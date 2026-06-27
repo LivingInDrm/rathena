@@ -58,3 +58,38 @@
 - **RSW 降级可用 GRF Editor 完成**：个别问题地图可提取 RSW/GAT/GND 文件降级版本后重新打入 GRF
 - **PACKETVER 在 src/config/packets.hpp 定义**，自定义覆盖放 `src/custom/defines_pre.hpp`
 - **20211103 自动启用 PACKETVER_RE（Sakray 模式）**：因为落在 20200902-20211118 区间内
+
+## AI 翻译工具链 (2026-06)
+
+### 设计决策
+- **复用 `npc_cn_translate.py` 的 `parse_blocks()` 解析器**：已验证的 NPC 脚本解析器，避免重复造轮子
+- **JSON 中间格式**：结构化、支持断点续传和校验，比纯文本更可靠
+- **按 NPC block 粒度翻译**：保持对话上下文连贯，比逐行翻译质量更高
+- **无 pip 依赖**：仅用 Python 标准库 + OpenAI REST API（urllib），降低部署门槛
+- **术语表独立 JSON**：可持续维护，被 translate.py 的 system prompt 引用
+- **验证器前置于回填**：pipeline 中 validate 在 apply 之前，有 error 则阻止回填
+
+### 关键教训
+- **翻译粒度选择**：逐行翻译会丢失上下文（NPC 对话有前后文关联），按 block 翻译效果更好
+- **GBK 编码校验必须在回填前做**：AI 可能生成 GBK 不支持的字符（如某些 emoji 或罕见汉字）
+- **select 选项数校验**：`:` 分隔符数量必须与原文一致，否则游戏逻辑会错乱
+- **颜色代码 `^RRGGBB` 保留**：AI 容易把颜色代码当作文本翻译或丢弃，需在 prompt 中强调并在验证中检查
+- **断点续传设计**：大量文件翻译时 API 可能中断，每 5 个文件保存 checkpoint，重跑时跳过已完成的
+
+### Code Review 教训
+- **高字节 ≠ 中文**：`is_file_translated()` 不能用 `byte > 0x80` 判断，latin-1 特殊字符也有高字节，必须解码后用中文字符正则检测
+- **重试耗尽必须抛异常**：`return []` 会导致下游静默回退到原文，掩盖 API 失败
+- **429 最后一次重试也要 raise**：否则 sleep 后落入循环末尾返回空结果
+- **跨文件重复函数要抽取到公共模块**：`read_npc_file`、`backup_file` 在多处定义会导致修一处漏一处
+- **GBK 编码校验要报告所有错误字符**：`UnicodeEncodeError` 只报第一个，需逐字符检查
+- **正则模式要避免误匹配**：`@\w+` 会匹配 `.@var` 中的 `@var`，需用 `(?<!\.)@\w+`；`#\w+` 会匹配颜色代码，需用 `(?<!\^)#\w+`
+- **argparse `store_true` + `default=True` 是无效参数**：该 flag 永远为 True，应删除
+- **AI 返回的 markdown 代码块要用正则提取**：简单删首尾行不够健壮，应用 `re.match` 提取 fence 内容
+
+## 客户端文件管理框架 (2026-06)
+
+### 设计教训
+- **方案管理用 Profile JSON 而非硬编码**：多方案并存时，用结构化配置档案记录每个方案的完整参数（EXE、PACKETVER、GRF 来源、补丁列表），方便切换和对比。
+- **切换工具只生成指导不执行破坏性操作**：客户端文件替换涉及 GB 级二进制文件，自动化风险高，工具应只提供步骤指导。
+- **GRF/EXE 不入 Git**：二进制大文件用 .gitignore 排除，通过文档和脚本管理。
+- **data.ini 模板化**：标准 GRF 加载顺序（custom.grf > rdata.grf > data.grf）应作为模板提供，避免每次手动配置出错。

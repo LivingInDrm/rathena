@@ -433,6 +433,19 @@ def backup_file(src: Path):
         shutil.copy2(src, dst)
 
 
+def read_npc_file(filepath: Path) -> str:
+    """Read NPC file content, handling various encodings (UTF-8 → GBK → latin-1)."""
+    try:
+        return filepath.read_text(encoding='utf-8')
+    except UnicodeDecodeError:
+        pass
+    try:
+        return filepath.read_text(encoding='gbk')
+    except UnicodeDecodeError:
+        pass
+    return filepath.read_text(encoding='latin-1')
+
+
 def write_gbk(path: Path, content: str):
     """Write content to path in GBK encoding with Unix line endings."""
     encoded = content.encode('gbk', errors='replace')
