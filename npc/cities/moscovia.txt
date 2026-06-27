@@ -17,77 +17,77 @@
 // Moscovia Transportation :: mosk_trans
 //============================================================
 -	script	::PR_Officer_moscovia	-1,{
-	mes "[Moscovia P.R. Officer]";
-	mes "Moscovia! Do you know Moscovia?";
-	mes "the paradise spreading on the endless seas...";
-	mes "Welcome to Moscovia";
-	mes "It's adventurous and mystic.";
+	mes "[莫斯科比亚 宣传员]";
+	mes "请问你知道 莫斯科比亚!!";
+	mes "莫斯科比亚吗?";
+	mes "一望无际的海洋地上的乐园...";
+	mes "邀请你来到我们 永无止境的冒险和";
 	next;
-	switch(select("About Moscovia...:Go to Moscovia.:Cancel")) {
+	switch(select("询问有关 莫斯科比亚...:到莫斯科比亚去:取消")) {
 		case 1:
-			mes "[Moscovia P.R. Officer]";
-			mes "Moscovia is a beautiful kingdom";
-			mes "on an island located north of Rune-";
-			mes "Midgarts.";
+			mes "充满神秘的莫斯科比亚";
+			mes "[莫斯科比亚 宣传员]";
+			mes "我们 莫斯科比亚在";
+			mes "卢恩--米德加兹大陆北方海洋的底端";
 			next;
-			mes "[Moscovia P.R. Officer]";
-			mes "I'm sure that you will be";
-			mes "absolutely fascinated";
-			mes "by Moscovia's beautiful scenery";
-			mes "and gorgeous palace.";
+			mes "是一座漂亮岛屿的王国";
+			mes "[莫斯科比亚 宣传员]";
+			mes "有着自然所造出来的神秘绝景的光景!";
+			mes "看到漂亮华丽礼拜堂和王宫的模样的话，";
+			mes "一定会沉迷在莫斯科比亚";
 			next;
-			mes "[Moscovia P.R. Officer]";
-			mes "Now that our long winter has";
-			mes "passed,";
-			mes "I'm happy that I can now show you";
-			mes "our gorgeous hometown.";
+			mes "的魅力的";
+			mes "[莫斯科比亚 宣传员]";
+			mes "漫漫长夜的冬天过去了";
+			mes "现在才能给各位介绍我们漂亮的故乡";
+			mes "而十分感到高兴，";
 			next;
-			mes "[Moscovia P.R. Officer]";
-			mes "If you feel like visiting Moscovia";
-			mes "take the chance now!";
-			mes "I'll help you to have a nice trip";
-			mes "to Moscovia!";
+			mes "因为莫斯科比亚的冬天";
+			mes "又漫长又冷啊";
+			mes "[莫斯科比亚 宣传员]";
+			mes "来，想要来到漂亮的莫斯科比亚的话";
+			mes "现在就是机会，";
 			close;
 
 		case 2:
-			mes "[Moscovia P.R. Officer]";
-			mes "Ok then, let us start now.";
-			mes "You should pay me 10,000 zeny";
-			mes "to go to Moscovia.";
-			mes "But when you come back,";
-			mes "you don't have to pay.";
+			mes "我诚心诚意的帮助各位";
+			mes "会变成一个很棒的旅行的";
+			mes "[莫斯科比亚 宣传员]";
+			mes "那么，马上就出发吧，";
+			mes "到莫斯科比亚";
+			mes "所需要的旅费是 10000金币，";
 			next;
-			mes "[Moscovia P.R. Officer]";
-			mes "Can we leave now?";
+			mes "回来的时候";
+			mes "会免费的载你回来的";
 			next;
-			if (select("Let's go!:Cancel") == 2) {
-				mes "[Moscovia P.R. Officer]";
-				mes "If you're too busy now,";
-				mes "please tell me again whenever you want.";
-				mes "I'm always ready to guide anyone to Moscovia.";
+			if (select("出发!:取消") == 2) {
+				mes "[莫斯科比亚 宣传员]";
+				mes "那么，可以出发了吗?";
+				mes "若现在很忙的话，";
+				mes "下一次来时随时的跟我说吧，";
 				close;
 			}
 			if (Zeny < 10000) {
-				mes "[Moscovia P.R. Officer]";
-				mes "I'm sorry but you don't have";
-				mes "enough zeny now";
-				mes "You need 10,000 zeny";
-				mes "to go to Moscovia";
-				mes "Thank you.";
+				mes "我会等待着各位";
+				mes "让我来介绍我们莫斯科比亚的光荣";
+				mes "[莫斯科比亚 宣传员]";
+				mes "很抱歉，你要先准备";
+				mes "旅行时所需要的10，000 金币，";
+				mes "请再确认一下";
 				close;
 			} else {
-				mes "[Moscovia P.R. Officer]";
-				mes "Ok then, we're leaving now.";
+				mes "你所携带的金额，";
+				mes "谢谢";
 				close2;
 				set Zeny,Zeny - 10000;
 				warp "moscovia",163,55;
 				end;
 			}
 		case 3:
-			mes "[Moscovia P.R. Officer]";
-			mes "If you're too busy now,";
-			mes "please tell me again whenever you want.";
-			mes "I'm always ready to guide anyone to Moscovia.";
+			mes "[莫斯科比亚 宣传员]";
+			mes "那么，出发了";
+			mes "[莫斯科比亚 宣传员]";
+			mes "若现在很忙的话，";
 			close;
 	}
 }
@@ -120,16 +120,16 @@ moscovia,166,53,4	script	Moscovia P.R. Officer#2	960,{
 // Moscovia Palace :: mos_swan
 //============================================================
 moscovia,253,166,4	script	Soldier#mosk1	966,{
-	mes "[Soldier]";
-	mes "Our dear Csar Alexsay III is in the palace.";
-	mes "He rules over Moscovia.";
-	mes "Please be careful not to cause him any trouble.";
+	mes "[士兵]";
+	mes "宫庭里面有统治着 莫斯科比亚的 辙勒";
+	mes "亚历斯3世居住在这里，";
+	mes "敬请的小心不要打扰他";
 	close;
 }
 
 -	script	Soldier#mosk::MoscSoldier	966,{
-	mes "[Soldier]";
-	mes "Please be silent or the Csar will be angry.";
+	mes "[士兵]";
+	mes "请在宫廷里保持安静";
 	close;
 }
 mosk_in,118,66,5	duplicate(MoscSoldier)	Soldier#mosk02	966

@@ -334,73 +334,73 @@ airplane,250,58,2	script	Airship Staff#airplane	67,{
 }
 
 airplane,80,71,2	script	Zerta#01airplane	834,{
-	mes "[Zerta]";
-	mes "Oh, hello adventurer.";
-	mes "I am currently on a";
-	mes "sacred journey, offering";
-	mes "prayer for the sake of the";
+	mes "[机组员]";
+	mes "如果我们抵达了您所想去的目的地,";
+	mes "就请登上前方的楼梯下机吧.";
+	mes "谢谢您选择使用我们的服务.";
+	mes "祝您有个美好的一天~";
 	mes "Midgard continent.";
 	close;
 }
 
 airplane,65,63,4	script	Maelin#01airplane	714,{
-	mes "[Maelin]";
-	mes "Um, this Airship is";
-	mes "to Lutie, isn't it? I've";
-	mes "waiting so long,";
-	mes "but I haven't heard any";
-	mes "broadcast about Lutie.";
+	mes "[孩童]";
+	mes "哇哦,麻麻!";
+	mes "看-看!";
+	mes "我们在飞!我-我们在...";
+	mes "我们在天上啊!";
+	mes "马库马拉古!";
 	close;
 }
 
 airplane,72,34,6	script	Aanos#01airplane	702,{
-	mes "[Aanos]";
-	mes "Oh wooow~";
-	mes "The sky looks";
-	mes "so different and";
-	mes "pretty from up there!";
+	mes "[女士]";
+	mes "嘘,嘘...";
+	mes "小宝贝,注意点~";
+	mes "公共场合别这么激动";
+	mes "超图!";
 	close;
 }
 
 airplane,221,158,2	script	Pilot#airplane	852,{
 	// Hugel quest addition
 	if (hg_ma1 == 3) {
-		mes "[Pilot]";
-		mes "I wish that I could go drink a cold fresh beer.";
-		mes "Drinking is the goal of my life! Drinking gives me energy!";
-		mes "I am nothing without drinks!";
+		mes "[科米廉姆]";
+		mes "嗨这边的~";
+		mes "看你的表情我就知道你懂我在说什么了";
+		mes "^333333*呼呼...!*^000000";
 		next;
-		mes "[Pilot]";
-		mes "But! Driving under the influence is not good.";
-		mes "But! That makes me want to drink more and more!";
+		mes "[科米廉姆]";
+		mes "我在为飞空艇事业做一番贡献呢.";
+		mes "帮助机组员在汶巴拉做训练以克服他们的恐高症.";
 		emotion ET_CRY;
 		next;
 		select("Do you know a passenger named Thierry?");
-		mes "[Pilot]";
-		mes "This uniform is";
-		mes "really dapper, but";
-		mes "it's way too thick to";
-		mes "wear around the Airship.";
+		mes "其实本来这事情就这么简单的.";
+		mes "[科米廉姆]";
+		mes "但是...";
+		mes "有些人就是不能克服哇,";
+		mes "甚至有一部分人真的被吓到了 ^333333尼菲奥姆去了^000000.";
 		next;
-		mes "[Pilot]";
+		mes "[科米廉姆]";
+		mes "巴就 嘎";
+		mes "钮克嗒 飞艇.";
+		mes "[科米廉姆]";
 		mes "...";
 		mes "......";
-		mes "No one ever really";
-		mes "comes into this room.";
-		mes "And the captain IS a reindeer. I could just strip to my boxers.";
 		next;
 		emotion ET_HUK;
-		mes "[Pilot]";
-		mes "Wah!? Who is it!";
+		mes "[科米廉姆]";
+		mes "沙巴 木欧 巴佳马";
 		next;
-		mes "- ...He is not listening to you, at all. -";
+		mes "飞艇 库拉哈 钩钩纳";
 		close;
 	}
 	// Hugel quest end
 	switch (rand(1,4)) {
 	case 1:
-		mes "[Pilot]";
-		mes "It's been sooo";
+		mes "萨鲁. 达麻,库库纳努";
+		mes "鱼库塔. 嗄, 法树库 那 热库!";
 		mes "long since I've";
 		mes "enjoyed a nice, cold";
 		mes "alcoholic brew. But the";
@@ -964,10 +964,10 @@ airplane_01,50,66,5	script	Apple Merchant#air01	86,{
 airplane_01,221,158,2	script	Pilot#airplane_01	852,{
 	switch (rand(1,4)) {
 	case 1:
-		mes "[Pilot]";
-		mes "Longitude, 131 degrees east.";
-		mes "Latitude, 37 degrees north.";
-		mes "We're right on course, captain.";
+		mes "[麦林]";
+		mes "啊,这飞空艇去不去姜饼城呢?";
+		mes "我都等了这么长时间了,";
+		mes "但是还没有听到什么关于姜饼城的,";
 		close;
 	case 2:
 		mes "[Pilot]";
@@ -1018,10 +1018,10 @@ airplane_01,221,158,2	script	Pilot#airplane_01	852,{
 }
 
 airplane_01,83,61,2	script	Dianne#01airplane_01	72,2,2,{
-	mes "[Dianne]";
-	mes "It's so weird!";
-	mes "I went to visit the";
-	mes "Airship Captain and";
+	mes "[阿诺斯]";
+	mes "哦哇哦~";
+	mes "从这里往下看,天空如此不同,";
+	mes "如此美丽啊!";
 	mes "all I saw was this";
 	mes "weird reindeer. Oh!";
 	mes "Do you think that...";
@@ -1033,13 +1033,13 @@ OnTouch_:
 }
 
 airplane_01,69,63,2	script	Mendel#01airplane_01	55,{
-	mes "[Mendel]";
-	mes "As I expected, the";
-	mes "in-flight meals are";
-	mes "three star quality at best.";
-	mes "*Harrrumph* I really should";
-	mes "have brought my chef so that";
-	mes "I could enjoy a real meal.";
+	mes "[飞行员]";
+	mes "好想来一杯冰镇啤酒喝.";
+	mes "喝酒就是我人生第一大乐趣了哈哈!酒给予我力量!";
+	mes "离开酒,我什么也不是啊!";
+	mes "[飞行员]";
+	mes "但是!醉酒驾机是不可以的.";
+	mes "但是!那只会让我更加想喝酒!";
 	close;
 }
 
@@ -1062,21 +1062,21 @@ airplane_01,71,31,2	script	Swordsman Shimizu#air_01	106,{
 //= Typing Challenge
 //============================================================ 
 airplane_01,32,61,4	script	Nils#ein	49,1,1,{
-	mes "[Nils]";
-	mes "Welcome to the";
-	mes "^ff0000RO Typing Challenge^000000.";
-	mes "Would you like to play";
-	mes "a quick typing game?";
+	mes "[萍国]";
+	mes "欢迎来到萍国的苹果小超市.";
+	mes "在这儿你可以买苹果,也可以把苹果榨汁.";
+	mes "[萍国]";
+	mes "输入你想要购买的数量吧.";
 	next;
-	switch (select("Play ^ff0000RO Typing Challenge^000000:Information:View Top Records:Cancel")) {
+	switch (select("买苹果.:榨苹果汁.:你在这里做什么?:取消.")) {
 	case 1:
-		mes "[Nils]";
-		mes "Okay, we have";
-		mes "a new challenger!";
-		mes "Enter the following";
-		mes "text as quickly as you";
-		mes "can without making any";
-		mes "mistakes! Let's start~!";
+		mes "单价 15 zeny ,一次最多购买500个.";
+		mes "不想要就输入0就可以了.";
+		mes "[萍国]";
+		mes "谢谢关注我的小店,";
+		mes "拜拜!";
+		mes "当你觉得你想要啃苹果的时候,";
+		mes "就来我萍国的小店吧~";
 		setarray .@line1_1$[0],	"^3cbcbccallipygian salacius lascivious^000000",
 					"^3cbcbcBy the power of^000000",
 					"^0000ffthkelfkskeldmsiejdlslehfndkelsheidl^000000",
@@ -1135,7 +1135,7 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 					1450;
 		set .@wordtest, rand(7);
 		next;
-		mes "[Nils]";
+		mes "[萍国]";
 		mes .@line1_1$[.@wordtest];
 		mes .@line1_2$[.@wordtest];
 		mes .@line1_3$[.@wordtest];
@@ -1144,7 +1144,7 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 		input .@save1$;
 		set .@end_time, gettimetick(1);
 		set .@total_time, .@end_time - .@start_time;
-		mes "[Nils]";
+		mes "你输入了超过500的数量喔.";
 		mes .@line2_1$[.@wordtest];
 		mes .@line2_2$[.@wordtest];
 		set .@start_time, gettimetick(1);
@@ -1154,81 +1154,81 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 		set .@total_time, .@total_time + (.@start_time - .@end_time);
 		set .@tasoo, (.@letters[.@wordtest] / ( .@total_time > 0 ?  .@total_time : 1)) * 6;
 		if ((.@save1$ == .@word1$[.@wordtest]) && (.@save2$ == .@word2$[.@wordtest])) {
-			mes "[Nils]";
+			mes "请重新输入你想要苹果的数量.";
 			mes "Your record is ^ff0000" + .@total_time + " seconds^000000 and";
 			mes "the total letters are " + .@tasoo + ".";
 			next;
 			if (.@tasoo >= 1300) {
-				mes "[Nils]";
-				mes "Hmmm, this record isn't";
-				mes "humanly possible unless you";
-				mes "copy and paste the whole";
-				mes "sentence. Please play fairly";
-				mes "next time.";
+				mes "[萍国]";
+				mes "愿意继续吗?";
+				mes "[萍国]";
+				mes "谢谢惠顾喔";
+				mes "拜拜!";
+				mes "当你觉得你想要啃苹果的时候,";
 				close;
 			}
 			if (.@tasoo >= $050320_ein_typing) {
-				mes "[Nils]";
-				mes "The previous top record was";
+				mes "就来我萍国的小店吧~";
+				mes "[萍国]";
 				mes "made by ^0000ff" + $050320_minus1_typing$ + "^000000";
 				mes "with the total ^0000ff" + $050320_ein_typing + "^000000 letters.";
 				mes "However, ^ff0000" + strcharinfo(0) + "^000000,";
-				mes "you made the new top record";
-				mes "this time. Congratulations!";
+				mes "抱歉,但是你没有带来买这些苹果要的钱呢.";
+				mes "检查一下你的钱包,少买点吧.";
 				set $050320_minus1_typing$, strcharinfo(0);
 				set $050320_ein_typing, .@tasoo;
 				close;
 			}
 			else {
-				mes "[Nils]";
+				mes "[萍国]";
 				mes "^0000ff" + $050320_minus1_typing$ + "^000000";
-				mes "is the current";
-				mes "record holder with";
+				mes "嗯,好吧.你包包里没有足够的位子了.";
+				mes "先清理一下你的包包再来吧.";
 				mes "a letter total of ^0000ff" + $050320_ein_typing + "^000000";
-				mes "characters. Try to beat";
-				mes "that record next time~";
+				mes "[萍国]";
+				mes "谢谢惠顾喔~";
 				close;
 			}
 		}
 		else {
-			mes "[Nils]";
-			mes "Oooh...";
-			mes "I'm sorry, but";
-			mes "you entered the";
-			mes "text incorrectly...";
+			mes "希望";
+			mes "你可以好好享受这些苹果的美味~!";
+			mes "[萍国]";
+			mes "好的,我需要";
+			mes "^FF00003 个苹果 和 1 空瓶^000000";
 			close;
 		}
 	case 2:
-		mes "[Nils]";
-		mes "The ^ff0000RO Typing Challenge^000000";
-		mes "is a game where you enter";
-		mes "the given text as quickly as you";
-		mes "can. The name of the top player";
-		mes "is recorded for posterity. If you";
-		mes "want fame, here's your chance!";
+		mes "如果你想要做一瓶苹果汁的话.";
+		mes "想要继续吗?";
+		mes "[萍国]";
+		mes "啊,你没带够做苹果汁的材料";
+		mes "记住哦 3 个苹果,一个空瓶.";
+		mes "[萍国]";
+		mes "好的,";
 		next;
-		mes "[Nils]";
-		mes "I'd just like to let";
-		mes "you know that you type";
-		mes "all the text that you see";
-		mes "in the single input line that";
-		mes "you're given. So don't press";
-		mes "the enter key, just click 'OK.'";
+		mes "稍等";
+		mes "^3355FF*磨啊磨啊*";
+		mes "*磨啊磨啊*";
+		mes "*钶琅...!*^000000";
+		mes "[萍国]";
+		mes "嘿,给你~";
+		mes "希望你好好享受!";
 		close;
 	case 3:
-		mes "[Nils]";
+		mes "如果你想要苹果或者苹果汁的话,";
 		mes "^0000ff" + $050320_minus1_typing$ + "^000000";
-		mes "is the current";
-		mes "record holder with";
+		mes "哈哈,随时随地都可以来找我呦~";
+		mes "[萍国]";
 		mes "a letter total of ^0000ff" + $050320_ein_typing + "^000000";
-		mes "characters. Try to beat";
-		mes "that record next time~";
+		mes "啊哈,谢谢关注我的小店.";
+		mes "拜拜!";
 		close;
 	case 4:
-		mes "[Nils]";
-		mes "Feel free to take on the";
-		mes "^ff0000RO Typing Challenge^000000";
-		mes "anytime. I'll be here~";
+		mes "当你觉得你想要啃苹果的时候,";
+		mes "就来我萍国的小店吧~";
+		mes "[萍国]";
+		mes "我曾经是一个漫游的流浪汉,";
 		close;
 	}
 }

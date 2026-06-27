@@ -31,29 +31,29 @@
 // Payon
 //============================================================
 payon,246,154,0	script	Lady#payon	90,{
-	mes "[Lady]";
-	mes "A long time ago,";
-	mes "when Payon was still";
-	mes "developing, many of the";
-	mes "villagers lived in poverty.";
+	mes "[女士]";
+	mes "好久以前,";
+	mes "斐扬的发展才起步的时候,";
+	mes "大多数的村民都很穷得要命.";
+	mes "[女士]";
 	next;
-	mes "[Lady]";
-	mes "Many families had to struggle to survive, and often could not even afford to properly bury their dead. Some people threw their dead into the cave near the village.";
+	mes "不少家庭都要拚命才可以活下来, 没有钱来安置死人也是极为常见的. 一些人就把死人扔进了村边的洞穴中.";
+	mes "[女士]";
 	next;
-	mes "[Lady]";
-	mes "So in that cave, it is said that there are many walking Zombies,";
-	mes "the dead who cannot rest in peace and are unable to pass on to the next world.";
+	mes "所以, 现在据说洞穴中生活着许许多多的腐尸,";
+	mes "这些腐尸无法得不到安宁, 也无法转生.";
+	mes "[女士]";
 	next;
-	mes "[Lady]";
-	mes "The Zombies, upon sensing the warmth of a human, begin to assault them, but that doesn't mean these Undead hold a grudge against";
-	mes "the living.";
+	mes "这些腐尸, 闻到人类身上的气息之后, 就开始向人类发动进攻,";
+	mes "倒不是说这些腐尸妒忌人类怎么的.";
+	mes "[女士]";
 	next;
-	mes "[Lady]";
-	mes "Their rotten bodies can't leave the cold, dark and damp cave, so it's instinctual for them to attack warmth which would speed up the decomposition of their bodies.";
+	mes "他们腐烂的身躯无法离开阴冷黑暗又潮湿的洞穴, 所以追逐那些身怀温暖, 那些可以促进他们身体分解的物体自然的成为了一种本能.";
+	mes "[女士]";
 	next;
-	mes "[Lady]";
-	mes "The Zombies in the Payon Cave";
-	mes "may be spooky, but their story";
+	mes "这些僵尸在斐扬洞穴出没,";
+	mes "这事情好像很诡异, 很恶心,";
+	mes "实际上, 这算是一种悲剧呢...";
 	mes "is also kind of tragic.";
 	close;
 }
@@ -116,51 +116,51 @@ payon,158,246,3	script	Guardsman#payon	708,3,3,{
 	end;
 
 OnTouch_:
-	mes "[Guardsman]";
-	mes "This is the Central Palace of Payon. This place is open to the public, but in accordance with our laws, you must behave in an orderly fashion once inside.";
+	mes "[年轻男子]";
+	mes "从你的衣着打扮上,";
 	next;
-	mes "[Guardsman]";
-	mes "In the interest of protecting the peace, we will disarm your equipment once you enter.";
-	mes "Your cooperation is";
-	mes "much appreciated.";
+	mes "我看得出来你是一个异乡人.";
+	mes "欢迎来到斐扬.";
+	mes "[年轻男子]";
+	mes "你一定是位老练的战士, 要不然, 你怎么能够通过这所城市周围陡峭的山路, 又怎么能够打败周围危险的魔物呢...";
 	nude;
 	close;
 }
 
 payon,249,156,1	script	Woman#payon	66,{
-	mes "[Woman]";
-	mes "Welcome to Payon.";
-	mes "You must have had";
-	mes "a hard time getting";
-	mes "through the Payon Forest.";
-	mes "How was your trip?";
+	mes "[年轻男子]";
+	mes "我记得我已逝的爷爷告诉过我一件事情.";
+	mes "[年轻男子]";
+	mes "关于这件蕴藏邪恶力量的护身符....";
+	mes "戴上它, 洞穴中的不死魔物就会觉醒.";
+	mes "[年轻男子]";
 	next;
-	mes "[Woman]";
-	mes "We've been receiving less tourists because of the increasing numbers of monsters outside, so it's quieter nowadays.";
+	mes "我也不知道到底是不是真的. ";
+	mes "但是不知道能不能把我的爷爷召唤过来....";
 	next;
-	mes "[Woman]";
-	mes " To be honest, things are getting tough because of all those monsters. ^666666*Sigh...*^000000";
+	mes "[?]";
+	mes "^3299CC 不要瞎想了...";
 	next;
-	mes "[Woman]";
+	mes "我的孩子.^000000";
 	if (Sex == SEX_MALE)
-		mes "Whoa~! I just noticed those arms of yours look pretty solid. You look pretty strong, guy. Just how many monsters have you killed?!";
+		mes "[年轻男子]";
 	else
-		mes "Oooh! I didn't notice before, but you look pretty strong beneath all of that feminine charm.";
+		mes "呃呃呃呃呃呃-!";
 	next;
-	mes "[Woman]";
-	mes "Hey, I know of a good place for you to hunt. It just so happens that there's a cave in the middle of Payon.";
+	mes "什么情况?!";
+	mes "爷-爷爷...?";
 	next;
-	mes "[Woman]";
-	mes "If you're interested, just head North, pass the forest, and go towards the Northwest. You'll know you've arrived when you're in the place filled with the smell of stinky monsters.";
+	mes "...";
+	mes "...";
 	next;
 	switch(select("It sounds dangerous!:I better prepare myself...!:That's a nice dress you're wearing~")) {
 	case 1:
-		mes "[Woman]";
-		mes "Oh come on, don't be a coward.";
-		mes "It's just a simple cave filled with normal monsters. It's quite safe. We've even established an Archer Village near that cave to prevent misfortune incidents. Hohoohoho~ ";
+		mes "......";
+		mes "[年轻男子]";
+		mes "...";
 		break;
 	case 2:
-		mes "[Woman]";
+		mes "上-上帝...?";
 		mes "Oh don't worry about any preparations. There's a Tool Dealer right in front of the cave, so you can purchase anything you need from my husband, er, that guy~";
 		break;
 	case 3:
@@ -180,11 +180,11 @@ payon,249,156,1	script	Woman#payon	66,{
 }
 
 payon,246,158,5	script	Woman#2payon	66,0,0,{
-	mes "[Jim's Mother]";
-	mes "Oh boy~";
-	mes "There she goes again.";
-	mes "Without a doubt, that";
-	mes "woman is the town gossip.";
+	mes "[卫兵]";
+	mes "这是斐扬中央宫. 本中央宫向游客开放, 但是根据我们的法律, 一旦到了里头就要按照老一套的规矩来行事.";
+	mes "[卫兵]";
+	mes "为了保证宫内的安全, 一旦进入了之后我们就会卸下你的装备.";
+	mes "请配合.";
 	next;
 	mes "[Jim's Mother]";
 	mes "Please don't judge the rest";
@@ -228,46 +228,46 @@ payon,246,158,5	script	Woman#2payon	66,0,0,{
 
 payon,210,110,1	script	Drunkard#payon	120,{
 	if (Class != Job_Archer) {
-		mes "[Drunkard]";
-		mes "Hey...";
-		mes "H-Hey...!";
+		mes "[女人]";
+		mes "欢迎来到斐扬.";
+		mes "穿过斐扬森林是很麻烦的一件事情.";
 		next;
-		mes "[Drunkard]";
-		mes "I wonder why those";
-		mes "stupid Archers even";
-		mes "bother trying to aim!";
-		mes "You're all weak!";
-		mes "Weeeeak!";
+		mes "旅途上遇到了麻烦事儿吗?";
+		mes "[女人]";
+		mes "因为外边的魔物越来越多, 来我们这儿的游客也越来越少咯, 所以这儿近来都很安静.";
+		mes "[女人]";
+		mes "说实话, 变成这个样子还不是那些魔物害的. ^666666*叹气...*^000000";
+		mes "[女人]";
 		next;
-		mes "[Drunkard]";
-		mes "Bwahahahaha!";
-		mes "Buy me a drink?!";
+		mes "哇~! 你的手臂真是粗呢. 好家伙, 你看起来真壮. 杀了多少魔物喇?!";
+		mes "哦! 看起来这么阴柔美丽...任谁都不会注意到你其实很强壮.";
+		mes "[女人]";
 	} else {
-		mes "[Drunkard]";
-		mes "An Archer!";
-		mes "Oh man, you guys!";
-		mes "You guys are the best!";
+		mes "嘿,我知道一个狩猎魔物的好去处. 在斐扬中部这儿有个洞穴.";
+		mes "[女人]";
+		mes "感兴趣的话, 先向北边走, 通过森林, 然后向着西北走. 当你闻到臭烘烘的味道的时候, 你就到了.";
+		mes "[女人]";
 		next;
-		mes "[Drunkard]";
-		mes "Bwahahahaha!";
-		mes "Buy me a drink?!";
+		mes "来吧. 不要做懦夫.";
+		mes "只是一个充满普通魔物的小洞窟罢了, 一点都不危险的呀. 我们在洞窟门旁设立了弓箭手社, 来防止魔物暴动. 呵呵~ ";
+		mes "[女人]";
 	}
 	next;
-	switch(select("Alright, but only one drink.:No thanks, pal.:Oh my God! Hell no!")) {
+	switch(select("好危险!:我自己准备一下吧...!:你穿的裙子好好看哦~")) {
 	case 1:
 		set Zeny, (Zeny < 100)?0:(Zeny - 100);
-		mes "[Drunkard]";
-		mes "Thanks...!";
-		mes "..Brother!";
+		mes "不要发愁准备的事了. 在洞窟的对面就有一个工具商呢, 所以你有什么要用的就买我老...额,那个家伙的吧~";
+		mes "[女人]";
+		mes "哦 吼吼吼吼!";
 		next;
-		mes "[Drunkard]";
-		mes "Most people don't even wanna";
-		mes "buy me drinks! Maybe cuz I used to fool around too much with the ladies back in my day!";
+		mes "终于注意到了吗?";
+		mes "这可是普隆德拉";
+		mes "最近最为流行的一种款式呢.";
 		next;
-		mes "[Drunkard]";
-		mes "Though, the women I used to play with are grannies now! Hahahaha! One of them still primps herself with makeup and stuff! Can you believe that?!";
+		mes "[女人]";
+		mes "大多数住在这里的女人什么潮流都不懂的! 我的哈尼~ 给我买来做礼物噶~";
 		next;
-		mes "[Drunkard]";
+		mes "他赚很多钱的嘎嘎~";
 		mes "I'm like...";
 		mes "Come on...!";
 		mes "Some faces are";
@@ -374,42 +374,42 @@ payon,132,235,3	script	Monster Scholar#02	98,{
 // Inside Payon
 //============================================================
 payon_in01,180,7,2	script	Waitress#payon	90,{
-	mes "[Pub Lady]";
-	mes "This place is always bustling with busy people. Little Novices come and go to become Archers, and everyone else is buying arrows while I have to stay here in this small shop.";
+	mes "[吉姆的麻麻]";
+	mes "哦天哪~";
 	next;
-	mes "[Pub Lady]";
-	mes "And I'm sick and tired of making this noodle soup. I have to shower all the time so I can get rid of the smell. And it's not so easy";
-	mes "to get rid of.";
+	mes "又来了.";
+	mes "她可是镇里头数一数二的闲话大王.";
+	mes "[吉姆的麻麻]";
 	next;
-	mes "[Pub Lady]";
-	mes "I feel so...";
-	mes "Bored.";
-	mes "And lonely...";
+	mes "请不要根据她的表现来评价我们斐扬镇的人吧.";
+	mes "她是镇上唯一的大嘴巴. 我想她只是因那些算命的口中传出的话而激动吧.";
+	mes "[吉姆的麻麻]";
+	mes "哦...!";
 	next;
-	mes "[Pub Lady]";
+	mes "你的肩膀好宽啊!";
 	if (Sex == SEX_MALE)
-		mes "Where I can find the right person, a hot and Sexy hunk who can take me away from here? Um, hey mister, are you listening?";
+		mes "和我一起出去吃个晚饭如何~!";
 	else {
-		mes "Where I can find the right person, a cute, yet hard-bodied hunk who can take me away from here?";
-		mes "Um, hey lady, are";
-		mes "you listening?";
+		mes "哇, 真是一个美丽的姑凉!";
+		mes "这个年纪是忙着用大棒子,";
+		mes "或者适时的冒犯话儿, 击退前来男生的时候吧.";
 	}
 	next;
-	mes "[Pub Lady]";
-	mes "The old fortune teller told me that I'd have great luck in the near future! But what's wrong with me? I'm just living day to day. Maybe I'm just dumb and wishy-washy.";
+	mes "[吉姆的麻麻]";
+	mes "是啊...";
 	next;
-	mes "[Pub Lady]";
-	mes "I'm so sorry,";
-	mes "I've said too much.";
-	mes "Now I'm just acting stupid.";
-	mes "I'm sorry you had to listen";
-	mes "to all that.";
+	mes "在斐扬中央宫有个了不得的算命先生呢. 你给她的 Zeny 越多, 你的运气就越好啊!";
+	mes "[吉姆的麻麻]";
+	mes "他告诉我这个月会遇见我的真命天子.";
+	mes "嘎嘎嘎嘎~ ";
+	mes "[吉姆的麻麻]";
+	mes "嗯...?";
 	next;
-	mes "[Pub Lady]";
+	mes "没有时间陪我闲扯吗?";
 	mes "So...";
 	mes "How may I help you? ";
 	next;
-	switch(select("Have you ever heard of Zombies?:Fortune Teller...?:I needs some booze.")) {
+	switch(select("算命的...? :再见咯~")) {
 	case 1:
 		mes "[Pub Lady]";
 		mes "Of course I've";
@@ -834,71 +834,71 @@ payon_in03,99,190,4	script	Chief#payon	107,2,2,{
 
 OnTouch_:
 	if (BaseLevel < 30) {
-		mes "[Guard]";
-		mes "Hey...";
-		mes "Hey...!";
-		mes "Show your respect";
-		mes "to our chief!";
+		mes "[醉汉]";
+		mes "嘿...";
+		mes "额-嘿...!";
+		mes "[醉汉]";
+		mes "傻乎乎的弓手...射什么呢...";
 		close;
 	}
 	if (BaseLevel > 30) {
 		set .@oldman_random,rand(1,2);
 		if (.@oldman_random == 1) {
-			mes "[Guard]";
-			mes "Hey...";
-			mes "Hey...!";
-			mes "Show your respect";
-			mes "to our chief!";
+			mes "一群弱智啊~";
+			mes "弱弱弱弱弱弱爆了!";
+			mes "[醉汉]";
+			mes "哇哈哈哈哈哈!";
+			mes "给我来瓶酒吧?!";
 			next;
-			mes "[Guard]";
-			mes "Heeeey!";
-			mes "I said... ";
+			mes "[醉汉]";
+			mes "弓手啊......";
+			mes "你们这群家伙啊~";
 			next;
-			mes "[Chief]";
-			mes "It's fine, it's fine.";
-			mes "It's been a long time";
-			mes "since I've spoken to";
-			mes "such young people.";
+			mes "真TM的厉害啊~";
+			mes "[醉汉]";
+			mes "哇哈哈哈哈哈!";
+			mes "给我来瓶酒吧?!";
+			mes "[醉汉]";
 			next;
 		}
-		switch(select("Please tell me about Payon.:Where are the guards from?:Please tell me about the cave. :What does an Archer do?:What does a Hunter do?")) {
+		switch(select("好,但是仅此一瓶. :兄弟, 这可不行啊.:啊啊啊啊啊? 老天啊, 我可不答应! ")) {
 		case 1:
-			mes "[Chief]";
-			mes "Payon is the city of highlanders. As long as our history can relate, our city has been self-sufficient.";
+			mes "谢了...!";
+			mes "..兄弟!";
 			next;
-			mes "[Chief]";
-			mes "Although our ancestors did not enjoy the benefits of cultural exchange with the Rune-Midgarts Kingdom as we do today, they knew how to make a living without";
-			mes "any help.";
+			mes "[醉汉]";
+			mes "好多人都不给我买!";
+			mes "也许是嫉妒我把妹太厉害了吧!嘎嘎!";
 			next;
-			mes "[Chief]";
-			mes "Payon has developed its own cultures and ways. We've invented our own means to protect ourselves against the elements, and Payon men and women train as Archers and Hunters to defend themselves.";
+			mes "[醉汉]";
+			mes "虽然那些我玩过的女人现在都成了老奶奶咯! 哈哈哈哈! 其中一个还是喜欢用化妆品什么的打扮自己呢! 不敢相信吧?!";
 			next;
-			mes "[Chief]";
-			mes "I've heard of weak, cowardly";
-			mes "young people who fear the fields or dungeons filled with monsters. But to us, battle is a way of life.";
+			mes "[醉汉]";
+			mes "我喜欢那个...";
+			mes "哦,看看啊...!";
 			next;
-			mes "[Chief]";
-			mes "That is why his Majesty, King Tristram III wishes for us to train young people how to effectively fight against evil creatures.";
+			mes "真是美啊!再不可能更美了!";
+			mes "哦? 玩笑, 玩笑啊!";
 			break;
 		case 2:
-			mes "[Chief]";
-			mes "Even since I was young,";
-			mes "Prontera has sent civil";
-			mes "servants and envoys to Payon.";
+			mes "哇哈哈哈哈哈!";
+			mes "[醉汉]";
+			mes "^666666*打嗝儿~ 打嗝儿~*^000000";
+			mes "真好喝!";
 			next;
-			mes "[Chief]";
-			mes "Royal troops, Kafra Ladies, Guards... At first, there was conflict brought about by differences in our customs";
-			mes "and cultures.";
+			mes "兄弟,真是个男人~!";
+			mes "恩哈哈哈哈哈!";
+			mes "[醉汉]";
 			next;
-			mes "[Chief]";
-			mes "However, as time passed,";
-			mes "we've been able to resolve such petty differences. I cannot deny that they've helped us speedily develop our trade with foreign nations.";
+			mes "呸!";
+			mes "现在的小孩子啊!";
+			mes "真'尊敬'老一辈啊!好啊!";
 			next;
-			mes "[Chief]";
-			mes "Now, people who used to be outsiders are now bonifide Payon citizens. When I was young, I would never imagined such a thing possible. Hahahaha~!";
+			mes "我不来烦你了!";
+			mes "[醉汉]";
 			next;
-			mes "[Chief]";
-			mes "It pleases me to see and meet with them. Even though have come from other places, they have a love for Payon that is as sincere as my own.";
+			mes "好啊...!";
+			mes "这就是我的报应吧!";
 			break;
 		case 3:
 			mes "[Chief]";
@@ -972,19 +972,19 @@ OnTouch_:
 
 payon_in03,102,185,5	script	Guard#payon	708,{
 	if (BaseLevel < 30) {
-		mes "[Guard]";
-		mes "Hey...!";
-		mes "You're not";
-		mes "allowed here!";
-		mes "Go back outside!";
+		mes "[魔物学者 卫库克]";
+		mes "你好.";
+		mes "我叫卫库克.";
+		mes "我是卢恩米德加兹王国 魔物研究协会 的一名成员. 有什么关于魔物的问题吗?";
+		mes "[魔物学者 卫库克]";
 		close;
 	}
 	if (BaseLevel > 30) {
-		mes "[Guard]";
-		mes "I'm sorry,";
-		mes "but you're";
-		mes "not allowed here.";
-		mes "Please leave.";
+		mes "斐扬深入森林...周围尽是些魔物群落. 村落周围也有很多些洞窟, 怪物也会从洞里面跑出来.";
+		mes "[魔物学者 卫库克]";
+		mes "因为不死的魔物呆在斐扬洞窟里头, 所以魔物学界对这里注入了很多关注. 我是负责分析他们的体表特征的.";
+		mes "[魔物学者 卫库克]";
+		mes "斐扬不死魔物的最大特点就是...他们的前身大多都是斐扬村民!";
 		close;
 	}
 	end;

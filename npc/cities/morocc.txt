@@ -131,7 +131,7 @@ morocc,223,102,0	script	Volunteer - Morocc#06::MocVolunteer	741,{
 	specialeffect EF_HIT2,AREA,"Volunteer - Morocc#06";
 	next;
 	mes "[Morocc Volunteer]";
-	mes "Heyyy, you're being too harsh, Se駉rita. Your fist may be as fragile as you are, but it sure can hurt somebody.";
+	mes "Heyyy, you're being too harsh, Se?orita. Your fist may be as fragile as you are, but it sure can hurt somebody.";
 	next;
 	mes "[Ringing Voice]";
 	mes "Anyways, isn't that a crib? I think I heard something like that before..";
@@ -162,11 +162,11 @@ moc_ruins,123,154,0	script	Young Man#moc01	99,{
 }
 
 moc_ruins,128,153,0	script	Grampa#moc	61,{
-	mes "[Old Scholar]";
-	mes "I've devoted my life to researching the mysterious pyramids near Morocc. I haven't been able to concretely confirm anything yet, but...";
+	mes "[梦罗克村民]";
+	mes "呵，最近不管是冒险家或旅行家，进出村落里的人次变多了，所以分辨不出谁是村民谁是旅行家";
 	next;
-	mes "[Old Scholar]";
-	mes "I'm sure that the largest pyramid contains the tomb of the ancient king, Osiris! I'm willing to stake my life on it!";
+	mes "[梦罗克村民]";
+	mes "若不是像我在地人就无法分辨谁是新来的人了?";
 	close;
 }
 
@@ -450,22 +450,22 @@ moc_ruins,143,43,4	script	Assassin Boy#moc	118,{
 }
 
 moc_ruins,173,141,4	script	Dimitri#moc	49,{
-	mes "[Dimitri]";
-	mes "The desert of Morocc has the highest average temperature in Midgard. You might as well think twice before you sit on the sand in the middle of the desert, cause your ass will be toasted.";
+	mes "[脸色苍白的青年]";
+	mes "... 那天是... 升起了带有血光的月亮，是个令人毛骨悚然的恐怖夜晚";
 	next;
 	switch(select("About the desert sands:About the remedy for Fatigue:End Conversation")) {
 	case 1:
-		mes "[Dimitri]";
-		mes "......What I mean is that...";
-		mes "It seems like it should be all burnt, but it's not!";
+		mes "[脸色苍白的青年]";
+		mes "连干燥的沙漠风也没有吹，空气又是快要窒息般的难过，此时突然听到狂叫和超大水蒸气从梦罗克中央城向空中窜起来";
+		mes "[脸色苍白的青年]";
 		next;
-		mes "[Dimitri]";
-		mes "You can sit down and take a rest whenever you need to and your ass won't burn. I guess the Morocc sand doesn't conduct heat as much as it should.";
+		mes "那是一瞬间的事，中央城的绿洲蒸发掉和梦罗克村落被毁都是瞬间发生的，还有... 还有传来... 传来了那声音";
+		mes "[脸色苍白的青年]";
 		next;
-		mes "[Dimitri]";
-		mes "That's why everyone could recover the HP and SP in the middle of desert.";
+		mes "说血... 血是灵魂的货币... 还有那恐怖的笑声...";
+		mes "啊啊!!! 在我的耳际仍然... 回荡着那笑声!!! 啊啊啊啊啊啊!!!!!!";
 		next;
-		mes "[Dimitri]";
+		mes "- 为了让他稳定情绪，还是别再问好了-";
 		mes "Now I come to think of it, maybe the reason why Morocc has exceptionally high average temperature is because that Satan is sealed within.";
 		close;
 	case 2:
@@ -624,18 +624,18 @@ moc_fild16,199,212,4	script	 Uncle Assassin#moc	55,{
 }
 
 moc_fild16,211,254,4	script	Assassin#07rhea_30	118,{
-	mes "[La Conte]";
-	mes "Once Thiefs are promoted";
-	mes "to Assassins, which is very professional";
-	mes "they will be able to vary their battle style.";
-	mes "their battle style.";
-	mes "There are 2 main battle styles available to Assassins.";
-	mes "They may either wield dual daggers,";
-	mes "or fight with a set of Katars!";
+	mes "[青年]";
+	mes "虽然村落被毁了，但那边巨型三角物体却毫发无伤，可能受到某种特殊力量的保护吧";
+	mes "[青年]";
+	mes "我们把位于村落角落上的那巨型三角物体称做为金字塔，不清楚何时出现在那里，听说我爷爷的爷爷时代就在那里了";
+	mes "[青年]";
+	mes "出现的理由和目的没有人知道，但有一点可以确定的是那里面充斥着恐怖的魔物，所以无人敢靠近它";
+	mes "[青年]";
+	mes "我也奉劝你最好别接近它，";
 	next;
 	switch(select("Specialty of Katar:Specialty of Dual Daggers:Quit Conversation")) {
 	case 1:
-		mes "[La Conte]";
+		mes "因金字塔里的魔物对人类的血腥味特别感兴趣，呵呵...";
 		mes "A set of Katars is";
 		mes "worn on both of the hands,";
 		mes "and allows Assassins";
@@ -718,16 +718,16 @@ moc_fild16,211,254,4	script	Assassin#07rhea_30	118,{
 //Bartender
 /*
 morocc_in,166,76,3	script	Bartender#02	46,{
-	mes "[Bartender]";
-	mes "What are you going to order?";
+	mes "[金字塔 研究员]";
+	mes "我把一生致力于研究本村落的金字塔上，且挖掘了不少东西，虽然无法证实，但相信那金字塔是古代某王的陵寝";
 	next;
 	switch(select("Tropical Sograt:Vermilion on the Beach:Nothing.")) {
 	case 1:
 		if (Zeny >= 1000 ) {
 			set Zeny, Zeny-1000;
 			getitem 12112,1;
-			mes "[Bartender]";
-			mes "Here you go.";
+			mes "[金字塔 研究员]";
+			mes "也许在那陵寝的深处沉睡着古代王俄赛里斯吧，如果我的研究正确的话...";
 			mes "Fruits are major ingredients,";
 			mes "but don't drink too much.";
 			close;
@@ -779,4 +779,3 @@ moc_fild16,200,231,4	duplicate(SinGuard)	Assassin Guardian#5	707
 moc_fild16,211,231,4	duplicate(SinGuard)	Assassin Guardian#6	707
 moc_fild16,200,257,4	duplicate(SinGuard)	Assassin Guardian#7	707
 moc_fild16,211,257,4	duplicate(SinGuard)	Assassin Guardian#8	707
-

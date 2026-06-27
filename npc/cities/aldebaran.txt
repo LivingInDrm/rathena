@@ -380,58 +380,58 @@ aldebaran,159,242,4	script	Insect Guy#alde	119,{
 }
 
 aldebaran,60,70,4	script	Sylvia#alde	69,{
-	mes "[Sylvia]";
-	mes "I came all the way here from Prontera because I heard the Kafra Main Office was somewhere here in Al De Baran.";
+	mes "[曼斯特]";
+	mes "我家原本住在吉芬";
 	next;
-	mes "[Sylvia]";
-	mes "It shouldn't be that hard to find, but I'm awful at following directions. I always get lost, no matter how hard I try!";
+	mes "去年冬天才搬家搬到艾尔帕兰";
+	mes "这个地方来..";
 	next;
-	mes "[Sylvia]";
-	mes "If that wasn't bad enough, I left my Magnifiers back in Prontera, so now I have to find someone to help me with these weapons I've got to appraise!";
+	mes "[曼斯特]";
+	mes "我的父亲";
 	next;
-	if (select("Appraise?:That's very nice.") == 1) {
-		mes "[Sylvia]";
-		mes "Equipment that is dropped by monsters can't be equipped right away.";
+	if (select("关于^3355FF' 精炼 '^000000..:结束对话") == 1) {
+		mes "在以铁匠闻名的吉芬";
+		mes "也是个相当有名气的名匠";
 		next;
-		mes "[Sylvia]";
-		mes "If you right-click the equippable item in the Item Inventory, you'll see that it is Unidentified and that Appraisal is needed. What to do?";
+		mes "后来才搬到母亲的故乡这来的";
+		mes "[曼斯特]";
 		next;
-		mes "[Sylvia]";
-		mes "Well, in that case, you've gotta use ^3355FF Magnifier^000000!";
+		mes "我有时候也会帮帮父亲的忙";
+		mes "我最近在学习的是";
 		next;
-		mes "[Sylvia]";
-		mes "Even without a Blacksmith, Alchemist or Merchant in your party, you can appraise your equipment! Of course, a Magnifier is consumed each time you use one...";
+		mes "辨别武器等级高低与";
+		mes "精炼的成功率大小之相关性";
 		close;
 	}
-	mes "[Sylvia]";
-	mes "Hey...";
-	mes "Was that a hint of sarcasm in your voice when you said that?";
+	mes "[曼斯特]";
+	mes "等级1 的武器";
+	mes "可以成功的精炼到等级7";
 	close;
 }
 
 aldebaran,93,80,4	script	Issei#alde	48,{
-	mes "[Issei]";
-	mes "Al De Baran is such a wonderful place with its romantic canals and classic architecture. I love nothing more than to stroll through this city with my beautiful girlfriend.";
+	mes "[奎特罗]";
+	mes "听说最近艾尔帕兰";
 	next;
-	if (select("You have a girlfriend?:End Conversation.") == 1) {
-		mes "[Issei]";
-		mes "Hey...";
-		mes "Is that so hard to believe?! Yeah, ask anyone! She really exists! Although, sometimes, just sometimes mind you, she gets too excited about weapons and armor.";
+	if (select("有关那位顶顶有名的铁匠师父:结束对话") == 1) {
+		mes "来了个在吉芬顶顶有名";
+		mes "的铁匠师父 ..";
+		mes "[奎特罗]";
 		next;
-		mes "[Issei]";
-		mes "I mean, instead of enjoying a romantic dinner, she'll just go on about how equipment dropped from monsters is higher quality than those sold in shops...";
+		mes "我听说";
+		mes "武器等级的高低与";
 		next;
-		mes "[Issei]";
-		mes "I mean, why should I care if equipment dropped by monsters tend to have more Slots?! I can't even kill a Poring!";
+		mes "可增加攻击力的大小";
+		mes "有相当程度的关系 ..";
 		next;
-		mes "[Issei]";
-		mes "As you can see,";
-		mes "I'm a lover,";
-		mes " not a fighter.";
+		mes "[奎特罗]";
+		mes "等级1 的可以冶炼到等级 2";
+		mes "等级2 的可以冶炼到等级 3";
+		mes "等级3 的可以冶炼到等级 5 !";
 		close;
 	}
-	mes "[Issei]";
-	mes "So, you don't think of me stupid, do you?";
+	mes "至于等级4 的则与等级3 一样";
+	mes "[奎特罗]";
 	close;
 }
 
@@ -461,19 +461,19 @@ aldebaran,180,46,4	script	Joo Jahk#alde	88,{
 }
 
 aldebaran,212,122,4	script	Citizen#alde	97,{
-	mes "[Gavin]";
-	mes "Welcome!";
-	mes "The town of";
-	mes "Al De Baran";
-	mes "welcomes you!";
+	mes "[密雷亚]";
+	mes "你知道吗 ? 听说武器的等级";
+	mes "不只到3 而已 ..";
+	mes "还有等级4 的武器呢!!";
+	mes "[密雷亚]";
 	next;
-	mes "[Gavin]";
-	mes "Well, that might be an exaggeration. After all, it's just me that's welcoming you.";
-	mes "Hey there!";
+	mes "我还听说，这种得来不易的";
+	mes "等级 4 的武器，";
+	mes "只有在你打败魔物首领后，";
 	next;
 	if (select("Now, tell me about monsters.:End conversation.") == 1) {
-		mes "[Gavin]";
-		mes "Monsters...?";
+		mes "才有极小的机率";
+		mes "可以得到这项武器";
 		mes "Aren't we straying off topic a little bit? Ah, you must be one of those adventurers!";
 		next;
 		mes "[Gavin]";
@@ -541,44 +541,44 @@ aldebaran,143,136,4	script	Bell Keeper#A	89,{
 // Inside Al De Baran
 //============================================================
 aldeba_in,232,241,4	script	RS125#alde	48,{
-	mes "[RS125]";
-	mes "I may sound inhuman rather robotic";
-	mes "however, I hope you will not be afraid of me. I am as humane as you are.";
+	mes "[乔丝]";
+	mes "在海边等地方拾蛤蜊";
+	mes "真是一点趣味都没有";
 	next;
-	mes "[RS125]";
-	mes "I may have a machine heart and I may disturb you with loud noises from the heart,";
-	mes "that will never stop me from running for future of Al De Baran.";
+	mes "[乔丝]";
+	mes "比起在沙滩.. 和水坑来说的话";
+	mes "海水啪搭啪搭的";
 	next;
-	if (select("Listen to his story.:End Conversation") == 1) {
-		mes "[RS125]";
-		mes "It's been 3 years already.";
-		mes "My brother 996 used to be a short track athlete in the Al De Baran city field team.";
-		mes "Back then, people gave him a nickname, 'Al De Baran's Peco Peco',";
-		mes "for his amazingly fast legs...";
+	if (select("关于拾蛤蜊:结束对话") == 1) {
+		mes "不断涌起";
+		mes "在海边就只能拾到一些蛤蜊，";
+		mes "因为大部分的蛤蜊";
+		mes "都藏在底下呢!";
+		mes "[乔丝]";
 		next;
-		mes "[RS125]";
-		mes "He became so popular for his exciting play,";
-		mes "so every time when the 'Al De Baran Turbo Track' was held once every 4 years,";
-		mes "many people from all over the continent came to this city only to see my brother.";
-		mes "I was his manager at the time and I was so stressed out because of his fans.";
+		mes "还有啊!";
+		mes "有种外壳坚硬";
+		mes "习性很差";
+		mes "不可小觑的";
+		mes "家伙!";
 		next;
-		mes "[RS125]";
-		mes "However, there is nothing last forever...";
-		mes "One day, a girl from Payon beat my brother from a game.";
+		mes "[乔丝]";
+		mes "它们的名字叫做蜗牛，";
+		mes "在普隆德拉西部地区的";
 		next;
-		mes "[RS125]";
-		mes "My brother couldn't accept the fact that he lost the game";
-		mes "so he did too much of practice and had a serious heart attack.";
-		mes "He is still in bed.";
+		mes "海边附近可以看到它们的踪迹..";
+		mes "要是不小心招惹到它们";
+		mes "那大概只能祈求老天能让你逃过一劫了";
+		mes "[乔丝]";
 		next;
-		mes "[RS125]";
-		mes "I am my brother's only hope and the future of Al De Baran!";
-		mes "Please wish me luck, I will beat her, 'Breezy Havana' from Payon!";
+		mes "总之，它们很可怕就是了..";
+		mes "[乔丝]";
+		mes "哪天我一定要去那个";
 		close;
 	}
-	mes "[RS125]";
-	mes "I want to travel around the world one of these days.";
-	mes "If I can see the ocean from the port of Alberta, it must be so wonderful.";
+	mes "有名的洞窟去拾蛤蜊 !";
+	mes "虽然有些危险..";
+	mes "但要是能去感受一下，应该也值得吧?";
 	mes "After the next year's athletic competition, I will go on a round-the-world tour with my brother.";
 	close;
 }
@@ -674,44 +674,44 @@ aldeba_in,152,47,4	script	Fussy Man#alde	97,{
 }
 
 aldeba_in,156,179,4	script	Master#alde	61,{
-	mes "[Master]";
-	mes "The Kafra Corporation Headquarters is located here in Al De Baran.";
-	mes "Do you know";
-	mes "what that means?";
+	mes "[帕那马]";
+	mes "艾尔帕兰在尘世大陆上";
+	mes "算是个名满天下";
+	mes "为人所津津乐道";
 	next;
-	mes "[Master]";
-	mes "That means those cute Kafra Employees come here for their lunch breaks! Isn't that great?!";
+	mes "相当著名的运河之都";
+	mes "[帕那马]";
 	next;
-	mes "[Master]";
-	mes "Alright, then!";
-	mes "Pop Quiz Time!";
-	mes "Who's your";
-	mes "favorite Kafra girl?";
+	mes "运河就是..";
+	mes "为了可以在内陆地区船运";
+	mes "以及灌溉农地 ..";
+	mes "等用途而建造的";
+	mes "人工水路";
 	next;
 	if (Sex == SEX_FEMALE) {
-		mes "[Master]";
-		mes "Oh, and don't worry. I know that girls have some kind of opinion about how pretty other girls are.";
+		mes "[帕那马]";
+		mes "一般来说，运河";
 		next;
 	}
-	if (select("Awesome!:No way, I ain't a perv.") == 1) {
-		mes "[Master]";
-		mes "Alright, here we go!";
-		mes "Choose your favorite Kafra Lady!";
+	if (select("关于运河之都:结束对话") == 1) {
+		mes "属于交通工具的一部份";
+		mes "运河大部分是挖掘陆地或";
+		mes "水路填土后所留下的水路..";
 		next;
-		mes "[Master]";
-		mes "The original Kafra Mascot, the classic blue haired lady! Candidate Number One: ^3355FFPavianne^000000!";
+		mes "[帕那马]";
+		mes "也有人将";
 		next;
-		mes "[Master]";
-		mes "Her graceful ponytail takes men's breath away! The fan favorite amongst teen males! Candidate Number Two: ^5533FFBlossom^000000!";
+		mes "为整修河川而建的人工水路";
+		mes "称为运河";
 		next;
-		mes "[Master]";
-		mes "Her long, straight hair, like silk from the East, is her charm point. Direct from Payon, it's Candidate Number Three: ^555555Jasmine^000000!";
+		mes "[帕那马]";
+		mes "水很清澈吧?";
 		next;
-		mes "[Master]";
-		mes "A tomboy with bright orange, shortly cut hair. Candidate Number Four: ^1133DDRoxie^000000!";
+		mes "既然这里被称做是山谷村";
+		mes "当然就有山谷村应有的特色噜 ..";
 		next;
-		mes "[Master]";
-		mes "Intelligent, sophisticated and never seen without her luxurious glasses. It's Candidate Number Five: ^33FF55Leilah^000000!";
+		mes ". . . . .";
+		mes "好好的休息完后再走吧!";
 		next;
 		mes "[Master]";
 		mes "Pretty, cute and fresh faced. Although She looks young and immature, she's the best staff!";

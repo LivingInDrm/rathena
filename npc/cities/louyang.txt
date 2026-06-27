@@ -22,63 +22,63 @@
 // Luoyang Transportation
 //============================================================
 -	script	::Girl_louyang	-1,{
-	mes "[Girl]";
-	mes "La la la la~";
-	mes "I feel so good today~";
-	mes "I'm in the mood to go";
-	mes "on a picnic somewhere~";
-	mes "La la la la~";
+	mes "[姑娘]";
+	mes "啦啦啦啦~";
+	mes "今天天气真正好~";
+	mes "我要去野营~";
+	mes "啦啦啦啦~";
+	mes "[姑娘]";
 	next;
-	switch(select("About Luoyang.:Go to Luoyang.:Cancel.")) {
+	switch(select("问问洛阳.:去洛阳.:取消.")) {
 	case 1:
-		mes "[Girl]";
-		mes "Oh, are you";
-		mes "interested in Luoyang?";
-		mes "It's a nice place to";
-		mes "visit for travelers.";
+		mes "啊, 嘻嘻, 对洛阳感兴趣吗?";
+		mes "洛阳对观光客们来说, 是个绝佳的地方呐.";
+		mes "[姑娘]";
+		mes "洛阳有一个很长的历史, 这里有很多关于传奇法师和战士的故事.";
+		mes "也有传闻说洛阳地区有很多怪物在游荡.";
 		next;
-		mes "[Girl]";
-		mes "Luoyang has a long history";
-		mes "with stories of ancient magic and warriors. It's also rumored that many evil beasts roam the";
-		mes "Luoyang area.";
+		mes "[姑娘]";
+		mes "这里有很多关于治愈丹药, 神秘时空的故事,";
+		mes "还有武术宗师!";
+		mes "[姑娘]";
 		next;
-		mes "[Girl]";
-		mes "You can find cure-all medicines, mysterious occurrences, and";
-		mes "martial artists all in one place!";
+		mes "我在洛阳的时候可是天天都学武术的喔. 呵呵, 看不出来其实我很强壮吧!";
+		mes "[姑娘]";
+		mes "想去洛阳的话, 就和我来说好了.";
 		next;
-		mes "[Girl]";
-		mes "I used to train in the martial arts every morning back when I was in Luoyang. I might not look like it, but I'm pretty strong!";
+		mes "支付一些钱我就可以帮助你顺利进入洛阳城~";
+		mes "[姑娘]";
 		next;
-		mes "[Girl]";
-		mes "If you want to visit";
-		mes "Luoyang, feel free to";
-		mes "tell me. Just give me";
-		mes "some Zeny and we'll go~";
+		mes "马上就要去洛阳吧.";
+		mes "一次的费用为 10,000 Zeny.";
+		mes "[姑娘]";
+		mes "准备好了莫?";
+		mes "[姑娘]";
 		close;
 	case 2:
-		mes "[Girl]";
-		mes "I'll guide you to";
-		mes "Luoyang right away.";
-		mes "For my service, I am";
-		mes "accepting 10,000 Zeny.";
+		mes "好勒~";
+		mes "走起!";
+		mes "祝你玩得愉快!";
+		mes "[姑娘]";
+		mes "...";
 		next;
-		mes "[Girl]";
-		mes "So, are you ready?";
+		mes "貌似你身上么有 10,000 Zeny...";
+		mes "先去拿点钱再说吧!";
 		next;
-		if (select("Yes!:No.") == 1) {
+		if (select("是的，准备好了！:还没拉.") == 1) {
 			if (Zeny > 9999) {
-				mes "[Girl]";
-				mes "Okay~";
-				mes "Ready!";
-				mes "Have fun!";
+				mes "[姑娘]";
+				mes "哦...";
+				mes "真失望啊.";
+				mes "那么, 再会咯!";
 				close2;
 				set Zeny, Zeny-10000;
 				warp "lou_fild01",190,101;
 				end;
 			}
-			mes "[Girl]";
-			mes "...";
-			mes "You don't seem";
+			mes "[姑娘]";
+			mes "哦...";
+			mes "再会咯!";
 			mes "to have 10,000 Zeny...";
 			mes "Go get some money first!";
 			close;
@@ -98,16 +98,16 @@
 }
 
 lou_fild01,190,100,7	script	Girl#1lou	815,{
-	mes "[Girl]";
-	mes "Would you";
-	mes "like to go back";
-	mes "to Alberta?";
+	mes "[姑娘]";
+	mes "像要返回艾尔贝塔吗?";
+	mes "[姑娘]";
+	mes "希望下次再见喔!";
 	next;
-	if (select("Go back to Alberta.:Cancel.") == 1) {
-		mes "[Girl]";
-		mes "I hope to";
-		mes "see you again!";
-		mes "Bye bye!";
+	if (select("返回艾尔贝塔吧.:取消.") == 1) {
+		mes "( ^_^ )/~~拜拜!";
+		mes "[姑娘]";
+		mes "喜欢这个地方的话, 多多待一会吧, 试试看我们的吃食, 看看这儿美丽的风景!";
+		mes "[姑娘]";
 		close2;
 		if (checkre(0))
 			warp "alberta",245,87;
@@ -115,11 +115,11 @@ lou_fild01,190,100,7	script	Girl#1lou	815,{
 			warp "alberta",235,45;
 		end;
 	}
-	mes "[Girl]";
-	mes "If you like this";
-	mes "area, why don't you";
-	mes "stay and enjoy the";
-	mes "the food and the sights!";
+	mes "哈哈, 说起风景...";
+	mes "我说的是那些姑凉们喇!";
+	mes "啼嘻嘻~";
+	mes "[姑娘]";
+	mes "这里的帅锅不少喔~";
 	next;
 	if (Sex == SEX_MALE) {
 		mes "[Girl]";
@@ -208,48 +208,48 @@ louyang,276,136,4	script	Fist master#lou	819,{
 }
 
 louyang,276,133,0	script	Trainee#1lou::LouTrainee	819,{
-	mes "[Trainee]";
-	mes "Yeeeyap~!";
-	mes "Taaaaaah~~!!";
-	mes "Hooo~.";
+	mes "[训练者]";
+	mes "呀呀呀呀~!";
+	mes "啊啊啊啊啊~~!!";
+	mes "霍霍霍~.";
 	close;
 }
 
 louyang,276,131,0	script	Trainee#2lou	819,{
-	mes "[Trainee]";
-	mes "Tah Tah Tah!";
-	mes "Taaaaaah~~!!";
-	mes "Schwooooooo~";
+	mes "[李芷清]";
+	mes "俺们女王宫的人都是女的. 俺也是女的.";
+	mes "[李芷清]";
+	mes "最近招不到新人咯, 所以俺回来看看有没有女淫们愿意加入俺们.";
 	close;
 }
 
 louyang,276,129,0	script	Trainee#3lou	819,{
-	mes "[Trainee]";
-	mes "Si!";
-	mes "Ayah!!";
+	mes "[安克亚]";
+	mes "我在练习 '鹰爪功.' 不但要锻炼拳部力量, 还要学着去调和心态.";
+	mes "[安克亚]";
 	close;
 }
 
 louyang,274,133,0	script	Trainee#4lou	819,{
-	mes "[Trainee]";
-	mes "Dergh!";
-	mes "Dergh!";
-	mes "Schwa--!";
+	mes "[江肖戟]";
+	mes "我终于...";
+	mes "练成了 '鹰爪功!'";
+	mes "[江肖戟]";
 	close;
 }
 
 louyang,274,131,0	script	Trainee#5lou	819,{
-	mes "[Trainee]";
-	mes "Yah Yah Yah!";
-	mes "Taaaaaah~~!!";
-	mes "Wataaaaaaaah!";
+	mes "[训练者]";
+	mes "呔 呔 呔!";
+	mes "阿大大~~!!";
+	mes "嘘呼呼呼呼~";
 	close;
 }
 
 louyang,274,129,0	script	Trainee#6lou	819,{
-	mes "[Trainee]";
-	mes "Yeeeyap~!";
-	mes "Taaaaaah~~!!";
+	mes "[训练者]";
+	mes "兮哈!";
+	mes "啊呀!!";
 	mes "Hooo~";
 	close;
 }
@@ -307,9 +307,9 @@ lou_in01,25,23,5	script	Friendly Looking Lady#lo	817,{
 }
 
 louyang,84,254,0	script	Exit#lou	111,{
-	mes "^3355FFThere is some sort";
-	mes "of descent apparatus.";
-	mes "Would you like to use it?^000000";
+	mes "[训练者]";
+	mes "呔啊!";
+	mes "呔啊!";
 	next;
 	if (select("Yes.:No.") == 1) {
 		if (rand(1,100) == 34) {

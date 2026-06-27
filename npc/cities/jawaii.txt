@@ -41,23 +41,23 @@
 // Jawaii Transportation
 //============================================================
 jawaii,239,112,7	script	Mariner#toizu	100,{
-	mes "[Mariner]";
-	mes "This ship";
-	mes "is heading";
-	mes "towards ^666699Izlude^000000.";
-	mes "Have you enjoyed your time in Jawaii? You should check to see";
-	mes "if you forgot anything before we go.";
+	mes "[船员]";
+	mes "本艘船开往^666699依斯鲁得^000000.";
+	mes "你觉得呆在爪哇咿的时光如何? 你应该在我们";
+	mes "出发前检查一下是不是遗忘了些什么东西.";
+	mes "[船员]";
+	mes "嗯, 那么.";
 	next;
-	mes "[Mariner]";
-	mes "Well, then.";
-	mes "Would you like";
-	mes "to go back to Izlude?";
+	mes "你要回到依斯鲁得吗?";
+	mes "[船员]";
+	mes "现在, 让我带你回依斯鲁得吧.";
+	mes "[船员]";
 	next;
-	if (select("Go back.:Cancel.") == 1) {
-		mes "[Mariner]";
-		mes "Now, let me";
-		mes "guide you to";
-		mes "Izlude.";
+	if (select("回去.:取消.") == 1) {
+		mes "别着急, 多看看";
+		mes "你喜欢的东西.";
+		mes "怎么说, 你也不";
+		mes "能经常来这里,";
 		close2;
 		if(checkre(0))
 			warp "izlude",195,212;
@@ -65,7 +65,7 @@ jawaii,239,112,7	script	Mariner#toizu	100,{
 			warp "izlude",176,182;
 		end;
 	}
-	mes "[Mariner]";
+	mes "是不是?";
 	mes "Take your time";
 	mes "and look around as";
 	mes "much as you like.";
@@ -76,28 +76,28 @@ jawaii,239,112,7	script	Mariner#toizu	100,{
 }
 
 jawaii,122,263,5	script	Mariner#toalbe	100,{
-	mes "[Mariner]";
-	mes "This ship";
-	mes "is headed back";
-	mes "towards ^003399Alberta^000000.";
-	mes "Have you enjoyed your time in Jawaii? You should check to see";
-	mes "if you forgot anything before we go.";
+	mes "[船员]";
+	mes "本艘船开往^666699艾尔贝塔^000000.";
+	mes "你觉得呆在爪哇咿的时光如何? 你应该在我们";
+	mes "出发前检查一下是不是遗忘了些什么东西.";
+	mes "[船员]";
+	mes "嗯, 那么.";
 	next;
-	mes "[Mariner]";
-	mes "Now, are you";
-	mes "ready to go back";
-	mes "to Alberta?";
+	mes "你要回到艾尔贝塔吗?";
+	mes "[船员]";
+	mes "现在, 让我带你回艾尔贝塔吧.";
+	mes "[船员]";
 	next;
-	if (select("Go back.:Cancel.") == 1) {
-		mes "[Mariner]";
-		mes "Now, let me";
-		mes "take you back";
-		mes "to Alberta.";
+	if (select("回去.:取消.") == 1) {
+		mes "是的...";
+		mes "尽可能的享受你";
+		mes "的假期吧. 当你";
+		mes "准备好的时候,";
 		close2;
 		warp "alberta",192,157;
 		end;
 	}
-	mes "[Mariner]";
+	mes "我们再走.";
 	mes "Yeah...";
 	mes "Try to enjoy your";
 	mes "vacation as much";
@@ -219,33 +219,33 @@ jawaii,165,121,1	script	Jawaii Resident#desc3	724,{
 }
 
 jawaii,141,200,3	script	Employee#sroom	798,{
-	mes "[Alowa]";
-	mes "W-Welcome...?";
-	mes "This is o-o-our";
-	mes "s-sweet room.";
-	mes "We, we just c-cleaned";
-	mes "this r-room for you";
-	mes "o-of course.";
+	mes "[小姐]";
+	mes "噢, 亲爱的!";
+	mes "你不是正要去酒馆吧, 哈?";
+	mes "[小姐]";
+	mes "呼~!";
+	mes "谢天谢地!";
+	mes "那个...";
 	next;
-	mes "[Alowa]";
-	mes "Th-The charge is is";
-	mes "1000 zeny p-p-per person?";
-	mes "P-please pay me the fee and";
-	mes "I,I'll let you in. I ssss...swear!";
+	mes "那个酒馆或许对你";
+	mes "来说, 不是个能让";
+	mes "你快乐的地方.";
+	mes "[小姐]";
+	mes "即使我在那里工作, 我仍然不能相信那样的地方是存在的! 我是说, 我认为那里的酒精在卢恩 米得加尔特王国里是非法的!";
 	next;
-	mes "[Alowa]";
-	mes "I, I'll also ca-carry your luggage. B-but pay me first. Otherwise, my bo-boss will be unhappy and... ^666666*Gulp*^000000";
+	mes "[小姐]";
+	mes "我不知道单身的人怎样找到这个";
 	next;
-	mes "[Alowa]";
-	mes "^333333Beat me to death...^000000";
+	mes "地方的. 但我已经听说许多人由于不同的原由来到这里.";
+	mes "[小姐]";
 	next;
-	if (select("Use.:Cancel.") == 1) {
-		mes "[Alowa]";
+	if (select("不, 不去.:当然是~") == 1) {
+		mes "我甚至还看到未婚的单身们来到这里只为了一醉方休! 噢! 由于某些原因, 人们";
 		if (Zeny > 999) {
-			mes "T-Thank you ssso much!";
-			mes "L-Let open the room door";
-			mes "ffffor you. Thank y-you.";
-			mes "Ha-have a good time.";
+			mes "逐渐离开酒馆!";
+			mes "[小姐]";
+			mes "我想知道到底发生了什么?";
+			mes "^666666*叹气*^000000 我是那里的女侍者, 但我仍要告诉你不要进去那里...";
 			close2;
 			set Zeny, Zeny-1000;
 			warp "jawaii_in",116,64;
@@ -265,24 +265,24 @@ jawaii,141,200,3	script	Employee#sroom	798,{
 }
 
 jawaii,108,199,5	script	Employee#antroom	74,{
-	mes "[Pine Oran]";
-	mes "Welcome to";
-	mes "the Antique room.";
+	mes "[爪哇 爪哇]";
+	mes "你知道在爪哇咿什";
+	mes "么地方最美丽吗?";
 	next;
-	mes "[Pine Oran]";
-	mes "This room provides lovers with";
-	mes "an atmosphere of plush elegance.";
-	mes "Every comfort is provided for";
-	mes "young couples in this room.";
+	mes "[爪哇 爪哇]";
+	mes "那就是这里北部的'爱心岛'. 岛周围的水不深, 因此你可以小心的走到那儿.";
+	mes "[爪哇 爪哇]";
+	mes "那里是你与你所爱的人分享最亲密时光的最佳";
+	mes "地方. 它是完全被划分出去的美丽地域.";
 	next;
-	mes "[Pine Oran]";
-	mes "All the rooms may have the same basic structure, but each of them has their own unique interior to suit the tastes of different people.";
+	mes "[爪哇 爪哇]";
+	mes "当然, 如果你是单身, 自";
 	next;
-	mes "[Pine Oran]";
-	mes "If you would like to lodge here, it is required to pay a 1,000 zeny fee for each person before entering. Since you're here to make fond memories of your honeymoon,";
-	mes "you should stay in the nicest room.";
+	mes "己一个人去那里的话可不";
+	mes "是一个好注意.";
+	mes "那样你看起来会像一个悲";
 	next;
-	mes "[Pine Oran]";
+	mes "惨的失败者!";
 	mes "Do not hesitate to let me know when you've decided on the Antique Room. Once you've made your choice,";
 	mes "I will guide you there.";
 	next;
@@ -313,16 +313,16 @@ jawaii,108,199,5	script	Employee#antroom	74,{
 }
 
 jawaii,107,189,5	script	Employee#horoom	93,{
-	mes "[Sharkie Rania]";
-	mes "I'll take you";
-	mes "to the Honey Room.";
-	mes "It costs 1,000 zeny.";
+	mes "[哇咿 哇咿]";
+	mes "欢迎来到爪哇咿!";
+	mes "[哇咿 哇咿]";
+	mes "在这里, 你可以好好享受你的蜜月期";
 	next;
-	mes "[Sharkie Rania]";
-	mes "So you wanna go?";
+	mes "而且不必担心任何打扰. 你都不用为那支臭名昭彰的单身军团费心!";
+	mes "[哇咿 哇咿]";
 	next;
 	if (select("Use.:Cancel.") == 1) {
-		mes "[Sharkie Rania]";
+		mes "还有, 这周围有一些魔物, 但是你可别故意攻击它们. 试想一下, 它们也是如此喜爱这座岛, 就把它们当作另一些原住的居民.";
 		if (Zeny > 999) {
 			mes "Eh, alright.";
 			mes "Let's get going.";
@@ -344,16 +344,16 @@ jawaii,107,189,5	script	Employee#horoom	93,{
 }
 
 jawaii,112,173,7	script	Employee#villroom	93,{
-	mes "[Larks Rania]";
-	mes "Hello dear,";
-	mes "how are you?";
-	mes "Are you looking for";
-	mes "a room to stay in?";
+	mes "[哇爪 哇爪]";
+	mes "啊, 你是外地来的游客吧.";
+	mes "如果你迷路了, 那么只要朝着西. 为新婚者们建造的旅馆";
+	mes "位于爪哇咿的西部. 这里的住宿环境可是非常棒的.";
+	mes "[哇爪 哇爪]";
 	next;
-	mes "[Larks Rania]";
-	mes "This is called the Villa Room.";
-	mes "I recommend this room to people";
-	mes "who prefer to stay in a place with";
+	mes "有四间不同主题的房间, 所以你可以选择合你胃口的一间. 如果你想要询问更多信息, 那周围有导游.";
+	mes "[哇爪 哇爪]";
+	mes "当你想要回去的时候, 西北方向有前";
+	mes "往艾尔贝塔的船只. 如果你是想回去依斯鲁得, 东南方向有一艘船是去那儿的.";
 	mes "a comfortable atmosphere";
 	mes "much like home.";
 	next;
@@ -436,24 +436,24 @@ jawaii,214,168,5	script	Honeymoon Helper#Jawaii	71,{
 // Inside Jawaii
 //============================================================
 jawaii_in,25,94,0	script	Employee#jaw1	724,{
-	mes "[Employee Tryteh]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[咿哇 咿哇]";
+	mes "爪哇咿~";
 	if (getpartnerid()) {
-		mes "Anyway, I am so glad that you two have gotten married. I hope you both will live happily ever after~";
+		mes "爪哇~咿~";
 		next;
-		mes "[Employee Tryteh]";
-		mes "Try to be a little careful if you bump into any rude customers.";
-		mes "They might be drunk and do something stupid. You know";
-		mes "how it is...";
+		mes "可以找到快乐的地方~";
+		mes "[咿哇 咿哇]";
+		mes "噢, 这里不美吗? 你不用去做其它事情, 只需要放松下来呼吸这里的新鲜空气. 这就是";
+		mes "在爪哇咿最棒的一件事情.";
 		close;
 	}
 	else if (!getpartnerid()) {
-		mes "I hope you enjoy your stay";
-		mes "over here. But try not";
-		mes "to drink too much~";
+		mes "[咿哇 咿哇]";
+		mes "噢! 有时我们会在这个舞台";
+		mes "上举行音乐会. 如果你擅长";
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "唱歌, 为什么不来舞台上为";
 	close;
 
 OnWelcome:
@@ -465,25 +465,25 @@ OnSolo:
 }
 
 jawaii_in,25,96,0	script	Employee#jaw2	724,{
-	mes "[Employee Fey]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[啊喽哇]";
+	mes "欢-欢迎...?";
 	if (getpartnerid()) {
 		next;
-		mes "[Employee Fey]";
-		mes "We hope that you enjoy your time here with the one that you love. Isn't this place nice and cozy,";
-		mes "a perfect romantic atmosphere?";
+		mes "这里是我-我-我";
+		mes "们的甜-甜美的房间.";
+		mes "我们, 我们为您";
 		next;
-		mes "[Employee Fey]";
-		mes "It would be absolutely perfect if it weren't for those 'Invincible Single Army' weirdos. Somehow,";
-		mes "a few of those dorks found their way here. To hell with them!";
+		mes "好-好好地把房-";
+		mes "房间收-收拾过了.";
+		mes "[啊喽哇]";
 		close;
 	}
 	else if (!getpartnerid()) {
-		mes "Have a good time! But please,";
-		mes "try not to interrupt the happily married people here!";
+		mes "这-这费用是1000 Zeny 每-每-每人!";
+		mes "请-请支付我足够的费用, 我, 我会让";
 		close;
 	}
-	mes "I hope you will have a good time~";
+	mes "你进去. 我发发发发... 发誓!";
 	close;
 
 OnWelcome:
@@ -495,39 +495,39 @@ OnSolo:
 }
 
 jawaii_in,25,98,0	script	Employee#jaw3	724,{
-	mes "[Employee Buffy]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[派 奥兰]";
+	mes "欢迎来到古典房间.";
 	if (getpartnerid()) {
 		next;
-		mes "[Employee Buffy]";
-		mes "Oh~";
-		mes "Look at you...";
-		mes "You look perfect";
+		mes "[派 奥兰]";
+		mes "这个房间为爱人们提供了非常";
+		mes "舒适幽雅的环境.";
+		mes "这房间中的每个细小的舒适环";
 		if (Sex == SEX_MALE)
-			mes "for your wife~";
+			mes "节都是为年轻夫妇们提供的.";
 		else
-			mes "with your husband~";
-		mes "Awwww, I want to";
-		mes "get married soon~!";
+			mes "[派 奥兰]";
+		mes "所有房间的基本布局是差不多的, 但是每一个房间都有自己独一无二的适合不同人群的主题.";
+		mes "[派 奥兰]";
 		close;
 	}
 	else if (!getpartnerid()) {
 		next;
-		mes "[Employee Buffy]";
-		mes "Hmm...?";
-		mes "You don't look like";
-		mes "you're married, are you?";
+		mes "如果你愿意在这里住宿, 请在进入之前支付1,000 Zeny. 你到这里来就是想要留下些美好的蜜月回忆的,";
+		mes "所以你应该住进最棒的房子.";
+		mes "[派 奥兰]";
+		mes "当你决定要住古典房间的时候, 就来告诉我. 一旦你做出了最后选择,";
 		if (Sex == SEX_MALE) {
 			next;
-			mes "[Employee Buffy]";
-			mes "I'm pretty good";
-			mes "at cooking and cleaning";
-			mes "^666666*AHEM*^000000 I've got a ^FF0000nice body^000000.";
-			mes "So what do you think...?";
+			mes "我将带你进去.";
+			mes "[派 奥兰]";
+			mes "谢谢你使";
+			mes "用我们的";
+			mes "服务.";
 		}
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "那么...";
 	close;
 
 OnWelcome:
@@ -539,26 +539,26 @@ OnSolo:
 }
 
 jawaii_in,25,100,0	script	Employee#jaw4	724,{
-	mes "[Employee Itere]";
-	mes "Welcome to";
-	mes "Jawaii Tavern~";
+	mes "[沙奇 瑞尼亚]";
+	mes "我能带你去甜蜜房间.";
+	mes "需要花费1,000 Zeny.";
 	if (getpartnerid()) {
 		next;
-		mes "[Employee Itere]";
-		mes "Oh~";
-		mes "You look so happy";
-		mes "to be here with your";
-		mes "partner! How precious~";
+		mes "[沙奇 瑞尼亚]";
+		mes "那么你要去吗?";
+		mes "[沙奇 瑞尼亚]";
+		mes "呃, 好的.";
+		mes "我们走吧.";
 		close;
 	}
 	else if (!getpartnerid()) {
-		mes "I hope you";
-		mes "enjoy your st--";
-		mes "Wait a minute...!";
+		mes "你...";
+		mes "没有足够的金钱.";
+		mes "拜托, 浪漫可是需";
 		next;
-		mes "[Employee Itere]";
-		mes "You're...";
-		mes "You better not be part of";
+		mes "要钱的, 明白吗?";
+		mes "[沙奇 瑞尼亚]";
+		mes "好吧.";
 		mes "the Invincible Single Army!";
 		next;
 		mes "[Employee Itere]";
@@ -578,28 +578,28 @@ OnSolo:
 }
 
 jawaii_in,30,94,4	script	Employee#jaw5	724,{
-	mes "[Employee Tonia]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[拉克斯 瑞尼亚]";
+	mes "你好, 亲爱的,";
 	if (getpartnerid()) {
 		next;
-		mes "[Employee Tonia]";
-		mes "Congratulations to both of you!";
+		mes "怎么样?";
+		mes "你是不是想找个";
 		next;
-		mes "[Employee Tonia]";
-		mes "^666666*Sigh...*^000000";
-		mes "^333333I hope those Single Army morons don't get drunk and do something stupid again...";
+		mes "房间住一下?";
+		mes "[拉克斯 瑞尼亚]";
+		mes "这是别墅套间.";
 		close;
 	}
 	else if (!getpartnerid()) {
-		mes "Wait a sec. You're...!";
+		mes "我喜欢向别人推荐";
 		next;
-		mes "[Employee Tonia]";
-		mes "Hey--!";
-		mes "You're not welcome here!";
-		mes "S-Stop drinking! Right this instant!";
+		mes "这个像家一样有舒";
+		mes "适环境的房间.";
+		mes "[拉克斯 瑞尼亚]";
+		mes "和其它房间一样,";
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "住宿费为1,000 Zeny.";
 	close;
 
 OnWelcome:
@@ -611,20 +611,20 @@ OnSolo:
 }
 
 jawaii_in,30,96,4	script	Employee#jaw6	724,{
-	mes "[Employee Kay]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[助手]";
+	mes "没有地方比爪哇";
 	if (getpartnerid()) {
 		next;
-		mes "[Employee Kay]";
-		mes "Oh gosh...!";
-		mes "Lately, I've been dealing with too many drunks in this place! It's been really hard for me to take care of it all...";
+		mes "咿更适合你的蜜";
+		mes "月假期了.";
+		mes "[助手]";
 		close;
 	}
 	else if (!getpartnerid()) {
-		mes "I understand that you want to relax and take a break, but please be careful and don't drink too much.";
+		mes "为什么你不在这里充分利用时间, 留下你未来几年可以珍藏的许多美好的回忆?";
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "[助手]";
 	close;
 
 OnWelcome:
@@ -636,19 +636,19 @@ OnSolo:
 }
 
 jawaii_in,30,98,4	script	Employee#jaw7	724,{
-	mes "[Employee Amy]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[职员 崔西]";
+	mes "欢迎来到爪哇咿酒馆~";
 	if (getpartnerid()) {
-		mes "Oh! You and your partner look perfect for each other. Like, um,";
-		mes "a gun and a bullet! No...?";
+		mes "无论如何, 我非常高兴你和你爱人已经结婚了. 祝你们以后幸福快乐~";
+		mes "[职员 崔西]";
 		next;
-		mes "[Employee Amy]";
-		mes "How about...";
-		mes "Milk and cookies?";
-		mes "Gin and tonic?";
-		mes "Jackie Tucker";
-		mes "and Chris Chan...?";
-		mes "Ummmm....";
+		mes "你若碰到任何粗鲁的客人, 小心一点啊.";
+		mes "他们可能喝醉后做一些愚蠢的事情. 你知";
+		mes "道可能会...";
+		mes "祝你在这里玩";
+		mes "得愉快. 不过";
+		mes "别喝太多了~";
+		mes "祝你玩得愉快.";
 		close;
 	}
 	else if (!getpartnerid()) {
@@ -670,19 +670,19 @@ OnSolo:
 }
 
 jawaii_in,30,100,4	script	Employee#jaw8	724,{
-	mes "[Employee Yasmine]";
-	mes "Welcome to Jawaii Tavern~";
+	mes "[职员 菲]";
+	mes "欢迎来到爪哇咿酒馆~";
 	if (getpartnerid()) {
-		mes "Just like the moon and the stars, you and your partner look perfect together. I'm really happy for you!";
+		mes "[职员 菲]";
 		close;
 	}
 	else if (!getpartnerid()) {
 		next;
-		mes "[Employee Yasmine]";
-		mes "You don't look like you belong here, but I hope you find your perfect match one of these days. Have fun!";
+		mes "我们希望你和你的爱人喜欢在这里的时光. 这里是非常舒适,";
+		mes "浪漫的地方吧?";
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "[职员 菲]";
 	close;
 
 OnWelcome:
@@ -719,39 +719,39 @@ OnTouch_:
 
 jawaii_in,15,104,0	script	Waitress#jawaii	80,{
 	if (checkweight(1201,1) == 0) {
-		mes "^3355FF * Wait a minute! *";
-		mes "You're carrying too many items with you right now. Please store some of your things into Kafra Storage and try again.^000000";
+		mes "[职员 伊特尔]";
+		mes "欢迎来到爪哇咿酒馆~";
 		close;
 	}
 	if (getpartnerid()) {
-		mes "[Waitress]";
-		mes "Hello,";
-		mes "how can I help you?";
+		mes "[职员 伊特尔]";
+		mes "噢~";
+		mes "你看起来和你";
 		emotion ET_CHUP;
 		next;
 		switch(select("Give me food.:Bring me drink.:Where's the bar?")) {
 		case 1:
-			mes "[Waitress]";
-			mes "You can have";
-			mes "1 Meat for 1,000 zeny.";
-			mes "Would you like one?";
+			mes "伴侣在这里很";
+			mes "开心! 多珍贵~";
+			mes "希望你喜欢呆--";
+			mes "等一下...!";
 			next;
 			if (select("Yes.:Wha--! It's too expensive!") == 1) {
-				mes "[Waitress]";
+				mes "[职员 伊特尔]";
 				if (Zeny > 999) {
 					set Zeny, Zeny-1000;
 					getitem 517,1; //Meat
-					mes "There you go~";
-					mes "Enjoy your meal~!";
+					mes "你...";
+					mes "最好别告诉我你就是不可战胜";
 					close;
 				}
-				mes "I'm sorry but...";
-				mes "This isn't enough money...";
+				mes "的单身军团的一份子!";
+				mes "[职员 伊特尔]";
 				close;
 			}
-			mes "[Waitress]";
-			mes "If you";
-			mes "need anything,";
+			mes "好吧, 不管你做什么, 别乱搞, 喝醉以后";
+			mes "去打扰这里的夫妇们!";
+			mes "祝你玩得愉快.";
 			mes "please let me know.";
 			close;
 
@@ -832,26 +832,26 @@ jawaii_in,15,104,0	script	Waitress#jawaii	80,{
 }
 
 jawaii_in,28,124,0	script	Bartender#jaw	46,{
-	mes "[Bartender]";
-	mes "Welcome to the";
-	mes "Jawaii Tavern bar.";
-	mes "What would you";
-	mes "like to drink?";
+	mes "[职员 托尼亚]";
+	mes "欢迎来到爪哇咿酒馆~";
+	mes "[职员 托尼亚]";
+	mes "恭喜你和你的爱人!";
+	mes "[职员 托尼亚]";
 	next;
 	if (Zeny < 99) {
-		mes "[Bartender]";
+		mes "^666666*叹气...*^000000";
 		if (rand(1,100) > 29) {
-			mes "Hm, I'm sorry";
-			mes "but you do not";
-			mes "have enough";
-			mes "money for a drink.";
+			mes "^333333我希望那些单身军团的白痴们别在这里喝醉了然后再做那些愚蠢的事情...";
+			mes "等下. 你是...!";
+			mes "[职员 托尼亚]";
+			mes "嘿--!";
 			close;
 		}
-		mes "....Hmm...";
+		mes "你在这里不受欢迎!";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Hey...!";
-		mes "Bartender...";
+		mes "停-停止喝酒! 赶快停下来!";
+		mes "祝你玩得愉快.";
 		mes "Gimmie one more.";
 		next;
 		mes "[Bartender]";
@@ -1117,16 +1117,16 @@ S_KillChar:
 }
 
 jawaii_in,43,115,0	script	Customer#jaw_1	97,{
-	mes "[Buchi]";
+	mes "[职员 凯]";
 	if (!getpartnerid()) {
 		if (Zeny > 99) {
-			mes "Grrrr...";
-			mes "Damn! I don't";
-			mes "like this place!";
-			mes "I don't like this at all!";
+			mes "欢迎来到爪哇咿酒馆~";
+			mes "[职员 凯]";
+			mes "噢, 唉呀...!";
+			mes "最近啊, 我一直在给醉鬼们提供服务! 真够难伺候的...";
 			next;
-			mes "[Buchi]";
-			mes "I can't believe my eyes! Everyone else looks disgustingly happy! It makes me feel so miserable!";
+			mes "我能理解你想要放松休息下, 但请你别喝的太多了.";
+			mes "祝你玩得愉快.";
 			mes "You agree, don't you?!";
 			next;
 			mes "[Buchi]";
@@ -1169,26 +1169,26 @@ jawaii_in,43,115,0	script	Customer#jaw_1	97,{
 }
 
 jawaii_in,41,106,3	script	Customer#Cage	98,{
-	mes "[Cage]";
+	mes "[职员 艾米]";
 	if (getpartnerid()) {
-		mes "....Bah!";
-		mes "What are you so happy about?";
-		mes "After all, everyone knows marriage is a sham for desperate, lonely people!";
+		mes "欢迎来到爪哇咿酒馆~";
+		mes "噢! 你和你的伴侣是多么的完美. 就像, 嗯,";
+		mes "一支枪和一发子弹! 不不...?";
 		next;
-		mes "[Cage]";
+		mes "[职员 艾米]";
 		if (Sex == SEX_MALE) {
-			mes "I don't trust anybody!";
-			mes "You're a fool for chaining";
-			mes "yourself to some gorgeous";
-			mes "woman for life!";
-			mes "You hear me?!";
-			mes "A FOOL!";
+			mes "就像...";
+			mes "牛奶和饼干怎么样?";
+			mes "杜松子酒?";
+			mes "或是杰基 塔克和";
+			mes "成 克里斯...?";
+			mes "嗯嗯嗯....";
 		}
 		else {
-			mes "Look at you!";
-			mes "You're a fool for";
-			mes "chaining yourself to";
-			mes "some pretty boy for life!";
+			mes "[职员 艾米]";
+			mes "嗯, 我想这地方不适合你. 但是, 我想你在这里喝酒娱乐是没问题, 只要";
+			mes "你别吵吵闹闹的.";
+			mes "祝你玩得愉快.";
 			mes "You hear me?! A FOOL!";
 		}
 		next;
@@ -1218,14 +1218,14 @@ jawaii_in,41,106,3	script	Customer#Cage	98,{
 // Inside Prontera
 //============================================================
 prt_in,173,13,4	script	Customer#SoloHan	86,{
-	mes "[SoloHan]";
+	mes "[职员 亚斯米内]";
 	if (!getpartnerid()) {
-		mes "Oh man...";
-		mes "I think I'm drunk~";
-		mes "^666666*Hiccup...!*^000000";
+		mes "欢迎来到爪哇咿酒馆~";
+		mes "正如月亮和星星一样, 你和你的伴侣是多么的完美. 真为你们高兴!";
+		mes "[职员 亚斯米内]";
 		next;
-		mes "[SoloHan]";
-		mes "Hey, you...!";
+		mes "你根本不属于这里, 但我希望你某一天能找到你的另一半. 祝你愉快!";
+		mes "祝你玩得愉快.";
 		mes "You understand, don't you?!";
 		mes "Aren't you upset looking at all these happily married couples?!";
 		mes "Yeah~? Me too!";
@@ -1400,51 +1400,51 @@ prt_in,170,14,0	script	Customer#Bachewcca	89,{
 // Izlude
 //============================================================
 -	script	::Honeymoon_Helper_Izlude	-1,{
-	mes "[Helper]";
-	mes "Newlyweds and";
-	mes "long time couples...";
-	mes "We invite you to Jawaii,";
-	mes "the honeymoon resort!";
+	mes "[助手]";
+	mes "新婚者们和久婚的人们...";
+	mes "我们邀请你们到爪哇咿,";
+	mes "蜜月胜地!";
+	mes "[助手]";
 	next;
-	switch(select("Jawaii?:Let's go to Jawaii~!:Cancel.")) {
+	switch(select("爪哇咿?:让我去爪哇咿~!:取消.")) {
 	case 1:
-		mes "[Helper]";
-		mes "There is an island far, far away from the Midgard continent.";
-		mes "It is a very quiet and beautiful island resort that only opens";
-		mes "its doors to couples.";
+		mes "有一座很远的岛, 离卢恩 米得加尔特王国大陆很遥远.";
+		mes "它是一座非常宁静美丽的度假胜岛,";
+		mes "且只对夫妇们敞开大门.";
+		mes "[助手]";
 		next;
-		mes "[Helper]";
-		mes "This is an exclusive travel offer to the special honeymoon resort for Midgard's citizens. The price, 100,000 zeny, may be expensive, but you really get what you pay for.";
+		mes "这里有专门为卢恩 米得加尔特王国的公民们提供的前往特别的蜜月胜地的旅行. 价格为100,000 Zeny, 也许有些贵, 但是你会明白什么是物有所值的.";
+		mes "[助手]";
 		next;
-		mes "[Helper]";
-		mes "I guarantee you that some of";
-		mes "the happiest moments you can";
-		mes "experience in your marriage will be on this island. Can you really put a price on that?";
+		mes "我保证你能在这座岛上经历到一些关";
+		mes "于结婚的快乐的时刻. 你会愿意为此";
+		mes "而支付那些费用吗?";
+		mes "[助手]";
 		close;
 
 	case 2:
-		mes "[Helper]";
+		mes "呃...";
 		if (!getpartnerid()) {
-			mes "Errm...";
-			mes "Unfortunately, singles are not allowed on the island. Why don't you go forget your loneliness in the Prontera pub?";
+			mes "真遗憾, 单身是不允许上岛的. 为什么你不到普隆德拉的酒吧里忘记你的寂寞?";
+			mes "一路平安...!!";
 			close;
 		}
 		else if (Zeny > 99999) {
 			set Zeny, Zeny-100000;
-			mes "Bon Voyage...!!";
-			mes "Let me guide";
-			mes "you to 'Jawaii!'";
+			mes "让我带领你前往'爪哇咿!'";
+			mes "就像我说的, 你必须有100,000 Zeny 才能去拜访爪哇咿. 为了这次旅行, 你为什么不向你的同伴寻求帮助?";
+			mes "[助手]";
 			close2;
 			warp "jawaii",245,125;
 			end;
 		}
-		mes "As I explained, you must have 100,000 zeny in order to visit Jawaii. Why don't you ask your partner for help in gathering the zeny for this trip?";
+		mes "没有什么方法比通过一次前往遥远奇特的领域的神秘旅程来分享如此特别,";
 		close;
 
 	case 3:
-		mes "[Helper]";
-		mes "There's there no better way to share special, secluded moments with your beloved than through";
-		mes "a secret trip to a remote, exotic area.";
+		mes "幽静的时光的.";
+		mes "[助手]";
+		mes "在爪哇咿的美好假期将是你给你所爱的人的一份最棒的礼物~";
 		next;
 		mes "[Helper]";
 		mes "A vacation in Jawaii could very well be the greatest gift that you could give to the one you love~";
