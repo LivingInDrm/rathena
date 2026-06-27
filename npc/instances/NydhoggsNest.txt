@@ -1061,11 +1061,11 @@ spl_in01,104,56,3	script	Aide Arioss#edq	437,3,3,{
 spl_in01,110,21,0	script	trap#s_edq	-1,10,10,{
 OnTouch_:
 	if ((isequipped(2782) == 1) && (ins_nyd == 51)) {
-		mes "[Splendide Guard]";
-		mes "That man is currently under arrest.";
+		mes "一块巨石挡在了你的面前. 上面有一个张开巨大翅膀的龙雕塑.";
+		mes "在栏杆底下, 精灵部落妇女已经变成了石头,不过现在看起来更像一扇宏伟的门.";
 		next;
-		mes "[Splendide Guard]";
-		mes "You'd better behave, Aide Arioss says that different races shall be treated the same way.";
+		mes "有一股神秘的力量在阻止你靠近. 看来有一股强大的力量躲在门的后面...";
+		mes "也许有一个超乎想像的秘密藏在门背后.";
 		warp "spl_in01",109,58;
 		close;
 	}
@@ -1506,11 +1506,11 @@ man_in01,291,62,3	script	Laphine Prisoner#edq	437,3,3,{
 man_in01,282,42,0	script	trap#edq2	-1,10,10,{
 OnTouch_:
 	if ((isequipped(2782) == 1) && (ins_nyd == 52)) {
-		mes "[Manuk Field Elite Soldier]";
-		mes "This is Neat Etorr's order. Please come with us to see him.";
+		mes "[斯普莱迪德守卫]";
+		mes "目前这名男子是被逮捕.";
 		next;
-		mes "[Manuk Field Elite Soldier]";
-		mes "Bring him to Neat Etorr. All soldiers be prepared.";
+		mes "[斯普莱迪德守卫]";
+		mes "助手阿尔洛斯说你最好表现,应以同样的方式对待不同种族.";
 		warp "man_in01",311,54;
 		close;
 	}
@@ -1840,9 +1840,9 @@ OnTimer18000:
 2@nyd,199,178,0	script	nyd_2f_ddr_control	-1,6,6,{
 OnTouch:
 	specialeffect2 EF_HOLYHIT;
-	mes "From below the gorgeous stones, a strange breeze is forming.";
+	mes "从华丽的石头下面, 形成了一股奇怪的微风.";
 	next;
-	mes "The strange power slowly surrounds your body, the dimension is starting to shift.";
+	mes "神奇的力量, 慢慢包围你的身体.";
 	close2;
 	warp instance_mapname("2@nyd"),199,255;
 	end;

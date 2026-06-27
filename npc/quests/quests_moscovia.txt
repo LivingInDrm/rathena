@@ -2726,10 +2726,10 @@ OnDisable:
 OnMyMobDead:
 	if (!mobcount("mosk_ship",strnpcinfo(0)+"::OnMyMobDead")) {
 		$@mos1_edq = 0;
-		mes "[Mr. Ibanoff]";
-		mes "Now that all the monsters are gone,";
-		mes "we can start sailing again";
-		mes "normally.";
+		mes "[提示]";
+		mes "注意, 根据潮汐的变化";
+		mes "船舶只有在以下时间";
+		mes "才可以离开";
 		.@c = charat(strnpcinfo(0),9);
 		switch (.@c) {
 			case 1:
@@ -3804,27 +3804,27 @@ mosk_in,215,181,0	script	#swan_inn	-1,1,1,{
 	end;
 OnTouch:
 	if (mos_swan != 4) end;
-	mes "..................";
-	mes "..................";
+	mes "你好, 你是 伊霸诺布吗?";
+	mes "[伊霸诺布]";
 	next;
-	mes "..................";
-	mes "..................";
-	mes "..................";
+	mes "我是伊霸诺布.";
+	mes "怎么了?";
+	mes "[伊霸诺布]";
 	next;
-	mes "..................";
-	mes "..................";
-	mes "..................";
-	mes "..................";
-	next;
-	mes "["+strcharinfo(0)+"]";
-	mes "Oh, I got a good night's sleep. How long did I sleep?";
+	mes "你是个探险者, 对吧?";
+	mes "来自陌生的大陆?";
+	mes "嗯嗯嗯...";
+	mes "欢迎你.";
 	next;
 	mes "["+strcharinfo(0)+"]";
-	mes "Although I was forced to stay here, it's true that it's got great facilities.";
-	mes "I feel refreshed.";
+	mes "[伊霸诺布]";
 	next;
 	mes "["+strcharinfo(0)+"]";
-	mes "Ok, I guess I will go to the landlord to get some info.";
+	mes "当我在卢恩米德贾鲁斯探险时";
+	mes "也许就是这个名字吧...";
+	next;
+	mes "["+strcharinfo(0)+"]";
+	mes "那时你还没出生呢.";
 	mos_swan = 5;
 	close;
 }
@@ -8259,13 +8259,13 @@ mosk_fild02,157,233,0	script	Shepherdess#rus10	1_F_04,{
 	if (rhea_rus_ring == 6) {
 		if (countitem(7882) < 50) {// Pointed_Branch
 			if (rand(1,3) == 2) {
-				mes "- I avoid the thorns and -";
-				mes "- cut off a branch!! -";
+				mes "seeewaaaaaaaaaaa";
+				mes "[伊霸诺布]";
 				getitem 7882,1;
 				donpcevent strnpcinfo(0) +"::OnDisable";
 				close;
 			}
-			mes "- My hand is pricked by thorns! -";
+			mes "危险!快躲起来!";
 			specialeffect2 EF_HIT2;
 			percentheal -5,0;
 			close;
@@ -8419,11 +8419,11 @@ OnTouch_:
 	}
 	if (rhea_rus_hair == 2) {
 		if (gettime(DT_HOUR) >= 17 || gettime(DT_HOUR) <= 6) {
-			mes "- Splash !! -";
+			mes "[伊霸诺布]";
 			next;
 			if (countitem(523) > 0) {// Holy_Water
-				mes "- You hear a splashing sound -";
-				mes "- and see something gleaming -";
+				mes "所有的怪物都赶走了,";
+				mes "我们可以继续航行了";
 				donpcevent "Lusalka#rus23::OnEnable";
 				close;
 			}
@@ -9059,11 +9059,11 @@ mosk_que,49,22,3	script	#rus27	-1,3,3,{
 OnTouch_:
 	if (rhea_rus_main == 8) {
 		if (!rhea_rus_quiz) {
-			mes "[Voice unidentified]";
-			mes "Who dares to come into my cave!";
+			mes "[伊霸诺布]";
+			mes "所有的怪物都赶走了,";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "Are you Marozka? Maria sent me! I need your 'Golden Thread' to make a 'Golden Key' to release her from the wall!";
+			mes "我们可以继续航行了";
 			next;
 			mes "[Voice unidentified]";
 			mes "...To make a 'Golden Key'?";
@@ -10655,15 +10655,15 @@ mosk_dun02,57,220,0	script	House Ghost Jar#rus43	HIDDEN_NPC,{
 			cutin "",255;
 			switch( .@rucard_game01 ) {
 			case 1:
-				cutin "器傅墨靛",4; // Poring Card
+				cutin "?????????",4; // Poring Card
 				.@win_string$ = "You are good. Can you do it next time?";
 				break;
 			case 2:
-				cutin "浚俩傅墨靛",4; // Angeling Card
+				cutin "??????????",4; // Angeling Card
 				.@win_string$ = "You are pretty good at this. Ok, but can you do it again?";
 				break;
 			case 3:
-				cutin "绊胶飘傅墨靛",4; // Ghostring Card
+				cutin "????ì???????????",4; // Ghostring Card
 				.@win_string$ = "You are pretty good at this. Ok, but can you do it again?";
 				break;
 			}

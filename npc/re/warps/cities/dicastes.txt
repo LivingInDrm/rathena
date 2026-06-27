@@ -44,15 +44,15 @@ dic_in01,242,182,0	script	#eldicastes0016	844,{
 	set .@n, atoi(strnpcinfo(2));
 	set .@eq, (isequipped(2782))?1:0;
 	if (.@n <= 4) {
-		set .@m$, (.@eq)?"Civil Services:Archive Room:Situation Room:Administrative Office":"¢³¡ð¡Ð:¡ñ¡ñ¡ò:¡ø¡ø¡ð:¡÷¡ú¡ð";
+		set .@m$, (.@eq)?"Civil Services:Archive Room:Situation Room:Administrative Office":"??????:???????¨¬??:??????:??????¨¬???";
 		setarray .@xy, 45,286,36,212,122,282,121,201;
 	}
 	else if (.@n <= 11) {
-		set .@m$, (.@eq)?"Residential Zone 1:Residential Zone 2:Residential Zone 3:Pub Burman Flone":"¡ô¡õ¡ñ ¡þ :¢³¡ü¡Ð ¡ú :¡ï¢³¢¤ ¢² :¢±¡Ð¡ñ";
+		set .@m$, (.@eq)?"Residential Zone 1:Residential Zone 2:Residential Zone 3:Pub Burman Flone":"?????? ?? :?????¨¬??? ???¨¬? :???????¡ì?¡ì ?? :???????";
 		setarray .@xy, 42,115,110,108,178,108,260,115;
 	}
 	else if (.@n <= 13) {
-		set .@m$, (.@eq)?"Battle Station:Galten Quarters":"¡ø¡ô¡ï ¡ò :¡ü¡÷¡ó ¡÷ ";
+		set .@m$, (.@eq)?"Battle Station:Galten Quarters":"?????? ???¨¬?? :???¨¬???????¨¬? ??? ";
 		setarray .@xy, 385,272,385,208;
 	}
 	set .@m, select(.@m$) - 1;

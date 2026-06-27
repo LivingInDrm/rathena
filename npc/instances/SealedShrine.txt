@@ -485,12 +485,12 @@ OnMyMobDead:
 1@cata,141,221,0	script	Gravestone#	844,3,3,{
 	set .@party_id,getcharid(1);
 	if ('ins_baphomet == 0) {
-		mes "The gravestone is trembling...";
+		mes "有什么东西在这个倾斜的雕像下面.";
 		next;
-		mes "When touching the gravestone, I hear a voice.";
+		mes "我想, 这就是他的项链了吧...";
 		next;
 		specialeffect2 EF_CONE;
-		mes "[Voice of the Gravestone]";
+		mes "我在这个墓碑上只能感觉到一股忧郁...";
 		mes "I have waited and waited for a brave adventurer like you who will come back here again...";
 		next;
 		while(1) {
@@ -820,7 +820,7 @@ OnTouch:
 		end;
 	}
 	else {
-		mes "[Ancient Hero's Soul]";
+		mes "我在这个墓碑上只能感觉到一股忧郁...";
 		mes "Where is your Token of Apostle? I said you should carry the Token of Apostle to pass this gate.";
 		close;
 	}
@@ -836,14 +836,14 @@ OnInstanceInit:
 	if ('ins_baphomet == 1) {
 		getitem 6003,1; //Soul_Pendant
 		set 'ins_baphomet,2;
-		mes "A small object is shining under a leaning grave.";
+		mes "一个巨大的火矩出现在我的面前, 它上上下下的摇晃, 看起来能把这里的所有都烧光.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I think this is the pendant...";
+		mes "这个架势和火焰的高温让我退了几步... 但我鼓足所有的勇气把它捡了起来.";
 		close;
 	}
 	else {
-		mes "I can only feel gloom from this Gravestone.";
+		mes "继承者的标志开始发光了. 这时, 一个细小的水晶块从火矩上落到我的手里.";
 		close;
 	}
 }

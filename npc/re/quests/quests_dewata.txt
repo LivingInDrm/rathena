@@ -1499,7 +1499,7 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 
 -	script	::DewataPalm	-1,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 5000) {
-		mes "You are carrying too much.";
+		mes "你负重了太高. ";
 		close;
 	}
 
@@ -1508,55 +1508,55 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 	else if (checkquest(5048) > -1) set .@count,30;
 	else if (checkquest(5050) > -1) set .@count,40;
 	if (.@count == 0) {
-		mes "There's a palm tree";
-		mes "facing the cool wind.";
+		mes "有一个棕榈树";
+		mes "面对凉爽的风. ";
 		close;
 	} else if (countitem(6402) >= .@count) {
-		mes "The palm tree denies";
-		mes "your greedy hands.";
+		mes "棕榈树否认";
+		mes "你贪婪的手中. ";
 		close;
 	}
 
 	if (isequipped(5009)) { // Safety_Helmet
-		mes "There's a palm tree with fruits and flowers hanging from its branches.";
-		mes "Be sure to wear a Safety Helmet while trying to pick the fruit.";
+		mes "有水果和鲜花挂在树枝棕榈树. ";
+		mes "一定要戴安全头盔, 而试图挑水果. ";
 	} else {
-		mes "There's a palm tree.";
-		mes "You can kick or shake it.";
-		mes "What do you want to do?";
+		mes "有一个棕榈树. ";
+		mes "你可以踢或摇晃. ";
+		mes "那你想干什么? ";
 	}
 	next;
-	switch(select("Shake the tree:Kick the tree")) {
+	switch(select("摇树:踢树")) {
 	case 1:
 		specialeffect EF_HITLINE2;
 		set .@message$, "As you shake the palm tree...";
-		mes "You shake the palm tree.";
+		mes "你摇动的棕榈树. ";
 		break;
 	case 2:
 		specialeffect EF_BASH;
 		set .@message$, "As you give the palm tree a quick kick to its proverbial shin...";
-		mes "You kick the palm tree swiftly with all you might.";
+		mes "你踢的棕榈树迅速提供所有您可能. ";
 		break;
 	}
 	next;
-	mes "... ... ...";
+	mes ".........";
 	next;
 	mes .@message$;
 	switch(rand(1,20)) {
 	case 1:
 	case 2:
 	case 3:
-		mes "a ^FF0000stone^000000 falls out.";
+		mes "石头掉下来. ";
 		getitem 7049,1; //Stone
 		break;
 	case 6:
 	case 7:
-		mes "a ^FF0000Great Leaf^000000 falls out.";
+		mes "一个伟大的叶子掉下来. ";
 		getitem 7198,1; //Great_Leaf
 		break;
 	case 8:
 	case 9:
-		mes "a ^FF0000Worm Peeling^000000 falls out.";
+		mes "一个蠕虫剥离掉出来. ";
 		getitem 955,1; //Worm_Peelings
 		break;
 	case 4:
@@ -1564,7 +1564,7 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 	case 11:
 	case 12:
 	case 13:
-		mes "an ^0000FFOil Palm Fruit^000000 falls out.";
+		mes "油棕果实掉下来. ";
 		getitem 6402,1; //Oil_Palm_F
 		break;
 	case 14:
@@ -1572,11 +1572,11 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 	case 20:
 		specialeffect2 EF_BASH;
 		if (isequipped(5009)) { //Safety_Helmet
-			mes "something falls on your head, but since you're wearing a Safety Helmet you're safe and sound.";
+			mes "东西落在你的头上, 但因为你戴着安全帽你安然无恙. ";
 			emotion ET_BEST, playerattached();
 			break;
 		} else {
-			mes "something smashes down on your head, right where that soft spot is, $#*@! that's a one in a million shot.";
+			mes "摔破的东西倒在你的头上, 右边那个地方情有独钟的是, $＃* @! 这是一个万里挑一的拍摄. ";
 			percentheal -30,0;
 			close2;
 			donpcevent strnpcinfo(0)+"::OnDisable";
@@ -1586,19 +1586,19 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 	case 10:
 	case 17:
 		if (countitem(6402) <= .@count-5) {
-			mes "tons of ^0000FFOil Palm Fruit^000000 crashes down from the tree.";
+			mes "吨油棕果的崩溃从树上下来. ";
 			getitem 6402,1; //Oil_Palm_F
 			getitem 6402,1; //Oil_Palm_F
 			getitem 6402,1; //Oil_Palm_F
 			getitem 6402,1; //Oil_Palm_F
 			getitem 6402,1; //Oil_Palm_F
 		} else {
-			mes "an ^0000FFOil Palm Fruit^000000 falls out.";
+			mes "油棕果实掉下来. ";
 			getitem 6402,1; //Oil_Palm_F
 		}
 		break;
 	default:
-		mes "but nothing happens.";
+		mes "但没有任何反应. ";
 		break;
 	}
 	close2;

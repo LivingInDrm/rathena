@@ -4248,11 +4248,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients- ^0000cd1 Clover, 1 Green Herb, 1 Red Herb^000000.";
 				next;
-				cutin "风唱平墨靛.bmp", 3;
+				cutin "??¨¨?????????.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Clover and the Red Herb are dropped by Lunatic or Fabre monsters wandering everywhere on the field outside Izlude.";
 				next;
-				cutin "颇宏福墨靛.bmp", 3;
+				cutin "?????ì???????.bmp", 3;
 				mes "[Eclaire]";
 				mes "Green Herbs are dropped by Fabres.";
 				next;
@@ -4274,11 +4274,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Apple & 2 Carrots^000000.";
 				next;
-				cutin "器傅墨靛.bmp", 3;
+				cutin "?????????.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apples are dropped by Porings bouncing around the field outside of Izlude.";
 				next;
-				cutin "风唱平墨靛.bmp", 3;
+				cutin "??¨¨?????????.bmp", 3;
 				mes "[Eclaire]";
 				mes "Carrots are given by Lunatics.";
 				next;
@@ -4300,15 +4300,15 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Jellopy, 1 Fluff, 1 Feather^000000.";
 				next;
-				cutin "器傅墨靛.bmp", 3;
+				cutin "?????????.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Jellopy are dropped by Porings bouncing around the field of Izlude.";
 				next;
-				cutin "颇宏福墨靛.bmp", 3;
+				cutin "?????ì???????.bmp", 3;
 				mes "[Eclaire]";
 				mes "Fluff can be received from Fabre or Lunatic.";
 				next;
-				cutin "风唱平墨靛.bmp", 3;
+				cutin "??¨¨?????????.bmp", 3;
 				mes "[Mille Feuille]";
 				mes "Feathers are dropped by Lunatics or Fabres.";
 				next;
@@ -4330,11 +4330,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are-^0000cd 1 Apple & 1 Clover^000000.";
 				next;
-				cutin "器傅墨靛.bmp", 3;
+				cutin "?????????.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apple can be found in Porings in the field outside of Izlude.";
 				next;
-				cutin "风唱平墨靛.bmp", 3;
+				cutin "??¨¨?????????.bmp", 3;
 				mes "[Eclaire]";
 				mes "Clovers are dropped by Lunatics or Fabre in the field outside Izlude.";
 				next;
@@ -12784,29 +12784,29 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 // -----------------------------------------------------------------------------
 -	script	::izludeWagjak	-1,{
 	disable_items;
-	mes "[Refining Machine Wagjak]";
-	mes "-Ddarritt!-";
-	mes "Wagjak Starting... completed..";
-	mes "Checking the user.. Completed.";
-	mes "Select the refining equipment.";
+	mes "[精炼机器 瓦克查]";
+	mes "-哔哩!-";
+	mes "瓦克查启动完毕！";
+	mes "使用者确认完毕！";
+	mes "请选择精炼装备。";
 	next;
 	setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
 	for(set .@i,1; .@i<=10; set .@i,.@i+1)
 		.@menu$ = .@menu$ + ( getequipisequiped(.@indices[.@i]) ? getequipname(.@indices[.@i]): F_getpositionname(.@indices[.@i]) +" - [Unarmed]" ) +":";
 	.@part = .@indices[ select(.@menu$) ];
 	if (!getequipisequiped(.@part)) {
-		mes "[Refining Machine Wagjak]";
+		mes "[精炼机器 瓦克查]";
 		mes "^ff0000- Error number 000"+.@part+" -^000000";
-		mes "Item is not equipped.";
+		mes "没有安装装备。";
 		close;
 	}
-	mes "[Refining Machine Wagjak]";
-	mes "Searching for the equipment information - completed.";
+	mes "[精炼机器 瓦克查]";
+	mes "装备咨询搜寻中…完毕";
 	next;
 	if (!getequipisenableref(.@part)) {
-		mes "[Refining Machine Wagjak]";
-		mes "^FF0000- error number 4444 -^000000";
-		mes "This item cannot be refined.";
+		mes "[精炼机器 瓦克查]";
+		mes "^FF0000- 错误编码 4444 -^000000";
+		mes "这个物品无法精炼。";
 		close;
 	}
 	// if (!getequipisidentify(.@part)) {// getequipisidentify command removed 
@@ -12823,32 +12823,32 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 	.@itemtype = getiteminfo( .@refineitemid, ITEMINFO_TYPE );
 
 	if (.@refinerycnt >= 10) {
-		mes "[Refining Machine Wagjak]";
-		mes "^FF0000- error number 1010 -^000000";
-		mes "At the current version, you can do refining up to level 10.";
+		mes "[精炼机器 瓦克查]";
+		mes "^FF0000- 错误编码 1010 -^000000";
+		mes "现在这版本，你只能精炼+10。";
 		close;
 	}
 	if (isbegin_quest(5153) == 1) {
 		if (getequipweaponlv(.@part) == 1) {
-			mes "[Refining Machine Wagjak]";
-			mes "Type : Level 1 weapon";
-			mes "Charge : Phracon, 1000 zeny";
-			mes "Service usage coupon sensed. No charge to be requested. Will you refine?";
+			mes "[精炼机器 瓦克查]";
+			mes "类型 : 一级武器";
+			mes "费用 : 强化武器金属-级数一, 1000 zeny";
+			mes "感应到服务利用券，不会要求支付费用，请问要进行精炼吗？";
 			next;
-			if (select("Refine.", "Don't Refine.") == 2) {
-				mes "[Refining Machine Wagjak]";
-				mes "Cancel the refining.";
+			if (select("进行精炼", "Don't Refine.") == 2) {
+				mes "[精炼机器 瓦克查]";
+				mes "已经取消精炼了。";
 				close;
 			}
 			if (getequippercentrefinery(.@part) < 100) {
-				mes "[Refining Machine Wagjak]";
-				mes "-Ddarritt!-";
-				mes "The user's confirmation required.";
-				mes "You are attempting unsafe refining. If refining fails, the equipment will be destroyed. Will you continue?";
+				mes "[精炼机器 瓦克查]";
+				mes "-哔哩!-";
+				mes "需要使用的确认。";
+				mes "正在勉强进行精炼，若是失败的话，装备会受损的，请问要继续进行吗？";
 				next;
 				if (select("Refine.", "Don't Refine.") == 2) {
-					mes "[Refining Machine Wagjak]";
-					mes "Refining has been cancelled as per the user's request.";
+					mes "[精炼机器 瓦克查]";
+					mes "已经依照使用者的要求取消精炼了。";
 					close;
 				}
 			}
@@ -12857,19 +12857,19 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 				close;
 			if (getequippercentrefinery(.@part) <= rand(100)) {
 				failedrefitem .@part;
-				mes "[Refining Machine Wagjak]";
-				mes "Result : Fail";
-				mes "refining failed. The equipment was destroyed.";
+				mes "[精炼机器 瓦克查]";
+				mes "精炼结果：失败";
+				mes "[精炼机器 瓦克查]";
 				close;
 			} else {
 				successrefitem .@part;
-				mes "[Refining Machine Wagjak]";
-				mes "Result : Success";
-				mes "Congratulations!! You succeeded in refining.";
+				mes "精炼结果：成功";
+				mes "[精炼机器 瓦克查]";
+				mes "已经使用服务利用券了。";
 				completequest 5153;
 				next;
-				mes "[Refining Machine Wagjak]";
-				mes "Service usage coupon was used.";
+				mes "[精炼机器 瓦克查]";
+				mes "需要支付上面的金额，请问要进行精炼嘛？";
 				close;
 			}
 		}
@@ -12917,25 +12917,25 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 		close;
 	}
 
-	mes "[Refining Machine Wagjak]";
+	mes "[精炼机器 瓦克查]";
 	mes "Type : "+ .@type$ +"";
 	mes "Charge : "+ getitemname(.@material) +", "+ .@price +" zeny";
-	mes "Above money will be charged. Will you refine?";
+	mes "已经依照使用者的要求取消精炼了。";
 	next;
-	if (select("Refine.", "Don't Refine.") == 2) {
-		mes "[Refining Machine Wagjak]";
-		mes "Refining has been cancelled as per the user's request.";
+	if (select("进行精炼。", "Don't Refine.") == 2) {
+		mes "[精炼机器 瓦克查]";
+		mes "-哔哩!-";
 		close;
 	}
 	if (getequippercentrefinery(.@part) < 100) {
-		mes "[Refining Machine Wagjak]";
-		mes "-Ddarritt!-";
-		mes "The user's confirmation required.";
-		mes "You are attempting unsafe refining. If refining fails, the equipment will be destroyed. Will you continue?";
+		mes "需要使用的确认。";
+		mes "正在勉强进行精炼，若是失败的话，装备会受损的，请问要继续进行吗？";
+		mes "[精炼机器 瓦克查]";
+		mes "已经依照使用者的要求取消精炼了。";
 		next;
-		if (select("Refine.", "Don't Refine.") == 2) {
-			mes "[Refining Machine Wagjak]";
-			mes "Refining has been cancelled as per the user's request.";
+		if (select("进行精炼。", "Don't Refine.") == 2) {
+			mes "[精炼机器 瓦克查]";
+			mes "^FF0000- 错误编码 8282 -^000000";
 			close;
 		}
 	}
@@ -12945,15 +12945,15 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 
 		// anti-hack
 		if (callfunc("F_IsEquipIDHack", .@part, .@refineitemid) || callfunc("F_IsEquipCardHack", .@part, .@card[0], .@card[1], .@card[2], .@card[3]) || callfunc("F_IsEquipRefineHack", .@part, .@refinerycnt)) {
-			mes "[Refining Machine Wagjak]";
+			mes "精炼费用不足。";
 			emotion ET_FRET;
-			mes "Wait a second...";
-			mes "Do you think I'm stupid?!";
-			mes "You switched the item while I wasn't looking! Get out of here!";
+			mes "[精炼机器 瓦克查]";
+			mes "精炼结果：失败";
+			mes "[精炼机器 瓦克查]";
 			close;
 		}
 	} else {
-		mes "[Refining Machine Wagjak]";
+		mes "精炼结果：成功";
 		mes "^FF0000- error number 8282 -^000000";
 		mes "You are short of refining price.";
 		close;

@@ -572,130 +572,130 @@ geffen,90,67,3	script	Promotional Staff#gef	100,{
 
 -	script	::PromotionalStaff_izlude	-1,{
 	if (ep13_ryu > 8) {
-		mes "[Promotional Staff]";
-		mes "I bless you for your future! May it be full of happiness!";
+		mes "[宣传官员]";
+		mes "祝你好运! 愿你每天都充满快乐!";
 		close;
 	}
 	if (ep13_ryu == 8) {
-		mes "[Promotional Staff]";
-		mes "The test is done!";
-		mes "If you have any other business, go to the palace.";
+		mes "[宣传官员]";
+		mes "测试都结束了..";
+		mes "还有事找我吗";
 		close;
 	}
 	if (ep13_ryu == 7) {
 		if (BaseLevel < 70) {
-			mes "[Promotional Staff]";
-			mes "You don't look that strong.";
-			mes "Nothing but skin and bones!";
-			mes "Not reliable.";
-			mes "You should level up more before";
-			mes "considering this adventure.";
+			mes "赶快去王宫吧";
+			mes "[宣传官员]";
+			mes "我端看你的外表";
+			mes "就知道你是强者!";
+			mes "我想也不需要再";
+			mes "考你了, 能来到";
 			next;
-			mes "[Promotional Staff]";
-			mes "I don't need adventurers who are";
-			mes "body-builders... but at least";
-			mes "someone not so little!!";
+			mes "这里算厉害... 好吧! 过关!";
+			mes "[宣传官员]";
+			mes "这都怪高层无聊的";
+			mes "把标准提高... 虽说";
 			close;
 		}
-		mes "[Promotional Staff]";
-		mes "Wow! You are considerably";
-		mes "stronger than before!";
-		mes "Let me see...";
-		mes "You look different!";
+		mes "新区域危险, 不过";
+		mes "没必要把标准订得";
+		mes "这么硬嘛!";
+		mes "[宣传官员]";
+		mes "难道新区域是什么魔鬼的";
 		next;
-		mes "[Promotional Staff]";
-		mes "Um...";
+		mes "基地或魔界嘛! 真是的";
+		mes "[宣传官员]";
 		next;
-		mes "[Promotional Staff]";
-		mes "Ok, it's done!";
-		mes "You seemed a sore weak of a soul,";
-		mes "but now, you're quite stronger than";
-		mes "before. Great! You will do!!";
+		mes "总之请你去找王宫里的";
+		mes "招募官吧! 我会通知他";
+		mes "你通过所有考验的消息";
+		mes "[宣传官员]";
+		mes "祝你一路顺风, ";
 		next;
-		mes "[Promotional Staff]";
-		mes "We have quite high expectations to meet.";
-		mes "Though the new place is dangerous,";
-		mes "no need to check thoroughly";
-		mes "anymore.";
+		mes "为民斩妖除魔!";
+		mes "[宣传官员]";
+		mes "快去加强吧";
+		mes "[宣传官员]";
+		mes "我们正在征求充满好奇心";
 		next;
-		mes "[Promotional Staff]";
-		mes "It's not a hell-hole!";
-		mes "Ukk!";
+		mes "与勇敢的冒险家~";
+		mes "勇士们喔快来挑战吧!";
+		mes "[宣传官员]";
 		next;
-		mes "[Promotional Staff]";
-		mes "Anyway, just go back to the";
-		mes "Recruiter. I will forward to him";
-		mes "that you passed all the steps. Good";
-		mes "job, friend!";
+		mes "这位气质不俗的冒险家, ";
+		mes "你愿不愿意停下脚步";
+		mes "听我讲完再走呢?";
+		mes "[宣传官员]";
+		mes "嗯? 啊..是吗? 你就是";
 		next;
 		changequest 10063,10064;
 		set ep13_ryu,8;
-		mes "[Promotional Staff]";
-		mes "Bless all of your heart,";
-		mes "for your great future!";
+		mes "从吉芬来接受测验的";
+		mes "那位吧? 你找对人了, ";
+		mes "我就是伊斯鲁德岛的";
 		close;
 	}
 	if (ep13_ryu == 6) {
-		mes "[Promotional Staff]";
-		mes "We are recruiting adventurers";
-		mes "who are quite strong and curious.";
+		mes "宣传官员";
+		mes "[宣传官员]";
+		mes "我应该好好考你才对...";
 		next;
-		mes "[Promotional Staff]";
-		mes "Hey, you're a knowledgeable adventurer. Are you interested in my story?";
+		mes "其实你能来到这里, ";
+		mes "就能足以证明你够强, ";
 		next;
-		select("I have something for you.");
-		mes "[Promotional Staff]";
-		mes "Um, you're the one sent to be tested, correct? You are in the right place. I'm the Promotional Staff in Izlude.";
+		select("- 我有事找你......");
+		mes "所以我看没必要";
+		mes "特地测试你了";
 		next;
-		mes "[Promotional Staff]";
-		mes "I guess you're qualified enough to go... I think no more testing is needed.";
+		mes "[宣传官员]";
+		mes "我看看...";
 		next;
-		mes "[Promotional Staff]";
-		mes "Let me see...";
+		mes "[宣传官员]";
+		mes "我端看你的外表";
 		next;
 		if (BaseLevel > 69) {
-			mes "[Promotional Staff]";
-			mes "I think you're good enough!";
-			mes "No more testing!!";
-			mes "Ok! You pass!";
+			mes "就知道你是强者!";
+			mes "我想也不需要再";
+			mes "考你了, 能来到";
+			mes "这里算厉害... 好吧! 过关!";
 			next;
-			mes "[Promotional Staff]";
-			mes "We have quite high expectations to meet.";
-			mes "Though the new place is dangerous,";
-			mes "no need to check thoroughly right now.";
+			mes "[宣传官员]";
+			mes "这都怪高层无聊的";
+			mes "把标准提高... 虽说";
+			mes "新区域危险, 不过";
 			next;
-			mes "[Promotional Staff]";
-			mes "It's not a hell-hole!";
-			mes "Ukk...";
+			mes "没必要把标准订得";
+			mes "这么硬嘛!";
+			mes "[宣传官员]";
 			next;
-			mes "[Promotional Staff]";
-			mes "Anyway, just go back to the recruiter.";
-			mes "I will forward to him that you passed all the steps.";
-			mes "Good job, friend!";
+			mes "难道新区域是什么魔鬼的";
+			mes "基地或魔界嘛! 真是的";
+			mes "[宣传官员]";
+			mes "总之请你去找王宫里的";
 			next;
 			changequest 10062,10064;
 			set ep13_ryu,8;
-			mes "[Promotional Staff]";
-			mes "May Freya bless you,";
-			mes "for your great future!";
+			mes "招募官吧! 我会通知他";
+			mes "你通过所有考验的消息";
+			mes "[宣传官员]";
 			close;
 		}
 		else {
-			mes "[Promotional Staff]";
-			mes "Hmm...";
+			mes "祝你一路顺风, ";
+			mes "为民斩妖除魔!";
 			next;
-			mes "[Promotional Staff]";
-			mes "You don't look that strong.";
-			mes "Nothing but skin and bones!";
-			mes "Not reliable.";
-			mes "I can't let you pass.";
+			mes "[宣传官员]";
+			mes "唉...";
+			mes "[宣传官员]";
+			mes "除了皮肤和骨骼, 你看起来似乎不是那么的强壮.";
+			mes "不怎么可靠啊, 我不能算你通过喔.";
 			next;
 			changequest 10062,10063;
 			set ep13_ryu,7;
-			mes "[Promotional Staff]";
-			mes "Please level up a little more. I";
-			mes "can't accept that you're strong";
-			mes "enough. Sorry.";
+			mes "[宣传官员]";
+			mes "再去练练级吧!";
+			mes "[宣传官员]";
+			mes "我们正在征求充满好奇心";
 			close;
 		}
 	}
@@ -705,41 +705,41 @@ geffen,90,67,3	script	Promotional Staff#gef	100,{
 
 lighthalzen,220,292,3	script	Guide#ep13_1	899,{
 	if (ep13_ryu > 8) {
-		mes "[Guide]";
-		mes "Welcome! You've arrived at Lighthalzen, which is the base of three kingdoms.";
+		mes "[警卫]";
+		mes "抱歉不能进去, ";
 		next;
-		mes "[Guide]";
-		mes "You have to register your name. Go to the 2nd floor in Rekenbereu on the northwest side.";
+		mes "上面下达指示请各位";
+		mes "冒险家直接前往卢恩";
 		next;
-		mes "[Guide]";
-		mes "Be careful not to lose your way!";
+		mes "米德加兹的裂痕处";
+		mes "[警卫]";
 		close;
 	}
-	mes "[Guide]";
-	mes "Welcome! You've arrived at Lighthalzen, which is the base of three kingdoms.";
+	mes "抱歉请你离开, ";
+	mes "这里是禁区";
 	close;
 }
 
 lhz_in01,136,260,5	script	Munkenro#1	967,{
 	if (ep13_ryu == 20) {
-		mes "-At this spot, it's possible to overhear something. Listen carefully through the wall...-";
+		mes "[大陆卫队戒备兵]";
 		next;
-		mes "[Munkenro]";
-		mes "You're a good buddy!";
-		mes "But...";
+		mes "这个地方是民间人禁止出入的地域.";
+		mes "[大陆卫队戒备兵]";
+		mes "这地方非常凶险, 希望不要随便进入这附近的地方.";
 		next;
-		mes "[Munkenro]";
-		mes "We can't avoid this...";
-		mes "You know better than I!";
-		mes "We can't go through this,";
-		mes "in this current status.";
+		mes "[大陆卫队戒备兵]";
+		mes "那就请你通过吧.";
+		mes "你准备好了吗?";
+		mes "[大陆卫队戒备兵]";
+		mes "祝你好运.";
 		next;
-		mes "[Munkenro]";
-		mes "I did all I could do...";
-		mes "Please...";
+		mes "[大陆卫队戒备兵]";
+		mes "有需要再找我.";
+		mes "[大陆卫队戒备兵]";
 		next;
-		mes "[Munkenro]";
-		mes "......";
+		mes "这个地方是民间人禁止出入的地域.";
+		mes "如果你没什么特殊的事情, 找我旁边的警卫离开这里吧.";
 		next;
 		mes "[Munkenro]";
 		mes "............";
@@ -793,26 +793,26 @@ lhz_in01,136,260,5	script	Munkenro#1	967,{
 
 lhz_in01,132,259,5	script	Sikaiz#1	868,{
 	if ((ep13_ryu == 18) || (ep13_ryu == 19)) {
-		mes "[Sikaiz]";
-		mes "Please come to me ASAP.";
-		mes "I hope you play an active part.";
+		mes "[警卫]";
+		mes "你是新来的冒险者?";
+		mes "如果你打算到另一侧的裂痕, 该联盟负责人会引导你有.";
 		next;
-		mes "[Sikaiz]";
-		mes "We all expect you to make the biggest impact.";
+		mes "[警卫]";
+		mes "他应该是附近的峡谷的中心.他是比前一个强, 所以要小心你的话.";
 		close;
 	}
 	if (ep13_ryu == 17) {
-		mes "[Sikaiz]";
-		mes "Only thing you should do is write down your name and show me your great face";
+		mes "[警卫]";
+		mes "如果你想离开这里, 只要叫我, 我就会带你离开.";
 		next;
-		mes "[Sikaiz]";
-		mes "I already accept you. Just write down your name here. Go ahead.";
+		mes "[警卫]";
+		mes "好吧.";
 		next;
 		input .@input$;
 		if (.@input$ != strcharinfo(0)) {
-			mes "[Sikaiz]";
-			mes "Don't you know your own name?";
-			mes "Write it again.";
+			mes "跟着我, 我这就带你离开.";
+			mes "[警卫]";
+			mes "好吧, 自己小心了.";
 			close;
 		}
 		else {
@@ -977,7 +977,7 @@ lhz_in01,132,259,5	script	Sikaiz#1	868,{
 		mes "[Sikaiz]";
 		mes "So, what do you want to know more of? You already know about the Ash-Vacuum. Is there anything else you'd like me to tell you?";
 		next;
-		select("The three kingdoms...");
+		select("- 我要离开.:- 没事.");
 		mes "[Sikaiz]";
 		mes "Ah, I need to tell you about the alliance, but first, may I ask something?";
 		next;
@@ -1162,8 +1162,8 @@ lhz_in01,140,234,5	duplicate(Guard#ep13_1-7)	Guard#ep13_1-8	899,2,2
 
 lhz_in01,130,232,5	script	Guard#ep13_1-9	899,{
 	if (ep13_ryu > 19) {
-		mes "[Guard]";
-		mes "You're not allowed to enter.";
+		mes "[布拉克 卢米斯]";
+		mes "就是这个!到小树的东南方去!";
 		mes "All of you are instructed to go to the Time-Gap of Dimension on Rune-Midgarts!";
 		next;
 		mes "[Guard]";
@@ -1663,12 +1663,12 @@ moc_fild22b,330,154,3	script	Rift Guard#3	707,{
 
 moc_fild22b,230,197,5	script	Munkenro#2	967,{
 	if (ep13_ryu == 100) {
-		mes "[Munkenro]";
-		mes "Are you ready to discover Ash-Vacuum?";
+		mes "传来低沉吼叫的声音, ";
+		mes "听起来不是在狂吼, ";
 		next;
 		switch(select("Yes, of course!:Please, wait...")) {
 		case 1:
-			mes "[Munkenro]";
+			mes "难道心情不错吗?";
 			mes "I wish you good luck!";
 			mes "I hope you are successful in your adventures in Ash-Vacuum!";
 			next;
@@ -1966,9 +1966,9 @@ moc_fild22b,370,370,3	script	Allied Manager#gm	100,{
 //============================================================ 
 mid_camp,222,283,4	script	Marian#ep13bs	727,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
-		mes "[Marian]";
-		mes "You have too many items~";
-		mes "Drop some and come back to me.";
+		mes "[塔布]";
+		mes "你别吵醒它啦! 它不喜欢, ";
+		mes "对了..你不觉得. .. 它.. 像那个吗? 街友.. . ..";
 		close;
 	}
 	if (ep13_newbs < 1) {
@@ -2117,13 +2117,13 @@ mid_camp,222,283,4	script	Marian#ep13bs	727,{
 
 mid_camp,261,284,4	script	Instructor#ep13bs	405,{
 	if (checkweight(1201,1) == 0) {
-		mes "[Instructor Lugen]";
-		mes "You are carrying too much weight.";
-		mes "Please try again after losing some weight.";
+		mes "[塔布]";
+		mes "喂喂! 你别太靠近它, ";
+		mes "也不要乱喂东西给它吃, ";
 		close;
 	}
 	if (ep13_newbs < 1) {
-		mes "[Instructor Lugen]";
+		mes "它很敏感要小心?";
 		mes "Huuu, no time to rest.";
 		mes "When re-enforcements come.";
 		close;
@@ -2716,8 +2716,8 @@ mid_camp,261,284,4	script	Instructor#ep13bs	405,{
 
 mid_camp,123,290,4	script	Otto#ep13bs	967,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute !! -";
-		mes "- Currently you're carrying -";
+		mes "什么也没捞到.";
+		mes "鱼在水里游来游去.";
 		mes "- too many items with you. -";
 		mes "- Please try again -";
 		mes "- after you lose some weight. -";
@@ -2924,8 +2924,8 @@ mid_campin,106,122,4	script	Receptionist Brink#ep13b	89,{
 
 -	script	Diego#ep13bs_	-1,{
 	if (ep13_newbs < 5) {
-		mes "[Diego]";
-		mes "I'm busy right now!";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		emotion ET_PROFUSELY_SWEAT;
 		close;
 	}
@@ -3098,8 +3098,8 @@ mid_campin,291,128,1	script	#ep13bs	111,1,1,{
 
 OnTouch_:
 	if (ep13_newbs < 4) {
-		mes "- It's a neat and tidy bed -";
-		mes "- It seems that nobody used it. -";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		close;
 	}
 	if ((ep13_newbs > 3) && (ep13_newbs < 10)) {
@@ -3128,8 +3128,8 @@ OnTouch_:
 
 mid_campin,295,128,4	script	Lucas#ep13bs	884,{
 	if (ep13_newbs < 11) {
-		mes "[Lucas]";
-		mes "......";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		close;
 	}
 	if (ep13_newbs == 11) {
@@ -3186,8 +3186,8 @@ mid_campin,295,128,4	script	Lucas#ep13bs	884,{
 }
 
 mid_campin,292,120,4	script	Davi#ep13bs	849,{
-	mes "[Davi]";
-	mes "Ahhh, my body...";
+	mes "这块石头包含不明的矿物质.";
+	mes "但是不能提取超过限度.";
 	mes "I walked too much...";
 	mes "and my body hurts.";
 	emotion ET_CRY;
@@ -3197,8 +3197,8 @@ mid_campin,292,120,4	script	Davi#ep13bs	849,{
 mid_camp,160,298,4	script	Jan#ep13bs	865,{
 	if (ep13_newbs == 15) {
 		if (countitem(6045) > 0) {
-			mes "[Jan]";
-			mes "Wawa, what is this~";
+			mes "这块石头包含不明的矿物质.";
+			mes "但是不能提取超过限度.";
 			mes "Hey, is that for me?";
 			next;
 			mes "["+ strcharinfo(0) +"]";
@@ -3263,9 +3263,9 @@ mid_camp,30,168,4	script	Gerard#ep13bs	939,{
 	if (ep13_newbs == 17) {
 		if (countitem(6045) > 0) {
 			mes "["+ strcharinfo(0) +"]";
-			mes "Are you Gerard?";
+			mes "这块石头包含不明的矿物质.";
 			next;
-			mes "[Gerard]";
+			mes "但是不能提取超过限度.";
 			mes "Yes, I am.";
 			mes "What brings you here?";
 			next;
@@ -3338,8 +3338,8 @@ mid_camp,30,168,4	script	Gerard#ep13bs	939,{
 man_fild01,80,248,4	script	Alberto#ep13bs	934,{
 	if (ep13_newbs == 19) {
 		if (countitem(6045) > 0) {
-			mes "[Alberto]";
-			mes "Hhh, I am cold...";
+			mes "这块石头包含不明的矿物质.";
+			mes "但是不能提取超过限度.";
 			next;
 			mes "["+ strcharinfo(0) +"]";
 			mes "Mr. Alberto, take this.";
@@ -3426,8 +3426,8 @@ mid_camp,159,282,4	script	Cooking Soldier#ep13bs	886,{
 }
 
 mid_camp,166,248,4	script	Sorcerer#ep13bs	937,{
-	mes "[Biolay]";
-	mes "Sob...";
+	mes "这块石头包含不明的矿物质.";
+	mes "但是不能提取超过限度.";
 	mes "Where is she?";
 	next;
 	mes "[Biolay]";
@@ -3490,8 +3490,8 @@ spl_fild02,183,235,0	duplicate(ep13tree)	Tree#ep13bs5	111
 
 mid_camp,267,263,0	script	Post#ep13bs1	111,{
 	if (ep13_newbs < 6) {
-		mes "- The posts of the -";
-		mes "- barracks are broken. -";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		close;
 	}
 	else if (ep13_newbs == 6) {
@@ -3574,8 +3574,8 @@ mid_camp,267,263,0	script	Post#ep13bs1	111,{
 
 mid_camp,267,258,0	script	Post#ep13bs2	111,{
 	if (ep13_newbs < 6) {
-		mes "- The posts of the -";
-		mes "- barracks are broken. -";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		close;
 	}
 	else if (ep13_newbs == 6 || ep13_newbs == 7) {
@@ -4334,8 +4334,8 @@ mid_camp,188,254,3	script	Monster Scholar#ep13	883,{
 
 mid_camp,240,270,3	script	Botanist#ep13	750,{
 	if (ep13_ryu < 100 && ep13_start < 100) {
-		mes "[Botanist]";
-		mes "This new land!";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "Undiscovered life!";
 		mes "Everything about this world excites me.";
 		next;
@@ -4654,8 +4654,8 @@ mid_camp,49,154,0	script	#env_clear	-1,3,3,{
 OnTouch:
 	if (ep13_animal == 7) {
 		enablenpc "Botanist#ep13_1";
-		mes "[Botanist]";
-		mes "This is it.";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		next;
 		mes "[Botanist]";
 		mes "Look.";
@@ -4680,8 +4680,8 @@ OnTouch:
 
 mid_camp,45,148,7	script	Botanist#ep13_1	750,{
 	if (ep13_animal == 8) {
-		mes "[Botanist]";
-		mes "Please try to plant the rotting stem in the ground.";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		close;
 	}
 	else if (ep13_animal == 9) {
@@ -4720,9 +4720,9 @@ OnInit:
 
 mid_camp,52,148,1	script	Dirt#ep13	844,{
 	if (ep13_animal == 8) {
-		mes "- You dug a hole into the ground, planted the rotting stem, and then watered it. -";
+		mes "这块石头包含不明的矿物质.";
 		next;
-		mes "... ... ... ...";
+		mes "但是不能提取超过限度.";
 		mes "... ... ... ...";
 		next;
 		mes "... ... ... ...";
@@ -4745,8 +4745,8 @@ mid_camp,52,148,1	script	Dirt#ep13	844,{
 man_fild01,59,261,0	script	#evt_lumis	-1,5,5,{
 OnTouch_:
 	if (ep13_animal == 11) {
-		mes "[Rumis Block]";
-		mes "This is it! Come to the small tree in the southeast direction!";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		close;
 	}
 	end;
@@ -5488,8 +5488,8 @@ OnTimer300000:
 
 mid_camp,165,245,0	script	Ryosen#ep131_rhea01	748,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
-		mes "[Ryosen]";
-		mes "How come you've got so much to carry?";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "Are you perhaps on training or something?";
 		close;
 	}
@@ -6034,8 +6034,8 @@ mid_camp,165,245,0	script	Ryosen#ep131_rhea01	748,{
 
 mid_camp,247,255,1	script	Hue#ep131_rhea02	868,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
-		mes "[Hue]";
-		mes "How come you've got so much to carry?";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "Are you perhaps on training or something?";
 		close;
 	}
@@ -6427,8 +6427,8 @@ mid_camp,247,255,1	script	Hue#ep131_rhea02	868,{
 
 mid_camp,222,218,3	script	Hansenne#ep131_rhea03	931,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
-		mes "[Hansenne]";
-		mes "How come you've got so much to carry?";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "Are you perhaps on training or something?";
 		close;
 	}
@@ -6952,13 +6952,13 @@ OnTimer300000:
 //============================================================ 
 mid_camp,1,1,0	script	#timer_alba01	844,{
 	callfunc "F_GM_NPC";
-	mes "Please enter the password";
+	mes "[远征队传令兵]";
 	next;
 	if (callfunc("F_GM_NPC",1854,0) < 1) {
-		mes "Wrong password.";
+		mes "...";
 		close;
 	} else {
-		mes "Current Status:";
+		mes "- 当您尝试与他谈话, 他消失了.他看起来像在执行一个非常重要的任务... -";
 		if ($@PartTimeOn == 1) {
 			mes "Recruiting.";
 		}
@@ -7461,9 +7461,9 @@ OnDisable:
 	end;
 
 OnTouch:
-	mes "It is hissing in a low voice.";
-	mes "Sometimes it purrs, too.";
-	mes "It must be in a happy mood.";
+	mes "[远征队搜索兵]";
+	mes "我来自米德加兹远征队第三搜索小组, 直接听命于司令官.";
+	mes "[远征队搜索兵]";
 	close;
 }
 
@@ -7477,13 +7477,13 @@ OnDisable:
 	end;
 
 OnTouch:
-	mes "[Taab]";
-	mes "Oh, please don't disturb";
-	mes "it's sleep. It hates that.";
-	mes "By the way, doesn't it";
-	mes "remind you of something?";
-	mes "I mean, like maybe";
-	mes "a vagrant or a hobo?";
+	mes "[远征队搜索兵]";
+	mes "我来自米德加兹远征队第三搜索小组, 直接听命于司令官.";
+	mes "[远征队搜索兵]";
+	mes "我们正在按照伊格里德教官的命令执行搜索任务.";
+	mes "[远征队搜索兵]";
+	mes "[远征队搜索兵]";
+	mes "好消息, 我找到了3张散落的报告书页.";
 	close;
 }
 
@@ -7497,11 +7497,11 @@ OnDisable:
 	end;
 
 OnTouch:
-	mes "[Taab]";
-	mes "Oh, please don't get";
-	mes "too close to it or try to";
-	mes "feed something strange.";
-	mes "It's pretty sensitive...";
+	mes "[远征队搜索兵]";
+	mes "我来自米德加兹远征队第三搜索小组, 直接听命于司令官.";
+	mes "[远征队搜索兵]";
+	mes "我们正在按照伊格里德教官的命令执行搜索任务.";
+	mes "[远征队搜索兵]";
 	close;
 }
 
@@ -10810,7 +10810,7 @@ mid_campin,68,185,3	script	Pursuit Party Leader#1	803,{
 }
 
 mid_camp,191,206,3	script	Manager#moc2_finder	852,{
-	mes "[Manager]";
+	mes "一种神秘的力量被排斥你, 使你无法进入这个区域.";
 	mes "Everything's okay so far!";
 	mes "How may I help you?";
 	next;
@@ -11518,9 +11518,9 @@ OnInit:
 mid_camp,205,312,0	script	#moc2_talkevent01	-1,1,1,{
 OnTouch:
 	if (mao_morocc2 == 11) {
-		mes "[Mr. Kidd]";
+		mes "只要你触摸结晶 ,";
 		mes "" + strcharinfo(0) + "? " + strcharinfo(0) + "?!";
-		mes "Wake up!";
+		mes "你觉得你的身体拉成的空间差距 .";
 		set mao_morocc2,12;
 		close;
 	}
@@ -11979,14 +11979,14 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[Jack]";
-		mes "Oh, not everyone can enter that place...!";
-		mes "...";
-		mes "Nevermind.";
+		mes "- 你会发现一个侧门通向地下室 .";
+		mes "一个微弱的灯光照耀通过铰链 .";
+		mes "里面的人, 大声说话 . -";
+		mes "[男人的声音]";
 		next;
-		mes "[Jack]";
-		mes "Since everything has changed,";
-		mes "just feel free to enter wherever you want!";
+		mes "嘿瑞安, 说些什么 .";
+		mes " 所做的一切 ,";
+		mes "但是...";
 		close2;
 		warp "que_job01",9,94;
 		end;

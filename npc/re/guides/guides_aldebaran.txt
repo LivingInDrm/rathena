@@ -17,19 +17,19 @@
 
 aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 	cutin "prt_soldier",2;
-	mes "[Al De Baran Guide]";
-	mes "Welcome to ^8B4513Al De Baran^000000,";
-	mes "the Border City.";
-	mes "Do you need help navigating the city?";
+	mes "[艾尔帕兰导游]";
+	mes "欢迎光临 运河之都^8B4513艾尔帕兰^000000,";
+	mes "需要为您介绍吗?";
+	mes "[艾尔帕兰导游]";
 	F_Navi("[Al De Baran Guide]");
 	next;
 	set .@str$,"Would you like to check any other locations?";
 	while (1) {
-		switch(select("[ Main Facilities ]:[ Merchants & Helpers ]:Remove Marks from Mini-Map:Cancel")) {
+		switch(select("[ 主要设施 ]:[ 商店 & 小帮手 ]:删除小地图的标记:结束对话")) {
 		case 1:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("[ Kafra Headquarters ]:[ Alchemist Guild ]:[ Clock Tower ]:[ Inn & Tool Shop ]:[ Repair & Buy Equipment ]:[ Tavern ]:Previous Menu")) {
+				switch(select("[ 卡普拉总部 ]:[ 炼金术师工会 ]:[ 钟塔 ]:[ 旅馆及道具店 ]:[ 装备维修及购买 ]:[ 酒店 ]:返回上一选单")) {
 				case 1:
 					callsub L_Mark, F_Navi("Kafra Headquarters","aldebaran,61,229","^B9062F");
 					mes .@str$;
@@ -49,19 +49,19 @@ aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 					next;
 					break;
 				case 4:
-					mes "[Al De Baran Guide]";
-					mes "Let me mark the location of the";
+					mes "^B9062F卡普拉总部^000000的";
+					mes "位置已经标记在";
 					mes F_Navi("Inn & Tool Shop","aldebaran,197,70","^006400")+" building";
-					mes "on your mini-map.";
+					mes "小地图上了,";
 					mes .@str$;
 					viewpoint 1,197,70,3,0xAAFF00;
 					next;
 					break;
 				case 5:
-					mes "[Al De Baran Guide]";
-					mes "If you'd like to ";
+					mes "还需要其它服务吗?";
+					mes "[艾尔帕兰导游]";
 					mes F_Navi("Buy or Repair Equipment","aldebaran,197,70","^7F3300")+",";
-					mes "then this is the place you'll want to visit.";
+					mes "^0000FF炼金术师工会^000000的";
 					mes .@str$;
 					viewpoint 1,72,197,4,0xD2691E;
 					next;
@@ -80,7 +80,7 @@ aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 		case 2:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("[ Eden Teleport Officer ]:[ Kafra Employee ]:[ Mr. Claus ]:[ Chef Assistant ]:Previous Menu")) {
+				switch(select("[ 伊甸园传送师 ]:[ 卡普拉职员 ]:[ 克劳斯先生 ]:[ 料理材料商 ]:返回上一选单")) {
 				case 1:
 					callsub L_Mark, F_Navi("Eden Teleport Officer","aldebaran,133,119","^B9062F");
 					mes .@str$;
@@ -93,11 +93,11 @@ aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 					next;
 					break;
 				case 3:
-					mes "[Al De Baran Guide]";
-					mes "Mr. Claus can teleport";
+					mes "位置已经标记在";
+					mes "小地图上了,";
 					mes "you to "+F_Navi("Lutie","aldebaran,168,168","^006400")+".";
-					mes "Let me mark his location";
-					mes "on your mini-map.";
+					mes "还需要其它服务吗?";
+					mes "[艾尔帕兰导游]";
 					mes .@str$;
 					viewpoint 1,168,168,8,0xAAFF00;
 					next;
@@ -115,9 +115,9 @@ aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 			}
 			break;
 		case 3:
-			mes "[Al De Baran Guide]";
-			mes "Sure, I'll remove all marks from your mini-map.";
-			mes "Is there anything else I can do for you?";
+			mes "^FF5400钟塔^000000的";
+			mes "位置已经标记在";
+			mes "小地图上了,";
 			viewpoint 2,1,1,0,0xFFFF00;
 			viewpoint 2,1,1,1,0x000000;
 			viewpoint 2,1,1,2,0xFF0000;
@@ -131,9 +131,9 @@ aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 			next;
 			break;
 		case 4:
-			mes "[Al De Baran Guide]";
-			mes "Alright then,";
-			mes "enjoy your stay!";
+			mes "还需要其它服务吗?";
+			mes "[艾尔帕兰导游]";
+			mes "^006400旅馆^000000和^006400道具店^000000的";
 			close2;
 			cutin "prt_soldier",255;
 			end;
@@ -141,10 +141,10 @@ aldebaran,139,63,4	script	Guide#01aldebaran::GuideAldearan	105,{
 	}
 	end;
 L_Mark:
-	mes "[Al De Baran Guide]";
-	mes "Let me mark the location of the";
+	mes "大楼的";
+	mes "位置已经标记在";
 	mes getarg(0);
-	mes "on your mini-map.";
+	mes "小地图上了,";
 	return;
 }
 aldebaran,243,143,2	duplicate(GuideAldearan)	Guide#02aldebaran	105

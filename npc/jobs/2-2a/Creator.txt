@@ -19,6 +19,57 @@
 valkyrie,53,50,3	script	Biochemist#Valkyrie	122,{
 	if (Class == Job_Creator && bioeth == 13 && getskilllv("AM_BIOETHICS") == 0) {
 		mes "[Biochemist]";
+		mes "Congratulations.";
+		mes "Honor to the warriors!";
+		mes "[Biochemist]";
+		mes "It's strange that";
+		mes "someone like me is here.";
+		mes "But even someone skilled";
+		next;
+		if (select("No.:Yes.") == 1) {
+			mes "in the ways of science";
+			mes "can manage to be a hero.";
+			mes "[Biochemist]";
+			mes "In this instance,";
+			mes "it's not necessarily";
+			mes "the means I've used, but";
+			mes "the ends for which I've";
+			next;
+			mes "fought that earned me";
+			mes "a place in Valhalla...";
+			mes "[Biochemist]";
+			mes "Yes...";
+			mes "It's about time.";
+			mes "We need more geniuses";
+			mes "like you on Rune-Midgard.";
+			next;
+			skill "AM_BIOETHICS",1,SKILL_PERM;
+			mes "[Biochemist]";
+			mes "Would you like to";
+			mes "become a Biochemist?";
+			mes "[Biochemist]";
+			mes "When you're ready,";
+			mes "feel free to come back.";
+			mes "Honor to the warriors!";
+			close;
+		}
+		mes "[Biochemist]";
+		mes "It is still possible for you to learn more skills. Please use";
+		mes "all of your remaining Skill Points before returning to me.";
+		mes "[Biochemist]";
+		mes "Congratulations!";
+		mes "As a Biochemist,";
+		mes "I hope you use your";
+		close;
+	}
+	else if (ADVJOB == 0 || Upper != 1) {
+		set .@karma_d,rand(1,10);
+		if (.@karma_d > 4) {
+			mes "vast knowledge for the";
+			mes "right purposes.";
+			mes "[Biochemist]";
+			close;
+		}
 		mes "Ah, have you come to";
 		mes "retrieve the memories";
 		mes "lost to you? Yes, you";
@@ -26,100 +77,49 @@ valkyrie,53,50,3	script	Biochemist#Valkyrie	122,{
 		mes "secrets of life that";
 		mes "were once yours...";
 		next;
-		if (select("Yes:No") == 1) {
-			mes "[Biochemist]";
-			mes "Close your eyes and";
-			mes "put your mind at rest.";
-			mes "We will return to your";
-			mes "past to recollect the";
-			mes "fragments of your lost";
-			mes "memories.";
-			next;
-			mes "[Biochemist]";
-			mes "When you open your eyes,";
-			mes "you will clearly remember";
-			mes "the secret of life. You will";
-			mes "also remember the weight of";
-			mes "responsibility in using these";
-			mes "secrets for the right ends...";
-			next;
-			skill "AM_BIOETHICS",1,SKILL_PERM;
-			mes "[Biochemist]";
-			mes "Open your eyes...";
-			mes "Now that you have";
-			mes "remembered how to";
-			mes "create artificial life, I only";
-			mes "ask that you treat all of your";
-			mes "creations with respect.";
-			close;
-		}
 		mes "[Biochemist]";
-		mes "If you wish to";
-		mes "retrieve your lost";
-		mes "memories, please";
-		mes "come back to me.";
-		mes "The secret to creating";
-		mes "life is no trifling thing...";
-		close;
-	}
-	else if (ADVJOB == 0 || Upper != 1) {
-		set .@karma_d,rand(1,10);
-		if (.@karma_d > 4) {
-			mes "[Biochemist]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
-			close;
-		}
-		mes "[Biochemist]";
-		mes "It's strange that";
-		mes "someone like me is here.";
-		mes "But even someone skilled";
-		mes "in the ways of science";
-		mes "can manage to be a hero.";
-		next;
-		mes "[Biochemist]";
-		mes "In this instance,";
-		mes "it's not necessarily";
-		mes "the means I've used, but";
-		mes "the ends for which I've";
-		mes "fought that earned me";
-		mes "a place in Valhalla...";
+		mes "Close your eyes and";
+		mes "put your mind at rest.";
+		mes "We will return to your";
+		mes "past to recollect the";
+		mes "fragments of your lost";
+		mes "memories.";
 		close;
 	}
 	else if (ADVJOB == Job_Creator && Class == Job_Merchant_High && JobLevel > 39) {
 		mes "[Biochemist]";
-		mes "Yes...";
-		mes "It's about time.";
-		mes "We need more geniuses";
-		mes "like you on Midgard.";
+		mes "When you open your eyes,";
+		mes "you will clearly remember";
+		mes "the secret of life. You will";
+		mes "also remember the weight of";
 		next;
+		mes "responsibility in using these";
+		mes "secrets for the right ends...";
 		mes "[Biochemist]";
-		mes "Would you like to";
-		mes "become a Biochemist?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Biochemist]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("Yes:No") == 1) {
+			mes "Open your eyes...";
+			mes "Now that you have";
+			mes "remembered how to";
+			mes "create artificial life, I only";
 			close;
 		}
 		if (SkillPoint) {
+			mes "ask that you treat all of your";
+			mes "creations with respect.";
 			mes "[Biochemist]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Creator;
 		if (bioeth == 13)
 			skill "AM_BIOETHICS",1,SKILL_PERM;
 		set ADVJOB,0;
-		mes "[Biochemist]";
-		mes "Congratulations!";
-		mes "As a Biochemist,";
-		mes "I hope you use your";
-		mes "vast knowledge for the";
-		mes "right purposes.";
+		mes "If you wish to";
+		mes "retrieve your lost";
+		mes "memories, please";
+		mes "come back to me.";
+		mes "The secret to creating";
+		mes "life is no trifling thing...";
 		close;
 	}
 	else {
@@ -136,4 +136,3 @@ valkyrie,53,50,3	script	Biochemist#Valkyrie	122,{
 		close;
 	}
 }
-

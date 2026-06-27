@@ -22,332 +22,332 @@
 //============================================================
 mid_camp,148,222,4	script	Theore#ep14_1_bs	982,3,3,{
 	if (BaseLevel < 100) {
-		mes "- A person with a white gown -";
-		mes "- is pulling at his hair. -";
+		mes "- 穿着白色衬衣的人 -";
+		mes "- 拉扯自己的头发. -";
 		close;
 	}
 	if (ep14_1_bs == 0) {
-		mes "[Theore]";
-		mes "Aaaarrrggghh!!!";
-		mes "Darn it!!!!";
-		mes "I'm finished!!!";
+		mes "[德欧雷]";
+		mes "啊啊啊啊啊啊啊!!!";
+		mes "该死!!!!";
+		mes "我完了!!!";
 		next;
-		mes "[Theore]";
-		mes "How am I supposed to submit a report that's so bad!!! A 5-year-old could do better!!!";
-		mes "Noooo!!!";
+		mes "[德欧雷]";
+		mes "如此糟糕, 让我怎么提交报告!!! 5岁的孩子都可以做得比这更好!!!";
+		mes "不!!!";
 		set ep14_1_bs,1;
 		close;
 	} else if (ep14_1_bs == 1) {
-		mes "- A person with a white gown -";
-		mes "- is pulling at his hair. -";
+		mes "- 穿着白色衬衣的人 -";
+		mes "- 拉扯自己的头发. -";
 		next;
-		if(select("Try talking to him.:How noisy.") == 2) {
-			mes "[Theore]";
-			mes "Oh, of course, I'm sorry.";
-			mes "I'll keep it down.";
+		if(select("- 尝试和他聊聊:- 好吵") == 2) {
+			mes "[德欧雷]";
+			mes "哦, 好吧, 我很抱歉.";
+			mes "我会小声一点.";
 			close;
 		}
 		mes "["+strcharinfo(0)+"]";
-		mes "Sir... Are you okay?";
-		mes "You will lose all your hair like that.";
-		mes "Calm down.";
+		mes "先生... 你还好吗?";
+		mes "这样下去你的头发都要掉了.";
+		mes "冷静下来.";
 		next;
-		mes "[Theore]";
-		mes "Sob.......";
+		mes "[德欧雷]";
+		mes "呜咽.......";
 		next;
-		mes "[Theore]";
+		mes "[德欧雷]";
 		mes ".......";
 		next;
-		mes "[Theore]";
-		mes "Odin!!!";
-		mes "Freyja!!!!";
-		mes "Sazarim!!!";
-		mes "Thank you!!";
-		mes "It's not all over!!";
+		mes "[德欧雷]";
+		mes "奥丁!!!";
+		mes "弗蕾亚!!!!";
+		mes "萨扎利姆!!!";
+		mes "谢谢你们!!";
+		mes "你们果然没有遗弃我!!";
 		next;
-		mes "[Theore]";
-		mes "There's always hope! I, Theore, will persevere and go on!!";
+		mes "[德欧雷]";
+		mes "人们总是希望我, 德欧雷, 能持之以恒, 能继续!!";
 		next;
-		mes "[Theore]";
-		mes "Dear Adventurer!!!";
-		mes "No, no, dear Warrior!!!!";
-		mes "Are you busy at the moment?";
-		mes "If you spare me a little time, I will see to it that you're rewarded handsomely!";
+		mes "[德欧雷]";
+		mes "亲爱的冒险家!!!";
+		mes "不, 不, 亲爱的勇士!!!!";
+		mes "你现在忙不忙?";
+		mes "如果你能给我一点时间, 我想你会得到不错的回报!";
 		next;
-		switch(select("I'm busy.:Listen to him more.")) {
+		switch(select("- 我很忙:- 继续听他说下去")) {
 		case 1:
-			mes "[Theore]";
+			mes "[德欧雷]";
 			mes ".......";
-			mes "I see, I suppose it can't be helped.";
-			mes "I'll probably lose all my hair and be on the ad for hair growth solutions. But I won't hold it against you, Warrior.";
+			mes "我知道了, 我得不到你的帮助.";
+			mes "可能我会失去所有的头发并从此不再生长. 但我不会记仇的, 战士.";
 			next;
-			mes "[Theore]";
-			mes "Dear God! My luck ends here. *sob*";
-			mes "Even though the world is turning its back on me, I won't blame anyone!!!";
+			mes "[德欧雷]";
+			mes "亲爱的上帝! 我的运气到此为止. *呜咽*";
+			mes "即使全世界都遗弃我, 我也不会责怪任何人!!!";
 			close;
 		case 2:
-			mes "[Theore]";
-			mes "Ahhh!";
-			mes "I feel like I was saved.";
-			mes "So the thing is.......";
+			mes "[德欧雷]";
+			mes "啊哈哈!";
+			mes "我觉得我得救了.";
+			mes "所以事情是.......";
 			next;
-			mes "[Theore]";
-			mes "Oh! Oh dear!";
-			mes "How rude of me, I haven't even introduced myself.";
-			mes "My name is Theore, and I work for 'Bazett Teablack's Institute of Culture of the Other World.' ";
+			mes "[德欧雷]";
+			mes "哦! 亲!";
+			mes "我多么粗鲁, 我还没有介绍我自己.";
+			mes "我叫德欧雷, 我在异世界为'巴兹特黑茶'文学院工作.";
 			next;
-			mes "[Theore]";
-			mes "I'm currently working on researching Laphines in the Splendide Basecamp.";
-			mes "Might be because I've been working soooo hard, but these days the Laphines all run away as soon as they see me.";
+			mes "[德欧雷]";
+			mes "我目前正在研究在辉煌领域的精灵.";
+			mes "可能是因为我的研究太投入了, 这些日子所有的精灵一看到我就逃跑了.";
 			next;
-			mes "[Theore]";
-			mes "The deadline is approaching, and I still haven't figured out the most critical part. ";
-			mes "My professor will be very disappointed .......";
+			mes "[德欧雷]";
+			mes "最后期限正在迫近, 我仍然没有想通最关键的部分.";
+			mes "我的导师会很失望.......";
 			next;
-			mes "[Theore]";
-			mes "So won't you give me a hand?!";
-			mes "Your help will be acknowledged fully - I will tell the professor myself!";
+			mes "[德欧雷]";
+			mes "所以你能不能帮我一把?!";
+			mes "我会承认得到了你的帮助 - 我会亲口告诉我的导师!";
 			next;
-			switch(select("Help.:Don't help.")) {
+			switch(select("- 帮他:- 不帮")) {
 			case 1:
-				mes "[Theore]";
-				mes "Sob sob Warrior, you're the best!";
-				mes "I will not forget this!!!";
-				mes "I'm going to write about it in my diary!!";
-				mes "And in the report!!!";
-				mes "And in a letter I'm sending home!!";
+				mes "[德欧雷]";
+				mes "呜咽~呜咽~战士, 你是最棒的!";
+				mes "我绝不会忘记!!!";
+				mes "我要写进我的日记!!";
+				mes "和报告中!!!";
+				mes "以及寄回家的书信里!!";
 				next;
-				mes "[Theore]";
-				mes "I'll tell my buddies at the lab!!!";
-				mes "I'll tell Lugen!!!";
-				mes "I'll write it in the bulletin board!!!";
-				mes "Let's see!!! Where else?";
+				mes "[德欧雷]";
+				mes "我会告诉我实验室的朋友!!!";
+				mes "我会告诉洛根!!!";
+				mes "我会写在布告栏上!!!";
+				mes "让我们来看看!!! 还有什么地方?";
 				next;
-				mes "- The man seems to be in a manic state. -";
-				mes "- Wait until he calms down -";
-				mes "- and try speaking to him again. -";
+				mes "- 那人看上去非常的浮躁. -";
+				mes "- 等到他平静下来 -";
+				mes "- 并尝试再次跟他说话. -";
 				set ep14_1_bs,2;
 				setquest 11182;
 				close;
 			case 2:
-				mes "[Theore]";
+				mes "[德欧雷]";
 				mes ".......";
-				mes "You bad person, making me all worked up.";
-				mes "*sob*";
+				mes "你这个坏人, 毁了我的前途.";
+				mes "*呜咽*";
 				close;
 			}
 		}
 	} else if (ep14_1_bs == 2) {
 		if (checkquest(11182,PLAYTIME) < 2) {
-			mes "[Theore]";
+			mes "[德欧雷]";
 			mes "......";
 			switch(rand(1,4)) {
 			case 1:
-				mes "I must tell my next-door neighbor Pico!!!";
-				mes "And Kachua!!!";
+				mes "我要告诉我的隔壁邻居皮克!!!";
+				mes "和卡丘亚!!!";
 				break;
 			case 2:
-				mes "Tell the merchant across the street!!!";
-				mes "And also tell the administrator!!!";
+				mes "告诉对面街的商人!!!";
+				mes "当然也告诉管理员!!!";
 				break;
 			case 3:
-				mes "Tell Mr. Holgren!!!";
-				mes "Write up a report for the King!!!";
+				mes "告诉霍根先生!!!";
+				mes "给国王写一份报告!!!";
 				break;
 			case 4:
-				mes "Tell the people around here!!!";
-				mes "Shout it out loud from the observatory so the whole world hears!!!";
+				mes "告诉这里周围的人!!!";
+				mes "从天文台上大声喊出好让全世界都听到!!!";
 				break;
 			}
 			next;
-			mes "- He is still manic. -";
-			mes "- Wait until he calms down -";
-			mes "- and try speaking to him again. -";
+			mes "- 他仍然很狂躁. -";
+			mes "- 等到他平静下来 -";
+			mes "- 并尝试再次和他说话. -";
 			close;
 		}
-		mes "[Theore]";
-		mes "My apologies.";
-		mes "I got a little excited.";
-		mes "I do apologize.";
+		mes "[德欧雷]";
+		mes "我得道歉.";
+		mes "我有点兴奋.";
+		mes "我向你道歉.";
 		next;
-		mes "[Theore]";
-		mes "I'm usually a calm and rational person, but it feels like I've been everywhere - heaven AND hell - today!";
+		mes "[德欧雷]";
+		mes "我通常是一个冷静和理性的人, 但它让感觉就像我已经无处不在 - 天堂和地狱 - 今天!";
 		next;
-		mes "[Theore]";
-		mes "To the point: what I would like to ask you is not a hard task.";
+		mes "[德欧雷]";
+		mes "重要的是: 我想给你个不知道算不算艰巨的任务.";
 		next;
-		mes "[Theore]";
-		mes "As you probably know, the Laphines are at war with the Saphas.";
-		mes "Until recently, they attacked the Saphas mercilessly.";
+		mes "[德欧雷]";
+		mes "正如你所知道的, 精灵与盗贼行会正在战争中.";
+		mes "直到最近, 他们无情地袭击了盗贼行会";
 		next;
-		mes "[Theore]";
-		mes "But lately, the frequency of attacks has decreased significantly.";
-		mes "I can't figure out why, they are single-minded creatures and it's not likely that they just took pity on the Saphas' situation.";
+		mes "[德欧雷]";
+		mes "但在这之后, 攻击的次数显著下降了.";
+		mes "我不明白为什么, 他们是专一的生物, 是不可能同情盗贼行会的.";
 		next;
-		mes "[Theore]";
-		mes "Also, there are rumors of unarmed Laphines flying through the fields.";
+		mes "[德欧雷]";
+		mes "当然, 有传言说手无寸铁的精灵飞过田野了.";
 		next;
-		mes "[Theore]";
-		mes "I have seen it once, but he ran away as soon as he spotted me and I didn't get a chance to ask him.";
-		mes "I'm sure that he went back to the village. But as desperately as I want to ask, I was banned from entering the Splendide Basecamp.";
+		mes "[德欧雷]";
+		mes "我看到过一次, 但他发现了我立刻就逃走了, 我没有机会问他.";
+		mes "我敢肯定他回到了村子里. 我想拼命地问, 但被禁止进入辉煌领域.";
 		next;
-		select("Banned?");
-		mes "[Theore]";
-		mes "Well...";
-		mes "I got so excited after the professor assigned me to this research project.......";
-		mes "that I combed through Splendide night and day, and they finally kicked me out.";
-		mes "Ha ha ha!";
+		select("禁止?");
+		mes "[德欧雷]";
+		mes "好吧...";
+		mes "教授安排我到这个研究项目后我很兴奋.......";
+		mes "我不分昼夜地研究辉煌领域, 最后被他们踢了出来.";
+		mes "哈哈哈!";
 		next;
-		mes "[Theore]";
-		mes "The Laphines may look cute, but they are combat specialists.......";
-		mes "So here I am, without the courage to sneak in, but with the report half-finished.......";
+		mes "[德欧雷]";
+		mes "这些精灵看起来很可爱, 但他们是战斗专家.......";
+		mes "所以我在这里, 没有勇气去潜入, 但报告只完成了一半......";
 		next;
-		mes "[Theore]";
-		mes "Tell me, is there a life more unfortunate than mine?";
-		mes "*chuckle*";
+		mes "[德欧雷]";
+		mes "告诉我, 有谁比我的生活更不幸?";
+		mes "*咯咯*";
 		next;
-		mes "[Theore]";
-		mes "So Warrior, would you please find the Laphines who are coming to the Splendide field, and find out what they're up to?";
+		mes "[德欧雷]";
+		mes "所以战士, 你可以找到来自辉煌领域的精灵, 看看他们在做些什么吗?";
 		next;
-		mes "[Theore]";
-		mes "They may run away if you try to speak to them, so pay close attention when you find one.";
+		mes "[德欧雷]";
+		mes "如果你尝试和他们说话他们可能会逃跑, 当你发现一个就要密切注意.";
 		next;
-		mes "[Theore]";
-		mes "The Laphines are such a rowdy crew, and it's very unsettling to see how quiet they've been - almost like a period of calm before a giant thunderstorm.";
+		mes "[德欧雷]";
+		mes "这些个精灵真的很吵闹, 看到安静的他们会令人很不安 - 就像是暴风雨来临前的平静.";
 		set ep14_1_bs,3;
 		changequest 11182,11183;
 		close;
 	} else if (ep14_1_bs == 3) {
-		mes "[Theore]";
-		mes "So Warrior, would you please find the Laphines who are coming to the Splendide field, and ask them what they're up to?";
+		mes "[德欧雷]";
+		mes "所以战士, 你能不能问下来自辉煌领域的精灵?";
 		next;
-		mes "[Theore]";
-		mes "They may run away if you try to speak to them, so pay close attention when you find one.";
+		mes "[德欧雷]";
+		mes "如果你试着跟他们说话, 他们可能会跑掉, 当你发现一个就要密切注意.";
 		next;
-		mes "[Theore]";
-		mes "The Laphines are such a rowdy crew, and it's very unsettling to see how quiet they've been - almost like a period of calm before a giant thunderstorm.";
+		mes "[德欧雷]";
+		mes "这些个精灵真的很吵闹, 看到安静的他们会令人很不安 - 就像是暴风雨来临前的平静.";
 		close;
 	} else if (ep14_1_bs < 10) {
 		if (ep14_1_bs2 == 0) {
-			mes "- He is in no state for conversations. You should take the pouch to Splendide and look for its owner. -";
+			mes "- 他在没有任何意识下开始胡言乱语. 你应当去辉煌领域寻找它的主人. -";
 			close;
 		} else if (ep14_1_bs2 < 4) {
-			mes "[Theore]";
-			mes "Hmm...... They were rummaging through the bushes?";
-			mes "Hmm... Hmm...";
+			mes "[德欧雷]";
+			mes "唔...... 他们在灌木丛翻箱倒柜?";
+			mes "唔... 唔...";
 			next;
-			mes "[Theore]";
-			mes "They may have left a clue, can you please look around the area?";
-			mes "If they were looking through the bushes, they may have been looking for something they've lost.";
-			mes "Or they may have left something behind.";
+			mes "[德欧雷]";
+			mes "他们身上可能有线索, 麻烦你看看周围地区.";
+			mes "如果他们正在灌木丛中寻找什么, 可能是在寻找他们失去的东西.";
+			mes "或者他们可能已经把什么东西藏在那里了.";
 			close;
 		} else if (ep14_1_bs2 < 7) {
 			if (countitem(6390) == 0) {
-				mes "[Theore]";
-				mes "They may have left a clue, can you please look around the area?";
-				mes "If they were looking through the bushes, they may have been looking for something they've lost.";
-				mes "Or they may have left something behind.";
+				mes "[德欧雷]";
+				mes "他们可能会留下一些线索, 可以请你去看看周围的地区?";
+				mes "如果他们正在寻找在灌木丛中, 他们可能一直在寻找他们失去了的东西.";
+				mes "或者他们可能已经把什么东西藏在那里了.";
 				close;
 			}
-			mes "[Theore]";
-			mes "A pouch that a Laphine dropped as it fled?";
-			mes "Hmm... Hmm... A soft leather pouch with a string made by soaking dried vines in oil.... too small for humans or Saphas to use...";
+			mes "[德欧雷]";
+			mes "一伙精灵丢下了一个袋子然后跑了?";
+			mes "唔... 恩... 柔软的皮革小袋一个字符串由油中浸泡干葡萄藤....这对于人类或盗贼们来说也太小了...";
 			next;
-			mes "[Theore]";
-			mes "Could... Could it be??!!";
-			mes "that object?!";
-			mes "that I've only heard about, but never came across!!!";
+			mes "[德欧雷]";
+			mes "莫非......莫非??!!";
+			mes "是那个?!";
+			mes "我只是听说过, 但从来没有见过!!!";
 			next;
-			mes "[Theore]";
-			mes "In the ancient times, Laphines used to carry fairy dust - such as the flying dust, minimizing dust - in a small pouch like this.";
+			mes "[德欧雷]";
+			mes "在古代, 像这样在一个小袋子, 用来存放精灵仙尘 - 精灵粉袋子, 最大限度地减少灰尘 -.";
 			next;
-			mes "[Theore]";
-			mes "They usually enjoy extravagant designs, but this 'fairy dust pouch' is something that they always carry around, and it is made simply without extravagant ornaments, keeping in line with tradition.";
+			mes "[德欧雷]";
+			mes "精灵们最喜欢奢华的物品. 但这个'精灵的布袋', 他们总是随身携带, 它是简单而不奢侈的装饰品, 与精灵们的传统非常接近.";
 			next;
-			mes "[Theore]";
-			mes "I'm not sure what it'll be like nowadays, but if this is the 'fairy dust pouch,' the owner should be anxious to find it.";
+			mes "[德欧雷]";
+			mes "我虽然不清楚它里面有什么, 但如果是这样的东西, 它的主人应该是急于找到它.";
 			next;
-			mes "[Theore]";
-			mes "We can't give it back for free though. In exchange for some information - that's a fair deal!";
+			mes "[德欧雷]";
+			mes "我们不能白白的还给他们. 交换一些情报 - 这是一个公平的交易!";
 			next;
-			mes "[Theore]";
-			mes "And perhaps they won't be too upset if we look inside the pouch!";
-			mes "Wooow!!";
-			mes "I always believed when I was little that a fairy would come and sprinkle me with flying dust to make me fly!!!";
+			mes "[德欧雷]";
+			mes "也许他们不会太难过, 如果我们看看里面的小袋袋!";
+			mes "哇哦!!";
+			mes "我小的时候始终坚信有一天, 精灵会来和我红尘作伴, 带我飞!!!";
 			next;
-			mes "- Before I can stop him, -";
-			mes "- he opened the small pouch. -";
+			mes "- 我刚想阻止他的时候, -";
+			mes "- 他已经打开了这个袋子. -";
 			next;
-			mes "[Theore]";
+			mes "[德欧雷]";
 			mes ".......";
 			next;
-			mes "[Theore]";
-			mes "Oh...";
-			mes "Berries......and leaves?";
+			mes "[德欧雷]";
+			mes "噢...";
+			mes "浆果......和叶子?";
 			mes ".......";
 			next;
-			mes "[Theore]";
-			mes "......What about the flying dust?";
-			mes "Noooo!";
-			mes "My poor innocent imagination!!!!";
+			mes "[德欧雷]";
+			mes "......仙尘在哪里?";
+			mes "不不不!";
+			mes "真让我无法想象!!!!";
 			next;
-			mes "- He is in no state for conversations. You should take the pouch to Splendide and look for its owner. -";
+			mes "- 他在没有任何意识下开始胡言乱语. 你应当收起'精灵的布袋'并去寻找它的主人. -";
 			set ep14_1_bs2, ep14_1_bs2+3; //4,5,6 -> 7,8,9
 			changequest 11185,11186;
 			close;
 		} else {
-			mes "- He is in no state for conversations. You should take the pouch to Splendide and look for its owner. -";
+			mes "- 他在没有任何意识下开始胡言乱语. 你应当收起'精灵的布袋'并去寻找它的主人. -";
 			close;
 		}
 	} else if (ep14_1_bs < 18) {
-		mes "- He appears to be busy. You should finish the task at hand and come back. -";
+		mes "- 他似乎很忙. 你应该完成手头上的任务再回来. -";
 		close;
 	} else if (ep14_1_bs == 18) {
-		mes "[Theore]";
-		mes "At last, you're back!!!!";
-		mes "How did the investigation go?!";
+		mes "[德欧雷]";
+		mes "最终你还是回来了!!!!";
+		mes "调查的情况如何?!";
 		next;
-		mes "[Theore]";
-		mes "Wow!!!";
-		mes "Incredible!!!!!!";
-		mes "Unbelievable!!!";
+		mes "[德欧雷]";
+		mes "哇!!!";
+		mes "难以置信!!!!!!";
+		mes "实在难以置信!!!";
 		next;
-		mes "[Theore]";
-		mes "The best!!!!";
-		mes "This is surely enough to write an excellent report on!!";
-		mes "All thanks to you, Warrior!!";
+		mes "[德欧雷]";
+		mes "太棒了!!!!";
+		mes "写一份出色的报告, 这肯定是不够的!!";
+		mes "太感激你了, 战士!!";
 		next;
-		mes "[Theore]";
-		mes "I'll never, EVER forget what you've done for me!";
-		mes "No!!";
-		mes "My grandchildren's grandchildren will remember!!!!";
-		mes "*Sob*";
+		mes "[德欧雷]";
+		mes "我将永远, 永远不会忘记你为我做的事情!";
+		mes "不!!";
+		mes "我们世世代代都会记得的!!!!";
+		mes "*哭泣*";
 		next;
-		mes "[Theore]";
-		mes "Then I'm off to put the finishing touches on the report!!!!!!!";
-		mes "Oh yeah!!!!";
+		mes "[德欧雷]";
+		mes "接下去我要把报告给完成!!!!!!!";
+		mes "噢耶!!!!";
 		set ep14_1_bs,19;
 		getexp 0,200000;
 		getitem 6380,5; //Mora_Coin
 		close;
 	} else if (ep14_1_bs > 18) {
-		mes "[Theore]";
-		mes "I'll write the report with lightning speed!!!!!!!";
-		mes "Oh yeah!!!!";
+		mes "[德欧雷]";
+		mes "我会以闪电般的速度写报告!!!!!!!";
+		mes "噢耶!!!!";
 		close;
 	}
 	end;
 OnTouch:
 	if (BaseLevel > 99) {
 		if (ep14_1_bs == 0) {
-			mes "[Theore]";
-			mes "Aaaarrrggghh!!!";
-			mes "Darn it!!!!";
-			mes "I'm finished!!!";
+			mes "[德欧雷]";
+			mes "啊啊啊啊啊啊啊!!!";
+			mes "该死!!!!";
+			mes "我完蛋了!!!";
 			next;
-			mes "[Theore]";
-			mes "How am I supposed to submit a report that's so bad!!! A 5-year-old could do better!!!";
-			mes "Noooo!!!";
+			mes "[德欧雷]";
+			mes "我应该如何提交一份报告, 这是多么的糟糕! 5年的时间啊!!!";
+			mes "不!!!";
 			set ep14_1_bs,1;
 			close;
 		}
@@ -357,25 +357,25 @@ OnTouch:
 
 -	script	#mora_bush	-1,{
 	if (ep14_1_bs != 3 || rand(5)) {
-		mes "- It's just an ordinary bush. -";
+		mes "- 这只是一堆普通的灌木. -";
 		close;
 	}
 	set .@i, atoi(charat(strnpcinfo(2),9));
 	set .@rand, rand(1,3);
-	mes "[Unarmed Laphine]";
-	mes "Aaaarrrrrggggghhhhh!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+	mes "[空着手的精灵]";
+	mes "啊啊啊啊啊啊啊!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 	donpcevent "Fairy#cmd"+.@i+.@rand+"::OnEnable";
 	set ep14_1_bs, .@i+3;
 	set ep14_1_bs2, .@rand;
 	changequest 11183,11184;
 	next;
-	mes "- You try to talk to the Laphine, -";
-	mes "- who is looking around the bushes, -";
-	mes "- but it flew away -";
-	mes "- while yelling fearfully. -";
+	mes "- 这个精灵在灌木附近寻找什么, -";
+	mes "- 你应该和这个精灵谈谈, -";
+	mes "- 但是他们惊慌失措地 -";
+	mes "- 飞走了. -";
 	next;
-	mes "- What was the fairy doing? -";
-	mes "- You decide to look around. -";
+	mes "- 这些精灵在干什么? -";
+	mes "- 决定环顾四周. -";
 	donpcevent "Bush"+.@i+"Timer::OnEnable";
 	close;
 OnEnable:
@@ -394,32 +394,32 @@ OnTouch:
 	if (ep14_1_bs == .@i+3) {
 		if (countitem(6390) == 0) {
 			if (checkweight(1201,1) == 0) {
-				mes " - Hang on there !! -";
-				mes " - You are carrying too many kinds of items - ";
-		   		mes " - to receive any more items. - ";
-				mes " - Please lighten your load - ";
-		   		mes " - and try again. - ";
+				mes " - 等等 !! -";
+				mes " - 你所携带的物品过多 - ";
+		   		mes " - 如果想获得更多物品. - ";
+				mes " - 请做一些清理工作 - ";
+		   		mes " - 再回来尝试. - ";
 				close;
 			}
 			if (MaxWeight - Weight < 1000) {
-				mes " - Hang on there !! -";
-			 	mes " - You are carrying too much weight - ";
-				mes " - Please lighten your load - ";
-		   		mes " - and try again. - ";
+				mes " - 等等 !! -";
+			 	mes " - 你的负重不足 - ";
+				mes " - 请做一些清理工作 - ";
+		   		mes " - 再回来尝试. - ";
 				close;
 			}
-			mes "- Jumble Fumble -";
-			mes "- Rustle Bustle -";
+			mes "- 随意摸索 -";
+			mes "- 沙沙的喧嚣声 -";
 			next;
 			if (rand(1,5) == 4) {
-				mes "- You've found a Small pouch. -";
+				mes "- 你找到一个小袋子. -";
 				if (ep14_1_bs2 > 0 && ep14_1_bs2 < 4)
 					set ep14_1_bs2, ep14_1_bs2+3;
 				changequest 11184,11185;
 				getitem 6390,1; //Small_Pocket
 				close;
 			} else {
-				mes "- You didn't find anything. -";
+				mes "- 你没有找到任何东西. -";
 				close;
 			}
 		}
@@ -627,76 +627,76 @@ splendide,183,117,4	script	Tired-looking Fairy	438,{
 
 splendide,119,138,4	script	Kusmi#ep14_1_bs	440,{
 	if (!isequipped(2782)) {
-		mes "[Kusmi]";
-		mes "DimFusTal Mu Lars";
-		mes "ModAnduLo";
-		mes "Mod";
-		mes "DorDuMe U NohLarsFulo Mu Fus";
+		mes "[疲惫的精灵]";
+		mes "VeOsaRiveh No ModAsh";
+		mes "- 你无法理解精灵的话. -";
+		mes "- 你需要能够翻译这些语言的东西. -";
+		mes "[疲惫的精灵]";
 		next;
-		mes "- You can't understand the fairy's words. -";
-		mes "- You need something to help you interpret them. -";
+		mes "我很疲倦, 请别和我说话.";
+		mes "[疲惫的精灵]";
 		close;
 	}
 	if (ep14_1_bs > 3 && ep14_1_bs < 10) {
-		mes "[Kusmi]";
-		mes "And who mayy you be?";
+		mes "我很疲倦, 请别和我说话.";
+		mes "[疲惫的精灵]";
 		next;
-		select("Show the pouch.");
+		select("拿出小袋子");
 		if (countitem(6390) == 0) {
-			mes "[Kusmi]";
-			mes "What is it that you want to show mee?";
+			mes "唔?!";
+			mes "你到这里来干嘛?!";
 			close;
 		}
 		if (ep14_1_bs2 == 10) {
-			mes "[Kusmi]";
-			mes "Ahh!!";
-			mes "My pouch!!!!!";
-			mes "Thank you sirr!!!!!";
-			mes "I've been looking for it all overr!";
+			mes "[疲惫的精灵]";
+			mes "这看上去不像, 但这对我们很重要. 我想我应该对你说声谢谢.";
+			mes "[疲惫的精灵]";
+			mes "如果只靠这个袋子的话, 是很难找到它的主人的...";
+			mes "[疲惫的精灵]";
 			next;
-			select("Ask about the rumor.");
-			mes "[Kusmi]";
-			mes "That's a difficult questionn!";
-			mes "But you've returned my pouch, so I'll have to answerr......";
+			select("我在灌木丛中找到了它");
+			mes "如果你想起了什么记得告诉我.";
+			mes "[疲惫的精灵]";
+			mes "我希望你能找到它的主人.";
 			next;
-			mes "[Kusmi]";
-			mes "Promise me you won't tell anyonee!";
-			mes "If you can promise, please talk to me againn.";
+			mes "[疲惫的精灵]";
+			mes "你还记得那个精灵的相貌吗?";
+			mes "[疲惫的精灵]";
 			delitem 6390,1; //Small_Pocket
 			set ep14_1_bs,10;
 			changequest 11187,11188;
 			close;
 		} else {
-			mes "[Kusmi]";
-			mes "Hmm I don't know who, but must be a slobb to be dropping his pouch like soo.";
-			mes "Huh? Mine??";
-			mes "No, mine is right here safelyy?";
+			mes "嗯...... 我想应该是库斯米.";
+			mes "[疲惫的精灵]";
+			mes "库斯米应该在村子的东南面寻找.";
+			mes "如果她丢了自己的袋子应该很着急, 去找她看看吧.";
 			next;
-			mes "[Kusmi]";
-			mes "It's a precious object so I hope you'll find the owner itt.";
+			mes "唔......那一定是德欧特.";
+			mes "[疲惫的精灵]";
 			close;
 		}
 	}
 	if (ep14_1_bs2 == 10) {
 		if (ep14_1_bs == 10) {
-			mes "[Kusmi]";
-			mes "You can't say this to anybody okayy~?";
-			mes "Recently,";
-			mes "the supplies from our the mainland have been cutt!";
-			mes "Or rather, the supply route is being blocked and we can't get our suppliess?";
+			mes "德欧特应该在东北部地区的村庄附近.";
+			mes "如果他丢了自己的袋子应该很着急, 去找他看看吧.";
+			mes "嗯......好像是宝熊?";
+			mes "[疲惫的精灵]";
+			mes "宝熊应该在村子以北的地区.";
 			next;
-			mes "[Kusmi]";
-			mes "We need to find enough food before we run out of stored goods, that's why we've been rummaging the bushess.";
+			mes "如果她丢了自己的袋子应该很着急, 去找她看看吧.";
+			mes "[疲惫的精灵]";
 			next;
-			mes "[Kusmi]";
-			mes "But this cursed frozen land has no good foods.";
-			mes "We're barely keeping it green using magic, but it takes too much power to make fruit.";
+			mes "呃...";
+			mes "我不记得有这样特征的精灵.";
+			mes "你确定没搞错吗?";
 			next;
-			mes "[Kusmi]";
-			mes "The energy spent in making food is probably twice as much as the energy gained from eatingg.";
-			mes "Those higher up don't want to admit it, but it's going to become a serious problem soonn.";
+			mes "要不要再回忆下.";
+			mes "[疲惫的精灵]";
+			mes "什么?";
 			next;
-			mes "[Kusmi]";
+			mes "你找到袋子的主人了?";
 			mes "We can't leave the battleground because we're in war, so we can't go checkk.";
 			mes "I am curiousss.......";
 			next;
@@ -717,12 +717,12 @@ splendide,119,138,4	script	Kusmi#ep14_1_bs	440,{
 			mes "Eh?";
 			mes "You stilll want to talk?";
 			next;
-			select("Supply route from the mainland?");
+			select("- 我看到了一个精灵, 我觉得可能是它的主人:- 我再考虑下");
 			mes "[Kusmi]";
 			mes "Well if you hear that you'll have to helpp!";
 			mes "Still want to knoww?!";
 			next;
-			switch(select("Yes.:No.")) {
+			switch(select("金色头发:草绿色头发:褐色头发:海洋蓝头发")) {
 			case 1:
 				mes "[Kusmi]";
 				mes "It's not a special road or anythingg.";
@@ -822,172 +822,172 @@ splendide,119,138,4	script	Kusmi#ep14_1_bs	440,{
 
 splendide,304,295,4	script	Theodore#ep14_1_bs	445,{
 	if (!isequipped(2782)) {
-		mes "[Theodore]";
+		mes "[库斯米]";
 		mes "DimFusTal Mu Lars";
 		mes "ModAnduLo";
 		mes "Mod";
 		mes "DorDuMe U NohLarsFulo Mu Fus";
 		next;
-		mes "- You can't understand the fairy's words. -";
-		mes "- You need something to help you interpret them. -";
+		mes "- 你无法理解精灵的话. -";
+		mes "- 你需要能够翻译这些语言的东西. -";
 		close;
 	}
 	if (ep14_1_bs > 3 && ep14_1_bs < 10) {
-		mes "[Theodore]";
-		mes "Who are you!";
+		mes "[库斯米]";
+		mes "你你是是谁?";
 		next;
-		select("Show the pouch.");
+		select("拿出小袋子");
 		if (countitem(6390) == 0) {
-			mes "[Theodore]";
-			mes "Hmm? What do you mean?";
+			mes "[库斯米]";
+			mes "你找我有什么事事情?";
 			close;
 		}
 		if (ep14_1_bs2 == 11) {
-			mes "[Theodore]";
-			mes "Ahh!!";
-			mes "My pouch!!!!!";
-			mes "I've been looking for it all over the place.";
-			mes "Thanks!";
+			mes "[库斯米]";
+			mes "啊!!";
+			mes "我的袋袋子!!!!!";
+			mes "谢谢谢谢你!!!!!";
+			mes "我找遍了都没找找找到它!";
 			next;
-			select("Ask about the rumor.");
-			mes "[Theodore]";
-			mes "Hrm!!";
-			mes "What a penetrating question!";
+			select("询问谣言.");
+			mes "[库斯米]";
+			mes "这是个很很难回答的问问题!";
+			mes "但是你帮我找回了我的袋袋子, 所以我尽尽量回答......";
 			next;
-			mes "[Theodore]";
-			mes "If you really want to hear the answer, talk to me again.";
-			mes "I need time to think.";
+			mes "[库斯米]";
+			mes "但是你要发发发誓, 不能告告诉任何人!";
+			mes "如果你愿意发发发誓, 就就再次和我对话.";
 			delitem 6390,1; //Small_Pocket
 			set ep14_1_bs,10;
 			changequest 11187,11194;
 			close;
 		} else {
-			mes "[Theodore]";
-			mes "What is that dirty pouch!";
-			mes "It is definitely not mine.";
+			mes "[库斯米]";
+			mes "唔我不知知知道是谁, 但肯定是谁谁不小心掉了自己的袋子.";
+			mes "呼? 我的??";
 			next;
-			mes "[Theodore]";
-			mes "But I hope you find its rightful owner.";
+			mes "不不是, 我我的就在我身上呢.";
+			mes "[库斯米]";
 			close;
 		}
 	}
 	if (ep14_1_bs2 == 11) {
 		if (ep14_1_bs == 10) {
-			mes "[Theodore]";
-			mes "You are not to tell anyone what I'm about to tell you.";
+			mes "这这是一个珍贵的东东东西, 所以我希望你能找到失失失主.";
+			mes "[库斯米]";
 			next;
-			mes "[Theodore]";
-			mes "Recently, there's a big problem in Splendide.";
-			mes "There is no communication with the mainland.";
-			mes "Not just communication, but supplies have been cut off also. People act indifferent but actually there is deep panic.";
+			mes "你别把这事告告告诉别人, 行行吗?";
+			mes "最近,";
+			mes "我我们大陆的供应被切断!";
+			mes "或者更确切地说, 供应路线被被封锁, 我我们无法得到我们的补给品.";
 			next;
-			mes "[Theodore]";
-			mes "This frozen land is no use for collecting food, but to farm it would be too much work.";
+			mes "[库斯米]";
+			mes "在我们找到足够的食物之前, 我们用完了储存的货物, 这就是为什么我们一直在灌木丛翻箱倒柜.";
 			next;
-			mes "[Theodore]";
-			mes "In fact, just maintaining the green is costing an incredible amount of magic power.";
-			mes "No word has come from higher up, but from the rumors it's not an easily fixable problem.";
+			mes "[库斯米]";
+			mes "但这座被诅咒的冻结土地又没有好的食物.";
+			mes "我们使用魔法勉强保持它的绿色, 但需要太多的力量来使水果保持新鲜.";
 			next;
-			mes "[Theodore]";
-			mes "And because there is no easy fix, everybody is worried sick.";
-			mes "By military law, our soldiers cannot leave the battlefield during war, so it's impossible to get more information.";
+			mes "[库斯米]";
+			mes "为了获得能够食用的食物, 我们花费了超过两倍的魔力.";
+			mes "虽然不想承认这一点, 但这会很快成为一个严重的问题.";
 			next;
-			mes "[Theodore]";
-			mes "Therefore, if you happen to run into a Laphine, please don't mention any of this.";
-			mes "Everybody is trying as hard as they can, but we are still a proud race.";
+			mes "[库斯米]";
+			mes "因为我们是在战争中, 我们不能离开战场, 所以我们不能去检查.";
+			mes "我很好奇.......";
 			next;
-			mes "[Theodore]";
-			mes "And as I said before, what I told you is a secret and you must not tell anyone.";
-			mes "We do need help, but we are cornered and we don't want others to know.";
+			mes "[库斯米]";
+			mes "不仅是我, 还有其他的守护精灵士兵们.";
+			mes "基于这个情况, 如果你在灌木丛中遇到一个精灵, 请尽量不要跟他说话.";
 			set ep14_1_bs,11;
 			completequest 11194;
 			setquest 11195;
 			close;
 		} else if (ep14_1_bs == 11) {
-			mes "[Theodore]";
-			mes "You have further business with me?";
+			mes "说起来有点尴尬!!!";
+			mes "[库斯米]";
 			next;
-			select("Supply route from the mainland?");
-			mes "[Theodore]";
-			mes "Hmm... if you hear that, you might just have to help us out?";
-			mes "Do you still want to know?";
+			select("来自大陆的供应路线?");
+			mes "唔, 你可不能告诉任何人, 今天发生了什么事!";
+			mes "除非这个人想帮助我们...这事传出去不会对辉煌领域有任何好处.";
+			mes "[库斯米]";
 			next;
-			switch(select("Yes.:No.")) {
+			switch(select("是的:不了")) {
 			case 1:
-				mes "[Theodore]";
-				mes "The supply route comes through Bifrost, and you can get to it from the back of the Splendide Basecamp.";
-				mes "That is why we set up the basecamp here.";
-				mes "The origin of the route is unclear, but it has been known for a long time to be a bridge that connects continents.";
+				mes "呃?";
+				mes "你还想问什么?";
+				mes "[库斯米]";
+				mes "好吧, 如果你想听那你可得帮我们!";
 				next;
-				mes "[Theodore]";
-				mes "If you happen to venture there, please ask a guard what things are like there.";
+				mes "还想听吗?!";
+				mes "[库斯米]";
 				set ep14_1_bs,12;
 				changequest 11195,11196;
 				close;
 			case 2:
-				mes "[Theodore]";
-				mes "Thank you for getting the pouch back to me.";
-				mes "Fairy dust? I don't carry around such a thing.";
+				mes "其实这条道路也没什么特别的.";
+				mes "它已经存在很久了.";
+				mes "有传言说它是连接各个大陆的道路. 也有人说它是从辉煌领域前线阵地的后方连接到艾芙菲姆.";
 				close;
 			}
 		} else if (ep14_1_bs == 12) {
-			mes "[Theodore]";
-			mes "The supply route comes through Bifrost, and you can get to it from the back of the Splendide Basecamp.";
-			mes "That is why we set up the basecamp here.";
-			mes "The origin of the route is unclear, but it has been known for a long time to be a bridge that connects continents.";
+			mes "[库斯米]";
+			mes "如果你顺路的话. 请去看看, 那里的情况是不是正常, 好吗?";
+			mes "[库斯米]";
+			mes "谢谢你找到了我的袋子.";
 			next;
-			mes "[Theodore]";
-			mes "If you happen to venture there, please ask a guard what things are like there.";
+			mes "我想给你一些仙尘, 但我已经没有剩余的了.";
+			mes "[库斯米]";
 			close;
 		} else if (ep14_1_bs == 13) {
-			mes "[Theodore]";
-			mes "A crevice?";
-			mes "So that was why we couldn't reach the mainland.";
-			mes "It would be good to know what's going on up there.";
+			mes "其实这条道路也没什么特别的.";
+			mes "它已经存在很久了.";
+			mes "有传言说它是连接各个大陆的道路. 也有人说它是从辉煌领域前线阵地的后方连接到艾芙菲姆.";
+			mes "[库斯米]";
 			next;
-			mes "[Theodore]";
-			mes "Hmm...";
-			mes "I can't leave here, but you would be able to, no?";
-			mes "The supplies from the mainland come through 'Mora' Village, which is located in the middle of Bifrost.";
+			mes "如果你顺路的话. 请去看看, 那里的情况是不是正常, 好吗?";
+			mes "[库斯米]";
+			mes "一处裂缝?";
+			mes "这就是为什么我们无法连络大陆.";
 			next;
-			mes "[Theodore]";
-			mes "If you speak to the Warehouse Manager of Mora Village, you'd be able to get more information.";
-			mes "If you're willing, will you go to Bifrost's 'Mora' Village and meet the Warehouse Manager?";
+			mes "呃.......";
+			mes "知道发生了什么情况就好办了.";
+			mes "[库斯米]";
 			next;
-			mes "[Theodore]";
-			mes "And if it's not too much trouble, you could drop by my friend Lilitia's also...";
+			mes "如果你碰巧要经过彩虹桥, 请弄清楚是怎么回事.";
+			mes "在彩虹桥的中间有个小村庄, 名叫'穆拉'. 来自大陆上的所有供给都通过那个村庄.";
 			set ep14_1_bs,14;
 			changequest 11197,11198;
 			close;
 		} else if (ep14_1_bs == 14) {
-			mes "[Theodore]";
-			mes "If you speak to the Warehouse Manager of Mora Village, you'd be able to get more information.";
-			mes "If you're willing, will you go to Bifrost's 'Mora' Village and meet the Warehouse Manager?";
+			mes "[库斯米]";
+			mes "如果你去穆拉村的仓库, 管理员会告诉你更多的讯息.";
+			mes "还有, 回来的时候可以顺便帮我看看我的朋友朗多是不是在穆拉村呢?";
 			if (checkquest(11199) > -1 && checkquest(11199) < 2)
 				close;
 			next;
-			mes "[Theodore]";
-			mes "And if it's not too much trouble, you could drop by my friend Lilitia's also...";
+			mes "[库斯米]";
+			mes "他常去辉煌领域. 不过这个时候, 情况非常不好. 我不得不告诉他需要改变安排了.";
 			close;
 		} else if (ep14_1_bs > 14) {
 			if (checkquest(11199) == -1) {
-				mes "[Theodore]";
-				mes "And if it's not too much trouble, you could drop by my friend Lilitia's also...";
+				mes "[库斯米]";
+				mes "如果你碰巧要经过彩虹桥, 请弄清楚是怎么回事.";
 				close;
 			}
-			mes "[Theodore]";
-			mes "Wow!!!";
-			mes "So you went through the Maze of the Hazy Forest and returned from Mora Village.";
-			mes "I made the right decision by asking you!";
+			mes "在彩虹桥的中间有个小村庄, 名叫'穆拉'. 来自大陆上的所有供给都通过那个村庄.";
+			mes "[库斯米]";
+			mes "如果你去穆拉村的仓库, 管理员会告诉你更多的讯息.";
+			mes "还有, 回来的时候可以顺便帮我看看我的朋友朗多是不是在穆拉村呢?";
 			next;
-			mes "[Theodore]";
-			mes "Thank you.";
-			mes "I hope this gets resolved soon...";
-			mes "I don't want to further upset Lilitia...";
+			mes "[库斯米]";
+			mes "他常去辉煌领域. 不过这个时候, 情况非常不好. 我不得不告诉他需要改变安排了.";
+			mes "[库斯米]";
+			mes "我的朋友朗多是不是在穆拉村呢?";
 			if (ep14_1_bs == 17) {
 				next;
-				mes "[Theodore]";
-				mes "Oh, And Daphrer is in northwest Splendide.";
+				mes "[库斯米]";
+				mes "他常去辉煌领域. 不过这个时候, 情况非常不好. 我不得不告诉他需要改变安排了.";
 			}
 			if (checkquest(11199) < 2) {
 				completequest 11198;
@@ -996,181 +996,181 @@ splendide,304,295,4	script	Theodore#ep14_1_bs	445,{
 			close;
 		}
 	}
-	mes "[Theodore]";
-	mes "Sometimes, I sense a painful beauty in this frozen earth, quite different from the beauty of my hometown.";
-	mes "But this is a difficult environment for us to live in, certainly.";
+	mes "[库斯米]";
+	mes "他他!";
+	mes "你真的已经穿越过了迷雾森林的迷宫了?";
 	close;
 }
 
 splendide,168,301,4	script	Pauchon#ep14_1_bs	439,{
 	if (!isequipped(2782)) {
-		mes "[Pauchon]";
+		mes "[德欧特]";
 		mes "DimFusTal Mu Lars";
 		mes "ModAnduLo";
 		mes "Mod";
 		mes "DorDuMe U NohLarsFulo Mu Fus";
 		next;
-		mes "- You can't understand the fairy's words. -";
-		mes "- You need something to help you interpret them. -";
+		mes "- 你无法理解精灵的话. -";
+		mes "- 你需要能够翻译这些语言的东西. -";
 		close;
 	}
 	if (ep14_1_bs > 3 && ep14_1_bs < 10) {
-		mes "[Pauchon]";
-		mes "What can I do for you, sir?";
+		mes "[德欧特]";
+		mes "你是是谁?";
 		next;
-		select("Show the pouch.");
+		select("拿出小袋子");
 		if (countitem(6390) == 0) {
-			mes "[Pauchon]";
-			mes "Huh? Do you see something?";
-			mes "I don't see anything...";
+			mes "[德欧特]";
+			mes "嗯? 这是什么意思?";
+			mes "[德欧特]";
 			close;
 		}
 		if (ep14_1_bs2 == 12) {
-			mes "[Pauchon]";
-			mes "Good heavens...!";
-			mes "I think this is mine!";
-			mes "Thank you.";
-			mes "I've been worried since I lost it, you lifted a burden off of my mind.";
+			mes "啊!!";
+			mes "我的袋子!!!!!";
+			mes "我找遍了都没找找找到它.";
+			mes "谢谢!";
+			mes "[德欧特]";
 			next;
-			select("Ask about the rumor.");
-			mes "[Pauchon]";
-			mes "That's not easy for me to answer...";
-			mes "I do appreciate you finding my pouch.... Hmm...";
-			mes "Please give me some time to think..";
+			select("询问谣言");
+			mes "唔!!";
+			mes "这是个很很难回答的问问题!";
+			mes "[德欧特]";
+			mes "如果你想知道答案, 就再次和我对话.";
 			delitem 6390,1; //Small_Pocket
 			set ep14_1_bs,10;
 			changequest 11187,11200;
 			close;
 		} else {
-			mes "[Pauchon]";
-			mes "Oh dear. It's not mine.";
-			mes "But to carelessly drop such an important object!";
-			mes "I don't know who it is, but that Laphine needs a lesson!";
+			mes "我需要好好整理下思路.";
+			mes "[德欧特]";
+			mes "这脏兮兮的袋子!";
+			mes "很明显不是我的.";
 			close;
 		}
 	}
 	if (ep14_1_bs2 == 12) {
 		if (ep14_1_bs == 10) {
-			mes "[Pauchon]";
-			mes "What I'm about to tell you is top secret!";
-			mes "We don't even talk about it amongst ourselves!";
-			mes "How would we say that the supply from the mainland's been cut off like that!";
+			mes "[德欧特]";
+			mes "不过我希望你能找到失主.";
+			mes "[德欧特]";
+			mes "我告诉你的事情, 你绝对不能告诉其他人.";
 			next;
-			mes "[Pauchon]";
-			mes "Ugh?!";
-			mes "Oh boy... I've done it....";
-			mes "It's really a top secret!!";
-			mes "Don't tell anybody!";
+			mes "[德欧特]";
+			mes "最近辉煌领域碰到一个很麻烦的问题.";
+			mes "我们无法和大陆正常联系了.";
+			mes "不只是沟通连供应也被切断. 人们表面上无动于衷, 但实际上已经处于极度恐慌.";
+			mes "[德欧特]";
 			next;
-			mes "[Pauchon]";
-			mes "Well since I spilled the beans already... oh well, too late.";
-			mes "So it's been a while since we received supplies from the mainland.";
+			mes "这片冰冻的土地很难搜集到食物, 如果耕种的话, 将耗费无数的人力物力.";
+			mes "[德欧特]";
+			mes "事实上, 目前就算维持植物生长也要耗费令人难以置信的力量.";
 			next;
-			mes "[Pauchon]";
-			mes "We're not starving, but we're receiving less and less food.";
-			mes "I was hungry so I went to go pick fruit, but in this cold climate there are no fruit trees.";
+			mes "高层还没有下达任何指示, 但是听说这不是一个容易解决的问题.";
+			mes "[德欧特]";
+			mes "因为没有简单的办法, 大家都担心死了.";
 			next;
-			mes "[Pauchon]";
-			mes "And the people higher up only tell us to wait... I'm so tired of waiting!";
-			mes "But the instant I leave this place, I'll end up going to prison....";
+			mes "根据军事法, 我们的士兵不能在战争期间离开战场, 所以没办法得到更多的讯息.";
+			mes "[德欧特]";
+			mes "因此, 如果你在路上遇到了精灵, 请不要提及此事.";
 			next;
-			mes "[Pauchon]";
-			mes "So I'm stuck here, and I'll be stuck here, suffering from hunger.... *sob*";
+			mes "每个人都很努力, 我们仍然是一个值得骄傲的种族.";
+			mes "[德欧特]";
 			next;
-			mes "[Pauchon]";
-			mes "I'd eat the bark off of that tree if I could.";
-			mes "If only somebody could help. *sob*";
+			mes "就像我之前说的, 我告诉你的是一个秘密, 你不能告诉任何人.";
+			mes "我们的确需要帮助, 但我们不想让别人知道我们被围困了.";
+			mes "[德欧特]";
 			set ep14_1_bs,11;
 			completequest 11200;
 			setquest 11201;
 			close;
 		} else if (ep14_1_bs == 11) {
-			mes "[Pauchon]";
-			mes "What?";
-			mes "What do you want... I'm hungry, don't have energy to talk...";
+			mes "你还有事找我?";
+			mes "[德欧特]";
+			mes "好吧, 如果你想听那你可得帮我们!";
 			next;
-			select("Supply route from the mainland?");
-			mes "[Pauchon]";
-			mes "Are you going to help me if I tell you?";
-			mes "If not, I won't tell.";
+			select("来自大陆的供应路线?");
+			mes "还想听吗?!";
+			mes "[德欧特]";
+			mes "供应路线从彩虹桥经过, 你可以从辉煌领域中心的后方过去.";
 			next;
-			switch(select("Yes.:No.")) {
+			switch(select("是的:不了")) {
 			case 1:
-				mes "[Pauchon]";
-				mes "A giant road leads away from the back of Splendide.";
-				mes "I don't know if it's related to legends and what not, but I've heard that the road's been there forever.";
+				mes "这就是为什么我们在那里设立驻营地.";
+				mes "原来的路线尚不清楚, 反正作为连接大陆的桥梁已经有很长一段时间了.";
+				mes "[德欧特]";
 				next;
-				mes "[Pauchon]";
-				mes "Oh! The guard there might know something.";
-				mes "If you're headed that way, please go find out what's up.";
+				mes "如果你正好要去那里冒险, 你可以问问守卫那里的情况.";
+				mes "[德欧特]";
+				mes "谢谢你把袋子还给我.";
 				set ep14_1_bs,12;
 				changequest 11201,11202;
 				close;
 			case 2:
-				mes "[Pauchon]";
-				mes "Thank you for finding the pouch.";
-				mes "Ugh... I'm starving... I suppose I'll have to eat these bitter berries...";
+				mes "仙尘? 我没携带这种东西.";
+				mes "[德欧特]";
+				mes "供应路线从彩虹桥经过, 你可以从辉煌领域中心的后方过去.";
 				close;
 			}
 		} else if (ep14_1_bs == 12) {
-			mes "[Pauchon]";
-			mes "A giant road leads away from the back of Splendide.";
-			mes "I don't know if it's related to legends and what not, but I've heard that the road's been there forever.";
+			mes "这就是为什么我们在那里设立驻营地.";
+			mes "原来的路线尚不清楚, 反正作为连接大陆的桥梁已经有很长一段时间了.";
+			mes "[德欧特]";
 			next;
-			mes "[Pauchon]";
-			mes "Oh! The guard there might know something.";
-			mes "If you're headed that way, please go find out what's up.";
+			mes "如果你正好要去那里冒险, 你可以问问守卫那里的情况.";
+			mes "[德欧特]";
+			mes "一处裂缝?";
 			close;
 		} else if (ep14_1_bs == 13) {
-			mes "[Pauchon]";
-			mes "Crevice?!?";
-			mes "Hmm I have heard that crevices are creeping up here and there, but it even infiltrated Bifrost....";
-			mes "It appears to be more serious than I had imagined.";
+			mes "这就是为什么我们无法连络大陆.";
+			mes "知道发生了什么情况就好办了.";
+			mes "[德欧特]";
+			mes "嗯...";
 			next;
-			mes "[Pauchon]";
-			mes "If you can, would you go to 'Mora' Village in Bifrost and figure out what's going on?";
+			mes "我不能离开这里, 但你可以, 不是吗?";
+			mes "从大陆来的供给会经过彩虹桥中间的'穆拉村'.";
 			next;
-			mes "[Pauchon]";
-			mes "The supplies from the mainland come through the Village. If you go speak to the Warehouse Manager, he'll be able to tell you something.";
-			mes "Also, please pay a visit to my friend Humming.";
+			mes "[德欧特]";
+			mes "如果你找穆拉村的物流仓库管理员谈谈, 你会得到更多的讯息.";
+			mes "如果你愿意的话, 能否去彩虹桥的'穆拉村'见下物流仓库管理员呢?";
 			next;
-			mes "[Pauchon]";
-			mes "He's such a flighty guy, might have already left, but we were supposed to meet up in Mora Village.";
+			mes "[德欧特]";
+			mes "如果方便的话, 你也可以顺便去拜访下我的朋友莉莉西亚...";
 			set ep14_1_bs,14;
 			changequest 11203,11204;
 			close;
 		} else if (ep14_1_bs == 14) {
-			mes "[Pauchon]";
-			mes "If you can, would you go to 'Mora' Village in Bifrost and figure out what's going on?";
+			mes "[德欧特]";
+			mes "如果你找穆拉村的物流仓库管理员谈谈, 你会得到更多的讯息.";
 			next;
-			mes "[Pauchon]";
-			mes "The supplies from the mainland come through the Village. If you go speak to the Warehouse Manager, he'll be able to tell you something.";
+			mes "如果你愿意的话, 能否去彩虹桥的'穆拉村'见下物流仓库管理员呢?";
+			mes "[德欧特]";
 			if (checkquest(11205) > -1 && checkquest(11205) < 2)
 				close;
-			mes "Also, please pay a visit to my friend Humming.";
+			mes "如果方便的话, 你也可以顺便去拜访下我的朋友莉莉西亚...";
 			next;
-			mes "[Pauchon]";
-			mes "He's such a flighty guy, might have already left, but we were supposed to meet up in Mora Village.";
+			mes "[德欧特]";
+			mes "如果方便的话, 你也可以顺便去拜访下我的朋友莉莉西亚...";
 			close;
 		} else if (ep14_1_bs > 14) {
 			if (checkquest(11205) == -1) {
-				mes "[Pauchon]";
-				mes "Please pay a visit to my friend Humming.";
-				mes "He's such a flighty guy, might have already left, but we were supposed to meet up in Mora Village.";
+				mes "[德欧特]";
+				mes "哇!!!";
+				mes "你竟然可以穿越雾林迷宫从穆拉村回来!";
 				close;
 			}
-			mes "[Pauchon]";
-			mes "I had my doubts...But you really did cross the legendary Maze of the Hazy Forest...";
-			mes "I'm very impressed.";
+			mes "拜托你果然没错!";
+			mes "[德欧特]";
+			mes "太感谢了.";
 			next;
-			mes "[Pauchon]";
-			mes "I really appreciate your help.";
-			mes "I hope this gets resolved soon.";
-			mes "What I'm really afraid of... is hunger. More than war.";
+			mes "希望能得到尽快解决...";
+			mes "我不想再去打扰莉莉西亚了...";
+			mes "[德欧特]";
+			mes "哦对了, 达佛雷洛在辉煌领域的西北处.";
 			if (ep14_1_bs == 17) {
 				next;
-				mes "[Pauchon]";
-				mes "Oh, And Daphrer is in northwest Splendide.";
+				mes "[德欧特]";
+				mes "有时, 在这片冰冻的土地上我感到一种痛苦之美, 和我家乡的美丽完全不同.";
 			}
 			if (checkquest(11205) < 2) {
 				completequest 11204;
@@ -1179,7 +1179,7 @@ splendide,168,301,4	script	Pauchon#ep14_1_bs	439,{
 			close;
 		}
 	}
-	mes "[Pauchon]";
+	mes "但对我们来说, 在这地方生存下来实属不易.";
 	mes "Ah... I'm hungry.";
 	mes "When I get back to the mainland I'm going to stuff my belly until it bursts.";
 	close;
@@ -1264,17 +1264,17 @@ mora,185,163,2	script	Warehouse Manager#ep14_1	516,{
 }
 
 mora,35,119,4	script	Rondo#ep14_1_bs	513,{
-	mes "[Rondo]";
-	mes "Mora is such a mysterious place.";
-	mes "You can understand any language.";
+	mes "[宝熊]";
+	mes "DimFusTal Mu Lars";
+	mes "ModAnduLo";
 	next;
-	mes "[Rondo]";
-	mes "Of course, when we leave this area I won't be able to understand what you say, but I'll be able to remember the conversations we had. And I'll look forward to the day we meet again, here.";
+	mes "Mod";
+	mes "DorDuMe U NohLarsFulo Mu Fus";
 	if (ep14_1_bs > 13 && ep14_1_bs2 == 10) {
 		next;
-		mes "[Rondo]";
-		mes "Please tell Kusmi";
-		mes "that if he wants to meet, we can meet any time. There is nothing to worry about.";
+		mes "- 你无法理解精灵的话. -";
+		mes "- 你需要能够翻译这些语言的东西. -";
+		mes "[宝熊]";
 		if (checkquest(11193) == -1)
 			setquest 11193;
 	}
@@ -1283,24 +1283,24 @@ mora,35,119,4	script	Rondo#ep14_1_bs	513,{
 
 mora,98,66,4	script	Lilitia#ep14_1_bs	518,{
 	if (ep14_1_bs > 13 && ep14_1_bs2 == 11) {
-		mes "[Lilitia]";
-		mes "Boo!!!";
-		mes "He broke his promise again!!!";
+		mes "[守护精灵士兵]";
+		mes "DielFarmar Di RiniIyazser Ha mahAgolAsh U  U ";
+		mes "TurNohnar Di DurNeiFar Ra AnuVerNoth Ha AshRivehDor Ha BurWehLars Ur RinimanMod";
 		next;
-		mes "[Lilitia]";
-		mes "He said he'd be here this time for sure!!!";
-		mes "That place is too cold for me to visit!!!!!";
-		mes "My precious leaves will wither there.";
+		mes "- 你无法理解精灵的话. -";
+		mes "- 你需要能够翻译这些语言的东西. -";
+		mes "[守护精灵士兵]";
+		mes "这里是通往艾芙菲姆的彩虹桥.";
 		next;
-		mes "[Lilitia]";
-		mes "What? Theodore sent you?";
-		mes "Please tell him that I'm so mad!!";
+		mes "请注意, 由于出现了原因不明的裂缝, 导致现在无法通行.";
+		mes "[守护精灵士兵]";
+		mes "另一条路通往迷雾森林的迷宫.";
 		if (checkquest(11199) == -1)
 			setquest 11199;
 		close;
 	}
-	mes "[Lilitia]";
-	mes "I really hate the cold.";
+	mes "[守护精灵士兵]";
+	mes "你可以穿越迷雾森林的迷宫到达艾芙菲姆. 不过, 至今还没有人能从迷雾森林的迷宫里出来.";
 	mes "That's why Mora is a lovely place to live.";
 	next;
 	mes "[Lilitia]";
@@ -1310,45 +1310,45 @@ mora,98,66,4	script	Lilitia#ep14_1_bs	518,{
 
 mora,139,102,2	script	Humming#ep14_1_bs	515,{
 	if (ep14_1_bs > 13 && ep14_1_bs2 == 12) {
-		mes "[Humming]";
-		mes "Oh!";
-		mes "You're here because Pauchon sent you?";
+		mes "[物流仓库管理员]";
+		mes "站住, 亲!";
+		mes "你不能随便进来.";
 		next;
-		mes "[Humming]";
-		mes "It must've been hard for you to get here. I'm impressed.";
-		mes "The Maze of the Hazy Forest~ It fuels my adventurous spirit!";
+		mes "这里是仓库. 如果你有什么需要, 请找外面的工作人员.";
+		mes "[物流仓库管理员]";
+		mes "啊!";
 		next;
-		mes "[Humming]";
-		mes "If you reach Splendide before me, please tell Pauchon";
-		mes "that I'm going through the Maze of the Hazy Forest.";
+		mes "你来自辉煌领域?";
+		mes "让我们看看...";
+		mes "所有来往的物资都是运往辉煌领域的.";
 		if (checkquest(11205) == -1)
 			setquest 11205;
 		close;
 	}
-	mes "[Humming]";
-	mes "I heard that a crevice crept in between Jotunheim and Midgard, so I wanted to check it out. But I got stuck here.";
-	mes "I was looking forward to seeing a new place.";
+	mes "[物流仓库管理员]";
+	mes "由于彩虹桥出现的裂缝, 这些物资已经没法运送了, 我们都十分焦心.";
+	mes "[物流仓库管理员]";
 	next;
-	mes "[Humming]";
-	mes "Are you from Midgard?";
-	mes "What is it like there?";
-	mes "I've always wanted to see a creature called Poring.";
+	mes "那些低调的游客也被困在了这里. 越来越多的顾客真是让我们喜忧参半...";
+	mes "[物流仓库管理员]";
+	mes "如果你打算回到辉煌领域, 去旅馆拜访下尤耐斯吧.";
+	mes "他有一些很重要的东西急需运送给辉煌领域的军队.";
 	close;
 }
 
 mora,55,124,2	script	Jones#ep14_1_bs	495,{
 	if (ep14_1_bs < 15) {
-		mes "[Jones]";
-		mes "Oh.... Darn.......";
-		mes "I can't go down, and I can't go back. My credibility that I've worked so hard on is just crumbling into dust.";
+		mes "[朗多]";
+		mes "穆拉是个神奇的地方.";
+		mes "你可以理解任何语言.";
 		close;
 	} else if (ep14_1_bs == 15) {
-		mes "[Jones]";
-		mes "Ah, are you the traveler who came through the Maze of the Hazy Forest from Splendide?";
-		mes "If you plan to go back, can you please deliver this to the Splendide army?";
+		mes "[朗多]";
+		mes "当然, 如果我们离开这个地方, 我将不能够理解你说的话. 但我会记住我们的对话, 我期待有一天我们能在这里再次见面.";
+		mes "[朗多]";
 		next;
-		mes "[Jones]";
-		mes "A person high up requested it, but I can't cross Bifrost.";
+		mes "请告诉库斯米";
+		mes "我们可以随时随地见面. 没什么好担心的.";
 		next;
 		mes "[Jones]";
 		mes "Deliveries to other places have all stopped also. Ah, my credibility is suffering....";
@@ -1405,20 +1405,20 @@ mora,55,124,2	script	Jones#ep14_1_bs	495,{
 
 splendide,121,260,4	script	Daphrer#ep14_1_bs	435,{
 	if (!isequipped(2782)) {
-		mes "[Daphrer]";
-		mes "DRHSfhsdfGSDH FGkkmvoifk DFG DFHshfeksmn fgg FDbbd fjnnvk n skncki dfgd F FHdfkdfjkmv";
+		mes "[莉莉西亚]";
+		mes "嘘!!!";
 		close;
 	}
 	if (countitem(6391)) {
-		mes "[Daphrer]";
-		mes "Oh....";
-		mes "I've been waiting for you.";
+		mes "他又一次违背了他的诺言!!!";
+		mes "[莉莉西亚]";
+		mes "他说他这次肯定会来这里!!!";
 		next;
-		mes "[Daphrer]";
-		mes "This was urgently needed so thank you for bringing it here, I hope I haven't caused you too much trouble..";
+		mes "那么冷的地方我才不会去!!!!!";
+		mes "我珍爱的叶子在那种地方会枯萎的.";
 		next;
-		mes "[Daphrer]";
-		mes "This is probably too small to be a reward, but please accept this as a sign of my gratitude.";
+		mes "[莉莉西亚]";
+		mes "什么? 德欧特让你来的?";
 		delitem 6391,1; //Splendid_Supply_Kit
 		if (ep14_1_bs == 17) {
 			set ep14_1_bs,18;
@@ -1430,13 +1430,13 @@ splendide,121,260,4	script	Daphrer#ep14_1_bs	435,{
 		close;
 	}
 	if (ep14_1_bs == 17) {
-		mes "[Daphrer]";
-		mes "Oh....";
-		mes "So you lost the item on the way.";
+		mes "请告诉他, 我很生气!!";
+		mes "[莉莉西亚]";
+		mes "我真的恨死了寒冷的天气.";
 		next;
-		mes "[Daphrer]";
-		mes "I knew that it was probably a stretch......";
-		mes "Perhaps I've been unrealistic.";
+		mes "这就是为什么穆拉村是个适合居住的好地方.";
+		mes "[莉莉西亚]";
+		mes "这里的叶子总是那么清新. 并且, 语言障碍问题也不复存在.";
 		mes "But I thank you for your trouble anyway. Please accept this as a sign of my gratitude.";
 		set ep14_1_bs,18;
 		completequest 11208;
@@ -1473,25 +1473,25 @@ OnTouch_:
 	if (ep13_3_secret > 22 && checkquest(7206) == -1) {
 		enablenpc "Cheshire#ep14_1_xq01";
 		cutin "ep13_cheshire_h",1;
-		mes "[Cheshire]";
-		mes "Oh, wait!";
-		mes "There's another thing I'd like you to do.";
-		mes "There's not enough time to go into details...";
+		mes "[荷明]";
+		mes "噢!";
+		mes "这么说, 是宝熊让你来的?";
+		mes "[荷明]";
 		next;
-		mes "- Cheshire glanced at the guard standing close to you, and leaned close and whispered into your ear.-";
+		mes "难以置信. 你竟然可以穿越迷雾森林的迷宫到底这里.";
 		next;
-		mes "[Cheshire]";
-		mes "You'll find cat caravans in the middle of ^4d4dffKamidal Tunnel^000000.";
-		mes "There is ^4d4dffa marked box among the caravans' goods to the west of the entrance to the Scaraba Hole^000000.";
+		mes "迷雾森林的迷宫, 它激起了我的冒险欲望!";
+		mes "[荷明]";
+		mes "如果你赶在我之前到达辉煌领域, 请告诉宝熊,";
 		next;
-		mes "[Cheshire]";
-		mes "I'd like you to bring it to me.";
-		mes "You'll see where you should bring it by looking at the box.";
-		mes "This is an important matter.";
+		mes "我将去穿越迷雾森林的迷宫.";
+		mes "[荷明]";
+		mes "我听说裂缝存在于艾芙菲姆和米德加尔特之间, 所以我想亲自去看看. 但我被困在了这里.";
+		mes "我很期待见识一个新的地方.";
 		next;
-		mes "[Cheshire]";
-		mes "I have something to get done in advance...";
-		mes "Good luck!";
+		mes "[荷明]";
+		mes "你来自米德加尔特?";
+		mes "那里是什么样的?";
 		setquest 7206;
 		close2;
 		disablenpc "Cheshire#ep14_1_xq01";
@@ -1563,31 +1563,31 @@ dic_dun01,274,114,0	script	Stacked Boxes of Goods	844,{
 
 bif_fild01,335,168,3	script	Cheshire#ep14_1_xq04	497,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
-		mes "- You have too many items to do this quest. -";
+		mes "[达佛雷洛]";
 		close;
 	}
 	cutin "ep13_cheshire",1;
 	if (checkquest(7209) > -1) {
 		if (countitem(6090) < 20) {
-			mes "[Cheshire]";
-			mes "Bring me 20 pieces of refined Bradium.";
-			mes "In exchange for the box, which you carelessly and irresponsibly sold to somebody.";
-			mes "Have I made myself clear?!";
+			mes "DRHSfhsdfGSDH FGkkmvoifk DFG DFHshfeksmn fgg FDbbd fjnnvk n skncki dfgd F FHdfkdfjkmv";
+			mes "[达佛雷洛]";
+			mes "噢....";
+			mes "我正在等你呢.";
 			close2;
 			cutin "",255;
 			end;
 		}
-		mes "[Cheshire]";
-		mes "So you've brought it?";
-		mes "The amount is less than it was, but I guess I can't help it.";
-		mes "Next time, you must bring the box to me intact.";
+		mes "[达佛雷洛]";
+		mes "这正是迫切需要的, 谢谢你把它带来, 希望没有因此给你添太多麻烦...";
+		mes "[达佛雷洛]";
+		mes "这是一点小小心意, 希望能表达我们的感谢之意.";
 		next;
-		mes "- Cheshire threw the Bradium into the Crevice. -";
+		mes "[达佛雷洛]";
 		next;
-		mes "[Cheshire]";
-		mes "You made a mistake of losing the box, you have to be content with this.";
-		mes "And starting tomorrow, get the box here intact.";
-		mes "Every day.";
+		mes "噢....";
+		mes "你把东西弄丢了.";
+		mes "[达佛雷洛]";
+		mes "我知道这可能是天意......";
 		delitem 6090,20; //Purified_Bradium
 		erasequest 7209;
 		setquest 7208;
@@ -1601,10 +1601,10 @@ bif_fild01,335,168,3	script	Cheshire#ep14_1_xq04	497,{
 		if (countitem(6392) == 0)
 			callsub L_LostQuest,7210;
 		else {
-			mes "[Cheshire]";
-			mes "You've come at just the right time.";
-			mes "And I see the box is intact!";
-			mes "Well done.";
+			mes "我的想法太不切实际了.";
+			mes "不过还是要感谢你, 请接受这点小心意.";
+			mes "[达佛雷洛]";
+			mes "对我来说, 给花草浇灌远比在战场挥舞兵器来的重要.";
 			next;
 			mes "[Cheshire]";
 			mes "Well, I'll be counting on you, tomorrow as well.";
@@ -1864,9 +1864,9 @@ OnTouch_:
 	if (ep13_3_secret > 22) {
 		if (rand(2)) {
 			emotion ET_DELIGHT, playerattached();
-			mes "..........?";
-			mes "You sense someone moving around.";
-			mes "There must be someone down there.";
+			mes "[柴郡]";
+			mes "噢, 等等!";
+			mes "现在有另一件事情需要你去做.";
 			if ($@cheshire_on == 0) {
 				donpcevent "Cheshire#ep14_extra::OnEnable";
 				set $@cheshire_on,1;
@@ -1961,30 +1961,30 @@ OnTimer600000:
 //============================================================
 mora,117,66,3	script	Euridi#pa	521,{
 	if (BaseLevel < 100) {
-		mes "[Euridi]";
-		mes "You are very delicate.";
-		mes "It's true that I need help,";
-		mes "but I don't think you can help.";
+		mes "- 你携带的物品种类过多, 请整理后再试. -";
+		mes "箱子与各种货物堆叠在一起, 高得已经快要碰到天花板了.";
+		mes "好像没有找到柴郡所说的有标记的箱子.";
+		mes "箱子与各种货物堆叠在一起, 高得已经快要碰到天花板了.";
 		close;
 	}
 	if (ep14_1_rope == 0) {
-		mes "[Euridi]";
-		mes "I hear you passed through the Hazy Forest.";
-		mes "Did you...";
-		mes "Did you happen to see";
-		mes "Lope, my fiance, there?";
+		mes "仔细观察, 你发现了一个箱子上有一个小的标记.";
+		mes "你找到了柴郡所说的箱子.";
+		mes "你承诺过将补给箱带回去给柴郡, 他还在彩虹桥的裂缝另一头等着你的消息呢.";
+		mes "你决定放弃拿走补给箱,";
+		mes "并转身离开.";
 		next;
-		switch(select("Yes, I did.:No, I didn't.")) {
+		switch(select("- 搬走箱子:- 放弃")) {
 		case 1:
-			mes "[Euridi]";
-			mes "Are you sure? Where did you see him?";
-			mes "Take me there, quick!";
-			mes "...";
+			mes "箱子与各种货物堆叠在一起, 高得已经快要碰到天花板了.";
+			mes "仔细观察, 你发现了一个箱子上有一个小的标记.";
+			mes "标记上刻着一个神秘的小符号, 符号下面写着一行小字, 内容是 ^4d4dff目的地: 彩虹桥裂缝^000000.";
+			mes "这肯定就是柴郡所说的箱子了.";
 			next;
-			mes "[Euridi]";
-			mes "What?";
-			mes "You're kidding...?";
-			mes "How could you?";
+			mes "你决定把箱子的位置记录在纸上.";
+			mes "你已经获得了柴郡所说的箱子.";
+			mes "现在你需要做的就是把它带去彩虹桥的裂缝处.";
+			mes "箱子与各种货物堆叠在一起, 高得已经快要碰到天花板了.";
 			close;
 		case 2:
 			mes "[Euridi]";
@@ -2247,160 +2247,160 @@ mora,115,68,3	script	Euridi's Friend#pa	520,{
 
 mora,65,145,3	script	Pitt#pa	519,{
 	if (ep14_1_rope == 0) {
-		mes "[Pitt]";
-		mes "So you're quite good,";
-		mes "since you passed through the Hazy Forest alive.";
-		mes "I'm completely messed up, you see,";
-		mes "so I can't afford to listen to the tales of your exploits.";
-		mes "Now leave.";
+		mes "- 你携带的物品过多, 无法进行该任务. -";
+		mes "[柴郡]";
+		mes "给我拿20个精炼魔力之石来.";
+		mes "就是那些你漫不经心地卖掉的.";
+		mes "我讲得够清楚了吗?";
+		mes "[柴郡]";
 		close;
 	} else if (ep14_1_rope == 1) {
-		mes "[Pitt]";
-		mes "You have a knack for pestering people, don't you?";
-		mes "Euridi sent you, eh?";
-		mes "The Laphine couple is";
-		mes "anxious to kill me.";
+		mes "这么说你带来了?";
+		mes "这已经是最低限度的补偿了, 不能再少了.";
+		mes "下次, 你必须完完整整地把箱子带给我.";
+		mes "- 柴郡把魔力之石扔进了裂缝里. -";
+		mes "[柴郡]";
 		next;
-		mes "[Pitt]";
-		mes "Go and tell her!";
-		mes "That the stupid guide";
-		mes "pushed us reluctant tourists into the forest,";
-		mes "and ran off to save his own skin!";
+		mes "你丢失了箱子, 这是你犯的错, 你必须对此负责.";
+		mes "从明天开始, 以及之后的每一天.";
+		mes "务必保证把箱子完完整整地带到这来.";
+		mes "[柴郡]";
+		mes "你来得正好.";
 		next;
-		mes "[Pitt]";
-		mes "So you're sorry that it's me, not him, that's here?";
-		mes "He will be alive somewhere,";
-		mes "so go and try to find him! Just stop bothering me!";
+		mes "我看到了完整的箱子!";
+		mes "做得好.";
+		mes "[柴郡]";
+		mes "嗯, 我就指望你了, 明天也是.";
 		changequest 1109,1110;
 		set ep14_1_rope,2;
 		close;
 	} else if (ep14_1_rope == 2) {
-		mes "[Pitt]";
-		mes "This is all because of";
-		mes "the stupid guide!";
-		mes "I hate Laphines!";
+		mes "明白了吗?";
+		mes "现在, 趁精灵还没开始怀疑, 赶紧离开这儿.";
+		mes "[柴郡]";
+		mes "...嗯? 哈?";
 		close;
 	} else if (ep14_1_rope == 3) {
 		if (countitem(6383) < 30) {
-			mes "[Pitt]";
-			mes "This is all because of";
-			mes "the stupid guide!";
-			mes "I hate Laphines!";
+			mes "你在这干嘛?";
+			mes "[柴郡]";
+			mes "你干嘛这么惊讶?";
+			mes "是因为在这看到我吗?";
 			close;
 		}
-		mes "[Pitt]";
-		mes "That thing you have in your hand...";
-		mes "It looks very strange.";
-		mes "I've never seen such a thing before.";
-		mes "You'd better not keep that.";
-		mes "Can I have it?";
+		mes "[柴郡]";
+		mes "哦...这个. 因为很伤脑筋.";
+		mes "在这, 我不必在意其他人.";
+		mes "噢, 正好!";
+		mes "你来迪埃我可以给你任务.";
+		mes "[柴郡]";
 		next;
-		switch(select("Give it to him.:Don't give it to him.")) {
+		switch(select("嗯? 柴郡?")) {
 		case 1:
-			mes "[Pitt]";
-			mes "So I swallow it like this,";
-			mes "and voila! Evidence gone!";
-			mes "Now I can sleep soundly, thank you!";
+			mes ".......咋了? 你为什么这样盯着我?";
+			mes "这都是给阿哈特的.";
+			mes "(如果我拒绝的话会引起他的怀疑...我想我还是暂时接受吧.)";
+			mes "好吧.";
 			delitem 6383,5; //Clue_Of_Lope
 			close;
 		case 2:
-			mes "[Pitt]";
-			mes "Why are you showing me such a thing?";
-			mes "I don't know anything! I'm the victim here!";
-			mes "I'm a victim of the schemes of the Laphine couple.";
-			mes "It's unfair...";
+			mes "我很乐意为阿哈特效劳.";
+			mes "那么, 需要我做什么?";
+			mes "[柴郡]";
+			mes "有事要做?";
+			mes "什么事?";
 			next;
-			mes "It's no use trying to talk to him any more.";
-			mes "Try talking to Euridi.";
+			mes "这个就是你必须要做的事.";
+			mes "别忘了你是为阿哈特效力.";
 			changequest 1111,1112;
 			set ep14_1_rope,4;
 			close;
 		}
 	} else if (ep14_1_rope == 4) {
-		mes "[Pitt]";
-		mes "This is unfair!";
-		mes "This is so totally unfair!";
+		mes "[柴郡]";
+		mes "很好! 现在我将告诉你要做什么.";
+		mes "你知道在卡米达隧道中间有一个通往甲虫洞的入口吧?";
 		close;
 	} else if (ep14_1_rope == 5) {
 		if (checkweight(6384,1) == 0) {
-			mes "[Pitt]";
-			mes "What are you, a professional mover?";
-			mes "Stomping about with a ton of stuff on your back!";
-			mes "I can't rest because of the noise!";
-			mes "Throw away all that stuff!";
+			mes "你会看到有个猫手商队在那卖生活用品和一些简单的工具.";
+			mes "[柴郡]";
+			mes "在那些堆积的货物中有一个有标记的箱子.";
+			mes "我要你把那个箱子带来给我.";
+			mes "[柴郡]";
 			close;
 		}
-		mes "[Pitt]";
-		mes "I never imagined you'd find them all";
-		mes "and piece them together.";
-		mes "Is this a divine punishment...?";
-		mes "Or Laphines' curse?";
-		mes "Whew...";
+		mes "这个任务只需要你把箱子找到然后拿来, 很简单吧.";
+		mes "你要做得^4d4dff安静而快速, 不能被发现^000000.";
+		mes "[柴郡]";
+		mes "开始行动吧!";
+		mes "[柴郡]";
+		mes "从卡米达隧道把箱子带来.";
 		next;
-		mes "[Pitt]";
-		mes "That guide fellow,";
-		mes "he opened the gate out";
-		mes "when he was hit hard";
-		mes "by the poison.";
+		mes "干净利落!";
+		mes "现在, 赶紧去!";
+		mes "[柴郡]";
+		mes "........那个箱子!";
+		mes "噢, 是的. 就是这个!";
 		next;
-		mes "[Pitt]";
-		mes "When I was hesitating whether to take him with me,";
-		mes "he handed me that letter and the ring.";
-		mes "Laphines' jewelry...";
-		mes "It's rumored that nobody could ever have it except Laphines,";
-		mes "including the Gods themselves.";
+		mes "你干得很好.";
+		mes "这事非常重要.";
+		mes "阿哈特会很满意的.";
+		mes "[柴郡]";
+		mes "这些箱子每天都会在同一个地方.";
+		mes "我会给你任务的.";
 		next;
-		mes "[Pitt]";
-		mes "So I had in my hands";
-		mes "a treasure among treasures!";
-		mes "How...! Just how on earth";
-		mes "could I have let it pass through!";
+		mes "[柴郡]";
+		mes "........嗯...";
+		mes "因为只有你们人类才能自由出入任何地方.";
+		mes "再加上, 这地方是精灵的地盘.";
+		mes "[柴郡]";
 		next;
-		mes "[Pitt]";
-		mes "I was going to leave this place";
-		mes "as soon as I pulled myself together.";
-		mes "But now I'm stuck here,";
-		mes "affected by the poison myself.";
+		mes "我不想引起他们的注意, 就像这样.";
+		mes "但是沙帕人会怎么想?";
+		mes "在精灵的地盘看到阿哈特的人?";
+		mes "[柴郡]";
+		mes "他们会产生怀疑.";
 		next;
-		mes "[Pitt]";
-		mes "I'll give you the ring back,";
-		mes "so please leave me alone!";
+		mes "但是你们人类就不存在这个麻烦, 这就是为什么你是最合适的人选.";
+		mes "(...我不相信他的解释, 但是他认为我是站在他这边的, 所以我想我还是应该继续下去.)";
+		mes "魔力之石后来怎么样了?";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Then where could Lope...?";
+		mes "[柴郡]";
 		next;
-		mes "[Pitt]";
-		mes "If he died near the exit of the forest,";
-		mes "he must be somewhere around there,";
-		mes "in whatever form he might be in.";
+		mes "那个?";
+		mes "把它交给我.";
+		mes "- 柴郡打开了箱子, 检查了里面的魔力之石, 并扔进了裂缝,";
+		mes "然后回头望了一眼, 拍了拍手, 脸上带着洋洋得意的神情. -";
 		changequest 1113,1114;
 		set ep14_1_rope,6;
 		getitem 6384,1; //Ring_Of_Lope
 		close;
 	} else if (ep14_1_rope == 6 || ep14_1_rope == 7) {
-		mes "[Pitt]";
-		mes "I'm a victim, too!";
-		mes "So leave me alone! I beg you!";
+		mes "[柴郡]";
+		mes "喏, 就是这样.";
+		mes "*大笑* 裂缝那头有条未知的路在等着你.";
 		close;
 	} else if (ep14_1_rope == 8) {
-		mes "[Pitt]";
-		mes "...";
+		mes "[柴郡]";
+		mes "那么, 我会把这事交给你.";
 		close;
 	} else if (ep14_1_rope > 8) {
-		mes "He's sleeping.";
-		mes "He seems to be in a very deep sleep.";
+		mes "尽量每天都给我带来箱子吧.";
+		mes "好吗?";
 		close;
 	}
 }
 
 bif_fild01,132,338,3	script	Lope#pa	461,2,2,{
 	if (ep14_1_rope < 8) {
-		mes "[Suspicious Man]";
-		mes "......";
+		mes "..........?";
+		mes "你觉得有人在周围走动.";
 		close;
 	} else if (ep14_1_rope == 8) {
 		donpcevent "Lope#pa::OnEnable";
-		mes "[Suspicious Man]";
+		mes "下面肯定有人.";
 		mes "Aaaarrrrrggggghhhh!!!!!!";
 		mes "I can't see anything.";
 		mes "Who's there?";
@@ -3418,7 +3418,7 @@ L_ShowReport:
 	mes "the mysterious power.";
 	mes " ";
 	mes "<Material analysis>";
-	mes "*** Temperature ***** 33.5∑";
+	mes "*** Temperature ***** 33.5??";
 	mes "*** PH ************ 9.8";
 	mes "*** Solid residues *** 176";
 	mes "*** K+ ************ 0,23";
@@ -4082,43 +4082,43 @@ OnFullon:
 
 -	script	???#mora	-1,{
 	if (checkquest(5019) > -1) {
-		mes "You find an area emitting a distinct aura.";
-		mes "You may be able to collect bath water samples.";
-		mes "What will you do?";
+		mes "[柴郡]";
+		mes "...嗯?";
+		mes "真令人惊讶. 你在这干嘛?";
 		next;
-		if(select("Collect samples.:Leave.") == 2) {
+		if(select("你又在这干嘛?:那些耳朵...?") == 2) {
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			end;
 		}
 		if (countitem(6386) >= 10) {
-			mes "You will not need additional samples.";
+			mes "[柴郡]";
 			close2;
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			end;
 		}
 		if (countitem(1092) == 0) {
-			mes "To obtain a sample, you need a sample tube.";
+			mes "出来散步?";
 			close2;
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			end;
 		}
-		mes "Collecting samples.";
+		mes "我和阿哈特一同出来, 但是他回去处理一个紧急事件了.";
 		next;
 		progressbar "ffff00",3;
 		if (!rand(3)) {
 			if (checkweight(6386,1) == 0) {
-				mes "You have so many items";
-				mes "that it is difficult to collect samples.";
-				mes "You will have to lighten your load and come back.";
+				mes "[柴郡]";
+				mes ".. ..............";
+				mes "[柴郡]";
 				close2;
 				donpcevent strnpcinfo(0)+"::OnDisable";
 				end;
 			}
-			mes "Bath water sample collection complete.";
+			mes "这棵树... 是白色的, 透明, 有光泽.";
 			delitem 1092,1; //Empty_Cylinder
 			getitem 6386,1; //Bathtub_R_Sample
 		} else {
-			mes "Bath water sample collection failed.";
+			mes "它是沙帕的身体.";
 			percentheal 5,5;
 		}
 		close2;
@@ -4132,16 +4132,16 @@ OnFullon:
 			set .@str$,"scale";
 			set .@item,6388; //Scale_Sample
 		}
-		mes "Something is shining in the water.";
+		mes "[柴郡]";
 		mes "You may be able to collect the unidentified creature's "+.@str$+" samples.";
-		mes "What do you want to do?";
+		mes "你知道的, 沙帕人在活着时会慢慢变成石头.";
 		next;
-		if(select("Look further.:Leave.") == 2) {
+		if(select("....:多么...多么漂亮的树啊.") == 2) {
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			end;
 		}
 		if (countitem(.@item) >= 10) {
-			mes "You will not need additional samples.";
+			mes "所以当他们死了, 他们会变成石树.";
 			close2;
 			donpcevent strnpcinfo(0)+"::OnDisable";
 			end;
@@ -4149,24 +4149,24 @@ OnFullon:
 		progressbar "ffff00",3;
 		if (!rand(3)) {
 			if (checkweight(.@item,1) == 0) {
-				mes "You have so many items";
-				mes "that it is difficult to collect samples.";
-				mes "You will have to lighten your load and come back.";
+				mes "可以说, 这片森林是...他们的墓地.";
+				mes "[柴郡]";
+				mes ".......仔细看, 你能辨认出他们的胳膊和腿.";
 				close;
 			}
 			mes "Obtained a "+.@str$+" sample";
-			mes "of the unidentified creature.";
+			mes "很有趣, 是吧?";
 			getitem .@item,1;
 		} else
-			mes "You thought you saw it on the ground, but it was an illusion.";
+			mes "[柴郡]";
 		close2;
 		donpcevent strnpcinfo(0)+"::OnDisable";
 		end;
 	} else {
-		mes "???";
+		mes "... .. ...";
 		next;
-		select("???");
-		mes "???";
+		select("你负责这个报告?!");
+		mes "[柴郡]";
 		close;
 	}
 	end;
@@ -4209,8 +4209,8 @@ OnTouch:
 		end;
 	} else {
 		mapannounce "mora","You can no longer use the mysterious power of the bath water.",bc_map,"0xFFFF00"; //FW_NORMAL 12 0 0
-		mes "^FF0000Something appeared.^000000";
-		mes "^FFFF00You cannot use the mysterious power of the bath water.^000000";
+		mes "噢, 这真是让人生气.";
+		mes "我走了!";
 		close2;
 		donpcevent "Black Shadow#ep14_muk::OnEnable";
 		end;
@@ -4233,20 +4233,20 @@ mora,118,86,0	duplicate(???#mora)	???#ep14_muk05	844,2,2
 	if (checkquest(.@quest1[.@i]) > -1) {
 		if (countitem(6389) == 0) {
 			mes "This appears to be the puddle to the "+.@dir$[.@i];
-			mes "that the researcher talked about.";
-			mes "Will you collect a sample?";
+			mes "[优莉蒂]";
+			mes "你太弱小了.";
 			next;
-			if(select("Collect a sample.:Don't collect a sample.") == 2)
+			if(select("我有看到:我没看到") == 2)
 				close;
 			if (countitem(1092) == 0) {
-				mes "You have no empty sample tubes.";
+				mes "真的, 我需要帮助,";
 				close;
 			}
 			progressbar "ffff00",5;
 			if (checkweight(6389,1) == 0) {
-				mes "You have so many items";
-				mes "that it is difficult to collect samples.";
-				mes "You will have to lighten your load and come back.";
+				mes "但我不认为你能给予.";
+				mes "[优莉蒂]";
+				mes "听说你有经过迷雾森林.";
 				close;
 			}
 			mes "You have collected a sample from the puddle to the "+.@dir$[.@i]+".";
@@ -4254,7 +4254,7 @@ mora,118,86,0	duplicate(???#mora)	???#ep14_muk05	844,2,2
 			getitem 6389,1; //Puddle_R_Sample
 			close;
 		} else {
-			mes "You already have a sample.";
+			mes "那...请问";
 			close;
 		}
 	}
@@ -4279,81 +4279,81 @@ mora,118,86,0	duplicate(???#mora)	???#ep14_muk05	844,2,2
 
 	if (ep14_1_goki == 30 && checkquest(.@quest2[0]) > -1) {
 		mes "You arrived at the puddle to the "+.@dir$[0]+".";
-		mes "You should look for the unidentified creature's family.";
+		mes "你在那里有见到";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Fish~ Fish~";
+		mes "我的未婚夫洛佩吗?";
 		next;
-		mes "When you called out, an answer came";
-		mes "from the puddle.";
+		mes "[优莉蒂]";
+		mes "你确定吗? 你在哪里见到过他?";
 		next;
-		mes "[???]";
-		mes "Who? Fisher? Go!";
+		mes "带我过去, 快!";
+		mes "...";
 		next;
-		select("I'm looking for a particular fish's family.");
-		mes "[???]";
-		mes "Family? What be that fish name?";
+		select("抱歉, 我很忙!:我帮你!");
+		mes "[优莉蒂]";
+		mes "什么?";
 		next;
-		mes "What was the name of the unidentified creature?";
+		mes "你在开玩笑...?";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ != "Fishee") {
-			mes "[???]";
+			mes "你怎么可以这样呢?";
 			mes "No Family. "+.@inputstr$+" No.";
-			mes "You go.";
+			mes "[优莉蒂]";
 			next;
-			mes "It appears that the unidentified creature's family is not here.";
+			mes "请帮忙找到我的洛佩.";
 			close;
 		}
-		mes "[???]";
+		mes "我问遍周围所有的人之后,";
 		mes .@inputstr$+"? Oh... How...";
-		mes "Husband here come. Your son.";
-		mes "News here.";
+		mes "来到了这个穆拉村,";
+		mes "可是依然没有丝毫线索.";
 		next;
-		mes "Another creature from the puddle spoke to you.";
+		mes "[优莉蒂]";
 		next;
-		mes "[????]";
-		mes "What? Missing son news?";
+		mes "只要想到洛佩现在一定";
+		mes "很心急地在找我, 我的心就...";
 		next;
-		mes "The two fish were very excited,";
-		mes "and their conversation was hard to follow.";
-		mes "You waited for them to calm down";
-		mes "and told them the full story.";
+		mes "[优莉蒂]";
+		mes "真是太没同情心了!";
+		mes "[优莉蒂]";
+		mes "我听说他在村子周围做导游时,";
 		next;
-		mes "[Fishee's Dad]";
-		mes "Yes... At night, son";
-		mes "gone... Night fishers.";
-		mes "Son stupid. Caught. Dead. OK.";
+		mes "进入了迷雾森林.";
+		mes "其中一个与洛佩同行的旅客";
+		mes "一定还在旅馆里.";
+		mes "[优莉蒂]";
 		next;
-		mes "[Fishee's Mom]";
-		mes "Fishee alive. Great. Great.";
+		mes "他把自己反锁在房间里不愿见我.";
+		mes "但他也许愿意见你, 因为你去过迷雾森林.";
 		next;
-		mes "[Fishee's Dad]";
-		mes "Yes... Human give son news.";
-		mes "Thanks. Son,";
-		mes "We okay. Happy. Here. You tell son.";
+		mes "[优莉蒂]";
+		mes "那个旅客在旅馆,";
+		mes "不是我前面的!";
+		mes "[优莉蒂]";
 		changequest .@quest2[0],5034;
 		close;
 	} else if (checkquest(5034) > -1 && checkquest(5034) < 2) {
-		mes "[Fishee's Dad]";
-		mes "Yes... Human give son news.";
-		mes "Thanks. Son,";
-		mes "We okay. Happy. Here. You tell son.";
+		mes "你见过皮特!";
+		mes "我就知道他愿意见你.";
+		mes "他说了什么?";
+		mes "[优莉蒂]";
 		close;
 	} else if (checkquest(.@quest2[1]) > -1 || checkquest(.@quest2[2]) > -1 || checkquest(.@quest2[3]) > -1) {
 		mes "You arrived at the puddle to the "+.@dir$[0]+".";
-		mes "You should look for the unidentified creature's family.";
+		mes "...不可能....!";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Fish~ Fish~";
+		mes "简直是胡说八道.";
 		next;
-		mes "You yelled out loud for fish,";
-		mes "but there is no response.";
-		mes "I don't think anybody lives";
-		mes "in this puddle.";
+		mes "这怎么能怪洛佩!";
+		mes "我在迷雾森林附近";
+		mes "找到这张碎纸.";
+		mes "我敢肯定是洛佩的.";
 		close;
 	}
-	mes "You see a puddle with a calm surface.";
+	mes "[优莉蒂]";
 	close;
 }
 bif_fild02,315,285,0	duplicate(#mora_puddle)	Puddle#ep14_muk01	844
@@ -4365,104 +4365,104 @@ bif_fild02,113,340,0	duplicate(#mora_puddle)	Puddle#ep14_muk04	844
 //============================================================
 mora,133,80,6	script	Elephantine#pa0829	509,{
 	if (checkweight(1201,1) == 0) {
-		mes "You have too many kinds of things with you to do that. Throw out some of them and try again.";
+		mes "[优莉蒂好友]";
 		close;
 	}
 	if (MaxWeight - Weight < 1000) {
-		mes "You are carrying too much weight to do that. Reduce the weight and try again.";
+		mes "请劝阻优莉蒂.";
 		close;
 	}
 	if (ep14_1_mistwoods < 10) {
-		mes "[Elephantine]";
-		mes "Hmm, you don't look reliable enough to perform tasks for me.";
+		mes "她不顾一切地寻找她失踪的未婚夫.";
+		mes "[优莉蒂好友]";
 		close;
 	}
 	if (BaseLevel < 135) {
-		mes "[Elephantine]";
-		mes "Why don't you come back when you've grown stronger? I can't give you tasks when you're in your current state.";
+		mes "皮特真的很可疑.";
+		mes "我觉得他是在逃避优莉蒂...";
 		close;
 	}
 	set .@playtime, checkquest(12230,PLAYTIME);
 	if (.@playtime == 0 || .@playtime == 1) {
-		mes "[Elephantine]";
-		mes "I have no additional tasks available now. If I get some, I'll let you know when you come back.";
+		mes "他一定在隐瞒什么.";
+		mes "[优莉蒂好友]";
 		close;
 	} else if (.@playtime == 2) {
-		mes "[Elephantine]";
-		mes "Will you please check with ^990099Hotcha^000000";
-		mes "on the details of the previous task?";
+		mes "说真的, 我不认为";
+		mes "洛佩还活着.";
+		mes "我只是担心优莉蒂.";
 		close;
 	}
-	mes "[Elephantine]";
-	mes "Welcome.";
-	mes "I have some tasks for you - will you take a look at them?";
+	mes "[优莉蒂]";
+	mes "啊啊啊啊啊啊啊!!!!!!!!";
+	mes "[优莉蒂好友]";
 	next;
 	if(select("What kind of tasks do you have for me?:Tell me about today's task.") == 1) {
-		mes "[Elephantine]";
-		mes "I'm the Head of the Volunteer Patrol of the Village of Mora. It didn't used to be like this, he he.";
+		mes "...";
+		mes "说实话, 我真的相信";
 		next;
-		mes "[Elephantine]";
-		mes "Each day, I'll be giving you a quest to kill off monsters in the surrounding area.";
+		mes "洛佩还活着.";
+		mes "...";
 		next;
-		mes "[Elephantine]";
-		mes "You might get a task that's far too difficult for you to take care of alone - in that case, try to get help from your fellow adventurers.";
+		mes "*叹息*";
+		mes "[优莉蒂好友]";
 		close;
 	}
-	mes "[Elephantine]";
-	mes "Let me see what tasks we've got today... Hmm...";
+	mes "皮特在搞什么?";
+	mes "我想我应该去找他,";
 	next;
-	mes "[Elephantine]";
-	mes "How about this one?";
+	mes "让他觉得更痛苦!";
+	mes "他真令人厌恶!";
 	next;
 	switch(rand(1,5)) {
 	case 1:
 		setquest 12225;
 		setquest 12230;
-		mes "[Elephantine]";
-		mes "Strange insects that carry fruit on their backs roam this area - you must've seen them.";
+		mes "[优莉蒂好友]";
+		mes "快去找皮特.";
 		next;
-		mes "[Elephantine]";
-		mes "I'd like you to take them out as you see them, before they try to sell anything to the adventurers lost in the forest.";
+		mes "[优莉蒂好友]";
+		mes "优莉蒂现在为了维持";
 		set .@n$,"Fruit-Carrying Insects";
 		break;
 	case 2:
 		setquest 12226;
 		setquest 12230;
-		mes "[Elephantine]";
-		mes "There have been a lot of reports lately about mantises disguised as flowers attacking creatures passing by.";
+		mes "衰弱的身体, 正在唱治疗之歌.";
+		mes "再这样下去的话, 她也会很危险!";
 		next;
-		mes "[Elephantine]";
-		mes "No casualties have been reported yet, but it wouldn't hurt to take precautions. Please deal with them appropriately.";
+		mes "[优莉蒂好友]";
+		mes "噢, 我记得有个旅客告诉过我,";
 		set .@n$,"Flowery Hunters";
 		break;
 	case 3:
 		setquest 12227;
 		setquest 12230;
-		mes "[Elephantine]";
-		mes "An adventurer was reported to have been attacked by little birds while gathering resources in the vicinity of Bifrost.";
+		mes "他在迷雾森林的入口附近";
+		mes "看到过一个可疑的人.";
 		next;
-		mes "[Elephantine]";
-		mes "They didn't look so ferocious... but the adventurer has asked me to get rid of them, so you'll have to do it.";
+		mes "[优莉蒂好友]";
+		mes "旅客说那个人一声不响地站在那,";
 		set .@n$,"Small but Ferocious...";
 		break;
 	case 4:
 		setquest 12228;
 		setquest 12230;
-		mes "[Elephantine]";
-		mes "I have qualms about this one, but somebody anonymously asked me to hunt down the naughty fairies.";
+		mes "看起来很可疑,";
+		mes "但是雾太浓看不清楚.";
 		next;
-		mes "[Elephantine]";
-		mes "I don't know what grudge he has against the fairies, but a request is a request.";
+		mes "我想有必要调查一下!";
+		mes "[优莉蒂好友]";
 		set .@n$,"An Unknown Grudge";
 		break;
 	case 5:
 		setquest 12229;
 		setquest 12230;
-		mes "[Elephantine]";
-		mes "Would you believe it if I said there are balls of blonde hair rolling around? You wouldn't, would you?";
+		mes "我听说在迷雾森林的入口附近,";
+		mes "有一个可疑的人.";
 		next;
-		mes "[Elephantine]";
-		mes "They don't seem so dangerous, but they are reported to steal books and sweets from adventurers. Please deal with them appropriately.";
+		mes "旅客说那个人一声不响地站在那,";
+		mes "看起来很可疑,";
 		set .@n$,"Blondie Ann";
 		break;
 	}
@@ -4473,41 +4473,41 @@ mora,133,80,6	script	Elephantine#pa0829	509,{
 
 mora,115,98,8	script	Hotcha#pa0829	509,{
 	if (checkweight(1201,1) == 0) {
-		mes "You have too many kinds of things with you to do that. Throw out some of them and try again.";
+		mes "[皮特]";
 		close;
 	}
 	if (MaxWeight - Weight < 1000) {
-		mes "You are carrying too much weight to do that. Reduce the weight and try again.";
+		mes "你相当不错,";
 		close;
 	}
 	if (ep14_1_mistwoods < 10) {
-		mes "[Hotcha]";
-		mes "Hmm, you don't look reliable enough for Elephantine's tasks.";
+		mes "能够活着穿越迷雾森林.";
+		mes "你看我完全搞砸了,";
 		close;
 	}
 	if (BaseLevel < 97) {
-		mes "[Hotcha]";
-		mes "This place is like a paradise for adventurers. Not for weak ones like you, though.";
+		mes "所以我受不了, 听你的显赫冒险故事.";
+		mes "快走开.";
 		close;
 	}
 	set .@playtime, checkquest(12230,PLAYTIME);
 	if (.@playtime == -1) {
-		mes "[Hotcha]";
-		mes "I see you haven't received";
-		mes "any tasks yet.";
-		mes "Go talk to Elephantine,";
-		mes "and Elephantine will give you";
-		mes "one of the countless tasks.";
+		mes "[皮特]";
+		mes "你可真难缠, 不是吗?";
+		mes "优莉蒂让你来的, 嗯?";
+		mes "这对精灵夫妻,";
+		mes "真尼玛不让我活了.";
+		mes "[皮特]";
 		close;
 	} else if (.@playtime == 2) {
-		mes "[Hotcha]";
-		mes "The time is up to complete the existing tasks.";
+		mes "你去给我告诉她!";
+		mes "是那个白痴导游";
 		next;
-		mes "[Hotcha]";
-		mes "If you have any unfinished tasks in your quest log, they are considered 'failed' and removed from the log.";
+		mes "说那里是风景名胜, 硬把我们推进雾林里,";
+		mes "结果却自己一个人逃命!";
 		next;
-		mes "[Hotcha]";
-		mes "Once they are removed, go talk to Elephantine and you can receive new tasks.";
+		mes "[皮特]";
+		mes "所以你对不起的是我, 不是他, 明白吗?";
 		for(set .@i,12225; .@i<=12229; set .@i,.@i+1) {
 			if (checkquest(.@i) > -1)
 				erasequest .@i;
@@ -4515,20 +4515,20 @@ mora,115,98,8	script	Hotcha#pa0829	509,{
 		erasequest 12230;
 		close;
 	}
-	mes "[Hotcha]";
-	mes "Welcome.";
-	mes "How may I help you?";
+	mes "他一定还在某个地方逍遥快活,";
+	mes "所以请去直接找他, 别再来烦我了!";
+	mes "[皮特]";
 	next;
-	select("I have completed a task.");
-	mes "Oh.";
-	mes "Have you?";
-	mes "Please wait a minute while I check the documents.";
+	select("给他:不给");
+	mes "这都是因为";
+	mes "那个白痴的导游!";
+	mes "我讨厌精灵!";
 	next;
 
 	for(set .@i,12225; .@i<=12229; set .@i,.@i+1) {
 		if (checkquest(.@i,HUNTING) == 2) {
-			mes "[Hotcha]";
-			mes "Yes, I see you've completed the task. It has been confirmed as completed.";
+			mes "[皮特]";
+			mes "这都是因为";
 			erasequest .@i;
 			specialeffect2 EF_STEAL;
 			if (BaseLevel > 99 && JobLevel < 50)
@@ -4540,112 +4540,112 @@ mora,115,98,8	script	Hotcha#pa0829	509,{
 		}
 	}
 
-	mes "[Hotcha]";
+	mes "那个白痴的导游!";
 	mes "Hmm... "+strcharinfo(0)+".";
-	mes "It may be a documentation error, but according to the documents, you have nothing to do with the tasks.";
+	mes "我讨厌精灵!";
 	close;
 }
 
 mora,119,103,4	script	Bow-wow#pa0829	513,{
 	if (checkweight(1201,1) == 0) {
-		mes "You have too many kinds of things with you to do that. Throw out some of them and try again.";
+		mes "[可疑的人]";
 		close;
 	}
 	if (MaxWeight - Weight < 1000) {
-		mes "You are carrying too much weight to do that. Reduce the weight and try again.";
+		mes "......";
 		close;
 	}
 	if (ep14_1_mistwoods < 10) {
-		mes "[Bow-wow]";
-		mes "I try to give tasks only to reliable people. You are......... no, never mind.";
+		mes "[可疑的人]";
+		mes "啊啊啊啊啊啊啊!!!!!!";
 		close;
 	}
 	if (BaseLevel < 97) {
-		mes "[Bow-wow]";
-		mes "You really have no clue. What could you do with such a weak body?";
+		mes "我什么也看不见.";
+		mes "是谁在那?";
 		close;
 	}
 	set .@playtime, checkquest(12241,PLAYTIME);
 	if (.@playtime == 0 || .@playtime == 1) {
-		mes "[Bow-wow]";
-		mes "I have no additional tasks available now. If I get some, I'll let you know when you come back.";
+		mes "快回答, 否则我会把你视为敌人消灭掉.";
+		mes "优莉蒂在找你.";
 		close;
 	} else if (.@playtime == 2) {
-		mes "[Bow-wow]";
-		mes "Will you please check with the ^990099General Goods Dealer^000000";
-		mes "on the details of the previous task?";
+		mes "[可疑的人]";
+		mes "......";
+		mes "[洛佩]";
 		close;
 	}
-	mes "[Bow-wow]";
-	mes "Welcome.";
-	mes "I have some tasks for you - will you take a look at them?";
+	mes "幽魂啊, 你怎么能对我这么苛刻?";
+	mes "我已请求你把这个名字从我脑海里抹去,";
+	mes "哪怕代价是受到诅咒!";
 	next;
-	if(select("What kind of tasks do you have for me?:Tell me about today's task.") == 1) {
-		mes "[Bow-wow]";
-		mes "Here, we make all kinds of supplies for adventurers.";
+	if(select("离开:和他对话") == 1) {
+		mes "你冷静点, 听我说...";
+		mes "[洛佩]";
 		next;
-		mes "[Bow-wow]";
-		mes "We accept raw materials for the supplies once a day.";
+		mes "我的助人欲望";
+		mes "引领我走向死亡,";
 		next;
-		mes "[Bow-wow]";
-		mes "Sometimes, we might ask for materials that are very difficult to obtain. In that case, try to get help from your fellow adventurers.";
+		mes "我的求生和复仇的欲望";
+		mes "指引我重生.";
 		close;
 	}
-	mes "[Bow-wow]";
-	mes "Let me see... what supplies are we making today...?";
+	mes "我不知道该如何是好.";
+	mes "[洛佩]";
 	next;
-	mes "[Bow-wow]";
-	mes "How about this one?";
+	mes "只要我的变身一结束,";
+	mes "我会用拯救了我生命的雾林的血腥的混乱,";
 	next;
 	switch(rand(1,5)) {
 	case 1:
 		setquest 12231;
 		setquest 12241;
-		mes "[Bow-wow]";
-		mes "The adventurers here make sure to bring with them, on their exploration to dungeons, a preservative to keep their food fresh. Do you know what the preservative is made from?";
+		mes "来惩罚你们所有人!";
+		mes "你把优莉蒂拼好的信交到洛佩手上.";
 		next;
-		mes "[Bow-wow]";
-		mes "*grin* None other than... Insect Feelers! The General Goods Dealer there asked me to get four of them. I personally would not eat it for all the world...";
+		mes "[洛佩]";
+		mes "...这是!";
 		set .@n$,"Material for the Preservative";
 		break;
 	case 2:
 		setquest 12232;
 		setquest 12241;
-		mes "[Bow-wow]";
-		mes "These days, it's common for adventurers here to make talismans to protect themselves on their dangerous adventures. Like a kind of insurance.";
+		mes "有优莉蒂的感觉.";
+		mes "这封信...曾被转交给了优莉蒂?";
 		next;
-		mes "[Bow-wow]";
-		mes "Immortal Hearts seem to be all the rage lately. The General Goods Merchant asked me to get five of them.";
+		mes "难以置信...";
+		mes "[洛佩]";
 		set .@n$,"A Symbol of Resistance";
 		break;
 	case 3:
 		setquest 12233;
 		setquest 12241;
-		mes "[Bow-wow]";
-		mes "They need tons of Rotten Bandages for making first aid bandages. They must have run out of new materials.";
+		mes "我现在已经变成了怪物,";
+		mes "我不再是她的爱人.";
 		next;
-		mes "[Bow-wow]";
-		mes "The client is the General Goods Merchant over there. Three bunches of them will be enough.";
+		mes "回去告诉她, 很久以前, 在雾林之地,";
+		mes "洛佩就已经化作了尘埃.";
 		set .@n$,"Material for First Aid Kits";
 		break;
 	case 4:
 		setquest 12234;
 		setquest 12241;
-		mes "[Bow-wow]";
-		mes "Symbols of strong warriors give adventurers great support on their journeys. That's why Orcish Vouchers sell like hotcakes.";
+		mes "[洛佩]";
+		mes "快去!";
 		next;
-		mes "[Bow-wow]";
-		mes "The General Goods Dealer asked me to get three Orcish Vouchers, which are to be used to make symbols of courage.";
+		mes "作为一个名叫洛佩的精灵, 这是我的最后请求...";
+		mes "[洛佩]";
 		set .@n$,"Symbols of Courage";
 		break;
 	case 5:
 		setquest 12235;
 		setquest 12241;
-		mes "[Bow-wow]";
-		mes "It seems to be rumored among adventurers that drinking powdered bones mixed with water helps boost their stamina.";
+		mes "我现在已经变成了怪物,";
+		mes "我不再是她的爱人.";
 		next;
-		mes "[Bow-wow]";
-		mes "The General Goods Dealer asked me to get three Skel-Bones, which are to be used to make tonic.";
+		mes "回去告诉她, 很久以前, 在雾林之地,";
+		mes "洛佩就已经化作了尘埃.";
 		set .@n$,"Good for Stamina...";
 		break;
 	}
@@ -4744,104 +4744,104 @@ L_CheckQuest:
 
 mora,124,108,7	script	Woof-grrr#pa0829	514,{
 	if (checkweight(1201,1) == 0) {
-		mes "You have too many kinds of things with you to do that. Throw out some of them and try again.";
+		mes "^FF0000- 警告信息 -";
 		close;
 	}
 	if (MaxWeight - Weight < 1000) {
-		mes "You are carrying too much weight to do that. Reduce the weight and try again.";
+		mes "- 别动!! -";
 		close;
 	}
 	if (ep14_1_mistwoods < 10) {
-		mes "[Woof-grrr]";
-		mes "Can you please keep away from me? You're getting in the way.";
+		mes "- 你带了太多的东西 -";
+		mes "- 要想再拿更多的 -";
 		close;
 	}
 	if (BaseLevel < 97) {
-		mes "[Woof-grrr]";
-		mes "This place is not a nursery. Grow up and come back, and I'll gladly give you tasks.";
+		mes "- 请减轻你的负重 -";
+		mes "- 然后再来 -^000000";
 		close;
 	}
 	set .@playtime, checkquest(12242,PLAYTIME);
 	if (.@playtime == 0 || .@playtime == 1) {
-		mes "[Woof-grrr]";
-		mes "I have no additional tasks available now. If I get some, I'll let you know when you come back.";
+		mes "[草精研究员]";
+		mes "人类不用睡觉的吗?";
 		close;
 	} else if (.@playtime == 2) {
-		mes "[Woof-grrr]";
-		mes "Will you please check with the ^990099Commodities Dealer^000000, standing across from me,";
-		mes "on the details of the previous task?";
+		mes "正常人在这个点儿都应该睡得正香.";
+		mes "你究竟为什么要来烦我?";
+		mes "[草精研究员]";
 		close;
 	}
-	mes "[Woof-grrr]";
-	mes "Nice to see you.";
-	mes "I have some tasks for you - will you take a look at them?";
+	mes "你把我吵醒了.";
+	mes "我得睡觉! 我明天还要搞研究.";
+	mes "你也应该洗洗睡了.";
 	next;
-	if(select("What kind of tasks do you have for me?:Tell me about today's task.") == 1) {
-		mes "[Woof-grrr]";
-		mes "Bow-wow and I are in the same industry.";
+	if(select("你是做什么的?") == 1) {
+		mes "Z z Z z";
+		mes "^FF0000他似乎是睡着了.^000000";
 		next;
-		mes "[Woof-grrr]";
-		mes "We are a manufacturer of adventurers' supplies.";
+		mes "[草精研究员]";
+		mes "哦不~ 我的研究工具...";
 		next;
-		mes "[Woof-grrr]";
-		mes "My tasks won't be easy - you'd better prepare yourself.";
+		mes "什么...... 那是什么?";
+		mes "[草精研究员]";
 		close;
 	}
-	mes "[Woof-grrr]";
-	mes "Hmm... What tasks are at hand today?";
+	mes "嗯?";
+	mes "[草精研究员]";
 	next;
-	mes "[Woof-grrr]";
-	mes "Oh. This one looks good.";
+	mes "你是人类...? 你是人类...?";
+	mes "你... 来自地球?";
 	next;
 	switch(rand(1,5)) {
 	case 1:
 		setquest 12236;
 		setquest 12242;
-		mes "[Woof-grrr]";
-		mes "Some people just hang their talismans around their necks, but more people choose to seal them in special cases and carry them on their bodies.";
+		mes "[草精研究员]";
+		mes "人类真是不可思议...";
 		next;
-		mes "[Woof-grrr]";
-		mes "Mementos serve as inspirations for designers of those cases. The Commodities Dealer across from me asked me to get two of them.";
+		mes "你竟然从裂缝中生存了下来并且来到了这里.";
+		mes "[草精研究员]";
 		set .@n$,"The Latest Trend in Talismans";
 		break;
 	case 2:
 		setquest 12237;
 		setquest 12242;
-		mes "[Woof-grrr]";
-		mes "Adventurers make sure to keep their talismans safe, because they could save their lives.";
+		mes "... ... ...";
+		mes "[草精研究员]";
 		next;
-		mes "[Woof-grrr]";
-		mes "The Commodities Dealer across from me seems to make protective cases out of Shells. I was asked to get three of them.";
+		mes "你过来一下!";
+		mes "这只是个小小的实验, 你不用害怕!";
 		set .@n$,"Keep Your Valuables Safe";
 		break;
 	case 3:
 		setquest 12238;
 		setquest 12242;
-		mes "[Woof-grrr]";
-		mes "Adventurers that go into the bushes of the Maze of the Hazy Forest always wear knee protectors.";
+		mes "[草精研究员]";
+		mes "你说你是从裂缝那边来的,";
 		next;
-		mes "[Woof-grrr]";
-		mes "The Commodities Dealer across from me asked me to get three Scale Shells, which are to be used to make knee protectors.";
+		mes "所以我很好奇你是什么种族的,";
+		mes "只是人类? 你怎么能够来到这儿?";
 		set .@n$,"Material for Knee Protectors";
 		break;
 	case 4:
 		setquest 12239;
 		setquest 12242;
-		mes "[Woof-grrr]";
-		mes "I have a task for you at hand, making a vaccine for possible poisonous insects.";
+		mes "[草精研究员]";
+		mes "什么?! 我认为一个从裂缝过来的人,";
 		next;
-		mes "[Woof-grrr]";
-		mes "The Commodities Dealer across from me asked me to get two Venom Canines, which are to be used in the research of the substance.";
+		mes "会是非比寻常的,";
+		mes "但你只不过是个孩子.";
 		set .@n$,"Poison for Poison...";
 		break;
 	case 5:
 		setquest 12240;
 		setquest 12242;
-		mes "[Woof-grrr]";
-		mes "It seems they have run out of the material for adding non-slip soles to shoes.";
+		mes "[草精研究员]";
+		mes "去狩猎更多的 ^0000FF波利^000000,";
 		next;
-		mes "[Woof-grrr]";
-		mes "The Commodities Dealer across from me commissioned me to get five globs of Sticky Mucus.";
+		mes "当你的等级达到3位数时再来!";
+		mes "[草精研究员]";
 		set .@n$,"Don't Slip and Fall";
 		break;
 	}
@@ -5076,10 +5076,10 @@ mora,125,174,2	script	A Random Customer#pa0829	520,{
 }
 
 mora,104,172,7	script	Victim#pa0829	520,{
-	mes "[Victim]";
-	mes "You Bastard! I want my rugged outwear! That was passed on to me by my father *SOB*";
+	mes "^FF0000- 警告信息 -";
+	mes "- 站住!! -";
 	next;
-	mes "^990099 It seems that he has gotten a great deal of damage from the art dealer.^000000";
+	mes "- 你携带了太多的物品 -";
 	close;
 }
 

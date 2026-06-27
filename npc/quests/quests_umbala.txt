@@ -829,26 +829,26 @@ umbala,221,193,1	script	#Skulldoor	111,{
 		end;
 	}
 	else {
-		mes "^3355FFA human skull disturbingly";
-		mes "hangs beside the door. The door is";
-		mes "locked tight, so you can't get in.";
-		mes "As you peer through the keyhole,";
-		mes "you can see somebody moving inside the room.^000000";
+		mes "^3355FF门旁有着长相看起来";
+		mes "令人不悦的骷髅, 门锁的";
+		mes "紧紧的所以无法进去, ";
+		mes "感觉到里面有人的动静, ";
+		mes "看来好像有人在^000000";
 		next;
-		if (select("Examine the skull.:Quit.") == 1) {
-			mes "^3355FFYou see that the eye sockets";
-			mes "of the skull are empty.";
-			mes "How peculiar...";
-			mes "It seems that Gemstones";
-			mes "would fit perfectly inside of";
-			mes "them.^000000";
+		if (select("详细的观察骷髅:结束") == 1) {
+			mes "^3355FF要敲打一个打不开的门, ";
+			mes "认为是一件很难的事情, 所以";
+			mes "就决定要放弃走过去了^000000";
+			mes "^3355FF白骷髅的两眼空空的, ";
+			mes "仔细看看可以看到有个, ";
+			mes "魔力矿石般大的";
 			next;
-			mes "^3355FFYou see the left eye socket of the";
-			mes "skull. What do you want to do?^000000";
+			mes "磨碎痕迹, 对面的柱子上";
+			mes "也有骷髅, 那种痕迹";
 			next;
-			switch(select("Leave it as it is.:Insert a Blue Gemstone.:Insert a Yellow Gemstone.:Insert a Red Gemstone.")) {
+			switch(select("不动它:放入蓝色魔力矿石:放入黄色魔力矿石:放入红色魔力矿石")) {
 			case 1:
-				mes "^3355FFYou left the eye socket as it was.^000000";
+				mes "不太容易找得到^000000";
 				next;
 				break;
 			case 2:
@@ -864,10 +864,10 @@ umbala,221,193,1	script	#Skulldoor	111,{
 			if (.@insert) {
 				if (countitem(.@insert) > 0) {
 					mes "^3355FFYou inserted a "+getitemname(.@insert)+"";
-					mes "into the eye socket.^000000";
+					mes "要怎么办呢?^000000";
 					next;
-					mes "^3355FFThe gemstone rolled back out of";
-					mes "the mouth of the skull.^000000";
+					mes "都没有, 没办法";
+					mes "^3355FF魔力矿石发出滚动的声音, ";
 					set .@skulldoor,.@skulldoor+1;
 					switch (.@insert) {
 					case 715: set .@skull,2; break;
@@ -880,17 +880,17 @@ umbala,221,193,1	script	#Skulldoor	111,{
 				}
 				else {
 					mes "^3355FFYou forgot to carry "+getitemname(.@insert)+"";
-					mes "with you. So you couldn't do what you";
-					mes "had intended.^000000";
+					mes "透过骷髅的嘴里出来了^000000";
+					mes "^3355FF................^000000";
 					next;
 				}
 			}
-			mes "^3355FFYou see the right eye socket of";
-			mes "the skull. What do you want to do?^000000";
+			mes "^3355FF.......................";
+			mes ".......................^000000";
 			next;
 			switch(select("Leave it as it is.:Insert a Blue Gemstone.:Insert a Yellow Gemstone.:Insert a Red Gemstone.")) {
 			case 1:
-				mes "^3355FFYou left the eye socket as it was.^000000";
+				mes "^3355FF.......................";
 				next;
 				break;
 			case 2:
@@ -906,10 +906,10 @@ umbala,221,193,1	script	#Skulldoor	111,{
 			if (.@insert2) {
 				if (countitem(.@insert2) > 0) {
 					mes "^3355FFYou inserted a "+getitemname(.@insert2)+"";
-					mes "into the eye socket.^000000";
+					mes ".......................";
 					next;
-					mes "^3355FFThe gemstone rolled back out of";
-					mes "the mouth of the skull.^000000";
+					mes ".......................^000000";
+					mes "^3355FF在骷髅的空眼孔里";
 					if (.@insert2 == .@insert) {
 						set .@skulldoor,.@skulldoor+1;
 					}
@@ -922,18 +922,18 @@ umbala,221,193,1	script	#Skulldoor	111,{
 				}
 				else {
 					mes "^3355FFYou forgot to carry "+getitemname(.@insert2)+"";
-					mes "with you. So you couldn't do what you";
-					mes "had intended.^000000";
+					mes "有着吱喀的声音, 门就";
+					mes "打开了, 在门打开来的同时, ";
 					next;
 				}
 			}
-			mes "^3355FF..............................^000000";
+			mes "不知不觉中我的脚步已经";
 			next;
-			mes "^3355FF..............................";
-			mes "..............................^000000";
+			mes "走向建筑物里面了^000000";
+			mes "^3355FF没有发生任何事情, ";
 			next;
-			mes "^3355FF..............................";
-			mes "..............................";
+			mes "感觉上骷髅在笑, ";
+			mes "不过认为就是心情上的关系吧^000000";
 			mes "..............................^000000";
 			next;
 			switch(.@skulldoor) {

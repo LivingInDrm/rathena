@@ -207,50 +207,50 @@ OnTreasureDied:
 -	script	Steward#template	-1,{
 	set .@GID, getcastledata(strnpcinfo(4),CD_GUILD_ID);
 	if (!.@GID) {
-		mes "[ Steward ]";
-		mes "I await for the master";
-		mes "whom destiny will choose";
-		mes "for me. Do you think you";
-		mes "have to courage and strength";
-		mes "to conquer this stronghold?";
+		mes "[ 管理人 ]";
+		mes "我在此等待我的主人... 勇敢的冒险者啊! 追随你的命运吧!";
+		mes "[ 管理人 ]";
+		mes "监护人你们在哪里呀!";
+		mes "赶快把这些无理的家伙们赶走吧!";
+		mes "[ 管理人 ]";
 		close;
 	}
 	if (is_guild_leader(.@GID) == false) {
-		mes "[ Steward ]";
-		mes "Hmpf. Your threats don't";
-		mes "scare me! Guardians, drive";
-		mes "this infidel away from here!";
-		mes "I will always be loyal to the";
-		mes "master of this stronghold,";
+		mes "请尽管吩咐，我将忠诚地为你完成任务";
+		mes "[ 管理人 ]";
+		mes "现在向你报告秘密基地的状况";
+		mes "在过去一天之内，";
+		mes "[ 管理人 ]";
+		mes "在过去一天之内，";
 		mes "the one and only ^FF0000"+getguildmaster(.@GID)+"^000000.";
 		close;
 	}
-	mes "[ Steward ]";
+	mes " ";
 	mes "Ah, Master ^FF0000"+getguildmaster(.@GID)+"^000000...";
-	mes "How shall I serve you today?";
-	mes "Was there an aspect of this";
-	mes "stronghold's maintenance";
-	mes "you wanted to discuss?";
+	mes "报告完毕";
+	mes "[ 管理人 ]";
+	mes "提高商业发展度的话,在工会里生产的物品数量会增加,为了以后著想的话,不能不投资啊";
+	mes " ";
 	next;
-	switch(select("Stronghold Briefing:Invest in Commercial Growth:Invest in Defense growth:Hire/Fire Storage Staff:Go to Master's room")) {
+	switch(select("查看秘密基地状况:投资商业发展度:投资防御度:雇用 / 解雇 仓库职员:进入主人房间")) {
 	case 1:
-		mes "[ Steward ]";
-		mes "The Commercial Growth";
+		mes "照原先的方式,一天只能投资一次,假如多付一点金钱的话,一天可以投资两次";
+		mes " ";
 		mes "Level of the stronghold is ^0000ff"+getcastledata(strnpcinfo(4),CD_CURRENT_ECONOMY)+".";
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY) > 0) {
-			mes "Last time, you invested in";
+			mes "[ 管理人 ]";
 			mes "Commercial Growth "+getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY)+".";
 		}
 		next;
-		mes "[ Steward ]";
-		mes "Our stronghold's";
+		mes "^FF0000目前防御度以经是100了,你已经不需要再加入任何投资了^000000";
+		mes "[ 管理人 ]";
 		mes "safeguard level is "+getcastledata(strnpcinfo(4),CD_CURRENT_DEFENSE)+".";
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE) > 0) {
-			mes "Last time, you invested";
+			mes "^FF0000可是你已经在今天之内投资了两次再不能投资了,^000000让发展度赶快上升期待著富贵的日子啰";
 			mes "in defense "+getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE)+" times.";
 		}
-		mes " ";
-		mes "That is all, master.";
+		mes "[ 管理人 ]";
+		mes "[ 管理人 ]";
 		close;
 	case 2:
 		set .@Economy,getcastledata(strnpcinfo(4),CD_CURRENT_ECONOMY);
@@ -265,84 +265,84 @@ OnTreasureDied:
 		}
 		// Quadruple the cost of investing if you've already invested once.
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY)) set .@eco_invest,.@eco_invest*4;
-		mes "[ Steward ]";
-		mes "Raising the stronghold's";
-		mes "commercial growth will";
-		mes "increase the quantity of";
-		mes "goods produced for the guild.";
-		mes "Investing in commercial growth";
-		mes "will help the guild's future.";
+		mes "现在你已经投资一次了...";
+		mes "金币噢";
+		mes "[ 管理人 ]";
+		mes "You've already made two";
+		mes "investments today, so you'll";
+		mes "have to wait until tomorrow";
+		mes "to make another investment.";
 		next;
-		mes "[ Steward ]";
-		mes "You can make one investment";
-		mes "each day, but if you can make";
-		mes "two investments if you pay";
-		mes "more Zeny: this will speed";
-		mes "up commercial development,";
-		mes "but can be quite expensive.";
+		mes "[ 管理人 ]";
+		mes "主人,你没有足够的资金可以投资商业发展度";
+		mes "[ 管理人 ]";
+		mes "顺利地完成投资了!";
+		mes "期待著我们往后要面临的未来,明天的话发展度会上升";
+		mes "[ 管理人 ]";
+		mes "我将依照你的吩咐去执行,是我的主人";
 		next;
 		if (.@Economy == 100) {
-			mes "[ Steward ]";
-			mes "However, our stronghold's";
-			mes "commerical growth level is";
-			mes "at 100%. It's not possible to";
-			mes "develop commercial growth";
-			mes "any further than that.";
+			mes "... 不需要太著急,我们会做得很好";
+			mes "[ 管理人 ]";
+			mes "提高防御程度的话,监护人和华丽金属的耐久度会增加,考虑到往后的战争,不得不投资啊,";
+			mes " ";
+			mes "照原先的方式,一天只能投资一次,假如多付一点金钱的话,一天可以投资两次";
+			mes "[ 管理人 ]";
 			close;
 		}
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY) >= 2) {
-			mes "[ Steward ]";
-			mes "You've already made two";
-			mes "investments today, so you'll";
-			mes "have to wait until tomorrow";
-			mes "to make another investment.";
+			mes "The Defense Level of this";
+			mes "stronghold is 100%, and";
+			mes "cannot be increased further.";
+			mes "Master, you've already";
+			mes "invested in Defense twice";
 			close;
 		}
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY) == 0) {
-			mes "[ Steward ]";
+			mes "today. You'll need to wait";
 			mes "You must pay ^FF0000"+.@eco_invest+"^000000 Zeny";
-			mes "to make an investment";
-			mes "Will you invest in this";
-			mes "stronghold's commerical";
-			mes "development now?";
+			mes "until tomorrow if you really";
+			mes "want to increase our defenses.";
+			mes "Zeny to invest in our";
+			mes "stronghold's defenses.";
 		}
 		else {
-			mes "[ Steward ]";
+			mes "Will you invest now?";
 			mes "You must pay ^FF0000"+.@eco_invest+"^000000";
-			mes "more Zeny to make a second";
-			mes "investment today. Will you";
-			mes "invest one more time?";
+			mes "Zeny to invest in our";
+			mes "stronghold's defenses";
+			mes "a second time today.";
 		}
 		next;
-		switch(select("Invest in Commercial Growth:Cancel")) {
+		switch(select("投资商业发展度:取消")) {
 		case 1:
 			if (getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY) >= 2) {
-				mes "[ Steward ]";
-				mes "You've already made two";
-				mes "investments today, so you'll";
-				mes "have to wait until tomorrow";
-				mes "to make another investment.";
+				mes "Will you invest now?";
+				mes "[ 管理人 ]";
+				mes "Master, you've already";
+				mes "invested in Defense twice";
+				mes "today. You'll need to wait";
 				close;
 			}
 			if (Zeny < .@eco_invest) {
-				mes "[ Steward ]";
+				mes "until tomorrow if you really";
+				mes "want to increase our defenses.";
+				mes "[ 管理人 ]";
 				mes "I'm sorry, Master, but";
 				mes "you do not have enough";
-				mes "Zeny to make an investment";
-				mes "for the guild today.";
 				close;
 			}
 			set Zeny, Zeny-.@eco_invest;
 			setcastledata strnpcinfo(4),CD_INVESTED_ECONOMY,getcastledata(strnpcinfo(4),CD_INVESTED_ECONOMY)+1;
-			mes "[ Steward ]";
+			mes "Zeny to make an investment";
+			mes "for the guild today.";
+			mes "[ 管理人 ]";
 			mes "A wise use of the guild's";
-			mes "funds, Master. We can expect";
-			mes "to see the results of this";
-			mes "investment by tomorrow.";
+			mes "funds, Master. Increasing";
 			close;
 		case 2:
-			mes "[ Steward ]";
-			mes "As you command, Master.";
+			mes "the frequency of treasure";
+			mes "procured by the guild will";
 			close;
 		}
 	case 3:
@@ -358,169 +358,169 @@ OnTreasureDied:
 		}
 		// Quadruple the cost of investing if you've already invested once.
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE)) set .@def_invest,.@def_invest*4;
-		mes "[ Steward ]";
-		mes "Investing in our stronghold's";
-		mes "defense will enhance the";
-		mes "durability of our Guardians";
-		mes "and the Emperium. We'll need";
-		mes "every advantage to protect";
-		mes "ourselves from our enemies.";
+		mes "definitely help us all.";
+		mes "[ 管理人 ]";
+		mes "As you command, Master.";
+		mes "[ 管理人 ]";
+		mes "Do you wish to dismiss";
+		mes "the Kafra Employee that";
+		mes "we've hired for the guild?";
 		next;
-		mes "[ Steward ]";
-		mes "You can invest in defense";
-		mes "once per day, but if you pay";
-		mes "more Zeny, you can invest";
-		mes "a maximum of two times daily.";
+		mes "[ Hired Kafra Employee ]";
+		mes "Master, please reconsider!";
+		mes "I've been working very hard";
+		mes "for the success of the guild!";
+		mes "I'll try harder to serve the";
 		next;
-		mes "[ Steward ]";
+		mes "guild members of this";
 		if (getcastledata(strnpcinfo(4),CD_CURRENT_DEFENSE) == 100) {
-			mes "The Defense Level of this";
-			mes "stronghold is 100%, and";
-			mes "cannot be increased further.";
+			mes "stronghold, I promise!";
+			mes "[ Hired Kafra Employee ]";
+			mes "Why?! What have I done";
 			close;
 		}
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE) >= 2) {
-			mes "Master, you've already";
-			mes "invested in Defense twice";
-			mes "today. You'll need to wait";
-			mes "until tomorrow if you really";
-			mes "want to increase our defenses.";
+			mes "to deserve this? Waaah~!";
+			mes "[ Hired Kafra Employee ]";
+			mes "Thank you, Master!";
+			mes "I'll obey your every";
+			mes "command as best I can!";
 			close;
 		}
 		if (getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE) == 0) {
 			mes "We need ^FF0000"+.@def_invest+"^000000";
-			mes "Zeny to invest in our";
-			mes "stronghold's defenses.";
-			mes "Will you invest now?";
+			mes "You won't regret this!";
+			mes "[ 管理人 ]";
+			mes "She works very hard,";
 		}
 		else {
 			mes "We need ^FF0000"+.@def_invest+"^000000";
-			mes "Zeny to invest in our";
-			mes "stronghold's defenses";
-			mes "a second time today.";
-			mes "Will you invest now?";
+			mes "in my opinion. It was in";
+			mes "all of our best interests to";
+			mes "allow her to stay with us.";
+			mes "[ 管理人 ]";
 		}
 		next;
 		switch(select("Invest in Defense:Cancel")) {
 		case 1:
 			if (getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE) >= 2) {
-				mes "[ Steward ]";
-				mes "Master, you've already";
-				mes "invested in Defense twice";
-				mes "today. You'll need to wait";
-				mes "until tomorrow if you really";
-				mes "want to increase our defenses.";
+				mes "That Kafra Employee";
+				mes "has been dismissed.";
+				mes "Were really dissatisfied";
+				mes "by the quality of her service?";
+				mes "[ 管理人 ]";
+				mes "Will you hire a";
 				close;
 			}
 			if (Zeny < .@def_invest) {
-				mes "[ Steward ]";
-				mes "I'm sorry, Master, but";
-				mes "you do not have enough";
-				mes "Zeny to make an investment";
-				mes "for the guild today.";
+				mes "Kafra Employee to serve";
+				mes "our stronghold? You must";
+				mes "pay ^FF000010,000 Zeny^000000 to hire one.";
+				mes "[ 管理人 ]";
+				mes "Master, we cannot hire a";
 				close;
 			}
 			set Zeny, Zeny-.@def_invest;
 			setcastledata strnpcinfo(4),CD_INVESTED_DEFENSE,getcastledata(strnpcinfo(4),CD_INVESTED_DEFENSE)+1;
-			mes "[ Steward ]";
-			mes "A wise use of the guild's";
-			mes "funds, Master. Increasing";
-			mes "the frequency of treasure";
-			mes "procured by the guild will";
-			mes "definitely help us all.";
+			mes "Kafra Employee because";
+			mes "you have not yet attained";
+			mes "the ^FF0000Contract with Kafra^000000";
+			mes "guild skill.";
+			mes "[ 管理人 ]";
+			mes "Master, we cannot hire a";
 			close;
 		case 2:
-			mes "[ Steward ]";
-			mes "As you command, Master.";
+			mes "Kafra Employee because";
+			mes "we do not have enough";
 			close;
 		}
 	case 4:
 		if (getcastledata(strnpcinfo(4),CD_ENABLED_KAFRA) == 1) {
-			mes "[ Steward ]";
-			mes "Do you wish to dismiss";
-			mes "the Kafra Employee that";
-			mes "we've hired for the guild?";
+			mes "funds to pay the contract fee.";
+			mes "[ 管理人 ]";
+			mes "Very well. We have formed";
+			mes "a contract with the Kafra";
 			next;
 			switch(select("Dismiss:Cancel")) {
 			case 1:
 				cutin "kafra_01",2;
+				mes "Head Office, and hired a";
+				mes "Kafra Employee for our";
+				mes "stronghold. Here she is~";
 				mes "[ Hired Kafra Employee ]";
-				mes "Master, please reconsider!";
-				mes "I've been working very hard";
-				mes "for the success of the guild!";
-				mes "I'll try harder to serve the";
-				mes "guild members of this";
-				mes "stronghold, I promise!";
+				mes "How do you do? I've";
+				mes "been dispatched by the";
+				mes "Kafra Head Office to";
 				next;
 				switch(select("Dismiss:Cancel")) {
 				case 1:
-					mes "[ Hired Kafra Employee ]";
-					mes "Why?! What have I done";
-					mes "to deserve this? Waaah~!";
+					mes "serve your guild's needs.";
+					mes "I'll do my best to follow";
+					mes "your every command, Master.";
 					next;
 					cutin "kafra_01",255;
 					break;
 				case 2:
-					mes "[ Hired Kafra Employee ]";
-					mes "Thank you, Master!";
-					mes "I'll obey your every";
-					mes "command as best I can!";
-					mes "You won't regret this!";
+					mes "[ 管理人 ]";
+					mes "Our contract will expire";
+					mes "after one month, so we must";
+					mes "pay additional fees to keep";
+					mes "this Kafra Employee in";
 					close;
 				}
 				break;
 			case 2:
-				mes "[ Steward ]";
-				mes "She works very hard,";
-				mes "in my opinion. It was in";
-				mes "all of our best interests to";
-				mes "allow her to stay with us.";
+				mes "the service of our guild.";
+				mes "[ 管理人 ]";
+				mes "As you command, Master.";
+				mes "However, I suggest hiring";
+				mes "a Kafra Employee as soon";
 				close;
 			}
 			disablenpc "Kafra Employee#"+strnpcinfo(2);
 			setcastledata strnpcinfo(4),CD_ENABLED_KAFRA,0;
-			mes "[ Steward ]";
-			mes "That Kafra Employee";
-			mes "has been dismissed.";
-			mes "Were really dissatisfied";
-			mes "by the quality of her service?";
+			mes "as possible since our guild";
+			mes "would greatly benefit from";
+			mes "the convenient Kafra services.";
+			mes "[ 管理人 ]";
+			mes "Do you wish to enter the";
 			close;
 		}
 		else {
-			mes "[ Steward ]";
-			mes "Will you hire a";
-			mes "Kafra Employee to serve";
-			mes "our stronghold? You must";
-			mes "pay ^FF000010,000 Zeny^000000 to hire one.";
+			mes "Guild Treasure Room?";
+			mes "Only you, the Guild Master,";
+			mes "are permitted to enter.";
+			mes "[ 管理人 ]";
+			mes "Please remember to open";
 			next;
 			switch(select("Hire:Cancel")) {
 			case 1:
 				if (getgdskilllv(.@GID,10001) == 0) {
-					mes "[ Steward ]";
-					mes "Master, we cannot hire a";
-					mes "Kafra Employee because";
-					mes "you have not yet attained";
-					mes "the ^FF0000Contract with Kafra^000000";
-					mes "guild skill.";
+					mes "the Treasure Boxes at the";
+					mes "proper time. Otherwise, the";
+					mes "treasure may disappear if";
+					mes "something unexpected happens.";
+					mes "[ 管理人 ]";
+					mes "Allow me to guide you";
 					close;
 				}
 				if (Zeny < 10000) {
-					mes "[ Steward ]";
-					mes "Master, we cannot hire a";
-					mes "Kafra Employee because";
-					mes "we do not have enough";
-					mes "funds to pay the contract fee.";
+					mes "on the secret path to";
+					mes "the Treasure Room.";
+					mes "Press the secret switch";
+					mes "when you wish to return here.";
+					mes "[ 管理人 ]";
 					close;
 				}
 				set Zeny, Zeny-10000;
 				enablenpc "Kafra Employee#"+strnpcinfo(2);
 				setcastledata strnpcinfo(4),CD_ENABLED_KAFRA,1;
-				mes "[ Steward ]";
-				mes "Very well. We have formed";
-				mes "a contract with the Kafra";
-				mes "Head Office, and hired a";
-				mes "Kafra Employee for our";
-				mes "stronghold. Here she is~";
+				mes "Items in the Treasure Room";
+				mes "are produced once each day.";
+				mes "Therefore, you must obtain";
+				mes "the treasure items everyday.";
+				mes "For the sake of the guild,";
+				mes "prioritize treasure harvesting!";
 				next;
 				cutin "kafra_01",2;
 				mes "[ Hired Kafra Employee ]";
@@ -663,13 +663,13 @@ OnStartArena:
 				mes "this stronghold. For now,";
 				mes "all is quiet in this place.";
 				next;
-				switch(select("Converse:Cancel")) {
+				switch(select("Converse:取消")) {
 				case 1:
 					mes .@n$;
 					mes "Do you have any questions";
 					mes "about this stronghold?";
 					next;
-					switch(select("Guardian Stones:Fortress Gates:Link Flags:Battle Strategy:Cancel")) {
+					switch(select("守护石:防御线:空间移动系统:Battle Strategy:Cancel")) {
 					case 1:
 						mes .@n$;
 						mes "There is one Emperium";
@@ -702,7 +702,7 @@ OnStartArena:
 						close;
 					case 2:
 						mes .@n$;
-						mes "^4D4DFFFortress Gates^000000 are the second line of guild stronghold defense,";
+						mes "^4D4DFFFortress Gates^000000 are the second  line of guild stronghold defense,";
 						mes "and are protected by extra barricades activated by the Guardian Stones.";
 						mes "These gates are located in three different parts of the fortress.";
 						next;
@@ -840,7 +840,7 @@ OnInit:
 	cutin "kafra_01",2;
 	set .@GID, getcastledata(strnpcinfo(4),CD_GUILD_ID);
 	if (getcharid(2) == .@GID && getgdskilllv(.@GID,10001)) {
-		mes "[Kafra Employee]";
+		mes "[卡普拉 职员]";
 		mes "Welcome, proud member";
 		mes "of the ^FF0000"+GetGuildName(.@GID)+"^000000 Guild!";
 		mes "The Kafra Corporation is ready";
@@ -849,7 +849,7 @@ OnInit:
 		switch(select("Use Storage:Use Warp Service:Rent Pushcart:Cancel")) {
 		case 1:
 			if(!callfunc("F_CanOpenStorage")){
-				mes "[Kafra Employee]";
+				mes "[卡普拉 职员]";
 				mes "I'm so sorry, but you must";
 				mes "have at least Novice Skill";
 				mes "Lv.6 to use the Storage.";
@@ -857,14 +857,14 @@ OnInit:
 			else openstorage;
 			break;
 		case 2:
-			mes "[Kafra Employee]";
+			mes "[卡普拉 职员]";
 			mes "Please tell me your";
 			mes "Warp destination.";
 			next;
 			switch(select("Rachel -> 200 z:Cancel")) {
 			case 1:
 				if (Zeny < 200) {
-					mes "[Kafra Employee]";
+					mes "[卡普拉 职员]";
 					mes "I'm sorry, but you don't";
 					mes "have enough Zeny to pay";
 					mes "the warp fee. Would you";
@@ -883,19 +883,19 @@ OnInit:
 			break;
 		case 3:
 			if (BaseClass != Job_Merchant) {
-				mes "[Kafra Employee]";
+				mes "[卡普拉 职员]";
 				mes "I'm sorry, but the Pushcart";
 				mes "rental service can only be";
 				mes "used by Merchant, Blacksmith,";
 				mes "and Alchemist class characters.";
 			}
 			else if (checkcart() == 1) {
-				mes "[Kafra Employee]";
+				mes "[卡普拉 职员]";
 				mes "Hm? You've already";
 				mes "rented a Pushcart.";
 			}
 			else {
-				mes "[Kafra Employee]";
+				mes "[卡普拉 职员]";
 				mes "The Pushcart rental fee";
 				mes "is 800 Zeny. Would you";
 				mes "like to rent a Pushcart?";
@@ -903,7 +903,7 @@ OnInit:
 				switch(select("Rent Pushcart:Cancel")) {
 				case 1:
 					if (Zeny < 800) {
-						mes "[Kafra Employee]";
+						mes "[卡普拉 职员]";
 						mes "I'm sorry, but you don't";
 						mes "have enough Zeny to rent";
 						mes "one of our Pushcarts.";
@@ -920,7 +920,7 @@ OnInit:
 			}
 			break;
 		case 4:
-			mes "[Kafra Employee]";
+			mes "[卡普拉 职员]";
 			mes "Thank you for using the";
 			mes "Kafra Service. Wherever";
 			mes "you go, Kafra will be";
@@ -934,7 +934,7 @@ OnInit:
 		end;
 	}
 	else {
-		mes "[Kafra Employee]";
+		mes "[卡普拉 职员]";
 		mes "I'm sorry, but I've been";
 		mes "exclusively contracted";
 		mes "to the members of the";

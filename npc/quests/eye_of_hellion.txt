@@ -1041,36 +1041,36 @@ prontera,269,326,3	script	Clanux Heffron#hellion	50,{
 
 prontera,223,82,0	script	#prt_key-1	111,{
 	if (HELLIONQ == 39) {
-		mes "^3355FFIt's a training dummy";
-		mes "with a gash in its body";
-		mes "that looks like it was made";
-		mes "by the thrust of a sharp sword.^000000";
+		mes "[爱奴智]";
+		mes "Oh hey, I remember you~";
+		mes "So did my mentor send you";
+		mes "to me again for some reason?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Didn't Clanux mention that he";
-		mes "found a broken sword around";
-		mes "here? Maybe this was exactly";
-		mes "where he found it. Let's see...";
+		mes "^3151FFYou cautiously hand 爱奴智 the";
+		mes "Master Science Reference Book.";
+		mes "[爱奴智]";
+		mes "Yes! Oh yes!";
 		next;
-		select("Inspect the dummy's gash");
-		mes "^3355FFInside of the dummy's body is";
-		mes "a steel bearing with a roughly";
-		mes "etched message that reads:^000000";
-		mes "^4d4dff''Veggie Lady N9 W3 BINGO.''^000000";
+		select("我只是一位跑腿的人!:不是我啦..");
+		mes "This is the book";
+		mes "I lost three days";
+		mes "ago! Thanks so much!";
+		mes "Now I can finally finish";
 		set HELLIONQ,40;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "What the heck does this";
-		mes "even mean? A Veggie Lady?";
-		mes "Does Clanux know anything";
-		mes "at all about this clue...?";
+		mes "this research project that--";
+		mes "[爱奴智]";
+		mes "Wait, the page I really";
+		mes "need is missing! And there's";
 		close;
 	}
-	mes "^3355FFIt's a training dummy";
-	mes "that was used to hone the";
-	mes "skills of new Swordmen...";
-	mes "But the Swordman Training";
-	mes "Grounds have moved to Izlude.";
+	mes "some sort of note... Umm...";
+	mes "is worth at least one Apple";
+	mes "[爱奴智]";
+	mes "NOooOOoOo!";
+	mes "Not agaaaaain!";
 	close;
 }
 
@@ -1078,31 +1078,31 @@ prontera,45,67,0	script	 #prt_key-1-1	111,1,1,{
 OnTouch_:
 	if (HELLIONQ == 40 || HELLIONQ == 41) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well, according to the";
-		mes "message in that old training";
-		mes "dummy, this is where I'm";
-		mes "supposed to go. Nine steps";
-		mes "north, 3 steps west. And now...";
-		mes "Veggie Lady. Okay, okay...";
+		mes "^3151FF是训练用的木偶, ";
+		mes "仔细查看木偶的身体部位, ";
+		mes "发现了有东西被拔出来的痕迹";
+		mes "嗯嗯?";
+		mes "克莱呢赐先生刚才拿给我看的物品之中...";
+		mes "有个折断的刀片..";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Huh. That's creepy.";
-		mes "There's one right there";
-		mes "staring at me. But after";
-		mes "the words ''Veggie Lady,''";
-		mes "all the message says is, um,";
-		mes "what was that last word again?";
+		mes "难道是那刀子插入的地方吗, ";
+		mes "我该怎么办呢..";
+		mes "^3151FF用自己的武器摆弄缝隙后, ";
+		mes "木偶身体的一部份脱离开来";
+		mes "木偶里面有用铁制成的支撑杆, ";
+		mes "并有用刀片刻上去的文句, ";
 		next;
 		input .@input$;
 		if (.@input$ == "BINGO") {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Of course!";
-			mes "''BINGO!'' But";
-			mes "I don't see a hall";
-			mes "full of old people";
-			mes "around here, I--";
+			mes "^7151FF蔬菜小姐 N9 W3 BINGO";
+			mes "^7151FF蔬菜小姐 N9 W3 BINGO^000000 ???";
+			mes "这是什么意思呢?";
+			mes "蔬菜小姐又是什么...";
+			mes "克莱呢赐先生会知道吗?";
 			next;
-			mes "[Veggie Lady]";
+			mes "^3151FF是训练用的木偶, 仔细查看木偶的身体部位, 发现了有东西被拔出来的痕迹";
 			mes "Finally, you say it.";
 			mes "Yeesh, I thought I was";
 			mes "going to wait forever for";
@@ -1607,18 +1607,18 @@ payon,101,190,0	script	 #paypuzz1	-1,1,1,{
 OnTouch_:
 	if (HELLIONQ == 48) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well, this is where";
-		mes "Grout'he told me to look.";
-		mes "Ooh, there's something";
-		mes "written on the ceiling. Um,";
-		mes "let's see... ''This garment";
-		mes "is one size fits all.''";
+		mes "^3151FF有一个不知用途的机械, ";
+		mes "看管理状态就知道是没在使用的机械了, ";
+		mes "最近有谁来动过的痕迹, ";
+		mes "上面少一个齿轮的样子";
+		mes "结束做搜查的动作";
+		mes "来.. 让我看看, 嗯?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "That's it...?";
-		mes "Hopefully this will";
-		mes "make more sense once";
-		mes "I find more clues. I hope.";
+		mes "没有齿轮啊? 真奇怪呀, ";
+		mes "我明明从克莱呢赐先生那里, ";
+		mes "收到一个不明的齿轮啊..";
+		mes "从克莱呢赐先生那里 所拿到的齿轮可以放的进去嘛..";
 		set HELLIONQ,49;
 		close;
 	}
@@ -1669,24 +1669,24 @@ payon,239,56,3	script	Dried Fish#paypuzz3	111,{
 payon,240,160,3	script	Vat#paypuzz4	111,{
 	if (HELLIONQ == 51) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Alright, the last";
-		mes "place I have to check.";
-		mes "It's a big old vat with a";
-		mes "message here too. Now";
-		mes "let me see, there should";
-		mes "be a message here too. Ah--!";
+		mes "...蔬菜店小姐为什么一直那样凝视着我呢?";
+		mes "由于有蔬菜店小姐的纪录, 我才来到这里的啊";
+		mes "果然是, N9 W3 是指先往北走九步, ";
+		mes "再往西走三步的意思, 不过那里到底会有什么呢?";
+		mes "难道那里就是那位用可怕眼神凝视我的蔬菜店小姐吗?";
+		mes "只有那位对我虎视眈眈的小姐..";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "This says, ''What will it be?";
-		mes "Wine or Grape Juice? Oh,";
-		mes "but I much prefer wine.'' Okay,";
-		mes "what does this have to do with";
-		mes "that Hellion's gem? Weird...";
+		mes "一直看着我令我感到很为难, ";
+		mes "要不要跟他说话呢, ";
+		mes "嗯.. 我还要继续解开剩下的谜团..";
+		mes "最后记载的是什么啦..?";
+		mes "其他文字!!!!";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Am I missing something?";
-		mes "I think I really need help in";
-		mes "figuring this out. Hmm...";
+		mes ".......哼嗯, 很抱歉, ";
+		mes "我突然大叫一声";
+		mes "对了! BINGO!!!!";
 		set HELLIONQ,52;
 		close;
 	}
@@ -2262,11 +2262,11 @@ OnTouch_:
 
 gef_tower,116,37,0	script	Enoz#hellion	748,{
 	if (HELLIONQ == 59 || HELLIONQ == 62) {
-		mes "[Enoz]";
-		mes "It's gone, it's gone!";
-		mes "Where the hell did it go?!";
-		mes "Oh man, who could have";
-		mes "taken it? Wait, was it... You?!";
+		mes "这里是葛劳吾堤告诉我的地方没错啊..嗯嗯? 天花板上好像写着密密麻麻的东西?阅读一下好了";
+		mes "　";
+		mes "- 这件衣服只有一种尺码... -";
+		mes "什么吗? 只写这些啊? 和在普隆德拉的也一样, 是不是也有别的猜谜呢? 我也不知道啊, ";
+		mes "先去别的场所找找看吧";
 		next;
 		if (select("Actually, Welshyun sent me.:No way man, don't go nuts.") == 1) {
 			mes "[Enoz]";

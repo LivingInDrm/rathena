@@ -40,9 +40,9 @@
 manuk,321,182,5	script	Entrance Manager#ep133	450,{
 	if (!isequipped(2782)) {
 		mes "[Average Galten]";
-		mes "ⅳ○→? ⅲ ※○...";
-		mes "★◎⌒ ⅳ ?";
-		mes "●★..?";
+		mes "???§?§?????ì?? ?? ???ì???...";
+		mes "?????ì???? ???§?§ ?";
+		mes "????..?";
 		close;
 	}
 	if (ep13_3_invite >= 4) {
@@ -69,7 +69,7 @@ manuk,321,182,5	script	Entrance Manager#ep133	450,{
 dic_dun01,266,113,5	script	Curious Sapha#ep13_3_	449,{
 	if (!isequipped(2782)) {
 		mes "[Curious Sapha]";
-		mes "■●⌒ ◎ □?";
+		mes "?????? ???ì?? ???";
 		next;
 		mes "- Cannot understand a word. -";
 		close;
@@ -195,57 +195,57 @@ sec_in02,16,43,5	script	Scaraba Dungeon Entrance	449,{
 -	script	Vigilante#main	-1,{
 	if (compare(strnpcinfo(0),"ep133_26")) {
 		if (!isequipped(2782)) {
-			mes "[Vigilante]";
+			mes "[民兵]";
 			mes "◆◇■ △ 〓※◇?";
 			mes "ⅳ■▲ ⒊ △ⅲ↑ ▲ ⌒□←...";
 			next;
-			mes "The Vigilante says something and then shakes his head.";
-			mes "Looks like a negative reaction from the looks of his firm pose holding his shield in front of him.";
+			mes "民兵团团员说了些什么,然后摇摇头.";
+			mes "貌似他坚定的样子消极的反应构成抱着他的盾牌在他的面前.";
 			close;
 		}
-		mes "[Vigilante]";
-		mes "Manuk is just before us.";
-		mes "Are you heading to Manuk?";
+		mes "[民兵]";
+		mes "马努克仅仅是摆在我们面前.";
+		mes "你前往马努克?";
 		next;
-		if (select("Yes.:No.") == 1) {
-			mes "[Vigilante]";
-			mes "I will send you to Manuk.";
+		if (select("- 是.:- 不是") == 1) {
+			mes "[民兵]";
+			mes "我会送你到马努克.";
 			close2;
 			warp "manuk",326,180;
 			end;
 		}
-		mes "[Vigilante]";
-		mes "Good luck.";
+		mes "[民兵]";
+		mes "祝你好运.";
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "[Vigilante]";
+		mes "[民兵]";
 		mes "◆◇■ △ 〓※◇?";
 		mes "ⅳ■▲ ⒊ △ⅲ↑ ▲ ⌒□←...";
 		mes "○→⒈ ◆ ◎□→ □..! ";
 		next;
-		mes "Cannot communicate with him.";
+		mes "无法与他沟通.";
 		close;
 	}
 	if (ep13_3_secret < 6) {
-		mes "The area below is restricted because it is dangerous.";
-		mes "I cannot let you pass because you are here as guests.";
-		mes "Please follow the tunnel to get to the capital city.";
+		mes "下面的区域受到限制,因为它是危险的.";
+		mes "我不能让你通过,因为你是这里的客人.";
+		mes "请按照隧道到达首都.";
 		close;
 	}
-	mes "[Vigilante]";
-	mes "Do you need something from the cave?";
+	mes "[民兵]";
+	mes "你需要从洞中的东西?";
 	next;
-	if (select("Yes.:No.") == 1) {
-		mes "[Vigilante]";
-		mes "Be careful.";
+	if (select("是.:不是") == 1) {
+		mes "[民兵]";
+		mes "一定要小心.";
 		close2;
 		warp "dic_dun02",101,142;
 		end;
 	}
-	mes "[Vigilante]";
-	mes "Please step aside because it is dangerous.";
-	mes "You won't know when those Scarabas will start rampaging..";
+	mes "[民兵]";
+	mes "请靠边站,因为它是危险的.";
+	mes "你不会知道当那些Scarabas将开始狂暴..";
 	close;
 
 }
@@ -256,8 +256,8 @@ dic_dun01,30,216,5	duplicate(Vigilante#main)	Vigilante#ep133_26	492
 dic_dun01,284,102,5	script	Dirty Vigilante#ep13_3	450,{
 	if (!isequipped(2782)) {
 		mes "[Vigilante]";
-		mes "◆◇■ △ 〓※◇ⅳ■▲ ⒊ △ⅲ↑ ▲ ⌒□←.";
-		mes "○→⒈ ◆ ◎□→ □..! ";
+		mes "?????ì??? ??? ?????ì????ì????§?§???? ?? ????????ì? ?? ??????.";
+		mes "?????ì???? ?? ???ì???????ì? ??..! ";
 		next;
 		mes "Cannot understand a word.";
 		close;
@@ -311,24 +311,24 @@ OnTouch_:
 	if (ep13_3_secret == 23) {
 		donpcevent "Suspicious Guy#ep133_::OnEnable";
 		cutin "ep13_loki01",2;
-		mes "[Low Voice]";
-		mes "Hey.";
-		mes "Are you the human that met the newly appointed minister of Dicastes?";
-		mes "What does he look like?";
+		mes "- 你也可以做到许多项目进行了探索. - ";
+		mes "还有,因为不稳定的地壳运动的岩石重重叠叠左右.";
+		mes "这石堆也是其中之一.";
+		mes "附近有没有破解一个几个土堆.";
 		next;
-		mes "You feel yourself pressured by this";
-		mes "suspicious guy and starts to talk about Ahat voluntarily.";
+		mes "这是其中之一.";
+		mes "地球的表面被分成从二维裂纹的冲击.";
 		next;
 		cutin "ep13_loki02",2;
-		mes "[Black Clothed Guy]";
-		mes "...Really?";
-		mes "You've found it at last.";
+		mes "分割地球是固体和结冰使它看起来像锋利的刀片.";
+		mes "没有看到什么可疑的东西.";
+		mes "你觉得一个邪恶的能量来自小石头碎片.";
 		set ep13_3_secret, 24;
 		next;
 		cutin "",255;
 		donpcevent "Suspicious Guy#ep133_::OnDisable";
-		mes "The guy in all black disappeared suddenly.";
-		mes "Who was that?";
+		mes "看起来不自然,但更像是从一个强大的魔法咒语残存附近.";
+		mes "你觉得邪恶能量.这是否有什么关系艾哈特?";
 		close;
 	}
 	end;
@@ -349,61 +349,61 @@ OnEnable:
 
 -	script	Guard#ep133_11	492,{
 	if (!isequipped(2782)) {
-		mes "[Capital City Guard]";
-		mes "◆◇■ △ 〓※◇?";
-		mes "○→⒈ ◆ ◎□→ □..!";
+		mes "[诗]";
+		mes "但我认为沙帕比赛过于善良,几乎不自然.";
+		mes "猜猜它会没事的.";
 		next;
-		mes "- Cannot communicate with him. -";
+		mes "[本]";
 		close;	
 	}
 	if (ep13_3_invite < 5) {
-		mes "[Capital City Guard]";
-		mes "Access to the city is restricted from other races without permits.";
-		mes "Please go back.";
+		mes "没有什么奇怪的!";
+		mes "我喜欢像你,被许多人推崇.";
+		mes "[本]";
 		close;
 	}
 	else if (ep13_3_invite == 5) {
-		mes "[Capital City Guard]";
-		mes "Access to the city is restricted from other races without permits.";
-		mes "Please go back.";
+		mes "我还可以参观沙帕如果我的工作在这里很好,我不能?";
+		mes "[本]";
+		mes "嗯.嘿,摩诃,";
 		next;
-		mes "[Capital City Guard]";
-		mes "Hmmm? You are human.";
-		mes "If you went through that tunnel, you are here by Ravail's invitation?";
+		mes "你有什么感想?";
+		mes "为什么你认为他是在这里?";
+		mes "[诗]";
 		next;
-		select("Yes.");
-		mes "[Capital City Guard]";
-		mes "No wonder Vyhannus approved you.";
-		mes "Understood.";
-		mes "I approve your entrance and will guide you on what you should first do in El Dicastes.";
+		select("这是什么?:保持沉默和倾听.");
+		mes "不知道.不感兴趣.";
+		mes "[本]";
+		mes "难道你没发现那家伙奇怪吗?";
+		mes "我从来没有见过他的比赛之前,我参加了远征.";
 		next;
-		mes "[Capital City Guard]";
-		mes "First enter the fortress,";
-		mes "and register yourself at Dicastes Diel located at the highest location in the north.";
-		mes "You must first register to b able to move freely.";
+		mes "[马哈]";
+		mes "啊.真的吗?";
+		mes "那么它的只有你.";
+		mes "必须有一个原因,他是在这里.";
 		next;
-		mes "[Capital City Guard]";
-		mes "You'll see Diel if you follow here towards the north.";
-		mes "You won't get lost.";
-		mes "You need to find the register window at the Diel public service center.";
+		mes "[本]";
+		mes "................";
+		mes "哦,不,你不能......";
+		mes "[马哈]";
 		close2;
 		warp "dicastes01",199,41;
 		end;
 	}
 	else if (ep13_3_invite > 5) {
-		mes "[Capital City Guard]";
-		mes "Are you returning to El Dicastes?";
+		mes "他们可能很快就会作出公布.";
+		mes "所有我们需要做的就是等待通知.";
 		next;
-		set .@m, select("Yes. Going to the castle.:No.") - 1;
-		mes "[Capital City Guard]";
-		mes "Good luck.";
+		set .@m, select("但?") - 1;
+		mes "它会给我们答案.";
+		mes "[本]";
 		close2;
 		if (!.@m) warp "dicastes01",199,41;
 		end;
 	}
-	mes "[Capital City Guard]";
+	mes "嗯...";
 	mes "Unknown situation occurred. Case " + strnpcinfo(2);
-	mes "Please inquiry with a GM.";
+	mes "这可能是真实的,但不是你想得太多了?";
 	close;
 }
 dic_fild01,146,281,5	duplicate(Guard#ep133_11)	Capital City Guard#1	492
@@ -493,8 +493,8 @@ dic_in01,48,263,5	script	Hunting Dept. 1 Manager	449,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -563,8 +563,8 @@ dic_in01,51,266,6	script	Hunting Dept. 2 Manager	449,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -632,8 +632,8 @@ dic_in01,51,270,7	script	Supply Dept. 1 Manager	449,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -703,8 +703,8 @@ dic_in01,48,273,8	script	Supply Dept. 2 Manager	449,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -770,8 +770,8 @@ dic_in01,43,273,1	script	Transport Dept. 1 Mgr	449,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -844,8 +844,8 @@ dic_in01,40,270,2	script	Transport Dept. 2 Mgr	449,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -905,107 +905,107 @@ dic_in01,40,270,2	script	Transport Dept. 2 Mgr	449,{
 
 dic_in01,40,193,1	script	Papyrus#0001	453,{
 	if (!checkweight(1201,1)) {
-		mes "You have too many items in your inventory.";
+		mes "你有太多类型的物品.您减少物品的数量之后让我们再试一次.";
 		close;
 	}
 	if ((MaxWeight - Weight) < 1000) {
-		mes "Your inventory is too heavy.";
+		mes "无法继续,因为您的物品的重量太重了.你减少一些负重后让我们再试一次.";
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "[卡利卡]";
+		mes "你想再次升级厄尔尼诺埃迪斯特斯之光?";
 		next;
-		mes "I don't feel confident in talking since you wouldn't understand anything.";
+		mes "[卡利卡]";
 		close;
 	}
 	if (ep13_3_invite < 6) {
-		mes "Sapha keeps a distance from you even when you try to talk. Looks like he called on Guard Galten. Time to go...";
+		mes "这将花费6 沙帕认证,以重试.";
 		close;
 	}
 	if (BaseLevel < 80) {
-		mes "You won't need those documents even if you could read them. Looks like you haven't gotten enough training";
+		mes "并注意这一点,你目前的厄尔尼诺埃迪斯特斯之光会随着所有的结界被破坏.";
 		close;
 	}
 	set .@map_hi, rand(1,4);
-	mes "[Papyrus]";
+	mes "[卡利卡]";
 	if (.@map_hi == 1) mes "Welcome, I am Papyrus, the manager of the Archive room here.";
 	else if (.@map_hi == 2) mes "The number of adventurers visiting the Archive room has increased";
 	else if (.@map_hi == 3) mes "This is the very place where Ancient Sapha forefathers created history";
 	else mes "The Archive room holds transcendent knowledge beyond that of Midgard and Asgard";
 	next;
 	if (countitem(6308) > 29) {
-		mes "[Papyrus]";
-		mes "Oh... You've brought back plenty of unknown relics";
+		mes "您确定要这么做吗?";
+		mes "[卡利卡]";
 		next;
-		mes "[Papyrus]";
-		mes "We exchange 11 Sapha Certifications for 30 Unknown Relics. Do you want to exchange?";
+		mes "您需要携带埃迪斯特斯和6 沙帕认证的光!";
+		mes "不要试图欺骗我!";
 		next;
-		if (select("Next time:Exchange now") == 1) {
-			mes "[Papyrus]";
-			mes "Ok, have it your way. I'm here if you change your mind";
+		if (select("不,让我想想.:就拿我厄尔尼诺埃迪斯特斯之光.") == 1) {
+			mes "[卡利卡]";
+			mes "好吧,让我们赶快开始.";
 			close;
 		}
-		mes "[Papyrus]";
-		mes "Ok here's your 11 Sapha Certifications.";
+		mes "我会从你的厄尔尼诺埃迪斯特斯之光取出所有结界.";
+		mes "Haaap  - !";
 		delitem 6308,30; //Unidentified_Relic
 		getitem 6304,11; //Sapa_Feat_Cert
 		close;
 	}
 	if (countitem(6308) > 2) {
-		mes "[Papyrus]";
-		mes "Wow~ ";
-		mes "You've found an Unknown Relic.";
-		mes "Do you want to exchange it with for 1 Sapha Certification?";
+		mes "[卡利卡]";
+		mes "该漏洞沙帕的认证,你收集,帮助整个城市有其他用途,除了满足部长.";
+		mes "[卡利卡]";
+		mes "如果你遇到一个漏洞认证,请回到我身边.";
 		next;
-		if (select("Next time:Exchange now") == 1) {
-			mes "[Papyrus]";
-			mes "Ok, have it your way. I'm here if you change your mind";
+		if (select("请解释一下.:我想升级.") == 1) {
+			mes "[卡利卡]";
+			mes "我可以把一个额外的法术给你的厄尔尼诺Dicastes配件灯.";
 			close;
 		}
-		mes "[Papyrus]";
-		mes "Ok here's your 1 Sapha Certifications.";
+		mes "[卡利卡]";
+		mes "你来唤醒的厄尔尼诺埃迪斯特斯无穷力量的光. ";
 		delitem 6308,3; //Unidentified_Relic
 		getitem 6304,1; //Sapa_Feat_Cert
 		close;
 	}
-	mes "[Papyrus]";
-	mes "How can I help you? ";
+	mes "[卡利卡]";
+	mes "我听说过的城市以外的一些工匠也可以施放法术的装备.";
 	next;
-	switch (select("What is this place for? :How do I view documents?:What is an Unknown Relic? ")) {
+	switch (select("请解释一下.:我想重置.:我想升级.")) {
 		case 1:
-			mes "[Papyrus]";
-			mes "This is an important place where data of various relics collected, since our ancient forefathers, are kept.";
+			mes "[卡利卡]";
+			mes "我是相同的,但至少我不破坏设备.";
 			next;
-			mes "[Papyrus]";
-			mes "You can say it's something similar to the human's museum. Take your time to look through our ancient records.";
+			mes "[卡利卡]";
+			mes "如果你把利用沙帕的认证,我会施展法术从1到3步骤,你的厄尔尼诺埃迪斯特斯之光.";
 			next;
-			mes "[Papyrus]";
-			mes "You'll never know if you'll find something that catches your adventurous eye.";
+			mes "[卡利卡]";
+			mes "但当然,因为这是在其原有的魔力,加起来法术,我不能保证你会得到你想要在一个尝试什么.";
 			break;
 		case 2:
-			mes "[Papyrus]";
-			mes "Some documents are written in Ancient Sapha Language so humans have trouble viewing all of the documents.";
+			mes "[卡利卡]";
+			mes "要么你不穿或不具备设备上的升级.";
 			next;
-			mes "[Papyrus]";
-			mes "You can find recent documents on the left where I am standing.";
-			mes "You can also take notes on documents you found interesting.";
+			mes "哦...对沙帕功勋证没有运气?";
+			mes "所以,你没有得到任何...";
+			mes "这是可悲的.他们是非常有用的,你知道...";
 			next;
-			mes "[Papyrus]";
-			mes "I would appreciate it if you bring back any Unknown Relics you happen to find while exploring using your notes from here to me.";
+			mes "如果你在这个城市努力工作,你会得到沙帕功勋证.";
+			mes "如果你遇到的认证之一,你可以把它给我吗?";
 			break;
 		case 3:
-			mes "[Papyrus]";
-			mes "Unknown Relics are relics that have not yet been verified and they are valuable research material for us.";
+			mes "我们可以做一个交流,你会不会后悔.";
+			mes "我一直在收集利用沙帕的认证一年了,以满足艾哈特.";
 			next;
-			mes "[Papyrus]";
-			mes "Many of us researchers are studying life and death, the birth and extinction of the universe through the ancient relics";
+			mes "但我远离它,因为它需要一个很高的位置,有些行贿的低动物像我和他见面.";
+			mes "如果您有任何利用沙帕的认证,以备用,请与我分享.我答应还给你的服务.你永远不会得到任何其他地方.";
 			next;
-			mes "[Papyrus]";
-			mes "If you find and bring an unknown relic to me, in exchange I will give you ^9900991 Sapha Certification^000000s for every ^9900993 Unknown Relic^000000s you bring.";
+			mes "你想看看豪华与金钟声?";
+			mes "你必须有兴趣的野性尾?";
 			next;
-			mes "[Papyrus]";
-			mes "If you bring ^99009930 relics^000000, I will exchange it for ^99009911 Sapha Certification^000000s.";
+			mes "你来的野性靴子.我刚才的项目适合你.";
+			mes "嗯.金钟是只颁发给我们两国人民的最好的和最勇敢的战士附件.";
 			break;
 	}
 	close;
@@ -1198,9 +1198,9 @@ cmd_fild08,324,163,0	script	Stone Hearts	844,{ unknown_d(12215,953); }
 dic_in01,138,225,3	script	Diel Guard#ep133_19	492,{
 	if (!isequipped(2782)) {
 		mes "[Diel Guard]";
-		mes "◆◇■ △ 〓※◇?";
-		mes "ⅳ■▲ ⒊ △ⅲ↑ ▲ ⌒□←...";
-		mes "○→⒈ ◆ ◎□→ □..!";
+		mes "?????ì??? ??? ?????ì????ì??";
+		mes "???§?§???? ?? ????????ì? ?? ??????...";
+		mes "?????ì???? ?? ???ì???????ì? ??..!";
 		next;
 		mes "Cannot communicate with him.";
 		close;
@@ -1261,9 +1261,9 @@ dic_in01,242,182,0	script	Elevator#5f_to_4f	844,{
 dic_in01,263,193,3	script	Diel Guard#ep133_20	450,{
 	if (!isequipped(2782)) {
 		mes "[Diel Guard]";
-		mes "◆◇■ △ 〓※◇?";
-		mes "ⅳ■▲ ⒊ △ⅲ↑ ▲ ⌒□←...";
-		mes "○→⒈ ◆ ◎□→ □..!";
+		mes "?????ì??? ??? ?????ì????ì??";
+		mes "???§?§???? ?? ????????ì? ?? ??????...";
+		mes "?????ì???? ?? ???ì???????ì? ??..!";
 		next;
 		mes "Cannot communicate with him.";
 		close;
@@ -1798,8 +1798,8 @@ OnTouch_:
 	if (ep13_3_secret == 19) {
 		if (!isequipped(2782)) {
 			mes "[Quiet Voice]";
-			mes "〓※◇ ⅳ■▲....";
-			mes "◎□→ △ⅲ↑ ▲ ⌒□←...";
+			mes "?????ì????ì? ???§?§????....";
+			mes "???ì???????ì? ????????ì? ?? ??????...";
 		}
 		else {
 			mes "[Quiet Voice]";
@@ -1815,9 +1815,9 @@ OnTouch_:
 dic_in01,158,188,3	script	Jarute HesLanta#ep133_2	451,{
 	if (!isequipped(2782)) {
 		mes "[Jarute HesLanta]";
-		mes "◆◇■ △ 〓※◇?";
-		mes "ⅳ■▲ ⒊ △ⅲ↑ ▲ ⌒□←...";
-		mes "○→⒈ ◆ ◎□→ □..!";
+		mes "?????ì??? ??? ?????ì????ì??";
+		mes "???§?§???? ?? ????????ì? ?? ??????...";
+		mes "?????ì???? ?? ???ì???????ì? ??..!";
 		next;
 		mes "Cannot communicate with him.";
 		mes "Sapha's minister looks hopeless.";
@@ -2325,8 +2325,8 @@ dicastes01,223,190,1	script	Calyon#pa8029	453,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -2498,8 +2498,8 @@ dicastes01,211,178,2	script	Moltuka#pa0829	453,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -2722,8 +2722,8 @@ dicastes01,175,217,5	script	Kalipo#pa0829	453,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -2864,8 +2864,8 @@ dicastes01,187,230,5	script	Laponte#pa0829	453,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -3035,8 +3035,8 @@ dicastes01,208,230,3	script	Pura#pa0829	453,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -3226,8 +3226,8 @@ dicastes01,225,211,3	script	Tragis#pa0829	453,{
 		close;
 	}
 	if (!isequipped(2782)) {
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "I don't feel confident in talking since you wouldn't understand anything.";
 		close;
@@ -4294,8 +4294,8 @@ dic_in01,245,119,4	script	Shay#ep133_13	884,{
 dicastes01,207,210,5	script	Walking Knit#ep133_15	449,{
 	if (!isequipped(2782)) {
 		mes "[Knit]";
-		mes "□ⅲ◆";
-		mes "■▲◇ ⅲ ■●★ ※ ○⒉ⅲ";
+		mes "??????";
+		mes "???????ì? ?? ?????? ???ì? ??????";
 		next;
 		mes "Cannot communicate with him.";
 		close;
@@ -4392,9 +4392,9 @@ dicastes01,207,210,5	script	Walking Knit#ep133_15	449,{
 dicastes01,112,248,5	script	Resting Piom#ep133_16	491,{
 	mes "[Piom]";
 	if (!isequipped(2782)) {
-		mes "●△ⅳ ■ ⒈●→?";
-		mes "◎⒊~!";
-		mes "⌒⒉ⅳ ⒈ ↑●□ ⒊ ○ !!!";
+		mes "????????§?§ ?? ????????ì??";
+		mes "???ì????~!";
+		mes "???????§?§ ??? ???ì????? ?? ?? !!!";
 		next;
 		mes "Cannot communicate with him.";
 		close;
@@ -4465,8 +4465,8 @@ dicastes01,112,248,5	script	Resting Piom#ep133_16	491,{
 dicastes01,249,140,3	script	Training Galten#ep133_17	450,{
 	if (!isequipped(2782)) {
 		mes "[Galten]";
-		mes "▲◆↑ ▲ ▲◆↑";
-		mes "▲◆↑";
+		mes "???????ì? ?? ???????ì?";
+		mes "???????ì?";
 		next;
 		mes "Cannot communicate with him.";
 		close;
@@ -5040,8 +5040,8 @@ dicastes01,117,262,0	script	Frede#13_3	491,2,2,{
 		close;
 	}
 	mes "[Frede]";
-	mes "ⅲ◆● ←"; 
-	mes "→■▲ ⅲ ◆";
+	mes "?????? ??"; 
+	mes "???ì????? ?? ??";
 	close;
 OnTouch:
 	if (isequipped(2782) && ep13_3_invite > 5 && ep13_3_bra < 1) {
@@ -5345,8 +5345,8 @@ dic_in01,165,104,0	script	Frede#13_3_in	454,{
 		close;
 	}
 	mes "[Frede]";
-	mes "ⅲ◆● ← ";
-	mes "→■▲ ⅲ ◆";
+	mes "?????? ?? ";
+	mes "???ì????? ?? ??";
 	close;
 }
 
@@ -5443,9 +5443,9 @@ dic_dun01,205,43,5	script	Brian#ep13_3_	490,{
 		close;
 	}
 	mes "[Brian]";
-	mes "◆□◇ ▲ ○⒈← ■ ○";
-	mes "○〓〓 ※ ⌒●★ ⅳ";
-	mes "◆◎⒉ ▲";
+	mes "???????ì? ?? ??????? ?? ??";
+	mes "?????? ???ì? ?????? ???§?§";
+	mes "?????ì???? ??";
 	close;
 }
 
@@ -5569,9 +5569,9 @@ dic_dun01,153,107,4	script	Tyler#13_3	489,{
 		close;
 	}
 	mes "[Tyler]";
-	mes "★〓△";
-	mes "〓◇⌒ 〓 ⌒▲⒈ ↑ ";
-	mes "◇▲ⅳ ◇ ";
+	mes "???????";
+	mes "?????ì??? ?? ??????? ???ì? ";
+	mes "???ì??????§?§ ???ì? ";
 	close;
 }
 
@@ -5672,8 +5672,8 @@ dic_dun01,235,243,0	script	John#13_3	454,{
 		close;
 	}
 	mes "[John]";
-	mes "※□⌒ ⒊ ◇";
-	mes "★★◎ △ 〓○■ ⅲ ●↑→ ◇ ⅳ↑ ◇ ";
+	mes "???ì????? ?? ???ì?";
+	mes "???????ì?? ??? ?????? ?? ?????ì????ì? ???ì? ???§?§???ì? ???ì? ";
 	close;
 }
 
@@ -5766,13 +5766,13 @@ dic_dun02,110,127,5	script	Rose#13_3	489,{
 		next;
 		mes "[Rose]";
 		mes "We must be connected?";
-		mes "^f57d7dHahaha⒔^000000";
+		mes "^f57d7dHahaha??^000000";
 		close;
 	}
 	mes "[Rose]";
-	mes "※◇○ ⒉ ○";
-	mes "←■△ ※ ⒊";
-	mes "ⅲ◇⒉";
+	mes "???ì????ì??? ?? ??";
+	mes "??????? ???ì? ??";
+	mes "?????ì???";
 	close;
 }
 
@@ -5865,8 +5865,8 @@ dic_dun01,64,107,7	script	Bain#13_3	490,{
 		close;
 	}
 	mes "[Bain]";
-	mes "◇▲⒈ △ ";
-	mes "■●⌒ ◎ □";
+	mes "???ì?????? ??? ";
+	mes "?????? ???ì?? ??";
 	close;
 }
 
@@ -5963,11 +5963,11 @@ dic_dun01,58,225,4	script	Lash#13_3	491,{
 		close;
 	}
 	mes "[Lash]";
-	mes "◆□◇ ▲ ○⒈← ■ ○";
-	mes "○〓〓 ※ ⌒●★ ⅳ ";
-	mes "◆◎⒉ ▲ ";
-	mes "△";
-	mes "□⒊● □ ●";
+	mes "???????ì? ?? ??????? ?? ??";
+	mes "?????? ???ì? ?????? ???§?§ ";
+	mes "?????ì???? ?? ";
+	mes "???";
+	mes "?????? ?? ??";
 	close;
 }
 
@@ -6088,9 +6088,9 @@ dic_in01,349,129,5	script	Bouy#13_3	449,{
 		close;
 	}
 	mes "[Bouy]";
-	mes "▲■〓 ※ →○★ ▲"; 
-	mes "★→■ ※";
-	mes "□★□ ◎";
+	mes "?????? ???ì? ???ì????? ??"; 
+	mes "?????ì??? ???ì?";
+	mes "?????? ???ì??";
 	close;
 }
 
@@ -6585,9 +6585,9 @@ mid_campin,168,128,3	script	Sapha from Manuk	451,{
 		mes "That is it.";
 	}
 	mes "[Sapha]";
-	mes "ⅳ○→? ⅲ ※○...";
-	mes "★◎⌒ ⅳ ?";
-	mes "●★..?";
+	mes "???§?§?????ì?? ?? ???ì???...";
+	mes "?????ì???? ???§?§ ?";
+	mes "????..?";
 	next;
 	mes "[Hound]";
 	mes "Where is your interpreter ring?";
@@ -6667,9 +6667,9 @@ OnInit:
 man_in01,315,52,3	script	Guard Captain Avalanche	450,{
 	mes "[Guard Captain Avalanche]";
 	if (!isequipped(2782)) {
-		mes "ⅳ○→? ⅲ ※○...";
-		mes "★◎⌒ ⅳ ?";
-		mes "●★..?";
+		mes "???§?§?????ì?? ?? ???ì???...";
+		mes "?????ì???? ???§?§ ?";
+		mes "????..?";
 		close;	
 	}
 	if (ep13_3_invite == 4) {
@@ -6745,8 +6745,8 @@ man_in01,315,52,3	script	Guard Captain Avalanche	450,{
 dic_in01,42,264,3	script	Adventurer Clerk#ep133	453,{
 	if (!isequipped(2782)) {
 		mes "[Clerk Knit]";
-		mes "○●◆ □ ↑⒈⒊ ■ ◎...?";
-		mes "ⅳ■▲ ... ⒊ △ⅲ↑ ▲ ⌒□←...";
+		mes "?????? ?? ???ì?????? ?? ???ì??...?";
+		mes "???§?§???? ... ?? ????????ì? ?? ??????...";
 		next;
 		mes "- Cannot communicate with him. -";
 		close;

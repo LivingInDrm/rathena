@@ -355,12 +355,12 @@ OnTimer300000:
 
 OnTouch:
 	if (lght_duk01 == 1) {
-		mes "I arrived at a research facility which seems it has been used till these days.";
+		mes "我到了一个研究设施, 但这里似乎有些时日没有人了.";
 		next;
-		mes "There are some destroyed part, but the basic facility seem fine.";
+		mes "也有一些被破坏的部分, 但基本设施良好.";
 		next;
 		lght_duk01 = 2;
-		mes "Get around a little more...";
+		mes "还是避开一点吧";
 		close;
 	}
 	end;
@@ -538,12 +538,12 @@ que_lhz,148,251,0	script	#Move2lab	-1,12,0,{
 
 OnTouch:
 	if (lght_duk01 == 6) {
-		mes "I arrived at '^0000FFWolfchev's Lab^000000'.";
+		mes "我到了'^0000FF查夫的实验室^000000'.";
 		close2;
 		warp "lhz_dun04", 148, 269;
 		end;
 	} else {
-		mes "I still have something to do with Wolfchev.";
+		mes "我和查夫还有点事情";
 		close;
 	}
 }

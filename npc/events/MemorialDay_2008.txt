@@ -49,45 +49,45 @@ prontera,182,214,4	script	Lauds#Memorial	58,{
 			mes "Fine, be unprepared!";
 			next;
 			mes "[Mad Sago Lauds]";
-			mes "^FF0000YOU WILL RUE THE DAY!^000000";
+			mes "";
 			close;
 		}
+		mes "^FF0000YOU WILL RUE THE DAY!^000000";
 		mes "[Mad Sago Lauds]";
 		mes "Great!";
-		mes "Then listen to me carefully.";
 		next;
+		mes "Then listen to me carefully.";
 		mes "[Mad Sago Lauds]";
 		mes "Now before you can pay tribute to the fallen soldiers you must be properly equipped.";
 		mes "Without your towel you will be lost!";
-		mes "If you bring me the materials, I can make you a towel.";
 		next;
+		mes "If you bring me the materials, I can make you a towel.";
 		mes "[Mad Sago Lauds]";
 		mes "Listen closely.";
-		mes "Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
 		set Memorial08,1;
 		close;
 	}
 
 	else if (Memorial08 == 1) {
 		if (countitem(1059) < 30 || countitem(914) < 20) {
+			mes "Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
 			mes "[Mad Sago Lauds]";
 			mes "What are these? They aren't enough?!";
 			mes "*Sigh* Do I really have to tell you again?!";
-			mes "Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
 			close;
 		} else {
+			mes "Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
+			next;
 			mes "***Mad Sago Lauds appears to be muttering to himself***";
-			next;
 			mes "[Mad Sago Lauds]";
-			mes "So, did you bring the towel materials?";
 			next;
+			mes "So, did you bring the towel materials?";
 			mes "[Mad Sago Lauds]";
 			mes "Excellent; you've brought them all.";
 			mes "Then I shall make you a Towel of Memory as I promised.";
-			mes "Give me a moment.";
 			next;
+			mes "Give me a moment.";
 			mes "[Mad Sago Lauds]";
-			mes "There you go!";
 			delitem 1059,30;
 			delitem 914,20;
 			getitem 6025,1;
@@ -98,96 +98,96 @@ prontera,182,214,4	script	Lauds#Memorial	58,{
 	}
 	
 	else if (Memorial08 == 2) {
+		mes "There you go!";
 		mes "[Mad Sago Lauds]";
-		mes "Ah, you have fluffy new towel now I even put your name on it";
 		next;
+		mes "Ah, you have fluffy new towel now I even put your name on it";
 		mes "[Mad Sago Lauds]";
-		mes "Say, how do you like to go on a journey to pay a tribute to Memorial Day?";
 		next;
 		if (select("Sure.:No, I'm Busy.") == 2) {
+			mes "Say, how do you like to go on a journey to pay a tribute to Memorial Day?";
 			mes "[Mad Sago Lauds]";
-			mes "Don't come crying to me if someone decides to build a highway through your home!";
 			close;
 		}
+		mes "Don't come crying to me if someone decides to build a highway through your home!";
 		mes "[Mad Sago Lauds]";
-		mes "Good. By the way, do you even know what the towel is for?";
 		next;
+		mes "Good. By the way, do you even know what the towel is for?";
 		mes "[Mad Sago Lauds]";
 		mes "It seems you're just carrying it without understanding its meaning.";
-		mes "What a shame! You should go speak to ^FF0000Grast in Prontera^000000.";
 		set Memorial08,3;
 		close;
 	}
 
 	else if (Memorial08 == 3) {
+		mes "What a shame! You should go speak to ^FF0000Grast in Prontera^000000.";
 		mes "[Mad Sago Lauds]";
 		mes "What are you still doing here?";
-		mes "I told you to go speak to Grast in Prontera!";
 		close;
 	}
 
 	else if (Memorial08 == 4 || Memorial08 == 5 || Memorial08 == 6) {
+		mes "I told you to go speak to Grast in Prontera!";
 		mes "[Mad Sago Lauds]";
-		mes "Go help Grast, and then come back.";
 		close;
 	}
 
 	else if (Memorial08 == 7) {
+		mes "Go help Grast, and then come back.";
 		mes "[Mad Sago Lauds]";
 		mes "Oh, you've brought them all.";
 		mes "Hahaha!";
-		mes "HAHAHAHAHAHA!!!! cough cough";
 		next;
+		mes "HAHAHAHAHAHA!!!! cough cough";
 		mes "[Mad Sago Lauds]";
 		mes "Please give them to me. Thank you for your hard work, by the way.";
 		mes "Say, have you learned anything from the journey?";
+		next;
 		mes "Now is to go visit the plaque at 12 o'clock direction in Prontera.";
-		next;
 		mes "[Mad Sago Lauds]";
-		mes "What do you mean you were just there?";
 		next;
+		mes "What do you mean you were just there?";
 		mes "[Mad Sago Lauds]";
 		mes "What? Why are you giving me your garbage!";
 		mes "Those items are not useful to me at all.";
-		mes "You should be going to the plaque!";
 		set Memorial08,8;
 		close;
 	}
 
 	else if (Memorial08 == 8) {
+		mes "You should be going to the plaque!";
 		mes "[Mad Sago Lauds]";
 		mes "Stop trying to give me your garbage!";
-		mes "Go to the plaque at 12 o'clock direction in Prontera for your journey!";
 		close;
 	}
 	
 	else if (Memorial08 >= 9) {
 		set .@RandomMsg, rand(1,5);
 		if (.@RandomMsg == 1) {
+			mes "Go to the plaque at 12 o'clock direction in Prontera for your journey!";
 			mes "[Mad Sago Lauds]";
-			mes "Don't panic!";
 			emotion ET_SURPRISE;
 			close;
 		}
 		else if (.@RandomMsg == 2) {
+			mes "Don't panic!";
 			mes "[Mad Sago Lauds]";
 			mes "Life... is like a grapefruit.";
-			mes "It's orange and squishy, and has a few pips in it, and some folks have half a one for breakfast.";
 			close;
 		}
 		else if (.@RandomMsg == 3) {
+			mes "It's orange and squishy, and has a few pips in it, and some folks have half a one for breakfast.";
 			mes "[Mad Sago Lauds]";
-			mes "There was a point to this story, but it has temporarily escaped the chronicler's mind.";
 			close;
 		}
 		else if (.@RandomMsg == 4) {
+			mes "There was a point to this story, but it has temporarily escaped the chronicler's mind.";
 			mes "[Mad Sago Lauds]";
-			mes "42!";
 			close;
 		}
 		else if (.@RandomMsg == 5) {
+			mes "42!";
 			mes "[Mad Sago Lauds]";
-			mes "It is a mistake to think you can solve any major problems just with potatoes.";
 			close;
 		}
 	}

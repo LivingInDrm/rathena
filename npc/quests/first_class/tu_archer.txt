@@ -1384,87 +1384,87 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 // Acolyte
 //============================================================
 -	script	::Acolyte_Tu	-1,{
-	mes "[Acolyte]";
+	mes "[侍僧]";
 	if(tu_archer01 == 14){
 		if(gettime(DT_HOUR) >= 18 && gettime(DT_HOUR) < 22){
-			mes "H-hello!";
-			mes "Umm, umm...";
-			mes "Are you R-Reidin Corse's";
-			mes "friend t-too?";
+			mes "H-您好!";
+			mes "嗯, 嗯...";
+			mes "你是R-雷丁·科西嘉的";
+			mes "朋友的T呢? ";
 			next;
-			mes "[Acolyte]";
-			mes "M-my name is Mafra.";
-			mes "Ever since he saved my life, Reidin has a-always been a good f-friend to me. He's such a great Archer";
-			mes "and a really nice person!";
+			mes "[侍僧]";
+			mes "M-我的名字是马夫拉. ";
+			mes "自从他救了我的命, Reidin有 - 始终是一个很好的F-朋友给我. 他是这样一个伟大的射手";
+			mes "和一个非常好的人!";
 			next;
-			mes "[Acolyte]";
-			mes "Um, and...";
-			mes "Uh... Oh no~";
-			mes "What am I supposed";
-			mes "t-to tell you...?";
+			mes "[侍僧]";
+			mes "嗯, 和...";
+			mes "呃......哦不?";
+			mes "那我该怎么";
+			mes "叔告诉你......? ";
 			emotion ET_PROFUSELY_SWEAT;
 			next;
-			mes "[Acolyte]";
-			mes "Oh, since I'm training to be an Acolyte, I'm supposed to help out the people he's teaching. So...";
-			mes "Let's h-help each other train!";
-			mes "Um, is that okay?";
+			mes "[侍僧]";
+			mes "呵呵, 因为我训练成为一个侍僧, 我应该帮了别人, 他已经教. 所以...";
+			mes "让我们H-互帮火车!";
+			mes "嗯, 是这样行不行? ";
 			next;
-			switch(select("Sure.:No thanks.:Reidin Corse is mine!")) {
+			switch(select("当然.:不用.:科西嘉是我的!")) {
 			case 1:
-				mes "[Acolyte]";
-				mes "Wow!";
-				mes "Thank you, thank you!";
-				mes "I''ll try my very best!";
+				mes "[侍僧]";
+				mes "哇!";
+				mes "谢谢你, 谢谢你!";
+				mes "''我会尽我所能!";
 				tu_archer01 = 15;
 				close;
 			case 2:
-				mes "[Acolyte]";
-				mes "Oh... Oh.";
-				mes "I'm so sorry.";
-				mes "If you don't need";
-				mes "my help, I guess";
-				mes "that's alright...";
+				mes "[侍僧]";
+				mes "哦......哦. ";
+				mes "我很抱歉. ";
+				mes "如果您不需要";
+				mes "我的帮助, 我猜";
+				mes "这是正常的...";
 				emotion ET_CRY;
 				close;
 			case 3:
-				mes "[Acolyte]";
-				mes "Eh?!";
-				mes "R-really?";
-				mes "I guess he doesn't";
-				mes "need to tell me if";
-				mes "he already has a girlfriend...";
+				mes "[侍僧]";
+				mes "诶? !";
+				mes "R-真的? ";
+				mes "我猜他不";
+				mes "需要告诉我, 如果";
+				mes "他已经有女朋友了......";
 				next;
-				mes "[Acolyte]";
+				mes "[侍僧]";
 				if(Sex == SEX_MALE){
-					mes "W-wait!";
-					mes "Y-you're a man!";
-					mes "D-d-d-don't tease me";
-					mes "like that! I'm serious!";
+					mes "W-等待!";
+					mes "? - 你一个人!";
+					mes "DDD  - 不要取笑我";
+					mes "这样的!我是认真的!";
 				} else {
-					mes "And he's so brave";
-					mes "and funny and smart.";
-					mes "Y-you're lucky to have him.";
-					mes "^333333*Sniff*^000000 I... I...";
+					mes "而且他是如此勇敢";
+					mes ", 风趣, 聪明. ";
+					mes "? - 你幸运地拥有他. ";
+					mes "*嗅探* I. .. I. ..";
 					next;
-					mes "[Acolyte]";
-					mes "^333333*Sniffle*^000000";
-					mes "I'll d-do my best to help you!";
-					mes "I wish you both happiness! (Waaaaaah~!)";
+					mes "[侍僧]";
+					mes "*抽鼻子*";
+					mes "我将D-尽我所能来帮助你!";
+					mes "祝你俩幸福!(Waaaaaah?!)";
 				}
 				tu_archer01 = 15;
 				close;
 			}
 		}
 		else {
-			mes "^666666Zzzzz...^000000";
-			mes "Wh-wha...?";
-			mes "Who are you?";
+			mes "ZZZZZ ...";
+			mes "WH-WHA ...? ";
+			mes "你是谁? ";
 			specialeffect EF_SLEEPATTACK;
 			next;
-			mes "[Acolyte]";
-			mes "Wait, I know...";
-			mes "Y-you're... ^666666*Yawn*^000000";
-			mes "So sleepy. Take this for now...";
+			mes "[侍僧]";
+			mes "等一下, 我知道...";
+			mes "? - 你... *哈欠*";
+			mes "很困. 借此现在...";
 			switch(rand(4)) {
 				case 0: npcskill "AL_HEAL",3,90,62; break;
 				case 1: npcskill "AL_HEAL",9,90,62; break;
@@ -1485,26 +1485,26 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 	}
 	else if(tu_archer01 == 15){
 		if((gettime(DT_HOUR) >= 18) && (gettime(DT_HOUR) < 22)){
-			mes "^666666Zzzzz...^000000";
-			mes "Wh-wha...?";
-			mes "Who are you?";
+			mes "ZZZZZ ...";
+			mes "WH-WHA ...? ";
+			mes "你是谁? ";
 			specialeffect EF_SLEEPATTACK;
 			next;
-			mes "[Acolyte]";
-			mes "Reidin Corse?";
-			mes "I can't believe";
-			mes "I feel asleep fo--";
-			mes "^666666Zzzzzzz...^000000";
+			mes "[侍僧]";
+			mes "雷丁·科西嘉? ";
+			mes "我不能相信";
+			mes "我觉得睡着了FO  - ";
+			mes "ZZZZZZZ ...";
 			next;
-			mes "[Acolyte]";
-			mes "^666666Zzzz^000000--Oooh!";
-			mes "J-just take this before";
-			mes "I fall asleep again~! ^666666*Yawn*^000000";
+			mes "[侍僧]";
+			mes "ZZZZ  - 哦!";
+			mes "J-前夕借此";
+			mes "我再次入睡?!*哈欠*";
 		} else {
-			mes "Okay~!";
-			mes "Let me try";
-			mes "casting a spell";
-			mes "to help you! Yaa~p!";
+			mes "好吧?!";
+			mes "让我来试试";
+			mes "施放法术";
+			mes "为您服务!YAA?P!";
 		}
 		switch(rand(4)) {
 			case 0: npcskill "AL_HEAL",3,90,62; break;
@@ -1524,10 +1524,10 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 		close;
 	}
 	mes "...";
-	mes "W-why does";
-	mes "traveling make";
-	mes "me sooo sleepy...?";
-	mes "^666666Zzzzzzzz...^000000";
+	mes "W-为什么";
+	mes "旅行使";
+	mes "我已经困...? ";
+	mes "ZZZZZZZZ ...";
 	specialeffect EF_SLEEPATTACK;
 	close;
 }

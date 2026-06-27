@@ -97,14 +97,14 @@
 // Binoculars Quest
 // ============================================================
 -	script	Alchemist	64,{
-	mes "[Marius]";
-	mes "Howdy, new customer!!";
-	mes "I know what you're gonna talk about. You want the Magic Glasses from me, riiiiight?";
+	mes "[???]";
+	mes "哇哇哇哇!";
+	mes "^660000这本书的封面严重破损,但出版日期却很近.应该有很多人翻阅过它.^000000";
 	next;
 	switch(select("What is that?:Manufacture:Ignore him")) {
 	case 1:
-		mes "[Marius]";
-		mes "Hmm~!";
+		mes "^660000你感觉到脚下的地面上下移动,然后在被遗弃的老建筑中听到一声尖叫.^000000";
+		mes "^660000在破旧巨大的建筑打开的窗户中飘出了暗红色的烟雾.^000000";
 		mes "Well, the official name for them is ^3355FFBinoculars^000000! An optical device that works like a pair of field glasses, they're designed for simultaneous use by both eyes!";
 		next;
 		mes "[Marius]";
@@ -201,14 +201,14 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[Jack]";
-		mes "Wait, that's the restricted area....";
-		mes "......";
-		mes "Oh, well.";
+		mes "^660000你穿过被火焰吞噬的走廊,到了一个正在崩溃的房间里.^000000";
+		mes "^660000因为有烟,你看不清楚房间里的东西,但你知道有什么东西在房间里.^000000";
+		mes "^660000你眯着眼睛,听着.你能听到人的声音,但从他们的剪影看得出不是人的形状.^000000";
+		mes "[女人]";
 		next;
-		mes "[Jack]";
-		mes "Things have changed.";
-		mes "Just do whatever you want!";
+		mes "咳! 火... 咳!";
+		mes "那些该死的人... 咳, 咳!";
+		mes "^660000她的咳嗽声因为咆哮的火焰而越来越频繁.^000000";
 		close2;
 		warp "que_job01",9,94;
 		end;
@@ -230,68 +230,68 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[Litheron]";
-		mes "Whoa, you're not";
-		mes "allowed to be in here.";
-		mes "Hey, master! Do you";
-		mes "know this guy?";
+		mes "[老年贵族]";
+		mes "你不必担心.";
+		mes "一旦艾伦被选为国王,理查家族将成为第二大贵族.";
+		mes "[中年贵族]";
+		mes "呵,艾伦是最具影响力的候选人.你会吃惊是你让他具有影响力的.";
 		next;
 		if (prt_curse == 24) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "I don't care what you say, I'm coming in!!!";
+			mes "[一个沃尔特家族的男人]";
 			next;
-			mes "[Litheron]";
-			mes "Hey, master-! What do we do with this guy?";
-			mes "He sure seems tough!";
+			mes "虽然艾伦是强有力的候选人,吉尔伯格家族的王子也有很高的声誉,他的美德是不可多得的.";
+			mes "[一个沃尔特家族的男人]";
+			mes "所以你想让阿勒姆王子中毒?";
 			next;
-			mes "[Master]";
-			mes "Hmm. Let him do what he wants to do.";
-			mes "Passing through one door doesn't make any difference.";
+			mes "[中年贵族]";
+			mes "当然,即使尸检也发现不了的...你不必担心.";
+			mes "[一个沃尔特家族的男人]";
 			next;
-			mes "[Litheron]";
-			mes "Hah! Did you hear that?";
-			mes "Alright, how about this?";
-			mes "I'll let you in if you buy me a drink.";
-			mes "Besides, you can't risk making trouble here: this place";
-			mes "is full of deadly Assassins.";
+			mes "一旦艾伦当选,就马上杀死吉尔伯格王子,然后...";
+			mes "[中年贵族]";
+			mes "我们的家族将领导这个国家,呼.....";
+			mes "[一个沃尔特家族的男人]";
+			mes "你必须知道,沃尔特和吉尔伯格家族是全国第一的.";
+			mes "[中年贵族]";
 			next;
 			switch(select("Sure:Why should I?!")) {
 			case 1:
 				if (Zeny > 999) {
-					mes "[Litheron]";
-					mes "Heh, that's what";
-					mes "I'm talking about!";
-					mes "Hey, bartender! Gimme";
-					mes "the usual! I like your";
-					mes "style, adventurer...";
+					mes "七个家族中最弱的是贾尔伯格家族,而最团结的是施密特和沃尔特家族.";
+					mes "[一个沃尔特家族的男人]";
+					mes "是的.这就是为什么沃尔特家族和贾尔伯格家族的联盟是完美的.还有,艾伦和阿勒姆...很明显施密特家族和海因里希家族想进行联盟.";
+					mes "[一个沃尔特家族的男人]";
+					mes "所以沃尔特家族和贾尔伯格家族不能共存,他们的共存会带来毁灭,就像过去那样.";
+					mes "[中年贵族]";
 					set Zeny, Zeny-1000;
 					next;
-					mes "[Litheron]";
-					mes "Alright, you can come";
-					mes "on in. But don't you dare";
-					mes "breathe a word about this";
-					mes "bar to another living soul.";
+					mes "谢谢你提供的信息,一切准备就绪.所有的人都会否认过去艾伦和阿勒姆是同盟.";
+					mes "[一个沃尔特家族的男人]";
+					mes "我们还需要更多一点.保守秘密,不能让任何人知道.";
+					mes "[中年贵族]";
+					mes "是的,为了卢恩·米德加兹的未来.";
 					close2;
 					warp "que_job01",61,50;
 					end;
 				}
 				else {
-					mes "[Litheron]";
-					mes "Huh...";
-					mes "Oh, you don't even";
-					mes "have enough zeny to";
-					mes "buy water here. Oh boy...";
-					mes "If you really want to enter,";
-					mes "make sure you have the cash!";
+					mes "[一个沃尔特家族的男人]";
+					mes "一切为了卢恩·米德加兹的未来...";
+					mes "嗯?";
+					mes "[一个沃尔特家族的男人]";
+					mes "安静... 有人来了.";
+					mes "保重.";
+					mes "[中年贵族]";
 					close2;
 					warp "que_job01",85,77;
 					end;
 				}
 			case 2:
-				mes "[Litheron]";
-				mes "Not the saavy type,";
-				mes "are you...? Fine, fine.";
-				mes "If you're not gonna do";
+				mes "别让在身上...";
+				mes "(沃尔特家族候选人是艾伦.";
+				mes "理查家族候选人是珀.)";
+				mes "(这是两个家族之间的阴谋?这到底是怎么回事.)";
 				mes "me any favors, then why";
 				mes "should I help you? Go away!";
 				close2;
@@ -587,9 +587,9 @@ que_job01,82,95,3	script	Bar Master#moc_main01	46,{
 
 que_job01,49,49,5	script	Tao#dan_09	877,{
 	if (BaseClass == Job_Assassin) {
-		mes "[Tao]";
-		mes "Welcome, meow~";
-		mes "How's out, meow?";
+		mes "[老年贵族]";
+		mes "嗯-嗯.";
+		mes "多么无礼的人!";
 		next;
 		if (prt_curse == 24) {
 			switch(select("Is Marjana in?:I'm here to see you,Tao.")) {

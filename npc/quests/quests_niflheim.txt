@@ -276,13 +276,13 @@ OnTouch_:
 }
 
 nif_in,188,168,3	script	Witch#nif	792,{
-	mes "[Kirkena]";
-	mes "Huh? ...You're alive, aren't you?";
-	mes "I'm not sure how more of you are";
-	mes "able to get here and I don't";
-	mes "know your reasons for coming,";
-	mes "but this place is dangerous for";
-	mes "the living.";
+	mes "^3355FFAs you bend towards";
+	mes "the final empty key space";
+	mes "to take a better look at it...^000000";
+	mes "^3355FFYou begin to feel dizzy and";
+	mes "your body feels as if it were";
+	mes "floating in air. Then, your";
+	mes "vision starts to blur...^000000";
 	next;
 	mes "[Kirkena]";
 	mes "I am sending you back";
@@ -299,25 +299,25 @@ nif_in,188,168,3	script	Witch#nif	792,{
 //============================================================
 prt_in,161,20,3	script	Erious#nif	92,{
 	if (MISC_QUEST & 16384) {
-		mes "[Erious]";
-		mes "I wish you safety from harm";
-		mes "in your journeys, adventurer.";
+		mes "[Kirkena]";
+		mes "Huh? ...You're alive, aren't you?";
+		mes "I'm not sure how more of you are";
 		close;
 	}
 	if (nif_revive == 0) {
-		mes "[Erious]";
-		mes "*Sob*Sob*";
-		mes "*Cries* Wahhh...!";
-		mes "Elly, how could you";
-		mes "leave me this way...";
+		mes "able to get here and I don't";
+		mes "know your reasons for coming,";
+		mes "but this place is dangerous for";
+		mes "the living.";
+		mes "[Kirkena]";
 		emotion ET_CRY;
 		next;
 		if (select("Comfort him.:Neglect him.") == 1) {
-			mes "[Erious]";
-			mes "Ah, thank you for your kindness.";
-			mes "*Sob* My wife died while I was on";
-			mes "a trip. I'm so sorry that I";
-			mes "couldn't be with her when";
+			mes "I am sending you back";
+			mes "outside of this town.";
+			mes "If you can help it, you";
+			mes "better not come back to";
+			mes "this place.";
 			mes "the end came...";
 			next;
 			mes "[Erious]";
@@ -509,132 +509,132 @@ prt_in,161,20,3	script	Erious#nif	92,{
 
 umbala,215,181,3	script	Billik	733,{
 	if (nif_revive > 1 || (MISC_QUEST & 16384)) {
-		mes "[Billik]";
-		mes "Well, long time no see.";
-		mes "If you have a chance in the";
-		mes "future, let's meet in the";
-		mes "town of the dead later.";
-		mes "Hahahaha~";
+		mes "[Erious]";
+		mes "I wish you safety from harm";
+		mes "in your journeys, adventurer.";
+		mes "[Erious]";
+		mes "*Sob*Sob*";
+		mes "*Cries* Wahhh...!";
 		emotion ET_BEST;
 		close;
 	}
 	if (nif_revive == 1) {
-		mes "[Billik]";
-		mes "The Town of the dead...";
-		mes "It's a very dangerous place.";
-		mes "Why would you want to go there?";
+		mes "Elly, how could you";
+		mes "leave me this way...";
+		mes "[Erious]";
+		mes "Ah, thank you for your kindness.";
 		next;
-		if (select("I have to meet somebody there.:It's a part of my adventure.") == 1) {
-			mes "[Billik]";
-			mes "Someone you have to meet there...";
-			mes "Hmm... I suppose you wish to";
-			mes "contact the dead...";
-			mes "I can also see that you're";
-			mes "determined to go.";
+		if (select("Comfort him.:Neglect him.") == 1) {
+			mes "*Sob* My wife died while I was on";
+			mes "a trip. I'm so sorry that I";
+			mes "couldn't be with her when";
+			mes "the end came...";
+			mes "[Erious]";
+			mes "I wish I could talk to my Elly,";
 			next;
-			mes "[Billik]";
-			mes "*Sigh* Okay, if you really want to";
-			mes "go, you must find a man named";
-			mes "'Feylin.' It's very important to";
-			mes "let him know that I introduced";
-			mes "him to you.";
+			mes "although I know it's too late now.";
+			mes "*Cries* But... there is one last";
+			mes "hope that I have. My absolute";
+			mes "final chance...";
+			mes "[Erious]";
+			mes "I was told that somewhere";
 			next;
-			mes "[Billik]";
-			mes "He's not very trusting, but he";
-			mes "likes roses a lot, so bring a rose";
-			mes "for him. That way, he'll know for";
-			mes "sure that I've sent you.";
+			mes "in this world, there exists a town";
+			mes "where the dead reside. I might be";
+			mes "able to meet my wife there, but";
+			mes "I cannot leave my children here";
+			mes "without me. *Cries*";
 			set nif_revive,2;
 			changequest 11038,11039;
 			next;
-			mes "[Billik]";
-			mes "The town of the dead is located";
-			mes "north of this place. Remember, it";
-			mes "is very dangerous to go there,";
-			mes "even for well experienced";
-			mes "adventurers, so...";
-			mes "Be careful.";
+			mes "[Erious]";
+			mes "Oh, can you?";
+			mes "Thank you so much for your";
+			mes "generosity. If you can do";
+			mes "this for me, I would be";
+			mes "greatly indebted to you.";
+			mes "[Erious]";
 			close;
 		}
-		mes "[Billik]";
-		mes "Hahaha~ I guess you like adventure";
-		mes "as much as I do. Although it's a";
-		mes "very dangrous place, you will be";
-		mes "paid back for your effort after";
-		mes "you get there. But be careful.";
+		mes "You're an adventurer, aren't you?";
+		mes "If your journeys take you to that";
+		mes "town of the dead, and if you";
+		mes "happen to meet her by chance...";
+		mes "[Erious]";
+		mes "Please send Elly a message for me,";
 		close;
 	}
 	else if (nif_revive == 0) {
-		mes "[Billik]";
-		mes "What brings you here? I'm busy,";
-		mes "leave if you don't have any business.";
+		mes "let her know that what happened";
+		mes "a month ago was all my fault.";
+		mes "Thank you for your help,";
 		close;
 	}
 }
 
 niflheim,153,215,3	script	Feylin	794,{
 	if (nif_revive == 2) {
-		mes "[Feylin]";
+		mes "[Billik]";
 		mes "Poor "+((Sex == SEX_MALE)?"guy":"girl")+"...";
-		mes "Dying at such a young age...";
-		mes "I am always sorry to see the";
-		mes "young pass away.";
+		mes "Well, long time no see.";
+		mes "If you have a chance in the";
+		mes "future, let's meet in the";
 		next;
-		mes "[Feylin]";
-		mes "............??";
-		mes "Oh, I see you're not dead yet,";
-		mes "are you? It's unbelievable to";
-		mes "see another living person";
-		mes "in this town.";
+		mes "town of the dead later.";
+		mes "Hahahaha~";
+		mes "[Billik]";
+		mes "The Town of the dead...";
+		mes "It's a very dangerous place.";
+		mes "Why would you want to go there?";
 		next;
-		mes "[Feylin]";
-		mes "Are you coming to rescue someone,";
-		mes "or do you have another purpose?";
-		mes "If you came here to meet a";
-		mes "deceased friend of yours, you've";
-		mes "come to the wrong person.";
+		mes "[Billik]";
+		mes "Someone you have to meet there...";
+		mes "Hmm... I suppose you wish to";
+		mes "contact the dead...";
+		mes "I can also see that you're";
+		mes "determined to go.";
 		next;
-		mes "[Feylin]";
-		mes "Nobody in Niflheim can";
-		mes "perform that kind of miracle...";
+		mes "[Billik]";
+		mes "*Sigh* Okay, if you really want to";
+		mes "go, you must find a man named";
 		next;
-		mes "[Feylin]";
-		mes "I can tell you have been through";
-		mes "much hardship, but unfortunately,";
-		mes "you came here for nothing. I hope";
-		mes "you go back to where you came";
-		mes "from before it's too late.";
+		mes "'Feylin.' It's very important to";
+		mes "let him know that I introduced";
+		mes "him to you.";
+		mes "[Billik]";
+		mes "He's not very trusting, but he";
+		mes "likes roses a lot, so bring a rose";
 		set nif_revive,3;
 		changequest 11039,11040;
 		close;
 	}
 	else if (nif_revive == 3) {
-		mes "[Feylin]";
-		mes "I've asked you to leave this";
-		mes "town immediately. I'm sorry";
-		mes "but I know nothing about what";
-		mes "you are asking.";
+		mes "for him. That way, he'll know for";
+		mes "sure that I've sent you.";
+		mes "[Billik]";
+		mes "The town of the dead is located";
+		mes "north of this place. Remember, it";
 		emotion ET_FRET;
 		next;
-		if (select("But...:I am sorry.") == 1) {
-			mes "[Feylin]";
-			mes "You must know something...";
-			mes "Otherwise, you wouldn't be";
-			mes "so stubborn. I am not sure";
-			mes "who told you contacting the";
-			mes "dead might be possible...";
+		if (select("I have to meet somebody there.:It's a part of my adventure.") == 1) {
+			mes "is very dangerous to go there,";
+			mes "even for well experienced";
+			mes "adventurers, so...";
+			mes "Be careful.";
+			mes "[Billik]";
+			mes "Hahaha~ I guess you like adventure";
 			next;
-			mes "[Feylin]";
-			mes "But I surely wouldn't have told";
-			mes "you. Besides, speaking about";
-			mes "such things is taboo.";
+			mes "as much as I do. Although it's a";
+			mes "very dangrous place, you will be";
+			mes "paid back for your effort after";
+			mes "you get there. But be careful.";
 			set nif_revive,4;
 			changequest 11040,11041;
 			close;
 		}
-		mes "[Feylin]";
-		mes "Please consider leaving this";
-		mes "place as soon as possible.";
+		mes "[Billik]";
+		mes "What brings you here? I'm busy,";
+		mes "leave if you don't have any business.";
 		mes "Nobody should stay in";
 		mes "Niflheim for too long.";
 		close;

@@ -107,9 +107,9 @@ payg_cas01,120,58,4	duplicate(cm)	Kurunnadi#payg_cas01	55
 //============================================================
 payg_cas01,295,8,0	script	#lever_PA01	111,{
 	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "这里有一个小小的控制杆, 去拉一下吗?";
 	next;
-	if(select("Pull.:Do not.") == 1) {
+	if(select("上前拉杆.:算了.") == 1) {
 		close2;
 		warp "payg_cas01",120,59;
 		end;

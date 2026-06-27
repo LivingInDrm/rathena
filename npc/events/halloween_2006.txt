@@ -294,39 +294,39 @@ geffen,145,132,3	script	Hoirin#06_hw	729,{
 			mes "2 Pumpkin";
 			mes "2 Egg^000000";
 			next;
+			mes "";
 			mes "[Hoirin]";
 			mes "Just Bring Pumpkin Mojo, Pumpkin, and a Egg.";
-			mes "Leave the rest for me..You'll get to try the best pumkin pie!";
 			set halloween, 100;
 			close;
 		}
+		mes "Leave the rest for me..You'll get to try the best pumkin pie!";
 		mes "[Hoirin]";
 		mes "Hm..You'll regret it!";
-		mes "Hoirin's pumpkin pie is just so delicious.";
 		close;
 	}
 	else {
+		mes "Hoirin's pumpkin pie is just so delicious.";
 		mes "[Hoirin]";
 		mes "So, did you bring all materials?";
-		mes "Were there anything hard to find?";
 		next;
 		switch(select( "I brought all ingredients.:How can I get eggs?:No,I'm just passing by.")) {
 		case 1:
 			if ((countitem(7609) > 0) && (countitem(535) > 1) && (countitem(574) > 1)) {
+				mes "Were there anything hard to find?";
 				mes "[Hoirin]";
 				mes "You are right!";
-				mes "You brought all things right. Give it to me!!";
 				specialeffect2 EF_HIT1;
 				next;
 				specialeffect EF_PIERCESELF;
+				mes "You brought all things right. Give it to me!!";
 				mes "[Hoirin]";
 				mes "Abracadabra~~";
-				mes "Abracadabra~~!";
 				next;
+				mes "Abracadabra~~!";
 				mes "[Hoirin]";
 				mes "Ta-da(h)!";
 				mes "Here it is~ help yourself.";
-				mes "It'll be good for your health. I added extra nutrient in it.";
 				delitem 7609,1; //Pumpkin_Mojo
 				delitem 535,2; //Pumpkin
 				delitem 574,2; //Egg
@@ -334,48 +334,48 @@ geffen,145,132,3	script	Hoirin#06_hw	729,{
 				close;
 			}
 			else {
+				mes "It'll be good for your health. I added extra nutrient in it.";
 				mes "[Hoirin]";
 				mes "No!! This is not enough. I need";
 				mes "^4d4dff 1 Pumpkin Mojo";
 				mes "2 Pumpkin";
 				mes "2 Egg^000000";
-				mes " at least.";
 				close;
 			}
 		case 2:
 			if (halloween == 100) {
+				mes " at least.";
 				mes "[Hoirin]";
 				mes "Egg?";
 				mes "Well, actually I know someone who can help you.";
-				mes "There's a man who raise many chickens.";
 				next;
+				mes "There's a man who raise many chickens.";
 				mes "[Hoirin]";
 				mes "I can send you to where he is if you want.";
-				mes "^4d4dffBut only for once^000000.";
 				next;
 				if (select("Send me.:It's ok.") == 1) {
+					mes "^4d4dffBut only for once^000000.";
 					mes "[Hoirin]";
-					mes "Ok, go get the eggs.";
 					set halloween, 101;
 					close2;
 					warp "nif_fild01", 162, 113;
 					end;
 				}
+				mes "Ok, go get the eggs.";
 				mes "[Hoirin]";
 				mes "Do you think you can go without my help?!";
 				mes "Ok! go ahead.";
-				mes "Do you know where it is?";
 				close;
 			}
 			else {
+				mes "Do you know where it is?";
 				mes "[Hoirin]";
-				mes "if you go to ^4d4dfffarm of Skelington Town at Neiflheim^000000, you'll meet Chicken Masta. He raises chickens.";
 				close;
 			}
 		case 3:
+			mes "if you go to ^4d4dfffarm of Skelington Town at Neiflheim^000000, you'll meet Chicken Masta. He raises chickens.";
 			mes "[Hoirin]";
 			mes "Next time, don't forget to bring ";
-			mes "all the ingredients for pumpkin pie!";
 			close;
 		}
 	}
@@ -1035,11 +1035,11 @@ prontera,155,285,3	script	Familiar#06_hw01::HWFamiDup	799,{
 	mes "Hello.";
 	mes "I'm Loli Ruri's faithful and cute Familiar.";
 	mes "Do you have an invitation from Loli Ruri?";
-	mes "That's a kind of^4d4dffa special ticket to Niflheim^000000..";
+	mes "That's a kind of^4d4dffa special ticket to Nifflheim^000000..";
 	next;
 	if (select( "Yes, I do.:No, I don't.") == 1) {
 		mes "[Familiar]";
-		mes "Do you want to go to Niflheim?";
+		mes "Do you want to go to Nifflheim?";
 		mes "It's available during Halloween.";
 		next;
 		if (select( "Yes, I do:No, I don't.") == 1) {
@@ -1064,7 +1064,7 @@ prontera,155,285,3	script	Familiar#06_hw01::HWFamiDup	799,{
 		}
 		mes "[Familiar]";
 		mes "Ok.";
-		mes "Actually, it's useless to have a special ticket to Niflheim.";
+		mes "Actually, it's useless to have a special ticket to Nifflheim.";
 		close;
 	}
 	mes "[Familiar]";

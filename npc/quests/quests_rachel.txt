@@ -1097,25 +1097,25 @@ ra_fild01,245,325,3	script	Suspicious Man#ra_in01	934,{
 
 rachel,263,32,3	script	Kid#ra_in01	931,{
 	if (lost_boy < 7) {
-		mes "[Kid]";
-		mes "Leave me alone!";
+		mes " == 似乎看到窗户 ==";
+		mes " == 有开启着 ==";
 		close;
 	}
 	else if (lost_boy == 8) {
-		mes "^3355FFYou catch a shining";
-		mes "glint from this boy's";
-		mes "back pocket. Perhaps he";
-		mes "has the jewel that Vincent";
-		mes "wants you to retrieve.^000000";
+		mes " == 轻轻的拉开开启的窗户 ==";
+		mes " == 没有出任何声音 ==";
+		mes " == 开启了如同通过 ==";
+		mes " == 大人般的空间 ==";
+		mes " == 应该是那些调皮的小孩们 ==";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Hey, you.";
-		mes "You must be";
-		mes "Phobe, right?";
+		mes " == 事先涂上了一层润滑油的关系吧";
+		mes " == 偷偷摸摸进去是 ==";
+		mes " == 不好的行为 ==";
 		next;
-		mes "[Kid]";
-		mes "Yeah?";
-		mes "So what?";
+		mes " == 要进入到窗户里面吗? ==";
+		mes " == 从外面进去的方法 ==";
+		mes " == 只有现在这个窗户而已==";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Your father sent";
@@ -1232,8 +1232,8 @@ rachel,263,32,3	script	Kid#ra_in01	931,{
 //============================================================ 
 ra_in01,235,194,5	script	Katinshuell	931,{
 	if (rach_vice > 21) {
-		mes "[Katinshuell]";
-		mes "If I had only turned";
+		mes " == 暗暗的 ==";
+		mes " == 感觉特别暗暗的==";
 		mes "myself in... Maybe if I had";
 		mes "made an effort to pay for";
 		mes "my crime, me and Bruspetti";
@@ -2200,9 +2200,9 @@ ra_in01,250,19,3	script	Mr. Shendar	929,{
 
 rachel,73,244,3	script	Lachellen	919,{
 	if (rach_vice > 21) {
-		mes "[Lachellen]";
-		mes "If you happen to see";
-		mes "Bruspetti, tell her to";
+		mes " == 一片喧哗... ==";
+		mes " == 在走往礼拜堂的走廊上 ==";
+		mes " == 听到了某种声音 ==";
 		mes "come talk to me. I need";
 		mes "to know whether I figured";
 		mes "out who her boyfriend is!";
@@ -2363,9 +2363,9 @@ rachel,73,244,3	script	Lachellen	919,{
 }
 
 rachel,196,77,3	script	Kid#1rachel	921,{
-	mes "[Kid]";
-	mes "Hey, have you seen";
-	mes "Bruspetti? She's really";
+	mes " == 一片喧哗... ==";
+	mes " == 从楼梯那里 ==";
+	mes " == 听到某种声音 ==";
 	mes "nice and always buys me";
 	mes "lots and lots of cookies!";
 	next;
@@ -2379,12 +2379,12 @@ rachel,196,77,3	script	Kid#1rachel	921,{
 }
 
 rachel,151,155,3	script	Kid#2rachel	921,{
-	mes "[Kid]";
-	mes "Oh wow! I wanna be an";
-	mes "adventurer like you when";
-	mes "I grow up! Go to all sorts";
-	mes "of places, visit different";
-	mes "towns. It sounds so fun!";
+	mes " ";
+	mes " ";
+	mes "              碰咚!";
+	mes " == 在楼梯上听到 ==";
+	mes " == 某个东西掉落的声音 ==";
+	mes " == 还有一起打架的声音 ==";
 	next;
 	mes "[Kid]";
 	mes "Maybe if I find a really";
@@ -2405,17 +2405,17 @@ rachel,151,155,3	script	Kid#2rachel	921,{
 
 rachel,266,35,3	script	Grandma#rachel	918,{
 	if (rach_vice > 21) {
-		mes "[Grandma]";
-		mes "When you get to be my";
-		mes "age, you'll cherish all";
-		mes "of your memories, even if";
-		mes "the experience was hurtful";
-		mes "when it actually happened.";
+		mes "^3355FFIt sounds like they're";
+		mes "still talking. It'd be";
+		mes "best to patient and wait";
+		mes "just a little while longer.";
+		mes "Still... It's awfully boring.^000000";
+		mes "^3355FFA little eavesdropping";
 		next;
-		mes "[Grandma]";
-		mes "Your memories are part";
-		mes "of who you are and what";
-		mes "makes you unique. I can";
+		mes "never hurt anyone. Maybe";
+		mes "you can hear them a little";
+		mes "better if you listen from";
+		mes "the left side of the wall.^000000";
 		mes "appreciate living the life";
 		mes "that I have, even if it's";
 		mes "not particularly special.";
@@ -2480,16 +2480,16 @@ lhz_in02,213,207,0	script	#ratrace1	111,4,4,{
 OnTouch_:
 	if (rach_vice == 5) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "This...";
-		mes "This smell...";
-		mes "It smells so nice!";
-		mes "Like rose petals riding";
-		mes "on a gentle breeze...";
+		mes "^3355FFAt this distance you";
+		mes "can cleartly hear the";
+		mes "voices from the other";
+		mes "side of the wall...^000000";
+		mes "[????]";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Wait, could this be";
-		mes "the scent that Bruspetti's";
-		mes "father mentioned earlier?";
+		mes "...Was it really";
+		mes "necessary to involve";
+		mes "an outsider in this";
 		set rach_vice,6;
 		changequest 8109,8110;
 		close;
@@ -2501,20 +2501,20 @@ rachel,265,47,0	script	#raevent1	111,2,2,{
 OnTouch_:
 	if (rach_vice == 23) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Just looking at this";
-		mes "spring makes me think";
-		mes "of Bruspetti. What really";
-		mes "happened to her? I get";
-		mes "the feeling that she";
-		mes "caved in to despair.";
+		mes "^3355FFYou find a small";
+		mes "shining object laid";
+		mes "on the floor.^000000";
+		mes "^3355FFYou decided to ignore";
+		mes "the small shining object,";
+		mes "no matter how important it";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "The water's not that";
-		mes "cold, or very deep...";
-		mes "And Katinshuell mentioned";
-		mes "that her body went limp...";
-		mes "But she was still looking";
-		mes "at him. It's haunting...";
+		mes "may be to you in the future.^000000";
+		mes "^3355FFUpon picking up the";
+		mes "object, you are able to";
+		mes "identify it as a small key.";
+		mes "Perhaps you can use it to";
+		mes "open some kind of lock.";
 		next;
 		mes "["+ strcharinfo(0) +"]";
 		mes "I suppose she was torn...";
@@ -2618,20 +2618,20 @@ OnTouch_:
 
 ra_in01,255,25,0	script	Book#ra_in	111,{
 	if (rach_vice == 15) {
-		mes "^3355FFThis is where you";
-		mes "found Bruspetti's diary.";
-		mes "Perhaps you should take";
-		mes "it with you the next time";
-		mes "you talk to Katinshuell.^000000";
+		mes "^3355FFThis large area looks";
+		mes "like it was artificially build";
+		mes "for some reason-- it doesn't";
+		mes "seem like an area naturally";
+		mes "infested by monsters.^000000";
 		close;
 	}
 	else if (rach_vice == 14) {
 		set rach_vice,15;
 		changequest 8118,8119;
 		getitem 7571,1; //Diary_Of_Blue
-		mes "^3355FFThis must be";
-		mes "Bruspetti's diary!";
-		mes "You now have permission";
+		mes "^3355FFPerhaps if you explore";
+		mes "this place, you'll be able";
+		mes "to find something interesting.^000000";
 		mes "to take it with you so that";
 		mes "you can figure out if she and";
 		mes "Katinshuell are connected...^000000";
@@ -3237,64 +3237,64 @@ OnTimer10800000:
 
 rachel,265,98,3	script	Hamion#aru	930,{
 	if (checkweight(908,200) == 0) {
-		mes "^3355FFWait a second!";
-		mes "Right now, you're carrying";
-		mes "too many things with you.";
-		mes "Please come back after";
-		mes "using the Kafra Service";
-		mes "to store some of your items.^000000";
+		mes "^3355FFNo wonder this object";
+		mes "in the water seems so";
+		mes "familiar: it's a Ymir's";
+		mes "Heart Piece! In fact, there's";
+		mes "dozens of them just lying here.^000000";
+		mes "^3355FFWhy would so many of these";
 		close;
 	}
 	if (ice_necklace_q < 2) {
-		mes "[Hamion]";
-		mes "Hm? Did you need";
-		mes "something? If it's not too";
-		mes "important, then I'd like to";
-		mes "get back to reading my book.";
+		mes "powerful artifacts be here";
+		mes "in the Holy Ground? Perhaps";
+		mes "this is the secret that the";
+		mes "priests are trying to keep.^000000";
+		mes "[High Priestess Niren]";
 		close;
 	}
 	else if (ice_necklace_q == 2) {
-		mes "[Hamion]";
-		mes "Hm? Did you need";
-		mes "something? If it's not too";
-		mes "important, then I'd like to";
-		mes "get back to reading my book.";
+		mes "How dare you intrude";
+		mes "the Holy Ground! Identify";
+		mes "yourself! I'll have you tried!";
+		mes "[High Priestess Niren]";
+		mes "O-oh! It's you, the";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Um, would you know";
-		mes "a mage by the name";
-		mes "of Maheo? I'm supposed";
-		mes "to go look for his master";
-		mes "around this area.";
+		mes "adventurer recommended";
+		mes "by Bekento. Hm. I apologize";
+		mes "for snapping at you like";
+		mes "that. Didn't you know that";
+		mes "no one's allowed here?";
 		next;
-		mes "[Hamion]";
-		mes "Well, you've found him";
-		mes "because that would be me.";
-		mes "What happened to Maheo?";
+		mes "[High Priestess Niren]";
+		mes "Hmm. Well, you Rune-Midgarts";
+		mes "adventurers are famous for your";
+		mes "skills and abilities, but this";
 		next;
-		mes "[Hamion]";
-		mes "He froze himself?!";
-		mes "Hahahaha! Some genius!";
-		mes "Oh, well, I suppose he still";
-		mes "has plenty to learn about";
-		mes "character, if not magic.";
+		mes "was not expected. I mean, we";
+		mes "made sure this place was";
+		mes "absolutely secure.";
+		mes "[High Priestess Niren]";
+		mes "What's done is done...";
+		mes "I warned Bekento that he";
 		next;
-		mes "[Hamion]";
-		mes "Let's see, let's see...";
-		mes "This book ought to have";
-		mes "the answer. Mmm... Ah!";
-		mes "Page 42! I need to construct";
-		mes "an artifact in order to break";
-		mes "that mystical ice. Mmm.";
+		mes "might cause trouble for you,";
+		mes "but it seems that you've";
+		mes "caused trouble for him.";
+		mes "[High Priestess Niren]";
+		mes "Understand this:";
+		mes "most intruders are";
+		mes "severely punished, but";
 		next;
-		mes "[Hamion]";
-		mes "Would you help";
-		mes "me? I need to get";
-		mes "^4D4DFF5 Rough Winds^000000,";
-		mes "^4D4DFF1 Hammer^000000, and";
-		mes "^4D4DFF1 Blank Scroll^000000";
+		mes "because of my friendship";
+		mes "with Bekento, I'm letting";
+		mes "you off easy. Remember that.";
+		mes "^3355FFNiren began to chant";
+		mes "in a low voice, and your";
+		mes "eyelids grow heavier as you";
 		next;
-		mes "[Hamion]";
+		mes "grow drowsier and sleepier...^000000";
 		mes "You can get Blank Scrolls";
 		mes "in the Sage Academy in Juno.";
 		mes "Ah, and the Hammer is a weapon,";
@@ -3390,15 +3390,15 @@ rachel,265,98,3	script	Hamion#aru	930,{
 
 rachel,113,97,5	script	Mohadian	929,10,10,{
 	if (ice_necklace_q == 6) {
-		mes "[Mohadian]";
-		mes "I work at the bar around";
-		mes "here, and I've heard good";
-		mes "things about you. Some of";
-		mes "the customers've heard that";
-		mes "you helped Urstialla by going";
-		mes "into that dangerous Ice Cave.";
+		mes "^3355FFYou feel a slight headache";
+		mes "after you recollect your senses.";
+		mes "Somehow, you're been brought";
+		mes "back to Rachel Town. How long";
+		mes "have you been unconscious?^000000";
+		mes "^3355FFIt would be best to";
+		mes "ask 杰德 大神官";
 		next;
-		mes "[Mohadian]";
+		mes "about what had happened.^000000";
 		mes "Now, are you really capable";
 		mes "of regularly defeating the";
 		mes "snow monsters inside there?";
@@ -4670,25 +4670,25 @@ que_rachel,170,37,0	script	nemma01::nemma01	-1,5,5,{
 OnTouch_:
 	if (ra_tem_q == 8) {
 		mes "[???]";
-		mes "Only the goddess exists.";
+		mes "只有";
+		next;
+		mes "神";
+		mes "才会";
+		mes "有啊";
 		next;
 		mes "[???]";
-		mes "Everyone must be";
-		mes "ready for her coming.";
-		next;
-		mes "[???]";
-		mes "Izlude, my hometown,";
-		mes "I have come to this";
-		mes "place to build.";
+		mes "还没有";
+		mes "准备者";
+		mes "是没";
 		next;
 		mes "["+strcharinfo(0)+"]";
+		mes "有啊";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "[???]";
+		mes "怀念的";
+		mes "依斯鲁得岛";
 		mes "!";
-		next;
-		mes "["+strcharinfo(0)+"]";
-		mes "Th-that's Priestess";
-		mes "Panno's voice! But isn't";
-		mes "she just outside the door?";
-		mes "What exactly was she saying?";
 		set ra_tem_q,9;
 		close;
 	}

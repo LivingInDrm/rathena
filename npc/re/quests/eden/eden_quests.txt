@@ -2156,305 +2156,305 @@ S_Select:
 }
 
 moc_para01,179,44,3	script	Chef	820,{
-	mes "[Chef]";
-	mes "What's up?";
-	mes "Do you want a Meal? Or do you have other business?";
+	mes "[博雅]";
+	mes "请问有什么事吗?";
+	mes "若有一般的委托任务,请移步至任务布告栏.";
 	next;
-	switch (select("Order a meal.:Talk.")) {
+	switch (select("- 你负责什么事情呢?:- 有没有能给我的装备?:取消.")) {
 	case 1:
-		mes "[Chef]";
-		mes "Choose one of the three course meals A, B or C.";
-		mes "Do you want a explanation?";
+		mes "[博雅]";
+		mes "我负责给伊甸园成员提供训练任务,";
+		mes "若想生存下去,就必须得接受任务啊!";
 		next;
-		switch (select("I want a explanation.:Order course meal A:Order course meal B:Order course meal C:End Conversation.")) {
+		switch (select("- 参加训练:- 取消")) {
 		case 1:
-			mes "[Chef]";
-			mes "Uh? what do you want to know?";
+			mes "..";
+			mes "[博雅]";
 			next;
-			switch (select("About course meal A.:About course meal B.:About course meal C.:End Conversation.")) {
+			switch (select("什么?!")) {
 			case 1:
-				mes "[Chef]";
-				mes "Course meal A is for nomal people.";
-				mes "It has three kinds of dishes and the main is....";
-				mes " ";
-				mes "-Chef is trying to point to a dish in the picture. There is a black roll.-";
+				mes "通过战斗训练不断积累实战经验,";
+				mes "努力接受训练的成员会得到奖励.";
+				mes "[博雅]";
+				mes "那些真正努力付出的成员们";
+				mes "会得到我们特制的装备.";
 				next;
-				mes "[Chef]";
-				mes "It's made of sea grass so, it's dry like paper.";
-				mes "It's a roll with steamed rice, vegetables and meat inside.";
-				mes "It seems simple but it is really good and healthy.";
+				mes "[博雅]";
+				mes "如果你有兴趣,加入我们吧.";
+				mes "战斗训练课程不会太困难.";
+				mes "没有什么好担心的.";
 				next;
-				mes "[Chef]";
-				mes "The ingredients mix well with the spicy sauce.";
-				mes "It is also mixed with chopped meat like sausages.";
+				mes "[博雅]";
+				mes "不要犹豫了,赶紧加入我们吧.";
+				mes "[博雅]";
 				next;
-				mes "[Chef]";
-				mes "It's simple and cheap so it is really popular with everyone.";
-				mes "Just 3,000 Zeny.";
-				mes "You will feel satisfied after eating it.";
+				mes "真的?看来你已经准备好了!";
+				mes "训练总共分3个阶段,";
+				mes "我来看一下...";
+				mes "[博雅]";
 				close;
 			case 2:
-				mes "[Chef]";
-				mes "Um course meal B is.";
-				mes "I make a sauce with aromatic vegetables and meat in a soup.";
+				mes "嗯. 你的等级还不够呢!";
+				mes "至少要达到12级才能参加训练哦!";
+				mes "真是很抱歉~";
 				next;
-				mes "[Chef]";
-				mes "The meat is boiled so it is fork tender in the soup.";
-				mes "When the soup is almost done I add noodles for the finishing touch.";
+				mes "[博雅]";
+				mes "真的?看来你已经准备好了!";
+				mes "训练总共分3个阶段,";
 				next;
-				mes "[Chef]";
-				mes "It's a good dish to share with your friends.";
-				mes "It's 4,000 Zeny.";
-				mes "It's a very fun dish to enjoy.";
+				mes "我来看一下...";
+				mes "[博雅]";
+				mes "第一阶段--课程 A";
+				mes "课程 A 是 '征服沙漠!'.";
 				close;
 			case 3:
-				mes "[Chef]";
-				mes "Now for course meal C...";
-				mes "It's a masterpiece of meat... Legend of the meat class!";
+				mes "这是你现在这个等级最为适合的任务.";
+				mes "[博雅]";
+				mes "^4d4dff有个沙漠之都叫梦罗克.";
 				next;
-				mes "[Chef]";
-				mes "Beef, bacon,";
-				mes "strip loin,";
-				mes "rib eye roll";
-				mes "...";
+				mes "从那儿往南走再往东.中间有个小绿洲.^000000";
+				mes "[博雅]";
+				mes "在绿洲附近你会找到一只狗.";
+				mes "它很神秘,如果它说话了,千万别感到惊讶.";
+				mes "[博雅]";
 				next;
-				mes "[Chef]";
-				mes "Do you need more information?";
-				mes "Don't worry.";
-				mes "I use the besk oak to smoke it.";
-				mes "Ah, it's 5,000 Zeny. Cheap isn't it? I only use the best meat so don't worry.";
+				mes "告诉那只狗 ^4d4dff博雅真棒.^000000";
+				mes "如果你有问题就问它吧.";
+				mes "[博雅]";
+				mes "盯着我干神马?";
+				mes "总得有个暗号吧~~~";
 				close;
 			case 4:
-				mes "[Chef]";
-				mes "I don't have enough time to chat with you...";
+				mes "刚才的暗号有什么问题吗?";
+				mes "[博雅]";
 				close;
 			}
 		case 2:
-			mes "[Chef]";
-			mes "Course meal A?";
-			mes "Ah, Kim-dduck-soon.";
-			mes "It's the representative meal for normal citizens.";
+			mes "不管怎么样,那个地方离这里不算远,";
+			mes "是个很适合你这样的新手的地方.一路顺风~";
+			mes "[博雅]";
+			mes "我们从第一阶段的课程 B开始.";
 			next;
 			if (callfunc("F_HasEdenGroupMark")) {
 				if (Zeny > 2699) {
-					mes "[Chef]";
-					mes "Hey, here you are.";
-					mes "Enjoy your meal.";
+					mes "课程 B 是 '征服地下水道~!'.";
+					mes "这是你现在这个等级最为适合的任务.";
+					mes "[博雅]";
 					next;
-					mes "- After eating the meal, You feel a little bit full.";
-					mes "You've recovered some HP and SP. -";
+					mes "你必须去普隆德拉骑士公会注册,才能探索地下水道.";
+					mes "从普隆德拉西门出去,下水道管理员就算下水道的入口附近.";
 					set Zeny, Zeny - 2700;
 					percentheal 50,0;
 					percentheal 0,50;
 					close;
 				}
-				mes "[Chef]";
-				mes "This meal costs 3,000 zeny but I will serve it for 2,700.";
-				mes "Since you are a eden member you get a 10% discount so, it's 2,700 zeny.";
+				mes "[博雅]";
+				mes "你会在下水道一层找到一只猫. 如果它对你说话,不要感到惊讶.";
+				mes "[博雅]";
 				close;
 			}
 			if (Zeny > 2999) {
-				mes "[Chef]";
-				mes "Hey, here you are.";
-				mes "Enjoy your meal.";
+				mes "告诉那只猫 ^4d4dff博雅的帮助就像巨大美味的金枪鱼^000000.";
+				mes "那只猫非常神秘.不要对于它开口说话感到惊讶.";
+				mes "你告诉它那句话,它就会告诉你任务目标.";
 				next;
-				mes "- After eating the meal, You feel a little bit full.";
-				mes "You've recovered some HP and SP. -";
+				mes "有什么问题尽管问它.";
+				mes "[博雅]";
 				set Zeny, Zeny - 3000;
 				percentheal 50,0;
 				percentheal 0,50;
 				close;
 			}
-			mes "[Chef]";
-			mes "This meal costs 3,000 zeny.";
-			mes "How many times do I have to tell you?";
+			mes "盯着我看干神马?";
+			mes "不就是我编的一个暗号嘛~";
+			mes "[博雅]";
 			close;
 		case 3:
-			mes "[Chef]";
-			mes "Course meal B?";
-			mes "This food with meat and vegetables in hot soup has it's origins from nomadic life under the cold and dry nature.";
+			mes "不管怎么样...";
+			mes "那地方离这里不算太远,非常适合你这样的新手.";
+			mes "好了,一路顺风~!";
 			next;
 			if (callfunc("F_HasEdenGroupMark")) {
 				if (Zeny > 3599) {
-					mes "[Chef]";
-					mes "Hey, here you are.";
-					mes "Enjoy your meal.";
+					mes "[博雅]";
+					mes "太好了~";
+					mes "让我给你挑个合适的地方.";
 					next;
-					mes "- After eating the meal, You feel a little bit full.";
-					mes "You've recovered some HP and SP. -";
+					mes "[博雅]";
+					mes "我们现在开始第二阶段课程 A.";
 					set Zeny, Zeny - 3600;
 					percentheal 75,0;
 					percentheal 0,75;
 					close;
 				}
-				mes "[Chef]";
-				mes "This meal costs 4,000 zeny but I will serve it for 3,600.";
-				mes "Since you are a eden member you get a 10% discount so, it's 3,600 zeny.";
+				mes "这个课程叫做 '征服僵尸洞~!'.";
+				mes "这是你现在这个等级最为适合的任务.";
+				mes "[博雅]";
 				close;
 			}
 			if (Zeny > 3999) {
-				mes "[Chef]";
-				mes "Hey, here you are.";
-				mes "Enjoy your meal.";
+				mes "斐扬北面有个小的弓箭村.";
+				mes "弓箭村西边的山上有个洞穴.";
+				mes "[博雅]";
 				next;
-				mes "- After eating the meal, You feel a little bit full.";
-				mes "You've recovered some HP and SP. -";
+				mes "我们已经派人去洞穴门口了.";
+				mes "他的名字是... 唔...";
 				set Zeny, Zeny - 4000;
 				percentheal 75,0;
 				percentheal 0,75;
 				close;
 			}
-			mes "[Chef]";
-			mes "This meal costs 4,000 zeny.";
-			mes "How many times do I have to tell you?";
+			mes "...";
+			mes "[博雅]";
+			mes "反正他是我们的成员,他肯定认识我.";
 			close;
 		case 4:
 			if (callfunc("F_HasEdenGroupMark")) {
 				if (Zeny > 4499) {
-					mes "[Chef]";
-					mes "Hey, here you are.";
-					mes "Enjoy your meal.";
+					mes "你从他那里会接到任务.";
+					mes "有什么问题尽管问他吧.";
+					mes "[博雅]";
 					next;
-					mes "- The Rib Eye Roll is grilled on the oak.";
-					mes "- After eating the meal, You feel a little bit full.";
-					mes "You've recovered your HP and SP. -";
+					mes "你怎么又盯着我看?（咦,为什么要说又呢?）";
+					mes "我好久没见过他了,记不住名字不行啊!";
+					mes "[博雅]";
 					set Zeny, Zeny - 4500;
 					percentheal 100,0;
 					percentheal 0,100;
 					close;
 				}
-				mes "[Chef]";
-				mes "This meal costs 5,000 zeny but I will serve it for 4,500.";
-				mes "Since you are a eden member you get a 10% discount so, it's 4,500 zeny.";
+				mes "不管怎么样...";
+				mes "那地方离这儿不远,快点回来~~";
+				mes "一路顺风~!";
 				close;
 			}
 			if (Zeny > 4999) {
-				mes "[Chef]";
-				mes "Hey, here you are.";
-				mes "Enjoy your meal.";
+				mes "[博雅]";
+				mes "现在给你安排的第二阶段课程 B.";
+				mes "这个课程叫做 '征服蚂蚁地狱~!'.";
 				next;
-				mes "Hey, here you are.";
-				mes "- The Rib Eye Roll is grilled on the oak.";
-				mes "- After eating the meal, You feel a little bit full.";
-				mes "You've recovered your HP and SP. -";
+				mes "这是你现在这个等级最为适合的任务.";
+				mes "[博雅]";
+				mes "去梦罗克西南方.";
+				mes "那里地底有个叫蚂蚁地狱的洞穴.";
 				set Zeny, Zeny - 5000;
 				percentheal 100,0;
 				percentheal 0,100;
 				close;
 			}
-			mes "[Chef]";
-			mes "This meal costs 5,000 zeny.";
-			mes "How many times do I have to tell you?";
+			mes "[博雅]";
+			mes "那里可是有很多蚂蚁哟~~~";
+			mes "那里被沙子覆盖着,要当心咯.";
 			close;
 		case 5:
-			mes "[Chef]";
-			mes "It's up to you.";
+			mes "[博雅]";
+			mes "这就是那里为啥叫蚂蚁地狱.";
 			close;
 		}
 	case 2:
 		if (callfunc("F_HasEdenGroupMark")) {
-			mes "[Chef]";
-			mes "Most jobs should be managed by yourself. So it might be difficult, right?";
-			mes "Actually it's harmful so they have requested continuously.";
+			mes "我们的一个成员在那里等你.";
+			mes "他叫什么来着... 呃? 记不清了···";
+			mes "[博雅]";
 			next;
-			mes "[Chef]";
-			mes "Can't we all work together by helping each other out?";
-			mes "Anyway, you...";
+			mes "反正他是我们的成员,他肯定认识我.";
+			mes "你从他那里会接到任务.";
+			mes "有什么问题尽管问他吧.";
 			next;
 			if (para_suv01 == 0) {
 				if (BaseLevel < 41) {
-					mes "[Chef]";
-					mes "How are you?";
-					mes "Ah... now you don't look like a beginner.";
-					mes "Do you want to know some good information?";
+					mes "[博雅]";
+					mes "你怎么又盯着我看?（咦,为什么要说又呢?）";
+					mes "我好久没见过他了,记不住名字不行啊!";
+					mes "[博雅]";
 					next;
-					mes "[Chef]";
-					mes "The Eden Group... sometimes receives jobs.";
-					mes "But they also manufacture armor and weapons by themselves.";
+					mes "不管怎么样...";
+					mes "那地方离这儿不远,快点回来~~";
+					mes "一路顺风~!";
 					next;
-					mes "[Chef]";
-					mes "If you want, you can get a uniform from the Eden Group.";
+					mes "[博雅]";
+					mes "现在已经进行到第三阶段课程 A.";
 					next;
-					mes "[Chef]";
-					mes "To get it you need to complete their missions.";
-					mes "If you have any interest, meet Instructor Boya at the desk.";
+					mes "这个课程叫做 '征服兽人村~!'.";
+					mes "让我看看...";
+					mes "[博雅]";
 					close;
 				}
-				mes "[Chef]";
-				mes "You look like an expert...";
-				mes "umm emm.. ";
-				mes "umm emm.. ummm..";
+				mes "穿过普隆德拉城门一直往西走.兽人村就在那个方向.";
+				mes "或者从吉芬西门出去一直往东南走..";
+				mes "[博雅]";
+				mes "唔···你也可以从卡普拉传送员那里直接传送过去.";
 				next;
-				mes "[Chef]";
-				mes "Yes! I found a thing that you are missing!";
-				mes "You didn't get eden group uniform?";
+				mes "随便你怎么选了.";
+				mes "[博雅]";
+				mes "我们派过去的成员在卡普拉服务人员旁边的房子里等你.";
 				next;
-				mes "[Chef]";
-				mes "Hmm, it's not necessary but if you remain with the eden group, it would be a good symbol.";
+				mes "[博雅]";
+				mes "她会向你解释下一步该怎么做.";
 				next;
-				mes "[Chef]";
-				mes "You can't get it easily but..";
-				mes "If you have an interest, ask Instructor Boya at the desk.";
+				mes "有什么问题尽管问她.";
+				mes "[博雅]";
+				mes "好了,一切顺利~!";
 				close;
 			}
-			mes "[Chef]";
-			mes "Sure, the uniform goes well with you.";
-			mes "Oh, sure.";
-			mes "The leader makes the designs these days.";
+			mes "[博雅]";
+			mes "现在已经进行到第三阶段课程 B.";
+			mes "这个课程叫做 '征服兽人地下洞窟~!'.";
+			mes "这是你现在这个等级最为适合的任务.";
 			next;
-			mes "[Chef]";
-			mes "Ahah..especially the hat.";
-			mes "To.. me.. the hat... um.";
-			mes "It goes well with Laime but with Luke... I don't know..";
+			mes "[博雅]";
+			mes "穿过普隆德拉城门一直往西走.兽人村就在那个方向.";
+			mes "或者从吉芬西门出去一直往东南走..";
+			mes "[博雅]";
 			next;
-			switch (select("What about the hat?:Luke?")) {
+			switch (select("参加训练:拒绝!")) {
 			case 1:
-				mes "[Chef]";
-				mes "Nothing. It's so cute.";
-				mes "I am concerned about the ribbon.";
-				mes "But, it is essential that I wear this hat..";
+				mes "唔···你也可以从卡普拉传送员那里直接传送过去.";
+				mes "随便你怎么选了.";
+				mes "[博雅]";
+				mes "我们派过去的成员在卡普拉服务人员旁边的房子里等你.";
 				next;
-				mes "[Chef]";
-				mes "Hahahah I don't care.";
-				mes "I don't care at all!";
-				mes "Hahaha.. aaaahahahaha... ";
+				mes "[博雅]";
+				mes "她会向你解释下一步该怎么做.";
+				mes "有什么问题尽管问她.";
+				mes "[博雅]";
 				close;
 			case 2:
-				mes "[Chef]";
-				mes "He is a knife expert.";
-				mes "One of our guard leaders.";
-				mes "Who is also in charge of the security in this office.";
+				mes "好了,一切顺利~!";
+				mes "[博雅]";
+				mes "这是你的最后一课~";
+				mes "这个课程叫做 '征服海底洞窟~!'.";
 				next;
-				mes "[Chef]";
-				mes "Almost everyone just hired wonders about him.";
-				mes "But Laime and Luke are totally different.";
+				mes "我也不太确定这个课程是不是很合适,反正这是我们训练的最后一课了.";
+				mes "[博雅]";
+				mes "首先从依斯鲁得坐船去依斯鲁得岛.";
 				next;
-				mes "[Chef]";
-				mes "The leaders have worked together for a long time.";
-				mes "But the leader wants to hide his past...";
+				mes "那里有个地下洞穴.进入洞穴向下走到第五层,你会发现一个古代的水底城市..";
+				mes "[博雅]";
+				mes "虽然在水底,你一样可以呼吸,不用担心.";
 				next;
-				mes "[Chef]";
-				mes "What I guess is... he might be a son of a rich family.";
-				mes "Rumor is that Luke was the family guard.";
-				mes "Laime was a servant? Wasn't she?";
-				mes "What do you think about my story?";
+				mes "在海底城市的门口有我们派过去的教官.";
+				mes "[博雅]";
+				mes "告诉他是我派你去的,后面就听他的指示吧.";
+				mes "好了,一切顺利~!";
+				mes "[博雅]";
 				next;
-				select(".....");
-				mes "[Chef]";
-				mes "............";
-				mes "Ahah..hey~ even if I talked useless things don't look at me like that";
-				mes "but it's really true that three people established this Eden Group.";
+				select("不想:当然,我愿意");
+				mes "随便你了…";
+				mes "虽然不关我的事,但你还是应该好好考虑考虑.";
+				mes "[博雅]";
+				mes "呵呵~~";
 				close;
 			}
 		}
-		mes "[Chef]";
-		mes "Uh? Missions. Did you find the right place?";
-		mes "Also let me se... you are not one of our members. How can I give you work?";
+		mes "你还真是老实呢~!";
+		mes "唔~你想了解一下装备的信息?";
+		mes "[博雅]";
 		next;
-		mes "[Chef]";
-		mes "Just eat in the restaurant.";
-		mes "We serve meals to everyone.";
-		mes "I am pretty sure they taste great!";
+		mes "我这里是有一套团员的制服提供,";
+		mes "但是,没有免费的午餐哦~";
+		mes "[博雅]";
+		mes "制服是送给在训练中努力表现的成员的.";
 		close;
 	}
 }
@@ -4364,20 +4364,20 @@ moc_para01,112,79,3	script	Weapons Expert BK#2nd11	4_M_REPAIR,{
 
 sec_in02,25,33,4	script	Assistant#para_suvquest	422,{
 	callfunc "F_GM_NPC";
-	mes "Password";
+	mes "[会说话的狗]";
 	next;
 	if (callfunc("F_GM_NPC",1854,0) == 1) {
-		mes "Please select the variable you want to modify.";
+		mes "汪···汪···汪···";
 		next;
-		set .@var, select("para_suv01:para_suv02");
-		mes "Enter the modified value";
+		set .@var, select("博雅真完美.:博雅真棒.:博雅真软.");
+		mes "汪汪···汪汪···";
 		next;
 		input .@input,0,9999;
 		mes "Value of para_suv0"+.@var+" has been changed to "+.@input+".";
 		setd "para_suv0"+.@var,.@input;
 		close;
 	} else {
-		mes "......meow wee.";
+		mes "汪汪汪···";
 		close;
 	}
 }

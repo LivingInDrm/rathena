@@ -108,9 +108,9 @@ payg_cas04,38,284,3	duplicate(cm)	DJ#payg_cas04	55
 //============================================================
 payg_cas04,151,47,0	script	#lever_PA04	111,{
 	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "这里有一个小小的控制杆, 去拉一下吗?";
 	next;
-	if(select("Pull.:Do not.") == 1) {
+	if(select("上前拉杆.:算了.") == 1) {
 		close2;
 		warp "payg_cas04",38,285;
 		end;

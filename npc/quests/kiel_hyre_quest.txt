@@ -654,29 +654,29 @@ lighthalzen,366,289,2	script	Windmill Owner's Helper	97,{
 // Girl (Talks about the academy)
 //----------------------------------------------------------------------------
 yuno_fild08,196,196,5	script	Hanie#kh1	102,{
-	mes "[Hanie]";
-	mes "Oh, I wish I could study";
-	mes "at the Kiel Hyre Academy...";
-	mes "All of the graduates get";
-	mes "really nice jobs! I'm almost";
-	mes "jealous of the students!";
+	mes "[思兹]";
+	mes "买土司啊~ 土司~";
+	mes "刚烤过的 还热腾腾呢~";
+	mes "[思兹]";
+	mes "欢迎光临~ 请问需要土司吗?";
+	mes "[思兹]";
 	next;
-	select("Kiel Hyre Academy?");
-	mes "[Hanie]";
-	mes "Oh, the Kiel Hyre Academy";
-	mes "is a school founded by Kiel";
-	mes "Hyre, an inventor that became";
-	mes "rich from his strange machines.";
-	mes "He decided to give back to society";
-	mes "by building this private academy.";
+	select("受爱丽之托而来:没事");
+	mes "啊... 你是说^ff0000爱丽^000000姐姐的委托啊?";
+	mes "[思兹]";
+	mes "哈啊.. 我知道是什么事情了, 她是不是又把实习的材料 变成不能用了呢? 真是拿^ff0000爱丽^000000姐姐 没有办法啊";
+	mes "[思兹]";
+	mes "我了解了! 是^ff0000爱丽^000000姐姐的请求的话, 我当然要听她的啰! 她是我的主客户呢..";
+	mes "[思兹]";
+	mes "嗯.. 可是... 很可惜的我们的材料也都用光了, 以目前的材料我们也不敷使用的关系.. 若可以的话请你到里希塔乐镇的辗米厂, ";
 	next;
-	mes "[Hanie]";
-	mes "However, the school will";
-	mes "only accept orphans that are";
-	mes "too poor to enroll in any other";
-	mes "schools. Sometimes, it makes";
-	mes "me wish that I was an orphan too!";
-	mes "Well, not really, but you know...";
+	mes "帮忙配送一下材料好吗?";
+	mes "[思兹]";
+	mes "你只要说你是从朱诺土司商店派来的话, 他们会给你面粉和鸡蛋的, 只要把那些带来的话, 我会把多余的那一份分给你的";
+	mes "[思兹]";
+	mes "请你下一次再来使用~";
+	mes "[思兹]";
+	mes "请你到里希塔乐镇的辗米厂";
 	close;
 }
 
@@ -800,31 +800,31 @@ yuno_fild08,158,183,7	duplicate(KHAGuard)	Security Guard#2	852
 // Gossiping Teenagers/Story NPCs
 //----------------------------------------------------------------------------
 kh_school,57,142,6	script	Student#kha	893,3,3,{
-	mes "[Laci]";
-	mes "Oh, wow! We usually";
-	mes "don't get visitors on";
-	mes "campus! Um, you're not";
-	mes "a new faculty member, are you?";
+	mes "[少女]";
+	mes "啊...我也能进入'^0000FF启 海伊洛 学院^000000'的话";
+	mes "那有多好呢... ";
+	mes "为什么我妈妈没有把我生成 ";
+	mes "孤儿呢...真是的..";
 	close;
 
 OnTouch_:
-	mes "[Laci]";
-	mes "Hey, Nesha...!";
-	mes "have you heard why";
-	mes "Aaci hasn't been coming";
-	mes "to class for awhile?";
+	mes "[少女]";
+	mes "嗯...这里是, ";
+	mes "只收容孤儿的地方啊, ";
+	mes "创立这学院的人是 ";
+	mes "'^ff0000启 海伊洛^000000'这号人物, ";
 	next;
-	mes "[Gui Nesha]";
-	mes "That's right, I haven't";
-	mes "seen Aaci in awhile.";
-	mes "Did something happen?";
+	mes "听说他以前制作出很多奇怪的机械, ";
+	mes "也赚了不少钱啊";
+	mes "[少女]";
+	mes "所以说以回馈社会的动机吧?";
 	next;
-	mes "[Laci]";
-	mes "It's because....";
-	mes "Aaci saw a freakin' ghost!";
-	mes "It's one hundred percent";
-	mes "true! I heard about it from,";
-	mes "well, you know, my sources.";
+	mes "因而为了孤儿们创立了学院, ";
+	mes "就是这间学院啊";
+	mes "[少女]";
+	mes "听说只要是在这间学院毕业的话, ";
+	mes "就能谋职很好的工作呢..";
+	mes "啊.. 我也想进这间学院啊";
 	next;
 	mes "[Gui Nesha]";
 	mes "...Wha...?";
@@ -834,10 +834,10 @@ OnTouch_:
 }
 
 kh_school,57,139,0	script	Student#khb	893,{
-	mes "[Gui Nesha]";
-	mes "Aren't we a little";
-	mes "old to be talking about";
-	mes "this kind of stuff? You";
+	mes "请在这里暂停一下 !!";
+	mes "你所携带的物品太多了, 所以不能获得物品；请把身上的物品减轻之后, 再来挑战吧";
+	mes "发现了掉落在地板上的'^FF0000信件^000000'";
+	mes "地板上是空空的";
 	mes "know, rumors and ghost";
 	mes "stories that make no sense?";
 	mes "C'mon, Laci, knock it off!";
@@ -850,21 +850,21 @@ kh_school,57,139,0	script	Student#khb	893,{
 //----------------------------------------------------------------------------
 kh_school,176,60,4	script	Lady#kh	101,{
 	if (KielHyreQuest < 2) {
-		mes "[Mrs. Lecollane]";
-		mes "Is there a problem?";
-		mes "Outsiders are not allowed to come";
-		mes "in here, please leave.";
+		mes "请在这里暂停一下 !!";
+		mes "你所携带的物品太多了, 所以不能获得物品；请把身上的物品减轻之后, 再来挑战吧";
+		mes "好像是有很多人的 手所触碰过的抽屉";
+		mes "打开抽屉后看到黄色的物体";
 		close;
 	}
 	else if (KielHyreQuest == 2) { 
-		mes "[Mrs. Lecollane]";
-		mes "Oh, hello. Ah!";
-		mes "have you come to";
+		mes "寻找别的地方";
+		mes "...看样子所需要的东西都找到了, ";
+		mes "回去吧";
 		mes "deliver my wine? The";
 		mes "security guard called and";
 		mes "mentioned you were coming.";
 		next;
-		switch(select("Yes, that's right!:Er, s-sorry!")) {
+		switch(select("打开抽屉看看:寻找别的地方")) {
 		case 1:
 			mes "[Mrs. Lecollane]";
 			mes "Well, you've come a little";
@@ -1478,48 +1478,48 @@ kh_school,179,39,0	script	Cute Student#kh	895,{
 //----------------------------------------------------------------------------
 yuno_fild08,69,185,0	script	Window#kh	111,{
 	if (KielHyreQuest < 29) {
-		mes "^3355FFYou can see a curtain";
-		mes "decorated with a cute";
-		mes "design through the";
-		mes "window of this room,";
-		mes "which is probably";
-		mes "used by a young girl.^000000";
+		mes "[管家]";
+		mes "这里是私人住宅, 请你离开好吗";
+		mes "[管家]";
+		mes "请问你是主人的客人吗?";
+		mes "那么请出示证据给我看";
+		mes "[管家]";
 		close;
 	}
 	else if (KielHyreQuest== 29) {
-		mes "^3355FFThis must be Elly's room.";
-		mes "It doesn't sound like anyone";
-		mes "is inside, so she probably";
-		mes "isn't back yet. For now, you";
-		mes "should try to find what her";
-		mes "grandfather left for her";
-		mes "in their cottage's Study.^000000";
+		mes "[管家]";
+		mes "若你不是客人的话, 请你离开好吗";
+		mes "[管家]";
+		mes ".....请问你要见我们家主人吗?";
+		mes "[管家]";
+		mes "我来带你去";
+		mes "[管家]";
 		close;
 	}
 	else if ((KielHyreQuest >= 30) && (KielHyreQuest <= 45)) {
-		mes "^3355FFThis slightly open window";
-		mes "must lead into Elly's room.";
-		mes "Although she asked you to";
-		mes "find a ladder to enter her";
-		mes "window, you probably won't";
-		mes "find one. You might be able";
-		mes "to climb up that water pipe...^000000";
+		mes "我在这里等你吧";
+		mes "[管家]";
+		mes "欢迎光临, 我们正在等你呢, 请问你要跟主人说话吗? 或是跟....";
+		mes "[管家]";
+		mes "我了解了, 我来带你去吧";
+		mes "[管家]";
+		mes "哈哈.... 看样子你有带来好消息啊";
 		next;
-		switch(select("Climb Water Pipe:Find Another Way")) {
+		switch(select("把黄金钥匙拿给他看:????")) {
 		case 1:
 			if (rand(1,3) == 2) {
-				mes "^3355FFYou climbed up the";
-				mes "water pipe, and sneaked";
-				mes "into Elly's room successfully.^000000";
+				mes "观察周围的管家的眼神不是普通啊...";
+				mes "果然平凡的管家是....";
+				mes "请问你的名字是不是";
 				close2;
 				warp "kh_school",185,185;
 				end;
 			}
 			else {
-				mes "^3355FFYou tried to climb";
-				mes "the water pipe, but";
-				mes "you ended up falling";
-				mes "and bumping your head.^000000";
+				mes "尔普...嗯嗯..";
+				mes ".......... ";
+				mes "[管家]";
+				mes "看样子没有讨厌的家伙在这边, 请到这边...";
 				percentheal -10,0;
 				close;
 			}
@@ -1544,7 +1544,7 @@ yuno_fild08,69,185,0	script	Window#kh	111,{
 //----------------------------------------------------------------------------
 kh_school,178,180,4	script	Elly	895,{
 	if (checkweight(908,200) == 0) {
-		mes "^3355FFJust a second...";
+		mes "离开官邸想要回去的时候, 在头上有一股震痛后就失去精神了";
 		mes "You're carrying too";
 		mes "many items with you";
 		mes "right now, so you'll";
@@ -2018,44 +2018,44 @@ yuno_fild02,93,210,4	script	Cottage Keeper#kh	85,{
 //----------------------------------------------------------------------------
 yuno_fild02,75,218,0	script	Door#kh2	111,{
 	if (KielHyreQuest < 16) {
-		mes "^3355FFThis door is locked.";
-		mes "If someone inside won't";
-		mes "open it for you, then you'll";
-		mes "need the right key to unlock it.";
+		mes "请在这里暂停一下 !!";
+		mes "你所携带的物品太多了, 所以不能获得物品；请把身上的物品减轻之后, 再来挑战吧";
+		mes "[齐尔]";
+		mes "......";
 		close;
 	}
 	if (KielHyreQuest == 16) {
-		mes "^3355FFThis door is locked.";
-		mes "If someone inside won't";
-		mes "open it for you, then you'll";
-		mes "need the right key to unlock it.";
+		mes ".........";
+		mes "............";
+		mes "[齐尔]";
+		mes "你终于找到我了, 来到我这寒舍真是辛苦你啦, 刺客大爷, 我也想按照约定把我的卷轴给你..";
 		next;
 		switch(select("Unlock:Cancel")) {
 		case 1:
-			mes "^3355FFYou unlock the door with the";
-			mes "key that Elly gave you, and";
-			mes "as you push it open, a folded";
-			mes "note dropped from top of the";
-			mes "door. The following words";
-			mes "are written on this crude note.";
+			mes "[齐尔]";
+			mes "如果把那个给拔走的话, 只会剩下躯壳的身体, 若你想要的话直接用你的实力来拿";
+			mes "[齐尔]";
+			mes "果然是爸爸所选中的刺客实力还不错吗?";
+			mes "好吧, 就这样闲着也很无聊, ";
+			mes "就听听看我爸到底委托了你哪些事情呢?";
 			next;
-			mes "6 Forward,";
-			mes "3 Left,";
-			mes "3 Forward,";
-			mes "4 Left";
+			mes "是不是叫你来杀我呢?";
+			mes "^FF0000启 海伊洛^000000先生叫我来阻止你, ";
+			mes "他对自己的过失非常的痛苦呀, ";
+			mes "现在该停止这一切了吧, ";
 			close2;
 			set KielHyreQuest,18;
 			warp "kh_vila",188,18;
 			end;
 		case 2:
-			mes "......";
-			mes ".........";
-			mes "............";
+			mes "^0000FF齐尔^000000随我回到老爸的身边吧";
+			mes "你现在这是欺负同族啊, 那是不对的!";
+			mes "[齐尔]";
 			close;
 		}
 	}
 	else {
-		mes "^3355FFThe door is open.^000000";
+		mes "同族啊..";
 		next;
 		switch(select("Enter:Cancel")) {
 		case 1:

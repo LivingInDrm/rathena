@@ -1954,43 +1954,43 @@ job3_sha01,22,78,0	script	????#keybox01	844,{
 		next;
 		mes " "+.@Codes1$[.@i];
 		next;
+		mes "";
+		mes "";
 		mes "It shows some letters and numbers.";
-		mes " ";
-		mes "Deceive.";
 		mes "Then "+.@i+".";
 		mes "And "+.@Codes1$[.@i]+".";
 		next;
 		select("What does it mean?");
 		mes "["+strcharinfo(0)+"]";
+		mes " ";
+		mes "Deceive.";
 		mes "Is it also code.";
+		next;
 		mes "It must be!";
+		next;
 		mes "Ah, something is showing up again...?";
-		next;
 		mes "- You can see some letters on the turtle's shell. -";
-		next;
 		mes " ";
 		mes "HONESTY";
-		mes " ";
-		mes "And also letters. They are blinking as if waiting for a code to be input.";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ == .@Codes2$[.@i] || .@inputstr$ == strtolower(.@Codes2$[.@i])) {
+			mes " ";
+			mes "And also letters. They are blinking as if waiting for a code to be input.";
 			mes "When you put the correct answer in there,";
-			mes "the box is opened.";
-			mes "There is a small and fabulous key.";
 			next;
-			mes "- You get the Key of Deception. -";
+			mes "the box is opened.";
 			set job_sha,8;
 			getitem 6266,1; //Cheat_Key
 			setquest 7165;
 			close;
 		}
+		mes "There is a small and fabulous key.";
+		mes "- You get the Key of Deception. -";
 		mes "- You put the answer -";
-		mes "- but it doesn't work. -";
-		mes "- You have failed. -";
 		close;
 	}
-	mes "You don't have to stay in here.";
+	mes "- but it doesn't work. -";
 	next;
 	if(select("Go outside.:Stay here.") == 1)
 		warp "tur_dun03",40,201;

@@ -733,18 +733,18 @@ OnTouch:
 		mes "Name : Maestro Song";
 		next;
 		mes "- Bring this receipt and exchange it";
-		mes "- Juno's store manager : Mr. Click.";
+		mes "";
 		next;
-		mes "- Directions : Around Juno's plaza.";
+		mes "- Juno's store manager : Mr. Click.";
 		getitem 6271,1; //Mins_Receipt
 		next;
 		mes "["+strcharinfo(0)+"]";
+		mes "- Directions : Around Juno's plaza.";
 		mes "Photo exchange receipt?";
-		mes "How did he drop it...";
 		next;
+		mes "How did he drop it...";
 		mes "[Karian]";
 		mes "Juno's store...";
-		mes "Let's go to Juno...";
 		if (job_min == 10) {
 			set job_min,11;
 			changequest 11143,11144;

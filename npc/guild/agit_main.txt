@@ -922,8 +922,8 @@ OnRecvCastle:
 	set .@GID,GetCastleData(strnpcinfo(2),CD_GUILD_ID);
 
 	if (.@GID == 0) {
-		mes "[Ringing Voice]";
-		mes "'Those who overcome an ordeal shows a great deal of bravery... and will find their way to another ordeal.'";
+		mes "[响亮的声音]";
+		mes "'克服严峻考验展现过人的勇气... 并且继续迈向另一个考验之路.'";
 		close;
 	}
 
@@ -964,20 +964,20 @@ OnRecvCastle:
 		end;
 	}
 
-	mes "[Ringing Voice]";
-	mes "'Only the truly brave can take the test.'";
+	mes "[响亮的声音]";
+	mes "'只有勇气的主人,才能接受考验啊.'";
 	next;
 	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "有小的拉杆 ,你要往下拉吗?";
 	next;
-	if(select("Pull.:Don't pull.") == 1) {
+	if(select("我要拉:我不要拉.") == 1) {
 		if (getcharid(2) == .@GID) {
 			close2;
 			warp .@destination$,.@coordinates[0],.@coordinates[1];
 			end;
 		}
 		mes " ";
-		mes "Nothing happened.";
+		mes "什么都没有发生.";
 		close;
 	}
 	close;

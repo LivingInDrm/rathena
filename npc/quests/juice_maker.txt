@@ -20,101 +20,101 @@
 
 prt_in,49,172,3	script	Marianne#juice	53,{
 	if ((MISC_QUEST&1) || morison_meat == 15) {
-		mes "[Housewife Marianne]";
-		mes "Whew...!";
-		mes "Still, he won't eat anything unless it's Meat. But maybe he will eat fruit if it was cut so that it was easy to eat. Like, if it was blended into juice...";
+		mes "[小孩子 莫利孙]";
+		mes "哼... 滚开! 别管我!";
+		mes "我会因为这些愚蠢的蔬菜水果而死, 你快滚一边去吧!";
 		next;
 		set mother_marienu,0;
 		set morison_meat,0;
 		set MISC_QUEST,MISC_QUEST | 1;
-		mes "[Housewife Marianne]";
-		mes "Ah! Come to think of it, I heard they were making fruit juice somewhere. Now where was it... Payon Village, or Morocc?";
+		mes "呃..我已经吃饱了.";
+		mes "你不用再给我了. 在继续吃下去的话我非撑死不可.";
 		close;
 	}
 	if (mother_marienu == 1) {
-		mes "[Housewife Marianne]";
-		mes "Morrison!! Eat some fruits!! You don't want to become a slobby fat pig when you grow up, do you?";
+		mes "[小孩子 莫利孙]";
+		mes "那么... 嗯... 这给你吧.";
 		next;
-		if (select("Talk:Cancel") == 1) {
-			mes "[Housewife Marianne]";
-			mes "Hm? ...You!";
-			mes "You're the one who gave, my little Morrison that Meat?! Did you come here thinking I wouldn't know about it?!";
+		if (select("对话:关闭") == 1) {
+			mes "[小孩子 莫利孙]";
+			mes "这是我背着妈妈偷偷藏起来的糖果.";
+			mes "啊.. 啊啊啊啊!!! 不.. 不吃";
 			next;
-			mes "[Housewife Marianne]";
-			mes "Go away, get out of my house NOW!!";
+			mes "哼..不吃水果!!";
+			mes "[小孩子 莫利孙]";
 			close;
 		}
-		mes "[Housewife Marianne]";
-		mes "Morrison!! I'm going to be very very mad if you keep doing this!";
+		mes "啊啊啊啊!!受够了!!已经不能在吃水果了!";
+		mes "讲实话,水果呢~先要拨皮还有很多的水份.吃的时候感觉不舒服";
 		close;
 	}
 	if (morison_meat > 0) {
 		set mother_marienu,1;
-		mes "[Housewife Marianne]";
-		mes "Oh!!.... This...";
-		mes "what is this...??";
-		mes "How could you do something like this to my boy?!";
+		mes "而且会酸酸黏黏的..还吃不饱.啊啊啊啊!给我肉吧~";
+		mes "[小孩子 莫利孙]";
+		mes "啊啊! 肉.肉.噢";
+		mes "啊 肚 肚子饿了 真香  这  给我1块肉行不行?";
 		next;
-		mes "[Housewife Marianne]";
-		mes "Argh! Get out of my house right this instant!";
+		mes "哼... 滚开! 别管我!";
+		mes "我会因为这些愚蠢的蔬菜水果而死, 你快滚一边去吧!";
 		close;
 	}
-	mes "[Housewife Marianne]";
-	mes "Morrison!! Please eat some fruits!! Please~!";
+	mes "[小孩子 莫利孙]";
+	mes "哇~!!! 真的是肉耶! 肉!";
 	next;
-	mes "[Housewife Marinaa]";
-	mes "Sigh~!! Like father, like son...";
+	mes "咕噜! 我口水都流下来了.";
+	mes "真是太感谢你了. 我现在觉得快乐多了. 哈哈...";
 	next;
-	switch(select("Talk:Cancel")) {
-		mes "[Housewife Marianne]";
-		mes "*Sigh*... This is Morrison...";
-		mes "My one and only son.";
+	switch(select("给他肉:不给他肉")) {
+		mes "[小孩子 莫利孙]";
+		mes "哼...";
+		mes "哼... 好... 很好, 非常好~!!! 自私的家伙!";
 		next;
-		mes "[Housewife Marianne]";
-		mes "But these days, he just won't eat fruits. His face is so dull because he refuses to eat healthy. He just wants to eat Meat. I need to find a way to feed him fruits or vegetables....";
+		mes "[小孩子 莫利孙]";
+		mes "啊啊啊啊!!受够了!!已经不能在吃水果了!";
 		close;
 	}
-	mes "[Housewife Marianne]";
-	mes "Morrison!! You're going to be in big trouble if you keep this up!";
+	mes "讲实话,水果呢~先要拨皮还有很多的水份.吃的时候感觉不舒服";
+	mes "而且会酸酸黏黏的..还吃不饱.啊啊啊啊!给我肉吧~";
 	close;
 }
 
 prt_in,47,173,3	script	Morrison#juice	97,{
 	if ((MISC_QUEST&1) || morison_meat == 15) {
-		mes "[Little Morrison]";
-		mes "Bleh... Forget it.";
-		mes "I'm just going to shrivel to death just eating fruits. Don't bother worrying about me .";
+		mes "[家庭主妇 玛丽亚棱]";
+		mes "啊呦 没有肉就不吃饭...要怎么样他才吃水果...";
+		mes "举个例子...抹成泥状...";
 		close;
 	}
 	if (morison_meat > 9) {
-		mes "[Little Morrison]";
-		mes "Ah... so full~";
-		mes "I think I can live now.";
-		mes "You don't have to give me any more Meat. I feel like I'm going to explode if I eat any more.";
+		mes "[家庭主妇 玛丽亚棱]";
+		mes "啊!好像有一个城市会把水果抹成泥状.";
+		mes "那是斐扬? 梦罗克";
+		mes "不!! 这..这到底";
 		if (morison_meat == 10) {
 			next;
 			set morison_meat,morison_meat+1;
-			mes "[Little Morrison]";
-			mes "Oh... and... um.";
-			mes "Take this.";
+			mes "世界上怎么会发生这种事情!!你不要把奇怪的食物给我儿子吃!";
+			mes "哎呀~~真烦!! 快滚出去!";
+			mes "莫利孙!!求你吃一点水果~!啊呦~!!活不下去了!";
 			next;
-			mes "[Little Morrison]";
-			mes "It's a little something I've been saving to eat for later, but since you gave me Meat, I think I can pass on the sweets.";
+			mes "这个坏习惯真像你爸...";
+			mes "[家庭主妇 玛丽亚棱]";
 			close;
 			getitem 529,3; //Candy
 			getitem 530,1; //Candy_Striper
 		}
 		close;
 	}
-	mes "[Little Morrison]";
-	mes "Agh....Noooo!!!";
-	mes "No, don't make me eat it! I can't bear to taste fruits!";
+	mes "莫利孙!! 你再这样我要发火了!";
+	mes "[家庭主妇 玛丽亚棱]";
+	mes "嗯..这个小孩叫莫利孙是我的儿子";
 	next;
 	if (countitem(517) > 0) {
-		switch(select("Talk:Show the Meat:Cancel")) {
+		switch(select("交谈:取消")) {
 		case 1:
-			mes "[Little Morrison]";
-			mes "Aaaagh!! Once or twice is enough!! I refuse to eat any more fruits! You have to peel them and there's so much juice that it makes you feel icky...";
+			mes "这个家伙最近不太敢吃水果.已经很久没吃了 脸色都变不好一直想吃肉...";
+			mes "哎..无论如何想个办法让他吃青菜和水果...";
 			next;
 			mes "[Little Morrison]";
 			mes "And they're all slippery and sour... Even if I eat it, I still feel hungry. Aaaah~! Give me Meat!";

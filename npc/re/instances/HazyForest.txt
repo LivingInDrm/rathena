@@ -688,24 +688,24 @@ OnDisable:
 
 1@mist,183,304,3	script	Loki#mist	512,{
 	if (ep14_1_mistwoods < 2) {
-		mes "[Loki]";
-		mes "An adventurer in the forest.";
-		mes ".....";
-		mes "You can go to Mora through this forest.";
+		mes "透过彩虹桥我看到了整片森林.";
+		mes "看上去我能穿过彩虹桥进入森林.";
+		mes "[拉菲尼士兵]";
+		mes "感觉有点不对劲. 看样子有什么危险的事情要发生, 你最好今天回去.";
 		close;
 	} else if (ep14_1_mistwoods == 2) {
-		mes "[Loki]";
-		mes "Is it you that took care of this unruly girl?";
-		mes "I guess I have to thank you.";
-		mes "You've calmed her down.";
+		mes "你试图抓住彩虹, 但是有股神秘的力量, 将你吹了回来.";
+		mes "看上去你无法进入森林了.";
+		mes "[拉菲尼士兵]";
+		mes "嘿, 快看!";
 		next;
-		select("What's happening?:This girl...?");
-		mes "[Loki]";
-		mes "You might be able to change your appearance, but you cannot change your unique, innate light.";
-		mes "A scent strong enough to burn your nose.";
+		select("- 进入彩虹桥.:- 放弃.");
+		mes "你打算单独一人?";
+		mes "这不可能. 太冲动了.";
+		mes "组队和一些朋友一起去!";
 		next;
-		mes "[Loki]";
-		mes "This is Nydhogg, the Guardian of Yggdrasil,";
+		mes "彩虹桥以外的世界看起来黑暗和令人窒息.";
+		mes "你的直觉告诉你这片森林是危险的.";
 		mes "whom I was looking for.";
 		mes "Now she won't wander around crazy any more.";
 		next;

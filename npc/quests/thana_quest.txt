@@ -163,141 +163,141 @@ OnTouch_:
 
 tha_t01,149,78,4	script	Guide	90,{
 	if (thana_tower == 0) {
-		mes "[Ditze]";
-		mes "Welcome to Thanatos Tower.";
-		mes "The tower's reconstruction is";
-		mes "a Rekenber Corporation project,";
-		mes "and the 1st and 2nd floors are";
-		mes "now open to the public. So";
-		mes "how may I help you today?";
+		mes "[伽铁]";
+		mes "欢迎，冒险者。";
+		mes "我是伽铁·拿姆，";
+		mes "是这座达纳托斯之塔的守塔人。";
+		mes "有什么可以帮你的？";
+		mes "[伽铁]";
+		mes "是的，在你面前的那座塔";
 		next;
-		switch(select("Tower Information:Temporary Work Contract:Cancel")) {
+		switch(select("达纳托斯之塔？:如何进入？:我要进入塔内:没事")) {
 		case 1:
-			mes "[Ditze]";
-			mes "When this tower was built,";
-			mes "who built it, and its purpose";
-			mes "are all mysteries. There are";
-			mes "many rumors about it being a";
-			mes "Mage lab, a hero's momunent,";
-			mes "or a demon fortress...";
+			mes "是一个古老的遗迹，";
+			mes "它的名字是从";
+			mes "塔里的一块石碑上发现的。";
+			mes "如今，这座塔是";
+			mes "一个有名的观光胜地。";
+			mes "[伽铁]";
+			mes "自从雷根贝勒企业";
 			next;
-			mes "[Ditze]";
-			mes "The Rekenber Corporation has";
-			mes "been researching the origin of";
-			mes "this tower, but has not yet been able to confirm anything. Although";
-			mes "we've lost many researchers to the tower monsters, we won't give up!";
+			mes "开始塔的重修工作后，";
+			mes "这座塔就在冒险者之间";
+			mes "有着非常高的名气。";
+			mes "现在1、2层已经重修完成，";
+			mes "原有的魔物大致清除干净。";
 			next;
-			mes "[Ditze]";
-			mes "Rekenber is convinced that this";
-			mes "tower holds many secrets, and";
-			mes "successfully reconstructed the";
-			mes "first 2 floors of this tower in";
-			mes "the pursuit of this knowledge.";
+			mes "[伽铁]";
+			mes "但是，3层及更高层的";
+			mes "重修工作仍在进行中。";
+			mes "这些楼层中仍然存在";
+			mes "数不胜数的魔物，因此现正";
+			mes "招募勇士一起清除魔物。";
 			next;
-			mes "[Ditze]";
-			mes "Currently, we are focused on";
-			mes "reconstructing the tower's 3rd";
-			mes "and 4th floors. Luckily, many";
-			mes "adventurers are exterminating";
-			mes "the monsters on those floors, working under temporary contracts.";
+			mes "[伽铁]";
+			mes "如果你对这项工作";
+			mes "感兴趣，或者想更了解";
+			mes "这座塔的话，";
+			mes "那么请";
+			mes "咨询塔内的工作人员吧。";
 			next;
-			mes "[Ditze]";
-			mes "At this rate, we expect";
-			mes "to complete reconstruction";
-			mes "of the 3rd and 4th floors in";
-			mes "the near future, bringing us";
-			mes "closer to our goal of opening all 12 floors of Thanatos Tower.";
+			mes "谢谢，祝你有个愉快的旅程~";
+			mes "[伽铁]";
+			mes "我们欢迎任何人";
+			mes "来参观这座达纳托斯之塔。";
+			mes "但是目前只有1、2层";
+			mes "是向公众开放的。";
 			next;
-			switch(select("Tower Monsters?:Temp Contract Work?:......")) {
+			switch(select("是的:下次再说")) {
 			case 1:
-				mes "[Ditze]";
-				mes "Yes, when we began";
-				mes "reconstruction of the";
-				mes "Thanatos Tower, these";
-				mes "monsters that look like angels";
-				mes "just appeared out of nowhere";
-				mes "to attack all the workers.";
+				mes "每个人的入场费是";
+				mes "5,000 zeny。";
+				mes "[伽铁]";
+				mes "可能对一个观光胜地来说，";
+				mes "5,000 zeny有些许的昂贵，";
+				mes "但请相信我，进去后你";
+				mes "一定会觉得不枉此行。";
 				next;
-				mes "[Ditze]";
-				mes "At first, witnesses thought";
-				mes "that these monsters might";
-				mes "be, you know, actual angels.";
-				mes "But if they were, why were they";
-				mes "attacking for no reason?";
+				mes "[伽铁]";
+				mes "当然，我们会对这里的";
+				mes "常客还有与我们一起";
+				mes "清理魔物的勇士";
+				mes "提供一些优惠。";
+				mes "[伽铁]";
 				next;
-				mes "[Ditze]";
-				mes "Anyway, we asked the Juno ";
-				mes "Sage Academy to investigate";
-				mes "them, and they confirmed that";
-				mes "these angelic creatures are true monsters--their resemblance to";
-				mes "angels is merely coincidence.";
+				mes "你想进入";
+				mes "达纳托斯之塔吗？";
+				mes "入场费是^FF00005,000 zeny^000000。";
+				mes "[伽铁]";
+				mes "欢迎回来！因为你";
+				mes "应征了雷根贝勒企业的";
 				close;
 			case 2:
-				mes "[Ditze]";
-				mes "You may have already heard";
-				mes "from the Tower Keeper, but";
-				mes "we're contracting adventurers to exterminate the tower monsters";
-				mes "in the 3rd and higher levels on";
-				mes "a temporary employee basis.";
+				mes "魔物清理工作，你的入场费";
+				mes "现在只需3,000 zeny。";
+				mes "[伽铁]";
+				mes "谢谢，";
+				mes "请你继续加油。";
+				mes "噢，还请牢记：";
 				next;
-				mes "[Ditze]";
-				mes "I'm in charge of hiring";
-				mes "temp contract workers, so";
-				mes "talk to me if you're interested. Only temp workers are allowed";
-				mes "to access the higher levels";
-				mes "here in Thanatos Tower.";
+				mes "与魔物战斗的时候，";
+				mes "一定要注意安全！";
+				mes "[伽铁]";
+				mes "噢，非常抱歉…";
+				mes "你看起来没有";
+				mes "足够的钱啊。";
 				next;
 				goto L_Contract;
 			case 3:
-				mes "[Ditze]";
-				mes "To develop the floors above";
-				mes "the 2nd floor, we're going to";
-				mes "need as many temp contract";
-				mes "workers as we can hire. Why";
-				mes "don't you consider working";
-				mes "for us under a temp contract?";
+				mes "还请以后再来吧~";
+				mes "[伽铁]";
+				mes "好吧，你最近一定很忙吧。";
+				mes "没事，我们会一直";
+				mes "在这里等候。再会~";
+				mes "[伽铁]";
+				mes "噢，那我就收下你的";
 				close;
 			}
 		case 2:
-			mes "[Ditze]";
-			mes "You may have already heard";
-			mes "from the Tower Keeper, but";
-			mes "we're contracting adventurers to exterminate the tower monsters";
-			mes "in the 3rd and higher levels on";
-			mes "a temporary employee basis.";
+			mes "入场费了。非常感谢。";
+			mes "我衷心希望";
+			mes "你能享受这次";
+			mes "愉快的旅行~";
+			mes "[伽铁]";
+			mes "好的...";
 			next;
-			mes "[Ditze]";
-			mes "I'm in charge of hiring";
-			mes "temp contract workers, so";
-			mes "talk to me if you're interested. Only temp workers are allowed";
-			mes "to access the higher levels";
-			mes "here in Thanatos Tower.";
+			mes "噢，非常抱歉，";
+			mes "你看起来没有";
+			mes "足够的钱啊。";
+			mes "还请以后再来吧…";
+			mes "[伽铁]";
+			mes "非常好。请进，";
 			next;
 			goto L_Contract;
 		case 3:
-			mes "[Ditze]";
-			mes "Well, if you have any";
-			mes "questions, feel free to";
-			mes "ask me later. My name is";
-			mes "Ditze Lappa. Have a good day!";
+			mes "欢迎再次参观";
+			mes "达纳托斯之塔。";
+			mes "[伽铁]";
+			mes "嗯？好吧。";
+			mes "但如果你以后想";
 			close;
 		}
 	}
-	mes "[Ditze]";
-	mes "For more detailed information";
-	mes "about monster exterminations,";
-	mes "please ask the 2nd Floor Guide";
-	mes "and the Guide next to me. Well,";
-	mes "we hope you enjoy your experience working with Rekenber Corporation~";
+	mes "参观这座达纳托斯之塔，";
+	mes "请你来找我。";
+	mes "谢谢，祝你有愉快的一天。";
+	mes "[守塔人]";
+	mes "非常抱歉，你不能";
+	mes "进入塔内。这个地方是";
 	close;
 
 L_Contract:
-	switch(select("Maybe next time:Sure, I'd like to work for you.")) {
+	switch(select("好的:还是下次吧")) {
 	case 1:
-		mes "[Ditze]";
-		mes "Well, alright.";
-		mes "But come and talk to";
-		mes "me as soon as you decide";
+		mes "属于雷根贝勒企业";
+		mes "旗下所有，";
+		mes "没有得到授权，";
+		mes "你是无法进入这里的。";
 		mes "that you want to help with";
 		mes "the tower reconstruction by";
 		mes "working for Rekenber.";
@@ -411,104 +411,104 @@ L_Contract:
 }
 
 tha_t01,140,78,4	script	Guide#reward	831,{
-	mes "[Liei]";
+	mes "[迪切]";
 	if (thana_tower == 0) {
-		mes "Good day, I'm";
-		mes "Liei Kuniziet of the";
-		mes "Employee Mission";
-		mes "Reward Department";
-		mes "here in Thanatos Tower.";
+		mes "欢迎来到达纳托斯之塔。";
+		mes "雷根贝勒企业正对";
+		mes "这座塔进行重修工作，";
+		mes "第1、2层已经重修完毕，";
+		mes "并对公众开放。";
 		next;
-		switch(select("Employee's mission reward?:Keep up the good work.")) {
+		switch(select("关于这座塔的资料:听说你们正在招募:没事")) {
 		case 1:
-			mes "[Liei]";
-			mes "Currently, Rekenber Corporation";
-			mes "is contracting temp employees";
-			mes "to develop the higher levels";
-			mes "of Thanatos Tower. If you'd";
-			mes "like to apply, please ask";
-			mes "Ditze right next to me.";
+			mes "我有什么能帮你的吗？";
+			mes "[迪切]";
+			mes "这座塔的建造者是谁，";
+			mes "还有建造这座塔的目的是什么，";
+			mes "目前都是一个谜。";
+			mes "有传言说只是";
+			mes "某位魔法师的实验室、";
 			close;
 		case 2:
-			mes "[Liei]";
-			mes "Thank you. Ah, and I hope";
-			mes "that you enjoy your visit";
-			mes "here to Thanatos Tower.";
+			mes "某位英雄的纪念塔，";
+			mes "或是一座恶魔的城堡…";
+			mes "[迪切]";
+			mes "雷根贝勒企业一直在研究";
 			close;
 		}
 	}
-	mes "Ah, hello~";
-	mes "How may I help you?";
+	mes "这座塔的起源，但到目前为止";
+	mes "尚未得出任何结论。";
 	next;
-	if(select("Reward:Nothing") == 2) {
-		mes "[Liei]";
-		mes "Alright, then.";
-		mes "Please do your best";
-		mes "to exterminate the";
-		mes "monsters that infest";
-		mes "the higher floors of";
-		mes "the Thanatos Tower~";
+	if(select("关于塔内的魔物:关于招募:……") == 2) {
+		mes "尽管很多研究人员";
+		mes "丧命于魔物的爪下，";
+		mes "但我们是不会放弃的！";
+		mes "[迪切]";
+		mes "我们确信这座塔";
+		mes "隐藏了很多秘密在其中，";
+		mes "并且在探索秘密的过程中，";
 		close;
 	}
-	mes "[Liei]";
+	mes "我们成功地";
 	mes "You're "+strcharinfo(0)+", yes?";
-	mes "Let me check our temp";
-	mes "employee records for--ah.";
-	mes "Here it is. Alright, so would";
-	mes "you please tell me what kind";
-	mes "of mission proof you brought?";
+	mes "重修了塔的头两层。";
+	mes "[迪切]";
+	mes "现在，我们正致力于";
+	mes "重修这座塔的3、4层。";
+	mes "幸运的是，很多冒险者";
 	next;
 	setarray .@Items[1],7435,7440,7441,7442;
-	set .@i, select("Golden Ornament:Red Feather:Blue Feather:Cursed Seal");
-	mes "[Liei]";
+	set .@i, select("下次吧:当然要参加！");
+	mes "参与了我们的招募，";
 	if (!countitem(.@Items[.@i])) {
-		mes "I'm sorry, but you are not";
+		mes "帮手清除塔中的魔物。";
 		mes "carrying any "+callfunc("F_GetPlural",getitemname(.@Items[.@i]))+".";
-		mes "Please check your inventory";
-		mes "one more time, and then come";
-		mes "to me to redeem your items";
-		mes "for a reward later, alright?";
+		mes "[迪切]";
+		mes "按照这个速度，";
+		mes "我们很快就能完成";
+		mes "对3、4层的重修工作，";
 		close;
 	}
-	mes "The reward for each";
+	mes "距离我们开放所有12层的";
 	mes getitemname(.@Items[.@i])+" is...";
-	mes " ";
-	mes "1,000 zeny";
+	mes "目标又进了一步。";
+	mes "[迪切]";
 	//mes "2,000 EXP";
 	next;
 	set .@zeny_tt,(countitem(.@Items[.@i]) * 1000);
 	//set .@exp_tt,(countitem(.@Items[.@i]) * 2000);
-	mes "[Liei]";
+	mes "是的，当我们";
 	mes callfunc("F_InsertPlural",countitem(.@Items[.@i]),getitemname(.@Items[.@i]))+", then";
-	mes "you will receive a total of...";
-	mes " ";
+	mes "开始对达纳托斯之塔";
+	mes "进行重修的时候，";
 	mes ""+.@zeny_tt+" zeny";
 	//mes ""+.@exp_tt+" EXP";
 	next;
-	mes "[Liei]";
-	mes "Would you like to exchange";
+	mes "那些像天使一样的魔物";
+	mes "就突然出现，";
 	mes "all of your "+callfunc("F_GetPlural",getitemname(.@Items[.@i]));
-	mes "for your reward right now?";
+	mes "并攻击我们的工人。";
 	next;
-	switch(select("Yes:No")) {
+	switch(select("Yes")) {
 		case 1:
-			mes "[Liei]";
-			mes "Great! Here is your";
+			mes "[迪切]";
+			mes "一开始，工人";
 			mes .@zeny_tt+" zeny. Thank you,";
 			//mes .@exp_tt+" EXP. Thank you,";
-			mes "and please keep up";
-			mes "the good work~";
+			mes "认为那些魔物";
+			mes "可能是天使。";
 			delitem .@Items[.@i], countitem(.@Items[.@i]);
 			set Zeny, Zeny + .@zeny_tt;
 			//getexp .@exp_tt,0;
 			close;
 		case 2:
-			mes "[Liei]";
-			mes "Sure, no problem.";
-			mes "Just come back and";
-			mes "talk to me whenever";
-			mes "you want to receive";
-			mes "your reward, alright?";
+			mes "但如果它们真的是天使，";
+			mes "怎么会无故就展开攻击？";
+			mes "[迪切]";
+			mes "无论如何，我们委托了";
+			mes "朱诺的贤者工会去调查";
+			mes "它们，结果证实了这些";
 			close;
 	}
 }

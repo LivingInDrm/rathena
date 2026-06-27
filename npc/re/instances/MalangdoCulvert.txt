@@ -23,17 +23,17 @@
 //============================================================
 mal_in01,172,28,2	script	Albo#mal	561,{
 	if (checkweight(1201,1) == 0) {
-		mes "You have too many kinds of objects. Try to continue after reducing those objects.";
+		mes "你携带了太多种类的物品.尝试减少物品种类然后继续.";
 		close;
 	}
 	if (MaxWeight - Weight < 1000) {
-		mes "You have too many heavy objects. Try to continue after reducing your weight.";
+		mes "你的负重不够了.尝试降低负重然后继续.";
 		close;
 	}
 	if (BaseLevel < 90) {
-		mes "[Albo]";
-		mes "Who are you?";
-		mes "We don't need a weaking!!";
+		mes "[阿尔多]";
+		mes "你是谁?";
+		mes "我们不需要弱者!!";
 		close;
 	}
 	setarray .@quests[0],12271,12272,12273,12274;
@@ -53,34 +53,34 @@ mal_in01,172,28,2	script	Albo#mal	561,{
 			set .@menu$, .@menu$+.@names$[.@i]+":";
 		}
 	}
-	mes "[Albo]";
-	mes "We crossed the sea!";
-	mes "We are great heroes of Culvert! We do not forgive the seafood that aims at Culvert!";
+	mes "[阿尔博]";
+	mes "我们穿越了海洋! 我们伟大的英雄!";
+	mes "绝不原谅! 不能原谅那些该死的海洋生物!";
 	next;
 	set .@i, select(.@menu$)-1;
 	if (.@i == 0) {
-		mes "[Albo]";
-		mes "We used to be the henchmen of Mr. Missing! We almost became guards of such a historic site.";
+		mes "[阿尔博]";
+		mes "我们曾是先生的心腹手下. 先生是一位能够创造历史的人物. 如果他完成了自己的梦想. 那我们也能够成为能够见证历史的非凡人物了.";
 		next;
-		mes "[Albo]";
-		mes "However, when sea water flooded all precious the resources, my dream... all my dreams melted away...";
+		mes "[阿尔博]";
+		mes "但是,海水和海洋生物淹没了一切. 先生所有珍贵的资料全部被海水和海洋生物吞噬了. 我们的梦想... 梦想... ";
 		next;
-		mes "[Albo]";
-		mes "We do not forgive the seafood that invaded our territory. I'll eat them with spicy paste!!!";
+		mes "[阿尔博]";
+		mes "所以绝对不可原谅那些海洋生物!!! 我一定要把它们做成海鲜色拉,然后用辣椒糊在一起吃掉.";
 		next;
-		mes "^0000ffAlbo's voice shakes with anger. He smacked his lips when he mentioned spicy paste.^000000";
+		mes "^0000ff阿尔博的声音因为愤怒而颤抖,当他说到辣椒糊在一起吃掉的时候, 不小心砸到了自己的嘴唇.^000000";
 		close;
 	}
 	switch(.@status[.@i-1]) {
 	case 0:
-		mes "[Albo]";
-		mes "That task is really hard for you, so I can't tell you about it. Why don't you find another one?";
+		mes "[阿尔博]";
+		mes "这项任务对你来说很难.我不能告诉你为什么.你考虑下接找另一个吧?";
 		close;
 	case 1:
 		break;
 	case 2:
-		mes "[Albo]";
-		mes "I'm sorry. There is no new task yet! If I find any work, I'll tell you so!";
+		mes "[阿尔博]";
+		mes "对不起,有没有新的任务!如果我有需要做的,我会告诉你的!";
 		close;
 	}
 	switch(.@i) {
@@ -113,8 +113,8 @@ mal_in01,172,28,2	script	Albo#mal	561,{
 			case 2: callsub L_GiveQuest,.@i,12270,12274,"Mutant Coelacanth";
 		}
 	default:
-		mes "[Albo]";
-		mes "Uh!? Where is the task? Let me find that quickly. You must speak with Madeca!";
+		mes "[阿尔博]";
+		mes "呃!? 哪里的任务? 让我查查. 你最好问下马德卡.";
 		close;
 	}
 	end;
@@ -123,21 +123,21 @@ mal_in01,172,28,2	script	Albo#mal	561,{
 L_GiveQuest:
 	setquest getarg(1);
 	setquest getarg(2);
-	mes "[Albo]";
-	mes "Today, the heroes of Culvert!";
+	mes "[阿尔博]";
+	mes "今天的深海英雄!";
 	mes "We raise our voices and set a date for the extermination of ^0000ff"+getarg(3)+"^000000!";
 	next;
-	mes "[Albo]";
+	mes "[阿尔博]";
 	switch(getarg(0)) {
 	case 1:
 	case 2:
-		mes "Come on, heroes! Don't be afraid of them! Just go on, since it's a one-day mission!";
+		mes "来吧,伙计! 不用担心,放手去做吧! 这是一个日常任务!";
 		break;
 	case 3:
-		mes "I'll give you one week to finish this job! Terminate all of them in Culvert Dungeon, Normal Mode!";
+		mes "我给你1周时间来完成这个任务,在副本里把它们全部杀死!(普通模式)";
 		break;
 	case 4:
-		mes "I'll give you one week to finish this job! Terminate all of them in Culvert Dungeon, Hard Mode!";
+		mes "我给你1周时间来完成这个任务,在副本里把它们全部杀死!(困难模式)";
 		break;
 	}
 	next;
@@ -147,43 +147,43 @@ L_GiveQuest:
 
 mal_in01,172,26,2	script	Madeca#mal	544,{
 	if (checkweight(1201,1) == 0) {
-		mes "You have too many kinds of objects. Try to continue after reducing those objects.";
+		mes "你携带了太多种类的物品.尝试减少物品种类然后继续.";
 		close;
 	}
 	if (MaxWeight - Weight < 1000) {
-		mes "You have too many heavy objects. Try to continue after reducing your weight.";
+		mes "你的负重不够了.尝试降低负重然后继续.";
 		close;
 	}
 	if (BaseLevel < 90) {
-		mes "[Madeca]";
+		mes "[马德卡]";
 		mes "Karrrrrrr!!";
-		mes "Let's have some bad seafood that can be boiled or grilled!";
+		mes "让我们搞一些该死的海洋生物来烧烤!";
 		next;
-		mes "[Madeca]";
-		mes "Who are you? You are such a totterer. Even seaweed could kill you!";
+		mes "[马德卡]";
+		mes "你是谁? 你这样的人连海藻都可以干掉你!";
 		close;
 	}
-	mes "[Madeca]";
-	mes "Oh?";
-	mes "You're the one who took care of my big brother Albo's request. It was a hard job!";
+	mes "[马德卡]";
+	mes "噢?";
+	mes "你接受了我大哥阿尔博的任务. 这可是个苦差事!";
 	next;
-	set .@i, select("What are you doing here?:General Culvert Daily Service Compensation:Hard Culvert Daily Service Compensation:General Culvert Weekly Service Compensation:Hard Culvert Weekly Service Compensation")-1;
+	set .@i, select("- 你在这里做什么?:- 日常普通模式任务奖励:- 日常困难模式任务奖励:- 周常普通模式任务奖励:- 周常困难模式任务奖励")-1;
 	if (.@i == 0) {
-		mes "[Madeca]";
-		mes "I'm here to help my big brother Albo!";
+		mes "[马德卡]";
+		mes "我在这里协助我大哥阿尔博!";
 		next;
-		mes "[Madeca]";
-		mes "We provide precious materials to humans who make sludge out of the bad seafood in the Culverts!";
+		mes "[马德卡]";
+		mes "谁能把这些肮脏的海洋生物清理出海底,我们就会奖励给他宝贵的财富!";
 		next;
-		mes "[Madeca]";
-		mes "We provide A~B Grade Coins as compensation for daily service, and the precious Sea God's Wrath as compensation for weekly service.";
+		mes "[马德卡]";
+		mes "我们提供A和B级硬币作为日常任务的奖励,周任务奖励是最最宝贵的海神之怒.";
 		next;
-		mes "[Madeca]";
-		mes "If you take care of big brother Albo's request, I will see you very often. So, let's stay close!";
+		mes "[马德卡]";
+		mes "如果你接受了我大哥阿尔博的任务,我会非常乐意见到你.所以,让我们站的靠近点!";
 		close;
 	}
-	mes "[Madeca]";
-	mes "I can't give you compensation for an expired request, so let me check if any of yours have expired.";
+	mes "[马德卡]";
+	mes "我可不会给过期任务发放奖励,所以先让我检查一下.";
 	next;
 	specialeffect2 EF_SPHERE;
 	progressbar "0xFFFF00",3;
@@ -234,12 +234,12 @@ mal_in01,172,26,2	script	Madeca#mal	544,{
 		}
 		break;
 	default:
-		mes "[Madeca]";
-		mes "Something is wrong. Please check this again!";
+		mes "[马德卡]";
+		mes "有些错误. 请再检查一下!";
 		close;
 	}
-	mes "[Madeca]";
-	mes "I don't see any completed mission!";
+	mes "[马德卡]";
+	mes "我没看到有任何一个任务已经完成!";
 	close;
 
 L_EraseQuest:
@@ -247,16 +247,16 @@ L_EraseQuest:
 		if (checkquest(getarg(.@j)) > -1)
 			erasequest getarg(.@j);
 	}
-	mes "[Madeca]";
-	mes "Um, I'm sorry. You exceeded the time limit, so I can't give you any payment.";
+	mes "[马德卡]";
+	mes "嗯,我很抱歉. 超过标准的任务期限, 所以我不能给你任何奖励.";
 	close;
 
 // callsub L_CheckQuest,<quest ID>,<monster>,<reward item ID>,<reward item amount>;
 L_CheckQuest:
 	if (checkquest(getarg(0),HUNTING) == 2) {
-		mes "[Madeca]";
+		mes "[马德卡]";
 		mes "You've punished ^0000ff"+getarg(1)+"^000000!";
-		mes "Here's your pay!";
+		mes "这是你的奖励!";
 		erasequest getarg(0);
 		specialeffect2 EF_STEAL;
 		getitem getarg(2),getarg(3);

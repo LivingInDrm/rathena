@@ -15,7 +15,18 @@ Key design decisions:
   - pre-re/cities/ reuses cities/ translations (same NPCs, different era)
 
 Usage:
-    python npc_cn_translate.py [--dry-run] [--no-backup]
+    python npc_cn_translate.py [--dry-run] [--no-backup] [--force-download]
+
+Options:
+    --dry-run         Show what would be changed without writing files
+    --no-backup       Skip backing up original files
+    --force-download  Re-download CN translation zip even if cache exists
+
+Coverage (najoast/rathena_npc_translate zh-CN/npc/):
+    cities, airports, battleground, events, guild, guild2, instances,
+    jobs, kafras, merchants, mobs, other, quests, warps, custom,
+    pre-re/{airports,guides,jobs,kafras,merchants,mobs,other,quests,warps},
+    re/{airports,guides,guild,instances,jobs,kafras,merchants,mobs,other,quests,warps,custom}
 """
 
 import re
@@ -24,14 +35,21 @@ import sys
 import shutil
 import urllib.request
 import urllib.error
+import zipfile
+import io
 from pathlib import Path
 from typing import Optional
 
 # ─── Configuration ──────────────────────────────────────────────────────────
 
-GITHUB_BASE = "https://raw.githubusercontent.com/najoast/rathena_npc_translate/master/zh-CN/npc/"
-RATHENA_NPC = Path(r"D:\Projects\rathena\npc")
+GITHUB_BASE  = "https://raw.githubusercontent.com/najoast/rathena_npc_translate/master/zh-CN/npc/"
+GITHUB_ZIP   = "https://github.com/najoast/rathena_npc_translate/archive/refs/heads/master.zip"
+RATHENA_NPC  = Path(r"D:\Projects\rathena\npc")
 BACKUP_DIR   = Path(r"D:\Projects\rathena\npc_backup_en")
+CN_CACHE_DIR = Path(r"D:\Projects\rathena\tmp\cn_cache")
+
+# In-memory cache populated by download_repo_zip()
+_CN_CACHE: dict = {}   # cn_relative_path -> str content
 
 # (english_relative_path, chinese_relative_path)
 # english path is relative to RATHENA_NPC
@@ -52,16 +70,51 @@ def build_file_mappings():
             en_rel = str(Path(en_dir) / rel)
             mappings.append((en_rel, cn_rel))
 
-    # cities
-    add_dir("cities",       "cities")
-    # airports
-    add_dir("airports",     "airports")
-    # battleground
-    add_dir("battleground", "battleground")
+    # ── Shared (non-RE) directories ──────────────────────────────────────────
+    add_dir("cities",        "cities")
+    add_dir("airports",      "airports")
+    add_dir("battleground",  "battleground")
+    add_dir("events",        "events")
+    add_dir("guild",         "guild")
+    add_dir("guild2",        "guild2")
+    add_dir("instances",     "instances")
+    add_dir("jobs",          "jobs")
+    add_dir("kafras",        "kafras")
+    add_dir("merchants",     "merchants")
+    add_dir("mobs",          "mobs")
+    add_dir("other",         "other")
+    add_dir("quests",        "quests")
+    add_dir("warps",         "warps")
+    add_dir("custom",        "custom")
+
+    # ── pre-re directories ────────────────────────────────────────────────────
     # pre-re/cities → reuse cities/ translations
-    add_dir("pre-re/cities", "cities")
+    add_dir("pre-re/cities",     "cities")
+    add_dir("pre-re/airports",   "pre-re/airports")
+    add_dir("pre-re/guides",     "pre-re/guides")
+    add_dir("pre-re/jobs",       "pre-re/jobs")
+    add_dir("pre-re/kafras",     "pre-re/kafras")
+    add_dir("pre-re/merchants",  "pre-re/merchants")
+    add_dir("pre-re/mobs",       "pre-re/mobs")
+    add_dir("pre-re/other",      "pre-re/other")
+    add_dir("pre-re/quests",     "pre-re/quests")
+    add_dir("pre-re/warps",      "pre-re/warps")
+
+    # ── re/ directories ───────────────────────────────────────────────────────
     # re/cities → reuse cities/ translations
-    add_dir("re/cities",    "cities")
+    add_dir("re/cities",         "cities")
+    add_dir("re/airports",       "re/airports")
+    add_dir("re/guides",         "re/guides")
+    add_dir("re/guild",          "re/guild")
+    add_dir("re/instances",      "re/instances")
+    add_dir("re/jobs",           "re/jobs")
+    add_dir("re/kafras",         "re/kafras")
+    add_dir("re/merchants",      "re/merchants")
+    add_dir("re/mobs",           "re/mobs")
+    add_dir("re/other",          "re/other")
+    add_dir("re/quests",         "re/quests")
+    add_dir("re/warps",          "re/warps")
+    add_dir("re/custom",         "re/custom")
 
     FILE_MAPPINGS = mappings
 
@@ -286,18 +339,84 @@ def apply_translation(en_content: str, cn_content: str) -> tuple:
 
 # ─── File I/O ─────────────────────────────────────────────────────────────────
 
+def download_repo_zip(force: bool = False):
+    """Download the entire najoast repo as a zip and populate _CN_CACHE.
+    Uses CN_CACHE_DIR as a disk cache so subsequent runs are instant.
+    Set force=True to re-download even if cache exists.
+    """
+    global _CN_CACHE
+    marker = CN_CACHE_DIR / ".done"
+
+    if not force and marker.exists():
+        # Load from disk cache
+        print("  Loading CN translations from disk cache...")
+        count = 0
+        for f in CN_CACHE_DIR.rglob("*.txt"):
+            rel = f.relative_to(CN_CACHE_DIR).as_posix()
+            try:
+                _CN_CACHE[rel] = f.read_text(encoding='utf-8')
+                count += 1
+            except Exception:
+                pass
+        print(f"  Loaded {count} cached files.")
+        return
+
+    print(f"  Downloading CN translation repo zip from GitHub...")
+    CN_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+    try:
+        req = urllib.request.Request(GITHUB_ZIP, headers={'User-Agent': 'rAthena-translate/1.0'})
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = resp.read()
+    except Exception as e:
+        print(f"  ERROR downloading zip: {e}")
+        print("  Falling back to per-file HTTP fetching.")
+        return
+
+    print(f"  Downloaded {len(data)//1024} KB, extracting...")
+    count = 0
+    prefix = "rathena_npc_translate-master/zh-CN/npc/"
+    with zipfile.ZipFile(io.BytesIO(data)) as zf:
+        for name in zf.namelist():
+            if name.startswith(prefix) and name.endswith('.txt'):
+                rel = name[len(prefix):]
+                if not rel:
+                    continue
+                raw = zf.read(name)
+                try:
+                    content = raw.decode('utf-8-sig')
+                except UnicodeDecodeError:
+                    content = raw.decode('latin-1')
+                _CN_CACHE[rel] = content
+                # Write to disk cache
+                dst = CN_CACHE_DIR / rel
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                dst.write_text(content, encoding='utf-8')
+                count += 1
+
+    marker.write_text("ok")
+    print(f"  Extracted {count} CN translation files to cache.")
+
+
 def fetch_cn_file(cn_relative: str) -> Optional[str]:
-    """Fetch Chinese translation file from GitHub (UTF-8)."""
-    url = GITHUB_BASE + cn_relative
+    """Return Chinese translation file content (UTF-8 string).
+    Uses in-memory cache if available, otherwise falls back to HTTP.
+    """
+    # Normalize path separators
+    key = cn_relative.replace('\\', '/')
+    if key in _CN_CACHE:
+        return _CN_CACHE[key]
+
+    # Fallback: per-file HTTP fetch (used when zip download failed)
+    url = GITHUB_BASE + key
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'rAthena-translate/1.0'})
         with urllib.request.urlopen(req, timeout=30) as resp:
             raw = resp.read()
-            # strip BOM if present
             return raw.decode('utf-8-sig')
     except urllib.error.HTTPError as e:
         if e.code == 404:
-            return None  # file doesn't exist in CN repo
+            return None
         print(f"    HTTP {e.code} fetching {url}")
         return None
     except Exception as e:
@@ -323,8 +442,9 @@ def write_gbk(path: Path, content: str):
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
-    dry_run   = '--dry-run' in sys.argv
-    no_backup = '--no-backup' in sys.argv
+    dry_run        = '--dry-run'        in sys.argv
+    no_backup      = '--no-backup'      in sys.argv
+    force_download = '--force-download' in sys.argv
 
     build_file_mappings()
 
@@ -333,6 +453,10 @@ def main():
     print(f"  Backup:   {BACKUP_DIR}")
     print(f"  Dry run:  {dry_run}")
     print(f"  Total mappings: {len(FILE_MAPPINGS)}")
+    print()
+
+    # Download / load CN translation cache (one zip instead of 928 HTTP requests)
+    download_repo_zip(force=force_download)
     print()
 
     total_files  = 0

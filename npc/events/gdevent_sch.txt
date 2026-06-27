@@ -61,8 +61,8 @@ OnMyMobDead:
 
 schg_dun01,194,148,5	script	Dwarf#sch_gd	826,{
 	if (getcharid(2) == 0) {
-		mes "[Dwarf]";
-		mes "Hey did you see an ugly Goblin come by? He stole something from me!";
+		mes "[侏儒]";
+		mes "你见到长得很难看的库布林了吗？那个家伙偷走了我的东西！";
 		close;
 	}
 	set .@chk_urquest,checkquest(2143,PLAYTIME);
@@ -71,88 +71,88 @@ schg_dun01,194,148,5	script	Dwarf#sch_gd	826,{
 		if ($@gdevents_s$ == "") {
 			set $@gdeventv_s1,1;
 			set $@gdevents_s$,.@chk_yourgdname$;
-			mes "[Dwarf]";
-			mes "Help me!";
-			mes "Please, help me!";
+			mes "[侏儒]";
+			mes "帮帮我！";
+			mes "请您帮帮我！";
 			next;
-			switch(select("What happened?:Nevermind.")) {
+			switch(select("有什么事吗？:对不起")) {
 			case 1:
-				mes "[Dwarf]";
-				mes "I am Morestone and I collect rare gems.";
+				mes "[侏儒]";
+				mes "我是喜欢采掘矿石的矿石收集家，名叫摩尔斯通。";
 				next;
-				mes "[Morestone]";
-				mes "In my travels, I was told that there were a lot of gems in Valfreyja and Nidhoggur, so I came down here.";
-				mes "But here, the soil is very hard to dig into. Fortunately, my ^3131FFPickaxe^000000 never lets me down!";
+				mes "[摩尔斯通]";
+				mes "我在旅行的过程中听到巴尔普雷亚和尼达贝尔地区开放的消息，我就赶了过来，看看这里有没有什么珍贵的矿石。";
+				mes "因为警卫非常森严，地面也很坚硬，所以非常辛苦。但在我的^3131FF迪格达^000000面前，没有困难这两个字！";
 				next;
-				select("Pickaxe!");
-				mes "[Morestone]";
-				mes "Yes, my beloved pickaxe!";
-				mes "I always carry it with me, you know?";
+				select("迪格达!");
+				mes "[摩尔斯通]";
+				mes "就是我每天冲着大地唱着清脆的歌的我的十字镐！ ";
+				mes "我和迪格达之间有着非常强烈的信任。因为我不管在什么时候都在聆听他呼唤我的声音。";
 				next;
-				mes "[Morestone]";
-				mes "We started working here together.";
-				mes "After a few days, we finally found something!";
+				mes "[摩尔斯通]";
+				mes "来到这里之后，我们立刻就开始工作。";
+				mes "我慎重地查看地面，而迪格达为我和坚硬的大地展开了战斗。经过几天之后，我们很快有了成果。";
 				next;
-				select("Something strange??");
-				mes "[Morestone]";
-				mes "No, but it was worth quite a lot.";
-				mes "But we did not have much time to celebrate. Suddenly, a monster appeared that stole my pickaxe.";
-				mes "His name was^3131FFKublin^000000!";
+				select("发现了新的矿石吗??");
+				mes "[摩尔斯通]";
+				mes "不是的。但我们发现了更神奇、更了不起的东西。";
+				mes "但是那种喜悦只是暂时的。我和迪格达因为突然出现的怪物的戏弄，现在不得不面对分开的痛苦。";
+				mes "那个怪物就是^3131FF库布林^000000！";
 				next;
-				mes "[Morestone]";
-				mes "He stole my Pickaxe!";
-				mes "I can't live without it...";
+				mes "[摩尔斯通]";
+				mes "它们偷走了我的迪格达。";
+				mes "没有迪格达的话，我什么都干不了……";
 				next;
 				if (countitem(6010) > 0) {
 					mes "[" + strcharinfo(0) + "]";
-					mes "Is this the pickaxe that you've been looking for?";
+					mes "这是你正在寻找的十字镐吗？";
 					next;
-					mes "[Morestone]";
-					mes "You found my Pickaxe?";
-					mes "Show me, please!";
+					mes "[摩尔斯通]";
+					mes "你找到了我的迪格达？？？？";
+					mes "快给我看看！";
 					next;
-					mes "[Morestone]";
-					mes "Oh, my! You've returned it to me!";
-					mes "My precious pickaxe, I thought I lost you forever.";
+					mes "[摩尔斯通]";
+					mes "哦，真的是啊。他终于又回到了我的身边！";
+					mes "迪格达，我的宝贝。我还担心会永远失去你了呢。";
 					next;
-					mes "[Morestone]";
-					mes "You are great! What guild are you from?";
-					mes "Could it be Gravity or Mercury?";
+					mes "[摩尔斯通]";
+					mes "不过像你这么出色的人，到底是来自哪个公会呢？";
+					mes "重力星人？还是哪美克星人？";
 					next;
 					mes "[" + strcharinfo(0) + "]";
 					mes "I am a member of the ^3131FF"+.@chk_yourgdname$+"^.";
 					next;
-					mes "[Morestone]";
-					mes "Oh... That guild will receive my greatest respect.";
+					mes "[摩尔斯通]";
+					mes "哦……光听名字就知道那个地方很有魄力，让人感觉非常勇猛。";
 					next;
-					mes "[Morestone]";
-					mes "Oh! My friend, I am very grateful for your help.";
-					mes "As a reward, I will tell you about a mysterious area I have discovered recently.";
+					mes "[摩尔斯通]";
+					mes "勇猛的勇士啊，你帮我找回了比生命还要珍贵的东西，我的喜悦真的难以言表。";
+					mes "作为给善良的你的报酬，我告诉你一个我不久之前发现的神奇的地方。怎么样？";
 					next;
-					select("A mysterious area?");
-					mes "[Morestone]";
-					mes "That's right. I found it when I was digging around here.";
-					mes "It looks like it was made for some special purpose, but since there are no gems around there, I have no interest in it.";
+					select("神奇的地方?");
+					mes "[摩尔斯通]";
+					mes "没错。是我在这个附近仔细地对地面进行挖掘的时候偶然发现的。";
+					mes "好像是为了某个特殊的目的而建造的场所，但是因为不是矿石，所以对我来说没有太大的意义。";
 					next;
-					mes "[Morestone]";
-					mes "Instead of going there alone, I think it would be more fun to go with your friends...";
+					mes "[摩尔斯通]";
+					mes "我觉得比起一个人去那个地方，^3131FF和朋友们一起去的话，应该会更有意思^000000……";
 					next;
-					mes "[Morestone]";
-					mes "If you want, I can take ^3131FFyou and your guild members^000000 to explore that area.";
-					mes "Do you want to go there now?";
+					mes "[摩尔斯通]";
+					mes "如果你愿意的话，我可以让^3131FF你和你所属的公会成员^000000一起去那里玩。";
+					mes "你想去那里看一看吗？";
 					next;
-					switch(select("Wait! I'm not ready yet.:Let's go!")) {
+					switch(select("等等！我还没准备好呢。:出发！")) {
 					case 1:
 						set $@gdeventv_s1,0;
 						set $@gdevents_s$,"";
-						mes "[Morestone]";
-						mes "Take your time, and find a place to gather your friends.";
+						mes "[摩尔斯通]";
+						mes "你去什么地方召集其他的朋友和同伴吧。";
 						close;
 					case 2:
-						mes "[Morestone]";
-						mes "Alright! Let's go.";
-						mes "If your friends visit me again later, I will guide them to that area again.";
-						mes "Don't forget, dwarves are grateful beings! Hahaha!";
+						mes "[摩尔斯通]";
+						mes "好的！那我们走吧！";
+						mes "今后你的朋友们来找我的话，我也同样会把他们介绍到那个地方去。";
+						mes "不要忘记，侏儒是明白道理的种族。呵呵呵！";
 						delitem 6010,1; //Pickaxe
 						set $@gdeventv_s1,1;
 						set $@gdevents_s$,.@chk_yourgdname$;
@@ -165,127 +165,127 @@ schg_dun01,194,148,5	script	Dwarf#sch_gd	826,{
 				else {
 					set $@gdeventv_s1,0;
 					set $@gdevents_s$,"";
-					mes "[Morestone]";
-					mes "I will tell you how to find him.";
-					mes "Kublin wears a ridiculous golden hat, It should be easy to recognise him by that.";
+					mes "[摩尔斯通]";
+					mes "如果发现它们的话，请你告诉我。";
+					mes "库布林带着搞笑的黄帽子，所以应该不难发现。";
 					close;
 				}
 			case 2:
 				set $@gdeventv_s1,0;
 				set $@gdevents_s$,"";
 				emotion ET_CRY;
-				mes "[Dwarf]";
-				mes "Ahhh...";
+				mes "[侏儒]";
+				mes "啊啊....";
 				close;
 			}
 		}
 		else if ($@gdevents_s$ == .@chk_yourgdname$) {
 			set .@chk_urquest1,checkquest(2144);
 			if ((.@chk_urquest1 == 0) || (.@chk_urquest1 == 1)) {
-				mes "[Morestone]";
+				mes "[摩尔斯通]";
 				mes "I, Morestone, have made an alliance with the "+$@gdevents_s$+" guild.";
-				mes "Oh, you are a member.";
-				mes "Would you like to go to the mysterious area?";
+				mes "我现在已经和+$@gdevents_s$+的公会结成了同盟关系。";
+				mes "啊，你刚好是他们的成员吧。";
 				next;
-				switch(select("Let's go.:No, thanks.")) {
+				switch(select("移动。:不移动。")) {
 				case 1:
-					mes "[Morestone]";
-					mes "I hope you enjoy yourself, my friend.";
+					mes "你要移动到约定的地点吗？";
+					mes "[摩尔斯通]";
 					close2;
 					warp "schg_que01",103,133;
 					end;
 				case 2:
-					mes "[Morestone]";
-					mes "If you need my assistance, just ask.";
-					mes "Ah! Dont forget, I hate monsters! So I don't want to see them. It will be better if you ask for another favour.";
+					mes "希望你享受快乐的时光，朋友。";
+					mes "[摩尔斯通]";
+					mes "在需要的时候，你可以随时向我请求帮助。";
 					close;
 				}
 			}
 			else {
 				set $@gdeventv_s1,1;
 				set $@gdevents_s$,.@chk_yourgdname$;
-				mes "[Dwarf]";
-				mes "Help me!";
-				mes "Please, help me!";
+				mes "啊！但是我觉得怪物太不吉利，所以不想见到它们。你最好是拜托我做点别的事情。";
+				mes "[侏儒]";
+				mes "帮帮我！";
 				next;
-				switch(select("What happened?:Nevermind.")) {
+				switch(select("有什么事吗？:对不起")) {
 				case 1:
-					mes "[Dwarf]";
-					mes "I am Morestone and I collect rare gems.";
+					mes "请您帮帮我！";
+					mes "[侏儒]";
 					next;
-					mes "[Morestone]";
-					mes "In my travels, I was told that there were a lot of gems in Valfreyja and Nidhoggur, so I came down here.";
-					mes "But here, the soil is very hard to dig into. Fortunately, my ^3131FFPickaxe^000000 never lets me down!";
+					mes "我是喜欢采掘矿石的矿石收集家，名叫摩尔斯通。";
+					mes "[摩尔斯通]";
+					mes "我在旅行的过程中听到巴尔普雷亚和尼达贝尔地区开放的消息，我就赶了过来，看看这里有没有什么珍贵的矿石。";
 					next;
-					select("Pickaxe!");
-					mes "[Morestone]";
-					mes "Yes, my beloved pickaxe!";
-					mes "I always carry it with me, you know?";
+					select("迪格达!");
+					mes "因为警卫非常森严，地面也很坚硬，所以非常辛苦。但在我的^3131FF迪格达^000000面前，没有困难这两个字！";
+					mes "[摩尔斯通]";
+					mes "就是我每天冲着大地唱着清脆的歌的我的十字镐！ ";
 					next;
-					mes "[Morestone]";
-					mes "We started working here together.";
-					mes "After a few days, we finally found something!";
+					mes "我和迪格达之间有着非常强烈的信任。因为我不管在什么时候都在聆听他呼唤我的声音。";
+					mes "[摩尔斯通]";
+					mes "来到这里之后，我们立刻就开始工作。";
 					next;
-					select("Something strange??");
-					mes "[Morestone]";
-					mes "No, but it was worth quite a lot.";
-					mes "But we did not have much time to celebrate. Suddenly, a monster appeared that stole my pickaxe.";
-					mes "His name was^3131FFKublin^000000!";
+					select("发现了新的矿石吗??");
+					mes "我慎重地查看地面，而迪格达为我和坚硬的大地展开了战斗。经过几天之后，我们很快有了成果。";
+					mes "[摩尔斯通]";
+					mes "不是的。但我们发现了更神奇、更了不起的东西。";
+					mes "但是那种喜悦只是暂时的。我和迪格达因为突然出现的怪物的戏弄，现在不得不面对分开的痛苦。";
 					next;
-					mes "[Morestone]";
-					mes "He stole my Pickaxe!";
-					mes "I can't live without it...";
+					mes "那个怪物就是^3131FF库布林^000000！";
+					mes "[摩尔斯通]";
+					mes "它们偷走了我的迪格达。";
 					next;
 					if (countitem(6010) > 0) {
 						mes "[" + strcharinfo(0) + "]";
-						mes "Is this the pickaxe that you've been looking for?";
+						mes "没有迪格达的话，我什么都干不了……";
 						next;
-						mes "[Morestone]";
-						mes "You found my Pickaxe?";
-						mes "Show me, please!";
+						mes "这是你正在寻找的十字镐吗？";
+						mes "[摩尔斯通]";
+						mes "你找到了我的迪格达？？？？";
 						next;
-						mes "[Morestone]";
-						mes "Oh, my! You've returned it to me!";
-						mes "My precious pickaxe, I thought I lost you forever.";
+						mes "快给我看看！";
+						mes "[摩尔斯通]";
+						mes "哦，真的是啊。他终于又回到了我的身边！";
 						next;
-						mes "[Morestone]";
-						mes "You are great! What guild are you from?";
-						mes "Could it be Gravity or Mercury?";
+						mes "迪格达，我的宝贝。我还担心会永远失去你了呢。";
+						mes "[摩尔斯通]";
+						mes "不过像你这么出色的人，到底是来自哪个公会呢？";
 						next;
 						mes "[" + strcharinfo(0) + "]";
 						mes "I am a member of the ^3131FF"+.@chk_yourgdname$+"^.";
 						next;
-						mes "[Morestone]";
-						mes "Oh... That guild will receive my greatest respect.";
+						mes "重力星人？还是哪美克星人？";
+						mes "[摩尔斯通]";
 						next;
-						mes "[Morestone]";
-						mes "Oh! My friend, I am very grateful for your help.";
-						mes "As a reward, I will tell you about a mysterious area I have discovered recently.";
+						mes "哦……光听名字就知道那个地方很有魄力，让人感觉非常勇猛。";
+						mes "[摩尔斯通]";
+						mes "勇猛的勇士啊，你帮我找回了比生命还要珍贵的东西，我的喜悦真的难以言表。";
 						next;
-						select("A mysterious area?");
-						mes "[Morestone]";
-						mes "That's right. I found it when I was digging around here.";
-						mes "It looks like it was made for some special purpose, but since there are no gems around there, I have no interest in it.";
+						select("神奇的地方?");
+						mes "作为给善良的你的报酬，我告诉你一个我不久之前发现的神奇的地方。怎么样？";
+						mes "[摩尔斯通]";
+						mes "没错。是我在这个附近仔细地对地面进行挖掘的时候偶然发现的。";
 						next;
-						mes "[Morestone]";
-						mes "Instead of going there alone, I think it would be more fun to go with your friends...";
+						mes "好像是为了某个特殊的目的而建造的场所，但是因为不是矿石，所以对我来说没有太大的意义。";
+						mes "[摩尔斯通]";
 						next;
-						mes "[Morestone]";
-						mes "If you want, I can take ^3131FFyou and your guild members^000000 to explore that area.";
-						mes "Do you want to go there now?";
+						mes "我觉得比起一个人去那个地方，^3131FF和朋友们一起去的话，应该会更有意思^000000……";
+						mes "[摩尔斯通]";
+						mes "如果你愿意的话，我可以让^3131FF你和你所属的公会成员^000000一起去那里玩。";
 						next;
-						switch(select("Wait! I'm not ready yet.:Let's go!")) {
+						switch(select("等等！我还没准备好呢。:出发！")) {
 						case 1:
 							set $@gdeventv_s1,0;
 							set $@gdevents_s$,"";
-							mes "[Morestone]";
-							mes "Take your time, and find a place to gather your friends.";
+							mes "你想去那里看一看吗？";
+							mes "[摩尔斯通]";
 							close;
 						case 2:
+							mes "你去什么地方召集其他的朋友和同伴吧。";
 							mes "[Morestone]";
-							mes "Alright! Let's go.";
-							mes "If your friends visit me again later, I will guide them to that area again.";
-							mes "Don't forget, dwarves are grateful beings! Hahaha!";
+							mes "好的！那我们走吧！";
+							mes "今后你的朋友们来找我的话，我也同样会把他们介绍到那个地方去。";
 							delitem 6010,1; //Pickaxe
 							set $@gdeventv_s1,1;
 							set $@gdevents_s$,.@chk_yourgdname$;
@@ -298,26 +298,26 @@ schg_dun01,194,148,5	script	Dwarf#sch_gd	826,{
 					else {
 						set $@gdeventv_s1,0;
 						set $@gdevents_s$,"";
-						mes "[Morestone]";
-						mes "I will tell you how to find him.";
-						mes "Kublin wears a ridiculous golden hat, It should be easy to recognise him by that.";
+						mes "不要忘记，侏儒是明白道理的种族。呵呵呵！";
+						mes "[摩尔斯通]";
+						mes "如果发现它们的话，请你告诉我。";
 						close;
 					}
 				case 2:
 					set $@gdeventv_s1,0;
 					set $@gdevents_s$,"";
 					emotion ET_CRY;
-					mes "[Dwarf]";
-					mes "Ah....";
+					mes "库布林带着搞笑的黄帽子，所以应该不难发现。";
+					mes "[侏儒]";
 					close;
 				}
 			}
 		}
 		else {
-			mes "[Morestone]";
+			mes "Ah....";
 			mes "I, Morestone, have made an alliance with the "+$@gdevents_s$+" guild.";
-			mes "Hm, you're not a member.";
-			mes "Could you please give them my greetings?";
+			mes "[摩尔斯通]";
+			mes "我现在已经和”+chk_usegdname+”的公会结成了同盟关系。";
 			close;
 		}
 	}
@@ -325,110 +325,110 @@ schg_dun01,194,148,5	script	Dwarf#sch_gd	826,{
 		if ($@gdevents_s$ == .@chk_yourgdname$) {
 			set .@chk_urquest1,checkquest(2144);
 			if ((.@chk_urquest1 == 0) || (.@chk_urquest1 == 1)) {
-				mes "[Morestone]";
+				mes "你不是那里的成员啊。那你能帮我向他们转达一下问候吗？";
 				mes "I, Morestone, have made an alliance with the "+$@gdevents_s$+" guild.";
-				mes "Oh, you are a member.";
-				mes "Would you like to go to the mysterious area?";
+				mes "[摩尔斯通]";
+				mes "啊，你刚好是他们的成员吧。";
 				next;
-				switch(select("Let's go.:No, thanks.")) {
+				switch(select("移动。:不移动。")) {
 				case 1:
-					mes "[Morestone]";
-					mes "I hope you enjoy yourself, my friend.";
+					mes "你要移动到约定的地点吗？";
+					mes "[摩尔斯通]";
 					close2;
 					warp "schg_que01",103,133;
 					end;
 				case 2:
-					mes "[Morestone]";
-					mes "If you need my assistance, just ask.";
-					mes "Ah! Dont forget, I hate monsters! So I don't want to see them. It will be better if you ask for another favour.";
+					mes "希望你享受快乐的时光，朋友。";
+					mes "[摩尔斯通]";
+					mes "在需要的时候，你可以随时向我请求帮助。";
 					close;
 				}
 			}
 			else {
 				set $@gdeventv_s1,1;
 				set $@gdevents_s$,.@chk_yourgdname$;
-				mes "[Dwarf]";
-				mes "Help me!";
-				mes "Please, help me!";
+				mes "啊！但是我觉得怪物太不吉利，所以不想见到它们。你最好是拜托我做点别的事情。";
+				mes "[侏儒]";
+				mes "帮帮我！";
 				next;
-				switch(select("What happened?:Nevermind.")) {
+				switch(select("有什么事吗？:对不起")) {
 				case 1:
-					mes "[Dwarf]";
-					mes "I am Morestone and I collect rare gems.";
+					mes "请您帮帮我！";
+					mes "[侏儒]";
 					next;
-					mes "[Morestone]";
-					mes "In my travels, I was told that there were a lot of gems in Valfreyja and Nidhoggur, so I came down here.";
-					mes "But here, the soil is very hard to dig into. Fortunately, my ^3131FFPickaxe^000000 never lets me down!";
+					mes "我是喜欢采掘矿石的矿石收集家，名叫摩尔斯通。";
+					mes "[摩尔斯通]";
+					mes "我在旅行的过程中听到巴尔普雷亚和尼达贝尔地区开放的消息，我就赶了过来，看看这里有没有什么珍贵的矿石。";
 					next;
-					select("Pickaxe!");
-					mes "[Morestone]";
-					mes "Yes, my beloved pickaxe!";
-					mes "I always carry it with me, you know?";
+					select("迪格达!");
+					mes "因为警卫非常森严，地面也很坚硬，所以非常辛苦。但在我的^3131FF迪格达^000000面前，没有困难这两个字！";
+					mes "[摩尔斯通]";
+					mes "就是我每天冲着大地唱着清脆的歌的我的十字镐！ ";
 					next;
-					mes "[Morestone]";
-					mes "We started working here together.";
-					mes "After a few days, we finally found something!";
+					mes "我和迪格达之间有着非常强烈的信任。因为我不管在什么时候都在聆听他呼唤我的声音。";
+					mes "[摩尔斯通]";
+					mes "来到这里之后，我们立刻就开始工作。";
 					next;
-					select("Something strange??");
-					mes "[Morestone]";
-					mes "No, but it was worth quite a lot.";
-					mes "But we did not have much time to celebrate. Suddenly, a monster appeared that stole my pickaxe.";
-					mes "His name was^3131FFKublin^000000!";
+					select("发现了新的矿石吗??");
+					mes "我慎重地查看地面，而迪格达为我和坚硬的大地展开了战斗。经过几天之后，我们很快有了成果。";
+					mes "[摩尔斯通]";
+					mes "不是的。但我们发现了更神奇、更了不起的东西。";
+					mes "但是那种喜悦只是暂时的。我和迪格达因为突然出现的怪物的戏弄，现在不得不面对分开的痛苦。";
 					next;
-					mes "[Morestone]";
-					mes "He stole my Pickaxe!";
-					mes "I can't live without it...";
+					mes "那个怪物就是^3131FF库布林^000000！";
+					mes "[摩尔斯通]";
+					mes "它们偷走了我的迪格达。";
 					next;
 					if (countitem(6010) > 0) {
 						mes "[" + strcharinfo(0) + "]";
-						mes "Is this the pickaxe that you've been looking for?";
+						mes "没有迪格达的话，我什么都干不了……";
 						next;
-						mes "[Morestone]";
-						mes "You found my Pickaxe?";
-						mes "Show me, please!";
+						mes "这是你正在寻找的十字镐吗？";
+						mes "[摩尔斯通]";
+						mes "你找到了我的迪格达？？？？";
 						next;
-						mes "[Morestone]";
-						mes "Oh, my! You've returned it to me!";
-						mes "My precious pickaxe, I thought I lost you forever.";
+						mes "快给我看看！";
+						mes "[摩尔斯通]";
+						mes "哦，真的是啊。他终于又回到了我的身边！";
 						next;
-						mes "[Morestone]";
-						mes "You are great! What guild are you from?";
-						mes "Could it be Gravity or Mercury?";
+						mes "迪格达，我的宝贝。我还担心会永远失去你了呢。";
+						mes "[摩尔斯通]";
+						mes "不过像你这么出色的人，到底是来自哪个公会呢？";
 						next;
 						mes "[" + strcharinfo(0) + "]";
 						mes "I am a member of the ^3131FF"+.@chk_yourgdname$+"^.";
 						next;
-						mes "[Morestone]";
-						mes "Oh... That guild will receive my greatest respect.";
+						mes "重力星人？还是哪美克星人？";
+						mes "[摩尔斯通]";
 						next;
-						mes "[Morestone]";
-						mes "Oh! My friend, I am very grateful for your help.";
-						mes "As a reward, I will tell you about a mysterious area I have discovered recently.";
+						mes "哦……光听名字就知道那个地方很有魄力，让人感觉非常勇猛。";
+						mes "[摩尔斯通]";
+						mes "勇猛的勇士啊，你帮我找回了比生命还要珍贵的东西，我的喜悦真的难以言表。";
 						next;
-						select("A mysterious area?");
-						mes "[Morestone]";
-						mes "That's right. I found it when I was digging around here.";
-						mes "It looks like it was made for some special purpose, but since there are no gems around there, I have no interest in it.";
+						select("神奇的地方?");
+						mes "作为给善良的你的报酬，我告诉你一个我不久之前发现的神奇的地方。怎么样？";
+						mes "[摩尔斯通]";
+						mes "没错。是我在这个附近仔细地对地面进行挖掘的时候偶然发现的。";
 						next;
-						mes "[Morestone]";
-						mes "Instead of going there alone, I think it would be more fun to go with your friends...";
+						mes "好像是为了某个特殊的目的而建造的场所，但是因为不是矿石，所以对我来说没有太大的意义。";
+						mes "[摩尔斯通]";
 						next;
-						mes "[Morestone]";
-						mes "If you want, I can take ^3131FFyou and your guild members^000000 to explore that area.";
-						mes "Do you want to go there now?";
+						mes "我觉得比起一个人去那个地方，^3131FF和朋友们一起去的话，应该会更有意思^000000……";
+						mes "[摩尔斯通]";
+						mes "如果你愿意的话，我可以让^3131FF你和你所属的公会成员^000000一起去那里玩。";
 						next;
-						switch(select("Wait! I'm not ready yet.:Let's go!")) {
+						switch(select("等等！我还没准备好呢。:出发！")) {
 						case 1:
 							set $@gdeventv_s1,0;
 							set $@gdevents_s$,"";
-							mes "[Morestone]";
-							mes "Take your time, and find a place to gather you friends.";
+							mes "你想去那里看一看吗？";
+							mes "[摩尔斯通]";
 							close;
 						case 2:
-							mes "[Morestone]";
-							mes "Alright! Let's go.";
-							mes "If your friends visit me again later, I will guide them to that area again.";
-							mes "Don't forget, dwarves are grateful beings! Hahaha!";
+							mes "你去什么地方召集其他的朋友和同伴吧。";
+							mes "[摩尔斯通]";
+							mes "好的！那我们走吧！";
+							mes "今后你的朋友们来找我的话，我也同样会把他们介绍到那个地方去。";
 							delitem 6010,1; //Pickaxe
 							set $@gdeventv_s1,1;
 							set $@gdevents_s$,.@chk_yourgdname$;
@@ -441,26 +441,26 @@ schg_dun01,194,148,5	script	Dwarf#sch_gd	826,{
 					else {
 						set $@gdeventv_s1,0;
 						set $@gdevents_s$,"";
-						mes "[Morestone]";
-						mes "I will tell you how to find him.";
-						mes "Kublin wears a ridiculous golden hat, It should be easy to recognise him by that.";
+						mes "不要忘记，侏儒是明白道理的种族。呵呵呵！";
+						mes "[摩尔斯通]";
+						mes "如果发现它们的话，请你告诉我。";
 						close;
 					}
 				case 2:
 					set $@gdeventv_s1,0;
 					set $@gdevents_s$,"";
 					emotion ET_CRY;
-					mes "[Dwarf]";
-					mes "Ah....";
+					mes "库布林带着搞笑的黄帽子，所以应该不难发现。";
+					mes "[侏儒]";
 					close;
 				}
 			}
 		}
 		else {
-			mes "[Morestone]";
+			mes "Ah....";
 			mes "I, Morestone, have made an alliance with the "+$@gdevents_s$+" guild.";
-			mes "Hm, you're not a member.";
-			mes "Could you please give them my greetings?";
+			mes "[摩尔斯通]";
+			mes "我现在已经和”+chk_usegdname+”的公会结成了同盟关系。";
 			close;
 		}
 	}

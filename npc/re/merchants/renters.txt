@@ -151,44 +151,44 @@ prontera,125,208,5	script	Peco Peco Remover	105,{
 // Mado Gear Renter :: madogear
 //============================================================
 -	script	::mgm	-1,{
-	mes "[Mado Gear Armorer]";
+	mes "[机械师]";
 	if ((eaclass()&EAJ_THIRDMASK)==EAJ_MECHANIC) {
-		mes "Welcome, Mechanic.";
-		mes "Would you like to rent a Pushcart or";
-		mes "ride a Mado Gear?";
+		mes "你好啊, 机匠!";
+		mes "想租用一台手推车, 还是";
+		mes "租用一台高达?";
 		next;
-		switch(select("Rent a Pushcart:Ride a Mado Gear:Buy Emergency Mado Gear:Upgrade Cooling Device:Cancel")) {
+		switch(select("- 手推车:- 机甲:- 取消")) {
 		case 1:
 			if (checkcart()) {
-				mes "[Mado Gear Armorer]";
-				mes "I'm sorry, but you already";
-				mes "have a Pushcart.";
+				mes "[机械师]";
+				mes "你已经有手推车了.";
+				mes "[机械师]";
 				close;
 			}
 			setcart;
-			mes "[Mado Gear Armorer]";
-			mes "There you go!";
+			mes "没事儿别烦我. ";
+			mes "[机械师]";
 			close;
 		case 2:
 			if (checkmadogear()) {
-				mes "[Mado Gear Armorer]";
-				mes "I'm sorry, but you're already";
-				mes "riding a Mado Gear.";
+				mes "你已经坐在机甲里面了.";
+				mes "[机械师]";
+				mes "拿到了驾驶执照再来见我!";
 				close;
 			}
 			else if (!getskilllv("NC_MADOLICENCE")) {
-				mes "[Mado Gear Armorer]";
-				mes "Please learn the skill to get the Mado Gear License first.";
+				mes "[机械师]";
+				mes "最为商人系钱不够是耻辱?";
 				close;
 			}
 			else if(ismounting()) {
-				mes "[Mado Gear Armorer]";
-				mes "Please remove your cash mount.";
+				mes "[机械师]";
+				mes "质保三年, 记得带发票来找我!";
 				close;
 			}
 			setmadogear;
-			mes "[Mado Gear Armorer]";
-			mes "Have fun, and please come again!";
+			mes "我能帮到你吗?";
+			mes "机甲只给机匠用, 记住了!";
 			close;
 		case 3:
 			mes "[Mado Gear Armorer]";

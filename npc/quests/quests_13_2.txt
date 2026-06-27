@@ -952,23 +952,23 @@ OnTouch:
 spl_fild02,45,214,0	script	????#ep13_mdplant01	844,{
 	if (ep13_mdrama == 2) {
 		cutin "ep13_plant01",2;
-		mes "Weeds are easy to find around here...";
-		mes "A closer look reveals that there's one knotted stem...";
-		mes "It looks like this is Terra's trace that Arc told me about.";
+		mes "[猫手官员]";
+		mes "Welcome to Cat Trading.";
+		mes "I guess you're a first-time customer, huh?";
 		next;
-		mes "A knotted leaf is pointing toward the^4d4dff Southern^000000 direction.";
+		mes "[猫手官员]";
 		set ep13_mdrama,3;
 		changequest 7056,7057;
 		close2;
 	}
 	else if (ep13_mdrama > 2) {
-		mes "This is a marking Terra left to remember the way back home.";
-		mes "A knotted leaf is pointing^4d4dff South^000000.";
+		mes "For more details about our contract, you need to talk to our staff first.";
+		mes "[猫手官员]";
 		close2;
 	}
 	else {
-		mes "Weeds are easy to find around here...";
-		mes "There's nothing too special about it.";
+		mes "猫团点数开放的服务如下.";
+		mes "若需要其他服务, 请找其他猫手官员或代理.";
 		close2;
 	}
 	cutin "ep13_plant01",255;
@@ -978,8 +978,8 @@ spl_fild02,45,214,0	script	????#ep13_mdplant01	844,{
 spl_fild02,122,106,0	script	????#ep13_mdplant02	844,{
 	if (ep13_mdrama > 2) {
 		cutin "ep13_plant01",2;
-		mes "Weeds are easy to find around here...";
-		mes "A closer look reveals that there's one knotted stem...";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "It looks like this is Terra's trace that Arc told me about.";
 		next;
 		mes "A knotted leaf is pointing ^4d4dff East^000000.";
@@ -997,8 +997,8 @@ spl_fild02,122,106,0	script	????#ep13_mdplant02	844,{
 spl_fild02,329,191,0	script	????#ep13_mdplant03	844,{
 	if (ep13_mdrama > 2) {
 	cutin "ep13_plant01",2;
-		mes "Weeds are easy to find around here...";
-		mes "A closer look reveals that there's one knotted stem...";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "It looks like this is Terra's trace that Arc told me about.";
 		next;
 		mes "A knotted leaf is pointing ^4d4dff North^000000.";
@@ -1015,8 +1015,8 @@ spl_fild02,329,191,0	script	????#ep13_mdplant03	844,{
 
 spl_fild02,328,323,0	script	????#ep13_mdplant04	844,{
 	if (ep13_mdrama == 3) {
-		mes "There are footprints here as well as signs that someone has fallen.";
-		mes "It looks like someone was fighting here?";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "But who?";
 		next;
 		mes "There are footprints heading ^4d4dffNorth^000000.";
@@ -1036,8 +1036,8 @@ spl_fild02,328,323,0	script	????#ep13_mdplant04	844,{
 
 spl_fild01,341,109,0	script	????#ep13_mdplant05	844,{
 	if (ep13_mdrama == 4) {
-		mes "There's evidence that there was a fight here too.";
-		mes "These footsteps can't be a Laphine's...";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		next;
 		mes "There are footprints that lead to^4d4dff the Root of a huge tree^000000.";
 		set ep13_mdrama,5;
@@ -1056,8 +1056,8 @@ spl_fild01,341,109,0	script	????#ep13_mdplant05	844,{
 spl_fild01,375,109,0	script	to_dun01#ep13_2	-1,2,2,{
 OnTouch:
 	if (ep13_mdrama == 5) {
-		mes "There's a stem entangled inside an opening in the roots of a huge tree...";
-		mes "It looks like something slipped here.";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		next;
 		mes "A cold breeze is blowing out from deep inside the tree.";
 		next;
@@ -1351,8 +1351,8 @@ OnTouch:
 }
 manuk,278,177,5	script	Villager#ep13_11	454,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "You can't receive this.";
 		mes "Lighten your weight and";
 		mes "try again.";
@@ -1449,8 +1449,8 @@ manuk,278,177,5	script	Villager#ep13_11	454,{
 
 manuk,281,177,3	script	Villager#ep13_12	449,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "You can't receive this.";
 		mes "Lighten your weight and";
 		mes "try again.";
@@ -1551,8 +1551,8 @@ manuk,281,177,3	script	Villager#ep13_12	449,{
 
 man_in01,175,59,5	script	Snorren#ep13_13	454,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
+		mes "这块石头包含不明的矿物质.";
+		mes "但是不能提取超过限度.";
 		mes "You can't receive this.";
 		mes "Lighten your weight and";
 		mes "try again.";
@@ -1872,7 +1872,7 @@ OnTouch:
 		end;
 	}
 	else {
-		mes "The doors are locked... I can't get in.";
+		mes "这块石头包含不明的矿物质.";
 		close;
 	}
 	end;
@@ -2058,93 +2058,93 @@ man_in01,22,126,3	script	Captured Laphine#ep13md	441,{
 
 man_in01,17,128,5	script	Snorren#ep13md_15	454,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "等等.";
+		mes "你携带了太多物品, 请清空一下你的背包再来吧.";
+		mes "[辉煌领域卫兵]";
+		mes "是外部人员吗?";
+		mes "最近来这里的外部人员越来越多了.";
 		close;
 	}
 	if (isequipped(2782) == 1) {
 		if (ep13_mdrama == 18) {
-			mes "[Snorren]";
-			mes "Here, Luik. He said this is a cure for Laphine.";
-			mes "Should we just let her eat it as it is?";
+			mes "[辉煌领域卫兵]";
+			mes "上司好像已经给了你许可, 你可以通过了.";
+			mes "[阿克]";
 			next;
-			mes "[Snorren]";
-			mes "Uh.. and your name was..?";
+			mes "我的名字叫阿克.";
+			mes "顺便问下, 你能听懂我再说什么吗?";
 			next;
-			select("" + strcharinfo(0) + "");
-			mes "[Snorren]";
-			mes "Yeah, Right.";
+			select("是的.:摇摇头." + strcharinfo(0) + "");
+			mes "[阿克]";
+			mes "什么, 你刚刚说'是的'?";
 			mes "" + strcharinfo(0) + ", you should try talking to that Laphine...";
-			mes "Let's hear her story.";
+			mes "无法相信我们彼此了解!你学习了我们的语言?你们族叫什么名字?";
 			set ep13_mdrama,19;
 			changequest 7064,7065;
 			close;
 		}
 		else if (ep13_mdrama == 19) {
 			// custom translation
-			mes "[Snorren]";
-			mes "Please help me translater.";
-			mes "We'll be watching as you speak to her.";
-			mes "Right, Luik?";
+			mes "- 我给阿克看了我的指环, 并向他解释了一切, 包括我是如何到这的... -";
+			mes "[阿克]";
+			mes "所以......嗯, 这是怎么回事......巨大的冲击和神秘...";
+			mes "[阿克]";
 			next;
-			mes "[Luik]";
-			mes "Maybe.";
-			mes "Let's ask her what happened, before it is too late.";
+			mes "一个相当有趣的故事.这就是为什么你们人类正在探索在这里和那里...";
+			mes "[阿克]";
+			mes "现在我清楚明白, 你是不是马努克萨法族那里过来的.谢谢你告诉我, 这些有趣的故事.";
 			close;
 		}
 		else if (ep13_mdrama == 20) {
-			mes "[Snorren]";
-			mes "Let's listen to her story.";
-			mes "Why don't we start from... Why does she want a bradium?";
+			mes "[阿克]";
+			mes "哦?是这样吗?我们使用不同的语言, 如我所料......真有点令人沮丧.";
+			mes "[阿克]";
 			next;
-			mes "[Snorren]";
-			mes "This part must be told to Luik in exact detail.";
+			mes "顺便问下, 别介意, 你的名字叫什么?";
+			mes "[阿克]";
 			close;
 		}
 		else if (ep13_mdrama == 21) {
-			mes "[Snorren]";
-			mes "What should I do if the Sapha in the Cave is really Ogen...?";
-			mes "Ogen... What should I do if anything happened to him...?";
+			mes "真是个奇怪的发音.我可能不理解读音, 所以请理解...";
+			mes "[阿克]";
+			mes "不管怎样, 有件事想请你帮忙, 你愿意帮我吗?";
 			close;
 		}
 		else if (ep13_mdrama == 22) {
 			if ((countitem(6085) > 0) && (countitem(6084) > 0)) {
-				mes "[Luik]";
-				mes "...This Bradium has not been refined properly...";
-				mes "This would be no help...";
-				mes "and, this muffler...";
+				mes "[阿克]";
+				mes "恩, 不过有点复杂喔...";
+				mes "- 阿克环顾四周检查有无别人在.对于我一个人来他似乎很满意, 然后他开始小声继续说他的故事. -";
+				mes "[阿克]";
 				next;
-				mes "[Snorren]";
-				mes "This is Ogen's! Ogen's muffler!";
-				mes "Luik! Ogen! This is Ogen!";
-				mes "Unrefined Bradium!";
+				mes "坦白地说, 我担心我的一个朋友擅自离开, 说她要调查你们的营地.从那时起, 她还没有回来.";
+				mes "[阿克]";
+				mes "但是, 我不能离开这个岗位, 我有责任来保护存储在这里的研究数据.";
+				mes "[阿克]";
 				next;
-				mes "[Snorren]";
-				mes "Lu.. Luik. Ogen.. Ogen...?!";
-				mes "I'm going to Ogen!";
-				mes "Where is that cave?! Where!";
+				mes "由于她擅自离开, 我甚至不能向我的上司报告...这可能是一个最大的问题.";
+				mes "[阿克]";
+				mes "想到这我就担心.事实上, 我们正在努力不会有任何接触马努克巨头, 所以我们远离远离对方的领土.";
+				mes "[阿克]";
 				next;
-				select("Calm down!");
-				mes "[Luik]";
-				mes "Yeah. Listen to him, calm down. Snorren.";
-				mes "If it is Ogen... We could be able to save him if we make haste.";
+				select("");
+				mes "你那的营地位于该地区已经为我们两个种族之间的中立区...";
+				mes "[阿克]";
+				mes "如果她已经得到接近自己身边, 那么她可能已经超过雪田......这将使我们更困难找她......";
 				next;
-				mes "[Luik]";
-				mes "Snorren. Go to Refinery and get the finest bradium...";
-				mes "Save him.";
+				mes "[阿克]";
+				mes "马努克树巨人可能会误解为挑衅他们......不是吗?";
+				mes "所以......问题是, 你要我找你的朋友.对不对?因为你不能做到这一点, 从所有这些复杂的情况下自己呢?";
 				next;
-				mes "[Luik]";
+				mes "[阿克]";
 				mes "" + strcharinfo(0) + "...eh?...";
-				mes "Please look after Snorren...and Ogen.";
-				mes "This Laphine, I mean Terra...";
-				mes "She truly wanted to save Ogen...";
+				mes "聪明!";
+				mes "你真是太善于观察了.";
+				mes "不过我需要更多关于她的信息.";
 				next;
-				mes "[Luik]";
-				mes "I will talk to my superiors to try and settle this matter...";
-				mes "Please save Ogen.";
+				mes "[阿克]";
+				mes "如果是这个问题, 请不要担心.";
+				mes "^4d4dff泰拉^000000有在植物上打结, 标出行进路线的习惯.";
 				delitem 6085,1; //Shaggy_Muffler
 				delitem 6084,1; //Bradium_Fragments
 				set ep13_mdrama,23;
@@ -2153,52 +2153,52 @@ man_in01,17,128,5	script	Snorren#ep13md_15	454,{
 			}
 			else {
 				// custom translation
-				mes "[Luik]";
-				mes "You should bring something that can prove it?";
-				mes "... We have been fighting them for so long, it is hard for us to believe you.";
+				mes "[阿克]";
+				mes "使她不会迷路.如果你发现一个打结植物的线索, 它应该引导你, 到她那.";
+				mes "[阿克]";
 				next;
-				mes "[Snorren]";
-				mes "...Yes... regardless of anything, just to prove what you say is true.";
+				mes "它可以很难寻找他们, 但它比什么都不做要好......请, 我求求你.";
+				mes "[阿克]";
 				close;
 			}
 		}
 		else if (ep13_mdrama == 23) {
-			mes "[Snorren]";
-			mes "Hurry up and take the lead!";
-			mes "Which way should we go now?";
+			mes "还有, 请不要告诉其他任何拉皮内族的人.";
+			mes "[阿克]";
+			mes "请帮我找到她, 谢谢.";
 			close;
 		}
 		else {
 			// custom translation
-			mes "[Snorren]";
-			mes "How did you get in here?!";
-			mes "Get out!";
+			mes "[阿克]";
+			mes "我就知道这肯定不是个合理的请求... ...你也是到这里来执行一个任务的吧......是我考虑不周...";
+			mes "[阿克]";
 			close;
 		}
 	}
 	else {
-		mes "[Snorren]";
-		mes "We rs...";
-		mes "F as d dd ";
-		mes "Tb ds dfw we!";
-		mes "Nd fs asd as...!";
+		mes "是这样吗?当然.你到这里也要执行你自己的任务......";
+		mes "[阿克]";
+		mes "^4d4dff泰拉^000000有在植物上打结, 标出行进路线的习惯.";
+		mes "使她不会迷路.如果你发现一个打结植物的线索, 它应该引导你, 到她那.";
+		mes "还有, 请不要告诉其他任何拉皮内族的人.";
 		close;
 	}
 }
 
 man_in01,19,126,3	script	Luik#ep13md16	450,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "附近常见的杂草.";
+		mes "仔细查看, 有一根茎上打了一个结.";
+		mes "这好像就是阿克所说的泰拉的痕迹.";
+		mes "叶片方向指向^4d4ff南^000000.";
+		mes "这就是泰拉留下的标记, 记录了回家的路.";
 		close;
 	}
 	if (isequipped(2782) == 1) {
 		if (ep13_mdrama < 20) {
-			mes "[Luik]";
-			mes "...I really look forward to drawing something useful out of her.";
+			mes "叶片方向指向^4d4ff南^000000.";
+			mes "杂草很容易在这里找到......它没有什么太特殊的.";
 			mes "Your interpretion is trustworthy, right?";
 			close;
 		}
@@ -2365,11 +2365,11 @@ OnTouch:
 
 spl_in02,236,92,5	script	Arc#ep13md_l02	447,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "附近常见的杂草.";
+		mes "仔细查看, 有一根茎上打了一个结.";
+		mes "这好像就是阿克所说的泰拉的痕迹.";
+		mes "叶片方向指向^4d4ff西^000000.";
+		mes "杂草很容易在这里找到......它没有什么太特殊的.";
 		close;
 	}
 	if (isequipped(2782) == 1) {
@@ -2541,7 +2541,7 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "It's locked.";
+		mes "附近常见的杂草.";
 		close;
 	}
 }
@@ -2550,15 +2550,15 @@ spl_in02,236,86,0	warp	terrashome_out	1,1,splendide,285,139
 
 spl_fild01,357,44,0	script	???#ep13mdf01	844,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "有足迹的迹象.它看起来像有人在这里打斗过?";
+		mes "会是谁呢?";
+		mes "战斗的痕迹一直通往 ^4d4dff北方^000000.";
+		mes "似乎有人在这里打斗过.";
+		mes "战斗的痕迹一直通往 ^4d4dff北方^000000.";
 		close;
 	}
 	if (ep13_mdrama == 14) {
-		mes "There's some kind of fruit lying on the ground.";
+		mes "有足迹的迹象, 似乎是在暗示或引导什么事情.";
 		mes "I see a small berry inside of a big outer shell...";
 		mes "It is a Yggdrasil!";
 		set ep13_mdrama,15;
@@ -2599,10 +2599,10 @@ spl_fild01,357,44,0	script	???#ep13mdf01	844,{
 
 spl_fild01,312,79,0	script	???#ep13mdf02	844,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
+		mes "证据显示, 有战斗在这里发生过.这些脚步不可能是一个人留下的";
+		mes "战斗的痕迹一直通往^4d4dff巨大的树根那边^000000.";
+		mes "战斗的痕迹一直通往^4d4dff巨大的树根那边^000000.";
+		mes "有足迹的迹象, 似乎是在暗示或引导什么事情.";
 		mes "try again.";
 		close;
 	}
@@ -2648,24 +2648,24 @@ spl_fild01,312,79,0	script	???#ep13mdf02	844,{
 
 spl_fild01,329,29,0	script	???#ep13mdf03	844,{
 	if (checkweight(1201,2) == 0) {
-		mes "Wait a moment!!";
-		mes "You have too many items.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "巨大的树根之间, 被从没见过的藤蔓缠绕着......";
+		mes "好像有什么滑倒的痕迹.";
+		mes "藤蔓的里面可以感觉到凉风.";
+		mes "你拿一个步骤向前小心翼翼地穿过泥泞的根源和支路.";
+		mes "里面太黑了, 什么都看不见里面...但感觉就像在底部有一个大洞.我最好退后一步......它看起来危险.";
 		close;
 	}
 	if (ep13_mdrama == 16) {
-		mes "There's some kind of fruit lying on the ground.";
-		mes "I see a small berry inside of a big outer shell...";
-		mes "It is a Yggdrasil!";
+		mes "巨大的根之间, 有一个洞, 通向一个地下洞穴.";
+		mes "你再次滑过泥泞的根进入.";
+		mes "你决定稍后再进去.";
 		set ep13_mdrama,17;
 		getitem 607,1; //Yggdrasilberry
 		getitem 522,1; //Fruit_Of_Mastela
 		changequest 7063,7064;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Arc gave me three Yggdrasilberries and...";
+		mes "奇怪的茎内一个巨大的根开幕式上纠缠.表面上看起来不稳定......差点滑下去之前, 我止步了.";
 		mes "I've found... three. Six of them should be enough.";
 		mes "Let's go back to Snorren.";
 		close;
@@ -4661,64 +4661,64 @@ mid_camp,7,3,0	script	Translator Preparation#1	708,{
 //============================================================ 
 man_in01,372,221,5	script	Scientist#lifeguard	449,{
 	if ((isequipped(2782) == 1) && (ep13_2_rhea == 100)) {
-		mes "[Dr. Lifeguard]";
+		mes "你携带了过多的物品, 请清理下背包后再来.";
 		if (ep13_2_tre == 0) {
-			mes "Recently, it seems like my skin is becoming really dry.";
+			mes "[拉维]";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "I don't know if it's caused by the cold weather or our chronic disease getting worse.";
-			mes "It hasn't been too long since we administered the Bradium, so why.";
+			mes "顺便问下, 为什么那个妖精会跑到这来?";
+			mes "她是俘虏吗?";
+			mes "[莉维亚]";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "Huu... You see, we are afraid of such things... What a hard life.";
+			mes "不是的.";
+			mes "她是自己要来这里的.";
 			next;
-			select("A chronic disease?:Bradium?");
-			mes "[Dr. Lifeguard]";
-			mes "We Sapha, who are descendants of Hwergelmir, survived and rebuilt the Giant tribe in the flood of the blood of Ymir.";
+			select("加入对话.:静静地听.");
+			mes "真大胆.当她来到这里, 她已经受伤了.";
+			mes "(恩?妖精?浑身全是伤?";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "For no apparent reason, we developed a chronic disease that makes our bodies dry and harden over time just like an old tree.";
+			mes "难道在说泰拉......!)";
+			mes "请原谅我打断您的谈话.你们所说的那个妖精, 能否告诉我细节?";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "I think that this is the curse of Ymir who bled by the gods?";
+			mes "[拉维]";
+			mes "外人, 他怎么会在这?";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "But we couldn't just wait for death to slowly creep up on us and exterminate our entire race.";
+			mes "[莉维亚]";
+			mes "我们什么也没说.";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "To heal this rare disease the smartest Sapha studied and studied.";
+			mes "也无可奉告.";
+			mes "拉维, 过会我们再聊.";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "What they found was that by injecting a refined Bradium, which is buried around Jotunheim, it can postpone the progression of the disease.";
+			mes "- 萨法部落的人似乎不愿意告诉我任何事, 但那个妖精, 很可能就是泰拉.-";
+			mes "[拉维]";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "So all of the giants of Sapha established their towns around mines to get Bradium easier.";
+			mes "我听说那个妖精哭泣着, 她受伤了.";
+			mes "[莉维亚]";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "It seems the amount of buried Bradium is enough.";
-			mes "But for the eternal prosperity of our tribe, and to make the vaccine for this incurable disease, we have to study more and more.";
+			mes "没人听得懂妖精的话, 最后我们也不知道如何是好.";
+			mes "[莉维亚]";
+			mes "不管怎样, 那妖精现在被囚禁在监狱里.";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "Bradium is the stem of our life.";
-			mes "But the buried Bradium will be exhausted someday, so we Scientists have to find an alternative for our descendants.";
+			mes "今天, 我们一起去的炼油厂.";
+			mes "[拉维]";
+			mes "啊, 怎么会有个外来的陌生人?";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "Recently, we've learned that there are various minerals in the human world Midgard.";
+			mes "[莉维亚]";
+			mes "不必介意, 他又听不懂我们在说什么.";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "Now the world called Midgard is";
-			mes "like a holy place for us,";
-			mes "which can bring the wind of";
-			mes "revolution for us.";
+			mes "- 真幸运, 他们不知道我能够听懂他们的话, 不过那个妖精一定是泰拉了.-";
+			mes "- 萨法部落的人似乎没有注意到我.-";
+			mes "- 他们谈论的都是不相干的事情.-";
+			mes "- 我最好离他们远些, 以免被怀疑. -";
+			mes "[村民]";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "Contact with Midgard";
-			mes "must be the lead of Hwergelmir";
-			mes "for us, the Sapha which has such";
-			mes "a closed-off society.";
+			mes "...外来人?";
+			mes "你被允许进入我们部落?";
+			mes "好吧, 你能听懂我说话吗?";
+			mes "[村民]";
+			mes "Das?";
 			next;
-			mes "[Dr. Lifeguard]";
-			mes "I'll draw a result that can";
+			mes "idh sd!";
+			mes "Dh apa sd＃is Das idh.";
 			mes "satisfy his lead!";
 			set ep13_2_tre,1;
 			close;
@@ -4892,7 +4892,7 @@ mjolnir_12,220,37,0	duplicate(mjo_no_find)	#mj12_find_3	-1,5,5
 -	script	mjo_find	-1,{
 	if ((ep13_2_tre == 2) && (countitem(6076) == 1)) {
 		if (countitem(6077) < 10) {
-			mes "- I can see some different colored minerals where the detector pointed to. This must be the mineral that Mr. Lifeguard told me about. -";
+			mes "门锁上了, 我们无法进入.";
 			next;
 			switch(select("Mine minerals.:Do nothing.")) {
 			case 1:
@@ -5376,20 +5376,20 @@ OnTouch_:
 -	script	ve_find	-1,{
 	if ((ep13_2_tre == 4) && (countitem(6076) == 1)) {
 		if (countitem(6077) < 5) {
-			mes "- I can see some different colored minerals where the detector pointed to. This must be the mineral that Mr. Lifeguard told me about. -";
+			mes "- 圆形的土墓中间,  -";
 			next;
-			switch(select("Mine minerals.:Do nothing.")) {
+			switch(select("拿出宝石:放着不管")) {
 			case 1:
-				mes "Clang! Clang! Clang! Clang!";
+				mes "- 半埋着一块红色的 -";
 				close2;
 				progressbar "ffff00",4;
 				if (rand(1,6) < 4) {
-					mes "- You failed to mine minerals. -";
+					mes "- 宝石 -";
 					getitem 6078,1; //Stone_Fragments
 					close;
 				}
 				else {
-					mes "- You succeeded to mine minerals. -";
+					mes "- 圆形的土墓中间,  -";
 					emotion ET_AHA, playerattached();
 					set .@stst,rand(1,5);
 					if (.@stst == 5) getitem 6077,5; //Rough_Mineral
@@ -5400,12 +5400,12 @@ OnTouch_:
 					close;
 				}
 			case 2:
-				mes "- You decide to do nothing. -";
+				mes "- 半埋着一块红色的 -";
 				close;
 			}
 		}
 		else {
-			mes "- I think I have enough minerals. -";
+			mes "- 宝石 -";
 			close;
 		}
 	}
@@ -7311,23 +7311,23 @@ nyd_dun02,56,264,0	warp	nynm_dun2f_to_1f	1,1,nyd_dun01,249,143
 
 nyd_dun02,1,1,0	script	ep13_nd2f_mng	844,{
 	callfunc "F_GM_NPC";
-	mes "Enter password.";
+	mes "-到达了目的地, 我想应该可以用便携式工具箱里的 矿产探测器 搜索了. -";
 	next;
 	if (callfunc("F_GM_NPC",1854,0) == 1) {
-		mes "Reset Control devices?";
+		mes "- 你按下了矿产探测器的按钮. -";
 		next;
-		switch(select("Yes:No")) {
+		switch(select("探测此处.:什么也不错.")) {
 		case 1:
 			donpcevent "ep13_nd2f_mng::OnReset";
 			set $@08_ep13nydun02_in,0;
-			mes "Done.";
+			mes "[矿产探测器]";
 			close;
 		case 2:
-			mes "Canceled.";
+			mes "啵啵 -";
 			close;
 		}
 	} else {
-		mes "Invalid.";
+		mes "- 什么也没有. -";
 		close;
 	}
 

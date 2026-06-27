@@ -529,115 +529,115 @@ malaya,185,358,3	script	Leader Phong in Mumbaki	580,{
 
 malaya,169,350,5	script	Imelda#malaya	475,{
 	if (MaxWeight - Weight < 1000 || checkweight(1201,1) == 0) {
-		mes "- Cannot proceed with the quest. You are carrying too many items. -";
+		mes "- 一个令人毛骨悚然的女孩站在那里.";
 		close;
 	}
 	if (malaya_hi < 10) {
-		mes "[Imelda]";
-		mes ".... Hmm.";
+		mes "当我们目光相对时, 一股寒意瞬间遍布我全身. -";
+		mes "[狄瓦泰]";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[Imelda]";
-		mes "..........";
-		mes "Not bad.";
-		mes "I have my eyes on you. Let's see how you do in this town.. *chuckle*";
+		mes "你也要来欺负狄瓦泰吗?";
+		mes "我什么都没有!";
+		mes "-我被小女孩恐怖的声音和眼神赶了出来.-";
+		mes "- 一个令人毛骨悚然的女孩站在那里.";
 		next;
-		mes "- She is a rather annoying little girl. -";
+		mes "当我们目光相对时, 一股寒意瞬间遍布我全身. -";
 		close;
 	} else if (malaya_hi == 20) {
-		mes "[Imelda]";
-		mes "Aren't you the hero who recently got on the villagers good side with the cheap foreign Holy Artifact?";
-		mes "What's up?";
+		mes "[狄瓦泰]";
+		mes "你也要来欺负狄瓦泰吗?";
+		mes "我什么都没有!";
 		next;
-		select ("You want to make a traditional Spiritual Protection?");
-		mes "[Imelda]";
-		mes "Yes. My grandfather found a way.";
-		mes "I'm going to make it.";
+		select ("等一下! 我只想说几句话!");
+		mes "[狄瓦泰]";
+		mes "那么你身后的是谁?";
+		mes "你和他们是一伙的!";
 		next;
-		mes "[Imelda]";
-		mes "This is my job and nobody else's.";
-		mes "Protecting traditions is my job.";
+		mes "- 相似的鬼魂正在靠近狄瓦泰. -";
+		mes "正如我想象! 你们害怕我吗?!";
+		mes "滚开啊!";
 		next;
-		switch (select("Is that so?:Good luck on your own!")) {
+		switch (select("- 这是个误会!:- 你是其中一员啊..!")) {
 		case 1:
 			if (BaseLevel < 100) {
-				mes "[Imelda]";
-				mes "Of course.";
-				mes "And to get help from someone as... weak as you is not such a good idea.";
+				mes "我要和她谈话.";
+				mes "[狄瓦泰]";
+				mes "我不知道为什么他们后退...";
 				next;
-				mes "[Imelda]";
-				mes "Getting the materials is not as easy as it sounds.";
-				mes "Maybe when you become stronger, yes, but not now. Never.";
+				mes "你也滚出我的视线!";
+				mes "-我被小女孩愤怒的哭泣和目光赶了出来.-";
+				mes "[狄瓦泰]";
 				close;
 			}
-			mes "[Imelda]";
-			mes "What then?";
-			mes "You're going to get the materials?";
-			mes "Fine I'll accept your proposal.";
+			mes "够了!";
+			mes "-我被小女孩决绝的哭泣和目光赶了出来.-";
+			mes "[狄瓦泰]";
+			mes "你又爬回来了?";
 			next;
-			select ("....?!");
-			mes "[Imelda]";
-			mes "If you wanted to help me out so much, why didn't you say so from the beginning?";
-			mes "Or ask my grandfather?";
+			select ("把花扔给她.:顺着门滑过去.");
+			mes "出去!!!!!";
+			mes "-我被小女孩凄厉的尖叫和目光赶了出来.-";
+			mes "- 狄瓦泰的灵魂怒视着我.";
 			next;
-			mes "[Imelda]";
-			mes "If you are so enthusiastic about making a Spiritual Protection.";
-			mes "I'd have to give up, won't I?";
+			mes "没有给她花束...!!! -";
+			mes "-我被她的怒视赶了出来.-";
+			mes "- 狄瓦泰的灵魂怒视着我. -";
 			next;
-			mes "[Imelda]";
-			mes "Now, the needed materials are ^4d4dff6 Sharpened Bamboos, 6 Salt bags and 6 Silver Crosses^000000.";
+			mes "- 拿出花束... -";
+			mes "- 在她把我赶出去之前, 我把花扔了过去. 她接住了花, 非常惊讶...";
 			next;
-			mes "[Imelda]";
-			mes "You'll have to manufacture the salt yourself at the north western beach.";
-			mes "You'll find the pits I've made there.";
+			mes "这次, 她没赶我走了, 现在, 她拿着花呆呆的...-";
+			mes "- 我把花束从门边滑了过去. 她看起来很困惑. -";
+			mes "[狄瓦泰]";
 			next;
-			mes "[Imelda]";
-			mes "Go to Pandoi at the weapon shop for the Silver Crosses.";
-			mes "He promised to make me some.";
+			mes "这是什么意思?";
+			mes "你不是来欺负我的吗?";
+			mes "[狄瓦泰]";
 			next;
-			mes "[Imelda]";
-			mes "Sharpened Bamboos you can get at Baryo or from a nearby forest.";
-			mes "You got all that?";
+			mes "什么?你也是一个外地人?";
+			mes "呵呵, 现在活着的人可以了, 而我不行吗?";
+			mes "[狄瓦泰]";
 			next;
-			mes "[Imelda]";
-			mes "Now's the time to prove your prowess!";
+			mes "有一个老套的说辞, 本地人比外地人高贵.";
+			mes "我非常气愤. 我恨不得将他们从世上抹去.";
 			set malaya_hi, 21;
 			setquest 7366;
 			close;
 		case 2:
-			mes "[Imelda]";
-			mes "Indeed.";
-			mes "I will protect the village!";
+			mes "[狄瓦泰]";
+			mes "什么? 我不该这么做?";
+			mes "为什么不?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Now I haven't seen any Spiritual Protections made with those!";
-			mes "Interesting~";
-			mes "I'm sure you'll do just fine~";
-			mes "Ha ha ha ha~";
+			mes "我让这艘船停运了?";
+			mes "[狄瓦泰]";
+			mes "因为这些花的原因, 我想听你说几句话.";
+			mes "但是你却对我说谎?!";
 			next;
-			mes "[Imelda]";
-			mes "Stop annoying me and go away!";
+			mes "[狄瓦泰]";
+			mes "你是说我把乡下人带到了船上,";
 			close;
 		}
 	} else if (malaya_hi == 21) {
 		if ((countitem(6501) < 6) || (countitem(6500) < 6) || (countitem(6502) < 6)) {
-			mes "[Imelda]";
-			mes "I'll approve you as worthy if you bring all the materials for the Spiritual Protection!";
+			mes "他们的争斗导致了船舶的停运?";
+			mes "[狄瓦泰]";
 			next;
-			mes "[Imelda]";
-			mes "Manufacture the salt at the north western beach and bamboos grow in Baryo Mahiwaga.";
-			mes "Ask Pandoi to make the Silver Crosses.";
-			mes "Don't forget to get 6 of each.";
+			mes "... 呵呵... 哼. 这并不是我想做的事情.";
+			mes "但是他们的确把我惹火了!";
+			mes "[狄瓦泰]";
+			mes "... 反正我无法摆脱.";
 			close;
 		}
-		mes "[Imelda]";
-		mes "... Oh... My, you really did get them?";
-		mes "You're better than I thought.";
-		mes "That was not a compliment at all!";
+		mes "这意味着让我再次不爽. 明白了?";
+		mes "[狄瓦泰]";
+		mes "... 今天我会试着控制我自己的.";
+		mes "这不是因为我喜欢这束花或我愿意合作!";
 		next;
-		mes "[Imelda]";
-		mes "Now I'm going through the holy ritual to make a traditional Spiritual Protection.";
-		mes "Give them to me! And don't bother me during the process!";
+		mes "只是因为我也被那些可恶的鬼魂同样对待过!";
+		mes "[狄瓦泰]";
+		mes "如果你继续打扰我.";
 		set malaya_hi, 22;
 		delitem 6500, 6; // Sharp_Bamboo
 		delitem 6501, 6; // Salt_Bag
@@ -648,22 +648,22 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 	} else if (malaya_hi == 22) {
 		.@playtime = checkquest(7367, PLAYTIME);
 		if (.@playtime == 0 || .@playtime == 1) {
-			mes "Imelda is in ritual with a devout aura, compared to when she streamed invectives.";
-			mes "Better not disturb her.";
+			mes "那我把话说清楚. 我的脾气可不会再克制这么久了.";
+			mes "[狄瓦泰]";
 			close;
 		} else if (.@playtime == 2) {
-			mes "[Imelda]";
-			mes "Still here?";
-			mes "Of course, you want to see how much better my Spiritual Protection is compared to that cheap Holy Artifact.";
+			mes "好了, 走... 走吧!";
+			mes "[狄瓦泰]";
+			mes "我发誓我会成为一个乖女孩, 如果那些乡下人不再来打扰我的吧.";
 			next;
-			mes "[Imelda]";
-			mes "Fine.";
-			mes "Now go and give these Spiritual Protections to the people!";
-			mes "You have all the rights to do so!";
-			mes "*Giggles*";
+			mes "如果他们还是来烦我的话, 我不会答应的.";
+			mes "[狄瓦泰]";
+			mes "很惊奇, 我能这么平静.";
+			mes "当然了, 他们再来时我会很紧张,";
+			mes "但是, 不论如何, 我仍将是最后的赢家.";
 			next;
-			mes "Took the Spiritual Protection, despite her ridiculous logic and vigor.";
-			mes "Let's give them to the villagers.";
+			mes "[狄瓦泰]";
+			mes "那时, 全部船员只会再次哭泣.";
 			set malaya_hi, 23;
 			getitem 6503, 6; // Soul_Protection
 			erasequest 7367;
@@ -676,33 +676,33 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 			setquest 7374;
 			close;
 		} else {
-			mes "[Imelda]";
-			mes "Don't disturb the ritual and go away.";
-			mes "Please wait while I make the Spiritual Protection.";
+			mes "我只是不能在一次争斗后让自己平静下来.";
+			mes "[狄瓦泰]";
+			mes "你给我带来的这些鲜花, 让我感觉好多了.";
 			setquest 7367;
 			close;
 		}
 	} else if (malaya_hi == 23) {
-		mes "[Imelda]";
-		mes "The ones who gets the Spiritual Protections are on the list.";
-		mes "Go and give them the new Spiritual Protections";
+		mes "....";
+		mes ".. 这并不代表我想念谁或喜欢这些花. 不要理解错了.";
+		mes "[狄瓦泰]";
 		next;
-		mes "[Imelda]";
-		mes "Such a kind person like yourself  will surely do it, won't you? ";
-		mes "*Smirk*";
+		mes "丢了!";
+		mes "什么? 噢, 是你啊.";
+		mes "那些乡下人又再来了!";
 		close;
 	} else if (malaya_hi == 24) {
-		mes "[Imelda]";
-		mes "... You really did what I asked you?";
-		mes "You know what? I give up.";
-		mes "I thought you'd leave after getting something from this town with sweet talk...";
+		mes "我要杀死他们!";
+		mes "[狄瓦泰]";
+		mes "在外面看到花朵是一件很不错的事情~";
+		mes "是不是只要在世界上温暖的地方, 花儿都笑的这么美丽?";
 		next;
-		mes "[Imelda]";
-		mes "I apologize for my rude behavior.";
-		mes "....This is something to go with the apology.";
+		mes "[狄瓦泰]";
+		mes "你给我带来的这些鲜花, 让我感觉好多了.";
+		mes "....";
 		next;
-		mes "[Imelda]";
-		mes "I'd be happy if you could help me, because the Spiritual Protections needs to be made every day.";
+		mes ".. 这并不代表我想念谁或喜欢这些花. 不要理解错了.";
+		mes "[狄瓦泰]";
 		set malaya_hi, 25;
 		erasequest 7374;
 		erasequest 7379;
@@ -716,30 +716,30 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 			$malayaNames$[0] = strcharinfo(0);
 		close;
 	} else {
-		mes "[Imelda]";
-		mes "Hello there.";
-		mes "Did you enjoy the scenery of Malaya?";
-		mes "It's nice to have a chat with friends on a Jeepney.";
+		mes "真是烦人! 你还想干什么?!";
+		mes "什么?";
+		mes "噢, 是你啊?";
+		mes "我现在太沮丧了.";
 		next;
-		switch (select("I'll help you making Spiritual Protections.:Love and Spiritual Protection for all.")) {
+		switch (select("把花束递给她.:握住她的双手.")) {
 		case 1:
 			if (checkquest(7380) > -1) {
 				if ((countitem(6501) < 6) || (countitem(6502) < 6) || (countitem(6500) < 6)) {
-					mes "[Imelda]";
-					mes "Materials for making a Spiritual Protection are";
-					mes "Salt Bags, Silver Crosses and Sharpened Bamboos, 6 of each.";
+					mes "- 狄瓦泰伸出她的双手, 好像在期待着什么. -";
+					mes "[狄瓦泰]";
+					mes "你认为你在干什么?!!??!?!!";
 					next;
-					mes "[Imelda]";
-					mes "Salt form the north western beach, Silver Crosses from Pandoi, and Sharpened Bamboos from near Baryo.";
+					mes "啊... - 这儿有足够多的怪物了, 不少你一个!!";
+					mes "-我被狄瓦泰雷鸣似的吼叫赶了出来.-";
 					close;
 				}
-				mes "[Imelda]";
-				mes "Yes, you got everything precisely.";
-				mes "Thanks for the help.";
+				mes "[狄瓦泰]";
+				mes "什么? 你想让我动摇?";
+				mes "你没有带来?";
 				next;
-				mes "[Imelda]";
-				mes "It'll be nice if you could help again tomorrow.";
-				mes "Here's something for your trouble.";
+				mes "你什么都没有?!?";
+				mes "任何人都不能信任, 谁都不行!";
+				mes "-我被狄瓦泰雷鸣般的吼叫赶了出来.-";
 				delitem 6500, 6; // Sharp_Bamboo
 				delitem 6501, 6; // Salt_Bag
 				delitem 6502, 6; // Silver_Cross
@@ -754,20 +754,20 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 			} else {
 				.@playtime = checkquest(7381, PLAYTIME);
 				if ((.@playtime == 0) || (.@playtime == 1)) {
-					mes "[Imelda]";
-					mes "I appreciate your kindness, but we have enough for today.";
-					mes "I'll ask for you when I need more materials.";
+					mes "[狄瓦泰]";
+					mes "... 噢... 和我想的一样!";
+					mes "我唯存的幸福感, 我唯存的心灵的安宁..!";
 					close;
 				} else if (.@playtime == 2) {
-					mes "[Imelda]";
-					mes "Very good timing.";
-					mes "I ran out of materials for today's Spiritual Protections.";
-					mes "Could you go for them now?";
+					mes "这些外面的花朵啊~!";
+					mes "-狄瓦泰看起来好了一些. 气氛也变的祥和一些了.-";
+					mes "[狄瓦泰]";
+					mes "告诉裴多乐!";
 					erasequest 7381;
 					next;
 					switch (select("Sure.:I need some preparations.")) {
 					case 1:
-						mes "[Imelda]";
+						mes "狄瓦泰将会成为这片海的女神. 算是我的慷慨, 他可以启航了.";
 						mes "As usual then.";
 						mes "6 Salt Bags. Silver Crosses and Sharpened Bamboos, please.";
 						setquest 7380;
@@ -1173,22 +1173,22 @@ malaya,181,353,5	script	Old Man Nardo#malaya	574,{
 
 malaya,224,267,3	script	Romel#malaya	573,{
 	if (malaya_hi < 10) {
-		mes "[Romel]";
-		mes ".........";
-		mes " ";
-		mes "(He evades your gaze and ignores you.)";
+		mes "- 等等!! -";
+		mes "- 你的负重太大了. -";
+		mes "- 不能再接收物品. -";
+		mes "- 请先清理一下你的物品. -";
 		close;
 	} else if (malaya_hi == 10) {
 		if (checkquest(7357) == 2) {
-			mes "[Romel]";
-			mes "....So cold-hearted.";
-			mes "And here we are, always trembling in anxiety...";
+			mes "- 然后再来. -";
+			mes "- 你不用再收集样本了. -";
+			mes "- 你看到了什么东西, 和杂草还有泥土混在一起. -";
 			next;
-			mes "[Romel]";
-			mes "Not even allowed the peace of mind...";
+			mes "- 你被手里收集到的样本的气味, 恶心到想吐. -";
+			mes "- 你小心的收集着柔软的, 细小的而又温暖的材料. -";
 			close;
 		} else {
-			mes "[Romel]";
+			mes "它温暖的就像妈妈的怀抱.";
 			mes "Ahh....";
 			mes "... You..";
 			mes "I'm sorry I ignored you.";

@@ -22,80 +22,80 @@
 // Christopher: Geffen Blacksmith
 //============================================================
 geffen_in,110,172,0	script	Christopher#1	63,{
-	mes "[Christopher Guillenrow]";
-	mes "Welcome to Christopher's Workshop. Ye can get all yer stuff for forging here. What business";
-	mes "brings ye to me?";
+	mes "[克理斯多福]";
+	mes "欢迎您来到克里斯多福铁匠铺.";
+	mes "这里贩卖所有关于锻治用的物品.";
 	next;
-	switch(select("Purchase Anvil:Purchase Forging Item:Purchase Metal:Purify Rough Ores:Cancel")) {
+	switch(select("我想要买铁砧:我想要买锻治的物品:我想要买金属:我想要买制作原石:取消")) {
 	case 1:
-		mes "[Christopher Guillenrow]";
-		mes "A better Anvil gives ye a greeeater chance to make better weapons, ye know? But they'll cost ye more zeny. Just get it off yer chest and buy what fits your purposes best, laddy.";
+		mes "您需要什么呢?";
+		mes "[克理斯多福]";
 		next;
-		switch(select("Anvil - 30,000 zeny:Oridecon Anvil - 120,000 zeny:Golden Anvil - 300,000 zeny:Better Anvil than the others.:Cancel.")) {
+		switch(select("铁砧 - 30,000z:O神之金属铁砧 - 120,000z:黄金铁砧 - 300,000z:更好的铁砧:取消")) {
 		case 1:
 			if (Zeny < 30000) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "用来制作武器的铁砧当然是越坚硬的金属越好.";
+				mes "不过您应该也知道,愈坚硬的金属价格上就愈贵.";
 				close;
 			}
 			getitem 986,1; // Anvil
 			Zeny = Zeny-30000;
-			mes "[Christopher Guillenrow]";
-			mes "This is the cheapest one, but efficient enough to forge most items. Thank ye fer shopping at me workshop.  Feel free to come anytime, whenever ye need.";
+			mes "您可以依靠自己的经济情况选择合适的.";
+			mes "[克理斯多福]";
 			close;
 		case 2:
 			if (Zeny < 120000) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐";
+				mes "[克理斯多福]";
 				close;
 			}
 			getitem 987,1; // Oridecon_Anvil
 			Zeny = Zeny-120000;
-			mes "[Christopher Guillenrow]";
-			mes "Aye, friend ye have an eye for the anvil. This must be the proper anvil for a Blacksmith, eh? Thank ye fer shopping at me workshop.  Feel free to come anytime, whenever ye need.";
+			mes "你选择的这一种是比较便宜的一种.";
+			mes "[克理斯多福]";
 			close;
 		case 3:
 			if (Zeny < 300000) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐";
+				mes "[克理斯多福]";
 				close;
 			}
 			getitem 988,1; // Golden_Anvil
 			Zeny = Zeny-300000;
-			mes "[Christopher Guillenrow]";
-			mes "This one is the best among all me stuffs in me workshop! With this, ye can rule the Blacksmith world! Thank ye fer shopping at me workshop.  Feel free to come anytime, whenever ye need.";
+			mes "噢!看来你是个行家.这一定是一个适合铁匠的铁砧,你说是吗?";
+			mes "[克理斯多福]";
 			close;
 		case 4:
-			mes "[Christopher Guillenrow]";
-			mes "Well, sorry. But I don't have anythin' harder' than the Golden Anvil.";
+			mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐";
+			mes "[克理斯多福]";
 			next;
-			mes "[Christopher Guillenrow]";
-			mes "Me thinks 'Ringgel,' the Legendary Anvil Maker would have one. But, I don't think ye can find him, though he be somewhere in this world.";
+			mes "这一个是工作室之中的最好的一种,用这种铁砧,你绝对可以称霸铁匠界";
+			mes "[克理斯多福]";
 			close;
 		case 5:
-			mes "[Christopher Guillenrow]";
-			mes "Okay, feel free to come anytime, whenever ye need. Fare ye well.";
+			mes "很抱歉,我这里没有比黄金铁砧更好的铁砧了.";
+			mes "[克理斯多福]";
 			close;
 		}
 	case 2:
-		mes "[Christopher Guillenrow]";
-		mes "A respectable blacksmith uses fine tools. Ye can become one o'those with me Stuff. Choose anything ye want.";
+		mes "或许传说中的'Ringgel'有比这更好的铁砧,但是它只是一个传说而已.";
+		mes "[克理斯多福]";
 		next;
-		switch(select("Mini-Furnace - 150 zeny:Iron Hammer - 1000 zeny:Golden Hammer - 3000 zeny:Oridecon Hammer - 5000 zeny:Cancel.")) {
+		switch(select("携带用熔矿炉 - 150z:钢铁锤子 - 1,000z:黄金锤子 - 3,000z:神之金属锤子 - 5,000z:结束交易")) {
 		case 1:
-			mes "[Christopher Guillenrow]";
-			mes "It's a much needed tool fer refining metal! So, How many do ye wish to buy? If ye want to quit, just type the number '0.'";
+			mes "如果有任何需要的话,欢迎您再度光临指.";
+			mes "请慢走.";
 			next;
 			while(1) {
 				input .@input;
 				if (.@input == 0) {
-					mes "[Christopher Guillenrow]";
-					mes "Aye, the deal is canceled. Fare ye well.";
+					mes "[克理斯多福]";
+					mes "伟大的铁匠当然得要用伟大的道具.";
 					close;
 				}
 				else if ((.@input < 0) || (.@input > 500)) {
-					mes "[Christopher Guillenrow]";
-					mes "Ye can buy 500, er less.";
+					mes "如果在克里斯多福铁匠铺购买道具的话,";
+					mes "您一定可以成为一名伟大的铁匠的.";
 					next;
 				}
 				else {
@@ -104,79 +104,79 @@ geffen_in,110,172,0	script	Christopher#1	63,{
 			}
 			.@sell = .@input * 150;
 			if (Zeny < .@sell) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "选选看那一种道具最何您的心意吧!";
+				mes "[克理斯多福]";
 				close;
 			}
 			if (checkweight(612,.@input) == 0) {
-				mes "[Christopher Guillenrow]";
-				mes "Ye look like you don't got enough room in yer inventory. Put some stuff into your Kafra Storage, why don't ye?";
+				mes "好的,请问您要购买多少数量?";
+				mes "欲结束交易的话请按'0'.";
 				close;
 			}
 			getitem 612,.@input; // Portable_Furnace
 			Zeny = Zeny-.@sell;
-			mes "[Christopher Guillenrow]";
-			mes "Thank ye fer shopping at me workshop. Feel free to come anytime, whenever ye need.";
+			mes "[克理斯多福]";
+			mes "交易已经结束.请慢走.";
 			close;
 		case 2:
 			if (Zeny < 1000) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "[克理斯多福]";
+				mes "请将购买数量减到500个以下.";
 				close;
 			}
 			getitem 613,1; // Iron_Hammer
 			Zeny = Zeny-1000;
-			mes "[Christopher Guillenrow]";
-			mes "Thank ye fer shopping at me workshop. Feel free to come anytime, whenever ye need.";
+			mes "[克理斯多福]";
+			mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐……";
 			close;
 		case 3:
 			if (Zeny < 3000) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "[克理斯多福]";
+				mes "你没办法携带这么多东西唷!";
 				close;
 			}
 			getitem 614,1; // Golden_Hammer
 			Zeny = Zeny-3000;
-			mes "[Christopher Guillenrow]";
-			mes "Thank ye fer shopping at me workshop. Feel free to come anytime, whenever ye need.";
+			mes "[克理斯多福]";
+			mes "感谢您的光临,欢迎下次光临!";
 			close;
 		case 4:
 			if (Zeny < 5000) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "[克理斯多福]";
+				mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐……";
 				close;
 			}
 			getitem 615,1; // Oridecon_Hammer
 			Zeny = Zeny-5000;
-			mes "[Christopher Guillenrow]";
-			mes "Thank ye fer shopping at me workshop. Feel free to come anytime, whenever ye need.";
+			mes "[克理斯多福]";
+			mes "感谢您的光临,欢迎下次光临!";
 			close;
 		case 5:
-			mes "[Christopher Guillenrow]";
-			mes "Feel free to come anytime, whenever ye need. Fare ye well.";
+			mes "[克理斯多福]";
+			mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐……";
 			close;
 		}
 	case 3:
-		mes "[Christopher Guillenrow]";
-		mes "I prepare every Metal, and only the high quality ones o'course. Now then, which one do ye need?";
+		mes "[克理斯多福]";
+		mes "感谢您的光临,欢迎下次光临!";
 		next;
-		switch(select("Phracon - 200z.:Emveretarcon - 1000z.:Cancel.")) {
+		switch(select("强化武器金属-级数一 - 200z:强化武器金属-级数二 - 1000z:取消")) {
 		case 1:
-			mes "[Christopher Guillenrow]";
-			mes "So, How many do ye wish to buy? If ye dont want anything, just type the number as '0.'";
+			mes "[克理斯多福]";
+			mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐……";
 			next;
 			while(1) {
 				input .@input;
 				if (.@input == 0) {
-					mes "[Christopher Guillenrow]";
-					mes "Deal has";
-					mes "been canceled.";
-					mes "Fare ye well.";
+					mes "[克理斯多福]";
+					mes "感谢您的光临,欢迎下次光临!";
+					mes "[克理斯多福]";
+					mes "欢迎来到'克理斯多福'的工作室";
 					close;
 				}
 				else if ((.@input < 0) || (.@input > 500)) {
-					mes "[Christopher Guillenrow]";
-					mes "Ye can buy 500, er less.";
+					mes "[克理斯多福]";
+					mes "我准备了很多高质量的金属.现在你需要哪一种呢?";
 					next;
 				}
 				else {
@@ -185,36 +185,36 @@ geffen_in,110,172,0	script	Christopher#1	63,{
 			}
 			.@sell = .@input * 200;
 			if (Zeny < .@sell) {
-				mes "[Christopher Guillenrow]";
-				mes "Ye don't have enough money. Ye know I can't sell this at a lower price... You know how the wifey nags about Zeny.";
+				mes "[克理斯多福]";
+				mes "现在你需要买多少呢?如果你不想买任何东西,请输入数字'0'";
 				close;
 			}
 			if (checkweight(1010,.@input) == 0) {
-				mes "[Christopher Guillenrow]";
-				mes "Ye look like you don't have the room to carry anythin' new. Why don't ye put some things into Kafra Storage n' come back.";
+				mes "[克理斯多福]";
+				mes "交易取消";
 				close;
 			}
 			getitem 1010,.@input; // Phracon
 			Zeny = Zeny-.@sell;
-			mes "[Christopher Guillenrow]";
-			mes "Thank ye fer shopping at me workshop. Feel free to come anytime, whenever ye need.";
+			mes "再见!";
+			mes "[克理斯多福]";
 			close;
 		case 2:
-			mes "[Christopher Guillenrow]";
-			mes "So, how many do ye wish to buy? If ye dont want anything at all, just type the number as '0.'";
+			mes "只能购买500个或者更少";
+			mes "[克理斯多福]";
 			next;
 			while(1) {
 				input .@input;
 				if (.@input == 0) {
-					mes "[Christopher Guillenrow]";
-					mes "Deal has";
-					mes "been canceled.";
-					mes "Fare ye well.";
+					mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐……";
+					mes "[克理斯多福]";
+					mes "你没办法携带这么多东西唷!";
+					mes "[克理斯多福]";
 					close;
 				}
 				else if ((.@input < 0) || (.@input > 500)) {
-					mes "[Christopher Guillenrow]";
-					mes "Ye can buy 500, er less.";
+					mes "感谢您的光临,欢迎下次光临!";
+					mes "[克理斯多福]";
 					next;
 				}
 				else {
@@ -223,64 +223,64 @@ geffen_in,110,172,0	script	Christopher#1	63,{
 			}
 			.@sell = .@input * 1000;
 			if (Zeny < .@sell) {
-				mes "[Christopher Guillenrow]";
-				mes "I don't think I can let ye have this with the zeny ye have. I can't lose me money because of ye.";
+				mes "现在你需要买多少呢?如果你不想买任何东西,请输入数字'0'";
+				mes "[克理斯多福]";
 				close;
 			}
 			if (checkweight(1011,.@input) == 0) {
-				mes "[Christopher Guillenrow]";
-				mes "Me friend... Seems to me ye don't have Inventory space. Why doncha put some things into Kafra Storage first?";
+				mes "交易取消";
+				mes "再见!";
 				close;
 			}
 			getitem 1011,.@input; // Emveretarcon
 			Zeny = Zeny-.@sell;
-			mes "[Christopher Guillenrow]";
-			mes "Thank ye fer shopping at me workshop. Feel free to come anytime, whenever ye need, whenever ye want.";
+			mes "[克理斯多福]";
+			mes "只能购买500个或者更少";
 			close;
 		case 3:
-			mes "[Christopher Guillenrow]";
-			mes "Feel free to come anytime, whenever ye need. Fare ye well.";
+			mes "[克理斯多福]";
+			mes "我觉得这个价格已经是最低的了,因为这么低的价钱,所以也不允许赊帐……";
 			close;
 		}
 	case 4:
-		mes "[Christopher Guillenrow]";
-		mes "I can purify yer Oridecon and Elunium. I make a refined Ore out of 5 o'each rough ones. Well... Which one do ye want to make?";
+		mes "[克理斯多福]";
+		mes "你没办法携带这么多东西唷!";
 		next;
-		switch(select("Make Oridecon:Make Elunium:Cancel.")) {
+		switch(select("制作神之金属:制作铝:取消")) {
 		case 1:
 			if (countitem(756) < 5) {
-				mes "[Christopher Guillenrow]";
-				mes "I told ye, I need 5 o'the rough Oridecons fer one Oridecon.";
+				mes "[克理斯多福]";
+				mes "感谢您的光临,欢迎下次光临!";
 				close;
 			}
 			else {
 				delitem 756,5;  //Oridecon_Stone
 				getitem 984,1; // Oridecon
-				mes "[Christopher Guillenrow]";
-				mes "Here's an Oridecon fer ye. Ye will be always welcome here, I'll be waitin' for ye.";
+				mes "[克理斯多福]";
+				mes "欢迎来到'克理斯多福'的工作室";
 				close;
 			}
 		case 2:
 			if (countitem(757) < 5) {
-				mes "[Christopher Guillenrow]";
-				mes "I told ye, I need 5 rough Eluniums fer one Elunium.";
+				mes "[克理斯多福]";
+				mes "我这里可以制作优质的金属矿石,5个神之金属原石可以制作成一个神之金属,5个铝原石可以制作成一个铝,你打算做哪一种呢?";
 				close;
 			}
 			else {
 				delitem 757,5;  //Elunium_Stone
 				getitem 985,1; // Elunium
-				mes "[Christopher Guillenrow]";
-				mes "Arrr, here's yer Elunium. Yer business is always welcome here, so feel free to come again.";
+				mes "[克理斯多福]";
+				mes "我告诉过你5个神之金属原石才能做一个神之金属";
 				close;
 			}
 		case 3:
-			mes "[Christopher Guillenrow]";
-			mes "Feel free to come anytime, whenever ye need. Fare ye well.";
+			mes "[克理斯多福]";
+			mes "给你一个神之金属,欢迎你下次再来!";
 			close;
 		}
 	case 5:
-		mes "[Christopher Guillenrow]";
-		mes "Feel free to come anytime, whenever ye need and whenever ye want. Fare ye well.";
+		mes "[克理斯多福]";
+		mes "我告诉过你5个铝原石才能换一个铝";
 		close;
 	}
 }

@@ -197,17 +197,17 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				mes "[Reidin Corse]";
 				mes "Ar-Arpesto, no!";
 				mes "...........................";
+				mes "";
 				mes "Oh. Oh, come on! The arrow";
 				mes "just glanced you! You'll be";
-				mes "alright. Quit being a baby.";
 				next;
+				mes "alright. Quit being a baby.";
 				mes "[Reidin Corse]";
 				mes "Eh, don't worry about";
 				mes "Arpesto. He's just being";
 				mes "a crazy old man. I'll take";
 				mes "care of him, so just make";
 				mes "sure you make good use";
-				mes "of that new skill. Take care~";
 				delitem 724,5; //Cardinal_Jewel_
 				delitem 7115,5; //Harpy's_Feather
 				delitem 537,30; //Pet_Food
@@ -215,163 +215,162 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				skill "HT_PHANTASMIC",1,SKILL_PERM;
 				close;
 			} else {
+				mes "of that new skill. Take care~";
 				mes "[Arpesto]";
 				mes "Hurry up and bring";
 				mes "^3131FF5 Cursed Rubies^000000,";
 				mes "^3131FF30 Pet Foods^000000 and";
 				mes "^3131FF5 Harpy Feathers^000000.";
 				mes "Then, I can teach you";
-				mes "the Emergency Arrow skill.";
 				close;
 			}
 		}
 		else {
 			if (getskilllv("HT_PHANTASMIC")) {
+				mes "the Emergency Arrow skill.";
 				mes "[Arpesto]";
 				mes "Ah, very nice.";
 				mes "Um, as you demonstrated";
 				mes "earlier, my teaching technique";
 				mes "was perfect. But next time, use";
 				mes "the skill on foes that deserve";
-				mes "to be beaten, alright? Good.";
 				set qskill_hunter,100;
 				close;
 			}
 			if (BaseJob == Job_Hunter && JobLevel < 40) {
+				mes "to be beaten, alright? Good.";
 				mes "[Arpesto]";
 				mes "Did the master send you";
 				mes "to me? Hmm... You're still";
 				mes "pretty green from the looks";
-				mes "of it. Yeah, I don't think there's anything I can teach quite yet.";
 				next;
+				mes "of it. Yeah, I don't think there's anything I can teach quite yet.";
 				mes "[Arpesto]";
 				mes "Train a little more and get";
 				mes "some more experience in";
 				mes "your job. When you become";
 				mes "more adept at hunting, you'll";
 				mes "be able to grasp what I've been";
-				mes "teaching Hunters and Snipers.";
 				close;
 			} else {
+				mes "teaching Hunters and Snipers.";
 				mes "[Arpesto]";
 				mes "Has the master sent you?";
 				mes "Ah, you definitely have the";
 				mes "keen, vulture like eyes of a";
 				mes "true Hunter. You should be";
 				mes "capable of learning my secret";
-				mes "skill, the 3rd Arpesto Form...";
 				next;
+				mes "skill, the 3rd Arpesto Form...";
 				mes "[Arpesto]";
 				mes "It's a handy skill that";
 				mes "I developed while battling";
 				mes "Medusas and running out";
 				mes "of arrows. I simply call it,";
 				mes "''^3131FFEmergency Arrow^000000.'' Would you";
-				mes "be interested in learning it?";
 				next;
 				switch(select("Yes, please!:Ummm...")) {
 				case 1:
+					mes "be interested in learning it?";
 					mes "[Arpesto]";
 					mes "Great, great. Of course,";
 					mes "you can't resist this offer";
 					mes "if you recognize this skill's";
 					mes "value. However, I'd like to";
-					mes "ask for a little tuition in return for me teaching this to you.";
 					next;
+					mes "ask for a little tuition in return for me teaching this to you.";
 					mes "[Arpesto]";
 					mes "Although I feel guilt at";
 					mes "asking for payment from";
 					mes "a fellow Hunter, creating";
 					mes "this skill required much";
 					mes "sacrifice and unimaginable";
-					mes "bloodshed on my part...";
 					next;
+					mes "bloodshed on my part...";
 					mes "[Reidin Corse]";
 					mes "Hey! You liar!";
 					mes "I was there when you";
 					mes "accidently made up that";
 					mes "skill when you were bored";
 					mes "and just messing around";
-					mes "with one of the Bows!";
 					emotion ET_KIK, getnpcid(0, "Reidin Corse#tu");
 					next;
 					emotion ET_HUK;
+					mes "with one of the Bows!";
 					mes "[Arpesto]";
 					mes "^333333*Ahem*^000000 Please Reidin,";
 					mes "don't entertain unfounded";
 					mes "rumors. It was only after";
 					mes "countless battles with Eddga";
 					mes "that I managed to invent and";
-					mes "perfect Emergency Arrow.";
 					next;
+					mes "perfect Emergency Arrow.";
 					mes "[Reidin Corse]";
 					mes "^333333*Tsk tsk*^000000 Huh.";
 					mes "I thought you said";
 					mes "you developed it while";
-					mes "you were fighting Medusas.";
 					next;
+					mes "you were fighting Medusas.";
 					mes "[Arpesto]";
 					mes "A-anyway, please bring";
 					mes "me the following items";
 					mes "as tuition in exchange for";
-					mes "me teaching you this skill.";
 					next;
+					mes "me teaching you this skill.";
 					mes "[Arpesto]";
 					mes "Please bring me";
 					mes "^3131FF5 Cursed Rubies^000000,";
 					mes "^3131FF30 Pet Foods^000000 and";
 					mes "^3131FF5 Harpy Feathers^000000.";
 					mes "Then I can teach";
-					mes "you this skill.";
 					next;
+					mes "you this skill.";
 					mes "[Reidin Corse]";
 					mes "30 Pet Foods?";
 					mes "What the heck do";
-					mes "you need all that for?";
 					next;
+					mes "you need all that for?";
 					mes "[Arpesto]";
 					mes "I...";
 					mes "I'm going to";
 					mes "use it to feed";
-					mes "my pet Falcon.";
 					next;
+					mes "my pet Falcon.";
 					mes "[Reidin Corse]";
 					mes "...";
 					mes "......";
 					mes ".........";
-					mes "......Riiiight.";
 					emotion ET_THINK, getnpcid(0, "Reidin Corse#tu");
 					set qskill_hunter,1;
 					close;
 				case 2:
+					mes "......Riiiight.";
 					mes "[Arpesto]";
 					mes "Alright, it's your";
 					mes "decision. However, I'm";
 					mes "sure that you may have";
 					mes "great need of my skill";
 					mes "sooner or later, so return";
-					mes "to me if you change your mind.";
 					close;
 				}
 			}
 		}
 	} else {
+		mes "to me if you change your mind.";
 		mes "[Arpesto]";
-		mes "The sky still looks clear, but recently the winds that have been blowing through the land seem to carry with them an air of misfortune.";
 		next;
 		emotion ET_HNG, getnpcid(0, "Reidin Corse#tu");
+		mes "The sky still looks clear, but recently the winds that have been blowing through the land seem to carry with them an air of misfortune.";
 		mes "[Reidin Corse]";
 		mes "So...";
 		mes "Danger's coming?";
 		mes "Heh! Chill, gramps~";
-		mes "I got it covered!";
 		next;
 		emotion ET_PROFUSELY_SWEAT;
+		mes "I got it covered!";
 		mes "[Arpesto]";
 		mes "Ho ho...";
 		mes "Energetic, but";
-		mes "cocky. Kids nowadays...";
 		close;
 	}
 }
-

@@ -18,10 +18,10 @@
 //============================================================
 ma_fild02,312,317,5	script	Guard#buwaya_cave	570,{
 	if (BaseLevel < 130) {
-		mes "[Guard]";
-		mes "People under ^ff0000level 130^000000";
-		mes "cannot enter this place.";
-		mes "This place is dangerous. Please go back.";
+		mes "[卫兵]";
+		mes "基本等级低于 ^ff0000130级^000000";
+		mes "是无法进入这个地方的.";
+		mes "这里很危险. 请回吧.";
 		close;
 	}
 
@@ -29,36 +29,36 @@ ma_fild02,312,317,5	script	Guard#buwaya_cave	570,{
 	set .@md_name$,"Buwaya Cave";
 
 	if (!.@party_id) {
-		mes "[Guard]";
-		mes "Buwaya is dangerous.";
-		mes "Please come back after you form a";
-		mes "team with other people.";
+		mes "[卫兵]";
+		mes "宝箱鳄鱼非常危险.";
+		mes "等你组织一支队伍后再回到这里";
+		mes "进行探险吧.";
 		close;
 	}
 	if (is_party_leader() == true) {
-		mes "[Guard]";
-		mes "This place is dangerous. Please go back.";
-		mes "If you dont have any business here, please go back.";
+		mes "[卫兵]";
+		mes "这里很危险. 请回吧.";
+		mes "如果你在附近没有其他的事情, 还是快点离开吧.";
 		next;
 		while(1) {
-			switch(select("Why is it so dangerous?:I'm here to hunt down Buwaya.:End conversation.")) {
+			switch(select("- 为什么说这里很危险?:- 我是来猎杀宝箱鳄鱼的.:- 结束对话.")) {
 			case 1:
-				mes "[Guard]";
-				mes "Recently, there has been a case";
-				mes "where villagers have disappeared.";
-				mes "After investigating the tracks, ";
-				mes "we found out the giant monster Buwaya";
-				mes "was responsible.";
+				mes "[卫兵]";
+				mes "最近一直接到附近有村民失踪的报告. ";
+				mes "经过我们调查我们发现了这里, ";
+				mes "并且发现了这条巨型鳄鱼. ";
+				mes "我们有充分理由相信,";
+				mes "村民的失踪原因就是它.";
 				next;
-				mes "[Guard]";
-				mes "Soldiers and mercenaries have been dispatched to ";
-				mes "hunt down Buwaya, but were never";
-				mes "completely successful.";
+				mes "[卫兵]";
+				mes "已经派遣了士兵们追杀这条鳄鱼, ";
+				mes "不过迄今为止还没有收到任何消息.";
+				mes "我们只能耐心的等待.";
 				next;
-				mes "[Guard]";
-				mes "Buwaya is still kidnapping";
-				mes "the villagers to this day.";
-				mes "Please gather some people to get rid of Buwaya.";
+				mes "[卫兵]";
+				mes "这条鳄鱼近期还在危害附近的村民";
+				mes "冒险家, 召集一批英雄们,";
+				mes "一起来消灭它把.";
 				next;
 				break;
 			case 2:
@@ -66,37 +66,37 @@ ma_fild02,312,317,5	script	Guard#buwaya_cave	570,{
 				if (.@playtime == -1) {
 					// fall through
 				} else if (.@playtime == 0 || .@playtime == 1) {
-					mes "[Guard]";
-					mes "Buwaya is still hiding.";
-					mes "Even if you enter now, Buwaya will not come out. ";
-					mes "Please come back later.";
+					mes "[卫兵]";
+					mes "宝箱鳄鱼还藏匿在深处.";
+					mes "就算你现在进去也不会碰到它. ";
+					mes "还是晚点再来吧.";
 					close;
 				} else {
 					erasequest 4229;
 					// fall through
 				}
 				if (instance_create(.@md_name$) < 0) {
-					mes "[Guard]";
+					mes "[卫兵]";
 					mes "Party name is... "+getpartyname(.@party_id)+".";
 					mes "Party leader is... "+strcharinfo(0);
 					mes "^0000ff"+.@md_name$+"^000000 cannot be opened now.";
-					mes "Please try a moment later.";
+					mes "请稍等.";
 					close;
 				}
-				mes "[Guard]";
+				mes "[卫兵]";
 				mes "I will open up the tunnel to ^0000ff"+.@md_name$+"^000000.";
-				mes "I wish you good luck.";
+				mes "祝你们好运.";
 				close;
 			case 3:
-				mes "[Guard]";
-				mes "This place is dangerous. You cannot enter.";
+				mes "[卫兵]";
+				mes "这里很危险. 你不能进去.";
 				close;
 			}
 		}
 	} else {
-		mes "[Guard]";
-		mes "Let me talk with the party leader.";
-		mes "Please call forth the leader.";
+		mes "[卫兵]";
+		mes "让我和队长谈谈.";
+		mes "请联系下你们的队长.";
 		close;
 	}
 }

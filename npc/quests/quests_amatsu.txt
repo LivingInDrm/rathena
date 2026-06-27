@@ -565,38 +565,38 @@ OnMyMobDead:
 }
 
 ama_test,50,100,3	script	Coach#ama	762,15,15,{
-	mes "[Coach]";
-	mes "Hoho~ Good.";
-	mes "I've been watching you in the VIP room. You were really something.";
-	mes "I was truly amazed.";
+	mes "[...]";
+	mes "^FF0066镪镪,镪镪,又来了一个";
+	mes "愚蠢的人啊! 这次想要怎么样";
+	mes "把我赶走啊!?^000000";
 	next;
-	mes "[Coach]";
-	mes "I thought you were really";
-	mes "Momotaro in the story!";
-	mes "Hohohoho...";
+	mes "[...]";
+	mes "^FF0066看来在哪里不知道学了些什么东西,";
+	mes "只拿这样子";
+	mes "是不能把我怎样的!! 镪镪!^000000";
 	next;
 	switch(select("Well, well. It is nothing~:It was boring.")) {
 	case 1:
-		mes "[Coach]";
-		mes "...Hohoho..";
-		mes "Don't be so proud of yourself.";
-		mes "When I was young like you,";
-		mes "I squashed Dokebi with";
-		mes "my little finger. Hohoho~";
+		mes "[...]";
+		mes "^FF0066镪镪! 哈哈! 镪镪! 哈哈哈!";
+		mes "既然敢,想要把我赶出去!";
+		mes "马上给我出去!! 镪镪!^000000";
+		mes "[...]";
+		mes "^FF0066镪镪! 镪镪! 镪镪! 这个家伙!";
 		next;
-		mes "[Coach]";
-		mes "..............";
-		mes "...Don't give me that look.";
-		mes "I was just joking. Hmmhmm.";
+		mes "既然用这种方式赶我走!";
+		mes "令人厌恶! 不服气!!^000000";
+		mes "[...]";
+		mes "^FF0066让我变成这个样子的宜希答家族";
 		next;
 		changequest 8127,8128;
-		mes "[Coach]";
-		mes "Now, the Momotaro story is over.";
-		mes "You can get your reward when you talk to the Publisher lady you saw first.";
+		mes "我要一辈子诅咒他! 诅咒!";
+		mes "人类啊,您也要小心点!^000000";
+		mes "[...]";
 		next;
-		mes "[Coach]";
-		mes "Don't lose your high self-esteem";
-		mes "in the future. Farewell.";
+		mes "^FF0066佑罗西那戈所做的所有事情";
+		mes "迟早会带给我";
+		mes "很大的不幸...^000000";
 		close2;
 		donpcevent "Timer#ama::OnDisable";
 		warp "amatsu",223,230;
@@ -604,41 +604,41 @@ ama_test,50,100,3	script	Coach#ama	762,15,15,{
 		donpcevent "Assistant#ama::OnReset";
 		end;
 	case 2:
-		mes "[Coach]";
-		mes ".....!!!!!!";
-		mes "....Hohohoho..";
-		mes "You're pretty funny.";
-		mes "Alright, hot stuff.";
-		mes "Do you want to listen to my proposal?";
+		mes "^CC3300镪啊啊啊啊啊啊啊啊啊!!^000000";
+		mes "[宜希答 撒伍克]";
+		mes "...唉呀哪里的年轻人啊...?";
+		mes "是您把狐狸赶走的吗?";
+		mes "糊里糊涂的没精神,唉呀...";
+		mes "[宜希答 撒伍克]";
 		next;
 		changequest 8127,8129;
-		mes "[Coach]";
-		mes "At this point I'm supposed to send you back...BUT!";
-		mes "I really want to know";
-		mes "what you are capable of. Hehe~";
-		mes "Hohoho~";
+		mes "谢谢您,从别的地方过来";
+		mes "还要受这种苦,";
+		mes "真是不好意思... 辛苦您了...";
+		mes "[宜希答 撒伍克]";
+		mes "我要联络我的儿子";
 		next;
-		mes "[Coach]";
-		mes "So, I will give you a chance.";
-		mes "But if you fail,";
-		mes "^3163FFyou can't take this challenge.^000000";
-		mes "Also, this mission will be pretty hard.";
+		mes "告诉他说已经把狐狸赶走了...";
+		mes "谢谢您,谢谢...";
+		mes "[宜希答 撒伍克]";
+		mes "现在我的精神有点恍惚";
+		mes "我要休息了,年轻人.....";
 		next;
 		if (select("Nah.. I'm good.:Bring it on, foo'!") == 1) {
 			erasequest 8129;
-			mes "[Coach]";
-			mes "Hoho~I understand...";
-			mes "You must be exhausted from the previous battle. It would have been a grand battle, though...";
+			mes "赶快去找我儿子吧...";
+			mes "[宜希答 撒伍克]";
+			mes "唉呀,您是帮忙赶走狐狸的";
 			next;
-			mes "[Coach]";
-			mes "Now, the Momotaro story is over.";
-			mes "You can get your reward";
-			mes "when you talk to";
-			mes "the Publisher lady you first spoke to.";
+			mes "那位年轻人啊... 欢迎欢迎";
+			mes "方便的话先坐一下吧...";
+			mes "[宜希答 撒伍克]";
+			mes "想想被狐狸上身";
+			mes "也都是我自己的错...";
 			next;
-			mes "[Coach]";
-			mes "Don't lose your high self-esteem";
-			mes "in the future. Farewell.";
+			mes "是我没有教好儿子... 哎呀";
+			mes "小时后是个乖乖的家伙";
+			mes "都是我没有教的很严格...";
 			next;
 			setquest 8128;
 			warp "amatsu",223,230;
@@ -647,11 +647,11 @@ ama_test,50,100,3	script	Coach#ama	762,15,15,{
 			donpcevent "Assistant#ama::OnReset";
 			end;
 		}
-		mes "[Coach]";
-		mes "Hohoho~ I like your attitude.";
-		mes "Now, this is the last battle!";
-		mes "Show me what you got.";
-		mes "I'm looking forward to this.";
+		mes "[宜希答 撒伍克]";
+		mes "本来这个村落没有这么大";
+		mes "也没有像东湖城这样大的城,";
+		mes "不过我儿子不知从那里";
+		mes "一直拿些财物来给我呢";
 		percentheal 70,0;
 		disablenpc "Coach#ama";
 		donpcevent "Am Mut#ama::OnEnable";
@@ -663,9 +663,9 @@ OnInit:
 	end;
 
 OnTouch_:
-	mes "[Coach]";
-	mes "Boom bam Boooom!!!";
-	mes "Tada~~~ !";
+	mes "不知道做些什么事赚来的钱";
+	mes "连我都要隐瞒着...";
+	mes "[宜希答 撒伍克]";
 	close;
 }
 
@@ -714,19 +714,19 @@ OnInit:
 	end;
 
 OnTouch_:
-	mes "[Coach]";
-	mes "( Clap- Clap- Clap- )";
+	mes "[积罗]";
+	mes "我叫积罗,我在这城里";
 	next;
-	mes "[Coach]";
-	mes "Hohoho~ You are really something.";
-	mes "You've got the moves, kiddo.";
-	mes "I'll give you that.";
+	mes "负责各种行政业务,";
+	mes "请问需要什么服务";
+	mes "[积罗]";
+	mes "通行证已经发给您了";
 	next;
-	mes "[Coach]";
-	mes "Well, time's up so...";
-	mes "Let me show you the exit.";
-	mes "I had a great time...";
-	mes "Don't forget to get your reward~";
+	mes "[积罗]";
+	mes "您所持的 Zeny 不足喔!";
+	mes "[积罗]";
+	mes "来, 就是这个啰";
+	mes "请小心保管不要再遗失了";
 	close2;
 	set event_momo,3;
 	changequest 8129,8130;

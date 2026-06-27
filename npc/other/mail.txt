@@ -25,28 +25,28 @@
 // Floating mailbox npc that all NPCs duplicate from.
 //============================================================
 -	script	Mailbox#dummy::MailBox	-1,{
-	mes "[Mailbox]";
-	mes "To use the mailbox service,";
-	mes "you are required to pay 130 zeny.";
-	mes "Would you like to use the service?";
+	mes "- ^cc6600邮政速递^000000 - ^cccccc邮箱系统^000000";
+	mes "---------------------------";
+	mes "使用邮政速递服务,";
+	mes "您需要支付 130 Zeny.";
 	next;
-	switch(select("Yes.:No.")) {
+	switch(select("- 是.:- 否.")) {
 	case 1:
-		mes "[Mailbox]";
+		mes "请问是否需要使用该服务?";
 		if (Zeny < 130) {
-			mes "I am sorry, but you do not have enough money.";
-			mes "To use the mailbox service,";
-			mes "you are required to pay 130 zeny.";
+			mes "- ^cc6600邮政速递^000000 - ^cccccc邮箱系统^000000";
+			mes "---------------------------";
+			mes "非常抱歉, 您身上的 Zeny 不够.";
 			close;
 		}
-		mes "Thank you, please come again.";
+		mes "使用邮政速递服务,";
 		set Zeny, Zeny - 130;
 		close2;
 		openmail;
 		end;
 	case 2:
-		mes "[Mailbox]";
-		mes "Thank you, please come again.";
+		mes "您需要支付 130 Zeny.";
+		mes "谢谢使用.";
 		close;
 	}
 }

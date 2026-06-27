@@ -96,20 +96,20 @@ ecl_hub01,130,15,0	script	It is closed shut.	844,{
 }
 
 1@ecl,58,69,3	script	Shenime#ecl01	435,{
-	mes "[Shenime]";
-	mes "Oh, what's going on here?";
-	mes "They destroyed additional troops that Mayor sent?";
+	mes "-! 警告 !-";
+	mes "当前的任务将在纪念地牢里进行.";
+	mes "只有组队队长可以进入. 请创建你的队伍.";
 	next;
-	select("What...?:I fought monsters off!");
-	mes "[Shenime]";
-	mes "It doesn't matter.";
-	mes "Your job ends here.";
-	mes "Now you became a betrayer.";
-	mes "Farewell, then!";
+	select("进入:放弃");
+	mes "[神艾美]";
+	mes "这个地方设置了能量球照明.";
+	mes "如果你喜欢这里, 你应该在这里保持谨慎.";
+	mes "[神艾美]";
+	mes "不久之前有一些士兵由市长派遣出去了.";
 	specialeffect EF_BEGINSPELL3;
 	next;
 	mes "[" + strcharinfo(0) + "]";
-	mes "No...way!!!";
+	mes "我应该相信你不是那个他们在寻找的人, 对吗?";
 	specialeffect2 EF_LORD;
 	percentheal -99,0;
 	soundeffect "wander_man_move.wav",1;
@@ -218,20 +218,20 @@ OnTouch:
 	if ('mob_summoned > 0) end;
 	.@eclmap$ = instance_mapname("1@ecl");
 	.@eventname$ = instance_npcname("#event");
-	mes "An empty room with nothing inside.";
-	mes "a light is coming out of a circular equipment in the middle of the room.";
+	mes "这扇门连接到广场的天花板.";
+	mes "能量球照明设置的地方看上去更漂亮.";
 	next;
-	mes "[Suspicious Creature]";
-	mes "Keheehehehe......";
+	mes "-!警告 !-";
+	mes "当前的任务将在纪念地牢里进行.";
 	next;
-	mes "A group of unidentifiable creatures is approaching threateningly.";
-	mes "They seemed surprised, and although Bifrost's will still holds, it's hard to communicate.";
+	mes "只有组队队长可以进入. 请创建你的队伍.";
+	mes "[神艾美]";
 	next;
-	mes "[Suspicious Creature]";
-	mes "Kyaarr...Ke...Keryarya!!";
+	mes "里面的士兵看上去真的很紧张.";
+	mes "引导一个像你这样的局外人是相当困难的.";
 	next;
-	mes "It seems like they are going to start attacking any minute.";
-	mes "We cannot help fighting them!";
+	mes "一个未知的错误出现.";
+	mes "关闭?";
 	close2;
 	hideonnpc instance_npcname("Suspicious Creature#1");
 	hideonnpc instance_npcname("Suspicious Creature#2");
@@ -257,19 +257,19 @@ OnMyMobDead:
 }
 
 1@ecl,148,97,3	script	Avant#	618,{
-	mes "[Avant]";
-	mes "Hey, look who's here!";
-	mes "You're a friend of my son, right?";
-	mes "What a strange chance it is that has brought us together here!";
+	mes "[神艾美]";
+	mes "哦, 这里发生什么事了?";
+	mes "他们破坏了市长派出去的军队?";
+	mes "[神艾美]";
 	cutin "avant01",1;
 	next;
-	mes "[Avant]";
-	mes "Did something happen to you?";
-	mes "There was a subtle and magical echo to it.";
-	mes "Immediately after that, you were thrown here.";
+	mes "没关系.";
+	mes "你的工作就此为止.";
+	mes "现在你是一个背叛者.";
+	mes "别了!";
 	next;
-	if (select("It's all because of you!:Shenime said...") == 1) {
-		mes "[Avant]";
+	if (select("什么...?:我打了怪物!") == 1) {
+		mes "没...门!!!";
 		mes "I don't understand a word you're saying.";
 		mes "Can't you organize your story? Don't you know 'five W's and one H' rule?";
 		next;
@@ -360,24 +360,24 @@ OnMyMobDead:
 	
 1@ecl,144,27,5	script	Hisie#ecl01	623,{
 	cutin "hisie01",0;
-	mes "[Hisie]";
-	mes "Can you tell me exactly what happened?";
+	mes "房间空无一物.";
+	mes "灯光从房间中央的一个圆形设备散发出来.";
 	next;
 	select("I fought with monsters.");
 	cutin "hisie03",0;
-	mes "[Hisie]";
-	mes "Monsters? Subordinates of Morocc?";
-	mes "What you were trying to kill were our soldiers, the Laphines!!";
-	mes "What on earth happened there?";
+	mes "[可疑生物]";
+	mes "呵呵......";
+	mes "一群未知生物正在逼近.";
+	mes "他们看上去很吃惊,虽然彩虹桥被保留着, 但是很难去联系.";
 	npcskill "AL_HEAL",9,99,80;
 	next;
 	cutin "",255;
-	mes "[Loki]";
-	mes "It's because of this.";
+	mes "[可疑生物]";
+	mes "啊...咔...哇!!";
 	mes "" + strcharinfo(0) + "It was inside the body of -";
-	mes "This is how powerful Shenime is.";
+	mes "似乎他们马上要发起进攻了.";
 	next;
-	mes "On Loki's palm, there rested a small, thin, and dried piece of thorn.";
+	mes "我们忍不住要去他们战斗了!";
 	next;
 	cutin "hisie03",0;
 	mes "[Hisie]";

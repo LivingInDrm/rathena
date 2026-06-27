@@ -108,9 +108,9 @@ payg_cas02,22,260,7	duplicate(cm)	Cherieos#payg_cas02	55
 //============================================================
 payg_cas02,149,149,0	script	#lever_PA02	111,{
 	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "这里有一个小小的控制杆, 去拉一下吗?";
 	next;
-	if(select("Pull.:Do not.") == 1) {
+	if(select("上前拉杆.:算了.") == 1) {
 		close2;
 		warp "payg_cas02",22,261;
 		end;

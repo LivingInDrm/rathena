@@ -22,91 +22,91 @@ mal_dun01,151,235,5	script	Starfish	551,{
 	set .@md_name$,"Octopus Cave";
 
 	if (!.@party_id) {
-		mes "[Starfish]";
-		mes "You alone is powerless, hehe!";
-		mes "Better get someone to help you out.";
-		mes "Make a party, and come back later.";
+		mes "[海星]";
+		mes "孤身一人是没用的, 呵呵!";
+		mes "找些志同道合的人来帮你把.";
+		mes "组成一支队伍, 然后再来找我.";
 		close;
 	}
 	if (is_party_leader() == false) {
-		mes "[Starfish]";
-		mes "Where is your leader, hehe.";
-		mes "I don't talk to some random people.";
-		mes "Bring your boss to me.";
+		mes "[海星]";
+		mes "你们的队长在哪里, 呵呵.";
+		mes "我可不是个随便的人,";
+		mes "把你们头叫来.";
 		close;
 	}
-	mes "[Starfish]";
-	mes "I am guarding here, hehe!";
-	mes "It is just roughly blocked for now.";
-	mes "But someday this cave must be sealed forever, hehe!";
+	mes "[海星]";
+	mes "我在这里守着, 呵呵!";
+	mes "现在八爪鱼的洞穴只是临时被堵死了.";
+	mes "不过我觉得离它永远被封的日子不远了, 呵呵!";
 	next;
 	while(1) {
-		switch(select("Ask what's going on.:Ask to open the gate.:Go to other location.")) {
+		switch(select("- 询问发生了什么.:- 要求打开洞口.:- 去别的地方.")) {
 		case 1:
-			mes "[Starfish]";
-			mes "Lately, our Starfish lady is";
-			mes "suffering with some issues, ooh ooh.";
-			mes "Something bad happen in this";
-			mes "peaceful place, hehe!";
+			mes "[海星]";
+			mes "最近, 我们海星一族的女王";
+			mes "碰到了一些麻烦, 嚯嚯.";
+			mes "一些不愉快的事情打破了这个";
+			mes "地方的宁静, 呵呵!";
 			next;
-			mes "[Starfish]";
-			mes "Weird looking limbs came out";
-			mes "from the hole there,";
-			mes "tried to kidnap our lady Starfish.";
-			mes "Ooh Ooh.";
+			mes "[海星]";
+			mes "从我背后的洞里出来很多";
+			mes "八爪鱼的触手,";
+			mes "这些鬼东西试图绑架我们海星.";
+			mes "一族的女王, 噢噢.";
 			next;
-			mes "[Starfish]";
-			mes "It seems those limbs belong to";
-			mes "that ugly octopus.";
-			mes "That monster should be taken care of,";
-			mes "but it's hard for ourselves only to make it happen, hehe.";
+			mes "[海星]";
+			mes "这些恶心的触手都是属于那个";
+			mes "该死的八爪鱼的.";
+			mes "这个家伙应该被好好的修理一下,";
+			mes "不过这个对于我们弱小的海星一族来说是非常有难度的, 呵呵.";
 			next;
-			mes "[Starfish]";
-			mes "I want to find someone special,";
-			mes "and ask to punish this ugly octopus.";
-			mes "I hope this octopus won't ever";
-			mes "harass our lady, hehe.";
+			mes "[海星]";
+			mes "我需要有一些专业的人,";
+			mes "来好好教训这只八爪鱼.";
+			mes "让它以后再也不敢打我们女王的主意.";
+			mes "呵呵.";
 			next;
-			mes "[Starfish]";
-			mes "Go catch that octopus and stick it to this pick.";
-			mes "If you bring back the pick, I will";
-			mes "open this gate for a while.";
-			mes "You should challenge if you are interested, hehe.";
+			mes "[海星]";
+			mes "去拔掉它的触手, 并把它们做成标本.";
+			mes "如果你能够承诺带回一些这样的战利品, ";
+			mes "我就打开背后的洞门.";
+			mes "让你能够进去探险, 呵呵.";
 			next;
 			break;
 		case 2:
 			set .@playtime, checkquest(4197,PLAYTIME);
 			if (.@playtime == 0 || .@playtime == 1) {
-				mes "[Starfish]";
-				mes "Octopus is not around now, hehe.";
-				mes "Please come back later.";
+				mes "[海星]";
+				mes "那只八爪鱼不在附近, 呵呵.";
+				mes "请稍候再来.";
 				close;
 			}
 			if (.@playtime == 2) erasequest 4197;
 			if (rentalcountitem(6442)) {
 				if (instance_create(.@md_name$) < 0) {
-					mes "[Starfish]";
+					mes "[海星]";
 					mes "Party name is... "+getpartyname(.@party_id)+".";
 					mes "Party leader is... "+strcharinfo(0)+".";
 					mes "^0000ff"+.@md_name$+"^000000, I cannot open now, hehe.";
-					mes "Now is not the time, please wait.";
+					mes "时机不对, 请再等等.";
 					close;
 				}
-				mes "[Starfish]";
+				mes "[海星]";
 				mes "I will open the gate for a while to ^0000ff"+.@md_name$+"^000000.";
-				mes "Please catch that pervert octopus,";
-				mes "and come back with it sticked to the pick, hehe.";
+				mes "请教训那个色狼章鱼,";
+				mes "并带回一些它的触手, 呵呵.";
 				close;
 			}
-			mes "[Starfish]";
-			mes "Prepare a pick first,";
-			mes "so you can thread that octopus";
-			mes "with that pick.";
-			mes "Then, I will let you in for a while, hehe.";
+			mes "[海星]";
+			mes "准备好捕章鱼棍,";
+			mes "有了它我才能放你进去.";
+			mes "快去准备吧.";
+			mes "然后, 我会让你进去一会, 呵呵.";
 			close;
 		case 3:
-			mes "[Starfish]";
-			mes "This is not a good location, check someplace else.";
+			mes "[海星]";
+			mes "这不是个好地方, 试试检查别的地方.";
 			close;
 		}
 	}
