@@ -41,5 +41,20 @@
 - Python 在 Windows 上写文件时，`&&` 链式命令可能因输出为空而不执行后续命令，需分开执行
 - 背景进程输出过大（exit code 2）不代表失败，需检查实际文件内容
 - 翻译工具运行时输出量极大（3000行日志），必须重定向到文件
-- 方案调研要区分“服务端 NPC 脚本汉化”和“客户端资源汉化”；`ROClientFullCN`、`LeeClient` 主要补客户端，不替代 NPC 脚本翻译
-- 运营中的中文 RO 服首页通常不公开服务端内核；调研结论必须区分“站点实锤样本”和“基于中文 rAthena 生态的保守推断”
+- 方案调研要区分"服务端 NPC 脚本汉化"和"客户端资源汉化"；`ROClientFullCN`、`LeeClient` 主要补客户端，不替代 NPC 脚本翻译
+- 运营中的中文 RO 服首页通常不公开服务端内核；调研结论必须区分"站点实锤样本"和"基于中文 rAthena 生态的保守推断"
+
+## 客户端稳定性 (2026-06)
+
+### 崩溃根因
+- **data.grf 版本与客户端 EXE 不匹配是最常见的崩溃原因**：kRO 持续更新 data.grf，新版 RSW 格式老客户端无法解析
+- `0xc0000005` access violation 通常是客户端尝试加载不支持的资源格式导致的内存访问错误
+- `payon.rsw` 等地图在 kRO 更新后可能被重制，与老客户端不兼容
+
+### 关键教训
+- **客户端 EXE 日期必须与 data.grf 版本匹配**：用 2021-11-03 的 EXE 就应该用 2021年11月左右的 data.grf
+- **NEMO 补丁 #71 Ignore Resource Errors 是必打补丁**：让缺失/不兼容资源不崩溃只报警告
+- **自定义 GRF 排在 data.ini 第一位**：优先加载自定义/修复的资源，覆盖 data.grf 中的问题文件
+- **RSW 降级可用 GRF Editor 完成**：个别问题地图可提取 RSW/GAT/GND 文件降级版本后重新打入 GRF
+- **PACKETVER 在 src/config/packets.hpp 定义**，自定义覆盖放 `src/custom/defines_pre.hpp`
+- **20211103 自动启用 PACKETVER_RE（Sakray 模式）**：因为落在 20200902-20211118 区间内
