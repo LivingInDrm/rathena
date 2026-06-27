@@ -15,14 +15,14 @@
 prontera,202,297,3	script	Rina#Easter	727,{
 	disable_items;
 	if (BaseLevel < 40) {
-		mes "[Rina]";
-		mes "Hi~!";
-		mes "You are an adventurer like me.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] Hi~!";
+		mes "[DRY-RUN] You are an adventurer like me.";
 		next;
-		mes "[Rina]";
-		mes "I am put under a curse.";
-		mes "I know you want to help me,";
-		mes "but your experience is not enough.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] I am put under a curse.";
+		mes "[DRY-RUN] I know you want to help me,";
+		mes "[DRY-RUN] but your experience is not enough.";
 		next;
 		consumeitem 607; //Yggdrasilberry
 		consumeitem 12068; //Luk_Dish03
@@ -30,89 +30,89 @@ prontera,202,297,3	script	Rina#Easter	727,{
 		consumeitem 12053; //Vit_Dish03
 		npcskill "AL_INCAGI",1,0,0;
 		npcskill "AL_BLESSING",1,0,0;
-		mes "[Rina]";
-		mes "I am not in the good condition,";
-		mes "so what I can do for you";
-		mes "is just like this.";
-		mes "Then, good bye.";
-		mes "Take care~!";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] I am not in the good condition,";
+		mes "[DRY-RUN] so what I can do for you";
+		mes "[DRY-RUN] is just like this.";
+		mes "[DRY-RUN] Then, good bye.";
+		mes "[DRY-RUN] Take care~!";
 		close;
 	}
 	set .@quest1, checkquest(9117);
 	if (.@quest1 == -1) {
 		playbgm "30.mp3"; // One Step Closer
-		mes "[Rina]";
-		mes "Hi~!";
-		mes "You are an adventurer like me.";
-		mes "Well... In fact, I am";
-		mes "put under a strange curse.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] Hi~!";
+		mes "[DRY-RUN] You are an adventurer like me.";
+		mes "[DRY-RUN] Well... In fact, I am";
+		mes "[DRY-RUN] put under a strange curse.";
 		next;
-		mes "[Rina]";
-		mes "To release this curse,";
-		mes "somebody needs to do ^800080Oath-taking ceremony^000000";
-		mes "with me,";
-		mes "and then needs to solve";
-		mes "several problems instead of me.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] To release this curse,";
+		mes "[DRY-RUN] somebody needs to do ^800080Oath-taking ceremony^000000";
+		mes "[DRY-RUN] with me,";
+		mes "[DRY-RUN] and then needs to solve";
+		mes "[DRY-RUN] several problems instead of me.";
 		next;
-		if (select("Let's help ^800080Rina^000000.:Just skip it.") == 2) {
+		if (select("[DRY-RUN] Let's help ^800080Rina^000000.:Just skip it.") == 2) {
 			emotion ET_OHNO;
-			mes "[Rina]";
-			mes "To help me,";
-			mes "I need a competent adventurer.";
-			mes "If you know those people,";
-			mes "I hope you to introduce them to me later.";
+			mes "[DRY-RUN] [Rina]";
+			mes "[DRY-RUN] To help me,";
+			mes "[DRY-RUN] I need a competent adventurer.";
+			mes "[DRY-RUN] If you know those people,";
+			mes "[DRY-RUN] I hope you to introduce them to me later.";
 			close;
 		}
 		emotion ET_COOL;
-		mes "[Rina]";
-		mes "Are you really going to help me?";
-		mes "Thank you.";
-		mes "You are so brave.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] Are you really going to help me?";
+		mes "[DRY-RUN] Thank you.";
+		mes "[DRY-RUN] You are so brave.";
 		next;
 		playbgm "01.mp3"; // Title
-		mes "[Rina]";
-		mes "Then I'll start ^800080Oath-taking ceremony^000000.";
-		mes " ";
-		mes "^787878( A mysterious atmosphere hangs in the air. )^000000";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] Then I'll start ^800080Oath-taking ceremony^000000.";
+		mes "[DRY-RUN] ^787878( A mysterious atmosphere hangs in the air. )^000000";
+		mes "[DRY-RUN] [Rina]";
 		next;
 		specialeffect2 EF_COUPLECASTING;
 		next;
-		mes "[Rina]";
-		mes "Blah blah blah...";
-		mes " ";
-		mes "Blah blah blah...";
-		mes " ";
-		mes "^787878( ... This is a strange spell. )^000000";
+		mes "[DRY-RUN] Blah blah blah...";
+		mes "[DRY-RUN] Blah blah blah...";
+		mes "[DRY-RUN] ^787878( ... This is a strange spell. )^000000";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] Haaaaah~";
+		mes "[DRY-RUN] ^800080Oath-taking ceremony^000000 is done enough now.";
 		next;
 		specialeffect2 EF_SIGNUM;
-		mes "[Rina]";
-		mes "Haaaaah~";
-		mes "^800080Oath-taking ceremony^000000 is done enough now.";
-		mes "Isn't that so simple?";
+		mes "[DRY-RUN] Isn't that so simple?";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] Okay, from no on,";
+		mes "[DRY-RUN] you need to go on ^006400a real adventure";
 		next;
 		emotion ET_HUM;
-		mes "[Rina]";
-		mes "Okay, from no on,";
-		mes "you need to go on ^006400a real adventure";
-		mes "to release my curse^000000.";
-		mes "Let me know when you are ready.";
+		mes "[DRY-RUN] to release my curse^000000.";
+		mes "[DRY-RUN] Let me know when you are ready.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] What you need to do is";
+		mes "[DRY-RUN] to choose one monster among";
 		setquest 9117;
 		close;
 	} else if (.@quest1 == 0 || .@quest1 == 1) {
 	L_HuntingInfo:
-		mes "[Rina]";
-		mes "What you need to do is";
-		mes "to choose one monster among";
-		mes "^FF0000DEVIRUCHI,^000000 ^FF0000WRAITH DEAD,^000000";
-		mes "^FF0000DULLAHAN,^000000 ^FF0000NIGHTMARE TERROR^000000";
-		mes "and then kill ^0000FF50^000000 monsters";
-		mes "and come back to me.";
+		mes "[DRY-RUN] ^FF0000DEVIRUCHI,^000000 ^FF0000WRAITH DEAD,^000000";
+		mes "[DRY-RUN] ^FF0000DULLAHAN,^000000 ^FF0000NIGHTMARE TERROR^000000";
+		mes "[DRY-RUN] and then kill ^0000FF50^000000 monsters";
+		mes "[DRY-RUN] and come back to me.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] It must be a tough task,";
+		mes "[DRY-RUN] but you are the right person";
 		next;
-		mes "[Rina]";
-		mes "It must be a tough task,";
-		mes "but you are the right person";
-		mes "who did the oath-taking ceremony.";
-		mes "I hope you succeed.";
+		mes "[DRY-RUN] who did the oath-taking ceremony.";
+		mes "[DRY-RUN] I hope you succeed.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] You did it.";
+		mes "[DRY-RUN] I can feel that my body is recovering.";
 		if (.@quest1 < 2) {
 			completequest 9117;
 			setquest 9118;
@@ -127,14 +127,14 @@ prontera,202,297,3	script	Rina#Easter	727,{
 	} else if (.@quest1 == 2) {
 		if (checkquest(9118) < 2 || checkquest(9119) < 2 || checkquest(9120) < 2 || checkquest(9121) < 2) {
 			if (checkquest(9118,HUNTING) == 2 || checkquest(9119,HUNTING) == 2 || checkquest(9120,HUNTING) == 2 || checkquest(9121,HUNTING) == 2) {
-				mes "[Rina]";
-				mes "You did it.";
-				mes "I can feel that my body is recovering.";
-				mes "But it is not enough.";
+				mes "[DRY-RUN] But it is not enough.";
+				mes "[DRY-RUN] [Rina]";
+				mes "[DRY-RUN] ^006400You have one more thing to do.^000000";
+				mes "[DRY-RUN] Let me know when you're ready.";
 				next;
-				mes "[Rina]";
-				mes "^006400You have one more thing to do.^000000";
-				mes "Let me know when you're ready.";
+				mes "[DRY-RUN] [Rina]";
+				mes "[DRY-RUN] I will check one thing.";
+				mes "[DRY-RUN] For this task,";
 				close2;
 				completequest 9118;
 				completequest 9119;
@@ -148,37 +148,37 @@ prontera,202,297,3	script	Rina#Easter	727,{
 	}
 	set .@quest2, checkquest(9122);
 	if (.@quest2 == 0 || .@quest2 == 1) {
-		mes "[Rina]";
-		mes "I will check one thing.";
-		mes "For this task,";
-		mes "You need to feel the music.";
+		mes "[DRY-RUN] You need to feel the music.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] You cannot complete the task";
+		mes "[DRY-RUN] without the music.";
 		next;
-		mes "[Rina]";
-		mes "You cannot complete the task";
-		mes "without the music.";
-		mes "do you have any problem?";
+		mes "[DRY-RUN] do you have any problem?";
+		mes "[DRY-RUN] - Check! -";
+		mes "[DRY-RUN] ^787878- BGM option should be turned on -^000000";
+		mes "[DRY-RUN] ^787878- in the game option menu. -^000000";
 		next;
-		mes "- Check! -";
-		mes "^787878- BGM option should be turned on -^000000";
-		mes "^787878- in the game option menu. -^000000";
-		mes "^787878- Please check -^000000";
-		mes "^787878- whether you can listen -^000000";
-		mes "^787878- to the music sound. -^000000";
+		mes "[DRY-RUN] ^787878- Please check -^000000";
+		mes "[DRY-RUN] ^787878- whether you can listen -^000000";
+		mes "[DRY-RUN] ^787878- to the music sound. -^000000";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] I am so shocked that";
+		mes "[DRY-RUN] you cannot feel the music.";
 		next;
-		if(select("[I'm ready to listen to the BGM.]:[I can't listen to the BGM.]") == 2) {
-			mes "[Rina]";
-			mes "I am so shocked that";
-			mes "you cannot feel the music.";
-			mes "What should we do now...";
+		if(select("[DRY-RUN] [I'm ready to listen to the BGM.]:[I can't listen to the BGM.]") == 2) {
+			mes "[DRY-RUN] What should we do now...";
+			mes "[DRY-RUN] [Rina]";
+			mes "[DRY-RUN] Listen carefully";
+			mes "[DRY-RUN] the feelings of it...";
 			close2;
 			emotion ET_CRY;
 			end;
 		}
-		mes "[Rina]";
-		mes "Listen carefully";
-		mes "the feelings of it...";
-		mes "I can't hear it,";
-		mes "but you can hear the sound.";
+		mes "[DRY-RUN] I can't hear it,";
+		mes "[DRY-RUN] but you can hear the sound.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] ^006400The music you're hearing now^000000";
+		mes "[DRY-RUN] has something to do with the one specific city.";
 		next;
 		if (oversea_event2 < 520 || oversea_event3 < 270 || oversea_event6 < 245 || oversea_event9 < 197) {
 			     if (oversea_event2 == 520) playbgm "13.mp3"; // Theme of Geffen
@@ -194,26 +194,26 @@ prontera,202,297,3	script	Rina#Easter	727,{
 				}
 			}
 		}
-		mes "[Rina]";
-		mes "^006400The music you're hearing now^000000";
-		mes "has something to do with the one specific city.";
-		mes "Think carefully ^006400what kind of city^000000";
-		mes "has similar feeling with this music.";
+		mes "[DRY-RUN] Think carefully ^006400what kind of city^000000";
+		mes "[DRY-RUN] has similar feeling with this music.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] And...";
+		mes "[DRY-RUN] Go to ^006400the city";
 		next;
-		mes "[Rina]";
-		mes "And...";
-		mes "Go to ^006400the city";
-		mes "where you can remind by this music^000000.";
+		mes "[DRY-RUN] where you can remind by this music^000000.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] After that,";
+		mes "[DRY-RUN] find ^FF0000the strange mark^000000";
 		next;
-		mes "[Rina]";
-		mes "After that,";
-		mes "find ^FF0000the strange mark^000000";
-		mes "around the entrances of the city.";
-		mes "Then you can release the curse on me.";
+		mes "[DRY-RUN] around the entrances of the city.";
+		mes "[DRY-RUN] Then you can release the curse on me.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] It must be tough";
+		mes "[DRY-RUN] but I hope you good luck.";
 		next;
-		mes "[Rina]";
-		mes "It must be tough";
-		mes "but I hope you good luck.";
+		mes "[DRY-RUN] [Rina]";
+		mes "[DRY-RUN] You're back~!";
+		mes "[DRY-RUN] My curse has been released.";
 		close2;
 		emotion ET_OHNO;
 		end;
@@ -221,17 +221,17 @@ prontera,202,297,3	script	Rina#Easter	727,{
 		set .@quest3, checkquest(9123);
 		if (.@quest3 == 0 || .@quest3 == 1) {
 			emotion ET_CHUP;
-			mes "[Rina]";
-			mes "You're back~!";
-			mes "My curse has been released.";
-			mes "Thank you so much.";
+			mes "[DRY-RUN] Thank you so much.";
+			mes "[DRY-RUN] [Rina]";
+			mes "[DRY-RUN] Your bag is too full.";
+			mes "[DRY-RUN] I have a present for you";
 			next;
 			if (checkweight(5852,1) == 0) {
-				mes "[Rina]";
-				mes "Your bag is too full.";
-				mes "I have a present for you";
-				mes "so make your bag lighter.";
-				mes "I'll wait for you.";
+				mes "[DRY-RUN] so make your bag lighter.";
+				mes "[DRY-RUN] I'll wait for you.";
+				mes "[DRY-RUN] [Rina]";
+				mes "[DRY-RUN] This is the present for you.";
+				mes "[DRY-RUN] It's not a big one";
 				close;
 			}
 			completequest 9123;
@@ -262,16 +262,16 @@ prontera,202,297,3	script	Rina#Easter	727,{
 				set .@nJobExp, (JobLevel * JobLevel * (JobLevel / 5 + 2) + (20 - JobLevel)) * 3;
 			}
 			getexp .@nBaseExp,.@nJobExp;
-			mes "[Rina]";
-			mes "This is the present for you.";
-			mes "It's not a big one";
-			mes "but please take it";
-			mes "as a token of my gratitude.";
+			mes "[DRY-RUN] but please take it";
+			mes "[DRY-RUN] as a token of my gratitude.";
+			mes "[DRY-RUN] [Rina]";
+			mes "[DRY-RUN] I'll take a rest for a few days";
+			mes "[DRY-RUN] and then I'll go on an adventure.";
 			next;
-			mes "[Rina]";
-			mes "I'll take a rest for a few days";
-			mes "and then I'll go on an adventure.";
-			mes "See you again.";
+			mes "[DRY-RUN] See you again.";
+			mes "[DRY-RUN] [Rina]";
+			mes "[DRY-RUN] Thank you for releasing my curse.";
+			mes "[DRY-RUN] I'll take a rest for a few days";
 			close2;
 			consumeitem 607; //Yggdrasilberry
 			consumeitem 12068; //Luk_Dish03
@@ -281,8 +281,8 @@ prontera,202,297,3	script	Rina#Easter	727,{
 			npcskill "AL_BLESSING",1,0,0;
 			end;
 		} else {
-			mes "[Rina]";
-			mes "Thank you for releasing my curse.";
+			mes "[DRY-RUN] and then go on an adventure again.";
+			mes "[DRY-RUN] Have a happy day~!";
 			mes "I'll take a rest for a few days";
 			mes "and then go on an adventure again.";
 			mes "Have a happy day~!";
@@ -299,13 +299,13 @@ geffen,207,114,4	script	#Hiddne01Easter	844,{
 	if (oversea_event2 > 519) {
 	OnRelease:
 		specialeffect EF_PATTACK;
-		mes "- I found ^0000FFthe strange mark^000000. -";
+		mes "[DRY-RUN] - I found ^0000FFthe strange mark^000000. -";
 		next;
 		specialeffect2 EF_HOLYHIT;
-		mes "- I can definitely feel that";
-		mes "- ^0000FFRina^000000 has been released";
-		mes "- from the curse.";
-		mes "- ^006400Let's go back to Rina!^000000";
+		mes "[DRY-RUN] - I can definitely feel that";
+		mes "[DRY-RUN] - ^0000FFRina^000000 has been released";
+		mes "[DRY-RUN] - from the curse.";
+		mes "[DRY-RUN] - ^006400Let's go back to Rina!^000000";
 		if (checkquest(9122) < 2) {
 			completequest 9122;
 			setquest 9123;
@@ -530,55 +530,55 @@ prontera,204,297,3	script	Rina's Little Friend	463,{
 }
 
 prontera,116,82,5	script	Traveler#01Easter	85,{
-	mes "[Traveler]";
-	mes "I'm a traveler";
-	mes "and I often visit ^8B4513Prontera^000000.";
-	mes "Hmm, I think I might";
-	mes "see you around here before.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] I'm a traveler";
+	mes "[DRY-RUN] and I often visit ^8B4513Prontera^000000.";
+	mes "[DRY-RUN] Hmm, I think I might";
+	mes "[DRY-RUN] see you around here before.";
 	next;
-	if(select("Listen some more.:Just ignore it.") == 2) {
-		mes "[Traveler]";
-		mes "As I expected,";
-		mes "you are a silent person. Ha ha.";
-		mes "Good bye.";
+	if(select("[DRY-RUN] Listen some more.:Just ignore it.") == 2) {
+		mes "[DRY-RUN] [Traveler]";
+		mes "[DRY-RUN] As I expected,";
+		mes "[DRY-RUN] you are a silent person. Ha ha.";
+		mes "[DRY-RUN] Good bye.";
 		close;
 	}
-	mes "[Traveler]";
-	mes "A few days ago,";
-	mes "I saw a new adventurer";
-	mes "who were standing";
-	mes "near the ^8B4513Cathedral^000000.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] A few days ago,";
+	mes "[DRY-RUN] I saw a new adventurer";
+	mes "[DRY-RUN] who were standing";
+	mes "[DRY-RUN] near the ^8B4513Cathedral^000000.";
 	next;
 	emotion ET_THROB;
-	mes "[Traveler]";
-	mes "That adventurer seemed pretty.";
-	mes "But...";
-	mes "I feel some strange energy";
-	mes "so I don't come close to that person.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] That adventurer seemed pretty.";
+	mes "[DRY-RUN] But...";
+	mes "[DRY-RUN] I feel some strange energy";
+	mes "[DRY-RUN] so I don't come close to that person.";
 	next;
-	mes "[Traveler]";
-	mes "Look like";
-	mes "you're interested in";
-	mes "that new adventurer?";
-	mes "Or that is just your face look. Ha ha.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] Look like";
+	mes "[DRY-RUN] you're interested in";
+	mes "[DRY-RUN] that new adventurer?";
+	mes "[DRY-RUN] Or that is just your face look. Ha ha.";
 	next;
-	if(select("I'm interested in it.:I don't care at all.") == 2) {
-		mes "[Traveler]";
-		mes "Ah~ I see~!";
-		mes "Then, Good bye.";
+	if(select("[DRY-RUN] I'm interested in it.:I don't care at all.") == 2) {
+		mes "[DRY-RUN] [Traveler]";
+		mes "[DRY-RUN] Ah~ I see~!";
+		mes "[DRY-RUN] Then, Good bye.";
 		close;
 	}
-	mes "[Traveler]";
-	mes "Just as I expected!";
-	mes "You can find";
-	mes "that new adventurer";
-	mes "on the way to the ^8B4513Cathedral^000000";
-	mes "at the direction of 1o'clock in ^8B4513Prontera^000000.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] Just as I expected!";
+	mes "[DRY-RUN] You can find";
+	mes "[DRY-RUN] that new adventurer";
+	mes "[DRY-RUN] on the way to the ^8B4513Cathedral^000000";
+	mes "[DRY-RUN] at the direction of 1o'clock in ^8B4513Prontera^000000.";
 	next;
-	mes "[Traveler]";
-	mes "She was carrying";
-	mes "^800080a big egg thing^000000.";
-	mes "That's what I know.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] She was carrying";
+	mes "[DRY-RUN] ^800080a big egg thing^000000.";
+	mes "[DRY-RUN] That's what I know.";
 	close;
 OnInit:
 	initnpctimer;
@@ -591,23 +591,23 @@ OnTimer5000:
 }
 
 prontera,163,194,5	script	Traveler#02Easter	92,{
-	mes "[Traveler]";
-	mes "A while ago,";
-	mes "I met a lady";
-	mes "and she said she has been";
-	mes "under a strange curse.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] A while ago,";
+	mes "[DRY-RUN] I met a lady";
+	mes "[DRY-RUN] and she said she has been";
+	mes "[DRY-RUN] under a strange curse.";
 	next;
-	mes "[Traveler]";
-	mes "I wanted to help her";
-	mes "but my experience is not enough.";
-	mes "So I couldn't help her.";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] I wanted to help her";
+	mes "[DRY-RUN] but my experience is not enough.";
+	mes "[DRY-RUN] So I couldn't help her.";
 	next;
-	mes "[Traveler]";
-	mes "If you are more than";
-	mes "level ^0000FF40^000000,";
-	mes "go to the ^8B4513Cathedral^000000";
-	mes "at the direction of 1'o clock.";
-	mes "I hope you can help her...";
+	mes "[DRY-RUN] [Traveler]";
+	mes "[DRY-RUN] If you are more than";
+	mes "[DRY-RUN] level ^0000FF40^000000,";
+	mes "[DRY-RUN] go to the ^8B4513Cathedral^000000";
+	mes "[DRY-RUN] at the direction of 1'o clock.";
+	mes "[DRY-RUN] I hope you can help her...";
 	close;
 OnInit:
 	initnpctimer;

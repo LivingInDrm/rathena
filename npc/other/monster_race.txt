@@ -1912,233 +1912,233 @@ p_track02,47,28,0	duplicate(Tire_1)	Tire#race02_6_6	-1,0,0
 //============================================================
 ein_in01,85,208,5	script	Ei'felle#repay01	854,{
 	if (!ein_medal01) {
-		mes "[Ei'felle]";
-		mes "Curses! We need to deliver";
-		mes "what our customers ordered,";
-		mes "but we've been making nothing";
-		mes "but shipshod products! If we";
-		mes "only had that metal, we could";
-		mes "pump up our product quality!";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] Curses! We need to deliver";
+		mes "[DRY-RUN] what our customers ordered,";
+		mes "[DRY-RUN] but we've been making nothing";
+		mes "[DRY-RUN] but shipshod products! If we";
+		mes "[DRY-RUN] only had that metal, we could";
+		mes "[DRY-RUN] pump up our product quality!";
 		next;
-		select("What metal are you talking about?");
-		mes "[Ei'felle]";
-		mes "There's a small village";
-		mes "at the outskirts of the";
-		mes "Schwaltzvalt Republic that";
-		mes "gives these special medals";
-		mes "that are made of this metal";
-		mes "which we desperately need...";
+		select("[DRY-RUN] What metal are you talking about?");
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] There's a small village";
+		mes "[DRY-RUN] at the outskirts of the";
+		mes "[DRY-RUN] Schwaltzvalt Republic that";
+		mes "[DRY-RUN] gives these special medals";
+		mes "[DRY-RUN] that are made of this metal";
+		mes "[DRY-RUN] which we desperately need...";
 		next;
-		mes "[Ei'felle]";
-		mes "We've sent one of our best";
-		mes "guildsmen to get some of those";
-		mes "medals for us, but he hasn't";
-		mes "reported back to us quite yet.";
-		mes "I'm getting pretty anxious...";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] We've sent one of our best";
+		mes "[DRY-RUN] guildsmen to get some of those";
+		mes "[DRY-RUN] medals for us, but he hasn't";
+		mes "[DRY-RUN] reported back to us quite yet.";
+		mes "[DRY-RUN] I'm getting pretty anxious...";
 		next;
-		mes "[Ei'felle]";
-		mes "I mean, we need a whole";
-		mes "lot of that metal to fill out";
-		mes "our orders and finish our";
-		mes "manufacturing research,";
-		mes "but so far, none of us have";
-		mes "been able to get any medals...";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] I mean, we need a whole";
+		mes "[DRY-RUN] lot of that metal to fill out";
+		mes "[DRY-RUN] our orders and finish our";
+		mes "[DRY-RUN] manufacturing research,";
+		mes "[DRY-RUN] but so far, none of us have";
+		mes "[DRY-RUN] been able to get any medals...";
 		next;
 		if (countitem("Marvelous_Medal")) {//7515
 			mes "["+ strcharinfo(0) +"]";
-			mes "Oh! Are you talking";
-			mes "about the medals that";
-			mes "they give as rewards in";
-			mes "the Monster Race Arena?";
-			mes "I have some of those.";
+			mes "[DRY-RUN] Oh! Are you talking";
+			mes "[DRY-RUN] about the medals that";
+			mes "[DRY-RUN] they give as rewards in";
+			mes "[DRY-RUN] the Monster Race Arena?";
+			mes "[DRY-RUN] I have some of those.";
 			next;
-			mes "[Ei'felle]";
-			mes "Huh? Show them to me...";
-			mes "Yes! That's exactly what";
-			mes "we need! Would you please";
-			mes "donate your medals so that we";
-			mes "can finally make some quality";
-			mes "products for our customers?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Huh? Show them to me...";
+			mes "[DRY-RUN] Yes! That's exactly what";
+			mes "[DRY-RUN] we need! Would you please";
+			mes "[DRY-RUN] donate your medals so that we";
+			mes "[DRY-RUN] can finally make some quality";
+			mes "[DRY-RUN] products for our customers?";
 			next;
 			callsub S_Reward;
 			end;
 		}
-		mes "[Ei'felle]";
-		mes "If you happen to obtain any";
-		mes "medals from the Monster";
-		mes "Race Arena in Hugel, then";
-		mes "please bring some of them";
-		mes "to me. I'll be sure to repay";
-		mes "you for your kindness...";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] If you happen to obtain any";
+		mes "[DRY-RUN] medals from the Monster";
+		mes "[DRY-RUN] Race Arena in Hugel, then";
+		mes "[DRY-RUN] please bring some of them";
+		mes "[DRY-RUN] to me. I'll be sure to repay";
+		mes "[DRY-RUN] you for your kindness...";
 		close;
 	} else if (ein_medal01 < 500) {
-		mes "[Ei'felle]";
-		mes "Oh, how have you been?";
-		mes "Thank you so much for";
-		mes "donating so many medals,";
-		mes "they've been helpful in my";
-		mes "research. Still, I need more";
-		mes "and more of them everyday...";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] Oh, how have you been?";
+		mes "[DRY-RUN] Thank you so much for";
+		mes "[DRY-RUN] donating so many medals,";
+		mes "[DRY-RUN] they've been helpful in my";
+		mes "[DRY-RUN] research. Still, I need more";
+		mes "[DRY-RUN] and more of them everyday...";
 		next;
 		if (countitem("Marvelous_Medal")) {
-			mes "[Ei'felle]";
-			mes "The other Blacksmith";
-			mes "Guildsmen are doing their";
-			mes "best to collect Prize Medals";
-			mes "in Hugel, but they keep failing";
-			mes "to win them! If you have any";
-			mes "medals, then may I have some?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] The other Blacksmith";
+			mes "[DRY-RUN] Guildsmen are doing their";
+			mes "[DRY-RUN] best to collect Prize Medals";
+			mes "[DRY-RUN] in Hugel, but they keep failing";
+			mes "[DRY-RUN] to win them! If you have any";
+			mes "[DRY-RUN] medals, then may I have some?";
 			next;
 			callsub S_Reward;
 			end;
 		}
-		mes "[Ei'felle]";
-		mes "If you happen to obtain any";
-		mes "medals from the Monster";
-		mes "Race Arena in Hugel, then";
-		mes "please bring some of them";
-		mes "to me. I'll be sure to repay";
-		mes "you for your kindness...";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] If you happen to obtain any";
+		mes "[DRY-RUN] medals from the Monster";
+		mes "[DRY-RUN] Race Arena in Hugel, then";
+		mes "[DRY-RUN] please bring some of them";
+		mes "[DRY-RUN] to me. I'll be sure to repay";
+		mes "[DRY-RUN] you for your kindness...";
 		close;
 	}
 	if (!checkweight("Knife",1)) {//1201
-		mes "[Ei'felle]";
-		mes "Goodness, you're carrying";
-		mes "so many things with you!";
-		mes "You'd better put some of";
-		mes "it away in Kafra Storage";
-		mes "before you're overwhelmed";
-		mes "by the bulk of your items!";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] Goodness, you're carrying";
+		mes "[DRY-RUN] so many things with you!";
+		mes "[DRY-RUN] You'd better put some of";
+		mes "[DRY-RUN] it away in Kafra Storage";
+		mes "[DRY-RUN] before you're overwhelmed";
+		mes "[DRY-RUN] by the bulk of your items!";
 		close;
 	}
 	if (ein_medal01 > 499 && ein_medal01 < 1500) {
 		if (ein_medal01 < 1000) {
-			mes "[Ei'felle]";
-			mes "Ah, welcome back! I've finally";
-			mes "made a breakthrough in my";
-			mes "metal research! Look, I've";
-			mes "developed this Glittering";
-			mes "Jacket! It's lightweight and";
-			mes "very durable, you see?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Ah, welcome back! I've finally";
+			mes "[DRY-RUN] made a breakthrough in my";
+			mes "[DRY-RUN] metal research! Look, I've";
+			mes "[DRY-RUN] developed this Glittering";
+			mes "[DRY-RUN] Jacket! It's lightweight and";
+			mes "[DRY-RUN] very durable, you see?";
 			next;
-			mes "[Ei'felle]";
-			mes "I wouldn't be able to have";
-			mes "completed this without your";
-			mes "help. Now, would you like to";
-			mes "receive this Glittering Jacket";
-			mes "as my way of repaying you?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] I wouldn't be able to have";
+			mes "[DRY-RUN] completed this without your";
+			mes "[DRY-RUN] help. Now, would you like to";
+			mes "[DRY-RUN] receive this Glittering Jacket";
+			mes "[DRY-RUN] as my way of repaying you?";
 			next;
-			if (select("Accept:Wait for Further Development") == 1) {
+			if (select("[DRY-RUN] Accept:Wait for Further Development") == 1) {
 				callsub S_BonusReward,500,2319;//Glittering_Clothes
 				end;
 			}
-			mes "[Ei'felle]";
-			mes "Ah, I see. You'd rather wait";
-			mes "until we develop something";
-			mes "more to your liking. In that";
-			mes "case, would you please donate";
-			mes "more medals to my research?";
-			mes "We're always low on them...";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Ah, I see. You'd rather wait";
+			mes "[DRY-RUN] until we develop something";
+			mes "[DRY-RUN] more to your liking. In that";
+			mes "[DRY-RUN] case, would you please donate";
+			mes "[DRY-RUN] more medals to my research?";
+			mes "[DRY-RUN] We're always low on them...";
 			next;
 		} else if (ein_medal01 < 1500) {
-			mes "[Ei'felle]";
-			mes "Oh, you're back!";
-			mes "Thanks to all the medals";
-			mes "that you've donated, I'm now";
-			mes "able to manufacture a set";
-			mes "of slotted armor imbued";
-			mes "with a property of your choice.";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Oh, you're back!";
+			mes "[DRY-RUN] Thanks to all the medals";
+			mes "[DRY-RUN] that you've donated, I'm now";
+			mes "[DRY-RUN] able to manufacture a set";
+			mes "[DRY-RUN] of slotted armor imbued";
+			mes "[DRY-RUN] with a property of your choice.";
 			next;
-			mes "[Ei'felle]";
-			mes "If you'd like, I can repay you";
-			mes "now by creating a set of slotted elemental armor for you, or we";
-			mes "can wait for you to donate more";
-			mes "medals until I can develop";
-			mes "something else for you.";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] If you'd like, I can repay you";
+			mes "[DRY-RUN] now by creating a set of slotted elemental armor for you, or we";
+			mes "[DRY-RUN] can wait for you to donate more";
+			mes "[DRY-RUN] medals until I can develop";
+			mes "[DRY-RUN] something else for you.";
 			next;
-			switch(select("Accept Armor:Can I have something else?:Wait for Further Development")) {
+			switch(select("[DRY-RUN] Accept Armor:Can I have something else?:Wait for Further Development")) {
 				case 1:
-					mes "[Ei'felle]";
-					mes "I can manufacture one set of";
-					mes "slotted Armor imbued with the";
-					mes "Fire, Earth, Wind, or Water";
-					mes "property. Which property would";
-					mes "you like your armor to have?";
+					mes "[DRY-RUN] [Ei'felle]";
+					mes "[DRY-RUN] I can manufacture one set of";
+					mes "[DRY-RUN] slotted Armor imbued with the";
+					mes "[DRY-RUN] Fire, Earth, Wind, or Water";
+					mes "[DRY-RUN] property. Which property would";
+					mes "[DRY-RUN] you like your armor to have?";
 					next;
-					switch(select("Fire Property:Earth Property:Wind Property:Water Property")) {
+					switch(select("[DRY-RUN] Fire Property:Earth Property:Wind Property:Water Property")) {
 						case 1: callsub S_BonusReward,1000,2345; end;// Flame_Sprits_Armor_
 						case 2: callsub S_BonusReward,1000,2351; end;// Earth_Sprits_Armor_
 						case 3: callsub S_BonusReward,1000,2349; end;// Wind_Sprits_Armor_
 						case 4: callsub S_BonusReward,1000,2347; end;// Water_Sprits_Armor_
 					}
 				case 2:
-					mes "[Ei'felle]";
-					mes "Something else...?";
-					mes "Oh, you must mean";
-					mes "the Glittering Jacket that";
-					mes "I developed earlier. After";
-					mes "all, I have any other items";
-					mes "to offer you for now...";
+					mes "[DRY-RUN] [Ei'felle]";
+					mes "[DRY-RUN] Something else...?";
+					mes "[DRY-RUN] Oh, you must mean";
+					mes "[DRY-RUN] the Glittering Jacket that";
+					mes "[DRY-RUN] I developed earlier. After";
+					mes "[DRY-RUN] all, I have any other items";
+					mes "[DRY-RUN] to offer you for now...";
 					next;
 					callsub S_BonusReward,500,2319;
 					end;
 				case 3:
-					mes "[Ei'felle]";
-					mes "Ah, I see. You'd rather wait";
-					mes "until we develop something";
-					mes "more to your liking. In that";
-					mes "case, would you please donate";
-					mes "more medals to my research?";
-					mes "We're always low on them...";
+					mes "[DRY-RUN] [Ei'felle]";
+					mes "[DRY-RUN] Ah, I see. You'd rather wait";
+					mes "[DRY-RUN] until we develop something";
+					mes "[DRY-RUN] more to your liking. In that";
+					mes "[DRY-RUN] case, would you please donate";
+					mes "[DRY-RUN] more medals to my research?";
+					mes "[DRY-RUN] We're always low on them...";
 					next;
 					break;
 			}
 		}
 		if (countitem("Marvelous_Medal")) {
-			mes "[Ei'felle]";
-			mes "The other Blacksmith";
-			mes "Guildsmen are doing their";
-			mes "best to collect Prize Medals";
-			mes "in Hugel, but they keep failing";
-			mes "to win them! If you have any";
-			mes "medals, then may I have some?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] The other Blacksmith";
+			mes "[DRY-RUN] Guildsmen are doing their";
+			mes "[DRY-RUN] best to collect Prize Medals";
+			mes "[DRY-RUN] in Hugel, but they keep failing";
+			mes "[DRY-RUN] to win them! If you have any";
+			mes "[DRY-RUN] medals, then may I have some?";
 			next;
 			callsub S_Reward;
 			end;
 		}
-		mes "[Ei'felle]";
-		mes "If you happen to obtain any";
-		mes "medals from the Monster";
-		mes "Race Arena in Hugel, then";
-		mes "please bring some of them";
-		mes "to me. I'll be sure to repay";
-		mes "you for your kindness...";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] If you happen to obtain any";
+		mes "[DRY-RUN] medals from the Monster";
+		mes "[DRY-RUN] Race Arena in Hugel, then";
+		mes "[DRY-RUN] please bring some of them";
+		mes "[DRY-RUN] to me. I'll be sure to repay";
+		mes "[DRY-RUN] you for your kindness...";
 		close;
 	} else if (ein_medal01 > 1499) {
-		mes "[Ei'felle]";
-		mes "Ah, you're back! I've";
-		mes "extracted all the metal";
-		mes "from the medals you've";
-		mes "given me, and I think I have";
-		mes "enough to create a Level 4";
-		mes "Weapon. Isn't that incredible?";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] Ah, you're back! I've";
+		mes "[DRY-RUN] extracted all the metal";
+		mes "[DRY-RUN] from the medals you've";
+		mes "[DRY-RUN] given me, and I think I have";
+		mes "[DRY-RUN] enough to create a Level 4";
+		mes "[DRY-RUN] Weapon. Isn't that incredible?";
 		next;
-		mes "[Ei'felle]";
-		mes "If you like, I can create";
-		mes "one of these weapons for you";
-		mes "as my way of repaying you for";
-		mes "your help. What do you think?";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] If you like, I can create";
+		mes "[DRY-RUN] one of these weapons for you";
+		mes "[DRY-RUN] as my way of repaying you for";
+		mes "[DRY-RUN] your help. What do you think?";
 		next;
-		if (select("Yes, I want a Level 4 Weapon.:Can I have something else?") == 2) {
-			mes "[Ei'felle]";
-			mes "Something else?";
-			mes "Oh, alright then, would";
-			mes "you like to have a Glittering";
-			mes "Jacket, or a set of slotted";
-			mes "elemental Armor? Please go";
-			mes "ahead and make your choice~";
+		if (select("[DRY-RUN] Yes, I want a Level 4 Weapon.:Can I have something else?") == 2) {
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Something else?";
+			mes "[DRY-RUN] Oh, alright then, would";
+			mes "[DRY-RUN] you like to have a Glittering";
+			mes "[DRY-RUN] Jacket, or a set of slotted";
+			mes "[DRY-RUN] elemental Armor? Please go";
+			mes "[DRY-RUN] ahead and make your choice~";
 			next;
-			switch (select("Glittering Jacket:Fire Property Armor:Earth Property Armor:Wind Property Armor:Water Property Armor:Cancel")) {
+			switch (select("[DRY-RUN] Glittering Jacket:Fire Property Armor:Earth Property Armor:Wind Property Armor:Water Property Armor:Cancel")) {
 				case 1: callsub S_BonusReward,500,2319; end;
 				case 2: callsub S_BonusReward,1000,2345; end;
 				case 3: callsub S_BonusReward,1000,2351; end;
@@ -2149,11 +2149,11 @@ ein_in01,85,208,5	script	Ei'felle#repay01	854,{
 		}
 		setarray .@type$, "Dagger","One Handed Sword","Two Handed Sword","Axe","Mace","Bow","Staff","Book","Spear","Katar","Knuckle","Whip","Musical Instrument";
 		.@m = select( implode(.@type$,":") ) - 1;
-		mes "[Ei'felle]";
-		mes "So you'd like to have a";
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] So you'd like to have a";
 		mes .@type$[.@m]+"? Please choose";
-		mes "which Level 4 Weapon";
-		mes "that you want me to create.";
+		mes "[DRY-RUN] which Level 4 Weapon";
+		mes "[DRY-RUN] that you want me to create.";
 		next;
 		switch(.@m) {
 			case 0:
@@ -2216,47 +2216,47 @@ ein_in01,85,208,5	script	Ei'felle#repay01	854,{
 	}
 	
 S_Reward:
-	if (select("Sure:No") == 2) {
-		mes "[Ei'felle]";
-		mes "Oh, alright...";
-		mes "Still, I really need";
-		mes "those medals, so if you";
-		mes "change your mind, please";
-		mes "come back as soon as you can.";
+	if (select("[DRY-RUN] Sure:No") == 2) {
+		mes "[DRY-RUN] [Ei'felle]";
+		mes "[DRY-RUN] Oh, alright...";
+		mes "[DRY-RUN] Still, I really need";
+		mes "[DRY-RUN] those medals, so if you";
+		mes "[DRY-RUN] change your mind, please";
+		mes "[DRY-RUN] come back as soon as you can.";
 		emotion ET_CRY;
 		close;
 	}
-	mes "[Ei'felle]";
-	mes "Oh, thank you so much!";
-	mes "I can use the metal in those";
-	mes "medals to produce some high";
-	mes "quality products. Now, how";
-	mes "shall I repay you for giving me";
-	mes "some of your Prize Medals?";
+	mes "[DRY-RUN] [Ei'felle]";
+	mes "[DRY-RUN] Oh, thank you so much!";
+	mes "[DRY-RUN] I can use the metal in those";
+	mes "[DRY-RUN] medals to produce some high";
+	mes "[DRY-RUN] quality products. Now, how";
+	mes "[DRY-RUN] shall I repay you for giving me";
+	mes "[DRY-RUN] some of your Prize Medals?";
 	next;
-	switch(select("Base Experience:Job Experience:No, I'm just glad to help.:How's your research progressing?")) {
+	switch(select("[DRY-RUN] Base Experience:Job Experience:No, I'm just glad to help.:How's your research progressing?")) {
 		case 1:
-			mes "[Ei'felle]";
-			mes "You just want to improve";
-			mes "yourself, huh? Well, I dunno";
-			mes "if you want to get stronger,";
-			mes "smarter, or faster, but I can";
-			mes "coach you on some visualization if you like. Now, relax with me~";
-			mes "physical development.";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] You just want to improve";
+			mes "[DRY-RUN] yourself, huh? Well, I dunno";
+			mes "[DRY-RUN] if you want to get stronger,";
+			mes "[DRY-RUN] smarter, or faster, but I can";
+			mes "[DRY-RUN] coach you on some visualization if you like. Now, relax with me~";
+			mes "[DRY-RUN] physical development.";
 			next;
-			mes "[Ei'felle]";
-			mes "Focus... and believe.";
-			mes "Believe that you are";
-			mes "becoming what you want";
-			mes "to be! B-believe... with";
-			mes "all of your freakin' heart!";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Focus... and believe.";
+			mes "[DRY-RUN] Believe that you are";
+			mes "[DRY-RUN] becoming what you want";
+			mes "[DRY-RUN] to be! B-believe... with";
+			mes "[DRY-RUN] all of your freakin' heart!";
 			emotion ET_HUK, playerattached();
 			emotion ET_HUK;
 			next;
-			mes "[Ei'felle]";
-			mes "*Phew* How's that?";
-			mes "Now do you see the";
-			mes "power of hope?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] *Phew* How's that?";
+			mes "[DRY-RUN] Now do you see the";
+			mes "[DRY-RUN] power of hope?";
 			delitem 7515,1; //Marvelous_Medal
 			if (checkre(3)) {
 				if (BaseLevel < 21) getexp 110,0;
@@ -2295,30 +2295,30 @@ S_Reward:
 			}
 			close;
 		case 2:
-			mes "[Ei'felle]";
-			mes "You want to become more";
-			mes "competent in your job? Um...";
-			mes "Alright, we can do that. Just";
-			mes "meditate with me, and we'll go";
-			mes "do some imagery work together.";
-			mes "I'm real good at this you know.";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] You want to become more";
+			mes "[DRY-RUN] competent in your job? Um...";
+			mes "[DRY-RUN] Alright, we can do that. Just";
+			mes "[DRY-RUN] meditate with me, and we'll go";
+			mes "[DRY-RUN] do some imagery work together.";
+			mes "[DRY-RUN] I'm real good at this you know.";
 			next;
-			mes "[Ei'felle]";
-			mes "J-just... visualize";
-			mes "yourself... being...";
-			mes "t-totally... awesome!";
-			mes "You've gotta see it, and";
-			mes "you've gotta feel it in your";
-			mes "freakin' heart and mind!";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] J-just... visualize";
+			mes "[DRY-RUN] yourself... being...";
+			mes "[DRY-RUN] t-totally... awesome!";
+			mes "[DRY-RUN] You've gotta see it, and";
+			mes "[DRY-RUN] you've gotta feel it in your";
+			mes "[DRY-RUN] freakin' heart and mind!";
 			emotion ET_HUK, playerattached();
 			emotion ET_HUK;
 			next;
-			mes "[Ei'felle]";
-			mes "Yeap, it doesn't matter";
-			mes "if it's real or imagined...";
-			mes "Your mind will work on";
-			mes "whatever you feed it.";
-			mes "Placebos and psychosomatic symptoms-- it all ties together.";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Yeap, it doesn't matter";
+			mes "[DRY-RUN] if it's real or imagined...";
+			mes "[DRY-RUN] Your mind will work on";
+			mes "[DRY-RUN] whatever you feed it.";
+			mes "[DRY-RUN] Placebos and psychosomatic symptoms-- it all ties together.";
 			delitem 7515,1; //Marvelous_Medal
 			if (checkre(3)) {
 				if (Class == Job_Novice) {
@@ -2403,199 +2403,199 @@ S_Reward:
 			}
 			close;
 		case 3:
-			mes "[Ei'felle]";
-			mes "What th--?! You sure";
-			mes "you don't want anything?";
-			mes "Hm, well, I think it's kind";
-			mes "of bad karma if I don't give";
-			mes "you anything in return, so...";
-			mes "Think of something. Quick.";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] What th--?! You sure";
+			mes "[DRY-RUN] you don't want anything?";
+			mes "[DRY-RUN] Hm, well, I think it's kind";
+			mes "[DRY-RUN] of bad karma if I don't give";
+			mes "[DRY-RUN] you anything in return, so...";
+			mes "[DRY-RUN] Think of something. Quick.";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "Er, just use the medals";
-			mes "to further your manufacturing";
-			mes "research, and then you can";
-			mes "pay me back if your develop";
-			mes "something new. It's, um, like";
-			mes "an investment in your work!";
+			mes "[DRY-RUN] Er, just use the medals";
+			mes "[DRY-RUN] to further your manufacturing";
+			mes "[DRY-RUN] research, and then you can";
+			mes "[DRY-RUN] pay me back if your develop";
+			mes "[DRY-RUN] something new. It's, um, like";
+			mes "[DRY-RUN] an investment in your work!";
 			next;
-			mes "[Ei'felle]";
-			mes "Yeah... Yeah.";
-			mes "Okay, I see where";
-			mes "you're coming from.";
-			mes "That's pretty smart.";
-			mes "Okay, I'll repay you when";
-			mes "we develop something new!";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Yeah... Yeah.";
+			mes "[DRY-RUN] Okay, I see where";
+			mes "[DRY-RUN] you're coming from.";
+			mes "[DRY-RUN] That's pretty smart.";
+			mes "[DRY-RUN] Okay, I'll repay you when";
+			mes "[DRY-RUN] we develop something new!";
 			next;
-			mes "[Ei'felle]";
-			mes "Anyway, I need as many";
-			mes "medals as I can get as";
-			mes "soon as I can. How many";
-			mes "medals do you think you";
-			mes "can give me right now?";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Anyway, I need as many";
+			mes "[DRY-RUN] medals as I can get as";
+			mes "[DRY-RUN] soon as I can. How many";
+			mes "[DRY-RUN] medals do you think you";
+			mes "[DRY-RUN] can give me right now?";
 			next;
-			switch(select("Take them all.:How about this much?:No, I changed my mind.")) {
+			switch(select("[DRY-RUN] Take them all.:How about this much?:No, I changed my mind.")) {
 			case 1:
-				mes "[Ei'felle]";
-				mes "Th-thank you!";
-				mes "Thank you so much!";
-				mes "Your help will greatly";
-				mes "advance my research,";
-				mes "and I promise to repay";
-				mes "you as soon as I can!";
+				mes "[DRY-RUN] [Ei'felle]";
+				mes "[DRY-RUN] Th-thank you!";
+				mes "[DRY-RUN] Thank you so much!";
+				mes "[DRY-RUN] Your help will greatly";
+				mes "[DRY-RUN] advance my research,";
+				mes "[DRY-RUN] and I promise to repay";
+				mes "[DRY-RUN] you as soon as I can!";
 				.@medals = countitem("Marvelous_Medal");
 				delitem 7515, .@medals; //Marvelous_Medal
 				ein_medal01 += .@medals;
 				close;
 			case 2:
-				mes "[Ei'felle]";
-				mes "Alright, please enter the";
-				mes "number of medals that";
-				mes "you're willing to give me.";
-				mes "Please don't enter any";
-				mes "number greater than 100.";
+				mes "[DRY-RUN] [Ei'felle]";
+				mes "[DRY-RUN] Alright, please enter the";
+				mes "[DRY-RUN] number of medals that";
+				mes "[DRY-RUN] you're willing to give me.";
+				mes "[DRY-RUN] Please don't enter any";
+				mes "[DRY-RUN] number greater than 100.";
 				next;
 				while(1) {
 					input .@input;
 					if (!.@input) {
-						mes "[Ei'felle]";
-						mes "Aw, so you've decided";
-						mes "to cancel? Well, it's your";
-						mes "choice, but I'm still so";
-						mes "disappointed. Please come";
-						mes "back if you change your mind...";
+						mes "[DRY-RUN] [Ei'felle]";
+						mes "[DRY-RUN] Aw, so you've decided";
+						mes "[DRY-RUN] to cancel? Well, it's your";
+						mes "[DRY-RUN] choice, but I'm still so";
+						mes "[DRY-RUN] disappointed. Please come";
+						mes "[DRY-RUN] back if you change your mind...";
 						close;
 					} else if (.@input < 1 || .@input > 100) {
-						mes "[Ei'felle]";
-						mes "Remember, you can only";
-						mes "enter a number from 1 to 100.";
-						mes "If you want to give me more";
-						mes "medals, then perhaps you";
-						mes "should just give them all to me~";
+						mes "[DRY-RUN] [Ei'felle]";
+						mes "[DRY-RUN] Remember, you can only";
+						mes "[DRY-RUN] enter a number from 1 to 100.";
+						mes "[DRY-RUN] If you want to give me more";
+						mes "[DRY-RUN] medals, then perhaps you";
+						mes "[DRY-RUN] should just give them all to me~";
 						next;
 					} else break;
 				}
 				if (countitem("Marvelous_Medal") < .@input) {
-					mes "[Ei'felle]";
-					mes "I'm sorry, but I don't";
-					mes "think you have that many";
-					mes "medals with you. Make sure";
-					mes "that you offer me an amount of";
-					mes "medals that you actually have.";
+					mes "[DRY-RUN] [Ei'felle]";
+					mes "[DRY-RUN] I'm sorry, but I don't";
+					mes "[DRY-RUN] think you have that many";
+					mes "[DRY-RUN] medals with you. Make sure";
+					mes "[DRY-RUN] that you offer me an amount of";
+					mes "[DRY-RUN] medals that you actually have.";
 					emotion ET_SMILE;
 					close;
 				} else {
-					mes "[Ei'felle]";
-					mes "Th-thank you!";
-					mes "Thank you so much!";
-					mes "Your help will greatly";
-					mes "advance my research,";
-					mes "and I promise to repay";
-					mes "you as soon as I can!";
+					mes "[DRY-RUN] [Ei'felle]";
+					mes "[DRY-RUN] Th-thank you!";
+					mes "[DRY-RUN] Thank you so much!";
+					mes "[DRY-RUN] Your help will greatly";
+					mes "[DRY-RUN] advance my research,";
+					mes "[DRY-RUN] and I promise to repay";
+					mes "[DRY-RUN] you as soon as I can!";
 					delitem 7515, .@input; //Marvelous_Medal
 					ein_medal01 += .@input;
 					close;
 				}
 			case 3:
-				mes "[Ei'felle]";
-				mes "Oh, alright...";
-				mes "Still, I really need";
-				mes "those medals, so if you";
-				mes "change your mind, please";
-				mes "come back as soon as you can.";
+				mes "[DRY-RUN] [Ei'felle]";
+				mes "[DRY-RUN] Oh, alright...";
+				mes "[DRY-RUN] Still, I really need";
+				mes "[DRY-RUN] those medals, so if you";
+				mes "[DRY-RUN] change your mind, please";
+				mes "[DRY-RUN] come back as soon as you can.";
 				close;
 			}
 		case 4:
-			mes "[Ei'felle]";
-			mes "Well, I've been able to";
-			mes "create a Glittering Jacket";
-			mes "using the medals that you've";
-			mes "brought to me. But I just know";
-			mes "I can make something better";
-			mes "if you'd bring me more!";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] Well, I've been able to";
+			mes "[DRY-RUN] create a Glittering Jacket";
+			mes "[DRY-RUN] using the medals that you've";
+			mes "[DRY-RUN] brought to me. But I just know";
+			mes "[DRY-RUN] I can make something better";
+			mes "[DRY-RUN] if you'd bring me more!";
 			next;
-			mes "[Ei'felle]";
-			mes "As of now, I have the metal";
+			mes "[DRY-RUN] [Ei'felle]";
+			mes "[DRY-RUN] As of now, I have the metal";
 			mes "from ^FF0000"+ ein_medal01 +"^000000 Prizes Medals that";
-			mes "you've donated to me. The more";
-			mes "that you bring, the closer I can get to making a new breakthrough!";
+			mes "[DRY-RUN] you've donated to me. The more";
+			mes "[DRY-RUN] that you bring, the closer I can get to making a new breakthrough!";
 			close;
 	}
 
 S_BonusReward:
-	mes "[Ei'felle]";
+	mes "[DRY-RUN] [Ei'felle]";
 	.@arg1 = getarg(1);
 	if (.@arg1 == 2319) {
-		mes "Do you really want";
+		mes "[DRY-RUN] Do you really want";
 		mes "this "+getitemname(.@arg1)+"?";
-		mes "You may want to forego this";
-		mes "reward in favor of getting";
-		mes "something better later...";
+		mes "[DRY-RUN] You may want to forego this";
+		mes "[DRY-RUN] reward in favor of getting";
+		mes "[DRY-RUN] something better later...";
 	} else if (.@arg1 == 2345 || .@arg1 == 2347 || .@arg1 == 2349 || .@arg1 == 2351) {
-		mes "Are you sure that you want";
-		mes "to accept this set of slotted";
+		mes "[DRY-RUN] Are you sure that you want";
+		mes "[DRY-RUN] to accept this set of slotted";
 		if (.@arg1 == 2345) mes "Fire property Armor? If you do,";
 		else if (.@arg1 == 2351) mes "Earth property Armor? If you do,";
 		else if (.@arg1 == 2349) mes "Wind property Armor? If you do,";
 		else if (.@arg1 == 2347) mes "Water property Armor? If you do,";
-		mes "I'll need more medals from you";
-		mes "to make further advancements";
-		mes "in my manufacturing research.";
+		mes "[DRY-RUN] I'll need more medals from you";
+		mes "[DRY-RUN] to make further advancements";
+		mes "[DRY-RUN] in my manufacturing research.";
 	} else {
-		mes "So you wish to have a";
+		mes "[DRY-RUN] So you wish to have a";
 		mes getitemname(.@arg1)+"? If you choose";
-		mes "to have this Level 4 Weapon,";
-		mes "I'll need to melt many of the";
-		mes "medals that you've donated";
-		mes "to me. Shall we proceed?";
+		mes "[DRY-RUN] to have this Level 4 Weapon,";
+		mes "[DRY-RUN] I'll need to melt many of the";
+		mes "[DRY-RUN] medals that you've donated";
+		mes "[DRY-RUN] to me. Shall we proceed?";
 	}
 	next;
-	if (select("Decline:Accept") == 1) {
+	if (select("[DRY-RUN] Decline:Accept") == 1) {
 		mes "["+ strcharinfo(0) +"]";
-		mes "W-wait, I changed my";
-		mes "mind. Would it be fine";
-		mes "if I asked you to give";
-		mes "me a reward later?";
+		mes "[DRY-RUN] W-wait, I changed my";
+		mes "[DRY-RUN] mind. Would it be fine";
+		mes "[DRY-RUN] if I asked you to give";
+		mes "[DRY-RUN] me a reward later?";
 		next;
-		mes "[Ei'felle]";
+		mes "[DRY-RUN] [Ei'felle]";
 		if (getiteminfo( .@arg1, ITEMINFO_TYPE ) == IT_ARMOR) {
-			mes "Of course, of course.";
-			mes "Remember, if you donate";
-			mes "more medals to me, then";
-			mes "I'll be able to create items";
-			mes "of higher quality for you~";
+			mes "[DRY-RUN] Of course, of course.";
+			mes "[DRY-RUN] Remember, if you donate";
+			mes "[DRY-RUN] more medals to me, then";
+			mes "[DRY-RUN] I'll be able to create items";
+			mes "[DRY-RUN] of higher quality for you~";
 		} else {
-			mes "I don't think I can develop";
-			mes "anything better than these Level 4 Weapons, but after making";
-			mes "such a big investment, you should decide on what you want carefully.";
+			mes "[DRY-RUN] I don't think I can develop";
+			mes "[DRY-RUN] anything better than these Level 4 Weapons, but after making";
+			mes "[DRY-RUN] such a big investment, you should decide on what you want carefully.";
 		}
 		close;
 	}
-	mes "[Ei'felle]";
+	mes "[DRY-RUN] [Ei'felle]";
 	if (.@arg1 == 2319) {
-		mes "Here you are, I trust that";
+		mes "[DRY-RUN] Here you are, I trust that";
 		mes "this "+getitemname(.@arg1)+" will";
-		mes "serve you well. Thank you";
-		mes "for your help, and I hope that";
-		mes "you'll continue to donate your";
-		mes "medals for my metal research~";
+		mes "[DRY-RUN] serve you well. Thank you";
+		mes "[DRY-RUN] for your help, and I hope that";
+		mes "[DRY-RUN] you'll continue to donate your";
+		mes "[DRY-RUN] medals for my metal research~";
 	} else if (.@arg1 == 2345 || .@arg1 == 2347 || .@arg1 == 2349 || .@arg1 == 2351) {
-		mes "Great choice! I'm sure";
+		mes "[DRY-RUN] Great choice! I'm sure";
 		if (.@arg1 == 2345) mes "that this set of slotted Fire";
 		else if (.@arg1 == 2351) mes "that this set of slotted Earth";
 		else if (.@arg1 == 2349) mes "that this set of slotted Wind";
 		else if (.@arg1 == 2347) mes "that this set of slotted Water";
-		mes "property Armor will serve you";
-		mes "well. Thank you for your help,";
-		mes "and if you get more medals,";
-		mes "please donate them to me~";
+		mes "[DRY-RUN] property Armor will serve you";
+		mes "[DRY-RUN] well. Thank you for your help,";
+		mes "[DRY-RUN] and if you get more medals,";
+		mes "[DRY-RUN] please donate them to me~";
 	} else {
-		mes "Once again, I'd like to";
-		mes "thank you for providing";
-		mes "me with all of those medals.";
-		mes "I imagine it must have been";
-		mes "difficult. In any case, I would";
-		mes "appreciate your continued help~";
+		mes "[DRY-RUN] Once again, I'd like to";
+		mes "[DRY-RUN] thank you for providing";
+		mes "[DRY-RUN] me with all of those medals.";
+		mes "[DRY-RUN] I imagine it must have been";
+		mes "[DRY-RUN] difficult. In any case, I would";
+		mes "[DRY-RUN] appreciate your continued help~";
 	}
 	ein_medal01 -= getarg(0);
 	getitem .@arg1,1;
@@ -2604,62 +2604,62 @@ S_BonusReward:
 
 hugel,71,83,4	script	Wayne	900,{
 	if (!checkweight("Knife",1)) {
-		mes "[Wayne]";
-		mes "Hold on a second...";
-		mes "If you want to exchange";
-		mes "your Prize Medals for items,";
-		mes "you'd better free up more space";
-		mes "in your Inventory first. Why don't you use your Kafra Storage?";
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] Hold on a second...";
+		mes "[DRY-RUN] If you want to exchange";
+		mes "[DRY-RUN] your Prize Medals for items,";
+		mes "[DRY-RUN] you'd better free up more space";
+		mes "[DRY-RUN] in your Inventory first. Why don't you use your Kafra Storage?";
 		close;
 	}
-	mes "[Wayne]";
-	mes "Hello, there! Ever wonder";
-	mes "what you could do with all";
-	mes "the Prize Medals you can win";
-	mes "in Monster Race Arena? You";
-	mes "can donate them in Einbroch";
-	mes "to the Blacksmith Guild...";
+	mes "[DRY-RUN] [Wayne]";
+	mes "[DRY-RUN] Hello, there! Ever wonder";
+	mes "[DRY-RUN] what you could do with all";
+	mes "[DRY-RUN] the Prize Medals you can win";
+	mes "[DRY-RUN] in Monster Race Arena? You";
+	mes "[DRY-RUN] can donate them in Einbroch";
+	mes "[DRY-RUN] to the Blacksmith Guild...";
 	next;
-	mes "[Wayne]";
-	mes "...Or you can exchange them";
-	mes "for items, right here and right";
-	mes "now, with me. As always, the";
-	mes "choice is really up to you.";
+	mes "[DRY-RUN] [Wayne]";
+	mes "[DRY-RUN] ...Or you can exchange them";
+	mes "[DRY-RUN] for items, right here and right";
+	mes "[DRY-RUN] now, with me. As always, the";
+	mes "[DRY-RUN] choice is really up to you.";
 	next;
-	if (select("Prize Medal Exchange:Cancel") == 2) {
-		mes "[Wayne]";
-		mes "Well, just keep in mind";
-		mes "that you can always come";
-		mes "to me to trade in your Prize";
-		mes "Medals for consumable items.";
-		mes "That guy in Einbroch? Not sure";
-		mes "what he'd give you for them...";
+	if (select("[DRY-RUN] Prize Medal Exchange:Cancel") == 2) {
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] Well, just keep in mind";
+		mes "[DRY-RUN] that you can always come";
+		mes "[DRY-RUN] to me to trade in your Prize";
+		mes "[DRY-RUN] Medals for consumable items.";
+		mes "[DRY-RUN] That guy in Einbroch? Not sure";
+		mes "[DRY-RUN] what he'd give you for them...";
 		next;
-		mes "[Wayne]";
-		mes "All I know is that he";
-		mes "needs a whole lot of medals";
-		mes "for the work that he's doing.";
-		mes "Still, I hear that he just may";
-		mes "make your donations worth";
-		mes "all your effort, you know?";
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] All I know is that he";
+		mes "[DRY-RUN] needs a whole lot of medals";
+		mes "[DRY-RUN] for the work that he's doing.";
+		mes "[DRY-RUN] Still, I hear that he just may";
+		mes "[DRY-RUN] make your donations worth";
+		mes "[DRY-RUN] all your effort, you know?";
 		close;
 	}
 	if (!checkweight("Jellopy",550)) {
-		mes "[Wayne]";
-		mes "Hold on a second...";
-		mes "If you want to exchange";
-		mes "your Prize Medals for items,";
-		mes "you'd better free up more space";
-		mes "in your Inventory first. Why don't you use your Kafra Storage?";
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] Hold on a second...";
+		mes "[DRY-RUN] If you want to exchange";
+		mes "[DRY-RUN] your Prize Medals for items,";
+		mes "[DRY-RUN] you'd better free up more space";
+		mes "[DRY-RUN] in your Inventory first. Why don't you use your Kafra Storage?";
 		close;
 	} else {
-		mes "[Wayne]";
-		mes "Now, how many Prize Medals";
-		mes "would you like to exchange?";
-		mes "It doesn't take a genius to";
-		mes "figure out that you can get";
-		mes "more valuable items by trading";
-		mes "more Prize Medals at a time.";
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] Now, how many Prize Medals";
+		mes "[DRY-RUN] would you like to exchange?";
+		mes "[DRY-RUN] It doesn't take a genius to";
+		mes "[DRY-RUN] figure out that you can get";
+		mes "[DRY-RUN] more valuable items by trading";
+		mes "[DRY-RUN] more Prize Medals at a time.";
 		next;
 		setarray .@pm, 1,3,7,8,16,25,42,59;
 		.@total_pm = getarraysize(.@pm);
@@ -2700,29 +2700,29 @@ hugel,71,83,4	script	Wayne	900,{
 				setarray .@item_array, 12109,1;
 				break;
 		}
-		mes "[Wayne]";
-		mes "Now, please choose";
-		mes "which of the following item";
-		mes "sets that you'd like to receive";
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] Now, please choose";
+		mes "[DRY-RUN] which of the following item";
+		mes "[DRY-RUN] sets that you'd like to receive";
 		mes "in exchange for "+.@pm[.@m]+" Prize Medal."+((getarraysize(.@item_array)<3)?" Well, we have only 1 set, but...":"");
 		next;
 		.@m2 = ( select(.@items$) -1 ) *2;
 		if (countitem("Marvelous_Medal") < .@pm[.@m]) {
-			mes "[Wayne]";
-			mes "Hey, you don't have";
-			mes "enough Prize Medals with";
-			mes "you. Go and get some more";
-			mes "if you want to exchange";
-			mes "them with me for anything.";
+			mes "[DRY-RUN] [Wayne]";
+			mes "[DRY-RUN] Hey, you don't have";
+			mes "[DRY-RUN] enough Prize Medals with";
+			mes "[DRY-RUN] you. Go and get some more";
+			mes "[DRY-RUN] if you want to exchange";
+			mes "[DRY-RUN] them with me for anything.";
 			close;
 		}
-		mes "[Wayne]";
-		mes "There you go~";
-		mes "Thanks for using my";
-		mes "service, and I hope that";
-		mes "you come visit me again";
-		mes "soon. Enjoy the monster";
-		mes "races, fair adventurer~";
+		mes "[DRY-RUN] [Wayne]";
+		mes "[DRY-RUN] There you go~";
+		mes "[DRY-RUN] Thanks for using my";
+		mes "[DRY-RUN] service, and I hope that";
+		mes "[DRY-RUN] you come visit me again";
+		mes "[DRY-RUN] soon. Enjoy the monster";
+		mes "[DRY-RUN] races, fair adventurer~";
 		delitem 7515,.@pm[.@m];// Marvelous_Medal
 		getitem .@item_array[.@m2], .@item_array[(.@m2+1)];
 		close;		
@@ -2732,52 +2732,52 @@ hugel,71,83,4	script	Wayne	900,{
 // Monster Race Affiliated NPCs
 //============================================================
 airplane,246,47,1	script	Eocatt#decoy01	878,{
-	mes "[Eocatt]";
-	mes "There's an old, humble";
-	mes "village on the outskirts of";
-	mes "the Schwaltzvalt Republic.";
-	mes "It was just a tiny blip on the";
-	mes "map until they opened up";
-	mes "their Monster Race Arena!";
+	mes "[DRY-RUN] [Eocatt]";
+	mes "[DRY-RUN] There's an old, humble";
+	mes "[DRY-RUN] village on the outskirts of";
+	mes "[DRY-RUN] the Schwaltzvalt Republic.";
+	mes "[DRY-RUN] It was just a tiny blip on the";
+	mes "[DRY-RUN] map until they opened up";
+	mes "[DRY-RUN] their Monster Race Arena!";
 	next;
-	mes "[Eocatt]";
-	mes "If you win wagers on the";
-	mes "monster race games, you'll";
-	mes "be rewarded with these Prize";
-	mes "Medals that are made of some";
-	mes "really rare metal. I hear this metal's in demand in Einbroch...";
+	mes "[DRY-RUN] [Eocatt]";
+	mes "[DRY-RUN] If you win wagers on the";
+	mes "[DRY-RUN] monster race games, you'll";
+	mes "[DRY-RUN] be rewarded with these Prize";
+	mes "[DRY-RUN] Medals that are made of some";
+	mes "[DRY-RUN] really rare metal. I hear this metal's in demand in Einbroch...";
 	next;
-	mes "[Eocatt]";
-	mes "Right, right...";
-	mes "I remember now, the";
-	mes "town was named Hugel.";
-	mes "I'm sure there's other fun";
-	mes "things to do there, but I'm sure that the Race Arena is a must!";
+	mes "[DRY-RUN] [Eocatt]";
+	mes "[DRY-RUN] Right, right...";
+	mes "[DRY-RUN] I remember now, the";
+	mes "[DRY-RUN] town was named Hugel.";
+	mes "[DRY-RUN] I'm sure there's other fun";
+	mes "[DRY-RUN] things to do there, but I'm sure that the Race Arena is a must!";
 	close;
 }
 
 hugel,85,93,5	script	Mudie#dummy01	866,{
-	mes "[Mudie]";
-	mes "The Monster Races";
-	mes "are probably the biggest";
-	mes "attraction here in Hugel.";
-	mes "We don't have much else";
-	mes "going on here, I'm afraid.";
+	mes "[DRY-RUN] [Mudie]";
+	mes "[DRY-RUN] The Monster Races";
+	mes "[DRY-RUN] are probably the biggest";
+	mes "[DRY-RUN] attraction here in Hugel.";
+	mes "[DRY-RUN] We don't have much else";
+	mes "[DRY-RUN] going on here, I'm afraid.";
 	next;
-	mes "[Mudie]";
-	mes "If you want to go visit";
-	mes "the Monster Race Arena,";
-	mes "just head towards the";
-	mes "7 'o clock direction on";
-	mes "your Mini-Map, and look for";
-	mes "the hill surrounded by a fence.";
+	mes "[DRY-RUN] [Mudie]";
+	mes "[DRY-RUN] If you want to go visit";
+	mes "[DRY-RUN] the Monster Race Arena,";
+	mes "[DRY-RUN] just head towards the";
+	mes "[DRY-RUN] 7 'o clock direction on";
+	mes "[DRY-RUN] your Mini-Map, and look for";
+	mes "[DRY-RUN] the hill surrounded by a fence.";
 	next;
-	mes "[Mudie]";
-	mes "You should find the arena";
-	mes "somewhere around that area.";
-	mes "Anyway, if you want to wager";
-	mes "or just watch the races, just";
-	mes "ask one of the Eckar brothers. I hope you enjoy our little town~";
+	mes "[DRY-RUN] [Mudie]";
+	mes "[DRY-RUN] You should find the arena";
+	mes "[DRY-RUN] somewhere around that area.";
+	mes "[DRY-RUN] Anyway, if you want to wager";
+	mes "[DRY-RUN] or just watch the races, just";
+	mes "[DRY-RUN] ask one of the Eckar brothers. I hope you enjoy our little town~";
 	close;
 }
 
@@ -2867,21 +2867,21 @@ p_track02,53,45,3	script	Valiant Knight#double	733,{
 }
 
 p_track01,27,47,5	script	Drunkard#single	853,{
-	mes "[Familiar Drunkard]";
-	mes "Grrr...! ^333333*Hiccup*^000000";
-	mes "I just gotta win this";
-	mes "next game! I hafta do it!";
-	mes "Hey, you! Which number is";
-	mes "your lucky number? Huh?";
+	mes "[DRY-RUN] [Familiar Drunkard]";
+	mes "[DRY-RUN] Grrr...! ^333333*Hiccup*^000000";
+	mes "[DRY-RUN] I just gotta win this";
+	mes "[DRY-RUN] next game! I hafta do it!";
+	mes "[DRY-RUN] Hey, you! Which number is";
+	mes "[DRY-RUN] your lucky number? Huh?";
 	next;
 	mes "["+ strcharinfo(0) +"]";
-	mes "I, er...";
+	mes "[DRY-RUN] I, er...";
 	next;
-	mes "[Familiar Drunkard]";
-	mes "C'mon, I need your";
-	mes "lucky number cuz I ran";
-	mes "out of mine! Tell me!";
-	mes "Tell me! ^333333*Hiccup~*^000000";
+	mes "[DRY-RUN] [Familiar Drunkard]";
+	mes "[DRY-RUN] C'mon, I need your";
+	mes "[DRY-RUN] lucky number cuz I ran";
+	mes "[DRY-RUN] out of mine! Tell me!";
+	mes "[DRY-RUN] Tell me! ^333333*Hiccup~*^000000";
 	close;
 }
 

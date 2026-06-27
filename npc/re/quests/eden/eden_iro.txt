@@ -20,32 +20,32 @@
 // Acolyte Warper (part of other/acolyte_warp.txt)
 //============================================================
 moc_para01,14,32,5	script	Aperture#acolytewarp	90,{
-	mes "[Aperture]";
-	mes "Hello there, adventurer.";
-	mes "I've been studying magic from all over Rune-Midgard to upgrade what I believe to be one of the greatest skills available to the acolyte class.";
+	mes "[DRY-RUN] [Aperture]";
+	mes "[DRY-RUN] Hello there, adventurer.";
+	mes "[DRY-RUN] I've been studying magic from all over Rune-Midgard to upgrade what I believe to be one of the greatest skills available to the acolyte class.";
 	next;
 
 	if (is_function("VIP_iRO_Acolyte"))
 		callfunc "VIP_iRO_Acolyte","[Aperture]","Prontera";
 
-	mes "[Aperture]";
-	mes "I am the one and only Acolyte that has attained the Level 10 Warp Portal skill!";
+	mes "[DRY-RUN] [Aperture]";
+	mes "[DRY-RUN] I am the one and only Acolyte that has attained the Level 10 Warp Portal skill!";
 	emotion ET_THINK, playerattached();
 	next;
-	mes "[Aperture]";
-	mes "That's right! And...";
-	mes "I promise you that I don't forget locations that I have already memorized.";
-	mes "One day I will level up my skills to warp to wherever I please~";
+	mes "[DRY-RUN] [Aperture]";
+	mes "[DRY-RUN] That's right! And...";
+	mes "[DRY-RUN] I promise you that I don't forget locations that I have already memorized.";
+	mes "[DRY-RUN] One day I will level up my skills to warp to wherever I please~";
 	next;
-	mes "[Aperture]";
-	mes "I am willing to warp you to the many locations that I have memorized for a small fee.";
-	mes "Would you like to use this service?";
+	mes "[DRY-RUN] [Aperture]";
+	mes "[DRY-RUN] I am willing to warp you to the many locations that I have memorized for a small fee.";
+	mes "[DRY-RUN] Would you like to use this service?";
 	next;
-	switch(select("Yes:No")) {
+	switch(select("[DRY-RUN] Yes:No")) {
 	case 1:
-		mes "[Aperture]";
-		mes "Where would you like to go to?";
-		mes "I wish you goodluck on your journey.";
+		mes "[DRY-RUN] [Aperture]";
+		mes "[DRY-RUN] Where would you like to go to?";
+		mes "[DRY-RUN] I wish you goodluck on your journey.";
 		next;
 
 		setarray .@towns$[0], "Prontera", "Izlude", "Geffen", "Payon", "Morocc", "Alberta", "Al De Baran", "Comodo", "Umbala", "Juno", "Einbroch", "Lighthalzen", "Hugel", "Rachel";
@@ -56,15 +56,15 @@ moc_para01,14,32,5	script	Aperture#acolytewarp	90,{
 			set .@menu$, .@menu$+.@towns$[.@i]+" -> "+.@cost[.@i]+"z:";
 		set .@i, select(.@menu$+"Cancel")-1;
 		if (.@i == .@size) {
-			mes "[Aperture]";
-			mes "Come back when you need a warp.";
+			mes "[DRY-RUN] [Aperture]";
+			mes "[DRY-RUN] Come back when you need a warp.";
 			close;
 		}
 		if (Zeny < .@cost[.@i]) {
-			mes "[Aperture]";
-			mes "I'm sorry, but you don't have";
-			mes "enough zeny for the Teleport";
-			mes "Service. The fee to teleport";
+			mes "[DRY-RUN] [Aperture]";
+			mes "[DRY-RUN] I'm sorry, but you don't have";
+			mes "[DRY-RUN] enough zeny for the Teleport";
+			mes "[DRY-RUN] Service. The fee to teleport";
 			mes "to "+.@towns$[.@i]+" is "+.@cost[.@i]+" zeny.";
 			close;
 		}
@@ -91,8 +91,8 @@ moc_para01,14,32,5	script	Aperture#acolytewarp	90,{
 		}
 		close;
 	case 2:
-		mes "[Aperture]";
-		mes "Come back when you need a warp.";
+		mes "[DRY-RUN] [Aperture]";
+		mes "[DRY-RUN] Come back when you need a warp.";
 		close;
 	}
 }
@@ -167,34 +167,34 @@ moc_para01,26,15,3	script	Primo d'Buffer	790,{
 //============================================================
 moc_para01,53,30,3	script	Clearchus	470,{
 	if (checkquest(62238,PLAYTIME) > -1 && checkquest(62238,PLAYTIME) < 2) {
-		mes "You must wait for the timer to finish before you can hire a new mercenary.";
+		mes "[DRY-RUN] You must wait for the timer to finish before you can hire a new mercenary.";
 		close;	
 	}
-	mes "[Clearchus]";
-	mes "Greetings young adventurer! I represent the Midgardian Mercenary Mission.";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] Greetings young adventurer! I represent the Midgardian Mercenary Mission.";
 	next;
-	mes "[Clearchus]";
-	mes "We provide training to aspiring mercenaries by pairing them with adventurers such as yourself.";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] We provide training to aspiring mercenaries by pairing them with adventurers such as yourself.";
 	next;
-	mes "[Clearchus]";
-	mes "Our organization is 10,000 strong! Now let me see if you are registered for this service.";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] Our organization is 10,000 strong! Now let me see if you are registered for this service.";
 	next;
 	if (!vip_status(VIP_STATUS_ACTIVE)) {
-		mes "[Clearchus]";
-		mes "Unfortunately it appears that you are not VIP, please get VIP so that you can use this service. You can get a temporary VIP access by talking to Gramps at the Eden Group Headquarters.";
+		mes "[DRY-RUN] [Clearchus]";
+		mes "[DRY-RUN] Unfortunately it appears that you are not VIP, please get VIP so that you can use this service. You can get a temporary VIP access by talking to Gramps at the Eden Group Headquarters.";
 		next;
-		mes "[Clearchus]";
-		mes "Vip is a very useful tool for adventurers to have, giving access to extra Kafra Services, discounted warps, exclusive content, and use of Primo d'Buffer. If an adventurer has full vip they even get an Exp, Drops, and storage boost!";
+		mes "[DRY-RUN] [Clearchus]";
+		mes "[DRY-RUN] Vip is a very useful tool for adventurers to have, giving access to extra Kafra Services, discounted warps, exclusive content, and use of Primo d'Buffer. If an adventurer has full vip they even get an Exp, Drops, and storage boost!";
 		close;
 	}
-	mes "[Clearchus]";
-	mes "Your name is on the list.";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] Your name is on the list.";
 	next;
-	mes "[Clearchus]";
-	mes "What kind of skill set are you looking for in a mercenary?";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] What kind of skill set are you looking for in a mercenary?";
 	next;
 
-	switch(select("Swordsman:Archer:Lancer")) {
+	switch(select("[DRY-RUN] Swordsman:Archer:Lancer")) {
 	case 1:
 		set .@base_id,12163; //SwordMercenary_Scroll
 		break;
@@ -216,11 +216,11 @@ moc_para01,53,30,3	script	Clearchus	470,{
 	else if (BaseLevel < 91) set .@i,8;
 	else set .@i,9;
 
-	mes "[Clearchus]";
-	mes "I have just the mercenary in mind!";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] I have just the mercenary in mind!";
 	next;
-	mes "[Clearchus]";
-	mes "Have fun now, ya hear?";
+	mes "[DRY-RUN] [Clearchus]";
+	mes "[DRY-RUN] Have fun now, ya hear?";
 	getitem .@base_id + .@i,1;
 	if (isbegin_quest(62238) > 0)
 		erasequest 62238;
@@ -231,90 +231,90 @@ moc_para01,53,30,3	script	Clearchus	470,{
 // Carrot & Red Potion Traders
 //============================================================
 moc_para01,166,51,3	script	Phelix#edco	85,{
-	mes "[Phelix]";
-	mes "Oh... I see from that look that you want me to work and give you Meat and Carrots...";
-	mes "Well my friend Izaac here has some Red Potions with him, but I only have some Carrots.";
-	mes "So I can trade you ^0000CC1 Carrot for 3 Jellopy^000000.";
+	mes "[DRY-RUN] [Phelix]";
+	mes "[DRY-RUN] Oh... I see from that look that you want me to work and give you Meat and Carrots...";
+	mes "[DRY-RUN] Well my friend Izaac here has some Red Potions with him, but I only have some Carrots.";
+	mes "[DRY-RUN] So I can trade you ^0000CC1 Carrot for 3 Jellopy^000000.";
 	next;
-	mes "[Phelix]";
-	mes "If you're interested in my offer, get me the Jellopies I mentioned.";
+	mes "[DRY-RUN] [Phelix]";
+	mes "[DRY-RUN] If you're interested in my offer, get me the Jellopies I mentioned.";
 	next;
-	select("Carrots please.");
-	mes "[Phelix]";
-	mes "Alright, let's see what ya got...";
+	select("[DRY-RUN] Carrots please.");
+	mes "[DRY-RUN] [Phelix]";
+	mes "[DRY-RUN] Alright, let's see what ya got...";
 	next;
 	if (countitem(909) < 3) {
-		mes "[Phelix]";
-		mes "Hmm, look dude, I said 3 Jellopies for 1 Carrot... got it?";
+		mes "[DRY-RUN] [Phelix]";
+		mes "[DRY-RUN] Hmm, look dude, I said 3 Jellopies for 1 Carrot... got it?";
 		close;
 	}
-	mes "[Phelix]";
-	mes "Not too bad...";
-	mes "How many do you want?";
+	mes "[DRY-RUN] [Phelix]";
+	mes "[DRY-RUN] Not too bad...";
+	mes "[DRY-RUN] How many do you want?";
 	next;
-	switch(select("As many as I can get, please.:I want to choose.:Never mind, I like my Jellopy.")) {
+	switch(select("[DRY-RUN] As many as I can get, please.:I want to choose.:Never mind, I like my Jellopy.")) {
 	case 1:
 		set .@amount, countitem(909) / 3;
 		break;
 	case 2:
 		set .@available, countitem(909) / 3;
-		mes "[Phelix]";
-		mes "How many do you want?";
+		mes "[DRY-RUN] [Phelix]";
+		mes "[DRY-RUN] How many do you want?";
 		mes "^ff0000You have enough for up to " + .@available + " Carrots.^000000";
 		input .@input;
 		next;
 		if (.@input < 1 || .@input > 10000) {
-			mes "[Phelix]";
-			mes "Don't want to deal? Fair enough...";
+			mes "[DRY-RUN] [Phelix]";
+			mes "[DRY-RUN] Don't want to deal? Fair enough...";
 			close;
 		}
 		if (.@input > .@available) {
-			mes "[Phelix]";
-			mes "Dude, I said for every 3 Jellopy I'll give you 1 Carrot.";
+			mes "[DRY-RUN] [Phelix]";
+			mes "[DRY-RUN] Dude, I said for every 3 Jellopy I'll give you 1 Carrot.";
 			close;
 		}
 		set .@amount, .@input;
 		break;
 	case 3:
-		mes "[Phelix]";
-		mes "Don't bother me if you don't want to trade.";
+		mes "[DRY-RUN] [Phelix]";
+		mes "[DRY-RUN] Don't bother me if you don't want to trade.";
 		close;
 	}
 	if (checkweight(515,.@amount) == 0) {
-		mes "[Phelix]";
-		mes "You are overweight.";
+		mes "[DRY-RUN] [Phelix]";
+		mes "[DRY-RUN] You are overweight.";
 		close;
 	}
-	mes "[Phelix]";
-	mes "There you go~! As I promised.";
-	mes "Try not to stuff yer face.";
+	mes "[DRY-RUN] [Phelix]";
+	mes "[DRY-RUN] There you go~! As I promised.";
+	mes "[DRY-RUN] Try not to stuff yer face.";
 	delitem 909,.@amount*3; //Jellopy
 	getitem 515,.@amount; //Carrot
 	end;
 }
 
 moc_para01,163,51,7	script	Izaac#edco	86,{
-	mes "[Izaac]";
-	mes "Good day!";
-	mes "Have you collected any weird stuff from monsters?";
-	mes "I want things like Jellopy, Fluff, Shell, Feather of Birds, Tree Root, Worm Peelings, and Chrysalis.";
-	mes "I need those for something.";
+	mes "[DRY-RUN] [Izaac]";
+	mes "[DRY-RUN] Good day!";
+	mes "[DRY-RUN] Have you collected any weird stuff from monsters?";
+	mes "[DRY-RUN] I want things like Jellopy, Fluff, Shell, Feather of Birds, Tree Root, Worm Peelings, and Chrysalis.";
+	mes "[DRY-RUN] I need those for something.";
 	next;
-	mes "[Izaac]";
-	mes "Of course, I won't ask you to give me that stuff for free. What if I traded the following for ^CC00001 Red Potion^000000:";
-	mes "^00CC005 Shell^000000";
-	mes "^0000CC10 Fluff^000000";
-	mes "^00CC0010 Jellopy^000000";
-	mes "^0000CC6 Tree Root^000000";
-	mes "^00CC001 Worm Peeling^000000";
-	mes "^0000CC7 Feather of Birds^000000";
-	mes "^00CC006 Chrysalis^000000";
+	mes "[DRY-RUN] [Izaac]";
+	mes "[DRY-RUN] Of course, I won't ask you to give me that stuff for free. What if I traded the following for ^CC00001 Red Potion^000000:";
+	mes "[DRY-RUN] ^00CC005 Shell^000000";
+	mes "[DRY-RUN] ^0000CC10 Fluff^000000";
+	mes "[DRY-RUN] ^00CC0010 Jellopy^000000";
+	mes "[DRY-RUN] ^0000CC6 Tree Root^000000";
+	mes "[DRY-RUN] ^00CC001 Worm Peeling^000000";
+	mes "[DRY-RUN] ^0000CC7 Feather of Birds^000000";
+	mes "[DRY-RUN] ^00CC006 Chrysalis^000000";
 	next;
-	switch(select("Sure!:I think it's a rip-off!:No, thanks.")) {
+	switch(select("[DRY-RUN] Sure!:I think it's a rip-off!:No, thanks.")) {
 	case 1:
-		mes "[Izaac]";
-		mes "So which items do";
-		mes "you want to bring me?";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] So which items do";
+		mes "[DRY-RUN] you want to bring me?";
 		next;
 
 		setarray .@items[0], 935, 914, 909, 902, 955, 916, 915;
@@ -325,9 +325,9 @@ moc_para01,163,51,7	script	Izaac#edco	86,{
 			set .@menu$, .@menu$+getitemname(.@items[.@i])+":";
 		set .@select, select(.@menu$+"Cancel")-1;
 		if (.@select == .@size) {
-			mes "[Izaac]";
-			mes "Sure~";
-			mes "No problem.";
+			mes "[DRY-RUN] [Izaac]";
+			mes "[DRY-RUN] Sure~";
+			mes "[DRY-RUN] No problem.";
 			close;
 		}
 		set .@item, .@items[.@select];
@@ -335,64 +335,64 @@ moc_para01,163,51,7	script	Izaac#edco	86,{
 		set .@price, .@count[.@select];
 
 		if (countitem(.@item) < .@price) {
-			mes "[Izaac]";
-			mes "Hey, where's all";
+			mes "[DRY-RUN] [Izaac]";
+			mes "[DRY-RUN] Hey, where's all";
 			mes "that "+.@item$+" that";
-			mes "you promised me?";
+			mes "[DRY-RUN] you promised me?";
 			mes "Give me "+.@item$+"!";
 			close;
 		}
-		mes "[Izaac]";
-		mes "Okay, let me check";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] Okay, let me check";
 		mes "how much "+.@item$;
-		mes "you have on you.";
-		mes "Hmm...";
+		mes "[DRY-RUN] you have on you.";
+		mes "[DRY-RUN] Hmm...";
 		next;
 		set .@amount, countitem(.@item) / .@price;
 		set .@trade_amount, .@amount * .@price;
-		mes "[Izaac]";
-		mes "You have";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] You have";
 		mes "a total of "+countitem(.@item)+" "+.@item$+"...";
-		mes "For all those, I can give you";
+		mes "[DRY-RUN] For all those, I can give you";
 		mes "a total of "+.@amount+" Red Potion(s).";
 		next;
-		mes "[Izaac]";
-		mes "What do you say?";
-		mes "Do we have a deal?";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] What do you say?";
+		mes "[DRY-RUN] Do we have a deal?";
 		next;
-		if(select("Deal.:No deal.") == 2) {
-			mes "[Izaac]";
-			mes "Huh~";
-			mes "Alright.";
-			mes "Though are";
+		if(select("[DRY-RUN] Deal.:No deal.") == 2) {
+			mes "[DRY-RUN] [Izaac]";
+			mes "[DRY-RUN] Huh~";
+			mes "[DRY-RUN] Alright.";
+			mes "[DRY-RUN] Though are";
 			mes .@item$ + " more useful";
-			mes "to an adventurer like you?";
+			mes "[DRY-RUN] to an adventurer like you?";
 			close;
 		}
 		if (checkweight(501,.@amount) == 0) { //custom check
-			mes "[Izaac]";
-			mes "You are overweight.";
+			mes "[DRY-RUN] [Izaac]";
+			mes "[DRY-RUN] You are overweight.";
 			close;
 		}
 		delitem .@item,.@trade_amount;
 		getitem 501,.@amount; //Red_Potion
-		mes "[Izaac]";
-		mes "There you go!";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] There you go!";
 		mes "Check how many "+.@item$;
-		mes "I've given you, it should be good.";
-		mes "Thanks, that was a good deal~";
+		mes "[DRY-RUN] I've given you, it should be good.";
+		mes "[DRY-RUN] Thanks, that was a good deal~";
 		close;
 	case 2:
-		mes "[Izaac]";
-		mes "A rip-off...?";
-		mes "If you check the market value";
-		mes "of the items being traded, I'm actually the one getting";
-		mes "ripped off here.";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] A rip-off...?";
+		mes "[DRY-RUN] If you check the market value";
+		mes "[DRY-RUN] of the items being traded, I'm actually the one getting";
+		mes "[DRY-RUN] ripped off here.";
 		close;
 	case 3:
-		mes "[Izaac]";
-		mes "Alright, No problem.";
-		mes "But come back to me if you change your mind.";
+		mes "[DRY-RUN] [Izaac]";
+		mes "[DRY-RUN] Alright, No problem.";
+		mes "[DRY-RUN] But come back to me if you change your mind.";
 		close;
 	}
 }
@@ -1059,45 +1059,45 @@ moc_para01,33,185,4	script	Dinorah Lacostt#ed	862,{ end; }
 /* These scripts change on a regular basis, so they're mostly just placeholders for now. */
 
 moc_para01,29,35,4	script	Gramps#huntquests	866,{
-	mes "[Gramps]";
-	mes "When you get to being my";
-	mes "age, you become bitter.";
-	mes "Too long I've done nothing about the monsters that roam around";
-	mes "Rune Midgard.";
+	mes "[DRY-RUN] [Gramps]";
+	mes "[DRY-RUN] When you get to being my";
+	mes "[DRY-RUN] age, you become bitter.";
+	mes "[DRY-RUN] Too long I've done nothing about the monsters that roam around";
+	mes "[DRY-RUN] Rune Midgard.";
 	next;
-	mes "[Gramps]";
-	mes "That's why I'm asking you wippersnappers to help";
-	mes "me hunt some monsters.";
-	mes "Will you help me, young adventurer?";
+	mes "[DRY-RUN] [Gramps]";
+	mes "[DRY-RUN] That's why I'm asking you wippersnappers to help";
+	mes "[DRY-RUN] me hunt some monsters.";
+	mes "[DRY-RUN] Will you help me, young adventurer?";
 	close;
 	//next;
-	//switch(select("Yes, I'll help.:Reward Me!:^ff0000I want to quit hunting^000000:^0000ffCan you warp me?^000000:Can you erase the timer?:What missions are you giving?:Give me Limited 3 day VIP:Tell me more about the VIP Access:No thanks, pops.")) {
+	//switch(select("[DRY-RUN] Yes, I'll help.:Reward Me!:^ff0000I want to quit hunting^000000:^0000ffCan you warp me?^000000:Can you erase the timer?:What missions are you giving?:Give me Limited 3 day VIP:Tell me more about the VIP Access:No thanks, pops.")) {
 }
 
 moc_para01,174,33,3	script	Bathory#2012spirits	1102,{
-	mes "[Bathory]";
-	mes "Eheeheeheehee! The spotlight is on Glast Heim this week, so I'm ferrying people there for a mere 1,000z!";
+	mes "[DRY-RUN] [Bathory]";
+	mes "[DRY-RUN] Eheeheeheehee! The spotlight is on Glast Heim this week, so I'm ferrying people there for a mere 1,000z!";
 	next;
-	mes "[Bathory]";
-	mes "How about it? Want to take a ride on a beautiful Bathory's broom?";
+	mes "[DRY-RUN] [Bathory]";
+	mes "[DRY-RUN] How about it? Want to take a ride on a beautiful Bathory's broom?";
 	next;
-	switch(select("Prepare for Takeoff!:No thanks.")) {
+	switch(select("[DRY-RUN] Prepare for Takeoff!:No thanks.")) {
 	case 1:
 		if (Zeny < 1000) {
-			mes "[Bathory]";
-			mes "Come on dearie...";
-			mes "You don't even have 1,000 zeny?";
+			mes "[DRY-RUN] [Bathory]";
+			mes "[DRY-RUN] Come on dearie...";
+			mes "[DRY-RUN] You don't even have 1,000 zeny?";
 			close;
 		}
-		mes "[Bathory]";
-		mes "Alright, hold on tight!";
+		mes "[DRY-RUN] [Bathory]";
+		mes "[DRY-RUN] Alright, hold on tight!";
 		close2;
 		set Zeny, Zeny-1000;
 		warp "niflheim",194,185;
 		end;
 	case 2:
 		mes "["+strcharinfo(0)+"]";
-		mes "No thanks, maybe later.";
+		mes "[DRY-RUN] No thanks, maybe later.";
 		close;
 	}
 }

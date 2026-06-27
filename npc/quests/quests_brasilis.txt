@@ -89,23 +89,23 @@ OnGo:
 }
 
 -	script	Puppy#bra	-1,{
-	mes "[Puppy]";
-	mes "bow! wow wow!";
+	mes "[DRY-RUN] [Puppy]";
+	mes "[DRY-RUN] bow! wow wow!";
 	if (checkquest(9030) == 1) {
 		if (brazil_kid < 3) {
 			next;
 			brazil_kid++;
 			mes "[" + strcharinfo(0) + "]";
 			if (brazil_kid == 3) {
-				mes "Good. I found all 3 puppies.";
-				mes "Now I need to go tell Angelo.";
+				mes "[DRY-RUN] Good. I found all 3 puppies.";
+				mes "[DRY-RUN] Now I need to go tell Angelo.";
 				brazil_kid = 0;
 				erasequest 9030;
 				setquest 9031;
 			}
 			else {
-				mes "Ah... who's a good puppy?";
-				mes "Ok, where are the others?";
+				mes "[DRY-RUN] Ah... who's a good puppy?";
+				mes "[DRY-RUN] Ok, where are the others?";
 			}
 			if (compare(strnpcinfo(2),"1")) setarray .@i[0],2,3;
 			else if (compare(strnpcinfo(2),"2")) setarray .@i[0],1,3;
@@ -809,48 +809,48 @@ brasilis,59,226,3	script	Poring#bra	4_PORING,{}
 bra_fild01,75,83,5	script	Toucan#bra	2073,2,2,{
 OnTouch:
 	if (brazil_gua == 6) {
-		mes "[Toucan]";
-		mes "Baaeecc!";
-		mes "I've never seen you before.";
-		mes "Baaeec!";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] Baaeecc!";
+		mes "[DRY-RUN] I've never seen you before.";
+		mes "[DRY-RUN] Baaeec!";
 		next;
-		mes "[Toucan]";
-		mes "It's the middle of the new and old continent... I know I've never seen you before but you seem familiar, like a woman dancing a samba. ";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] It's the middle of the new and old continent... I know I've never seen you before but you seem familiar, like a woman dancing a samba. ";
 		next;
-		select("What are you talking about?");
-		mes "[Toucan]";
-		mes "I can feel some similar power like guarana kid. bbaaaeeeccc!";
+		select("[DRY-RUN] What are you talking about?");
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] I can feel some similar power like guarana kid. bbaaaeeeccc!";
 		next;
-		mes "[Toucan]";
-		mes "That kid has had a really lonely time, baaecc! Perhaps you are a friend of him? Baaeec!!";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] That kid has had a really lonely time, baaecc! Perhaps you are a friend of him? Baaeec!!";
 		next;
-		select("Not yet... but I want to be a friend.");
-		mes "[Toucan]";
-		mes "The kid who received care from guarana woman is also a friend of animals. Bbaaeecc!";
+		select("[DRY-RUN] Not yet... but I want to be a friend.");
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] The kid who received care from guarana woman is also a friend of animals. Bbaaeecc!";
 		next;
-		mes "[Toucan]";
-		mes "I'd like to give the symbol of a toucan representative for the kid. Bbaaeecc!";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] I'd like to give the symbol of a toucan representative for the kid. Bbaaeecc!";
 		next;
-		mes "[Toucan]";
-		mes "If you want to relieve his loneliness, can you help me?";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] If you want to relieve his loneliness, can you help me?";
 		next;
-		select("Absolutely!");
-		mes "[Toucan]";
-		mes "It's my feather.";
-		mes "Send it to the kid.";
-		mes "We will keep our promise of friendship between guarana kid and Toucan forever. Bbaaeecc!";
+		select("[DRY-RUN] Absolutely!");
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] It's my feather.";
+		mes "[DRY-RUN] Send it to the kid.";
+		mes "[DRY-RUN] We will keep our promise of friendship between guarana kid and Toucan forever. Bbaaeecc!";
 		next;
-		mes "- You take a feather from Toucan. - ";
+		mes "[DRY-RUN] - You take a feather from Toucan. - ";
 		next;
-		mes "[Toucan]";
-		mes "There have to be others around here like me.";
-		mes "Why don't you find a jaguar Bbaaeecc!";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] There have to be others around here like me.";
+		mes "[DRY-RUN] Why don't you find a jaguar Bbaaeecc!";
 		next;
-		mes "[Toucan]";
-		mes "I will give a blessing from Toucan to you.";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] I will give a blessing from Toucan to you.";
 		next;
-		mes "[Toucan]";
-		mes "Fly fly far away. bbaaaeeeccckkk--!";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] Fly fly far away. bbaaaeeeccckkk--!";
 		brazil_gua = 7;
 		changequest 2196,2197;
 		specialeffect2 EF_SEISMICWEAPON;
@@ -859,8 +859,8 @@ OnTouch:
 		end;
 	}
 	else {
-		mes "[Toucan]";
-		mes "Bbbaaeec~! Baaeec~!";
+		mes "[DRY-RUN] [Toucan]";
+		mes "[DRY-RUN] Bbbaaeec~! Baaeec~!";
 		close;
 	}
 	end;
@@ -869,51 +869,51 @@ OnTouch:
 bra_fild01,34,184,5	script	Jaguar#bra	2072,2,2,{
 OnTouch_:
 	if (brazil_gua == 7) {
-		mes "[Jaguar]";
-		mes "Hhooww..hhooww.....";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Hhooww..hhooww.....";
 		next;
-		mes "[Jaguar]";
-		mes "Smelling! This smell is from a human!";
-		mes "Somewhere, a human!";
-		mes "I got it. You are!!!";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Smelling! This smell is from a human!";
+		mes "[DRY-RUN] Somewhere, a human!";
+		mes "[DRY-RUN] I got it. You are!!!";
 		specialeffect EF_HIT1,AREA,"Jaguar#bra";
 		emotion ET_HUK, playerattached();
 		next;
-		mes "[Jaguar]";
-		mes "Don't be afraid human.";
-		mes "I don't have enough power to hunt humans, just waiting time to end my lifetime in this jungle.";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Don't be afraid human.";
+		mes "[DRY-RUN] I don't have enough power to hunt humans, just waiting time to end my lifetime in this jungle.";
 		next;
-		mes "[Jaguar]";
-		mes "Anyway you can talk with me, are you a guarana kid?";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Anyway you can talk with me, are you a guarana kid?";
 		next;
-		select("Yes? N...o......actually....");
-		mes "[Jaguar]";
-		mes "The son of guarana woman became our friend also.";
-		mes "They treated all life preciously.";
-		mes "I hope you are same the as her.";
+		select("[DRY-RUN] Yes? N...o......actually....");
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] The son of guarana woman became our friend also.";
+		mes "[DRY-RUN] They treated all life preciously.";
+		mes "[DRY-RUN] I hope you are same the as her.";
 		next;
-		mes "[Jaguar]";
-		mes "Bird's chirpings informed me.";
-		mes "The son of guarana woman has a diseased heart.";
-		mes "Her brothers made him lonely, don't you think?";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Bird's chirpings informed me.";
+		mes "[DRY-RUN] The son of guarana woman has a diseased heart.";
+		mes "[DRY-RUN] Her brothers made him lonely, don't you think?";
 		next;
-		mes "[Jaguar]";
-		mes "Here is fresh meat that I hunted just a few days ago.";
-		mes "Take it and give it to the poor kid.";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Here is fresh meat that I hunted just a few days ago.";
+		mes "[DRY-RUN] Take it and give it to the poor kid.";
 		next;
-		mes "[Jaguar]";
-		mes "I can give this tiny thing to you so, don't forget it.";
-		mes "The jungle will welcome you whenever!";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] I can give this tiny thing to you so, don't forget it.";
+		mes "[DRY-RUN] The jungle will welcome you whenever!";
 		next;
-		mes "- You get fresh meat from Jaguar. -";
+		mes "[DRY-RUN] - You get fresh meat from Jaguar. -";
 		next;
-		mes "[Jaguar]";
-		mes "Monkey, who's always meddling with others, wants to meet you.";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] Monkey, who's always meddling with others, wants to meet you.";
 		next;
-		mes "[Jaguar]";
-		mes "I will give you a Jaguar's high blessing.";
-		mes "Go to monkey by flowing through the wind like a bee.";
-		mes "Let's meet again my friend!";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] I will give you a Jaguar's high blessing.";
+		mes "[DRY-RUN] Go to monkey by flowing through the wind like a bee.";
+		mes "[DRY-RUN] Let's meet again my friend!";
 		brazil_gua = 8;
 		changequest 2197,2198;
 		close2;
@@ -921,8 +921,8 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[Jaguar]";
-		mes "krrrrrr....";
+		mes "[DRY-RUN] [Jaguar]";
+		mes "[DRY-RUN] krrrrrr....";
 		close;
 	}
 	end;

@@ -21,63 +21,63 @@ valkyrie,53,54,3	script	Minstrel#Valkyrie	741,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Minstrel]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Minstrel]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Minstrel]";
-		mes "Do you want to";
-		mes "sing a song with me?";
-		mes "Sha la la la la~";
+		mes "[DRY-RUN] [Minstrel]";
+		mes "[DRY-RUN] Do you want to";
+		mes "[DRY-RUN] sing a song with me?";
+		mes "[DRY-RUN] Sha la la la la~";
 		close;
 	}
 	else if (ADVJOB == Job_Clown && Class == Job_Archer_High && JobLevel > 39) {
-		mes "[Minstrel]";
-		mes "The dreary world";
-		mes "of mortals is in need";
-		mes "of more cheerful song.";
-		mes "Will you bring it to them";
-		mes "and turn the tide in the";
-		mes "battle against evil?";
+		mes "[DRY-RUN] [Minstrel]";
+		mes "[DRY-RUN] The dreary world";
+		mes "[DRY-RUN] of mortals is in need";
+		mes "[DRY-RUN] of more cheerful song.";
+		mes "[DRY-RUN] Will you bring it to them";
+		mes "[DRY-RUN] and turn the tide in the";
+		mes "[DRY-RUN] battle against evil?";
 		next;
-		mes "[Minstrel]";
-		mes "Will you do this";
-		mes "for Rune-Midgard...";
-		mes "As a Minstrel?";
+		mes "[DRY-RUN] [Minstrel]";
+		mes "[DRY-RUN] Will you do this";
+		mes "[DRY-RUN] for Rune-Midgard...";
+		mes "[DRY-RUN] As a Minstrel?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Minstrel]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Minstrel]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Minstrel]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Minstrel]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Clown;
 		set ADVJOB,0;
-		mes "[Minstrel]";
-		mes "Congratulations!";
-		mes "As a Minstrel, your";
-		mes "your songs will bring";
-		mes "hope to your allies, and";
-		mes "desperation to your foes.";
+		mes "[DRY-RUN] [Minstrel]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] As a Minstrel, your";
+		mes "[DRY-RUN] your songs will bring";
+		mes "[DRY-RUN] hope to your allies, and";
+		mes "[DRY-RUN] desperation to your foes.";
 		close;
 	}
-	mes "[Minstrel]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Minstrel]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Minstrel]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Minstrel]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

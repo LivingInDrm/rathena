@@ -113,29 +113,29 @@ L_Lifting:
 }
 
 gon_test,50,14,4	script	Administrator#gnp	780,{
-	mes "[Administrator]";
+	mes "[DRY-RUN] [Administrator]";
 	if (BaseJob == Job_Novice) {
-		mes "Children are not allowed in here.";
+		mes "[DRY-RUN] Children are not allowed in here.";
 		close;
 	}
 	if ($@in_battle) {
-		mes "Sorry, the field of fight";
-		mes "is occupied right now.";
-		mes "Try again later.";
+		mes "[DRY-RUN] Sorry, the field of fight";
+		mes "[DRY-RUN] is occupied right now.";
+		mes "[DRY-RUN] Try again later.";
 		close;
 	}
-	mes "Are you ready?";
-	mes " ";
-	mes "Remember, you have to pay";
-	mes "500z to fight.";
+	mes "[DRY-RUN] Are you ready?";
+	mes "[DRY-RUN] Remember, you have to pay";
+	mes "[DRY-RUN] 500z to fight.";
+	mes "[DRY-RUN] [Administrator]";
 	next;
-	if (select("Yes, let me fight!:One moment, please.") == 2) {
-		mes "[Administrator]";
-		mes "Ok, see you later.";
+	if (select("[DRY-RUN] Yes, let me fight!:One moment, please.") == 2) {
+		mes "[DRY-RUN] Ok, see you later.";
+		mes "[DRY-RUN] [Administrator]";
 		close;
 	}
 	if (Zeny < 500) {
-		mes "[Administrator]";
+		mes "[DRY-RUN] I'm sorry but you don't have enough zeny.";
 		mes "I'm sorry but you don't have enough zeny.";
 		close;
 	}
@@ -149,27 +149,27 @@ gon_test,50,14,4	script	Administrator#gnp	780,{
 }
 
 gon_test,42,89,4	script	Summoner#gnp	774,{
-	mes "[SongYeunWoo]";
+	mes "[DRY-RUN] [SongYeunWoo]";
 	if (in_battle == 3) {
-		mes "Please come back after registration.";
+		mes "[DRY-RUN] Please come back after registration.";
 		close;
 	} else if (in_battle == 2) {
-		mes "You had a single match already.";
-		mes "You can have a match once at a time.";
-		mes "Please re-enter if you want a match";
-		mes "with other monsters.";
+		mes "[DRY-RUN] You had a single match already.";
+		mes "[DRY-RUN] You can have a match once at a time.";
+		mes "[DRY-RUN] Please re-enter if you want a match";
+		mes "[DRY-RUN] with other monsters.";
 		close;
 	}
-	mes "Welcome.";
-	mes "Which monster will you recall?";
+	mes "[DRY-RUN] Welcome.";
+	mes "[DRY-RUN] Which monster will you recall?";
 	next;
-	set .@gnpGroup, select("Group 1:Group 2:Group 3:Group 4:Group 5:Group 6:Group 7:Group 8:Group 9:Group 10:Group 11");
+	set .@gnpGroup, select("[DRY-RUN] Group 1:Group 2:Group 3:Group 4:Group 5:Group 6:Group 7:Group 8:Group 9:Group 10:Group 11");
 	set .@gnpGroupMob$,.gnpMobsName$[(.@gnpGroup-1)*6];
 	for (set .@i,1; .@i < 6; set .@i, .@i+1)
 		set .@gnpGroupMob$, .@gnpGroupMob$ + ":" + .gnpMobsName$[(.@gnpGroup-1)*6 + .@i];
 	set .@gnpMob, select(.@gnpGroupMob$);
-	mes "[SongYeunWoo]";
-	mes "Let the fight begin!";
+	mes "[DRY-RUN] [SongYeunWoo]";
+	mes "[DRY-RUN] Let the fight begin!";
 	close2;
 	set in_battle,2;
 	if (getnpctimer(0) < 180000) monster "gon_test",56,86,.gnpMobsName$[(.@gnpGroup-1)*6 + .@gnpMob - 1],.gnpMobsId[(.@gnpGroup-1)*6 + .@gnpMob - 1],1,"Summoner#gnp::OnGnpMobDead";
@@ -275,19 +275,19 @@ gon_test,46,14,3	script	Guide of field of fight	770,{
 }
 
 gon_test,70,103,3	script	ChowAnAn#gnp	773,{
-	mes "[ChowAnAn]";
-	mes "Want to go back?";
+	mes "[DRY-RUN] [ChowAnAn]";
+	mes "[DRY-RUN] Want to go back?";
 	next;
-	if (select("Yes.:No.") == 1) {
-		mes "[ChowAnAn]";
-		mes "Thank you.";
-		mes "Please come again.";
+	if (select("[DRY-RUN] Yes.:No.") == 1) {
+		mes "[DRY-RUN] [ChowAnAn]";
+		mes "[DRY-RUN] Thank you.";
+		mes "[DRY-RUN] Please come again.";
 		close2;
 		set in_battle,1;
 		warp "gon_test",44,4;
 		end;
 	}
-	mes "[ChowAnAn]";
-	mes "Thank you.";
+	mes "[DRY-RUN] [ChowAnAn]";
+	mes "[DRY-RUN] Thank you.";
 	close;
 }

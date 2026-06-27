@@ -18,33 +18,33 @@
 moc_ruins,118,99,5	script	Roberto	88,{
 	if (BaseClass == Job_Archer) {
 		if (getskilllv("AC_MAKINGARROW") == 1) {
-			mes "[Roberto]";
-			mes "Ooh, you're from my home town!";
-			mes "Nice to see you!";
-			mes "How are you?";
-			mes "Ah! That arrow!";
-			mes "You made it, didn't you!";
+			mes "[DRY-RUN] [Roberto]";
+			mes "[DRY-RUN] Ooh, you're from my home town!";
+			mes "[DRY-RUN] Nice to see you!";
+			mes "[DRY-RUN] How are you?";
+			mes "[DRY-RUN] Ah! That arrow!";
+			mes "[DRY-RUN] You made it, didn't you!";
 			next;
-			mes "[Roberto]";
-			mes "Haha...!";
-			mes "Do you think it's a lot better?";
-			mes "Haha... anyways, I am glad.";
-			mes "Come back with once in a while";
-			mes "with news from home.";
-			mes "Then byebye~";
+			mes "[DRY-RUN] [Roberto]";
+			mes "[DRY-RUN] Haha...!";
+			mes "[DRY-RUN] Do you think it's a lot better?";
+			mes "[DRY-RUN] Haha... anyways, I am glad.";
+			mes "[DRY-RUN] Come back with once in a while";
+			mes "[DRY-RUN] with news from home.";
+			mes "[DRY-RUN] Then byebye~";
 			close;
 		}
 		else if (JobLevel >= 30 || (BaseJob == Job_Hunter || BaseJob == Job_Bard || BaseJob == Job_Dancer)) {
-			mes "[Roberto]";
-			mes "Eh!";
-			mes " ";
-			mes "You are...";
+			mes "[DRY-RUN] [Roberto]";
+			mes "[DRY-RUN] Eh!";
+			mes "[DRY-RUN] You are...";
+			mes "[DRY-RUN] [Roberto]";
 			next;
 			if ((countitem(907) > 19) && (countitem(921) > 6) && (countitem(906) > 40) && (countitem(1019) > 12) && (countitem(501) > 0)) {
-				mes "[Roberto]";
-				mes "You brought them!";
-				mes "Thank you very much.";
-				mes "Then, as I promised, I will teach you the skill.";
+				mes "[DRY-RUN] You brought them!";
+				mes "[DRY-RUN] Thank you very much.";
+				mes "[DRY-RUN] Then, as I promised, I will teach you the skill.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
 				delitem 907,20; //Resin
 				delitem 921,7; //Mushroom_Spore
@@ -52,91 +52,91 @@ moc_ruins,118,99,5	script	Roberto	88,{
 				delitem 1019,13; //Wooden_Block
 				delitem 501,1; //Red_Potion
 				skill "AC_MAKINGARROW",1,SKILL_PERM;
-				mes "[Roberto]";
-				mes "No need to worry about arrows now.";
-				mes "Oh, and did you happen to see";
-				mes "someone called Jason in Payon?";
-				mes "Be careful. He is a";
-				mes "ferocious one.";
+				mes "[DRY-RUN] No need to worry about arrows now.";
+				mes "[DRY-RUN] Oh, and did you happen to see";
+				mes "[DRY-RUN] someone called Jason in Payon?";
+				mes "[DRY-RUN] Be careful. He is a";
+				mes "[DRY-RUN] ferocious one.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
-				mes "[Roberto]";
-				mes "You just have to be careful of Jason in Payon.";
-				mes "Remember.";
-				mes "Then bubye~ Thank you for the presents~";
+				mes "[DRY-RUN] You just have to be careful of Jason in Payon.";
+				mes "[DRY-RUN] Remember.";
+				mes "[DRY-RUN] Then bubye~ Thank you for the presents~";
+				mes "[DRY-RUN] [Roberto]";
 				close;
 			}
-			mes "[Roberto]";
-			mes "An archer in Morroc!?";
-			mes "Nice to see you! Meeting a fellow";
-			mes "archer in a place like this! *sniffsniff*!";
-			mes "I came alone to Morroc..";
-			mes "but I was a newcomer, and the pressure... waaah~";
-			mes "I was very lonely~";
+			mes "[DRY-RUN] An archer in Morroc!?";
+			mes "[DRY-RUN] Nice to see you! Meeting a fellow";
+			mes "[DRY-RUN] archer in a place like this! *sniffsniff*!";
+			mes "[DRY-RUN] I came alone to Morroc..";
+			mes "[DRY-RUN] but I was a newcomer, and the pressure... waaah~";
+			mes "[DRY-RUN] I was very lonely~";
+			mes "[DRY-RUN] [Roberto]";
 			next;
-			switch (select("It must be hard. It's ok have faith.:Keep suffering.")) {
+			switch (select("[DRY-RUN] It must be hard. It's ok have faith.:Keep suffering.")) {
 			case 1:
-				mes "[Roberto]";
-				mes "Yes. Thank you...";
-				mes "You must be having a hard";
-				mes "time in a place like this.";
-				mes "Isn't it hard to find arrows?";
-				mes "That's why I make my own.";
+				mes "[DRY-RUN] Yes. Thank you...";
+				mes "[DRY-RUN] You must be having a hard";
+				mes "[DRY-RUN] time in a place like this.";
+				mes "[DRY-RUN] Isn't it hard to find arrows?";
+				mes "[DRY-RUN] That's why I make my own.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
-				select("Eh, really?!");
-				mes "[Roberto]";
-				mes "Yeah! I gather different items";
-				mes "and make arrows using them.";
-				mes "It is a useful skill to help me";
-				mes "survive alone in this tough world.";
-				mes "If you'd like, I can teach you.";
+				select("[DRY-RUN] Eh, really?!");
+				mes "[DRY-RUN] Yeah! I gather different items";
+				mes "[DRY-RUN] and make arrows using them.";
+				mes "[DRY-RUN] It is a useful skill to help me";
+				mes "[DRY-RUN] survive alone in this tough world.";
+				mes "[DRY-RUN] If you'd like, I can teach you.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
-				select("That would be wonderful.");
-				mes "[Roberto]";
-				mes "But.. I can't do it for free.";
-				mes "Nothing is free in this world~";
-				mes "Mmm... How about this?";
-				mes "You bring me what I ask for.";
-				mes "Then I will teach you the skill.";
+				select("[DRY-RUN] That would be wonderful.");
+				mes "[DRY-RUN] But.. I can't do it for free.";
+				mes "[DRY-RUN] Nothing is free in this world~";
+				mes "[DRY-RUN] Mmm... How about this?";
+				mes "[DRY-RUN] You bring me what I ask for.";
+				mes "[DRY-RUN] Then I will teach you the skill.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
-				mes "[Roberto]";
-				mes "I've been very lonely since I left my hometown.";
-				mes "I would like to treat my homesick-ness";
-				mes "with things from there.";
-				mes "Bring me 20 Resins from the trees in the ";
-				mes "Payon forest, and 1 Red Potion";
-				mes "sold in the store.";
+				mes "[DRY-RUN] I've been very lonely since I left my hometown.";
+				mes "[DRY-RUN] I would like to treat my homesick-ness";
+				mes "[DRY-RUN] with things from there.";
+				mes "[DRY-RUN] Bring me 20 Resins from the trees in the ";
+				mes "[DRY-RUN] Payon forest, and 1 Red Potion";
+				mes "[DRY-RUN] sold in the store.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
-				mes "[Roberto]";
-				mes "Also, 13 Trunks from the Willows that";
-				mes "lives near the Payon Forest,";
-				mes "41 Pointed Scale,";
-				mes "7 Mushroom Spores.";
-				mes "If you bring me all of these.";
+				mes "[DRY-RUN] Also, 13 Trunks from the Willows that";
+				mes "[DRY-RUN] lives near the Payon Forest,";
+				mes "[DRY-RUN] 41 Pointed Scale,";
+				mes "[DRY-RUN] 7 Mushroom Spores.";
+				mes "[DRY-RUN] If you bring me all of these.";
+				mes "[DRY-RUN] [Roberto]";
 				next;
-				mes "[Roberto]";
-				mes "I will teach you the skill.";
-				mes "Then.. I'll be waiting.";
-				mes "For news from our home.";
+				mes "[DRY-RUN] I will teach you the skill.";
+				mes "[DRY-RUN] Then.. I'll be waiting.";
+				mes "[DRY-RUN] For news from our home.";
+				mes "[DRY-RUN] [Roberto]";
 				close;
 			case 2:
-				mes "[Roberto]";
+				mes "[DRY-RUN] ...be careful at night.";
 				mes "...hey "+((Sex == SEX_MALE)?"mister":"miss")+".";
-				mes "...be careful at night.";
+				mes "[DRY-RUN] [Roberto]";
 				close;
 			}
 		}
-		mes "[Roberto]";
-		mes "Hmm... Do you";
-		mes "have something to say?";
-		mes "I have nothing.";
-		mes "Difference in levels";
-		mes "cuts off conversations.";
+		mes "[DRY-RUN] Hmm... Do you";
+		mes "[DRY-RUN] have something to say?";
+		mes "[DRY-RUN] I have nothing.";
+		mes "[DRY-RUN] Difference in levels";
+		mes "[DRY-RUN] cuts off conversations.";
+		mes "[DRY-RUN] [?]";
 		close;
 	}
-	mes "[?]";
-	mes "Eh... First time seeing an archer or something?";
-	mes "Just go where you were going.";
-	mes "I only talk to high level archers.";
+	mes "[DRY-RUN] Eh... First time seeing an archer or something?";
+	mes "[DRY-RUN] Just go where you were going.";
+	mes "[DRY-RUN] I only talk to high level archers.";
+	mes "[DRY-RUN] Won't open my mouth otherwise!";
 	mes "Won't open my mouth otherwise!";
 	close;
 }
@@ -144,80 +144,80 @@ moc_ruins,118,99,5	script	Roberto	88,{
 payon,103,63,3	script	Jason	88,3,3,{
 	if (BaseClass == Job_Archer) {
 		if (getskilllv("AC_CHARGEARROW") == 1) {
-			mes "[Jason]";
-			mes "Eh, we meet again.";
-			mes "Ehhhh so weird.";
-			mes "Whenever I see someone again";
-			mes "I start eh-ing a lot.";
-			mes "Ehhh... anyways nice to see you again.";
-			mes "Ehhhh... don't come any more ehh...";
+			mes "[DRY-RUN] [Jason]";
+			mes "[DRY-RUN] Eh, we meet again.";
+			mes "[DRY-RUN] Ehhhh so weird.";
+			mes "[DRY-RUN] Whenever I see someone again";
+			mes "[DRY-RUN] I start eh-ing a lot.";
+			mes "[DRY-RUN] Ehhh... anyways nice to see you again.";
+			mes "[DRY-RUN] Ehhhh... don't come any more ehh...";
 			close;
 		}
 		else if (JobLevel >= 35 || (BaseJob == Job_Hunter || BaseJob == Job_Bard || BaseJob == Job_Dancer)) {
-			mes "[Jason]";
-			mes "Darn... my wound isn't healing.";
-			mes "Bleh.. I was too careless... ";
-			mes "to become like this.. err...";
-			mes "But still, hurting me like this";
-			mes "giving me so many injuries...";
+			mes "[DRY-RUN] [Jason]";
+			mes "[DRY-RUN] Darn... my wound isn't healing.";
+			mes "[DRY-RUN] Bleh.. I was too careless... ";
+			mes "[DRY-RUN] to become like this.. err...";
+			mes "[DRY-RUN] But still, hurting me like this";
+			mes "[DRY-RUN] giving me so many injuries...";
 			next;
-			mes "What should I do about Roberto.";
-			mes "Mmmm... Ah!";
-			mes "You? How long have you been there?";
-			mes "Mmm... very high level.";
-			mes "Someone like you would definitely be";
-			mes "able to know how to use Arrow Repel.";
+			mes "[DRY-RUN] What should I do about Roberto.";
+			mes "[DRY-RUN] Mmmm... Ah!";
+			mes "[DRY-RUN] You? How long have you been there?";
+			mes "[DRY-RUN] Mmm... very high level.";
+			mes "[DRY-RUN] Someone like you would definitely be";
+			mes "[DRY-RUN] able to know how to use Arrow Repel.";
 			next;
-			switch (select("What is that?:Teach me.")) {
+			switch (select("[DRY-RUN] What is that?:Teach me.")) {
 			case 1:
-				mes "[Jason]";
-				mes "...you're kidding, right?";
-				mes "Oh my, you don't even know";
-				mes "Arrow Repel at that level?";
-				mes "You're a strange person.";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] ...you're kidding, right?";
+				mes "[DRY-RUN] Oh my, you don't even know";
+				mes "[DRY-RUN] Arrow Repel at that level?";
+				mes "[DRY-RUN] You're a strange person.";
 				next;
-				mes "[Jason]";
-				mes "(Jason was in the lala land.)";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] (Jason was in the lala land.)";
 				next;
-				mes "[Jason]";
-				mes "Well, ok. I'll teach you what";
-				mes "Arrow Repel is.";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] Well, ok. I'll teach you what";
+				mes "[DRY-RUN] Arrow Repel is.";
 				next;
-				mes "[Jason]";
-				mes "Arrow Repel is a skill that allows you to";
-				mes "push the opponent away as soon as you attack.";
-				mes "You can only use it when you aim exactly";
-				mes "at the target. But unlike magic, ";
-				mes "it doesn't de-spell.";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] Arrow Repel is a skill that allows you to";
+				mes "[DRY-RUN] push the opponent away as soon as you attack.";
+				mes "[DRY-RUN] You can only use it when you aim exactly";
+				mes "[DRY-RUN] at the target. But unlike magic, ";
+				mes "[DRY-RUN] it doesn't de-spell.";
 				next;
-				mes "[Jason]";
-				mes "It is very useful for an archer";
-				mes "that is weak in close ranges.";
-				mes "If you would like to learn,";
-				mes "come find me again.";
-				mes "There are some necessary materials.";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] It is very useful for an archer";
+				mes "[DRY-RUN] that is weak in close ranges.";
+				mes "[DRY-RUN] If you would like to learn,";
+				mes "[DRY-RUN] come find me again.";
+				mes "[DRY-RUN] There are some necessary materials.";
 				next;
-				mes "[Jason]";
-				mes "First, because you must modify a bow";
-				mes "bring a crossbow you do not use.";
-				mes "10 Tentacles, 10 Bill of Birds,";
-				mes "3 Yoyo Tails.. these are very elastic.";
-				mes "Also, 2 Emeralds. And last but not least...";
-				mes "36 bottles of Banana Juice that I love!";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] First, because you must modify a bow";
+				mes "[DRY-RUN] bring a crossbow you do not use.";
+				mes "[DRY-RUN] 10 Tentacles, 10 Bill of Birds,";
+				mes "[DRY-RUN] 3 Yoyo Tails.. these are very elastic.";
+				mes "[DRY-RUN] Also, 2 Emeralds. And last but not least...";
+				mes "[DRY-RUN] 36 bottles of Banana Juice that I love!";
 				next;
-				mes "[Jason]";
-				mes "......Ehem!";
-				mes "If you bring all of these,";
-				mes "I shall teach you Arrow Repel.";
-				mes "Then, see you again.";
-				mes "(I'm going to be mad if you don't bring the Banana Juice.)";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] ......Ehem!";
+				mes "[DRY-RUN] If you bring all of these,";
+				mes "[DRY-RUN] I shall teach you Arrow Repel.";
+				mes "[DRY-RUN] Then, see you again.";
+				mes "[DRY-RUN] (I'm going to be mad if you don't bring the Banana Juice.)";
 				close;
 			case 2:
 				if ((countitem(721) > 1) && (countitem(942) > 2) && (countitem(962) > 9) && (countitem(925) > 9) && (countitem(532) > 35)) {
-					mes "[Jason]";
-					mes "Ok! Perfect!";
-					mes "I shall teach you the nationally";
-					mes "renowned skill, Arrow Repel!";
+					mes "[DRY-RUN] [Jason]";
+					mes "[DRY-RUN] Ok! Perfect!";
+					mes "[DRY-RUN] I shall teach you the nationally";
+					mes "[DRY-RUN] renowned skill, Arrow Repel!";
 					next;
 					delitem 721,2; //Azure_Jewel
 					delitem 942,3; //Yoyo_Tail
@@ -225,44 +225,44 @@ payon,103,63,3	script	Jason	88,3,3,{
 					delitem 925,10; //Bill_Of_Birds
 					delitem 532,36; //Banana_Juice
 					skill "AC_CHARGEARROW",1,SKILL_PERM;
-					mes "[Jason]";
-					mes "Oh, works better than I expected!";
-					mes "Won't be needing to modify the bow!";
-					mes "You can take this back~";
-					mes "And enjoy using your newly inherited";
-					mes "skill in fields and dungeons!";
-					mes "He~heh~!";
+					mes "[DRY-RUN] [Jason]";
+					mes "[DRY-RUN] Oh, works better than I expected!";
+					mes "[DRY-RUN] Won't be needing to modify the bow!";
+					mes "[DRY-RUN] You can take this back~";
+					mes "[DRY-RUN] And enjoy using your newly inherited";
+					mes "[DRY-RUN] skill in fields and dungeons!";
+					mes "[DRY-RUN] He~heh~!";
 					close;
 				}
-				mes "[Jason]";
-				mes "Mmm... too bad.";
-				mes "You are missing some things.";
-				mes "Once again, you need 2 Emeralds,";
-				mes "3 Yoyo Tails, 10 Tentacles,";
-				mes "10 Bill of Birds, and last but";
-				mes "not least 36 bottles of Banana juice!";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] Mmm... too bad.";
+				mes "[DRY-RUN] You are missing some things.";
+				mes "[DRY-RUN] Once again, you need 2 Emeralds,";
+				mes "[DRY-RUN] 3 Yoyo Tails, 10 Tentacles,";
+				mes "[DRY-RUN] 10 Bill of Birds, and last but";
+				mes "[DRY-RUN] not least 36 bottles of Banana juice!";
 				next;
-				mes "[Jason]";
-				mes "Make sure you have all of them and come again!";
+				mes "[DRY-RUN] [Jason]";
+				mes "[DRY-RUN] Make sure you have all of them and come again!";
 				close;
 			}
 		}
-		mes "[Jason]";
-		mes "Ooh... you are an archer.";
-		mes "If you try a little more";
-		mes "you will have a great";
-		mes "reputation as an archer!";
-		mes "Exert yourself!";
+		mes "[DRY-RUN] [Jason]";
+		mes "[DRY-RUN] Ooh... you are an archer.";
+		mes "[DRY-RUN] If you try a little more";
+		mes "[DRY-RUN] you will have a great";
+		mes "[DRY-RUN] reputation as an archer!";
+		mes "[DRY-RUN] Exert yourself!";
 		close;
 	}
-	mes "[?]";
-	mes "What does life need from";
-	mes "a lonely lad like me?";
+	mes "[DRY-RUN] [?]";
+	mes "[DRY-RUN] What does life need from";
+	mes "[DRY-RUN] a lonely lad like me?";
 	close;
 
 OnTouch_:
-	mes "[???]";
-	mes "Errrrrrr...";
+	mes "[DRY-RUN] [???]";
+	mes "[DRY-RUN] Errrrrrr...";
 	close;
 }
 

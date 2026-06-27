@@ -591,33 +591,33 @@ beach_dun2,119,92,4	script	Fishing Novice#sp2	567,{
 
 airplane,33,47,5	script	Nudor#sp2	729,{
 	if (checkquest(5099) >= 0) {
-		mes "[Nudor]";
-		mes "Ahhh~ I have no money to buy any food.";
-		mes "I'm hungry, but I have no idea when Brother is coming...";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] Ahhh~ I have no money to buy any food.";
+		mes "[DRY-RUN] I'm hungry, but I have no idea when Brother is coming...";
 		next;
-		select("Hey, are you... Mr. Nudor?");
-		mes "[Nudor]";
-		mes "Eeeeeh?! Who wants to know?";
-		mes "Do I know you?";
+		select("[DRY-RUN] Hey, are you... Mr. Nudor?");
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] Eeeeeh?! Who wants to know?";
+		mes "[DRY-RUN] Do I know you?";
 		next;
-		mes "- You explain to Nudor why you have come to see him. -";
+		mes "[DRY-RUN] - You explain to Nudor why you have come to see him. -";
 		next;
-		mes "[Nudor]";
-		mes "Aha! You've come to give me some pocket money in place of my bro~";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] Aha! You've come to give me some pocket money in place of my bro~";
 		next;
-		mes "[Nudor]";
-		mes "Wowowow~~ How much did he give you?";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] Wowowow~~ How much did he give you?";
 		next;
-		mes "- Nudor stares with twinkling -";
-		mes "- eyes, holding out his hands. -";
-		mes "- How much do you want to give? -";
+		mes "[DRY-RUN] - Nudor stares with twinkling -";
+		mes "[DRY-RUN] - eyes, holding out his hands. -";
+		mes "[DRY-RUN] - How much do you want to give? -";
 		next;
-		set .@i, select("I have no money:Give 100,000 Zeny:Give 300,000 Zeny:Give 1,000,000 Zeny:Give all the money you have");
-		mes "[Nudor]";
+		set .@i, select("[DRY-RUN] I have no money:Give 100,000 Zeny:Give 300,000 Zeny:Give 1,000,000 Zeny:Give all the money you have");
+		mes "[DRY-RUN] [Nudor]";
 		if (.@i == 1) {
-			mes "- crying -";
-			mes "I hate Nodor --- !";
-			mes "I hate you too --- !";
+			mes "[DRY-RUN] - crying -";
+			mes "[DRY-RUN] I hate Nodor --- !";
+			mes "[DRY-RUN] I hate you too --- !";
 			close2;
 			warp "airplane",70,93;
 			end;
@@ -631,29 +631,29 @@ airplane,33,47,5	script	Nudor#sp2	729,{
 			mes "Lovely~~ Did he give you "+callfunc("F_InsertComma",.@n)+" Zeny? That's pretty much!";
 			next;
 			if (Zeny < .@n) {
-				mes "[Nudor]";
+				mes "[DRY-RUN] [Nudor]";
 				mes "What? But where is "+callfunc("F_InsertComma",.@n)+" Zeny?";
 				close;
 			}
 		}
 		else {
-			mes "Oh... oh my gosh, are you really giving me all the Zeny you have? Really?";
+			mes "[DRY-RUN] Oh... oh my gosh, are you really giving me all the Zeny you have? Really?";
 			next;
-			if(select("No, not really...:Give it all") == 1) {
-				mes "[Nudor]";
-				mes "Pshaw! How disappointing!";
+			if(select("[DRY-RUN] No, not really...:Give it all") == 1) {
+				mes "[DRY-RUN] [Nudor]";
+				mes "[DRY-RUN] Pshaw! How disappointing!";
 				close;
 			}
 			if (!Zeny) {
-				mes "[Nudor]";
-				mes "Eh? But you don't have any money. You're so poor, huh?";
+				mes "[DRY-RUN] [Nudor]";
+				mes "[DRY-RUN] Eh? But you don't have any money. You're so poor, huh?";
 				close;
 			}
 			set .@n,Zeny;
 		}
-		mes "[Nudor]";
+		mes "[DRY-RUN] [Nudor]";
 		mes "Woa~!! "+.@n+" Zeny! This helped me so much~ Tehee~";
-		mes "I can't believe it...";
+		mes "[DRY-RUN] I can't believe it...";
 		changequest 5099,5100;
 		set Zeny, Zeny - .@n;
 		if (.@i < 5) set EXSUPNOV_Q_, .@i;
@@ -663,29 +663,29 @@ airplane,33,47,5	script	Nudor#sp2	729,{
 			else set EXSUPNOV_Q_,2;
 		}
 		next;
-		mes "[Nudor]";
+		mes "[DRY-RUN] [Nudor]";
 		if (Sex == SEX_MALE) mes "Did you know? You're really handsome~";
 		else mes "I need to tell you, you are really... really~ beautiful.";
 		next;
-		mes "[Nudor]";
-		mes "- You feel like you're being -";
-		mes "- tricked, so go back to Nodor. -";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] - You feel like you're being -";
+		mes "[DRY-RUN] - tricked, so go back to Nodor. -";
 		close;
 	}
 	else if (checkquest(5100) >= 0) {
-		mes "[Nudor]";
-		mes "I cannot believe that my bro sent me money... I love it~";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] I cannot believe that my bro sent me money... I love it~";
 		next;
-		mes "[Nudor]";
-		mes "Ooooops!";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] Ooooops!";
 		mes strcharinfo(0)+", hush --- !!";
 		next;
-		mes "[Nudor]";
-		mes "Don't tell Nodor about this~~";
+		mes "[DRY-RUN] [Nudor]";
+		mes "[DRY-RUN] Don't tell Nodor about this~~";
 		close;
 	}
-	mes "[Nudor]";
-	mes "Ahhh~ I have no money to buy any food.";
-	mes "I'm hungry, but I have no idea when Brother is coming...";
+	mes "[DRY-RUN] [Nudor]";
+	mes "[DRY-RUN] Ahhh~ I have no money to buy any food.";
+	mes "[DRY-RUN] I'm hungry, but I have no idea when Brother is coming...";
 	close;
 }

@@ -11,23 +11,23 @@
 
 ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	if (checkweight(1201,3) == 0) {
-		mes "^ff0000It seems that the type or weight of the item you have is too much. Please organize your inventory.^000000";
+		mes "[DRY-RUN] ^ff0000It seems that the type or weight of the item you have is too much. Please organize your inventory.^000000";
 		close;
 	}
 	disable_items;
-	mes "[Lisa]";
-	mes "Welcome welcome~";
+	mes "[DRY-RUN] [Lisa]";
+	mes "[DRY-RUN] Welcome welcome~";
 	next;
-	switch( select( "Explore Devices", "Automatic Engine Wing Enhancement", "Automatic Armor Enhancement", "Automatic Leg Enhancement", "Automatic Accessories(R) Enhancement", "Automatic Accessories(L) Enhancement" ) ) {
+	switch( select( "[DRY-RUN] Explore Devices", "Automatic Engine Wing Enhancement", "Automatic Armor Enhancement", "Automatic Leg Enhancement", "Automatic Accessories(R) Enhancement", "Automatic Accessories(L) Enhancement" ) ) {
 	case 1:
-		mes "[Lisa]";
-		mes "If you bring automatic equipment and reinforcement modules, we can enchant the appropriate module on the equipment.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] If you bring automatic equipment and reinforcement modules, we can enchant the appropriate module on the equipment.";
 		next;
-		mes "[Lisa]";
-		mes "This is done according to the specification module, so the equipment will not be destroyed. However, the number of upgrades can vary depending on the module.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] This is done according to the specification module, so the equipment will not be destroyed. However, the number of upgrades can vary depending on the module.";
 		next;
-		mes "[Lisa]";
-		mes "Then please visit again when you need help~";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Then please visit again when you need help~";
 		close;
 	case 2:
 		.@part = EQI_GARMENT;
@@ -56,17 +56,17 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	for ( .@i = 0; .@i < 4; ++.@i )
 		.@card[.@i] = getequipcardid(.@part,.@i);
 
-	mes "[Lisa]";
-	mes "If you bring automatic equipment and reinforcement modules, we can enchant the appropriate module on the equipment.";
+	mes "[DRY-RUN] [Lisa]";
+	mes "[DRY-RUN] If you bring automatic equipment and reinforcement modules, we can enchant the appropriate module on the equipment.";
 	next;
-	mes "[Lisa]";
+	mes "[DRY-RUN] [Lisa]";
 	mes strcharinfo(0) + ".";
-	mes "Please select the grade of module that you want to use.";
+	mes "[DRY-RUN] Please select the grade of module that you want to use.";
 	next;
-	switch( select( "Cancel", "Normal Grade", "Rare Grade", "Unique Grade", "Legendary Grade", "Epic Grade 1", "Epic Grade 2", "Epic Grade 3" ) ) {
+	switch( select( "[DRY-RUN] Cancel", "Normal Grade", "Rare Grade", "Unique Grade", "Legendary Grade", "Epic Grade 1", "Epic Grade 2", "Epic Grade 3" ) ) {
 	case 1:
-		mes "[Lisa]";
-		mes "Stopping conversation.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Stopping conversation.";
 		close;
 	case 2:
 		setarray .@module_etc[0],1000105,1000106,1000107,1000108,1000109,1000110,1000111,1000112;
@@ -106,31 +106,31 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	}
 	.@s = select(.@menu$) - 2;
 	if (.@s == -1) {
-		mes "[Lisa]";
-		mes "Stopping conversation.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Stopping conversation.";
 		close;
 	}
 	.@module_id = .@module_etc[.@s];
 
 	if (countitem(.@module_id) < 1) {
-		mes "[Lisa]";
-		mes "You must possess a module in your inventory that matches the efficacy to proceed with the enhancement.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] You must possess a module in your inventory that matches the efficacy to proceed with the enhancement.";
 		close;
 	}
 	if (.@equip_required[0] != .@equip_id && .@equip_required[1] != .@equip_id) {
-		mes "[Lisa]";
-		mes "Please make sure you have equipped the proper automatic equipment that you want to enhance.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Please make sure you have equipped the proper automatic equipment that you want to enhance.";
 		close;
 	}
 	if (.@card[1] > 0) {
-		mes "[Lisa]";
-		mes "This automatic equipment is already at its maximum capacity.";
-		mes "Please try another automatic equipment.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] This automatic equipment is already at its maximum capacity.";
+		mes "[DRY-RUN] Please try another automatic equipment.";
 		close;
 	}
 	if (.@module_id < 1000105 || .@module_id == 1000150 || .@module_id == 1000151 || (.@module_id >= 1000203 && .@module_id != 1000207 && .@module_id != 1000208)) {
-		mes "[Lisa]";
-		mes "Unknown error has occurred.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Unknown error has occurred.";
 		close;
 	}
 
@@ -163,8 +163,8 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	.@data_index = inarray(.@module_etc_data, .@module_id);
 
 	if (.@data_index == -1) {
-		mes "[Lisa]";
-		mes "You can not enchant this module to this automatic equipment.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] You can not enchant this module to this automatic equipment.";
 		close;
 	}
 	// Max number of the selected module allowed
@@ -183,22 +183,22 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	// Check the count of the corresponding enchant in card slots
 	.@enchant_id = .@auto_module[.@module_id];
 	if (.@enchant_id == 0) {
-		mes "[Lisa]";
-		mes "Unknown error has occurred.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Unknown error has occurred.";
 		close;
 	}
 	if (countinarray(.@card[0], .@enchant_id) >= .@max_module) {
-		mes "[Lisa]";
-		mes "This automatic equipment has already maximized the enhancement from this module.";
-		mes "Please try another module.";
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] This automatic equipment has already maximized the enhancement from this module.";
+		mes "[DRY-RUN] Please try another module.";
 		close;
 	}
-	mes "[Lisa]";
+	mes "[DRY-RUN] [Lisa]";
 	mes "Are you sure you want to enchance your ^FF0000" + .@equip_name$ + "^000000 with ^0000CD" + getitemname(.@module_id) + "^000000? This process cannot be reversed.";
 	next;
-	if (select( "Wait... Don't", "I'm sure. Do it." ) == 1) {
-		mes "[Lisa]";
-		mes "Stopping conversation.";
+	if (select( "[DRY-RUN] Wait... Don't", "I'm sure. Do it." ) == 1) {
+		mes "[DRY-RUN] [Lisa]";
+		mes "[DRY-RUN] Stopping conversation.";
 		close;
 	}
 	delitem .@module_id,1;
@@ -214,8 +214,8 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	}
 	delequip .@part;
 	getitem2 .@equip_id,1,1,.@refine,0,.@card[0],.@card[1],.@card[2],.@card[3];
-	mes "[Lisa]";
-	mes "Woaaaah~ I can feel the power of your automatic equipment already~!";
+	mes "[DRY-RUN] [Lisa]";
+	mes "[DRY-RUN] Woaaaah~ I can feel the power of your automatic equipment already~!";
 	close;
 }
 

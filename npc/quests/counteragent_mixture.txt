@@ -19,290 +19,290 @@
 
 alberta_in,133,55,3	script	Louitz#cm	84,{
 	if (molgenstain == 2) {
-		mes "[Merchant Louitz]";
-		mes "Oh, it's you again.";
-		mes "So did you try finding";
-		mes "that nutcase scientist";
-		mes "who lives over in Geffen?";
+		mes "[DRY-RUN] [Merchant Louitz]";
+		mes "[DRY-RUN] Oh, it's you again.";
+		mes "[DRY-RUN] So did you try finding";
+		mes "[DRY-RUN] that nutcase scientist";
+		mes "[DRY-RUN] who lives over in Geffen?";
 		next;
-		if (select("Talk About Morgenstein:Cancel") == 1) {
-			mes "[Merchant Louitz]";
-			mes "You know where he lives";
-			mes "but didn't check it out? Hey,";
-			mes "he may be off his rocker, but";
-			mes "I guess most geniuses are";
-			mes "like that. Still, I think it'd be^FFFFFFss^000000 a good idea if you see him.";
+		if (select("[DRY-RUN] Talk About Morgenstein:Cancel") == 1) {
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] You know where he lives";
+			mes "[DRY-RUN] but didn't check it out? Hey,";
+			mes "[DRY-RUN] he may be off his rocker, but";
+			mes "[DRY-RUN] I guess most geniuses are";
+			mes "[DRY-RUN] like that. Still, I think it'd be^FFFFFFss^000000 a good idea if you see him.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "I mean...";
-			mes "It's only a matter";
-			mes "of time until a smart guy";
-			mes "like that creates something";
-			mes "truly miraculous, right?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] I mean...";
+			mes "[DRY-RUN] It's only a matter";
+			mes "[DRY-RUN] of time until a smart guy";
+			mes "[DRY-RUN] like that creates something";
+			mes "[DRY-RUN] truly miraculous, right?";
 			close;
 		}
-		mes "[Merchant Louitz]";
-		mes "...Hello?";
-		mes "Hellooo? Hey.";
-		mes "Hey! I'm talkin'";
-		mes "to you! Man, I hate";
-		mes "it when you adventurers";
-		mes "just shut up and space out...";
+		mes "[DRY-RUN] [Merchant Louitz]";
+		mes "[DRY-RUN] ...Hello?";
+		mes "[DRY-RUN] Hellooo? Hey.";
+		mes "[DRY-RUN] Hey! I'm talkin'";
+		mes "[DRY-RUN] to you! Man, I hate";
+		mes "[DRY-RUN] it when you adventurers";
+		mes "[DRY-RUN] just shut up and space out...";
 		close;
 	}
-	mes "[Merchant Louitz]";
-	mes "Heya.";
-	mes "What's up?";
+	mes "[DRY-RUN] [Merchant Louitz]";
+	mes "[DRY-RUN] Heya.";
+	mes "[DRY-RUN] What's up?";
 	next;
 	if (countitem(971) > 0 && countitem(972) > 0) {
-		switch(select("Talk:Talk about the solutions.:Cancel")) {
+		switch(select("[DRY-RUN] Talk:Talk about the solutions.:Cancel")) {
 		case 1:
-			mes "[Merchant Louitz]";
-			mes "When I was in Geffen";
-			mes "looking for magic items,";
-			mes "I heard rumors of this really";
-			mes "crazy scientist guy. So I got";
-			mes "curious, asked around, and";
-			mes "eventually found this guy.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] When I was in Geffen";
+			mes "[DRY-RUN] looking for magic items,";
+			mes "[DRY-RUN] I heard rumors of this really";
+			mes "[DRY-RUN] crazy scientist guy. So I got";
+			mes "[DRY-RUN] curious, asked around, and";
+			mes "[DRY-RUN] eventually found this guy.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Boy, oh boy, this guy was";
-			mes "screwy. He didn't even know";
-			mes "I was there the whole time and";
-			mes "just kept mumbling this mumbo";
-			mes "jumbo while working on his";
-			mes "experiments. Words like, um...";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Boy, oh boy, this guy was";
+			mes "[DRY-RUN] screwy. He didn't even know";
+			mes "[DRY-RUN] I was there the whole time and";
+			mes "[DRY-RUN] just kept mumbling this mumbo";
+			mes "[DRY-RUN] jumbo while working on his";
+			mes "[DRY-RUN] experiments. Words like, um...";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Yeah, he kept mumbling";
-			mes "words like ''Karvodailnirol''";
-			mes "and ''Detrimindexta.'' The";
-			mes "first time I heard it, I thought";
-			mes "it was just crazy talk, you know?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Yeah, he kept mumbling";
+			mes "[DRY-RUN] words like ''Karvodailnirol''";
+			mes "[DRY-RUN] and ''Detrimindexta.'' The";
+			mes "[DRY-RUN] first time I heard it, I thought";
+			mes "[DRY-RUN] it was just crazy talk, you know?";
 			next;
-			mes "[Merchant Louitz]";
-			mes "But it turns out,";
-			mes "this Karvodailnirol";
-			mes "and Detrimindexta actually";
-			mes "exist. I think they're special";
-			mes "liquids that don't work quite";
-			mes "like any liquids we're used to.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] But it turns out,";
+			mes "[DRY-RUN] this Karvodailnirol";
+			mes "[DRY-RUN] and Detrimindexta actually";
+			mes "[DRY-RUN] exist. I think they're special";
+			mes "[DRY-RUN] liquids that don't work quite";
+			mes "[DRY-RUN] like any liquids we're used to.";
 			close;
 		case 2:
 			set molgenstain,1;
-			mes "[Merchant Louitz]";
-			mes "Hey, this is one of";
-			mes "those solutions that";
-			mes "scientist kept mentioning.";
-			mes "You were able to get one";
-			mes "of these? Huh. Now, I have";
-			mes "no idea what to do with them... ";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Hey, this is one of";
+			mes "[DRY-RUN] those solutions that";
+			mes "[DRY-RUN] scientist kept mentioning.";
+			mes "[DRY-RUN] You were able to get one";
+			mes "[DRY-RUN] of these? Huh. Now, I have";
+			mes "[DRY-RUN] no idea what to do with them... ";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Ah, but that crazy";
-			mes "scientist would know.";
-			mes "I don't remember exactly";
-			mes "where he lives, but I know";
-			mes "he's in Geffen and that his";
-			mes "name is ^0000FFMorgenstein^000000.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Ah, but that crazy";
+			mes "[DRY-RUN] scientist would know.";
+			mes "[DRY-RUN] I don't remember exactly";
+			mes "[DRY-RUN] where he lives, but I know";
+			mes "[DRY-RUN] he's in Geffen and that his";
+			mes "[DRY-RUN] name is ^0000FFMorgenstein^000000.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Hmm... You better";
-			mes "go around Geffen and";
-			mes "around first. I know for";
-			mes "ask around first. I know for";
-			mes "sure that somebody knows";
-			mes "where you can find Morgenstein.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Hmm... You better";
+			mes "[DRY-RUN] go around Geffen and";
+			mes "[DRY-RUN] around first. I know for";
+			mes "[DRY-RUN] ask around first. I know for";
+			mes "[DRY-RUN] sure that somebody knows";
+			mes "[DRY-RUN] where you can find Morgenstein.";
 			close;
 		case 3:
-			mes "[Merchant Louitz]";
-			mes "Um...";
-			mes "Good talking";
-			mes "to you pal. Uh,";
-			mes "see ya 'round. Take";
-			mes "care of yourself, 'kay?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Um...";
+			mes "[DRY-RUN] Good talking";
+			mes "[DRY-RUN] to you pal. Uh,";
+			mes "[DRY-RUN] see ya 'round. Take";
+			mes "[DRY-RUN] care of yourself, 'kay?";
 			close;
 		}
 	}
 	if (countitem(972) > 0) {
-		switch(select("Talk:Talk about Karvodailnirol:Cancel")) {
+		switch(select("[DRY-RUN] Talk:Talk about Karvodailnirol:Cancel")) {
 		case 1:
-			mes "[Merchant Louitz]";
-			mes "When I was in Geffen";
-			mes "looking for magic items,";
-			mes "I heard rumors of this really";
-			mes "crazy scientist guy. So I got";
-			mes "curious, asked around, and";
-			mes "eventually found this guy.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] When I was in Geffen";
+			mes "[DRY-RUN] looking for magic items,";
+			mes "[DRY-RUN] I heard rumors of this really";
+			mes "[DRY-RUN] crazy scientist guy. So I got";
+			mes "[DRY-RUN] curious, asked around, and";
+			mes "[DRY-RUN] eventually found this guy.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Boy, oh boy, this guy was";
-			mes "screwy. He didn't even know";
-			mes "I was there the whole time and";
-			mes "just kept mumbling this mumbo";
-			mes "jumbo while working on his";
-			mes "experiments. Words like, um...";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Boy, oh boy, this guy was";
+			mes "[DRY-RUN] screwy. He didn't even know";
+			mes "[DRY-RUN] I was there the whole time and";
+			mes "[DRY-RUN] just kept mumbling this mumbo";
+			mes "[DRY-RUN] jumbo while working on his";
+			mes "[DRY-RUN] experiments. Words like, um...";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Yeah, he kept mumbling";
-			mes "words like ''Karvodailnirol''";
-			mes "and ''Detrimindexta.'' The";
-			mes "first time I heard it, I thought";
-			mes "it was just crazy talk, you know?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Yeah, he kept mumbling";
+			mes "[DRY-RUN] words like ''Karvodailnirol''";
+			mes "[DRY-RUN] and ''Detrimindexta.'' The";
+			mes "[DRY-RUN] first time I heard it, I thought";
+			mes "[DRY-RUN] it was just crazy talk, you know?";
 			next;
-			mes "[Merchant Louitz]";
-			mes "But it turns out,";
-			mes "this Karvodailnirol";
-			mes "and Detrimindexta actually";
-			mes "exist. I think they're special";
-			mes "liquids that don't work quite";
-			mes "like any liquids we're used to.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] But it turns out,";
+			mes "[DRY-RUN] this Karvodailnirol";
+			mes "[DRY-RUN] and Detrimindexta actually";
+			mes "[DRY-RUN] exist. I think they're special";
+			mes "[DRY-RUN] liquids that don't work quite";
+			mes "[DRY-RUN] like any liquids we're used to.";
 			close;
 		case 2:
 			set molgenstain,1;
-			mes "[Merchant Louitz]";
-			mes "Oh hey, this is that";
-			mes "Karvodailnirol that the";
-			mes "old scientist was talking";
-			mes "about, huh? Of course, only";
-			mes "someone like that guy would";
-			mes "know what to do with it...";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Oh hey, this is that";
+			mes "[DRY-RUN] Karvodailnirol that the";
+			mes "[DRY-RUN] old scientist was talking";
+			mes "[DRY-RUN] about, huh? Of course, only";
+			mes "[DRY-RUN] someone like that guy would";
+			mes "[DRY-RUN] know what to do with it...";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Hey, why don't you go";
-			mes "and ask him about it?";
-			mes "I don't remember exactly";
-			mes "where he lives, but I know";
-			mes "he's in Geffen and that his";
-			mes "name is ^0000FFMorgenstein^000000.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Hey, why don't you go";
+			mes "[DRY-RUN] and ask him about it?";
+			mes "[DRY-RUN] I don't remember exactly";
+			mes "[DRY-RUN] where he lives, but I know";
+			mes "[DRY-RUN] he's in Geffen and that his";
+			mes "[DRY-RUN] name is ^0000FFMorgenstein^000000.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Hmm... You better";
-			mes "go around Geffen and";
-			mes "around first. I know for";
-			mes "ask around first. I know for";
-			mes "sure that somebody knows";
-			mes "where you can find Morgenstein.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Hmm... You better";
+			mes "[DRY-RUN] go around Geffen and";
+			mes "[DRY-RUN] around first. I know for";
+			mes "[DRY-RUN] ask around first. I know for";
+			mes "[DRY-RUN] sure that somebody knows";
+			mes "[DRY-RUN] where you can find Morgenstein.";
 			close;
 		case 3:
-			mes "[Merchant Louitz]";
-			mes "Um...";
-			mes "Good talking";
-			mes "to you pal. Uh,";
-			mes "see ya 'round. Take";
-			mes "care of yourself, 'kay?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Um...";
+			mes "[DRY-RUN] Good talking";
+			mes "[DRY-RUN] to you pal. Uh,";
+			mes "[DRY-RUN] see ya 'round. Take";
+			mes "[DRY-RUN] care of yourself, 'kay?";
 			close;
 		}
 	}
 	if (countitem(971) > 0) {
-		switch(select("Talk:Talk about Detrimindexta:Cancel")) {
+		switch(select("[DRY-RUN] Talk:Talk about Detrimindexta:Cancel")) {
 		case 1:
-			mes "[Merchant Louitz]";
-			mes "When I was in Geffen";
-			mes "looking for magic items,";
-			mes "I heard rumors of this really";
-			mes "crazy scientist guy. So I got";
-			mes "curious, asked around, and";
-			mes "eventually found this guy.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] When I was in Geffen";
+			mes "[DRY-RUN] looking for magic items,";
+			mes "[DRY-RUN] I heard rumors of this really";
+			mes "[DRY-RUN] crazy scientist guy. So I got";
+			mes "[DRY-RUN] curious, asked around, and";
+			mes "[DRY-RUN] eventually found this guy.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Boy, oh boy, this guy was";
-			mes "screwy. He didn't even know";
-			mes "I was there the whole time and";
-			mes "just kept mumbling this mumbo";
-			mes "jumbo while working on his";
-			mes "experiments. Words like, um...";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Boy, oh boy, this guy was";
+			mes "[DRY-RUN] screwy. He didn't even know";
+			mes "[DRY-RUN] I was there the whole time and";
+			mes "[DRY-RUN] just kept mumbling this mumbo";
+			mes "[DRY-RUN] jumbo while working on his";
+			mes "[DRY-RUN] experiments. Words like, um...";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Yeah, he kept mumbling";
-			mes "words like ''Karvodailnirol''";
-			mes "and ''Detrimindexta.'' The";
-			mes "first time I heard it, I thought";
-			mes "it was just crazy talk, you know?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Yeah, he kept mumbling";
+			mes "[DRY-RUN] words like ''Karvodailnirol''";
+			mes "[DRY-RUN] and ''Detrimindexta.'' The";
+			mes "[DRY-RUN] first time I heard it, I thought";
+			mes "[DRY-RUN] it was just crazy talk, you know?";
 			next;
-			mes "[Merchant Louitz]";
-			mes "But it turns out,";
-			mes "this Karvodailnirol";
-			mes "and Detrimindexta actually";
-			mes "exist. I think they're special";
-			mes "liquids that don't work quite";
-			mes "like any liquids we're used to.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] But it turns out,";
+			mes "[DRY-RUN] this Karvodailnirol";
+			mes "[DRY-RUN] and Detrimindexta actually";
+			mes "[DRY-RUN] exist. I think they're special";
+			mes "[DRY-RUN] liquids that don't work quite";
+			mes "[DRY-RUN] like any liquids we're used to.";
 			close;
 		case 2:
 			set molgenstain,1;
-			mes "[Merchant Louitz]";
-			mes "Oh hey, this is that";
-			mes "Detrimindexta that the";
-			mes "old scientist was talking";
-			mes "about, huh? Of course, only";
-			mes "someone like that guy would";
-			mes "know what to do with it...";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Oh hey, this is that";
+			mes "[DRY-RUN] Detrimindexta that the";
+			mes "[DRY-RUN] old scientist was talking";
+			mes "[DRY-RUN] about, huh? Of course, only";
+			mes "[DRY-RUN] someone like that guy would";
+			mes "[DRY-RUN] know what to do with it...";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Hey, why don't you go";
-			mes "and ask him about it?";
-			mes "I don't remember exactly";
-			mes "where he lives, but I know";
-			mes "he's in Geffen and that his";
-			mes "name is ^0000FFMorgenstein^000000.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Hey, why don't you go";
+			mes "[DRY-RUN] and ask him about it?";
+			mes "[DRY-RUN] I don't remember exactly";
+			mes "[DRY-RUN] where he lives, but I know";
+			mes "[DRY-RUN] he's in Geffen and that his";
+			mes "[DRY-RUN] name is ^0000FFMorgenstein^000000.";
 			next;
-			mes "[Merchant Louitz]";
-			mes "Hmm... You better";
-			mes "go around Geffen and";
-			mes "around first. I know for";
-			mes "ask around first. I know for";
-			mes "sure that somebody knows";
-			mes "where you can find Morgenstein.";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Hmm... You better";
+			mes "[DRY-RUN] go around Geffen and";
+			mes "[DRY-RUN] around first. I know for";
+			mes "[DRY-RUN] ask around first. I know for";
+			mes "[DRY-RUN] sure that somebody knows";
+			mes "[DRY-RUN] where you can find Morgenstein.";
 			close;
 		case 3:
-			mes "[Merchant Louitz]";
-			mes "Um...";
-			mes "Good talking";
-			mes "to you pal. Uh,";
-			mes "see ya 'round. Take";
-			mes "care of yourself, 'kay?";
+			mes "[DRY-RUN] [Merchant Louitz]";
+			mes "[DRY-RUN] Um...";
+			mes "[DRY-RUN] Good talking";
+			mes "[DRY-RUN] to you pal. Uh,";
+			mes "[DRY-RUN] see ya 'round. Take";
+			mes "[DRY-RUN] care of yourself, 'kay?";
 			close;
 		}
 	}
-	if (select("Talk:Cancel") == 1) {
-		mes "[Merchant Louitz]";
-		mes "When I was in Geffen";
-		mes "looking for magic items,";
-		mes "I heard rumors of this really";
-		mes "crazy scientist guy. So I got";
-		mes "curious, asked around, and";
-		mes "eventually found this guy.";
+	if (select("[DRY-RUN] Talk:Cancel") == 1) {
+		mes "[DRY-RUN] [Merchant Louitz]";
+		mes "[DRY-RUN] When I was in Geffen";
+		mes "[DRY-RUN] looking for magic items,";
+		mes "[DRY-RUN] I heard rumors of this really";
+		mes "[DRY-RUN] crazy scientist guy. So I got";
+		mes "[DRY-RUN] curious, asked around, and";
+		mes "[DRY-RUN] eventually found this guy.";
 		next;
-		mes "[Merchant Louitz]";
-		mes "Boy, oh boy, this guy was";
-		mes "screwy. He didn't even know";
-		mes "I was there the whole time and";
-		mes "just kept mumbling this mumbo";
-		mes "jumbo while working on his";
-		mes "experiments. Words like, um...";
+		mes "[DRY-RUN] [Merchant Louitz]";
+		mes "[DRY-RUN] Boy, oh boy, this guy was";
+		mes "[DRY-RUN] screwy. He didn't even know";
+		mes "[DRY-RUN] I was there the whole time and";
+		mes "[DRY-RUN] just kept mumbling this mumbo";
+		mes "[DRY-RUN] jumbo while working on his";
+		mes "[DRY-RUN] experiments. Words like, um...";
 		next;
-		mes "[Merchant Louitz]";
-		mes "Yeah, he kept mumbling";
-		mes "words like ''Karvodailnirol''";
-		mes "and ''Detrimindexta.'' The";
-		mes "first time I heard it, I thought";
-		mes "it was just crazy talk, you know?";
+		mes "[DRY-RUN] [Merchant Louitz]";
+		mes "[DRY-RUN] Yeah, he kept mumbling";
+		mes "[DRY-RUN] words like ''Karvodailnirol''";
+		mes "[DRY-RUN] and ''Detrimindexta.'' The";
+		mes "[DRY-RUN] first time I heard it, I thought";
+		mes "[DRY-RUN] it was just crazy talk, you know?";
 		next;
-		mes "[Merchant Louitz]";
-		mes "But it turns out,";
-		mes "this Karvodailnirol";
-		mes "and Detrimindexta actually";
-		mes "exist. I think they're special";
-		mes "liquids that don't work quite";
-		mes "like any liquids we're used to.";
+		mes "[DRY-RUN] [Merchant Louitz]";
+		mes "[DRY-RUN] But it turns out,";
+		mes "[DRY-RUN] this Karvodailnirol";
+		mes "[DRY-RUN] and Detrimindexta actually";
+		mes "[DRY-RUN] exist. I think they're special";
+		mes "[DRY-RUN] liquids that don't work quite";
+		mes "[DRY-RUN] like any liquids we're used to.";
 		close;
 	}
-	mes "[Merchant Louitz]";
-	mes "Um...";
-	mes "Good talking";
-	mes "to you pal. Uh,";
-	mes "see ya 'round. Take";
-	mes "care of yourself, 'kay?";
+	mes "[DRY-RUN] [Merchant Louitz]";
+	mes "[DRY-RUN] Um...";
+	mes "[DRY-RUN] Good talking";
+	mes "[DRY-RUN] to you pal. Uh,";
+	mes "[DRY-RUN] see ya 'round. Take";
+	mes "[DRY-RUN] care of yourself, 'kay?";
 	close;
 }
 
@@ -397,76 +397,76 @@ geffen,181,114,3	script	Aure Dupon#cm	82,{
 
 geffen_in,141,140,3	script	Morgenstein#cm	121,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute !! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again -";
-		mes "- after you lose some weight. -";
+		mes "[DRY-RUN] - Wait a minute !! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again -";
+		mes "[DRY-RUN] - after you lose some weight. -";
 		close;
 	}
 	if (MISC_QUEST & 4) {
-		mes "[Chemist Morgenstein]";
-		mes ".....";
-		mes "Welcome.";
-		mes "Hehehehe....";
-		mes "Heeheeheeheehee....";
+		mes "[DRY-RUN] [Chemist Morgenstein]";
+		mes "[DRY-RUN] .....";
+		mes "[DRY-RUN] Welcome.";
+		mes "[DRY-RUN] Hehehehe....";
+		mes "[DRY-RUN] Heeheeheeheehee....";
 		next;
-		switch(select("Ask about his research:Ask him to make a new solution.:Cancel")) {
+		switch(select("[DRY-RUN] Ask about his research:Ask him to make a new solution.:Cancel")) {
 		case 1:
-			mes "[Chemist Morgenstein]";
-			mes "Heeheeheeheee...";
-			mes "You must have heard the rumors about my research. Yes! But since you probably know already, I'll tell you without hiding, I mean, there's nothing to hide.";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Heeheeheeheee...";
+			mes "[DRY-RUN] You must have heard the rumors about my research. Yes! But since you probably know already, I'll tell you without hiding, I mean, there's nothing to hide.";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "Actually, you can say my research is complete! Nothing's impossible for my genius! Bwahaha, it's just a matter of time!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Actually, you can say my research is complete! Nothing's impossible for my genius! Bwahaha, it's just a matter of time!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "Are you still here? Right, you wanted to know about my research. It's actually very simple. I was just trying to invent a super liquid that can melt everything!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Are you still here? Right, you wanted to know about my research. It's actually very simple. I was just trying to invent a super liquid that can melt everything!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "Isn't it interesting? No matter how strong you are, you can't break apart stone or steel, but with my new liquid, you can melt those things, making them soft like puddy!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Isn't it interesting? No matter how strong you are, you can't break apart stone or steel, but with my new liquid, you can melt those things, making them soft like puddy!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "It can't melt everything yet, but I did find that you could combine things that you could never mix before with my invention. Heeheeheehee~!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] It can't melt everything yet, but I did find that you could combine things that you could never mix before with my invention. Heeheeheehee~!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "You can make a whole lot of things that you'd never would have imagined possible! I can make you a lot of new things you never would have imagined using this method... as long as you want it!!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] You can make a whole lot of things that you'd never would have imagined possible! I can make you a lot of new things you never would have imagined using this method... as long as you want it!!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "The endorphins are rushing to my face at least 2.1 times faster than the usual rate! Ah! I'm so excited! I... I just can't hide it!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] The endorphins are rushing to my face at least 2.1 times faster than the usual rate! Ah! I'm so excited! I... I just can't hide it!";
 			close;
 		case 2:
-			mes "[Chemist Morgenstein]";
-			mes "So...";
-			mes "You want me to make something totally new, huh? Hehhehheh! I love your sense of scientific adventure!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] So...";
+			mes "[DRY-RUN] You want me to make something totally new, huh? Hehhehheh! I love your sense of scientific adventure!";
 			next;
-			switch(select("Counteragent:Mixture")) {
+			switch(select("[DRY-RUN] Counteragent:Mixture")) {
 			case 1:
-				mes "[Chemist Morgenstein]";
-				mes "Ooh...!";
-				mes "You want to make a Counteragent? Hohohohoho, let's see what we'll need...";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Ooh...!";
+				mes "[DRY-RUN] You want to make a Counteragent? Hohohohoho, let's see what we'll need...";
 				next;
-				mes "[Chemist Morgenstein]";
-				mes "Oh, I remember, yes, Alcohol, and um, er, Detrimindexta and an Empty Bottle to put it it all in. Just these three items and 3000 zeny.";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Oh, I remember, yes, Alcohol, and um, er, Detrimindexta and an Empty Bottle to put it it all in. Just these three items and 3000 zeny.";
 				next;
-				mes "[Chemist Morgenstein]";
-				mes "Bwahahahah!";
-				mes "Oh, I just can't wait to make this! Are you ready to begin?";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Bwahahahah!";
+				mes "[DRY-RUN] Oh, I just can't wait to make this! Are you ready to begin?";
 				next;
-				if (select("Make:Cancel") == 1) {
+				if (select("[DRY-RUN] Make:Cancel") == 1) {
 					if (countitem(970) == 0 || countitem(971) == 0 || countitem(713) == 0 || Zeny < 3000) {
-						mes "[Chemist Morgenstein]";
-						mes "Heuheuheuheuh.... not enough... not enough.. Haah...Haah... Go..... get the rest of the materials!";
-						mes "We'll postpone the fun until then... Heuheuheuheuheuh.";
+						mes "[DRY-RUN] [Chemist Morgenstein]";
+						mes "[DRY-RUN] Heuheuheuheuh.... not enough... not enough.. Haah...Haah... Go..... get the rest of the materials!";
+						mes "[DRY-RUN] We'll postpone the fun until then... Heuheuheuheuheuh.";
 						close;
 					}
-					mes "[Chemist Morgenstein]";
-					mes "Ooooooooh...... heeheeheeheehee...... yes... like that...... yes... more... more........ heeheeheehee.";
-					mes ".... Aaah.... ahah... ha....ahahooooooooohoh!";
+					mes "[DRY-RUN] [Chemist Morgenstein]";
+					mes "[DRY-RUN] Ooooooooh...... heeheeheeheehee...... yes... like that...... yes... more... more........ heeheeheehee.";
+					mes "[DRY-RUN] .... Aaah.... ahah... ha....ahahooooooooohoh!";
 					next;
 					if (countitem(970) < 1 || countitem(971) < 1 || countitem(713) < 1) {
-						mes "[Chemist Morgenstein]";
-						mes "Hohohoho.... not enough... not enough... haah...haah... go..... go get the rest of the materials!!";
+						mes "[DRY-RUN] [Chemist Morgenstein]";
+						mes "[DRY-RUN] Hohohoho.... not enough... not enough... haah...haah... go..... go get the rest of the materials!!";
 						close;
 					}
 					delitem 970,1; //Alchol
@@ -474,43 +474,43 @@ geffen_in,141,140,3	script	Morgenstein#cm	121,{
 					delitem 713,1; //Empty_Bottle
 					set Zeny, Zeny-3000;
 					getitem 973,1; //Counteragent
-					mes "[Chemist Morgenstein]";
-					mes "Hee hee hee...";
-					mes "Haaaaah......";
-					mes "Oh? We're done already?!";
+					mes "[DRY-RUN] [Chemist Morgenstein]";
+					mes "[DRY-RUN] Hee hee hee...";
+					mes "[DRY-RUN] Haaaaah......";
+					mes "[DRY-RUN] Oh? We're done already?!";
 					close;
 				}
-				mes "[Chemist Morgenstein]";
-				mes "Hee hee hee...!";
-				mes "Come back when";
-				mes "you're ready~";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Hee hee hee...!";
+				mes "[DRY-RUN] Come back when";
+				mes "[DRY-RUN] you're ready~";
 				close;
 			case 2:
-				mes "[Chemist Morgenstein]";
-				mes "Ooh...!";
-				mes "You want to make a Mixture? Hohohohoho, let's see what we'll need...";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Ooh...!";
+				mes "[DRY-RUN] You want to make a Mixture? Hohohohoho, let's see what we'll need...";
 				next;
-				mes "[Chemist Morgenstein]";
-				mes "Ooh, I remember now, yes, Alcohol, and um, er, Karvodailnirol and an empty bottle to put all of it in. Just these three items and 4000 zeny.";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Ooh, I remember now, yes, Alcohol, and um, er, Karvodailnirol and an empty bottle to put all of it in. Just these three items and 4000 zeny.";
 				next;
-				mes "[Chemist Morgenstein]";
-				mes "Bwahahahah!";
-				mes "Oh, I just can't wait to make this! Are you ready to begin?";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Bwahahahah!";
+				mes "[DRY-RUN] Oh, I just can't wait to make this! Are you ready to begin?";
 				next;
-				if (select("Make:Cancel") == 1) {
+				if (select("[DRY-RUN] Make:Cancel") == 1) {
 					if (countitem(970) == 0 || countitem(972) == 0 || countitem(713) == 0 || Zeny < 4000) {
-						mes "[Chemist Morgenstein]";
-						mes "Hohohoho.... not enough... not enough... haah...haah... go..... go get the rest of the materials!!";
-						mes "We'll have to postpone the fun for later... Hehehehe";
+						mes "[DRY-RUN] [Chemist Morgenstein]";
+						mes "[DRY-RUN] Hohohoho.... not enough... not enough... haah...haah... go..... go get the rest of the materials!!";
+						mes "[DRY-RUN] We'll have to postpone the fun for later... Hehehehe";
 						close;
 					}
-					mes "[Chemist Morgenstein]";
-					mes "Ooooooooh... heehee...... yes... like that...... yes... more... more........ heeheeheehee";
-					mes ".... Aaah.... ahah... ha....ahah...oooooooooooooooooh!!!...!!!!!!";
+					mes "[DRY-RUN] [Chemist Morgenstein]";
+					mes "[DRY-RUN] Ooooooooh... heehee...... yes... like that...... yes... more... more........ heeheeheehee";
+					mes "[DRY-RUN] .... Aaah.... ahah... ha....ahah...oooooooooooooooooh!!!...!!!!!!";
 					next;
 					if (countitem(970) < 1 || countitem(972) < 1 || countitem(713) < 1) {
-						mes "[Chemist Morgenstein]";
-						mes "Hohohoho.... not enough... not enough... haah...haah... go..... go get the rest of the materials!!";
+						mes "[DRY-RUN] [Chemist Morgenstein]";
+						mes "[DRY-RUN] Hohohoho.... not enough... not enough... haah...haah... go..... go get the rest of the materials!!";
 						close;
 					}
 					delitem 970,1; //Alchol
@@ -518,64 +518,64 @@ geffen_in,141,140,3	script	Morgenstein#cm	121,{
 					delitem 713,1; //Empty_Bottle
 					set Zeny, Zeny-4000;
 					getitem 974,1; //Mixture
-					mes "[Chemist Morgenstein]";
-					mes "Hee hee hee...";
-					mes "Haaaaah......";
-					mes "Oh? We're done already?!";
+					mes "[DRY-RUN] [Chemist Morgenstein]";
+					mes "[DRY-RUN] Hee hee hee...";
+					mes "[DRY-RUN] Haaaaah......";
+					mes "[DRY-RUN] Oh? We're done already?!";
 					close;
 				}
-				mes "[Chemist Morgenstein]";
-				mes "Hee hee hee...!";
-				mes "Come back when";
-				mes "you're ready~";
-				mes "Heh... heuheuheuheh....";
+				mes "[DRY-RUN] [Chemist Morgenstein]";
+				mes "[DRY-RUN] Hee hee hee...!";
+				mes "[DRY-RUN] Come back when";
+				mes "[DRY-RUN] you're ready~";
+				mes "[DRY-RUN] Heh... heuheuheuheh....";
 				close;
 			}
 		case 3:
-			mes "[Chemist Morgenstein]";
-			mes "Heehee....heheheheh....";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Heehee....heheheheh....";
 			close;
 		}
 	}
 	if (molgenstain == 2) {
 		set MISC_QUEST,MISC_QUEST | 4;
 		set molgenstain,0;
-		mes "[Chemist Morgenstein]";
-		mes "Heeheeheehee.... welcome. Hehehehe.... heeheeheeheehee....";
+		mes "[DRY-RUN] [Chemist Morgenstein]";
+		mes "[DRY-RUN] Heeheeheehee.... welcome. Hehehehe.... heeheeheeheehee....";
 		next;
-		mes "[Chemist Morgenstein]";
-		mes "Ah...?!";
-		mes "So sorry if I weirded you out. It's just... I haven't seen a living person in soooo long. So, er, what can I do for you??";
+		mes "[DRY-RUN] [Chemist Morgenstein]";
+		mes "[DRY-RUN] Ah...?!";
+		mes "[DRY-RUN] So sorry if I weirded you out. It's just... I haven't seen a living person in soooo long. So, er, what can I do for you??";
 		next;
-		if (select("Ask about his research.:Cancel.") == 1) {
-			mes "[Chemist Morgenstein]";
-			mes "Heeheeheeheee...";
-			mes "You must have heard the rumors about my research. Yes! But since you probably know already, I'll tell you without hiding, I mean, there's nothing to hide.";
+		if (select("[DRY-RUN] Ask about his research.:Cancel.") == 1) {
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Heeheeheeheee...";
+			mes "[DRY-RUN] You must have heard the rumors about my research. Yes! But since you probably know already, I'll tell you without hiding, I mean, there's nothing to hide.";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "Actually, you can say my research is complete! Nothing's impossible for my genius! Bwahaha, it's just a matter of time!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Actually, you can say my research is complete! Nothing's impossible for my genius! Bwahaha, it's just a matter of time!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "Are you still here? Right, you wanted to know about my research. It's actually very simple. I was just trying to invent a super liquid that can melt everything!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Are you still here? Right, you wanted to know about my research. It's actually very simple. I was just trying to invent a super liquid that can melt everything!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "Isn't it interesting? No matter how strong you are, you can't break apart stone or steel, but with my new liquid, you can melt those things, making them soft like puddy!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] Isn't it interesting? No matter how strong you are, you can't break apart stone or steel, but with my new liquid, you can melt those things, making them soft like puddy!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "It can't melt everything yet, but I did find that you could combine things that you could never mix before with my invention.";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] It can't melt everything yet, but I did find that you could combine things that you could never mix before with my invention.";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "I can make you a lot of new things you never would have imagined using this method... as long as you want it!!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] I can make you a lot of new things you never would have imagined using this method... as long as you want it!!";
 			next;
-			mes "[Chemist Morgenstein]";
-			mes "The endorphins are rushing to my face at least 2.1 times faster than the usual rate! Ah! I'm so excited! I... I just can't hide it!";
+			mes "[DRY-RUN] [Chemist Morgenstein]";
+			mes "[DRY-RUN] The endorphins are rushing to my face at least 2.1 times faster than the usual rate! Ah! I'm so excited! I... I just can't hide it!";
 			close;
 		}
 		close;
 	}
-	mes "[Chemist Morgenstein]";
-	mes "Heeheeheehee...";
-	mes "You're not here to be a test subject, are you? Probably not though. Not since my little 'accident.' Heeheeheeee~!";
+	mes "[DRY-RUN] [Chemist Morgenstein]";
+	mes "[DRY-RUN] Heeheeheehee...";
+	mes "[DRY-RUN] You're not here to be a test subject, are you? Probably not though. Not since my little 'accident.' Heeheeheeee~!";
 	close;
 }
 

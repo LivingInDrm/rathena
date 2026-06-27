@@ -433,11 +433,11 @@ pvp_2vs2,40,40,0	script	Combat Square Staff#5	45,1,1,{
 //============================================================ 
 pvp_room,51,19,0	script	out#eventpvp	45,4,2,{
 OnTouch_:
-	mes "[Combat Square Staff]";
-	mes "Did you have fun in Combat Square?";
-	mes "May I ask where you want to go?";
+	mes "[DRY-RUN] [Combat Square Staff]";
+	mes "[DRY-RUN] Did you have fun in Combat Square?";
+	mes "[DRY-RUN] May I ask where you want to go?";
 	next;
-	switch(select("Prontera.:Morocc.:Geffen.:Payon.:Alberta.:Cancel.")) {
+	switch(select("[DRY-RUN] Prontera.:Morocc.:Geffen.:Payon.:Alberta.:Cancel.")) {
 		case 1: warp "prontera",107,60; end;
 		case 2: warp "morocc",157,96; end;
 		case 3: warp "geffen",120,36; end;

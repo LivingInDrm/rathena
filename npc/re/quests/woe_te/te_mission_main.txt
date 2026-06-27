@@ -126,8 +126,8 @@ S_Coord:
 
 -	script	Training_Instructor_TE	-1,{
 	if (checkweight(1201,5) == 0) {
-		mes "You have too many items to proceed with the quest.";
-		mes "Please lighten your load and try again.";
+		mes "[DRY-RUN] You have too many items to proceed with the quest.";
+		mes "[DRY-RUN] Please lighten your load and try again.";
 		close;
 	}
 	.@map$ = strnpcinfo(4);
@@ -161,46 +161,46 @@ S_Coord:
 	}
 	mes "["+ .@npc_name$ +"]";
 	if (jobcanentermap("te_prtcas01") == 0) {
-		mes "Ah... you...";
-		mes "based on TE rules, I won't be ordering you or asking you favors unfortunately.";
+		mes "[DRY-RUN] Ah... you...";
+		mes "[DRY-RUN] based on TE rules, I won't be ordering you or asking you favors unfortunately.";
 		next;
 		mes "["+ .@npc_name$ +"]";
-		mes "Hey now, since this place is just for primary and secondary job classes as well as users without expanded levels, could you leave if you got nothing else to do here?";
+		mes "[DRY-RUN] Hey now, since this place is just for primary and secondary job classes as well as users without expanded levels, could you leave if you got nothing else to do here?";
 		close;
 	}
-	mes "There are missions you can complete in TE region.";
-	mes "Let's see, what do you want?";
+	mes "[DRY-RUN] There are missions you can complete in TE region.";
+	mes "[DRY-RUN] Let's see, what do you want?";
 	next;
-	switch( select( "Accept/Conform Missions", "What do you mean a mission?", "I don't have any." ) ) {
+	switch( select( "[DRY-RUN] Accept/Conform Missions", "What do you mean a mission?", "I don't have any." ) ) {
 	case 1:
 		mes "["+ .@npc_name$ +"]";
 		if (BaseLevel < 70) {
-			mes "Mm, I'm sorry but missions are for users with ^4d4dff70 level^000000 or higher.";
-			mes "Honestly, it's hard to complete a mission if your level is too low.";
+			mes "[DRY-RUN] Mm, I'm sorry but missions are for users with ^4d4dff70 level^000000 or higher.";
+			mes "[DRY-RUN] Honestly, it's hard to complete a mission if your level is too low.";
 			close;
 		}
 		.@time_check = WoeTETimeStart(3600);
 		.@siege_check = agitcheck3();
-		mes "You already know that you have to accept a mission in a certain period of time, right?";
+		mes "[DRY-RUN] You already know that you have to accept a mission in a certain period of time, right?";
 		if (.@time_check == 1 || .@siege_check == 1)
-			mes "Moreover, you have to keep in mind that you can't accept both high-level and low-level missions simultaneously if they are of the same content.";
+			mes "[DRY-RUN] Moreover, you have to keep in mind that you can't accept both high-level and low-level missions simultaneously if they are of the same content.";
 		else {
-			mes "Unfortunately, you can't accept missions right now.";
+			mes "[DRY-RUN] Unfortunately, you can't accept missions right now.";
 			next;
 			mes "["+ .@npc_name$ +"]";
 			.@playtime_check2 = checkquest(7516,PLAYTIME);// A Break for Commercial Development
 			if (.@playtime_check2 == 2) {
 				erasequest 7516;
-				mes "Mm, you were taking a break?";
-				mes "Well, it doesn't matter anymore.";
+				mes "[DRY-RUN] Mm, you were taking a break?";
+				mes "[DRY-RUN] Well, it doesn't matter anymore.";
 			}
-			mes "You can only check the results of the missions you've already accepted.";
+			mes "[DRY-RUN] You can only check the results of the missions you've already accepted.";
 		}
 		next;
 		.@s = select( .@menu$ + "Cancel" ) -1;
 		mes "["+ .@npc_name$ +"]";
 		if (.@s == 9) {
-			mes "See you later then.";
+			mes "[DRY-RUN] See you later then.";
 			close;
 		}
 
@@ -238,9 +238,9 @@ S_Coord:
 			if (.@mission01 == 1) {
 				if (.@playtime_check == 0) {
 					if (.@hunting_check == 2) {
-						mes "You did it in time.";
+						mes "[DRY-RUN] You did it in time.";
 						mes "I don't understand why "+ .@mob_name$[0] +" appear at that time of the day.";
-						mes "Anyway, good job.";
+						mes "[DRY-RUN] Anyway, good job.";
 						if (.@num_tool_box == 0) {
 							erasequest .@main_quest;
 							getitem 11558,5;// TE_White_Slim_Potion
@@ -250,8 +250,8 @@ S_Coord:
 						next;
 						mes "["+ .@npc_name$ +"]";
 						mes "Since you've done a good job, I'll let you open my tool box " + .@num_tool_box + " times.";
-						mes "Although you won't find anything mostly...";
-						mes "It's a bonus, so don't complaint even if you don't find anything.";
+						mes "[DRY-RUN] Although you won't find anything mostly...";
+						mes "[DRY-RUN] It's a bonus, so don't complaint even if you don't find anything.";
 						next;
 						mes "Just like "+ .@npc_name$ +" said, you went through the box in front, and...";
 						erasequest .@main_quest;
@@ -261,30 +261,30 @@ S_Coord:
 					}
 					callsub( S_Cancelquest, .@main_quest, .@npc_name$, "This mission is to eliminate "+ .@mob_name$[1] +" that secretly appear at the fortress in "+ .@fortress$ +"." );
 				}
-				mes "Time's up.";
-				mes "Unfortunately, mission failed!";
-				mes "Maybe next time!";
+				mes "[DRY-RUN] Time's up.";
+				mes "[DRY-RUN] Unfortunately, mission failed!";
+				mes "[DRY-RUN] Maybe next time!";
 				erasequest .@main_quest;
 				close;
 			}
 			if (.@time_check != 1 && .@siege_check != 1) {
-				mes "You're not on this mission currently.";
-				mes "Could you check again?";
+				mes "[DRY-RUN] You're not on this mission currently.";
+				mes "[DRY-RUN] Could you check again?";
 				close;
 			}
 			if (.@mission02 == 1 || .@mission03 == 1) {
 				if (.@num_tool_box == 0) {
-					mes "You are already on a high-level mission!";
-					mes "You cannot accept a low-level mission if you're already on a high-level mission of the same content!";
+					mes "[DRY-RUN] You are already on a high-level mission!";
+					mes "[DRY-RUN] You cannot accept a low-level mission if you're already on a high-level mission of the same content!";
 				}
 				else {
-					mes "You're already on a elimination mission!";
-					mes "I would like you to take care of what you already have unless you want to cancel it.";
+					mes "[DRY-RUN] You're already on a elimination mission!";
+					mes "[DRY-RUN] I would like you to take care of what you already have unless you want to cancel it.";
 				}
 				next;
 				mes "["+ .@npc_name$ +"]";
-				mes "It only makes sense that way, doesn't it?";
-				mes "Don't you think so?";
+				mes "[DRY-RUN] It only makes sense that way, doesn't it?";
+				mes "[DRY-RUN] Don't you think so?";
 				close;
 			}
 			mes "I've been told that "+ .@mob_name$[1] +" appear during the busy siege hours at the fortress in "+ .@fortress$ +".";
@@ -313,14 +313,14 @@ S_Coord:
 			if (.@mission01 == 1) {
 				if (.@playtime_check == 0) {
 					if (.@hunting_check == 2) {
-						mes "Incredible!";
-						mes "Breaking Emperiums is definitely not an easy job.";
-						mes "You must be contributing a lot to your guild. Good job!";
+						mes "[DRY-RUN] Incredible!";
+						mes "[DRY-RUN] Breaking Emperiums is definitely not an easy job.";
+						mes "[DRY-RUN] You must be contributing a lot to your guild. Good job!";
 						next;
 						mes "["+ .@npc_name$ +"]";
 						mes "Since you've done a good job, I'll let you open my tool box "+ .@num_tool_box +" times.";
-						mes "Although you won't find anything mostly...";
-						mes "It's a bonus, so don't complaint even if you don't find anything.";
+						mes "[DRY-RUN] Although you won't find anything mostly...";
+						mes "[DRY-RUN] It's a bonus, so don't complaint even if you don't find anything.";
 						next;
 						mes "Just like "+ .@npc_name$ +" said, you went through the box in front, and...";
 						erasequest .@main_quest;
@@ -331,52 +331,52 @@ S_Coord:
 					}
 					callsub( S_Cancelquest, .@main_quest, .@npc_name$, "This mission is to ^4d4dff destroy Emperiums that exist all over Gloria and Kafragarten regions.^000000" );
 				}
-				mes "Time's up.";
-				mes "Unfortunately, mission failed!";
-				mes "Maybe next time!";
+				mes "[DRY-RUN] Time's up.";
+				mes "[DRY-RUN] Unfortunately, mission failed!";
+				mes "[DRY-RUN] Maybe next time!";
 				erasequest .@main_quest;
 				close;
 			}
 			if (.@time_check != 1 && .@siege_check != 1) {
-				mes "You're not on this mission currently.";
-				mes "Could you check again?";
+				mes "[DRY-RUN] You're not on this mission currently.";
+				mes "[DRY-RUN] Could you check again?";
 				close;
 			}
 			if (.@mission02 == 1 || .@mission03 == 1) {
-				mes "You're already on a mission of the same content,";
-				mes "the level is different though";
-				mes "I would like you to take care of what you already have unless you want to cancel it.";
+				mes "[DRY-RUN] You're already on a mission of the same content,";
+				mes "[DRY-RUN] the level is different though";
+				mes "[DRY-RUN] I would like you to take care of what you already have unless you want to cancel it.";
 				next;
 				mes "["+ .@npc_name$ +"]";
-				mes "It only makes sense that way, doesn't it?";
-				mes "Don't you think so?";
+				mes "[DRY-RUN] It only makes sense that way, doesn't it?";
+				mes "[DRY-RUN] Don't you think so?";
 				close;
 			}
 			.@playtime_check2 = checkquest(7516,PLAYTIME);
 			if (.@playtime_check2 == 0) {
-				mes "There is something called 'commercial development level' in each fortress.";
-				mes "It increases as much as each guild invests.";
+				mes "[DRY-RUN] There is something called 'commercial development level' in each fortress.";
+				mes "[DRY-RUN] It increases as much as each guild invests.";
 				next;
 				mes "["+ .@npc_name$ +"]";
-				mes "However, this is closely related to Emperiums.";
-				mes "Destroying Emperiums repeatedly staggers commercial development level.";
+				mes "[DRY-RUN] However, this is closely related to Emperiums.";
+				mes "[DRY-RUN] Destroying Emperiums repeatedly staggers commercial development level.";
 				next;
 				mes "["+ .@npc_name$ +"]";
-				mes "So, now we take a break in order to prevent an excessive decrease in commercial development level.";
-				mes "See you in a bit.";
+				mes "[DRY-RUN] So, now we take a break in order to prevent an excessive decrease in commercial development level.";
+				mes "[DRY-RUN] See you in a bit.";
 				close;
 			}
 			else if (.@playtime_check2 == 2) {
 				erasequest 7516;
-				mes "The break for commercial development of the fortress is over now.";
-				mes "Good. Think about what kind of missions you want and come back again.";
+				mes "[DRY-RUN] The break for commercial development of the fortress is over now.";
+				mes "[DRY-RUN] Good. Think about what kind of missions you want and come back again.";
 				close;
 			}
-			mes "What is the most important thing in siege battles?";
-			mes "It's destroying Emperiums! Let me give you that exact mission of destroying Emperiums!";
+			mes "[DRY-RUN] What is the most important thing in siege battles?";
+			mes "[DRY-RUN] It's destroying Emperiums! Let me give you that exact mission of destroying Emperiums!";
 			next;
 			mes "["+ .@npc_name$ +"]";
-			mes "Gloria or Kafragarten, wherever it is! Right now, at this very hour, ^4d4dffdestroy Emperiums!^000000";
+			mes "[DRY-RUN] Gloria or Kafragarten, wherever it is! Right now, at this very hour, ^4d4dffdestroy Emperiums!^000000";
 			mes "^4d4dffTarget number is "+ .@num_kill +" or more!^000000";
 			callsub( S_Acceptquest, .@main_quest, .@npc_name$ );
 		}
@@ -413,16 +413,16 @@ S_Coord:
 					if (countitem(.@item_quest) > 9) {
 						mes .@num_items +" or more of "+ .@string$[0] +" let's see you've done it right.";
 						mes .@string$[1];
-						mes "Anyway, good job.";
+						mes "[DRY-RUN] Anyway, good job.";
 						next;
 						mes "["+ .@npc_name$ +"]";
 						mes "Let me take the rest of the "+ .@string$[0] +".";
-						mes "I'll return it to its original owner.";
+						mes "[DRY-RUN] I'll return it to its original owner.";
 						next;
 						mes "["+ .@npc_name$ +"]";
 						mes "Since you've done a good job, I'll let you open my tool box "+ .@num_tool_box +" times.";
-						mes "Although you won't find anything mostly...";
-						mes "It's a bonus, so don't complaint even if you don't find anything.";
+						mes "[DRY-RUN] Although you won't find anything mostly...";
+						mes "[DRY-RUN] It's a bonus, so don't complaint even if you don't find anything.";
 						next;
 						mes "Just like "+ .@npc_name$ +" said, you went through the box in front, and...";
 						delitem .@item_quest, countitem(.@item_quest);
@@ -433,94 +433,94 @@ S_Coord:
 					}
 					callsub( S_Cancelquest, .@main_quest, .@npc_name$, "This mission is to ^4d4dffcollect "+ .@string$[2] +"^000000 at the fortress in "+ .@fortress$ +"." );
 				}
-				mes "Time's up.";
-				mes "Unfortunately, mission failed!";
-				mes "Maybe next time!";
+				mes "[DRY-RUN] Time's up.";
+				mes "[DRY-RUN] Unfortunately, mission failed!";
+				mes "[DRY-RUN] Maybe next time!";
 				erasequest .@main_quest;
 				close;
 			}
 			if (.@time_check != 1 && .@siege_check != 1) {
-				mes "You're not on this mission currently.";
-				mes "Could you check again?";
+				mes "[DRY-RUN] You're not on this mission currently.";
+				mes "[DRY-RUN] Could you check again?";
 				close;
 			}
 			if (.@mission02 == 1 || .@mission03 == 1) {
-				mes "You're already on a mission of the same content,";
-				mes "the level is different though";
-				mes "I would like you to take care of what you already have unless you want to cancel it.";
+				mes "[DRY-RUN] You're already on a mission of the same content,";
+				mes "[DRY-RUN] the level is different though";
+				mes "[DRY-RUN] I would like you to take care of what you already have unless you want to cancel it.";
 				next;
 				mes "["+ .@npc_name$ +"]";
-				mes "It only makes sense that way, doesn't it?";
-				mes "Don't you think so?";
+				mes "[DRY-RUN] It only makes sense that way, doesn't it?";
+				mes "[DRY-RUN] Don't you think so?";
 				close;
 			}
-			mes "Hmm you wouldn't believe it, but this mission is related to a theft.";
+			mes "[DRY-RUN] Hmm you wouldn't believe it, but this mission is related to a theft.";
 			mes "They told me a bunch of "+ .@string$[2] +" is missing from the fortress in "+ .@fortress$ +".";
 			next;
 			mes "["+ .@npc_name$ +"]";
-			mes "The thief probably took advantage of the siege hours.";
+			mes "[DRY-RUN] The thief probably took advantage of the siege hours.";
 			mes "It's a request to find ^4d4dff"+ .@num_items +" or more of "+ .@string$[2] +"^000000.";
 			callsub( S_Acceptquest, .@main_quest, .@npc_name$ );
 		}
 	case 2:
 		mes "["+ .@npc_name$ +"]";
-		mes "Since TE Region has more of a casual atmosphere,";
-		mes "it's not fun doing just siege battles, right?";
-		mes "So, I brought ^4d4dffsome works you can do during the siege hours^000000~";
+		mes "[DRY-RUN] Since TE Region has more of a casual atmosphere,";
+		mes "[DRY-RUN] it's not fun doing just siege battles, right?";
+		mes "[DRY-RUN] So, I brought ^4d4dffsome works you can do during the siege hours^000000~";
 		next;
 		mes "["+ .@npc_name$ +"]";
-		mes "You can accept missions ^4d4dffstarting from 1 hour before the beginning of the siege and until the end of the siege battle TE^000000,";
-		mes "and every mission has ^4d4dffa 4-hour time limit^000000 for completion.";
+		mes "[DRY-RUN] You can accept missions ^4d4dffstarting from 1 hour before the beginning of the siege and until the end of the siege battle TE^000000,";
+		mes "[DRY-RUN] and every mission has ^4d4dffa 4-hour time limit^000000 for completion.";
 		next;
 		mes "["+ .@npc_name$ +"]";
-		mes "Simply put, you accept a mission from me during the siege hours and";
-		mes "^4d4dffcome back to give me a report within the time limit^000000.";
+		mes "[DRY-RUN] Simply put, you accept a mission from me during the siege hours and";
+		mes "[DRY-RUN] ^4d4dffcome back to give me a report within the time limit^000000.";
 		next;
 		mes "["+ .@npc_name$ +"]";
-		mes "Try it for fun.";
+		mes "[DRY-RUN] Try it for fun.";
 		close;
 	case 3:
 		mes "["+ .@npc_name$ +"]";
-		mes "I see.";
-		mes "Come back anytime if you change your mind.";
-		mes "I might not be available, though. Hehehe.";
+		mes "[DRY-RUN] I see.";
+		mes "[DRY-RUN] Come back anytime if you change your mind.";
+		mes "[DRY-RUN] I might not be available, though. Hehehe.";
 		close;
 	}
 
 S_Cancelquest:
 	.@npc_name$ = getarg(1);
 	if (WoeTETimeStart(3600) == 1 || agitcheck3()) {
-		mes "It seems like you haven't accomplished the mission yet?";
+		mes "[DRY-RUN] It seems like you haven't accomplished the mission yet?";
 		mes getarg(2);
 		next;
 		mes "["+ .@npc_name$ +"]";
-		mes "Do you want to cancel by any chance?";
+		mes "[DRY-RUN] Do you want to cancel by any chance?";
 		next;
-		switch( select( "No.","Yes." ) ) {
+		switch( select( "[DRY-RUN] No.","Yes." ) ) {
 		case 1:
 			mes "["+ .@npc_name$ +"]";
-			mes "Good luck!";
+			mes "[DRY-RUN] Good luck!";
 			close;
 		case 2:
 			mes "["+ .@npc_name$ +"]";
-			mes "As you wanted, this mission is canceled.";
+			mes "[DRY-RUN] As you wanted, this mission is canceled.";
 			erasequest getarg(0);
 			close;
 		}
 	}
 	else {
-		mes "Hmm you still have some time left, but it's not the siege hour yet";
-		mes "I don't think you should go on.";
-		mes "You should cancel this mission. I would say it's failed.";
+		mes "[DRY-RUN] Hmm you still have some time left, but it's not the siege hour yet";
+		mes "[DRY-RUN] I don't think you should go on.";
+		mes "[DRY-RUN] You should cancel this mission. I would say it's failed.";
 		next;
-		switch( select( "I would like to go on.","Yes, I'll cancel it." ) ) {
+		switch( select( "[DRY-RUN] I would like to go on.","Yes, I'll cancel it." ) ) {
 		case 1:
 			mes "["+ .@npc_name$ +"]";
-			mes "I don't think it's worth it. Well, good luck!";
+			mes "[DRY-RUN] I don't think it's worth it. Well, good luck!";
 			close;
 		case 2:
 			mes "["+ .@npc_name$ +"]";
-			mes "As you wanted, this mission is canceled.";
+			mes "[DRY-RUN] As you wanted, this mission is canceled.";
 			erasequest getarg(0);
 			close;
 		}
@@ -529,16 +529,16 @@ S_Cancelquest:
 S_Acceptquest:
 	.@npc_name$ = getarg(1);
 	next;
-	switch( select( "Accept it.","Do not accept it." ) ) {
+	switch( select( "[DRY-RUN] Accept it.","Do not accept it." ) ) {
 	case 1:
 		mes "["+ .@npc_name$ +"]";
-		mes "^4d4dffThe time limit is 4 hours.^000000";
-		mes "Accomplish the mission with in that time and report to me.";
+		mes "[DRY-RUN] ^4d4dffThe time limit is 4 hours.^000000";
+		mes "[DRY-RUN] Accomplish the mission with in that time and report to me.";
 		setquest getarg(0);
 		close;
 	case 2:
 		mes "["+ .@npc_name$ +"]";
-		mes "Try another mission then.";
+		mes "[DRY-RUN] Try another mission then.";
 		close;
 	}
 
@@ -547,7 +547,7 @@ S_Rentbox:
 	for ( .@count = 0; .@count < getarg(0); .@count++ ) {
 		.@miss_item01 = rand(100);
 		if (.@miss_item01 > 3)
-			mes "You didn't find anything.";
+			mes "[DRY-RUN] You didn't find anything.";
 		else {
 			rentitem .@item_id[ .@miss_item01 ],86400;
 			mes "You found '"+ getitemname(.@item_id[ .@miss_item01 ]) +" !'";

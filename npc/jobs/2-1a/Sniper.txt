@@ -19,65 +19,65 @@ valkyrie,44,55,5	script	Sniper#Valkyrie	727,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Sniper]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Sniper]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Sniper]";
-		mes "One shot.";
-		mes "One kill.";
-		mes "It's not so hard";
-		mes "once you develop the";
-		mes "vision for that style";
-		mes "of battling.";
+		mes "[DRY-RUN] [Sniper]";
+		mes "[DRY-RUN] One shot.";
+		mes "[DRY-RUN] One kill.";
+		mes "[DRY-RUN] It's not so hard";
+		mes "[DRY-RUN] once you develop the";
+		mes "[DRY-RUN] vision for that style";
+		mes "[DRY-RUN] of battling.";
 		close;
 	}
 	else if (ADVJOB == Job_Sniper && Class == Job_Archer_High && JobLevel > 39) {
-		mes "[Sniper]";
-		mes "The world is in";
-		mes "need of mighty Bowmen";
-		mes "like you. Are you ready for";
-		mes "the awesome responsibility?";
+		mes "[DRY-RUN] [Sniper]";
+		mes "[DRY-RUN] The world is in";
+		mes "[DRY-RUN] need of mighty Bowmen";
+		mes "[DRY-RUN] like you. Are you ready for";
+		mes "[DRY-RUN] the awesome responsibility?";
 		next;
-		mes "[Sniper]";
-		mes "Are you willing to";
-		mes "take the next step and";
-		mes "become a Sniper?";
+		mes "[DRY-RUN] [Sniper]";
+		mes "[DRY-RUN] Are you willing to";
+		mes "[DRY-RUN] take the next step and";
+		mes "[DRY-RUN] become a Sniper?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Sniper]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Sniper]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Sniper]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Sniper]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Sniper;
 		set ADVJOB,0;
-		mes "[Sniper]";
-		mes "Congratulations!";
-		mes "As a Sniper, I hope";
-		mes "that the minions of evil";
-		mes "will never be safe so";
-		mes "long as they are in";
-		mes "your sight!";
+		mes "[DRY-RUN] [Sniper]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] As a Sniper, I hope";
+		mes "[DRY-RUN] that the minions of evil";
+		mes "[DRY-RUN] will never be safe so";
+		mes "[DRY-RUN] long as they are in";
+		mes "[DRY-RUN] your sight!";
 		close;
 	}
-	mes "[Sniper]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Sniper]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Sniper]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Sniper]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

@@ -85,10 +85,10 @@ OnTouch:
 L_Fill:
 	set @bingo_fill,callfunc("Func_Bingo",@bingo_case);
 	if (!@bingo_fill) {
-		mes "The numbers you have entered";
-  		mes "exceed the limit, or you have";
-		mes "already entered these numbers.";
-		mes "Please enter your numbers again.";
+		mes "[DRY-RUN] The numbers you have entered";
+  		mes "[DRY-RUN] exceed the limit, or you have";
+		mes "[DRY-RUN] already entered these numbers.";
+		mes "[DRY-RUN] Please enter your numbers again.";
 		next;
 	} else if (@bingo_fill) {
 		if(@bingoplate[25] < 10) set @bingo_e5$,"0"+@bingoplate[25]+""; else set @bingo_e5$,@bingoplate[25];
@@ -461,13 +461,13 @@ OnTouch:
 	if ($@bingoresult > 15) {
 		if (@bingowin > 4) {
 			next;
-			mes "We just have made 5 lines!";
-			mes "Say ^ff0000Bingo^000000!";
-			mes "W-we just matched";
-			mes "5 numbers in a row!";
-			mes "Quickly, say ''^FF0000Bingo^000000!''";
-			mes "Remember, you'll only";
-			mes "have one chance to say it!";
+			mes "[DRY-RUN] We just have made 5 lines!";
+			mes "[DRY-RUN] Say ^ff0000Bingo^000000!";
+			mes "[DRY-RUN] W-we just matched";
+			mes "[DRY-RUN] 5 numbers in a row!";
+			mes "[DRY-RUN] Quickly, say ''^FF0000Bingo^000000!''";
+			mes "[DRY-RUN] Remember, you'll only";
+			mes "[DRY-RUN] have one chance to say it!";
 			input @bingoyell$;
 			if (@bingoyell$ == "Bingo") {
 				if ($@hu_bingoa == 5) {
@@ -479,20 +479,20 @@ OnTouch:
 
 				} else if ($@hu_bingoa == 6) {
 					next;
-					mes "Oh no! I'm sorry, but";
-					mes "someone already yelled";
-					mes "''bingo'' before you did.";
-					mes "I'm sorry, but you missed";
-					mes "your chance! Better luck,";
-					mes "next time, alright?";
+					mes "[DRY-RUN] Oh no! I'm sorry, but";
+					mes "[DRY-RUN] someone already yelled";
+					mes "[DRY-RUN] ''bingo'' before you did.";
+					mes "[DRY-RUN] I'm sorry, but you missed";
+					mes "[DRY-RUN] your chance! Better luck,";
+					mes "[DRY-RUN] next time, alright?";
 					close;
 				}
 			} else {
 				next;
-				mes "I'm sorry, but you";
-				mes "said it wrong. Next time,";
-				mes "make sure that you yell";
-				mes "out the word, ''^FF0000Bingo^000000,'' okay?";
+				mes "[DRY-RUN] I'm sorry, but you";
+				mes "[DRY-RUN] said it wrong. Next time,";
+				mes "[DRY-RUN] make sure that you yell";
+				mes "[DRY-RUN] out the word, ''^FF0000Bingo^000000,'' okay?";
 				close;
 			}
 		}

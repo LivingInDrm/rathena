@@ -64,16 +64,16 @@ dicastes01,202,86,3	script	Sentinel#a	4_MAN_GALTUN,{
 }
 
 dicastes01,194,95,5	script	Sentinel#b	450,{
-	mes "[Sentinel]";
+	mes "[DRY-RUN] [Sentinel]";
 	if (isequipped(2782)) {
-		mes "I permit your entry.";
-		mes "But if you dare to cause trouble";
-		mes "you won't know what hit you. Beware!";
+		mes "[DRY-RUN] I permit your entry.";
+		mes "[DRY-RUN] But if you dare to cause trouble";
+		mes "[DRY-RUN] you won't know what hit you. Beware!";
 		close; 
 	}
-	mes "¡ø¡ô¡ü ¡ø ¡ó";
-	mes "¡ø¡ï¡û ¡ó ¡û¢¤¢² ¡÷ ¢£";
-	mes "¢¤¡ô¡ø ¢³ ¡÷¡û¡ö ¡õ ¡ø";
+	mes "[DRY-RUN] ¡ø¡ô¡ü ¡ø ¡ó";
+	mes "[DRY-RUN] ¡ø¡ï¡û ¡ó ¡û¢¤¢² ¡÷ ¢£";
+	mes "[DRY-RUN] ¢¤¡ô¡ø ¢³ ¡÷¡û¡ö ¡õ ¡ø";
 	close;
 }
 
@@ -361,14 +361,14 @@ dic_in01,252,103,3	script	Eating Adventurer#tre	711,{
 
 dic_in01,32,54,5	script	Venknick#el_01	449,{
 	if (isequipped(2782)) {
-		mes "[Venknick]";
-		mes "Oh feels so refreshed.";
-		mes "The refined Bradium was the best ever. Do you want to try some?";
+		mes "[DRY-RUN] [Venknick]";
+		mes "[DRY-RUN] Oh feels so refreshed.";
+		mes "[DRY-RUN] The refined Bradium was the best ever. Do you want to try some?";
 		close; 
 	}
-	mes "[¡ó¡ò¡ð]";
-	mes "¡ù¡ó¢¤ ¢± ¢£";
-	mes "¡õ¡þ¡ï ¢£ ¡÷¡÷¢¤ ¡ú ¡ó¡ñ¡ö ¢² ¡þ¢²¢¤ ¢² ¢£?";
+	mes "[DRY-RUN] [¡ó¡ò¡ð]";
+	mes "[DRY-RUN] ¡ù¡ó¢¤ ¢± ¢£";
+	mes "[DRY-RUN] ¡õ¡þ¡ï ¢£ ¡÷¡÷¢¤ ¡ú ¡ó¡ñ¡ö ¢² ¡þ¢²¢¤ ¢² ¢£?";
 	close;
 }
 
@@ -419,47 +419,47 @@ dic_in01,360,125,5	script	Serious Venknicka	449,{
 dic_in01,42,250,5	script	Guide#diel_1	489,{
 	if (isequipped(2782)) {
 		if (ep13_3_invite > 5) {		
-			mes "[Guide]";
-			mes "I'm Dior, your kind guide for El Dicastes.";
-			mes "How can I help you?";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] I'm Dior, your kind guide for El Dicastes.";
+			mes "[DRY-RUN] How can I help you?";
 			next;
-			mes "[Guide]";
-			mes "You may submit your civil complaints here.";
-			mes "Civil services and El Dicastes zones are managed in the Situation Room upstairs.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] You may submit your civil complaints here.";
+			mes "[DRY-RUN] Civil services and El Dicastes zones are managed in the Situation Room upstairs.";
 			next;
-			mes "[Guide]";
-			mes "The Administrative Office is located on the top floor and handles very important matters.";
-			mes "The Archive Room is in the lower level where you can obtain a vast amount of information.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] The Administrative Office is located on the top floor and handles very important matters.";
+			mes "[DRY-RUN] The Archive Room is in the lower level where you can obtain a vast amount of information.";
 			next;
-			mes "[Guide]";
-			mes "By the way, you may use the elevator in the back to go to the other floors.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] By the way, you may use the elevator in the back to go to the other floors.";
 			next;
-			mes "[Guide]";
-			mes "Oh, you didn't ask?";
-			mes "But since I'm Dior, the kind guide. He he.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] Oh, you didn't ask?";
+			mes "[DRY-RUN] But since I'm Dior, the kind guide. He he.";
 			close; 
 		}
-		mes "- The guide looks at you with an alert expression. -";
+		mes "[DRY-RUN] - The guide looks at you with an alert expression. -";
 		close;
 	}
-	mes "[¢³¡ñ]";
-	mes "¡õ¢£¡ó ¡Ð ¡õ¡ñ¡ò ¢¤ ¡ø¡ø¢£ ¢± ¢²¢³¡÷ ¢±";
-	mes "¡ö¡ò¡ð ¡ó ¡ô¡ô?";
+	mes "[DRY-RUN] [¢³¡ñ]";
+	mes "[DRY-RUN] ¡õ¢£¡ó ¡Ð ¡õ¡ñ¡ò ¢¤ ¡ø¡ø¢£ ¢± ¢²¢³¡÷ ¢±";
+	mes "[DRY-RUN] ¡ö¡ò¡ð ¡ó ¡ô¡ô?";
 	next;
-	mes "[¢³¡ñ]";
-	mes "¡Ð¡ù¡ó ¡ù ¡ü¢²¡Ð ¢± ¡÷¡ö¡þ";
-	mes "¡ñ¡þ¢² ¡ø ¡ó¡ï¡ï ¡ù ¡ð¡ñ¡Ð ¡ù ¢³¡ò¡þ ¡ù ¡ø¡ð¡õ ¡õ ¢¤";
+	mes "[DRY-RUN] [¢³¡ñ]";
+	mes "[DRY-RUN] ¡Ð¡ù¡ó ¡ù ¡ü¢²¡Ð ¢± ¡÷¡ö¡þ";
+	mes "[DRY-RUN] ¡ñ¡þ¢² ¡ø ¡ó¡ï¡ï ¡ù ¡ð¡ñ¡Ð ¡ù ¢³¡ò¡þ ¡ù ¡ø¡ð¡õ ¡õ ¢¤";
 	next;
-	mes "[¢³¡ñ]";
-	mes "¡û¡ù¡ô ¡ø ¡ð¡þ¡÷ ¢³ ¡þ¡ù¡ñ ¡ú ¡ü¢¤¡ò ¡ú ¡ô¢£";
-	mes "¡÷¡ò¢¤ ¡ø ¡û¢³";
+	mes "[DRY-RUN] [¢³¡ñ]";
+	mes "[DRY-RUN] ¡û¡ù¡ô ¡ø ¡ð¡þ¡÷ ¢³ ¡þ¡ù¡ñ ¡ú ¡ü¢¤¡ò ¡ú ¡ô¢£";
+	mes "[DRY-RUN] ¡÷¡ò¢¤ ¡ø ¡û¢³";
 	next;
-	mes "[¢³¡ñ]";
-	mes "¡ô¡ð¡ñ ¢¤ ¡ó¡÷¢³ ¡þ ¡ó¡õ¡÷ ¡ö ¡ó ¡ö";
+	mes "[DRY-RUN] [¢³¡ñ]";
+	mes "[DRY-RUN] ¡ô¡ð¡ñ ¢¤ ¡ó¡÷¢³ ¡þ ¡ó¡õ¡÷ ¡ö ¡ó ¡ö";
 	next;
-	mes "[¢³¡ñ]";
-	mes "¡ò¡ô¡ø ¡÷ ¡õ¡ø¡ð ¡ó ¢¤¡Ð¡ô ¡ø ¡ñ¡ñ¡ñ ¡ø ¡ú¡ö¡ø ¡ü";
-	mes "¡ï¢³¡ð ¢¤ ¡ð¡ö¢£ ¢± ¡ô¡ø";
+	mes "[DRY-RUN] [¢³¡ñ]";
+	mes "[DRY-RUN] ¡ò¡ô¡ø ¡÷ ¡õ¡ø¡ð ¡ó ¢¤¡Ð¡ô ¡ø ¡ñ¡ñ¡ñ ¡ø ¡ú¡ö¡ø ¡ü";
+	mes "[DRY-RUN] ¡ï¢³¡ð ¢¤ ¡ð¡ö¢£ ¢± ¡ô¡ø";
 	close;
 }
 

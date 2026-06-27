@@ -19,65 +19,65 @@ valkyrie,53,56,3	script	Gypsy#Valkyrie	101,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Gypsy]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Gypsy]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Gypsy]";
-		mes "Move left,";
-		mes "move right~!";
-		mes "And step...!";
-		mes "Dancing can be";
-		mes "more than a hobby.";
-		mes "For me, it's a way of life~";
+		mes "[DRY-RUN] [Gypsy]";
+		mes "[DRY-RUN] Move left,";
+		mes "[DRY-RUN] move right~!";
+		mes "[DRY-RUN] And step...!";
+		mes "[DRY-RUN] Dancing can be";
+		mes "[DRY-RUN] more than a hobby.";
+		mes "[DRY-RUN] For me, it's a way of life~";
 		close;
 	}
 	else if (ADVJOB == Job_Gypsy && Class == Job_Archer_High && JobLevel > 39) {
-		mes "[Gypsy]";
-		mes "The land of Rune-Midgard";
-		mes "is in need of talented women";
-		mes "to subtly change the balances";
-		mes "in the battle between good";
-		mes "and evil.";
+		mes "[DRY-RUN] [Gypsy]";
+		mes "[DRY-RUN] The land of Rune-Midgard";
+		mes "[DRY-RUN] is in need of talented women";
+		mes "[DRY-RUN] to subtly change the balances";
+		mes "[DRY-RUN] in the battle between good";
+		mes "[DRY-RUN] and evil.";
 		next;
-		mes "[Gypsy]";
-		mes "Are you ready";
-		mes "to take up this role,";
-		mes "and become a Gypsy?";
+		mes "[DRY-RUN] [Gypsy]";
+		mes "[DRY-RUN] Are you ready";
+		mes "[DRY-RUN] to take up this role,";
+		mes "[DRY-RUN] and become a Gypsy?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Gypsy]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Gypsy]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Gypsy]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Gypsy]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Gypsy;
 		set ADVJOB,0;
-		mes "[Gypsy]";
-		mes "Congratulations!";
-		mes "As a Gypsy, I know";
-		mes "that your performances";
-		mes "sway the hearts of all";
-		mes "those who will be watching...";
+		mes "[DRY-RUN] [Gypsy]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] As a Gypsy, I know";
+		mes "[DRY-RUN] that your performances";
+		mes "[DRY-RUN] sway the hearts of all";
+		mes "[DRY-RUN] those who will be watching...";
 		close;
 	}
-	mes "[Gypsy]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Gypsy]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Gypsy]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Gypsy]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

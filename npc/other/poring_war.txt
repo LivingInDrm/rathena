@@ -1217,36 +1217,36 @@ OnTimer120000:
 //============================================================
 poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 	if (MaxWeight-Weight < 2000 || checkweight(1201,1) == 0) {
-		mes "- Wait a minute !! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again -";
-		mes "- after you lose some weight. -";
+		mes "[DRY-RUN] - Wait a minute !! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again -";
+		mes "[DRY-RUN] - after you lose some weight. -";
 		close;
 	}
 	set .@a_point,$@wop_deadcount_a;
 	set .@d_point,$@wop_deadcount_d;
 	if (getcharid(1) == $@wop_team_a) {
 		if (.@a_point < .@d_point) {
-			mes "[Devi]";
-			mes "Good work!";
-			mes "Thanks to you, we increased our chances of victory.";
-			mes "Please, accept these Poring Coins as a sign of our appreciation.";
+			mes "[DRY-RUN] [Devi]";
+			mes "[DRY-RUN] Good work!";
+			mes "[DRY-RUN] Thanks to you, we increased our chances of victory.";
+			mes "[DRY-RUN] Please, accept these Poring Coins as a sign of our appreciation.";
 			next;
 			if (wop_team == 1) {
-				mes "[Devi]";
-				mes "Goodbye, my human friend.";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Goodbye, my human friend.";
 				close2;
 				getitem 7539,3; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[Devi]";
-				mes "Wait a minute, you look suspicious!!";
-				mes "Ah, I got it! You are on the side of the Devilings?!";
-				mes "You are spying on us!";
-				mes "I will never forgive you!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
+				mes "[DRY-RUN] Ah, I got it! You are on the side of the Devilings?!";
+				mes "[DRY-RUN] You are spying on us!";
+				mes "[DRY-RUN] I will never forgive you!";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1254,26 +1254,26 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 			}
 		}
 		else if (.@a_point == .@d_point) {
-			mes "[Devi]";
-			mes "You did the best you could.";
-			mes "I' ts a shame the battle was tied...";
-			mes "Even so, thanks for coming to fight for us. Please, accept this Poring Coin.";
+			mes "[DRY-RUN] [Devi]";
+			mes "[DRY-RUN] You did the best you could.";
+			mes "[DRY-RUN] I' ts a shame the battle was tied...";
+			mes "[DRY-RUN] Even so, thanks for coming to fight for us. Please, accept this Poring Coin.";
 			next;
 			if (wop_team == 1) {
-				mes "[Devi]";
-				mes "Goodbye, my human friend.";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Goodbye, my human friend.";
 				close2;
 				getitem 7539,1; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[Devi]";
-				mes "Wait a minute, you look suspicious!!";
-				mes "Ah, I got it! You are on the side of the Devilings?!";
-				mes "You are spying on us!";
-				mes "It must have been you that made us tie the battle!!";
-				mes "I will never forgive you!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
+				mes "[DRY-RUN] Ah, I got it! You are on the side of the Devilings?!";
+				mes "[DRY-RUN] You are spying on us!";
+				mes "[DRY-RUN] It must have been you that made us tie the battle!!";
+				mes "[DRY-RUN] I will never forgive you!";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1282,24 +1282,24 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 		}
 		else {
 			if (wop_team == 1) {
-				mes "[Devi]";
-				mes "Well, I guess we had bad luck...";
-				mes "I cant give you anything, since we lost and everything...";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Well, I guess we had bad luck...";
+				mes "[DRY-RUN] I cant give you anything, since we lost and everything...";
 				next;
-				mes "[Devi]";
-				mes "Goodbye, my human friend.";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Goodbye, my human friend.";
 				close2;
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[Devi]";
-				mes "Wait a minute... There is a traitor here!";
-				mes "Ah, I got it! You are on the side of the Devilings?!";
-				mes "You are spying on us, Angelings!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Wait a minute... There is a traitor here!";
+				mes "[DRY-RUN] Ah, I got it! You are on the side of the Devilings?!";
+				mes "[DRY-RUN] You are spying on us, Angelings!";
 				next;
-				mes "[Devi]";
-				mes "You should be ashamed!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] You should be ashamed!";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1309,25 +1309,25 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 	}
 	else if (getcharid(1) == $@wop_team_d) {
 		if (.@a_point > .@d_point) {
-			mes "[Devi]";
-			mes "Good work!";
-			mes "Thanks to you, we increased our chances of victory.";
-			mes "Please, accept these Poring Coins as a sign of our appreciation.";
+			mes "[DRY-RUN] [Devi]";
+			mes "[DRY-RUN] Good work!";
+			mes "[DRY-RUN] Thanks to you, we increased our chances of victory.";
+			mes "[DRY-RUN] Please, accept these Poring Coins as a sign of our appreciation.";
 			next;
 			if (wop_team == 2) {
-				mes "[Devi]";
-				mes "Goodbye, my human friend.";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Goodbye, my human friend.";
 				close2;
 				getitem 7539,3; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[Devi]";
-				mes "Wait a minute, you look suspicious!!";
-				mes "Ah, I got it! You are on the side of the Angelings?!";
-				mes "You are spying on us!!";
-				mes "I will never forgive you!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
+				mes "[DRY-RUN] Ah, I got it! You are on the side of the Angelings?!";
+				mes "[DRY-RUN] You are spying on us!!";
+				mes "[DRY-RUN] I will never forgive you!";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1335,26 +1335,26 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 			}
 		}
 		else if (.@a_point == .@d_point) {
-			mes "[Devi]";
-			mes "You did the best you could.";
-			mes "It's a shame the battle was tied...";
-			mes "Even so, thanks for coming to fight for us. Please, accept this Poring Coin.";
+			mes "[DRY-RUN] [Devi]";
+			mes "[DRY-RUN] You did the best you could.";
+			mes "[DRY-RUN] It's a shame the battle was tied...";
+			mes "[DRY-RUN] Even so, thanks for coming to fight for us. Please, accept this Poring Coin.";
 			next;
 			if (wop_team == 2) {
-				mes "[Devi]";
-				mes "Goodbye, my human friend.";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Goodbye, my human friend.";
 				close2;
 				getitem 7539,1; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[Devi]";
-				mes "Wait a minute, you look suspicious!!";
-				mes "Ah, I got it! You are on the side of the Angelings?!";
-				mes "You are spying on us!";
-				mes "It must have been you that made us tie the battle!!";
-				mes "I will never forgive you!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
+				mes "[DRY-RUN] Ah, I got it! You are on the side of the Angelings?!";
+				mes "[DRY-RUN] You are spying on us!";
+				mes "[DRY-RUN] It must have been you that made us tie the battle!!";
+				mes "[DRY-RUN] I will never forgive you!";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1363,24 +1363,24 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 		}
 		else {
 			if (wop_team == 2) {
-				mes "[Devi]";
-				mes "Well, I guess we had bad luck...";
-				mes "I cant give you anything, since we lost and everything...";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Well, I guess we had bad luck...";
+				mes "[DRY-RUN] I cant give you anything, since we lost and everything...";
 				next;
-				mes "[Devi]";
-				mes "I will allow you to return to your human world.";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] I will allow you to return to your human world.";
 				close2;
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[Devi]";
-				mes "Wait a minute, you look suspicious!!";
-				mes "Ah, I got it! You are on the side of the Angelings?!";
-				mes "You are spying on us, Devilings!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
+				mes "[DRY-RUN] Ah, I got it! You are on the side of the Angelings?!";
+				mes "[DRY-RUN] You are spying on us, Devilings!";
 				next;
-				mes "[Devi]";
-				mes "You should be ashamed!";
+				mes "[DRY-RUN] [Devi]";
+				mes "[DRY-RUN] You should be ashamed!";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1389,9 +1389,9 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 		}
 	}
 	else {
-		mes "[Devi]";
-		mes "This is weird...Your party name ain't registered.";
-		mes "Im sorry, but rules are rules. I can't help you if your party ain't registered.";
+		mes "[DRY-RUN] [Devi]";
+		mes "[DRY-RUN] This is weird...Your party name ain't registered.";
+		mes "[DRY-RUN] Im sorry, but rules are rules. I can't help you if your party ain't registered.";
 		close;
 	}
 OnInit:
@@ -1670,13 +1670,13 @@ poring_w01,84,108,3	script	#wop_ex_1	139,3,3,{
 	end;
 
 OnTouch:
-	mes "[Porings]";
-	mes "P~ooooooooo -!!!";
-	mes "Let's teach them a lesson, ring!";
-	mes "We are no longer betting our lives for Jellopies, ring!!!";
+	mes "[DRY-RUN] [Porings]";
+	mes "[DRY-RUN] P~ooooooooo -!!!";
+	mes "[DRY-RUN] Let's teach them a lesson, ring!";
+	mes "[DRY-RUN] We are no longer betting our lives for Jellopies, ring!!!";
 	next;
-	mes "[Porings]";
-	mes "Let's go! Let's fight! Let's win, win, win!!!";
+	mes "[DRY-RUN] [Porings]";
+	mes "[DRY-RUN] Let's go! Let's fight! Let's win, win, win!!!";
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa1");
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa2");
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa3");
@@ -1684,17 +1684,17 @@ OnTouch:
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa5");
 	next;
 	if (wop_team == 1) {
-		mes "[Porings]";
-		mes "Ohhhhhh, there he is, the warrior that fought for us!!";
-		mes "Oh my god... Nice, ring!";
-		mes "Poring~ Poring~ Poooooo~";
-		mes "Party of Angeling~ Popopo, Poring!";
+		mes "[DRY-RUN] [Porings]";
+		mes "[DRY-RUN] Ohhhhhh, there he is, the warrior that fought for us!!";
+		mes "[DRY-RUN] Oh my god... Nice, ring!";
+		mes "[DRY-RUN] Poring~ Poring~ Poooooo~";
+		mes "[DRY-RUN] Party of Angeling~ Popopo, Poring!";
 	}
 	else if (wop_team == 2) {
-		mes "[Porings]";
-		mes "Wait, YOU! Aren't you on the side of the Devilings?!";
-		mes "Get out now! Leave!!";
-		mes "Booooo~ Boo~ Boooo~";
+		mes "[DRY-RUN] [Porings]";
+		mes "[DRY-RUN] Wait, YOU! Aren't you on the side of the Devilings?!";
+		mes "[DRY-RUN] Get out now! Leave!!";
+		mes "[DRY-RUN] Booooo~ Boo~ Boooo~";
 		emotion ET_HUK, getnpcid(0, "Angeling Side Poring#wa1");
 		emotion ET_FRET, getnpcid(0, "Angeling Side Poring#wa2");
 		emotion ET_HUK, getnpcid(0, "Angeling Side Poring#wa3");
@@ -1702,8 +1702,8 @@ OnTouch:
 		emotion ET_SURPRISE, getnpcid(0, "Angeling Side Poring#wa5");
 	}
 	else {
-		mes "[Porings]";
-		mes "Hey, human. How about fighting for us Porings on Angeling's side??!";
+		mes "[DRY-RUN] [Porings]";
+		mes "[DRY-RUN] Hey, human. How about fighting for us Porings on Angeling's side??!";
 		emotion ET_HELP, getnpcid(0, "Angeling Side Poring#wa1");
 		emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa2");
 		emotion ET_HELP, getnpcid(0, "Angeling Side Poring#wa3");
@@ -1711,11 +1711,11 @@ OnTouch:
 		emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa5");
 	}
 	next;
-	mes "[Porings]";
-	mes "Party of Angeling~ Popopo, Poring!";
-	mes "Victory~ Victory~ Pooooooo~";
+	mes "[DRY-RUN] [Porings]";
+	mes "[DRY-RUN] Party of Angeling~ Popopo, Poring!";
+	mes "[DRY-RUN] Victory~ Victory~ Pooooooo~";
 	next;
-	mes "- Porings are cheerfully shouting for the victory. -";
+	mes "[DRY-RUN] - Porings are cheerfully shouting for the victory. -";
 	close;
 }
 
@@ -1723,13 +1723,13 @@ poring_w01,119,107,3	script	#wop_ex_2	139,3,3,{
 	end;
 
 OnTouch:
-	mes "[Marins]";
-	mes "Woooooaaaaaaaaaaa!";
-	mes "Finally, it's time for us to teach those stupid pigs a lesson!!";
-	mes "Those Porings with low-grades are all idiots!!";
+	mes "[DRY-RUN] [Marins]";
+	mes "[DRY-RUN] Woooooaaaaaaaaaaa!";
+	mes "[DRY-RUN] Finally, it's time for us to teach those stupid pigs a lesson!!";
+	mes "[DRY-RUN] Those Porings with low-grades are all idiots!!";
 	next;
-	mes "[Marins]";
-	mes "Let's go! Let's fight! Fight for Triumph!!!!";
+	mes "[DRY-RUN] [Marins]";
+	mes "[DRY-RUN] Let's go! Let's fight! Fight for Triumph!!!!";
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd1");
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd2");
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd3");
@@ -1737,16 +1737,16 @@ OnTouch:
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd5");
 	next;
 	if (wop_team == 2) {
-		mes "[Marins]";
-		mes "Ohhhh... Here is the warrior that fought for us!!";
-		mes "Amazing!";
-		mes "This proves that humans recognize us as true monsters!!";
+		mes "[DRY-RUN] [Marins]";
+		mes "[DRY-RUN] Ohhhh... Here is the warrior that fought for us!!";
+		mes "[DRY-RUN] Amazing!";
+		mes "[DRY-RUN] This proves that humans recognize us as true monsters!!";
 	}
 	else if (wop_team == 1) {
-		mes "[Marins]";
-		mes "Wait, YOU! Aren't you on the side of the Angelings?!";
-		mes "Get out now! Leave!!";
-		mes "Booooo~ Boo~ Boooo~";
+		mes "[DRY-RUN] [Marins]";
+		mes "[DRY-RUN] Wait, YOU! Aren't you on the side of the Angelings?!";
+		mes "[DRY-RUN] Get out now! Leave!!";
+		mes "[DRY-RUN] Booooo~ Boo~ Boooo~";
 		emotion ET_HUK, getnpcid(0, "Deviling Side Marin#wd1");
 		emotion ET_FRET, getnpcid(0, "Deviling Side Marin#wd2");
 		emotion ET_HUK, getnpcid(0, "Deviling Side Marin#wd3");
@@ -1754,8 +1754,8 @@ OnTouch:
 		emotion ET_SURPRISE, getnpcid(0, "Deviling Side Marin#wd5");
 	}
 	else {
-		mes "[Marins]";
-		mes "Hey, human. Don't you wanna fight for Deviling, the noble of darkness? What do you say?!";
+		mes "[DRY-RUN] [Marins]";
+		mes "[DRY-RUN] Hey, human. Don't you wanna fight for Deviling, the noble of darkness? What do you say?!";
 		emotion ET_HELP, getnpcid(0, "Deviling Side Marin#wd1");
 		emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd2");
 		emotion ET_HELP, getnpcid(0, "Deviling Side Marin#wd3");
@@ -1763,9 +1763,9 @@ OnTouch:
 		emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd5");
 	}
 	next;
-	mes "[Marins]";
-	mes "The world's Best Miraculous Poring! Deviling has it all! Go, Deviling, Go-!!";
+	mes "[DRY-RUN] [Marins]";
+	mes "[DRY-RUN] The world's Best Miraculous Poring! Deviling has it all! Go, Deviling, Go-!!";
 	next;
-	mes "- Marins are cheerfully shouting for the victory. -";
+	mes "[DRY-RUN] - Marins are cheerfully shouting for the victory. -";
 	close;
 }

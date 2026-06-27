@@ -15,8 +15,8 @@ function calcexp;
 function calcjobexp;
 
 	if (!checkweight(1201,3)){
-		mes "You have too many items to proceed with the quest.";
-		mes "Please lighten your load and try again.";
+		mes "[DRY-RUN] You have too many items to proceed with the quest.";
+		mes "[DRY-RUN] Please lighten your load and try again.";
 		close;
 	}
 
@@ -54,26 +54,26 @@ function calcjobexp;
 
 	mes .@npcname$;
 	mes "We provide missions and daily quests that you can complete in the region of " + .region$[.@zoneid] + ".";
-	mes "There are simple daily quests as well as missions that you have to complete within the siege hours only. So, think about it~";
+	mes "[DRY-RUN] There are simple daily quests as well as missions that you have to complete within the siege hours only. So, think about it~";
 	next;
-	switch(select("Conquering " + .region$[.@zoneid], "Guild Dungeon Daily Quests", "About quests", "I don't need it.")){
+	switch(select("[DRY-RUN] Conquering " + .region$[.@zoneid], "Guild Dungeon Daily Quests", "About quests", "I don't need it.")){
 		case 1: // Conquering.
 			.@gid = getcharid(2);
 			if(.@gid && is_guild_leader() == true){
 				.@time_check1 = checkquest(.conquer_delay_questid[.@zoneid], PLAYTIME);
 				if(.@time_check1 == 0){
 					mes .@npcname$;
-					mes "It's been less than an hour since the last time we've checked!";
-					mes "Come back when the waiting time is over.";
+					mes "[DRY-RUN] It's been less than an hour since the last time we've checked!";
+					mes "[DRY-RUN] Come back when the waiting time is over.";
 					next;
 					mes .@npcname$;
-					mes "If you have luck on your side, you'll have good results.";
+					mes "[DRY-RUN] If you have luck on your side, you'll have good results.";
 					close;
 				} else if(.@time_check1 == 2){
 					erasequest .conquer_delay_questid[.@zoneid];
 					mes .@npcname$;
-					mes "I have confirmed that the waiting time for conquering missions has ended.";
-					mes "I'll delete unnecessary records for you.";
+					mes "[DRY-RUN] I have confirmed that the waiting time for conquering missions has ended.";
+					mes "[DRY-RUN] I'll delete unnecessary records for you.";
 					close;
 				} else {
 					.@siege_check = (.@edition == 1 ? agitcheck() : .@edition == 2 ? agitcheck2() : agitcheck3());
@@ -82,13 +82,13 @@ function calcjobexp;
 
 					if(.@siege_check && .@after_time){
 						mes .@npcname$;
-						mes "According to ^4d4dffthe number of fortresses that your guild has conquered at this very moment,^000000 I'll give you a reward.";
-						mes "Do you want to check right now? You're aware that ^4d4dffthe number can change even as we speak,^000000 right?";
+						mes "[DRY-RUN] According to ^4d4dffthe number of fortresses that your guild has conquered at this very moment,^000000 I'll give you a reward.";
+						mes "[DRY-RUN] Do you want to check right now? You're aware that ^4d4dffthe number can change even as we speak,^000000 right?";
 						next;
-						if(select("I'll come back later.","Let's check right now!") == 1){
+						if(select("[DRY-RUN] I'll come back later.","Let's check right now!") == 1){
 							mes .@npcname$;
-							mes "Right. Life is all about timing.";
-							mes "Come back when it's shining the most.";
+							mes "[DRY-RUN] Right. Life is all about timing.";
+							mes "[DRY-RUN] Come back when it's shining the most.";
 							close;
 						} else {
 							.@total = 0;
@@ -98,15 +98,15 @@ function calcjobexp;
 
 							if(!.@total){
 								mes .@npcname$;
-								mes "Unfortunately, there is no fortress that your guild has conquered.";
-								mes "Try again!";
+								mes "[DRY-RUN] Unfortunately, there is no fortress that your guild has conquered.";
+								mes "[DRY-RUN] Try again!";
 								close;
 							} else {
 								mes .@npcname$;
 								if(.@total == 5)
-									mes "Incredible.";
+									mes "[DRY-RUN] Incredible.";
 								else
-									mes "Currently, the total number of fortresses that your guild has conquered";
+									mes "[DRY-RUN] Currently, the total number of fortresses that your guild has conquered";
 								for(.@i = 0; .@i < 5; ++.@i){
 									mes getcastlename(.castle$[.@i+.@zoneid*5]) + (.@gid == getcastledata(.castle$[.@i+.@zoneid*5],CD_GUILD_ID) ? ": ^4d4dffOccupied^000000" : "");
 								}
@@ -116,8 +116,8 @@ function calcjobexp;
 									mes "is " + .@total + "!";
 								next;
 								mes .@npcname$;
-								mes "I'll give you a reward accordingly. I hope you make good use of it.";
-								mes "You have an hour of waiting time until the next report. Keep that in mind and try again.";
+								mes "[DRY-RUN] I'll give you a reward accordingly. I hope you make good use of it.";
+								mes "[DRY-RUN] You have an hour of waiting time until the next report. Keep that in mind and try again.";
 								setquest .conquer_delay_questid[.@zoneid];
 								getitem 6489,.@total;
 								getitem 6615,.@total;
@@ -127,21 +127,21 @@ function calcjobexp;
 						}
 					} else {
 						mes .@npcname$;
-						mes "I'm sorry but you can complete this mission only during the siege hours. I'm afraid I can't do anything here.";
+						mes "[DRY-RUN] I'm sorry but you can complete this mission only during the siege hours. I'm afraid I can't do anything here.";
 						close;
 					}
 				}
 			} else {
 				mes .@npcname$;
-				mes "I'm sorry but conquering missions are for guild masters only.";
-				mes "Members should try guild dungeon daily quests instead.";
+				mes "[DRY-RUN] I'm sorry but conquering missions are for guild masters only.";
+				mes "[DRY-RUN] Members should try guild dungeon daily quests instead.";
 				close;
 			}
 			break;
 		case 2: // Daily Quests
 			mes .@npcname$;
 			mes "These are missions that you can complete in guild dungeons of " + .region$[.@zoneid] + " area.";
-			mes "You can cancel them if you want to. Feel free to challenge yourself.";
+			mes "[DRY-RUN] You can cancel them if you want to. Feel free to challenge yourself.";
 			next;
 			.@cancel_index = (.@edition == 1 ? 3 : 2);
 			for(.@i = 0; .@i < 3; ++.@i){
@@ -152,14 +152,14 @@ function calcjobexp;
 			.@index = .@zoneid*3 + .@sel;
 			if(.@sel == .@cancel_index){
 				mes .@npcname$;
-				mes "You don't need to rush since these missions take place in guild dungeons.";
-				mes "Feel free to give it a try whenever you want to.";
+				mes "[DRY-RUN] You don't need to rush since these missions take place in guild dungeons.";
+				mes "[DRY-RUN] Feel free to give it a try whenever you want to.";
 				close;
 			}
 			if(BaseLevel < .level_req[.@index]){
 				mes .@npcname$;
 				mes "Hmm, unfortunately, this mission is limited to users with ^4d4dfflevel " + .level_req[.@index] + "^000000 or higher only.";
-				mes "Your level is not high enough.";
+				mes "[DRY-RUN] Your level is not high enough.";
 				close;
 			}
 			.@hunting = checkquest(.daily_hunting_questid[.@index], HUNTING);
@@ -167,26 +167,26 @@ function calcjobexp;
 			if(.@hunting > -1){
 				if(.@hunting == 2){
 					mes .@npcname$;
-					mes "Oh, you've done a good job.";
-					mes "It isn't much, but hopefully it will be helpful.";
+					mes "[DRY-RUN] Oh, you've done a good job.";
+					mes "[DRY-RUN] It isn't much, but hopefully it will be helpful.";
 					setquest .daily_delay_questid[.@index];
 					erasequest .daily_hunting_questid[.@index];
 					getexp calcexp(.@zoneid,.@index),calcjobexp(.@edition);
 					getitem 6615,1;
 				} else {
 					mes .@npcname$;
-					mes "Hmm? It seems like you haven't completed the mission yet..";
-					mes "Is there any problem?";
+					mes "[DRY-RUN] Hmm? It seems like you haven't completed the mission yet..";
+					mes "[DRY-RUN] Is there any problem?";
 					next;
-					if(select("No.","Give up the quest.") == 1){
+					if(select("[DRY-RUN] No.","Give up the quest.") == 1){
 						mes .@npcname$;
-						mes "I'm not sure how long you can use the guild dungeon, but good luck.";
+						mes "[DRY-RUN] I'm not sure how long you can use the guild dungeon, but good luck.";
 						close;
 					} else {
 						mes .@npcname$;
-						mes "Well, no one's forcing you.";
-						mes "Do whatever you like to do.";
-						mes "I'll cancel the mission then.";
+						mes "[DRY-RUN] Well, no one's forcing you.";
+						mes "[DRY-RUN] Do whatever you like to do.";
+						mes "[DRY-RUN] I'll cancel the mission then.";
 						erasequest .daily_hunting_questid[.@index];
 						close;
 					}
@@ -194,15 +194,15 @@ function calcjobexp;
 			} else {
 				if(.@playtime == 0 || .@playtime == 1){
 					mes .@npcname$;
-					mes "The rule is set here so that you're only allowed to complete one mission each day.";
-					mes "I would like you to come back when the waiting time is over.";
+					mes "[DRY-RUN] The rule is set here so that you're only allowed to complete one mission each day.";
+					mes "[DRY-RUN] I would like you to come back when the waiting time is over.";
 					close;
 				} else if(.@playtime == 2){
 					erasequest .daily_delay_questid[.@index];
 					mes .@npcname$;
-					mes "I have confirmed that the waiting time for this mission is over.";
-					mes "I'll delete the records used for confirmation.";
-					mes "Now, give it a try to complete the quest!";
+					mes "[DRY-RUN] I have confirmed that the waiting time for this mission is over.";
+					mes "[DRY-RUN] I'll delete the records used for confirmation.";
+					mes "[DRY-RUN] Now, give it a try to complete the quest!";
 					close;
 				} else {
 					mes .@npcname$;
@@ -211,19 +211,19 @@ function calcjobexp;
 					next;
 					mes .@npcname$;
 					if(mob_brief(.daily_hunting_questid[.@index]))
-						mes "I'll reward you accordingly upon completing this mission.";
+						mes "[DRY-RUN] I'll reward you accordingly upon completing this mission.";
 					else
-						mes "I'll give you experience points in return.";
+						mes "[DRY-RUN] I'll give you experience points in return.";
 					next;
-					if(select("Accept it.","Reject it.") == 1){
+					if(select("[DRY-RUN] Accept it.","Reject it.") == 1){
 						mes .@npcname$;
-						mes "Entrance to the guild dungeon is restricted. But it's not like you can't find a way to go there, either.";
-						mes "I'll pray for your success in fighting those monsters.";
+						mes "[DRY-RUN] Entrance to the guild dungeon is restricted. But it's not like you can't find a way to go there, either.";
+						mes "[DRY-RUN] I'll pray for your success in fighting those monsters.";
 						setquest .daily_hunting_questid[.@index];
 						close;
 					} else {
 						mes .@npcname$;
-						mes "Well, do as you wish.";
+						mes "[DRY-RUN] Well, do as you wish.";
 						close;
 					}
 				}
@@ -231,24 +231,24 @@ function calcjobexp;
 			break;
 		case 3: // About quests
 			mes .@npcname$;
-			mes "It's not difficult at all.";
-			mes "I give a reward ^4d4dffdepending on how many fortresses you have conquered.^000000";
-			mes "^4d4dffThe type and quality of the reward depend on the number of conquered fortresses at the very moment I check.^000000";
+			mes "[DRY-RUN] It's not difficult at all.";
+			mes "[DRY-RUN] I give a reward ^4d4dffdepending on how many fortresses you have conquered.^000000";
+			mes "[DRY-RUN] ^4d4dffThe type and quality of the reward depend on the number of conquered fortresses at the very moment I check.^000000";
 			next;
 			mes .@npcname$;
-			mes "And of course, I check during the siege hours only.";
-			mes "^4d4dffReceiving a reward is followed by an hour of waiting time. So you'd better figure out the right timing as well.^000000";
+			mes "[DRY-RUN] And of course, I check during the siege hours only.";
+			mes "[DRY-RUN] ^4d4dffReceiving a reward is followed by an hour of waiting time. So you'd better figure out the right timing as well.^000000";
 			next;
 			mes .@npcname$;
-			mes "If you are a master of a guild that is currently participating in siege battles, you should give it a try.";
+			mes "[DRY-RUN] If you are a master of a guild that is currently participating in siege battles, you should give it a try.";
 			next;
 			mes .@npcname$;
-			mes "Guild dungeon daily quests consist of combat quests that you can complete in guild dungeons.";
-			mes "It's simple.";
+			mes "[DRY-RUN] Guild dungeon daily quests consist of combat quests that you can complete in guild dungeons.";
+			mes "[DRY-RUN] It's simple.";
 			close;
 		case 4: // I don't need it.
 			mes .@npcname$;
-			mes "You're really something else~!";
+			mes "[DRY-RUN] You're really something else~!";
 			close;
 	}
 	end;
@@ -320,10 +320,10 @@ OnInit:
 			case 7530:
 			case 7533:
 			case 7536:
-				mes "It is to deal with the powerful creatures that appear in the Corridor of the Abyss.";
+				mes "[DRY-RUN] It is to deal with the powerful creatures that appear in the Corridor of the Abyss.";
 				break;
 			default:
-				mes "It is to eliminate the monsters that appear in the guild dungeon.";
+				mes "[DRY-RUN] It is to eliminate the monsters that appear in the guild dungeon.";
 				break;
 		}
 		return;
@@ -332,64 +332,64 @@ OnInit:
 	function mob_brief {
 		switch(getarg(0)){
 			case 7525:
-				mes "You should hunt 50 or more Caterpillars and Creamy Fear monsters..";
+				mes "[DRY-RUN] You should hunt 50 or more Caterpillars and Creamy Fear monsters..";
 				break;
 			case 7526:
-				mes "Hunt down 30 or more of all 3 types of Abyss Kobolds.";
+				mes "[DRY-RUN] Hunt down 30 or more of all 3 types of Abyss Kobolds.";
 				break;
 			case 7527:
-				mes "^4d4dffYou should kill furious 'Pyuriel' and warrior 'Lora'.^000000";
+				mes "[DRY-RUN] ^4d4dffYou should kill furious 'Pyuriel' and warrior 'Lora'.^000000";
 				return 1;
 			case 7528:
-				mes "^4d4dffHunt 50 or more of Giant Hornets and Ancient Worms, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 50 or more of Giant Hornets and Ancient Worms, respectively.^000000";
 				break;
 			case 7529:
-				mes "^4d4dffHunt 40 or more of Killer Mantises and 50 or more of Angra Mantises.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 40 or more of Killer Mantises and 50 or more of Angra Mantises.^000000";
 				break;
 			case 7530:
-				mes "They are ^4d4dff'Elvira' and 'Gioia,' which is a strange mechanical creature of heroes' tears.^000000";
+				mes "[DRY-RUN] They are ^4d4dff'Elvira' and 'Gioia,' which is a strange mechanical creature of heroes' tears.^000000";
 				return 1;
 			case 7531:
-				mes "^4d4dffHunt 50 or more Zombie Masters and Wraith Deads, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 50 or more Zombie Masters and Wraith Deads, respectively.^000000";
 				break;
 			case 7532:
-				mes "^4d4dffHunt 50 GLD_DARK_SHADOW, 20 GLD_DARK_FRAME, and 20 GLD_DARK_PRIEST monsters.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 50 GLD_DARK_SHADOW, 20 GLD_DARK_FRAME, and 20 GLD_DARK_PRIEST monsters.^000000";
 				break;
 			case 7533:
-				mes "They are ^4d4dff'Kades' and 'Rudo' who wander around the dead's hill.^000000";
+				mes "[DRY-RUN] They are ^4d4dff'Kades' and 'Rudo' who wander around the dead's hill.^000000";
 				return 1;
 			case 7534:
-				mes "^4d4dffHunt 50 or more Gullinbursti and Leib Olmai, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 50 or more Gullinbursti and Leib Olmai, respectively.^000000";
 				break;
 			case 7535:
-				mes "^4d4dffHunt 45 or more Skeleton General, 20 or more Am Mut and 25 or more Gajomart, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 45 or more Skeleton General, 20 or more Am Mut and 25 or more Gajomart, respectively.^000000";
 				break;
 			case 7536:
-				mes "^4d4dffThey are Old Empire's General 'Daehyon' and Guard 'Soheon'.^000000";
+				mes "[DRY-RUN] ^4d4dffThey are Old Empire's General 'Daehyon' and Guard 'Soheon'.^000000";
 				return 1;
 			case 7537:
-				mes "^4d4dffHunt 50 or more Hell Apocalypse and Zakudam, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 50 or more Hell Apocalypse and Zakudam, respectively.^000000";
 				break;
 			case 7538:
-				mes "^4d4dffHunt 35 or more Heavy Metaling and Cobalt Mineral, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 35 or more Heavy Metaling and Cobalt Mineral, respectively.^000000";
 				break;
 			case 7539:
-				mes "^4d4dffHunt more than 50 Banshee Masters and 30 Beholder Masters.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt more than 50 Banshee Masters and 30 Beholder Masters.^000000";
 				break;
 			case 7540:
-				mes "^4d4dffHunt 50 Aunoes, and 20 Fanats.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 50 Aunoes, and 20 Fanats.^000000";
 				break;
 			case 7541:
-				mes "^4d4dffHunt 30 or more Knight, Blacksmith, Assassin, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 30 or more Knight, Blacksmith, Assassin, respectively.^000000";
 				break;
 			case 7542:
-				mes "^4d4dffHunt 30 or more Wizard, Priest, Hunter respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 30 or more Wizard, Priest, Hunter respectively.^000000";
 				break;
 			case 7561:
-				mes "^4d4dffHunt 30 or more, Crusader, Rogue, Alchemist, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 30 or more, Crusader, Rogue, Alchemist, respectively.^000000";
 				break;
 			case 7562:
-				mes "^4d4dffHunt 30 or more Sage, Monk, Bard, respectively.^000000";
+				mes "[DRY-RUN] ^4d4dffHunt 30 or more Sage, Monk, Bard, respectively.^000000";
 				break;
 		}
 		return 0;

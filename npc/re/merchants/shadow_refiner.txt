@@ -12,16 +12,16 @@
 //============================================================
 -	script	::ShadowBlacksmith	-1,{
 	if( getbattleflag( "feature.refineui" ) ){
-		mes "[Shadow Blacksmith]";
-		mes "Now Basta is in charge of refinement for shadow items.";
-		mes "If you'd like to refine a shadow item, please visit him.";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] Now Basta is in charge of refinement for shadow items.";
+		mes "[DRY-RUN] If you'd like to refine a shadow item, please visit him.";
 		close;
 	}
 
 	.@zeny_cost = 200000; // Zeny cost is 200,000 according to official script [Secret]
 	disable_items;
-	mes "[Shadow Blacksmith]";
-	mes "Do you want to refine a shadow item? Pick yer poison!";
+	mes "[DRY-RUN] [Shadow Blacksmith]";
+	mes "[DRY-RUN] Do you want to refine a shadow item? Pick yer poison!";
 	next;
 	setarray .@indices[1], EQI_SHADOW_ARMOR, EQI_SHADOW_WEAPON, EQI_SHADOW_SHIELD, EQI_SHADOW_SHOES, EQI_SHADOW_ACC_R, EQI_SHADOW_ACC_L;
 	.@indlen = getarraysize(.@indices) - 1;
@@ -30,26 +30,26 @@
 	.@menu$ = .@menu$ + "Refine info";
 	.@choice = select(.@menu$);
 	if (.@choice == .@indlen + 1) { // Refine info
-		mes "[Shadow Blacksmith]";
-		mes "When a shadow item is refined, it gains extra bonuses very much like normal items.";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] When a shadow item is refined, it gains extra bonuses very much like normal items.";
 		next;
-		mes "[Shadow Blacksmith]";
-		mes "Weapon: ATK, MATK + 1 increase for each +1 refine success.";
-		mes "Etc: HP + 10 increase for each +1 refine success.";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] Weapon: ATK, MATK + 1 increase for each +1 refine success.";
+		mes "[DRY-RUN] Etc: HP + 10 increase for each +1 refine success.";
 		next;
-		mes "[Shadow Blacksmith]";
-		mes "All types of Oridecon and Elunium can be used to refine shadow items. Each attempt will also cost 20,000 zeny.";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] All types of Oridecon and Elunium can be used to refine shadow items. Each attempt will also cost 20,000 zeny.";
 		next;
-		mes "[Shadow Blacksmith]";
-		mes "HD ores can be used for gear that is at least refine level +7 and will prevent breaking as long as you stay talking to me.";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] HD ores can be used for gear that is at least refine level +7 and will prevent breaking as long as you stay talking to me.";
 		close;
 	}
 
 	.@part = .@indices[.@choice];
 
 	if (!getequipisequiped(.@part)) {
-		mes "[Shadow Blacksmith]";
-		mes "There's nothing here!";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] There's nothing here!";
 		close;
 	}
 	.@equip_id = getequipid(.@part);
@@ -57,9 +57,9 @@
 
 	while(1) {
 		.@equip_refine = getequiprefinerycnt(.@part);
-		mes "[Shadow Blacksmith]";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
 		mes "I require " + callfunc("F_InsertComma", .@zeny_cost) + " zeny as a fee for EACH refine attempt.";
-		mes "Choose your Ore and start refining.";
+		mes "[DRY-RUN] Choose your Ore and start refining.";
 		next;
 
 		.@material[0] = getequiprefinecost(.@part, REFINE_COST_NORMAL, REFINE_MATERIAL_ID);
@@ -90,54 +90,54 @@
 			break;
 		case 3:// HD
 			if (.@equip_refine < 7) {
-				mes "[Shadow Blacksmith]";
-				mes "HD Ore can only used for +7 or higher refine level items.";
+				mes "[DRY-RUN] [Shadow Blacksmith]";
+				mes "[DRY-RUN] HD Ore can only used for +7 or higher refine level items.";
 				close;
 			}
 			.@hoihoi = 1;
 			.@choose = .@material[2];
 			break;
 		case 4:
-			mes "[Shadow Blacksmith]";
-			mes "You've cancelled refining.";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] You've cancelled refining.";
 			close;
 		}
 		if (!countitem(.@choose)) {
-			mes "[Shadow Blacksmith]";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
 			mes "You do not have enough "+ getitemname(.@choose) +".";
 			close;
 		}
 		if (Zeny < .@zeny_cost) {
-			mes "[Shadow Blacksmith]";
-			mes "You do not have enough zeny.";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] You do not have enough zeny.";
 			close;
 		}
 		if (.@equip_refine > 9) {
-			mes "[Shadow Blacksmith]";
-			mes "Shadow Equipment can be refined to the maximum of 10...";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] Shadow Equipment can be refined to the maximum of 10...";
 			close;
 		}
 		if (!getequipisenableref(.@part)) {
-			mes "[Shadow Blacksmith]";
-			mes "This item cannot be refined.";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] This item cannot be refined.";
 			close;
 		}
 		if (getequippercentrefinery(.@part) < 100) {
-			mes "[Shadow Blacksmith]";
-			mes "The safety refine level for Shadow Equipment is +4.";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] The safety refine level for Shadow Equipment is +4.";
 			if (!.@hoihoi)
-				mes "Shadow equipment may be destroyed in subsequent refinements. Want to get started?";
+				mes "[DRY-RUN] Shadow equipment may be destroyed in subsequent refinements. Want to get started?";
 			else
-				mes "The next refinement, if it fails, will degrade the refinement. Do you want to refine?";
+				mes "[DRY-RUN] The next refinement, if it fails, will degrade the refinement. Do you want to refine?";
 			next;
-			if (select("Proceed","Cancel") == 2) {
-				mes "[Shadow Blacksmith]";
-				mes "Heh, I knew it!";
+			if (select("[DRY-RUN] Proceed","Cancel") == 2) {
+				mes "[DRY-RUN] [Shadow Blacksmith]";
+				mes "[DRY-RUN] Heh, I knew it!";
 				close;
 			}
 		}
-		mes "[Shadow Blacksmith]";
-		mes "Well then.. here goes nothing!";
+		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[DRY-RUN] Well then.. here goes nothing!";
 		next;
 		delitem .@choose,1;
 		Zeny -= .@zeny_cost;
@@ -148,16 +148,16 @@
 
 		if (getequippercentrefinery(.@part, .@is_enriched) > rand(100)) {
 			successrefitem .@part;
-			mes "[Shadow Blacksmith]";
-			mes "It worked! It worked!";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] It worked! It worked!";
 			next;
 		} else {
 			if (.@hoihoi)
 				downrefitem .@part;
 			else
 				failedrefitem .@part;
-			mes "[Shadow Blacksmith]";
-			mes "Oh Odin No!";
+			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[DRY-RUN] Oh Odin No!";
 			close;
 		}
 	}

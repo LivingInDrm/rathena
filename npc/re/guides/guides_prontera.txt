@@ -9,20 +9,20 @@
 
 prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 	cutin "prt_soldier",2;
-	mes "[Prontera Guide]";
-	mes "Welcome to ^8B4513Prontera^000000,";
-	mes "the beautiful capital of the";
-	mes "Rune-Midgarts Kingdom.";
-	mes "Do you need help navigating the city?";
+	mes "[DRY-RUN] [Prontera Guide]";
+	mes "[DRY-RUN] Welcome to ^8B4513Prontera^000000,";
+	mes "[DRY-RUN] the beautiful capital of the";
+	mes "[DRY-RUN] Rune-Midgarts Kingdom.";
+	mes "[DRY-RUN] Do you need help navigating the city?";
 	F_Navi("[Prontera Guide]");
 	next;
 	set .@str$,"Would you like to check any other locations?";
 	while (1) {
-		switch(select("[ Main Facilities ]:[ Merchants & Helpers ]:Remove Marks from Mini-Map:Cancel")) {
+		switch(select("[DRY-RUN] [ Main Facilities ]:[ Merchants & Helpers ]:Remove Marks from Mini-Map:Cancel")) {
 		case 1:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("[ Tool Shop ]:[ Weapon & Armor Shop ]:[ Forge ]:[ Sanctuary ]:[ Chivalry Office ]:[ Inn ]:[ Tavern ]:[ Library ]:[ Prontera Castle ]:[ Job Agency ]:[ City Hall ]:Previous Menu")) {
+				switch(select("[DRY-RUN] [ Tool Shop ]:[ Weapon & Armor Shop ]:[ Forge ]:[ Sanctuary ]:[ Chivalry Office ]:[ Inn ]:[ Tavern ]:[ Library ]:[ Prontera Castle ]:[ Job Agency ]:[ City Hall ]:Previous Menu")) {
 				case 1:
 					callsub L_Mark, F_Navi("Tool Shop","prontera,134,221","^B9062F");
 					mes .@str$;
@@ -42,20 +42,20 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 4:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes "The "+F_Navi("Prontera Sanctuary","prontera,236,316","^006400")+" is";
-					mes "where you can change your job to Acolyte,";
-					mes "its located in the far northeast of Prontera.";
-					mes "Let me mark the location on your mini-map.";
+					mes "[DRY-RUN] where you can change your job to Acolyte,";
+					mes "[DRY-RUN] its located in the far northeast of Prontera.";
+					mes "[DRY-RUN] Let me mark the location on your mini-map.";
 					mes .@str$;
 					viewpoint 1,236,316,3,0xAAFF00;
 					next;
 					break;
 				case 5:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes "The "+F_Navi("Chivalry Office","prontera,46,345")+" is";
-					mes "where you can change your job to ^7F3300Knight^000000";
-					mes "or apply for the ^7F3300Culvert^000000 Subjugation Party.";
+					mes "[DRY-RUN] where you can change your job to ^7F3300Knight^000000";
+					mes "[DRY-RUN] or apply for the ^7F3300Culvert^000000 Subjugation Party.";
 					mes .@str$;
 					viewpoint 1,46,345,4,0xD2691E;
 					next;
@@ -69,17 +69,17 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 				case 7:
 					callsub L_Mark, "^B9062FTaverns^000000";
 					mes "Only the "+F_Navi("northern","prontera,208,154","^B9062F")+" tavern";
-					mes "is open for now.";
+					mes "[DRY-RUN] is open for now.";
 					mes .@str$;
 					viewpoint 1,208,154,6,0xFF0000;
 					viewpoint 1,46,67,7,0xFF0000;
 					next;
 					break;
 				case 8:
-					mes "[Prontera Guide]";
-					mes "The ^0000FFLibrary^000000 is";
-					mes "where you can find useful information, like the Monster Encyclopedia.";
-					mes "There are currently two libaries available,";
+					mes "[DRY-RUN] [Prontera Guide]";
+					mes "[DRY-RUN] The ^0000FFLibrary^000000 is";
+					mes "[DRY-RUN] where you can find useful information, like the Monster Encyclopedia.";
+					mes "[DRY-RUN] There are currently two libaries available,";
 					mes "One to the "+F_Navi("northeast","prontera,120,264")+" and the other to the "+F_Navi("northwest","prontera,192,264")+".";
 					mes .@str$;
 					viewpoint 1,120,264,8,0x0A82FF;
@@ -87,11 +87,11 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 9:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes "The "+F_Navi("Prontera Castle","prontera,156,360","^FF5400")+" is north from here,";
-					mes "and its rear gate is connected to";
-					mes "the northern Prontera Fields.";
-					mes "Let me mark the castle on your mini-map.";
+					mes "[DRY-RUN] and its rear gate is connected to";
+					mes "[DRY-RUN] the northern Prontera Fields.";
+					mes "[DRY-RUN] Let me mark the castle on your mini-map.";
 					mes .@str$;
 					viewpoint 1,156,360,10,0xFFB400;
 					next;
@@ -103,11 +103,11 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 11:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes "Let me mark the location of "+F_Navi("City Hall","prontera,75,91","^7F3300");
-					mes "on your mini-map.";
-					mes "There's a hairstylist";
-					mes "there that can change your hair color.";
+					mes "[DRY-RUN] on your mini-map.";
+					mes "[DRY-RUN] There's a hairstylist";
+					mes "[DRY-RUN] there that can change your hair color.";
 					mes .@str$;
 					viewpoint 1,75,91,12,0xD2691E;
 					next;
@@ -121,7 +121,7 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 		case 2:
 			set .@loop,1;
 			while (.@loop) {
-				switch(select("[ Eden Teleport Officer ]:[ Peco Peco Breeder ]:[ Riding Creature Master ]:[ Magic Gear Master ]:[ Peco Peco Remover ]:[ Trading Merchants ]:[ Mercenary Guildsman ]:[ Hypnotist ]:[ Kafra Employee ]:[ Leablem ]:[ Apprentice Craftsman ]:[ Pet Groomer ]:Previous Menu")) {
+				switch(select("[DRY-RUN] [ Eden Teleport Officer ]:[ Peco Peco Breeder ]:[ Riding Creature Master ]:[ Magic Gear Master ]:[ Peco Peco Remover ]:[ Trading Merchants ]:[ Mercenary Guildsman ]:[ Hypnotist ]:[ Kafra Employee ]:[ Leablem ]:[ Apprentice Craftsman ]:[ Pet Groomer ]:Previous Menu")) {
 				case 1:
 					callsub L_Mark, F_Navi("Eden Teleport Officer","prontera,124,76","^800080"),1;
 					mes .@str$;
@@ -129,8 +129,8 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 2:
-					mes "[Prontera Guide]";
-					mes "Two ^0000FFPeco Peco Breeders^000000 are available,";
+					mes "[DRY-RUN] [Prontera Guide]";
+					mes "[DRY-RUN] Two ^0000FFPeco Peco Breeders^000000 are available,";
 					mes "one for ^0000FFKnights^000000 to the "+F_Navi("northwest","prontera,55,350","^0000FF");
 					mes "and the other for ^0000FFCrusaders^000000 to the "+F_Navi("northeast","prontera,232,310","^0000FF")+".";
 					viewpoint 1,55,350,14,0x0A82FF;
@@ -138,41 +138,41 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 3:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes "The "+F_Navi("Riding Creature Master","prontera,131,213","^FF5400")+" provides services for";
-					mes "^FF5400Rune Knights^000000 and ^FF5400Royal Guards^000000.";
-					mes "Let me mark his location";
-					mes "on your mini-map.";
+					mes "[DRY-RUN] ^FF5400Rune Knights^000000 and ^FF5400Royal Guards^000000.";
+					mes "[DRY-RUN] Let me mark his location";
+					mes "[DRY-RUN] on your mini-map.";
 					mes .@str$;
 					viewpoint 1,131,213,16,0xFFB400;
 					next;
 					break;
 				case 4:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes "The "+F_Navi("Magic Gear Master","prontera,163,178","^006400");
-					mes "provides services for";
-					mes "^006400Mechanics^000000.";
-					mes "Let me mark his location";
-					mes "on your mini-map.";
+					mes "[DRY-RUN] provides services for";
+					mes "[DRY-RUN] ^006400Mechanics^000000.";
+					mes "[DRY-RUN] Let me mark his location";
+					mes "[DRY-RUN] on your mini-map.";
 					mes .@str$;
 					viewpoint 1,163,178,17,0xAAFF00;
 					next;
 					break;
 				case 5:
-					mes "[Prontera Guide]";
-					mes "If your beloved Peco Peco refuses";
-					mes "to leave you,";
+					mes "[DRY-RUN] [Prontera Guide]";
+					mes "[DRY-RUN] If your beloved Peco Peco refuses";
+					mes "[DRY-RUN] to leave you,";
 					mes "please talk to the "+F_Navi("Peco Peco Remover","prontera,125,208","^7F3300");
-					mes "near the central fountain.";
+					mes "[DRY-RUN] near the central fountain.";
 					mes .@str$;
 					viewpoint 1,125,208,18,0xD2691E;
 					next;
 					break;
 				case 6:
-					mes "[Prontera Guide]";
-					mes "The Rune Merchant, Amatsu Trader, and other";
+					mes "[DRY-RUN] [Prontera Guide]";
+					mes "[DRY-RUN] The Rune Merchant, Amatsu Trader, and other";
 					mes F_Navi("Trading Merchants","prontera,178,244","^800080")+" have been marked";
-					mes "on your mini-map.";
+					mes "[DRY-RUN] on your mini-map.";
 					mes .@str$;
 					viewpoint 1,178,244,19,0xDA70D6;
 					next;
@@ -184,12 +184,12 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 8:
-					mes "[Prontera Guide]";
-					mes "The ^FF5400Hypnotist^000000";
-					mes "helps beginner adventurers";
-					mes "to reset their skills.";
-					mes "He has moved to Izlude, Prontera's satellite town to the southeast.";
-					mes "Would you like to check any other locations?";
+					mes "[DRY-RUN] [Prontera Guide]";
+					mes "[DRY-RUN] The ^FF5400Hypnotist^000000";
+					mes "[DRY-RUN] helps beginner adventurers";
+					mes "[DRY-RUN] to reset their skills.";
+					mes "[DRY-RUN] He has moved to Izlude, Prontera's satellite town to the southeast.";
+					mes "[DRY-RUN] Would you like to check any other locations?";
 					mes .@str$;
 					//viewpoint 1,146,232,21,0xFFB400;
 					next;
@@ -205,12 +205,12 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					next;
 					break;
 				case 10:
-					mes "[Prontera Guide]";
+					mes "[DRY-RUN] [Prontera Guide]";
 					mes F_Navi("Leablem","prontera,244,169","^0000FF");
-					mes "is a technician";
-					mes "who can create ^0000FFslots^000000 on weapons and armors,";
-					mes "As amazing as it sounds,";
-					mes "not all equipment can be slotted.";
+					mes "[DRY-RUN] is a technician";
+					mes "[DRY-RUN] who can create ^0000FFslots^000000 on weapons and armors,";
+					mes "[DRY-RUN] As amazing as it sounds,";
+					mes "[DRY-RUN] not all equipment can be slotted.";
 					mes .@str$;
 					viewpoint 1,244,169,27,0x0A82FF;
 					next;
@@ -234,9 +234,9 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 			}
 			break;
 		case 3:
-			mes "[Prontera Guide]";
-			mes "Sure, I'll remove all marks from your mini-map.";
-			mes "Is there anything else I can do for you?";
+			mes "[DRY-RUN] [Prontera Guide]";
+			mes "[DRY-RUN] Sure, I'll remove all marks from your mini-map.";
+			mes "[DRY-RUN] Is there anything else I can do for you?";
 			viewpoint 2,1,1,0,0xFFFF00;
 			viewpoint 2,1,1,1,0x000000;
 			viewpoint 2,1,1,2,0xFF0000;
@@ -270,8 +270,8 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 			next;
 			break;
 		case 4:
-			mes "[Prontera Guide]";
-			mes "Enjoy your stay.";
+			mes "[DRY-RUN] [Prontera Guide]";
+			mes "[DRY-RUN] Enjoy your stay.";
 			close2;
 			cutin "prt_soldier",255;
 			end;
@@ -279,13 +279,13 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 	}
 	end;
 L_Mark:
-	mes "[Prontera Guide]";
+	mes "[DRY-RUN] [Prontera Guide]";
 	if (getarg(1,0)) {
-		mes "Let me mark the location of the";
+		mes "[DRY-RUN] Let me mark the location of the";
 		mes getarg(0);
 	} else
 		mes "Let me mark the location of the "+getarg(0);
-	mes "on your mini-map.";
+	mes "[DRY-RUN] on your mini-map.";
 	return;
 }
 prontera,282,208,2	duplicate(GuideProntera)	Guide#02prontera	105

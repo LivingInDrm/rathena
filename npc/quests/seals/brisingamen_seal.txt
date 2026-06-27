@@ -26,558 +26,558 @@ prt_fild08,175,374,3	script	Bard#brising	51,{
 	cutin "god_nelluad01",2;
 	if ($God2 >= $@god_check1 && $God3 < $@god_check2) {
 		if (god_brising > 49) {
-			mes "[Nelliorde]";
-			mes "Oh, I guess all is going well for you. So how has everything else been?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] Oh, I guess all is going well for you. So how has everything else been?";
 			next;
-			mes "[Nelliorde]";
-			mes "I may be being overly sensitive, but it feels like something might happen soon. Aaah, don't mind me. It's no big deal. Maybe I'm just being weird.";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] I may be being overly sensitive, but it feels like something might happen soon. Aaah, don't mind me. It's no big deal. Maybe I'm just being weird.";
 			next;
-			mes "[Nelliorde]";
-			mes "Right, right, let me play a song for you. Would you care to listen?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] Right, right, let me play a song for you. Would you care to listen?";
 			next;
-			switch(select("Sure, why not~:How about some news?:No thanks.")) {
+			switch(select("[DRY-RUN] Sure, why not~:How about some news?:No thanks.")) {
 			case 1:
-				mes "[Nelliorde]";
-				mes "So, which song";
-				mes "would you like to hear?";
-				mes "Go ahead, pick one~";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] So, which song";
+				mes "[DRY-RUN] would you like to hear?";
+				mes "[DRY-RUN] Go ahead, pick one~";
 				next;
-				switch(select("Bragi's Poem:Eternal Chaos:Assassin in the Sunset:Der Ring des Nibelungen")) {
+				switch(select("[DRY-RUN] Bragi's Poem:Eternal Chaos:Assassin in the Sunset:Der Ring des Nibelungen")) {
 				case 1:
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Bragi's Poem!";
-					mes "What a good choice!";
-					mes "I must say this song";
-					mes "represents the";
-					mes "heart of a poet!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Bragi's Poem!";
+					mes "[DRY-RUN] What a good choice!";
+					mes "[DRY-RUN] I must say this song";
+					mes "[DRY-RUN] represents the";
+					mes "[DRY-RUN] heart of a poet!";
 					soundeffect "bragis_poem.wav",1;
 					close2;
 					break;
 				case 2:
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Eternal Chaos...";
-					mes "Sounds too chaotic.";
-					mes "By the way, I wonder";
-					mes "what the title really";
-					mes "means. Is it the chaos";
-					mes "of hell or our own reality?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Eternal Chaos...";
+					mes "[DRY-RUN] Sounds too chaotic.";
+					mes "[DRY-RUN] By the way, I wonder";
+					mes "[DRY-RUN] what the title really";
+					mes "[DRY-RUN] means. Is it the chaos";
+					mes "[DRY-RUN] of hell or our own reality?";
 					soundeffect "chaos_of_eternity.wav",1;
 					close2;
 					break;
 				case 3:
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Assassin in the Sunset!";
-					mes "Yes, no one looks cooler than an Assassin, the bringer of death, standing alone in the sunset! Heh heh~";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Assassin in the Sunset!";
+					mes "[DRY-RUN] Yes, no one looks cooler than an Assassin, the bringer of death, standing alone in the sunset! Heh heh~";
 					soundeffect "assassin_of_sunset.wav",1;
 					close2;
 					break;
 				case 4:
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Der Ring des Nibelungen.....";
-					mes "Okay, are you ready to listen?";
-					mes "Hum hum hum....";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Der Ring des Nibelungen.....";
+					mes "[DRY-RUN] Okay, are you ready to listen?";
+					mes "[DRY-RUN] Hum hum hum....";
 					next;
 					soundeffect "ring_of_nibelungen.wav",1;
-					mes "^4D4DFFRheingold...";
-					mes "Hidden in the Rhein river.";
-					mes "If made into a ring,";
-					mes "Could rule the world~^000000";
+					mes "[DRY-RUN] ^4D4DFFRheingold...";
+					mes "[DRY-RUN] Hidden in the Rhein river.";
+					mes "[DRY-RUN] If made into a ring,";
+					mes "[DRY-RUN] Could rule the world~^000000";
 					next;
-					mes "^4D4DFFProtected by a spell";
-					mes "Cursing its thief";
-					mes "To never find love.";
-					mes "Alberich had known";
-					mes "Nonetheless stole it.";
-					mes "Love was forsaken for power.^000000";
+					mes "[DRY-RUN] ^4D4DFFProtected by a spell";
+					mes "[DRY-RUN] Cursing its thief";
+					mes "[DRY-RUN] To never find love.";
+					mes "[DRY-RUN] Alberich had known";
+					mes "[DRY-RUN] Nonetheless stole it.";
+					mes "[DRY-RUN] Love was forsaken for power.^000000";
 					next;
-					mes "^4D4DFFGiants built beautiful Valhalla";
-					mes "Matrimony with Freya";
-					mes "Goddess of beauty";
-					mes "Their supposed payment.";
-					mes "In not receiving it";
-					mes "They forcefully took her.^000000";
+					mes "[DRY-RUN] ^4D4DFFGiants built beautiful Valhalla";
+					mes "[DRY-RUN] Matrimony with Freya";
+					mes "[DRY-RUN] Goddess of beauty";
+					mes "[DRY-RUN] Their supposed payment.";
+					mes "[DRY-RUN] In not receiving it";
+					mes "[DRY-RUN] They forcefully took her.^000000";
 					next;
-					mes "^4D4DFFThe gods would";
-					mes "give Alberich's treasure";
-					mes "To the Giants for Freya's return.";
-					mes "Loki tricked Alberich,";
-					mes "Stealing his ring or power.^000000";
+					mes "[DRY-RUN] ^4D4DFFThe gods would";
+					mes "[DRY-RUN] give Alberich's treasure";
+					mes "[DRY-RUN] To the Giants for Freya's return.";
+					mes "[DRY-RUN] Loki tricked Alberich,";
+					mes "[DRY-RUN] Stealing his ring or power.^000000";
 					next;
-					mes "^4D4DFFBut Alberich cursed his ring";
-					mes "Before it was returned to him,";
-					mes "Envy and death would";
-					mes "befall its wearers.^000000";
+					mes "[DRY-RUN] ^4D4DFFBut Alberich cursed his ring";
+					mes "[DRY-RUN] Before it was returned to him,";
+					mes "[DRY-RUN] Envy and death would";
+					mes "[DRY-RUN] befall its wearers.^000000";
 					next;
-					mes "^4D4DFFThe ring was given to the giants";
-					mes "Freya was returned to the gods";
-					mes "The giants killed themselves";
-					mes "Fighting over the rheingold,";
-					mes "Victims of Alberich's curse~^000000";
+					mes "[DRY-RUN] ^4D4DFFThe ring was given to the giants";
+					mes "[DRY-RUN] Freya was returned to the gods";
+					mes "[DRY-RUN] The giants killed themselves";
+					mes "[DRY-RUN] Fighting over the rheingold,";
+					mes "[DRY-RUN] Victims of Alberich's curse~^000000";
 					close2;
 					break;
 				}
 				break;
 			case 2:
-				mes "[Nelliorde]";
-				mes "Some news you say..";
-				mes "What kind of news do";
-				mes "you wish to hear about?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Some news you say..";
+				mes "[DRY-RUN] What kind of news do";
+				mes "[DRY-RUN] you wish to hear about?";
 				next;
-				switch(select("About Prontera!:About coastal areas.:Is the desert still hot?:How about the borderlands?")) {
+				switch(select("[DRY-RUN] About Prontera!:About coastal areas.:Is the desert still hot?:How about the borderlands?")) {
 				case 1:
-					mes "[Nelliorde]";
-					mes "What?! Prontera?!";
-					mes "Can you not see that the front";
-					mes "gate of Prontera is right before you? You should at least know where you are, adventurer.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] What?! Prontera?!";
+					mes "[DRY-RUN] Can you not see that the front";
+					mes "[DRY-RUN] gate of Prontera is right before you? You should at least know where you are, adventurer.";
 					next;
-					mes "[Nelliorde]";
-					mes "Anyways, I have one interesting news about Prontera. But, it's a secret. Shh! Are you... Single?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Anyways, I have one interesting news about Prontera. But, it's a secret. Shh! Are you... Single?";
 					next;
 					cutin "god_nelluad04",2;
-					mes "[Nelliorde]";
-					mes "If so, go visit the tavern. I met a guy there who took to me a nice place. Oh yes. He took me to 'the place' where singles are forbidden~!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] If so, go visit the tavern. I met a guy there who took to me a nice place. Oh yes. He took me to 'the place' where singles are forbidden~!";
 					close2;
 					break;
 				case 2:
-					mes "[Nelliorde]";
-					mes "Coastal areas?";
-					mes "That's a funny question. I mean, there's Alberta and a few other places where you can see the sea.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Coastal areas?";
+					mes "[DRY-RUN] That's a funny question. I mean, there's Alberta and a few other places where you can see the sea.";
 					next;
-					mes "[Nelliorde]";
-					mes "To the southwest there's";
-					mes "Kokomo Beach. But, I suppose it's too dangerous just to go there to take a stroll.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] To the southwest there's";
+					mes "[DRY-RUN] Kokomo Beach. But, I suppose it's too dangerous just to go there to take a stroll.";
 					next;
-					mes "[Nelliorde]";
+					mes "[DRY-RUN] [Nelliorde]";
 					cutin "god_nelluad03",2;
-					mes "Kokomo Beach is a large";
-					mes "expanse of sand. The nearby water is filled with sea animals, so you can enjoy catching Shellfishes.";
+					mes "[DRY-RUN] Kokomo Beach is a large";
+					mes "[DRY-RUN] expanse of sand. The nearby water is filled with sea animals, so you can enjoy catching Shellfishes.";
 					next;
-					mes "[Nelliorde]";
-					mes "However, there are always bullies in that kind of place. Once, I met a threatening looking hoodlum with red spiky hair.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] However, there are always bullies in that kind of place. Once, I met a threatening looking hoodlum with red spiky hair.";
 					next;
-					mes "[Nelliorde]";
+					mes "[DRY-RUN] [Nelliorde]";
 					cutin "god_nelluad04",2;
-					mes "He was chewing on something and spat it on the ground. The big buffoon managed to intimidate me into giving him all of my Zeny!";
+					mes "[DRY-RUN] He was chewing on something and spat it on the ground. The big buffoon managed to intimidate me into giving him all of my Zeny!";
 					next;
-					mes "[Nelliorde]";
-					mes "^333333*Sigh...*^000000";
-					mes "This world is too";
-					mes "dangerous for a young";
-					mes "and fragile Bard.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] ^333333*Sigh...*^000000";
+					mes "[DRY-RUN] This world is too";
+					mes "[DRY-RUN] dangerous for a young";
+					mes "[DRY-RUN] and fragile Bard.";
 					next;
-					mes "[Nelliorde]";
-					mes "By the way, Alberta doesn't seem to have changed. The Sunken Ship looks the same as well, with all of its Skeleton Pirates and whatnot. You know how it is.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] By the way, Alberta doesn't seem to have changed. The Sunken Ship looks the same as well, with all of its Skeleton Pirates and whatnot. You know how it is.";
 					next;
-					mes "[Nelliorde]";
+					mes "[DRY-RUN] [Nelliorde]";
 					cutin "god_nelluad01",2;
-					mes "The event agency in charge of expeditions into the Sunken Ship is still making tons of money. If you have nothing to do, why don't you hunt for monsters down there?";
+					mes "[DRY-RUN] The event agency in charge of expeditions into the Sunken Ship is still making tons of money. If you have nothing to do, why don't you hunt for monsters down there?";
 					close2;
 					break;
 				case 3:
-					mes "[Nelliorde]";
-					mes "Oh, hell yes!";
-					mes "When is it not?";
-					mes "The desert is hot, has";
-					mes "been hot and probably";
-					mes "always will be...!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Oh, hell yes!";
+					mes "[DRY-RUN] When is it not?";
+					mes "[DRY-RUN] The desert is hot, has";
+					mes "[DRY-RUN] been hot and probably";
+					mes "[DRY-RUN] always will be...!";
 					next;
-					mes "[Nelliorde]";
-					mes "Giant worms still jump out of nowhere, freaking out innocent travellers like myself, and the Sandmen still kick people in the, well... You know where.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Giant worms still jump out of nowhere, freaking out innocent travellers like myself, and the Sandmen still kick people in the, well... You know where.";
 					next;
-					mes "[Nelliorde]";
-					mes "Even if the desert is filled with hideous monsters, the view of the ocean there is so magnificent. Hah, it makes me want to play a song.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Even if the desert is filled with hideous monsters, the view of the ocean there is so magnificent. Hah, it makes me want to play a song.";
 					next;
-					mes "[Nelliorde]";
-					mes "I must say there is";
-					mes "one place you may wish";
-					mes "to see in the desert.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I must say there is";
+					mes "[DRY-RUN] one place you may wish";
+					mes "[DRY-RUN] to see in the desert.";
 					next;
-					mes "[Nelliorde]";
+					mes "[DRY-RUN] [Nelliorde]";
 					cutin "god_nelluad02",2;
-					mes "I'm talking about the Assassin Guild. Supposedly, it's hidden behind a sandstorm in the Morroc Desert!";
+					mes "[DRY-RUN] I'm talking about the Assassin Guild. Supposedly, it's hidden behind a sandstorm in the Morroc Desert!";
 					if (Class == Job_Assassin || Class == Job_Assassin_Cross) {
-						mes "But you should know what I am talking about! So when are you gonna take me to the guild, eh?";
+						mes "[DRY-RUN] But you should know what I am talking about! So when are you gonna take me to the guild, eh?";
 					}
 					else {
-						mes "Have you ever been there before?";
+						mes "[DRY-RUN] Have you ever been there before?";
 					}
 					close2;
 					break;
 				case 4:
-					mes "[Nelliorde]";
-					mes "Well, to the north is the Schwaltzwald Republic.";
-					mes "There, you'll find Juno,";
-					mes "the 'City of Sages.'";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Well, to the north is the Schwaltzwald Republic.";
+					mes "[DRY-RUN] There, you'll find Juno,";
+					mes "[DRY-RUN] the 'City of Sages.'";
 					next;
-					mes "[Nelliorde]";
+					mes "[DRY-RUN] [Nelliorde]";
 					cutin "god_nelluad03",2;
-					mes "The people there say that there is one major nuisance, a man known as";
-					mes "the 'Mad Scientist.' He's antisocial and creates a lot of public disturbances with his experiments.";
+					mes "[DRY-RUN] The people there say that there is one major nuisance, a man known as";
+					mes "[DRY-RUN] the 'Mad Scientist.' He's antisocial and creates a lot of public disturbances with his experiments.";
 					next;
-					mes "[Nelliorde]";
-					mes "It seems everyone in Juno";
-					mes "hates him with a passion. Even one of the Tool Shop owners begged a passing adventurer to stop this Mad Scientist's research!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] It seems everyone in Juno";
+					mes "[DRY-RUN] hates him with a passion. Even one of the Tool Shop owners begged a passing adventurer to stop this Mad Scientist's research!";
 					next;
-					mes "[Nelliorde]";
-					mes "But I have a different opinion about him. I believe it's not a good idea to interrupt the work of any scientist.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] But I have a different opinion about him. I believe it's not a good idea to interrupt the work of any scientist.";
 					next;
-					mes "[Nelliorde]";
-					mes "After all, he might just discover something important, even if his experiments are a little hazardous.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] After all, he might just discover something important, even if his experiments are a little hazardous.";
 					next;
-					mes "[Nelliorde]";
-					mes "Speaking of discoveries, you know how Juno floats in the air, right?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Speaking of discoveries, you know how Juno floats in the air, right?";
 					next;
-					mes "[Nelliorde]";
+					mes "[DRY-RUN] [Nelliorde]";
 					cutin "god_nelluad01",2;
-					mes "It's said that a piece of Ymir's Heart generates enough power";
-					mes "to keep the entire city aloft in the sky. Isn't that amazing?";
+					mes "[DRY-RUN] It's said that a piece of Ymir's Heart generates enough power";
+					mes "[DRY-RUN] to keep the entire city aloft in the sky. Isn't that amazing?";
 					next;
-					mes "[Nelliorde]";
-					mes "Even more recent is the news about the discovery of Ymir's Book. You can read it in Juno's Sage Castle. I hear that it contains the secret to meeting Valkyrie...";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Even more recent is the news about the discovery of Ymir's Book. You can read it in Juno's Sage Castle. I hear that it contains the secret to meeting Valkyrie...";
 					close2;
 					break;
 				}
 				break;
 			case 3:
-				mes "[Nelliorde]";
-				mes "Huh? Okay then, talk to you later. May Bragi bless you on your journeys.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Huh? Okay then, talk to you later. May Bragi bless you on your journeys.";
 				close2;
 				break;
 			}
 		}
 		else if ((god_brising > 0) && (god_brising < 50)){
-			mes "[Nelliorde]";
-			mes "So, have you";
-			mes "met Mr. Kaili?";
-			mes "Please do your best.";
-			mes "After all, I especially";
-			mes "recommended you~";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] So, have you";
+			mes "[DRY-RUN] met Mr. Kaili?";
+			mes "[DRY-RUN] Please do your best.";
+			mes "[DRY-RUN] After all, I especially";
+			mes "[DRY-RUN] recommended you~";
 			next;
-			switch(select("Tell me a story.:Sing a song for me.")) {
+			switch(select("[DRY-RUN] Tell me a story.:Sing a song for me.")) {
 			case 1:
 				cutin "god_nelluad02",2;
-				mes "[Nelliorde]";
-				mes "Hmm. What would";
-				mes "be a good story for";
-				mes "you this time...? Ah yes, I've got it. Let me tell you about one of my own adventures. It was a pretty amazing experience.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Hmm. What would";
+				mes "[DRY-RUN] be a good story for";
+				mes "[DRY-RUN] you this time...? Ah yes, I've got it. Let me tell you about one of my own adventures. It was a pretty amazing experience.";
 				next;
-				mes "[Nelliorde]";
-				mes "I went to Morroc, the city of the desert. On my way there, I became exhausted from the heat. Luckily, I found a hole beneath the shadows and climbed in to rest.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I went to Morroc, the city of the desert. On my way there, I became exhausted from the heat. Luckily, I found a hole beneath the shadows and climbed in to rest.";
 				next;
-				mes "[Nelliorde]";
-				mes "Oh my God...";
-				mes "If I had known";
-				mes "better, I would have";
-				mes "never gone inside that place...";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Oh my God...";
+				mes "[DRY-RUN] If I had known";
+				mes "[DRY-RUN] better, I would have";
+				mes "[DRY-RUN] never gone inside that place...";
 				next;
-				mes "[Nelliorde]";
-				mes "I actually crawled into the infamous ^FF0000Ant Hell^000000! I don't sound like a coward to you, do I?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I actually crawled into the infamous ^FF0000Ant Hell^000000! I don't sound like a coward to you, do I?";
 				next;
-				mes "[Nelliorde]";
-				mes "Well, the ants aren't the only ones living there. I wasn't afraid of them at all. Except, of course, when they attacked in groups.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Well, the ants aren't the only ones living there. I wasn't afraid of them at all. Except, of course, when they attacked in groups.";
 				next;
 				cutin "god_nelluad03",2;
-				mes "[Nelliorde]";
-				mes "What I was really afraid of was this type of strawberry colored... tongue thing. Phreeoni!";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] What I was really afraid of was this type of strawberry colored... tongue thing. Phreeoni!";
 				next;
-				mes "[Nelliorde]";
-				mes "Fortunately, I survived the whole incident, although I still have nightmares of that man-sized tongue.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Fortunately, I survived the whole incident, although I still have nightmares of that man-sized tongue.";
 				next;
-				mes "[Nelliorde]";
-				mes "Once I got out of there, I craved human companionship to restore my sense of normalcy. The closest place that I knew was Paros Lighthouse.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Once I got out of there, I craved human companionship to restore my sense of normalcy. The closest place that I knew was Paros Lighthouse.";
 				next;
-				mes "[Nelliorde]";
-				mes "Yet again, I decided to traverse the desert, despite the fact that the Kafra Ladies provide a very convenient teleport service there.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Yet again, I decided to traverse the desert, despite the fact that the Kafra Ladies provide a very convenient teleport service there.";
 				next;
 				cutin "god_nelluad01",2;
-				mes "[Nelliorde]";
-				mes "Anyway, the fortress of Sandaruman is on the way to Paros Lighthouse. I remember Serutero, a guy I met in south Morroc, telling me about its scenic beauty.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Anyway, the fortress of Sandaruman is on the way to Paros Lighthouse. I remember Serutero, a guy I met in south Morroc, telling me about its scenic beauty.";
 				next;
-				mes "[Nelliorde]";
-				mes "I was so excited";
-				mes "about seeing it";
-				mes "for myself. After all, doesn't 'Sandaruman' sound like the";
-				mes "name of a beautiful place?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I was so excited";
+				mes "[DRY-RUN] about seeing it";
+				mes "[DRY-RUN] for myself. After all, doesn't 'Sandaruman' sound like the";
+				mes "[DRY-RUN] name of a beautiful place?";
 				next;
-				mes "[Nelliorde]";
-				mes "But I immediately regretted my decision once I arrived. Of course, the view was breathtaking: the sandy hills near the ocean, as";
-				mes "well as the ruins.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] But I immediately regretted my decision once I arrived. Of course, the view was breathtaking: the sandy hills near the ocean, as";
+				mes "[DRY-RUN] well as the ruins.";
 				next;
-				mes "[Nelliorde]";
-				mes "And of course I forgot Serutero's warning about all the monsters. Argh! It was a nightmare! Instead of enjoying the scenary, I ended up running for my life.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] And of course I forgot Serutero's warning about all the monsters. Argh! It was a nightmare! Instead of enjoying the scenary, I ended up running for my life.";
 				next;
-				mes "[Nelliorde]";
-				mes "I was still trying to escape those monsters when I stumbled upon";
-				mes "an old house, West of Sandaruman, that seemed to be in a state of decay.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I was still trying to escape those monsters when I stumbled upon";
+				mes "[DRY-RUN] an old house, West of Sandaruman, that seemed to be in a state of decay.";
 				next;
-				mes "[Nelliorde]";
-				mes "I recalled that Serutero said that no one was living in that area, so I began to worry a bit. Still, I was desperate and needed refuge.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I recalled that Serutero said that no one was living in that area, so I began to worry a bit. Still, I was desperate and needed refuge.";
 				next;
-				mes "[Nelliorde]";
-				mes "In my panic, I violently knocked on the door and screamed for someone to let me inside. Then do you know what I heard?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] In my panic, I violently knocked on the door and screamed for someone to let me inside. Then do you know what I heard?";
 				next;
-				mes "[Nelliorde]";
+				mes "[DRY-RUN] [Nelliorde]";
 				cutin "god_nelluad03",2;
-				mes "^FF0000Who's there?!";
-				mes "Who would dare to intrude";
-				mes "upon my territory?^000000";
-				mes "I was freaked out! Whoever owned that house must have been some";
-				mes "kind of lunatic!";
+				mes "[DRY-RUN] ^FF0000Who's there?!";
+				mes "[DRY-RUN] Who would dare to intrude";
+				mes "[DRY-RUN] upon my territory?^000000";
+				mes "[DRY-RUN] I was freaked out! Whoever owned that house must have been some";
+				mes "[DRY-RUN] kind of lunatic!";
 				next;
-				mes "[Nelliorde]";
-				mes "Th-then, with the specter of Death nipping at my heels, he told me to get lost! Luckily, I was saved by a mysterious, wandering SuperNovice, but that's another story.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Th-then, with the specter of Death nipping at my heels, he told me to get lost! Luckily, I was saved by a mysterious, wandering SuperNovice, but that's another story.";
 				next;
-				mes "[Nelliorde]";
-				mes "In any case, I finally arrived at Paros Lighthouse. There, I learned that the old house was a secret camp for the Rogue Guild. ";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] In any case, I finally arrived at Paros Lighthouse. There, I learned that the old house was a secret camp for the Rogue Guild. ";
 				next;
-				mes "[Nelliorde]";
-				mes "It's amazing, how they can live in such dangerous areas. Only Rogues would be able to survive there, you know?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] It's amazing, how they can live in such dangerous areas. Only Rogues would be able to survive there, you know?";
 				next;
-				mes "[Nelliorde]";
+				mes "[DRY-RUN] [Nelliorde]";
 				cutin "god_nelluad01",2;
-				mes "Ah...";
-				mes "I'm so tired from talking so much. But if I happen to have another adventure, I shall share that tale with you.";
+				mes "[DRY-RUN] Ah...";
+				mes "[DRY-RUN] I'm so tired from talking so much. But if I happen to have another adventure, I shall share that tale with you.";
 				close2;
 				break;
 			case 2:
 				cutin "god_nelluad02",2;
-				mes "[Nelliorde]";
-				mes "Ah, you wish";
-				mes "to hear a song?";
-				mes "Okay! I shall then";
-				mes "perform my favorite.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Ah, you wish";
+				mes "[DRY-RUN] to hear a song?";
+				mes "[DRY-RUN] Okay! I shall then";
+				mes "[DRY-RUN] perform my favorite.";
 				next;
-				mes "[Nelliorde]";
-				mes "I chased after fame.";
-				mes "It eluded me.";
-				mes "I ran after happiness";
-				mes "But never caught it.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I chased after fame.";
+				mes "[DRY-RUN] It eluded me.";
+				mes "[DRY-RUN] I ran after happiness";
+				mes "[DRY-RUN] But never caught it.";
 				next;
-				mes "[Nelliorde]";
-				mes "But tomorrow will still";
-				mes "Be there, I'm sure.";
-				mes "Like the Water Mill";
-				mes "In Al De Baran";
-				mes "Which turns as";
-				mes "Life goes on.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] But tomorrow will still";
+				mes "[DRY-RUN] Be there, I'm sure.";
+				mes "[DRY-RUN] Like the Water Mill";
+				mes "[DRY-RUN] In Al De Baran";
+				mes "[DRY-RUN] Which turns as";
+				mes "[DRY-RUN] Life goes on.";
 				next;
 				cutin "god_nelluad04",2;
-				mes "[Nelliorde]";
-				mes "Cheer up! Life goes on.";
-				mes "As surely as the Water";
-				mes "Mill turns, tomorrow";
-				mes "Will come.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Cheer up! Life goes on.";
+				mes "[DRY-RUN] As surely as the Water";
+				mes "[DRY-RUN] Mill turns, tomorrow";
+				mes "[DRY-RUN] Will come.";
 				close2;
 				break;
 			}
 		}
 		else {
-			mes "[Nelliorde]";
-			mes "Say...";
-			mes "Have we met before?";
-			mes "Hmm? Never? Well...";
-			mes "That's rather odd.";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] Say...";
+			mes "[DRY-RUN] Have we met before?";
+			mes "[DRY-RUN] Hmm? Never? Well...";
+			mes "[DRY-RUN] That's rather odd.";
 			next;
-			mes "[Nelliorde]";
-			mes "I seem to recall that you've asked me to give you some information if I ever have any. Well, now I have and shall share it with you~";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] I seem to recall that you've asked me to give you some information if I ever have any. Well, now I have and shall share it with you~";
 			next;
-			mes "[Nelliorde]";
-			mes "The usefulness of this information all depends on you. Now, have you heard of the ^3333CCMonster Research Organization^000000?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] The usefulness of this information all depends on you. Now, have you heard of the ^3333CCMonster Research Organization^000000?";
 			next;
-			mes "[Nelliorde]";
-			mes "I happened to get this information from its headquarters in Juno. So how does that sound?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] I happened to get this information from its headquarters in Juno. So how does that sound?";
 			next;
-			switch(select("Wee~ I want to hear!:Booooring~")) {
+			switch(select("[DRY-RUN] Wee~ I want to hear!:Booooring~")) {
 			case 1:
-				mes "[Nelliorde]";
-				mes "Well...!";
-				mes "You seem to be";
-				mes "very excited about";
-				mes "this new tidbit of";
-				mes "knowledge I have~";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Well...!";
+				mes "[DRY-RUN] You seem to be";
+				mes "[DRY-RUN] very excited about";
+				mes "[DRY-RUN] this new tidbit of";
+				mes "[DRY-RUN] knowledge I have~";
 				next;
 				if (BaseLevel < 70) {
 					cutin "god_nelluad03",2;
-					mes "[Nelliorde]";
-					mes "Alas, this information doesn't seem to be very valuable to someone such as yourself.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Alas, this information doesn't seem to be very valuable to someone such as yourself.";
 					next;
-					mes "[Nelliorde]";
-					mes "I'm so very sorry to have excited you, but only people that are strong enough to handle grueling work can benefit from this.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I'm so very sorry to have excited you, but only people that are strong enough to handle grueling work can benefit from this.";
 					next;
-					mes "[Nelliorde]";
-					mes "Why don't you travel around and gain more experiences? I will let you know when you're ready, you know~";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Why don't you travel around and gain more experiences? I will let you know when you're ready, you know~";
 					close2;
 				}
 				else {
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Ooh...";
-					mes "And you look";
-					mes "like you can handle";
-					mes "this kind of information.";
-					mes "I'll share everything I know!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Ooh...";
+					mes "[DRY-RUN] And you look";
+					mes "[DRY-RUN] like you can handle";
+					mes "[DRY-RUN] this kind of information.";
+					mes "[DRY-RUN] I'll share everything I know!";
 					next;
-					mes "[Nelliorde]";
-					mes "One day, an adventurer discovered a strange, mysterious object. Unable to figure out what it could do, he visited the Monster Organization.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] One day, an adventurer discovered a strange, mysterious object. Unable to figure out what it could do, he visited the Monster Organization.";
 					next;
 					cutin "god_nelluad01",2;
-					mes "[Nelliorde]";
-					mes "There, it was entrusted to a scholar by the name of Mr. Kaili. He still hasn't uncovered the truth about that item and wishes for assistance in his investigation.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] There, it was entrusted to a scholar by the name of Mr. Kaili. He still hasn't uncovered the truth about that item and wishes for assistance in his investigation.";
 					next;
-					mes "[Nelliorde]";
-					mes "Mr. Kaili suspects that the item might be part of an undiscovered ancient relic. Fortunately, he is also researching ancient relics as a project assigned by the royal court.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Mr. Kaili suspects that the item might be part of an undiscovered ancient relic. Fortunately, he is also researching ancient relics as a project assigned by the royal court.";
 					next;
-					mes "[Nelliorde]";
-					mes "So what do you think? Isn't that interesting? Of course, you'd better speak to Mr. Kaili if you wish to learn more. If you'd like, I shall write you a letter or recommendation.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] So what do you think? Isn't that interesting? Of course, you'd better speak to Mr. Kaili if you wish to learn more. If you'd like, I shall write you a letter or recommendation.";
 					next;
-					switch(select("Sure! Sounds good.:Sorry, I am not that interested.")) {
+					switch(select("[DRY-RUN] Sure! Sounds good.:Sorry, I am not that interested.")) {
 					case 1:
-						mes "[Nelliorde]";
-						mes "Excellent...!";
-						mes "So your name is...";
+						mes "[DRY-RUN] [Nelliorde]";
+						mes "[DRY-RUN] Excellent...!";
+						mes "[DRY-RUN] So your name is...";
 						mes "" + strcharinfo(0) + "?";
 						next;
-						mes "[Nelliorde]";
-						mes "Alright, I shall contact him right away! Oh, and you can find the Monster Organization west of Juno's central plaza. It shouldn't be hard to find. Good luck!";
+						mes "[DRY-RUN] [Nelliorde]";
+						mes "[DRY-RUN] Alright, I shall contact him right away! Oh, and you can find the Monster Organization west of Juno's central plaza. It shouldn't be hard to find. Good luck!";
 						set god_brising,1;
 						close2;
 						break;
 					case 2:
 						cutin "god_nelluad02",2;
-						mes "[Nelliorde]";
-						mes "Ah, it's disappointing to hear that. I thought that you'd be perfect to help out Mr. Kaili. Oh well, talk to you later~";
+						mes "[DRY-RUN] [Nelliorde]";
+						mes "[DRY-RUN] Ah, it's disappointing to hear that. I thought that you'd be perfect to help out Mr. Kaili. Oh well, talk to you later~";
 						close2;
 						break;
 					}
 				}
 				break;
 			case 2:
-				mes "[Nelliorde]";
-				mes "Boring, you say?";
-				mes "Perhaps, but not as";
-				mes "boring as an adventurer";
-				mes "that passes up a chance";
-				mes "for an adventure, yes?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Boring, you say?";
+				mes "[DRY-RUN] Perhaps, but not as";
+				mes "[DRY-RUN] boring as an adventurer";
+				mes "[DRY-RUN] that passes up a chance";
+				mes "[DRY-RUN] for an adventure, yes?";
 				next;
-				switch(select("Tell me a story.:Sing a song for me.")) {
+				switch(select("[DRY-RUN] Tell me a story.:Sing a song for me.")) {
 				case 1:
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Hmm. What would";
-					mes "be a good story for";
-					mes "you this time...? Ah yes, I've got it. Let me tell you about one of my own adventures. It was a pretty amazing experience.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Hmm. What would";
+					mes "[DRY-RUN] be a good story for";
+					mes "[DRY-RUN] you this time...? Ah yes, I've got it. Let me tell you about one of my own adventures. It was a pretty amazing experience.";
 					next;
-					mes "[Nelliorde]";
-					mes "I went to Morroc, the city of the desert. On my way there, I became exhausted from the heat. Luckily, I found a hole beneath the shadows and climbed in to rest.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I went to Morroc, the city of the desert. On my way there, I became exhausted from the heat. Luckily, I found a hole beneath the shadows and climbed in to rest.";
 					next;
-					mes "[Nelliorde]";
-					mes "Oh my God...";
-					mes "If I had known";
-					mes "better, I never";
-					mes "would have gone";
-					mes "inside that place...";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Oh my God...";
+					mes "[DRY-RUN] If I had known";
+					mes "[DRY-RUN] better, I never";
+					mes "[DRY-RUN] would have gone";
+					mes "[DRY-RUN] inside that place...";
 					next;
-					mes "[Nelliorde]";
-					mes "I actually crawled into the infamous ^FF0000Ant Hell^000000! I don't sound like a coward to you, do I?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I actually crawled into the infamous ^FF0000Ant Hell^000000! I don't sound like a coward to you, do I?";
 					next;
-					mes "[Nelliorde]";
-					mes "Well, the ants aren't the only ones living there. I wasn't afraid of them at all. Except, of course, when they attacked in groups.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Well, the ants aren't the only ones living there. I wasn't afraid of them at all. Except, of course, when they attacked in groups.";
 					next;
 					cutin "god_nelluad03",2;
-					mes "[Nelliorde]";
-					mes "What I was really afraid of was this type of strawberry colored... tongue thing. Phreeoni!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] What I was really afraid of was this type of strawberry colored... tongue thing. Phreeoni!";
 					next;
-					mes "[Nelliorde]";
-					mes "Fortunately, I survived the whole incident, although I still have nightmares of that man-sized tongue.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Fortunately, I survived the whole incident, although I still have nightmares of that man-sized tongue.";
 					next;
-					mes "[Nelliorde]";
-					mes "Once I got out of there, I craved human companionship to restore my sense of normalcy. The closest place that I knew was Paros Lighthouse.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Once I got out of there, I craved human companionship to restore my sense of normalcy. The closest place that I knew was Paros Lighthouse.";
 					next;
-					mes "[Nelliorde]";
-					mes "Yet again, I decided to traverse the desert, despite the fact that the Kafra Ladies provide a very convenient teleport service there.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Yet again, I decided to traverse the desert, despite the fact that the Kafra Ladies provide a very convenient teleport service there.";
 					next;
 					cutin "god_nelluad01",2;
-					mes "[Nelliorde]";
-					mes "Anyway, the fortress of Sandaruman is on the way to Paros Lighthouse. I remember Serutero, a guy I met in south Morroc, telling me about its scenic beauty.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Anyway, the fortress of Sandaruman is on the way to Paros Lighthouse. I remember Serutero, a guy I met in south Morroc, telling me about its scenic beauty.";
 					next;
-					mes "[Nelliorde]";
-					mes "I was so excited";
-					mes "about seeing it";
-					mes "for myself. After all, doesn't 'Sandaruman' sound like the";
-					mes "name of a beautiful place?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I was so excited";
+					mes "[DRY-RUN] about seeing it";
+					mes "[DRY-RUN] for myself. After all, doesn't 'Sandaruman' sound like the";
+					mes "[DRY-RUN] name of a beautiful place?";
 					next;
-					mes "[Nelliorde]";
-					mes "But I immediately regretted my decision once I arrived. Of course, the view was breathtaking: the sandy hills near the ocean, as";
-					mes "well as the ruins.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] But I immediately regretted my decision once I arrived. Of course, the view was breathtaking: the sandy hills near the ocean, as";
+					mes "[DRY-RUN] well as the ruins.";
 					next;
-					mes "[Nelliorde]";
-					mes "And of course I forgot Serutero's warning about all the monsters. Argh! It was a nightmare! Instead of enjoying the scenary, I ended up running for my life.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] And of course I forgot Serutero's warning about all the monsters. Argh! It was a nightmare! Instead of enjoying the scenary, I ended up running for my life.";
 					next;
-					mes "[Nelliorde]";
-					mes "I was still trying to escape those monsters when I stumbled upon";
-					mes "an old house, West of Sandaruman, that seemed to be in a state of decay.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I was still trying to escape those monsters when I stumbled upon";
+					mes "[DRY-RUN] an old house, West of Sandaruman, that seemed to be in a state of decay.";
 					next;
-					mes "[Nelliorde]";
-					mes "I recalled that Serutero said that no one was living in that area, so I began to worry a bit. Still, I was desperate and needed refuge.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I recalled that Serutero said that no one was living in that area, so I began to worry a bit. Still, I was desperate and needed refuge.";
 					next;
-					mes "[Nelliorde]";
-					mes "In my panic, I violently knocked on the door and screamed for someone to let me inside. Then do you know what I heard?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] In my panic, I violently knocked on the door and screamed for someone to let me inside. Then do you know what I heard?";
 					next;
 					cutin "god_nelluad04",2;
-					mes "[Nelliorde]";
-					mes "^FF0000Who's there?!";
-					mes "Who would dare to intrude";
-					mes "upon my territory?^000000";
-					mes "I was freaked out! Whoever owned that house must have been some";
-					mes "kind of lunatic!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] ^FF0000Who's there?!";
+					mes "[DRY-RUN] Who would dare to intrude";
+					mes "[DRY-RUN] upon my territory?^000000";
+					mes "[DRY-RUN] I was freaked out! Whoever owned that house must have been some";
+					mes "[DRY-RUN] kind of lunatic!";
 					next;
-					mes "[Nelliorde]";
-					mes "Th-then, with the specter of Death nipping at my heels, he told me to get lost! Luckily, I was saved by a mysterious, wandering SuperNovice, but that's another story.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Th-then, with the specter of Death nipping at my heels, he told me to get lost! Luckily, I was saved by a mysterious, wandering SuperNovice, but that's another story.";
 					next;
-					mes "[Nelliorde]";
-					mes "In any case, I finally arrived at Paros Lighthouse. There, I learned that the old house was a secret camp for the Rogue Guild. ";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] In any case, I finally arrived at Paros Lighthouse. There, I learned that the old house was a secret camp for the Rogue Guild. ";
 					next;
-					mes "[Nelliorde]";
-					mes "It's amazing, how they can live in such dangerous areas. Only Rogues would be able to survive there, you know?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] It's amazing, how they can live in such dangerous areas. Only Rogues would be able to survive there, you know?";
 					next;
 					cutin "god_nelluad01",2;
-					mes "[Nelliorde]";
-					mes "Ah...";
-					mes "I'm so tired from talking so much. But if I happen to have another adventure, I shall share that tale with you.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Ah...";
+					mes "[DRY-RUN] I'm so tired from talking so much. But if I happen to have another adventure, I shall share that tale with you.";
 					close2;
 					break;
 				case 2:
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Ah, you wish";
-					mes "to hear a song?";
-					mes "Okay! I shall then";
-					mes "perform my favorite.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Ah, you wish";
+					mes "[DRY-RUN] to hear a song?";
+					mes "[DRY-RUN] Okay! I shall then";
+					mes "[DRY-RUN] perform my favorite.";
 					next;
-					mes "[Nelliorde]";
-					mes "I chased after fame.";
-					mes "It eluded me.";
-					mes "I ran after happiness";
-					mes "But never caught it.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] I chased after fame.";
+					mes "[DRY-RUN] It eluded me.";
+					mes "[DRY-RUN] I ran after happiness";
+					mes "[DRY-RUN] But never caught it.";
 					next;
-					mes "[Nelliorde]";
-					mes "But tomorrow will still";
-					mes "Be there, I'm sure.";
-					mes "Like the Water Mill";
-					mes "In Al De Baran";
-					mes "Which turns as";
-					mes "Life goes on.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] But tomorrow will still";
+					mes "[DRY-RUN] Be there, I'm sure.";
+					mes "[DRY-RUN] Like the Water Mill";
+					mes "[DRY-RUN] In Al De Baran";
+					mes "[DRY-RUN] Which turns as";
+					mes "[DRY-RUN] Life goes on.";
 					next;
 					cutin "god_nelluad04",2;
-					mes "[Nelliorde]";
-					mes "Cheer up! Life goes on.";
-					mes "As surely as the Water";
-					mes "Mill turns, tomorrow";
-					mes "Will come.";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Cheer up! Life goes on.";
+					mes "[DRY-RUN] As surely as the Water";
+					mes "[DRY-RUN] Mill turns, tomorrow";
+					mes "[DRY-RUN] Will come.";
 					close2;
 					break;
 				}
@@ -586,252 +586,252 @@ prt_fild08,175,374,3	script	Bard#brising	51,{
 		}
 	}
 	else {
-		mes "[Nelliorde]";
-		mes "Hello there!";
-		mes "Isn't it such";
-		mes "a glorious day?";
-		mes "You know of me,";
-		mes "do you not?";
+		mes "[DRY-RUN] [Nelliorde]";
+		mes "[DRY-RUN] Hello there!";
+		mes "[DRY-RUN] Isn't it such";
+		mes "[DRY-RUN] a glorious day?";
+		mes "[DRY-RUN] You know of me,";
+		mes "[DRY-RUN] do you not?";
 		next;
-		mes "[Nelliorde]";
+		mes "[DRY-RUN] [Nelliorde]";
 		if (Sex == SEX_MALE) {
-			mes "Hahahaha, forgive my rudeness,";
-			mes "but I fail to remember your name, although your face does seem rather familiar.";
+			mes "[DRY-RUN] Hahahaha, forgive my rudeness,";
+			mes "[DRY-RUN] but I fail to remember your name, although your face does seem rather familiar.";
 		}
 		else {
-			mes "Oh well well...";
-			mes "How could I ever";
-			mes "forget the lovely";
+			mes "[DRY-RUN] Oh well well...";
+			mes "[DRY-RUN] How could I ever";
+			mes "[DRY-RUN] forget the lovely";
 			mes ""+ strcharinfo(0) +"?";
 		}
 		next;
 		cutin "god_nelluad01",2;
-		mes "[Nelliorde]";
-		mes "So, aren't you curious about me? Feel free to ask me whatever you like! I'm the vagabond that will wander the earth till the end of his days, your friend who loves to sing under the moonlight~";
+		mes "[DRY-RUN] [Nelliorde]";
+		mes "[DRY-RUN] So, aren't you curious about me? Feel free to ask me whatever you like! I'm the vagabond that will wander the earth till the end of his days, your friend who loves to sing under the moonlight~";
 		next;
-		switch(select("Who are you?:What's new?:Can you sing?")) {
+		switch(select("[DRY-RUN] Who are you?:What's new?:Can you sing?")) {
 		case 1:
-			mes "[Nelliorde]";
-			mes "Why, I am Nelliorde, the Bard.";
-			mes "In truth, my real name is Elliorde.";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] Why, I am Nelliorde, the Bard.";
+			mes "[DRY-RUN] In truth, my real name is Elliorde.";
 			next;
 			cutin "god_nelluad03",2;
-			mes "[Nelliorde]";
-			mes "However, while I was singing at a Tavern, as per usual, a man with long blonde hair angrily demanded that I change my name!";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] However, while I was singing at a Tavern, as per usual, a man with long blonde hair angrily demanded that I change my name!";
 			next;
-			mes "[Nelliorde]";
-			mes "Never before have I seen such a flailing and a fuss over someone coincidentally sharing the same name!";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] Never before have I seen such a flailing and a fuss over someone coincidentally sharing the same name!";
 			next;
-			mes "[Nelliorde]";
-			mes "And so, that little altercation";
-			mes "was settled with me being named Nelliorde.";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] And so, that little altercation";
+			mes "[DRY-RUN] was settled with me being named Nelliorde.";
 			next;
 			cutin "god_nelluad04",2;
-			mes "[Nelliorde]";
-			mes "I don't sound like a coward to you, do I? Do you believe I should have fought for the right to keep my original name?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] I don't sound like a coward to you, do I? Do you believe I should have fought for the right to keep my original name?";
 			next;
-			mes "[Nelliorde]";
-			mes "If so, you're wrong! I just don't believe that violence can solve anything, as the romantic Bard";
-			mes "that cherishes peace...";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] If so, you're wrong! I just don't believe that violence can solve anything, as the romantic Bard";
+			mes "[DRY-RUN] that cherishes peace...";
 			next;
-			mes "^3355FFSeeing as it's not worth";
-			mes "listening to Nelliorde's lies, you decide to simply tune him out.^000000";
+			mes "[DRY-RUN] ^3355FFSeeing as it's not worth";
+			mes "[DRY-RUN] listening to Nelliorde's lies, you decide to simply tune him out.^000000";
 			next;
-			mes "^3355FF...";
-			mes "......^000000";
+			mes "[DRY-RUN] ^3355FF...";
+			mes "[DRY-RUN] ......^000000";
 			next;
-			mes "^3355FF...";
-			mes "......";
-			mes ".........^000000";
+			mes "[DRY-RUN] ^3355FF...";
+			mes "[DRY-RUN] ......";
+			mes "[DRY-RUN] .........^000000";
 			next;
 			cutin "god_nelluad03",2;
-			mes "[Nelliorde]";
-			mes "And that's how I convinced wise";
-			mes "and benevolent King Tristram III to build a paradise where married lovers could enjo--Hm? Are you even listening?!";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] And that's how I convinced wise";
+			mes "[DRY-RUN] and benevolent King Tristram III to build a paradise where married lovers could enjo--Hm? Are you even listening?!";
 			close2;
 			break;
 		case 2:
-			mes "[Nelliorde]";
-			mes "You wish to";
-			mes "hear of some news?";
-			mes "What kind of news do";
-			mes "you wish to know about?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] You wish to";
+			mes "[DRY-RUN] hear of some news?";
+			mes "[DRY-RUN] What kind of news do";
+			mes "[DRY-RUN] you wish to know about?";
 			next;
-			switch(select("About Prontera!:About seaside areas.:Is the desert still hot?:How about the borderlands?")) {
+			switch(select("[DRY-RUN] About Prontera!:About seaside areas.:Is the desert still hot?:How about the borderlands?")) {
 			case 1:
-				mes "[Nelliorde]";
-				mes "What?! Prontera?!";
-				mes "Can you not see that the front";
-				mes "gate of Prontera is right before you? You should at least know where you are, adventurer.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] What?! Prontera?!";
+				mes "[DRY-RUN] Can you not see that the front";
+				mes "[DRY-RUN] gate of Prontera is right before you? You should at least know where you are, adventurer.";
 				next;
-				mes "[Nelliorde]";
-				mes "Anyways, I know one interesting bit of news about Prontera. But it's a secret. Shh! Are you... Single?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Anyways, I know one interesting bit of news about Prontera. But it's a secret. Shh! Are you... Single?";
 				next;
-				mes "[Nelliorde]";
-				mes "If so, go visit the tavern. I met a guy there who took me a nice place. Oh yes. He took me the place where singles are forbidden~!";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] If so, go visit the tavern. I met a guy there who took me a nice place. Oh yes. He took me the place where singles are forbidden~!";
 				close2;
 				break;
 			case 2:
-				mes "[Nelliorde]";
-				mes "Seaside areas?";
-				mes "That's a funny question. I mean, there's Alberta and a few other places where you can see the sea.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Seaside areas?";
+				mes "[DRY-RUN] That's a funny question. I mean, there's Alberta and a few other places where you can see the sea.";
 				next;
-				mes "[Nelliorde]";
-				mes "To the southwest there's";
-				mes "Kokomo Beach. But, I suppose it's too dangerous just to go there to take a stroll.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] To the southwest there's";
+				mes "[DRY-RUN] Kokomo Beach. But, I suppose it's too dangerous just to go there to take a stroll.";
 				next;
-				mes "[Nelliorde]";
-				mes "Kokomo Beach is a large";
-				mes "expanse of sand. The nearby water is filled with sea animals, so you can enjoy catching Shellfishes.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Kokomo Beach is a large";
+				mes "[DRY-RUN] expanse of sand. The nearby water is filled with sea animals, so you can enjoy catching Shellfishes.";
 				next;
-				mes "[Nelliorde]";
-				mes "However, there are always bullies in that kind of place. Once, I met a threatening looking hoodlum with red spiky hair.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] However, there are always bullies in that kind of place. Once, I met a threatening looking hoodlum with red spiky hair.";
 				next;
 				cutin "god_nelluad04",2;
-				mes "[Nelliorde]";
-				mes "He was chewing on something and spat on the ground. The big buffoon managed to intimidate me into giving him all of my Zeny!";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] He was chewing on something and spat on the ground. The big buffoon managed to intimidate me into giving him all of my Zeny!";
 				next;
-				mes "[Nelliorde]";
-				mes "^333333*Sigh...*^000000";
-				mes "This world is too";
-				mes "dangerous for a young";
-				mes "and fragile Bard.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] ^333333*Sigh...*^000000";
+				mes "[DRY-RUN] This world is too";
+				mes "[DRY-RUN] dangerous for a young";
+				mes "[DRY-RUN] and fragile Bard.";
 				next;
-				mes "[Nelliorde]";
-				mes "By the way, Alberta doesn't seem to have changed. The Sunken Ship looks the same as well, with all of its Skeleton Pirates and whatnot. You know how it is.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] By the way, Alberta doesn't seem to have changed. The Sunken Ship looks the same as well, with all of its Skeleton Pirates and whatnot. You know how it is.";
 				next;
 				cutin "god_nelluad01",2;
-				mes "[Nelliorde]";
-				mes "The event agency in charge of expeditions into the Sunken Ship is still making tons of money. If you have nothing to do, why don't you hunt for monsters down there?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] The event agency in charge of expeditions into the Sunken Ship is still making tons of money. If you have nothing to do, why don't you hunt for monsters down there?";
 				close2;
 				break;
 			case 3:
-				mes "[Nelliorde]";
-				mes "Oh yes!";
-				mes "When is it not?";
-				mes "The desert is hot, has";
-				mes "been hot and probably";
-				mes "always will be...!";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Oh yes!";
+				mes "[DRY-RUN] When is it not?";
+				mes "[DRY-RUN] The desert is hot, has";
+				mes "[DRY-RUN] been hot and probably";
+				mes "[DRY-RUN] always will be...!";
 				next;
-				mes "[Nelliorde]";
-				mes "Giant worms still jump out of nowhere, freaking out innocent travellers like myself, and the Sandmen still kick people in the, well... You know where.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Giant worms still jump out of nowhere, freaking out innocent travellers like myself, and the Sandmen still kick people in the, well... You know where.";
 				next;
 				cutin "god_nelluad02",2;
-				mes "[Nelliorde]";
-				mes "Even if the desert is filled with hideous monsters, the view of the ocean there is so magnificent. Hah, it makes me want to play a song.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Even if the desert is filled with hideous monsters, the view of the ocean there is so magnificent. Hah, it makes me want to play a song.";
 				next;
-				mes "[Nelliorde]";
-				mes "I must say there is";
-				mes "one place you may wish";
-				mes "to see in the desert.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I must say there is";
+				mes "[DRY-RUN] one place you may wish";
+				mes "[DRY-RUN] to see in the desert.";
 				next;
-				mes "[Nelliorde]";
-				mes "I'm talking about the Assassin Guild. Supposedly, it's hidden behind a sandstorm in the Morroc";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] I'm talking about the Assassin Guild. Supposedly, it's hidden behind a sandstorm in the Morroc";
 				if ((Class == Job_Assassin) || (Class == Job_Assassin_Cross)) {
-					mes "Desert! But you should know what I am talking about! So when are you gonna take me to the guild, eh?";
+					mes "[DRY-RUN] Desert! But you should know what I am talking about! So when are you gonna take me to the guild, eh?";
 				}
 				else {
-					mes "Desert! Have you ever been there before?";
+					mes "[DRY-RUN] Desert! Have you ever been there before?";
 				}
 				close2;
 				break;
 			case 4:
-				mes "[Nelliorde]";
-				mes "Well, to the north is the Schwaltzwald Republic.";
-				mes "There, you'll find Juno,";
-				mes "the 'City of Sages.'";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Well, to the north is the Schwaltzwald Republic.";
+				mes "[DRY-RUN] There, you'll find Juno,";
+				mes "[DRY-RUN] the 'City of Sages.'";
 				next;
-				mes "[Nelliorde]";
-				mes "The people there say that there is one major nuisance, a man known";
-				mes "as the 'Mad Scientist.' He's antisocial and creates a lot of public disturbances with his experiments.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] The people there say that there is one major nuisance, a man known";
+				mes "[DRY-RUN] as the 'Mad Scientist.' He's antisocial and creates a lot of public disturbances with his experiments.";
 				next;
 				cutin "god_nelluad03",2;
-				mes "[Nelliorde]";
-				mes "It seems everyone in Juno hates";
-				mes "him with a passion. Even one of the Tool Shop owners begged a passing adventurer to stop this Mad Scientist's research!";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] It seems everyone in Juno hates";
+				mes "[DRY-RUN] him with a passion. Even one of the Tool Shop owners begged a passing adventurer to stop this Mad Scientist's research!";
 				next;
-				mes "[Nelliorde]";
-				mes "But I have a different opinion about him. I believe it's not a good idea to interrupt the work of any scientist.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] But I have a different opinion about him. I believe it's not a good idea to interrupt the work of any scientist.";
 				next;
-				mes "[Nelliorde]";
-				mes "After all, he might just discover something important, even if his experiments are a little hazardous.";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] After all, he might just discover something important, even if his experiments are a little hazardous.";
 				next;
-				mes "[Nelliorde]";
-				mes "Speaking of discoveries, you know how Juno floats in the air, right?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Speaking of discoveries, you know how Juno floats in the air, right?";
 				next;
 				cutin "god_nelluad01",2;
-				mes "[Nelliorde]";
-				mes "It's said that a piece of Ymir's Heart generates enough power";
-				mes "to keep the entire city aloft in the sky. Isn't that amazing?";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] It's said that a piece of Ymir's Heart generates enough power";
+				mes "[DRY-RUN] to keep the entire city aloft in the sky. Isn't that amazing?";
 				next;
-				mes "[Nelliorde]";
-				mes "Even more recent is the news about the discovery of Ymir's Book. You can read it in Juno's Sage Castle. I hear that it contains the secret to meeting Valkyrie...";
+				mes "[DRY-RUN] [Nelliorde]";
+				mes "[DRY-RUN] Even more recent is the news about the discovery of Ymir's Book. You can read it in Juno's Sage Castle. I hear that it contains the secret to meeting Valkyrie...";
 				close2;
 				break;
 			}
 			break;
 		case 3:
-			mes "[Nelliorde]";
-			mes "Can I sing, you ask?";
-			mes "Certainly, and if I may say so, pleasureably. Which song would";
-			mes "you care to hear?";
+			mes "[DRY-RUN] [Nelliorde]";
+			mes "[DRY-RUN] Can I sing, you ask?";
+			mes "[DRY-RUN] Certainly, and if I may say so, pleasureably. Which song would";
+			mes "[DRY-RUN] you care to hear?";
 			next;
-			switch(select("Bragi's Poem:Eternal Chaos:Assassin in the Sunset")) {
+			switch(select("[DRY-RUN] Bragi's Poem:Eternal Chaos:Assassin in the Sunset")) {
 			case 1:
 				if (Zeny > 499) {
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Bragi's Poem!";
-					mes "What a good choice!";
-					mes "I must say this song";
-					mes "represents the";
-					mes "heart of a poet!";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Bragi's Poem!";
+					mes "[DRY-RUN] What a good choice!";
+					mes "[DRY-RUN] I must say this song";
+					mes "[DRY-RUN] represents the";
+					mes "[DRY-RUN] heart of a poet!";
 					soundeffect "bragis_poem.wav",1;
 					set Zeny,Zeny-500;
 					close2;
 				}
 				else {
-					mes "[Nelliorde]";
-					mes "Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
-					mes "to survive~";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
+					mes "[DRY-RUN] to survive~";
 					close2;
 				}
 				break;
 			case 2:
 				if (Zeny > 499) {
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "You must like robust";
-					mes "and energetic music, eh?";
-					mes "As you wish~";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] You must like robust";
+					mes "[DRY-RUN] and energetic music, eh?";
+					mes "[DRY-RUN] As you wish~";
 					soundeffect "chaos_of_eternity.wav",1;
 					set Zeny,Zeny-500;
 					close2;
 				}
 				else {
-					mes "[Nelliorde]";
-					mes "Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
-					mes "to survive~";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
+					mes "[DRY-RUN] to survive~";
 					close2;
 				}
 				break;
 			case 3:
 				if (Zeny > 499) {
 					cutin "god_nelluad02",2;
-					mes "[Nelliorde]";
-					mes "Excellent choice!";
-					mes "Somehow, the image of";
-					mes "the setting sun fits";
-					mes "well with Assassins.";
-					mes "Don't you agree?";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Excellent choice!";
+					mes "[DRY-RUN] Somehow, the image of";
+					mes "[DRY-RUN] the setting sun fits";
+					mes "[DRY-RUN] well with Assassins.";
+					mes "[DRY-RUN] Don't you agree?";
 					soundeffect "assassin_of_sunset.wav",1;
 					set Zeny,Zeny-500;
 					close2;
 				}
 				else {
-					mes "[Nelliorde]";
-					mes "Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
-					mes "to survive~";
+					mes "[DRY-RUN] [Nelliorde]";
+					mes "[DRY-RUN] Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
+					mes "[DRY-RUN] to survive~";
 					close2;
 				}
 				break;
@@ -2086,173 +2086,173 @@ prt_church,113,103,1	script	Praying Man	798,{
 //-----------librarian----------------------------------------------------------
 -	script	Librarian#2_	-1,{
 	if ($God2 < $@god_check1) {
-		mes "[Librarian]";
-		mes "What are you doing here?";
-		mes "Don't touch anything!";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] What are you doing here?";
+		mes "[DRY-RUN] Don't touch anything!";
 		close;
 	}
  	if ($God3 >= $@god_check2) {
-		mes "[Librarian]";
-		mes "What are you doing here?";
-		mes "Don't touch anything!";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] What are you doing here?";
+		mes "[DRY-RUN] Don't touch anything!";
 		close;
 	}
  	if (god_brising > 24 && god_brising < 27) {
-		mes "[Librarian]";
-		mes "Zzzzz...";
-		mes "...Zzzzz...";
-		mes "......Zzzzzz...";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] Zzzzz...";
+		mes "[DRY-RUN] ...Zzzzz...";
+		mes "[DRY-RUN] ......Zzzzzz...";
 		next;
-		mes "^3355FFThis librarian seems to be deeply asleep. It'd be smarter not to wake him if you want to check the Crusader Personnel Records.^000000";
+		mes "[DRY-RUN] ^3355FFThis librarian seems to be deeply asleep. It'd be smarter not to wake him if you want to check the Crusader Personnel Records.^000000";
 		close;
 	}
  	else if (god_brising == 10) {
-		mes "[Librarian]";
-		mes "All confidential personnel records are kept here in the royal library. However, you need authorization";
-		mes "for full access.";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] All confidential personnel records are kept here in the royal library. However, you need authorization";
+		mes "[DRY-RUN] for full access.";
 		next;
-		mes "[Librarian]";
-		mes "Did you say that you";
-		mes "need to find a person?";
-		mes "Please give me that";
-		mes "person's name, as well";
-		mes "as your relationship.";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] Did you say that you";
+		mes "[DRY-RUN] need to find a person?";
+		mes "[DRY-RUN] Please give me that";
+		mes "[DRY-RUN] person's name, as well";
+		mes "[DRY-RUN] as your relationship.";
 		next;
-		switch(select("Lowen, Sibling:Lowen, Spouse:Lowen, Enemy:Lowen, a Friend")) {
+		switch(select("[DRY-RUN] Lowen, Sibling:Lowen, Spouse:Lowen, Enemy:Lowen, a Friend")) {
 		case 1:
 			if (Sex == SEX_MALE) {
-				mes "[Librarian]";
-				mes "How dare you";
-				mes "lie to the royal";
-				mes "librarian!";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] How dare you";
+				mes "[DRY-RUN] lie to the royal";
+				mes "[DRY-RUN] librarian!";
 				next;
-				mes "[Librarian]";
-				mes "It says here";
-				mes "in the records";
-				mes "that Lowen did not";
-				mes "have any male siblings!";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] It says here";
+				mes "[DRY-RUN] in the records";
+				mes "[DRY-RUN] that Lowen did not";
+				mes "[DRY-RUN] have any male siblings!";
 				next;
-				mes "[Librarian]";
-				mes "^333333(Crap...!";
-				mes "I just disclosed";
-				mes "^666666classified^000000 ^333333info!)^000000";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] ^333333(Crap...!";
+				mes "[DRY-RUN] I just disclosed";
+				mes "[DRY-RUN] ^666666classified^000000 ^333333info!)^000000";
 				next;
-				mes "[Librarian]";
-				mes "The Royal Library won't";
-				mes "tolerate identity fraud!";
-				mes "Please leave!";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] The Royal Library won't";
+				mes "[DRY-RUN] tolerate identity fraud!";
+				mes "[DRY-RUN] Please leave!";
 				close;
 			}
 			else {
-				mes "[Librarian]";
-				mes "You're related to Miss Lowen? How have you not received any news about her before?";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] You're related to Miss Lowen? How have you not received any news about her before?";
 				next;
-				mes "[Librarian]";
-				mes "I see...";
-				mes "Separated at birth,";
-				mes "that's truly tragic.";
-				mes "Okay, let me check.";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] I see...";
+				mes "[DRY-RUN] Separated at birth,";
+				mes "[DRY-RUN] that's truly tragic.";
+				mes "[DRY-RUN] Okay, let me check.";
 				next;
-				mes "[Librarian]";
-				mes "I feel terrible telling you this, but it's too late to find Lowen Ellenen, according to the records.";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] I feel terrible telling you this, but it's too late to find Lowen Ellenen, according to the records.";
 				next;
-				mes "[Librarian]";
-				mes "During the monster subjugation mission in Geffen dungeon she reportedly disappeared and... was later pronounced dead.";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] During the monster subjugation mission in Geffen dungeon she reportedly disappeared and... was later pronounced dead.";
 				next;
-				mes "[Librarian]";
-				mes "I'm sorry, but";
-				mes "that's all I know.";
-				mes "Thank you...";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] I'm sorry, but";
+				mes "[DRY-RUN] that's all I know.";
+				mes "[DRY-RUN] Thank you...";
 				set god_brising,11;
 				close;
 			}
 		case 2:
 			if (Sex == SEX_MALE) {
-				mes "[Librarian]";
-				mes "Spouse...?";
-				mes "Well, I guess you look like a husband. Heh, I've got a girlfriend myself. Well, at least I think so. Anyway...";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] Spouse...?";
+				mes "[DRY-RUN] Well, I guess you look like a husband. Heh, I've got a girlfriend myself. Well, at least I think so. Anyway...";
 				next;
-				mes "[Librarian]";
-				mes "Lowen Ellenen";
-				mes "the Crusader, right?";
-				mes "I'm so... sorry.";
-				mes "You might want";
-				mes "to have a seat.";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] Lowen Ellenen";
+				mes "[DRY-RUN] the Crusader, right?";
+				mes "[DRY-RUN] I'm so... sorry.";
+				mes "[DRY-RUN] You might want";
+				mes "[DRY-RUN] to have a seat.";
 				next;
-				mes "[Librarian]";
-				mes "During the monster";
-				mes "subjugation in Geffen";
-				mes "Dungeon, she reportedly";
-				mes "disappeared. And later,";
-				mes "she was pronounced dead.";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] During the monster";
+				mes "[DRY-RUN] subjugation in Geffen";
+				mes "[DRY-RUN] Dungeon, she reportedly";
+				mes "[DRY-RUN] disappeared. And later,";
+				mes "[DRY-RUN] she was pronounced dead.";
 				next;
-				mes "[Librarian]";
-				mes "That's all the";
-				mes "information I have,";
-				mes "sir. I'm truly sorry";
-				mes "for your loss.";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] That's all the";
+				mes "[DRY-RUN] information I have,";
+				mes "[DRY-RUN] sir. I'm truly sorry";
+				mes "[DRY-RUN] for your loss.";
 				set god_brising,11;
 				close;
 			}
 			else {
-				mes "[Librarian]";
-				mes "Hmmm...?";
-				mes "Spouse?";
-				mes "Or ^333333*Ahem*^000000";
-				mes "cohabitational partners?";
+				mes "[DRY-RUN] [Librarian]";
+				mes "[DRY-RUN] Hmmm...?";
+				mes "[DRY-RUN] Spouse?";
+				mes "[DRY-RUN] Or ^333333*Ahem*^000000";
+				mes "[DRY-RUN] cohabitational partners?";
 				next;
-				mes "^3355FFThe librarian";
-				mes "now seems awfully";
-				mes "distracted, as if";
-				mes "he were lost in";
-				mes "vivid daydream...^000000";
+				mes "[DRY-RUN] ^3355FFThe librarian";
+				mes "[DRY-RUN] now seems awfully";
+				mes "[DRY-RUN] distracted, as if";
+				mes "[DRY-RUN] he were lost in";
+				mes "[DRY-RUN] vivid daydream...^000000";
 				close;
 			}
 		case 3:
 			mes "["+ strcharinfo(0) +"]";
-			mes "I'm looking";
-			mes "for Ellenen.";
-			mes "Lowen Ellenen.";
-			mes "My sworn arch-enemy.";
+			mes "[DRY-RUN] I'm looking";
+			mes "[DRY-RUN] for Ellenen.";
+			mes "[DRY-RUN] Lowen Ellenen.";
+			mes "[DRY-RUN] My sworn arch-enemy.";
 			next;
-			mes "[Librarian]";
-			mes "Arch-enemy...?";
-			mes "Um, uh ^666666*Ahem!*^000000";
-			mes "All I can tell you is that there was a Crusader by that name.";
+			mes "[DRY-RUN] [Librarian]";
+			mes "[DRY-RUN] Arch-enemy...?";
+			mes "[DRY-RUN] Um, uh ^666666*Ahem!*^000000";
+			mes "[DRY-RUN] All I can tell you is that there was a Crusader by that name.";
 			next;
-			mes "[Librarian]";
-			mes "I'm sorry, but";
-			mes "I can't tell you";
-			mes "more than that.";
+			mes "[DRY-RUN] [Librarian]";
+			mes "[DRY-RUN] I'm sorry, but";
+			mes "[DRY-RUN] I can't tell you";
+			mes "[DRY-RUN] more than that.";
 			next;
-			mes "[Librarian]";
-			mes "^333333*Cough*^000000";
-			mes "^666666Nutcase!^000000";
+			mes "[DRY-RUN] [Librarian]";
+			mes "[DRY-RUN] ^333333*Cough*^000000";
+			mes "[DRY-RUN] ^666666Nutcase!^000000";
 			close;
 		case 4:
-			mes "[Librarian]";
-			mes "A friend...?";
-			mes "Well, we have a";
-			mes "record of someone";
-			mes "named Lohen Phelica.";
+			mes "[DRY-RUN] [Librarian]";
+			mes "[DRY-RUN] A friend...?";
+			mes "[DRY-RUN] Well, we have a";
+			mes "[DRY-RUN] record of someone";
+			mes "[DRY-RUN] named Lohen Phelica.";
 			next;
-			mes "[Librarian]";
-			mes "He retired from the service a few years ago. I'd like to give you his address, but we don't have any of that information.";
+			mes "[DRY-RUN] [Librarian]";
+			mes "[DRY-RUN] He retired from the service a few years ago. I'd like to give you his address, but we don't have any of that information.";
 			set god_brising,12;
 			close;
 		}
 	}
 	else if (god_brising > 10 && god_brising < 13) {
-		mes "[Librarian]";
-		mes "Now, may";
-		mes "I excuse myself?";
-		mes "Thank you!";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] Now, may";
+		mes "[DRY-RUN] I excuse myself?";
+		mes "[DRY-RUN] Thank you!";
 		close;
 	}
 	else  {
-		mes "[Librarian]";
-		mes "All confidential personnel records are kept here in the royal library. However, you need authorization";
-		mes "for full access.";
+		mes "[DRY-RUN] [Librarian]";
+		mes "[DRY-RUN] All confidential personnel records are kept here in the royal library. However, you need authorization";
+		mes "[DRY-RUN] for full access.";
 		close;
 	}
 
@@ -2387,24 +2387,24 @@ prontera,260,354,4	script	Woman#Rosa Ellenen	101,{
 prontera,262,353,0	script	Gravestone	111,{
 	if ($God2 > $@god_check1) {
 		if (god_brising > 33) {
-			mes "Lowen Ellenen";
-			mes " ";
-			mes " XXXX. XX. XX.";
-			mes "Her noble spirit";
-			mes "was sent to the holy";
-			mes "place by Valkyrie's will.";
+			mes "[DRY-RUN] Lowen Ellenen";
+			mes "[DRY-RUN]  XXXX. XX. XX.";
+			mes "[DRY-RUN] Her noble spirit";
+			mes "[DRY-RUN] was sent to the holy";
+			mes "[DRY-RUN] place by Valkyrie's will.";
+			mes "[DRY-RUN] ^3355FFYou couldn't read the rest of the epitaph since the tombstone has been eroded with time.^000000";
 			close;
 		}
 		else {
-			mes "^3355FFYou couldn't read the rest of the epitaph since the tombstone has been eroded with time.^000000";
+			mes "[DRY-RUN] ^3355FFIt's just an";
 			close;
 		}
 	}
 	else {
-		mes "^3355FFIt's just an";
-		mes "ordinary gravestone.^000000";
+		mes "[DRY-RUN] ordinary gravestone.^000000";
+		mes "[DRY-RUN] ^3355FFNothing really";
 		next;
-		mes "^3355FFNothing really";
+		mes "[DRY-RUN] sets it apart from the rest of the tombstones here in the Prontera cemetary.^000000";
 		mes "sets it apart from the rest of the tombstones here in the Prontera cemetary.^000000";
 		close;
 	}
@@ -2412,61 +2412,61 @@ prontera,262,353,0	script	Gravestone	111,{
  
 gef_dun01,89,192,0	script	#lowentrace	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "^3355FFIt's just an old,";
-		mes "dry piece of wood.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an old,";
+		mes "[DRY-RUN] dry piece of wood.^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "^3355FFIt's just an old,";
-		mes "dry piece of wood.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an old,";
+		mes "[DRY-RUN] dry piece of wood.^000000";
 		close;
 	}
 	if ((god_brising > 20) && (god_brising < 34)) {
-		mes "^3355FFWill you";
-		mes "summon her?^000000";
+		mes "[DRY-RUN] ^3355FFWill you";
+		mes "[DRY-RUN] summon her?^000000";
 		next;
-		switch(select("Yes:No")) {
+		switch(select("[DRY-RUN] Yes:No")) {
 		case 1:
 			input @lowenstring$;
 			if (@lowenstring$ == "Lowen") {
 				if (god_brising == 30) {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8B...Y-you're...";
-					mes "I-I can't stay long,";
-					mes "I'm feeling too weak.";
-					mes "Come closer, I want";
-					mes "to show you something...^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8B...Y-you're...";
+					mes "[DRY-RUN] I-I can't stay long,";
+					mes "[DRY-RUN] I'm feeling too weak.";
+					mes "[DRY-RUN] Come closer, I want";
+					mes "[DRY-RUN] to show you something...^000000";
 					next;
-					mes "^3355FFHer voice grew";
-					mes "softer and softer";
-					mes "until you could no";
-					mes "longer hear her.^000000";
+					mes "[DRY-RUN] ^3355FFHer voice grew";
+					mes "[DRY-RUN] softer and softer";
+					mes "[DRY-RUN] until you could no";
+					mes "[DRY-RUN] longer hear her.^000000";
 					close;
 				}
 				else if (god_brising == 21) {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BPlease tell Rosa";
-					mes "not to worry about me anymore. You might be able to find her beside my grave. I don't want her to suffer anymore...^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BPlease tell Rosa";
+					mes "[DRY-RUN] not to worry about me anymore. You might be able to find her beside my grave. I don't want her to suffer anymore...^000000";
 					close;
 				}
 				else if (god_brising == 25) {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BYou've come back.";
-					mes "Have you met Rosa?";
-					mes "Hm, yes, it sounds like she'd say that. But thank you for sending her my message.^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BYou've come back.";
+					mes "[DRY-RUN] Have you met Rosa?";
+					mes "[DRY-RUN] Hm, yes, it sounds like she'd say that. But thank you for sending her my message.^000000";
 					next;
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BAh, it's too dangero--";
-					mes "This place is too dangerous for you. I hate myself for not being able to help protect you from";
-					mes "these evil creatures. Be careful...^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BAh, it's too dangero--";
+					mes "[DRY-RUN] This place is too dangerous for you. I hate myself for not being able to help protect you from";
+					mes "[DRY-RUN] these evil creatures. Be careful...^000000";
 					close;
 				}
 				else {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BMy spirit is";
-					mes "growing weaker...";
-					mes "Please be careful...";
-					mes "This place is too dangerous.^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BMy spirit is";
+					mes "[DRY-RUN] growing weaker...";
+					mes "[DRY-RUN] Please be careful...";
+					mes "[DRY-RUN] This place is too dangerous.^000000";
 					close;
 				}
 			} 
@@ -2478,51 +2478,51 @@ gef_dun01,89,192,0	script	#lowentrace	111,3,3,{
 		}
 	}
 	else if (god_brising == 20) {
-		mes "[The voice of a female]";
-		mes "^6E7B8BI-It's dangerous...";
-		mes "Be careful...^000000";
+		mes "[DRY-RUN] [The voice of a female]";
+		mes "[DRY-RUN] ^6E7B8BI-It's dangerous...";
+		mes "[DRY-RUN] Be careful...^000000";
 		next;
-		switch(select("Ignore it.:What are you talking about?")) {
+		switch(select("[DRY-RUN] Ignore it.:What are you talking about?")) {
 		case 1:
 			close;
 		case 2:
-			mes "[The voice of a female]";
-			mes "^6E7B8B...No way...";
-			mes "You can hear me?";
-			mes "I can't believe this.";
-			mes "It's impossible...";
-			mes "But if you don't mind,";
-			mes "may I talk to you...?^000000";
+			mes "[DRY-RUN] [The voice of a female]";
+			mes "[DRY-RUN] ^6E7B8B...No way...";
+			mes "[DRY-RUN] You can hear me?";
+			mes "[DRY-RUN] I can't believe this.";
+			mes "[DRY-RUN] It's impossible...";
+			mes "[DRY-RUN] But if you don't mind,";
+			mes "[DRY-RUN] may I talk to you...?^000000";
 			next;
-			switch(select("Holy...! Run!:What are you?!")) {
+			switch(select("[DRY-RUN] Holy...! Run!:What are you?!")) {
 			case 1:
 				close;
 			case 2:
-				mes "[The voice of a female]";
-				mes "^6E7B8BI...";
-				mes "I don't have my body anymore, so... I think I'm a ghost. Yes, I've been wandering in this place ever since I got here.^000000";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BI...";
+				mes "[DRY-RUN] I don't have my body anymore, so... I think I'm a ghost. Yes, I've been wandering in this place ever since I got here.^000000";
 				next;
-				mes "[The voice of a female]";
-				mes "^6E7B8BI'm still not sure why I'm";
-				mes "bound to this realm. If you";
-				mes "don't mind, would you visit";
-				mes "my sister for me?";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BI'm still not sure why I'm";
+				mes "[DRY-RUN] bound to this realm. If you";
+				mes "[DRY-RUN] don't mind, would you visit";
+				mes "[DRY-RUN] my sister for me?";
 				next;
-				mes "[The voice of a female]";
-				mes "^6E7B8BPlease tell her...";
-				mes "Please tell her that her";
-				mes "little sister Lowen is fine.^000000";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BPlease tell her...";
+				mes "[DRY-RUN] Please tell her that her";
+				mes "[DRY-RUN] little sister Lowen is fine.^000000";
 				next;
-				mes "[The voice of a female]";
-				mes "^6E7B8BUm...";
-				mes "If you want to meet me again, just say my name out loud. '^000000Lowen^6E7B8B.'^000000";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BUm...";
+				mes "[DRY-RUN] If you want to meet me again, just say my name out loud. '^000000Lowen^6E7B8B.'^000000";
 				set god_brising,21;
 				close;
 			}
 		}
 	}
 	else {
-		mes "^3355FFYou find a piece of twisted, dry wood. Looking at it seems to bring out a feeling of sadness within you for some reason.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of twisted, dry wood. Looking at it seems to bring out a feeling of sadness within you for some reason.^000000";
 		close;
 	}
 
@@ -2535,70 +2535,70 @@ OnTouch_:
 
 gef_dun01,203,48,0	script	#lowentrace1	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "^3355FFIt's just an old,";
-		mes "dry piece of wood.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an old,";
+		mes "[DRY-RUN] dry piece of wood.^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "^3355FFIt's just an old,";
-		mes "dry piece of wood.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an old,";
+		mes "[DRY-RUN] dry piece of wood.^000000";
 		close;
 	}
 	if ((god_brising > 20) && (god_brising < 34)) {
-		mes "Would you";
-		mes "like to summon her? ";
+		mes "[DRY-RUN] Would you";
+		mes "[DRY-RUN] like to summon her? ";
 		next;
-		switch(select("Yes:No")) {
+		switch(select("[DRY-RUN] Yes:No")) {
 		case 1:
 			input @lowenstring$;
 				if (@lowenstring$ == "Lowen") {
 					if (god_brising == 31) {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BYou came back!";
-					mes "You'll be with me";
-					mes "...Won't you?^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BYou came back!";
+					mes "[DRY-RUN] You'll be with me";
+					mes "[DRY-RUN] ...Won't you?^000000";
 					next;
-					switch(select("Of course.:Sorry, I don't think I can...")) {
+					switch(select("[DRY-RUN] Of course.:Sorry, I don't think I can...")) {
 					case 1:
-						mes "[Lowen Ellenen]";
-						mes "^6E7B8BThank you,";
-						mes "thank you so much...^000000";
+						mes "[DRY-RUN] [Lowen Ellenen]";
+						mes "[DRY-RUN] ^6E7B8BThank you,";
+						mes "[DRY-RUN] thank you so much...^000000";
 						close2;
 						warp "que_god02",47,53;
 						end;
 					case 2:
-						mes "[Lowen Ellenen]";
-						mes "^6E7B8BI understand.";
-						mes "Please take";
-						mes "care of yourself...^000000";
+						mes "[DRY-RUN] [Lowen Ellenen]";
+						mes "[DRY-RUN] ^6E7B8BI understand.";
+						mes "[DRY-RUN] Please take";
+						mes "[DRY-RUN] care of yourself...^000000";
 						close;
 					}
 				} else if (god_brising == 30) {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BAh yes. This is it.";
-					mes "You look very curious about me, yet I am amazed that you can hear my voice. Please let me tell you an old story.^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BAh yes. This is it.";
+					mes "[DRY-RUN] You look very curious about me, yet I am amazed that you can hear my voice. Please let me tell you an old story.^000000";
 					close2;
 					warp "que_god02",47,53;
 					end;
 				}
 				else if (god_brising == 25) {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BYou've come back.";
-					mes "Have you met Rosa?";
-					mes "Hm, yes, it sounds like she'd say that. But thank you for sending her my message.^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BYou've come back.";
+					mes "[DRY-RUN] Have you met Rosa?";
+					mes "[DRY-RUN] Hm, yes, it sounds like she'd say that. But thank you for sending her my message.^000000";
 					next;
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BAh, it's too dangero--";
-					mes "This place is too dangerous for you. I hate myself for not being able to help protect you from";
-					mes "these evil creatures. Be careful...^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BAh, it's too dangero--";
+					mes "[DRY-RUN] This place is too dangerous for you. I hate myself for not being able to help protect you from";
+					mes "[DRY-RUN] these evil creatures. Be careful...^000000";
 					close;
 				}
 				else {
-					mes "[Lowen Ellenen]";
-					mes "^6E7B8BMy spirit is";
-					mes "growing weaker...";
-					mes "Please be careful...";
-					mes "This place is too dangerous.^000000";
+					mes "[DRY-RUN] [Lowen Ellenen]";
+					mes "[DRY-RUN] ^6E7B8BMy spirit is";
+					mes "[DRY-RUN] growing weaker...";
+					mes "[DRY-RUN] Please be careful...";
+					mes "[DRY-RUN] This place is too dangerous.^000000";
 					close;
 				}
 			}
@@ -2610,51 +2610,51 @@ gef_dun01,203,48,0	script	#lowentrace1	111,3,3,{
 		}
 	}
 	else if (god_brising == 20) {
-		mes "[The voice of a female]";
-		mes "^6E7B8BI-It's dangerous...";
-		mes "Be careful...^000000";
+		mes "[DRY-RUN] [The voice of a female]";
+		mes "[DRY-RUN] ^6E7B8BI-It's dangerous...";
+		mes "[DRY-RUN] Be careful...^000000";
 		next;
-		switch(select("Ignore it.:What are you talking about?")) {
+		switch(select("[DRY-RUN] Ignore it.:What are you talking about?")) {
 		case 1:
 			close;
 		case 2:
-			mes "[The voice of a female]";
-			mes "^6E7B8B...No way...";
-			mes "You can hear me?";
-			mes "I can't believe this.";
-			mes "It's impossible...";
-			mes "But if you don't mind,";
-			mes "may I talk to you...?^000000";
+			mes "[DRY-RUN] [The voice of a female]";
+			mes "[DRY-RUN] ^6E7B8B...No way...";
+			mes "[DRY-RUN] You can hear me?";
+			mes "[DRY-RUN] I can't believe this.";
+			mes "[DRY-RUN] It's impossible...";
+			mes "[DRY-RUN] But if you don't mind,";
+			mes "[DRY-RUN] may I talk to you...?^000000";
 			next;
-			switch(select("Holy...! Run!:What are you?!")) {
+			switch(select("[DRY-RUN] Holy...! Run!:What are you?!")) {
 			case 1:
 				close;
 			case 2:
-				mes "[The voice of a female]";
-				mes "^6E7B8BI...";
-				mes "I don't have my body anymore, so... I think I'm a ghost. Yes, I've been wandering in this place ever since I got here.^000000";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BI...";
+				mes "[DRY-RUN] I don't have my body anymore, so... I think I'm a ghost. Yes, I've been wandering in this place ever since I got here.^000000";
 				next;
-				mes "[The voice of a female]";
-				mes "^6E7B8BI'm still not sure why I'm";
-				mes "bound to this realm. If you";
-				mes "don't mind, would you visit";
-				mes "my sister for me?";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BI'm still not sure why I'm";
+				mes "[DRY-RUN] bound to this realm. If you";
+				mes "[DRY-RUN] don't mind, would you visit";
+				mes "[DRY-RUN] my sister for me?";
 				next;
-				mes "[The voice of a female]";
-				mes "^6E7B8BPlease tell her...";
-				mes "Please tell her that her";
-				mes "little sister Lowen is fine.^000000";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BPlease tell her...";
+				mes "[DRY-RUN] Please tell her that her";
+				mes "[DRY-RUN] little sister Lowen is fine.^000000";
 				next;
-				mes "[The voice of a female]";
-				mes "^6E7B8BUm...";
-				mes "If you want to meet me again, just say my name out loud. '^000000Lowen^6E7B8B.'^000000";
+				mes "[DRY-RUN] [The voice of a female]";
+				mes "[DRY-RUN] ^6E7B8BUm...";
+				mes "[DRY-RUN] If you want to meet me again, just say my name out loud. '^000000Lowen^6E7B8B.'^000000";
 				set god_brising,21;
 				close;
 			}
 		}
 	}
 	else {
-		mes "^3355FFYou find a piece of twisted, dry wood. Looking at it seems to bring out a feeling of sadness within you for some reason.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of twisted, dry wood. Looking at it seems to bring out a feeling of sadness within you for some reason.^000000";
 		close;
 	}
 
@@ -2775,27 +2775,27 @@ que_god02,48,55,3	script	Lowen Ellenen	745,{
 
 que_god02,54,64,4	script	Soldier#1_brising	105,1,1,{
  	if (god_brising == 31) {
-		mes "[Soldier]";
-		mes "Have you volunteered for monster subjugation? Would you like to start the mission now?";
+		mes "[DRY-RUN] [Soldier]";
+		mes "[DRY-RUN] Have you volunteered for monster subjugation? Would you like to start the mission now?";
 		next;
-		switch(select("Yes.:I need more time.")) {
+		switch(select("[DRY-RUN] Yes.:I need more time.")) {
 		case 1:
-			mes "[Soldier]";
-			mes "We're you're ready,";
-			mes "come and stand in";
-			mes "front of me.";
+			mes "[DRY-RUN] [Soldier]";
+			mes "[DRY-RUN] We're you're ready,";
+			mes "[DRY-RUN] come and stand in";
+			mes "[DRY-RUN] front of me.";
 			close;
 		case 2:
-			mes "[Soldier]";
-			mes "No problem, just come back when your preparations are completed.";
+			mes "[DRY-RUN] [Soldier]";
+			mes "[DRY-RUN] No problem, just come back when your preparations are completed.";
 			close;
 		}
 	}
 	else {
-		mes "[Soldier]";
-		mes "Please back away.";
-		mes "You are not permitted";
-		mes "to enter!";
+		mes "[DRY-RUN] [Soldier]";
+		mes "[DRY-RUN] Please back away.";
+		mes "[DRY-RUN] You are not permitted";
+		mes "[DRY-RUN] to enter!";
 		close;
 	}
 
@@ -2807,10 +2807,10 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[Soldier]";
-		mes "Please back away.";
-		mes "You are not permitted";
-		mes "to enter!";
+		mes "[DRY-RUN] [Soldier]";
+		mes "[DRY-RUN] Please back away.";
+		mes "[DRY-RUN] You are not permitted";
+		mes "[DRY-RUN] to enter!";
 		close2;
 		warp "que_god02",51,59;
 		end;
@@ -2819,10 +2819,10 @@ OnTouch_:
 }
 
 que_god02,55,64,4	script	Soldier#2_brising	105,1,1,{
-	mes "[Soldier]";
-	mes "Please back away.";
-	mes "You are not permitted";
-	mes "to enter!";
+	mes "[DRY-RUN] [Soldier]";
+	mes "[DRY-RUN] Please back away.";
+	mes "[DRY-RUN] You are not permitted";
+	mes "[DRY-RUN] to enter!";
 	close;
 }
 
@@ -2980,26 +2980,26 @@ que_god02,174,49,0	script	#lowenone	139,0,0,{
 OnTouch_:
 	donpcevent "brisinsold2::OnSold2On";
 	mes "[" + strcharinfo(0) + "]";
-	mes "Where am I?";
-	mes "Isn't this...?!";
+	mes "[DRY-RUN] Where am I?";
+	mes "[DRY-RUN] Isn't this...?!";
 	next;
 	mes "[" + strcharinfo(0) + "]";
-	mes "Ah, I see.";
-	mes "This must be the place where everything happened two years ago. Good, good...";
+	mes "[DRY-RUN] Ah, I see.";
+	mes "[DRY-RUN] This must be the place where everything happened two years ago. Good, good...";
 	next;
-	mes "[Lowen Ellenen]";
-	mes "Shshh...";
-	mes "This is just a reflection of the past. Here, you'll see what happened at the time for yourself.";
+	mes "[DRY-RUN] [Lowen Ellenen]";
+	mes "[DRY-RUN] Shshh...";
+	mes "[DRY-RUN] This is just a reflection of the past. Here, you'll see what happened at the time for yourself.";
 	next;
-	mes "[Lowen Ellenen]";
-	mes "It wasn't any trouble";
-	mes "getting down here. But...";
-	mes "We've got problems now.";
+	mes "[DRY-RUN] [Lowen Ellenen]";
+	mes "[DRY-RUN] It wasn't any trouble";
+	mes "[DRY-RUN] getting down here. But...";
+	mes "[DRY-RUN] We've got problems now.";
 	next;
 	mapannounce "que_god02","D...Doppelganger!!!",0,0x9CFF00;
 	mes "[" + strcharinfo(0) + "]";
-	mes "What...?!";
-	mes "Doppelganger?!";
+	mes "[DRY-RUN] What...?!";
+	mes "[DRY-RUN] Doppelganger?!";
 	next;
 	donpcevent "#brisinsummon::OnDoppel1On";
 	donpcevent "#brisinsummon::OnKnight1On";
@@ -3007,31 +3007,31 @@ OnTouch_:
 	donpcevent "#brisinsummon::OnKnight3On";
 	donpcevent "#brisinsummon::OnLowenOn";
 	mes "[" + strcharinfo(0) + "]";
-	mes "What's going on?";
-	mes "Did you really fight with that creature? H-hey! Answer me!";
+	mes "[DRY-RUN] What's going on?";
+	mes "[DRY-RUN] Did you really fight with that creature? H-hey! Answer me!";
 	next;
-	mes "[Lowen Ellenen]";
-	mes "Yes, this was the place...";
-	mes "The commander gave orders";
-	mes "and then... What happened?";
+	mes "[DRY-RUN] [Lowen Ellenen]";
+	mes "[DRY-RUN] Yes, this was the place...";
+	mes "[DRY-RUN] The commander gave orders";
+	mes "[DRY-RUN] and then... What happened?";
 	next;
 	mapannounce "que_god02","Everyone, stay calm! Get into your positions!",0,0x9CFF00;
-	mes "^4E2F2F[Crusader Commander]";
-	mes "Everyone, get into your positions! Front line, block its movement! Rear line, support the defense!^000000";
+	mes "[DRY-RUN] ^4E2F2F[Crusader Commander]";
+	mes "[DRY-RUN] Everyone, get into your positions! Front line, block its movement! Rear line, support the defense!^000000";
 	emotion ET_GO, getnpcid(0, "#knight1");
 	emotion ET_GO, getnpcid(0, "#knight2");
 	emotion ET_GO, getnpcid(0, "#knight3");
 	emotion ET_SURPRISE, getnpcid(0, "#doppelganger1");
 	next;
-	mes "[Lowen Ellenen]";
-	mes "N-no!";
-	mes "I'm not running away!";
+	mes "[DRY-RUN] [Lowen Ellenen]";
+	mes "[DRY-RUN] N-no!";
+	mes "[DRY-RUN] I'm not running away!";
 	next;
-	mes "^3355FFYou're filled with a great anxiety, and you experience for yourself the fear and pressure Lowen felt during those very moments.^000000";
+	mes "[DRY-RUN] ^3355FFYou're filled with a great anxiety, and you experience for yourself the fear and pressure Lowen felt during those very moments.^000000";
 	next;
-	mes "^4E2F2F[Crusader Commander]";
-	mes "Go, Lowen!";
-	mes "Cast Grand Cross, now!^000000";
+	mes "[DRY-RUN] ^4E2F2F[Crusader Commander]";
+	mes "[DRY-RUN] Go, Lowen!";
+	mes "[DRY-RUN] Cast Grand Cross, now!^000000";
 	next;
 	specialeffect EF_BEGINSPELL7,AREA,"#lowen";
 	mapannounce "que_god02","Mwahaha! Mortals are such fools...",0,0xA8A8A8;
@@ -3042,12 +3042,12 @@ OnTouch_:
 	emotion ET_SURPRISE, getnpcid(0, "#knight3");
 	emotion ET_SURPRISE, getnpcid(0, "#lowen");
 	mes "[" + strcharinfo(0) + "]";
-	mes " ??!!!";
+	mes "[DRY-RUN]  ??!!!";
 	next;
 	specialeffect EF_BEGINSPELL7,AREA,"#doppelganger2";
-	mes "[Male Voice]";
-	mes "Lowen!";
-	mes "Noooooooooo!!!";
+	mes "[DRY-RUN] [Male Voice]";
+	mes "[DRY-RUN] Lowen!";
+	mes "[DRY-RUN] Noooooooooo!!!";
 	close2;
 	warp "que_god02",120,52;
 	donpcevent "#brisinsummon::OnDoppel2Off";
@@ -3064,40 +3064,40 @@ que_god02,120,52,0	script	#monologue	139,0,0,{
 
 OnTouch_:
 	mes "[" + strcharinfo(0) + "]";
-	mes "Where am I?";
-	mes "Isn't that...";
-	mes "What's Hermite";
-	mes "doing here?!";
+	mes "[DRY-RUN] Where am I?";
+	mes "[DRY-RUN] Isn't that...";
+	mes "[DRY-RUN] What's Hermite";
+	mes "[DRY-RUN] doing here?!";
 	next;
-	mes "[Hermite Charles]";
-	mes "No, no, no!";
-	mes "Lowen don't...!";
-	mes "He's gonna kill you!";
+	mes "[DRY-RUN] [Hermite Charles]";
+	mes "[DRY-RUN] No, no, no!";
+	mes "[DRY-RUN] Lowen don't...!";
+	mes "[DRY-RUN] He's gonna kill you!";
 	next;
-	mes "[Hermite Charles]";
-	mes "Grand Cross?!";
-	mes "Using that's";
-	mes "committing suicide!";
-	mes "Lowen, don't do it!";
-	mes "Don't do that, Lowen!";
+	mes "[DRY-RUN] [Hermite Charles]";
+	mes "[DRY-RUN] Grand Cross?!";
+	mes "[DRY-RUN] Using that's";
+	mes "[DRY-RUN] committing suicide!";
+	mes "[DRY-RUN] Lowen, don't do it!";
+	mes "[DRY-RUN] Don't do that, Lowen!";
 	next;
 	mapannounce "que_god02","Mwahaha! Mortals are such fools...",0,0xA8A8A8;
-	mes "[Hermite Charles]";
-	mes "Lowen!";
-	mes "Noooooooooo!!!";
+	mes "[DRY-RUN] [Hermite Charles]";
+	mes "[DRY-RUN] Lowen!";
+	mes "[DRY-RUN] Noooooooooo!!!";
 	next;
 	donpcevent "#brisinsummon::OnHermiteOff";
 	mes "[" + strcharinfo(0) + "]";
-	mes "Where did he go?";
-	mes "Was... Was that";
-	mes "from his mind?";
+	mes "[DRY-RUN] Where did he go?";
+	mes "[DRY-RUN] Was... Was that";
+	mes "[DRY-RUN] from his mind?";
 	mapannounce "que_god02","What happened?! L-Lowen's gone!!",0,0xA8A8A8;
 	next;
-	mes "[Lowen Ellenen]";
-	mes "...";
-	mes "I see now.";
-	mes "I know...";
-	mes "What happened...";
+	mes "[DRY-RUN] [Lowen Ellenen]";
+	mes "[DRY-RUN] ...";
+	mes "[DRY-RUN] I see now.";
+	mes "[DRY-RUN] I know...";
+	mes "[DRY-RUN] What happened...";
 	close2;
 	warp "que_god02",18,127;
 	end;
@@ -3158,74 +3158,74 @@ que_god02,21,127,3	script	Lowen Ellenen#2	745,{
 que_god02,178,127,3	script	Valkyrie#1	811,{
 
 	if (god_brising == 31) {
-		mes "[Valkyrie]";
-		mes "You have passed";
-		mes "the test, Lowen.";
-		mes "I don't have much";
-		mes "time to speak.";
+		mes "[DRY-RUN] [Valkyrie]";
+		mes "[DRY-RUN] You have passed";
+		mes "[DRY-RUN] the test, Lowen.";
+		mes "[DRY-RUN] I don't have much";
+		mes "[DRY-RUN] time to speak.";
 		next;
-		mes "[Valkyrie]";
-		mes "Have you found the strength to release yourself from the guilt and the pain? I have been waiting for you. Will you accept my invitation to Valhalla?";
+		mes "[DRY-RUN] [Valkyrie]";
+		mes "[DRY-RUN] Have you found the strength to release yourself from the guilt and the pain? I have been waiting for you. Will you accept my invitation to Valhalla?";
 		next;
-		switch(select("Yes, I will follow you.:Um... I'm not Lowen.")) {
+		switch(select("[DRY-RUN] Yes, I will follow you.:Um... I'm not Lowen.")) {
 		case 1:
-			mes "[Valkyrie]";
-			mes "Lowen Ellenen, misunderstood hero. I will now promote you";
-			mes "to Einherjar with";
-			mes "the will of God.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Lowen Ellenen, misunderstood hero. I will now promote you";
+			mes "[DRY-RUN] to Einherjar with";
+			mes "[DRY-RUN] the will of God.";
 			next;
-			mes "[Valkyrie]";
-			mes "Your soul and spirit will be reborn in Valhalla as a holy warrior preparing for the holy war.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Your soul and spirit will be reborn in Valhalla as a holy warrior preparing for the holy war.";
 			specialeffect2 EF_BLESSING;
 			next;
-			mes "[Valkyrie]";
-			mes "And...";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] And...";
 			mes ""+ strcharinfo(0) +",";
-			mes "Your exploits are known to me. But I am curious as to what has brought you here?";
+			mes "[DRY-RUN] Your exploits are known to me. But I am curious as to what has brought you here?";
 			next;
-			mes "^3355FFYou explained what happened to the Valkyrie, starting from the Snow Crystal which never melts.^000000";
+			mes "[DRY-RUN] ^3355FFYou explained what happened to the Valkyrie, starting from the Snow Crystal which never melts.^000000";
 			next;
-			mes "[Valkyrie]";
-			mes "I understand.";
-			mes "The story begins a long, long time ago with Freya, the patron goddess of beauty and love.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] I understand.";
+			mes "[DRY-RUN] The story begins a long, long time ago with Freya, the patron goddess of beauty and love.";
 			next;
-			mes "[Valkyrie]";
-			mes "Her teardrop became a beautiful jewel. The snow on which Freya's teardrops have fallen will always retain its crystalline beauty.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Her teardrop became a beautiful jewel. The snow on which Freya's teardrops have fallen will always retain its crystalline beauty.";
 			next;
-			mes "[Valkyrie]";
-			mes "You seek traces of the goddess? Perhaps this is a sign of the end of the thousand year peace. When the time comes, I hope humans will not abandon their faith.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] You seek traces of the goddess? Perhaps this is a sign of the end of the thousand year peace. When the time comes, I hope humans will not abandon their faith.";
 			next;
-			mes "[Valkyrie]";
-			mes "Perhaps, I was also sent to meet you. I wish that humans will use the power derived from the traces of the gods to protect justice.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Perhaps, I was also sent to meet you. I wish that humans will use the power derived from the traces of the gods to protect justice.";
 			next;
-			mes "[Valkyrie]";
+			mes "[DRY-RUN] [Valkyrie]";
 			mes ""+ strcharinfo(0) +"...";
-			mes "Listen. This is";
-			mes "what you must find.";
+			mes "[DRY-RUN] Listen. This is";
+			mes "[DRY-RUN] what you must find.";
 			next;
-			mes "[Valkyrie]";
-			mes "A cold snowy path on";
-			mes "which the goddess tread.";
-			mes "A blue river the goddess crossed.";
-			mes "A narrow path the goddess passed.";
-			mes "Four dwarves that the goddess met...";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] A cold snowy path on";
+			mes "[DRY-RUN] which the goddess tread.";
+			mes "[DRY-RUN] A blue river the goddess crossed.";
+			mes "[DRY-RUN] A narrow path the goddess passed.";
+			mes "[DRY-RUN] Four dwarves that the goddess met...";
 			next;
-			mes "[Valkyrie]";
-			mes "^4d4dffThe beauty of the stars";
-			mes "Wanes in comparison.";
-			mes "We lost our hearts";
-			mes "To that golden hair";
-			mes "And those dazzling eyes.^000000";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] ^4d4dffThe beauty of the stars";
+			mes "[DRY-RUN] Wanes in comparison.";
+			mes "[DRY-RUN] We lost our hearts";
+			mes "[DRY-RUN] To that golden hair";
+			mes "[DRY-RUN] And those dazzling eyes.^000000";
 			next;
-			mes "[Valkyrie]";
-			mes "Remember this.";
-			mes "I shall send you";
-			mes "back to where you";
-			mes "belong.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Remember this.";
+			mes "[DRY-RUN] I shall send you";
+			mes "[DRY-RUN] back to where you";
+			mes "[DRY-RUN] belong.";
 			set god_brising,34;
 			next;
-			mes "[Valkyrie]";
-			mes "For Odin's honor...";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] For Odin's honor...";
 			close2;
 			hideonnpc "#doppelganger1";
 			hideonnpc "#doppelganger2";
@@ -3241,75 +3241,75 @@ que_god02,178,127,3	script	Valkyrie#1	811,{
 			warp "geffen",120,101;
 			end;
 		case 2:
-			mes "[Valkyrie]";
-			mes "Hahahaha...";
-			mes "It has been";
-			mes "a while since";
-			mes "a mortal has";
-			mes "made me laugh.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Hahahaha...";
+			mes "[DRY-RUN] It has been";
+			mes "[DRY-RUN] a while since";
+			mes "[DRY-RUN] a mortal has";
+			mes "[DRY-RUN] made me laugh.";
 			next;
-			mes "[Valkyrie]";
+			mes "[DRY-RUN] [Valkyrie]";
 			mes ""+ strcharinfo(0) +",";
-			mes "I am speaking to the";
-			mes "spirit that rests within you, the girl to whom you lent your body so that she may learn the truth of the past.";
+			mes "[DRY-RUN] I am speaking to the";
+			mes "[DRY-RUN] spirit that rests within you, the girl to whom you lent your body so that she may learn the truth of the past.";
 			next;
-			mes "[Valkyrie]";
-			mes "Lowen Ellenen,";
-			mes "misunderstood hero.";
-			mes "I will now promote you to Einherjar with the will of God.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Lowen Ellenen,";
+			mes "[DRY-RUN] misunderstood hero.";
+			mes "[DRY-RUN] I will now promote you to Einherjar with the will of God.";
 			next;
-			mes "[Valkyrie]";
-			mes "Your soul and";
-			mes "spirit will be reborn in Valhalla as a holy warrior preparing for the holy war.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Your soul and";
+			mes "[DRY-RUN] spirit will be reborn in Valhalla as a holy warrior preparing for the holy war.";
 			specialeffect2 EF_BLESSING;
 			next;
-			mes "[Valkyrie]";
-			mes "And...";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] And...";
 			mes ""+ strcharinfo(0) +",";
-			mes "Your exploits are known to me. But I am curious as to what has brought you here?";
+			mes "[DRY-RUN] Your exploits are known to me. But I am curious as to what has brought you here?";
 			next;
-			mes "^3355FFYou explained what happened to the Valkyrie, starting from the Snow Crystal which never melts.^000000";
+			mes "[DRY-RUN] ^3355FFYou explained what happened to the Valkyrie, starting from the Snow Crystal which never melts.^000000";
 			next;
-			mes "[Valkyrie]";
-			mes "I understand.";
-			mes "The story begins a long, long time ago with Freya, the patron goddess of beauty and love.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] I understand.";
+			mes "[DRY-RUN] The story begins a long, long time ago with Freya, the patron goddess of beauty and love.";
 			next;
-			mes "[Valkyrie]";
-			mes "Her teardrop became a beautiful jewel. The snow on which Freya's teardrops have fallen will always retain its crystalline beauty.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Her teardrop became a beautiful jewel. The snow on which Freya's teardrops have fallen will always retain its crystalline beauty.";
 			next;
-			mes "[Valkyrie]";
-			mes "You seek traces of the goddess? Perhaps this is a sign of the end of the thousand year peace. When the time comes, I hope humans will not abandon their faith.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] You seek traces of the goddess? Perhaps this is a sign of the end of the thousand year peace. When the time comes, I hope humans will not abandon their faith.";
 			next;
-			mes "[Valkyrie]";
-			mes "Perhaps, I was also sent to meet you. I wish that humans will use the power derived from the traces of the gods to protect justice.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Perhaps, I was also sent to meet you. I wish that humans will use the power derived from the traces of the gods to protect justice.";
 			next;
-			mes "[Valkyrie]";
+			mes "[DRY-RUN] [Valkyrie]";
 			mes ""+ strcharinfo(0) +"...";
-			mes "Listen. This is";
-			mes "what you must find.";
+			mes "[DRY-RUN] Listen. This is";
+			mes "[DRY-RUN] what you must find.";
 			next;
-			mes "[Valkyrie]";
-			mes "A cold snowy path on";
-			mes "which the goddess tread.";
-			mes "A blue river the goddess crossed.";
-			mes "A narrow path the goddess passed.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] A cold snowy path on";
+			mes "[DRY-RUN] which the goddess tread.";
+			mes "[DRY-RUN] A blue river the goddess crossed.";
+			mes "[DRY-RUN] A narrow path the goddess passed.";
 			next;
-			mes "[Valkyrie]";
-			mes "^4d4dffThe beauty of the stars";
-			mes "Wanes in comparison.";
-			mes "We lost our hearts";
-			mes "To that golden hair";
-			mes "And those dazzling eyes.^000000";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] ^4d4dffThe beauty of the stars";
+			mes "[DRY-RUN] Wanes in comparison.";
+			mes "[DRY-RUN] We lost our hearts";
+			mes "[DRY-RUN] To that golden hair";
+			mes "[DRY-RUN] And those dazzling eyes.^000000";
 			next;
-			mes "[Valkyrie]";
-			mes "Remember this.";
-			mes "I shall send you";
-			mes "back to where you";
-			mes "belong.";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] Remember this.";
+			mes "[DRY-RUN] I shall send you";
+			mes "[DRY-RUN] back to where you";
+			mes "[DRY-RUN] belong.";
 			set god_brising,34;
 			next;
-			mes "[Valkyrie]";
-			mes "For Odin's honor...";
+			mes "[DRY-RUN] [Valkyrie]";
+			mes "[DRY-RUN] For Odin's honor...";
 			close2;
 			hideonnpc "#doppelganger1";
 			hideonnpc "#doppelganger2";
@@ -3330,157 +3330,157 @@ que_god02,178,127,3	script	Valkyrie#1	811,{
 
 xmas,38,105,0	script	#brisindwarf1	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "^3355FFA lot of snow";
-		mes "is heavily piled";
-		mes "here on the ground.^000000";
+		mes "[DRY-RUN] ^3355FFA lot of snow";
+		mes "[DRY-RUN] is heavily piled";
+		mes "[DRY-RUN] here on the ground.^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "^3355FFA lot of snow";
-		mes "is heavily piled";
-		mes "here on the ground.^000000";
+		mes "[DRY-RUN] ^3355FFA lot of snow";
+		mes "[DRY-RUN] is heavily piled";
+		mes "[DRY-RUN] here on the ground.^000000";
 		close;
 	}
 	if ((god_brising > 39) && (god_brising < 50)) {
-		mes "^3355FFA lot of snow";
-		mes "is heavily piled";
-		mes "here on the ground.^000000";
+		mes "[DRY-RUN] ^3355FFA lot of snow";
+		mes "[DRY-RUN] is heavily piled";
+		mes "[DRY-RUN] here on the ground.^000000";
 		next;
-		mes "^3355FFHowever, this particular mound strikes you as curious for some reason.^000000";
+		mes "[DRY-RUN] ^3355FFHowever, this particular mound strikes you as curious for some reason.^000000";
 		next;
-		switch(select("Sweep the snow away with your hand.:Poke the snow with your finger.:Cancel.")) {
+		switch(select("[DRY-RUN] Sweep the snow away with your hand.:Poke the snow with your finger.:Cancel.")) {
 		case 1:
-			mes "^3355FFAs you sweep the snow with the palm of your hand, some of the snow melts, revealing a strange puzzle cube. It's multi-faceted, but you can read that each facet is inscribed with a lyric.";
+			mes "[DRY-RUN] ^3355FFAs you sweep the snow with the palm of your hand, some of the snow melts, revealing a strange puzzle cube. It's multi-faceted, but you can read that each facet is inscribed with a lyric.";
 			next;
-			switch(select("Adjust the puzzle.:Quit.")) {
+			switch(select("[DRY-RUN] Adjust the puzzle.:Quit.")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "Okay, um...";
-				mes "I guess I should";
-				mes "choose a lyric...";
+				mes "[DRY-RUN] Okay, um...";
+				mes "[DRY-RUN] I guess I should";
+				mes "[DRY-RUN] choose a lyric...";
 				next;
-				switch(select("Wanes in comparison:To that beautiful hair:All of our hearts:The beauty of the stars:To those dazzling eyes")) {
+				switch(select("[DRY-RUN] Wanes in comparison:To that beautiful hair:All of our hearts:The beauty of the stars:To those dazzling eyes")) {
 				case 1:
 					mes "[" + strcharinfo(0) + "]";
-					mes "we gave...";
+					mes "[DRY-RUN] we gave...";
 					break;
 				case 2:
 					mes "[" + strcharinfo(0) + "]";
-					mes "To that beautiful hair";
+					mes "[DRY-RUN] To that beautiful hair";
 					break;
 				case 3:
 					mes "[" + strcharinfo(0) + "]";
-					mes "All of our hearts in";
+					mes "[DRY-RUN] All of our hearts in";
 					break;
 				case 4:
 					mes "[" + strcharinfo(0) + "]";
-					mes "The beauty of the stars";
+					mes "[DRY-RUN] The beauty of the stars";
 					set .@point,.@point + 10;
 					break;
 				case 5:
 					mes "[" + strcharinfo(0) + "]";
-					mes "To those dazzling eyes";
+					mes "[DRY-RUN] To those dazzling eyes";
 					break;
 				}
-				switch(select("We gave:Wanes in comparison.:All of our hearts in:To the steps in:To those dazzling eyes")) {
+				switch(select("[DRY-RUN] We gave:Wanes in comparison.:All of our hearts in:To the steps in:To those dazzling eyes")) {
 				case 1:
-					mes "we gave..";
+					mes "[DRY-RUN] we gave..";
 					break;
 				case 2:
-					mes "Wanes in comparison.";
+					mes "[DRY-RUN] Wanes in comparison.";
 					set .@point,.@point + 10;
 					break;
 				case 3:
-					mes "All of our hearts in";
+					mes "[DRY-RUN] All of our hearts in";
 					break;
 				case 4:
-					mes "To the steps in";
+					mes "[DRY-RUN] To the steps in";
 					break;
 				case 5:
-					mes "To those dazzling eyes";
+					mes "[DRY-RUN] To those dazzling eyes";
 					break;
 				}
-				switch(select("We gave:To that beautiful hair:All of our hearts in:To the steps in:We lost our hearts")) {
+				switch(select("[DRY-RUN] We gave:To that beautiful hair:All of our hearts in:To the steps in:We lost our hearts")) {
 				case 1:
-					mes "We gave";
+					mes "[DRY-RUN] We gave";
 					break;
 				case 2:
-					mes "To that beautiful hair";
+					mes "[DRY-RUN] To that beautiful hair";
 					break;
 				case 3:
-					mes "All of our hearts in";
+					mes "[DRY-RUN] All of our hearts in";
 					break;
 				case 4:
-					mes "To the steps in";
+					mes "[DRY-RUN] To the steps in";
 					break;
 				case 5:
-					mes "We lost our hearts";
+					mes "[DRY-RUN] We lost our hearts";
 					set .@point,.@point + 10;
 					break;
 				}
-				switch(select("To that golden hair:To that beautiful hair:All of our hearts in:To the steps in:To those dazzling eyes")) {
+				switch(select("[DRY-RUN] To that golden hair:To that beautiful hair:All of our hearts in:To the steps in:To those dazzling eyes")) {
 				case 1:
-					mes "To that golden hair";
+					mes "[DRY-RUN] To that golden hair";
 					set .@point,.@point + 10;
 					break;
 				case 2:
-					mes "To that beautiful hair";
+					mes "[DRY-RUN] To that beautiful hair";
 					break;
 				case 3:
-					mes "All of our hearts in";
+					mes "[DRY-RUN] All of our hearts in";
 					break;
 				case 4:
-					mes "To the steps in";
+					mes "[DRY-RUN] To the steps in";
 					break;
 				case 5:
-					mes "To those dazzling eyes";
+					mes "[DRY-RUN] To those dazzling eyes";
 					break;
 				}
-				switch(select("We gave:To that beautiful hair:And those dazzling eyes.:To the steps in:To those dazzling eyes")) {
+				switch(select("[DRY-RUN] We gave:To that beautiful hair:And those dazzling eyes.:To the steps in:To those dazzling eyes")) {
 				case 1:
-					mes "We gave";
+					mes "[DRY-RUN] We gave";
 					break;
 				case 2:
-					mes "To that beautiful hair";
+					mes "[DRY-RUN] To that beautiful hair";
 					break;
 				case 3:
-					mes "And those dazzling eyes.";
+					mes "[DRY-RUN] And those dazzling eyes.";
 					set .@point,.@point + 10;
 					break;
 				case 4:
-					mes "To the steps in";
+					mes "[DRY-RUN] To the steps in";
 					break;
 				case 5:
-					mes "To those dazzling eyes";
+					mes "[DRY-RUN] To those dazzling eyes";
 					break;
 				}
 				next;
 				if (.@point > 40) {
 					hideoffnpc "Alfrik#1";
-					mes "[Old dwarf]";
-					mes "Who are you?!";
-					mes "And why the hell";
-					mes "did you wake me up?";
+					mes "[DRY-RUN] [Old dwarf]";
+					mes "[DRY-RUN] Who are you?!";
+					mes "[DRY-RUN] And why the hell";
+					mes "[DRY-RUN] did you wake me up?";
 					close;
 				}
 				close;
 			case 2:
 				mes "["+ strcharinfo(0) +"]";
-				mes "Huh...?";
-				mes "Nothing happened.";
-				mes "Did I do something wrong, or is this just a completely ordinary puzzle cube?";
+				mes "[DRY-RUN] Huh...?";
+				mes "[DRY-RUN] Nothing happened.";
+				mes "[DRY-RUN] Did I do something wrong, or is this just a completely ordinary puzzle cube?";
 				close;
 			}
 		case 2:
 			mes "["+ strcharinfo(0) +"]";
-			mes "This...";
-			mes "This better not";
-			mes "be just some regular";
-			mes "puzzle cube that someone";
-			mes "just dropped in the snow!";
+			mes "[DRY-RUN] This...";
+			mes "[DRY-RUN] This better not";
+			mes "[DRY-RUN] be just some regular";
+			mes "[DRY-RUN] puzzle cube that someone";
+			mes "[DRY-RUN] just dropped in the snow!";
 			close;
 		case 3:
-			mes "^3355FFYou use your finger to poke the pile of snow. However, you hurt your finger a little bit after hitting something really solid.^000000";
+			mes "[DRY-RUN] ^3355FFYou use your finger to poke the pile of snow. However, you hurt your finger a little bit after hitting something really solid.^000000";
 			emotion ET_ANGER, playerattached();
 			percentheal -20,0;
 			close;
@@ -3489,9 +3489,9 @@ xmas,38,105,0	script	#brisindwarf1	111,3,3,{
 		}
 	}
 	else {
-		mes "^3355FFA lot of snow";
-		mes "is heavily piled";
-		mes "here on the ground.^000000";
+		mes "[DRY-RUN] ^3355FFA lot of snow";
+		mes "[DRY-RUN] is heavily piled";
+		mes "[DRY-RUN] here on the ground.^000000";
 		close;
 	}
 
@@ -3504,60 +3504,60 @@ OnTouch_:
 
 xmas,36,103,4	script	Alfrik#1	826,{
 	if (god_brising == 49) {
-		mes "[Alfrik]";
-		mes "I've got nothing";
-		mes "more to say! Now";
-		mes "get out of here!";
-		mes "I don't want to";
-		mes "be found!";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] I've got nothing";
+		mes "[DRY-RUN] more to say! Now";
+		mes "[DRY-RUN] get out of here!";
+		mes "[DRY-RUN] I don't want to";
+		mes "[DRY-RUN] be found!";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
 	}
 	else if (god_brising == 48) {
-		mes "[Alfrik]";
-		mes "What's up, human?";
-		mes "All of us have awakened.";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] What's up, human?";
+		mes "[DRY-RUN] All of us have awakened.";
 		next;
-		switch(select("I just wanted to say hello.:What are Brisingamen's materials?")) {
+		switch(select("[DRY-RUN] I just wanted to say hello.:What are Brisingamen's materials?")) {
 		case 1:
-			mes "[Alfrik]";
-			mes "Your gesture is appreciated, but I'd rather hide than socialize. I don't want to be found by the crows of Odin!";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Your gesture is appreciated, but I'd rather hide than socialize. I don't want to be found by the crows of Odin!";
 			close2;
 			hideonnpc "Alfrik#1";
 			end;
 		case 2:
-			mes "[Alfrik]";
-			mes "Materials for Brisingamen? For the human imitation, the materials are pretty easy to gather...";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Materials for Brisingamen? For the human imitation, the materials are pretty easy to gather...";
 			next;
-			mes "[Alfrik]";
-			mes "The power of weapons used by gods, when they battled demons a thousand years ago, and everything detached from Brisingamen. That's basically what you need.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] The power of weapons used by gods, when they battled demons a thousand years ago, and everything detached from Brisingamen. That's basically what you need.";
 			next;
-			mes "[Alfrik]";
-			mes "If you want to";
-			mes "create a Brisingamen,";
-			mes "you will need.....";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] If you want to";
+			mes "[DRY-RUN] create a Brisingamen,";
+			mes "[DRY-RUN] you will need.....";
 			next;
-			mes "[Alfrik]";
-			mes "^4d4dffFreya's Jewel";
-			mes "Silver Ornament";
-			mes "Snow Crystal";
-			mes "Ripple";
-			mes "Drifting Air^000000";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] ^4d4dffFreya's Jewel";
+			mes "[DRY-RUN] Silver Ornament";
+			mes "[DRY-RUN] Snow Crystal";
+			mes "[DRY-RUN] Ripple";
+			mes "[DRY-RUN] Drifting Air^000000";
 			next;
-			mes "[Alfrik]";
-			mes "You might need some gems, like Saphire, Peal, Opal, Curse Ruby, and maybe even some Gold to decorate the necklace.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] You might need some gems, like Saphire, Peal, Opal, Curse Ruby, and maybe even some Gold to decorate the necklace.";
 			next;
-			mes "[Alfrik]";
-			mes "Although I give freely of my advice, we four Dwarves will no longer do smithing work unless it be Freya's command.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Although I give freely of my advice, we four Dwarves will no longer do smithing work unless it be Freya's command.";
 			next;
-			mes "[Alfrik]";
-			mes "But I can promise you one thing. Since the four of us have awakened, humans will obtain the Brisingamen for sure.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] But I can promise you one thing. Since the four of us have awakened, humans will obtain the Brisingamen for sure.";
 			next;
-			mes "[Alfrik]";
-			mes "Now...";
-			mes "Leave me";
-			mes "in peace.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Now...";
+			mes "[DRY-RUN] Leave me";
+			mes "[DRY-RUN] in peace.";
 			set god_brising,49;
 			close2;
 			hideonnpc "Alfrik#1";
@@ -3565,118 +3565,118 @@ xmas,36,103,4	script	Alfrik#1	826,{
 		}
 	}
 	else if (god_brising == 40) {
-		mes "[Alfrik]";
-		mes "^333333*Yawn...*^000000";
-		mes "It's been a long time since I've been outside! W-wait! You're not...";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] ^333333*Yawn...*^000000";
+		mes "[DRY-RUN] It's been a long time since I've been outside! W-wait! You're not...";
 		next;
-		mes "[Alfrik]";
-		mes "Who sent you?!";
-		mes "Loki? Heimdall?";
-		mes "Or was it Freya?";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] Who sent you?!";
+		mes "[DRY-RUN] Loki? Heimdall?";
+		mes "[DRY-RUN] Or was it Freya?";
 		next;
-		switch(select("No one, it was an accident!:It was Valkyrie.")) {
+		switch(select("[DRY-RUN] No one, it was an accident!:It was Valkyrie.")) {
 		case 1:
-			mes "[Alfrik]";
-			mes "Don't even think of lying to me, human! There's no way you could have awoken me without knowing";
-			mes "the password! Now, speak!";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Don't even think of lying to me, human! There's no way you could have awoken me without knowing";
+			mes "[DRY-RUN] the password! Now, speak!";
 			next;
-			switch(select("Valkyrie told me.:It was a coincidence!")) {
+			switch(select("[DRY-RUN] Valkyrie told me.:It was a coincidence!")) {
 			case 1:
-				mes "[Alfrik]";
-				mes "Valkyrie...?";
-				mes "Odin's warmonger?";
-				mes "What could Odin want,";
-				mes "I haven't done anything wrong!";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] Valkyrie...?";
+				mes "[DRY-RUN] Odin's warmonger?";
+				mes "[DRY-RUN] What could Odin want,";
+				mes "[DRY-RUN] I haven't done anything wrong!";
 				next;
-				mes "^3355FFYou explained everything to Alfrik, who seems to worry about being targeted by Odin.^000000";
+				mes "[DRY-RUN] ^3355FFYou explained everything to Alfrik, who seems to worry about being targeted by Odin.^000000";
 				next;
-				mes "[Alfrik]";
-				mes "So that's it.";
-				mes "Seeking out our";
-				mes "masterpiece? You";
-				mes "humans must desire";
-				mes "the power of the gods.";
-				mes "Interesting.";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] So that's it.";
+				mes "[DRY-RUN] Seeking out our";
+				mes "[DRY-RUN] masterpiece? You";
+				mes "[DRY-RUN] humans must desire";
+				mes "[DRY-RUN] the power of the gods.";
+				mes "[DRY-RUN] Interesting.";
 				next;
-				mes "[Alfrik]";
-				mes "The time for us to revive may actually have come! Alright then,";
-				mes "I, Alfrik shall cooperate with you humans.";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] The time for us to revive may actually have come! Alright then,";
+				mes "[DRY-RUN] I, Alfrik shall cooperate with you humans.";
 				next;
-				mes "[Alfrik]";
-				mes "After all, getting on Odin's good side like this is much better than being tortured by Loki.";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] After all, getting on Odin's good side like this is much better than being tortured by Loki.";
 				next;
-				mes "[Alfrik]";
-				mes "Now...";
-				mes "Understand that";
-				mes "there can only be";
-				mes "one true Brisingamen.";
-				mes "After all, it's our";
-				mes "masterpiece.";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] Now...";
+				mes "[DRY-RUN] Understand that";
+				mes "[DRY-RUN] there can only be";
+				mes "[DRY-RUN] one true Brisingamen.";
+				mes "[DRY-RUN] After all, it's our";
+				mes "[DRY-RUN] masterpiece.";
 				next;
-				mes "[Alfrik]";
-				mes "However, that doesn't mean an imitation, with the same power as that godly item, can't be made. Isn't it tempting, the power of a god?";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] However, that doesn't mean an imitation, with the same power as that godly item, can't be made. Isn't it tempting, the power of a god?";
 				next;
-				mes "[Alfrik]";
-				mes "First things first. If you want to make the necklace, you must";
-				mes "awaken all four of us. Because of Loki's threat, we all hid ourselves in different places.";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] First things first. If you want to make the necklace, you must";
+				mes "[DRY-RUN] awaken all four of us. Because of Loki's threat, we all hid ourselves in different places.";
 				next;
-				mes "[Alfrik]";
-				mes "Go wake all my brothers!";
-				mes "Let's see if the Brisingamen can be made once again! First, go and wake Dvalin before the gods and giants find out!";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] Go wake all my brothers!";
+				mes "[DRY-RUN] Let's see if the Brisingamen can be made once again! First, go and wake Dvalin before the gods and giants find out!";
 				set god_brising,41;
 				close2;
 				hideonnpc "Alfrik#1";
 				end;
 			case 2:
-				mes "[Alfrik]";
-				mes "Coincidence?";
-				mes "Impossible! How dare you lie! Don't ever come back, or the gods will find me!";
+				mes "[DRY-RUN] [Alfrik]";
+				mes "[DRY-RUN] Coincidence?";
+				mes "[DRY-RUN] Impossible! How dare you lie! Don't ever come back, or the gods will find me!";
 				close2;
 				hideonnpc "Alfrik#1";
 				end;
 			}
 		case 2:
-			mes "[Alfrik]";
-			mes "Valkyrie...?";
-			mes "Odin's warmonger?";
-			mes "What could Odin want,";
-			mes "I haven't done anything wrong!";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Valkyrie...?";
+			mes "[DRY-RUN] Odin's warmonger?";
+			mes "[DRY-RUN] What could Odin want,";
+			mes "[DRY-RUN] I haven't done anything wrong!";
 			next;
-			mes "^3355FFYou explained everything to Alfrik, who seems to worry about being targeted by Odin.^000000";
+			mes "[DRY-RUN] ^3355FFYou explained everything to Alfrik, who seems to worry about being targeted by Odin.^000000";
 			next;
-			mes "[Alfrik]";
-			mes "So that's it.";
-			mes "Seeking out our";
-			mes "masterpiece? You";
-			mes "humans must desire";
-			mes "the power of the gods.";
-			mes "Interesting.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] So that's it.";
+			mes "[DRY-RUN] Seeking out our";
+			mes "[DRY-RUN] masterpiece? You";
+			mes "[DRY-RUN] humans must desire";
+			mes "[DRY-RUN] the power of the gods.";
+			mes "[DRY-RUN] Interesting.";
 			next;
-			mes "[Alfrik]";
-			mes "The time for us to revive may actually have come! Alright then,";
-			mes "I, Alfrik shall cooperate with you humans.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] The time for us to revive may actually have come! Alright then,";
+			mes "[DRY-RUN] I, Alfrik shall cooperate with you humans.";
 			next;
-			mes "[Alfrik]";
-			mes "After all, getting on Odin's good side like this is much better than being tortured by Loki.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] After all, getting on Odin's good side like this is much better than being tortured by Loki.";
 			next;
-			mes "[Alfrik]";
-			mes "Now...";
-			mes "Understand that";
-			mes "there can only be";
-			mes "one true Brisingamen.";
-			mes "After all, it's our";
-			mes "masterpiece.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Now...";
+			mes "[DRY-RUN] Understand that";
+			mes "[DRY-RUN] there can only be";
+			mes "[DRY-RUN] one true Brisingamen.";
+			mes "[DRY-RUN] After all, it's our";
+			mes "[DRY-RUN] masterpiece.";
 			next;
-			mes "[Alfrik]";
-			mes "However, that doesn't mean an imitation, with the same power as that godly item, can't be made. Isn't it tempting, the power of a god?";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] However, that doesn't mean an imitation, with the same power as that godly item, can't be made. Isn't it tempting, the power of a god?";
 			next;
-			mes "[Alfrik]";
-			mes "First things first. If you want to make the necklace, you must";
-			mes "awaken all four of us. Because of Loki's threat, we all hid ourselves in different places.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] First things first. If you want to make the necklace, you must";
+			mes "[DRY-RUN] awaken all four of us. Because of Loki's threat, we all hid ourselves in different places.";
 			next;
-			mes "[Alfrik]";
-			mes "Go wake all my brothers!";
-			mes "Let's see if the Brisingamen can be made once again! First, go and wake Dvalin before the gods and giants find out!";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Go wake all my brothers!";
+			mes "[DRY-RUN] Let's see if the Brisingamen can be made once again! First, go and wake Dvalin before the gods and giants find out!";
 			set god_brising,41;
 			close2;
 			hideonnpc "Alfrik#1";
@@ -3684,75 +3684,75 @@ xmas,36,103,4	script	Alfrik#1	826,{
 		}
 	}
 	else if (god_brising == 41) {
-		mes "[Alfrik]";
-		mes "Why are you still here?";
-		mes "I told you go wake Dvalin!";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] Why are you still here?";
+		mes "[DRY-RUN] I told you go wake Dvalin!";
 		next;
-		switch(select("Where is he?:Tell me more about Brisingamen.")) {
+		switch(select("[DRY-RUN] Where is he?:Tell me more about Brisingamen.")) {
 		case 1:
-			mes "[Alfrik]";
-			mes "Ah. Right.";
-			mes "I forgot to tell";
-			mes "you. Poor Dvalin.";
-			mes "Now, where was it?";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Ah. Right.";
+			mes "[DRY-RUN] I forgot to tell";
+			mes "[DRY-RUN] you. Poor Dvalin.";
+			mes "[DRY-RUN] Now, where was it?";
 			next;
-			mes "[Alfrik]";
-			mes "We were afraid that Odin and Heimdall would punish us because, well, in their eyes we disgraced the goddess.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] We were afraid that Odin and Heimdall would punish us because, well, in their eyes we disgraced the goddess.";
 			next;
-			mes "[Alfrik]";
-			mes "Oh course, they never would have been angered if it weren't for Loki's trickery.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Oh course, they never would have been angered if it weren't for Loki's trickery.";
 			next;
-			mes "[Alfrik]";
-			mes "We loved Freya so much that we decided to hide ourselves beneath the path that she walked. To be as close to any trace of her as we could.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] We loved Freya so much that we decided to hide ourselves beneath the path that she walked. To be as close to any trace of her as we could.";
 			next;
-			mes "[Alfrik]";
-			mes "Poor Dvalin is sleeping";
-			mes "under the path in the East. Once there, you'll feel the scent the goddess. I can't remember where the others are sleeping, but you cannot forget these words...";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Poor Dvalin is sleeping";
+			mes "[DRY-RUN] under the path in the East. Once there, you'll feel the scent the goddess. I can't remember where the others are sleeping, but you cannot forget these words...";
 			next;
-			mes "[Alfrik]";
-			mes "^4d4dffHer lovely scent";
-			mes "Still lingers in the wind.";
-			mes "We surrendered our hearts";
-			mes "To those tender teardrops";
-			mes "Those seductive red lips.^000000";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] ^4d4dffHer lovely scent";
+			mes "[DRY-RUN] Still lingers in the wind.";
+			mes "[DRY-RUN] We surrendered our hearts";
+			mes "[DRY-RUN] To those tender teardrops";
+			mes "[DRY-RUN] Those seductive red lips.^000000";
 			set god_brising,42;
 			close2;
 			hideonnpc "Alfrik#1";
 			end;
 		case 2:
-			mes "[Alfrik]";
-			mes "Brisingamen is our masterpiece, a necklace we forged for Freya. Even if we tried making it again, I doubt it would be as good.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Brisingamen is our masterpiece, a necklace we forged for Freya. Even if we tried making it again, I doubt it would be as good.";
 			next;
-			mes "[Alfrik]";
-			mes "It looked perfect on Freya. Very difficult to create jewelry that actually enhances the attractiveness of the goddess of beauty.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] It looked perfect on Freya. Very difficult to create jewelry that actually enhances the attractiveness of the goddess of beauty.";
 			next;
-			mes "[Alfrik]";
-			mes "Perhaps our greatest reward was that beautiful smile of satisfaction she gave us when that we gave her that necklace. We loved her so.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Perhaps our greatest reward was that beautiful smile of satisfaction she gave us when that we gave her that necklace. We loved her so.";
 			next;
-			mes "[Alfrik]";
-			mes "Is it that wrong for dwarves to love a goddess? Perhaps we were punished because the gods, even Odin, loved her as well.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Is it that wrong for dwarves to love a goddess? Perhaps we were punished because the gods, even Odin, loved her as well.";
 			next;
-			mes "[Alfrik]";
-			mes "In any case, we've never seen the true Brisingamen again. But something very similar to it can be created...";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] In any case, we've never seen the true Brisingamen again. But something very similar to it can be created...";
 			next;
-			mes "[Alfrik]";
-			mes "You'll need materials that have been graced by the goddess' presense. Traces of the goddess in the earth, water and the wind.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] You'll need materials that have been graced by the goddess' presense. Traces of the goddess in the earth, water and the wind.";
 			next;
-			mes "[Alfrik]";
-			mes "And if the Brisingamen is recreated, the power of a god will be in the hands of a human. That human could be you!";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] And if the Brisingamen is recreated, the power of a god will be in the hands of a human. That human could be you!";
 			next;
-			mes "[Alfrik]";
-			mes "Poor Dvalin is sleeping under the path in the East. Once there, you'll feel the scent the goddess.";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] Poor Dvalin is sleeping under the path in the East. Once there, you'll feel the scent the goddess.";
 			next;
-			mes "[Alfrik]";
-			mes "I can't remember where the others are sleeping, but you cannot forget these words...";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] I can't remember where the others are sleeping, but you cannot forget these words...";
 			next;
-			mes "[Alfrik]";
-			mes "^4d4dffHer lovely scent";
-			mes "Still lingers in the wind.";
-			mes "We surrendered our hearts";
-			mes "To those tender teardrops";
-			mes "Those seductive red lips.^000000";
+			mes "[DRY-RUN] [Alfrik]";
+			mes "[DRY-RUN] ^4d4dffHer lovely scent";
+			mes "[DRY-RUN] Still lingers in the wind.";
+			mes "[DRY-RUN] We surrendered our hearts";
+			mes "[DRY-RUN] To those tender teardrops";
+			mes "[DRY-RUN] Those seductive red lips.^000000";
 			set god_brising,42;
 			close2;
 			hideonnpc "Alfrik#1";
@@ -3760,31 +3760,31 @@ xmas,36,103,4	script	Alfrik#1	826,{
 		}
 	}
 	else if (god_brising == 42) {
-		mes "[Alfrik]";
-		mes "Will you please!";
-		mes "Get lost before Loki and Heimdall find out I've awakened! Now hurry, find Dvalin, and wake him up!";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] Will you please!";
+		mes "[DRY-RUN] Get lost before Loki and Heimdall find out I've awakened! Now hurry, find Dvalin, and wake him up!";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
 	}
 	else if ((god_brising > 42) && (god_brising < 48)) {
-		mes "[Alfrik]";
-		mes "Oh, finally all of us have awakened! Now, the power of the goddess can be retrieved from the earth, water and the wind!";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] Oh, finally all of us have awakened! Now, the power of the goddess can be retrieved from the earth, water and the wind!";
 		next;
-		mes "[Alfrik]";
-		mes "Hahahahaha!";
-		mes "This should be";
-		mes "interesting!";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] Hahahahaha!";
+		mes "[DRY-RUN] This should be";
+		mes "[DRY-RUN] interesting!";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
 	}
 	else {
-		mes "[Alfrik]";
-		mes "Mmm...?";
-		mes "I've got";
-		mes "no business";
-		mes "with you.";
+		mes "[DRY-RUN] [Alfrik]";
+		mes "[DRY-RUN] Mmm...?";
+		mes "[DRY-RUN] I've got";
+		mes "[DRY-RUN] no business";
+		mes "[DRY-RUN] with you.";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
@@ -3797,168 +3797,168 @@ OnInit:
 
 prt_fild02,185,269,0	script	#brisindwarf2	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "^3355FFIt's just an";
-		mes "ordinary rock.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an";
+		mes "[DRY-RUN] ordinary rock.^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "^3355FFIt's just an";
-		mes "ordinary rock.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an";
+		mes "[DRY-RUN] ordinary rock.^000000";
 		close;
 	}
 	if (god_brising > 41) {
-		mes "^3355FFIt's just an ordinary rock underneath the shadow of";
-		mes "a tree. But on closer inspection, you notice that the moss on top of the rock looks perfectly flat.^000000";
+		mes "[DRY-RUN] ^3355FFIt's just an ordinary rock underneath the shadow of";
+		mes "[DRY-RUN] a tree. But on closer inspection, you notice that the moss on top of the rock looks perfectly flat.^000000";
 		next;
-		switch(select("Step on it.:Sweep the surface.:Scratch the surface.:Kick it.")) {
+		switch(select("[DRY-RUN] Step on it.:Sweep the surface.:Scratch the surface.:Kick it.")) {
 		case 1:
-			mes "^3355FFYou gingerly place your foot on the top of the stone. The entire rock suddenly swings downward";
-			mes "into the ground, and you fall helplessly...^000000";
+			mes "[DRY-RUN] ^3355FFYou gingerly place your foot on the top of the stone. The entire rock suddenly swings downward";
+			mes "[DRY-RUN] into the ground, and you fall helplessly...^000000";
 			close2;
 			warp "prt_fild02",165,224;
 			end;
 		case 2:
-			mes "^3355FFAs you sweep away the moss with your hand, you scratch your palm from the sharp edges of the rock.^000000";
+			mes "[DRY-RUN] ^3355FFAs you sweep away the moss with your hand, you scratch your palm from the sharp edges of the rock.^000000";
 			emotion ET_SURPRISE, playerattached();
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Damn...!";
-			mes "I'm bleeding!";
-			mes "But why didn't";
-			mes "anything else";
-			mes "happen?!";
+			mes "[DRY-RUN] Damn...!";
+			mes "[DRY-RUN] I'm bleeding!";
+			mes "[DRY-RUN] But why didn't";
+			mes "[DRY-RUN] anything else";
+			mes "[DRY-RUN] happen?!";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "This rock had";
-			mes "better be one of";
-			mes "those secret rocks!";
-			mes "Or else...!";
+			mes "[DRY-RUN] This rock had";
+			mes "[DRY-RUN] better be one of";
+			mes "[DRY-RUN] those secret rocks!";
+			mes "[DRY-RUN] Or else...!";
 			close;
 		case 3:
-			mes "^3355FFYou scratch away";
-			mes "at the moss, and feel that the surface of the rock has even recesses.";
+			mes "[DRY-RUN] ^3355FFYou scratch away";
+			mes "[DRY-RUN] at the moss, and feel that the surface of the rock has even recesses.";
 			next;
-			mes "^3355FFAfter peeling off the moss, a series of tiles, etched with faint words, are revealed on top of the rock. These tiles could be moved around, like in a puzzle.^000000";
+			mes "[DRY-RUN] ^3355FFAfter peeling off the moss, a series of tiles, etched with faint words, are revealed on top of the rock. These tiles could be moved around, like in a puzzle.^000000";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Another puzzle?";
-			mes "This was just like when I had to give Alfrik's password. Okay, let me see...";
+			mes "[DRY-RUN] Another puzzle?";
+			mes "[DRY-RUN] This was just like when I had to give Alfrik's password. Okay, let me see...";
 			set .@point,0;
 			next;
-			switch(select("To the tear drops dripping on the way:Her lovely scent:We gave:To the seducing red lips:Our hearts in")) {
+			switch(select("[DRY-RUN] To the tear drops dripping on the way:Her lovely scent:We gave:To the seducing red lips:Our hearts in")) {
 			case 1:
 				mes "["+ strcharinfo(0) +"]";
-				mes "To the tear drops dripping on the way";
+				mes "[DRY-RUN] To the tear drops dripping on the way";
 			break;
 			case 2:
 				mes "["+ strcharinfo(0) +"]";
-				mes "Her lovely scent";
+				mes "[DRY-RUN] Her lovely scent";
 				set .@point,.@point + 10;
 			break;
 			case 3:
 				mes "["+ strcharinfo(0) +"]";
-				mes "We gave";
+				mes "[DRY-RUN] We gave";
 			break;
 			case 4:
 				mes "["+ strcharinfo(0) +"]";
-				mes "To the seducing red lips";
+				mes "[DRY-RUN] To the seducing red lips";
 				break;
 			case 5:
 				mes "["+ strcharinfo(0) +"]";
-				mes "Our hearts in";
+				mes "[DRY-RUN] Our hearts in";
 				break;
 			}
-			switch(select("Still lingers in the wind.:To the scent drifted in the wind:We gave:To the seducing red lips:Our hearts in")) {
+			switch(select("[DRY-RUN] Still lingers in the wind.:To the scent drifted in the wind:We gave:To the seducing red lips:Our hearts in")) {
 			case 1:
-				mes "Still lingers in the wind.";
+				mes "[DRY-RUN] Still lingers in the wind.";
 				set .@point,.@point + 10;
 				break;
 			case 2:
-				mes "To the scent drifted in the wind";
+				mes "[DRY-RUN] To the scent drifted in the wind";
 				break;
 			case 3:
-				mes "We gave";
+				mes "[DRY-RUN] We gave";
 				break;
 			case 4:
-				mes "To the seducing red lips";
+				mes "[DRY-RUN] To the seducing red lips";
 			case 5:
-				mes "Our hearts in";
+				mes "[DRY-RUN] Our hearts in";
 				break;
 			}
-			switch(select("To the tear drops dripping on the way:To the scent drifted in the wind:We gave:We surrendered our hearts:Our hearts in")) {
+			switch(select("[DRY-RUN] To the tear drops dripping on the way:To the scent drifted in the wind:We gave:We surrendered our hearts:Our hearts in")) {
 			case 1:
-				mes "To the tear drops dripping on the way";
+				mes "[DRY-RUN] To the tear drops dripping on the way";
 				break;
 			case 2:
-				mes "To the scent drifted in the wind";
+				mes "[DRY-RUN] To the scent drifted in the wind";
 				break;
 			case 3:
-				mes "We gave";
+				mes "[DRY-RUN] We gave";
 				break;
 			case 4:
-				mes "We surrendered our hearts";
+				mes "[DRY-RUN] We surrendered our hearts";
 				set .@point,.@point + 10;
 			case 5:
-				mes "Our hearts in";
+				mes "[DRY-RUN] Our hearts in";
 				break;
 			}
-			switch(select("To the tear drops dripping on the way:To the scent drifted in the wind:To those tender teardrops:To the seducing red lips:Our hearts in")) {
+			switch(select("[DRY-RUN] To the tear drops dripping on the way:To the scent drifted in the wind:To those tender teardrops:To the seducing red lips:Our hearts in")) {
 			case 1:
-				mes "To the tear drops dripping on the way";
+				mes "[DRY-RUN] To the tear drops dripping on the way";
 				break;
 			case 2:
-				mes "To the scent drifted in the wind";
+				mes "[DRY-RUN] To the scent drifted in the wind";
 				break;
 			case 3:
-				mes "To those tender teardrops";
+				mes "[DRY-RUN] To those tender teardrops";
 				set .@point,.@point + 10;
 				break;
 			case 4:
-				mes "To the seducing red lips";
+				mes "[DRY-RUN] To the seducing red lips";
 				break;
 			case 5:
-				mes "Our hearts in";
+				mes "[DRY-RUN] Our hearts in";
 				break;
 			}
-			switch(select("To the tear drops dripping on the way:To the scent drifted in the wind:We gave:To the seducing red lips:Those seductive red lips")) {
+			switch(select("[DRY-RUN] To the tear drops dripping on the way:To the scent drifted in the wind:We gave:To the seducing red lips:Those seductive red lips")) {
 			case 1:
-				mes "To the tear drops dripping on the way";
+				mes "[DRY-RUN] To the tear drops dripping on the way";
 				break;
 			case 2:
-				mes "To the scent drifted in the wind";
+				mes "[DRY-RUN] To the scent drifted in the wind";
 				break;
 			case 3:
-				mes "We gave";
+				mes "[DRY-RUN] We gave";
 				break;
 			case 4:
-				mes "To the seducing red lips";
+				mes "[DRY-RUN] To the seducing red lips";
 				break;
 			case 5:
-				mes "Those seductive red lips";
+				mes "[DRY-RUN] Those seductive red lips";
 				set .@point,.@point + 10;
 				break;
 			}
 			next;
 			if (.@point > 40) {
 				hideoffnpc "Dvalin#1";
-				mes "[Dvalin]";
-				mes "...?";
-				mes "Alfrik?";
-				mes "Is that you?";
+				mes "[DRY-RUN] [Dvalin]";
+				mes "[DRY-RUN] ...?";
+				mes "[DRY-RUN] Alfrik?";
+				mes "[DRY-RUN] Is that you?";
 				close;
 			}
 			close;
 		case 4:
 			mes "["+ strcharinfo(0) +"]";
-			mes "^333333*Cough cough!*";
-			mes "Aaaack!";
-			mes "It's so dusty!";
+			mes "[DRY-RUN] ^333333*Cough cough!*";
+			mes "[DRY-RUN] Aaaack!";
+			mes "[DRY-RUN] It's so dusty!";
 			close;
 		}
 	}
 	else {
-		mes "^3355FFJust a normal";
-		mes "rock, covered in moss.^000000";
+		mes "[DRY-RUN] ^3355FFJust a normal";
+		mes "[DRY-RUN] rock, covered in moss.^000000";
 		close;
 	}
 
@@ -3971,102 +3971,102 @@ OnTouch_:
 
 prt_fild02,185,270,3	script	Dvalin#1	826,{
 	if (god_brising > 43) {
-		mes "[Dvalin]";
-		mes "A human?";
-		mes "You woke me up?";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] A human?";
+		mes "[DRY-RUN] You woke me up?";
 		next;
-		mes "[Dvalin]";
-		mes "Hmm...";
-		mes "And you'd be acting pretty pushy right about now if you were acting on behalf of a god. What could you want...?";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] Hmm...";
+		mes "[DRY-RUN] And you'd be acting pretty pushy right about now if you were acting on behalf of a god. What could you want...?";
 		next;
-		mes "[Dvalin]";
-		mes "It makes sense that you want a replica of Brisingamen for its power. But remember, we originally made Brisingamen as a necklace fit for a goddess.";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] It makes sense that you want a replica of Brisingamen for its power. But remember, we originally made Brisingamen as a necklace fit for a goddess.";
 		next;
-		mes "[Dvalin]";
-		mes "Some might say that we seduced Freya with the necklace, but we really loved her with all of our hearts.";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] Some might say that we seduced Freya with the necklace, but we really loved her with all of our hearts.";
 		close2;
 		hideonnpc "Dvalin#1";
 		end;
 	}
 	else if (god_brising == 42) {
-		mes "[Dvalin]";
-		mes "Wah, it's not Alfrik?";
-		mes "Who are you to wake Dvalin?";
-		mes "Tell me right now, or I'll...";
-		mes "I'll kick your ass!";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] Wah, it's not Alfrik?";
+		mes "[DRY-RUN] Who are you to wake Dvalin?";
+		mes "[DRY-RUN] Tell me right now, or I'll...";
+		mes "[DRY-RUN] I'll kick your ass!";
 		next;
-		switch(select("Help!:Alfrik sent me to wake you up!")) {
+		switch(select("[DRY-RUN] Help!:Alfrik sent me to wake you up!")) {
 		case 1:
-			mes "[Dvalin]";
-			mes "I don't know";
-			mes "what the hell";
-			mes "you're doing here,";
-			mes "but leave!";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] I don't know";
+			mes "[DRY-RUN] what the hell";
+			mes "[DRY-RUN] you're doing here,";
+			mes "[DRY-RUN] but leave!";
 			close2;
 			hideonnpc "Dvalin#1";
 			end;
 		case 2:
-			mes "[Dvalin]";
-			mes "Did you just say Alfrik sent you? How do you know my brother?!";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Did you just say Alfrik sent you? How do you know my brother?!";
 			next;
-			mes "[Dvalin]";
-			mes "Brisingamen?!";
-			mes "Then, that means";
-			mes "we can meet Freya again?!";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Brisingamen?!";
+			mes "[DRY-RUN] Then, that means";
+			mes "[DRY-RUN] we can meet Freya again?!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Umm...";
-			mes "I'm afraid not.";
-			mes "Or, at least, that's";
-			mes "not why I'm here.";
+			mes "[DRY-RUN] Umm...";
+			mes "[DRY-RUN] I'm afraid not.";
+			mes "[DRY-RUN] Or, at least, that's";
+			mes "[DRY-RUN] not why I'm here.";
 			next;
-			mes "[Dvalin]";
-			mes "Okay...";
-			mes "I understand.";
-			mes "Sorry, I was just";
-			mes "hoping you were a";
-			mes "herald of Freya.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Okay...";
+			mes "[DRY-RUN] I understand.";
+			mes "[DRY-RUN] Sorry, I was just";
+			mes "[DRY-RUN] hoping you were a";
+			mes "[DRY-RUN] herald of Freya.";
 			next;
-			mes "[Dvalin]";
-			mes "So, an imitation";
-			mes "of Brisingamen...";
-			mes "Even if it's not the original, I'm sure it can possess power comparable to the real thing. Yes...";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] So, an imitation";
+			mes "[DRY-RUN] of Brisingamen...";
+			mes "[DRY-RUN] Even if it's not the original, I'm sure it can possess power comparable to the real thing. Yes...";
 			next;
-			mes "[Dvalin]";
-			mes "It's no use trying to predict the future, but I can't help but wonder what would mankind do with the power of the gods?";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] It's no use trying to predict the future, but I can't help but wonder what would mankind do with the power of the gods?";
 			next;
-			mes "[Dvalin]";
-			mes "If my brother Alfrik already approved of you, then I'll help you out. I'll tell you how to wake my brother Berling.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] If my brother Alfrik already approved of you, then I'll help you out. I'll tell you how to wake my brother Berling.";
 			next;
-			mes "[Dvalin]";
-			mes "We hid ourselves near traces of Freya. The path where I am staying is one that my goddess has walked through.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] We hid ourselves near traces of Freya. The path where I am staying is one that my goddess has walked through.";
 			next;
-			mes "[Dvalin]";
-			mes "The air that quietly drifts here holds her fragrant scent. You can use this wind to borrow her power.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] The air that quietly drifts here holds her fragrant scent. You can use this wind to borrow her power.";
 			next;
-			mes "[Dvalin]";
-			mes "Aside from Freya, I have";
-			mes "no special love for the gods or giants. But I am intrigued by you humans. Your race is one of both love and hatred, life and destruction.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Aside from Freya, I have";
+			mes "[DRY-RUN] no special love for the gods or giants. But I am intrigued by you humans. Your race is one of both love and hatred, life and destruction.";
 			next;
-			mes "[Dvalin]";
-			mes "Go now and seek Berling. He is sleeping near a river linked to Mount Mjolnir. Travel West to find the river were Freya's Teardrops have fallen.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Go now and seek Berling. He is sleeping near a river linked to Mount Mjolnir. Travel West to find the river were Freya's Teardrops have fallen.";
 			next;
-			mes "[Dvalin]";
-			mes "If the phantom of water gives you a question, answer it. The answer is the punishment that Odin gave to our goddess.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] If the phantom of water gives you a question, answer it. The answer is the punishment that Odin gave to our goddess.";
 			next;
-			mes "[Dvalin]";
-			mes "Until thousands of Valkyries filled up Valhala, they had to repeatedly live, die, then be reborn the next day only to die again.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Until thousands of Valkyries filled up Valhala, they had to repeatedly live, die, then be reborn the next day only to die again.";
 			next;
-			mes "[Dvalin]";
-			mes "Think about";
-			mes "who they were.";
-			mes "That's all I can tell you.";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Think about";
+			mes "[DRY-RUN] who they were.";
+			mes "[DRY-RUN] That's all I can tell you.";
 			next;
-			mes "[Dvalin]";
-			mes "Somehow, I know";
-			mes "you are the one who";
-			mes "can answer the question.";
-			mes "Hahahaha!";
+			mes "[DRY-RUN] [Dvalin]";
+			mes "[DRY-RUN] Somehow, I know";
+			mes "[DRY-RUN] you are the one who";
+			mes "[DRY-RUN] can answer the question.";
+			mes "[DRY-RUN] Hahahaha!";
 			set god_brising,43;
 			close2;
 			hideonnpc "Dvalin#1";
@@ -4074,13 +4074,13 @@ prt_fild02,185,270,3	script	Dvalin#1	826,{
 		}
 	}
 	else if (god_brising == 43) {
-		mes "[Dvalin]";
-		mes "Why do you keep calling me? I did everything I can do for you. I even gave you the key to the question.";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] Why do you keep calling me? I did everything I can do for you. I even gave you the key to the question.";
 		next;
-		mes "[Dvalin]";
-		mes "From now on,";
-		mes "it's all up to you.";
-		mes "Now, go wake Berling...";
+		mes "[DRY-RUN] [Dvalin]";
+		mes "[DRY-RUN] From now on,";
+		mes "[DRY-RUN] it's all up to you.";
+		mes "[DRY-RUN] Now, go wake Berling...";
 		close2;
 		hideonnpc "Dvalin#1";
 		end;
@@ -4094,65 +4094,65 @@ OnInit:
 
 mjolnir_09,85,129,0	script	#brisindwarf3	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
+		mes "[DRY-RUN] ^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
+		mes "[DRY-RUN] ^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
 		close;
 	}
 	if ((god_brising > 42) && (god_brising < 50)) {
 		specialeffect EF_BUBBLE;
-		mes "[Echoing Voice]";
-		mes "Alfrik: confirmed.";
-		mes "Dvalin: confirmed.";
+		mes "[DRY-RUN] [Echoing Voice]";
+		mes "[DRY-RUN] Alfrik: confirmed.";
+		mes "[DRY-RUN] Dvalin: confirmed.";
 		next;
-		mes "[Echoing Voice]";
-		mes "Please answer me.";
-		mes "Odin punished beautiful";
-		mes "Freya, and made her curse";
-		mes "some humans with her power.";
+		mes "[DRY-RUN] [Echoing Voice]";
+		mes "[DRY-RUN] Please answer me.";
+		mes "[DRY-RUN] Odin punished beautiful";
+		mes "[DRY-RUN] Freya, and made her curse";
+		mes "[DRY-RUN] some humans with her power.";
 		next;
-		mes "[Echoing Voice]";
-		mes "Freya caused an eternal battle, where the combatants were all killed and brought back to life everyday. How many humans were cursed to participate?";
+		mes "[DRY-RUN] [Echoing Voice]";
+		mes "[DRY-RUN] Freya caused an eternal battle, where the combatants were all killed and brought back to life everyday. How many humans were cursed to participate?";
 		next;
-		switch(select("20!","How should I know?!","40!","42!" )) {
+		switch(select("[DRY-RUN] 20!","How should I know?!","40!","42!" )) {
 		case 1:
 			specialeffect EF_BUBBLE;
-			mes "[Echoing Voice]";
-			mes "Failed.";
-			mes "Failed...";
+			mes "[DRY-RUN] [Echoing Voice]";
+			mes "[DRY-RUN] Failed.";
+			mes "[DRY-RUN] Failed...";
 			close;
 		case 2:
 			specialeffect EF_BUBBLE;
-			mes "[Echoing Voice]";
-			mes "Failed.";
-			mes "Failed...";
+			mes "[DRY-RUN] [Echoing Voice]";
+			mes "[DRY-RUN] Failed.";
+			mes "[DRY-RUN] Failed...";
 			close;
 		case 3:
 			specialeffect EF_BUBBLE;
-			mes "[Echoing Voice]";
-			mes "Failed.";
-			mes "Failed...";
+			mes "[DRY-RUN] [Echoing Voice]";
+			mes "[DRY-RUN] Failed.";
+			mes "[DRY-RUN] Failed...";
 			close;
 		case 4:
 			specialeffect EF_BUBBLE;
-			mes "[Echoing Voice]";
-			mes "...Confirmed.";
-			mes "Shutting down barrier.";
-			mes "Initiating summoning.";
+			mes "[DRY-RUN] [Echoing Voice]";
+			mes "[DRY-RUN] ...Confirmed.";
+			mes "[DRY-RUN] Shutting down barrier.";
+			mes "[DRY-RUN] Initiating summoning.";
 			next;
 			hideoffnpc "Berling#1";
-			mes "[Berling]";
-			mes "^333333*Gasp--!*^000000";
-			mes "Thought I was";
-			mes "gonna drown to death!";
-			mes "Who woke me up?";
+			mes "[DRY-RUN] [Berling]";
+			mes "[DRY-RUN] ^333333*Gasp--!*^000000";
+			mes "[DRY-RUN] Thought I was";
+			mes "[DRY-RUN] gonna drown to death!";
+			mes "[DRY-RUN] Who woke me up?";
 			close;
 		}
 	}
 	else {
-		mes "^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
+		mes "[DRY-RUN] ^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
 		close;
 	}
 
@@ -4165,91 +4165,91 @@ OnTouch_:
 
 mjolnir_09,87,129,3	script	Berling#1	826,{
 	if (god_brising > 44) {
-		mes "[Berling]";
-		mes "You're the one that's awakened us? Hahaha, perhaps that's a sign we may see Freya again! Hahahaha!";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] You're the one that's awakened us? Hahaha, perhaps that's a sign we may see Freya again! Hahahaha!";
 		next;
-		mes "[Berling]";
-		mes "We are indebted to you for reviving us. Okay, I know what you want, and will help you obtain the power of the gods.";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] We are indebted to you for reviving us. Okay, I know what you want, and will help you obtain the power of the gods.";
 		close2;
 		hideonnpc "OnBerling#1";
 		end;
 	}
 	else if (god_brising == 43) {
-		mes "[Berling]";
-		mes "What the...?";
-		mes "It's a human?!";
-		mes "What do you want?";
-		mes "Wh-who are you?";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] What the...?";
+		mes "[DRY-RUN] It's a human?!";
+		mes "[DRY-RUN] What do you want?";
+		mes "[DRY-RUN] Wh-who are you?";
 		next;
-		switch(select("Dvalin wants you to wake up!:Tell me who you are first!")) {
+		switch(select("[DRY-RUN] Dvalin wants you to wake up!:Tell me who you are first!")) {
 		case 1:
-			mes "[Berling]";
-			mes "Dvalin?!";
-			mes "You mean my brother!";
-			mes "But he can only be revived if Alfrik is revived. What happened?";
+			mes "[DRY-RUN] [Berling]";
+			mes "[DRY-RUN] Dvalin?!";
+			mes "[DRY-RUN] You mean my brother!";
+			mes "[DRY-RUN] But he can only be revived if Alfrik is revived. What happened?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Umm...";
-			mes "Let me explain...";
+			mes "[DRY-RUN] Umm...";
+			mes "[DRY-RUN] Let me explain...";
 			next;
-			mes "...";
-			mes "......";
-			mes ".........";
+			mes "[DRY-RUN] ...";
+			mes "[DRY-RUN] ......";
+			mes "[DRY-RUN] .........";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "...So I guess I need to wake up all four of you dwarves so that Brisingamen, which holds Freya's power, can be made again.";
+			mes "[DRY-RUN] ...So I guess I need to wake up all four of you dwarves so that Brisingamen, which holds Freya's power, can be made again.";
 			next;
-			mes "[Berling]";
-			mes "Oh! Say that name once again! Freya, the goddess who took my body and soul! Did you just say you want to make her necklace?";
+			mes "[DRY-RUN] [Berling]";
+			mes "[DRY-RUN] Oh! Say that name once again! Freya, the goddess who took my body and soul! Did you just say you want to make her necklace?";
 			next;
-			mes "[Berling]";
-			mes "Hahahaha!";
-			mes "Stop joking around.";
-			mes "The Brisingamen is";
-			mes "a one of a kind";
-			mes "masterpiece!";
+			mes "[DRY-RUN] [Berling]";
+			mes "[DRY-RUN] Hahahaha!";
+			mes "[DRY-RUN] Stop joking around.";
+			mes "[DRY-RUN] The Brisingamen is";
+			mes "[DRY-RUN] a one of a kind";
+			mes "[DRY-RUN] masterpiece!";
 			next;
-			switch(select("I don't mean the original one, but...")) {
+			switch(select("[DRY-RUN] I don't mean the original one, but...")) {
 			case 1:
-				mes "[Berling]";
-				mes "Ah, now I see! You want a replica that has roughly the same power.";
-				mes "A Brisingamen used by humans!";
-				mes "Very clever!";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] Ah, now I see! You want a replica that has roughly the same power.";
+				mes "[DRY-RUN] A Brisingamen used by humans!";
+				mes "[DRY-RUN] Very clever!";
 				next;
-				mes "[Berling]";
-				mes "I, on the other hand, do not desire power. I would be happy to own but a strand of my goddess' hair.";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] I, on the other hand, do not desire power. I would be happy to own but a strand of my goddess' hair.";
 				next;
-				mes "[Berling]";
-				mes "Oh Freya...";
-				mes "The more of her beauty exists in this world, the happier I'll be. I'm more than willing to help you recreate this memento of Freya.";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] Oh Freya...";
+				mes "[DRY-RUN] The more of her beauty exists in this world, the happier I'll be. I'm more than willing to help you recreate this memento of Freya.";
 				next;
-				mes "[Berling]";
-				mes "Now, please go and find the last one of my brothers! Poor Grer, perhaps he is still digging silver in that mine for her...";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] Now, please go and find the last one of my brothers! Poor Grer, perhaps he is still digging silver in that mine for her...";
 				next;
-				mes "[Berling]";
-				mes "Go and find Grer. I will give you Freya's golden teardrop, but he might have revived on his own...";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] Go and find Grer. I will give you Freya's golden teardrop, but he might have revived on his own...";
 				next;
-				mes "[Berling]";
-				mes "If he doesn't trust you, sing this song. You must remember each";
-				mes "and every word...";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] If he doesn't trust you, sing this song. You must remember each";
+				mes "[DRY-RUN] and every word...";
 				next;
-				mes "[Berling]";
-				mes "^4d4dffNo jewel in the world can compare.^000000";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] ^4d4dffNo jewel in the world can compare.^000000";
 				next;
-				mes "[Berling]";
-				mes "^4d4dffOur masterpiece made from love.^000000";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] ^4d4dffOur masterpiece made from love.^000000";
 				next;
-				mes "[Berling]";
-				mes "^4d4dffShe wanted the dazzling necklace.^000000";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] ^4d4dffShe wanted the dazzling necklace.^000000";
 				next;
-				mes "[Berling]";
-				mes "^4d4dffWe wanted the goddess of beauty.^000000";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] ^4d4dffWe wanted the goddess of beauty.^000000";
 				next;
-				mes "[Berling]";
-				mes "^4d4dffOur happiest times were with her.^000000";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] ^4d4dffOur happiest times were with her.^000000";
 				next;
-				mes "[Berling]";
-				mes "Memorize all five lines of this song exactly. Now take this golden teardrop and please seek out Grer.";
+				mes "[DRY-RUN] [Berling]";
+				mes "[DRY-RUN] Memorize all five lines of this song exactly. Now take this golden teardrop and please seek out Grer.";
 				specialeffect2 EF_IMPOSITIO;
 				set god_brising,44;
 				close2;
@@ -4257,46 +4257,46 @@ mjolnir_09,87,129,3	script	Berling#1	826,{
 				end;
 			}
 		case 2:
-			mes "[Berling]";
-			mes "Where the hell";
-			mes "did you come from?";
-			mes "I, Berling, refuse to";
-			mes "give my name to a rude,";
-			mes "ill-bred human like yourself!";
+			mes "[DRY-RUN] [Berling]";
+			mes "[DRY-RUN] Where the hell";
+			mes "[DRY-RUN] did you come from?";
+			mes "[DRY-RUN] I, Berling, refuse to";
+			mes "[DRY-RUN] give my name to a rude,";
+			mes "[DRY-RUN] ill-bred human like yourself!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Wait...";
-			mes "Your name";
-			mes "is Berling?";
+			mes "[DRY-RUN] Wait...";
+			mes "[DRY-RUN] Your name";
+			mes "[DRY-RUN] is Berling?";
 			next;
-			mes "[Berling]";
-			mes "Baaaaahhh!";
-			mes "Quiet you!";
-			mes "Mind your own";
-			mes "business!";
+			mes "[DRY-RUN] [Berling]";
+			mes "[DRY-RUN] Baaaaahhh!";
+			mes "[DRY-RUN] Quiet you!";
+			mes "[DRY-RUN] Mind your own";
+			mes "[DRY-RUN] business!";
 			close2;
 			hideonnpc "Berling#1";
 			end;
 		}
 	}
 	else if (god_brising == 44) {
-		mes "[Berling]";
-		mes "Did you already forget the lyrics? Let me tell them to you again, so don't forget this time.";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] Did you already forget the lyrics? Let me tell them to you again, so don't forget this time.";
 		next;
-		mes "[Berling]";
-		mes "^4d4dffNo jewel in the world can compare.^000000";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] ^4d4dffNo jewel in the world can compare.^000000";
 		next;
-		mes "[Berling]";
-		mes "^4d4dffOur masterpiece made from love.^000000";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] ^4d4dffOur masterpiece made from love.^000000";
 		next;
-		mes "[Berling]";
-		mes "^4d4dffShe wanted the dazzling necklace.^000000";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] ^4d4dffShe wanted the dazzling necklace.^000000";
 		next;
-		mes "[Berling]";
-		mes "^4d4dffWe wanted the goddess of beauty.^000000";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] ^4d4dffWe wanted the goddess of beauty.^000000";
 		next;
-		mes "[Berling]";
-		mes "^4d4dffOur happiest times were with her.^000000";
+		mes "[DRY-RUN] [Berling]";
+		mes "[DRY-RUN] ^4d4dffOur happiest times were with her.^000000";
 		close2;
 		hideonnpc "Berling#1";
 		end;
@@ -4310,59 +4310,59 @@ OnInit:
 mjo_dun02,126,36,0	script	#brisindwarf4	111,3,3,{
 	if ($God2 < $@god_check1) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Bah, no way out.";
+		mes "[DRY-RUN] Bah, no way out.";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Bah, no way out.";
+		mes "[DRY-RUN] Bah, no way out.";
 		close;
 	}
 	if ((god_brising > 45) && (god_brising < 50)) {
-		mes "[Grer]";
-		mes "What!";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] What!";
 		hideoffnpc "Grer#1";
 		close;
 	}
 	else if (god_brising == 45) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Let's see.";
-		mes "Um, that song.";
-		mes "What was the first line...?";
+		mes "[DRY-RUN] Let's see.";
+		mes "[DRY-RUN] Um, that song.";
+		mes "[DRY-RUN] What was the first line...?";
 		next;
 		input @dwarfsong1$;
 		if (@dwarfsong1$ == "No jewel in the world can compare.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong1$ + "";
-		mes "Then...ummm..";
-		mes "The second line?";
+		mes "[DRY-RUN] Then...ummm..";
+		mes "[DRY-RUN] The second line?";
 		next;
 		input @dwarfsong2$;
 		if (@dwarfsong2$ == "Our masterpiece made from love.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong2$ + "";
-		mes "Now, what was";
-		mes "the third line...?";
+		mes "[DRY-RUN] Now, what was";
+		mes "[DRY-RUN] the third line...?";
 		next;
 		input @dwarfsong3$;
 		if (@dwarfsong3$ == "She wanted the dazzling necklace.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong3$ + "";
-		mes "Now, the fourth";
-		mes "line after that...";
+		mes "[DRY-RUN] Now, the fourth";
+		mes "[DRY-RUN] line after that...";
 		next;
 		input @dwarfsong4$;
 		if (@dwarfsong4$ == "We wanted the goddess of beauty.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong4$ + "";
-		mes "Alright, now";
-		mes "for the last line...";
+		mes "[DRY-RUN] Alright, now";
+		mes "[DRY-RUN] for the last line...";
 		next;
 		input @dwarfsong5$;
 		if (@dwarfsong5$ == "Our happiest times were with her.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong5$ + "";
-		mes "Alright, let's give it a try.";
+		mes "[DRY-RUN] Alright, let's give it a try.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "" + @dwarfsong1$ + "";
@@ -4373,67 +4373,67 @@ mjo_dun02,126,36,0	script	#brisindwarf4	111,3,3,{
 		next;
 		if (@point > 4) {
 			hideoffnpc "Grer#1";
-			mes "[Grer]";
-			mes "Wha--?";
-			mes "Berling";
-			mes "did send you!";
+			mes "[DRY-RUN] [Grer]";
+			mes "[DRY-RUN] Wha--?";
+			mes "[DRY-RUN] Berling";
+			mes "[DRY-RUN] did send you!";
 			set god_brising,46;
 			stopnpctimer;
 			close;
 		}
 		else {
-			mes "[Grer]";
-			mes "Bah!";
-			mes "I knew it!";
-			mes "I can't trust you!";
+			mes "[DRY-RUN] [Grer]";
+			mes "[DRY-RUN] Bah!";
+			mes "[DRY-RUN] I knew it!";
+			mes "[DRY-RUN] I can't trust you!";
 			close2;
 			warp "mjo_dun02",118,56;
 			end;
 		}
 	}
 	else {
-		mes "^3355FFYou found a hole filled with some clod and a lump of coal.^000000";
+		mes "[DRY-RUN] ^3355FFYou found a hole filled with some clod and a lump of coal.^000000";
 		close;
 	}
 
 OnTouch_:
 	if ($God2 < $@god_check1) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Beh, no way out.";
+		mes "[DRY-RUN] Beh, no way out.";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Beh, no way out.";
+		mes "[DRY-RUN] Beh, no way out.";
 		close;
 	}
 	if (god_brising == 44) {
 		emotion ET_SURPRISE, playerattached();
-		mes "[Male Voice]";
-		mes "Don't come any closer!";
-		mes "How the hell do I feel";
-		mes "Freya's presense on you?";
-		mes "Tell me who you are!";
+		mes "[DRY-RUN] [Male Voice]";
+		mes "[DRY-RUN] Don't come any closer!";
+		mes "[DRY-RUN] How the hell do I feel";
+		mes "[DRY-RUN] Freya's presense on you?";
+		mes "[DRY-RUN] Tell me who you are!";
 		next;
-		switch(select("I am sent by Berling.:Wah, you freaked me out!")) {
+		switch(select("[DRY-RUN] I am sent by Berling.:Wah, you freaked me out!")) {
 		case 1:
-			mes "[Male Voice]";
-			mes "Lies! Lies!";
-			mes "Prove it!";
-			mes "Prove yourself!";
+			mes "[DRY-RUN] [Male Voice]";
+			mes "[DRY-RUN] Lies! Lies!";
+			mes "[DRY-RUN] Prove it!";
+			mes "[DRY-RUN] Prove yourself!";
 			set god_brising,45;
 			initnpctimer;
 			close;
 		case 2:
-			mes "[Male Voice]";
-			mes "Get out of here!";
+			mes "[DRY-RUN] [Male Voice]";
+			mes "[DRY-RUN] Get out of here!";
 			close;
 		}
 	}
 	else if (god_brising == 45) {
-		mes "[Male Voice]";
-		mes "Prove it!";
-		mes "Otherwise, leave me alone and let me mine silver. Silver...! Heh heh heh...";
+		mes "[DRY-RUN] [Male Voice]";
+		mes "[DRY-RUN] Prove it!";
+		mes "[DRY-RUN] Otherwise, leave me alone and let me mine silver. Silver...! Heh heh heh...";
 		stopnpctimer;
 		startnpctimer;
 		close;
@@ -4467,72 +4467,72 @@ OnTimer301000:
 
 mjo_dun02,126,34,1	script	Grer#1	826,{
 	if (god_brising > 47) {
-		mes "[Grer]";
-		mes "As we promised,";
-		mes "Brisingamen will appear in front of human's eyes. But until then, I shall make jewelry of silver. Mwahahaha~";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] As we promised,";
+		mes "[DRY-RUN] Brisingamen will appear in front of human's eyes. But until then, I shall make jewelry of silver. Mwahahaha~";
 		close2;
 		hideonnpc "Grer#1";
 		end;
 	}
 	else if (god_brising == 46) {
-		mes "[Grer]";
-		mes "My name is Grer.";
-		mes "I should have been";
-		mes "the last one to be awakened. Now I see that I haven't mined as much silver as I may need.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] My name is Grer.";
+		mes "[DRY-RUN] I should have been";
+		mes "[DRY-RUN] the last one to be awakened. Now I see that I haven't mined as much silver as I may need.";
 		next;
-		mes "[Grer]";
-		mes "You might think gold would better suit a goddess, but no. Silver is what makes her golden hair more beautiful.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] You might think gold would better suit a goddess, but no. Silver is what makes her golden hair more beautiful.";
 		next;
-		mes "[Grer]";
-		mes "Now that we're revived, there's a good chance that we may see her again. I don't really mind anything else.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Now that we're revived, there's a good chance that we may see her again. I don't really mind anything else.";
 		next;
-		mes "[Grer]";
-		mes "I want her spirit and scent to fill this world. I don't want Odin or Heimdall to know our plan.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] I want her spirit and scent to fill this world. I don't want Odin or Heimdall to know our plan.";
 		next;
-		mes "[Grer]";
-		mes "Now, this doesn't mean";
-		mes "that I prefer humans over";
-		mes "gods or giants, but if it's for Freya, I'll do anything.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Now, this doesn't mean";
+		mes "[DRY-RUN] that I prefer humans over";
+		mes "[DRY-RUN] gods or giants, but if it's for Freya, I'll do anything.";
 		next;
-		mes "[Grer]";
-		mes "Anyway, now my brothers";
-		mes "have been revived. For that, I give you my thanks. Someday, you will have the power to challenge the gods.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Anyway, now my brothers";
+		mes "[DRY-RUN] have been revived. For that, I give you my thanks. Someday, you will have the power to challenge the gods.";
 		next;
-		mes "[Grer]";
-		mes "Now, I need to";
-		mes "get back to my work.";
-		mes "You'll need a silver ornament for the necklace, so I'll continue to mine silver.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Now, I need to";
+		mes "[DRY-RUN] get back to my work.";
+		mes "[DRY-RUN] You'll need a silver ornament for the necklace, so I'll continue to mine silver.";
 		next;
-		mes "[Grer]";
-		mes "I will be working";
-		mes "hard to make the most";
-		mes "beautiful ornament";
-		mes "in the world.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] I will be working";
+		mes "[DRY-RUN] hard to make the most";
+		mes "[DRY-RUN] beautiful ornament";
+		mes "[DRY-RUN] in the world.";
 		next;
-		mes "[Grer]";
-		mes "Okay, you";
-		mes "may go back now!";
-		mes "Farewell.";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Okay, you";
+		mes "[DRY-RUN] may go back now!";
+		mes "[DRY-RUN] Farewell.";
 		set god_brising,47;
 		close2;
 		hideonnpc "Grer#1";
 		end;
 	}
 	else if (god_brising == 47) {
-		mes "[Grer]";
-		mes "Heh heh...";
-		mes "Why are you still";
-		mes "here? Your job is done.";
-		mes "Now, go back to where";
-		mes "you came from!";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Heh heh...";
+		mes "[DRY-RUN] Why are you still";
+		mes "[DRY-RUN] here? Your job is done.";
+		mes "[DRY-RUN] Now, go back to where";
+		mes "[DRY-RUN] you came from!";
 		close2;
 		hideonnpc "Grer#1";
 		end;
 	}
 	else {
-		mes "[Grer]";
-		mes "Who the";
-		mes "hell are you?!";
+		mes "[DRY-RUN] [Grer]";
+		mes "[DRY-RUN] Who the";
+		mes "[DRY-RUN] hell are you?!";
 		close2;
 		hideonnpc "Grer#1";
 		end;

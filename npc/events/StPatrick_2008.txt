@@ -205,31 +205,31 @@ mjolnir_01,272,363,4	script	Rocks#08StPattysDay	-1,1,1,{
 
 OnTouch:
 	if (StPatrick2008 < 1) {
-		mes "- You've found a pile of rocks covered with soil. -";
+		mes "[DRY-RUN] - You've found a pile of rocks covered with soil. -";
 		close;
 	}
 	if (StPatrick2008 == 1) {
-		mes "- You've found a pile of rocks covered with soil. -";
+		mes "[DRY-RUN] - You've found a pile of rocks covered with soil. -";
 		next;
 		if (countitem(12018) < 200) {
-			mes "The rocks won't budge.";
-			mes "Maybe O'Riley knows a way to move the rocks.";
+			mes "[DRY-RUN] The rocks won't budge.";
+			mes "[DRY-RUN] Maybe O'Riley knows a way to move the rocks.";
 			close;
 		}
 		else {
-			if (select("Use Firecrackers.:Ignore") == 2) {
+			if (select("[DRY-RUN] Use Firecrackers.:Ignore") == 2) {
 				close;
 			}
-			mes "You buried 200 Firecrackers under the pile of rocks.";
-			mes "You light the fuse.";
+			mes "[DRY-RUN] You buried 200 Firecrackers under the pile of rocks.";
+			mes "[DRY-RUN] You light the fuse.";
 			next;
-			mes "*BOOM!*";
+			mes "[DRY-RUN] *BOOM!*";
 			specialeffect2 EF_LORD;
 			next;
-			mes "After A cloud of dust and smoke has dissipated,";
-			mes "You've found a box between the rocks and soil.";
-			mes "This box must contain O'Riley's valuables.";
-			mes "Let's bring the box to O'Riley.";
+			mes "[DRY-RUN] After A cloud of dust and smoke has dissipated,";
+			mes "[DRY-RUN] You've found a box between the rocks and soil.";
+			mes "[DRY-RUN] This box must contain O'Riley's valuables.";
+			mes "[DRY-RUN] Let's bring the box to O'Riley.";
 			close2;
 			set StPatrick2008,2;
 			delitem 12018,200;

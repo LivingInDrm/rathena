@@ -19,74 +19,74 @@ valkyrie,53,47,3	script	Scholar#Valkyrie	743,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Scholar]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Scholar]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Scholar]";
-		mes "It takes a lifetime...";
-		mes "Literally a lifetime";
-		mes "to amass the knowledge";
-		mes "necessary to become";
-		mes "a Scholar...";
+		mes "[DRY-RUN] [Scholar]";
+		mes "[DRY-RUN] It takes a lifetime...";
+		mes "[DRY-RUN] Literally a lifetime";
+		mes "[DRY-RUN] to amass the knowledge";
+		mes "[DRY-RUN] necessary to become";
+		mes "[DRY-RUN] a Scholar...";
 		next;
-		mes "[Scholar]";
-		mes "It's overwhelming.";
-		mes "The more you learn, the";
-		mes "more you discover what";
-		mes "else you don't know.";
-		mes "There's no end to the";
-		mes "process of learning...";
+		mes "[DRY-RUN] [Scholar]";
+		mes "[DRY-RUN] It's overwhelming.";
+		mes "[DRY-RUN] The more you learn, the";
+		mes "[DRY-RUN] more you discover what";
+		mes "[DRY-RUN] else you don't know.";
+		mes "[DRY-RUN] There's no end to the";
+		mes "[DRY-RUN] process of learning...";
 		close;
 	}
 	else if (ADVJOB == Job_Professor && Class == Job_Mage_High && JobLevel > 39) {
-		mes "[Scholar]";
-		mes "Rune-Midgard doesn't";
-		mes "have enough Scholars to";
-		mes "help usher in a new age";
-		mes "of prosperity. The";
-		mes "world needs you...";
+		mes "[DRY-RUN] [Scholar]";
+		mes "[DRY-RUN] Rune-Midgard doesn't";
+		mes "[DRY-RUN] have enough Scholars to";
+		mes "[DRY-RUN] help usher in a new age";
+		mes "[DRY-RUN] of prosperity. The";
+		mes "[DRY-RUN] world needs you...";
 		next;
-		mes "[Scholar]";
-		mes "Will you take this";
-		mes "awesome responsibility?";
-		mes "Will you serve Rune-Midgard";
-		mes "as a Scholar?";
+		mes "[DRY-RUN] [Scholar]";
+		mes "[DRY-RUN] Will you take this";
+		mes "[DRY-RUN] awesome responsibility?";
+		mes "[DRY-RUN] Will you serve Rune-Midgard";
+		mes "[DRY-RUN] as a Scholar?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Scholar]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Scholar]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Scholar]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Scholar]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Professor;
 		set ADVJOB,0;
-		mes "[Scholar]";
-		mes "Congratulations!";
-		mes "As a Professor, I hope";
-		mes "that you will take an";
-		mes "active part in bringing";
-		mes "the light of knowledge";
-		mes "where there is darkness.";
+		mes "[DRY-RUN] [Scholar]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] As a Professor, I hope";
+		mes "[DRY-RUN] that you will take an";
+		mes "[DRY-RUN] active part in bringing";
+		mes "[DRY-RUN] the light of knowledge";
+		mes "[DRY-RUN] where there is darkness.";
 		close;
 	}
-	mes "[Scholar]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Scholar]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Scholar]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Scholar]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

@@ -591,11 +591,11 @@ OnEnable:
 prt_church,100,128,4	script	Bishop#w	60,{
 	cutin "wedding_bomars01",2;
 	if (Upper == 2) {
-		mes "[Vomars]";
-		mes "Greetings, child.";
-		mes "Are you lost? Hmmm.";
-		mes "Do you know where your";
-		mes "mommy and daddy are?";
+		mes "[DRY-RUN] [Vomars]";
+		mes "[DRY-RUN] Greetings, child.";
+		mes "[DRY-RUN] Are you lost? Hmmm.";
+		mes "[DRY-RUN] Do you know where your";
+		mes "[DRY-RUN] mommy and daddy are?";
 		close2;
 		cutin "wedding_bomars01",255;
 		end;
@@ -610,67 +610,67 @@ prt_church,100,128,4	script	Bishop#w	60,{
 					if (Sex == SEX_MALE) {
 						set $@wedding,1;
 						initnpctimer;
-						mes "[Vomars]";
-						mes "Young lovers, please";
-						mes "remember this moment for";
-						mes "the rest of your lives. May your future be blessed with peace";
-						mes "and joy. May the love you share";
-						mes "grow with each passing day.";
+						mes "[DRY-RUN] [Vomars]";
+						mes "[DRY-RUN] Young lovers, please";
+						mes "[DRY-RUN] remember this moment for";
+						mes "[DRY-RUN] the rest of your lives. May your future be blessed with peace";
+						mes "[DRY-RUN] and joy. May the love you share";
+						mes "[DRY-RUN] grow with each passing day.";
 						next;
 						mapannounce "prt_church","It's the marriage proposal from the groom, Mr. " + strcharinfo(0) + "...",bc_map;
-						mes "[Vomars]";
-						mes "Until the end of the";
-						mes "world, may you stand";
-						mes "by the side of the one";
-						mes "whom you love, to support";
-						mes "her and protect her. Now, may";
-						mes "I know the name of your bride?";
+						mes "[DRY-RUN] [Vomars]";
+						mes "[DRY-RUN] Until the end of the";
+						mes "[DRY-RUN] world, may you stand";
+						mes "[DRY-RUN] by the side of the one";
+						mes "[DRY-RUN] whom you love, to support";
+						mes "[DRY-RUN] her and protect her. Now, may";
+						mes "[DRY-RUN] I know the name of your bride?";
 						next;
 						input $@wed_bride$;
-						mes "[Vomars]";
+						mes "[DRY-RUN] [Vomars]";
 						mes "Mr. " + strcharinfo(0) + "...";
-						mes "Do you swear on your life";
-						mes "that you will forever cherish";
-						mes "and care for your bride,";
+						mes "[DRY-RUN] Do you swear on your life";
+						mes "[DRY-RUN] that you will forever cherish";
+						mes "[DRY-RUN] and care for your bride,";
 						mes "Miss " + $@wed_bride$ + "?";
 						next;
-						select("I do.");
+						select("[DRY-RUN] I do.");
 						set $@wed_groom$,strcharinfo(0);
-						mes "[Vomars]";
-						mes "Now, it is time for";
-						mes "your bride to make";
-						mes "her wedding vows.";
-						mes "If she will come forward...";
+						mes "[DRY-RUN] [Vomars]";
+						mes "[DRY-RUN] Now, it is time for";
+						mes "[DRY-RUN] your bride to make";
+						mes "[DRY-RUN] her wedding vows.";
+						mes "[DRY-RUN] If she will come forward...";
 						close2;
 						mapannounce "prt_church","The groom, Mr. " + strcharinfo(0) + ", has made his vows to Miss " + $@wed_bride$ + "...",bc_map;
 						cutin "",255;
 						end;
 					}
-					mes "[Vomars]";
-					mes "I'm sorry, but the groom";
-					mes "must speak to me first in";
-					mes "order to begin the wedding.";
-					mes "It's old fashioned protocol,";
-					mes "but I'll admit that it does";
-					mes "keep things running smoothly.";
+					mes "[DRY-RUN] [Vomars]";
+					mes "[DRY-RUN] I'm sorry, but the groom";
+					mes "[DRY-RUN] must speak to me first in";
+					mes "[DRY-RUN] order to begin the wedding.";
+					mes "[DRY-RUN] It's old fashioned protocol,";
+					mes "[DRY-RUN] but I'll admit that it does";
+					mes "[DRY-RUN] keep things running smoothly.";
 					goto L_End;
 				}
-				mes "[Vomars]";
-				mes "Before you can be";
-				mes "married, you must";
-				mes "first form a party of";
-				mes "two with your partner.";
-				mes "Then, we can proceed";
-				mes "with the ceremony.";
+				mes "[DRY-RUN] [Vomars]";
+				mes "[DRY-RUN] Before you can be";
+				mes "[DRY-RUN] married, you must";
+				mes "[DRY-RUN] first form a party of";
+				mes "[DRY-RUN] two with your partner.";
+				mes "[DRY-RUN] Then, we can proceed";
+				mes "[DRY-RUN] with the ceremony.";
 				goto L_End;
 			}
-			mes "[Vomars]";
-			mes "You must apply for";
-			mes "marriage with Happy Marry";
-			mes "before you can get married.";
-			mes "Happy Marry will let you know";
-			mes "what else you'll need to do";
-			mes "to prepare for marriage.";
+			mes "[DRY-RUN] [Vomars]";
+			mes "[DRY-RUN] You must apply for";
+			mes "[DRY-RUN] marriage with Happy Marry";
+			mes "[DRY-RUN] before you can get married.";
+			mes "[DRY-RUN] Happy Marry will let you know";
+			mes "[DRY-RUN] what else you'll need to do";
+			mes "[DRY-RUN] to prepare for marriage.";
 			goto L_End;
 		}
 		else if ($@wedding == 1) {
@@ -680,42 +680,42 @@ prt_church,100,128,4	script	Bishop#w	60,{
 				if (.@partymembercount == 2) {
 					if (Sex == SEX_FEMALE) {
 						if (strcharinfo(0) == $@wed_bride$) {
-							mes "[Vomars]";
-							mes "Young lovers, please";
-							mes "remember this moment for";
-							mes "the rest of your lives. May your future be blessed with peace";
-							mes "and joy. May the love you share";
-							mes "grow with each passing day.";
+							mes "[DRY-RUN] [Vomars]";
+							mes "[DRY-RUN] Young lovers, please";
+							mes "[DRY-RUN] remember this moment for";
+							mes "[DRY-RUN] the rest of your lives. May your future be blessed with peace";
+							mes "[DRY-RUN] and joy. May the love you share";
+							mes "[DRY-RUN] grow with each passing day.";
 							next;
 							mapannounce "prt_church","Let's hear what the bride, Miss "+$@wed_bride$+", has to say...",bc_map;
-							mes "[Vomars]";
+							mes "[DRY-RUN] [Vomars]";
 							mes "Miss "+$@wed_bride$+"...";
-							mes "Do you swear to stay";
+							mes "[DRY-RUN] Do you swear to stay";
 							mes "true to "+$@wed_groom$+",";
-							mes "to be by his side, no matter";
-							mes "what the dangers may be?";
+							mes "[DRY-RUN] to be by his side, no matter";
+							mes "[DRY-RUN] what the dangers may be?";
 							next;
-							if (select("^FF0000No.^000000:I do.") == 1) {
+							if (select("[DRY-RUN] ^FF0000No.^000000:I do.") == 1) {
 								cutin "wedding_bomars03",2;
 								mapannounce "prt_church","Next couple, please proceed...",bc_map;
-								mes "[Vomars]";
+								mes "[DRY-RUN] [Vomars]";
 								mes "So "+$@wed_groom$;
-								mes "isn't the one you";
-								mes "want to marry? Hmm.";
-								mes "I'm truly sorry for this";
-								mes "misunderstanding...";
+								mes "[DRY-RUN] isn't the one you";
+								mes "[DRY-RUN] want to marry? Hmm.";
+								mes "[DRY-RUN] I'm truly sorry for this";
+								mes "[DRY-RUN] misunderstanding...";
 								set $@wedding,0;
 								close2;
 								stopnpctimer;
 								cutin "",255;
 								end;
 							}
-							mes "[Vomars]";
-							mes "Do you truly swear";
-							mes "fidelity and patience?";
+							mes "[DRY-RUN] [Vomars]";
+							mes "[DRY-RUN] Do you truly swear";
+							mes "[DRY-RUN] fidelity and patience?";
 							mes "Will you marry "+$@wed_groom$+"?";
 							next;
-							if (select("Yes, I do.:^FF0000No.^000000") == 1) {
+							if (select("[DRY-RUN] Yes, I do.:^FF0000No.^000000") == 1) {
 								if (isloggedin(getcharid(3,$@wed_groom$))) {
 									if (marriage($@wed_groom$)) {
 										//Call Wedding effect
@@ -732,17 +732,17 @@ prt_church,100,128,4	script	Bishop#w	60,{
 										attachrid(getcharid(3,$@wed_bride$));
 										cutin "wedding_bomars02",2;
 										mapannounce "prt_church","I now pronounce you, "+$@wed_groom$+" and "+$@wed_bride$+", husband and wife.",bc_map;
-										mes "[Vomars]";
-										mes "By the power invested";
-										mes "in me as Royal Bishop of";
-										mes "the Rune-Midgarts Kingdom,";
-										mes "I now pronounce you husband";
-										mes "and wife. May your future be";
-										mes "blessed with many great joys.";
+										mes "[DRY-RUN] [Vomars]";
+										mes "[DRY-RUN] By the power invested";
+										mes "[DRY-RUN] in me as Royal Bishop of";
+										mes "[DRY-RUN] the Rune-Midgarts Kingdom,";
+										mes "[DRY-RUN] I now pronounce you husband";
+										mes "[DRY-RUN] and wife. May your future be";
+										mes "[DRY-RUN] blessed with many great joys.";
 										next;
-										mes "[Vomars]";
-										mes "And lastly...";
-										mes "Always be happy,";
+										mes "[DRY-RUN] [Vomars]";
+										mes "[DRY-RUN] And lastly...";
+										mes "[DRY-RUN] Always be happy,";
 										mes "dear "+$@wed_bride$+"...";
 										set $@wed_groom$,"";
 										set $@wed_bride$,"";
@@ -755,24 +755,24 @@ prt_church,100,128,4	script	Bishop#w	60,{
 									}
 								}
 								cutin "wedding_bomars03",2;
-								mes "[Vomars]";
-								mes "Hm. It seems that";
-								mes "your groom left before";
-								mes "the ceremony has finished";
-								mes "Please try again once he's";
-								mes "returned.";
+								mes "[DRY-RUN] [Vomars]";
+								mes "[DRY-RUN] Hm. It seems that";
+								mes "[DRY-RUN] your groom left before";
+								mes "[DRY-RUN] the ceremony has finished";
+								mes "[DRY-RUN] Please try again once he's";
+								mes "[DRY-RUN] returned.";
 								goto L_End;
 							}
 							else {
 								cutin "wedding_bomars03",2;
 								mapannounce "prt_church","Alas! "+$@wed_bride$+" has rejected "+$@wed_groom$+"'s marriage proposal!",bc_map;
-								mes "[Vomars]";
-								mes "Hm. It seems that";
-								mes "you've changed your";
-								mes "mind. Although I feel";
-								mes "sorry for the groom, you";
-								mes "must do what your heart";
-								mes "tells you is right. Now, run!";
+								mes "[DRY-RUN] [Vomars]";
+								mes "[DRY-RUN] Hm. It seems that";
+								mes "[DRY-RUN] you've changed your";
+								mes "[DRY-RUN] mind. Although I feel";
+								mes "[DRY-RUN] sorry for the groom, you";
+								mes "[DRY-RUN] must do what your heart";
+								mes "[DRY-RUN] tells you is right. Now, run!";
 							}
 							set $@wed_groom$,"";
 							set $@wed_bride$,"";
@@ -789,26 +789,26 @@ prt_church,100,128,4	script	Bishop#w	60,{
 				callsub S_Busy;
 			}
 			if (strcharinfo(0) == $@wed_bride$) {
-				mes "[Vomars]";
-				mes "Hm? It appears that";
-				mes "Happy Marry still hasn't";
-				mes "received your marriage";
-				mes "application. Please speak";
-				mes "to her so that we can begin";
-				mes "the wedding ceremony.";
+				mes "[DRY-RUN] [Vomars]";
+				mes "[DRY-RUN] Hm? It appears that";
+				mes "[DRY-RUN] Happy Marry still hasn't";
+				mes "[DRY-RUN] received your marriage";
+				mes "[DRY-RUN] application. Please speak";
+				mes "[DRY-RUN] to her so that we can begin";
+				mes "[DRY-RUN] the wedding ceremony.";
 				goto L_End;
 			}
 			callsub S_Busy;
 		}
 		callsub S_Busy;
 	}
-	mes "[Vomars]";
-	mes "I wish you eternal";
-	mes "happiness. No matter";
-	mes "how dark the present may";
-	mes "be, always stand by your";
-	mes "loved one's side and look";
-	mes "to the future with hope.";
+	mes "[DRY-RUN] [Vomars]";
+	mes "[DRY-RUN] I wish you eternal";
+	mes "[DRY-RUN] happiness. No matter";
+	mes "[DRY-RUN] how dark the present may";
+	mes "[DRY-RUN] be, always stand by your";
+	mes "[DRY-RUN] loved one's side and look";
+	mes "[DRY-RUN] to the future with hope.";
 
 L_End:
 	close2;
@@ -817,19 +817,19 @@ L_End:
 
 S_Busy:
 	if ($@wed_groom$ != "" && $@wed_bride$ != "") {
-		mes "[Vomars]";
-		mes "The wedding of";
+		mes "[DRY-RUN] [Vomars]";
+		mes "[DRY-RUN] The wedding of";
 		mes "Miss "+ $@wed_bride$ +" and";
 		mes "Mister "+ $@wed_groom$;
-		mes "is currently in progress.";
-		mes "Please keep your voice down.";
+		mes "[DRY-RUN] is currently in progress.";
+		mes "[DRY-RUN] Please keep your voice down.";
 		goto L_End;
 	}
-	mes "[Vomars]";
-	mes "I'm conducting a wedding";
-	mes "for another couple now, so";
-	mes "please wait patiently for your";
-	mes "turn. Thanks for understanding...";
+	mes "[DRY-RUN] [Vomars]";
+	mes "[DRY-RUN] I'm conducting a wedding";
+	mes "[DRY-RUN] for another couple now, so";
+	mes "[DRY-RUN] please wait patiently for your";
+	mes "[DRY-RUN] turn. Thanks for understanding...";
 	goto L_End;
 
 OnStop:

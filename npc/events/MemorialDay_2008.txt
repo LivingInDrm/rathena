@@ -18,76 +18,76 @@
 //============================================================
 prontera,182,214,4	script	Lauds#Memorial	58,{
 	if (Memorial08 < 1) {
-		mes "[Mad Sago Lauds]";
-		mes "Hey, yo!";
-		mes "What are you doing there!?";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Hey, yo!";
+		mes "[DRY-RUN] What are you doing there!?";
 		next;
-		mes "[Mad Sago Lauds]";
-		mes "Do you know what day it is!?";
-		mes "It's a very important date!";
-		mes "A very important date to remember!";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Do you know what day it is!?";
+		mes "[DRY-RUN] It's a very important date!";
+		mes "[DRY-RUN] A very important date to remember!";
 		next;
-		mes "[Mad Sago Lauds]";
-		mes "What is this!?";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] What is this!?";
 		emotion ET_SURPRISE;
 		next;
-		mes "[Mad Sago Lauds]";
-		mes "Where is your towel!?";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Where is your towel!?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "My what?";
+		mes "[DRY-RUN] My what?";
 		next;
-		mes "[Mad Sago Lauds]";
-		mes "How are you supposed to go on your trip without your towel!?";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] How are you supposed to go on your trip without your towel!?";
 		next;
-		mes "[Mad Sago Lauds]";
-		mes "If you think this is just another holiday, I'm not going to waste my breath.";
-		mes "But if you like to pay a tribute to great soldiers, I will help you ready yourself.";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] If you think this is just another holiday, I'm not going to waste my breath.";
+		mes "[DRY-RUN] But if you like to pay a tribute to great soldiers, I will help you ready yourself.";
 		next;
-		if (select("I guess so...:Are you crazy or something?") == 2) {
-			mes "[Mad Sago Lauds]";
-			mes "Fine, be unprepared!";
+		if (select("[DRY-RUN] I guess so...:Are you crazy or something?") == 2) {
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] Fine, be unprepared!";
 			next;
-			mes "[Mad Sago Lauds]";
-			mes "";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] ^FF0000YOU WILL RUE THE DAY!^000000";
 			close;
 		}
-		mes "^FF0000YOU WILL RUE THE DAY!^000000";
-		mes "[Mad Sago Lauds]";
-		mes "Great!";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Great!";
+		mes "[DRY-RUN] Then listen to me carefully.";
 		next;
-		mes "Then listen to me carefully.";
-		mes "[Mad Sago Lauds]";
-		mes "Now before you can pay tribute to the fallen soldiers you must be properly equipped.";
-		mes "Without your towel you will be lost!";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Now before you can pay tribute to the fallen soldiers you must be properly equipped.";
+		mes "[DRY-RUN] Without your towel you will be lost!";
+		mes "[DRY-RUN] If you bring me the materials, I can make you a towel.";
 		next;
-		mes "If you bring me the materials, I can make you a towel.";
-		mes "[Mad Sago Lauds]";
-		mes "Listen closely.";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Listen closely.";
+		mes "[DRY-RUN] Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
 		set Memorial08,1;
 		close;
 	}
 
 	else if (Memorial08 == 1) {
 		if (countitem(1059) < 30 || countitem(914) < 20) {
-			mes "Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
-			mes "[Mad Sago Lauds]";
-			mes "What are these? They aren't enough?!";
-			mes "*Sigh* Do I really have to tell you again?!";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] What are these? They aren't enough?!";
+			mes "[DRY-RUN] *Sigh* Do I really have to tell you again?!";
+			mes "[DRY-RUN] Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
 			close;
 		} else {
-			mes "Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
+			mes "[DRY-RUN] ***Mad Sago Lauds appears to be muttering to himself***";
 			next;
-			mes "***Mad Sago Lauds appears to be muttering to himself***";
-			mes "[Mad Sago Lauds]";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] So, did you bring the towel materials?";
 			next;
-			mes "So, did you bring the towel materials?";
-			mes "[Mad Sago Lauds]";
-			mes "Excellent; you've brought them all.";
-			mes "Then I shall make you a Towel of Memory as I promised.";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] Excellent; you've brought them all.";
+			mes "[DRY-RUN] Then I shall make you a Towel of Memory as I promised.";
+			mes "[DRY-RUN] Give me a moment.";
 			next;
-			mes "Give me a moment.";
-			mes "[Mad Sago Lauds]";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] There you go!";
 			delitem 1059,30;
 			delitem 914,20;
 			getitem 6025,1;
@@ -98,95 +98,95 @@ prontera,182,214,4	script	Lauds#Memorial	58,{
 	}
 	
 	else if (Memorial08 == 2) {
-		mes "There you go!";
-		mes "[Mad Sago Lauds]";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Ah, you have fluffy new towel now I even put your name on it";
 		next;
-		mes "Ah, you have fluffy new towel now I even put your name on it";
-		mes "[Mad Sago Lauds]";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Say, how do you like to go on a journey to pay a tribute to Memorial Day?";
 		next;
-		if (select("Sure.:No, I'm Busy.") == 2) {
-			mes "Say, how do you like to go on a journey to pay a tribute to Memorial Day?";
-			mes "[Mad Sago Lauds]";
+		if (select("[DRY-RUN] Sure.:No, I'm Busy.") == 2) {
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] Don't come crying to me if someone decides to build a highway through your home!";
 			close;
 		}
-		mes "Don't come crying to me if someone decides to build a highway through your home!";
-		mes "[Mad Sago Lauds]";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Good. By the way, do you even know what the towel is for?";
 		next;
-		mes "Good. By the way, do you even know what the towel is for?";
-		mes "[Mad Sago Lauds]";
-		mes "It seems you're just carrying it without understanding its meaning.";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] It seems you're just carrying it without understanding its meaning.";
+		mes "[DRY-RUN] What a shame! You should go speak to ^FF0000Grast in Prontera^000000.";
 		set Memorial08,3;
 		close;
 	}
 
 	else if (Memorial08 == 3) {
-		mes "What a shame! You should go speak to ^FF0000Grast in Prontera^000000.";
-		mes "[Mad Sago Lauds]";
-		mes "What are you still doing here?";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] What are you still doing here?";
+		mes "[DRY-RUN] I told you to go speak to Grast in Prontera!";
 		close;
 	}
 
 	else if (Memorial08 == 4 || Memorial08 == 5 || Memorial08 == 6) {
-		mes "I told you to go speak to Grast in Prontera!";
-		mes "[Mad Sago Lauds]";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Go help Grast, and then come back.";
 		close;
 	}
 
 	else if (Memorial08 == 7) {
-		mes "Go help Grast, and then come back.";
-		mes "[Mad Sago Lauds]";
-		mes "Oh, you've brought them all.";
-		mes "Hahaha!";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Oh, you've brought them all.";
+		mes "[DRY-RUN] Hahaha!";
+		mes "[DRY-RUN] HAHAHAHAHAHA!!!! cough cough";
 		next;
-		mes "HAHAHAHAHAHA!!!! cough cough";
-		mes "[Mad Sago Lauds]";
-		mes "Please give them to me. Thank you for your hard work, by the way.";
-		mes "Say, have you learned anything from the journey?";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Please give them to me. Thank you for your hard work, by the way.";
+		mes "[DRY-RUN] Say, have you learned anything from the journey?";
+		mes "[DRY-RUN] Now is to go visit the plaque at 12 o'clock direction in Prontera.";
 		next;
-		mes "Now is to go visit the plaque at 12 o'clock direction in Prontera.";
-		mes "[Mad Sago Lauds]";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] What do you mean you were just there?";
 		next;
-		mes "What do you mean you were just there?";
-		mes "[Mad Sago Lauds]";
-		mes "What? Why are you giving me your garbage!";
-		mes "Those items are not useful to me at all.";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] What? Why are you giving me your garbage!";
+		mes "[DRY-RUN] Those items are not useful to me at all.";
+		mes "[DRY-RUN] You should be going to the plaque!";
 		set Memorial08,8;
 		close;
 	}
 
 	else if (Memorial08 == 8) {
-		mes "You should be going to the plaque!";
-		mes "[Mad Sago Lauds]";
-		mes "Stop trying to give me your garbage!";
+		mes "[DRY-RUN] [Mad Sago Lauds]";
+		mes "[DRY-RUN] Stop trying to give me your garbage!";
+		mes "[DRY-RUN] Go to the plaque at 12 o'clock direction in Prontera for your journey!";
 		close;
 	}
 	
 	else if (Memorial08 >= 9) {
 		set .@RandomMsg, rand(1,5);
 		if (.@RandomMsg == 1) {
-			mes "Go to the plaque at 12 o'clock direction in Prontera for your journey!";
-			mes "[Mad Sago Lauds]";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] Don't panic!";
 			emotion ET_SURPRISE;
 			close;
 		}
 		else if (.@RandomMsg == 2) {
-			mes "Don't panic!";
-			mes "[Mad Sago Lauds]";
-			mes "Life... is like a grapefruit.";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] Life... is like a grapefruit.";
+			mes "[DRY-RUN] It's orange and squishy, and has a few pips in it, and some folks have half a one for breakfast.";
 			close;
 		}
 		else if (.@RandomMsg == 3) {
-			mes "It's orange and squishy, and has a few pips in it, and some folks have half a one for breakfast.";
-			mes "[Mad Sago Lauds]";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] There was a point to this story, but it has temporarily escaped the chronicler's mind.";
 			close;
 		}
 		else if (.@RandomMsg == 4) {
-			mes "There was a point to this story, but it has temporarily escaped the chronicler's mind.";
-			mes "[Mad Sago Lauds]";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
+			mes "[DRY-RUN] 42!";
 			close;
 		}
 		else if (.@RandomMsg == 5) {
-			mes "42!";
+			mes "[DRY-RUN] [Mad Sago Lauds]";
 			mes "[Mad Sago Lauds]";
 			close;
 		}
@@ -254,56 +254,56 @@ prontera,153,286,4	script	Memorial Plaque#Memorial	857,{
 //============================================================
 prontera,150,270,4	script	Grast#Memorial	900,{
 	if (Memorial08 < 3) {
-		mes "[Grast]";
-		mes "Memorial Day is a sad and yet glorious day.";
-		mes "I wonder how many people remember them...";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] Memorial Day is a sad and yet glorious day.";
+		mes "[DRY-RUN] I wonder how many people remember them...";
 		close;
 	}
 	
 	else if (Memorial08 == 3) {
-		mes "[Grast]";
-		mes "Oh, isn't that a Towel of Memory?";
-		mes "I'm so glad to meet someone who understands the meaning of Memorial Day.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] Oh, isn't that a Towel of Memory?";
+		mes "[DRY-RUN] I'm so glad to meet someone who understands the meaning of Memorial Day.";
 		next;
-		mes "[Grast]";
-		mes "It is very important to know what we're celebrating today, don't you think?";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] It is very important to know what we're celebrating today, don't you think?";
 		next;
-		mes "[Grast]";
-		mes "If you like to go on a journey to pay a tribute to Memorial Day, you should bring me some materials I ask.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] If you like to go on a journey to pay a tribute to Memorial Day, you should bring me some materials I ask.";
 		next;
-		mes "[Grast]";
-		mes "Please bring me ^FF0000one of each Red Potion, Green Potion, Awakening Potion, and Butterfly Wing^000000.";
-		mes "I'll be waiting for your return.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] Please bring me ^FF0000one of each Red Potion, Green Potion, Awakening Potion, and Butterfly Wing^000000.";
+		mes "[DRY-RUN] I'll be waiting for your return.";
 		set Memorial08,4;
 		close;
 	}
 
 	else if (Memorial08 == 4) {
 		if (countitem(501) < 1 || countitem(506) < 1 || countitem(656) < 1 || countitem(602) < 1) {
-			mes "[Grast]";
-			mes "Oops, you haven't brought all materials.";
-			mes "Please make sure you need to bring me";
-			mes "^FF0000one of each Red Potion, Green Potion, Awakening Potion, and Butteryfly Wing^000000.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Oops, you haven't brought all materials.";
+			mes "[DRY-RUN] Please make sure you need to bring me";
+			mes "[DRY-RUN] ^FF0000one of each Red Potion, Green Potion, Awakening Potion, and Butteryfly Wing^000000.";
 			next;
-			mes "[Grast]";
-			mes "You'll have to bring me more materials afterwards.";
-			mes "If you feel too burdened to gather them all,";
-			mes "I can provide you all the materials.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] You'll have to bring me more materials afterwards.";
+			mes "[DRY-RUN] If you feel too burdened to gather them all,";
+			mes "[DRY-RUN] I can provide you all the materials.";
 			next;
-			if (select("I'll gather the rest.:Give me the materials.") == 2) {
+			if (select("[DRY-RUN] I'll gather the rest.:Give me the materials.") == 2) {
 				goto L_GiveUp;
 			}
 			goto L_Continue;
 		} else {
-			mes "[Grast]";
-			mes "Oh, you've brought the materials I asked.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Oh, you've brought the materials I asked.";
 			next;
-			mes "[Grast]";
-			mes "Hmm, you will need some more things still...";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Hmm, you will need some more things still...";
 			next;
-			mes "[Grast]";
-			mes "Please bring me ^FF0000one of each Trap, Yggdrasil Leaf, Blue Gemstone, Crystal Mirror, Meat, and Carrot.^000000";
-			mes "I'll be waiting for your return.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Please bring me ^FF0000one of each Trap, Yggdrasil Leaf, Blue Gemstone, Crystal Mirror, Meat, and Carrot.^000000";
+			mes "[DRY-RUN] I'll be waiting for your return.";
 			set Memorial08,5;
 			close;
 		}
@@ -311,26 +311,26 @@ prontera,150,270,4	script	Grast#Memorial	900,{
 	
 	else if (Memorial08 == 5) {
 		if (countitem(1065) < 1 || countitem(610) < 1 || countitem(717) < 1 || countitem(747) < 1 || countitem(517) < 1 || countitem(515) < 1) {
-			mes "[Grast]";
-			mes "Oops, you haven't brought all materials.";
-			mes "Please make sure you'll have to bring me";
-			mes "^FF0000one of each Trap, Yggdrasil Leaf, Blue Gemstone, Crystal Mirror, Meat, and Carrot^000000.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Oops, you haven't brought all materials.";
+			mes "[DRY-RUN] Please make sure you'll have to bring me";
+			mes "[DRY-RUN] ^FF0000one of each Trap, Yggdrasil Leaf, Blue Gemstone, Crystal Mirror, Meat, and Carrot^000000.";
 			next;
-			mes "[Grast]";
-			mes "You'll have to bring me more materials afterwards.";
-			mes "If you feel too burdened to gather them all, I can provide you all the materials.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] You'll have to bring me more materials afterwards.";
+			mes "[DRY-RUN] If you feel too burdened to gather them all, I can provide you all the materials.";
 			next;
-			if (select("I'll gather the rest.:Give me the materials.") == 2) {
+			if (select("[DRY-RUN] I'll gather the rest.:Give me the materials.") == 2) {
 				goto L_GiveUp;
 			}
 			goto L_Continue;
 		} else {
-			mes "[Grast]";
-			mes "Oh, you've brought everything I asked.";
-			mes "Hmm, I think you need just a little bit more.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Oh, you've brought everything I asked.";
+			mes "[DRY-RUN] Hmm, I think you need just a little bit more.";
 			next;
-			mes "[Grast]";
-			mes "Please bring me ^FF0000one of each Pet Incubator, Firecracker, Poring Doll, and Bouquet^000000.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Please bring me ^FF0000one of each Pet Incubator, Firecracker, Poring Doll, and Bouquet^000000.";
 			set Memorial08,6;
 			close;
 		}
@@ -338,53 +338,53 @@ prontera,150,270,4	script	Grast#Memorial	900,{
 	
 	else if (Memorial08 == 6) {
 		if (countitem(643) < 1 || countitem(12018) < 1 || countitem(741) < 1 || countitem(745) < 1) {
-			mes "[Grast]";
-			mes "Oops, you haven't brought all materials.";
-			mes "Please make sure you need to bring me";
-			mes "^FF0000one of each Pet Incubator, Firecracker, Poring Doll and Bouquet";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Oops, you haven't brought all materials.";
+			mes "[DRY-RUN] Please make sure you need to bring me";
+			mes "[DRY-RUN] ^FF0000one of each Pet Incubator, Firecracker, Poring Doll and Bouquet";
 			next;
-			mes "[Grast]";
-			mes "They are the last batch of materials.";
-			mes "If you feel too burdened to gather them all, I can provide you all the materials.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] They are the last batch of materials.";
+			mes "[DRY-RUN] If you feel too burdened to gather them all, I can provide you all the materials.";
 			next;
-			mes "[Grast]";
-			mes "If I provide you all materials, however, I won't have to thank you for your service.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] If I provide you all materials, however, I won't have to thank you for your service.";
 			mes "It's your call, " + strcharinfo(0) + ".";
 			next;
-			if (select("I'll gather the rest.:Give me the materials.") == 2) {
+			if (select("[DRY-RUN] I'll gather the rest.:Give me the materials.") == 2) {
 				goto L_GiveUp;
 			}
 			goto L_Continue;
 		} else {
-			mes "[Grast]";
-			mes "Have you brought the materials I asked?";
-			mes "Ah, thank you for your hard work you've brought all of them.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Have you brought the materials I asked?";
+			mes "[DRY-RUN] Ah, thank you for your hard work you've brought all of them.";
 			next;
-			mes "[Grast]";
-			mes "I hope you'll learn a valuable lesson while gathering these materials.";
-			mes "I like to give you a small gift for your service.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] I hope you'll learn a valuable lesson while gathering these materials.";
+			mes "[DRY-RUN] I like to give you a small gift for your service.";
 			next;
-			mes "[Grast]";
-			mes "You see, I have two different gifts in my each hand.";
-			mes "A best thing would be giving you both of them, but...";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] You see, I have two different gifts in my each hand.";
+			mes "[DRY-RUN] A best thing would be giving you both of them, but...";
 			mes "How do you like to test your luck, " + strcharinfo(0) + "?";
 			next;
-			mes "[Grast]";
-			mes "Okay, which hand would you like to pick?";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] Okay, which hand would you like to pick?";
 			next;
-			if (select("Left hand.:Right hand.") == 2) {
-				mes "[Grast]";
-				mes "You've selected my right hand.";
-				mes "Here's the gift for you.";
-				mes "Now, please bring all these materials to Lauds.";
+			if (select("[DRY-RUN] Left hand.:Right hand.") == 2) {
+				mes "[DRY-RUN] [Grast]";
+				mes "[DRY-RUN] You've selected my right hand.";
+				mes "[DRY-RUN] Here's the gift for you.";
+				mes "[DRY-RUN] Now, please bring all these materials to Lauds.";
 				set Memorial08, 7;
 				getitem 617,1;
 				close;
 			}
-			mes "[Grast]";
-			mes "You've selected my left hand.";
-			mes "Here's the gift for you.";
-			mes "Now, please bring all these materials to Lauds.";
+			mes "[DRY-RUN] [Grast]";
+			mes "[DRY-RUN] You've selected my left hand.";
+			mes "[DRY-RUN] Here's the gift for you.";
+			mes "[DRY-RUN] Now, please bring all these materials to Lauds.";
 			set Memorial08, 7;
 			getitem 12109,1;
 			close;
@@ -392,39 +392,39 @@ prontera,150,270,4	script	Grast#Memorial	900,{
 	}
 	
 	else if (Memorial08 == 7) {
-		mes "[Grast]";
-		mes "Have you met Lauds?";
-		mes "I hope you'll remember your freedom and happiness are built on thousands of lives sacrificed in war.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] Have you met Lauds?";
+		mes "[DRY-RUN] I hope you'll remember your freedom and happiness are built on thousands of lives sacrificed in war.";
 		close;
 	}
 
 	else if (Memorial08 >= 8) {
-		mes "[Grast]";
-		mes "A towel is about the most massively useful thing an adventurer can have.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] A towel is about the most massively useful thing an adventurer can have.";
 		close;
 	}
 
 	L_GiveUp:
-		mes "[Grast]";
-		mes "Oh, I see. I guess you're quite busy nowadays, huh?";
-		mes "No problem; I'll give you all the supplies...";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] Oh, I see. I guess you're quite busy nowadays, huh?";
+		mes "[DRY-RUN] No problem; I'll give you all the supplies...";
 		next;
-		mes "[Grast]";
-		mes "There you go.";
-		mes "I crushed all the items together into a more compact form for you.";
-		mes "You can thank me later for that extra service.";
-		mes "Please bring them to Lauds.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] There you go.";
+		mes "[DRY-RUN] I crushed all the items together into a more compact form for you.";
+		mes "[DRY-RUN] You can thank me later for that extra service.";
+		mes "[DRY-RUN] Please bring them to Lauds.";
 		set Memorial08,7;
 		getitem 7126,1;
 		next;
-		mes "[Grast]";
-		mes "By the way, he had an unfortunate accident, and has kind of lost his mind.";
-		mes "Please don't be alarmed even if he starts babbling.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] By the way, he had an unfortunate accident, and has kind of lost his mind.";
+		mes "[DRY-RUN] Please don't be alarmed even if he starts babbling.";
 		close;
 	
 	L_Continue:
-		mes "[Grast]";
-		mes "That's a good idea.";
-		mes "Then I'll be waiting for your return.";
+		mes "[DRY-RUN] [Grast]";
+		mes "[DRY-RUN] That's a good idea.";
+		mes "[DRY-RUN] Then I'll be waiting for your return.";
 		close;
 }

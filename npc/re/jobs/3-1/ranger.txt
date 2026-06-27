@@ -25,47 +25,47 @@
 //============================================================
 
 tur_dun01,156,36,5	script	Survival Instructor#jr01	59,{
-	mes "[Survival Instructor, Rescue]";
+	mes "[生存教官 雷斯丘]";
 	if (BaseJob == Job_Hunter) {
 		if (job_ranger01 < 1) {
-			mes "eeeeei~ ha!";
-			mes "The weather is really great.";
+			mes "咿～哈！";
+			mes "天气真好啊。";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "What's up?";
-			mes "The monsters here are a";
-			mes "little tough so be careful.";
+			mes "[生存教官 雷斯丘]";
+			mes "怎么了？";
+			mes "这里的怪物有点";
+			mes "厉害，要小心哦。";
 			next;
-			if(select("I came here to become to a Ranger.:I just came to look around.") == 2) {
-				mes "[Survival Instructor, Rescue]";
-				mes "Oh ya?";
-				mes "The weather is really great. Shall we take a picture to commemorate it?";
+			if(select("我是来转职成游侠的。:我只是来看看。") == 2) {
+				mes "[生存教官 雷斯丘]";
+				mes "哦，是吗？";
+				mes "天气真好啊。要不要拍张照留念？";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "No?";
-				mes "Then just look around quietly and then go back.";
+				mes "[生存教官 雷斯丘]";
+				mes "不要？";
+				mes "那就安静地看看然后回去吧。";
 				close;
 			}
-			mes "[Survival Instructor, Rescue]";
-			mes "Huh?";
-			mes "How did you find me?";
+			mes "[生存教官 雷斯丘]";
+			mes "嗯？";
+			mes "你是怎么找到我的？";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "Well, it's a passing mark that you recognize me... let me see.";
+			mes "[生存教官 雷斯丘]";
+			mes "嗯，能认出我来算是及格了……让我看看。";
 			next;
 			if (BaseLevel < 99 || JobLevel < 50) {
-				mes "[Survival Instructor, Rescue]";
-				mes "No.";
-				mes "I can tell just by looking at you that you seem to be inexperienced.";
+				mes "[生存教官 雷斯丘]";
+				mes "不行。";
+				mes "光看你就知道你还缺乏经验。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Have more pride in your job and get more experience, and then when you grow as a Hunter or a Sniper you can make an aura by yourself, please come back again.";
+				mes "[生存教官 雷斯丘]";
+				mes "对自己的职业多一些自豪感，多积累经验，等你作为猎人或神射手成长到能自己发出光环的时候，再来找我吧。";
 				close;
 			}
-			mes "[Survival Instructor, Rescue]";
-			mes "Ok!";
-			mes "It looks like you have";
-			mes "enough experience.";
+			mes "[生存教官 雷斯丘]";
+			mes "好！";
+			mes "看起来你已经有";
+			mes "足够的经验了。";
 			next;
 			if (VIP_SCRIPT) {
 				callfunc "VIP_Third_Class";
@@ -73,52 +73,52 @@ tur_dun01,156,36,5	script	Survival Instructor#jr01	59,{
 				setquest 8254;
 				next;
 			}
-			mes "[Survival Instructor, Rescue]";
-			mes "Good.";
-			mes "First of all, let me tell you the job change qualifications to be a Ranger.";
+			mes "[生存教官 雷斯丘]";
+			mes "好的。";
+			mes "首先，让我告诉你转职成游侠的资格条件。";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "I've already checked the first qualification that you've experienced enough to make an aura as a Hunter or a Sniper.";
+			mes "[生存教官 雷斯丘]";
+			mes "第一个资格条件，我已经确认你作为猎人或神射手已经积累了足够的经验，能够发出光环。";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "For the second qualification to judge one's ability exactly, you need to lighten your body and mind.";
+			mes "[生存教官 雷斯丘]";
+			mes "第二个资格条件是为了准确判断你的能力，你需要让身心都轻松下来。";
 			next;
 			if (Class == Job_Hunter || Class == Job_Baby_Hunter) {
-				mes "[Survival Instructor, Rescue]";
-				mes "Ah wait, before that.";
-				mes "When you change a job into a Ranger from a Hunter,";
-				mes "you won't get any chance to learn the skills of a Sniper, would that be okay?";
+				mes "[生存教官 雷斯丘]";
+				mes "啊，等一下。";
+				mes "从猎人直接转职成游侠的话，";
+				mes "你将没有机会学习神射手的技能，这样可以吗？";
 				next;
-				switch(select("I'll think about it more.:I want to be a Ranger already.")) {
+				switch(select("我再想想。:我想马上成为游侠。")) {
 				case 1:
-					mes "[Survival Instructor, Rescue]";
-					mes "Okay.";
-					mes "Take your time to think, if it's okay then come back.";
+					mes "[生存教官 雷斯丘]";
+					mes "好的。";
+					mes "慢慢想，想好了再来吧。";
 					close;
 				case 2:
-					mes "[Survival Instructor, Rescue]";
-					mes "All right.";
-					mes "You are ready then.";
+					mes "[生存教官 雷斯丘]";
+					mes "好的。";
+					mes "那你准备好了。";
 					next;
 				}
-				mes "[Survival Instructor, Rescue]";
-				mes "Well let's continue our conversation.";
-				mes "Before you change into a Ranger, even though you reached the highest level of a Hunter, it is not the best evaluation of your abilities.";
+				mes "[生存教官 雷斯丘]";
+				mes "那我们继续说吧。";
+				mes "在你转职成游侠之前，虽然你已经达到了猎人的最高等级，但这并不是对你能力的最佳评估。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "So in order to check your abilities, I'll need to evaluate your pure abilities.~";
+				mes "[生存教官 雷斯丘]";
+				mes "所以为了检验你的能力，我需要评估你的纯粹实力~";
 				next;
 			} else {
-				mes "[Survival Instructor, Rescue]";
-				mes "Before you change into a Ranger, even though you reached the highest level of a Sniper, it is not the best evaluation of your abilities.";
+				mes "[生存教官 雷斯丘]";
+				mes "在你转职成游侠之前，虽然你已经达到了神射手的最高等级，但这并不是对你能力的最佳评估。";
 				next;
-				mes "[Survival Instructor]";
-				mes "So in order to check your abilities, I'll need to evaluate your pure abilities.~";
+				mes "[生存教官]";
+				mes "所以为了检验你的能力，我需要评估你的纯粹实力~";
 				next;
 			}
-			mes "[Survival Instructor, Rescue]";
-			mes "To do this you need to be cleansed of body and soul.";
-			mes "Make sure that your weight equals '0' to continue.";
+			mes "[生存教官 雷斯丘]";
+			mes "为此你需要净化身心。";
+			mes "请确保你的负重为'0'才能继续。";
 			set job_ranger01,1;
 			setquest 8254;
 			close2;
@@ -126,82 +126,82 @@ tur_dun01,156,36,5	script	Survival Instructor#jr01	59,{
 			end;
 		} else if (job_ranger01 == 1) {
 			if (Weight < 1) {
-				mes "Wow, you've come back so quickly.";
+				mes "哇，你回来得真快。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Ok, now I'll talk about the requirements to take the test to become a Ranger.";
+				mes "[生存教官 雷斯丘]";
+				mes "好的，现在我来说说成为游侠的考试要求。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "All the tests to become a Ranger are going to be done with practical means.";
+				mes "[生存教官 雷斯丘]";
+				mes "所有成为游侠的考试都将以实战方式进行。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Will there be a written test?";
+				mes "[生存教官 雷斯丘]";
+				mes "会有笔试吗？";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Why do you want one?";
-				mes "The most important part of this test is the test of your experience on the battlefield.";
+				mes "[生存教官 雷斯丘]";
+				mes "你为什么想要笔试？";
+				mes "这次考试最重要的部分是你在战场上的实战经验测试。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Therefore, what I request of you is to prove your power of survival.";
+				mes "[生存教官 雷斯丘]";
+				mes "因此，我要求你证明你的生存能力。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "I want to see the real power of survival, even if you fall down and get beat up.";
+				mes "[生存教官 雷斯丘]";
+				mes "我想看到真正的生存能力，即使你跌倒了、被打了也要坚持下去。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "If you succeed with this survival power test, you will receive the first qualification.";
+				mes "[生存教官 雷斯丘]";
+				mes "如果你通过了这个生存能力测试，你将获得第一个资格。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Well, let's talk about the details when you get the qualification for taking the test.";
-				mes "When you want to take the survival power test, please talk to me again.";
+				mes "[生存教官 雷斯丘]";
+				mes "好了，等你获得考试资格后我们再谈细节。";
+				mes "当你想参加生存能力测试时，请再来找我。";
 				set job_ranger01,2;
 				changequest 8254,8255;
 				close;
 			}
-			mes "Before you change into a Ranger, I'll need to evaluate your pure abilities.";
+			mes "在你转职成游侠之前，我需要评估你的纯粹实力。";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "To do this you need to be cleansed of body and soul.";
-			mes "Make sure that your weight equals 0 to continue.";
+			mes "[生存教官 雷斯丘]";
+			mes "为此你需要净化身心。";
+			mes "请确保你的负重为0才能继续。";
 			close;
 		} else if (job_ranger01 == 2) {
 			if (Weight < 1) {
-				mes "Um. That you talked to me again means that you are determined to change into a Ranger and take the survival power test.";
+				mes "嗯。你又来找我说明你已经下定决心要转职成游侠并参加生存能力测试了。";
 				next;
-				if(select("I'll think about it more:I'll take the test") == 1) {
-					mes "[Survival Instructor, Rescue]";
-					mes "Prepare yourself very well before taking this test.";
+				if(select("我再想想:我要参加考试") == 1) {
+					mes "[生存教官 雷斯丘]";
+					mes "在参加考试之前好好准备一下。";
 					next;
-					mes "[Survival Instructor, Rescue]";
-					mes "Think about it well and come back.";
+					mes "[生存教官 雷斯丘]";
+					mes "好好想想再来吧。";
 					close;
 				}
-				mes "[Survival Instructor, Rescue]";
-				mes "If you are determined, then there's nothing to wait for.";
+				mes "[生存教官 雷斯丘]";
+				mes "既然你已经下定决心了，那就没什么好等的了。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "I'll explain it simply.";
-				mes "What I'm going to provide you is 10 Fly Wings, 500 of Arrows and 1 test Bow.";
+				mes "[生存教官 雷斯丘]";
+				mes "我简单说明一下。";
+				mes "我会提供给你10个苍蝇翅膀、500支箭和1把测试用弓。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Take the provided items and all you have to do for the survival power test is ^0000ffgo to the Northwestern area of Turtle Island and find Instructor Teardrop^000000.";
-				mes "Easy, right?";
+				mes "[生存教官 雷斯丘]";
+				mes "拿着这些物品，生存能力测试就是^0000ff前往海龟岛的西北区域找到教官 泪滴^000000。";
+				mes "简单吧？";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Remember that you don't have any other equipment on, so be careful of the monsters.";
-				mes "Ready to start?";
+				mes "[生存教官 雷斯丘]";
+				mes "记住你身上没有其他装备，所以要小心怪物。";
+				mes "准备好开始了吗？";
 				next;
-				if(select("Wait a second:Yes, I'm ready") == 1) {
-					mes "[Survival Instructor, Rescue]";
-					mes "What kind of preparation can be so long.";
+				if(select("等一下:是的，我准备好了") == 1) {
+					mes "[生存教官 雷斯丘]";
+					mes "准备怎么能这么久。";
 					next;
-					mes "[Survival Instructor, Rescue]";
-					mes "Come again when you are absolutely ready.";
+					mes "[生存教官 雷斯丘]";
+					mes "完全准备好了再来吧。";
 					close;
 				}
-				mes "[Survival Instructor, Rescue]";
-				mes "Well, then let's start.";
-				mes "There's no time to hesitate.";
-				mes "Do your best.";
+				mes "[生存教官 雷斯丘]";
+				mes "好，那就开始吧。";
+				mes "没有时间犹豫了。";
+				mes "加油。";
 				set job_ranger01,3;
 				changequest 8255,8256;
 				getitem 1703,1; //Bow__
@@ -209,465 +209,465 @@ tur_dun01,156,36,5	script	Survival Instructor#jr01	59,{
 				getitem 1750,500; //Arrow
 				close;
 			}
-			mes "I knew it.";
+			mes "我就知道。";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "Why did you bring so much?";
-			mes "It's good that you do your best on the job change but, the key to this test is to test our true abilities...";
+			mes "[生存教官 雷斯丘]";
+			mes "你怎么带了这么多东西？";
+			mes "转职固然重要，但这次考试的关键是测试我们的真实能力……";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "If you don't make your weight 0, you wouldn't be able to take the test.";
+			mes "[生存教官 雷斯丘]";
+			mes "如果你不把负重降到0，就无法参加考试。";
 			close;
 		} else if (job_ranger01 == 3) {
-			mes "Umm?";
-			mes "What are you waiting for?";
+			mes "嗯？";
+			mes "你在等什么？";
 			next;
-			if(select("Tell me the mission again.:I just wanted to talk.") == 1) {
-				mes "[Survival Instructor, Rescue]";
-				mes "Oh, ya.";
-				mes "Is this the mind of a person who's going to take the test?";
+			if(select("再告诉我一次任务。:我只是想聊聊。") == 1) {
+				mes "[生存教官 雷斯丘]";
+				mes "哦，是吗。";
+				mes "这是要参加考试的人该有的心态吗？";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Stay alert and listen.";
+				mes "[生存教官 雷斯丘]";
+				mes "打起精神来听好了。";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "Take the provided items and all you have to do for the survival power test is ^0000ffgo to the Northwestern area of Turtle Island and find Instructor Teardrop^000000.";
-				mes "Isn't that so easy?";
+				mes "[生存教官 雷斯丘]";
+				mes "拿着这些物品，生存能力测试就是^0000ff前往海龟岛的西北区域找到教官 泪滴^000000。";
+				mes "很简单不是吗？";
 				next;
-				mes "[Survival Instructor, Rescue]";
-				mes "As you don't have any equipment on, be careful of the monsters in the field.";
-				mes "Well, shall we start?";
+				mes "[生存教官 雷斯丘]";
+				mes "你身上没有装备，要小心野外的怪物。";
+				mes "好了，要开始了吗？";
 				next;
-				if(select("Wait a minute:I will start") == 1) {
-					mes "[Survival Instructor, Rescue]";
-					mes "What kind of preparation can be so long.";
+				if(select("等一下:我要开始") == 1) {
+					mes "[生存教官 雷斯丘]";
+					mes "准备怎么能这么久。";
 					next;
-					mes "[Survival Instructor, Rescue]";
-					mes "Come again when you are absolutely ready.";
+					mes "[生存教官 雷斯丘]";
+					mes "完全准备好了再来吧。";
 					close;
 				}
-				mes "[Survival Instructor, Rescue]";
-				mes "Okay, let's start.";
-				mes "There's no time to hesitate, so do your best.";
+				mes "[生存教官 雷斯丘]";
+				mes "好，开始吧。";
+				mes "没有时间犹豫了，加油。";
 				close;
 			}
-			mes "[Survival Instructor, Rescue]";
-			mes "I don't think you have the time for that.";
+			mes "[生存教官 雷斯丘]";
+			mes "我觉得你没有时间闲聊。";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "Hurry up and finish the test.";
+			mes "[生存教官 雷斯丘]";
+			mes "快去完成考试吧。";
 			close;
 		} else if (job_ranger01 > 3 && job_ranger01 < 7) {
-			mes "Are you still wandering about here?";
+			mes "你还在这里晃悠？";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "Well, if you are an easy person, that's none of my business but if you decided once, wouldn't it be better to take the practical test in a minute and meet me after becoming a Ranger?";
+			mes "[生存教官 雷斯丘]";
+			mes "嗯，如果你是个随便的人那是你的事，但既然已经决定了，赶紧去参加实战考试，成为游侠之后再来见我不是更好吗？";
 			close;
 		} else if (job_ranger01 == 7) {
-			mes "Oh, hey. What are you doing here?";
+			mes "哦，嘿。你在这里做什么？";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "Because you've disappeared suddenly, the Ranger Master was looking for you.";
-			mes "Do you want to go to him now?";
+			mes "[生存教官 雷斯丘]";
+			mes "因为你突然消失了，游侠大师一直在找你。";
+			mes "你现在要去找他吗？";
 			next;
-			switch(select("Don't go:Go")) {
+			switch(select("不去:去")) {
 			case 1:
-				mes "[Survival Instructor, Rescue]";
-				mes "Are you busy with something else?";
+				mes "[生存教官 雷斯丘]";
+				mes "你还有别的事要忙吗？";
 				close;
 			case 2:
-				mes "[Survival Instructor, Rescue]";
-				mes "Then I'll send you, please be well.";
+				mes "[生存教官 雷斯丘]";
+				mes "那我送你过去，保重。";
 				close2;
 				warp "job3_rang01",89,38;
 				end;
 			}
 		}
-		mes "Oh, hey. Who's this?";
+		mes "哦，嘿。这是谁啊？";
 		next;
-		mes "[Survival Instructor, Rescue]";
-		mes "Hey, you look great.";
-		mes "Congratulations on becoming a Ranger~";
+		mes "[生存教官 雷斯丘]";
+		mes "嘿，你看起来真精神。";
+		mes "恭喜你成为游侠~";
 		next;
-		mes "[Survival Instructor, Rescue]";
-		mes "Next time, try not to intimidate other people.";
+		mes "[生存教官 雷斯丘]";
+		mes "下次别再吓唬别人了。";
 		close;
 	}
 	if (Class == Job_Ranger || Class == Job_Ranger_T || Class == Job_Baby_Ranger) {
 		if (job_ranger01 == 8) {
-			mes "Ho. Who's this~";
-			mes "You really look talented...";
+			mes "嗬。这是谁~";
+			mes "你看起来真有才华……";
 			next;
-			mes "[Survival Instructor, Rescue]";
-			mes "Next time, try not to intimidate other people.";
+			mes "[生存教官 雷斯丘]";
+			mes "下次别再吓唬别人了。";
 			close;
 		}
 	}
-	mes "Ha ~ ha.";
-	mes "The weather is really great.";
+	mes "哈~哈。";
+	mes "天气真好啊。";
 	next;
-	mes "[Survival Instructor, Rescue]";
-	mes "What's up?";
-	mes "The monsters here are a";
-	mes "little tough so be careful.";
+	mes "[生存教官 雷斯丘]";
+	mes "怎么了？";
+	mes "这里的怪物有点";
+	mes "厉害，要小心哦。";
 	close;
 }
 
 tur_dun01,91,169,3	script	Test Instructor#jr02	732,{
-	mes "[Test Instructor, Teardrop]";
+	mes "[考试教官 泪滴]";
 	if (BaseJob == Job_Hunter) {
 		if (job_ranger01 < 3) {
-			mes "Good to goooooo!!!!!!!";
+			mes "冲冲冲！！！！！！！";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Huh? Who are you? What are you doing here, you baby archer.";
+			mes "[考试教官 泪滴]";
+			mes "嗯？你是谁？你这个小弓箭手来这里做什么。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "May I tell you one thing?";
-			mes "If you want to change a job to a Ranger, first talk to Survival Instructor Rescue.";
+			mes "[考试教官 泪滴]";
+			mes "我告诉你一件事好吗？";
+			mes "如果你想转职成游侠，先去找生存教官雷斯丘谈谈。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Then he will tell you the requirement for the job change test!!!";
+			mes "[考试教官 泪滴]";
+			mes "然后他会告诉你转职考试的要求！！！";
 			close;
 		} else if (job_ranger01 == 3) {
-			mes "Good to goooooo!!!!!!!";
+			mes "冲冲冲！！！！！！！";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Huh? Who are you? What are you doing here, you baby archer.";
+			mes "[考试教官 泪滴]";
+			mes "嗯？你是谁？你这个小弓箭手来这里做什么。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "That you are coming and going bugs me so, would you please stop?!";
+			mes "[考试教官 泪滴]";
+			mes "你来来回回的让我很烦，能不能别这样了？！";
 			next;
-			if(select("Ranger practical test building?:I came for the test.") == 1) {
-				mes "[Test Instructor, Teardrop]";
-				mes "What, what are you...?";
+			if(select("游侠实战考试场？:我是来参加考试的。") == 1) {
+				mes "[考试教官 泪滴]";
+				mes "什么，你这是……？";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "What do you think you are looking at?";
+				mes "[考试教官 泪滴]";
+				mes "你在看什么？";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "How could you be a Ranger if you can't even recognize what's in front of you? Get out of here!";
+				mes "[考试教官 泪滴]";
+				mes "连眼前的东西都认不出来，怎么能成为游侠？快走开！";
 				close;
 			}
-			mes "[Test Instructor, Teardrop]";
-			mes "Ho, having come this far, it means you've passed the first survival test.";
+			mes "[考试教官 泪滴]";
+			mes "嗬，能走到这里来，说明你已经通过了第一个生存测试。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "But, can you be sure that there wasn't any cheating?";
+			mes "[考试教官 泪滴]";
+			mes "但是，你能确定没有作弊吗？";
 			next;
 			if (Weight > 500) {
-				mes "[Test Instructor, Teardrop]";
-				mes "See, I knew it.";
+				mes "[考试教官 泪滴]";
+				mes "看吧，我就知道。";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "Having done the test normally, you would have adjusted your weight to 0, and hold the items provided by Rescue!";
-				mes "But, how come you weigh so much?";
+				mes "[考试教官 泪滴]";
+				mes "正常参加考试的话，你应该把负重调到0，只带着雷斯丘提供的物品！";
+				mes "但是你怎么这么重？";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "I consider this as cheating!";
-				mes "Come and see me again!";
+				mes "[考试教官 泪滴]";
+				mes "我认为这是作弊！";
+				mes "回去重新来过！";
 				close2;
 				warp "tur_dun01",162,33;
 				end;
 			}
-			mes "[Test Instructor, Teardrop]";
-			mes "Hmm. It's doubtful...";
+			mes "[考试教官 泪滴]";
+			mes "嗯。有点可疑……";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "I don't smell any signs of cheating. For now...";
+			mes "[考试教官 泪滴]";
+			mes "暂时没有闻到作弊的气息……";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Before taking a practical test, I want to eat something.";
-			mes "You know the food situation isn't always so good in a foreign land.";
+			mes "[考试教官 泪滴]";
+			mes "在参加实战考试之前，我想先吃点东西。";
+			mes "你知道在外面食物供应不总是那么好的。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "I know that the very basic way to survive might be raising the strength of one's own body. But, I find that sending adventurers is easier for me.";
+			mes "[考试教官 泪滴]";
+			mes "我知道最基本的生存方式可能是增强自身的体力。但是，我觉得派冒险者去更方便。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "So, kill ^0000ff1 Dragon Tail^000000 and bring me ^0000ff1 Wing of Dragonfly^000000.";
+			mes "[考试教官 泪滴]";
+			mes "所以，去杀^0000ff1只龙尾^000000，给我带^0000ff1个蜻蜓翅膀^000000回来。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "If you run out of the provided items, we cannot support you more so take care.";
-			mes "Consider this as an extension of the survival power test.";
+			mes "[考试教官 泪滴]";
+			mes "如果你用完了提供的物品，我们无法再补给，所以要小心。";
+			mes "把这当作生存能力测试的延伸吧。";
 			set job_ranger01,4;
 			changequest 8256,8257;
 			close;
 		} else if (job_ranger01 == 4) {
 			if (checkquest(8257,HUNTING) == 2) {
 				if (countitem(7064) > 0) {
-					mes "Oh! Oh! Woooooow!";
-					mes "You've brought it! Let me see...";
+					mes "哦！哦！哇哦！！！";
+					mes "你带来了！让我看看……";
 					next;
-					mes "[Test Instructor, Teardrop]";
-					mes "Hmmmm, it's still hot?!";
-					mes "You don't seem to be hurt anywhere...";
+					mes "[考试教官 泪滴]";
+					mes "嗯嗯，还是热的？！";
+					mes "你好像没有受伤……";
 					next;
-					mes "[Test Instructor, Teardrop]";
-					mes "Good, for now you're qualified for the practical test.";
+					mes "[考试教官 泪滴]";
+					mes "好的，暂时你有资格参加实战考试了。";
 					next;
-					mes "[Test Instructor, Teardrop]";
-					mes "Well, before I explain, could you please give me that Dragonfly wing?";
-					mes "You've heard the saying, 'in any situation, eating comes first'?";
+					mes "[考试教官 泪滴]";
+					mes "嗯，在我解释之前，能把那个蜻蜓翅膀给我吗？";
+					mes "你听过'无论什么情况，吃饭最重要'这句话吧？";
 					delitem 7064,1; //Dragon_Fly_Wing
 					set job_ranger01,5;
 					changequest 8257,8258;
 					close;
 				}
 			}
-			mes "What are you doing there? Standing with a blank look.";
+			mes "你在那里发什么呆呢？";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "I'm hungry.";
-			mes "Before taking the practical test, I want to eat something.";
+			mes "[考试教官 泪滴]";
+			mes "我饿了。";
+			mes "在参加实战考试之前，我想先吃点东西。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "I know that the very basic way to survive might be raising the strength of one's own body. But, I find that sending adventurers is easier for me.";
+			mes "[考试教官 泪滴]";
+			mes "我知道最基本的生存方式可能是增强自身的体力。但是，我觉得派冒险者去更方便。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "So, kill ^0000ff1 Dragon Tail^000000 and bring me ^0000ff1 Dragon Fly Wing^000000.";
+			mes "[考试教官 泪滴]";
+			mes "所以，去杀^0000ff1只龙尾^000000，给我带^0000ff1个蜻蜓翅膀^000000回来。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "If you run out of the provided items, we cannot support more so take care.";
-			mes "Consider this as an extension of the survival power test.";
+			mes "[考试教官 泪滴]";
+			mes "如果你用完了提供的物品，我们无法再补给，所以要小心。";
+			mes "把这当作生存能力测试的延伸吧。";
 			close;
 		} else if (job_ranger01 == 5) {
-			mes "Awooo. Yumyum.";
-			mes "Eh? What are you looking at?";
-			mes "You want to eat some?";
+			mes "嗷呜。好吃好吃。";
+			mes "嗯？你看什么呢？";
+			mes "你也想吃点吗？";
 			next;
-			switch(select("Oh, just eat up:...")) {
+			switch(select("哦，你吃吧:……")) {
 			case 1:
-				mes "[Test Instructor, Teardrop]";
-				mes "Why aren't you eating?";
-				mes "It's quite edible.";
-				mes "If you cover it with rice, it's like roasted seaweed, very tasty and delicious.";
+				mes "[考试教官 泪滴]";
+				mes "你怎么不吃？";
+				mes "挺好吃的。";
+				mes "如果配上米饭，就像烤海苔一样，非常美味可口。";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "You need to be strong enough not to be so picky with such things...";
+				mes "[考试教官 泪滴]";
+				mes "你要足够坚强，不能对这些东西太挑剔……";
 				next;
 				break;
 			case 2:
 				mes "["+strcharinfo(0)+"]";
-				mes "No thanks... anyway...";
+				mes "不用了……总之……";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "Hmm? Oh my, oh my, I've shown you my sloppiness.";
+				mes "[考试教官 泪滴]";
+				mes "嗯？哎呀哎呀，让你看到我邋遢的样子了。";
 				next;
 				break;
 			}
-			mes "[Test Instructor, Teardrop]";
-			mes "Ok, I'll send you to the practical test field.";
+			mes "[考试教官 泪滴]";
+			mes "好的，我送你去实战考试场。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "The practical test consists of 3 parts in total.";
-			mes "It's to recheck the things you've learned as a hunter or a sniper, so there's nothing much to be worried.";
+			mes "[考试教官 泪滴]";
+			mes "实战考试一共分为3个部分。";
+			mes "是重新检验你作为猎人或神射手所学到的东西，所以不用太担心。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "If you get a passing mark over three tests, you'll be on your way to becoming a Ranger.";
+			mes "[考试教官 泪滴]";
+			mes "如果你在三项考试中都获得及格分数，你就离成为游侠不远了。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "I'll explain the paths for the test.";
+			mes "[考试教官 泪滴]";
+			mes "我来说明一下考试的流程。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Once you get into the test field, a staff will be waiting for you. Go into the room made by the staff, and standby.";
+			mes "[考试教官 泪滴]";
+			mes "进入考试场后，会有工作人员在等你。进入工作人员准备好的房间，然后待命。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "The test is done one by one so, if there's many people, you might need to wait.";
+			mes "[考试教官 泪滴]";
+			mes "考试是一个一个进行的，如果人多的话可能需要等待。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "The first test is to test of how keen your eyes are.";
-			mes "Different monsters will appear in 8 places. Kill only the monster named 'Poring' and you get a point, when you reach a certain mark, then you pass. Easy, huh?";
+			mes "[考试教官 泪滴]";
+			mes "第一项考试是测试你的眼力有多敏锐。";
+			mes "怪物会从8个方向出现。只杀名为'波利'的怪物就能得分，达到一定分数就算通过。简单吧？";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "The second test is about how much you can use a trap efficiently.";
-			mes "Get rid of monsters and do the mission by using only the provided traps, and you pass. Just be careful not to be engulfed by the explosion.";
+			mes "[考试教官 泪滴]";
+			mes "第二项考试是关于你能多有效地使用陷阱。";
+			mes "只用提供的陷阱消灭怪物并完成任务就算通过。注意不要被爆炸波及。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "For the 3rd test, when you become a Ranger you can handle a wolf, so you will be tested on how well you can handle such an animal.";
+			mes "[考试教官 泪滴]";
+			mes "第三项考试，当你成为游侠后可以驾驭魔狼，所以会测试你驾驭动物的能力。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "When you remove a bomb by using the given wolf, you get points. You pass when you get a certain mark on the test.";
+			mes "[考试教官 泪滴]";
+			mes "当你用给定的魔狼拆除炸弹时就能得分。达到一定分数就算通过考试。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "The staff there will tell you more details as well.";
+			mes "[考试教官 泪滴]";
+			mes "那里的工作人员也会告诉你更多细节。";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Now, I will enter you into the practical test field, is your preparation all done?";
+			mes "[考试教官 泪滴]";
+			mes "现在，我要送你进入实战考试场了，你都准备好了吗？";
 			next;
-			if(select("Please wait a little:Let's go to the practical test field!") == 1) {
-				mes "[Test Instructor, Teardrop]";
-				mes "Um? Aren't you ready?";
+			if(select("请等一下:去实战考试场！") == 1) {
+				mes "[考试教官 泪滴]";
+				mes "嗯？你还没准备好？";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "Well. To be careful is good.";
-				mes "Come back when you are ready.";
+				mes "[考试教官 泪滴]";
+				mes "嗯。谨慎是好事。";
+				mes "准备好了再来吧。";
 				close;
 			}
 			callsub L_Start,0;
 			close;
 		} else if (job_ranger01 == 6) {
-			mes "Good to goooooo!!!!!!!";
+			mes "冲冲冲！！！！！！！";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Um? What happened?";
-			mes "Why are you walking about here? What about the test?";
+			mes "[考试教官 泪滴]";
+			mes "嗯？怎么了？";
+			mes "你怎么在这里晃悠？考试呢？";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Aha... You've failed the middle!";
-			mes "You are such a fool.";
+			mes "[考试教官 泪滴]";
+			mes "啊哈……你中途失败了！";
+			mes "你这个笨蛋。";
 			emotion ET_KIK;
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "So what are you going to do? Try again?";
+			mes "[考试教官 泪滴]";
+			mes "那你打算怎么办？再试一次？";
 			next;
-			switch(select("Wait a minute:Go to the practical test field!:I give up the job change.")) {
+			switch(select("等一下:去实战考试场！:我放弃转职。")) {
 			case 1:
-				mes "[Test Instructor, Teardrop]";
-				mes "Um? Aren't you ready yet?";
+				mes "[考试教官 泪滴]";
+				mes "嗯？你还没准备好？";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "All right. To be careful is good.";
-				mes "Come when you are ready.";
+				mes "[考试教官 泪滴]";
+				mes "好吧。谨慎是好事。";
+				mes "准备好了再来。";
 				close;
 			case 2:
 				callsub L_Start,1;
 				close;
 			case 3:
-				mes "[Test Instructor, Teardrop]";
-				mes "Um? What, you're kidding huh?";
+				mes "[考试教官 泪滴]";
+				mes "嗯？什么，你在开玩笑吧？";
 				next;
-				mes "[Test Instructor, Teardrop]";
-				mes "Think again.";
-				mes "Do you really want to give up the job change to become a Ranger?";
+				mes "[考试教官 泪滴]";
+				mes "再想想。";
+				mes "你真的要放弃转职成游侠吗？";
 				next;
-				switch(select("No, I'll try again:I give up!")) {
+				switch(select("不，我再试一次:我放弃！")) {
 				case 1:
-					mes "[Test Instructor, Teardrop]";
-					mes "Hey. You were kidding after all?";
+					mes "[考试教官 泪滴]";
+					mes "嘿。果然是在开玩笑吧？";
 					next;
-					mes "[Test Instructor, Teardrop]";
-					mes "It's not funny so don't do that kind of joke again.";
+					mes "[考试教官 泪滴]";
+					mes "这种玩笑一点都不好笑，别再开了。";
 					close;
 				case 2:
-					mes "[Test Instructor, Teardrop]";
-					mes "You don't have as many guts as I thought.";
+					mes "[考试教官 泪滴]";
+					mes "你没有我想象中那么有胆量。";
 					nude;
 					next;
 					if (countitem(1703) > 0) {
-						mes "[Test Instructor, Teardrop]";
-						mes "Okay. I'll respect your opinion.";
-						mes "I'll cancel the job change request from "+strcharinfo(0)+".";
+						mes "[考试教官 泪滴]";
+						mes "好吧。我尊重你的决定。";
+						mes "我会取消"+strcharinfo(0)+"的转职申请。";
 						delitem 1703,1; //Bow__
 						set job_ranger01,0;
 						for(set .@i,8254; .@i<=8262; set .@i,.@i+1)
 							if (checkquest(.@i) > -1) erasequest .@i;
 						close;
 					}
-					mes "[Test Instructor, Teardrop]";
-					mes "Huh? Where's the bow that I gave you for the practical tests?";
+					mes "[考试教官 泪滴]";
+					mes "嗯？我给你实战考试用的弓呢？";
 					next;
-					mes "[Test Instructor, Teardrop]";
-					mes "If you don't return it, I can't cancel you job change request.";
+					mes "[考试教官 泪滴]";
+					mes "如果你不归还，我就无法取消你的转职申请。";
 					close;
 				}
 			}
 		} else if (job_ranger01 == 7) {
-			mes "Oh, hey. What are you doing here?";
+			mes "哦，嘿。你在这里做什么？";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "Because you've disappeared suddenly, the Ranger Master was looking for you.";
-			mes "Do you want to go to him now?";
+			mes "[考试教官 泪滴]";
+			mes "因为你突然消失了，游侠大师一直在找你。";
+			mes "你现在要去找他吗？";
 			next;
-			switch(select("Don't go:Go")) {
+			switch(select("不去:去")) {
 			case 1:
-				mes "[Test Instructor, Teardrop]";
-				mes "Are you busy with something else?";
+				mes "[考试教官 泪滴]";
+				mes "你还有别的事要忙吗？";
 				close;
 			case 2:
-				mes "[Test Instructor, Teardrop]";
-				mes "Then I'll send you, please be well.";
+				mes "[考试教官 泪滴]";
+				mes "那我送你过去，保重。";
 				close2;
 				warp "job3_rang01",89,38;
 				end;
 			}
 		}
-		mes "Wow. Who's this?";
+		mes "哇。这是谁啊？";
 		next;
-		mes "[Test Instructor, Teardrop]";
-		mes "It seems that your dull eyes became somewhat keen now?";
+		mes "[考试教官 泪滴]";
+		mes "看起来你那迟钝的眼神现在变得敏锐了一些？";
 		next;
-		mes "[Test Instructor, Teardrop]";
-		mes "Then, enjoy an adventure well as a Ranger.";
+		mes "[考试教官 泪滴]";
+		mes "那么，作为游侠好好享受冒险吧。";
 		close;
 	}
-	mes "Good to gooooooooooooooo!!!!!!";
+	mes "冲冲冲！！！！！！！！！！！！！";
 	next;
-	mes "[Test Instructor]";
-	mes "Huh? What are you? Where are you from?";
-	mes "Don't hang around here doing nothing. This is my area!";
+	mes "[考试教官]";
+	mes "嗯？你是谁？从哪里来的？";
+	mes "别在这里无所事事地晃悠。这是我的地盘！";
 	close;
 L_Start:
 	if (getmercinfo(1)) {
-		mes "[Test Instructor, Teardrop]";
-		mes "Stop!";
+		mes "[考试教官 泪滴]";
+		mes "停下！";
 		next;
-		mes "[Test Instructor, Teardrop]";
-		mes "Where do you think you're going with that mercenary?!";
+		mes "[考试教官 泪滴]";
+		mes "你带着佣兵想去哪里？！";
 		next;
-		mes "[Test Instructor, Teardrop]";
-		mes "If you don't cancel the mercenary, you cannot get into the test field! Cancel it first!";
+		mes "[考试教官 泪滴]";
+		mes "如果你不解雇佣兵，就不能进入考试场！先解雇吧！";
 		close;
 	}
 	if (getarg(0) == 1) {
 		if (countitem(12380)) {
-			mes "[Test Instructor, Teardrop]";
-			mes "What, what is this?";
-			mes "You shouldn't keep this around!";
+			mes "[考试教官 泪滴]";
+			mes "什么，这是什么？";
+			mes "你不应该留着这个！";
 			delitem 12380,countitem(12380); //Desert_Wolf_Babe_Scroll
 			next;
 		}
 		if (countitem(12258)) {
-			mes "[Test Instructor, Teardrop]";
-			mes "What, what is this, a Bombring Capsule.";
-			mes "You shouldn't keep such a dangerous thing!";
+			mes "[考试教官 泪滴]";
+			mes "什么，这是什么，炸弹波利胶囊。";
+			mes "你不应该留着这么危险的东西！";
 			delitem 12258,countitem(12258); //Bombring_Box
 			next;
 		}
 		if (countitem(6156)) {
-			mes "[Test Instructor, Teardrop]";
-			mes "What, what are all these Documents?";
-			mes "I think I know. You were going to send this to Caution, right?";
+			mes "[考试教官 泪滴]";
+			mes "什么，这些文件是怎么回事？";
+			mes "我想我知道了。你是要把这个送给考申的，对吧？";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "If you hold such thing it would disturb your practical test so I'll take this.";
+			mes "[考试教官 泪滴]";
+			mes "如果你拿着这种东西会影响你的实战考试，所以我收走了。";
 			delitem 6156,countitem(6156); //Approval_Report
 			next;
 		}
 	}
 	if (Weight > 500) {
-		mes "[Test Instructor, Teardrop]";
-		mes "Well, then let's gooooooooo.... oo,um?";
+		mes "[考试教官 泪滴]";
+		mes "好，那我们出发……等等，嗯？";
 		next;
-		mes "[Test Instructor, Teardrop]";
-		mes "Hey, what are you hiding there?";
-		mes "I've pointed it out for several times, you should not even think to go in there secretly with anything other than the provided items!";
+		mes "[考试教官 泪滴]";
+		mes "嘿，你在那里藏了什么？";
+		mes "我已经说了好几次了，除了提供的物品之外，你不能偷偷带任何东西进去！";
 		next;
-		mes "[Test Instructor, Teardrop]";
-		mes "You'd better lighten your weight.";
+		mes "[考试教官 泪滴]";
+		mes "你最好减轻你的负重。";
 		close;
 	}
-	mes "[Test Instructor, Teardrop]";
-	mes "See, for the last time, I warn you that cheating is strictly banned.";
+	mes "[考试教官 泪滴]";
+	mes "最后再警告你一次，严禁作弊。";
 	next;
 	if (countitem(1750) < 100) {
-		mes "[Test Instructor, Teardrop]";
-		mes "Okay, once again I'll provide you with arrows, then I'll let you in.";
+		mes "[考试教官 泪滴]";
+		mes "好吧，我再给你一些箭，然后让你进去。";
 		set .@arrow,1;
 		next;
 	}
-	mes "[Test Instructor, Teardrop]";
-	mes "Good luck.";
-	mes "Become a Ranger and we shall meet again.";
+	mes "[考试教官 泪滴]";
+	mes "祝你好运。";
+	mes "成为游侠后我们再见。";
 	set job_ranger01,6;
 	if (getarg(0) == 0)
 		changequest 8258,8259;
@@ -682,42 +682,42 @@ L_Start:
 }
 
 job3_rang01,30,44,3	script	Test Waiting Room#jr_03	88,{
-	mes "[Staff DTS]";
-	mes "Please wait at the practical test waiting room to start the test process.";
+	mes "[工作人员 DTS]";
+	mes "请在实战考试等候室等待考试开始。";
 	next;
-	mes "[Staff DTS]";
-	mes "In the order you enter, you can take the practical test one by one.";
-	mes "There's 3 kinds of a Ranger job change practical tests, it takes a total of about 10 minutes.";
+	mes "[工作人员 DTS]";
+	mes "按照进入的顺序，你可以一个一个地参加实战考试。";
+	mes "游侠转职实战考试共有3种，总共大约需要10分钟。";
 	next;
-	switch(select("Test explanation:Cancel:I give up the Ranger test")) {
+	switch(select("考试说明:取消:我放弃游侠考试")) {
 	case 1:
 		break;
 	case 2:
-		mes "[Staff DTS]";
-		mes "Don't you need any explanation?";
+		mes "[工作人员 DTS]";
+		mes "你不需要说明吗？";
 		next;
-		mes "[Staff DTS]";
-		mes "Enter into the chat room and wait for the order and take the job change practical test.";
+		mes "[工作人员 DTS]";
+		mes "进入聊天室等待顺序，然后参加转职实战考试。";
 		close;
 	case 3:
-		mes "[Staff DTS]";
-		mes "Please think about it again.";
-		mes "If you give up here, your job change request will be cancelled. Do you really want to give up the job change to a Ranger?";
+		mes "[工作人员 DTS]";
+		mes "请再考虑一下。";
+		mes "如果你在这里放弃，你的转职申请将被取消。你真的要放弃转职成游侠吗？";
 		next;
-		switch(select("No, I'll continue with the test:I give up the Ranger job change")) {
+		switch(select("不，我继续考试:我放弃游侠转职")) {
 		case 1:
-			mes "[Staff DTS]";
-			mes "If you want to continue with the practical test, please enter into the chat room.";
+			mes "[工作人员 DTS]";
+			mes "如果你想继续实战考试，请进入聊天室。";
 			close;
 		case 2:
-			mes "[Staff DTS]";
-			mes "You don't have as many guts as I thought.";
+			mes "[工作人员 DTS]";
+			mes "你没有我想象中那么有胆量。";
 			nude;
 			next;
 			if (countitem(1703) > 0) {
-				mes "[Staff DTS]";
-				mes "Okay. I'll respect your opinion.";
-				mes "I'll cancel the job change request from "+strcharinfo(0)+".";
+				mes "[工作人员 DTS]";
+				mes "好吧。我尊重你的决定。";
+				mes "我会取消"+strcharinfo(0)+"的转职申请。";
 				delitem 1703,1; //Bow__
 				set job_ranger01,0;
 				for(set .@i,8254; .@i<=8262; set .@i,.@i+1)
@@ -727,65 +727,65 @@ job3_rang01,30,44,3	script	Test Waiting Room#jr_03	88,{
 				warp "alberta",117,57;
 				end;
 			}
-			mes "[Staff DTS]";
-			mes "Huh? Where's the bow that I gave you for the practical tests?";
+			mes "[工作人员 DTS]";
+			mes "嗯？我给你实战考试用的弓呢？";
 			next;
-			mes "[Test Instructor, Teardrop]";
-			mes "If you don't return it, I can't cancel you job change request.";
+			mes "[考试教官 泪滴]";
+			mes "如果你不归还，我就无法取消你的转职申请。";
 			close;
 		}
 	}
 	while (1) {
-		mes "[Staff DTS]";
-		mes "I'll explain the Ranger job change practical test.";
-		mes "Among the 1st, 2nd, and 3rd practical tests, which one's test method are you curious of?";
+		mes "[工作人员 DTS]";
+		mes "我来说明游侠转职实战考试。";
+		mes "第1、第2和第3项实战考试中，你想了解哪一项的考试方式？";
 		next;
-		switch(select("1st Test:2nd Test:3rd Test:Cancel")) {
+		switch(select("第1项考试:第2项考试:第3项考试:取消")) {
 		case 1:
-			mes "[Staff DTS]";
-			mes "For the 1st test, we test your eyesight and accuracy.";
+			mes "[工作人员 DTS]";
+			mes "第1项考试测试你的视力和准确度。";
 			next;
-			mes "[Staff DTS]";
-			mes "Monsters appear randomly from 8 sides of the left, right, up and down of the player, among them if you get rid of a monster named 'Poring' you get a point.";
+			mes "[工作人员 DTS]";
+			mes "怪物会从玩家的上下左右8个方向随机出现，其中如果你消灭名为'波利'的怪物就能得分。";
 			next;
-			mes "[Staff DTS]";
-			mes "^0000ffWhatever the form looks like, you need to kill the monster named 'Poring' to get a point, and if you get rid of others your points get deducted, so be careful.^000000";
+			mes "[工作人员 DTS]";
+			mes "^0000ff无论外形看起来像什么，你需要杀死名为'波利'的怪物才能得分，如果杀错了会被扣分，所以要小心。^000000";
 			next;
-			mes "[Staff DTS]";
-			mes "The 1st test progressing time will be about 3 minutes. When you get 15 points or more over 20, you are sent to 2nd test field.";
+			mes "[工作人员 DTS]";
+			mes "第1项考试时间约为3分钟。20次中得到15分以上就会被送往第2项考试场。";
 			next;
 			break;
 		case 2:
-			mes "[Staff DTS]";
-			mes "The 2nd test is to test the mission performance ability and the efficient use of a trap.";
+			mes "[工作人员 DTS]";
+			mes "第2项考试是测试任务执行能力和陷阱的有效使用。";
 			next;
-			mes "[Staff DTS]";
-			mes "The attendant receives 10 'Bombring Capsules'. When you consume the Bombring Capsule, a Bombring is summoned near and after the summoning when you reach a certain time, the Bombring explodes.";
+			mes "[工作人员 DTS]";
+			mes "考生会收到10个'炸弹波利胶囊'。使用炸弹波利胶囊后，附近会召唤出炸弹波利，召唤后经过一定时间，炸弹波利就会爆炸。";
 			next;
-			mes "[Staff DTS]";
-			mes "^0000ffThe Bombring explosion affects you, so be careful not to get involved in the explosion. You need to get rid of the monster by using the Bombring Capsule, accomplish the mission and come out alive.^000000";
+			mes "[工作人员 DTS]";
+			mes "^0000ff炸弹波利的爆炸会影响到你，所以要小心不要被卷入爆炸中。你需要使用炸弹波利胶囊消灭怪物，完成任务并活着出来。^000000";
 			next;
-			mes "[Staff DTS]";
-			mes "The 2nd test progressing time will be about 3 minutes. When you consume all the Bombring Capsules, collect hidden equipment, and survive, you will be sent to the 3rd test field.";
+			mes "[工作人员 DTS]";
+			mes "第2项考试时间约为3分钟。当你用完所有炸弹波利胶囊、收集隐藏装备并存活下来，就会被送往第3项考试场。";
 			next;
 			break;
 		case 3:
-			mes "[Staff DTS]";
-			mes "The 3rd is to test how you can efficiently use a wolf which is given Rangers.";
+			mes "[工作人员 DTS]";
+			mes "第3项是测试你能多有效地使用游侠专属的魔狼。";
 			next;
-			mes "[Staff DTS]";
-			mes "The tester is provided with disposable wolf summoning flute. Remove all bombs that are dispersed here and there by controlling the summoned warg and you get a point.";
+			mes "[工作人员 DTS]";
+			mes "考生会获得一次性魔狼召唤笛。通过控制召唤出的魔狼，拆除散布各处的炸弹就能得分。";
 			next;
-			mes "[Staff DTS]";
-			mes "^0000ffThe tester cannot move while the test is going on and the test is completed when he or she removes the bombs quickly and accurately in time by using only the warg.^000000";
+			mes "[工作人员 DTS]";
+			mes "^0000ff考试期间考生不能移动，考试在规定时间内只能使用魔狼快速准确地拆除炸弹才算完成。^000000";
 			next;
-			mes "[Staff DTS]";
-			mes "The 3rd test progressing time would be about 3 minutes, when you get 10 or more over 20, all the practical tests are completed.";
+			mes "[工作人员 DTS]";
+			mes "第3项考试时间约为3分钟，20次中得到10分以上，所有实战考试就算完成。";
 			next;
 			break;
 		case 4:
-			mes "[Staff DTS]";
-			mes "When you want to progress with the practical test, please enter into the chat room.";
+			mes "[工作人员 DTS]";
+			mes "当你想进行实战考试时，请进入聊天室。";
 			close;
 		}
 	}
@@ -829,23 +829,23 @@ OnStart:
 	disablenpc "Test Supervisor#jr_04";
 	end;
 OnTimer3000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : Welcome to the Ranger Job Change Test. I am Test Supervisor, Notice.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 欢迎来到游侠转职考试。我是考试监督诺提斯。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer6000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : The 1st test is to test your eyesight and accuracy.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 第1项考试是测试你的视力和准确度。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer9000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : The test method is, to kill monsters named 'Poring' amongst the random spawned monsters on 8 locations.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 考试方式是，在8个位置随机出现的怪物中，杀死名为'波利'的怪物。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer12000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : Whatever it may look like, you need to kill the monster named 'Poring' to get a point, and if you kill others you will lose points, so be careful.",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 无论外形看起来像什么，你需要杀死名为'波利'的怪物才能得分，如果杀错了会被扣分，所以要小心。",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 OnTimer15000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : The test progression time would be around 3 minutes. You need to get 15 points or more to qualify for the next test.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 考试时间约为3分钟。你需要得到15分以上才能进入下一项考试。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer18000:
 	stopnpctimer;
-	mapannounce "job3_rang02","Test Supervisor, Notice : Then let's begin the test. Good luck.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 那么开始考试吧。祝你好运。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	donpcevent "Test Supervisor#jr_04::OnStart";
 	end;
 }
@@ -859,8 +859,8 @@ OnEnable:
 	set $@job_rang_point01,0;
 	set $@job_rang_text01,0;
 	setarray .text$[1],
-		"First","Second","Third","Fourth","Fifth","Sixth","Seventh","Eighth","Ninth","Tenth","Eleventh",
-		"Twelfth","Thirteenth","Fourteenth","Fifteenth","Sixteenth","Seventeenth","Eighteenth","Nineteenth","Last";
+		"第一","第二","第三","第四","第五","第六","第七","第八","第九","第十","第十一",
+		"第十二","第十三","第十四","第十五","第十六","第十七","第十八","第十九","最后";
 	initnpctimer;
 	end;
 OnDisable:
@@ -911,28 +911,28 @@ OnTimer122000:
 OnTimer129000:
 OnTimer136000:
 	set $@job_rang_text01,$@job_rang_text01+1;
-	mapannounce "job3_rang02","Test Supervisor, Notice : "+.text$[$@job_rang_text01]+" Wave! Kill the Poring!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : "+.text$[$@job_rang_text01]+"波！杀死波利！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	donpcevent "CallCorrectAnswer#jr::OnStart";
 	end;
 OnTimer143000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : Well done! Now for your test result!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 辛苦了！现在来看看你的考试结果！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer146000:
 	if ($@job_rang_point01 < 1)
 		set $@job_rang_point01,0;
-	mapannounce "job3_rang02","Test Supervisor, Notice : I'll announce the test result. The number of Porings you killed out of 20 is ..." + $@job_rang_point01 + "!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 我来公布考试结果。你在20次中杀死的波利数量是……" + $@job_rang_point01 + "！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer149000:
 	if ($@job_rang_point01 > 14) {
-		mapannounce "job3_rang02","Test Supervisor, Notice : Congratulations! You've killed " + $@job_rang_point01 + " out of 20 Porings total, so you've passed the 1st test. I will send you to the 2nd test field.",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+		mapannounce "job3_rang02","考试监督 诺提斯 : 恭喜！你在20次中杀死了" + $@job_rang_point01 + "只波利，通过了第1项考试。我会送你去第2项考试场。",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 		mapwarp "job3_rang02","job3_rang02",113,58;
 		donpcevent "Second Test Timer#jr_08::OnEnable";
 		stopnpctimer;
 	} else
-		mapannounce "job3_rang02","Test Supervisor, Notice : You couldn't kill 15 Porings or more on a total of 20 total, so you've failed the 1st test... I am sorry but please try again.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+		mapannounce "job3_rang02","考试监督 诺提斯 : 你在20次中未能杀死15只以上的波利，第1项考试不合格……很抱歉，请再试一次。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer151000:
-	mapannounce "job3_rang02","Test Supervisor, Notice : The adventurer's 1st test ends now. Please make yourself more capable. Goodbye.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 冒险者的第1项考试到此结束。请提升自己的能力。再见。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	end;
 OnTimer154000:
@@ -974,7 +974,7 @@ OnReset:
 OnMyMobDead:
 	specialeffect2 EF_POTION_CON;
 	set $@job_rang_point01, $@job_rang_point01+1;
-	mapannounce "job3_rang02","Test Supervisor, Notice : Correct Target! You have very good eyesight!",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 正确目标！你的眼力很好！",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 }
 
@@ -1064,7 +1064,7 @@ OnReset:
 OnMyMobDead:
 	specialeffect2 EF_DEVIL;
 	set $@job_rang_point01, $@job_rang_point01-1;
-	mapannounce "job3_rang02","Test Supervisor, Notice : Wrong Target! Pull yourself together!",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 诺提斯 : 错误目标！振作起来！",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 }
 
@@ -1088,81 +1088,81 @@ OnStop:
 	stopnpctimer;
 	end;
 OnTimer3000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Yeah. Congrats on you passing the 1st practical test. I am the 2nd practical test supervisor Caution.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 嗯。恭喜你通过了第1项实战考试。我是第2项实战考试监督考申。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer6000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : The Second Test is about test performance ability and the effective usage of traps.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 第2项考试是关于任务执行能力和陷阱的有效使用。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer9000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : When the test begins, you'll recive 'Bombring Caspule's' from a staff member near you, and kill the monsters in your way.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 考试开始后，你会从附近的工作人员那里收到'炸弹波利胶囊'，用它来消灭挡路的怪物。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer11000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : When you use a 'Bombring Capsule' a Bombring is summoned near you, and after 3 seconds it will explode.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 使用'炸弹波利胶囊'后，附近会召唤出炸弹波利，3秒后它会爆炸。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer14000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : The explosive range of the Bombring is a 5x5 cell around the Bombring, so be careful not to be caught in the explosion.",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 炸弹波利的爆炸范围是以炸弹波利为中心的5x5格，所以要小心不要被卷入爆炸中。",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 OnTimer17000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Whilst progressing, if you complete the mission given by an staff member come and see me, then you will pass the 2nd practical test!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 在进行过程中，如果你完成了工作人员给你的任务就来找我，这样就能通过第2项实战考试！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer20000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Oh! When you come and see me, all 'Bombring Capsules' have to been used up.",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 哦！来找我的时候，所有的'炸弹波利胶囊'必须用完。",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 OnTimer23000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : The test period will take 3 minutes in total! Copmplete the mission in 3 minutes and stay alive! Then come to see me!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 考试时间总共3分钟！在3分钟内完成任务并活着！然后来找我！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer26000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Well the test begins now!! Start going!!!!!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 好了，考试现在开始！！出发！！！！！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	donpcevent "Staff Rust#jr_09::OnEnable";
 	end;
 OnTimer80000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 1 Minute has passed. You are coming to see me, right?",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 已经过了1分钟了。你会来找我的，对吧？",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer83000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Don't be too brave to rush and get yourself killed, be slow and careful.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 不要太逞强冲过去把自己搞死了，慢慢来，小心行事。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer140000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 2 Minutes have passed. Getting here on time should be your top priority.?",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 已经过了2分钟了。按时到达应该是你的首要任务。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer143000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : However, you need to be alive in order to make the time limit, right? Please watch out.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 不过，你得活着才能赶上时间限制，对吧？请小心。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer170000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 2 Minutes and 30 Seconds have passed. There's not much time left!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 已经过了2分30秒了。时间不多了！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer173000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Hurry up! Hurry up! Come on.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 快点！快点！加油。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer200000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 3 Minutes have passed! 3 Minutes!!!! I'll be a little easy on you, so hurry up!!!!!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 已经过了3分钟了！3分钟！！！！我稍微宽容一点，所以快点！！！！！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer205000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 5 Seconds remaining!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 还剩5秒！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer206000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 4 Seconds remaining!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 还剩4秒！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer207000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 3 Seconds remaining!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 还剩3秒！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer208000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 2 Seconds remaining!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 还剩2秒！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer209000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : 1 Second remaining!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 还剩1秒！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer210000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Ugh... What are you doing? Your time is up!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 唉……你在干什么？时间到了！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer213000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : You couldn't get here on time, therefore the 2nd practical test ends here!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 你没能按时到达，因此第2项实战考试到此结束！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer217000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : If you want to blame something, blame your own stupidness! Start over from the beginning! You fool!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 要怪就怪你自己的愚蠢吧！从头再来！你这个笨蛋！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	end;
 OnTimer220000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : If you want to blame something, blame your own stupidness! Start over from the beginning! You fool!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 要怪就怪你自己的愚蠢吧！从头再来！你这个笨蛋！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	donpcevent "Staff Rust#jr_09::OnDisable";
 	donpcevent "Summon Monster#jr_10::OnDisable";
@@ -1180,32 +1180,32 @@ job3_rang02,111,56,3	script	Staff Rust#jr_09	89,{
 		if (countitem(12258) < 1) {
 			percentheal 100,0;
 			specialeffect2 EF_ABSORBSPIRITS;
-			mes "[Staff Rust]";
-			mes "I'll give you the 'Bombring Capsules.";
-			mes "The 'Bombring Capsules' can be given again only for the one who used it all, so please keep that in mind.";
+			mes "[工作人员 拉斯特]";
+			mes "我给你'炸弹波利胶囊'。";
+			mes "'炸弹波利胶囊'只有用完了才能再次领取，请记住。";
 			if (countitem(6156)) {
 				getitem 12258,5; //Bombring_Box
 				close;
 			}
 			next;
 			emotion ET_FRET;
-			mes "[Staff Rust]";
-			mes "And the mission is.... to deliver these documents to the supervisor, Caution. He won't take what I give...";
+			mes "[工作人员 拉斯特]";
+			mes "还有任务是……把这些文件送给监督考申。他不肯收我给的东西……";
 			setquest 8260;
 			getitem 6156, (MaxWeight-Weight-2000)/10; //Approval_Report
 			getitem 12258,10; //Bombring_Box
 			getitem 569,100; //Novice_Potion
 			close;
 		}
-		mes "[Staff Rust]";
-		mes "I'm sorry, but you already have the 'Bombring Capsules', so I cannot provide you with more.";
+		mes "[工作人员 拉斯特]";
+		mes "抱歉，你已经有'炸弹波利胶囊'了，所以我无法再提供给你。";
 		close;
 	}
-	mes "[Staff Rust]";
-	mes "Excuse me, but how did you get in?";
+	mes "[工作人员 拉斯特]";
+	mes "请问，你是怎么进来的？";
 	next;
-	mes "[Staff Rust]";
-	mes "If you are not here for the job change test, please leave.";
+	mes "[工作人员 拉斯特]";
+	mes "如果你不是来参加转职考试的，请离开。";
 	close;
 OnInit:
 	disablenpc "Staff Rust#jr_09";
@@ -1263,15 +1263,15 @@ OnDisable:
 OnTouch_:
 	percentheal 10,0;
 	specialeffect2 EF_ABSORBSPIRITS;
-	mapannounce "job3_rang02","Test Supervisor, Caution : You are doing well! If you come closer a little more, you should be able to see me.",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 你做得很好！再靠近一点就应该能看到我了。",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnMyMobDead:
 	end;
 }
 
 job3_rang02,180,78,3	script	Test Supervisor#jr_11	882,1,1,{
-	mes "[Test Supervisor, Caution]";
-	mes "Come, come near, nearer, nearer!!";
+	mes "[考试监督 考申]";
+	mes "来，靠近，再靠近，再靠近！！";
 	close;
 OnInit:
 	disablenpc "Test Supervisor#jr_11";
@@ -1286,77 +1286,77 @@ OnDisable:
 OnTouch_:
 	if (job_ranger01 == 6) {
 		if (countitem(12258)) {
-			mes "[Test Supervisor, Caution]";
-			mes "No, no!";
-			mes "You need to use all the 'Bombring Capsules'?!";
+			mes "[考试监督 考申]";
+			mes "不行，不行！";
+			mes "你需要把所有的'炸弹波利胶囊'用完？！";
 			next;
-			mes "[Test Supervisor, Caution]";
-			mes "Use it all and come back!";
-			mes "Time is ticking so you'd better hurry.";
+			mes "[考试监督 考申]";
+			mes "用完再回来！";
+			mes "时间在流逝，你最好快点。";
 			close;
 		}
 		if (countitem(6156) > 0) {
-			mes "[Test Supervisor, Caution]";
-			mes "You've arrived safely!!!";
+			mes "[考试监督 考申]";
+			mes "你安全到达了！！！";
 			donpcevent "Second Test Timer#jr_08::OnDisable";
 			donpcevent "Staff Rust#jr_09::OnDisable";
 			donpcevent "Summon Monster#jr_10::OnDisable";
 			initnpctimer;
 			next;
-			mes "[Test Supervisor, Caution]";
-			mes "What are those documents?";
+			mes "[考试监督 考申]";
+			mes "那些文件是什么？";
 			emotion ET_STARE_ABOUT;
 			next;
-			select("Mr. Rust asked me to give this to you.");
-			mes "[Test Supervisor, Caution]";
-			mes "Haaaaaaaah!!";
-			mes "I've been avoiding him so much!!";
+			select("拉斯特先生让我把这个交给你。");
+			mes "[考试监督 考申]";
+			mes "啊啊啊啊啊啊！！";
+			mes "我一直在躲他啊！！";
 			delitem 6156,countitem(6156); //Approval_Report
 			erasequest 8260;
 			next;
-			mes "[Test Supervisor, Caution]";
-			mes "I've never imagined this could be a test...";
+			mes "[考试监督 考申]";
+			mes "我从没想过这也能成为考试内容……";
 			emotion ET_CRY;
 			next;
-			mes "[Test Supervisor, Caution]";
-			mes "Anyway you've passed the 2nd test very well.";
+			mes "[考试监督 考申]";
+			mes "总之你很好地通过了第2项考试。";
 			next;
-			mes "[Test Supervisor, Caution]";
-			mes "Pass the 3rd one and you will become a great ranger.";
+			mes "[考试监督 考申]";
+			mes "通过第3项考试，你就能成为一名出色的游侠了。";
 			close2;
 			warp "job3_rang02",250,49;
 			donpcevent "Test Supervisor#jr_13::OnEnable";
 			end;
 		}
 	}
-	mes "[Test Supervisor, Caution]";
-	mes "You've arrived safely......uh?";
+	mes "[考试监督 考申]";
+	mes "你安全到达了……嗯？";
 	next;
-	mes "[Test Supervisor, Caution]";
-	mes "Didn't Rust give you something?";
+	mes "[考试监督 考申]";
+	mes "拉斯特没有给你什么东西吗？";
 	next;
-	mes "[Test Supervisor, Caution]";
-	mes "Where did you lose that?";
-	mes "Pick it up quickly!";
+	mes "[考试监督 考申]";
+	mes "你把它弄丢在哪里了？";
+	mes "快去捡回来！";
 	close;
 OnTimer60000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Come here, you don't have to rush your test, but why are you delaying the test?",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 过来，你不用急着考试，但你为什么在拖延考试？",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 OnTimer63000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : I hate people that make me wait! if you don't talk to me in 30 seconds to continue the test, I will end your test progress!",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 我讨厌让我等的人！如果你不在30秒内跟我说话继续考试，我就终止你的考试进度！",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 OnTimer93000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : Hurry up! Hurry up! Come on.",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 快点！快点！加油。",bc_map,"0xffb6c1"; //FW_NORMAL 12 0 0
 	end;
 OnTimer96000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : You couldn't get here on time, therefore the 2nd practical test ends here!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 你没能按时到达，因此第2项实战考试到此结束！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer99000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : If you want to blame something, blame your own stupidity! Start over from the beginning! You fool!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 要怪就怪你自己的愚蠢吧！从头再来！你这个笨蛋！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	end;
 OnTimer102000:
-	mapannounce "job3_rang02","Test Supervisor, Caution : If you want to blame something, blame your own stupidity! Start over from the beginning! You fool!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 考申 : 要怪就怪你自己的愚蠢吧！从头再来！你这个笨蛋！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	donpcevent "Staff Rust#jr_09::OnDisable";
 	donpcevent "Summon Monster#jr_10::OnDisable";
@@ -1383,16 +1383,16 @@ OnDisable:
 	disablenpc "Third Test Timer#jr_12";
 	end;
 OnTimer3000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Well, then let's start the 3rd practical test! Are you ready?",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 好，那么开始第3项实战考试吧！你准备好了吗？",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer6000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : From now on, every 3 seconds an 'Egg Bomb' will appear! Look at it carefully, and have your wolf attack the egg bomb to dismantle it!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 从现在开始，每3秒会出现一个'蛋形炸弹'！仔细观察，让你的魔狼攻击蛋形炸弹来拆除它！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer9000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : You can control the wolf by pressing the alt key and left click the surface, the wolf then moves to that point! Then you target the bomb and click on more time, it will then attack it!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 你可以按Alt键并左键点击地面来控制魔狼，魔狼会移动到那个位置！然后瞄准炸弹再点击一次，它就会攻击！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer12000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : The 'Egg Bombs' will spawn 20 times! Each time you successfully dismantle one, you get 1 point! If you get 10 or more points, you pass the practical test, so go for it! Then I'll start!!!!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : '蛋形炸弹'会出现20次！每成功拆除一个得1分！得到10分以上就能通过实战考试，加油！那我开始了！！！！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	set .n,14;
 	end;
 OnTimer15000:
@@ -1420,30 +1420,30 @@ OnTimer110000:
 	else set .n,.n+3;
 	end;
 OnTimer113000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : The test is ooooooooooooooveeeeerrr!!!!!!!!!!!!!!!!!!!!!!!!!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 考试结束了！！！！！！！！！！！！！！！！！！！！！！！！！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	for(set .@i,14; .@i<=28; set .@i,.@i+1)
 		donpcevent "Egg Bomb#"+.@i+"::OnDisable";
 	set .n,0;
 	end;
 OnTimer116000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Well let's see the result?!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 好，让我们来看看结果？！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer119000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Your score is ..." + $@job_rang_point03 + " out of 20!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 你的分数是……20次中" + $@job_rang_point03 + "分！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer121000:
 	if ($@job_rang_point03 > 9) {
-		mapannounce "job3_rang02","Test Supervisor, Freeze : You have been successful so far! You've passed all practical tests! Let's move to the waitingroom!!!!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+		mapannounce "job3_rang02","考试监督 弗利兹 : 到目前为止你做得很好！你通过了所有实战考试！让我们移动到等候室！！！！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 		mapwarp "job3_rang02","job3_rang01",89,38;
 	} else
-		mapannounce "job3_rang02","Test Supervisor, Freeze : It's too bad but you couldn't pass the 10 points, so you failed!!!!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+		mapannounce "job3_rang02","考试监督 弗利兹 : 很遗憾，你没能达到10分，所以不合格！！！！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer124000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : It's too bad, but you'll need to retake the test from the beginning! Please go back!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 很遗憾，但你需要从头开始重新考试！请回去吧！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	end;
 OnTimer127000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : It's too bad, but you'll need to retake the test from the beginning! Please go back!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 很遗憾，但你需要从头开始重新考试！请回去吧！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	set $@job_rang_point03,0;
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	donpcevent "Test Supervisor#jr_13::OnDisable";
@@ -1457,42 +1457,42 @@ OnTimer130000:
 }
 
 job3_rang02,251,49,3	script	Test Supervisor#jr_13	732,{
-	mes "[Test Supervisor, Freeze]";
+	mes "[考试监督 弗利兹]";
 	if (job_ranger01 == 6) {
 		if (checkquest(8261) == -1) {
-			mes "Congrats for passing the 2nd practical test! I am the 3rd practical test supervisor Freeze!";
+			mes "恭喜你通过了第2项实战考试！我是第3项实战考试监督弗利兹！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "For the 3rd test, I'll test how much you could use a wolf effectively. When you become a Ranger in the future, you'll learn an wolf!";
+			mes "[考试监督 弗利兹]";
+			mes "第3项考试，我会测试你能多有效地使用魔狼。当你将来成为游侠后，你会学会驾驭魔狼！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "^0000ffThe tester is provided with a disposable Wolf summoning Flute! When you remove egg bombs coming out from here and there by controlling the summoned wolf, you get points!^000000";
+			mes "[考试监督 弗利兹]";
+			mes "^0000ff考生会获得一次性魔狼召唤笛！通过控制召唤出的魔狼拆除各处出现的蛋形炸弹就能得分！^000000";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "Tester cannot move during the test, and the test completes when all bombs are removed quickly and accurately within the given time only by using a wolf!";
+			mes "[考试监督 弗利兹]";
+			mes "考试期间考生不能移动，在规定时间内只能使用魔狼快速准确地拆除所有炸弹才算完成考试！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "^0000ffThe way to control an wolf is to press the alt key and left-click the surface, then the wolf moves to the point where you've clicked on!^000000";
-			mes "^0000ffWhen you target the bomb and press one more, it starts to attack!^000000";
+			mes "[考试监督 弗利兹]";
+			mes "^0000ff控制魔狼的方法是按Alt键并左键点击地面，魔狼就会移动到你点击的位置！^000000";
+			mes "^0000ff瞄准炸弹再按一次，它就会开始攻击！^000000";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "The 3rd test time limit is about 3 minutes, when you get 10 over 20 points, you can pass the practical test!";
+			mes "[考试监督 弗利兹]";
+			mes "第3项考试时间限制约为3分钟，20次中得到10分以上就能通过实战考试！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "Well, then first get this Wolf' flutes and after summoning the wolf, talk to me!";
+			mes "[考试监督 弗利兹]";
+			mes "好，那先拿着这个魔狼笛子，召唤魔狼后再来找我！";
 			getitem 12380,1; //Desert_Wolf_Babe_Scroll
 			setquest 8261;
 			close;
 		}
 		if (getmercinfo(1) == 2034) {
 			erasequest 8261;
-			mes "Good! Then I'll start the test right now!";
+			mes "好！那我现在就开始考试！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "Keep in mind! You need to remove the egg bomb before it gets exploded by only using a wolf!";
+			mes "[考试监督 弗利兹]";
+			mes "记住！你只能使用魔狼在蛋形炸弹爆炸之前拆除它！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "Then, good luck!";
+			mes "[考试监督 弗利兹]";
+			mes "那么，祝你好运！";
 			sc_start SC_STONE,120000,10;
 			close2;
 			donpcevent "Test Supervisor#jr_13::OnDisable";
@@ -1500,27 +1500,27 @@ job3_rang02,251,49,3	script	Test Supervisor#jr_13	732,{
 			end;
 		}
 		if (countitem(12380) < 1) {
-			mes "Huh?! There's no wolf, no Test Flute, where did you get rid of them?!";
+			mes "嗯？！魔狼呢，考试笛子呢，你把它们弄到哪里去了？！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "I'll give you one more time specially, so hold yourself together!";
+			mes "[考试监督 弗利兹]";
+			mes "我特别再给你一次机会，振作起来！";
 			next;
-			mes "[Test Supervisor, Freeze]";
-			mes "Summon the wolf quickly, and talk to me again!";
+			mes "[考试监督 弗利兹]";
+			mes "快召唤魔狼，然后再来找我！";
 			getitem 12380,1; //Desert_Wolf_Babe_Scroll
 			close;
 		}
-		mes "Ha? What are you doing?";
+		mes "哈？你在干什么？";
 		next;
-		mes "[Test Supervisor, Freeze]";
-		mes "Play the Test Flute quickly to summon the wolf and talk to me!";
+		mes "[考试监督 弗利兹]";
+		mes "快吹考试笛子召唤魔狼然后来找我！";
 		close;
 	}
-	mes "Who are you?";
+	mes "你是谁？";
 	next;
-	mes "[Test Supervisor, Freeze]";
-	mes "This area is for the Ranger Job Change test!";
-	mes "You are not authorized to be here, please get out!";
+	mes "[考试监督 弗利兹]";
+	mes "这里是游侠转职考试区域！";
+	mes "你没有权限在这里，请离开！";
 	close;
 OnInit:
 	disablenpc "Test Supervisor#jr_13";
@@ -1538,33 +1538,33 @@ OnDisable:
 	disablenpc "Test Supervisor#jr_13";
 	end;
 OnTimer3000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Welcome to the 3rd practical test field! I am the 3rd practical Test Supervisor Freeze!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 欢迎来到第3项实战考试场！我是第3项实战考试监督弗利兹！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer6000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : For the smooth testing progress for the other testers, if you don't talk to me again in 2 minutes to start the 3rd test, the test will end!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 为了其他考生的顺利考试，如果你不在2分钟内再次跟我说话开始第3项考试，考试将结束！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer9000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Don't hesitate and let's begin!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 不要犹豫，开始吧！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer60000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : For the smooth testing progress for the other testers, if you don't talk to me again in 1 minute to start the 3rd test, the test will end!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 为了其他考生的顺利考试，如果你不在1分钟内再次跟我说话开始第3项考试，考试将结束！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer63000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Don't hesitate and let's begin!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 不要犹豫，开始吧！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer120000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : Why aren't you starting the test?",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 你为什么不开始考试？",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer123000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : You weren't on time for the test, so I am ending the 3rd practical test!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 你没有按时参加考试，所以我要结束第3项实战考试！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnTimer127000:
 	set $@job_rang_point03,0;
-	mapannounce "job3_rang02","Test Supervisor, Freeze : It's too bad, but try again!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 很遗憾，请再试一次！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	end;
 OnTimer130000:
-	mapannounce "job3_rang02","Test Supervisor, Freeze : It's too bad, but try again!",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","考试监督 弗利兹 : 很遗憾，请再试一次！",bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	mapwarp "job3_rang02","tur_dun01",93,165;
 	end;
 OnTimer133000:
@@ -1585,11 +1585,11 @@ OnEnable:
 	getmapxy(.@map$,.@x,.@y,BL_NPC);
 	monster "job3_rang02",.@x,.@y,"Egg Bomb",1047,1,strnpcinfo(0)+"::OnMyMobDead";
 	switch(atoi(strnpcinfo(2))%3) {
-		case 0: set .@str$,"Hey, I am going to explode. What are you going to do?"; break;
-		case 1: set .@str$,"I... no, I can't stand anymore!!"; break;
-		case 2: set .@str$,"I am almost done now... Don't stop me."; break;
+		case 0: set .@str$,"嘿，我要爆炸了。你打算怎么办？"; break;
+		case 1: set .@str$,"我……不，我撑不住了！！"; break;
+		case 2: set .@str$,"我快到极限了……别拦我。"; break;
 	}
-	mapannounce "job3_rang02","Egg Bomb : "+.@str$,bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","蛋形炸弹 : "+.@str$,bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	end;
 OnDisable:
 	stopnpctimer;
@@ -1599,15 +1599,15 @@ OnDisable:
 OnMyMobDead:
 	set $@job_rang_point03, $@job_rang_point03+1;
 	switch(atoi(strnpcinfo(2))%3) {
-		case 0: set .@str$,"The world is meaningless and my dream is so far away..."; break;
-		case 1: set .@str$,"Don't be relieved. Misery always comes from carelessness."; break;
-		case 2: set .@str$,"Alas, it was only a dream for a short time..."; break;
+		case 0: set .@str$,"这个世界毫无意义，我的梦想如此遥远……"; break;
+		case 1: set .@str$,"别掉以轻心。灾难总是源于大意。"; break;
+		case 2: set .@str$,"唉，那不过是短暂的一场梦……"; break;
 	}
-	mapannounce "job3_rang02","Egg Bomb : "+.@str$,bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","蛋形炸弹 : "+.@str$,bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
 	donpcevent strnpcinfo(0)+"::OnDisable";
 	end;
 OnTimer10000:
-	mapannounce "job3_rang02","Egg Bomb : Ughhhhhhhhhhhhhh!!! So what did I say!!",bc_map,"0xFF9900"; //FW_NORMAL 12 0 0
+	mapannounce "job3_rang02","蛋形炸弹 : 啊啊啊啊啊啊！！！我都说了吧！！",bc_map,"0xFF9900"; //FW_NORMAL 12 0 0
 	donpcevent strnpcinfo(0)+"::OnDisable";
 	end;
 }
@@ -1628,92 +1628,92 @@ job3_rang02,254,52,0	duplicate(Egg Bomb#0)	Egg Bomb#27	139
 job3_rang02,247,42,0	duplicate(Egg Bomb#0)	Egg Bomb#28	139
 
 job3_rang01,90,43,3	script	Ranger Master#jr_29	832,{
-	mes "[Ranger Master, Neveragain]";
+	mes "[游侠大师 奈维尔根]";
 	if (job_ranger01 < 6) {
-		mes "... ...Huh?";
-		mes "It's weird... How did you get here?";
+		mes "……嗯？";
+		mes "奇怪……你是怎么到这里来的？";
 		next;
-		mes "[Ranger Master, Neveragain]";
-		mes "You don't seem to belong here...";
+		mes "[游侠大师 奈维尔根]";
+		mes "你好像不属于这里……";
 		next;
-		mes "[Ranger Master, Neveragain]";
-		mes "Go away.";
-		mes "You are not supposed to be here.";
+		mes "[游侠大师 奈维尔根]";
+		mes "走吧。";
+		mes "你不应该在这里。";
 		close2;
 		warp "alberta",117,57;
 		end;
 	} else if (job_ranger01 == 6 || job_ranger01 == 7) {
 		if (BaseLevel < 99 || JobLevel < 50) {
-			mes "No.";
-			mes "I can tell just by looking at you that you seem to be inexperienced.";
+			mes "不行。";
+			mes "光看你就知道你还缺乏经验。";
 			next;
-			mes "[Ranger Master, Neveragain]";
-			mes "Have more pride in your job and get more experience, and then when you grow as a Hunter or a Sniper you can make an aura by yourself, please come back again.";
+			mes "[游侠大师 奈维尔根]";
+			mes "对自己的职业多一些自豪感，多积累经验，等你作为猎人或神射手成长到能自己发出光环的时候，再来找我吧。";
 			close2;
 			warp "alberta",117,57;
 			end;
 		}
-		mes "Congratulations!";
-		mes "You've completed all the rough practical tests!";
+		mes "恭喜！";
+		mes "你完成了所有艰难的实战考试！";
 		if (job_ranger01 == 6) {
 			set job_ranger01,7;
 			changequest 8259,8262;
 		}
 		next;
-		mes "[Ranger Master, Neveragain]";
-		mes "Well, you've had enough experience so I won't need to drag on.";
+		mes "[游侠大师 奈维尔根]";
+		mes "嗯，你已经有足够的经验了，我就不多说了。";
 		next;
-		mes "[Ranger Master, Neveragain]";
-		mes "Before you do a job change ^0000ffdismiss your Falcon^000000, and check if you've used all of your ^0000ffSkill Points^000000.";
+		mes "[游侠大师 奈维尔根]";
+		mes "在转职之前，请^0000ff解除你的猎鹰^000000，并确认你已经用完了所有的^0000ff技能点数^000000。";
 		next;
-		if(select("Wait a minute:I am ready") == 1) {
-			mes "[Ranger Master, Neveragain]";
-			mes "I am not running away so take your time.";
+		if(select("等一下:我准备好了") == 1) {
+			mes "[游侠大师 奈维尔根]";
+			mes "我又不会跑，慢慢来。";
 			close;
 		}
-		mes "[Ranger Master, Neveragain]";
+		mes "[游侠大师 奈维尔根]";
 		if (checkfalcon()) {
-			mes "Didn't you dismiss your falcon??";
+			mes "你没有解除猎鹰吗？？";
 			next;
-			mes "[Ranger Master, Neveragain]";
-			mes "Please dismiss your falcon, and come back to me.";
+			mes "[游侠大师 奈维尔根]";
+			mes "请解除猎鹰后再来找我。";
 			close;
 		}
 		if (SkillPoint != 0) {
-			mes "I think you need to learn more.";
+			mes "我觉得你还需要多学习一些。";
 			next;
-			mes "[Ranger Master Neveragain]";
-			mes "Use up all of your skill points before continuing on.";
+			mes "[游侠大师 奈维尔根]";
+			mes "在继续之前，请用完所有的技能点数。";
 			close;
 		}
-		mes "Good. No falcon and you've used up all your skill points.";
+		mes "好的。没有猎鹰，技能点数也用完了。";
 		next;
-		mes "[Ranger Master, Neveragain]";
-		mes "Okay, before you really change the job into a ranger, I'll ask you on more time.";
-		mes "Do you really want to become a ranger?";
+		mes "[游侠大师 奈维尔根]";
+		mes "好的，在你真正转职成游侠之前，我再问你一次。";
+		mes "你真的想成为游侠吗？";
 		next;
-		if(select("No:Yes!") == 1) {
-			mes "[Ranger Master, Neveragain]";
-			mes "...Um? That's not the answer that I was waiting for...";
+		if(select("不:是的！") == 1) {
+			mes "[游侠大师 奈维尔根]";
+			mes "……嗯？这不是我期待的答案……";
 			next;
-			mes "[Ranger Master, Neveragain]";
-			mes "Even after passing through all the rough practical tests, you don't want to become a ranger... are you sure?";
+			mes "[游侠大师 奈维尔根]";
+			mes "经历了所有艰难的实战考试之后，你不想成为游侠……你确定吗？";
 			close;
 		}
-		mes "[Ranger Master, Neveragain]";
+		mes "[游侠大师 奈维尔根]";
 		if (ismounting()) {
-			mes "You are on a riding pet,";
-			mes "so you cannot change your job.";
-			mes "Please unequip your riding pet and try again!";
+			mes "你骑着坐骑宠物，";
+			mes "所以无法转职。";
+			mes "请卸下你的坐骑宠物后再试！";
 			close;
 		}
 		if (BaseJob != Job_Hunter) {
-			mes "Wait, who are you?";
-			mes "You are not a Hunter or a Sniper?!";
+			mes "等等，你是谁？";
+			mes "你不是猎人或神射手？！";
 			next;
-			mes "[Ranger Master, Neveragain]";
-			mes "What are you doing here?";
-			mes "You are not supposed to be here. Get out!";
+			mes "[游侠大师 奈维尔根]";
+			mes "你在这里做什么？";
+			mes "你不应该在这里。快出去！";
 			set job_ranger01,0;
 			for(set .@i,8254; .@i<=8262; set .@i,.@i+1)
 				if (checkquest(.@i) > -1) erasequest .@i;
@@ -1721,19 +1721,19 @@ job3_rang01,90,43,3	script	Ranger Master#jr_29	832,{
 			warp "alberta",117,57;
 			end;
 		}
-		mes "Your firm answer seems very trustworthy!";
+		mes "你坚定的回答让人非常信赖！";
 		next;
 		nude;
 		if (countitem(1703) < 1) {
-			mes "[Ranger Master, Neveragain]";
-			mes "Umm?";
-			mes "You need to return the borrowed stuff.";
-			mes "Where is the bow that was given to you for the job change test?";
+			mes "[游侠大师 奈维尔根]";
+			mes "嗯？";
+			mes "你需要归还借来的东西。";
+			mes "转职考试给你的弓在哪里？";
 			close;
 		}
-		mes "[Ranger Master, Neveragain]";
-		mes "From now on be active as a splendid Ranger!";
-		mes "I wish you luck in your future!";
+		mes "[游侠大师 奈维尔根]";
+		mes "从现在起，作为一名出色的游侠活跃吧！";
+		mes "祝你前途光明！";
 		delitem 1703,1; //Bow__
 		set job_ranger01,8;
 		completequest 8262;
@@ -1743,22 +1743,22 @@ job3_rang01,90,43,3	script	Ranger Master#jr_29	832,{
 		getitem 6124,1; //Wolf's_Flute
 		close;
 	}
-	mes "Hey, you look great.";
-	mes "What are you doing here?";
+	mes "嘿，你看起来真精神。";
+	mes "你在这里做什么？";
 	next;
-	switch(select("I just came by:Please let me be out")) {
+	switch(select("我只是路过:请让我出去")) {
 	case 1:
-		mes "[Ranger Master, Neveragain]";
-		mes "Well, there's nothing to see and you came.";
+		mes "[游侠大师 奈维尔根]";
+		mes "嗯，也没什么好看的，你就来了。";
 		next;
-		mes "[Ranger Master, Neveragain]";
-		mes "Take a rest as long as you want.";
-		mes "It's the place where you can have a tea easily.";
+		mes "[游侠大师 奈维尔根]";
+		mes "想休息多久就休息多久。";
+		mes "这里是个可以轻松喝茶的地方。";
 		close;
 	case 2:
-		mes "[Ranger Master, Neveragain]";
-		mes "It was good to see you.";
-		mes "Don't lose the dignity as a Ranger wherever you go.";
+		mes "[游侠大师 奈维尔根]";
+		mes "很高兴见到你。";
+		mes "无论走到哪里，都不要失去作为游侠的尊严。";
 		close2;
 		warp "alberta",117,57;
 		end;
@@ -1767,21 +1767,21 @@ job3_rang01,90,43,3	script	Ranger Master#jr_29	832,{
 
 job3_rang01,58,1,0	script	Worker#job_ranger	88,{
 	callfunc "F_GM_NPC";
-	switch(select("Enable Waiting Room:Disable Waiting Room:Enable 1st Test:Disable 1st Test:Enable 2nd Test:Disable 2nd Test:Enable 3rd Test:Disable 3rd Test:Cancel")) {
+	switch(select("启用等候室:禁用等候室:启用第1项考试:禁用第1项考试:启用第2项考试:禁用第2项考试:启用第3项考试:禁用第3项考试:取消")) {
 	case 1:
-		mes "Enabled Waiting Room";
+		mes "已启用等候室";
 		donpcevent "Test Waiting Room#jr_03::OnEnable";
 		close;
 	case 2:
-		mes "Disabled Waiting Room";
+		mes "已禁用等候室";
 		donpcevent "Test Waiting Room#jr_03::OnDisable";
 		close;
 	case 3:
-		mes "1st Test Enabled";
+		mes "第1项考试已启用";
 		donpcevent "Test Supervisor#jr_04::OnEnable";
 		close;
 	case 4:
-		mes "1st Test Disabled";
+		mes "第1项考试已禁用";
 		donpcevent "Test Supervisor#jr_04::OnDisable";
 		donpcevent "First Test Timer#jr_05::OnDisable";
 		donpcevent "CallCorrectAnswer#jr::OnReset";
@@ -1790,19 +1790,19 @@ job3_rang01,58,1,0	script	Worker#job_ranger	88,{
 		donpcevent "CallWrongAnswer#jr::OnDisable";
 		close;
 	case 5:
-		mes "2nd Test Enabled";
+		mes "第2项考试已启用";
 		donpcevent "Second Test Timer#jr_08::OnEnable";
 		close;
 	case 6:
-		mes "2nd Test Disabled";
+		mes "第2项考试已禁用";
 		donpcevent "Second Test Timer#jr_08::OnDisable";
 		close;
 	case 7:
-		mes "3rd Test has been Enabled";
+		mes "第3项考试已启用";
 		donpcevent "Third Test Timer#jr_12::OnEnable";
 		close;
 	case 8:
-		mes "3rd Test has been Disabled";
+		mes "第3项考试已禁用";
 		donpcevent "Third Test Timer#jr_12::OnDisable";
 		for(set .@i,14; .@i<=28; set .@i,.@i+1)
 			donpcevent "Egg Bomb#"+.@i+"::OnDisable";

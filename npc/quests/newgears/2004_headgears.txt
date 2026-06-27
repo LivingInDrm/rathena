@@ -110,146 +110,146 @@ payon,115,131,3	script	Neko Neko#1	725,{
 geffen,129,148,3	script	Argen#1	779,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[Argen]";
-		mes "Hey~ why are you carrying so many items?";
-		mes "You mind sharing them with me?";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] Hey~ why are you carrying so many items?";
+		mes "[DRY-RUN] You mind sharing them with me?";
 		close;
 	}
 	emotion ET_SCRATCH;
-	mes "[Argen]";
-	mes "Man, oh man~";
-	mes "Am I bored~!";
-	mes "If I only knew more tricks with this yo-yo. Then I could really impress the ladies.";
+	mes "[DRY-RUN] [Argen]";
+	mes "[DRY-RUN] Man, oh man~";
+	mes "[DRY-RUN] Am I bored~!";
+	mes "[DRY-RUN] If I only knew more tricks with this yo-yo. Then I could really impress the ladies.";
 	next;
 	mes "[" + strcharinfo(0) + "]";
-	mes "Impress the ladies...?";
+	mes "[DRY-RUN] Impress the ladies...?";
 	next;
 	emotion ET_SURPRISE;
 	if (Sex == SEX_MALE) {
-		mes "[Argen]";
-		mes "Yeah dude. There are two things chicks dig. Small, adorable presents. And suave dudes.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] Yeah dude. There are two things chicks dig. Small, adorable presents. And suave dudes.";
 		next;
-		mes "[Argen]";
-		mes "So, I got the cutesy present junk down. You know, instead of like, spending money on like a real gift, I make these little hairpin thingees.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] So, I got the cutesy present junk down. You know, instead of like, spending money on like a real gift, I make these little hairpin thingees.";
 		next;
-		mes "[Argen]";
-		mes "As for being suave? Well, I do have this yo-yo...";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] As for being suave? Well, I do have this yo-yo...";
 		next;
-		mes "[Argen]";
-		mes "Heh. You look like you don't like wasting cash on girls either. I'm down with that. If you like, I can make you a hairpin that you can give as gifts to the ^FF3333ladies^000000.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] Heh. You look like you don't like wasting cash on girls either. I'm down with that. If you like, I can make you a hairpin that you can give as gifts to the ^FF3333ladies^000000.";
 		next;
-		mes "[Argen]";
-		mes "All you gotta do is bring me the stuff to make it. And if that hairpin's for yourself, well, I'm down with that jive too.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] All you gotta do is bring me the stuff to make it. And if that hairpin's for yourself, well, I'm down with that jive too.";
 	}
 	else {
-		mes "[Argen]";
-		mes "Whoa~! A lady...";
-		mes "Wow, you're really cute! Tell you what...";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] Whoa~! A lady...";
+		mes "[DRY-RUN] Wow, you're really cute! Tell you what...";
 		next;
-		mes "[Argen]";
-		mes "Since you're such a cutie, I'll put together a nice little hairpin for you. All you gotta do is bring me the stuff to make it.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] Since you're such a cutie, I'll put together a nice little hairpin for you. All you gotta do is bring me the stuff to make it.";
 		next;
-		mes "[Argen]";
-		mes "So go ahead and tell me what kinda hairpin you're interested in.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] So go ahead and tell me what kinda hairpin you're interested in.";
 	}
 	next;
 	emotion ET_SMILE;
-	switch(select("^3131FFX Hairpin^000000:^3131FFBand Aid^000000:^3131FFFlower Hairpin^000000:No thanks.")) {
+	switch(select("[DRY-RUN] ^3131FFX Hairpin^000000:^3131FFBand Aid^000000:^3131FFFlower Hairpin^000000:No thanks.")) {
 	case 1:
 		if (countitem(2294) > 0 && countitem(7220) > 399) {
-			mes "[Argen]";
-			mes "X Hairpin!";
-			mes "Nice choice~!";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] X Hairpin!";
+			mes "[DRY-RUN] Nice choice~!";
 			next;
 			emotion ET_SURPRISE;
-			mes "[Argen]";
-			mes "Ah... Right.";
-			mes "About the Stellar...";
-			mes "^CE3100If you use an upgraded Stellar to make this item, any upgrades will be lost. That okay with you?^000000";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Ah... Right.";
+			mes "[DRY-RUN] About the Stellar...";
+			mes "[DRY-RUN] ^CE3100If you use an upgraded Stellar to make this item, any upgrades will be lost. That okay with you?^000000";
 			next;
-			switch(select("I don't mind.:I will come back later.")) {
+			switch(select("[DRY-RUN] I don't mind.:I will come back later.")) {
 			case 1:
-				mes "[Argen]";
-				mes "Alright, let's get to work.";
+				mes "[DRY-RUN] [Argen]";
+				mes "[DRY-RUN] Alright, let's get to work.";
 				next;
-				mes "^3131FF * Scrape Scrape * ^000000";
-				mes "^3131FF * Scrape Scrape * ^000000";
+				mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
+				mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
 				next;
 				emotion ET_BEST;
-				mes "[Argen]";
-				mes "Alright, I'm done!";
-				mes "So what do you think?";
-				mes "Pretty cool, eh?";
+				mes "[DRY-RUN] [Argen]";
+				mes "[DRY-RUN] Alright, I'm done!";
+				mes "[DRY-RUN] So what do you think?";
+				mes "[DRY-RUN] Pretty cool, eh?";
 				delitem 2294,1; //Star_Dust
 				delitem 7220,400; //Ectoplasm
 				getitem 5079,1; //Crossed_Hair_Band
 				next;
 				break;
 			case 2:
-				mes "[Argen]";
-				mes "No problem, take your time.";
+				mes "[DRY-RUN] [Argen]";
+				mes "[DRY-RUN] No problem, take your time.";
 				close;
 			}
 		}
 		else {
-			mes "[Argen]";
-			mes "Oh~";
-			mes "You want a ^3131FFX Hairpin?^000000";
-			mes "That's easy!";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Oh~";
+			mes "[DRY-RUN] You want a ^3131FFX Hairpin?^000000";
+			mes "[DRY-RUN] That's easy!";
 			next;
-			mes "[Argen]";
-			mes "I need ^FF00001 Stellar^000000";
-			mes "and ^FF0000400 Ectoplasm^000000.";
-			mes "Tell me when you're ready!";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] I need ^FF00001 Stellar^000000";
+			mes "[DRY-RUN] and ^FF0000400 Ectoplasm^000000.";
+			mes "[DRY-RUN] Tell me when you're ready!";
 			close;
 		}
 		break;
 	case 2:
 		if (countitem(970) > 0 && countitem(930) > 499) {
-			mes "[Argen]";
-			mes "Band Aid, eh?";
-			mes "Got it! Hold on";
-			mes "a sec, I'll be";
-			mes "done in a bit.";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Band Aid, eh?";
+			mes "[DRY-RUN] Got it! Hold on";
+			mes "[DRY-RUN] a sec, I'll be";
+			mes "[DRY-RUN] done in a bit.";
 			next;
-			mes "^3131FF * Scrape Scrape * ^000000";
-			mes "^3131FF * Scrape Scrape * ^000000";
+			mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
+			mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
 			next;
 			emotion ET_BEST;
-			mes "[Argen]";
-			mes "*Whew~!*";
-			mes "I'm finished!";
-			mes "Pretty cool, huh?";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] *Whew~!*";
+			mes "[DRY-RUN] I'm finished!";
+			mes "[DRY-RUN] Pretty cool, huh?";
 			delitem 970,1; //Alchol
 			delitem 930,500; //Rotten_Bandage
 			getitem 5063,1; //Plaster
 			next;
 		}
 		else {
-			mes "[Argen]";
-			mes "Ah, a ^3131FFBand Aid^000000!";
-			mes "That stuff is great for faking injuries, or hiding a bald spot. Handy to have when you wanna ditch school.";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Ah, a ^3131FFBand Aid^000000!";
+			mes "[DRY-RUN] That stuff is great for faking injuries, or hiding a bald spot. Handy to have when you wanna ditch school.";
 			next;
-			mes "[Argen]";
-			mes "Bring me ^FF00001 Alcohol^000000 and";
-			mes "^FF0000500 Rotten Bandage^000000!";
-			mes "Tell me when you're ready, yeah?";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Bring me ^FF00001 Alcohol^000000 and";
+			mes "[DRY-RUN] ^FF0000500 Rotten Bandage^000000!";
+			mes "[DRY-RUN] Tell me when you're ready, yeah?";
 			close;
 		}
 		break;
 	case 3:
 		if (countitem(2269) > 0 && countitem(999) > 9 && Zeny > 19999) {
-			mes "[Argen]";
-			mes "You wanna a Flower Hairpin~?";
-			mes "Alright, gimmie a minute, yeah?";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] You wanna a Flower Hairpin~?";
+			mes "[DRY-RUN] Alright, gimmie a minute, yeah?";
 			next;
-			mes "^3131FF - Scrape Scrape - ^000000";
-			mes "^3131FF - Scrape Scrape - ^000000";
+			mes "[DRY-RUN] ^3131FF - Scrape Scrape - ^000000";
+			mes "[DRY-RUN] ^3131FF - Scrape Scrape - ^000000";
 			next;
 			emotion ET_BEST;
-			mes "[Argen]";
-			mes "Ah... It's done!";
-			mes "Hey, that looks pretty smooth! Oh, and uh, you can keep this leftover Stem.";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Ah... It's done!";
+			mes "[DRY-RUN] Hey, that looks pretty smooth! Oh, and uh, you can keep this leftover Stem.";
 			delitem 2269,1; //Centimental_Flower
 			delitem 999,10; //Steel
 			set Zeny, Zeny-20000;
@@ -258,40 +258,40 @@ geffen,129,148,3	script	Argen#1	779,{
 			next;
 		}
 		else {
-			mes "[Argen]";
-			mes "You wanna a ^3131FFFlower Hairpin^000000!";
-			mes "Yeah, I've noticed cuties just love walking around with flowers in their mouths, and I was always like 'Whaaaat~?' But then I got this great idea!";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] You wanna a ^3131FFFlower Hairpin^000000!";
+			mes "[DRY-RUN] Yeah, I've noticed cuties just love walking around with flowers in their mouths, and I was always like 'Whaaaat~?' But then I got this great idea!";
 			next;
-			mes "[Argen]";
-			mes "Wouldn't some kinda... ^3131FFFlower Hairpin^000000 be a hit with chicks? So I tried making one, and it seemed to be pretty popular among my lady friends.";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Wouldn't some kinda... ^3131FFFlower Hairpin^000000 be a hit with chicks? So I tried making one, and it seemed to be pretty popular among my lady friends.";
 			next;
-			mes "[Argen]";
-			mes "And it's a much better way to use a flower than to put it on Pet Orc Warriors. Man, those things just look gnarly~";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] And it's a much better way to use a flower than to put it on Pet Orc Warriors. Man, those things just look gnarly~";
 			next;
-			mes "[Argen]";
-			mes "Well, if you want one, I'll make it. But I want you should pay me some royalties for my services. It's pretty hard to attach a flower to a hairpin, you know?";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] Well, if you want one, I'll make it. But I want you should pay me some royalties for my services. It's pretty hard to attach a flower to a hairpin, you know?";
 			next;
-			mes "[Argen]";
-			mes "It takes mad skill.";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] It takes mad skill.";
 			next;
-			mes "[Argen]";
-			mes "So, I want you to bring...";
-			mes "^FF00001 Romantic Flower^000000,";
-			mes "^FF000010 Steel^000000";
-			mes "and ^3131FF20,000 zeny^000000!";
-			mes "Got it? Cool~";
+			mes "[DRY-RUN] [Argen]";
+			mes "[DRY-RUN] So, I want you to bring...";
+			mes "[DRY-RUN] ^FF00001 Romantic Flower^000000,";
+			mes "[DRY-RUN] ^FF000010 Steel^000000";
+			mes "[DRY-RUN] and ^3131FF20,000 zeny^000000!";
+			mes "[DRY-RUN] Got it? Cool~";
 			close;
 		}
 		break;
 	case 4:
-		mes "[Argen]";
-		mes "I'm down with that.";
-		mes "If you want some kinda hairpin, just come back. I'll just be here, looking ^FF3333suaaave^000000 with this yo-yo.";
+		mes "[DRY-RUN] [Argen]";
+		mes "[DRY-RUN] I'm down with that.";
+		mes "[DRY-RUN] If you want some kinda hairpin, just come back. I'll just be here, looking ^FF3333suaaave^000000 with this yo-yo.";
 		close;
 	}
 	emotion ET_WRAP;
-	mes "[Argen]";
-	mes "Feel free to come ask me if you want more hairpins. Hey, I know I look lazy, but I do like to make things for the ladies. See ya later~!";
+	mes "[DRY-RUN] [Argen]";
+	mes "[DRY-RUN] Feel free to come ask me if you want more hairpins. Hey, I know I look lazy, but I do like to make things for the ladies. See ya later~!";
 	close;
 }
 
@@ -300,94 +300,94 @@ geffen,129,148,3	script	Argen#1	779,{
 yuno,300,188,5	script	Zhenbolt#1	753,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after -";
+		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
 		close;
 	}
 	if (countitem(7216) > 299 && countitem(7097) > 299 && countitem(2211) > 0 && countitem(982) > 0) {
-		mes "[Zhenbolt]";
-		mes "What's this?!";
-		mes "You've already brought everything I've asked! Good job, hero~! Let me get to work right away...";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] What's this?!";
+		mes "[DRY-RUN] You've already brought everything I've asked! Good job, hero~! Let me get to work right away...";
 		next;
-		mes "[Zhenbolt]";
-		mes "...";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] ...";
 		next;
-		mes "[Zhenbolt]";
-		mes "......";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] ......";
 		next;
-		mes "[Zhenbolt]";
-		mes "......*Cling*";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] ......*Cling*";
 		next;
-		mes "[Zhenbolt]";
-		mes "Take this...";
-		mes "It's known as the ^FF0000Hot-blooded Headband^000000, my personal symbol of fighting spirit! With this on your head, nothing can stop you!";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] Take this...";
+		mes "[DRY-RUN] It's known as the ^FF0000Hot-blooded Headband^000000, my personal symbol of fighting spirit! With this on your head, nothing can stop you!";
 		delitem 7216,300; //Red_Scarf
 		delitem 7097,300; //Burning_Heart
 		delitem 2211,1; //Bandana
 		delitem 982,1; //White_Dyestuffs
 		getitem 5070,1; //Headband_Of_Power
 		next;
-		mes "[Zhenbolt]";
-		mes "Now, go!";
-		mes "Unleash your fighting spirit upon the villains of the world!";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] Now, go!";
+		mes "[DRY-RUN] Unleash your fighting spirit upon the villains of the world!";
 		close;
 	}
-	mes "[Zhenbolt]";
-	mes "I...";
-	mes "am called ^FF0000Zhenbolt^000000!!";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] I...";
+	mes "[DRY-RUN] am called ^FF0000Zhenbolt^000000!!";
 	next;
-	if (select("THE Zhenbolt!?:Oh my gosh, it's Zhenbolt!") == 1) {
-		mes "[Zhenbolt]";
-		mes "Yes, it is I, the man who has pummelled over a trillion foes and rising. Raging Hurricane Hero of Justice: Zhenbolt!";
+	if (select("[DRY-RUN] THE Zhenbolt!?:Oh my gosh, it's Zhenbolt!") == 1) {
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] Yes, it is I, the man who has pummelled over a trillion foes and rising. Raging Hurricane Hero of Justice: Zhenbolt!";
 		next;
-		mes "[Zhenbolt]";
-		mes "I see in your eyes that you also fight with a heart of purity, a heart of passion!";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] I see in your eyes that you also fight with a heart of purity, a heart of passion!";
 		next;
-		mes "[Zhenbolt]";
-		mes "It is decided! If you bring me the following items, I will give you the famous symbol of battle by which villains fear Zhenbolt.";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] It is decided! If you bring me the following items, I will give you the famous symbol of battle by which villains fear Zhenbolt.";
 		next;
-		mes "[Zhenbolt]";
-		mes "Bring me...";
-		mes "300 ^FF0000Red Muffler^000000,";
-		mes "300 ^FF0000Burning Heart^000000,";
-		mes "1 ^FF0000Bandana^000000 and 1 ^FF0000White Dyestuffs^000000.";
-		mes "That's all I need.";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] Bring me...";
+		mes "[DRY-RUN] 300 ^FF0000Red Muffler^000000,";
+		mes "[DRY-RUN] 300 ^FF0000Burning Heart^000000,";
+		mes "[DRY-RUN] 1 ^FF0000Bandana^000000 and 1 ^FF0000White Dyestuffs^000000.";
+		mes "[DRY-RUN] That's all I need.";
 		next;
-		mes "[Zhenbolt]";
-		mes "Come back soon, adventurer!";
-		mes "I expect great things of you!";
+		mes "[DRY-RUN] [Zhenbolt]";
+		mes "[DRY-RUN] Come back soon, adventurer!";
+		mes "[DRY-RUN] I expect great things of you!";
 		close;
 	}
-	mes "[Zhenbolt]";
-	mes "Yes.";
-	mes "It is I, Zhenbolt.";
-	mes "Warrior of Might!";
-	mes "Whirling Tempest";
-	mes "of Raging Passion!";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] Yes.";
+	mes "[DRY-RUN] It is I, Zhenbolt.";
+	mes "[DRY-RUN] Warrior of Might!";
+	mes "[DRY-RUN] Whirling Tempest";
+	mes "[DRY-RUN] of Raging Passion!";
 	next;
-	mes "[Zhenbolt]";
-	mes "I see in your eyes that you have seen many a skirmish. To have survived this long, you must know the secret to victory...";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] I see in your eyes that you have seen many a skirmish. To have survived this long, you must know the secret to victory...";
 	next;
-	mes "[Zhenbolt]";
-	mes "Pure, unbridled rage!";
-	mes "Battles are won with vigor and passion!";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] Pure, unbridled rage!";
+	mes "[DRY-RUN] Battles are won with vigor and passion!";
 	next;
-	mes "[Zhenbolt]";
-	mes "Seeing as you understand this fundamental, I recognize you as an ally in the eternal struggle for justice! I shall bestow upon you the very symbol with which I have struck fear into evil hearts...";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] Seeing as you understand this fundamental, I recognize you as an ally in the eternal struggle for justice! I shall bestow upon you the very symbol with which I have struck fear into evil hearts...";
 	next;
-	mes "[Zhenbolt]";
-	mes "Bring me";
-	mes "300 ^FF0000Red Muffler^000000,";
-	mes "300 ^FF0000Burning Heart^000000,";
-	mes "1 ^FF0000Bandana^000000 and 1 ^FF0000White Dyestuffs^000000.";
-	mes "That's all I need.";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] Bring me";
+	mes "[DRY-RUN] 300 ^FF0000Red Muffler^000000,";
+	mes "[DRY-RUN] 300 ^FF0000Burning Heart^000000,";
+	mes "[DRY-RUN] 1 ^FF0000Bandana^000000 and 1 ^FF0000White Dyestuffs^000000.";
+	mes "[DRY-RUN] That's all I need.";
 	next;
-	mes "[Zhenbolt]";
-	mes "Bring me those items...";
-	mes "And you too can become a fighting legend...";
+	mes "[DRY-RUN] [Zhenbolt]";
+	mes "[DRY-RUN] Bring me those items...";
+	mes "[DRY-RUN] And you too can become a fighting legend...";
 	close;
 }
 
@@ -396,112 +396,112 @@ yuno,300,188,5	script	Zhenbolt#1	753,{
 prontera,165,232,3	script	Nephia#1	744,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after -";
+		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
 		close;
 	}
 	if (countitem(2244) > 0 && countitem(2209) > 0 && countitem(10007) > 0) {
-		mes "[Nephia]";
-		mes "Oh...";
-		mes "You've brought all these ribbons! I can't wait to tie you a new ribbon to put on your ^FF66CCbeautiful hair!^000000";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Oh...";
+		mes "[DRY-RUN] You've brought all these ribbons! I can't wait to tie you a new ribbon to put on your ^FF66CCbeautiful hair!^000000";
 		next;
-		mes "[Nephia]";
-		mes "...";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] ...";
 		next;
-		mes "[Nephia]";
-		mes "......";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] ......";
 		next;
-		mes "[Nephia]";
-		mes ".......*Cling*";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] .......*Cling*";
 		next;
-		mes "[Nephia]";
-		mes "That's it~! We're done! Oh, I just know you're going to look precious wearing this.";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] That's it~! We're done! Oh, I just know you're going to look precious wearing this.";
 		delitem 2244,1; //Big_Sis'_Ribbon
 		delitem 2209,1; //Ribbon_
 		delitem 10007,1; //Silk_Ribbon
 		getitem 5083,1; //Red_Tailed_Ribbon
 		next;
-		mes "[Nephia]";
-		mes "Hopefully, we can get together and do each other's hair sometime! Wouldn't that be soooo much fun?";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Hopefully, we can get together and do each other's hair sometime! Wouldn't that be soooo much fun?";
 		close;
 	}
-	mes "[Nephia]";
-	mes "Wow~";
-	mes "Such beautiful hair! I'm sorry, it's just that I love pretty hairstyles, and accessories!";
+	mes "[DRY-RUN] [Nephia]";
+	mes "[DRY-RUN] Wow~";
+	mes "[DRY-RUN] Such beautiful hair! I'm sorry, it's just that I love pretty hairstyles, and accessories!";
 	next;
-	mes "[Nephia]";
-	mes "Ooh~! You know what would make your hair so much cuter? I think if you tied it back with a big, red ribbon, you would look sooo ^FF66CCadorable^000000!";
+	mes "[DRY-RUN] [Nephia]";
+	mes "[DRY-RUN] Ooh~! You know what would make your hair so much cuter? I think if you tied it back with a big, red ribbon, you would look sooo ^FF66CCadorable^000000!";
 	next;
 	if (Sex == SEX_MALE) {
-		if (select("Um, lady, I'm a dude.:^FF66CCOoh~! You're right!^000000") == 1) {
+		if (select("[DRY-RUN] Um, lady, I'm a dude.:^FF66CCOoh~! You're right!^000000") == 1) {
 			mes "["+ strcharinfo(0) +"]";
-			mes "Woman, can't you that I'm a man?";
+			mes "[DRY-RUN] Woman, can't you that I'm a man?";
 			next;
-			mes "[Nephia]";
-			mes "Awww...";
-			mes "But you would look so ^FF66CCpretty~!^000000";
+			mes "[DRY-RUN] [Nephia]";
+			mes "[DRY-RUN] Awww...";
+			mes "[DRY-RUN] But you would look so ^FF66CCpretty~!^000000";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "That...";
-			mes "Was the worst";
-			mes "compliment anyone";
-			mes "has ever given me.";
+			mes "[DRY-RUN] That...";
+			mes "[DRY-RUN] Was the worst";
+			mes "[DRY-RUN] compliment anyone";
+			mes "[DRY-RUN] has ever given me.";
 			close;
 		}
 		mes "["+ strcharinfo(0) +"]";
-		mes "Oooh~!";
-		mes "That sounds great!";
+		mes "[DRY-RUN] Oooh~!";
+		mes "[DRY-RUN] That sounds great!";
 		next;
-		mes "[Nephia]";
-		mes "Like, oh my God! That's what I was thinking! Oh hey~! I can go ahead and tie that ribbon for you if you want!";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Like, oh my God! That's what I was thinking! Oh hey~! I can go ahead and tie that ribbon for you if you want!";
 		next;
-		mes "[Nephia]";
-		mes "Ooh! Bring...";
-		mes "1 ^FF0000Big Ribbon^000000,";
-		mes "1 ^FF0000slotted Ribbon^000000 and";
-		mes "1 ^FF0000Silk Ribbon^000000!";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Ooh! Bring...";
+		mes "[DRY-RUN] 1 ^FF0000Big Ribbon^000000,";
+		mes "[DRY-RUN] 1 ^FF0000slotted Ribbon^000000 and";
+		mes "[DRY-RUN] 1 ^FF0000Silk Ribbon^000000!";
 		next;
-		mes "[Nephia]";
-		mes "Oh, I almost forgot!";
-		mes "^FF0000If you bring me any upgraded items, or items compounded with cards, those cards and upgrades will be lost once I create the new item for you. So please don't forget that!^000000";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Oh, I almost forgot!";
+		mes "[DRY-RUN] ^FF0000If you bring me any upgraded items, or items compounded with cards, those cards and upgrades will be lost once I create the new item for you. So please don't forget that!^000000";
 		next;
-		mes "[Nephia]";
-		mes "Ooh, hurry hurry! I can't wait to accessorize your hair!";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Ooh, hurry hurry! I can't wait to accessorize your hair!";
 		close;
 	}
 	else {
-		if (select("No thanks.:^FF66CCOoh~! You're right!^000000") == 1) {
+		if (select("[DRY-RUN] No thanks.:^FF66CCOoh~! You're right!^000000") == 1) {
 			mes "["+ strcharinfo(0) +"]";
-			mes "Er...";
-			mes "No thanks.";
+			mes "[DRY-RUN] Er...";
+			mes "[DRY-RUN] No thanks.";
 			next;
-			mes "[Nephia]";
-			mes "Awwww~";
-			mes "But you're just the cutest little thing. I just know you would look so preeeetty!";
+			mes "[DRY-RUN] [Nephia]";
+			mes "[DRY-RUN] Awwww~";
+			mes "[DRY-RUN] But you're just the cutest little thing. I just know you would look so preeeetty!";
 			close;
 		}
 		mes "["+ strcharinfo(0) +"]";
-		mes "Oooh~!";
-		mes "That sounds great!";
+		mes "[DRY-RUN] Oooh~!";
+		mes "[DRY-RUN] That sounds great!";
 		next;
-		mes "[Nephia]";
-		mes "Like, oh my God! That's what I was thinking! Oh hey~! I can go ahead and tie a ribbon for you if you want!";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Like, oh my God! That's what I was thinking! Oh hey~! I can go ahead and tie a ribbon for you if you want!";
 		next;
-		mes "[Nephia]";
-		mes "Ooh! To do that I need";
-		mes "1 ^FF0000Big Ribbon^000000,";
-		mes "1 ^FF0000slotted Ribbon^000000 and";
-		mes "1 ^FF0000Silk Ribbon^000000!";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Ooh! To do that I need";
+		mes "[DRY-RUN] 1 ^FF0000Big Ribbon^000000,";
+		mes "[DRY-RUN] 1 ^FF0000slotted Ribbon^000000 and";
+		mes "[DRY-RUN] 1 ^FF0000Silk Ribbon^000000!";
 		next;
-		mes "[Nephia]";
-		mes "Oh, I almost forgot!";
-		mes "^FF0000If you bring me any upgraded items, or items compounded with cards, those cards and upgrades will be lost once I create the new item for you. So please don't forget that!^000000";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Oh, I almost forgot!";
+		mes "[DRY-RUN] ^FF0000If you bring me any upgraded items, or items compounded with cards, those cards and upgrades will be lost once I create the new item for you. So please don't forget that!^000000";
 		next;
-		mes "[Nephia]";
-		mes "Ooh, hurry hurry! I can't wait to accessorize your hair!";
+		mes "[DRY-RUN] [Nephia]";
+		mes "[DRY-RUN] Ooh, hurry hurry! I can't wait to accessorize your hair!";
 		close;
 	}
 }
@@ -510,52 +510,52 @@ prontera,165,232,3	script	Nephia#1	744,{
 //============================================================
 comodo,237,217,5	script	Meruntei#1	732,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after -";
+		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
 		close;
 	}
 	if (countitem(5010) > 0 && countitem(5049) > 0 && countitem(7101) > 9 && Zeny > 9999) {
-		mes "[Meruntei]";
-		mes "Oh! You brought all of them! Now I shall make you an Indian Headband of your very own.";
+		mes "[DRY-RUN] [Meruntei]";
+		mes "[DRY-RUN] Oh! You brought all of them! Now I shall make you an Indian Headband of your very own.";
 		next;
-		mes "[Meruntei]";
-		mes "Take this! The items you have brought will be very useful for continuing my work in spreading headbands around Rune-Midgard.";
+		mes "[DRY-RUN] [Meruntei]";
+		mes "[DRY-RUN] Take this! The items you have brought will be very useful for continuing my work in spreading headbands around Rune-Midgard.";
 		delitem 5010,1; //Indian_Hair_Piece
 		delitem 5049,1; //Stripe_Band
 		delitem 7101,10; //Peco_Wing_Feather
 		set Zeny, Zeny-10000;
 		getitem 5071,1; //Indian_Headband
 		next;
-		mes "[Meruntei]";
-		mes "iiiyiyiyiyiyiyiiiiii~~!";
+		mes "[DRY-RUN] [Meruntei]";
+		mes "[DRY-RUN] iiiyiyiyiyiyiyiiiiii~~!";
 		close;
 	}
-	mes "[Meruntei]";
-	mes "iiiyiyiyiyiyiyiiiiii~~!";
-	mes " ";
-	mes "Indian spirit, forever~!";
-	mes "On behalf of the Comodo Indians, I give reverence to all Indian Tribes!";
+	mes "[DRY-RUN] [Meruntei]";
+	mes "[DRY-RUN] iiiyiyiyiyiyiyiiiiii~~!";
+	mes "[DRY-RUN] Indian spirit, forever~!";
+	mes "[DRY-RUN] On behalf of the Comodo Indians, I give reverence to all Indian Tribes!";
+	mes "[DRY-RUN] [Meruntei]";
 	next;
-	mes "[Meruntei]";
-	mes "Would you like to have an Indian Headband? You wouldn't become an official member of my tribe, but wearing it would show your respect if you happen to encounter tribal Indians in your adventures.";
+	mes "[DRY-RUN] Would you like to have an Indian Headband? You wouldn't become an official member of my tribe, but wearing it would show your respect if you happen to encounter tribal Indians in your adventures.";
+	mes "[DRY-RUN] [Meruntei]";
 	next;
-	mes "[Meruntei]";
-	mes "You could just bring...";
-	mes "1 ^FF0000Indian Fillet^000000,";
-	mes "1 ^FF0000Striped Hairband^000000,";
-	mes "10 ^FF0000PecoPeco Feather^000000";
-	mes "and ^FF000010,000 zeny!";
+	mes "[DRY-RUN] You could just bring...";
+	mes "[DRY-RUN] 1 ^FF0000Indian Fillet^000000,";
+	mes "[DRY-RUN] 1 ^FF0000Striped Hairband^000000,";
+	mes "[DRY-RUN] 10 ^FF0000PecoPeco Feather^000000";
+	mes "[DRY-RUN] and ^FF000010,000 zeny!";
+	mes "[DRY-RUN] [Meruntei]";
 	next;
-	mes "[Meruntei]";
-	mes "I will be using the items you've given me so I can continue my work in spreading Indian Headbands, and paying homage to the tribes of Rune-Midgard.";
+	mes "[DRY-RUN] I will be using the items you've given me so I can continue my work in spreading Indian Headbands, and paying homage to the tribes of Rune-Midgard.";
+	mes "[DRY-RUN] [Meruntei]";
 	next;
-	mes "[Meruntei]";
-	mes "^FF0000For your information, if you bring me any item that has a card inserted, or has been upgraded, the additional abilities of the item will disappear after I have used them. So please keep that in mind.^000000";
+	mes "[DRY-RUN] ^FF0000For your information, if you bring me any item that has a card inserted, or has been upgraded, the additional abilities of the item will disappear after I have used them. So please keep that in mind.^000000";
+	mes "[DRY-RUN] [Meruntei]";
 	next;
-	mes "[Meruntei]";
+	mes "[DRY-RUN] iiiyiyiyiyiyiyiiiiii~~!";
 	mes "iiiyiyiyiyiyiyiiiiii~~!";
 	close;
 }
@@ -564,79 +564,79 @@ comodo,237,217,5	script	Meruntei#1	732,{
 //============================================================
 geffen,67,87,3	script	Ipore#1	700,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after -";
+		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
 		close;
 	}
 	if (countitem(921) > 299) {
-		mes "[Ipore]";
-		mes "Wow! Did you really gather these 300 Mushroom Spores all by yoruself? Nice! Now it's time to use my magic~";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] Wow! Did you really gather these 300 Mushroom Spores all by yoruself? Nice! Now it's time to use my magic~";
 		next;
-		mes "^3355FF*Sprinkle Sprinkle*";
-		mes "Ipore pours the Mushroom Spores onto your head.^000000";
+		mes "[DRY-RUN] ^3355FF*Sprinkle Sprinkle*";
+		mes "[DRY-RUN] Ipore pours the Mushroom Spores onto your head.^000000";
 		next;
-		mes "[Ipore]";
-		mes "Hocus pocus!";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] Hocus pocus!";
 		next;
-		mes "[Ipore]";
-		mes ".......................";
-		mes "Phew! Success! There's a mushroom growing out of your head!";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] .......................";
+		mes "[DRY-RUN] Phew! Success! There's a mushroom growing out of your head!";
 		next;
-		mes "[Ipore]";
-		mes "But...";
-		mes "I don't like the way it's tilting. It should have grown in the ^FF3333other^000000 direction.";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] But...";
+		mes "[DRY-RUN] I don't like the way it's tilting. It should have grown in the ^FF3333other^000000 direction.";
 		next;
-		mes "[Ipore]";
-		mes "I guess...";
-		mes "I guess we should make that mushroom into a headband so that you can adjust it to your style.";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] I guess...";
+		mes "[DRY-RUN] I guess we should make that mushroom into a headband so that you can adjust it to your style.";
 		next;
-		mes "[Ipore]";
-		mes "I know, I know...";
-		mes "It's not as cool as having the mushroom actually attached to your skull, but it's all we can do. I'm sorry I let you down.";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] I know, I know...";
+		mes "[DRY-RUN] It's not as cool as having the mushroom actually attached to your skull, but it's all we can do. I'm sorry I let you down.";
 		next;
-		mes "[Ipore]";
-		mes "...There.";
-		mes "It's done. But are you okay? Luckily, I don't think I scalped you.";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] ...There.";
+		mes "[DRY-RUN] It's done. But are you okay? Luckily, I don't think I scalped you.";
 		next;
-		mes "[Ipore]";
-		mes "Anyway, now you can wear that mushroom at a rakish angle, the way it's supposed to be worn. Stay cool, you fashion rebel, you.";
+		mes "[DRY-RUN] [Ipore]";
+		mes "[DRY-RUN] Anyway, now you can wear that mushroom at a rakish angle, the way it's supposed to be worn. Stay cool, you fashion rebel, you.";
 		delitem 921,300; //Mushroom_Spore
 		getitem 5082,1; //Mushroom_Band
 		close;
 	}
-	mes "[Ipore]";
-	mes "Finally...";
-	mes "I've created a magic spell that can make mushrooms grow anywhere! Anyplace you can imagine, I can make a mushroom grow there.";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Finally...";
+	mes "[DRY-RUN] I've created a magic spell that can make mushrooms grow anywhere! Anyplace you can imagine, I can make a mushroom grow there.";
 	next;
-	mes "[Ipore]";
-	mes "Even...";
-	mes "On top of the human head...";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Even...";
+	mes "[DRY-RUN] On top of the human head...";
 	next;
-	mes "[Ipore]";
-	mes "Some may think it grotesque, but wouldn't you agree that sporting a mushroom, grown from your head, would start an art revolution?";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Some may think it grotesque, but wouldn't you agree that sporting a mushroom, grown from your head, would start an art revolution?";
 	next;
-	mes "[Ipore]";
-	mes "Just think! It's the perfect fusion of magic and art, fashion and living life...";
-	mes "Man and mushroom?";
-	mes "Ah...I've piqued your curiosity I see.";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Just think! It's the perfect fusion of magic and art, fashion and living life...";
+	mes "[DRY-RUN] Man and mushroom?";
+	mes "[DRY-RUN] Ah...I've piqued your curiosity I see.";
 	next;
-	mes "[Ipore]";
-	mes "So...";
-	mes "But in order to cast this spell, I need the magical power in ^FF0000300 Mushroom Spores^000000. So, if you bring me all of those Mushroom Spores, you can see my magic for yourself!";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] So...";
+	mes "[DRY-RUN] But in order to cast this spell, I need the magical power in ^FF0000300 Mushroom Spores^000000. So, if you bring me all of those Mushroom Spores, you can see my magic for yourself!";
 	next;
-	mes "[Ipore]";
-	mes "Now now, you do understand that I have to make the mushroom grow out of your head. Anywhere else, you could suspect that there's some kind of trick or illusion involved.";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Now now, you do understand that I have to make the mushroom grow out of your head. Anywhere else, you could suspect that there's some kind of trick or illusion involved.";
 	next;
-	mes "[Ipore]";
-	mes "Besides, nothing says 'rebel without a cause' like a mushroom growing out of your head! You would look soooo cool, independent and countercultured!";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Besides, nothing says 'rebel without a cause' like a mushroom growing out of your head! You would look soooo cool, independent and countercultured!";
 	next;
-	mes "[Ipore]";
-	mes "Remember, bring me...";
-	mes "^FF0000300 Mushroom Spore^000000,";
-	mes "so that I can let you experience my amazing magic for yourself~!";
+	mes "[DRY-RUN] [Ipore]";
+	mes "[DRY-RUN] Remember, bring me...";
+	mes "[DRY-RUN] ^FF0000300 Mushroom Spore^000000,";
+	mes "[DRY-RUN] so that I can let you experience my amazing magic for yourself~!";
 	close;
 }
 
@@ -1168,159 +1168,159 @@ xmas,175,156,3	script	Fuzzy Fuzz#1	712,{
 payon_in03,8,193,4	script	Nanhyang#1	77,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after -";
+		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
 		close;
 	}
 	if ((MaxWeight-Weight) < 2430) {
-		mes "[Nanhyang]";
-		mes "Hmmm...";
-		mes "You look like you're having trouble carrying all of your things. Why don't you place some of your extra items into the Kafra Storage?";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Hmmm...";
+		mes "[DRY-RUN] You look like you're having trouble carrying all of your things. Why don't you place some of your extra items into the Kafra Storage?";
 		close;
 	}
 	if (countitem(5073) > 0 && countitem(1750) > 0) {
-		mes "[Nanhyang]";
-		mes "Hello, there.";
-		mes "Ah, I can tell that you already have a ^8C1717'Model Training Hat'^000000. I see that using it has corrected your posture.";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Hello, there.";
+		mes "[DRY-RUN] Ah, I can tell that you already have a ^8C1717'Model Training Hat'^000000. I see that using it has corrected your posture.";
 		next;
-		mes "[Nanhyang]";
-		mes "Oh...";
-		mes "I forgot to tell you that I can not only put together a 'Model Training Hat,' I can disassemble it into its original parts.";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Oh...";
+		mes "[DRY-RUN] I forgot to tell you that I can not only put together a 'Model Training Hat,' I can disassemble it into its original parts.";
 		next;
-		mes "[Nanhyang]";
-		mes "If you give me ^0000FF1 'Model Training Hat'^000000 and ^0000FF1 'Arrow'^000000, I give you ^8C17171 'Apple of Archer'^000000 and ^8C17171 'Book'^000000. So, would you like to disassemble the items?";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] If you give me ^0000FF1 'Model Training Hat'^000000 and ^0000FF1 'Arrow'^000000, I give you ^8C17171 'Apple of Archer'^000000 and ^8C17171 'Book'^000000. So, would you like to disassemble the items?";
 		next;
-		if (select("Disassemble:Cancel") == 1) {
-			mes "[Nanhyang]";
-			mes "Thank you.";
-			mes "It will not take that much time to make this hat, so please wait a moment.";
+		if (select("[DRY-RUN] Disassemble:Cancel") == 1) {
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] Thank you.";
+			mes "[DRY-RUN] It will not take that much time to make this hat, so please wait a moment.";
 			next;
-			mes "[Nanhyang]";
-			mes " . . . . . . . . . . . . . .";
-			mes " . . . . . . . . . . . . . ";
-			mes " . . . . . . . . . . . . . .";
-			mes " . . . . . . . . . . . . . ";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
 			next;
-			mes "[Nanhyang]";
+			mes "[DRY-RUN] [Nanhyang]";
 			delitem 5073,1; //Cap_Of_Concentration
 			delitem 1750,1; //Arrow
 			getitem 2285,1; //Apple_Of_Archer
 			getitem 1550,1; //Book
-			mes "There you go.";
+			mes "[DRY-RUN] There you go.";
 			next;
-			mes "[Nanhyang]";
-			mes "If you want to make a";
-			mes "'Model Training Hat' again,";
-			mes "feel free to come back.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] If you want to make a";
+			mes "[DRY-RUN] 'Model Training Hat' again,";
+			mes "[DRY-RUN] feel free to come back.";
 			close;
 		}
-		mes "[Nanhyang]";
-		mes "I see.";
-		mes "I hope you will";
-		mes "continue to use that hat";
-		mes "to improve your posture";
-		mes "and glamorous poise.";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] I see.";
+		mes "[DRY-RUN] I hope you will";
+		mes "[DRY-RUN] continue to use that hat";
+		mes "[DRY-RUN] to improve your posture";
+		mes "[DRY-RUN] and glamorous poise.";
 		close;
 	}
 	if (countitem(2285) > 0 && countitem(1550) > 0) {
-		mes "[Nanhyang]";
+		mes "[DRY-RUN] [Nanhyang]";
 		emotion ET_SMILE;
-		mes "You brought the materials~";
+		mes "[DRY-RUN] You brought the materials~";
 		next;
-		mes "[Nanhyang]";
-		mes "Before I start to create the item, I'm obligated to warn you...";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Before I start to create the item, I'm obligated to warn you...";
 		next;
-		mes "[Nanhyang]";
-		mes "If the ^FF0000'Book' and 'Apple of Archer' items you have brought to make a 'Model Training Hat' was ^FF0000upgraded^000000, after I create the hat out of the book, ^FF0000these upgrades, including compounded cards, will be lost.^000000";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] If the ^FF0000'Book' and 'Apple of Archer' items you have brought to make a 'Model Training Hat' was ^FF0000upgraded^000000, after I create the hat out of the book, ^FF0000these upgrades, including compounded cards, will be lost.^000000";
 		next;
-		mes "[Hanhyang]";
-		mes "So would you like to create the Model Training Hat right now?";
+		mes "[DRY-RUN] [Hanhyang]";
+		mes "[DRY-RUN] So would you like to create the Model Training Hat right now?";
 		next;
-		if (select("Create:Cancel") == 1) {
-			mes "[Nanhyang]";
+		if (select("[DRY-RUN] Create:Cancel") == 1) {
+			mes "[DRY-RUN] [Nanhyang]";
 			emotion ET_OK;
-			mes "Thank you.";
-			mes "Let me create one for you right away. Please have a seat and make yourself comfortable.";
+			mes "[DRY-RUN] Thank you.";
+			mes "[DRY-RUN] Let me create one for you right away. Please have a seat and make yourself comfortable.";
 			next;
-			mes "[Nanhyang]";
-			mes "Usually we have a zeny service charge, but since you've got ^3355FFthe look^000000, I'll waive it.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] Usually we have a zeny service charge, but since you've got ^3355FFthe look^000000, I'll waive it.";
 			next;
-			mes "[Nanhyang]";
-			mes "Please wait a moment while I put this together.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] Please wait a moment while I put this together.";
 			next;
-			mes " . . . . . . . . . . . . . .";
-			mes " . . . . . . . . . . . . . ";
-			mes " . . . . . . . . . . . . . .";
-			mes " . . . . . . . . . . . . . ";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
+			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
 			next;
-			mes "[Nanhyang]";
+			mes "[DRY-RUN] [Nanhyang]";
 			emotion ET_AHA;
-			mes "That wasn't too difficult. I hope you wear this hat everyday to improve your posture.";
+			mes "[DRY-RUN] That wasn't too difficult. I hope you wear this hat everyday to improve your posture.";
 			next;
-			mes "[Nanhyang]";
-			mes "You may have trouble at first, keeping your balance and trying not to drop the apple. You may even feel incredible neck pain. But for the sake of beauty, it'll all be worth it.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] You may have trouble at first, keeping your balance and trying not to drop the apple. You may even feel incredible neck pain. But for the sake of beauty, it'll all be worth it.";
 			next;
-			mes "[Nanhyang]";
-			mes "Here it is.";
-			mes "Oh, right, this arrow from the Apple of Archer is left over, so you can go ahead and take that.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] Here it is.";
+			mes "[DRY-RUN] Oh, right, this arrow from the Apple of Archer is left over, so you can go ahead and take that.";
 			delitem 2285,1; //Apple_Of_Archer
 			delitem 1550,1; //Book
 			getitem 5073,1; //Cap_Of_Concentration
 			next;
-			mes "[Nanhyang]";
-			mes "Also, I can disassemble the Model Training Hat into its original materials. So if you want the original items back, bring the Model Training Hat and the arrow I gave you.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] Also, I can disassemble the Model Training Hat into its original materials. So if you want the original items back, bring the Model Training Hat and the arrow I gave you.";
 			getitem 1750,1; //Arrow
 			next;
-			mes "[Nanhyang]";
-			mes "I hope you";
-			mes "will have a";
-			mes "good day.";
-			mes "Farewell.";
+			mes "[DRY-RUN] [Nanhyang]";
+			mes "[DRY-RUN] I hope you";
+			mes "[DRY-RUN] will have a";
+			mes "[DRY-RUN] good day.";
+			mes "[DRY-RUN] Farewell.";
 			close;
 		}
-		mes "[Nanhyang]";
+		mes "[DRY-RUN] [Nanhyang]";
 		emotion ET_THINK;
-		mes "I see. You must have brought items with cards or upgrades that you didn't want to lose. Feel free to come back anytime when you are ready.";
+		mes "[DRY-RUN] I see. You must have brought items with cards or upgrades that you didn't want to lose. Feel free to come back anytime when you are ready.";
 		close;
 	}
-	mes "[Nanhyang]";
+	mes "[DRY-RUN] [Nanhyang]";
 	emotion ET_SURPRISE;
-	mes "Hello~";
-	mes "Welcome to the Handsome Charm Modeling School. May I help you?";
+	mes "[DRY-RUN] Hello~";
+	mes "[DRY-RUN] Welcome to the Handsome Charm Modeling School. May I help you?";
 	next;
-	if (select("I want to be a model~!:Cancel") == 1) {
-		mes "[Nanhyang]";
-		mes "I see~";
-		mes "Although it's clear that you've got '^3355FFthe look^000000,' we can't accept any students at the moment.";
+	if (select("[DRY-RUN] I want to be a model~!:Cancel") == 1) {
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] I see~";
+		mes "[DRY-RUN] Although it's clear that you've got '^3355FFthe look^000000,' we can't accept any students at the moment.";
 		next;
-		mes "[Nanhyang]";
-		mes "Lately, our director has been gone, and we aren't sure when he'll come back. ^333333*Sigh* I can't even remember the last time we got paid.^000000";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Lately, our director has been gone, and we aren't sure when he'll come back. ^333333*Sigh* I can't even remember the last time we got paid.^000000";
 		next;
-		mes "[Nanhyang]";
-		mes "Hmm... Wait a minute!";
-		mes "At the very least, we could train you to improve your posture so that you can walk with regal poise.";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Hmm... Wait a minute!";
+		mes "[DRY-RUN] At the very least, we could train you to improve your posture so that you can walk with regal poise.";
 		next;
-		mes "[Nanhyang]";
-		mes "Although we can't offer any classes at this time, I can create a special 'Model Training Hat' for you. That way, you can practice the glamourous way of walking down the catwalk on your own.";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Although we can't offer any classes at this time, I can create a special 'Model Training Hat' for you. That way, you can practice the glamourous way of walking down the catwalk on your own.";
 		next;
-		mes "[Nanhyang]";
+		mes "[DRY-RUN] [Nanhyang]";
 		emotion ET_QUESTION;
-		mes "But since our director is gone, we can't really use our budget to give you a hat. If you want, please bring me the following items...";
+		mes "[DRY-RUN] But since our director is gone, we can't really use our budget to give you a hat. If you want, please bring me the following items...";
 		next;
-		mes "[Nanhyang]";
-		mes "Please bring...";
-		mes "^0000FF1 Apple of Archer^000000 and";
-		mes "^0000FF1 Book^000000.";
-		mes "Then I can fashion a 'Model Training Hat' for you right away.";
+		mes "[DRY-RUN] [Nanhyang]";
+		mes "[DRY-RUN] Please bring...";
+		mes "[DRY-RUN] ^0000FF1 Apple of Archer^000000 and";
+		mes "[DRY-RUN] ^0000FF1 Book^000000.";
+		mes "[DRY-RUN] Then I can fashion a 'Model Training Hat' for you right away.";
 		close;
 	}
-	mes "[Nanhyang]";
-	mes "I understand.";
-	mes "Well, have a good day.";
-	mes "Thank you~";
+	mes "[DRY-RUN] [Nanhyang]";
+	mes "[DRY-RUN] I understand.";
+	mes "[DRY-RUN] Well, have a good day.";
+	mes "[DRY-RUN] Thank you~";
 	close;
 }
 
@@ -1329,116 +1329,116 @@ payon_in03,8,193,4	script	Nanhyang#1	77,{
 geffen,83,189,5	script	Seth#1	716,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes " [Seth]";
-		mes "Whoa, why are you carrying so many items with you?";
-		mes "You look so heavy...! Maybe you can walk more easily if you put some of your stuff away?";
+		mes "[DRY-RUN]  [Seth]";
+		mes "[DRY-RUN] Whoa, why are you carrying so many items with you?";
+		mes "[DRY-RUN] You look so heavy...! Maybe you can walk more easily if you put some of your stuff away?";
 		close;
 	}
-	mes " [Seth]";
-	mes "Hello, my name is Seth!";
-	mes "I like folding paper and making origami. I made my mommy a big paper boat, and she gave me a big smile and patted my head!";
+	mes "[DRY-RUN]  [Seth]";
+	mes "[DRY-RUN] Hello, my name is Seth!";
+	mes "[DRY-RUN] I like folding paper and making origami. I made my mommy a big paper boat, and she gave me a big smile and patted my head!";
 	emotion ET_SMILE;
 	next;
-	mes "[Seth]";
-	mes "Today at school, I learned how to make a paper flower! The flower was sort of hard, but now I can do it! Then I made a tiny tiny flower and put in on my head~";
+	mes "[DRY-RUN] [Seth]";
+	mes "[DRY-RUN] Today at school, I learned how to make a paper flower! The flower was sort of hard, but now I can do it! Then I made a tiny tiny flower and put in on my head~";
 	emotion ET_THROB;
 	next;
 	if (countitem(2278) > 0 && countitem(975) > 0) {
-		mes "[Seth]";
-		mes "Hey~!";
-		mes "You have a Mr. Smile and Scarlet Dyestuffs! Yaaay~! I could use those and make you a paper flower. C'mon, lemme show you!";
+		mes "[DRY-RUN] [Seth]";
+		mes "[DRY-RUN] Hey~!";
+		mes "[DRY-RUN] You have a Mr. Smile and Scarlet Dyestuffs! Yaaay~! I could use those and make you a paper flower. C'mon, lemme show you!";
 		emotion ET_PROFUSELY_SWEAT;
 		next;
-		mes "[Seth]";
-		mes "Lemme make";
-		mes "one for you,";
-		mes "pwease pwease?";
+		mes "[DRY-RUN] [Seth]";
+		mes "[DRY-RUN] Lemme make";
+		mes "[DRY-RUN] one for you,";
+		mes "[DRY-RUN] pwease pwease?";
 		emotion ET_PROFUSELY_SWEAT;
 		next;
-		switch(select("Alright!:No thanks kid.:Boys aren't supposed to make flowers.")) {
+		switch(select("[DRY-RUN] Alright!:No thanks kid.:Boys aren't supposed to make flowers.")) {
 		case 1:
 			emotion ET_SMILE;
-			mes "[Seth]";
-			mes "Yay~";
-			mes "You're the best!";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Yay~";
+			mes "[DRY-RUN] You're the best!";
 			next;
-			mes "[Seth]";
-			mes "Let's see...";
-			mes "I cut Mr. Smile this way~.";
-			mes "*Snip Snip Snip~~*";
-			mes "*Snip...Snip...*";
-			mes "Yyyyyaaaeeep...";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Let's see...";
+			mes "[DRY-RUN] I cut Mr. Smile this way~.";
+			mes "[DRY-RUN] *Snip Snip Snip~~*";
+			mes "[DRY-RUN] *Snip...Snip...*";
+			mes "[DRY-RUN] Yyyyyaaaeeep...";
 			emotion ET_DELIGHT;
 			next;
-			mes "[Seth]";
-			mes "Tah dah~!";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Tah dah~!";
 			next;
 			delitem 2278,1; //Mr_Smile
 			delitem 975,1; //Scarlet_Dyestuffs
 			getitem 5077,1; //Tulip_Hairpin
-			mes "[Seth]";
-			mes "Heheheh~!";
-			mes "I'm done!";
-			mes "I did a good job, didn't I?";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Heheheh~!";
+			mes "[DRY-RUN] I'm done!";
+			mes "[DRY-RUN] I did a good job, didn't I?";
 			next;
 			if (BaseJob == Job_Novice || BaseJob == Job_Super_Novice) {
-				mes "[Seth]";
-				mes "Oh, here's the leftovers. Mommy says that we should always save things. Heh heh~";
+				mes "[DRY-RUN] [Seth]";
+				mes "[DRY-RUN] Oh, here's the leftovers. Mommy says that we should always save things. Heh heh~";
 				getitem 935,1; //Shell
 				next;
 			}
-			mes "[Seth]";
-			mes "I'm a good boy!";
-			mes "I'm gonna make one for my little sister~! And everybody I love!";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] I'm a good boy!";
+			mes "[DRY-RUN] I'm gonna make one for my little sister~! And everybody I love!";
 			next;
-			mes "[Seth]";
-			mes "If you want to see me make another one, just bring more Scarlet Dyestuffs and Mr.Smile, okay? Bye bye~!";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] If you want to see me make another one, just bring more Scarlet Dyestuffs and Mr.Smile, okay? Bye bye~!";
 			close;
 		case 2:
-			mes "[Seth]";
-			mes "*Sniff sniff*";
-			mes "O-okay...";
-			mes "But I just wanted to show you how good I am...";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] *Sniff sniff*";
+			mes "[DRY-RUN] O-okay...";
+			mes "[DRY-RUN] But I just wanted to show you how good I am...";
 			emotion ET_CRY;
 			close;
 		case 3:
 			mes "[" + strcharinfo(0) + "]";
-			mes "Hey.";
+			mes "[DRY-RUN] Hey.";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Boys aren't supposed to make flowers.";
+			mes "[DRY-RUN] Boys aren't supposed to make flowers.";
 			next;
-			mes "[Seth]";
-			mes "Waaaaaaah~!";
-			mes "But flowers are so nice and pweety!!!";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Waaaaaaah~!";
+			mes "[DRY-RUN] But flowers are so nice and pweety!!!";
 			emotion ET_CRY;
 			close;
 		}
 	}
 	else {
-		mes "[Seth]";
-		mes "You want me to show you? Huh?";
-		mes "I can do it you want!";
+		mes "[DRY-RUN] [Seth]";
+		mes "[DRY-RUN] You want me to show you? Huh?";
+		mes "[DRY-RUN] I can do it you want!";
 		next;
-		mes "[Seth]";
-		mes "Uh oh...";
-		mes "But I don't have anything to make paper flowers out of.";
+		mes "[DRY-RUN] [Seth]";
+		mes "[DRY-RUN] Uh oh...";
+		mes "[DRY-RUN] But I don't have anything to make paper flowers out of.";
 		next;
-		if (select("I'll get what you need.:Too bad!") == 1) {
-			mes "[Seth]";
-			mes "Okay okay...";
-			mes "I neeeeed...";
-			mes "^3131FF1 Mr. Smile^000000 and";
-			mes "^3131FF1 Scarlet Dyestuffs^000000.";
-			mes "Then I can make you a tiiiiny little flower.";
+		if (select("[DRY-RUN] I'll get what you need.:Too bad!") == 1) {
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Okay okay...";
+			mes "[DRY-RUN] I neeeeed...";
+			mes "[DRY-RUN] ^3131FF1 Mr. Smile^000000 and";
+			mes "[DRY-RUN] ^3131FF1 Scarlet Dyestuffs^000000.";
+			mes "[DRY-RUN] Then I can make you a tiiiiny little flower.";
 			next;
-			mes "[Seth]";
-			mes "Seth will wait for you here. Promise me you'll come back?";
+			mes "[DRY-RUN] [Seth]";
+			mes "[DRY-RUN] Seth will wait for you here. Promise me you'll come back?";
 			close;
 		}
 		emotion ET_CRY;
-		mes "[Seth]";
-		mes "Wah~~~~~!";
+		mes "[DRY-RUN] [Seth]";
+		mes "[DRY-RUN] Wah~~~~~!";
 		close;
 	}
 }
@@ -1739,162 +1739,162 @@ xmas_in,35,30,3	script	Hat Merchant#zero	797,{
 yuno_in03,20,18,6	script	Nehris#1	726,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after -";
+		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
 		close;
 	}
-	mes "[Nehris]";
-	mes "The Monster Museum has prepared a special event for your support~!";
+	mes "[DRY-RUN] [Nehris]";
+	mes "[DRY-RUN] The Monster Museum has prepared a special event for your support~!";
 	next;
-	mes "[Nehris]";
-	mes "Accessories typically worn by monsters are now available for adventurers to wear!";
+	mes "[DRY-RUN] [Nehris]";
+	mes "[DRY-RUN] Accessories typically worn by monsters are now available for adventurers to wear!";
 	next;
-	mes "[Nehris]";
-	mes "Of course, since we're on a trial period, we can only provide 3 monster accessories to our fans. However, according to your response, we may add more monster accessories in the future.";
+	mes "[DRY-RUN] [Nehris]";
+	mes "[DRY-RUN] Of course, since we're on a trial period, we can only provide 3 monster accessories to our fans. However, according to your response, we may add more monster accessories in the future.";
 	next;
-	mes "[Nehris]";
-	mes "Simply bring the required materials, and pay a small fee, and we will provide you with the monsters accessory of your choice.";
+	mes "[DRY-RUN] [Nehris]";
+	mes "[DRY-RUN] Simply bring the required materials, and pay a small fee, and we will provide you with the monsters accessory of your choice.";
 	next;
-	mes "[Nehris]";
-	mes "Please choose the";
-	mes "accessory you are";
-	mes "interested in.";
+	mes "[DRY-RUN] [Nehris]";
+	mes "[DRY-RUN] Please choose the";
+	mes "[DRY-RUN] accessory you are";
+	mes "[DRY-RUN] interested in.";
 	next;
-	switch(select("Decorative Golden Bell:Crown of Ancient Queen:Crown of Mistress")) {
+	switch(select("[DRY-RUN] Decorative Golden Bell:Crown of Ancient Queen:Crown of Mistress")) {
 	case 1:
-		mes "[Nehris]";
-		mes "This Golden Bell is fashioned after the one worn by the 'Sohee' monster. It's a cute accessory I personally recommend for us ladies. A little oversized, but I believe you'll like it a lot.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] This Golden Bell is fashioned after the one worn by the 'Sohee' monster. It's a cute accessory I personally recommend for us ladies. A little oversized, but I believe you'll like it a lot.";
 		next;
 		if (countitem(10016) > 0 && countitem(714) > 0 && countitem(969) > 2 && Zeny > 19999) {
-			mes "[Nehris]";
-			mes "Thank you for";
-			mes "bringing everything.";
-			mes "Please wait one moment.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Thank you for";
+			mes "[DRY-RUN] bringing everything.";
+			mes "[DRY-RUN] Please wait one moment.";
 			next;
-			mes "^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
+			mes "[DRY-RUN] ^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
 			next;
 			delitem 10016,1; //Golden_Bell
 			delitem 714,1; //Emperium
 			delitem 969,3; //Gold
 			set Zeny, Zeny-20000;
 			getitem 5091,1; //Big_Golden_Bell
-			mes "[Nehris]";
-			mes "Yoohoo~";
-			mes "There you go. Here's your beautiful Golden Bell. I doubt it will jingle if you shake your head, though.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Yoohoo~";
+			mes "[DRY-RUN] There you go. Here's your beautiful Golden Bell. I doubt it will jingle if you shake your head, though.";
 			next;
-			mes "[Nehris]";
-			mes "Oh, one more thing, don't confuse yourself with Sohee and commit suicide!";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Oh, one more thing, don't confuse yourself with Sohee and commit suicide!";
 			next;
-			mes "[Nehris]";
-			mes "If you'd like me to make another one, please come again. Thank you for visiting the Monster Museum.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] If you'd like me to make another one, please come again. Thank you for visiting the Monster Museum.";
 			close;
 		}
-		mes "[Nehris]";
-		mes "The required materials for the Decorative Golden Bell are...";
-		mes "^3355FF1 Golden Bell, 1 Emperium, 3 Gold^000000 and";
-		mes "20,000 zeny.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] The required materials for the Decorative Golden Bell are...";
+		mes "[DRY-RUN] ^3355FF1 Golden Bell, 1 Emperium, 3 Gold^000000 and";
+		mes "[DRY-RUN] 20,000 zeny.";
 		next;
-		mes "[Nehris]";
-		mes "Just come ask me";
-		mes "when you're ready.";
-		mes "Thank you.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] Just come ask me";
+		mes "[DRY-RUN] when you're ready.";
+		mes "[DRY-RUN] Thank you.";
 		close;
 	case 2:
-		mes "[Nehris]";
-		mes "This crown is inspired by the the one worn by the 'Isis' monster. It has a elegant look fitting for ancient royalty.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] This crown is inspired by the the one worn by the 'Isis' monster. It has a elegant look fitting for ancient royalty.";
 		next;
 		if (countitem(10006) > 0 && countitem(714) > 0 && countitem(969) > 2 && Zeny > 19999) {
-			mes "[Nehris]";
-			mes "Thank you for";
-			mes "bringing everything.";
-			mes "Please wait one moment.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Thank you for";
+			mes "[DRY-RUN] bringing everything.";
+			mes "[DRY-RUN] Please wait one moment.";
 			next;
-			mes "^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
+			mes "[DRY-RUN] ^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
 			next;
 			delitem 10006,1; //Queen's_Hair_Ornament
 			delitem 714,1; //Emperium
 			delitem 969,3; //Gold
 			set Zeny, Zeny-20000;
 			getitem 5080,1; //Headgear_Of_Queen
-			mes "[Nehris]";
-			mes "Tah dah!";
-			mes "Here's your Crown of Ancient Queen! I don't know if you can get anyone to bow before you while wearing this, but at least you'll look elegant.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Tah dah!";
+			mes "[DRY-RUN] Here's your Crown of Ancient Queen! I don't know if you can get anyone to bow before you while wearing this, but at least you'll look elegant.";
 			next;
-			mes "[Nehris]";
-			mes "If you'd like me to make another one, please come again. Thank you for visiting the Monster Museum.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] If you'd like me to make another one, please come again. Thank you for visiting the Monster Museum.";
 			close;
 		}
-		mes "[Nehris]";
-		mes "The required materials for the Crown of Ancient Queen are...";
-		mes "^3355FF1 Queen's Hair Ornament, 1 Emperium, 3 Gold^000000 and";
-		mes "20,000 zeny.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] The required materials for the Crown of Ancient Queen are...";
+		mes "[DRY-RUN] ^3355FF1 Queen's Hair Ornament, 1 Emperium, 3 Gold^000000 and";
+		mes "[DRY-RUN] 20,000 zeny.";
 		next;
-		mes "[Nehris]";
-		mes "Just come ask me";
-		mes "when you're ready.";
-		mes "Thank you.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] Just come ask me";
+		mes "[DRY-RUN] when you're ready.";
+		mes "[DRY-RUN] Thank you.";
 		close;
 	case 3:
-		mes "[Nehris]";
-		mes "This crown is an imitation of the one worn by the 'Mistress' monster. Wearing this will give you a look of brusque authority.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] This crown is an imitation of the one worn by the 'Mistress' monster. Wearing this will give you a look of brusque authority.";
 		next;
 		if (countitem(2249) > 0 && countitem(714) > 0 && countitem(969) > 2 && Zeny > 39999) {
-			mes "[Nehris]";
-			mes "Thank you for";
-			mes "bringing everything.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Thank you for";
+			mes "[DRY-RUN] bringing everything.";
 			next;
-			mes "[Nehris]";
-			mes "^FF0000By the way, if you use an upgraded";
-			mes "Coronet for making this item,";
-			mes "the item you create out of the Coronet";
-			mes "will not have its upgraded status.^000000";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] ^FF0000By the way, if you use an upgraded";
+			mes "[DRY-RUN] Coronet for making this item,";
+			mes "[DRY-RUN] the item you create out of the Coronet";
+			mes "[DRY-RUN] will not have its upgraded status.^000000";
 			next;
-			mes "[Nehris]";
-			mes "^FF0000Also, please only have one Coronet in your inventory to make the Crown of Mistress. We are not responsible for any loss.";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] ^FF0000Also, please only have one Coronet in your inventory to make the Crown of Mistress. We are not responsible for any loss.";
 			next;
-			mes "[Nehris]";
-			mes "Are you sure you want to create the Crown of Mistress?";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] Are you sure you want to create the Crown of Mistress?";
 			next;
-			if (select("Yes:Wait a minute...!") == 1) {
-				mes "[Nehris]";
-				mes "Please wait one moment.";
+			if (select("[DRY-RUN] Yes:Wait a minute...!") == 1) {
+				mes "[DRY-RUN] [Nehris]";
+				mes "[DRY-RUN] Please wait one moment.";
 				next;
-				mes "^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
+				mes "[DRY-RUN] ^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
 				next;
 				delitem 2249,1; //Coronet
 				delitem 714,1; //Emperium
 				delitem 969,3; //Gold
 				set Zeny, Zeny-40000;
 				getitem 5081,1; //Mistress_Crown
-				mes "[Nehris]";
-				mes "Yay! You've got a great looking crown!";
+				mes "[DRY-RUN] [Nehris]";
+				mes "[DRY-RUN] Yay! You've got a great looking crown!";
 				next;
-				mes "[Nehris]";
-				mes "I don't know if everyone will obey your commands while wearing this, but at least you can feel beautifully regal.";
+				mes "[DRY-RUN] [Nehris]";
+				mes "[DRY-RUN] I don't know if everyone will obey your commands while wearing this, but at least you can feel beautifully regal.";
 				next;
-				mes "[Nehris]";
-				mes "Why don't you go take a picture with Mistress? That would be funny to see if she wasn't too busy trying to maul you.";
+				mes "[DRY-RUN] [Nehris]";
+				mes "[DRY-RUN] Why don't you go take a picture with Mistress? That would be funny to see if she wasn't too busy trying to maul you.";
 				next;
-				mes "[Nehris]";
-				mes "If you'd like me to make you another one, please come again. Thank you for visiting the Monster Museum.";
+				mes "[DRY-RUN] [Nehris]";
+				mes "[DRY-RUN] If you'd like me to make you another one, please come again. Thank you for visiting the Monster Museum.";
 				close;
 			}
-			mes "[Nehris]";
-			mes "No problem, just be sure to understand our precautions well, okay?";
+			mes "[DRY-RUN] [Nehris]";
+			mes "[DRY-RUN] No problem, just be sure to understand our precautions well, okay?";
 			close;
 		}
-		mes "[Nehris]";
-		mes "The required materials for the Crown of Mistress are...";
-		mes "^3355FF1 Coronet, 1 Emperium, 3 Gold^000000 and";
-		mes "40,000 zeny.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] The required materials for the Crown of Mistress are...";
+		mes "[DRY-RUN] ^3355FF1 Coronet, 1 Emperium, 3 Gold^000000 and";
+		mes "[DRY-RUN] 40,000 zeny.";
 		next;
-		mes "[Nehris]";
-		mes "Just come ask me";
-		mes "when you're ready.";
-		mes "Thank you.";
+		mes "[DRY-RUN] [Nehris]";
+		mes "[DRY-RUN] Just come ask me";
+		mes "[DRY-RUN] when you're ready.";
+		mes "[DRY-RUN] Thank you.";
 		close;
 	}
 }

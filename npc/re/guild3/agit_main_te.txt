@@ -215,27 +215,27 @@ OnMyMobDead:
 	.@guildname$ = getguildname(.@guild_id);
 
 	cutin "kafra_01",2;
-	mes "[Kafra Employee]";
+	mes "[DRY-RUN] [Kafra Employee]";
 	if (.@guild_id == getcharid(2)) {
 		mes "Welcome. ^ff0000" + .@guildname$ + "^000000 Member.";
-		mes "The Kafra Corporation will stay with you wherever you go.";
+		mes "[DRY-RUN] The Kafra Corporation will stay with you wherever you go.";
 		next;
-		switch( select( "Use Storage", "Use Teleport Service", "Rent a Pushcart", "Cancel" ) ) {
+		switch( select( "[DRY-RUN] Use Storage", "Use Teleport Service", "Rent a Pushcart", "Cancel" ) ) {
 		case 1:
 			if (getskilllv("NV_BASIC") > 5) {
-				mes "[Kafra Employee]";
-				mes "Here, let me open";
-				mes "your Storage for you.";
-				mes "Thank you for using";
-				mes "the Kafra Service.";
+				mes "[DRY-RUN] [Kafra Employee]";
+				mes "[DRY-RUN] Here, let me open";
+				mes "[DRY-RUN] your Storage for you.";
+				mes "[DRY-RUN] Thank you for using";
+				mes "[DRY-RUN] the Kafra Service.";
 				close2;
 				openstorage;
 			} else {
-				mes "[Kafra Employee]";
-				mes "I'm sorry, but you";
-				mes "need the Novice's";
-				mes "Basic Skill Level 6 to";
-				mes "use the Storage Service.";
+				mes "[DRY-RUN] [Kafra Employee]";
+				mes "[DRY-RUN] I'm sorry, but you";
+				mes "[DRY-RUN] need the Novice's";
+				mes "[DRY-RUN] Basic Skill Level 6 to";
+				mes "[DRY-RUN] use the Storage Service.";
 				close2;
 			}
 			break;
@@ -245,34 +245,34 @@ OnMyMobDead:
 			else
 				callsub( S_Warp, "Prontera", "prontera",278,211 );
 		case 3:
-			mes "[Kafra Employee]";
+			mes "[DRY-RUN] [Kafra Employee]";
 			if (BaseClass != Job_Merchant) {
-				mes "I'm sorry, but the";
-				mes "Pushcart rental service";
-				mes "is only available to Merchants,";
-				mes "Blacksmiths and Alchemists.";
+				mes "[DRY-RUN] I'm sorry, but the";
+				mes "[DRY-RUN] Pushcart rental service";
+				mes "[DRY-RUN] is only available to Merchants,";
+				mes "[DRY-RUN] Blacksmiths and Alchemists.";
 				close2;
 			}
 			else if (checkcart()) {
-				mes "You already have";
-				mes "a Pushcart equipped.";
-				mes "Unfortunately, we can't";
-				mes "rent more than one to";
-				mes "each customer at a time.";
+				mes "[DRY-RUN] You already have";
+				mes "[DRY-RUN] a Pushcart equipped.";
+				mes "[DRY-RUN] Unfortunately, we can't";
+				mes "[DRY-RUN] rent more than one to";
+				mes "[DRY-RUN] each customer at a time.";
 				close2;
 			}
 			else {
-				mes "The Pushcart rental";
-				mes "fee is 800 zeny. Would";
-				mes "you like to rent a Pushcart?";
+				mes "[DRY-RUN] The Pushcart rental";
+				mes "[DRY-RUN] fee is 800 zeny. Would";
+				mes "[DRY-RUN] you like to rent a Pushcart?";
 				next;
-				if (select( "Rent a Pushcart","Cancel" ) == 1) {
+				if (select( "[DRY-RUN] Rent a Pushcart","Cancel" ) == 1) {
 					if (Zeny < 800) {
-						mes "[Kafra Employee]";
-						mes "I'm sorry, but you";
-						mes "don't have enough";
-						mes "zeny to pay the Pushcart";
-						mes "rental fee of 800 zeny.";
+						mes "[DRY-RUN] [Kafra Employee]";
+						mes "[DRY-RUN] I'm sorry, but you";
+						mes "[DRY-RUN] don't have enough";
+						mes "[DRY-RUN] zeny to pay the Pushcart";
+						mes "[DRY-RUN] rental fee of 800 zeny.";
 						close2;
 					}
 					else {
@@ -284,9 +284,9 @@ OnMyMobDead:
 			}
 			break;
 		case 4:
-			mes "[Kafra Employee]";
-			mes "We, here at Kafra Corporation,";
-			mes "are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+			mes "[DRY-RUN] [Kafra Employee]";
+			mes "[DRY-RUN] We, here at Kafra Corporation,";
+			mes "[DRY-RUN] are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
 			close2;
 			break;
 		}
@@ -299,17 +299,17 @@ OnMyMobDead:
 	end;
 
 S_Warp:
-	mes "[Kafra Employee]";
-	mes "Please choose";
-	mes "your destination.";
+	mes "[DRY-RUN] [Kafra Employee]";
+	mes "[DRY-RUN] Please choose";
+	mes "[DRY-RUN] your destination.";
 	next;
 	switch( select( getarg(0) + " -> 200 z", "Cancel it" ) ) {
 	case 1:
 		if (Zeny < 200) {
-			mes "[Kafra Employee]";
-			mes "I'm sorry, but you don't have";
-			mes "enough zeny for the Teleport";
-			mes "Service. The fee to teleport";
+			mes "[DRY-RUN] [Kafra Employee]";
+			mes "[DRY-RUN] I'm sorry, but you don't have";
+			mes "[DRY-RUN] enough zeny for the Teleport";
+			mes "[DRY-RUN] Service. The fee to teleport";
 			mes "to "+getarg(0)+" is 200 zeny.";
 			close2;
 			cutin "",255;
@@ -340,8 +340,8 @@ function GuardianData;
 
 	mes .@npc_name$;
 	if (.@guild_id == 0) {
-		mes "I have been waiting for a master to fulfill my destiny.";
-		mes "Brave soul... fate will guide you towards your future...";
+		mes "[DRY-RUN] I have been waiting for a master to fulfill my destiny.";
+		mes "[DRY-RUN] Brave soul... fate will guide you towards your future...";
 		close;
 	}
 	if (strcharinfo(0) != .@guildmaster$) {
@@ -351,21 +351,21 @@ function GuardianData;
 	mes "Welcome. My honorable master, ^ff0000"+strcharinfo(0)+"^000000...";
 	mes "Your humble servent, "+strnpcinfo(1)+", is here to serve you.";
 	next;
-	switch( select( "Castle briefing", "Invest in commercial growth", "Invest in Castle Defenses", "Summon Guardian", "Hire / Fire a Kafra Employee", "Go into Master's room" ) ) {
+	switch( select( "[DRY-RUN] Castle briefing", "Invest in commercial growth", "Invest in Castle Defenses", "Summon Guardian", "Hire / Fire a Kafra Employee", "Go into Master's room" ) ) {
 	case 1:
 		.@economy_today = getcastledata(.@map$,CD_INVESTED_ECONOMY);
 		.@defense_today = getcastledata(.@map$,CD_INVESTED_DEFENSE);
 		mes .@npc_name$;
-		mes "I will report the Castle briefing, Master.";
-		mes " ";
+		mes "[DRY-RUN] I will report the Castle briefing, Master.";
+		mes "[DRY-RUN] That's all I have to report, Master.";
 		mes "^0000ffNow, the commercial growth level is "+GetCastleData(.@map$,CD_CURRENT_ECONOMY)+".";
 		if (.@economy_today > 0)
 			mes " You invested "+.@economy_today+" times in past 1 day.";
 		mes " Now, the Castle Defense level is "+GetCastleData(.@map$,CD_CURRENT_DEFENSE)+".^000000";
 		if (.@defense_today > 0)
 			mes " ^0000ff- You invested "+.@defense_today+" times in past 1 day.^000000";
-		mes " ";
-		mes "That's all I have to report, Master.";
+		mes "[DRY-RUN] Will you summon a Guardian? It'll be a protector to defend us loyally.";
+		mes "[DRY-RUN] Please select a guardian to defend us.";
 		close;
 
 	case 2:
@@ -386,8 +386,8 @@ function GuardianData;
 
 	case 4:
 		mes .@npc_name$;
-		mes "Will you summon a Guardian? It'll be a protector to defend us loyally.";
-		mes "Please select a guardian to defend us.";
+		mes "[DRY-RUN] Will you summon the chosen guardian? 10,000 zeny are required to summon a Guardian.";
+		mes "[DRY-RUN] I did as you ordered. But please remember if you the have money to spare, it'll be better to set it up.";
 		next;
 		GuardianData( .@mob_id, .@x, .@y, .@name$ );
 		for ( .@i = 0; .@i < MAX_GUARDIANS ; .@i++ ) {
@@ -398,108 +398,108 @@ function GuardianData;
 		}
 		.@s = select(.@menu$) -1;
 		mes .@npc_name$;
-		mes "Will you summon the chosen guardian? 10,000 zeny are required to summon a Guardian.";
+		mes "[DRY-RUN] Master, we have not the resources to Summon the Guardian. If you want to accumulate them, you have to learn the Guild skill. We failed to summon the Guardian.";
 		next;
-		if (select( "Summon","Cancel" ) == 2) {
+		if (select( "[DRY-RUN] Summon","Cancel" ) == 2) {
 			mes .@npc_name$;
-			mes "I did as you ordered. But please remember if you the have money to spare, it'll be better to set it up.";
+			mes "[DRY-RUN] Master, you already have summoned that Guardian. We cannot summon another.";
 			close;
 		}
 		mes .@npc_name$;
 		if (getgdskilllv(.@guild_id,10002) == 0) {
-			mes "Master, we have not the resources to Summon the Guardian. If you want to accumulate them, you have to learn the Guild skill. We failed to summon the Guardian.";
+			mes "[DRY-RUN] Well... I'm sorry but we don't have funds to summon the Guardian. We failed to summon the Guardian.";
 		}
 		else if (getcastledata( .@map$,(.@s + CD_ENABLED_GUARDIAN00) ) == 1)
-			mes "Master, you already have summoned that Guardian. We cannot summon another.";
+			mes "[DRY-RUN] We completed the summoning of the Guardian. Our defenses are now increased with it in place.";
 		else if (Zeny <  10000)
-			mes "Well... I'm sorry but we don't have funds to summon the Guardian. We failed to summon the Guardian.";
+			mes "[DRY-RUN] We are currently hiring a Kafra Employee... Do you want to fire the Kafra Employee?";
 		else {
 			Zeny = Zeny - 10000;
 			setcastledata .@map$,(.@s + CD_ENABLED_GUARDIAN00),1;
 			guardian .@map$, .@x[.@s], .@y[.@s], .@name$[.@s], .@mob_id[.@s], "Kafra Employee#"+ replacestr(.@map$, "cas", "") +"::OnGuardianDied", .@s;
-			mes "We completed the summoning of the Guardian. Our defenses are now increased with it in place.";
+			mes "[DRY-RUN] She worked hard in my opinion. It was a good decision to keep her.";
 		}
 		close;
 
 	case 5:
 		mes .@npc_name$;
 		if (getcastledata(.@map$,CD_ENABLED_KAFRA) == 1) {
-			mes "We are currently hiring a Kafra Employee... Do you want to fire the Kafra Employee?";
+			mes "[DRY-RUN] [ Hired Kafra Employee ]";
 			next;
-			if (select( "Fire","Cancel" ) == 2) {
+			if (select( "[DRY-RUN] Fire","Cancel" ) == 2) {
 				mes .@npc_name$;
-				mes "She worked hard in my opinion. It was a good decision to keep her.";
+				mes "[DRY-RUN] I worked so hard... How can you do that, Master?... Please... Please reconsider... Check it again, Master... Please...";
 				close;
 			}
 			cutin "kafra_01",2;
-			mes "[ Hired Kafra Employee ]";
-			mes "I worked so hard... How can you do that, Master?... Please... Please reconsider... Check it again, Master... Please...";
+			mes "[DRY-RUN] [ Hired Kafra Employee ]";
+			mes "[DRY-RUN] I'll work hard for you... Thank you!";
 			next;
-			if (select( "Fire","Cancel" ) == 2) {
-				mes "[ Hired Kafra Employee ]";
-				mes "I'll work hard for you... Thank you!";
+			if (select( "[DRY-RUN] Fire","Cancel" ) == 2) {
+				mes "[DRY-RUN] [ Hired Kafra Employee ]";
+				mes "[DRY-RUN] Oh, my goodness! This is nonsense!";
 				close3;
 			}
-			mes "[ Hired Kafra Employee ]";
-			mes "Oh, my goodness! This is nonsense!";
+			mes "[DRY-RUN] ....";
+			mes "[DRY-RUN] I have discharged the Kafra Employee... But... are you unsatisfied with something?";
 			next;
 			cutin "",255;
 			disablenpc "Kafra Employee#" + replacestr(.@map$, "cas", "");
 			setcastledata .@map$,CD_ENABLED_KAFRA,0;
 			mes .@npc_name$;
-			mes "....";
-			mes "I have discharged the Kafra Employee... But... are you unsatisfied with something?";
+			mes "[DRY-RUN] Will you contact the kafra Main Office and Hire a Employee for our Castle?";
+			mes "[DRY-RUN] ^ff0000 10,000 zeny is required for their services. ";
 			close;
 		}
-		mes "Will you contact the kafra Main Office and Hire a Employee for our Castle?";
-		mes "^ff0000 10,000 zeny is required for their services. ";
+		mes "[DRY-RUN] I did as you ordered, but some of our members will be unhappy. It will be better to hire a Kafra Employee quickly.";
+		mes "[DRY-RUN] Master, we can't hire a Kafra Employee because we don't have a contract with the Kafra Main Office. If you want to obtain a contract with the Kafra Main Office, you will need to learn the Guild skill first.";
 		next;
-		if (select( "Hire.","Cancel" ) == 2) {
+		if (select( "[DRY-RUN] Hire.","Cancel" ) == 2) {
 			mes .@npc_name$;
-			mes "I did as you ordered, but some of our members will be unhappy. It will be better to hire a Kafra Employee quickly.";
+			mes "[DRY-RUN] Well... I'm sorry but we don't have enough funds to hire a Kafra Employee.";
 			close;
 		}
 		mes .@npc_name$;
 		if (getgdskilllv(.@guild_id,10001) == 0) {
-			mes "Master, we can't hire a Kafra Employee because we don't have a contract with the Kafra Main Office. If you want to obtain a contract with the Kafra Main Office, you will need to learn the Guild skill first.";
+			mes "[DRY-RUN] We obtained a contract with the kafra Main Office, and hired a Kafra Employee.";
 			close;
 		}
 		if (Zeny <  10000) {
-			mes "Well... I'm sorry but we don't have enough funds to hire a Kafra Employee.";
+			mes "[DRY-RUN] [ Hired Kafra Employee ]";
 			close;
 		}
 		Zeny = Zeny - 10000;
 		enablenpc "Kafra Employee#" + replacestr(.@map$, "cas", "");
 		setcastledata .@map$,CD_ENABLED_KAFRA,1;
 
-		mes "We obtained a contract with the kafra Main Office, and hired a Kafra Employee.";
+		mes "[DRY-RUN] How do you do? I was dispatched from the Main Office.";
 		next;
 		cutin "kafra_01",2;
-		mes "[ Hired Kafra Employee ]";
-		mes "How do you do? I was dispatched from the Main Office.";
-		mes "I'll do my best to not tarnish the reputation of the Guild.";
+		mes "[DRY-RUN] I'll do my best to not tarnish the reputation of the Guild.";
+		mes "[DRY-RUN] The Contract terms of the hired Kafra Employee are for 1 month and after this term, you will need to pay an additional fee.";
+		mes "[DRY-RUN] It will be useful for our members.";
 		next;
 		cutin "",255;
 		mes .@npc_name$;
-		mes "The Contract terms of the hired Kafra Employee are for 1 month and after this term, you will need to pay an additional fee.";
-		mes "It will be useful for our members.";
+		mes "[DRY-RUN] Do you want to visit the room where our valuables are stored?";
+		mes "[DRY-RUN] That room is restricted to you... you are the only one with access to it.";
 		close;
 
 	case 6:
 		mes .@npc_name$;
-		mes "Do you want to visit the room where our valuables are stored?";
-		mes "That room is restricted to you... you are the only one with access to it.";
+		mes "[DRY-RUN] If you don't open the treasure box within time limits, there is a possibility of losing it when unexpected situation occurs.";
+		mes "[DRY-RUN] Please make sure to remember that always, Master.";
 		next;
 		mes .@npc_name$;
-		mes "If you don't open the treasure box within time limits, there is a possibility of losing it when unexpected situation occurs.";
-		mes "Please make sure to remember that always, Master.";
-		mes "So, for our guild's improvement, you must find time to collect it.";
+		mes "[DRY-RUN] So, for our guild's improvement, you must find time to collect it.";
+		mes "[DRY-RUN] I'll show you the secret path. Follow me...please.";
+		mes "[DRY-RUN] When you want to return here, please press the secret switch.";
 		next;
-		switch( select( "Go into Master's room.","Cancel" ) ) {
+		switch( select( "[DRY-RUN] Go into Master's room.","Cancel" ) ) {
 		case 1:
 			mes .@npc_name$;
-			mes "I'll show you the secret path. Follow me...please.";
-			mes "When you want to return here, please press the secret switch.";
+			mes "[DRY-RUN] Goods are produced once a day... if you don't remove them in time, they will not be produced anymore.";
+			mes "[DRY-RUN] Therefore, it will be better if you check up on them from time to time.";
 			close2;
 			if (.@map$ == "te_aldecas1") warp "te_aldecas1",113,223;
 			else if (.@map$ == "te_aldecas2") warp "te_aldecas2",134,225;
@@ -514,8 +514,8 @@ function GuardianData;
 			end;
 		case 2:
 			mes .@npc_name$;
-			mes "Goods are produced once a day... if you don't remove them in time, they will not be produced anymore.";
-			mes "Therefore, it will be better if you check up on them from time to time.";
+			mes "[DRY-RUN] Initially, you are able to invest just once but if you pay more money, you will be able to invest twice.";
+			mes "[DRY-RUN] I'm sorry but there is not enough zeny to invest. You will have to try again when you have the funds, Master.";
 			close;
 		}
 	}
@@ -529,7 +529,7 @@ S_Invest:
 
 	mes .@npc_name$;
 	mes "If you invest in "+ getarg(3) +", the "+ getarg(4) +". Therfore, if you consider our "+ getarg(5) +", investments will be a necessity.";
-	mes " ";
+	mes "[DRY-RUN] I'll do as you bid, my master... There is no hurry. We will do our best.";
 	mes "Initially, you are able to invest just once but if you pay more money, you will be able to invest twice.";
 	mes " ";
 	if (getcastledata(strnpcinfo(4),CD_CURRENT_ECONOMY) >= 100) {
@@ -545,7 +545,7 @@ S_Invest:
 	else
 		mes "You've invested once today... if you wish to invest once more, ^ff0000"+.@cost_invest+"^000000 more zeny will be needed.";
 	next;
-	switch( select( "Invest in "+ getarg(3) +".","Cancel" ) ) {
+	switch( select( "[DRY-RUN] Invest in "+ getarg(3) +".","Cancel" ) ) {
 	case 1:
 		mes .@npc_name$;
 		if (Zeny < .@cost_invest) {
@@ -699,17 +699,17 @@ OnSpawnGuardians:
 -	script	lever2_TE	-1,{
 	.@guild_id = getcastledata( strnpcinfo(4),CD_GUILD_ID );
 	if (.@guild_id == 0) {
-		mes "[Ringing Voice]";
-		mes "'Those who overcome an ordeal shows a great deal of bravery... and will find their way to another ordeal.'";
+		mes "[DRY-RUN] [Ringing Voice]";
+		mes "[DRY-RUN] 'Those who overcome an ordeal shows a great deal of bravery... and will find their way to another ordeal.'";
 		close;
 	}
-	mes "[Ringing Voice]";
-	mes "'Only the truly brave can take the test.'";
+	mes "[DRY-RUN] [Ringing Voice]";
+	mes "[DRY-RUN] 'Only the truly brave can take the test.'";
 	next;
-	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "[DRY-RUN] There's a small lever. Will you pull it?";
+	mes "[DRY-RUN] Nothing happened.";
 	next;
-	if (select( "Pull.","Don't pull." ) == 1) {
+	if (select( "[DRY-RUN] Pull.","Don't pull." ) == 1) {
 		if (.@guild_id == getcharid(2)) {
 			.@npc_map$ = strnpcinfo(4);
 			if (compare( .@npc_map$,"te_alde" )) {
@@ -742,10 +742,10 @@ OnSpawnGuardians:
 // Treasure Room Exit
 //============================================================
 -	script	lever1_TE	-1,{
-	mes " ";
+	mes "[DRY-RUN] There's a small lever. Will you pull it?";
 	mes "There's a small lever. Will you pull it?";
 	next;
-	if ( select( "Pull.","Do not." ) == 1 ) {
+	if ( select( "[DRY-RUN] Pull.","Do not." ) == 1 ) {
 		.@map$ = strnpcinfo(4);
 		if (.@map$ == "te_aldecas1") setarray .@coord[0],218,176;
 		else if (.@map$ == "te_aldecas2") setarray .@coord[0],51,179;

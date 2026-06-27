@@ -1,5 +1,6 @@
 //===== rAthena Script =======================================
 //= Arch Bishop Job Quest
+//= 大主教转职任务
 //===== By: ==================================================
 //= L0ne_W0lf
 //= Credits: Gepard
@@ -30,35 +31,35 @@
 prt_church,103,88,3	script	Praying Minister#arch	60,{
 	if (BaseJob != Job_Priest) {
 		if (Class == Job_Arch_Bishop || Class == Job_Arch_Bishop_T || Class == Job_Baby_Arch_Bishop) {
-			mes "[Praying Minister]";
-			mes "Ah! An Archbishop.";
-			mes "You have reached the state of light.";
-			mes "I hope you give happiness and honor to people during your adventures.";
+			mes "[祈祷牧师]";
+			mes "啊！一位大主教。";
+			mes "你已经达到了光明的境界。";
+			mes "希望你在冒险途中能给人们带来幸福和荣耀。";
 			close;
 		}
-		mes "[Praying Minister]";
-		mes "In front of the Almighty God Odin,";
-		mes "there shall be no person smarter than him,";
-		mes "and there will be no person more merciful than him.";
+		mes "[祈祷牧师]";
+		mes "在全能的奥丁神面前，";
+		mes "没有人比他更睿智，";
+		mes "也没有人比他更仁慈。";
 		next;
-		mes "[Praying Minister]";
-		mes "All ministers of Odin should be diligent. They should never be too lazy to serve Odin.";
+		mes "[祈祷牧师]";
+		mes "奥丁的所有牧师都应当勤勉。他们绝不应懈怠于侍奉奥丁。";
 		next;
-		mes "[Praying Minister]";
-		mes "These days, I've heard that ministers are becoming lax in their duty to Odin and adorn themselves with the splendors of the world.";
+		mes "[祈祷牧师]";
+		mes "最近，我听说有些牧师在侍奉奥丁的职责上变得松懈，还用世俗的华丽来装饰自己。";
 		next;
-		mes "[Praying Minister]";
-		mes "If you see any of these ministers, can you ask to them to go to the church in prontera?";
+		mes "[祈祷牧师]";
+		mes "如果你看到这些牧师，能否请他们到普隆德拉的教堂来？";
 		next;
-		mes "[Praying Minister]";
-		mes "They give out a special aura so you can easily recognize them.";
-		mes "I'm going to make them ministers worthy of serving Odin.";
+		mes "[祈祷牧师]";
+		mes "他们会散发出一种特殊的气场，所以你很容易认出他们。";
+		mes "我要让他们成为配得上侍奉奥丁的牧师。";
 		close;
 	}
 	if ((BaseLevel > 98) && (JobLevel > 49)) {
 		if (job_arch == 0) {
 			if (SkillPoint) {
-				mes "You can't change jobs without using all your skill points. Please use all of your skill points before applying to change jobs~";
+				mes "在使用完所有技能点之前无法转职。请先用完所有技能点再来申请转职~";
 				close;
 			}
 			if (VIP_SCRIPT) {
@@ -67,359 +68,359 @@ prt_church,103,88,3	script	Praying Minister#arch	60,{
 				setquest 2187;
 				next;
 			}
-			mes "[Praying Minister]";
-			mes "In front of the Almighty God Odin,";
-			mes "there shall be no person smarter than him,";
-			mes "and there will be no person more merciful than him.";
+			mes "[祈祷牧师]";
+			mes "在全能的奥丁神面前，";
+			mes "没有人比他更睿智，";
+			mes "也没有人比他更仁慈。";
 			next;
-			mes "[Praying Minister]";
-			mes "All ministers of Odin should be diligent. They should never be too lazy to serve Odin.";
+			mes "[祈祷牧师]";
+			mes "奥丁的所有牧师都应当勤勉。他们绝不应懈怠于侍奉奥丁。";
 			next;
-			mes "[Praying Minister]";
-			mes (Sex == SEX_MALE?"Brother":"Sister")+", how has your life been? Have you lived it to its fullest?";
-			mes "Have you served your life in the light of Odin?";
+			mes "[祈祷牧师]";
+			mes (Sex == SEX_MALE?"兄弟":"姐妹")+"，你过得怎么样？你是否充实地度过了每一天？";
+			mes "你是否在奥丁的光辉下度过了你的人生？";
 			next;
-			mes "[Praying Minister]";
-			mes "We are ministers and our behavior is seen as acts of the Gods.";
-			mes "We should always be mindful of this.";
+			mes "[祈祷牧师]";
+			mes "我们是牧师，我们的行为被视为神的旨意。";
+			mes "我们应当时刻铭记这一点。";
 			next;
-			mes "[Praying Minister]";
-			mes "We should always tell the truth.";
-			mes "We should not fall prey to lies and deceit.";
+			mes "[祈祷牧师]";
+			mes "我们应当始终说真话。";
+			mes "我们不应沦为谎言和欺骗的猎物。";
 			next;
-			mes "[Praying Minister]";
-			mes (Sex == SEX_MALE?"Brother":"Sister")+"...";
-			mes "Even though we serve Odin, we are normal people.";
-			mes "We can be degraded in spite of ourselves and we must realize that.";
+			mes "[祈祷牧师]";
+			mes (Sex == SEX_MALE?"兄弟":"姐妹")+"……";
+			mes "尽管我们侍奉奥丁，但我们也是普通人。";
+			mes "我们可能会在不知不觉中堕落，我们必须认识到这一点。";
 			next;
-			mes "[Praying Minister]";
-			mes "We always try to keep our original intention in mind and spread Odin's rule.";
+			mes "[祈祷牧师]";
+			mes "我们始终努力铭记初心，传播奥丁的教义。";
 			next;
-			select("How do I become like that?");
-			mes "[Praying Minister]";
-			mes "That's a good question.";
-			mes "We have lots of methods.";
-			mes "But, I recommend this.";
+			select("我该如何做到呢？");
+			mes "[祈祷牧师]";
+			mes "这是个好问题。";
+			mes "我们有很多方法。";
+			mes "但是，我推荐这个。";
 			next;
-			mes "[Praying Minister]";
-			mes "Have you ever heard of a ^3131FFHoly Pilgrimage^000000?";
-			mes "A Holy Pilgrimage means going to a holy place to pray to the God Odin for protection and grace.";
+			mes "[祈祷牧师]";
+			mes "你听说过^3131FF圣地巡礼^000000吗？";
+			mes "圣地巡礼是指前往圣地，向奥丁神祈求庇护和恩典。";
 			next;
-			mes "[Praying Minister]";
-			mes "When you pray to Odin in the holy place, you will feel that you are born again.";
+			mes "[祈祷牧师]";
+			mes "当你在圣地向奥丁祈祷时，你会感觉自己获得了重生。";
 			next;
-			mes "[Praying Minister]";
-			mes "What do you think?";
-			mes "Would you like to do a Holy Pilgrimage?";
+			mes "[祈祷牧师]";
+			mes "你觉得怎么样？";
+			mes "你愿意进行一次圣地巡礼吗？";
 			next;
-			switch(select("Yes I want to.:I'll think about it.")) {
+			switch(select("是的，我愿意。:让我考虑一下。")) {
 			case 1:
-				mes "[Praying Minister]";
-				mes "That's the correct attitude.";
-				mes "A person who lives in one's mundane life would better have a new mind and body and evolve to the way of a true minister of Odin.";
+				mes "[祈祷牧师]";
+				mes "这才是正确的态度。";
+				mes "一个过着平凡生活的人，最好能以崭新的身心进化为奥丁真正的牧师。";
 				next;
-				mes "[Praying Minister]";
-				mes "There is a small village named Umbala far from here.";
-				mes "That village is a where a tribe lives in harmony with nature.";
+				mes "[祈祷牧师]";
+				mes "在离这里很远的地方有一个叫乌姆巴拉的小村庄。";
+				mes "那个村庄是一个与自然和谐共处的部落居住的地方。";
 				next;
-				mes "[Praying Minister]";
-				mes "Go there and find Priest Dayan.";
-				mes "Tell him exactly,";
-				mes "'^3131FFI'm here for the Holy Pilgrimage.^000000'";
+				mes "[祈祷牧师]";
+				mes "去那里找到达扬神父。";
+				mes "准确地告诉他，";
+				mes "'^3131FF我是来进行圣地巡礼的。^000000'";
 				next;
-				mes "[Praying Minister]";
-				mes "He's very old so he is hard of hearing.";
-				mes "You have to speak loud and clearly. You got it?";
-				mes "I hope that this paves the way for you to live in the light of Odin.";
+				mes "[祈祷牧师]";
+				mes "他年纪很大了，所以听力不太好。";
+				mes "你必须大声而清楚地说。明白了吗？";
+				mes "希望这能为你铺就在奥丁光辉下生活的道路。";
 				set job_arch,1;
 				setquest 2187;
 				close;
 			case 2:
-				mes "[Praying Minister]";
-				mes "Mmmm...";
-				mes "A Holy Pilgrimage isn't that difficult.";
-				mes "Just be mindful that once you start the path you will be on your way to the way of a true minister of Odin.";
+				mes "[祈祷牧师]";
+				mes "嗯……";
+				mes "圣地巡礼并不难。";
+				mes "只要记住，一旦你踏上这条路，你就走上了成为奥丁真正牧师的道路。";
 				next;
-				mes "[Praying Minister]";
-				mes "Feel free to visit me if you change your mind.";
-				mes "I'll always be here for you.";
+				mes "[祈祷牧师]";
+				mes "如果你改变主意，随时来找我。";
+				mes "我会一直在这里等你。";
 				close;
 			}
 		}
-		mes "[Praying Minister]";
-		mes "How's it going?";
-		mes "Did you meet Priest Dayan in Umbala?";
+		mes "[祈祷牧师]";
+		mes "进展如何？";
+		mes "你在乌姆巴拉见到达扬神父了吗？";
 		close;
 	}
-	mes "[Praying Minister]";
-	mes "In front of the Almighty God Odin,";
-	mes "there shall be no person smarter than him,";
-	mes "and there will be no person more merciful than him.";
+	mes "[祈祷牧师]";
+	mes "在全能的奥丁神面前，";
+	mes "没有人比他更睿智，";
+	mes "也没有人比他更仁慈。";
 	next;
-	mes "[Praying Minister]";
-	mes "All ministers of Odin should be diligent. They should never be too lazy to serve Odin.";
+	mes "[祈祷牧师]";
+	mes "奥丁的所有牧师都应当勤勉。他们绝不应懈怠于侍奉奥丁。";
 	next;
-	mes "[Praying Minister]";
-	mes "These days, I've heard that ministers are becoming lax in their duty to Odin and adorn themselves with the splendors of the world.";
+	mes "[祈祷牧师]";
+	mes "最近，我听说有些牧师在侍奉奥丁的职责上变得松懈，还用世俗的华丽来装饰自己。";
 	next;
-	mes "[Praying Minister]";
-	mes "If you see any of these ministers, can you ask to them to go to the church in Prontera?";
+	mes "[祈祷牧师]";
+	mes "如果你看到这些牧师，能否请他们到普隆德拉的教堂来？";
 	next;
-	mes "[Praying Minister]";
-	mes "They give out a special aura so you can easily recognize them.";
-	mes "I'm going to make them ministers worthy of serving Odin.";
+	mes "[祈祷牧师]";
+	mes "他们会散发出一种特殊的气场，所以你很容易认出他们。";
+	mes "我要让他们成为配得上侍奉奥丁的牧师。";
 	close;
 }
 
 umbala,137,227,5	script	Utan Boy#arch	787,{
-	mes "[Utan Boy]";
-	mes "........";
+	mes "[乌坦族男孩]";
+	mes "………";
 	close;
 }
 
 umbala,139,227,3	script	Priest#arch	60,{
 	if (job_arch == 0) {
-		mes "[Priest]";
-		mes "Un...ba... Unba?";
+		mes "[神父]";
+		mes "嗯……巴……嗯巴？";
 		close;
 	} else if (job_arch == 1) {
-		mes "[Priest]";
-		mes "Un...ba... Umba?";
+		mes "[神父]";
+		mes "嗯……巴……嗯巴？";
 		next;
-		mes "[Utan Boy]";
-		mes "...............";
+		mes "[乌坦族男孩]";
+		mes "……………………";
 		next;
-		mes "[Priest]";
-		mes "Is that... right?";
-		mes "Hmm... so...";
-		mes "Um...ma? Umau...ma?";
+		mes "[神父]";
+		mes "是……这样吗？";
+		mes "嗯……那么……";
+		mes "嗯……妈？嗯奥……妈？";
 		emotion ET_SWEAT;
 		next;
-		mes "[Utan Boy]";
-		mes "...............";
+		mes "[乌坦族男孩]";
+		mes "……………………";
 		next;
-		mes "[Priest]";
-		mes "Huuuuuu......";
-		mes "Oh, dear . I feel heavy.";
-		mes "hohohoho.";
+		mes "[神父]";
+		mes "呼呼呼……";
+		mes "哦，天哪。我感觉好沉重。";
+		mes "呵呵呵呵。";
 		next;
-		mes "- mumbling~ -";
+		mes "- 喃喃自语~ -";
 		next;
-		mes "[Priest]";
-		mes "hahahahaha.";
-		mes "huhuhuhu. humhum.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "Hello. are you... Priest Dayan?";
-		next;
-		mes "[Priest]";
-		mes "Huh?";
-		next;
-		mes "He turns his head towards you.";
+		mes "[神父]";
+		mes "哈哈哈哈。";
+		mes "呵呵呵呵。哼哼。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Aren't you Priest Dayan?";
+		mes "你好。你是……达扬神父吗？";
 		next;
-		mes "[Priest]";
-		mes "muttering...";
+		mes "[神父]";
+		mes "嗯？";
 		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "Priest! Da~yan! Right!?";
-		next;
-		mes "[Priest Dayan]";
-		mes "Ah~, yes.";
-		mes "Yes, I am.";
-		mes "I'm Dayan. Nice to meet you "+(Sex?"Brother.":"Sister.");
-		next;
-		mes "The old priest gives you an ear to ear grin. ";
-		next;
-		mes "[Priest Dayan]";
-		mes "I forgot to wear my hearing aid. hehe.";
-		mes "Anyway, why have you come here?";
+		mes "他转过头看向你。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Hmm, I wanted to tell you...";
+		mes "你不是达扬神父吗？";
+		next;
+		mes "[神父]";
+		mes "嘟囔……";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "神父！达~扬！对吧！？";
+		next;
+		mes "[达扬神父]";
+		mes "啊~，是的。";
+		mes "是的，我是。";
+		mes "我是达扬。很高兴见到你，"+(Sex?"兄弟。":"姐妹。");
+		next;
+		mes "老神父给了你一个灿烂的笑容。";
+		next;
+		mes "[达扬神父]";
+		mes "我忘了戴助听器了。呵呵。";
+		mes "不管怎样，你来这里有什么事？";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "嗯，我想告诉你……";
 		next;
 		input .@inputstr$;
 		mes "[" + strcharinfo(0) + "]";
 		mes "" + .@inputstr$ + "";
 		next;
 		if (.@inputstr$ != "I'm here for the Holy Pilgrimage") {
-			mes "Priest Dayan doesn't seem to understand you. He just stares at you and smiles.";
+			mes "达扬神父似乎不理解你。他只是盯着你微笑。";
 			next;
-			mes "[Priest]";
-			mes "Eh? Say what?";
+			mes "[神父]";
+			mes "嗯？你说什么？";
 			close;
 		}
-		mes "[Priest Dayan]";
-		mes "..............?";
+		mes "[达扬神父]";
+		mes "……………？";
 		next;
-		mes "He cups his ears towards you.";
+		mes "他把耳朵凑向你。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "^FF0000I'm here for the Holy Pilgrimage!^000000";
-		mes "^FF0000I'm here for the Holy Pilgrimage!^000000";
-		mes "^FF0000I'm here for the Holy Pilgrimage!^000000";
-		mes "^FF0000I'm here for the Holy Pilgrimage!^000000";
+		mes "^FF0000我是来进行圣地巡礼的！^000000";
+		mes "^FF0000我是来进行圣地巡礼的！^000000";
+		mes "^FF0000我是来进行圣地巡礼的！^000000";
+		mes "^FF0000我是来进行圣地巡礼的！^000000";
 		next;
-		mes "[Priest Dayan]";
-		mes "Eh... are you?";
-		mes "A pilgrimage to the Holy Land...";
-		mes "It has been a long time since I've seen such a devout minister.";
-		mes "Welcome. "+(Sex?"Brother.":"Sister.");
+		mes "[达扬神父]";
+		mes "嗯……是吗？";
+		mes "去圣地巡礼……";
+		mes "我已经很久没有见过如此虔诚的牧师了。";
+		mes "欢迎你。"+(Sex?"兄弟。":"姐妹。");
 		next;
-		mes "The old priest gives you a gracious smile.";
+		mes "老神父给了你一个慈祥的微笑。";
 		next;
-		mes "[Priest Dayan]";
-		mes "See this village with the huge forest surrounding it.";
-		mes "Can you see a giant tree?";
+		mes "[达扬神父]";
+		mes "看到这个被巨大森林环绕的村庄了吗。";
+		mes "你能看到一棵巨树吗？";
 		next;
-		mes "[Priest Dayan]";
-		mes "That big tree is called The ^3131FFYggdrasil^000000.";
-		mes "That tree was created from Ymir's body after Odin created the world as you know it, Rune-Midgard.";
+		mes "[达扬神父]";
+		mes "那棵大树叫做^3131FF世界树^000000。";
+		mes "那棵树是奥丁创造了你所知的世界——卢恩-米德加尔特之后，由伊米尔的身体所化。";
 		next;
-		mes "[Priest Dayan]";
-		mes "A fountain pours out from the end of Yggdrasil's roots that spread to every world.";
+		mes "[达扬神父]";
+		mes "一股泉水从世界树延伸到每个世界的根部末端涌出。";
 		next;
-		mes "[Priest Dayan]";
-		mes "The roots head to Niflheim where you can find the Hvergelmir spring.";
-		mes "In Rune-Midgard there is Mimir's spring.";
-		mes "And in Asgard, the world of the Gods, there is the Word spring.";
+		mes "[达扬神父]";
+		mes "树根通向尼芙尔海姆，在那里你可以找到赫瓦格密尔之泉。";
+		mes "在卢恩-米德加尔特有密米尔之泉。";
+		mes "而在众神的世界阿斯加德，有命运之泉。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Mimir's spring wells with intelligence, myth says that if Odin lets you have his eye that you will gain all of the knowledge within that spring.";
+		mes "[达扬神父]";
+		mes "密米尔之泉涌出智慧，传说如果奥丁让你拥有他的眼睛，你将获得那泉水中所有的知识。";
 		next;
-		mes "[Priest Dayan]";
-		mes Sex?"Brother.":"Sister.";
-		mes "Through the Holy Pilgrimage, we can make ourselves pious by cleansing our bodies and souls.";
+		mes "[达扬神父]";
+		mes Sex?"兄弟。":"姐妹。";
+		mes "通过圣地巡礼，我们可以净化身心，使自己变得虔诚。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Enter the Yggdrasil.";
-		mes "You may be assaulted by creatures in there";
-		mes "but be mindful that their intentions are only to protect the Yggdrasil.";
+		mes "[达扬神父]";
+		mes "进入世界树吧。";
+		mes "你可能会受到里面生物的攻击，";
+		mes "但请记住，它们的目的只是保护世界树。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Follow your steps with purpose.";
-		mes "If Odin doesn't abandon you, you can reach the beginning of the world at the stem of the Yggdrasil.";
-		mes "When you arrive there, find a quiet place.";
+		mes "[达扬神父]";
+		mes "带着目标前行。";
+		mes "如果奥丁没有抛弃你，你就能到达世界树根部的世界起源之地。";
+		mes "当你到达那里时，找一个安静的地方。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Pray for a life of faith and expiate your sins with a pious mind.";
+		mes "[达扬神父]";
+		mes "以虔诚的心祈祷信仰的生活，忏悔你的罪过。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Admire Odin's omniscience and omnipotence and pray for a wisdom to choose the right path.";
-		mes "^3131FFFeel free to ask me about how to pray^000000.";
+		mes "[达扬神父]";
+		mes "赞美奥丁的全知全能，祈求选择正确道路的智慧。";
+		mes "^3131FF如果你想知道如何祈祷，随时可以问我^000000。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Lets see, go to the place of the most famous creature from Odin.";
+		mes "[达扬神父]";
+		mes "让我想想，去奥丁最著名的造物所在之处吧。";
 		next;
-		mes "[Priest Dayan]";
-		mes "After making your pilgrimage, let's have a drink together and talk about your experience.";
+		mes "[达扬神父]";
+		mes "完成巡礼之后，让我们一起喝一杯，聊聊你的经历。";
 		next;
-		mes "- Priest Dayan smiles again. -";
+		mes "- 达扬神父又微笑了。 -";
 		set job_arch,2;
 		changequest 2187,2188;
 		close;
 	} else if (job_arch == 2) {
-		mes "[Priest Dayan]";
-		mes "This place is the holiest place in the world, Yggdrasil.";
-		mes "This holy ceremony will brighten your soul.";
+		mes "[达扬神父]";
+		mes "这里是世界上最神圣的地方，世界树。";
+		mes "这个神圣的仪式将照亮你的灵魂。";
 		next;
-		switch(select("How should I pray?:Cancel.")) {
+		switch(select("我应该如何祈祷？:取消。")) {
 		case 1:
-			mes "[Priest Dayan]";
-			mes "Through prayer, we can follow four paths.";
-			mes "Remember what I say to you now.";
+			mes "[达扬神父]";
+			mes "通过祈祷，我们可以走四条路。";
+			mes "记住我现在对你说的话。";
 			next;
-			mes "[Priest Dayan]";
-			mes "The 1st way is the ^3131FFway of meditation^000000.";
-			mes "In the way of meditation, we have to be ready to greet Odin with a clear conscience.";
+			mes "[达扬神父]";
+			mes "第一条是^3131FF冥想之路^000000。";
+			mes "在冥想之路上，我们必须以清净的良心准备好迎接奥丁。";
 			next;
-			mes "[Priest Dayan]";
-			mes "Meditation starts with a ^3131FFBlessing^000000 which calms your mind down.";
+			mes "[达扬神父]";
+			mes "冥想从^3131FF祝福^000000开始，它能让你的心灵平静下来。";
 			next;
-			mes "[Priest Dayan]";
-			mes "The 2nd is the ^3131FFway of agony^000000.";
-			mes "Through the way of agony, we reflect on ourselves with confession about our retribution for the deeds of a former life.";
+			mes "[达扬神父]";
+			mes "第二条是^3131FF苦行之路^000000。";
+			mes "通过苦行之路，我们反省自身，忏悔前世业报。";
 			next;
-			mes "[Priest Dayan]";
-			mes "Don't be afraid of pain. That is a necessity and will be a first step to enter a way to liquidate past wounds.";
+			mes "[达扬神父]";
+			mes "不要害怕痛苦。那是必要的，也是清算过去创伤的第一步。";
 			next;
-			mes "[Priest Dayan]";
-			mes "The 3rd way is the ^3131FFway of joy^000000.";
-			mes "As you rid yourself of pain, your mind will suffer less and you will experience the joy of life as you help and console others.";
+			mes "[达扬神父]";
+			mes "第三条是^3131FF喜悦之路^000000。";
+			mes "当你摆脱痛苦时，你的心灵将减少苦难，你将在帮助和安慰他人的过程中体验生命的喜悦。";
 			next;
-			mes "[Priest Dayan]";
-			mes "They will bless you because you are an existence of joy overcoming an affliction. We call that ^3131FFAspersio^000000.";
-			mes "You must drink a ^3131FFHoly Water^000000 with appreciation of Aspersio.";
+			mes "[达扬神父]";
+			mes "他们会祝福你，因为你是克服苦难的喜悦之存在。我们称之为^3131FF圣水洗礼^000000。";
+			mes "你必须怀着对圣水洗礼的感恩之心饮下^3131FF圣水^000000。";
 			next;
-			mes "[Priest Dayan]";
-			mes "The last way is the ^3131FFway of light^000000.";
-			mes "You are free from all sin because you were blessed from all creation.";
+			mes "[达扬神父]";
+			mes "最后一条是^3131FF光明之路^000000。";
+			mes "你已从所有罪孽中解脱，因为你得到了万物的祝福。";
 			next;
-			mes "[Priest Dayan]";
-			mes "You were reborn as light, sing a ^3131FFGloria^000000 of joy and soul that loves you.";
+			mes "[达扬神父]";
+			mes "你已重生为光明，唱一首^3131FF荣耀颂歌^000000，歌颂爱你的喜悦与灵魂。";
 			next;
-			mes "[Priest Dayan]";
-			mes "After finishing all of these prayers, just stand up with a pious mind.";
-			mes "If your prayer is truthful, Odin will lend you his wisdom.";
+			mes "[达扬神父]";
+			mes "完成所有这些祈祷后，以虔诚的心站起来。";
+			mes "如果你的祈祷是真诚的，奥丁将赐予你他的智慧。";
 			next;
-			mes "[Priest Dayan]";
-			mes "Are you ready?";
-			mes "Okay, it's time to leave and exculpate yourself.";
-			mes "If your prayer is finished, let's talk.";
+			mes "[达扬神父]";
+			mes "你准备好了吗？";
+			mes "好的，是时候出发去净化自己了。";
+			mes "祈祷结束后，我们再谈。";
 			close;
 		case 2:
-			mes "[Priest Dayan]";
-			mes "I hope that my prayer can weaken your agony...";
+			mes "[达扬神父]";
+			mes "希望我的祈祷能减轻你的痛苦……";
 			close;
 		}
 	} else if (job_arch == 3) {
-		mes "[Priest Dayan]";
-		mes "Oh, you've come back.";
-		mes "I can feel that you have a fresh energy.";
-		mes "Maybe you did pray truthfully.";
+		mes "[达扬神父]";
+		mes "哦，你回来了。";
+		mes "我能感觉到你有一股清新的能量。";
+		mes "也许你确实真诚地祈祷了。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I feel light-hearted. Like I was just reborn...";
+		mes "我感到心情舒畅。就像刚刚重生一样……";
 		next;
-		mes "[Priest Dayan]";
-		mes "Your faith gives you confidence and courage.";
-		mes "A smile from a peaceful mind will easily rid people of their wariness.";
-		mes "Please, inspire people with love and energy.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "Thanks for your kind words.";
-		next;
-		mes "[Priest Dayan]";
-		mes Sex?"Brother.":"Sister.";
-		mes "Now, there is a place you should go to.";
-		next;
-		mes "[Priest Dayan]";
-		mes "That place is Hugel in Schwaltzvalt.";
-		mes "There is a Nun praying there named Vinue,";
-		mes "she is a true minister who prays for the suffering people in the world.";
-		mes "But the last time I saw her she seemed sad.";
-		next;
-		mes "[Priest Dayan]";
-		mes "Can you convince her to make a pilgrimage to Yggdrasil?";
-		mes "I think she is exhausted due to praying too much.";
-		mes "I hope the air of Yggdrasil will be helpful to her.";
+		mes "[达扬神父]";
+		mes "你的信仰给了你信心和勇气。";
+		mes "来自平和心灵的微笑能轻易消除人们的戒备。";
+		mes "请用爱和能量去激励人们。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Don't worry.";
-		mes "I'll go and meet her.";
+		mes "感谢你的好意。";
 		next;
-		mes "[Priest Dayan]";
-		mes "Thank you very much.";
-		mes "Feel free to visit here when you want to pray, "+(Sex == SEX_MALE?"brother.":"sister.");
-		mes "A visit from a friend always makes me happy.";
+		mes "[达扬神父]";
+		mes Sex?"兄弟。":"姐妹。";
+		mes "现在，有一个地方你应该去。";
+		next;
+		mes "[达扬神父]";
+		mes "那个地方是施瓦尔茨瓦尔德的胡乐。";
+		mes "那里有一位正在祈祷的修女叫维纽，";
+		mes "她是一位真正的牧师，为世间受苦的人们祈祷。";
+		mes "但我上次见到她时，她似乎很悲伤。";
+		next;
+		mes "[达扬神父]";
+		mes "你能劝她去世界树进行圣地巡礼吗？";
+		mes "我觉得她因为祈祷太多而精疲力竭了。";
+		mes "希望世界树的空气能对她有所帮助。";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "别担心。";
+		mes "我会去见她的。";
+		next;
+		mes "[达扬神父]";
+		mes "非常感谢你。";
+		mes "想祈祷的时候随时来这里，"+(Sex == SEX_MALE?"兄弟。":"姐妹。");
+		mes "朋友的来访总是让我很开心。";
 		set job_arch,4;
 		changequest 2188,2189;
 		close;
 	}
-	mes "[Dayan]";
-	mes "Did you find Vinue in Hugel? How's she doing?";
+	mes "[达扬]";
+	mes "你在胡乐找到维纽了吗？她怎么样了？";
 	close;
 }
 
@@ -427,154 +428,154 @@ yggdrasil01,220,47,0	script	#arch_pilgrimage	139,5,5,{
 OnTouch:
 	if (job_arch == 2) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Is it the spring of Hvergelmir.";
-		mes "This place is a very vivid and peaceful place.";
-		mes "It's proper to pray.";
+		mes "这就是赫瓦格密尔之泉。";
+		mes "这个地方非常生机勃勃而又宁静。";
+		mes "很适合祈祷。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Time to genuflect...";
-		mes "Time to start...";
-		mes "Hmm, what did that priest say to me?";
+		mes "是时候跪下了……";
+		mes "是时候开始了……";
+		mes "嗯，那个神父对我说了什么来着？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Hmm... What is the first way?";
+		mes "嗯……第一条路是什么？";
 		next;
-		switch(select("The way of silence.:The way of confession.:The way of meditation.")) {
+		switch(select("沉默之路。:忏悔之路。:冥想之路。")) {
 		case 1:
 			mes "[" + strcharinfo(0) + "]";
-			mes "The way of silence...?";
-			mes "I don't think so.";
+			mes "沉默之路……？";
+			mes "我觉得不对。";
 			close;
 		case 2:
 			mes "[" + strcharinfo(0) + "]";
-			mes "The way of confession...?";
-			mes "I don't think so.";
+			mes "忏悔之路……？";
+			mes "我觉得不对。";
 			close;
 		case 3:
 			mes "[" + strcharinfo(0) + "]";
-			mes "The way of meditation...?";
-			mes "Yes, it's the way of meditation.";
+			mes "冥想之路……？";
+			mes "对了，是冥想之路。";
 			next;
 		}
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFThe 1st way is the way of meditation.^000000";
-		mes "^3131FFIn the way of meditation, we have to be ready to greet Odin with a clear conscience.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF第一条是冥想之路。^000000";
+		mes "^3131FF在冥想之路上，我们必须以清净的良心准备好迎接奥丁。^000000";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFMeditation starts with a Blessing which calms your mind down.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF冥想从祝福开始，它能让你的心灵平静下来。^000000";
 		next;
-		mes "- You close your eyes slowly and take a deep breath. -";
+		mes "- 你慢慢闭上眼睛，深深地吸了一口气。 -";
 		next;
-		mes "- * BLESSING! * -";
+		mes "- * 祝福！ * -";
 		specialeffect2 EF_BLESSING;
 		next;
-		mes "Your mind is refreshed with the blessing effect.";
-		mes "You continue to meditate trying to rid your mind of any ill feelings.";
+		mes "你的心灵在祝福的效果下焕然一新。";
+		mes "你继续冥想，试图清除心中所有的不良情绪。";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFThe 2nd is the way of agony^000000.";
-		mes "^3131FFThrough the way of agony, we reflect on ourselves with confession about our retribution for the deeds of a former life.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF第二条是苦行之路。^000000";
+		mes "^3131FF通过苦行之路，我们反省自身，忏悔前世业报。^000000";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFDon't be afraid of pain. That is a necessity and will be a first step to enter a way to liquidate past wounds.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF不要害怕痛苦。那是必要的，也是清算过去创伤的第一步。^000000";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Pain... What kind of faults have I had?";
+		mes "痛苦……我犯过什么样的过错呢？";
 		input .@inputstr$;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "I confess my guilt to the Almighty God Odin.";
+		mes "我向全能的奥丁神忏悔我的罪过。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "^3131FF" + .@inputstr$ + ".^000000";
+		mes "^3131FF" + .@inputstr$ + "。^000000";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Oh benevolent Odin, Take mercy on me and pity me because I'm remiss in the discharge of my duties as a minister.";
-		mes "Please, lead the way and save a foolish minister with your wisdom.";
+		mes "仁慈的奥丁啊，怜悯我、同情我吧，因为我作为牧师疏忽了自己的职责。";
+		mes "请指引道路，用你的智慧拯救一个愚蠢的牧师。";
 		next;
-		mes "You ruminate about your confession and are lost in thought again.";
+		mes "你反复思考着自己的忏悔，再次陷入了沉思。";
 		next;
-		mes ".............................";
+		mes "…………………………………";
 		next;
-		mes ".............................";
-		mes ".........................";
+		mes "…………………………………";
+		mes "…………………………";
 		next;
-		mes ".............................";
-		mes ".........................";
-		mes ".....................";
+		mes "…………………………………";
+		mes "…………………………";
+		mes "………………………";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFThe 3rd way is the way of joy.^000000";
-		mes "^3131FFAs you rid yourself of pain, your mind will suffer less and you will experience the joy of life as you help and console others.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF第三条是喜悦之路。^000000";
+		mes "^3131FF当你摆脱痛苦时，你的心灵将减少苦难，你将在帮助和安慰他人的过程中体验生命的喜悦。^000000";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFAnd also they will bless you because you are an existence of joy overcoming an affliction. We call that Aspersio^000000.";
-		mes "^3131FFYou must drink a Holy Water with appreciation of Aspersio.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF他们会祝福你，因为你是克服苦难的喜悦之存在。我们称之为圣水洗礼。^000000";
+		mes "^3131FF你必须怀着对圣水洗礼的感恩之心饮下圣水。^000000";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFYou're drinking the Holy Water.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF你正在饮下圣水。^000000";
 		next;
 		if (countitem(523) == 0) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Oh no! I forgot to bring a Holy Water!";
+			mes "糟糕！我忘了带圣水！";
 			close;
 		}
-		mes "- You bow respectfully holding up a Holy Water and put the glass to your lips. -";
+		mes "- 你恭敬地鞠躬，举起圣水，将杯子送到唇边。 -";
 		next;
-		mes "- * ASPERSIO ! * -";
+		mes "- * 圣水洗礼！ * -";
 		specialeffect2 EF_ASPERSIO;
 		next;
 		specialeffect2 EF_RECOVERY;
-		mes ".............................";
+		mes "…………………………………";
 		next;
-		mes ".............................";
-		mes ".........................";
+		mes "…………………………………";
+		mes "…………………………";
 		next;
-		mes ".............................";
-		mes ".........................";
-		mes ".....................";
+		mes "…………………………………";
+		mes "…………………………";
+		mes "………………………";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFThe last way is a way of light^000000.^000000.";
-		mes "^3131FFYou are free from all sin because you were blessed from all creation.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF最后一条是光明之路^000000。^000000。";
+		mes "^3131FF你已从所有罪孽中解脱，因为你得到了万物的祝福。^000000";
 		next;
-		mes "^3131FF[Priest Dayan]^000000";
-		mes "^3131FFYou were reborn as light, sing a Gloria of joy and soul that love you.^000000";
+		mes "^3131FF[达扬神父]^000000";
+		mes "^3131FF你已重生为光明，唱一首荣耀颂歌，歌颂爱你的喜悦与灵魂。^000000";
 		next;
-		mes "- You breath in deep and start to sing a Gloria.";
-		mes "A chord crashes out in the spring of Hvergelmir and a waterfall sound gives you a refreshing feeling. -";
+		mes "- 你深吸一口气，开始唱荣耀颂歌。";
+		mes "一个和弦在赫瓦格密尔之泉中回荡，瀑布的声音给你带来清新的感觉。 -";
 		specialeffect2 EF_GLORIA;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "~Descendants of Heimdal gather under the Ash tree Yggdrasil.~";
-		mes "~The Curdan bird which sits on a branch brings me the wisdom of whole world.~";
+		mes "~海姆达尔的后裔聚集在世界树之下。~";
+		mes "~栖息在枝头的库尔丹之鸟为我带来了全世界的智慧。~";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "~The Curdan wolf protects me from all threats in the world.~";
+		mes "~库尔丹之狼保护我免受世间一切威胁。~";
 		specialeffect2 EF_GLORIA;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "~The host of ballascalf, rise up from your seat. The whole world shouts for joy.~";
-		mes "~The father of light, the poet of wisdom, sing for me.~";
+		mes "~巴拉斯卡尔夫的众神啊，从你们的座位上站起来吧。全世界为之欢呼。~";
+		mes "~光明之父，智慧的诗人，为我歌唱吧。~";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "~The host of a glittering glass, give me a holy prediction.~";
+		mes "~闪耀玻璃杯的众神啊，赐予我神圣的预言吧。~";
 		specialeffect2 EF_GLORIA;
 		next;
-		mes "- After you finish the song, you feel light and strong with abundant devotion. -";
+		mes "- 唱完歌后，你感到轻盈而强壮，充满了虔诚的信念。 -";
 		specialeffect2 EF_BLESSING;
 		specialeffect2 EF_RESURRECTION;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "That was refreshing.";
-		mes "I guess I should go back to Priest Dayan.";
+		mes "真是令人神清气爽。";
+		mes "我想我应该回去找达扬神父了。";
 		set job_arch,3;
 		close2;
 		warp "umbala",138,219;
 		end;
 	} else if (job_arch == 3) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "The song is over. It's time to go back to Priest Dayan.";
+		mes "歌已唱完。是时候回去找达扬神父了。";
 		close2;
 		warp "umbala",138,219;
 		end;
@@ -584,150 +585,150 @@ OnTouch:
 
 hu_in01,205,204,7	script	Praying Nun#benew	79,{
 	if (job_arch == 4) {
-		mes "- There is a nun closing her eyes as she murmurs something which sounds like a prayer. -";
+		mes "- 有一位修女闭着眼睛，喃喃地说着什么，听起来像是祈祷。 -";
 		next;
-		if(select("Talk to her.:Stay Quiet.") == 2) {
-			mes "- You don't feel like disturbing her -";
+		if(select("和她说话。:保持安静。") == 2) {
+			mes "- 你不想打扰她 -";
 			close;
 		}
 		mes "[" + strcharinfo(0) + "]";
-		mes "Umm, hello sister?";
+		mes "嗯，你好，修女？";
 		next;
-		mes "[Vinue]";
-		mes "Ah, Welcome.";
-		mes "It's not time to have a service yet...";
-		mes "Are you here to pray, "+(Sex == SEX_MALE?"brother":"sister")+"?";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "I came here to say hello from Priest Dayan from Prontera.";
-		next;
-		mes "[Vinue]";
-		mes "Ah, Priest Dayan.";
-		mes "Is he good?";
-		mes "He is so cute even though he's old.";
+		mes "[维纽]";
+		mes "啊，欢迎。";
+		mes "现在还不是做礼拜的时间……";
+		mes "你是来祈祷的吗，"+(Sex == SEX_MALE?"兄弟":"姐妹")+"？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "He told me that he was worried because when he saw you last time, you seemed sad.";
-		mes "He asks you to go on a Holy Pilgrimage.";
+		mes "我是受普隆德拉的达扬神父之托来向你问好的。";
+		next;
+		mes "[维纽]";
+		mes "啊，达扬神父。";
+		mes "他还好吗？";
+		mes "虽然他年纪大了，但还是很可爱。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Umbala has the vital power of nature!";
+		mes "他告诉我，他很担心，因为上次见到你时，你似乎很悲伤。";
+		mes "他请你去进行一次圣地巡礼。";
 		next;
-		mes "[Vinue]";
-		mes "Ah...";
-		mes "He's very kind. As are you "+(Sex == SEX_MALE?"brother":"sister")+".";
+		mes "[" + strcharinfo(0) + "]";
+		mes "乌姆巴拉有着大自然的生命力！";
 		next;
-		mes "[Vinue]";
-		mes "But don't worry.";
-		mes "I'm just a little tired because of a bad dream.";
+		mes "[维纽]";
+		mes "啊……";
+		mes "他真是太好了。你也是，"+(Sex == SEX_MALE?"兄弟":"姐妹")+"。";
 		next;
-		mes "[Vinue]";
-		mes "Evil is always watching for our souls.";
-		mes "If you are indifferent to praying, it never misses an opportunity.";
+		mes "[维纽]";
+		mes "但别担心。";
+		mes "我只是因为做了一个噩梦而有点疲惫。";
 		next;
-		if(select("A dream? What kind of dream?:Your soul should be fine.") == 2) {
-			mes "[Vinue]";
-			mes "Oh but that's where you're wrong.";
-			mes "My soul may be the most at risk.";
-			mes "Thank you for delivering the message.";
-			mes "I'll go back to my prayers.";
+		mes "[维纽]";
+		mes "邪恶总是在窥视我们的灵魂。";
+		mes "如果你疏于祈祷，它绝不会放过任何机会。";
+		next;
+		if(select("梦？什么样的梦？:你的灵魂应该没问题的。") == 2) {
+			mes "[维纽]";
+			mes "哦，你说错了。";
+			mes "我的灵魂可能是最危险的。";
+			mes "谢谢你传达消息。";
+			mes "我要回去继续祈祷了。";
 			close;
 		}
-		mes "[Vinue]";
-		mes "That is...";
-		mes "Actually I started to have a bad dream from the date I was appointed.";
+		mes "[维纽]";
+		mes "那是……";
+		mes "其实从我被任命的那天起，我就开始做噩梦了。";
 		next;
-		mes "[Vinue]";
-		mes "At first, it was a dream that Valkyrie was sad and in darkness.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "Valkyrie?";
-		next;
-		mes "[Vinue]";
-		mes "Yeah...";
-		mes "She was crying in a pitch-black room.";
-		mes "Hanging down like a bird that had its wings cut.";
-		next;
-		mes "[Vinue]";
-		mes "But, as time went by, the dream became scarier. Now Valkyrie is arrested with chains and then finally she is dashed to pieces.";
-		next;
-		mes "[Vinue]";
-		mes "What a cruel performance! I suddenly can't breathe properly and then I wake up.";
+		mes "[维纽]";
+		mes "起初，是一个瓦尔基里在黑暗中悲伤的梦。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "To have to see the death of Valkyrie, must be a tormenting dream.";
+		mes "瓦尔基里？";
 		next;
-		mes "[Vinue]";
-		mes "Is it just a nightmare?";
-		mes "Or do you think it is an omen?";
+		mes "[维纽]";
+		mes "是的……";
+		mes "她在一个漆黑的房间里哭泣。";
+		mes "像一只被剪断翅膀的鸟一样垂挂着。";
 		next;
-		mes "[Vinue]";
-		mes "I've been wanting to pray at Odin's shrine to make the dream go away. But that shrine became a den of evil a long time ago.";
+		mes "[维纽]";
+		mes "但是，随着时间的推移，梦变得越来越可怕。现在瓦尔基里被锁链束缚，最终被粉碎。";
 		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "The shrine?";
-		mes "Nobody tried to subdue the evil?";
-		next;
-		mes "[Vinue]";
-		mes "Unfortunately, I'm a nun who doesn't have any exorcism skill...";
-		mes "Residents of Hugel just stood aghast of the sight because they are not familiar with adventure.";
-		next;
-		mes "[Vinue]";
-		mes "These days, there are a lot of people because of the development of the Odin shrine, but their situation is not so good.";
+		mes "[维纽]";
+		mes "多么残忍的场景！我突然无法正常呼吸，然后就醒了。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Is the dream related with the evil in the Odin shrine?";
+		mes "不得不目睹瓦尔基里的死亡，一定是一个令人痛苦的梦。";
 		next;
-		mes "[Vinue]";
-		mes "Hum... well.";
-		mes "I don't have any way to find out.";
-		mes "I don't have a method, so I just pray.";
+		mes "[维纽]";
+		mes "这只是一个噩梦吗？";
+		mes "还是你觉得这是一个预兆？";
 		next;
-		if(select("I'll investgate for you.:I'll pray with you.") == 2) {
-			mes "[Vinue]";
-			mes "Thank you.";
-			mes "I'll pray that the darkness stays away.";
-			mes "I hope you have a good time with the festival here in Hugel.";
+		mes "[维纽]";
+		mes "我一直想在奥丁的神殿祈祷，让这个梦消失。但那个神殿很久以前就变成了邪恶的巢穴。";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "神殿？";
+		mes "没有人试图去驱除邪恶吗？";
+		next;
+		mes "[维纽]";
+		mes "不幸的是，我是一个没有任何驱魔技能的修女……";
+		mes "胡乐的居民们也只是惊恐地站在那里，因为他们不习惯冒险。";
+		next;
+		mes "[维纽]";
+		mes "最近，由于奥丁神殿的开发，来了很多人，但他们的情况也不太好。";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "这个梦和奥丁神殿里的邪恶有关吗？";
+		next;
+		mes "[维纽]";
+		mes "嗯……这个嘛。";
+		mes "我没有办法查明。";
+		mes "我没有方法，所以只能祈祷。";
+		next;
+		if(select("我去帮你调查。:我和你一起祈祷。") == 2) {
+			mes "[维纽]";
+			mes "谢谢你。";
+			mes "我会祈祷黑暗远离我们。";
+			mes "希望你在胡乐的节日中度过愉快的时光。";
 			close;
 		}
-		mes "[Vinue]";
-		mes "Yeah?";
-		mes "But, it'll be scary inside!";
-		mes "There are lots of devils inside!";
+		mes "[维纽]";
+		mes "真的吗？";
+		mes "但是，里面会很可怕的！";
+		mes "里面有很多恶魔！";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "But I can't pretend to ignore a Sister who is in trouble?";
-		mes "I'm a minister who copes with lots of asceticism!";
-		mes "Entrust me.";
+		mes "但我不能假装无视一个有困难的修女吧？";
+		mes "我是一个经历了许多苦行的牧师！";
+		mes "交给我吧。";
 		next;
-		mes "[Vinue]";
-		mes "Ah... I'm so worried....";
-		mes "I'll never forget your warm heart.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "How do I get to Odin shrine?";
-		next;
-		mes "[Vinue]";
-		mes "There is a ferry on the right side of the church.";
+		mes "[维纽]";
+		mes "啊……我好担心……";
+		mes "我永远不会忘记你温暖的心。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Ok, wait for good news!";
+		mes "我怎么去奥丁神殿？";
 		next;
-		mes "[Vinue]";
-		mes "I'll pray for your safe return.";
-		mes "I hope that Odin gives you his protection as well.";
+		mes "[维纽]";
+		mes "教堂右边有一艘渡船。";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "好的，等我的好消息！";
+		next;
+		mes "[维纽]";
+		mes "我会为你的平安归来祈祷。";
+		mes "希望奥丁也能给予你他的庇护。";
 		set job_arch,5;
 		changequest 2189,2190;
 		close;
 	} else if ((job_arch > 4) && (job_arch < 100)) {
-		mes "[Vinue]";
-		mes "I'll pray for your safe return.";
+		mes "[维纽]";
+		mes "我会为你的平安归来祈祷。";
 		close;
 	}
-	mes "[Vinue]";
-	mes "I feel refreshed.";
-	mes "It must be good news?";
-	mes "Thank the Gods.";
+	mes "[维纽]";
+	mes "我感到神清气爽。";
+	mes "一定是好消息吧？";
+	mes "感谢神明。";
 	close;
 }
 
@@ -740,18 +741,18 @@ OnTouch:
 
 odin_tem02,281,275,3	script	Valkyrie Illusion#arch	403,{
 	if ((job_arch > 4) && (job_arch < 100)) {
-		mes "You can see Valkyrie who has a despairing face.";
+		mes "你可以看到一个面容绝望的瓦尔基里。";
 		next;
-		switch(select("Touch Valkyrie's Illusion.:Turn away.")) {
+		switch(select("触碰瓦尔基里的幻影。:转身离开。")) {
 		case 1:
-			mes "You lose your consciousness while getting a closer view of Valkyrie's Illusion.";
+			mes "在靠近瓦尔基里幻影的瞬间，你失去了意识。";
 			close2;
 			specialeffect2 EF_CLOAKING;
 			warp "job3_arch01",29,29;
 			hideonnpc "Valkyrie Illusion#arch";
 			end;
 		case 2:
-			mes "Out of fear, you turn away from Valkyrie's illusion.";
+			mes "出于恐惧，你转身离开了瓦尔基里的幻影。";
 			close2;
 			hideonnpc "Valkyrie Illusion#arch";
 			end;
@@ -765,11 +766,11 @@ OnInit:
 
 job3_arch01,29,34,3	script	Valkyrie#arch	403,{
 	if (checkweight(1201,1) == 0 || (MaxWeight - Weight) < 2000) {
-		mes "- Wait a Sec !! -";
-		mes "- You are carrying too many items, -";
-		mes "- you won't be able to obtain any new items. -";
-		mes "- Please take off some items -";
-		mes "- and come for the challenge again. -";
+		mes "- 等一下！！ -";
+		mes "- 你携带了太多物品， -";
+		mes "- 将无法获得任何新物品。 -";
+		mes "- 请卸下一些物品 -";
+		mes "- 然后再来挑战。 -";
 		close;
 	}
 	if ((BaseLevel != 99) || (JobLevel < 50) || (BaseJob != Job_Priest)) {
@@ -777,12 +778,12 @@ job3_arch01,29,34,3	script	Valkyrie#arch	403,{
 		end;
 	}
 	if (getmercinfo(1)) {
-		mes "[Valkyrie]";
-		mes "If you want to talk with me, you have to ^3131FFcancel all contracts^000000 with any mercenaries you have.";
+		mes "[瓦尔基里]";
+		mes "如果你想和我说话，你必须先^3131FF解除所有佣兵合同^000000。";
 		close;
 	}
 	if (SkillPoint) {
-		mes "You can't progress without using all your skill points. Please use all of your skill points before progressing~";
+		mes "在使用完所有技能点之前无法继续。请先用完所有技能点再继续~";
 		close;
 	}
 	if (Class != Job_Priest && Class != Job_High_Priest && Class != Job_Baby_Priest) {
@@ -793,141 +794,141 @@ job3_arch01,29,34,3	script	Valkyrie#arch	403,{
 			warp "odin_tem02",282,263;
 			end;
 		} else if (job_arch == 5) {
-			mes "[Valkyrie]";
-			mes "In the heavens the sound of pipes spread out, but a bird that can't fly crawls and finally is crushed to pieces on the ground.";
-			mes "Ah, I'm resentful! so regretful!";
+			mes "[瓦尔基里]";
+			mes "天堂中笛声悠扬，但一只不会飞的鸟在地上爬行，最终被碾碎。";
+			mes "啊，我好怨恨！好后悔！";
 			next;
-			mes "- Valkyrie holds its face, then she finds you and stares with a threatening face. -";
+			mes "- 瓦尔基里捂住脸，然后发现了你，用威胁的目光盯着你。 -";
 			next;
-			mes "[Valkyrie]";
-			mes "You are a descendant of Heimdal living in pain as a mortal, why are you in here?";
-			mes "Are you here to ridicule my grim fate?";
-			next;
-			mes "[" + strcharinfo(0) + "]";
-			mes "No way!";
-			mes "But it's true that I'm here for you.";
-			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "...me?";
-			mes "Of course I'm staying in Midgard, but we are under the yoke of fate that can't coexist in this world.";
-			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "I see, is your goal to enter Valhalla?";
-			mes "If you do, it's the wrong place for you.";
-			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "I was already expelled from Asgard.";
-			mes "My duty is protecting this small island from humans trying to take it from the Gods and even I don't have any energy to do so.";
+			mes "[瓦尔基里]";
+			mes "你是海姆达尔的后裔，作为凡人在痛苦中生活，你为什么在这里？";
+			mes "你是来嘲笑我悲惨的命运的吗？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "It's not that kind of problem.";
-			mes "But someone who perceives your painful situation has sent me here.";
+			mes "不是的！";
+			mes "但我确实是为你而来的。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "Haha! You are going to help me?!";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "……我？";
+			mes "虽然我留在米德加尔特，但我们受命运的束缚，无法在这个世界共存。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "...................";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我明白了，你的目标是进入瓦尔哈拉吗？";
+			mes "如果是的话，你来错地方了。";
 			next;
-			mes "- Valkyrie gives you a fierce scowl. -";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我已经被逐出阿斯加德了。";
+			mes "我的职责是保护这个小岛不被试图从众神手中夺取它的人类侵占，但我连这点力量都没有了。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "In fact, I can't do anything with my body now.";
+			mes "[" + strcharinfo(0) + "]";
+			mes "不是那种问题。";
+			mes "但有人感知到了你的痛苦处境，派我来这里。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "Human, answer me. Are you here to sincerely help me?";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "哈哈！你要来帮我？！";
 			next;
-			if(select("Yes:No") == 2) {
-				mes "[Valkyrie Anguhilde]";
-				mes "I knew that I couldn't trust a human!";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "…………………";
+			next;
+			mes "- 瓦尔基里狠狠地瞪了你一眼。 -";
+			next;
+			mes "[瓦尔基里·安古希尔德]";
+			mes "事实上，我现在的身体什么都做不了。";
+			next;
+			mes "[瓦尔基里·安古希尔德]";
+			mes "人类，回答我。你是真心来帮助我的吗？";
+			next;
+			if(select("是的:不是") == 2) {
+				mes "[瓦尔基里·安古希尔德]";
+				mes "我就知道不能信任人类！";
 				close2;
 				warp "odin_tem02",282,263;
 				end;
 			}
-			mes "[Valkyrie Anguhilde]";
-			mes "Ok...";
-			mes "I don't have any energy to hold my own, so I have no choice but to trust you.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "好吧……";
+			mes "我已经没有力量支撑自己了，所以别无选择只能信任你。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "I was a normal Valkyrie that lead soldiers to Valhalla according to the order of Odin.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我曾是一个普通的瓦尔基里，按照奥丁的命令引导战士前往瓦尔哈拉。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "But I harmed Freki, one of Odin's wolves, and I was expelled form Asgard without any energy as a Valkyrie with orders to protect this island.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "但我伤害了奥丁的狼弗雷基，被剥夺了瓦尔基里的力量逐出阿斯加德，被命令保护这个岛屿。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "I was disgraced, this island is important as a temple for Odin and the various Gods.";
-			mes "I tried to do my best to protect this holy place.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我蒙受了耻辱，这个岛屿作为奥丁和众神的神殿非常重要。";
+			mes "我尽力保护这个神圣的地方。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "But one day, the devil started to gain influence on this island.";
-			mes "I don't know why they came here and from where they came from.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "但有一天，恶魔开始在这个岛上扩大影响。";
+			mes "我不知道它们为什么来这里，也不知道它们从哪里来。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "They sieged the temple and I exhausted my energy trying to fight them all myself.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "它们围攻了神殿，我独自与它们战斗，耗尽了所有力量。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "The holy shrine was tainted by the devils.";
-			mes "How long do I have to be under this dishonorable fate!";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "神圣的神殿被恶魔玷污了。";
+			mes "我还要在这不光彩的命运下忍受多久！";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "Mortal one, what is your name?";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "凡人，你叫什么名字？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "My name is " + strcharinfo(0) + ".";
+			mes "我的名字是" + strcharinfo(0) + "。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "" + strcharinfo(0) + ",";
-			mes "You told me that you want to help me, right? Even though it disgraces me, I am asking for your help.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "" + strcharinfo(0) + "，";
+			mes "你说你想帮助我，对吧？虽然这让我蒙羞，但我请求你的帮助。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "This place may look like it was made my humans. Actually, it's a very important monument and also a part of the God's history.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "这个地方看起来像是人类建造的。实际上，它是一座非常重要的纪念碑，也是众神历史的一部分。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "I've lost all of my energy and my body is sealed so there is no way for me to protect the shrine.";
-			mes "You have to send a message to Valhalla to ask for help from a Valkyrie quickly.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我已经失去了所有的力量，身体也被封印了，所以没有办法保护神殿。";
+			mes "你必须向瓦尔哈拉传递消息，尽快请求瓦尔基里的援助。";
 			next;
-			select("How can I do that?");
-			mes "[Valkyrie Anguhilde]";
-			mes "At the ^3131FFtop of the shrine^000000, You can contact to them with a ^3131FFGolden pipe^000000.";
+			select("我该怎么做？");
+			mes "[瓦尔基里·安古希尔德]";
+			mes "在^3131FF神殿的顶部^000000，你可以用一支^3131FF金色号角^000000联系她们。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "I'm going to give you a scroll of paper written in an ancient language.";
-			mes "In that scroll, there is my impersonation.";
-			mes "^3131FFIf you go outside, you can summon a Valkyrie with that scroll.^000000";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我会给你一张写着古代语言的卷轴。";
+			mes "那张卷轴里有我的化身。";
+			mes "^3131FF如果你到外面去，你可以用那张卷轴召唤一个瓦尔基里。^000000";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "After you summon my impersonation, you have to find a ^3131FFBroken pipe^000000.";
-			mes "Maybe it'll be spread in the shrine...";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "召唤我的化身后，你必须找到^3131FF破碎的号角^000000。";
+			mes "也许它散落在神殿各处……";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "You have to go to the top of the shrine, collecting all broken pipes from the impersonation.";
-			mes "And then I'm going to take care of the matter.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "你必须从化身那里收集所有破碎的号角，前往神殿顶部。";
+			mes "然后我会处理这件事。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "An impersonation will help when you move or attack as you want through ^FF0000ALT+click^000000.";
-			mes "But you have to be careful if an imeprsonation falls down.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "化身会在你通过^FF0000ALT+点击^000000移动或攻击时提供帮助。";
+			mes "但如果化身倒下了，你要小心。";
 			next;
-			mes "[Valkyrie Anguhilde]";
-			mes "When you finish preparing to go on, talk to me again.";
-			mes "It'll be a long journey...";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "当你准备好出发时，再来和我说话。";
+			mes "这将是一段漫长的旅程……";
 			set job_arch,6;
 			close;
 		} else if (job_arch == 6) {
 			if ($@archbs == 0) {
 				set $@archbs,1;
-				mes "[Valkyrie Anguhilde]";
-				mes "" + strcharinfo(0) + " Did you finish preparing for your way of asceticism?";
+				mes "[瓦尔基里·安古希尔德]";
+				mes "" + strcharinfo(0) + "，你准备好踏上苦行之路了吗？";
 				next;
 				if (getmapusers("job3_arch02") > 0) {
-					mes "[Valkyrie Anguhilde]";
-					mes "Hmm, someone is battling the devil in the shrine right now.";
-					mes "You just wait a minute while I'm finding who it is.";
+					mes "[瓦尔基里·安古希尔德]";
+					mes "嗯，现在有人正在神殿里与恶魔战斗。";
+					mes "你等一下，我去看看是谁。";
 					set $@archbs,0;
 					close;
 				}
-				mes "[Valkyrie Anguhilde]";
-				mes "Ok. Now I'm going to send you there.";
-				mes "^FF0000When you go there, you have to summon my impersonation with the scroll^000000. Don't forget.";
+				mes "[瓦尔基里·安古希尔德]";
+				mes "好的。现在我要把你送过去。";
+				mes "^FF0000到了那里后，你必须用卷轴召唤我的化身^000000。别忘了。";
 				set $@archbs,0;
 				close2;
 				nude;
@@ -940,32 +941,32 @@ job3_arch01,29,34,3	script	Valkyrie#arch	403,{
 				hideonnpc "Valkyrie#arch";
 				end;
 			}
-			mes "[Valkyrie Anguhilde]";
-			mes "I'm talking with another person now, so give me a second.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我正在和另一个人说话，请稍等一下。";
 			close;
 		} else if (job_arch == 7) {
 			if (countitem(12381)) delitem 12381,countitem(12381); //ValkyrieA_Scroll
 			if (countitem(12382)) delitem 12382,countitem(12382); //ValkyrieB_Scroll
 			if ($@archbs == 0) {
 				set $@archbs,1;
-				mes "[Valkyrie Anguhilde]";
-				mes "Are you ok human?";
-				mes "It was not as easy as I expected.";
-				mes "Will you challenge again?";
+				mes "[瓦尔基里·安古希尔德]";
+				mes "你还好吗，人类？";
+				mes "这比我预想的要困难。";
+				mes "你要再挑战一次吗？";
 				next;
 				if (getmapusers("job3_arch02") > 0) {
 					set $@archbs,0;
-					mes "[Valkyrie Anguhilde]";
-					mes "Hmm, someone is battling the devil in the shrine right now.";
-					mes "You just wait a minute while I'm finding who it is.";
+					mes "[瓦尔基里·安古希尔德]";
+					mes "嗯，现在有人正在神殿里与恶魔战斗。";
+					mes "你等一下，我去看看是谁。";
 					close;
 				}
 				set $@archbs,0;
-				mes "[Valkyrie Anguhilde]";
-				mes "OK. now I'm going to send you there.";
-				mes "^FF0000When you go there, you have to summon my impersonation with the scroll^000000.";
-				mes "An impersonation will help when you move or attack as you want through ^FF0000ALT+click^000000.";
-				mes "But you have to be careful if an impersonation falls down.";
+				mes "[瓦尔基里·安古希尔德]";
+				mes "好的。现在我要把你送过去。";
+				mes "^FF0000到了那里后，你必须用卷轴召唤我的化身^000000。";
+				mes "化身会在你通过^FF0000ALT+点击^000000移动或攻击时提供帮助。";
+				mes "但如果化身倒下了，你要小心。";
 				close2;
 				nude;
 				if (countitem(2798))
@@ -976,15 +977,15 @@ job3_arch01,29,34,3	script	Valkyrie#arch	403,{
 				hideonnpc "Valkyrie#arch";
 				end;
 			}
-			mes "[Valkyrie Anguhilde]";
-			mes "I'm talking with another person now, so give me a second.";
+			mes "[瓦尔基里·安古希尔德]";
+			mes "我正在和另一个人说话，请稍等一下。";
 			close;
 		}
 	}
 	end;
 OnBc:
 	set $@archbs,0;
-	mapannounce "job3_arch01","Valkyrie: I think someone fell down in the shrine. I can hear the devil's unpleasant laugh.",bc_map,"0xFFCE00";
+	mapannounce "job3_arch01","瓦尔基里：我想有人在神殿里倒下了。我能听到恶魔令人不快的笑声。",bc_map,"0xFFCE00";
 	hideoffnpc "Valkyrie#arch";
 	end;
 }
@@ -993,7 +994,7 @@ job3_arch02,119,49,0	script	#arch_1_start	139,6,6,{
 OnTouch:
 	if (countitem(12381) == 0)
 		getitem 12381,1; //ValkyrieA_Scroll
-	mapannounce "job3_arch02","Whispering of an impersonation: I feel heavy! Set me free!",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：我感觉好沉重！放我自由！",bc_map,"0xFFCE00";
 	disablenpc "#arch_1_start";
 	end;
 }
@@ -1008,12 +1009,12 @@ OnTouch:
 			viewpoint 1,113,327,1,0xFF9900;
 		set .@randht, rand(1,10);
 		if (.@randht < 8)
-			mapannounce "job3_arch02","Whispering of an impersonation: I can feel the devil's spirits! Be careful!",bc_map,"0xFFCE00";
+			mapannounce "job3_arch02","化身的低语：我能感觉到恶魔的气息！小心！",bc_map,"0xFFCE00";
 		else if ((.@randht == 8) || (.@randht == 9))
-			mapannounce "job3_arch02","Whispering of an impersonation: They are coming!",bc_map,"0xFFCE00";
+			mapannounce "job3_arch02","化身的低语：它们来了！",bc_map,"0xFFCE00";
 		end;
 	}
-	mapannounce "job3_arch02","Whispering of an impersonation: You can't do anything by yourself! Let's go back!",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：你一个人什么都做不了！我们回去吧！",bc_map,"0xFFCE00";
 	mapwarp "job3_arch02","job3_arch01",29,29;
 	end;
 }
@@ -1036,11 +1037,11 @@ OnTouch:
 		delitem 12381,1; //ValkyrieA_Scroll
 		// fall through
 	} else if (getmercinfo(1) == 2037) {
-		mapannounce "job3_arch02","Valkyrie's Nightmare: An incompetent illusion of Valkyrie came here with the assistance of humans. You wanna have that nightmare?",bc_map,"0xFF0000";
+		mapannounce "job3_arch02","瓦尔基里的噩梦：一个无能的瓦尔基里幻影在人类的帮助下来到了这里。你也想做那个噩梦吗？",bc_map,"0xFF0000";
 		donpcevent "mob#arch_1::OnKill";
 		end;
 	}
-	mapannounce "job3_arch02","Whispering of an impersonation: You can't do anything by yourself! Let's go back!",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：你一个人什么都做不了！我们回去吧！",bc_map,"0xFFCE00";
 	mapwarp "job3_arch02","job3_arch01",29,29;
 	end;
 }
@@ -1068,7 +1069,7 @@ OnEnable:
 OnMyMobDead:
 	if (mobcount("job3_arch02","#arch_val01::OnMyMobDead") < 1) {
 		donpcevent "#arch_redcell::OnGreen";
-		mapannounce "job3_arch02","Valkyrie's Nightmare: Your win is only a false image! hahahaha!",bc_map,"0xFF0000";
+		mapannounce "job3_arch02","瓦尔基里的噩梦：你的胜利只是一个幻象！哈哈哈哈！",bc_map,"0xFF0000";
 		hideoffnpc "Valkyrie#arch_01";
 		disablenpc "#arch_1_start";
 		disablenpc "#arch_1_01";
@@ -1098,7 +1099,7 @@ OnEnable:
 	end;
 OnMyMobDead:
 	if (mobcount("job3_arch02","#arch_val02::OnMyMobDead") < 1) {
-		mapannounce "job3_arch02","Valkyrie's Nightmare: You are so childish. I invite you to a devil's party. I'll make sure you have a fun!",bc_map,"0xFF0000";
+		mapannounce "job3_arch02","瓦尔基里的噩梦：你太幼稚了。我邀请你参加恶魔的派对。我会让你玩得开心的！",bc_map,"0xFF0000";
 		hideoffnpc "Valkyrie#arch_02";
 		disablenpc "#arch_2_boss";
 		viewpoint 1,279,234,1,0xFFFF99;
@@ -1111,31 +1112,31 @@ OnKill:
 
 job3_arch02,113,327,5	script	Valkyrie#arch_01	403,{
 	if (getmercinfo(1)) {
-		mes "[Valkyrie]";
-		mes "If you want to talk with me, you have to ^3131FFcancel all contracts^000000 with any mercenaries you have.";
+		mes "[瓦尔基里]";
+		mes "如果你想和我说话，你必须先^3131FF解除所有佣兵合同^000000。";
 		close;
 	}
-	mes "[Valkyrie Anguhilde]";
-	mes "The devil always makes an effort to agitate people's mind.";
-	mes "You don't have to care about their whisperings.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "恶魔总是试图动摇人们的心灵。";
+	mes "你不必在意它们的低语。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Anyway I can feel my energy coming back.";
-	mes "Show me the stuff that you found.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "不管怎样，我能感觉到我的力量正在恢复。";
+	mes "把你找到的东西给我看看。";
 	next;
-	mes "- You show a golden piece of pipe to Valkyrie. -";
+	mes "- 你向瓦尔基里展示了一块金色的号角碎片。 -";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Oh, It's a piece of pipe!";
-	mes "If you collect pieces, you can ask other Valkyries for help.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "哦，是号角的碎片！";
+	mes "如果你收集齐碎片，就可以向其他瓦尔基里求助。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Because of a close battle, I could only get a little energy.";
-	mes "I'm going to give a ^3131FFnew ancient scroll^000000.";
-	mes "It'll be helpful to find the rest of pieces.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "由于激烈的战斗，我只恢复了一点力量。";
+	mes "我会给你一张^3131FF新的古代卷轴^000000。";
+	mes "它会帮助你找到剩下的碎片。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Then I look forward a good news.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "那么，我期待好消息。";
 	close2;
 	getitem 12382,1; //ValkyrieB_Scroll
 	viewpoint 1,244,46,1,0xFFFF99;
@@ -1145,35 +1146,35 @@ job3_arch02,113,327,5	script	Valkyrie#arch_01	403,{
 }
 
 job3_arch02,244,46,5	script	Valkyrie#arch_02	403,{
-	mes "[Valkyrie Anguhilde]";
-	mes "Did you find the rest of the pieces?";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "你找到剩下的碎片了吗？";
 	next;
 	if (countitem(6154) < 2) {
-		mes "[Valkyrie Anguhilde]";
-		mes "Hum?";
-		mes "I can see this one beside you.";
+		mes "[瓦尔基里·安古希尔德]";
+		mes "嗯？";
+		mes "我能看到你身边有这个。";
 		getitem 6154,2; //Broken_Horn_Pipe
 		next;
 	}
-	mes "[Valkyrie Anguhilde]";
-	mes "OK.";
-	mes "I'll complete the broken horn pipe!";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "好的。";
+	mes "我来修复破碎的号角！";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "But the battle is not finished yet.";
-	mes "You remember a ^3131FFruined shrine on the center of the island^000000?";
-	mes "It'll be completed only when you use a horn pipe.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "但战斗还没有结束。";
+	mes "你还记得^3131FF岛屿中央的废墟神殿^000000吗？";
+	mes "只有在那里使用号角才能完成任务。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "I can feel the air around me is getting impure.";
-	mes "And feel the coldness of the pitch-black darkness.";
-	mes "This time will be dangerous.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "我能感觉到周围的空气变得污浊。";
+	mes "还能感受到漆黑黑暗的寒冷。";
+	mes "这次会很危险。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "I give you a necklace as a present.";
-	mes "But I'm not sure that It'll be helpful or not....";
-	mes "Take care.";
-	mes "Please, hurry up!";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "我送你一条项链作为礼物。";
+	mes "但我不确定它是否有用……";
+	mes "保重。";
+	mes "请快点！";
 	close2;
 	getitem 2798,1; //Will_Of_Exhausted_Angel
 	hideonnpc "Valkyrie#arch_02";
@@ -1190,28 +1191,28 @@ OnTouch:
 	donpcevent "mob#arch_2::OnKill";
 	hideoffnpc "Valkyrie Anguhilde#end";
 	if (checkweight(1201,1) == 0 || (MaxWeight - Weight) < 2000) {
-		mes "- Wait a Sec !! -";
-		mes "- You are carrying too many items, -";
-		mes "- you won't be able to obtain any new items. -";
-		mes "- Please take off some items -";
-		mes "- and come for the challenge again. -";
+		mes "- 等一下！！ -";
+		mes "- 你携带了太多物品， -";
+		mes "- 将无法获得任何新物品。 -";
+		mes "- 请卸下一些物品 -";
+		mes "- 然后再来挑战。 -";
 		close;
 	}
 	if (ismounting()) {
-		mes "You are on a riding pet,";
-		mes "so you cannot change your job.";
-		mes "Please unequip your riding pet and try again!";
+		mes "你正骑着宠物坐骑，";
+		mes "所以无法转职。";
+		mes "请先卸下坐骑再试一次！";
 		close;
 	}
 	if (countitem(6154) < 2) {
-		mes "[Valkyrie Anguhilde]";
-		mes "Did you collect all of the pieces of my horn pipe?";
+		mes "[瓦尔基里·安古希尔德]";
+		mes "你收集齐我号角的所有碎片了吗？";
 		next;
-		mes "[Valkyrie Anguhilde]";
-		mes "I know you bent over backwards to help me, but I can't do anything without 2 pieces of horn pipe.";
+		mes "[瓦尔基里·安古希尔德]";
+		mes "我知道你竭尽全力来帮助我，但没有两块号角碎片我什么都做不了。";
 		next;
-		mes "[Valkyrie Anguhilde]";
-		mes "It can be dangerous, so let's go back.";
+		mes "[瓦尔基里·安古希尔德]";
+		mes "这里可能很危险，我们回去吧。";
 		close2;
 		nude;
 		if (countitem(2798))
@@ -1220,84 +1221,84 @@ OnTouch:
 		mapwarp "job3_arch02","job3_arch01",29,29;
 		end;
 	}
-	mes "[Valkyrie Anguhilde]";
-	mes "Finally we finished all the preparations.";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "终于完成了所有准备工作。";
 	next;
-	mes "Valkyrie holds the pipe and blows towards the sky.";
+	mes "瓦尔基里拿起号角，朝天空吹响。";
 	next;
-	mes "Booo - - - -";
+	mes "呜————";
 	next;
-	mes "Booo - - -";
+	mes "呜———";
 	next;
 	hideoffnpc "Valkyrie of the heavens";
-	mes "[Valkyrie Anguhilde]";
-	mes "Assistance of Odin! Soldiers of Valhalla!";
-	mes "The holy place of the God Odin is tainted by darkness!";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "奥丁的援军！瓦尔哈拉的战士们！";
+	mes "奥丁神的圣地被黑暗玷污了！";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Don't worry, Anguhilde.";
-	mes "Your desire has reached Valhalla.";
-	mes "The devils were removed by other Valkyries as you wanted.";
+	mes "[天界的瓦尔基里]";
+	mes "别担心，安古希尔德。";
+	mes "你的愿望已经传达到瓦尔哈拉了。";
+	mes "如你所愿，恶魔已经被其他瓦尔基里清除了。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Valkyries! Then is it safe now?";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "瓦尔基里们！那现在安全了吗？";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Yes Anguhilde.";
-	mes "Even though you were expelled because of an incident before, Odin said that he is reconsidering your banishment.";
+	mes "[天界的瓦尔基里]";
+	mes "是的，安古希尔德。";
+	mes "虽然你之前因为那件事被驱逐，但奥丁说他正在重新考虑你的放逐。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Ah! I can go back to Asgard!";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "啊！我可以回到阿斯加德了！";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Don't make a hasty generalization.";
-	mes "But I think that good news will be sent to you.";
+	mes "[天界的瓦尔基里]";
+	mes "不要急于下结论。";
+	mes "但我想好消息会传达给你的。";
 	next;
-	mes "[Valkyrie Anguhilde]";
-	mes "Honor to Odin!";
-	mes "I feel full of grace.";
-	mes "So bright and warm....";
+	mes "[瓦尔基里·安古希尔德]";
+	mes "荣耀归于奥丁！";
+	mes "我感到充满了恩典。";
+	mes "如此明亮而温暖……";
 	next;
-	mes "- Shoooo -";
+	mes "- 嗖—— -";
 	specialeffect EF_CLOAKING,AREA,"Valkyrie Anguhilde#end";
 	hideonnpc "Valkyrie Anguhilde#end";
 	emotion ET_HUK, playerattached();
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Set your mind at ease.";
-	mes "She went to a place where she is supposed to be.";
+	mes "[天界的瓦尔基里]";
+	mes "放心吧。";
+	mes "她去了她应该去的地方。";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "I think you don't get it.";
+	mes "[天界的瓦尔基里]";
+	mes "我想你还不明白。";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Anguhilde is a Valkyrie who is dead for a long time ago.";
-	mes "Didn't you see a shrine covered by the devil?";
-	mes "Unfortunately, Anguhilde couldn't cope with the task and fell down.";
+	mes "[天界的瓦尔基里]";
+	mes "安古希尔德是一个很久以前就已经死去的瓦尔基里。";
+	mes "你没有看到被恶魔覆盖的神殿吗？";
+	mes "不幸的是，安古希尔德无法完成任务，倒下了。";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Here is an illusion of Anguhilde who doesn't want to be recognized.";
-	mes "She can't go to hell even when she is dead, and struggles from her constant nightmare.";
+	mes "[天界的瓦尔基里]";
+	mes "这里是安古希尔德不愿被认出的幻影。";
+	mes "她死后也无法去往冥界，在不断的噩梦中挣扎。";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "But she is relieved by your favor.";
-	mes "Even though It's different with reality but now she may be able to rest in peace.";
+	mes "[天界的瓦尔基里]";
+	mes "但她因你的帮助而得到了解脱。";
+	mes "虽然与现实不同，但现在她也许能够安息了。";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Human, the Valkyries are in your debt. Thank you.";
-	mes "I can't invite you as I want, but the power given by Odin can help you.";
+	mes "[天界的瓦尔基里]";
+	mes "人类，瓦尔基里们欠你一份恩情。谢谢你。";
+	mes "我无法如愿邀请你，但奥丁赐予的力量可以帮助你。";
 	next;
-	mes "[Valkyrie of the heavens]";
-	mes "Now, go back to your world.";
-	mes "The sound of the horn pipe and a bird's chirpings will be spread out for you.";
+	mes "[天界的瓦尔基里]";
+	mes "现在，回到你的世界去吧。";
+	mes "号角的声音和鸟儿的鸣叫将为你传播开来。";
 	next;
 	if (SkillPoint) {
-		mes "You can't progress without using all your skill points. Please use all of your skill points before progressing~";
+		mes "在使用完所有技能点之前无法继续。请先用完所有技能点再继续~";
 		close;
 	}
-	mes "[Valkyrie of the heavens]";
-	mes "Don't forget an altruistic minister's spirit like today forever.";
-	mes "I hope we see each other in Valhalla sometime.";
+	mes "[天界的瓦尔基里]";
+	mes "永远不要忘记像今天这样无私的牧师精神。";
+	mes "希望我们有朝一日能在瓦尔哈拉相见。";
 	nude;
 	if (countitem(2798))
 		delitem 2798,countitem(2798); //Will_Of_Exhausted_Angel
@@ -1322,13 +1323,13 @@ OnInit:
 
 job3_arch02,273,235,5	script	Valkyrie of the heavens	811,{
 	if (job_arch == 100) {
-		mes "[Valkyrie of the heavens]";
-		mes "Now, go back to your world.";
-		mes "The sound of the horn pipe and a bird's chirpings will be spread out for you.";
+		mes "[天界的瓦尔基里]";
+		mes "现在，回到你的世界去吧。";
+		mes "号角的声音和鸟儿的鸣叫将为你传播开来。";
 		next;
-		mes "[Valkyrie of the heavens]";
-		mes "Don't forget an altruistic minister's spirit like today forever.";
-		mes "I hope we see each other in Valhalla sometime.";
+		mes "[天界的瓦尔基里]";
+		mes "永远不要忘记像今天这样无私的牧师精神。";
+		mes "希望我们有朝一日能在瓦尔哈拉相见。";
 		close2;
 		mapwarp "job3_arch02","job3_arch01",29,29;
 		end;
@@ -1343,7 +1344,7 @@ job3_arch02,132,323,0	script	#arch_2_01	139,5,5,{
 	end;
 OnTouch:
 	if (countitem(12382))
-		mapannounce "job3_arch02","Whispering of Valkyrie: I see a new ancient scroll!",bc_map;
+		mapannounce "job3_arch02","瓦尔基里的低语：我看到了一张新的古代卷轴！",bc_map;
 	end;
 }
 
@@ -1355,14 +1356,14 @@ OnTouch:
 	} else if (getmercinfo(1) == 2038) {
 		set .@randht, rand(1,10);
 		if (.@randht < 8)
-			mapannounce "job3_arch02","Whispering of an impersonation: I can feel the devil's spirits. Can you hear? The sound of gathering in crowds.",bc_map,"0xFFCE00";
+			mapannounce "job3_arch02","化身的低语：我能感觉到恶魔的气息。你听到了吗？聚集的声音。",bc_map,"0xFFCE00";
 		else if ((.@randht == 8) || (.@randht == 9))
-			mapannounce "job3_arch02","Whispering of an impersonation: Combat readiness!",bc_map,"0xFFCE00";
+			mapannounce "job3_arch02","化身的低语：做好战斗准备！",bc_map,"0xFFCE00";
 		else
-			mapannounce "job3_arch02","Whispering of an impersonation: I can't leave you. Die!",bc_map,"0xFFCE00";
+			mapannounce "job3_arch02","化身的低语：我不能丢下你。去死吧！",bc_map,"0xFFCE00";
 		end;
 	}
-	mapannounce "job3_arch02","Whispering of an impersonation: You can't do anything by yourself! Let's go back!",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：你一个人什么都做不了！我们回去吧！",bc_map,"0xFFCE00";
 	mapwarp "job3_arch02","job3_arch01",29,29;
 	end;
 }
@@ -1381,13 +1382,13 @@ job3_arch02,190,146,0	duplicate(archbjcq2)	#arch_2_11	139,5,5
 // Not in official script.
 job3_arch02,252,267,0	script	#arch_2_12	139,5,5,{
 OnTouch:
-	mapannounce "job3_arch02","Whispering of an impersonation: It's a crossroad. Let's go to the left side. I have to find my pipe.",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：这是一个十字路口。我们走左边吧。我得找到我的号角。",bc_map,"0xFFCE00";
 	end;
 }
 
 job3_arch02,250,290,0	script	#arch_2_13	139,5,5,{
 OnTouch:
-	mapannounce "job3_arch02","Whispering of an impersonation: I can see a ruined shrine. Take a rest in there.",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：我看到了一座废墟神殿。在那里休息一下吧。",bc_map,"0xFFCE00";
 	end;
 }
 */
@@ -1398,10 +1399,10 @@ OnTouch:
 		delitem 12382,1; //ValkyrieB_Scroll
 		// fall through
 	} else if (getmercinfo(1) == 2038) {
-		mapannounce "job3_arch02","A shout of devil: You are so childish. I invite you a party of devil. I'll make you have a fun!",bc_map,"0xFF0000";
+		mapannounce "job3_arch02","恶魔的呐喊：你太幼稚了。我邀请你参加恶魔的派对。我会让你玩得开心的！",bc_map,"0xFF0000";
 		end;
 	}
-	mapannounce "job3_arch02","Whispering of an impersonation: You can't do anything by yourself! Let's go back!",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","化身的低语：你一个人什么都做不了！我们回去吧！",bc_map,"0xFFCE00";
 	mapwarp "job3_arch02","job3_arch01",29,29;
 	end;
 }
@@ -1409,7 +1410,7 @@ OnTouch:
 job3_arch02,284,159,0	script	#arch_3_01	139,20,20,{
 OnTouch:
 	if (Class != Job_Priest) {
-		mapannounce "job3_arch02","Frus: Do you want to see God? Okay, I'll send you to the land of the dead by myself!",bc_map,"0xFF0000";
+		mapannounce "job3_arch02","弗鲁斯：你想见神吗？好的，我亲自送你去死者之地！",bc_map,"0xFF0000";
 		areamonster "job3_arch02",239,41,249,51,"Frus",1762,1,"#arch_3_01::OnMyMobDead";
 	}
 	disablenpc "#arch_3_01";
@@ -1427,7 +1428,7 @@ OnKill:
 job3_arch02,307,200,0	script	#arch_3_02	139,5,5,{
 OnTouch:
 	if (BaseJob == Job_Priest) {
-		mapannounce "job3_arch02","Skogul: You are my guest!",bc_map,"0xFF0000";
+		mapannounce "job3_arch02","斯科古尔：你是我的客人！",bc_map,"0xFF0000";
 		areamonster "job3_arch02",306,199,308,201,"Skogul",1761,1,"#arch_3_02::OnMyMobDead";
 	}
 	disablenpc "#arch_3_02";
@@ -1444,7 +1445,7 @@ OnKill:
 
 job3_arch02,296,216,0	script	#arch_3_03	139,5,5,{
 OnTouch:
-	mapannounce "job3_arch02","Frus: I like your face... Can I steal it?",bc_map,"0xFF0000";
+	mapannounce "job3_arch02","弗鲁斯：我喜欢你的脸……我能偷走它吗？",bc_map,"0xFF0000";
 	areamonster "job3_arch02",295,215,297,217,"Frus",1762,1,"#arch_3_03::OnMyMobDead";
 	disablenpc "#arch_3_03";
 	end;
@@ -1580,10 +1581,10 @@ OnTimer540000:
 	}
 	end;
 OnTimer600000:
-	mapannounce "job3_arch02","Valkyrie's Nightmare: I can't stand anymore!",bc_map,"0xFF0000";
+	mapannounce "job3_arch02","瓦尔基里的噩梦：我再也忍受不了了！",bc_map,"0xFF0000";
 	end;
 OnTimer605000:
-	mapannounce "job3_arch02","Whispering of Valkyrie: No way! I can't let you guys do that. Go back!",bc_map,"0xFFCE00";
+	mapannounce "job3_arch02","瓦尔基里的低语：不行！我不能让你们这样做。回去吧！",bc_map,"0xFFCE00";
 	mapwarp "job3_arch02","job3_arch01",29,29;
 	donpcevent "Valkyrie#arch::OnBc";
 	stopnpctimer;
@@ -1654,14 +1655,14 @@ OnTouch:
 
 job3_arch01,1,1,1	script	control#arch	844,{
 	callfunc "F_GM_NPC";
-	mes "[Troll]";
-	mes "Password please.";
+	mes "[巨魔]";
+	mes "请输入密码。";
 	next;
 	if (callfunc("F_GM_NPC",1854,0) == 1) {
-		mes "[Transit]";
-		mes "The GlobalVar is";
-		mes $@archbs + ".";
-		mes "Do you want to change it?";
+		mes "[传送]";
+		mes "全局变量是";
+		mes $@archbs + "。";
+		mes "你要修改它吗？";
 		next;
 		switch(select("0:1")) {
 		case 1:
@@ -1674,8 +1675,8 @@ job3_arch01,1,1,1	script	control#arch	844,{
 			close;
 		}
 	} else {
-		mes "[Troll]";
-		mes "Enter the correct password!";
+		mes "[巨魔]";
+		mes "请输入正确的密码！";
 		close;
 	}
 }

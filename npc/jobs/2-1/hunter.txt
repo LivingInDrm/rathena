@@ -625,33 +625,33 @@ hu_in01,382,382,4	script	Guild Receptionist#hnt	732,{
 
 payon_in03,131,7,3	script	Hunter#htnGM	59,{
 	if (HNTR_Q == 10) {
-		mes "[Hunter Guildmaster]";
-		mes "Hmpf. You must be here for the Hunter job test. Let me tell you about the testing process. What would you like to know?";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Hmpf. You must be here for the Hunter job test. Let me tell you about the testing process. What would you like to know?";
 		next;
-		switch( select( "What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "[DRY-RUN] What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[Hunter Guildmaster]";
-			mes "You have to hunt down certain monsters with a particular name. But you must avoid all the traps while you're at it.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name. But you must avoid all the traps while you're at it.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "This is to test your ability to move swiftly and locate targets in various situations.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] This is to test your ability to move swiftly and locate targets in various situations.";
 			close;
 		case 2:
-			mes "[Hunter Guildmaster]";
-			mes "Within the time limit, starting in the 6 o'clock direction of the map, you must hunt the target monsters and then hit the escape switch that will appear in the center of the map.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] Within the time limit, starting in the 6 o'clock direction of the map, you must hunt the target monsters and then hit the escape switch that will appear in the center of the map.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "You will pass if you are able to escape in the 12 o'clock direction of the map after you hit the switch.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map after you hit the switch.";
 			close;
 		case 3:
-			mes "[Hunter Guildmaster]";
-			mes "Hmm. Warnings... Well, if you fall into a trap, you have to start from the beginning. Also, only one person can take the test at a time.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] Hmm. Warnings... Well, if you fall into a trap, you have to start from the beginning. Also, only one person can take the test at a time.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "I will send you to the testing place. There will be a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] I will send you to the testing place. There will be a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "If the person in front succeeds, resigns or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] If the person in front succeeds, resigns or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
 			close;
 		case 4:
 			// Note: aegis typo
@@ -664,12 +664,12 @@ payon_in03,131,7,3	script	Hunter#htnGM	59,{
 			// 	mes "Okay. Best of luck.";
 			// 	mes "I'll send you right now.";
 			// }
-			mes "[Hunter Guildmaster]";
-			mes "Okay. I'll send you to the testing area right now. Don't blame me if you get lost or confused because you didn't listen to my explanation.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] Okay. I'll send you to the testing area right now. Don't blame me if you get lost or confused because you didn't listen to my explanation.";
 			next;
 		}
-		mes "[Hunter Guildmaster]";
-		mes "Okay. Best of luck.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay. Best of luck.";
 		HNTR_Q = 12;
 		changequest 4009,4011;
 		getitem 1751,200; // Silver_Arrow
@@ -678,104 +678,104 @@ payon_in03,131,7,3	script	Hunter#htnGM	59,{
 		end;
 	}
 	else if (HNTR_Q > 1 && HNTR_Q < 10) {
-		mes "I'll send you right now.";
-		mes "[Hunter Guildmaster]";
-		mes "Well, then. Your arrows are probably still being made, so you can use mine to take the test.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] I'll send you right now.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Well, then. Your arrows are probably still being made, so you can use mine to take the test.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		next;
-		mes "Mmm...?";
-		mes "What is an Archer";
+		mes "[DRY-RUN] Mmm...?";
+		mes "[DRY-RUN] What is an Archer";
 		next;
-		mes "visiting me for?";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] visiting me for?";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		close;
 	}
 	else if (HNTR_Q == 11) {
-		mes "I wasn't notified about anything in particular from the Hunter Guild. You're not trying to skip the middle part of the Hunter test, are you?";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] I wasn't notified about anything in particular from the Hunter Guild. You're not trying to skip the middle part of the Hunter test, are you?";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		close;
 	}
 	else if (HNTR_Q > 11 && HNTR_Q < 16) {
-		mes "Go gather the items for the test, and come back after you've visited the Hunter Guild.";
-		mes "[Hunter]";
+		mes "[DRY-RUN] Go gather the items for the test, and come back after you've visited the Hunter Guild.";
+		mes "[DRY-RUN] [Hunter]";
 		next;
-		mes "Hmm? Can I help you? If you wish to change jobs, you should visit the person at the Archer Guild, not me.";
-		mes "[Hunter Guildmaster]";
-		mes "Hmm. You're the Archer that almost gave up on changing jobs. You do have everything ready, right? Then I'll send you to take the test right away.";
+		mes "[DRY-RUN] Hmm? Can I help you? If you wish to change jobs, you should visit the person at the Archer Guild, not me.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Hmm. You're the Archer that almost gave up on changing jobs. You do have everything ready, right? Then I'll send you to take the test right away.";
 		next;
-		switch( select( "What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "[DRY-RUN] What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[Hunter Guildmaster]";
-			mes "If you have any";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] If you have any";
 			close;
 		case 2:
-			mes "questions, ask now.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] questions, ask now.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			next;
-			mes "You have to hunt down certain monsters with a particular name, but you also avoid all the traps at the same time. This is to test your ability to move swiftly and locate targets in various situations.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name, but you also avoid all the traps at the same time. This is to test your ability to move swiftly and locate targets in various situations.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			close;
 		case 3:
-			mes "Within the given time, you will start at the 6 o'clock direction of the map, hunt the target monsters, and then hit the escape switch that will appear in the center of the map.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] Within the given time, you will start at the 6 o'clock direction of the map, hunt the target monsters, and then hit the escape switch that will appear in the center of the map.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			next;
-			mes "You will pass if you are able to escape in the 12 o'clock direction of the map after you hit the switch.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map after you hit the switch.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			next;
-			mes "Hmm. Warnings... Well, if you fall into a trap, you have to start from the beginning. Also, only one person can take the test at a time.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] Hmm. Warnings... Well, if you fall into a trap, you have to start from the beginning. Also, only one person can take the test at a time.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			close;
 		case 4:
-			mes "I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
-			mes "[Hunter Guildmaster]";
-			mes "If the person in front succeeds, resigns or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "[DRY-RUN] I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] If the person in front succeeds, resigns or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
 			next;
 		}
-		mes "[Hunter Guildmaster]";
-		mes "Okay. Good luck.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay. Good luck.";
 		next;
-		mes "I'll send you right now.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] I'll send you right now.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		next;
-		if (select( "Okay. Let's start...:Ah, wait a sec.", "Ah, wait a sec." ) == 1) {
-			mes "Eh? Why won't I give you Silver Arrows? Don't expect anything when you don't bring any materials.";
-			mes "[Hunter Guildmaster]";
-			mes "Anyway, I believe you've prepared it yourself. Let's begin now.";
+		if (select( "[DRY-RUN] Okay. Let's start...:Ah, wait a sec.", "Ah, wait a sec." ) == 1) {
+			mes "[DRY-RUN] Eh? Why won't I give you Silver Arrows? Don't expect anything when you don't bring any materials.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] Anyway, I believe you've prepared it yourself. Let's begin now.";
 			close2;
 			HNTR_Q = 12;
 			warp "job_hunte",176,22;
 			end;
 		}
-		mes "[Hunter Guildmaster]";
-		mes "Okay!! I hope";
-		mes "you will pass this time!";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay!! I hope";
+		mes "[DRY-RUN] you will pass this time!";
 		close;
 	}
 	else if (HNTR_Q == 16) {
-		mes "[Hunter Guildmaster]";
-		mes "Then hurry and finish";
-		mes "all of your preparations.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Then hurry and finish";
+		mes "[DRY-RUN] all of your preparations.";
 		HNTR_Q = 17;
 		savepoint "payon",104,99,1,1;
 		getitem 1007,1; // Penetration
 		changequest 4012,4013;
 		next;
-		mes "[Hunter Guildmaster]";
-		mes "Wow, you came back in one piece!";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Wow, you came back in one piece!";
 		close;
 	}
 	else if (HNTR_Q == 17) {
-		mes "I mean, good job. I'll give you the item which proves that you have passed the test.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] I mean, good job. I'll give you the item which proves that you have passed the test.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		next;
-		mes "Okay, here it is. Now, go back to the Hunter Guild. I have some more business left to do here, but I hope you can become a Hunter soon.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay, here it is. Now, go back to the Hunter Guild. I have some more business left to do here, but I hope you can become a Hunter soon.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		close;
 	}
 	else {
-		mes "I see you aren't in a hurry to become a Hunter? When I first became a Hunter, I ran around for a month wildly brandishing my bow because I was so happy. Hehe~";
-		mes "[Hunter Guildmaster]";
-		mes "Now, you should go back to the Hunter Guild~";
+		mes "[DRY-RUN] I see you aren't in a hurry to become a Hunter? When I first became a Hunter, I ran around for a month wildly brandishing my bow because I was so happy. Hehe~";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Now, you should go back to the Hunter Guild~";
 		close;
 	}
 }
@@ -783,33 +783,33 @@ payon_in03,131,7,3	script	Hunter#htnGM	59,{
 payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 	cutin "job_huntermaster",2;
 	if (HNTR_Q == 11) {
-		mes "[Hunter Guildmaster]";
-		mes "Mmm. I see you're here for the Hunter job test. Let me explain the testing process. What would you like to know?";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Mmm. I see you're here for the Hunter job test. Let me explain the testing process. What would you like to know?";
 		next;
-		switch( select( "What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "[DRY-RUN] What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[Hunter Guildmaster]";
-			mes "You have to hunt down certain monsters with a particular name, but you must avoid all of the traps here at the same time.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name, but you must avoid all of the traps here at the same time.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "This is to test your ability to move swiftly and locate targets in various situations.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] This is to test your ability to move swiftly and locate targets in various situations.";
 			close3;
 		case 2:
-			mes "[Hunter Guildmaster]";
-			mes "Within the given time, you will start in the 6 o'clock direction of the map, hunt the target monsters, and hit the escape switch that will appear in the center of the map.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] Within the given time, you will start in the 6 o'clock direction of the map, hunt the target monsters, and hit the escape switch that will appear in the center of the map.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
 			close3;
 		case 3:
-			mes "[Hunter Guildmaster]";
-			mes "Mmm. Warnings... Well, if you fall into a trap, you have to start the test over from the beginning. And only one person can take the test at a time.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] Mmm. Warnings... Well, if you fall into a trap, you have to start the test over from the beginning. And only one person can take the test at a time.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
 			next;
-			mes "[Hunter Guildmaster]";
-			mes "If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
 			close3;
 		case 4:
 			// Note: aegis typo
@@ -824,141 +824,141 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			// 	mes "I'll send you right now.";
 			// }
 			// next;
-			mes "[Hunter Guildmaster]";
-			mes "...Okay. I'll send you to the testing area right now. Don't blame me if you get lost or confused because you didn't listen to the explanation.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] ...Okay. I'll send you to the testing area right now. Don't blame me if you get lost or confused because you didn't listen to the explanation.";
 			next;
 		}
-		mes "[Hunter Guildmaster]";
-		mes "Okay, best of luck.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay, best of luck.";
 		getitem 1751,200; // Silver_Arrow
 		next;
-		mes "I'll send you right now.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] I'll send you right now.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		HNTR_Q = 12;
 		changequest 4010,4011;
 		warp "job_hunte",176,22;
 		end;
 	}
 	else if (HNTR_Q > 1 && HNTR_Q < 10) {
-		mes "Well, your arrows are probably still being made, so you can use mine to take the test.";
-		mes "[Hunter Guildmaster]";
-		mes "Good luck.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] Well, your arrows are probably still being made, so you can use mine to take the test.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Good luck.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		next;
-		mes "Mmm...?";
-		mes "Why is an Archer";
+		mes "[DRY-RUN] Mmm...?";
+		mes "[DRY-RUN] Why is an Archer";
 		next;
-		mes "visiting me?";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] visiting me?";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		close3;
 	}
 	else if (HNTR_Q == 10) {
-		mes "I wasn't notified by the Hunter Guild about anything. You're not trying to skip the middle part of the Hunter test, are you?";
-		mes "[Hunter Guildmaster]";
-		mes "Stop by once you have gathered all the items needed for the test.";
-		mes "[Hunter]";
-		mes "Mmm?";
-		mes "Can I help you";
+		mes "[DRY-RUN] I wasn't notified by the Hunter Guild about anything. You're not trying to skip the middle part of the Hunter test, are you?";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Stop by once you have gathered all the items needed for the test.";
+		mes "[DRY-RUN] [Hunter]";
+		mes "[DRY-RUN] Mmm?";
+		mes "[DRY-RUN] Can I help you";
 		next;
-		mes "with something?";
-		mes "Oh, you must be";
+		mes "[DRY-RUN] with something?";
+		mes "[DRY-RUN] Oh, you must be";
 		close3;
 	}
 	else if (HNTR_Q > 11 && HNTR_Q < 16) {
-		mes "a Hunter applicant.";
-		mes "[Hunter]";
+		mes "[DRY-RUN] a Hunter applicant.";
+		mes "[DRY-RUN] [Hunter]";
 		next;
-		mes "If you wish to change jobs, I think you need to go visit the person at Payon Central Palace.";
-		mes "[Hunter Guildmaster]";
-		mes "Mmm? Aren't you the Archer who gave up last time? Now you're ready, right? Then I'll send you to the job change area right now.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] If you wish to change jobs, I think you need to go visit the person at Payon Central Palace.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Mmm? Aren't you the Archer who gave up last time? Now you're ready, right? Then I'll send you to the job change area right now.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		next;
-		switch( select( "What is the test?:What are the requirements to pass the test?:Any warnings?:Begin test.", "What are the requirements to pass the test?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "[DRY-RUN] What is the test?:What are the requirements to pass the test?:Any warnings?:Begin test.", "What are the requirements to pass the test?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "If you still";
-			mes "have questions,";
+			mes "[DRY-RUN] If you still";
+			mes "[DRY-RUN] have questions,";
 			next;
-			mes "feel free to ask.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] feel free to ask.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			close3;
 		case 2:
-			mes "You have to hunt down certain monsters with a particular name, but you must avoid all of the traps here at the same time.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name, but you must avoid all of the traps here at the same time.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			next;
-			mes "This is to test your ability to move swiftly and locate targets in various situations.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] This is to test your ability to move swiftly and locate targets in various situations.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			close3;
 		case 3:
-			mes "Within the given time, you will start in the 6 o'clock direction of the map, hunt the target monsters, and hit the escape switch that will appear in the center of the map.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] Within the given time, you will start in the 6 o'clock direction of the map, hunt the target monsters, and hit the escape switch that will appear in the center of the map.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			next;
-			mes "You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			next;
-			mes "Mmm. Warnings... Well, if you fall into a trap, you have to start the test over from the beginning. And only one person can take the test at a time.";
-			mes "[Hunter Guildmaster]";
+			mes "[DRY-RUN] Mmm. Warnings... Well, if you fall into a trap, you have to start the test over from the beginning. And only one person can take the test at a time.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
 			close3;
 		case 4:
-			mes "I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
-			mes "[Hunter Guildmaster]";
-			mes "If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "[DRY-RUN] I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
+			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "[DRY-RUN] If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
 			next;
 		}
-		mes "[Hunter Guildmaster]";
-		mes "Okay, good luck.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay, good luck.";
 		next;
-		mes "I'll send you right now...";
-		mes "[Hunter Guildmaster]";
-		mes "Eh? Why don't I give you any Silver Arrows? Well, you shouldn't expect to get anything when you didn't even bring the materials.";
-		mes "[Hunter Guildmaster]";
-		mes "Well...";
+		mes "[DRY-RUN] I'll send you right now...";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Eh? Why don't I give you any Silver Arrows? Well, you shouldn't expect to get anything when you didn't even bring the materials.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Well...";
 		next;
-		if (select( "Yes, let's start.:Ah, wait a moment.", "Ah, wait a moment." ) == 1) {
-			mes "I believe";
-			mes "you're ready.";
-			mes "Let's begin.";
+		if (select( "[DRY-RUN] Yes, let's start.:Ah, wait a moment.", "Ah, wait a moment." ) == 1) {
+			mes "[DRY-RUN] I believe";
+			mes "[DRY-RUN] you're ready.";
+			mes "[DRY-RUN] Let's begin.";
 			close2;
 			cutin "",255;
 			HNTR_Q = 12;
 			warp "job_hunte",176,22;
 			end;
 		}
-		mes "[Hunter Guildmaster]";
-		mes "Okay!! Now...";
-		mes "Pass this time!";
-		mes "[Hunter Guildmaster]";
-		mes "*Sigh...*";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Okay!! Now...";
+		mes "[DRY-RUN] Pass this time!";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] *Sigh...*";
 		close3;
 	}
 	else if (HNTR_Q == 16) {
-		mes "Come back when";
-		mes "you're done with";
-		mes "your preparations.";
+		mes "[DRY-RUN] Come back when";
+		mes "[DRY-RUN] you're done with";
+		mes "[DRY-RUN] your preparations.";
 		HNTR_Q = 17;
 		savepoint "payon",104,99,1,1;
 		getitem 1007,1; //Penetration
 		changequest 4012,4013;
 		next;
-		mes "[Hunter Guildmaster]";
-		mes "Wow. You're back in one piece!";
-		mes "I mean, good job. Well then, I'll give you the item which serves as proof that you passed the test.";
-		mes "[Hunter Guildmaster]";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Wow. You're back in one piece!";
+		mes "[DRY-RUN] I mean, good job. Well then, I'll give you the item which serves as proof that you passed the test.";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
 		close3;
 	}
 	else if (HNTR_Q == 17) {
-		mes "Well...";
-		mes "There you go.";
+		mes "[DRY-RUN] Well...";
+		mes "[DRY-RUN] There you go.";
 		next;
-		mes "Now hurry back to the Hunter Guild, and join us~";
-		mes "[Hunter Guildmaster]";
-		mes "I see you're not in a hurry to become a Hunter. I was running around with joy, wildly brandishing my bow the first month I became a Hunter. Hehe~";
-		mes "[Hunter Guildmaster]";
-		mes "Now hurry~";
+		mes "[DRY-RUN] Now hurry back to the Hunter Guild, and join us~";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] I see you're not in a hurry to become a Hunter. I was running around with joy, wildly brandishing my bow the first month I became a Hunter. Hehe~";
+		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[DRY-RUN] Now hurry~";
 		close3;
 	}
 	else {
-		mes "They're waiting";
-		mes "for you back";
+		mes "[DRY-RUN] They're waiting";
+		mes "[DRY-RUN] for you back";
 		close3;
 	}
 }
@@ -966,42 +966,42 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 job_hunte,178,32,1	script	Guide#hnt	107,5,2,{
 OnTouch_:
 	if (HNTR_Q == 12) {
-		mes "[Guide]";
-		mes "Good day. Welcome to the Hunter testing site. The test begins when you enter the next room.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] Good day. Welcome to the Hunter testing site. The test begins when you enter the next room.";
 		next;
-		mes "[Guide]";
-		mes "As explained before, hunt 4 or more of the monsters named ^3355FFJob change monster^000000. Upon doing so, a switch in the center of the map will then appear.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] As explained before, hunt 4 or more of the monsters named ^3355FFJob change monster^000000. Upon doing so, a switch in the center of the map will then appear.";
 		next;
-		mes "[Guide]";
-		mes "When you destroy the switch, the exit will appear in the 12 o'clock direction of the map. Complete everything within the given time and escape.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] When you destroy the switch, the exit will appear in the 12 o'clock direction of the map. Complete everything within the given time and escape.";
 		next;
-		mes "[Guide]";
-		mes "If you faint in the middle, fall into a trap, or go over the time limit, you'll fail. Then you must then retake the test.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] If you faint in the middle, fall into a trap, or go over the time limit, you'll fail. Then you must then retake the test.";
 		next;
-		mes "[Guide]";
-		mes "We will provide the arrows, so just make sure that you bring a bow. Well, then. Please enter when you are ready.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] We will provide the arrows, so just make sure that you bring a bow. Well, then. Please enter when you are ready.";
 		savepoint "job_hunte",176,22,1,1;
 		close;
 	}
 	else if (HNTR_Q > 12 && HNTR_Q < 16) {
-		mes "[Guide]";
-		mes "Hmm...";
-		mes "Did you mess up?";
-		mes "I'll recover some";
-		mes "of your HP and SP for now.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] Hmm...";
+		mes "[DRY-RUN] Did you mess up?";
+		mes "[DRY-RUN] I'll recover some";
+		mes "[DRY-RUN] of your HP and SP for now.";
 		percentheal 100,100;
 		next;
-		mes "[Guide]";
-		mes "If it's too hard, it wouldn't hurt to try again next time. Would you like to resign for now?";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] If it's too hard, it wouldn't hurt to try again next time. Would you like to resign for now?";
 		next;
-		if (select( "Keep trying.:Resign.", "Resign." ) == 1) {
-			mes "[Guide]";
-			mes "Okay. Do your best and become a great Hunter. Please enter the waiting room. If someone is already taking the test, you must wait until that person is done.";
+		if (select( "[DRY-RUN] Keep trying.:Resign.", "Resign." ) == 1) {
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] Okay. Do your best and become a great Hunter. Please enter the waiting room. If someone is already taking the test, you must wait until that person is done.";
 			close;
 		}
 		mapannounce "job_hunte",strcharinfo(0)+ " has resigned. Next person, please enter.",bc_map;
-		mes "[Guide]";
-		mes "Very well. I'll send you to Payon. Hope to see you next time. Don't forget to save when you leave.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] Very well. I'll send you to Payon. Hope to see you next time. Don't forget to save when you leave.";
 		// donpcevent "Waiting Room#hnt::OnStart";
 		close2;
 		HNTR_Q = 13;
@@ -1009,8 +1009,8 @@ OnTouch_:
 		warp "payon_in02",21,27;
 	}
 	else if (HNTR_Q > 15) {
-		mes "[Guide]";
-		mes "You shouldn't be here. How about finding the required job change item first?";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] You shouldn't be here. How about finding the required job change item first?";
 		close2;
 		savepoint "payon",104,99,1,1;
 		warp "payon_in02",21,27;
@@ -1200,29 +1200,29 @@ OnTimer197000:
 
 job_hunte,93,101,1	script	Switch#hnt	723,1,1,{
 OnTouch_:
-	mes "^3355FFThere are 3 buttons";
-	mes "on the escape switch.^000000";
+	mes "[DRY-RUN] ^3355FFThere are 3 buttons";
+	mes "[DRY-RUN] on the escape switch.^000000";
 	HNTR_Q = 15;
 	next;
-	switch( select( "Escape:Cancel:Re-test", "Cancel", "Re-test" ) ) {
+	switch( select( "[DRY-RUN] Escape:Cancel:Re-test", "Cancel", "Re-test" ) ) {
 	case 1:
-		mes "^3355FFThe Escape Warp Portal";
-		mes "has now been activated.^000000";
+		mes "[DRY-RUN] ^3355FFThe Escape Warp Portal";
+		mes "[DRY-RUN] has now been activated.^000000";
 		close2;
 		mapannounce "job_hunte"," !! Escape Warp Portal activation complete. !! ",bc_map;
 		enablenpc "exit#hnttest";
 		end;
 	case 2:
-		mes "^3355FFCanceling";
-		mes "Operation.^000000";
+		mes "[DRY-RUN] ^3355FFCanceling";
+		mes "[DRY-RUN] Operation.^000000";
 		close2;
 		mapannounce "job_hunte"," !! Operation has been cancelled. !! ",bc_map;
 		end;
 	case 3:
 		mapannounce "job_hunte"," !! Cancellation warp activating... !! ",bc_map;
-		mes "^3355FFYou will soon be";
-		mes "returned to the";
-		mes "waiting room.^000000";
+		mes "[DRY-RUN] ^3355FFYou will soon be";
+		mes "[DRY-RUN] returned to the";
+		mes "[DRY-RUN] waiting room.^000000";
 		close2;
 		HNTR_Q = 13;
 		warp "job_hunte",176,22;

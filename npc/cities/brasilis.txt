@@ -14,50 +14,50 @@
 // Brasilis Transportation :: brasilis_trans
 //============================================================
 -	script	::Crewman_bra2	-1,{
-	mes "[Crewman]";
-	mes "Hey, have you heard of a place called Brasilis?";
-	mes "It's a tropical city that's hot like the desert but also rainy. It is a very mysterious place.";
+	mes "[水手]";
+	mes "嘿，你听说过一个叫巴西利斯的地方吗？";
+	mes "那是一个热带城市，像沙漠一样炎热，但也常常下雨。真是个神秘的地方。";
 	next;
-	mes "[Crewman]";
-	mes "We recently found a new ocean route to get there easily.";
+	mes "[水手]";
+	mes "我们最近发现了一条新的海洋航线，可以轻松到达那里。";
 	if (VIP_SCRIPT) {
 		set .@cost, vip_status(VIP_STATUS_ACTIVE)?1000:10000;
-		mes "It's just 10,000 zeny for a round trip, and 1,000 for VIP! So do you want to go?"; //custom translation (VIP)
+		mes "往返只需10,000金币，VIP只需1,000！你想去吗？"; //custom translation (VIP)
 	} else {
 		set .@cost,10000;
-		mes "It's just 10,000 zeny for a round trip! So do you want to go?";
+		mes "往返只需10,000金币！你想去吗？";
 	}
 	next;
-	switch(select("Take me to Brasilis!:I'll stay here.")) {
+	switch(select("带我去巴西利斯！:我留在这里。")) {
 	case 1:
 		if (Zeny < .@cost) {
-			mes "[Crewman]";
+			mes "[水手]";
 			mes "I said "+callfunc("F_InsertComma",.@cost)+" zeny.";
 			close;
 		}
 		else {
-			mes "[Crewman]";
-			mes "Cool~!! Let's go~!";
+			mes "[水手]";
+			mes "太酷了~！！我们出发吧~！";
 			set Zeny, Zeny-.@cost;
 			close2;
 			warp "brasilis",314,60;
 			end;
 		}
 	case 2:
-		mes "[Crewman]";
-		mes "Well if you're ever interested, let me know and I can take you there.";
+		mes "[水手]";
+		mes "如果你有兴趣，告诉我，我可以带你去。";
 		close;
 	}
 }
 
 brasilis,316,57,3	script	Crewman#bra1	100,{
-	mes "[Crewman]";
-	mes "My ship is going to back to Alberta, do you want to join us?";
+	mes "[水手]";
+	mes "我的船要回到艾尔贝塔，你想和我们一起去吗？";
 	next;
-	switch(select("Go back to Alberta.:Not yet~.")) {
+	switch(select("回到艾尔贝塔。:还不~。")) {
 	case 1:
-		mes "[Crewman]";
-		mes "I sure do miss home.";
+		mes "[水手]";
+		mes "我真的很想念家。";
 		close2;
 		if (checkre(0))
 			warp "alberta",245,87;
@@ -65,8 +65,8 @@ brasilis,316,57,3	script	Crewman#bra1	100,{
 			warp "alberta",244,115;
 		end;
 	case 2:
-		mes "[Crewman]";
-		mes "Ok, suit yourself. We'll see you when we get back then.";
+		mes "[水手]";
+		mes "好吧，随你便。我们回来的时候再见。";
 		close;
 	}
 }
@@ -74,30 +74,30 @@ brasilis,316,57,3	script	Crewman#bra1	100,{
 // Generic Brasilis NPCs :: brazil_tre
 //============================================================
 brasilis,155,165,3	script	Signpost#bra1	858,{
-	mes ":: Art Museum ::";
+	mes ":: 艺术博物馆 ::";
 	close;
 }
 
 brasilis,191,239,3	script	Signpost#bra2	858,{
-	mes ":: Verass Monument ::";
+	mes ":: 韦拉斯纪念碑 ::";
 	close;
 }
 
 brasilis,240,247,3	script	Signpost#bra3	858,{
-	mes ":: Market ::";
-	mes " ";
+	mes ":: 市场 ::";
+	mes "- 为你的药水和武器 -";
 	mes "- For your Potions and Weaponry -";
 	close;
 }
 
 brasilis,303,309,3	script	Signpost#bra4	858,{
-	mes ":: Jungle Cable ::";
-	mes "- Not for the faint of heart -";
+	mes ":: 丛林缆索 ::";
+	mes "- 不适合胆小者 -";
 	close;
 }
 
 brasilis,278,137,3	script	Signpost#bra5	858,{
-	mes ":: Brasilis Hotel ::";
+	mes ":: 巴西利斯酒店 ::";
 	close;
 }
 

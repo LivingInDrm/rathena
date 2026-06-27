@@ -20,127 +20,127 @@
 
 einbroch,72,202,4	script	Guide#ein::EinGuide	852,{
 	cutin "ein_soldier",2;
-	mes "[Einbroch Guide]";
-	mes "Welcome";
-	mes "to Einbroch,";
-	mes "the City of Steel.";
-	mes "Please ask me if you";
-	mes "have any questions.";
+	mes "[艾因布罗克向导]";
+	mes "欢迎来到";
+	mes "艾因布罗克，";
+	mes "钢铁之都。";
+	mes "如果您有任何问题，";
+	mes "请随时向我咨询。";
 	set .@loop1,1;
 	while (.@loop1) {
 		next;
-		switch(select("City Guide.:Remove Marks from Mini-Map.:Notice.:Cancel.")) {
+		switch(select("城市向导.:清除小地图标记.:公告.:取消.")) {
 		case 1:
-			mes "[Einbroch Guide]";
-			mes "Please select";
-			mes "a location from";
-			mes "the following menu.";
+			mes "[艾因布罗克向导]";
+			mes "请从下方菜单中";
+			mes "选择一个";
+			mes "您想了解的地点。";
 			if (.@compass_check == 0) {
-				mes "Would you like me";
-				mes "to mark locations";
-				mes "on your Mini-Map?";
+				mes "您需要我在";
+				mes "小地图上标记";
+				mes "各个地点吗？";
 				next;
-				if (select("Yes.:No.") == 1) set .@compass_check,1;
+				if (select("是.:否.") == 1) set .@compass_check,1;
 			}
 			set .@loop2,1;
 			while(.@loop2) {
 				if (.@wait_button_chk == 0) set .@wait_button_chk,1;
 				else next;
-				switch(select("^FF0000Airport^000000:Train Station:Factory:Plaza:Hotel:Weapon Shop:Laboratory:Blacksmith Guild:Einbroch Tower:Cancel")) {
+				switch(select("^FF0000机场^000000:火车站:工厂:广场:酒店:武器店:实验室:铁匠公会:艾因布罗克塔:取消")) {
 				case 1:
-					mes "[Einbroch Guide]";
-					mes "The ^FF0000Airport^000000 is located";
-					mes "in the northwestern part";
-					mes "of the city. There you can";
-					mes "see our city's pride and joy, the Airship. Remember that you must pay admission to board the Airship.";
+					mes "[艾因布罗克向导]";
+					mes "^FF0000机场^000000位于";
+					mes "城市的西北方。";
+					mes "在那里您可以看到我们城市";
+					mes "引以为豪的飞空艇。请注意，登上飞空艇需要支付费用。";
 					if (.@compass_check)
 						viewpoint 1,63,228,2,0xFF0000;
 					break;
 				case 2:
-					mes "[Einbroch Guide]";
-					mes "The Train Station is";
-					mes "located in the northeast";
-					mes "part of Einbroch. Trains";
-					mes "running between here";
-					mes "and Einbech run all day";
-					mes "long, everyday.";
+					mes "[艾因布罗克向导]";
+					mes "火车站位于";
+					mes "艾因布罗克的";
+					mes "东北方。往返于";
+					mes "这里和艾因贝赫之间的";
+					mes "列车全天候";
+					mes "运行。";
 					if (.@compass_check)
 						viewpoint 1,236,279,3,0xFF00FF;
 					break;
 				case 3:
-					mes "[Einbroch Guide]";
-					mes "The Factory, perhaps the";
-					mes "most important facility in";
-					mes "Einbroch, is located in the";
-					mes "southern part of the city.";
+					mes "[艾因布罗克向导]";
+					mes "工厂，也许是";
+					mes "艾因布罗克最重要的";
+					mes "设施，位于";
+					mes "城市的南部。";
 					if (.@compass_check)
 						viewpoint 1,158,78,4,0xFF00FF;
 					break;
 				case 4:
-					mes "[Einbroch Guide]";
-					mes "The Plaza, our biggest";
-					mes "shopping district, can be";
-					mes "found just east from the";
-					mes "center of Einbroch.";
+					mes "[艾因布罗克向导]";
+					mes "广场，我们最大的";
+					mes "购物区，就在";
+					mes "艾因布罗克";
+					mes "中心的东边。";
 					if (.@compass_check)
 						viewpoint 1,232,190,5,0xFF00FF;
 					break;
 				case 5:
-					mes "[Einbroch Guide]";
-					mes "The Hotel is east of";
-					mes "the Plaza and offers top";
-					mes "caliber accomodations.";
-					mes "There, you can enjoy your";
-					mes "stay in Einbroch in comfort~";
+					mes "[艾因布罗克向导]";
+					mes "酒店位于广场的";
+					mes "东边，提供";
+					mes "一流的住宿条件。";
+					mes "在那里，您可以";
+					mes "舒适地享受在艾因布罗克的旅程~";
 					if (.@compass_check)
 						viewpoint 1,260,201,6,0x00FF00;
 					break;
 				case 6:
-					mes "[Einbroch Guide]";
-					mes "The Weapon Shop is";
-					mes "located north from the";
-					mes "Plaza. There you can";
-					mes "purchase weapons for";
-					mes "your personal use.";
+					mes "[艾因布罗克向导]";
+					mes "武器店位于";
+					mes "广场的北边。";
+					mes "在那里您可以";
+					mes "购买您所需的";
+					mes "各种武器。";
 					if (.@compass_check)
 						viewpoint 1,215,221,7,0x00FF00;
 					break;
 				case 7:
-					mes "[Einbroch Guide]";
-					mes "The Laboratory is an";
-					mes "annex of the Factory and";
-					mes "is located in the southwest";
-					mes "sector of Einbroch.";
+					mes "[艾因布罗克向导]";
+					mes "实验室是工厂的";
+					mes "附属设施，";
+					mes "位于艾因布罗克的";
+					mes "西南区域。";
 					if (.@compass_check)
 						viewpoint 1,36,49,8,0x00FF;
 					break;
 				case 8:
-					mes "[Einbroch Guide]";
-					mes "The Blacksmith Guild is";
-					mes "located in the southeast";
-					mes "part of Einbroch. You can";
-					mes "upgrade your equipment";
-					mes "by using their services.";
+					mes "[艾因布罗克向导]";
+					mes "铁匠公会位于";
+					mes "艾因布罗克的";
+					mes "东南方。您可以";
+					mes "利用他们的服务";
+					mes "来升级您的装备。";
 					if (.@compass_check)
 						viewpoint 1,244,90,9,0x00FF00;
 					break;
 				case 9:
-					mes "[Einbroch Guide]";
-					mes "The Einbroch Tower is";
-					mes "located in the center of";
-					mes "the city. From the top of";
-					mes "the tower, you can view";
-					mes "all of Einbroch.";
+					mes "[艾因布罗克向导]";
+					mes "艾因布罗克塔位于";
+					mes "城市的中心。";
+					mes "从塔顶上，";
+					mes "您可以俯瞰";
+					mes "整个艾因布罗克。";
 					if (.@compass_check)
 						viewpoint 1,174,195,10,0xFFFF00;
 					break;
 				case 10:
-					mes "[Einbroch Guide]";
-					mes "Please ask me to ''Remove";
-					mes "Marks from Mini-Map'' if you";
-					mes "no longer wish to have the";
-					mes "location marks displayed";
-					mes "on your Mini-Map.";
+					mes "[艾因布罗克向导]";
+					mes "如果您不再需要";
+					mes "在小地图上显示";
+					mes "地点标记，请选择";
+					mes "''清除小地图标记''";
+					mes "选项即可。";
 					set .@loop2,0;
 				}
 			}
@@ -156,45 +156,45 @@ einbroch,72,202,4	script	Guide#ein::EinGuide	852,{
 			viewpoint 2,244,90,9,0x00FF00;
 			viewpoint 2,174,195,10,0xFFFF00;
 			set .@compass_check,0;
-			mes "[Einbroch Guide]";
-			mes "Okay, the marks from";
-			mes "your Mini-Map have been";
-			mes "removed. If you need any";
-			mes "guidance around Einbroch,";
-			mes "please let me or one of the";
-			mes "other Einbroch Guides know.";
+			mes "[艾因布罗克向导]";
+			mes "好的，您小地图上的";
+			mes "标记已经";
+			mes "清除了。如果您需要";
+			mes "关于艾因布罗克的指引，";
+			mes "请随时向我或其他";
+			mes "艾因布罗克向导咨询。";
 			break;
 		case 3:
-			mes "[Einbroch Guide]";
-			mes "Through the technology of";
-			mes "the Schwaltzvalt Republic,";
-			mes "we've upgraded to a digital";
-			mes "information system that allows";
-			mes "us to mark locations on your";
-			mes "Mini-Map for easier navigation.";
+			mes "[艾因布罗克向导]";
+			mes "通过修瓦尔兹瓦尔德";
+			mes "共和国的技术，";
+			mes "我们已升级为数字化";
+			mes "信息系统，可以在您的";
+			mes "小地图上标记地点，";
+			mes "方便您导航。";
 			next;
-			mes "[Einbroch Guide]";
-			mes "Your Mini-Map is located";
-			mes "in the upper right corner";
-			mes "of the screen. If you can't";
-			mes "see it, press the Ctrl + Tab";
-			mes "keys or click the ''Map'' button in your Basic Info Window.";
+			mes "[艾因布罗克向导]";
+			mes "您的小地图位于";
+			mes "屏幕的右上角。";
+			mes "如果您看不到它，";
+			mes "请按Ctrl + Tab键";
+			mes "或点击基本信息窗口中的''地图''按钮。";
 			next;
-			mes "[Einbroch Guide]";
-			mes "On your Mini-Map,";
-			mes "click on the ''+'' and ''-''";
-			mes "symbols to zoom in and";
-			mes "our of your Mini-Map. We";
-			mes "hope you enjoy your travels";
-			mes "here in Einbroch, adventurer.";
+			mes "[艾因布罗克向导]";
+			mes "在您的小地图上，";
+			mes "点击''+''和''-''";
+			mes "符号可以放大和";
+			mes "缩小小地图。我们";
+			mes "希望您在";
+			mes "艾因布罗克旅途愉快，冒险者。";
 			break;
 		case 4:
-			mes "[Einbroch Guide]";
-			mes "We hope that you";
-			mes "enjoy your travels";
-			mes "here in Einbroch.";
-			mes "Oh, and please be";
-			mes "aware of the Smog Alerts.";
+			mes "[艾因布罗克向导]";
+			mes "我们希望您";
+			mes "在艾因布罗克的";
+			mes "旅途愉快。";
+			mes "哦，还有请";
+			mes "注意烟雾警报。";
 			close2;
 			set .@loop1,0;
 		}
@@ -208,90 +208,90 @@ einbroch,162,317,4	duplicate(EinGuide)	Guide#3ein	852
 
 einbech,67,37,4	script	Guide#4ein::EinGuide2	852,{
 	cutin "ein_soldier",2;
-	mes "[Einbech Guide]";
-	mes "Welcome to Einbech,";
-	mes "the Mining Town. We're";
-	mes "here to assist tourists,";
-	mes "so if you have any questions,";
-	mes "please feel free to ask us.";
+	mes "[艾因贝赫向导]";
+	mes "欢迎来到艾因贝赫，";
+	mes "矿业小镇。我们";
+	mes "在这里为游客提供帮助，";
+	mes "如果您有任何问题，";
+	mes "请随时向我们咨询。";
 	set .@loop1,1;
 	while (.@loop1) {
 		next;
-		switch(select("City Guide.:Remove Marks from Mini-Map.:Notice.:Cancel.")) {
+		switch(select("城市向导.:清除小地图标记.:公告.:取消.")) {
 		case 1:
-			mes "[Einbech Guide]";
-			mes "Please select";
-			mes "a location from";
-			mes "the following menu.";
+			mes "[艾因贝赫向导]";
+			mes "请从下方菜单中";
+			mes "选择一个";
+			mes "您想了解的地点。";
 			if (.@compass_check == 0) {
-				mes "Would you like me";
-				mes "to mark locations";
-				mes "on your Mini-Map?";
+				mes "您需要我在";
+				mes "小地图上标记";
+				mes "各个地点吗？";
 				next;
-				if (select("Yes.:No.") == 1) set .@compass_check,1;
+				if (select("是.:否.") == 1) set .@compass_check,1;
 			}
 			set .@loop2,1;
 			while (.@loop2) {
 				if (.@wait_button_chk == 0) set .@wait_button_chk,1;
 				else next;
-				switch(select("Train Station:Tavern:Tool Shop:Swordman Guild:Mine:Cancel")) {
+				switch(select("火车站:酒馆:道具店:剑士公会:矿山:取消")) {
 				case 1:
-					mes "[Einbech Guide]";
-					mes "The Train Stations are";
-					mes "located in the northwest";
-					mes "and northeast parts of";
-					mes "Einbech. There, you can";
-					mes "take a train to Einbroch.";
+					mes "[艾因贝赫向导]";
+					mes "火车站位于";
+					mes "艾因贝赫的西北方";
+					mes "和东北方。";
+					mes "在那里，您可以";
+					mes "乘坐火车前往艾因布罗克。";
 					if (.@compass_check)
 						viewpoint 1,43,213,2,0xFF0000;
 					break;
 				case 2:
-					mes "[Einbech Guide]";
-					mes "The Tavern is located";
-					mes "in the southern part of";
-					mes "Einbech. It's a nice place";
-					mes "to relax after a long day.";
+					mes "[艾因贝赫向导]";
+					mes "酒馆位于";
+					mes "艾因贝赫的";
+					mes "南部。那是一个";
+					mes "在漫长一天后放松的好地方。";
 					if (.@compass_check)
 						viewpoint 1,142,112,3,0xFF00FF;
 					break;
 				case 3:
-					mes "[Einbech Guide]";
-					mes "You can find the Tool";
-					mes "Shop in the center of";
-					mes "Einbech. There, you can";
-					mes "purchase any tools you";
-					mes "might need for your travels.";
+					mes "[艾因贝赫向导]";
+					mes "道具店位于";
+					mes "艾因贝赫的中心。";
+					mes "在那里，您可以";
+					mes "购买旅途中";
+					mes "可能需要的各种道具。";
 					if (.@compass_check)
 						viewpoint 1,176,136,4,0xFF00FF;
 					break;
 				case 4:
-					mes "[Einbech Guide]";
-					mes "The Swordman Guild";
-					mes "is located in the eastern";
-					mes "outskirts of Einbech. It's";
-					mes "under construction and they";
-					mes "haven't started accepting";
-					mes "applications.";
+					mes "[艾因贝赫向导]";
+					mes "剑士公会位于";
+					mes "艾因贝赫的";
+					mes "东部郊区。目前";
+					mes "正在建设中，";
+					mes "还没有开始";
+					mes "接受申请。";
 					if (.@compass_check)
 						viewpoint 1,250,110,5,0xFF00FF;
 					break;
 				case 5:
-					mes "[Einbech Guide]";
-					mes "The Mine, which is";
-					mes "Einbech's major industry,";
-					mes "is located in the northern";
-					mes "part of this town. It's where";
-					mes "we get all our ores, although monsters get in the miners' way.";
+					mes "[艾因贝赫向导]";
+					mes "矿山，作为";
+					mes "艾因贝赫的主要产业，";
+					mes "位于小镇的";
+					mes "北部。那里是我们获取";
+					mes "所有矿石的地方，不过矿工们常常会受到魔物的阻碍。";
 					if (.@compass_check)
 						viewpoint 1,138,251,6,0x00FF00;
 					break;
 				case 6:
-					mes "[Einbech Guide]";
-					mes "Please ask me to ''Remove";
-					mes "Marks from Mini-Map'' if you";
-					mes "no longer wish to have the";
-					mes "location marks displayed";
-					mes "on your Mini-Map.";
+					mes "[艾因贝赫向导]";
+					mes "如果您不再需要";
+					mes "在小地图上显示";
+					mes "地点标记，请选择";
+					mes "''清除小地图标记''";
+					mes "选项即可。";
 					set .@loop2,0;
 				}
 			}
@@ -303,43 +303,43 @@ einbech,67,37,4	script	Guide#4ein::EinGuide2	852,{
 			viewpoint 2,250,110,5,0xFF00FF;
 			viewpoint 2,138,251,6,0x00FF00;
 			set .@compass_check,0;
-			mes "[Einbech Guide]";
-			mes "Okay, the marks from";
-			mes "your Mini-Map have been";
-			mes "removed. If you need any";
-			mes "guidance around Einbech,";
-			mes "please let me or one of the";
-			mes "other Einbech Guides know.";
+			mes "[艾因贝赫向导]";
+			mes "好的，您小地图上的";
+			mes "标记已经";
+			mes "清除了。如果您需要";
+			mes "关于艾因贝赫的指引，";
+			mes "请随时向我或其他";
+			mes "艾因贝赫向导咨询。";
 			break;
 		case 3:
-			mes "[Einbech Guide]";
-			mes "Through the technology of";
-			mes "the Schwaltzvalt Republic,";
-			mes "we've upgraded to a digital";
-			mes "information system that allows";
-			mes "us to mark locations on your";
-			mes "Mini-Map for easier navigation.";
+			mes "[艾因贝赫向导]";
+			mes "通过修瓦尔兹瓦尔德";
+			mes "共和国的技术，";
+			mes "我们已升级为数字化";
+			mes "信息系统，可以在您的";
+			mes "小地图上标记地点，";
+			mes "方便您导航。";
 			next;
-			mes "[Einbech Guide]";
-			mes "Your Mini-Map is located";
-			mes "in the upper right corner";
-			mes "of the screen. If you can't";
-			mes "see it, press the Ctrl + Tab";
-			mes "keys or click the ''Map'' button in your Basic Info Window.";
+			mes "[艾因贝赫向导]";
+			mes "您的小地图位于";
+			mes "屏幕的右上角。";
+			mes "如果您看不到它，";
+			mes "请按Ctrl + Tab键";
+			mes "或点击基本信息窗口中的''地图''按钮。";
 			next;
-			mes "[Einbech Guide]";
-			mes "On your Mini-Map,";
-			mes "click on the ''+'' and ''-''";
-			mes "symbols to zoom in and";
-			mes "our of your Mini-Map. We";
-			mes "hope you enjoy your travels";
-			mes "here in Einbech, adventurer.";
+			mes "[艾因贝赫向导]";
+			mes "在您的小地图上，";
+			mes "点击''+''和''-''";
+			mes "符号可以放大和";
+			mes "缩小小地图。我们";
+			mes "希望您在";
+			mes "艾因贝赫旅途愉快，冒险者。";
 			break;
 		case 4:
-			mes "[Einbech Guide]";
-			mes "We hope that you";
-			mes "enjoy your travels";
-			mes "here in Einbech.";
+			mes "[艾因贝赫向导]";
+			mes "我们希望您";
+			mes "在艾因贝赫的";
+			mes "旅途愉快。";
 			close2;
 			set .@loop1,0;
 		}

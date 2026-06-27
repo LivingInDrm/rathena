@@ -16,53 +16,53 @@
 //============================================================
 
 brasilis,219,97,3	script	Brasilis Guide	478,{
-	mes "[Brasilis Guide]";
-	mes "Welcome to ^8B4513Brasilis^000000, a country as passionate as the sun.";
-	mes "If you have any questions, please ask me.";
+	mes "[巴西利斯向导]";
+	mes "欢迎来到^8B4513巴西利斯^000000，一个如阳光般热情似火的国度。";
+	mes "如果您有任何问题，请尽管问我。";
 	next;
-	switch(select("Ask about locations:Remove Marks from Mini-Map:Cancel")) {
+	switch(select("询问地点:清除小地图标记:取消")) {
 	case 1:
-		mes "[Brasilis Guide]";
-		mes "Where can I guide you?";
+		mes "[巴西利斯向导]";
+		mes "您想去哪里呢？";
 		next;
-		switch(select("[ Hotel ]:[ Jungle Cable ]:[ Art Museum ]:[ Market ]:[ Verass Monument ]")) {
+		switch(select("[ 旅馆 ]:[ 丛林缆车 ]:[ 美术馆 ]:[ 市场 ]:[ 维拉斯纪念碑 ]")) {
 		case 1:
-			mes "[Brasilis Guide]";
-			mes "The Brasilis Hotel is located just above, ^FF3355+^000000.";
-			mes "Is there anything else I can do for you?";
+			mes "[巴西利斯向导]";
+			mes "巴西利斯旅馆就在上方，^FF3355+^000000 处。";
+			mes "还有什么我能为您效劳的吗？";
 			viewpoint 1,274,151,2,0xFF3355;
 			close;
 		case 2:
-			mes "[Brasilis Guide]";
-			mes "Do you want to go through the rough jungle? You can take a ";
-			mes "Jungle Cable here ^CE6300+^000000.";
-			mes "Is there anything else I can do for you?";
+			mes "[巴西利斯向导]";
+			mes "您想穿越茂密的丛林吗？您可以在";
+			mes "^CE6300+^000000 处乘坐丛林缆车。";
+			mes "还有什么我能为您效劳的吗？";
 			viewpoint 1,308,335,3,0xCE6300;
 			close;
 		case 3:
-			mes "[Brasilis Guide]";
-			mes "The pride of Brasilis, the world scale Art Museum is at ^A5BAAD+^000000.";
-			mes "Is there anything else I can do for you?";
+			mes "[巴西利斯向导]";
+			mes "巴西利斯的骄傲——世界级的美术馆就在 ^A5BAAD+^000000 处。";
+			mes "还有什么我能为您效劳的吗？";
 			viewpoint 1,137,167,4,0x00FF00;
 			close;
 		case 4:
-			mes "[Brasilis Guide]";
-			mes "You can buy items for hunting at the Market here ^55FF33+^000000.";
-			mes "Is there anything else I can do for you?";
+			mes "[巴西利斯向导]";
+			mes "您可以在 ^55FF33+^000000 处的市场购买狩猎所需的物品。";
+			mes "还有什么我能为您效劳的吗？";
 			viewpoint 1,254,248,5,0x55FF33;
 			close;
 		case 5:
-			mes "[Brasilis Guide]";
-			mes "The iconic monument of Brasilis, the Verass Monument stands at ^3355FF+^000000.";
-			mes "Is there anything else I can do for you?";
+			mes "[巴西利斯向导]";
+			mes "巴西利斯的标志性建筑——维拉斯纪念碑矗立在 ^3355FF+^000000 处。";
+			mes "还有什么我能为您效劳的吗？";
 			viewpoint 1,195,235,6,0x3355FF;
 			close;
 		}
 		end;
 	case 2:
-		mes "[Brasilis Guide]";
-		mes "I'll remove all marks from your mini-map.";
-		mes "Is there anything else I can do for you?";
+		mes "[巴西利斯向导]";
+		mes "我已为您清除小地图上的所有标记。";
+		mes "还有什么我能为您效劳的吗？";
 		viewpoint 0,274,151,2,0x00FF00;
 		viewpoint 0,308,335,3,0x00FF00;
 		viewpoint 0,137,167,4,0x00FF00;
@@ -70,8 +70,8 @@ brasilis,219,97,3	script	Brasilis Guide	478,{
 		viewpoint 0,195,235,6,0x00FF00;
 		close;
 	case 3:
-		mes "[Brasilis Guide]";
-		mes "Wandering on your own is always the best way to explore. Anyway, take care.";
+		mes "[巴西利斯向导]";
+		mes "自由漫步总是探索城市的最好方式。总之，请多保重。";
 		close;
 	}
 }

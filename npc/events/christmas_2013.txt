@@ -863,34 +863,34 @@ xmas,168,164,3	script	Raffini Girl#xmas	438,{ end; }
 
 xmas,147,123,5	script	Angeling#xmas	948,{
 	if (isbegin_quest(15056) == 0) {
-		mes "[Angeling]";
-		mes "Kkuing~";
+		mes "[DRY-RUN] [Angeling]";
+		mes "[DRY-RUN] Kkuing~";
 		emotion ET_THROB;
 		next;
-		mes "[Arc Angeling]";
-		mes "Kkuing Kkuing~";
+		mes "[DRY-RUN] [Arc Angeling]";
+		mes "[DRY-RUN] Kkuing Kkuing~";
 		emotion ET_THROB, getnpcid(0, "Arc Angeling#xmas");
 		close;
 	} else if (isbegin_quest(15056) == 1 && xmas2013_01 < 5) {
-		mes "[Angeling]";
-		mes "Kkuing~";
+		mes "[DRY-RUN] [Angeling]";
+		mes "[DRY-RUN] Kkuing~";
 		emotion ET_THROB;
 		next;
-		mes "[Arc Angeling]";
-		mes "Kkuing Kkuing~";
+		mes "[DRY-RUN] [Arc Angeling]";
+		mes "[DRY-RUN] Kkuing Kkuing~";
 		emotion ET_THROB, getnpcid(0, "Arc Angeling#xmas");
 		next;
-		mes "- I cannot bother them though.";
-		mes "- Can't even talk to them,";
-		mes "- oh well.";
+		mes "[DRY-RUN] - I cannot bother them though.";
+		mes "[DRY-RUN] - Can't even talk to them,";
+		mes "[DRY-RUN] - oh well.";
 		next;
-		mes "- Just hunt them?";
-		mes "- ......No way.";
+		mes "[DRY-RUN] - Just hunt them?";
+		mes "[DRY-RUN] - ......No way.";
 		close;
 	} else if (isbegin_quest(15056) == 1 && xmas2013_01 > 4) {
-		mes "- Couple breaking point";
-		mes "- is now more than 5.";
-		mes "- I should go back to Union Commander Cliff.";
+		mes "[DRY-RUN] - Couple breaking point";
+		mes "[DRY-RUN] - is now more than 5.";
+		mes "[DRY-RUN] - I should go back to Union Commander Cliff.";
 		close;
 	}
 	end;
@@ -899,77 +899,77 @@ xmas,149,123,3	script	Arc Angeling#xmas	949,{ end; }
 
 xmas,129,115,5	script	Prenetan#xmas	783,{
 	if (isbegin_quest(15056) == 0) {
-		mes "[Prenetan]";
-		mes "Umba~ Umba Umba!";
-		mes "Umba Umumumum!";
+		mes "[DRY-RUN] [Prenetan]";
+		mes "[DRY-RUN] Umba~ Umba Umba!";
+		mes "[DRY-RUN] Umba Umumumum!";
 		next;
-		mes "[Prenetan]";
-		mes "Finally got you, huh? You are cheating on me until now and even made me chase after you? I'll kill you boy!";
+		mes "[DRY-RUN] [Prenetan]";
+		mes "[DRY-RUN] Finally got you, huh? You are cheating on me until now and even made me chase after you? I'll kill you boy!";
 		emotion ET_FRET;
 		next;
-		mes "[Umpoucoriotan]";
-		mes "Ooohh... my wife is too violent. Ohh...it hurts!";
+		mes "[DRY-RUN] [Umpoucoriotan]";
+		mes "[DRY-RUN] Ooohh... my wife is too violent. Ohh...it hurts!";
 		emotion ET_CRY, getnpcid(0, "Umpoucoriotan#xmas");
 		close;
 	} else if (isbegin_quest(15056) == 1 && xmas2013_01 < 5) {
-		mes "[Prenetan]";
-		mes "Umba~ Umba umba!";
-		mes "Umba umumumum!";
+		mes "[DRY-RUN] [Prenetan]";
+		mes "[DRY-RUN] Umba~ Umba umba!";
+		mes "[DRY-RUN] Umba umumumum!";
 		next;
-		mes "[Prenetan]";
-		mes "Finally got you, huh? You are cheating on me until now and even made me chase after you? I'll kill you boy!";
+		mes "[DRY-RUN] [Prenetan]";
+		mes "[DRY-RUN] Finally got you, huh? You are cheating on me until now and even made me chase after you? I'll kill you boy!";
 		emotion ET_FRET;
 		next;
-		mes "[Umpoucoriotan]";
-		mes "Ooohh... my wife is too violent. Ohh...it hurts!";
+		mes "[DRY-RUN] [Umpoucoriotan]";
+		mes "[DRY-RUN] Ooohh... my wife is too violent. Ohh...it hurts!";
 		emotion ET_CRY, getnpcid(0, "Umpoucoriotan#xmas");
 		next;
-		mes "[Umpoucoriotan]";
-		mes "Wenathan, berzthan, Chabimathan";
-		mes "Oooh... The girls of Umbala are here... They're waiting for me now....Arg! Don't touch me!";
+		mes "[DRY-RUN] [Umpoucoriotan]";
+		mes "[DRY-RUN] Wenathan, berzthan, Chabimathan";
+		mes "[DRY-RUN] Oooh... The girls of Umbala are here... They're waiting for me now....Arg! Don't touch me!";
 		next;
-		mes "[Prenetan]";
-		mes "How stupid you are!";
-		mes "Those girls never wanted to see you and that's just a lie that they would come here!!";
+		mes "[DRY-RUN] [Prenetan]";
+		mes "[DRY-RUN] How stupid you are!";
+		mes "[DRY-RUN] Those girls never wanted to see you and that's just a lie that they would come here!!";
 		next;
-		select("- No. They are all here!");
+		select("[DRY-RUN] - No. They are all here!");
 		hideonnpc "Prenetan#xmas";
 		hideonnpc "Umpoucoriotan#xmas";
 		initnpctimer;
 		set .@cu_bre, rand(1,10);
 		if (.@cu_bre < 6) {
 			set xmas2013_01, xmas2013_01 + 1;
-			mes "[Umpoucoriotan]";
-			mes "Umm...yeah I know..Is it true those girls are here?";
+			mes "[DRY-RUN] [Umpoucoriotan]";
+			mes "[DRY-RUN] Umm...yeah I know..Is it true those girls are here?";
 			next;
-			mes "[Umpoucoriotan]";
-			mes "...Oh I got a stomachache... Did I have something wrong... Darling, just a second. I'll be right back soon to go to the restroom! Just wait for a while here!";
+			mes "[DRY-RUN] [Umpoucoriotan]";
+			mes "[DRY-RUN] ...Oh I got a stomachache... Did I have something wrong... Darling, just a second. I'll be right back soon to go to the restroom! Just wait for a while here!";
 			next;
-			mes "[Prenetan]";
-			mes "Hey you idiot! Stop right there! Stop! ...STOP!!!";
+			mes "[DRY-RUN] [Prenetan]";
+			mes "[DRY-RUN] Hey you idiot! Stop right there! Stop! ...STOP!!!";
 			next;
-			mes "- Well, things are quite easy. Got 1 score point!";
+			mes "[DRY-RUN] - Well, things are quite easy. Got 1 score point!";
 		} else {
 			set xmas2013_01, xmas2013_01 + 1;
-			mes "[Prenetan]";
-			mes "Who's there? You want to be killed, too?";
+			mes "[DRY-RUN] [Prenetan]";
+			mes "[DRY-RUN] Who's there? You want to be killed, too?";
 			next;
-			mes "- Oops";
+			mes "[DRY-RUN] - Oops";
 			next;
-			mes "[Prenetan]";
-			mes "You still don't understand anything. Come here, I'm taking you back to Umbala!";
+			mes "[DRY-RUN] [Prenetan]";
+			mes "[DRY-RUN] You still don't understand anything. Come here, I'm taking you back to Umbala!";
 			next;
-			mes "[Umpoucoriotan]";
-			mes "ARG! ....Arrrrrrrrg!! It hurts! Noooo!!! They're waiting for me!!!";
+			mes "[DRY-RUN] [Umpoucoriotan]";
+			mes "[DRY-RUN] ARG! ....Arrrrrrrrg!! It hurts! Noooo!!! They're waiting for me!!!";
 			next;
-			mes "- Well, he just made it harder for himself. Got 1 score point!";
+			mes "[DRY-RUN] - Well, he just made it harder for himself. Got 1 score point!";
 		}
 		mes "- Current couple breaking point is " + xmas2013_01 + ".";
 		close;
 	} else if (isbegin_quest(15056) == 1 && xmas2013_01 > 4) {
-		mes "- Couple breaking point";
-		mes "- is now more than 5.";
-		mes "- I should go back to Union Commander Cliff.";
+		mes "[DRY-RUN] - Couple breaking point";
+		mes "[DRY-RUN] - is now more than 5.";
+		mes "[DRY-RUN] - I should go back to Union Commander Cliff.";
 		close;
 	}
 	end;

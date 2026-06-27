@@ -13,35 +13,35 @@ moc_fild12,261,318,3	script	Suspicious Man	4_M_MOCASS2,2,2,{
 OnTouch:
 	if (Class == Job_Gunslinger && BaseLevel >= 99 && JobLevel >= 70) {
 		if (isbegin_quest(12340) == 0) {
-			mes "[Suspicious Man]";
-			mes "Finally I've found you, Vagabond Spike! Your neck is mine!";
+			mes "[可疑的男人]";
+			mes "终于找到你了，流浪者斯派克！你的人头是我的了！";
 			next;
-			select("Say what?");
-			mes "[Suspicious Man]";
-			mes "*Snort* Don't pretend like you don't know. Look at this poster! You're in it!";
+			select("你说什么？");
+			mes "[可疑的男人]";
+			mes "*哼*别装不知道。看看这张通缉令！上面就是你！";
 			next;
-			select("I see the resemblance, but that's not me.");
+			select("我承认长得像，但那不是我。");
 			mes "["+strcharinfo(0)+"]";
-			mes "Forget the resemblance. Where did you get that poster? I've never committed a crime.";
+			mes "别管像不像了。你从哪弄来的通缉令？我从没犯过罪。";
 			next;
-			mes "[Suspicious Man]";
-			mes "I knew you'd try to lie your way out.";
+			mes "[可疑的男人]";
+			mes "我就知道你会想蒙混过关。";
 			next;
-			mes "[Suspicious Man]";
-			mes "The ^0000ffEinbroch Private Pub^000000 has released that wanted poster. You have many bounty hunters like me on your heels.";
+			mes "[可疑的男人]";
+			mes "^0000ff艾因布罗赫私人酒馆^000000发布了那张通缉令。像我这样追你的赏金猎人不止一个。";
 			next;
-			mes "[Suspicious Man]";
-			mes "I don't care if you're the right one so long as you look it and I can take you dead or alive.";
+			mes "[可疑的男人]";
+			mes "我不管你是不是本人，只要你长得像，我就能把你活捉或击毙。";
 		}
 		else {
-			mes "[Suspicious Man]";
-			mes "It's you again! You've got guts to come back here!";
+			mes "[可疑的男人]";
+			mes "又是你！你还敢回来！";
 		}
 		next;
-		if (select("Make a run for it.:Fight him.") == 1)
-			mes "^0000ffI should run for now and think about this later.^000000";
+		if (select("赶紧逃跑。:跟他打。") == 1)
+			mes "^0000ff我现在应该先跑，以后再想办法。^000000";
 		else
-			mes "^0000ffHe's not the only bounty hunter after me, if he's telling the truth. I need time to strategize.^000000";
+			mes "^0000ff追我的赏金猎人不止他一个，如果他说的是真的。我需要时间想个对策。^000000";
 		close2;
 		if (isbegin_quest(12340) == 0)
 			setquest 12340;// Rebellion Job Change Quest
@@ -52,45 +52,45 @@ OnTouch:
 
 einbroch,54,97,3	script	Bouncer	4_M_REBELLION,{
 	if (BaseClass != Job_Gunslinger) {
-		mes "[Bouncer]";
-		mes "No loitering around the venue.";
+		mes "[保镖]";
+		mes "不准在场地周围闲逛。";
 		close;
 	}
 	switch( isbegin_quest(12340) ) {
 	case 0:
-		mes "[Bouncer]";
-		mes "Under construction, can't get in.";
+		mes "[保镖]";
+		mes "正在施工，不能进入。";
 		close;
 	case 1:
-		mes "[Bouncer]";
-		mes "*Gasp* You! I thought you were already captured. Ooh, doesn't matter now. You're my Get Out of Jail Free card!";
+		mes "[保镖]";
+		mes "*倒吸一口气*你！我以为你已经被抓了。哦，不管了。你就是我的免死金牌！";
 		next;
-		select("I'm not the criminal you think I am!");
-		mes "[Bouncer]";
-		mes "You aren't?";
+		select("我不是你以为的那个罪犯！");
+		mes "[保镖]";
+		mes "你不是？";
 		next;
-		mes "^0000ffThe bouncer examines your face.^000000";
+		mes "^0000ff保镖仔细端详你的脸。^000000";
 		next;
-		mes "[Bouncer]";
-		mes "Hm, you bear a striking resemblance, though you don't look not as menacing as that criminal Spike";
+		mes "[保镖]";
+		mes "嗯，你确实长得很像，不过你看起来没有罪犯斯派克那么凶狠。";
 		next;
-		select("I want to talk to the poster publisher.");
-		mes "[Bouncer]";
-		mes "Your problem is a bit out of my league. Get in. If I find out you're the real deal all along, I'll see that you'll never see the outside again.";
+		select("我想跟发布通缉令的人谈谈。");
+		mes "[保镖]";
+		mes "你的问题超出了我的能力范围。进去吧。如果我发现你一直就是本人，我会让你再也见不到外面的天。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	case 2:
-		mes "[Bouncer]";
-		mes "You're back. Why?";
+		mes "[保镖]";
+		mes "你回来了。为什么？";
 		next;
-		if (select("I want in.:I was passing by.") == 2) {
-			mes "[Bouncer]";
-			mes "You're silly.";
+		if (select("我想进去。:我只是路过。") == 2) {
+			mes "[保镖]";
+			mes "你真傻。";
 			close;
 		}
-		mes "[Bouncer]";
-		mes "Go ahead. Stay out of trouble.";
+		mes "[保镖]";
+		mes "进去吧。别惹麻烦。";
 		close2;
 		warp "job_gun",70,28;
 		end;
@@ -98,39 +98,39 @@ einbroch,54,97,3	script	Bouncer	4_M_REBELLION,{
 }
 
 job_gun,68,33,3	script	Ruthless Rebellion	4_F_REBELLION,{
-	mes "[Ruthless Rebellion]";
-	mes "Do you know how to use a gun?";
+	mes "[冷酷的反叛者]";
+	mes "你会用枪吗？";
 	close;
 }
 
 job_gun,78,33,3	script	Suspicious Gunslinger	4_M_JOB_BLACKSMITH,{
-	mes "[Suspicious Gunslinger]";
-	mes "...";
+	mes "[可疑的枪手]";
+	mes "……";
 	next;
-	mes "[Quiet Gunslinger]";
-	mes "Don't say I look like a blacksmith you know.";
+	mes "[沉默的枪手]";
+	mes "别说我长得像你认识的某个铁匠。";
 	close;
 }
 
 job_gun,74,24,6	script	Drunken Man	4_M_LIEMAN,{
-	mes "[Drunken Man]";
-	mes "*Hiccups* Oh, I'm the owner here.";
-	mes "Oh wait, am I in the pub or someplace else? Zzz...";
+	mes "[醉汉]";
+	mes "*打嗝*哦，我是这里的老板。";
+	mes "等等，我是在酒馆还是别的地方？呼呼……";
 	close;
 }
 
 job_gun,64,33,6	script	Anxious Man	4_M_ALCHE_A,{
-	mes "[Anxious Man]";
-	mes "Maybe I'm in the wrong place. This place doesn't look like a pub.";
+	mes "[焦虑的男人]";
+	mes "也许我来错地方了。这里看起来不像酒馆。";
 	close;
 }
 
 job_gun,86,29,3	script	Kulbertinov	4_M_REBELLION,{
 	if (Class == Job_Rebellion) {
-		mes "[Kulbertinov]";
-		mes "Do you want to see the boss?";
+		mes "[库尔贝蒂诺夫]";
+		mes "你想见老板吗？";
 		next;
-		if (select("Yes.:No.") == 1) {
+		if (select("是。:否。") == 1) {
 			close2;
 			warp "job_gun",220,130;
 			end;
@@ -138,78 +138,78 @@ job_gun,86,29,3	script	Kulbertinov	4_M_REBELLION,{
 		end;
 	}
 	if (Class != Job_Gunslinger) {
-		mes "[Kulbertinov]";
-		mes "Are you looking for me?";
+		mes "[库尔贝蒂诺夫]";
+		mes "你在找我吗？";
 		close;
 	}
 	switch( isbegin_quest(12340) ) {
 	case 0:
-		mes "[Kulbertinov]";
-		mes "Can I help you?";
+		mes "[库尔贝蒂诺夫]";
+		mes "有什么我能帮你的吗？";
 		close;
 	case 1:
-		mes "[Kulbertinov]";
-		mes "What do you want?";
+		mes "[库尔贝蒂诺夫]";
+		mes "你想要什么？";
 		next;
-		select("I'm mistaken for a criminal!.");
-		mes "[Kulbertinov]";
-		mes "Wait a minute... Mwah hah hah!";
+		select("我被当成罪犯了！");
+		mes "[库尔贝蒂诺夫]";
+		mes "等一下……哇哈哈哈！";
 		next;
-		mes "^0000ffHe scans your face, then guffaws.^000000";
+		mes "^0000ff他扫视你的脸，然后大笑起来。^000000";
 		next;
-		mes "[Kulbertinov]";
-		mes "I'm sorry. For a moment, I thought Spike came back to life. He was found dead three days ago.";
+		mes "[库尔贝蒂诺夫]";
+		mes "抱歉。我一时以为斯派克死而复生了。他三天前被发现死了。";
 		next;
-		select("He was captured already?");
-		mes "[Kulbertinov]";
-		mes "Yes, and the bounty hunter was already paid. The news hasn't spread, and you're the spitting image of him. Go figure.";
+		select("他已经被抓了？");
+		mes "[库尔贝蒂诺夫]";
+		mes "是的，赏金猎人已经拿到报酬了。消息还没传开，而你跟他长得一模一样。真是巧了。";
 		next;
-		select("You have to do something!");
-		mes "[Kulbertinov]";
-		mes "I'm sorry, but I can't talk to every single bounty hunter for you. Of course, I'm willing to compensate for your inconvenience.";
+		select("你得想想办法！");
+		mes "[库尔贝蒂诺夫]";
+		mes "抱歉，我不能替你跟每个赏金猎人解释。当然，我愿意补偿你的不便。";
 		next;
-		mes "[Kulbertinov]";
-		mes "Hey, how about you join our ranks? At the very last, you won't get shot.";
+		mes "[库尔贝蒂诺夫]";
+		mes "嘿，你要不要加入我们？至少你不会被人开枪打。";
 		next;
-		select("You want me become a bounty hunter?");
-		mes "[Kulbertinov]";
-		mes "No, bounty hunting is just a pastime. We're the experts of all the firearms in the world.";
+		select("你想让我当赏金猎人？");
+		mes "[库尔贝蒂诺夫]";
+		mes "不，赏金猎人只是副业。我们是全世界所有火器的专家。";
 		next;
-		mes "[Kulbertinov]";
-		mes "Carefree spirits!";
-		mes "Magical spitfires!";
-		mes "We call ourselves the ^0000ffRebellion^000000.";
+		mes "[库尔贝蒂诺夫]";
+		mes "自由的灵魂！";
+		mes "神奇的火力！";
+		mes "我们自称^0000ff反叛者^000000。";
 		next;
-		mes "[Kulbertinov]";
-		mes "You look like you know how to use a gun. How'd you like to join our ranks? You won't have to worry about other bounty hunters anymore too.";
+		mes "[库尔贝蒂诺夫]";
+		mes "你看起来会用枪。要不要加入我们？这样你也不用再担心其他赏金猎人了。";
 		next;
-		if (select("Let me think it over.:I don't think I have a choice.") == 1) {
-			mes "[Kulbertinov]";
-			mes "You can think it over and over, but the answer won't change. Just take the offer.";
+		if (select("让我考虑一下。:我好像没得选。") == 1) {
+			mes "[库尔贝蒂诺夫]";
+			mes "你可以反复考虑，但答案不会变。接受吧。";
 		}
 		else {
-			mes "[Kulbertinov]";
-			mes "Good thinking. Might as well do it now and get it over with.";
+			mes "[库尔贝蒂诺夫]";
+			mes "想得好。不如现在就办了。";
 		}
 		next;
-		mes "[Kulbertinov]";
-		mes "Talk to Enwin Conick. She guides drifting spirits like you to the way of the Rebellion. I'll send word to her. Ah, and don't point your gun at her.";
+		mes "[库尔贝蒂诺夫]";
+		mes "去找艾尔温·科尼克。她负责引导像你这样的漂泊灵魂走上反叛者之路。我会通知她的。啊，别拿枪指着她。";
 		completequest 12340;
 		setquest 12341;// Rebellion Job Change Quest
 		close2;
 		warp "job_gun",19,15;
 		end;
 	case 2:
-		mes "[Kulbertinov]";
-		mes "Do you have business with Elwin Conick?";
+		mes "[库尔贝蒂诺夫]";
+		mes "你找艾尔温·科尼克有事吗？";
 		next;
-		if (select("No.:Send me to Elwin Conick.") == 1) {
-			mes "[Kulbertinov]";
-			mes "All right. Care for a shot of vodka?";
+		if (select("没有。:送我去找艾尔温·科尼克。") == 1) {
+			mes "[库尔贝蒂诺夫]";
+			mes "好的。来杯伏特加吗？";
 			close;
 		}
-		mes "[Kulbertinov]";
-		mes "Okay, I'll let her know.";
+		mes "[库尔贝蒂诺夫]";
+		mes "好的，我会通知她。";
 		close2;
 		warp "job_gun",19,15;
 		end;
@@ -218,86 +218,86 @@ job_gun,86,29,3	script	Kulbertinov	4_M_REBELLION,{
 
 job_gun,19,24,3	script	Elwin Conick#1	4_F_REBELLION,{
 	if (Class != Job_Gunslinger) {
-		mes "[Elwin Conick]";
-		mes "If you don't want to join Rebellions, just get out.";
+		mes "[艾尔温·科尼克]";
+		mes "如果你不想加入反叛者，就出去。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
 	if (isbegin_quest(12341) == 1) {
-		mes "[Elwin Conick]";
-		mes "Do you to join us Rebellions?";
+		mes "[艾尔温·科尼克]";
+		mes "你要加入我们反叛者吗？";
 		next;
-		mes "^0000ffThe short woman with keen eyes stares into your eyes.^000000";
+		mes "^0000ff这个目光锐利的矮个子女人直视你的眼睛。^000000";
 		next;
-		mes "[Elwin Conick]";
-		mes "Sign here.";
+		mes "[艾尔温·科尼克]";
+		mes "在这里签名。";
 		next;
-		mes "^0000ffThe undersigned party '_____' will not speak of the test even if he or she suffers injury, mutilation, or death in an unforeseen accident that may occur during the test.^000000";
+		mes "^0000ff签署方'_____'不得泄露测试内容，即使在测试中发生意外导致受伤、残疾或死亡。^000000";
 		next;
-		select("WHAT?!");
-		mes "[Elwin Conick]";
-		mes "Do you want join us or not?";
+		select("什么？！");
+		mes "[艾尔温·科尼克]";
+		mes "你到底要不要加入？";
 		next;
-		if (select("I give up.:...I'll sign.") == 1) {
-			mes "[Elwin Conick]";
-			mes "Your choice.";
+		if (select("我放弃。:……我签。") == 1) {
+			mes "[艾尔温·科尼克]";
+			mes "你自己选。";
 			close2;
 			warp "job_gun",81,29;
 			end;
 		}
-		mes "[Elwin Conick]";
-		mes "Good. Now, follow me.";
+		mes "[艾尔温·科尼克]";
+		mes "好。现在，跟我来。";
 		close2;
 		warp "job_gun",117,41;
 		end;
 	}
 	if (isbegin_quest(12342) == 1) {
-		mes "[Elwin Conick]";
-		mes "Do you want to try again?";
+		mes "[艾尔温·科尼克]";
+		mes "你想再试一次吗？";
 		next;
-		if (select("I give up.:Do it.") == 1) {
-			mes "[Elwin Conick]";
-			mes "Your choice.";
+		if (select("我放弃。:开始。") == 1) {
+			mes "[艾尔温·科尼克]";
+			mes "你自己选。";
 			close2;
 			warp "job_gun",81,29;
 			end;
 		}
-		mes "[Elwin Conick]";
-		mes "Follow me.";
+		mes "[艾尔温·科尼克]";
+		mes "跟我来。";
 		close2;
 		warp "job_gun",117,41;
 		end;
 	}
 	if (isbegin_quest(12343) > 0) {
-		mes "[Elwin Conick]";
+		mes "[艾尔温·科尼克]";
 		if (isbegin_quest(12343) == 1)
-			mes "You still have Ivan's shooting test, do you want to try again?";
+			mes "你还有伊万的射击测试，要再试一次吗？";
 		else
-			mes "Ivan's shooting test have not finished yet, do you want to try again?";
+			mes "伊万的射击测试还没完成，要再试一次吗？";
 		next;
-		if (select("I give up.:Do it.") == 1) {
-			mes "[Elwin Conick]";
-			mes "It's not worth to give up, now go out and relax.";
+		if (select("我放弃。:开始。") == 1) {
+			mes "[艾尔温·科尼克]";
+			mes "放弃不值得，现在出去放松一下吧。";
 			close2;
 			warp "job_gun",81,29;
 			end;
 		}
-		mes "[Elwin Conick]";
-		mes "Remember to give your best.";
+		mes "[艾尔温·科尼克]";
+		mes "记得全力以赴。";
 		close2;
 		warp "job_gun",120,130;
 		end;
 	}
 	if (isbegin_quest(12345) == 1) {
-		mes "[Elwin Conick]";
-		mes "Ivan is waiting for you, go find him.";
+		mes "[艾尔温·科尼克]";
+		mes "伊万在等你，去找他吧。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
-	mes "[Elwin Conick]";
-	mes "You have no more test to take. Why don't you go out and have a drink?";
+	mes "[艾尔温·科尼克]";
+	mes "你没有更多测试了。出去喝一杯吧？";
 	close2;
 	warp "job_gun",81,29;
 	end;
@@ -305,8 +305,8 @@ job_gun,19,24,3	script	Elwin Conick#1	4_F_REBELLION,{
 
 job_gun,117,46,3	script	Elwin Conick#2	4_F_REBELLION,{
 	if (Class != Job_Gunslinger) {
-		mes "[Elwin Conick]";
-		mes "If you don't want to join Rebellions, just get out.";
+		mes "[艾尔温·科尼克]";
+		mes "如果你不想加入反叛者，就出去。";
 		close2;
 		warp "job_gun",81,29;
 		end;
@@ -315,86 +315,86 @@ job_gun,117,46,3	script	Elwin Conick#2	4_F_REBELLION,{
 	.@quest_12341 = isbegin_quest(12341);
 	.@quest_12342 = isbegin_quest(12342);
 	if (.@emt_chk == 3169) {
-		mes "^0000ffYou are already in the test form. If you have finished all your tests, report to Elwin Conick in the Assembly Room^000000.";
+		mes "^0000ff你已经处于测试形态。如果你已完成所有测试，请到组装室向艾尔温·科尼克报告^000000。";
 		close;
 	}
 	if (.@emt_chk) {
-		mes "[Elwin Conick]";
-		mes "Look at yourself, do you really want to test?";
+		mes "[艾尔温·科尼克]";
+		mes "看看你自己，你真的想参加测试吗？";
 		next;
-		mes "^0000ffElwin see you turn into another form and she is very angry. Wait for your current form ends, and then find her again.^000000";
+		mes "^0000ff艾尔温看到你变成了另一种形态，她非常生气。等你当前形态结束后再来找她。^000000";
 		next;
-		if (select("Wait.:Go away.") == 2) {
-			mes "[Elwin Conick]";
-			mes "Come back when you aren't in any form.";
+		if (select("等待。:离开。") == 2) {
+			mes "[艾尔温·科尼克]";
+			mes "等你恢复原样后再来。";
 			close2;
 			warp "job_gun",81,29;
 			end;
 		}
-		mes "[Elwin Conick]";
-		mes "It's not worth to give up, now go out and relax.";
+		mes "[艾尔温·科尼克]";
+		mes "放弃不值得，现在出去放松一下吧。";
 		close;
 	}
 	if (.@quest_12341 == 1 || .@quest_12342 == 1) {
 		if (countitem(6746)) {
-			mes "[Elwin Conick]";
-			mes "Any leftover Steel Artifacts must be returned after the test.";
+			mes "[艾尔温·科尼克]";
+			mes "测试后所有剩余的钢铁制品必须归还。";
 			delitem 6746,countitem(6746);// Steel_Article
 			close;
 		}
 		if (countitem(6747)) {
-			mes "[Elwin Conick]";
-			mes "Any leftover Steel Artifacts must be returned after the test.";
+			mes "[艾尔温·科尼克]";
+			mes "测试后所有剩余的钢铁制品必须归还。";
 			delitem 6747,countitem(6747);// Steel_Article_
 			close;
 		}
 		if ((countitem(13118) - isequipped(13118)) > 0) {
-			mes "[Elwin Conick]";
-			mes "Time over. You failed the test. Let me take all your leftover test materials.";
+			mes "[艾尔温·科尼克]";
+			mes "时间到。你没通过测试。让我收走你剩余的测试材料。";
 			delitem 13118,1;// Tiny_Flame
 			close;
 		}
 		if (.@quest_12342 == 1)
-			.@menu$ = "Got it.";
+			.@menu$ = "明白了。";
 		else {
-			.@menu$ = "Okay.";
+			.@menu$ = "好的。";
 			setquest 12342;// Rebellion Job Change Quest
 			completequest 12341;
 		}
-		mes "[Elwin Conick]";
-		mes "Listen up. I'm not going to great lengths trying to explain the test to you.";
+		mes "[艾尔温·科尼克]";
+		mes "听好了。我不会费太多口舌给你解释测试。";
 		next;
 		select( .@menu$ );
-		mes "[Elwin Conick]";
+		mes "[艾尔温·科尼克]";
 		if (.@quest_12341 == 1) {
-			mes "This is where the firearm molds are cast. Everywhere you can see Steel Artifacts are being produced.";
+			mes "这里是铸造枪械模具的地方。到处都在生产钢铁制品。";
 			next;
-			mes "[Elwin Conick]";
-			mes "We Rebellions are weapon experts at heart. Here you will learn to create and assemble firearms.";
+			mes "[艾尔温·科尼克]";
+			mes "我们反叛者骨子里就是武器专家。在这里你将学会制造和组装枪械。";
 			next;
-			mes "[Elwin Conick]";
-			mes "You'll be asked to control the furnace controller near the entrance and select 5 standard Steel Artifacts.";
+			mes "[艾尔温·科尼克]";
+			mes "你需要操控入口附近的熔炉控制器，选出5个标准钢铁制品。";
 			next;
-			mes "[Elwin Conick]";
-			mes "You'll then take them to the next Assembly Room and assemble them info a firearm. You'll be given 3 minutes to do all that. You'd better be fast and focused, or you will fail the test.";
+			mes "[艾尔温·科尼克]";
+			mes "然后把它们带到下一个组装室，组装成一把枪械。你有3分钟时间完成所有步骤。你最好又快又专注，否则就会失败。";
 			next;
-			mes "[Elwin Conick]";
-			mes "I'll be in the next room, waiting for you to bring me a complete firearm. To check the elapsed time, you'll be transformed into a different job. ^0000ffIf you pass 3 minutes and turn back to normal, go back to me and start the test again.^000000.";
+			mes "[艾尔温·科尼克]";
+			mes "我会在下一个房间等你带来一把完整的枪械。为了计时，你会被变身为另一个职业。^0000ff如果超过3分钟变回原样，就回来找我重新开始测试^000000。";
 		}
 		else {
-			mes "You'll be asked to control switches on the machine and select 5 standard Steel Artifacts.";
+			mes "你需要操控机器上的开关，选出5个标准钢铁制品。";
 			next;
-			mes "[Elwin Conick]";
-			mes "You'll then take them to the next Assembly Room and assemble them into a complete firearm. You'll be given 3 minutes to finish all that. ^0000ffTo check the elapsed time, you'll be transformed into a different job^000000.";
+			mes "[艾尔温·科尼克]";
+			mes "然后把它们带到下一个组装室，组装成一把完整的枪械。你有3分钟时间完成。^0000ff为了计时，你会被变身为另一个职业^000000。";
 			next;
-			mes "[Elwin Conick]";
-			mes "I'll be in the next room, waiting for you to bring me a complete firearm. Remember, ^0000ffyou fail the test when your transformation expires after 3 minutes^000000.";
+			mes "[艾尔温·科尼克]";
+			mes "我会在下一个房间等你带来一把完整的枪械。记住，^0000ff变身在3分钟后消失时你就失败了^000000。";
 		}
 		transform 3169,180000;
 		close;
 	}
-	mes "[Elwin Conick]";
-	mes "Ah? Are you lost? You need to register first and then get back here.";
+	mes "[艾尔温·科尼克]";
+	mes "啊？你迷路了？你需要先注册然后再回来。";
 	close2;
 	warp "job_gun",81,29;
 	end;
@@ -402,8 +402,8 @@ job_gun,117,46,3	script	Elwin Conick#2	4_F_REBELLION,{
 
 job_gun,198,39,3	script	Elwin Conick#3	4_F_REBELLION,{
 	if (Class != Job_Gunslinger) {
-		mes "[Elwin Conick]";
-		mes "If you don't want to join Rebellions, just get out.";
+		mes "[艾尔温·科尼克]";
+		mes "如果你不想加入反叛者，就出去。";
 		close2;
 		warp "job_gun",81,29;
 		end;
@@ -412,57 +412,57 @@ job_gun,198,39,3	script	Elwin Conick#3	4_F_REBELLION,{
 		.@emt_chk = getstatus(SC_MONSTER_TRANSFORM,1);
 		if (.@emt_chk == 3169) {
 			if ((countitem(13118) - isequipped(13118)) < 1) {// don't count if equipped
-				mes "[Elwin Conick]";
-				mes "Are you done? I don't see any completed firearm in your inventory.";
+				mes "[艾尔温·科尼克]";
+				mes "你完成了吗？我没看到你背包里有完成的枪械。";
 				close;
 			}
-			mes "[Elwin Conick]";
-			mes "It's shoddy but not bad, given the time. You passed.";
+			mes "[艾尔温·科尼克]";
+			mes "虽然粗糙，但考虑到时间还不错。你通过了。";
 			delitem 13118,1;// Tiny_Flame
 			next;
-			mes "[Elwin Conick]";
-			mes "Let me take all your leftover test materials.";
+			mes "[艾尔温·科尼克]";
+			mes "让我收走你剩余的测试材料。";
 			delitem 6746,countitem(6746);// Iron_Artifact
 			delitem 6747,countitem(6747);// Steel_Artifact
 			next;
-			mes "[Elwin Conick]";
-			mes "Now you can move on to the next course. Ivan Sidorenko will oversee your test.";
+			mes "[艾尔温·科尼克]";
+			mes "现在你可以进入下一个课程了。伊万·西多连科将负责你的测试。";
 			completequest 12342;
 			close2;
 			warp "job_gun",120,133;
 			end;
 		}
 		if (.@emt_chk) {
-			mes "[Elwin Conick]";
-			mes "Look at yourself, do you really want to test?";
+			mes "[艾尔温·科尼克]";
+			mes "看看你自己，你真的想参加测试吗？";
 			next;
-			mes "^0000ffElwin see you turn into another form and she is very angry. Wait for your current form ends, and then find her again.^000000";
+			mes "^0000ff艾尔温看到你变成了另一种形态，她非常生气。等你当前形态结束后再来找她。^000000";
 			next;
-			if (select("Wait.:Go away.") == 2) {
-				mes "[Elwin Conick]";
-				mes "Come back when you aren't in any form.";
+			if (select("等待。:离开。") == 2) {
+				mes "[艾尔温·科尼克]";
+				mes "等你恢复原样后再来。";
 				close2;
 				warp "job_gun",81,29;
 				end;
 			}
-			mes "[Elwin Conick]";
-			mes "It's not worth to give up, now go out and relax.";
+			mes "[艾尔温·科尼克]";
+			mes "放弃不值得，现在出去放松一下吧。";
 			close;
 		}
-		mes "[Elwin Conick]";
-		mes "Time over. You failed the test. Let me take all your leftover test materials.";
+		mes "[艾尔温·科尼克]";
+		mes "时间到。你没通过测试。让我收走你剩余的测试材料。";
 		delitem 6746,countitem(6746);// Iron_Artifact
 		delitem 6747,countitem(6747);// Steel_Artifact
 		delitem 13118,(countitem(13118) - isequipped(13118));// Tiny_Flame
 		next;
-		mes "[Elwin Conick]";
-		mes "Let's start again.";
+		mes "[艾尔温·科尼克]";
+		mes "让我们重新开始。";
 		close2;
 		warp "job_gun",117,41;
 		end;
 	}
-	mes "[Elwin Conick]";
-	mes "Ah? Are you lost? You need to register first and then get back here.";
+	mes "[艾尔温·科尼克]";
+	mes "啊？你迷路了？你需要先注册然后再回来。";
 	close2;
 	warp "job_gun",81,29;
 	end;
@@ -470,67 +470,67 @@ job_gun,198,39,3	script	Elwin Conick#3	4_F_REBELLION,{
 
 job_gun,165,18,0	script	Furnace Controller#1	CLEAR_NPC,{
 	if (Class != Job_Gunslinger) {
-		mes "Only authorized user can do the operation.";
+		mes "只有授权用户才能进行操作。";
 		close;
 	}
 	if (getstatus(SC_MONSTER_TRANSFORM,1) == 3169) {// J_REB_SHECIL1
 		if (isbegin_quest(12342) == 1) {
-			mes "Do you want to dredge the mold up from the furnace?";
+			mes "你想从熔炉中取出模具吗？";
 			next;
-			if (select("Quit.:Begin.") == 1) {
-				mes "Switch to the Standby mode.";
+			if (select("退出。:开始。") == 1) {
+				mes "切换到待机模式。";
 				close;
 			}
-			mes "Initializing Furnace Controller ZX-3100...";
+			mes "正在初始化熔炉控制器ZX-3100……";
 			disablenpc "Furnace Controller#1";
 			donpcevent "Furnace Controller#2::OnStart";
 			close;
 		}
 	}
-	mes "Not an authorized user. Abort the operation.";
+	mes "非授权用户。操作中止。";
 	close;
 }
 
 job_gun,214,36,0	script	Auto Anvil#1	CLEAR_NPC,{
 	if (Class != Job_Gunslinger) {
-		mes "Only authorized user can do the operation.";
+		mes "只有授权用户才能进行操作。";
 		close;
 	}
 	if ((countitem(13118) - isequipped(13118)) > 0) {// Tiny_Flame
-		mes "Unauthorized firearm creation has been detected. Report to Manager Elwin.";
+		mes "检测到未经授权的枪械制造。向管理员艾尔温报告。";
 		close;
 	}
 	if (getstatus(SC_MONSTER_TRANSFORM,1) == 3169) {
 		if (countitem(6747) < 5) {// Steel_Article_
-			mes "You do not have standard Steel Artifacts.";
+			mes "你没有标准钢铁制品。";
 			close;
 		}
 		if (isbegin_quest(12342) == 1) {
-			mes "Do you want to use the auto anvil and shape the standard Steel Artifacts into a firearm?";
+			mes "你想使用自动铁砧将标准钢铁制品锻造成枪械吗？";
 			next;
-			if (select("Quit.:Begin.") == 1) {
-				mes "For your safety, please step away from the auto anvil.";
+			if (select("退出。:开始。") == 1) {
+				mes "为了你的安全，请远离自动铁砧。";
 				close;
 			}
 			if (rand(1,10) > 6) {
-				mes "You have successfully created a firearm using the auto anvil. ^ff0000Please report before your transformation expires^000000.";
+				mes "你已成功使用自动铁砧制造了一把枪械。^ff0000请在变身消失前报告^000000。";
 				specialeffect EF_REPAIRWEAPON;
 				getitem 13118,1;// Tiny_Flame
 			}
 			else {
-				mes "Failed to create a firearm.";
+				mes "枪械制造失败。";
 				specialeffect EF_SUI_EXPLOSION;
 			}
 			delitem 6747,5;// Steel_Article_
 			close;
 		}
 	}
-	mes "Not an authorized user. Abort the operation.";
+	mes "非授权用户。操作中止。";
 	close;
 }
 
 job_gun,165,18,0	script	Furnace Controller#2	CLEAR_NPC,{
-	mes "The system is busy dredging a completed mold from the furnace.";
+	mes "系统正忙于从熔炉中取出已完成的模具。";
 	close;
 
 OnStart:
@@ -578,40 +578,40 @@ job_gun,141,31,0	duplicate(Heating Furnace#3)	Heating Furnace#5	CLEAR_NPC
 
 job_gun,120,138,3	script	Ivan Sidorenko#1	4_M_REBELLION,{
 	if (Class != Job_Gunslinger) {
-		mes "[Ivan Sidorenko]";
-		mes "This is shooting test area, you can't come here as you like.";
+		mes "[伊万·西多连科]";
+		mes "这里是射击测试区，你不能随便进来。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
 	if (isbegin_quest(12342) < 2) {
-		mes "[Ivan Sidorenko]";
-		mes "There seems to be a mistake, you can't stay here.";
+		mes "[伊万·西多连科]";
+		mes "好像有什么误会，你不能待在这里。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
 	if (isbegin_quest(12343) == 0) {
-		mes "[Ivan Sidorenko]";
-		mes "Hey, stay focused--we're using live ammo here, and you can get shot anytime.";
+		mes "[伊万·西多连科]";
+		mes "嘿，集中注意力——我们这里用的是实弹，你随时可能中弹。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "Let me make this quick. Basically you'll be running in this shooting range consisting of 5 sections.";
+		mes "[伊万·西多连科]";
+		mes "我长话短说。基本上你要在这个由5个区域组成的射击场里跑。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "The objective is to find enemies in the midst of a crowd quickly and without fail.";
+		mes "[伊万·西多连科]";
+		mes "目标是在人群中快速准确地找到敌人。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "Among all the targets, you must shoot only the ^0000ffStandard-issue Targets^000000. If you make a mistake, you'll lose points.";
+		mes "[伊万·西多连科]";
+		mes "在所有目标中，你只能射击^0000ff标准靶^000000。如果打错了，你会扣分。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "Let's try. There aren't many ^0000ffStandard-issue Targets^000000, so keep your eyes peeled.";
+		mes "[伊万·西多连科]";
+		mes "开始吧。^0000ff标准靶^000000不多，所以睁大眼睛。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "^0000ffYou have 3 minutes to finish this test. If you can't finish before your transformation expires^000000, you'll fail. If that happens, just follow the path back to me.";
+		mes "[伊万·西多连科]";
+		mes "^0000ff你有3分钟完成这个测试。如果在变身消失前无法完成^000000，你就失败了。如果失败了，沿着路回来找我。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "^0000ffYou'll fail if you miss a Standard-issue Target, or shoot 3 incorrect targets^000000. Let's get started.";
+		mes "[伊万·西多连科]";
+		mes "^0000ff如果你漏掉一个标准靶，或者打错3个目标^000000，你就失败了。开始吧。";
 		setquest 12343;// Rebellion Job Change Quest
 		setquest 12344;// Rebellion Job Change Quest
 		transform 3169,180000;
@@ -628,39 +628,39 @@ job_gun,120,138,3	script	Ivan Sidorenko#1	4_M_REBELLION,{
 			.@j_r_t = 5;
 		.@j_r_c = .@j_r_s - .@j_r_f - .@j_r_t;
 		if (.@j_r_c > 9) {
-			mes "[Ivan Sidorenko]";
-			mes "Good job. I didn't think you could pass so quickly.";
+			mes "[伊万·西多连科]";
+			mes "干得好。没想到你能这么快通过。";
 			completequest 12343;
 			completequest 12344;
 			setquest 12345;// Rebellion Job Change Quest
 			next;
-			mes "[Ivan Sidorenko]";
-			mes "You may leave and wait outside. I'll bring other instructors' evaluation reports to see you.";
+			mes "[伊万·西多连科]";
+			mes "你可以出去在外面等。我会把其他教官的评估报告带来给你看。";
 			close2;
 			warp "job_gun",210,132;
 			end;
 		}
 		if (.@j_r_c == 8) {
-			mes "[Ivan Sidorenko]";
-			mes "You're quick enough, but you shot too many incorrect targets. You failed.";
+			mes "[伊万·西多连科]";
+			mes "你速度够快，但打错了太多目标。你失败了。";
 		}
 		else if (.@j_r_c == 5) {
-			mes "[Ivan Sidorenko]";
-			mes "You accurate enough, but you took too much time. Slow Rebellions don't survive long enough.";
+			mes "[伊万·西多连科]";
+			mes "你准确度够了，但花了太多时间。慢吞吞的反叛者活不长。";
 		}
 		else if (.@j_r_c < 5) {
-			mes "[Ivan Sidorenko]";
-			mes "You failed at both speed and accuracy. How did you survive this long?";
+			mes "[伊万·西多连科]";
+			mes "你速度和准确度都不行。你是怎么活到现在的？";
 		}
 		else {
-			mes "[Ivan Sidorenko]";
-			mes "There's a problem, the statistic seems to be wrong. Well... This can happen sometimes.";
+			mes "[伊万·西多连科]";
+			mes "有个问题，统计数据好像不对。嗯……这种事偶尔会发生。";
 		}
 		erasequest 12343;
 		erasequest 12344;
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "Let's try again. Be more careful this time.";
+		mes "[伊万·西多连科]";
+		mes "再试一次。这次小心点。";
 		setquest 12343;
 		setquest 12344;
 		transform 3169,180000;
@@ -668,11 +668,11 @@ job_gun,120,138,3	script	Ivan Sidorenko#1	4_M_REBELLION,{
 		warp "job_gun",102,146;
 		end;
 	}
-	mes "[Ivan Sidorenko]";
-	mes "How did you not leave?";
+	mes "[伊万·西多连科]";
+	mes "你怎么还没走？";
 	next;
-	mes "[Ivan Sidorenko]";
-	mes "You may leave and wait outside. I'll bring other instructors' evaluation reports to see you.";
+	mes "[伊万·西多连科]";
+	mes "你可以出去在外面等。我会把其他教官的评估报告带来给你看。";
 	close2;
 	warp "job_gun",210,132;
 	end;
@@ -726,79 +726,79 @@ OnMyMobDead:
 
 job_gun,220,132,3	script	Ivan Sidorenko#2	10062,{
 	if (!checkweight(1201,1)) {
-		mes "You have too many items, please reduce them to continue.";
+		mes "你的物品太多了，请减少后再继续。";
 		close;
 	}
 	if ((MaxWeight - Weight) < 1000) {
-		mes "The items in your inventory are weighing you down. Lighten your weight first.";
+		mes "你背包里的物品太重了。先减轻负重吧。";
 		close;
 	}
 	if (isbegin_quest(12345) == 0) {
-		mes "[Ivan Sidorenko]";
-		mes "There must have been a mistake. You aren't supposed to remain here.";
+		mes "[伊万·西多连科]";
+		mes "一定是搞错了。你不应该留在这里。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
 	if (Class == Job_Gunslinger) {
 		if (BaseLevel < 99 || JobLevel < 70) {
-			mes "[Ivan Sidorenko]";
-			mes "Huh? You look so weak? I have nothing more to say.";
+			mes "[伊万·西多连科]";
+			mes "嗯？你看起来好弱？我没什么好说的了。";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Ivan Sidorenko]";
-			mes "Oh no~ You still have Skill Points.";
+			mes "[伊万·西多连科]";
+			mes "哦不~你还有技能点没用完。";
 			close;
 		}
-		mes "[Ivan Sidorenko]";
-		mes "Kulbertinov, Elwin, and I've evaluated your Rebellion test results.";
+		mes "[伊万·西多连科]";
+		mes "库尔贝蒂诺夫、艾尔温和我已经评估了你的反叛者测试结果。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "And...";
+		mes "[伊万·西多连科]";
+		mes "而且……";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "You've met all our requirements including the attitude and the test performance.";
+		mes "[伊万·西多连科]";
+		mes "你达到了我们所有的要求，包括态度和测试表现。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "That's right, you're now a member of the Rebellion. Get ready to be wowed.";
+		mes "[伊万·西多连科]";
+		mes "没错，你现在是反叛者的一员了。准备好大开眼界吧。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "And Elwin wants you to have this. Take good care of it. He made it for you.";
+		mes "[伊万·西多连科]";
+		mes "艾尔温想把这个给你。好好保管。是她为你做的。";
 		jobchange Job_Rebellion;
 		completequest 12345;
 		getitem 13119,1;// Freedom_Flame
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "See you later.";
+		mes "[伊万·西多连科]";
+		mes "回头见。";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
 	if (Class == Job_Rebellion) {
-		mes "[Ivan Sidorenko]";
-		mes "This life should be fun, not boring.";
+		mes "[伊万·西多连科]";
+		mes "人生应该有趣，而不是无聊。";
 		next;
-		mes "[Ivan Sidorenko]";
-		mes "And by becoming a Rebellion your life should be upgraded. So, go and create a great journey, make us proud!";
+		mes "[伊万·西多连科]";
+		mes "成为反叛者后，你的人生应该会升级。所以，去创造一段伟大的旅程，让我们骄傲！";
 		close2;
 		warp "job_gun",81,29;
 		end;
 	}
-	mes "[Ivan Sidorenko]";
-	mes "Do you have something to say to me, don't you?";
+	mes "[伊万·西多连科]";
+	mes "你有话要对我说，对吧？";
 	close;
 }
 
 job_gun,220,138,4	shop	Prop Vending Machine	2_VENDING_MACHINE1,13210:-1,13211:-1,13212:-1,13213:-1,13214:-1,7663:-1,7664:-1,7665:-1
 
 job_gun,216,138,4	script	Butler Karlex	1_M_01,{
-	mes "[Butler Karlex]";
-	mes "Use this temporary storage to keep your items safe while on the Advancement test.";
+	mes "[管家卡莱克斯]";
+	mes "在晋升测试期间，使用这个临时仓库来保管你的物品。";
 	next;
-	.@s = select("Quit.:Open the storage.");
-	mes "[Butler Karlex]";
-	mes "Thank you for using the service.";
+	.@s = select("退出。:打开仓库。");
+	mes "[管家卡莱克斯]";
+	mes "感谢使用本服务。";
 	close2;
 	if (.@s == 2)
 		openstorage;
@@ -820,10 +820,10 @@ job_gun,1,1,0	script	Admin1	CLEAR_NPC,{
 	callfunc "F_GM_NPC";
 	if (callfunc("F_GM_NPC",1854,0) != 1)
 		end;
-	mes "[Time Manager]";
-	mes "What time would you like to return?";
+	mes "[时间管理员]";
+	mes "你想什么时候回来？";
 	next;
-	switch( select("Cancel:Test monster spawn:Start from beginning:Furnace Zone:Shooting Zone:Complete the test") ) {
+	switch( select("取消:测试怪物刷新:从头开始:熔炉区:射击区:完成测试") ) {
 	case 1:
 		end;
 	case 2:

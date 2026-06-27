@@ -1,0 +1,70 @@
+{
+  "name": "方案A - 2021-11-03 Ragexe (当前推荐)",
+  "description": "保留当前 2021-11-03 Ragexe EXE，替换 data.grf 为匹配版本。零服务端改动、最低风险。",
+  "status": "active",
+
+  "client_exe": {
+    "filename": "2021-11-03_Ragexe_patched.exe",
+    "original": "2021-11-03_Ragexe_1635824489.exe",
+    "patch_tool": "NEMO 或 WARP",
+    "nemo_success_rate": "284/361"
+  },
+
+  "packetver": {
+    "value": 20211103,
+    "config_file": "src/config/packets.hpp",
+    "override_file": "src/custom/defines_pre.hpp",
+    "note": "rAthena 默认值，无需修改"
+  },
+
+  "data_grf": {
+    "source": "kRO 2021年11月完整客户端 (RAG_SETUP_211105.exe)",
+    "download_urls": [
+      "http://nemo.herc.ws/downloads",
+      "http://rofull.gnjoy.com/RAG_SETUP_211105.exe"
+    ],
+    "required_files": [
+      "data.grf",
+      "rdata.grf"
+    ],
+    "approximate_size_gb": 2.0,
+    "note": "必须使用与 EXE 发布日期匹配的 GRF，否则新版 RSW 格式会导致崩溃"
+  },
+
+  "data_ini": {
+    "template": "client/data-ini/data.ini.template",
+    "grf_order": [
+      "custom.grf (中文资源/自定义覆盖)",
+      "rdata.grf",
+      "data.grf (kRO 原始数据)"
+    ]
+  },
+
+  "required_patches": {
+    "critical": [
+      {"id": 71, "name": "Ignore Resource Errors", "reason": "缺失资源不崩溃只报警告"},
+      {"id": 72, "name": "Ignore Missing Palette Error", "reason": "缺失调色板不崩溃"},
+      {"id": 214, "name": "Restore Model Culling", "reason": "修复模型渲染问题"},
+      {"id": 234, "name": "Ignore Lua Errors", "reason": "Lua 错误不崩溃"}
+    ],
+    "recommended": [
+      {"id": 35, "name": "Read Data Folder First", "reason": "方便用本地文件覆盖 GRF 中的问题资源"},
+      {"id": 49, "name": "Enable Multiple GRFs", "reason": "支持多 GRF 加载"}
+    ]
+  },
+
+  "server_changes": "none",
+
+  "cn_compatibility": {
+    "ROClientFullCN": "直接支持",
+    "npc_gbk_output": "已验证",
+    "note": "中文化兼容性最佳"
+  },
+
+  "known_issues": [
+    "个别 Pre-Renewal 旧版地图（如旧版 payon、morocc）可能在 2021 GRF 中被重制版替换",
+    "如遇个别地图崩溃，可用 GRF Editor 将 RSW 降级"
+  ],
+
+  "fallback": "如方案A仍不稳定，考虑方案B (2018-06-20 RagexeRE)"
+}

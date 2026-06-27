@@ -906,198 +906,198 @@ monk_in,99,58,1	script	Sensei Moohae#mk	60,{
 prt_monk,251,255,1	script	Touha#mk	79,{
 	if (MONK_Q >= 10 && MONK_Q < 14) {
 		if (MONK_Q == 10) {
-			mes "[Touha]";
-			mes "What brings you to me.";
-			mes "Do you wish to share a conversation with me?";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] What brings you to me.";
+			mes "[DRY-RUN] Do you wish to share a conversation with me?";
 			next;
-			mes "[Touha]";
-			mes "Oh, I see. You're on the monk in training.";
-			mes "You already possess a similar spirit as a monk's.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Oh, I see. You're on the monk in training.";
+			mes "[DRY-RUN] You already possess a similar spirit as a monk's.";
 			next;
-			mes "[Touha]";
-			mes "By the looks of you, it seems, you";
-			mes "have already visited Sensei Moohae. Good.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] By the looks of you, it seems, you";
+			mes "[DRY-RUN] have already visited Sensei Moohae. Good.";
 			next;
-			mes "[Touha]";
-			mes "Let me inform you about certain things you must know as a monk.";
-			mes "Then I will help you to strengthen your body so that you can bear your next training.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Let me inform you about certain things you must know as a monk.";
+			mes "[DRY-RUN] Then I will help you to strengthen your body so that you can bear your next training.";
 			next;
-			mes "[Touha]";
-			mes "Calm your mind.";
-			mes "Relax your body...are you ready?";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Calm your mind.";
+			mes "[DRY-RUN] Relax your body...are you ready?";
 			next;
-			if (select("Yes.:No.") == 2) {
-				mes "[Touha]";
-				mes "Please come back when you're ready.";
+			if (select("[DRY-RUN] Yes.:No.") == 2) {
+				mes "[DRY-RUN] [Touha]";
+				mes "[DRY-RUN] Please come back when you're ready.";
 				close;
 			}
-			mes "[Touha]";
-			mes "Ok...then.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Ok...then.";
 			next;
-			mes "[Touha]";
-			mes "Please repeat after me.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Please repeat after me.";
 			next;
 			changequest 3024,3025;
 		}
 		else {
-			mes "[Touha]";
-			mes "Now, pay attention this time...";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Now, pay attention this time...";
 			next;
 		}
-		mes "[Touha]";
+		mes "[DRY-RUN] [Touha]";
 		set .@rand,rand(1,3);
 		if ((.@rand == 1) || (MONK_Q == 11)) {
 			set MONK_Q,11;
-			mes "I seek the path";
+			mes "[DRY-RUN] I seek the path";
 			next;
-			mes "[Touha]";
-			mes "of enlightenment.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] of enlightenment.";
 			next;
-			mes "[Touha]";
-			mes "We monks";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] We monks";
 			next;
-			mes "[Touha]";
-			mes "shall hold true";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] shall hold true";
 			next;
-			mes "[Touha]";
-			mes "to what we believe";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] to what we believe";
 			next;
-			mes "[Touha]";
-			mes "and will help protect others";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] and will help protect others";
 			next;
-			mes "[Touha]";
-			mes "through the teachings";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] through the teachings";
 			next;
-			mes "[Touha]";
-			mes "we learn through our lives.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] we learn through our lives.";
 			next;
-			mes "[Touha]";
-			mes "In nomine Patris, et Filii";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] In nomine Patris, et Filii";
 			next;
-			mes "[Touha]";
-			mes "et Spiritus Sancti.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] et Spiritus Sancti.";
 		}
 		else if ((.@rand == 2) || (MONK_Q == 12)) {
 			set MONK_Q,12;
-			mes "I commit myself to";
+			mes "[DRY-RUN] I commit myself to";
 			next;
-			mes "[Touha]";
-			mes "veritas and aequitas.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] veritas and aequitas.";
 			next;
-			mes "[Touha]";
-			mes "I will follow my path";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] I will follow my path";
 			next;
-			mes "[Touha]";
-			mes "to enlightenment and purity.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] to enlightenment and purity.";
 			next;
-			mes "[Touha]";
-			mes "I will protect my";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] I will protect my";
 			next;
-			mes "[Touha]";
-			mes "brothers with my life.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] brothers with my life.";
 			next;
-			mes "[Touha]";
-			mes "Evil shall never be";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Evil shall never be";
 			next;
-			mes "[Touha]";
-			mes "victorious while I breathe.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] victorious while I breathe.";
 			next;
-			mes "[Touha]";
-			mes "In nomine Patris, et Filii";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] In nomine Patris, et Filii";
 			next;
-			mes "[Touha]";
-			mes "et Spiritus Sancti.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] et Spiritus Sancti.";
 		}
 		else if ((.@rand == 3) || (MONK_Q == 13)) {
 			set MONK_Q,13;
-			mes "And shepherds we shall be,";
+			mes "[DRY-RUN] And shepherds we shall be,";
 			next;
-			mes "[Touha]";
-			mes "for thee my lord for thee.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] for thee my lord for thee.";
 			next;
-			mes "[Touha]";
-			mes "Power hath descended forth";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Power hath descended forth";
 			next;
-			mes "[Touha]";
-			mes "from the hand";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] from the hand";
 			next;
-			mes "[Touha]";
-			mes "so our feet may swiftly carry";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] so our feet may swiftly carry";
 			next;
-			mes "[Touha]";
-			mes "out thy command. And we shall";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] out thy command. And we shall";
 			next;
-			mes "[Touha]";
-			mes "flow a river forth to thee and";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] flow a river forth to thee and";
 			next;
-			mes "[Touha]";
-			mes "teeming with souls shall it ever be";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] teeming with souls shall it ever be";
 			next;
-			mes "[Touha]";
-			mes "In nomine Patris, et Filii";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] In nomine Patris, et Filii";
 			next;
-			mes "[Touha]";
-			mes "et Spiritus Sancti.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] et Spiritus Sancti.";
 		}
 		next;
 		if (MONK_Q == 10) {
-			mes "[Touha]";
-			mes "Ok, that is all. Now repeat what I have spoken.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Ok, that is all. Now repeat what I have spoken.";
 			mes "" + strcharinfo(0) + ", your turn.";
 			next;
 		}
 		if (MONK_Q == 11) {
-			switch(select("shall hold true:We monks:and will help protect others:through the teachings:In nomine Patris, et Filii:to what we believe:I seek the path:we learn through our lives.:et Spiritus Sancti.:of enlightenment.")) {
+			switch(select("[DRY-RUN] shall hold true:We monks:and will help protect others:through the teachings:In nomine Patris, et Filii:to what we believe:I seek the path:we learn through our lives.:et Spiritus Sancti.:of enlightenment.")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "shall hold true";
+				mes "[DRY-RUN] shall hold true";
 				break;
 			case 2:
 				mes "[" + strcharinfo(0) + "]";
-				mes "We monks";
+				mes "[DRY-RUN] We monks";
 				break;
 			case 3:
 				mes "[" + strcharinfo(0) + "]";
-				mes "and will help protect others";
+				mes "[DRY-RUN] and will help protect others";
 				break;
 			case 4:
 				mes "[" + strcharinfo(0) + "]";
-				mes "through the teachings";
+				mes "[DRY-RUN] through the teachings";
 				break;
 			case 5:
 				mes "[" + strcharinfo(0) + "]";
-				mes "In nomine Patris, et Filii";
+				mes "[DRY-RUN] In nomine Patris, et Filii";
 				break;
 			case 6:
 				mes "[" + strcharinfo(0) + "]";
-				mes "to what we believe";
+				mes "[DRY-RUN] to what we believe";
 				break;
 			case 7:
 				set .@monk_t,.@monk_t+10;
 				mes "[" + strcharinfo(0) + "]";
-				mes "I seek the path";
+				mes "[DRY-RUN] I seek the path";
 				break;
 			case 8:
 				mes "[" + strcharinfo(0) + "]";
-				mes "we learn through our lives.";
+				mes "[DRY-RUN] we learn through our lives.";
 				break;
 			case 9:
 				mes "[" + strcharinfo(0) + "]";
-				mes "et Spiritus Sancti.";
+				mes "[DRY-RUN] et Spiritus Sancti.";
 				break;
 			case 10:
 				mes "[" + strcharinfo(0) + "]";
-				mes "of enlightenment.";
+				mes "[DRY-RUN] of enlightenment.";
 				break;
 			}
-			switch(select("We monks:In nomine Patris, et Filii:I seek the path:shall hold true:of enlightenment.:and will help protect others:we learn through our lives.:through the teachings:to what we believe:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] We monks:In nomine Patris, et Filii:I seek the path:shall hold true:of enlightenment.:and will help protect others:we learn through our lives.:through the teachings:to what we believe:et Spiritus Sancti.")) {
 			case 1: mes "We monks"; break;
 			case 2: mes "In nomine Patris, et Filii"; break;
 			case 3: mes "I seek the path"; break;
 			case 4: mes "shall hold true"; break;
 			case 5:
 				set .@monk_t,.@monk_t+10;
-				mes "of enlightenment.";
+				mes "[DRY-RUN] of enlightenment.";
 				break;
 			case 6: mes "and will help protect others";  break;
 			case 7: mes "we learn through our lives."; break;
@@ -1105,11 +1105,11 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "to what we believe"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("to what we believe:We monks:I seek the path:shall hold true:of enlightenment.:we learn through our lives.:In nomine Patris, et Filii:and will help protect others:through the teachings:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] to what we believe:We monks:I seek the path:shall hold true:of enlightenment.:we learn through our lives.:In nomine Patris, et Filii:and will help protect others:through the teachings:et Spiritus Sancti.")) {
 			case 1: mes "to what we believe"; break;
 			case 2:
 				set .@monk_t,.@monk_t+10;
-				mes "We monks";
+				mes "[DRY-RUN] We monks";
 				break;
 			case 3: mes "I seek the path"; break;
 			case 4: mes "shall hold true"; break;
@@ -1120,10 +1120,10 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "through the teachings"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("shall hold true:I seek the path:We monks:In nomine Patris, et Filii:of enlightenment.:et Spiritus Sancti.:to what we believe:we learn through our lives.:and will help protect others:through the teachings")) {
+			switch(select("[DRY-RUN] shall hold true:I seek the path:We monks:In nomine Patris, et Filii:of enlightenment.:et Spiritus Sancti.:to what we believe:we learn through our lives.:and will help protect others:through the teachings")) {
 			case 1:
 				set .@monk_t,.@monk_t+10;
-				mes "shall hold true";
+				mes "[DRY-RUN] shall hold true";
 				break;
 			case 2: mes "I seek the path"; break;
 			case 3: mes "We monks";
@@ -1136,7 +1136,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "and will help protect others"; break;
 			case 10: mes "through the teachings"; break;
 			}
-			switch(select("of enlightenment.:I seek the path:We monks:shall hold true:and will help protect others:through the teachings:we learn through our lives.:In nomine Patris, et Filii:to what we believe:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] of enlightenment.:I seek the path:We monks:shall hold true:and will help protect others:through the teachings:we learn through our lives.:In nomine Patris, et Filii:to what we believe:et Spiritus Sancti.")) {
 			case 1: mes "of enlightenment."; break;
 			case 2: mes "I seek the path"; break;
 			case 3: mes "We monks"; break;
@@ -1147,16 +1147,16 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 8: mes "In nomine Patris, et Filii"; break;
 			case 9:
 				set .@monk_t,.@monk_t+10;
-				mes "to what we believe";
+				mes "[DRY-RUN] to what we believe";
 				break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("I seek the path:through the teachings:and will help protect others:of enlightenment.:shall hold true:et Spiritus Sancti.:In nomine Patris, et Filii:to what we believe:We monks:we learn through our lives.")) {
+			switch(select("[DRY-RUN] I seek the path:through the teachings:and will help protect others:of enlightenment.:shall hold true:et Spiritus Sancti.:In nomine Patris, et Filii:to what we believe:We monks:we learn through our lives.")) {
 			case 1: mes "I seek the path"; break;
 			case 2: mes "through the teachings"; break;
 			case 3:
 				set .@monk_t,.@monk_t+10;
-				mes "and will help protect others";
+				mes "[DRY-RUN] and will help protect others";
 				break;
 			case 4: mes "of enlightenment."; break;
 			case 5: mes "shall hold true"; break;
@@ -1166,7 +1166,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "We monks"; break;
 			case 10: mes "we learn through our lives."; break;
 			}
-			switch(select("we learn through our lives.:In nomine Patris, et Filii:et Spiritus Sancti.:I seek the path:of enlightenment.:to what we believe:We monks:shall hold true:and will help protect others:through the teachings")) {
+			switch(select("[DRY-RUN] we learn through our lives.:In nomine Patris, et Filii:et Spiritus Sancti.:I seek the path:of enlightenment.:to what we believe:We monks:shall hold true:and will help protect others:through the teachings")) {
 			case 1: mes "we learn through our lives."; break;
 			case 2: mes "In nomine Patris, et Filii"; break;
 			case 3: mes "et Spiritus Sancti."; break;
@@ -1178,13 +1178,13 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "and will help protect others"; break;
 			case 10:
 				set .@monk_t,.@monk_t+10;
-				mes "through the teachings";
+				mes "[DRY-RUN] through the teachings";
 				break;
 			}
-			switch(select("we learn through our lives.:In nomine Patris, et Filii:through the teachings:I seek the path:We monks:shall hold true:to what we believe:and will help protect others:of enlightenment.:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] we learn through our lives.:In nomine Patris, et Filii:through the teachings:I seek the path:We monks:shall hold true:to what we believe:and will help protect others:of enlightenment.:et Spiritus Sancti.")) {
 			case 1:
 				set .@monk_t,.@monk_t+10;
-				mes "we learn through our lives.";
+				mes "[DRY-RUN] we learn through our lives.";
 				break;
 			case 2: mes "In nomine Patris, et Filii"; break;
 			case 3: mes "through the teachings"; break;
@@ -1196,7 +1196,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "of enlightenment."; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("I seek the path:of enlightenment.:We monks:shall hold true:to what we believe:et Spiritus Sancti.:and will help protect others:through the teachings:we learn through our lives.:In nomine Patris, et Filii")) {
+			switch(select("[DRY-RUN] I seek the path:of enlightenment.:We monks:shall hold true:to what we believe:et Spiritus Sancti.:and will help protect others:through the teachings:we learn through our lives.:In nomine Patris, et Filii")) {
 			case 1: mes "I seek the path"; break;
 			case 2: mes "of enlightenment."; break;
 			case 3: mes "We monks"; break;
@@ -1208,10 +1208,10 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "we learn through our lives."; break;
 			case 10:
 				set .@monk_t,.@monk_t+10;
-				mes "In nomine Patris, et Filii";
+				mes "[DRY-RUN] In nomine Patris, et Filii";
 				break;
 			}
-			switch(select("I seek the path:of enlightenment.:We monks:shall hold true:to what we believe:and will help protect others:through the teachings:we learn through our lives.:In nomine Patris, et Filii:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] I seek the path:of enlightenment.:We monks:shall hold true:to what we believe:and will help protect others:through the teachings:we learn through our lives.:In nomine Patris, et Filii:et Spiritus Sancti.")) {
 			case 1: mes "I seek the path"; break;
 			case 2: mes "of enlightenment."; break;
 			case 3: mes "We monks"; break;
@@ -1223,55 +1223,55 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "In nomine Patris, et Filii"; break;
 			case 10:
 				set .@monk_t,.@monk_t+10;
-				mes "et Spiritus Sancti.";
+				mes "[DRY-RUN] et Spiritus Sancti.";
 				break;
 			}
 		}
 		else if (MONK_Q == 12) {
-			switch(select("I will follow my path:veritas and aequitas.:to enlightenment and purity.:I commit myself to:I will protect my:victorious while I breathe.:brothers with my life.:Evil shall never be:In nomine Patris, et Filii:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] I will follow my path:veritas and aequitas.:to enlightenment and purity.:I commit myself to:I will protect my:victorious while I breathe.:brothers with my life.:Evil shall never be:In nomine Patris, et Filii:et Spiritus Sancti.")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "I will follow my path";
+				mes "[DRY-RUN] I will follow my path";
 				break;
 			case 2:
 				mes "[" + strcharinfo(0) + "]";
-				mes "veritas and aequitas.";
+				mes "[DRY-RUN] veritas and aequitas.";
 				break;
 			case 3:
 				mes "[" + strcharinfo(0) + "]";
-				mes "to enlightenment and purity.";
+				mes "[DRY-RUN] to enlightenment and purity.";
 				break;
 			case 4:
 				mes "[" + strcharinfo(0) + "]";
 				set .@monk_t,.@monk_t+10;
-				mes "I commit myself to";
+				mes "[DRY-RUN] I commit myself to";
 				break;
 			case 5:
 				mes "[" + strcharinfo(0) + "]";
-				mes "I will protect my";
+				mes "[DRY-RUN] I will protect my";
 				break;
 			case 6:
 				mes "[" + strcharinfo(0) + "]";
-				mes "victorious while I breathe.";
+				mes "[DRY-RUN] victorious while I breathe.";
 				break;
 			case 7:
 				mes "[" + strcharinfo(0) + "]";
-				mes "brothers with my life.";
+				mes "[DRY-RUN] brothers with my life.";
 				break;
 			case 8:
 				mes "[" + strcharinfo(0) + "]";
-				mes "Evil shall never be";
+				mes "[DRY-RUN] Evil shall never be";
 				break;
 			case 9:
 				mes "[" + strcharinfo(0) + "]";
-				mes "In nomine Patris, et Filii";
+				mes "[DRY-RUN] In nomine Patris, et Filii";
 				break;
 			case 10:
 				mes "[" + strcharinfo(0) + "]";
-				mes "et Spiritus Sancti.";
+				mes "[DRY-RUN] et Spiritus Sancti.";
 				break;
 			}
-			switch(select("I will follow my path:I will protect my:brothers with my life.:to enlightenment and purity.:Evil shall never be:victorious while I breathe.:et Spiritus Sancti.:I commit myself to:veritas and aequitas.:In nomine Patris, et Filii")) {
+			switch(select("[DRY-RUN] I will follow my path:I will protect my:brothers with my life.:to enlightenment and purity.:Evil shall never be:victorious while I breathe.:et Spiritus Sancti.:I commit myself to:veritas and aequitas.:In nomine Patris, et Filii")) {
 			case 1: mes "I will follow my path"; break;
 			case 2: mes "I will protect my"; break;
 			case 3: mes "brothers with my life."; break;
@@ -1282,14 +1282,14 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 8: mes "I commit myself to"; break;
 			case 9:
 				set .@monk_t,.@monk_t+10;
-				mes "veritas and aequitas.";
+				mes "[DRY-RUN] veritas and aequitas.";
 				break;
 			case 10: mes "In nomine Patris, et Filii"; break;
 			}
-			switch(select("I will follow my path:veritas and aequitas.:I commit myself to:et Spiritus Sancti.:Evil shall never be:to enlightenment and purity.:In nomine Patris, et Filii:I will protect my:brothers with my life.:victorious while I breathe.")) {
+			switch(select("[DRY-RUN] I will follow my path:veritas and aequitas.:I commit myself to:et Spiritus Sancti.:Evil shall never be:to enlightenment and purity.:In nomine Patris, et Filii:I will protect my:brothers with my life.:victorious while I breathe.")) {
 			case 1:
 				set .@monk_t,.@monk_t+10;
-				mes "I will follow my path";
+				mes "[DRY-RUN] I will follow my path";
 				break;
 			case 2: mes "veritas and aequitas."; break;
 			case 3: mes "I commit myself to"; break;
@@ -1301,7 +1301,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "brothers with my life."; break;
 			case 10: mes "victorious while I breathe."; break;
 			}
-			switch(select("veritas and aequitas.:Evil shall never be:I will follow my path:I will protect my:victorious while I breathe.:to enlightenment and purity.:brothers with my life.:In nomine Patris, et Filii:et Spiritus Sancti.:I commit myself to")) {
+			switch(select("[DRY-RUN] veritas and aequitas.:Evil shall never be:I will follow my path:I will protect my:victorious while I breathe.:to enlightenment and purity.:brothers with my life.:In nomine Patris, et Filii:et Spiritus Sancti.:I commit myself to")) {
 			case 1: mes "veritas and aequitas."; break;
 			case 2: mes "Evil shall never be"; break;
 			case 3: mes "I will follow my path"; break;
@@ -1309,14 +1309,14 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 5: mes "victorious while I breathe."; break;
 			case 6:
 				set .@monk_t,.@monk_t+10;
-				mes "to enlightenment and purity.";
+				mes "[DRY-RUN] to enlightenment and purity.";
 				break;
 			case 7: mes "brothers with my life."; break;
 			case 8: mes "In nomine Patris, et Filii"; break;
 			case 9: mes "et Spiritus Sancti."; break;
 			case 10: mes "I commit myself to"; break;
 			}
-			switch(select("victorious while I breathe.:I commit myself to:to enlightenment and purity.:brothers with my life.:Evil shall never be:In nomine Patris, et Filii:et Spiritus Sancti.:I will follow my path:veritas and aequitas.:I will protect my")) {
+			switch(select("[DRY-RUN] victorious while I breathe.:I commit myself to:to enlightenment and purity.:brothers with my life.:Evil shall never be:In nomine Patris, et Filii:et Spiritus Sancti.:I will follow my path:veritas and aequitas.:I will protect my")) {
 			case 1: mes "victorious while I breathe."; break;
 			case 2: mes "I commit myself to"; break;
 			case 3: mes "to enlightenment and purity."; break;
@@ -1328,17 +1328,17 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "veritas and aequitas."; break;
 			case 10:
 				set .@monk_t,.@monk_t+10;
-				mes "I will protect my";
+				mes "[DRY-RUN] I will protect my";
 				break;
 			}
-			switch(select("to enlightenment and purity.:I will follow my path:veritas and aequitas.:I commit myself to:brothers with my life.:I will protect my:victorious while I breathe.:Evil shall never be:et Spiritus Sancti.:In nomine Patris, et Filii")) {
+			switch(select("[DRY-RUN] to enlightenment and purity.:I will follow my path:veritas and aequitas.:I commit myself to:brothers with my life.:I will protect my:victorious while I breathe.:Evil shall never be:et Spiritus Sancti.:In nomine Patris, et Filii")) {
 			case 1: mes "to enlightenment and purity."; break;
 			case 2: mes "I will follow my path"; break;
 			case 3: mes "veritas and aequitas."; break;
 			case 4: mes "I commit myself to"; break;
 			case 5:
 				set .@monk_t,.@monk_t+10;
-				mes "brothers with my life.";
+				mes "[DRY-RUN] brothers with my life.";
 				break;
 			case 6: mes "I will protect my"; break;
 			case 7: mes "victorious while I breathe."; break;
@@ -1346,11 +1346,11 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "et Spiritus Sancti."; break;
 			case 10: mes "In nomine Patris, et Filii"; break;
 			}
-			switch(select("veritas and aequitas.:Evil shall never be:brothers with my life.:victorious while I breathe.:I will follow my path:to enlightenment and purity.:I will protect my:In nomine Patris, et Filii:et Spiritus Sancti.:I commit myself to")) {
+			switch(select("[DRY-RUN] veritas and aequitas.:Evil shall never be:brothers with my life.:victorious while I breathe.:I will follow my path:to enlightenment and purity.:I will protect my:In nomine Patris, et Filii:et Spiritus Sancti.:I commit myself to")) {
 			case 1: mes "veritas and aequitas."; break;
 			case 2:
 				set .@monk_t,.@monk_t+10;
-				mes "Evil shall never be";
+				mes "[DRY-RUN] Evil shall never be";
 				break;
 			case 3: mes "brothers with my life."; break;
 			case 4: mes "victorious while I breathe."; break;
@@ -1361,10 +1361,10 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "et Spiritus Sancti."; break;
 			case 10: mes "I commit myself to"; break;
 			}
-			switch(select("victorious while I breathe.:to enlightenment and purity.:I will protect my:veritas and aequitas.:brothers with my life.:I will follow my path:Evil shall never be:In nomine Patris, et Filii:I commit myself to:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] victorious while I breathe.:to enlightenment and purity.:I will protect my:veritas and aequitas.:brothers with my life.:I will follow my path:Evil shall never be:In nomine Patris, et Filii:I commit myself to:et Spiritus Sancti.")) {
 			case 1:
 				set .@monk_t,.@monk_t+10;
-				mes "victorious while I breathe.";
+				mes "[DRY-RUN] victorious while I breathe.";
 				break;
 			case 2: mes "to enlightenment and purity."; break;
 			case 3: mes "I will protect my"; break;
@@ -1376,7 +1376,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "I commit myself to"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("I commit myself to:I will follow my path:veritas and aequitas.:I will protect my:to enlightenment and purity.:brothers with my life.:Evil shall never be:In nomine Patris, et Filii:victorious while I breathe.:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] I commit myself to:I will follow my path:veritas and aequitas.:I will protect my:to enlightenment and purity.:brothers with my life.:Evil shall never be:In nomine Patris, et Filii:victorious while I breathe.:et Spiritus Sancti.")) {
 			case 1: mes "I commit myself to"; break;
 			case 2: mes "I will follow my path"; break;
 			case 3: mes "veritas and aequitas."; break;
@@ -1386,12 +1386,12 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 7: mes "Evil shall never be"; break;
 			case 8:
 				set .@monk_t,.@monk_t+10;
-				mes "In nomine Patris, et Filii";
+				mes "[DRY-RUN] In nomine Patris, et Filii";
 				break;
 			case 9: mes "victorious while I breathe."; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("I commit myself to:veritas and aequitas.:I will follow my path:to enlightenment and purity.:I will protect my:brothers with my life.:Evil shall never be:victorious while I breathe.:In nomine Patris, et Filii:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] I commit myself to:veritas and aequitas.:I will follow my path:to enlightenment and purity.:I will protect my:brothers with my life.:Evil shall never be:victorious while I breathe.:In nomine Patris, et Filii:et Spiritus Sancti.")) {
 			case 1: mes "I commit myself to"; break;
 			case 2: mes "veritas and aequitas."; break;
 			case 3: mes "I will follow my path"; break;
@@ -1403,55 +1403,55 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "In nomine Patris, et Filii"; break;
 			case 10:
 				set .@monk_t,.@monk_t+10;
-				mes "et Spiritus Sancti.";
+				mes "[DRY-RUN] et Spiritus Sancti.";
 				break;
 			}
 		}
 		else if (MONK_Q == 13) {
-			switch(select("for thee my lord for thee.:And shepherds we shall be,:Power hath descended forth:out thy command. And we shall:from the hand:flow a river forth to thee and:so our feet may swiftly carry:teeming with souls shall it ever be:et Spiritus Sancti.:In nomine Patris, et Filii")) {
+			switch(select("[DRY-RUN] for thee my lord for thee.:And shepherds we shall be,:Power hath descended forth:out thy command. And we shall:from the hand:flow a river forth to thee and:so our feet may swiftly carry:teeming with souls shall it ever be:et Spiritus Sancti.:In nomine Patris, et Filii")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "for thee my lord for thee.";
+				mes "[DRY-RUN] for thee my lord for thee.";
 				break;
 			case 2:
 				mes "[" + strcharinfo(0) + "]";
 				set .@monk_t,.@monk_t+10;
-				mes "And shepherds we shall be,";
+				mes "[DRY-RUN] And shepherds we shall be,";
 				break;
 			case 3:
 				mes "[" + strcharinfo(0) + "]";
-				mes "Power hath descended forth";
+				mes "[DRY-RUN] Power hath descended forth";
 				break;
 			case 4:
 				mes "[" + strcharinfo(0) + "]";
-				mes "out thy command. And we shall";
+				mes "[DRY-RUN] out thy command. And we shall";
 				break;
 			case 5:
 				mes "[" + strcharinfo(0) + "]";
-				mes "from the hand";
+				mes "[DRY-RUN] from the hand";
 				break;
 			case 6:
 				mes "[" + strcharinfo(0) + "]";
-				mes "flow a river forth to thee and";
+				mes "[DRY-RUN] flow a river forth to thee and";
 				break;
 			case 7:
 				mes "[" + strcharinfo(0) + "]";
-				mes "so our feet may swiftly carry";
+				mes "[DRY-RUN] so our feet may swiftly carry";
 				break;
 			case 8:
 				mes "[" + strcharinfo(0) + "]";
-				mes "teeming with souls shall it ever be";
+				mes "[DRY-RUN] teeming with souls shall it ever be";
 				break;
 			case 9:
 				mes "[" + strcharinfo(0) + "]";
-				mes "et Spiritus Sancti.";
+				mes "[DRY-RUN] et Spiritus Sancti.";
 				break;
 			case 10:
 				mes "[" + strcharinfo(0) + "]";
-				mes "In nomine Patris, et Filii";
+				mes "[DRY-RUN] In nomine Patris, et Filii";
 				break;
 			}
-			switch(select("teeming with souls shall it ever be:flow a river forth to thee and:so our feet may swiftly carry:In nomine Patris, et Filii:et Spiritus Sancti.:Power hath descended forth:And shepherds we shall be,:for thee my lord for thee.:from the hand:out thy command. And we shall")) {
+			switch(select("[DRY-RUN] teeming with souls shall it ever be:flow a river forth to thee and:so our feet may swiftly carry:In nomine Patris, et Filii:et Spiritus Sancti.:Power hath descended forth:And shepherds we shall be,:for thee my lord for thee.:from the hand:out thy command. And we shall")) {
 			case 1: mes "teeming with souls shall it ever be"; break;
 			case 2: mes "flow a river forth to thee and"; break;
 			case 3: mes "so our feet may swiftly carry"; break;
@@ -1461,17 +1461,17 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 7: mes "And shepherds we shall be,"; break;
 			case 8:
 				set .@monk_t,.@monk_t+10;
-				mes "for thee my lord for thee.";
+				mes "[DRY-RUN] for thee my lord for thee.";
 				break;
 			case 9: mes "from the hand"; break;
 			case 10: mes "out thy command. And we shall"; break;
 			}
-			switch(select("And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:from the hand:teeming with souls shall it ever be:et Spiritus Sancti.:In nomine Patris, et Filii:so our feet may swiftly carry:out thy command. And we shall:flow a river forth to thee and")) {
+			switch(select("[DRY-RUN] And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:from the hand:teeming with souls shall it ever be:et Spiritus Sancti.:In nomine Patris, et Filii:so our feet may swiftly carry:out thy command. And we shall:flow a river forth to thee and")) {
 			case 1: mes "And shepherds we shall be,"; break;
 			case 2: mes "for thee my lord for thee."; break;
 			case 3:
 				set .@monk_t,.@monk_t+10;
-				mes "Power hath descended forth";
+				mes "[DRY-RUN] Power hath descended forth";
 				break;
 			case 4: mes "from the hand"; break;
 			case 5: mes "teeming with souls shall it ever be"; break;
@@ -1481,14 +1481,14 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "out thy command. And we shall"; break;
 			case 10: mes "flow a river forth to thee and"; break;
 			}
-			switch(select("for thee my lord for thee.:And shepherds we shall be,:Power hath descended forth:so our feet may swiftly carry:from the hand:flow a river forth to thee and:out thy command. And we shall:In nomine Patris, et Filii:teeming with souls shall it ever be:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] for thee my lord for thee.:And shepherds we shall be,:Power hath descended forth:so our feet may swiftly carry:from the hand:flow a river forth to thee and:out thy command. And we shall:In nomine Patris, et Filii:teeming with souls shall it ever be:et Spiritus Sancti.")) {
 			case 1: mes "for thee my lord for thee."; break;
 			case 2: mes "And shepherds we shall be,"; break;
 			case 3: mes "Power hath descended forth"; break;
 			case 4: mes "so our feet may swiftly carry"; break;
 			case 5:
 				set .@monk_t,.@monk_t+10;
-				mes "from the hand";
+				mes "[DRY-RUN] from the hand";
 				break;
 			case 6: mes "flow a river forth to thee and"; break;
 			case 7: mes "out thy command. And we shall"; break;
@@ -1496,13 +1496,13 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "teeming with souls shall it ever be"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:so our feet may swiftly carry:from the hand:so our feet may swiftly carry:flow a river forth to thee and:In nomine Patris, et Filii:teeming with souls shall it ever be:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:so our feet may swiftly carry:from the hand:so our feet may swiftly carry:flow a river forth to thee and:In nomine Patris, et Filii:teeming with souls shall it ever be:et Spiritus Sancti.")) {
 			case 1: mes "And shepherds we shall be,"; break;
 			case 2: mes "for thee my lord for thee."; break;
 			case 3: mes "Power hath descended forth"; break;
 			case 4:
 				set .@monk_t,.@monk_t+10;
-				mes "so our feet may swiftly carry";
+				mes "[DRY-RUN] so our feet may swiftly carry";
 				break;
 			case 5: mes "from the hand"; break;
 			case 6: mes "so our feet may swiftly carry"; break;
@@ -1511,7 +1511,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "teeming with souls shall it ever be"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("for thee my lord for thee.:Power hath descended forth:And shepherds we shall be,:from the hand:so our feet may swiftly carry:flow a river forth to thee and:out thy command. And we shall:teeming with souls shall it ever be:In nomine Patris, et Filii:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] for thee my lord for thee.:Power hath descended forth:And shepherds we shall be,:from the hand:so our feet may swiftly carry:flow a river forth to thee and:out thy command. And we shall:teeming with souls shall it ever be:In nomine Patris, et Filii:et Spiritus Sancti.")) {
 			case 1: mes "for thee my lord for thee."; break;
 			case 2: mes "Power hath descended forth"; break;
 			case 3: mes "And shepherds we shall be,"; break;
@@ -1520,18 +1520,18 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 6: mes "flow a river forth to thee and"; break;
 			case 7:
 				set .@monk_t,.@monk_t+10;
-				mes "out thy command. And we shall";
+				mes "[DRY-RUN] out thy command. And we shall";
 				break;
 			case 8: mes "teeming with souls shall it ever be"; break;
 			case 9: mes "In nomine Patris, et Filii"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("for thee my lord for thee.:teeming with souls shall it ever be:flow a river forth to thee and:In nomine Patris, et Filii:et Spiritus Sancti.:Power hath descended forth:And shepherds we shall be,:so our feet may swiftly carry:from the hand:out thy command. And we shall")) {
+			switch(select("[DRY-RUN] for thee my lord for thee.:teeming with souls shall it ever be:flow a river forth to thee and:In nomine Patris, et Filii:et Spiritus Sancti.:Power hath descended forth:And shepherds we shall be,:so our feet may swiftly carry:from the hand:out thy command. And we shall")) {
 			case 1: mes "for thee my lord for thee."; break;
 			case 2: mes "teeming with souls shall it ever be"; break;
 			case 3:
 				set .@monk_t,.@monk_t+10;
-				mes "flow a river forth to thee and";
+				mes "[DRY-RUN] flow a river forth to thee and";
 				break;
 			case 4: mes "In nomine Patris, et Filii"; break;
 			case 5: mes "et Spiritus Sancti."; break;
@@ -1541,10 +1541,10 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "from the hand"; break;
 			case 10: mes "out thy command. And we shall"; break;
 			}
-			switch(select("teeming with souls shall it ever be:In nomine Patris, et Filii:And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:from the hand:so our feet may swiftly carry:out thy command. And we shall:flow a river forth to thee and:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] teeming with souls shall it ever be:In nomine Patris, et Filii:And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:from the hand:so our feet may swiftly carry:out thy command. And we shall:flow a river forth to thee and:et Spiritus Sancti.")) {
 			case 1:
 				set .@monk_t,.@monk_t+10;
-				mes "teeming with souls shall it ever be";
+				mes "[DRY-RUN] teeming with souls shall it ever be";
 				break;
 			case 2: mes "In nomine Patris, et Filii"; break;
 			case 3: mes "And shepherds we shall be,"; break;
@@ -1556,13 +1556,13 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "flow a river forth to thee and"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("Power hath descended forth:for thee my lord for thee.:And shepherds we shall be,:In nomine Patris, et Filii:so our feet may swiftly carry:from the hand:teeming with souls shall it ever be:flow a river forth to thee and:out thy command. And we shall:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] Power hath descended forth:for thee my lord for thee.:And shepherds we shall be,:In nomine Patris, et Filii:so our feet may swiftly carry:from the hand:teeming with souls shall it ever be:flow a river forth to thee and:out thy command. And we shall:et Spiritus Sancti.")) {
 			case 1: mes "Power hath descended forth"; break;
 			case 2: mes "for thee my lord for thee."; break;
 			case 3: mes "And shepherds we shall be,"; break;
 			case 4:
 				set .@monk_t,.@monk_t+10;
-				mes "In nomine Patris, et Filii";
+				mes "[DRY-RUN] In nomine Patris, et Filii";
 				break;
 			case 5: mes "so our feet may swiftly carry"; break;
 			case 6: mes "from the hand"; break;
@@ -1571,7 +1571,7 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "out thy command. And we shall"; break;
 			case 10: mes "et Spiritus Sancti."; break;
 			}
-			switch(select("And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:from the hand:out thy command. And we shall:so our feet may swiftly carry:flow a river forth to thee and:teeming with souls shall it ever be:In nomine Patris, et Filii:et Spiritus Sancti.")) {
+			switch(select("[DRY-RUN] And shepherds we shall be,:for thee my lord for thee.:Power hath descended forth:from the hand:out thy command. And we shall:so our feet may swiftly carry:flow a river forth to thee and:teeming with souls shall it ever be:In nomine Patris, et Filii:et Spiritus Sancti.")) {
 			case 1: mes "And shepherds we shall be,"; break;
 			case 2: mes "for thee my lord for thee."; break;
 			case 3: mes "Power hath descended forth"; break;
@@ -1583,267 +1583,267 @@ prt_monk,251,255,1	script	Touha#mk	79,{
 			case 9: mes "In nomine Patris, et Filii"; break;
 			case 10:
 				set .@monk_t,.@monk_t+10;
-				mes "et Spiritus Sancti.";
+				mes "[DRY-RUN] et Spiritus Sancti.";
 				break;
 			}
 		}
 		next;
-		mes "[Touha]";
-		mes "...";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] ...";
 		next;
-		mes "[Touha]";
-		mes "Hmm...";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] Hmm...";
 		next;
 		if (.@monk_t > 90) {
 			set MONK_Q,14;
 			changequest 3025,3026;
-			mes "[Touha]";
-			mes "...well done, that was perfect. You pay attention well...";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] ...well done, that was perfect. You pay attention well...";
 			next;
-			mes "[Touha]";
-			mes "However, now is not the time to relax. Your path is still long ahead of you.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] However, now is not the time to relax. Your path is still long ahead of you.";
 			next;
-			mes "[Touha]";
-			mes "Now as I promised, I will help strengthen your body.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Now as I promised, I will help strengthen your body.";
 			next;
-			mes "Focus your mind and do not move.";
+			mes "[DRY-RUN] Focus your mind and do not move.";
 			next;
-			mes "^33CCFFYou feel wind all around your body.^000000";
+			mes "[DRY-RUN] ^33CCFFYou feel wind all around your body.^000000";
 			next;
-			mes "^33CCFFAn energy within you grows.^000000";
+			mes "[DRY-RUN] ^33CCFFAn energy within you grows.^000000";
 			next;
-			mes "[Touha]";
-			mes "I feel what grows within you.";
-			mes "You may now continue on...";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] I feel what grows within you.";
+			mes "[DRY-RUN] You may now continue on...";
 			next;
-			mes "[Touha]";
-			mes "...the next course will be with Boohae.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] ...the next course will be with Boohae.";
 			next;
-			mes "[Touha]";
-			mes "I wish you well on your journey.";
-			mes "Don't forget, his name is ^CC0000Boohae^000000.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] I wish you well on your journey.";
+			mes "[DRY-RUN] Don't forget, his name is ^CC0000Boohae^000000.";
 			close;
 		}
 		else {
-			mes "[Touha]";
-			mes "I see you did not pay attention.. If you wish to become a monk, you must take this seriously.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] I see you did not pay attention.. If you wish to become a monk, you must take this seriously.";
 			next;
-			mes "[Touha]";
-			mes "Perhaps the path of a monk is too difficult for you?";
-			mes "You must take this seriously if you wish to continue...";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] Perhaps the path of a monk is too difficult for you?";
+			mes "[DRY-RUN] You must take this seriously if you wish to continue...";
 			next;
-			mes "[Touha]";
-			mes "I will give you another chance.";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] I will give you another chance.";
 			next;
-			mes "[Touha]";
-			mes "If you cannot pay attention and repeat what I ask you to, I will not allow you to continue your training here..";
+			mes "[DRY-RUN] [Touha]";
+			mes "[DRY-RUN] If you cannot pay attention and repeat what I ask you to, I will not allow you to continue your training here..";
 			close;
 		}
 	}
 	else if (MONK_Q == 14) {
-		mes "[Touha]";
-		mes "Hmm... did you forget who to visit?";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] Hmm... did you forget who to visit?";
 		next;
-		mes "[Touha]";
-		mes "I wonder about your abilities if you cannot remember such a simple thing.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] I wonder about your abilities if you cannot remember such a simple thing.";
 		next;
-		mes "[Touha]";
-		mes "...are you testing my patience?";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] ...are you testing my patience?";
 		next;
-		mes "[Touha]";
-		mes "You wear my patience thin...";
-		mes "... go visit Boohae.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] You wear my patience thin...";
+		mes "[DRY-RUN] ... go visit Boohae.";
 		close;
 	}
 	else if (MONK_Q > 14 && BaseJob == Job_Acolyte) {
-		mes "[Touha]";
-		mes "...do your best for the final test.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] ...do your best for the final test.";
 		close;
 	}
 	else {
-		mes "[Touha]";
-		mes "Never shall innocent blood be shed.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] Never shall innocent blood be shed.";
 		next;
-		mes "[Touha]";
-		mes "Yet the blood of the wicked shall flow like a river.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] Yet the blood of the wicked shall flow like a river.";
 		next;
-		mes "[Touha]";
-		mes "We shall spread our blackened wings and be the vengeful striking hammer of god.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] We shall spread our blackened wings and be the vengeful striking hammer of god.";
 		next;
-		mes "[Touha]";
-		mes "We shall flow a river forth to thee, and teeming with souls shall it ever be.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] We shall flow a river forth to thee, and teeming with souls shall it ever be.";
 		next;
-		mes "[Touha]";
-		mes "In nomine Patris, et Filii, et Spiritus Sancti.";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] In nomine Patris, et Filii, et Spiritus Sancti.";
 		next;
-		mes "[Touha]";
-		mes "...You don't have to be afraid of me...";
+		mes "[DRY-RUN] [Touha]";
+		mes "[DRY-RUN] ...You don't have to be afraid of me...";
 		close;
 	}
 }
 
 prt_monk,57,179,1	script	Boohae#mk	110,{
 	if (MONK_Q == 14 && BaseJob == Job_Acolyte) {
-		mes "[Boohae]";
-		mes "...";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ...";
 		next;
-		mes "[Boohae]";
-		mes "......";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ......";
 		next;
-		mes "[Boohae]";
-		mes ".........";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] .........";
 		next;
-		mes "[Boohae]";
-		mes "............";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ............";
 		next;
-		select("...excuse me...?");
-		mes "[Boohae]";
-		mes "...";
-		mes "You just interrupted my meditation, I should break your legs...";
+		select("[DRY-RUN] ...excuse me...?");
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ...";
+		mes "[DRY-RUN] You just interrupted my meditation, I should break your legs...";
 		next;
-		mes "[Boohae]";
-		mes "........";
-		mes "I will give you a chance to explain why you interrupted me.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ........";
+		mes "[DRY-RUN] I will give you a chance to explain why you interrupted me.";
 		next;
-		mes "[Boohae]";
-		mes ".....";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] .....";
 		next;
-		mes "[Boohae]";
-		mes "Well, start explaining... or you'll be crawling soon...";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Well, start explaining... or you'll be crawling soon...";
 		next;
-		if (select("Touha sent me.:Sorry, nothing.") == 2) {
-			mes "[Boohae]";
-			mes "........";
-			mes "...you must have a death wish to have interrupted me intentionally...";
+		if (select("[DRY-RUN] Touha sent me.:Sorry, nothing.") == 2) {
+			mes "[DRY-RUN] [Boohae]";
+			mes "[DRY-RUN] ........";
+			mes "[DRY-RUN] ...you must have a death wish to have interrupted me intentionally...";
 			close;
 		}
-		mes "[Boohae]";
-		mes "I see...";
-		mes "Well then, let's see....";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] I see...";
+		mes "[DRY-RUN] Well then, let's see....";
 		next;
-		mes "[Boohae]";
-		mes "....your body seems..";
-		mes "strengthened. Good...";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ....your body seems..";
+		mes "[DRY-RUN] strengthened. Good...";
 		next;
-		mes "[Boohae]";
-		mes "What did you do with Touha?";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] What did you do with Touha?";
 		next;
-		switch(select("Umm... well...ah..:We recited a holy pledge.:He diagnosed my physical status.")) {
+		switch(select("[DRY-RUN] Umm... well...ah..:We recited a holy pledge.:He diagnosed my physical status.")) {
 		case 1:
-			mes "[Boohae]";
-			mes "You are not ready if you";
-			mes "cannot answer a simple question.";
-			mes "Leave me to my prayers.";
+			mes "[DRY-RUN] [Boohae]";
+			mes "[DRY-RUN] You are not ready if you";
+			mes "[DRY-RUN] cannot answer a simple question.";
+			mes "[DRY-RUN] Leave me to my prayers.";
 			close;
 		case 2:
-			mes "[Boohae]";
-			mes "... I see...";
-			mes "Didn't he do anything for you?";
+			mes "[DRY-RUN] [Boohae]";
+			mes "[DRY-RUN] ... I see...";
+			mes "[DRY-RUN] Didn't he do anything for you?";
 			next;
-			switch(select("Umm... well...ah..:He diagnosed my physical status.:He taught me about being a monk.:He modified my body.")) {
+			switch(select("[DRY-RUN] Umm... well...ah..:He diagnosed my physical status.:He taught me about being a monk.:He modified my body.")) {
 			case 1:
-				mes "[Boohae]";
-				mes "You are not ready if you";
-				mes "cannot answer a simple question.";
-				mes "Leave me to my prayers.";
+				mes "[DRY-RUN] [Boohae]";
+				mes "[DRY-RUN] You are not ready if you";
+				mes "[DRY-RUN] cannot answer a simple question.";
+				mes "[DRY-RUN] Leave me to my prayers.";
 				close;
 			case 2:
-				mes "[Boohae]";
-				mes "That is unimportant to me...";
-				mes "Stop disturbing me and go away!";
+				mes "[DRY-RUN] [Boohae]";
+				mes "[DRY-RUN] That is unimportant to me...";
+				mes "[DRY-RUN] Stop disturbing me and go away!";
 				close;
 			case 3:
-				mes "[Boohae]";
-				mes "The teachings of becoming a monk are learned after becoming one.";
-				mes "This is not what I am looking for...";
+				mes "[DRY-RUN] [Boohae]";
+				mes "[DRY-RUN] The teachings of becoming a monk are learned after becoming one.";
+				mes "[DRY-RUN] This is not what I am looking for...";
 				close;
 			case 4:
-				mes "[Boohae]";
-				mes "Very well, you seem to realize your body has something new inside.";
-				mes "Well then, we shall move on to the next step...";
+				mes "[DRY-RUN] [Boohae]";
+				mes "[DRY-RUN] Very well, you seem to realize your body has something new inside.";
+				mes "[DRY-RUN] Well then, we shall move on to the next step...";
 				next;
 				break;
 			}
 			break;
 		case 3:
-			mes "[Boohae]";
-			mes "...You interrupted me to tell me that...?";
-			mes "Get lost before I break your legs...";
+			mes "[DRY-RUN] [Boohae]";
+			mes "[DRY-RUN] ...You interrupted me to tell me that...?";
+			mes "[DRY-RUN] Get lost before I break your legs...";
 			close;
 		}
-		mes "[Boohae]";
-		mes "Alright... well we have two tests...";
-		mes "Choose which one you want to do...";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Alright... well we have two tests...";
+		mes "[DRY-RUN] Choose which one you want to do...";
 		next;
-		if (select("Gathering mushrooms:Marathon") == 1) {
+		if (select("[DRY-RUN] Gathering mushrooms:Marathon") == 1) {
 			set MONK_Q,15;
 			changequest 3026,3027;
-			mes "[Boohae]";
-			mes "Hmm....gathering mushrooms. So you want to test your tolerance huh?";
-			mes "Go prepare and come back later when you're ready.";
+			mes "[DRY-RUN] [Boohae]";
+			mes "[DRY-RUN] Hmm....gathering mushrooms. So you want to test your tolerance huh?";
+			mes "[DRY-RUN] Go prepare and come back later when you're ready.";
 			close;
 		}
 		set MONK_Q,16;
 		changequest 3026,3028;
-		mes "[Boohae]";
-		mes "Good choice. Forcing your physical limits to their boundaries and grants a higher amount of self control.";
-		mes "Go prepare and come back later when you're ready.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Good choice. Forcing your physical limits to their boundaries and grants a higher amount of self control.";
+		mes "[DRY-RUN] Go prepare and come back later when you're ready.";
 		close;
 	}
 	if (MONK_Q == 15) {
-		mes "[Boohae]";
-		mes "So, are you ready? You won't need anything but a great deal of determination.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] So, are you ready? You won't need anything but a great deal of determination.";
 		next;
-		mes "[Boohae]";
-		mes "The gathering mushroom test is intended,";
-		mes "to test your patience.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] The gathering mushroom test is intended,";
+		mes "[DRY-RUN] to test your patience.";
 		next;
-		mes "[Boohae]";
-		mes "Go inside the building near this abbey.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Go inside the building near this abbey.";
 		next;
-		mes "[Boohae]";
-		mes "Other monk candidates will be with you for the same test,";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Other monk candidates will be with you for the same test,";
 		next;
-		mes "[Boohae]";
-		mes "The more people that are there, the less mushrooms they'll find.";
-		mes "So I hope you will understand that they are testing their patience, just like you.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] The more people that are there, the less mushrooms they'll find.";
+		mes "[DRY-RUN] So I hope you will understand that they are testing their patience, just like you.";
 		close;
 	}
 	if (MONK_Q == 16) {
-		mes "[Boohae]";
-		mes "Welcome back, did you prepare? You won't need anything except strong legs.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Welcome back, did you prepare? You won't need anything except strong legs.";
 		next;
-		mes "[Boohae]";
-		mes "The marathon is intended,";
-		mes "to test your self-control ability.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] The marathon is intended,";
+		mes "[DRY-RUN] to test your self-control ability.";
 		next;
-		mes "[Boohae]";
-		mes "Go inside the building near this abbey.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Go inside the building near this abbey.";
 		next;
-		mes "[Boohae]";
-		mes "All you have to do is run around the building as many times as you're required.";
-		mes "Well... get going.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] All you have to do is run around the building as many times as you're required.";
+		mes "[DRY-RUN] Well... get going.";
 		close;
 	}
 	if (MONK_Q == 17) {
-		mes "[Boohae]";
-		mes "Now, go visit 'Tomoon'. How many times should I tell you this?";
-		mes "Now you have a lot of chance to damage your body because you're so exhausted right now.";
-		mes "'Tomoon' is staying in a deepest place inside a building near this abbey.";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Now, go visit 'Tomoon'. How many times should I tell you this?";
+		mes "[DRY-RUN] Now you have a lot of chance to damage your body because you're so exhausted right now.";
+		mes "[DRY-RUN] 'Tomoon' is staying in a deepest place inside a building near this abbey.";
 		close;
 	}
 	if (MONK_Q > 17 && MONK_Q < 24) {
-		mes "[Boohae]";
-		mes "...........";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] ...........";
 		next;
-		mes "-He seems to be in meditation.-";
+		mes "[DRY-RUN] -He seems to be in meditation.-";
 		close;
 	}
 	else {
-		mes "[Boohae]";
-		mes "Hmmmm....!!";
+		mes "[DRY-RUN] [Boohae]";
+		mes "[DRY-RUN] Hmmmm....!!";
 		next;
-		mes "-He seems to be in meditation.-";
+		mes "[DRY-RUN] -He seems to be in meditation.-";
 		close;
 	}
 }
@@ -1884,50 +1884,50 @@ prt_monk,199,169,3	script	Door Keeper#mk	746,{
 monk_test,329,61,3	script	Bashu#mk	753,{
 	if (MONK_Q > 14 && MONK_Q < 25) {
 		if (MONK_Q == 15) {
-			mes "[Bashu]";
-			mes "So, which test do you want to do...?";
+			mes "[DRY-RUN] [Bashu]";
+			mes "[DRY-RUN] So, which test do you want to do...?";
 			next;
-			mes "[Bashu]";
-			mes "From what I've heard, you chose the mushroom test...";
-			mes "Oh well, it's still your choice.";
+			mes "[DRY-RUN] [Bashu]";
+			mes "[DRY-RUN] From what I've heard, you chose the mushroom test...";
+			mes "[DRY-RUN] Oh well, it's still your choice.";
 		}
 		else if (MONK_Q == 16) {
-			mes "[Bashu]";
-			mes "Which test hall do you wish to enter?";
+			mes "[DRY-RUN] [Bashu]";
+			mes "[DRY-RUN] Which test hall do you wish to enter?";
 			next;
-			mes "[Bashu]";
-			mes "Well, as far as I've been told, you chose the marathon test...";
-			mes "Oh well, it's your choice.";
+			mes "[DRY-RUN] [Bashu]";
+			mes "[DRY-RUN] Well, as far as I've been told, you chose the marathon test...";
+			mes "[DRY-RUN] Oh well, it's your choice.";
 		}
 		else {
-			mes "[Bashu]";
-			mes "Which test hall do you wish to enter?";
-			mes "You can choose which one you want.";
+			mes "[DRY-RUN] [Bashu]";
+			mes "[DRY-RUN] Which test hall do you wish to enter?";
+			mes "[DRY-RUN] You can choose which one you want.";
 			next;
 		}
 		next;
-		if (select("Tolerance - Gathering Mushrooms:Self-Control - Marathon") == 1) {
-			mes "You have decided to take the test of tolerance by ^FF0000gathering mushrooms^000000.";
+		if (select("[DRY-RUN] Tolerance - Gathering Mushrooms:Self-Control - Marathon") == 1) {
+			mes "[DRY-RUN] You have decided to take the test of tolerance by ^FF0000gathering mushrooms^000000.";
 			close2;
 			warp "job_monk",226,175;
 			end;
 		}
-		mes "You have decided to take the test of self control by taking a ^FF0000marathon^000000.";
+		mes "[DRY-RUN] You have decided to take the test of self control by taking a ^FF0000marathon^000000.";
 		close2;
 		warp "monk_test",386,387;
 		end;
 	}
 	else {
-		mes "[Bashu]";
-		mes "Welcome... this place is a training place for monks, Saint Capitolina Abbey.";
-		mes "When you go inside....you will meet Tomoon the oldest monk who succeeds to the predecessors,";
+		mes "[DRY-RUN] [Bashu]";
+		mes "[DRY-RUN] Welcome... this place is a training place for monks, Saint Capitolina Abbey.";
+		mes "[DRY-RUN] When you go inside....you will meet Tomoon the oldest monk who succeeds to the predecessors,";
 		next;
-		mes "[Bashu]";
-		mes "Please be advised and do not touch anything.";
-		mes "And please avoid talking loud in front of Tomoon.";
+		mes "[DRY-RUN] [Bashu]";
+		mes "[DRY-RUN] Please be advised and do not touch anything.";
+		mes "[DRY-RUN] And please avoid talking loud in front of Tomoon.";
 		next;
-		mes "[Bashu]";
-		mes "I hope you will have a great time in here.";
+		mes "[DRY-RUN] [Bashu]";
+		mes "[DRY-RUN] I hope you will have a great time in here.";
 		close;
 	}
 }
@@ -1982,9 +1982,9 @@ OnTouch_:
 		end;
 	}
 	else if (MONK_Q == 25) {
-		mes "[Supervisor]";
-		mes "Now...you may go visit Tomoon.";
-		mes "Tomoon is in the deepest room inside a building near this abbey.";
+		mes "[DRY-RUN] [Supervisor]";
+		mes "[DRY-RUN] Now...you may go visit Tomoon.";
+		mes "[DRY-RUN] Tomoon is in the deepest room inside a building near this abbey.";
 		mapannounce "monk_test","Congratulations!" + strcharinfo(0) +"!! You completed the marathon!",bc_map;
 		close2;
 		warp "prt_monk",194,168;
@@ -2027,19 +2027,19 @@ monk_test,389,42,0	duplicate(MonkTrap)	Trap#t_monk7_4	-1
 
 job_monk,225,180,1	script	Hyunmoo#mk	89,{
 	if ((countitem(1069) > 0 || countitem(1070) > 0) && countitem(1069) < 30 && countitem(1070) < 30) {
-		mes "[Hyunmoo]";
-		mes "You didn't bring enough mushrooms... go get some more.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] You didn't bring enough mushrooms... go get some more.";
 		next;
-		mes "[Hyunmoo]";
-		mes "Or is it you want to quit... do you want to quit?";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Or is it you want to quit... do you want to quit?";
 		next;
-		switch(select("No.:Yes.") == 1) {
-			mes "[Hyunmoo]";
-			mes "Then move!";
+		switch(select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Hyunmoo]";
+			mes "[DRY-RUN] Then move!";
 			close;
 		}
-		mes "[Hyunmoo]";
-		mes ".....I figured as much....you don't have a spirit.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] .....I figured as much....you don't have a spirit.";
 		mapannounce "job_monk","" + strcharinfo(0) + ", has quit his testing to become a monk.",bc_map;
 		close2;
 		set MONK_Q,16;
@@ -2048,41 +2048,41 @@ job_monk,225,180,1	script	Hyunmoo#mk	89,{
 		end;
 	}
 	else if (MONK_Q > 14 && MONK_Q < 25 && (countitem(1069) == 0 || countitem(1070)  == 0)) {
-		mes "[Hyunmoo]";
-		mes "Nice to meet you. My name is Hyunmoo. I am in charge of the mushroom test.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Nice to meet you. My name is Hyunmoo. I am in charge of the mushroom test.";
 		next;
-		mes "[Hyunmoo]";
-		mes "Your task will be to gather mushrooms.";
-		mes "Understand?";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Your task will be to gather mushrooms.";
+		mes "[DRY-RUN] Understand?";
 		next;
-		mes "[Hyunmoo]";
-		mes "Picking the mushrooms is to train your tolerance.";
-		mes "We planted a garden in order to survive as well as to discipline our minds.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Picking the mushrooms is to train your tolerance.";
+		mes "[DRY-RUN] We planted a garden in order to survive as well as to discipline our minds.";
 		next;
-		mes "[Hyunmoo]";
-		mes "I believe there is no better way to find true inner peace then to be one with nature.";
-		mes "So we created our garden, however these mushrooms started sprouting up everywhere!";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] I believe there is no better way to find true inner peace then to be one with nature.";
+		mes "[DRY-RUN] So we created our garden, however these mushrooms started sprouting up everywhere!";
 		next;
-		mes "[Hyunmoo]";
-		mes "What we ask of you as part of your training is to remove these mushrooms.";
-		mes "Go help the others remove as many mushrooms as you can and bring me back";
-		mes "enough ^FF0000Orange Net Mushrooms^000000 and ^FF0000Orange Gooey Mushroom^000000 as proof.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] What we ask of you as part of your training is to remove these mushrooms.";
+		mes "[DRY-RUN] Go help the others remove as many mushrooms as you can and bring me back";
+		mes "[DRY-RUN] enough ^FF0000Orange Net Mushrooms^000000 and ^FF0000Orange Gooey Mushroom^000000 as proof.";
 		next;
-		mes "[Hyunmoo]";
-		mes "Now, go get some mushrooms.";
-		mes "Check back with me when you have picked some, I will tell you if it is enough.";
-		mes "And remember, find peace when gardening.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Now, go get some mushrooms.";
+		mes "[DRY-RUN] Check back with me when you have picked some, I will tell you if it is enough.";
+		mes "[DRY-RUN] And remember, find peace when gardening.";
 		next;
-		mes "[Hyunmoo]";
-		mes "...or do you want to quit?";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] ...or do you want to quit?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Hyunmoo]";
-			mes "Alright then, keep going.";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Hyunmoo]";
+			mes "[DRY-RUN] Alright then, keep going.";
 			close;
 		}
-		mes "[Hyunmoo]";
-		mes ".....yeah I thought as much....you don't have the spirit needed to become a monk.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] .....yeah I thought as much....you don't have the spirit needed to become a monk.";
 		mapannounce "job_monk","" + strcharinfo(0) + ", has quit his testing to become a monk.",bc_map;
 		delitem 1069,countitem(1069); //Mushroom_Of_Thief_1
 		delitem 1070,countitem(1070); //Mushroom_Of_Thief_2
@@ -2094,13 +2094,13 @@ job_monk,225,180,1	script	Hyunmoo#mk	89,{
 		end;
 	}
 	else if (MONK_Q > 14 && MONK_Q < 25 && (countitem(1069) > 29 || countitem(1070) > 29)) {
-		mes "[Hyunmoo]";
-		mes "...hmm... not bad.";
-		mes "Ok, you passed.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] ...hmm... not bad.";
+		mes "[DRY-RUN] Ok, you passed.";
 		next;
-		mes "[Hyunmoo]";
-		mes "Go meet Tomoon for your next test.";
-		mes "Tomoon is staying in the deepest room inside a building near this abbey.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Go meet Tomoon for your next test.";
+		mes "[DRY-RUN] Tomoon is staying in the deepest room inside a building near this abbey.";
 		set MONK_Q,25;
 		changequest 3027,3029;
 		delitem 1069,countitem(1069); //Mushroom_Of_Thief_1
@@ -2110,78 +2110,78 @@ job_monk,225,180,1	script	Hyunmoo#mk	89,{
 		end;
 	}
 	else if (MONK_Q > 24) {
-		mes "[Hyunmoo]";
-		mes "Didn't I tell you to go meet ^FF0000Tomoon^000000? Or do you want to pick some more mushrooms?";
-		mes "Tomoon is staying in the deepest room inside a building near this abbey.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Didn't I tell you to go meet ^FF0000Tomoon^000000? Or do you want to pick some more mushrooms?";
+		mes "[DRY-RUN] Tomoon is staying in the deepest room inside a building near this abbey.";
 		close;
 	}
 }
 
 prt_monk,225,180,1	script	Hyunmoo#mk2	89,{
 	if (MONK_Q < 25) {
-		mes "[Hyunmoo]";
-		mes "As I see vegetables growing, I feel myself growing within.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] As I see vegetables growing, I feel myself growing within.";
 		next;
-		mes "[Hyunmoo]";
-		mes "As I see other monks working hard on growing vegetables,";
-		mes "it warms my heart to see others enjoying gardening as I do.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] As I see other monks working hard on growing vegetables,";
+		mes "[DRY-RUN] it warms my heart to see others enjoying gardening as I do.";
 		next;
-		mes "[Hyunmoo]";
-		mes "To be honest with you, I think gardening is the greatest thing ever...";
-		mes "We should give thanks to the brothers who prepare our food for us through their hard work.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] To be honest with you, I think gardening is the greatest thing ever...";
+		mes "[DRY-RUN] We should give thanks to the brothers who prepare our food for us through their hard work.";
 		next;
-		mes "[Hyunmoo]";
-		mes "Don't forget to thank them as you go by for their hard work.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Don't forget to thank them as you go by for their hard work.";
 		close;
 	}
 	else if (MONK_Q > 24 && BaseJob == Job_Acolyte) {
-		mes "[Hyunmoo]";
-		mes "Didn't I tell you to go meet Tomoon? Or do you want to pick more mushrooms?";
-		mes "Tomoon is staying in the deepest room inside a building near this abbey.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Didn't I tell you to go meet Tomoon? Or do you want to pick more mushrooms?";
+		mes "[DRY-RUN] Tomoon is staying in the deepest room inside a building near this abbey.";
 		close;
 	}
 	else {
-		mes "[Hyunmoo]";
-		mes "As I see vegetables growing, I feel myself growing within.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] As I see vegetables growing, I feel myself growing within.";
 		next;
-		mes "[Hyunmoo]";
-		mes "As I see other monks working hard on growing vegetables,";
-		mes "it warms my heart to see others enjoying gardening as I do.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] As I see other monks working hard on growing vegetables,";
+		mes "[DRY-RUN] it warms my heart to see others enjoying gardening as I do.";
 		next;
-		mes "[Hyunmoo]";
-		mes "To be honest with you, I think gardening is the greatest thing ever...";
-		mes "We should give thanks to the brothers who prepare our food for us through their hard work.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] To be honest with you, I think gardening is the greatest thing ever...";
+		mes "[DRY-RUN] We should give thanks to the brothers who prepare our food for us through their hard work.";
 		next;
-		mes "[Hyunmoo]";
-		mes "Don't forget to thank them as you go by for their hard work.";
+		mes "[DRY-RUN] [Hyunmoo]";
+		mes "[DRY-RUN] Don't forget to thank them as you go by for their hard work.";
 		close;
 	}
 }
 
 monk_test,319,139,1	script	Tomoon#mk	52,{
 	if (MONK_Q == 25) {
-		mes "[Tomoon]";
-		mes "Welcome young one.";
-		mes "My name is Tomoon, I am in charge of the last test of spiritual training!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Welcome young one.";
+		mes "[DRY-RUN] My name is Tomoon, I am in charge of the last test of spiritual training!";
 		next;
-		mes "[Tomoon]";
-		mes "Now you don't need to be instructed any more then this:";
-		mes "^990000Terminate every living thing in your way!^000000 That's all!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Now you don't need to be instructed any more then this:";
+		mes "[DRY-RUN] ^990000Terminate every living thing in your way!^000000 That's all!";
 		next;
-		mes "[Tomoon]";
-		mes "While you're wandering around within the maze, if you encounter any evil creatures, just kill them! Release their tortured souls!!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] While you're wandering around within the maze, if you encounter any evil creatures, just kill them! Release their tortured souls!!";
 		next;
-		mes "[Tomoon]";
-		mes "Do not compare us to the weakling priests! We are monks and we will always be the strongest!!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Do not compare us to the weakling priests! We are monks and we will always be the strongest!!";
 		next;
-		mes "[Tomoon]";
-		mes "We are not like priests who cower behind the strength of others!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] We are not like priests who cower behind the strength of others!";
 		next;
-		mes "[Tomoon]";
-		mes "Now, focus!! Keep your fists tight and your eyes open! It's time to show me what you got.";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Now, focus!! Keep your fists tight and your eyes open! It's time to show me what you got.";
 		next;
-		mes "[Tomoon]";
-		mes "Let's see if you got what it takes to be a true monk!!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Let's see if you got what it takes to be a true monk!!";
 		close2;
 		set MONK_Q,26;
 		changequest 3029,3031;
@@ -2189,74 +2189,74 @@ monk_test,319,139,1	script	Tomoon#mk	52,{
 		end;
 	}
 	else if (MONK_Q == 26) {
-		mes "[Tomoon]";
-		mes "Hmm... you failed?";
-		mes "Cheer up! Failure is but a process to success!";
-		mes "Go! Start again! Kill them all!!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Hmm... you failed?";
+		mes "[DRY-RUN] Cheer up! Failure is but a process to success!";
+		mes "[DRY-RUN] Go! Start again! Kill them all!!";
 		close2;
 		warp "monk_test",88,74;
 		end;
 	}
 	else if (MONK_Q == 27) {
-		mes "[Tomoon]";
-		mes "Excellent job!!";
-		mes "I knew you'd make it through!";
-		mes "Now...I will give you a secret potion which will double your physical strength.";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] Excellent job!!";
+		mes "[DRY-RUN] I knew you'd make it through!";
+		mes "[DRY-RUN] Now...I will give you a secret potion which will double your physical strength.";
 		next;
 		getitem 506,1; //Green_Potion
-		mes "Drink this potion and you will be able to become a monk!!!";
-		mes "... now go back to sensei Moohae!!!";
+		mes "[DRY-RUN] Drink this potion and you will be able to become a monk!!!";
+		mes "[DRY-RUN] ... now go back to sensei Moohae!!!";
 		set MONK_Q,28;
 		changequest 3031,3032;
 		close;
 	}
 	else if (MONK_Q == 28) {
-		mes "[Tomoon]";
-		mes "I already told you, go back to sensei Moohae!!!";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] I already told you, go back to sensei Moohae!!!";
 		close;
 	}
 	else {
-		mes "[Tomoon]";
-		mes "....be quiet.";
-		mes ".....";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] ....be quiet.";
+		mes "[DRY-RUN] .....";
 		next;
-		mes "[Tomoon]";
-		mes "I will not allow anyone to cause any trouble in this abbey.";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] I will not allow anyone to cause any trouble in this abbey.";
 		next;
-		mes "[Tomoon]";
-		mes "You'd better not be thinking about causing any trouble.";
+		mes "[DRY-RUN] [Tomoon]";
+		mes "[DRY-RUN] You'd better not be thinking about causing any trouble.";
 		close;
 	}
 }
 
 monk_test,82,85,1	script	Proctor#mk	95,{
-	mes "[Proctor]";
-	mes "So, are you ready to undergo the spiritual training?";
+	mes "[DRY-RUN] [Proctor]";
+	mes "[DRY-RUN] So, are you ready to undergo the spiritual training?";
 	next;
-	switch(select("Yes!:No.:What do I have to do?")) {
+	switch(select("[DRY-RUN] Yes!:No.:What do I have to do?")) {
 	case 1:
-		mes "[Proctor]";
-		mes "Alright! I wish you luck. If you get lost and can't find a way out, simply log out and log back in.";
-		mes "Then you will return to your save point. What's that mean? Heck if I know, I'm just told to say that. Oh yes and also, please cooperate with your comrades.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] Alright! I wish you luck. If you get lost and can't find a way out, simply log out and log back in.";
+		mes "[DRY-RUN] Then you will return to your save point. What's that mean? Heck if I know, I'm just told to say that. Oh yes and also, please cooperate with your comrades.";
 		close2;
 		set MONK_Q,26;
 		warp "monk_test",125,277;
 		end;
 	case 2:
-		mes "[Proctor]";
-		mes "I see. Take your time.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] I see. Take your time.";
 		close;
 	case 3:
-		mes "[Proctor]";
-		mes "Inside this test hall is the maze of spirits.";
-		mes "There are spirits inside which will block you from moving freely.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] Inside this test hall is the maze of spirits.";
+		mes "[DRY-RUN] There are spirits inside which will block you from moving freely.";
 		next;
-		mes "[Proctor]";
-		mes "If you want to exit the test hall, you must make your way to the warp portal located at the opposite side from the start point.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] If you want to exit the test hall, you must make your way to the warp portal located at the opposite side from the start point.";
 		next;
-		mes "[Proctor]";
-		mes "....Oh yes and also there are monsters wandering around in the maze, please clear them.";
-		mes "Good luck.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] ....Oh yes and also there are monsters wandering around in the maze, please clear them.";
+		mes "[DRY-RUN] Good luck.";
 		close;
 	}
 }
@@ -2323,8 +2323,8 @@ OnDisable:
 
 monk_test,166,278,0	script	exit_monk#1	45,1,1,{
 OnTouch_:
-	mes "[Proctor]";
-	mes "You did well. Please return to Tomoon, he's waiting for you.";
+	mes "[DRY-RUN] [Proctor]";
+	mes "[DRY-RUN] You did well. Please return to Tomoon, he's waiting for you.";
 	set MONK_Q,27;
 	donpcevent "mob_monk#1_5::OnDisable";
 	donpcevent "mob_monk#1_4::OnDisable";
@@ -2337,33 +2337,33 @@ OnTouch_:
 }
 
 monk_test,88,91,1	script	Proctor#mk2	52,{
-	mes "[Proctor]";
-	mes "So, are you ready to undergo this spiritual training?";
+	mes "[DRY-RUN] [Proctor]";
+	mes "[DRY-RUN] So, are you ready to undergo this spiritual training?";
 	next;
-	switch(select("Yes!:No.:Check the caution for the test.")) {
+	switch(select("[DRY-RUN] Yes!:No.:Check the caution for the test.")) {
 	case 1:
-		mes "[Proctor]";
-		mes "Alright! I wish you luck. If you get lost and can't find a way out, simply log out and log back in.";
-		mes "Then you will return to your save point. What's that mean? Heck if I know, I'm just told to say that. Oh yes and also, please cooperate with your comrades.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] Alright! I wish you luck. If you get lost and can't find a way out, simply log out and log back in.";
+		mes "[DRY-RUN] Then you will return to your save point. What's that mean? Heck if I know, I'm just told to say that. Oh yes and also, please cooperate with your comrades.";
 		close2;
 		set MONK_Q,26;
 		warp "monk_test",125,177;
 		end;
 	case 2:
-		mes "[Proctor]";
-		mes "I see. Take your time.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] I see. Take your time.";
 		close;
 	case 3:
-		mes "[Proctor]";
-		mes "Inside this test hall is the maze of spirits.";
-		mes "There are spirits inside which will block you from moving freely.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] Inside this test hall is the maze of spirits.";
+		mes "[DRY-RUN] There are spirits inside which will block you from moving freely.";
 		next;
-		mes "[Proctor]";
-		mes "If you want to exit the test hall, you must make your way to the warp portal located at the opposite side from the start point.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] If you want to exit the test hall, you must make your way to the warp portal located at the opposite side from the start point.";
 		next;
-		mes "[Proctor]";
-		mes "....Oh yes and also there are monsters wandering around in the maze, please clear them.";
-		mes "Good luck.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] ....Oh yes and also there are monsters wandering around in the maze, please clear them.";
+		mes "[DRY-RUN] Good luck.";
 		close;
 	}
 }
@@ -2430,8 +2430,8 @@ OnDisable:
 
 monk_test,166,178,0	script	exit_monk#2	45,1,1,{
 OnTouch_:
-	mes "[Proctor]";
-	mes "You did well. Please return to Tomoon, he's waiting for you.";
+	mes "[DRY-RUN] [Proctor]";
+	mes "[DRY-RUN] You did well. Please return to Tomoon, he's waiting for you.";
 	set MONK_Q,27;
 	donpcevent "mob_monk#2_5::OnDisable";
 	donpcevent "mob_monk#2_4::OnDisable";
@@ -2444,33 +2444,33 @@ OnTouch_:
 }
 
 monk_test,95,85,1	script	Proctor#btl#3	79,{
-	mes "[Proctor]";
-	mes "So, are you ready to undergo this spiritual training?";
+	mes "[DRY-RUN] [Proctor]";
+	mes "[DRY-RUN] So, are you ready to undergo this spiritual training?";
 	next;
-	switch(select("Yes!:No.:Check the caution for the test.")) {
+	switch(select("[DRY-RUN] Yes!:No.:Check the caution for the test.")) {
 	case 1:
-		mes "[Proctor]";
-		mes "Alright! I wish you luck. If you get lost and can't find a way out, simply log out and log back in.";
-		mes "Then you will return to your save point. What's that mean? Heck if I know, I'm just told to say that. Oh yes and also, please cooperate with your comrades.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] Alright! I wish you luck. If you get lost and can't find a way out, simply log out and log back in.";
+		mes "[DRY-RUN] Then you will return to your save point. What's that mean? Heck if I know, I'm just told to say that. Oh yes and also, please cooperate with your comrades.";
 		close2;
 		set MONK_Q,26;
 		warp "monk_test",230,277;
 		end;
 	case 2:
-		mes "[Proctor]";
-		mes "I see. Take your time.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] I see. Take your time.";
 		close;
 	case 3:
-		mes "[Proctor]";
-		mes "Inside this test hall is the maze of spirits.";
-		mes "There are spirits inside which will block you from moving freely.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] Inside this test hall is the maze of spirits.";
+		mes "[DRY-RUN] There are spirits inside which will block you from moving freely.";
 		next;
-		mes "[Proctor]";
-		mes "If you want to exit the test hall, you must make your way to the warp portal located at the opposite side from the start point.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] If you want to exit the test hall, you must make your way to the warp portal located at the opposite side from the start point.";
 		next;
-		mes "[Proctor]";
-		mes "....Oh yes and also there are monsters wandering around in the maze, please clear them.";
-		mes "Good luck.";
+		mes "[DRY-RUN] [Proctor]";
+		mes "[DRY-RUN] ....Oh yes and also there are monsters wandering around in the maze, please clear them.";
+		mes "[DRY-RUN] Good luck.";
 		close;
 	}
 }
@@ -2537,8 +2537,8 @@ OnDisable:
 
 monk_test,270,278,0	script	exit_monk#3	45,1,1,{
 OnTouch_:
-	mes "[Proctor]";
-	mes "You did well. Please return to Tomoon, he's waiting for you.";
+	mes "[DRY-RUN] [Proctor]";
+	mes "[DRY-RUN] You did well. Please return to Tomoon, he's waiting for you.";
 	set MONK_Q,27;
 	donpcevent "mob_monk#3_5::OnDisable";
 	donpcevent "mob_monk#3_4::OnDisable";
@@ -2578,9 +2578,9 @@ OnEnable:
 }
 
 monk_test,137,338,1	script	switchreset#monkmonk	79,{
-	mes "Grrrr...";
-	mes "All monsters in the monk job chance place have been reset.";
-	mes "Timer's activated.";
+	mes "[DRY-RUN] Grrrr...";
+	mes "[DRY-RUN] All monsters in the monk job chance place have been reset.";
+	mes "[DRY-RUN] Timer's activated.";
 	donpcevent "mob_monk#1_1::OnDisable";
 	donpcevent "mob_monk#1_2::OnDisable";
 	donpcevent "mob_monk#1_3::OnDisable";

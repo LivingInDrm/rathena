@@ -202,79 +202,79 @@ alberta,88,52,5	duplicate(EggGeezer)	Cantankerous Geezer#alb	709
 
 // Create Holy Eggs
 prontera,230,312,3	script	Nerlen#es07	79,{
-	mes "[Nerlen]";
-	mes "Hello! If you'd like,";
-	mes "I can take your Chicken";
-	mes "Eggs and transform them";
-	mes "into Holy Eggs. It's something";
-	mes "I do for others in celebration";
-	mes "of this holy season.";
+	mes "[DRY-RUN] [Nerlen]";
+	mes "[DRY-RUN] Hello! If you'd like,";
+	mes "[DRY-RUN] I can take your Chicken";
+	mes "[DRY-RUN] Eggs and transform them";
+	mes "[DRY-RUN] into Holy Eggs. It's something";
+	mes "[DRY-RUN] I do for others in celebration";
+	mes "[DRY-RUN] of this holy season.";
 	next;
-	mes "[Nerlen]";
-	mes "Holy Eggs represent";
-	mes "rebirth and, fittingly,";
-	mes "can be used to restore";
-	mes "life to your friends.";
-	mes "Would you like me to";
-	mes "make some for you?";
+	mes "[DRY-RUN] [Nerlen]";
+	mes "[DRY-RUN] Holy Eggs represent";
+	mes "[DRY-RUN] rebirth and, fittingly,";
+	mes "[DRY-RUN] can be used to restore";
+	mes "[DRY-RUN] life to your friends.";
+	mes "[DRY-RUN] Would you like me to";
+	mes "[DRY-RUN] make some for you?";
 	next;
-	switch(select("What do I need to make Holy Eggs?:I want to make Holy Eggs.:Maybe next time.")) {
+	switch(select("[DRY-RUN] What do I need to make Holy Eggs?:I want to make Holy Eggs.:Maybe next time.")) {
 	case 1:
-		mes "[Nerlen]";
-		mes "For each Holy Egg";
-		mes "that you want me to";
-		mes "make, you will need";
-		mes "to bring me...";
+		mes "[DRY-RUN] [Nerlen]";
+		mes "[DRY-RUN] For each Holy Egg";
+		mes "[DRY-RUN] that you want me to";
+		mes "[DRY-RUN] make, you will need";
+		mes "[DRY-RUN] to bring me...";
 		next;
-		mes "[Nerlen]";
-		mes "^4D4DFF1 White Herb^000000,";
-		mes "^4D4DFF1 Green Herb^000000,";
-		mes "^4D4DFF1 Yellow Herb^000000,";
-		mes "^4D4DFF1 Holy Water^000000, and";
-		mes "^4D4DFF1 Chicken Egg^000000.";
+		mes "[DRY-RUN] [Nerlen]";
+		mes "[DRY-RUN] ^4D4DFF1 White Herb^000000,";
+		mes "[DRY-RUN] ^4D4DFF1 Green Herb^000000,";
+		mes "[DRY-RUN] ^4D4DFF1 Yellow Herb^000000,";
+		mes "[DRY-RUN] ^4D4DFF1 Holy Water^000000, and";
+		mes "[DRY-RUN] ^4D4DFF1 Chicken Egg^000000.";
 		close;
 	case 2:
-		mes "[Nerlen]";
-		mes "Alright, how many";
-		mes "Holy Eggs would you";
-		mes "like me to make you?";
-		mes "I can only make up to";
-		mes "10 Holy Eggs at a time.";
-		mes "Enter ''0'' to cancel.";
+		mes "[DRY-RUN] [Nerlen]";
+		mes "[DRY-RUN] Alright, how many";
+		mes "[DRY-RUN] Holy Eggs would you";
+		mes "[DRY-RUN] like me to make you?";
+		mes "[DRY-RUN] I can only make up to";
+		mes "[DRY-RUN] 10 Holy Eggs at a time.";
+		mes "[DRY-RUN] Enter ''0'' to cancel.";
 		next;
 		while(1) {
 			input .@input;
 			if (.@input == 0) {
-				mes "[Nerlen]";
-				mes "Oh, you changed your";
-				mes "mind? Feel free to visit me";
-				mes "whenever you want me to";
-				mes "make you some Holy Eggs~";
+				mes "[DRY-RUN] [Nerlen]";
+				mes "[DRY-RUN] Oh, you changed your";
+				mes "[DRY-RUN] mind? Feel free to visit me";
+				mes "[DRY-RUN] whenever you want me to";
+				mes "[DRY-RUN] make you some Holy Eggs~";
 				close;
 			}
 			else if (.@input < 0 || .@input > 10) {
-				mes "[Nerlen]";
-				mes "I'm sorry, but I can only";
-				mes "make up to 10 Holy Eggs";
-				mes "at a time. If you wanted to";
-				mes "cancel, then just enter ''0.''";
+				mes "[DRY-RUN] [Nerlen]";
+				mes "[DRY-RUN] I'm sorry, but I can only";
+				mes "[DRY-RUN] make up to 10 Holy Eggs";
+				mes "[DRY-RUN] at a time. If you wanted to";
+				mes "[DRY-RUN] cancel, then just enter ''0.''";
 				next;
 			}
 			else {
 				if ((countitem(509) < .@input) || (countitem(511) < .@input) || (countitem(508) < .@input) || (countitem(523) < .@input) || (countitem(7605) < .@input)) {
-					mes "[Nerlen]";
-					mes "I'm sorry, but you don't";
-					mes "have enough items to make";
-					mes "Holy Eggs. You need the";
-					mes "following for me to create";
-					mes "each Holy Egg for you.";
+					mes "[DRY-RUN] [Nerlen]";
+					mes "[DRY-RUN] I'm sorry, but you don't";
+					mes "[DRY-RUN] have enough items to make";
+					mes "[DRY-RUN] Holy Eggs. You need the";
+					mes "[DRY-RUN] following for me to create";
+					mes "[DRY-RUN] each Holy Egg for you.";
 					next;
-					mes "[Nerlen]";
-					mes "^4D4DFF1 White Herb^000000,";
-					mes "^4D4DFF1 Green Herb^000000,";
-					mes "^4D4DFF1 Yellow Herb^000000,";
-					mes "^4D4DFF1 Holy Water^000000, and";
-					mes "^4D4DFF1 Chicken Egg^000000.";
+					mes "[DRY-RUN] [Nerlen]";
+					mes "[DRY-RUN] ^4D4DFF1 White Herb^000000,";
+					mes "[DRY-RUN] ^4D4DFF1 Green Herb^000000,";
+					mes "[DRY-RUN] ^4D4DFF1 Yellow Herb^000000,";
+					mes "[DRY-RUN] ^4D4DFF1 Holy Water^000000, and";
+					mes "[DRY-RUN] ^4D4DFF1 Chicken Egg^000000.";
 					close;
 				}
 				else {
@@ -283,12 +283,12 @@ prontera,230,312,3	script	Nerlen#es07	79,{
 			}
 		}
 		if (checkweight(12019,.@input) == 0) {
-			mes "[Nerlen]";
-			mes "I'm sorry, but you";
-			mes "won't be able to carry";
-			mes "that many Holy Eggs now...";
-			mes "You'd better free up more";
-			mes "space in your Inventory first.";
+			mes "[DRY-RUN] [Nerlen]";
+			mes "[DRY-RUN] I'm sorry, but you";
+			mes "[DRY-RUN] won't be able to carry";
+			mes "[DRY-RUN] that many Holy Eggs now...";
+			mes "[DRY-RUN] You'd better free up more";
+			mes "[DRY-RUN] space in your Inventory first.";
 			close;
 		}
 		else {
@@ -298,17 +298,17 @@ prontera,230,312,3	script	Nerlen#es07	79,{
 			delitem 523,.@input; //Holy_Water
 			delitem 7605,.@input; //Egg
 			getitem 12019,.@input; //Holy_Egg
-			mes "[Nerlen]";
-			mes "Thank you!";
-			mes "I hope you enjoy";
-			mes "these Holy Eggs~";
-			mes "Hope you to be with God's love.";
+			mes "[DRY-RUN] [Nerlen]";
+			mes "[DRY-RUN] Thank you!";
+			mes "[DRY-RUN] I hope you enjoy";
+			mes "[DRY-RUN] these Holy Eggs~";
+			mes "[DRY-RUN] Hope you to be with God's love.";
 			close;
 		}
 	case 3:
-		mes "[Nerlen]";
-		mes "Alright, I understand.";
-		mes "May God bless you.";
+		mes "[DRY-RUN] [Nerlen]";
+		mes "[DRY-RUN] Alright, I understand.";
+		mes "[DRY-RUN] May God bless you.";
 		close;
 	}
 }
@@ -631,33 +631,33 @@ morocc,131,26,5	script	Secret Corps#egg	880,{
 pay_dun00,22,127,0	script	Trace#egg1	844,{
 	if (easter2008 == 5) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well...";
-		mes "This is the place";
-		mes "the Corps Member";
-		mes "wanted me to find...";
-		mes "Time to use all of";
-		mes "these Holy Eggs.";
+		mes "[DRY-RUN] Well...";
+		mes "[DRY-RUN] This is the place";
+		mes "[DRY-RUN] the Corps Member";
+		mes "[DRY-RUN] wanted me to find...";
+		mes "[DRY-RUN] Time to use all of";
+		mes "[DRY-RUN] these Holy Eggs.";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Here we go...";
-			mes "Will this really bring";
-			mes "this ancient hero";
-			mes "back to life? I'm...";
-			mes "I'm kind of scared!";
+			mes "[DRY-RUN] Here we go...";
+			mes "[DRY-RUN] Will this really bring";
+			mes "[DRY-RUN] this ancient hero";
+			mes "[DRY-RUN] back to life? I'm...";
+			mes "[DRY-RUN] I'm kind of scared!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "^333333*Whew!*^000000 Nothing happened!";
-			mes "I guess I better go back to";
-			mes "that Corps Member and let";
-			mes "him know that it didn't work.";
+			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
+			mes "[DRY-RUN] I guess I better go back to";
+			mes "[DRY-RUN] that Corps Member and let";
+			mes "[DRY-RUN] him know that it didn't work.";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -665,17 +665,17 @@ pay_dun00,22,127,0	script	Trace#egg1	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Huh? Where did I put";
-			mes "those 33 Holy Eggs";
-			mes "that I needed for this?";
+			mes "[DRY-RUN] Huh? Where did I put";
+			mes "[DRY-RUN] those 33 Holy Eggs";
+			mes "[DRY-RUN] that I needed for this?";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "There was something";
-		mes "here, but I can't tell";
-		mes "for sure what it was...";
+		mes "[DRY-RUN] There was something";
+		mes "[DRY-RUN] here, but I can't tell";
+		mes "[DRY-RUN] for sure what it was...";
 		close;
 	}
 }
@@ -683,33 +683,33 @@ pay_dun00,22,127,0	script	Trace#egg1	844,{
 iz_dun02,340,346,0	script	Trace#egg	844,{
 	if (easter2008 == 6) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well...";
-		mes "This is the place";
-		mes "the Corps Member";
-		mes "wanted me to find...";
-		mes "Time to use all of";
-		mes "these Holy Eggs.";
+		mes "[DRY-RUN] Well...";
+		mes "[DRY-RUN] This is the place";
+		mes "[DRY-RUN] the Corps Member";
+		mes "[DRY-RUN] wanted me to find...";
+		mes "[DRY-RUN] Time to use all of";
+		mes "[DRY-RUN] these Holy Eggs.";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Here we go...";
-			mes "Will this really bring";
-			mes "this ancient hero";
-			mes "back to life? I'm...";
-			mes "I'm kind of scared!";
+			mes "[DRY-RUN] Here we go...";
+			mes "[DRY-RUN] Will this really bring";
+			mes "[DRY-RUN] this ancient hero";
+			mes "[DRY-RUN] back to life? I'm...";
+			mes "[DRY-RUN] I'm kind of scared!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "^333333*Whew!*^000000 Nothing happened!";
-			mes "I guess I better go back to";
-			mes "that Corps Member and let";
-			mes "him know that it didn't work.";
+			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
+			mes "[DRY-RUN] I guess I better go back to";
+			mes "[DRY-RUN] that Corps Member and let";
+			mes "[DRY-RUN] him know that it didn't work.";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -717,17 +717,17 @@ iz_dun02,340,346,0	script	Trace#egg	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Huh? Where did I put";
-			mes "those 33 Holy Eggs";
-			mes "that I needed for this?";
+			mes "[DRY-RUN] Huh? Where did I put";
+			mes "[DRY-RUN] those 33 Holy Eggs";
+			mes "[DRY-RUN] that I needed for this?";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "There was something";
-		mes "here, but I can't tell";
-		mes "for sure what it was...";
+		mes "[DRY-RUN] There was something";
+		mes "[DRY-RUN] here, but I can't tell";
+		mes "[DRY-RUN] for sure what it was...";
 		close;
 	}
 }
@@ -735,33 +735,33 @@ iz_dun02,340,346,0	script	Trace#egg	844,{
 mjo_dun03,308,256,0	script	Trace#egg2	844,{
 	if (easter2008 == 7) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well...";
-		mes "This is the place";
-		mes "the Corps Member";
-		mes "wanted me to find...";
-		mes "Time to use all of";
-		mes "these Holy Eggs.";
+		mes "[DRY-RUN] Well...";
+		mes "[DRY-RUN] This is the place";
+		mes "[DRY-RUN] the Corps Member";
+		mes "[DRY-RUN] wanted me to find...";
+		mes "[DRY-RUN] Time to use all of";
+		mes "[DRY-RUN] these Holy Eggs.";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Here we go...";
-			mes "Will this really bring";
-			mes "this ancient hero";
-			mes "back to life? I'm...";
-			mes "I'm kind of scared!";
+			mes "[DRY-RUN] Here we go...";
+			mes "[DRY-RUN] Will this really bring";
+			mes "[DRY-RUN] this ancient hero";
+			mes "[DRY-RUN] back to life? I'm...";
+			mes "[DRY-RUN] I'm kind of scared!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "^333333*Whew!*^000000 Nothing happened!";
-			mes "I guess I better go back to";
-			mes "that Corps Member and let";
-			mes "him know that it didn't work.";
+			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
+			mes "[DRY-RUN] I guess I better go back to";
+			mes "[DRY-RUN] that Corps Member and let";
+			mes "[DRY-RUN] him know that it didn't work.";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -769,17 +769,17 @@ mjo_dun03,308,256,0	script	Trace#egg2	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Huh? Where did I put";
-			mes "those 33 Holy Eggs";
-			mes "that I needed for this?";
+			mes "[DRY-RUN] Huh? Where did I put";
+			mes "[DRY-RUN] those 33 Holy Eggs";
+			mes "[DRY-RUN] that I needed for this?";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "There was something";
-		mes "here, but I can't tell";
-		mes "for sure what it was...";
+		mes "[DRY-RUN] There was something";
+		mes "[DRY-RUN] here, but I can't tell";
+		mes "[DRY-RUN] for sure what it was...";
 		close;
 	}
 }
@@ -787,33 +787,33 @@ mjo_dun03,308,256,0	script	Trace#egg2	844,{
 gl_prison,157,176,0	script	Trace#egg3	844,{
 	if (easter2008 == 8) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Well...";
-		mes "This is the place";
-		mes "the Corps Member";
-		mes "wanted me to find...";
-		mes "Time to use all of";
-		mes "these Holy Eggs.";
+		mes "[DRY-RUN] Well...";
+		mes "[DRY-RUN] This is the place";
+		mes "[DRY-RUN] the Corps Member";
+		mes "[DRY-RUN] wanted me to find...";
+		mes "[DRY-RUN] Time to use all of";
+		mes "[DRY-RUN] these Holy Eggs.";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Here we go...";
-			mes "Will this really bring";
-			mes "this ancient hero";
-			mes "back to life? I'm...";
-			mes "I'm kind of scared!";
+			mes "[DRY-RUN] Here we go...";
+			mes "[DRY-RUN] Will this really bring";
+			mes "[DRY-RUN] this ancient hero";
+			mes "[DRY-RUN] back to life? I'm...";
+			mes "[DRY-RUN] I'm kind of scared!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
-			mes "...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
+			mes "[DRY-RUN] ...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "^333333*Whew!*^000000 Nothing happened!";
-			mes "I guess I better go back to";
-			mes "that Corps Member and let";
-			mes "him know that it didn't work.";
+			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
+			mes "[DRY-RUN] I guess I better go back to";
+			mes "[DRY-RUN] that Corps Member and let";
+			mes "[DRY-RUN] him know that it didn't work.";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -821,17 +821,17 @@ gl_prison,157,176,0	script	Trace#egg3	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Huh? Where did I put";
-			mes "those 33 Holy Eggs";
-			mes "that I needed for this?";
+			mes "[DRY-RUN] Huh? Where did I put";
+			mes "[DRY-RUN] those 33 Holy Eggs";
+			mes "[DRY-RUN] that I needed for this?";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "There was something";
-		mes "here, but I can't tell";
-		mes "for sure what it was...";
+		mes "[DRY-RUN] There was something";
+		mes "[DRY-RUN] here, but I can't tell";
+		mes "[DRY-RUN] for sure what it was...";
 		close;
 	}
 }

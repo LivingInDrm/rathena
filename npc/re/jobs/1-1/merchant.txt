@@ -15,109 +15,109 @@
 alberta_in,53,43,6	script	Merchant#mer	86,{
 	if (Upper == 1) {
 		if (Class == Job_Novice_High && (ADVJOB == Job_Whitesmith || ADVJOB == Job_Creator)) {
-			mes "[Chief Mahnsoo]";
-			mes "Long time no see!";
-			mes "Hey, you didn't quit";
-			mes "your business, did you?";
-			mes "What happened?";
+			mes "[会长满秀]";
+			mes "好久不见！";
+			mes "嘿，你没有放弃";
+			mes "你的生意吧？";
+			mes "怎么回事？";
 			next;
-			mes "[Chief Mahnsoo]";
-			mes "Whoa...";
-			mes "You've actually been to Valhalla?! Wow, you've come a long way...";
+			mes "[会长满秀]";
+			mes "哇……";
+			mes "你居然去过瓦尔哈拉？！哇，你走了好远的路啊……";
 			next;
 			if (!callfunc("F_CanChangeJob")) {
-				mes "[Chief Mahnsoo]";
-				mes "Hmmm...";
-				mes "It seems that you're not ready to become a Merchant again. Go finish learning the Basic Novice Skills first.";
+				mes "[会长满秀]";
+				mes "嗯嗯……";
+				mes "看来你还没准备好再次成为商人。先去把初学者基本技能学完吧。";
 				next;
-				mes "[Chief Mahnsoo]";
-				mes "Don't worry, we'll always have a Merchant position open for you. Just come back when you're ready, okay?";
+				mes "[会长满秀]";
+				mes "别担心，我们永远为你保留一个商人的位置。准备好了就回来，好吗？";
 				close;
 			}
-			mes "[Chief Mahnsoo]";
-			mes "I guess it's destiny that we meet like this once more. Alright. Once again, let me change you into a Merchant!";
+			mes "[会长满秀]";
+			mes "我想这就是命运，让我们再次相遇。好吧。让我再次把你变成商人！";
 			next;
 			skill "NV_TRICKDEAD",0,SKILL_PERM;
 			jobchange Job_Merchant_High;
 			skill "MC_CARTREVOLUTION",1,SKILL_PERM;
 			skill "MC_CHANGECART",1,SKILL_PERM;
 			skill "MC_LOUD",1,SKILL_PERM;
-			mes "[Chief Mahnsoo]";
-			mes "Ah~ How nostalgic. Just like old times! Alright, do your best!";
+			mes "[会长满秀]";
+			mes "啊~真怀念。就像以前一样！好了，加油吧！";
 			close;
 		}else{
-			mes "[Chief Mahnsoo]";
-			mes "^333333*Sigh*^000000";
-			mes "I'm so bored...";
-			mes "When will I hear from my lovely Blossom?";
+			mes "[会长满秀]";
+			mes "^333333*叹气*^000000";
+			mes "好无聊啊……";
+			mes "什么时候才能收到我可爱的花花的消息呢？";
 			close;
 		}
 	}
-	mes "[Guildsman Mahnsoo]";
-	mes "Hey, why are you here?";
+	mes "[公会会员满秀]";
+	mes "嘿，你来这里做什么？";
 	next;
-	switch(select("I want to be a merchant.:I want to know more about merchants.:Ask him the requirements to be a merchant.:Nothing.")) {
+	switch(select("我想成为商人。:我想了解更多关于商人的事。:告诉我成为商人的要求。:没什么。")) {
 	case 1:
-		mes "[Guildsman Mahnsoo]";
+		mes "[公会会员满秀]";
 		if(BaseJob != Job_Novice) {
 			if(BaseJob == Job_Merchant) {
-				mes ".....? Sorry? What are you saying?";
-				mes "You are already a merchant. Oh my..";
-				mes "Huh?! ...Do I need to laugh right now?!";
+				mes "……？什么？你说什么？";
+				mes "你已经是商人了。天哪……";
+				mes "啊？！……我现在需要笑吗？！";
 			}else{
-				mes "Ahh? Are you trying to have both ways?";
-				mes "How about just giving yourself over to your original job?";
+				mes "啊？你想脚踏两条船？";
+				mes "不如专心做好你原来的职业吧？";
 				next;
-				mes "[Guildsman Mahnsoo]";
-				mes "We have business ethics you know.";
+				mes "[公会会员满秀]";
+				mes "我们可是有商业道德的。";
 			}
 			close;
 		}else{
-			mes "Want to be a merchant? Hmm...";
+			mes "想成为商人？嗯……";
 			next;
 			if (!callfunc("F_CanChangeJob")) {
-				mes "[Guildsman Mahnsoo]";
-				mes "But if you want to be a merchant, your basic skill level must reach Level 9 or you must spend all of your skill points.";
+				mes "[公会会员满秀]";
+				mes "但如果你想成为商人，你的基本技能等级必须达到9级，或者你必须用完所有技能点。";
 				next;
-				mes "[Guildsman Mahnsoo]";
-				mes "Don't you think we need to learn some basic skills although we just deal with money?";
+				mes "[公会会员满秀]";
+				mes "你不觉得虽然我们只是跟钱打交道，但也需要学一些基本技能吗？";
 				close;
 			}
-			mes "[Guildsman Mahnsoo]";
-			mes "Good, I think you're fully ready for it seeing that your basic skill level is fulfilled.";
-			mes "Now I allow you to be a merchant.";
+			mes "[公会会员满秀]";
+			mes "好的，看到你的基本技能等级已经达标了，我觉得你已经完全准备好了。";
+			mes "现在我允许你成为商人。";
 			next;
-			mes "[Guildsman Mahnsoo]";
-			mes "Congratulations on becoming a merchant!";
-			mes "Congratulations again for being a member of the merchant guild and one of our colleagues. I expect your active participation from now on!";
+			mes "[公会会员满秀]";
+			mes "恭喜你成为商人！";
+			mes "再次恭喜你成为商人公会的一员和我们的同事。从现在起，期待你的积极参与！";
 			callfunc "Job_Change",Job_Merchant;
 			getitem 1381,1;	// N_Battle_Axe
 			next;
-			mes "[Guildsman Mahnsoo]";
-			mes "Absolutely, we need young people who have passion to achieve our great goal for securing 20% of the worldwide currency volume. You get it? Huh?";
-			mes "Well, I'm just saying... it means let's make lots of money in the end. You guys know that~";
+			mes "[公会会员满秀]";
+			mes "没错，我们需要像你这样有热情的年轻人来实现我们掌控全球20%货币流通量的伟大目标。你懂了吗？嗯？";
+			mes "嗯，我只是说说……意思就是最终让我们一起赚大钱。你们知道的~";
 			close;
 		}
 	case 2:
-		mes "[Guildsman Mahnsoo]";
-		mes "Merchant? To put it simply, the person who sells good and makes money is a merchant.";
-		mes "Not good at fighting and doesn't have special attack/recovery skills... but a merchant can buy things at a low price and then sell them and make money.";
+		mes "[公会会员满秀]";
+		mes "商人？简单来说，卖东西赚钱的人就是商人。";
+		mes "不擅长战斗，也没有特殊的攻击/恢复技能……但商人可以低价买入然后卖出赚钱。";
 		next;
-		mes "[Guildsman Mahnsoo]";
-		mes "Well, a merchant has an ultimate skill called Mammonite which strikes an enemy with his/her money... We can equip everything except Bows, Rods, and Two-Handed Swords. But we can always sell and buy those.";
-		mes "Yes... we merchants always have money on our minds, got it?";
+		mes "[公会会员满秀]";
+		mes "嗯，商人有一个终极技能叫金币投掷，用钱砸敌人……我们除了弓、法杖和双手剑之外什么都能装备。但我们随时可以买卖那些东西。";
+		mes "是的……我们商人脑子里永远想着钱，明白了吗？";
 		close;
 	case 3:
-		mes "[Guildsman Mahnsoo]";
-		mes "To become a merchant, although just selling and receiving money is our job, you must reach at least basic skill level 9.";
+		mes "[公会会员满秀]";
+		mes "要成为商人，虽然买卖收钱是我们的工作，但你必须至少达到基本技能等级9。";
 		next;
-		mes "[Guildsman Mahnsoo]";
-		mes "Well, we used to receive a start-up fee before. Wasn't it hard to make that money?";
-		mes "There were too many people who couldn't gather that money and kept crying.";
+		mes "[公会会员满秀]";
+		mes "嗯，我们以前还收过启动资金呢。凑那笔钱不容易吧？";
+		mes "有太多人凑不齐那笔钱一直在哭。";
 		next;
-		mes "[Guildsman Mahnsoo]";
-		mes "So recently, we decided to allow any Novice who wants to be a merchant become one.";
-		mes "Because to be alive or not later is all up to one's ability.";
+		mes "[公会会员满秀]";
+		mes "所以最近，我们决定让任何想成为商人的初学者都能成为商人。";
+		mes "因为以后是死是活全凭个人能力。";
 		close;
 	case 4:
 		close;

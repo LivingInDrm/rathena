@@ -273,53 +273,53 @@ ma_scene01,167,112,6	duplicate(Unidentified Creature#j)	Unidentified Creature#11
 
 malaya,227,311,4	script	Grandma#ma01	575,{
 	if (malaya_hi < 10) {
-		mes "[Grandma]";
-		mes "You're not from around here? Take care of yourself.";
+		mes "[DRY-RUN] [Grandma]";
+		mes "[DRY-RUN] You're not from around here? Take care of yourself.";
 		next;
-		mes "[Grandma]";
-		mes "I'm worried because my daughter-in-law is pregnant. I hope nothing goes wrong.";
+		mes "[DRY-RUN] [Grandma]";
+		mes "[DRY-RUN] I'm worried because my daughter-in-law is pregnant. I hope nothing goes wrong.";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[Grandma]";
-		mes "I heard there is an outsider that is helping the village.";
+		mes "[DRY-RUN] [Grandma]";
+		mes "[DRY-RUN] I heard there is an outsider that is helping the village.";
 		next;
-		mes "[Grandma]";
-		mes "Then my daughter-in-law will be safe.";
+		mes "[DRY-RUN] [Grandma]";
+		mes "[DRY-RUN] Then my daughter-in-law will be safe.";
 		close;
 	}
 	if (rand(1,3) == 2) {
-		mes "[Grandma]";
+		mes "[DRY-RUN] [Grandma]";
 		mes "Heard there is this "+getd("$ma_name0"+rand(1,6)+"$")+" that follows Meoneonuncle around.";
 		next;
-		mes "[Grandma]";
-		mes "I will cheer for their forbidden love.";
+		mes "[DRY-RUN] [Grandma]";
+		mes "[DRY-RUN] I will cheer for their forbidden love.";
 		close;
 	}
-	mes "[Grandma]";
-	mes "I'm worried about my pregnant daughter-in-law. Hope Meoneonuncle won't bother her.";
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] I'm worried about my pregnant daughter-in-law. Hope Meoneonuncle won't bother her.";
 	next;
-	select("Meoneonuncle?");
-	mes "[Grandma]";
-	mes "Not from around here? Let me tell you why even a foreigner like you should be careful.";
+	select("[DRY-RUN] Meoneonuncle?");
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] Not from around here? Let me tell you why even a foreigner like you should be careful.";
 	next;
-	mes "[Grandma]";
-	mes "Meoneonuncle was a woman who lived in Port Malaya long ago. She married a decent man and also had a baby.";
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] Meoneonuncle was a woman who lived in Port Malaya long ago. She married a decent man and also had a baby.";
 	next;
-	mes "[Grandma]";
-	mes "But happiness never lasts forever, right? The baby was miscarried from an accident...";
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] But happiness never lasts forever, right? The baby was miscarried from an accident...";
 	next;
-	mes "[Grandma]";
-	mes "She eventually passed away after grieving over her lost baby for days.";
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] She eventually passed away after grieving over her lost baby for days.";
 	next;
-	select("That is a sad story.");
-	mes "[Grandma]";
-	mes "Meoneonuncle then started to appear in spirit and take away babies from pregnant women in the village.";
+	select("[DRY-RUN] That is a sad story.");
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] Meoneonuncle then started to appear in spirit and take away babies from pregnant women in the village.";
 	next;
-	mes "[Grandma]";
-	mes "If you ever walk around Port Malaya at night...";
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] If you ever walk around Port Malaya at night...";
 	next;
-	mes "[Grandma]";
-	mes "And hear either tik-tik or wak-wak, be cautious because that is the sound of Meoneonuncle's wings flapping.";
+	mes "[DRY-RUN] [Grandma]";
+	mes "[DRY-RUN] And hear either tik-tik or wak-wak, be cautious because that is the sound of Meoneonuncle's wings flapping.";
 	close;
 }
 
@@ -501,64 +501,64 @@ malaya,219,92,6	script	Little Kid#ma05	577,{
 
 malaya,363,283,4	script	Local#ma06	582,{
 	if (malaya_hi < 10) {
-		mes "[Local]";
-		mes "Hmm... is it time to be careful of the witches' curse?";
+		mes "[DRY-RUN] [Local]";
+		mes "[DRY-RUN] Hmm... is it time to be careful of the witches' curse?";
 		next;
-		mes "[Local]";
-		mes "Beware of Mongkukurums needle, foreigner.";
+		mes "[DRY-RUN] [Local]";
+		mes "[DRY-RUN] Beware of Mongkukurums needle, foreigner.";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[Local]";
-		mes "Welcome to Port Malaya, foreigner..";
+		mes "[DRY-RUN] [Local]";
+		mes "[DRY-RUN] Welcome to Port Malaya, foreigner..";
 		next;
-		mes "[Local]";
-		mes "The village is chaotic these days. If you see someone with red eyes, try not to stare at their eyes.";
+		mes "[DRY-RUN] [Local]";
+		mes "[DRY-RUN] The village is chaotic these days. If you see someone with red eyes, try not to stare at their eyes.";
 		close;
 	}
 	set .@name$, getd("$ma_name0"+rand(1,6)+"$");
 	switch(rand(1,6)) {
 	case 1:
-		mes "[Local]";
+		mes "[DRY-RUN] [Local]";
 		mes "Be careful walking around the village at night. "+.@name$+" was taken down by Wokwok.";
 		close;
 	case 2:
-		mes "[Local]";
+		mes "[DRY-RUN] [Local]";
 		mes .@name$+" is said to have successfully tamed a Tikbalang. This person must be courageous. Wonder if I'll get to see this tamed Tikbalang?";
 		close;
 	case 3:
-		mes "[Local]";
+		mes "[DRY-RUN] [Local]";
 		mes "Have you ever seen Bongisungisu? I heard "+.@name$+" is hunting down Bongisungisus.";
 		close;
 	case 4:
-		mes "[Local]";
+		mes "[DRY-RUN] [Local]";
 		mes "If you plan to go out of the village, be careful of Tiucknuc. "+.@name$+" is said to be tricked by Tiucknuc and had to go to the hospital.";
 		close;
 	case 5:
 	case 6:
 		break;
 	}
-	mes "[Local]";
-	mes "The village is chaotic these days. Looks like Mongkukurum is back in the village.";
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] The village is chaotic these days. Looks like Mongkukurum is back in the village.";
 	next;
-	select("Mongkukurum?");
-	mes "[Local]";
-	mes "A monster that is also called witch. Looks like a person and also wears clothes.";
+	select("[DRY-RUN] Mongkukurum?");
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] A monster that is also called witch. Looks like a person and also wears clothes.";
 	next;
-	mes "[Local]";
-	mes "Mongkukurum makes a doll out of the people it sees and curses it with needles.";
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] Mongkukurum makes a doll out of the people it sees and curses it with needles.";
 	next;
-	select("Is there a way to recognize this monster?");
-	mes "[Local]";
-	mes "There is one way. All Mongkukurum have red eyes.";
+	select("[DRY-RUN] Is there a way to recognize this monster?");
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] There is one way. All Mongkukurum have red eyes.";
 	next;
-	mes "[Local]";
-	mes "You can recognize them by their eyes but! You must remember one thing.";
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] You can recognize them by their eyes but! You must remember one thing.";
 	next;
-	mes "[Local]";
-	mes "You will be captivated by Mongkukurum if you stare at their eyes too long.";
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] You will be captivated by Mongkukurum if you stare at their eyes too long.";
 	next;
-	mes "[Local]";
-	mes "Never ever stare into their eyes for too long.";
+	mes "[DRY-RUN] [Local]";
+	mes "[DRY-RUN] Never ever stare into their eyes for too long.";
 	close;
 }
 
@@ -604,84 +604,84 @@ malaya,41,127,6	script	Old Man #ma07	574,{
 
 malaya,63,185,4	script	Woman#ma08	583,{
 	if (malaya_hi < 10) {
-		mes "[Woman]";
-		mes "I don't have anything to share with you.";
+		mes "[DRY-RUN] [Woman]";
+		mes "[DRY-RUN] I don't have anything to share with you.";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[Woman]";
-		mes "Im worried about the children. I hope they aren't terrified from whats going on in the village.";
+		mes "[DRY-RUN] [Woman]";
+		mes "[DRY-RUN] Im worried about the children. I hope they aren't terrified from whats going on in the village.";
 		close;
 	}
 	if (rand(1,3) == 2) {
 		set .@name$, getd("$ma_name0"+rand(1,6)+"$");
 		set .@rand, rand(1,10);
 		if (.@rand < 5) {
-			mes "[Woman]";
+			mes "[DRY-RUN] [Woman]";
 			mes "I like fun stories. Not so long ago, "+.@name$+" came and told me a funny story.";
 			next;
 		}
 		switch(.@rand) {
 		case 1:
-			mes "[Woman]";
-			mes "'My aunt stepped on an ant.'";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] 'My aunt stepped on an ant.'";
 			next;
 			break;
 		case 2:
-			mes "[Woman]";
-			mes "'You eat chili on a chilly day.'";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] 'You eat chili on a chilly day.'";
 			next;
 			break;
 		case 3:
-			mes "[Woman]";
-			mes "'Why are you putting flour on that flower?'";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] 'Why are you putting flour on that flower?'";
 			next;
 			break;
 		case 4:
-			mes "[Woman]";
-			mes "At the Tool Store, 'Ill buy the needle and thread! You buy the hay to lose the needle in.'";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] At the Tool Store, 'Ill buy the needle and thread! You buy the hay to lose the needle in.'";
 			next;
-			mes "[Woman]";
+			mes "[DRY-RUN] [Woman]";
 			mes .@name$+" said that and was kicked out of the Tool Store.";
 			next;
 			break;
 		case 5:
-			mes "[Woman]";
-			mes "A Kafra Employee I'm friends with told me a story about a customer.";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] A Kafra Employee I'm friends with told me a story about a customer.";
 			next;
-			mes "[Woman]";
-			mes "'Kafra, the wise never marry and when they marry, they become otherwise.'";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] 'Kafra, the wise never marry and when they marry, they become otherwise.'";
 			next;
-			mes "[Woman]";
-			mes "He he... I do like funny stories but a bit difficult for my taste.";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] He he... I do like funny stories but a bit difficult for my taste.";
 			close;
 		default:
-			mes "[Woman]";
+			mes "[DRY-RUN] [Woman]";
 			mes "I like fun stories. Oh by the way! "+.@name$+", love is photogenic. Don't you agree?";
 			next;
-			mes "[Woman]";
-			mes "It needs darkness to develop.";
+			mes "[DRY-RUN] [Woman]";
+			mes "[DRY-RUN] It needs darkness to develop.";
 			next;
 		}
-		mes "[Woman]";
-		mes "He he. Isn't it fun?";
+		mes "[DRY-RUN] [Woman]";
+		mes "[DRY-RUN] He he. Isn't it fun?";
 		close;
 	}
-	mes "[Woman]";
-	mes "If you hear a baby crying from the forest outside of the village, never go near it.";
+	mes "[DRY-RUN] [Woman]";
+	mes "[DRY-RUN] If you hear a baby crying from the forest outside of the village, never go near it.";
 	next;
-	select("Why?");
-	mes "[Woman]";
-	mes "There is a monster named Tiucknuc that roams around outside of the village and cries after transforming himself into a baby.";
+	select("[DRY-RUN] Why?");
+	mes "[DRY-RUN] [Woman]";
+	mes "[DRY-RUN] There is a monster named Tiucknuc that roams around outside of the village and cries after transforming himself into a baby.";
 	next;
-	mes "[Woman]";
-	mes "But when kind travelers pick up the baby, it turns back into its original form and attacks.";
+	mes "[DRY-RUN] [Woman]";
+	mes "[DRY-RUN] But when kind travelers pick up the baby, it turns back into its original form and attacks.";
 	next;
-	select("Sounds like a sneaky monster.");
-	mes "[Woman]";
-	mes "Yes, this monster is bad to trick the kindness of travelers but...";
+	select("[DRY-RUN] Sounds like a sneaky monster.");
+	mes "[DRY-RUN] [Woman]";
+	mes "[DRY-RUN] Yes, this monster is bad to trick the kindness of travelers but...";
 	next;
-	mes "[Woman]";
-	mes "There is rumor that the monster came from the soul of a baby that never been born. So sad.";
+	mes "[DRY-RUN] [Woman]";
+	mes "[DRY-RUN] There is rumor that the monster came from the soul of a baby that never been born. So sad.";
 	close;
 }
 

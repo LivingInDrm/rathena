@@ -391,22 +391,22 @@ OnReset:
 
 prt_gld,2,2,0	script	Investment_total#fund00	844,{
 	callfunc "F_GM_NPC";
-	mes "Is this not working properly?";
+	mes "[DRY-RUN] Is this not working properly?";
 	next;
 	if (callfunc("F_GM_NPC",1854,0) == 1) {
-		mes "If you think the investment timer is dead, please adjust the timer.";
+		mes "[DRY-RUN] If you think the investment timer is dead, please adjust the timer.";
 		next;
-		switch(select("Turn on the timer:Cancel")) {
+		switch(select("[DRY-RUN] Turn on the timer:Cancel")) {
 		case 1:
 			donpcevent "Investment_total#fund00::OnTimerReset";
-			mes "You've turned on the timer.";
+			mes "[DRY-RUN] You've turned on the timer.";
 			close;
 		case 2:
-			mes "Canceled.";
+			mes "[DRY-RUN] Canceled.";
 			close;
 		}
 	} else {
-		mes "I don't need to adjust anything now.";
+		mes "[DRY-RUN] I don't need to adjust anything now.";
 		close;
 	}
 
@@ -670,7 +670,7 @@ OnTimer20000:
 
 /*
 prtg_cas01,2,2,0	script	Abrai	55,{
-	mes "I should quit my steward job.";
+	mes "[DRY-RUN] I should quit my steward job.";
 	close;
 OnAgitInvest:
 	switch(callfunc("F_Invest_Status")) {
@@ -1323,61 +1323,61 @@ malangdo,218,126,4	script	Cat Paw Merchants Notice	857,{
 
 malangdo,218,123,1	script	Namis#invest	545,4,4,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again after you -";
-		mes "- lose some weight. -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please try again after you -";
+		mes "[DRY-RUN] - lose some weight. -";
 		close;
 	}
 	emotion ET_HUK;
 	emotion ET_FRET;
 	emotion ET_ANGER;
-	mes "[Namis]";
-	mes "Purr-Purr-Purrr-Purrrr-Pur~ Meow!!";
-	mes "Wh-- What? How rude. You scared me.";
+	mes "[DRY-RUN] [Namis]";
+	mes "[DRY-RUN] Purr-Purr-Purrr-Purrrr-Pur~ Meow!!";
+	mes "[DRY-RUN] Wh-- What? How rude. You scared me.";
 	next;
-	switch(select("What do you need? I'll invest!:What's the purpose of this event?:Were you asleep?")) {
+	switch(select("[DRY-RUN] What do you need? I'll invest!:What's the purpose of this event?:Were you asleep?")) {
 	case 1:
 		break;
 	case 2:
-		mes "[Namis]";
-		mes "So, another pushover in contract with the Cat Paw Merchants?";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] So, another pushover in contract with the Cat Paw Merchants?";
 		next;
-		select("Huh? What! You calling me a pushover?");
-		mes "[Namis]";
-		mes "I'll say this just once, so you listen good!";
-		mes "We, the Cat Paw Merchants have planned an event for loyal workers like yourself.";
+		select("[DRY-RUN] Huh? What! You calling me a pushover?");
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] I'll say this just once, so you listen good!";
+		mes "[DRY-RUN] We, the Cat Paw Merchants have planned an event for loyal workers like yourself.";
 		next;
-		mes "[Namis]";
-		mes "Run along to your storage and bring back rotting antiques to us and we'll exchange them for the oh-so valuable 'Cat Paw Merchants Investment Certificate'.";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Run along to your storage and bring back rotting antiques to us and we'll exchange them for the oh-so valuable 'Cat Paw Merchants Investment Certificate'.";
 		next;
-		mes "[Namis]";
-		mes "It will be wise for you to do so because the Cat Paw Merchants are doing this at a loss!";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] It will be wise for you to do so because the Cat Paw Merchants are doing this at a loss!";
 		next;
-		mes "[Namis]";
-		mes "Details are on the notice.";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Details are on the notice.";
 		close;
 	case 3:
-		mes "[Namis]";
-		mes "Hick- Slurp-";
-		mes "Remember, human! There's no other cat who works as hard as I do.";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Hick- Slurp-";
+		mes "[DRY-RUN] Remember, human! There's no other cat who works as hard as I do.";
 		close;
 	}
-	mes "[Namis]";
-	mes "You must be here to participate in the '^C379CEInvest Unused Items for Prizes!^000000' event of the Cat Paw Merchants.";
+	mes "[DRY-RUN] [Namis]";
+	mes "[DRY-RUN] You must be here to participate in the '^C379CEInvest Unused Items for Prizes!^000000' event of the Cat Paw Merchants.";
 	next;
-	mes "[Namis]";
-	mes "So, which event do you wish to participate in?";
+	mes "[DRY-RUN] [Namis]";
+	mes "[DRY-RUN] So, which event do you wish to participate in?";
 	next;
-	switch(select("Not interested:Event 1 Items:Event 2 Items")) {
+	switch(select("[DRY-RUN] Not interested:Event 1 Items:Event 2 Items")) {
 	case 1:
-		mes "[Namis]";
-		mes "Don't you mess with a busy cat!";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Don't you mess with a busy cat!";
 		close;
 	case 2:
-		mes "[Namis]";
-		mes "So you're in for Event 1.";
-		mes "Choose from the shown list.";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] So you're in for Event 1.";
+		mes "[DRY-RUN] Choose from the shown list.";
 		next;
 		setarray .@event1$[0],
 			"Wings of the Insect Queen","Crown of the Fly King","I hear Dragon Scales are tough 01","The Meaning of the Mother's Nightmare",
@@ -1410,9 +1410,9 @@ malangdo,218,123,1	script	Namis#invest	545,4,4,{
 			case 21: callsub L_Check,"2 Foolishness of the Blind",7021,2,"This blind man is foolish in not knowing that gathering 300 cats cures blindness...",.@event1$[.@i];
 		}
 	case 3:
-		mes "[Namis]";
-		mes "Participate in Event 2?";
-		mes "It is not yet in motion. Wait for it!";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Participate in Event 2?";
+		mes "[DRY-RUN] It is not yet in motion. Wait for it!";
 		close;
 	}
 	end;
@@ -1425,31 +1425,31 @@ L_Check:
 			set .@items,2; //complete
 	}
 	if (countitem(getarg(1)) < getarg(2) || .@items == 1) {
-		mes "[Namis]";
-		mes "You don't have the items?";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] You don't have the items?";
 		mes getarg(0)+" exchange for one Cat Paw Merchants Investment Certificate.";
 		next;
-		mes "[Namis]";
-		mes "Don't bother me and look up the details on the board over there!";
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Don't bother me and look up the details on the board over there!";
 		close;
 	}
-	mes "[Namis]";
+	mes "[DRY-RUN] [Namis]";
 	mes "'^8E5601"+getarg(4)+" Event^000000'";
-	mes "Seems to be the right items.";
+	mes "[DRY-RUN] Seems to be the right items.";
 	mes getarg(3);
-	mes "Oh! Almost forgot. Will you invest?";
+	mes "[DRY-RUN] Oh! Almost forgot. Will you invest?";
 	next;
-	if(select("Invest:Don't Invest") == 2) {
-		mes "[Namis]";
-		mes "Don't you mess with a busy cat!";
+	if(select("[DRY-RUN] Invest:Don't Invest") == 2) {
+		mes "[DRY-RUN] [Namis]";
+		mes "[DRY-RUN] Don't you mess with a busy cat!";
 		close;
 	}
 	delitem getarg(1),getarg(2);
 	if (.@items == 2)
 		delitem getarg(5),getarg(6);
 	getitem 6489,1; //Cats_Invest_Certif
-	mes "[Namis]";
-	mes "Here's your Certificate. Always be grateful to the Merchants for these events!";
+	mes "[DRY-RUN] [Namis]";
+	mes "[DRY-RUN] Here's your Certificate. Always be grateful to the Merchants for these events!";
 	close;
 OnTouch:
 	if (rand(2))

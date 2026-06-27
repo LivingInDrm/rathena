@@ -15,78 +15,78 @@
 
 ayothaya,203,169,3	script	Noi#ayo	839,{
 	mes "[Noi]";
-	mes "Welcome to Ayotaya.";
-	mes "Our beautiful village is built";
-	mes "above the water, surrounded";
-	mes "by a dense forest.";
+	mes "欢迎来到阿由塔亚。";
+	mes "我们美丽的村庄建在";
+	mes "水面之上，四周环绕着";
+	mes "茂密的森林。";
 	next;
 	mes "[Noi]";
-	mes "There are many tourist attractions in this village that you won't be able to find anywhere else. Our fish markets and the the unique architecture of our buildings is enough reason to visit Ayotaya.";
+	mes "这个村庄有许多别处找不到的旅游景点。我们的鱼市和独特的建筑风格，就足以成为您造访阿由塔亚的理由。";
 	next;
 	mes "[Noi]";
-	mes "Please feel free";
-	mes "to take a look around.";
+	mes "请随意";
+	mes "四处看看吧。";
 	next;
-	switch(select("Building Locations.:Remove marks from mini-map.:Cancel.")) {
+	switch(select("建筑位置.:清除小地图标记.:取消.")) {
 	case 1:
 		mes "[Noi]";
-		mes "Where would";
-		mes "you like to visit?";
+		mes "您想去";
+		mes "哪里参观呢？";
 		next;
-		switch(select("Weapon Shop:Tool Shop:Tavern:Shrine:Fishing Spot:Cancel")) {
+		switch(select("武器店:道具店:酒馆:神殿:钓鱼点:取消")) {
 		case 1:
 			mes "[Noi]";
-			mes "At our Weapon Shop,";
-			mes "you will find great weapons";
-			mes "favored by brave Ayotayan seafarers.";
+			mes "在我们的武器店，";
+			mes "您可以找到阿由塔亚";
+			mes "勇敢的航海者们钟爱的精良武器。";
 			next;
 			mes "[Noi]";
-			mes "Our Weapon Shop";
-			mes "is located at ^55FF33+^000000.";
+			mes "我们的武器店";
+			mes "位于 ^55FF33+^000000 处。";
 			viewpoint 1,165,90,2,0x55FF33;
 			close;
 		case 2:
 			mes "[Noi]";
-			mes "We Ayotayans always make sure we have everything we need before we go traveling. It never hurts to be prepared, doesn't it?";
+			mes "我们阿由塔亚人出行前总会确保准备齐全。做好万全的准备总没有坏处，不是吗？";
 			next;
 			mes "[Noi]";
-			mes "Our Tool Shop";
-			mes "is located at ^3355FF+^000000.";
+			mes "我们的道具店";
+			mes "位于 ^3355FF+^000000 处。";
 			viewpoint 1,129,86,3,0x3355FF;
 			close;
 		case 3:
 			mes "[Noi]";
-			mes "One of the basics of adventuring is gathering information, or at least that's what they say. You can meet people from all sorts of places in the Tavern. I'm sure you can learn something useful there.";
+			mes "冒险的基本功之一就是收集情报，至少人们都是这么说的。在酒馆里您可以遇到来自各地的人。我相信您一定能在那里获得有用的信息。";
 			next;
 			mes "[Noi]";
-			mes "Of course, you must";
-			mes "drop by our Tavern.";
-			mes "It is located at ^00FF00+^000000.";
+			mes "当然，您一定要";
+			mes "来我们的酒馆看看。";
+			mes "它位于 ^00FF00+^000000 处。";
 			viewpoint 1,232,76,4,0x00FF00;
 			close;
 		case 4:
 			mes "[Noi]";
-			mes "If you wish to pray to God, or achieve a state of peace in your mind, why don't you visit our Shrine? Even if it's just for sight-seeing, everyone is";
-			mes "welcome there.";
+			mes "如果您想向神明祈祷，或者寻求内心的平静，何不去参观一下我们的神殿呢？即使只是观光游览，";
+			mes "也欢迎所有人前来。";
 			next;
 			mes "[Noi]";
-			mes "Our Shrine";
-			mes "is located at ^00FF00+^000000.";
+			mes "我们的神殿";
+			mes "位于 ^00FF00+^000000 处。";
 			viewpoint 1,208,283,5,0x00FF00;
 			close;
 		case 5:
 			mes "[Noi]";
-			mes "Since Ayothaya was built above the surface of the water and close to a beach, it's been a favorite spot for fishermen. Why don't you catch some fish for dinner at the Fishing Spot?";
+			mes "阿由塔亚建在水面之上，又靠近海滩，因此一直是钓鱼爱好者的最佳去处。何不去钓鱼点钓几条鱼当晚餐呢？";
 			next;
 			mes "[Noi]";
-			mes "Our famous";
-			mes "Fishing Spot";
-			mes "is located at ^00FF00+^000000";
+			mes "我们著名的";
+			mes "钓鱼点";
+			mes "位于 ^00FF00+^000000 处。";
 			viewpoint 1,253,99,6,0x00FF00;
 			close;
 		case 6:
 			mes "[Noi]";
-			mes "If you wish to remove location marks on your mini-map, please select the 'Remove marks from mini-map' command from the menu.";
+			mes "如果您想清除小地图上的位置标记，请从菜单中选择‘清除小地图标记’选项。";
 			close;
 		}
 	case 2:
@@ -96,16 +96,16 @@ ayothaya,203,169,3	script	Noi#ayo	839,{
 		viewpoint 2,208,283,5,0x00FF00;
 		viewpoint 2,253,99,6,0x00FF00;
 		mes "[Noi]";
-		mes "Alright...";
-		mes "I've removed all the";
-		mes "location marks from";
-		mes "your mini-map.";
-		mes "Thank you.";
+		mes "好的……";
+		mes "我已经清除了";
+		mes "您小地图上的";
+		mes "所有位置标记。";
+		mes "谢谢。";
 		close;
 	case 3:
 		mes "[Noi]";
-		mes "Please enjoy";
-		mes "your travels.";
+		mes "祝您";
+		mes "旅途愉快。";
 		close;
 	}
 }

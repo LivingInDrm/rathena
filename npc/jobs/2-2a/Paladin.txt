@@ -19,67 +19,67 @@ valkyrie,53,39,3	script	Paladin#Valkyrie	752,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Paladin]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Paladin]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Paladin]";
-		mes "Do not forget";
-		mes "that the Holy War";
-		mes "is fast approaching!";
-		mes "We must ready ourselves!";
-		mes "May the light of justice";
-		mes "always brighten our path!";
+		mes "[DRY-RUN] [Paladin]";
+		mes "[DRY-RUN] Do not forget";
+		mes "[DRY-RUN] that the Holy War";
+		mes "[DRY-RUN] is fast approaching!";
+		mes "[DRY-RUN] We must ready ourselves!";
+		mes "[DRY-RUN] May the light of justice";
+		mes "[DRY-RUN] always brighten our path!";
 		close;
 	}
 	else if (ADVJOB == Job_Paladin && Class == Job_Swordman_High && JobLevel > 39) {
-		mes "[Paladin]";
-		mes "The Holy War will";
-		mes "be upon us before we";
-		mes "know it. More than ever,";
-		mes "we have need of strong men";
-		mes "and women to fight for what";
-		mes "is good and right.";
+		mes "[DRY-RUN] [Paladin]";
+		mes "[DRY-RUN] The Holy War will";
+		mes "[DRY-RUN] be upon us before we";
+		mes "[DRY-RUN] know it. More than ever,";
+		mes "[DRY-RUN] we have need of strong men";
+		mes "[DRY-RUN] and women to fight for what";
+		mes "[DRY-RUN] is good and right.";
 		next;
-		mes "[Paladin]";
-		mes "Will you fight on";
-		mes "the side of righteousness";
-		mes "as a Paladin?";
+		mes "[DRY-RUN] [Paladin]";
+		mes "[DRY-RUN] Will you fight on";
+		mes "[DRY-RUN] the side of righteousness";
+		mes "[DRY-RUN] as a Paladin?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Paladin]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Paladin]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Paladin]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Paladin]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Paladin;
 		set ADVJOB,0;
-		mes "[Paladin]";
-		mes "Congratulations.";
-		mes "As a Paladin, I hope";
-		mes "you will protect those";
-		mes "weaker than you, and bring";
-		mes "us victory in the upcoming";
-		mes "war between good and evil.";
+		mes "[DRY-RUN] [Paladin]";
+		mes "[DRY-RUN] Congratulations.";
+		mes "[DRY-RUN] As a Paladin, I hope";
+		mes "[DRY-RUN] you will protect those";
+		mes "[DRY-RUN] weaker than you, and bring";
+		mes "[DRY-RUN] us victory in the upcoming";
+		mes "[DRY-RUN] war between good and evil.";
 		close;
 	}
-	mes "[Paladin]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Paladin]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Paladin]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Paladin]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

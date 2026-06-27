@@ -1,0 +1,59 @@
+{
+  "name": "方案B - 2018-06-20e RagexeRE (Pre-Renewal 经典)",
+  "description": "降级到 2018 客户端，Pre-Renewal 社区最广泛使用、稳定性经验证。需重新编译服务端。",
+  "status": "inactive",
+
+  "client_exe": {
+    "filename": "2018-06-20eRagexeRE_patched.exe",
+    "original": "2018-06-20eRagexeRE.exe",
+    "patch_tool": "NEMO 或 WARP"
+  },
+
+  "packetver": {
+    "value": 20180620,
+    "config_file": "src/config/packets.hpp",
+    "override_file": "src/custom/defines_pre.hpp",
+    "override_content": "#define PACKETVER 20180620",
+    "note": "需要在 defines_pre.hpp 中覆盖并重新编译服务端"
+  },
+
+  "data_grf": {
+    "source": "kRO 2018年8月完整客户端 (kRO_FullClient_20180813)",
+    "download_urls": [
+      "http://nemo.herc.ws/downloads"
+    ],
+    "required_files": [
+      "data.grf",
+      "rdata.grf"
+    ]
+  },
+
+  "data_ini": {
+    "template": "client/data-ini/data.ini.template",
+    "grf_order": [
+      "custom.grf",
+      "rdata.grf",
+      "data.grf"
+    ]
+  },
+
+  "server_changes": "需修改 PACKETVER 并重新编译",
+
+  "cn_compatibility": {
+    "ROClientFullCN": "支持",
+    "LeeClient": "支持",
+    "note": "良好兼容性"
+  },
+
+  "pros": [
+    "Pre-Renewal 社区最广泛使用",
+    "稳定性经验证",
+    "更经典的 UI 风格"
+  ],
+
+  "cons": [
+    "robe costume 显示不如 2021",
+    "部分新功能不可用",
+    "需重新编译服务端"
+  ]
+}

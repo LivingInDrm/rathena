@@ -221,132 +221,132 @@ OnTouch:
 }
 
 dewata,159,81,4	script	Tourist#dew-1	881,{
-	mes "[Nasolo]";
-	mes "Wow~ Pure ocean, a warm beach...";
-	mes "Perfect for a date with a girlfriend...";
+	mes "[DRY-RUN] [Nasolo]";
+	mes "[DRY-RUN] Wow~ Pure ocean, a warm beach...";
+	mes "[DRY-RUN] Perfect for a date with a girlfriend...";
 	next;
-	mes "[Nasolo]";
-	mes "If only I had one...";
+	mes "[DRY-RUN] [Nasolo]";
+	mes "[DRY-RUN] If only I had one...";
 	emotion ET_CRY;
 	next;
-	mes "[Nasolo]";
-	mes "I wonder when my princess will come...";
+	mes "[DRY-RUN] [Nasolo]";
+	mes "[DRY-RUN] I wonder when my princess will come...";
 	emotion ET_OHNO;
 	close;
 }
 
 dewata,146,109,5	script	Restauranteur#dew	886,{
 	if (checkweight(11532,1) == 0 || checkweight(11533,1) == 0 || MaxWeight - Weight < 500) {
-		mes "[Restauranteur]";
-		mes "You came to taste my dish? It is always good to eat with an empty stomach.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] You came to taste my dish? It is always good to eat with an empty stomach.";
 		close;
 	}
-	mes "[Restauranteur]";
-	mes "Welcome to the island of Dewata.";
-	mes "I hope you behave like a noble";
-	mes "traveler, unlike some of these";
-	mes "teenage punks...";
+	mes "[DRY-RUN] [Restauranteur]";
+	mes "[DRY-RUN] Welcome to the island of Dewata.";
+	mes "[DRY-RUN] I hope you behave like a noble";
+	mes "[DRY-RUN] traveler, unlike some of these";
+	mes "[DRY-RUN] teenage punks...";
 	next;
-	switch(select("About Dewata dishes:Today's menu?:I'm okay.")) {
+	switch(select("[DRY-RUN] About Dewata dishes:Today's menu?:I'm okay.")) {
 	case 1:
-		mes "[Restauranteur]";
-		mes "Need info about our foods? Well... I don't have much to talk about, but feel free to listen if you want.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] Need info about our foods? Well... I don't have much to talk about, but feel free to listen if you want.";
 		next;
-		mes "[Restauranteur]";
-		mes "So much to cover, let me begin.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] So much to cover, let me begin.";
 		next;
-		mes "[Restauranteur]";
-		mes "First, Dewata dishes have special names based on each cooking recipe,";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] First, Dewata dishes have special names based on each cooking recipe,";
 		next;
-		mes "[Restauranteur]";
-		mes "If dish name has 'Goreng' in it, then it is either stir or deep fried food.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] If dish name has 'Goreng' in it, then it is either stir or deep fried food.";
 		next;
-		mes "[Restauranteur]";
-		mes "If it is a type of 'Bakar', then it is a grilled food.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] If it is a type of 'Bakar', then it is a grilled food.";
 		next;
-		mes "[Restauranteur]";
-		mes "And if it's 'Satay', then you are eating a skewered dish.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] And if it's 'Satay', then you are eating a skewered dish.";
 		next;
-		mes "[Restauranteur]";
-		mes "Second, we have dishes named after basic ingredients,";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] Second, we have dishes named after basic ingredients,";
 		next;
-		mes "[Restauranteur]";
-		mes "In Dewata island, we call rice as Nasi, noodle as Mie, bread as Roti, chicken as Ayam, fish as Ikan, and corn as Jagung.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] In Dewata island, we call rice as Nasi, noodle as Mie, bread as Roti, chicken as Ayam, fish as Ikan, and corn as Jagung.";
 		next;
-		mes "[Restauranteur]";
-		mes "So, if rice is fried we call it 'Nasi Goreng', and fried noodle is 'Mie Goreng'.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] So, if rice is fried we call it 'Nasi Goreng', and fried noodle is 'Mie Goreng'.";
 		next;
-		mes "[Restauranteur]";
-		mes "Well... This is enough to enjoy our foods in Dewata!! If you are hungry, we have our special set menu for only ^0000FF5000^000000 Zeny.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] Well... This is enough to enjoy our foods in Dewata!! If you are hungry, we have our special set menu for only ^0000FF5000^000000 Zeny.";
 		close;
 	case 2:
-		mes "[Restauranteur]";
-		mes "We have 2 items 'Nasi Goreng' and 'Satay'. Which one do you want?";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] We have 2 items 'Nasi Goreng' and 'Satay'. Which one do you want?";
 		next;
-		switch(select("Nasi Goreng:Satay")) {
+		switch(select("[DRY-RUN] Nasi Goreng:Satay")) {
 		case 1:
-			mes "[Restauranteur]";
-			mes "This is Nasi Goreng fried with my special sauce plus egg fry on the top. It only costs ^0000FF5000^000000 Zeny.";
+			mes "[DRY-RUN] [Restauranteur]";
+			mes "[DRY-RUN] This is Nasi Goreng fried with my special sauce plus egg fry on the top. It only costs ^0000FF5000^000000 Zeny.";
 			set .@food,11532;
 			break;
 		case 2:
-			mes "[Restauranteur]";
-			mes "This is the Satay, a slice of meat skewered and grilled over Palm fruit charcoal. It costs only ^0000FF5000^000000 Zeny.";
+			mes "[DRY-RUN] [Restauranteur]";
+			mes "[DRY-RUN] This is the Satay, a slice of meat skewered and grilled over Palm fruit charcoal. It costs only ^0000FF5000^000000 Zeny.";
 			set .@food,11533;
 			break;
 		}
 		next;
-		switch(select("Taste:Walk away")) {
+		switch(select("[DRY-RUN] Taste:Walk away")) {
 		case 1:
 			if (Zeny < 5000) {
-				mes "[Restauranteur]";
-				mes "Where's the money kid? Sheesh! No free food here! Ok?";
+				mes "[DRY-RUN] [Restauranteur]";
+				mes "[DRY-RUN] Where's the money kid? Sheesh! No free food here! Ok?";
 				close;
 			}
-			mes "[Restauranteur]";
+			mes "[DRY-RUN] [Restauranteur]";
 			mes "Here's your "+getitemname(.@food)+", you won't regret it!";
 			set Zeny, Zeny - 5000;
 			getitem .@food,1;
 			close;
 		case 2:
-			mes "[Restauranteur]";
-			mes "It's a shame you won't taste this great dish...";
+			mes "[DRY-RUN] [Restauranteur]";
+			mes "[DRY-RUN] It's a shame you won't taste this great dish...";
 			close;
 		}
 	case 3:
-		mes "[Restauranteur]";
-		mes "Are you serious? This is not even funny.";
+		mes "[DRY-RUN] [Restauranteur]";
+		mes "[DRY-RUN] Are you serious? This is not even funny.";
 		close;
 	}
 }
 
 dewata,147,107,6	script	Gourmet#dew	85,{
-	mes "[Gourmet]";
-	mes "Oh... it's like a party in my";
-	mes "mouth... and everyone's invited!";
+	mes "[DRY-RUN] [Gourmet]";
+	mes "[DRY-RUN] Oh... it's like a party in my";
+	mes "[DRY-RUN] mouth... and everyone's invited!";
 	emotion ET_CRY;
 	next;
-	mes "[Gourmet]";
-	mes "Master~ One more please~";
+	mes "[DRY-RUN] [Gourmet]";
+	mes "[DRY-RUN] Master~ One more please~";
 	emotion ET_BEST;
 	emotion ET_OK, getnpcid(0, "Restauranteur#dew");
 	next;
-	mes "[Gourmet]";
-	mes "You must try this! The Food here is succulent~";
+	mes "[DRY-RUN] [Gourmet]";
+	mes "[DRY-RUN] You must try this! The Food here is succulent~";
 	close;
 }
 
 dewata,154,107,4	script	Sightseer#dew	86,{
-	mes "[Tourist]";
-	mes "Wow...";
-	mes "How many has he already eaten?";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Wow...";
+	mes "[DRY-RUN] How many has he already eaten?";
 	emotion ET_SCRATCH;
 	next;
-	mes "[Tourist]";
-	mes "He must be big eater, not the gourmet...";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] He must be big eater, not the gourmet...";
 	next;
-	mes "[Tourist]";
-	mes "Have you been to Prontera yet? I think I've seen him somewhere..";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Have you been to Prontera yet? I think I've seen him somewhere..";
 	close;
 }
 
@@ -376,96 +376,96 @@ dewata,95,203,6	script	Travel Guide#dew	536,{
 }
 
 dewata,97,207,4	script	Tourist#dew1	803,{
-	mes "[Tourist]";
-	mes "Oh, dag-nabbit... I've gone and";
-	mes "picked the wrong tour guide...";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Oh, dag-nabbit... I've gone and";
+	mes "[DRY-RUN] picked the wrong tour guide...";
 	next;
-	mes "[Tourist]";
-	mes "This hombre is a real snooze...";
-	mes "Why make it longer..";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] This hombre is a real snooze...";
+	mes "[DRY-RUN] Why make it longer..";
 	emotion ET_CONFUSE;
 	next;
-	mes "[Tourist]";
-	mes "I need to change my travel agent...";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] I need to change my travel agent...";
 	emotion ET_OHNO;
 	close;
 }
 
 dewata,100,206,4	script	Tourist#dew2	59,{
-	mes "[Tourist]";
-	mes "Hey, let's go there! Hurry up,";
-	mes "while the tour guide is explaining~";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Hey, let's go there! Hurry up,";
+	mes "[DRY-RUN] while the tour guide is explaining~";
 	next;
-	mes "[Tourist]";
-	mes "Come on... It doesn't sound like";
-	mes "he's going to stop talking anytime soon.";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Come on... It doesn't sound like";
+	mes "[DRY-RUN] he's going to stop talking anytime soon.";
 	close;
 }
 
 dewata,101,206,4	script	Tourist#dew3	90,{
-	mes "[Tourist]";
-	mes "Aren't we going to get lost without the guide?";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Aren't we going to get lost without the guide?";
 	next;
-	mes "[Tourist]";
-	mes "We got lost already last time...";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] We got lost already last time...";
 	close;
 }
 
 dewata,99,203,4	script	Tourist#dew4	755,{
-	mes "[Tourist]";
-	mes "Oh~ This is very interesting. A";
-	mes "temple that worships the Buddha...";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] Oh~ This is very interesting. A";
+	mes "[DRY-RUN] temple that worships the Buddha...";
 	emotion ET_OK;
 	next;
-	mes "[Tourist]";
-	mes "But I don't really get all the";
-	mes "symbology here.";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] But I don't really get all the";
+	mes "[DRY-RUN] symbology here.";
 	next;
-	mes "[Tourist]";
-	mes "So beautiful... I wonder who built";
-	mes "this place?";
+	mes "[DRY-RUN] [Tourist]";
+	mes "[DRY-RUN] So beautiful... I wonder who built";
+	mes "[DRY-RUN] this place?";
 	close;
 }
 
 dewata,67,186,8	script	Monk#dew1	834,{
-	mes "[Monk]";
-	mes "I am a monk, content to spend my days in religious study.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] I am a monk, content to spend my days in religious study.";
 	next;
-	mes "[Monk]";
-	mes "I've just returned from a pilgrimage to Borobudur temple with my fellow monks...";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] I've just returned from a pilgrimage to Borobudur temple with my fellow monks...";
 	next;
-	mes "[Monk]";
-	mes "Borobudur temple has many pilgrims visiting, since it is one of few temples left for worshipping the Great Buddha.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] Borobudur temple has many pilgrims visiting, since it is one of few temples left for worshipping the Great Buddha.";
 	close;
 }
 
 dewata,65,188,8	script	Monk#dew2	834,{
-	mes "[Monk]";
-	mes "Borobudur temple is one of few temples left for worshiping the Great Buddha.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] Borobudur temple is one of few temples left for worshiping the Great Buddha.";
 	next;
-	mes "[Monk]";
-	mes "I don't understand why there are only few temples left that follow our ways...";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] I don't understand why there are only few temples left that follow our ways...";
 	close;
 }
 
 dewata,63,190,8	script	Monk#dew3	834,{
-	mes "[Monk]";
-	mes "Are you a Tourist? You can make an offering and a wish to one of the shrines.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] Are you a Tourist? You can make an offering and a wish to one of the shrines.";
 	next;
-	mes "[Monk]";
-	mes "Our great Buddha may grant your wish..";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] Our great Buddha may grant your wish..";
 	close;
 }
 
 dewata,62,192,8	script	Monk#dew4	834,{
-	mes "[Monk]";
-	mes "Our great Buddha is the king of souls and the leader of all good Gods.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] Our great Buddha is the king of souls and the leader of all good Gods.";
 	next;
-	mes "[Monk]";
-	mes "The Dewata tribes believes in Buddha, the strange thing is they all describe Buddha as different creatures.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] The Dewata tribes believes in Buddha, the strange thing is they all describe Buddha as different creatures.";
 	next;
-	mes "[Monk]";
-	mes "I'm not really sure about the reason for that. Maybe because there are many different tribes in Dewata with different characteristics.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] I'm not really sure about the reason for that. Maybe because there are many different tribes in Dewata with different characteristics.";
 	close;
 }
 
@@ -573,62 +573,62 @@ dewata,68,212,6	duplicate(Small Shrine#dew1)	Small Shrine#dew3	844
 dewata,68,191,6	duplicate(Small Shrine#dew1)	Small Shrine#dew4	844
 
 dewata,75,122,6	script	Monk#dewt1	834,{
-	mes "[Monk]";
-	mes "You are a stranger here. What brings here to this quiet place?";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] You are a stranger here. What brings here to this quiet place?";
 	next;
-	switch(select("I'm sightseeing.:No reason.")) {
+	switch(select("[DRY-RUN] I'm sightseeing.:No reason.")) {
 	case 1:
-		mes "[Monk]";
-		mes "Oh, you are a tourist. This is the '^0000FFPagoda^000000' worshiping the great Buddha. Please be respectful of the monks praying here.";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Oh, you are a tourist. This is the '^0000FFPagoda^000000' worshiping the great Buddha. Please be respectful of the monks praying here.";
 		close;
 	case 2:
-		mes "[Monk]";
-		mes "Good day to you...";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Good day to you...";
 		close;
 	}
 }
 
 dewata,69,101,6	script	Monk#dewt2	834,{
-	mes "[Monk]";
-	mes "We have a pagoda for the worship of Buddhas. Each temple has one of these towers, though not many people come here besides other monks.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] We have a pagoda for the worship of Buddhas. Each temple has one of these towers, though not many people come here besides other monks.";
 	next;
-	switch(select("I see...:Explain about Buddhas:Ah, okay.")) {
+	switch(select("[DRY-RUN] I see...:Explain about Buddhas:Ah, okay.")) {
 	case 1:
-		mes "[Monk]";
-		mes "You must feel the compassion of our Buddha!";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] You must feel the compassion of our Buddha!";
 		close;
 	case 2:
-		mes "[Monk]";
-		mes "Buddha is our God from Dewata myth, he is the king of souls and also the leader of good Gods.";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Buddha is our God from Dewata myth, he is the king of souls and also the leader of good Gods.";
 		next;
-		mes "[Monk]";
-		mes "Buddha is the guardian of souls whom often described in traditional dance as fighting against the magician Rangda.";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Buddha is the guardian of souls whom often described in traditional dance as fighting against the magician Rangda.";
 		next;
-		mes "[Monk]";
-		mes "In Dewata we belive there are many deities protecting each island and tribal locale,";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] In Dewata we belive there are many deities protecting each island and tribal locale,";
 		next;
-		mes "[Monk]";
-		mes "so we do have different manifestations of the Buddha, usually described as a bear, tiger, dragon, snake, or lion";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] so we do have different manifestations of the Buddha, usually described as a bear, tiger, dragon, snake, or lion";
 		next;
-		mes "[Monk]";
-		mes "Great Lion is one of famous Buddhas worshipped in Dewata.";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Great Lion is one of famous Buddhas worshipped in Dewata.";
 		next;
-		mes "[Monk]";
-		mes "Hope this was good explanation for you. Let me know if you have anything else you want to know.";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Hope this was good explanation for you. Let me know if you have anything else you want to know.";
 		close;
 	case 3:
-		mes "[Monk]";
-		mes "Good day to you...";
+		mes "[DRY-RUN] [Monk]";
+		mes "[DRY-RUN] Good day to you...";
 		close;
 	}
 }
 
 dewata,71,79,6	script	Monk#dewt3	834,{
-	mes "[Monk]";
-	mes "This tower is built on the edge of coastal cliff. You can pray with a cool ocean breeze in your hair.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] This tower is built on the edge of coastal cliff. You can pray with a cool ocean breeze in your hair.";
 	next;
-	mes "[Monk]";
-	mes "Come, you should feel the compassion of our Buddha in this pleasant weather.";
+	mes "[DRY-RUN] [Monk]";
+	mes "[DRY-RUN] Come, you should feel the compassion of our Buddha in this pleasant weather.";
 	close;
 }
 
@@ -719,18 +719,18 @@ OnTouch:
 
 dewata,279,213,4	script	Tourist#dew-2	887,2,3,{
 OnTouch:
-	mes "[Reclining Tourist]";
-	mes "Wow~ This is really comfy~";
+	mes "[DRY-RUN] [Reclining Tourist]";
+	mes "[DRY-RUN] Wow~ This is really comfy~";
 	next;
-	mes "[Reclining Tourist]";
-	mes "I'm having a great time just relaxing.";
+	mes "[DRY-RUN] [Reclining Tourist]";
+	mes "[DRY-RUN] I'm having a great time just relaxing.";
 	next;
-	mes "[Reclining Tourist]";
-	mes "You should lie down here too.";
-	mes "Once you do, you'll never want to get up.";
+	mes "[DRY-RUN] [Reclining Tourist]";
+	mes "[DRY-RUN] You should lie down here too.";
+	mes "[DRY-RUN] Once you do, you'll never want to get up.";
 	next;
-	mes "[Reclining Tourist]";
-	mes "That's why I haven't moved in a whole week! Hahahaha~";
+	mes "[DRY-RUN] [Reclining Tourist]";
+	mes "[DRY-RUN] That's why I haven't moved in a whole week! Hahahaha~";
 	emotion ET_SMILE;
 	close;
 }
@@ -754,73 +754,73 @@ OnTouch:
 
 dewata,227,129,4	script	Sarr#dew	538,2,3,{
 OnTouch:
-	mes "[Sarr]";
-	mes "They're hiding so I should seek.";
-	mes "I'll find them for sure!-";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] They're hiding so I should seek.";
+	mes "[DRY-RUN] I'll find them for sure!-";
 	next;
-	mes "[Sarr]";
-	mes "One~";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] One~";
 	next;
-	mes "[Sarr]";
-	mes "Two~ Three~";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] Two~ Three~";
 	next;
-	mes "[Sarr]";
-	mes "Four~ Five~ Six~";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] Four~ Five~ Six~";
 	next;
-	mes "[Sarr]";
-	mes "... ... ... ...";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] ... ... ... ...";
 	next;
-	mes "[Sarr]";
-	mes "Ninty nine~ One hundred!!! Now I'm coming~";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] Ninty nine~ One hundred!!! Now I'm coming~";
 	close;
 }
 
 dewata,239,140,4	script	Siyak#dew	539,2,3,{
 OnTouch:
-	mes "[Siyak]";
-	mes "Hey come on, move over~ He's gonna find me~~";
+	mes "[DRY-RUN] [Siyak]";
+	mes "[DRY-RUN] Hey come on, move over~ He's gonna find me~~";
 	next;
-	mes "[Sarr]";
-	mes "I found Siyak!! Come out, come out!!";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] I found Siyak!! Come out, come out!!";
 	emotion ET_KIK, getnpcid(0, "Sarr#dew");
 	emotion ET_HUK;
 	emotion ET_KIK, getnpcid(0, "Sipo#dew");
 	emotion ET_HUK, playerattached();
 	next;
-	mes "[Siyak]";
-	mes "Arrgg!! This is all your fault~!!";
+	mes "[DRY-RUN] [Siyak]";
+	mes "[DRY-RUN] Arrgg!! This is all your fault~!!";
 	emotion ET_FRET;
 	close;
 }
 
 dewata,193,145,4	script	Sipo#dew	538,2,3,{
 OnTouch:
-	mes "[Sipo]";
-	mes "Sarr won't find me here, right?";
+	mes "[DRY-RUN] [Sipo]";
+	mes "[DRY-RUN] Sarr won't find me here, right?";
 	next;
-	mes "[Sarr]";
-	mes "I found Siyak!! Come out come out!!";
+	mes "[DRY-RUN] [Sarr]";
+	mes "[DRY-RUN] I found Siyak!! Come out come out!!";
 	emotion ET_KIK, getnpcid(0, "Sarr#dew");
 	emotion ET_HUK, getnpcid(0, "Siyak#dew");
 	emotion ET_KIK;
 	emotion ET_HUK, playerattached();
 	next;
-	mes "[Sipo]";
-	mes "Hehe~ Now Siyak is IT~ I'll just keep hiding in here.";
+	mes "[DRY-RUN] [Sipo]";
+	mes "[DRY-RUN] Hehe~ Now Siyak is IT~ I'll just keep hiding in here.";
 	close;
 }
 
 dewata,228,177,4	script	Majya#dew	538,2,3,{
 OnTouch:
-	mes "[Majya]";
-	mes "I was playing hide-and-seek with my friends...";
+	mes "[DRY-RUN] [Majya]";
+	mes "[DRY-RUN] I was playing hide-and-seek with my friends...";
 	next;
-	mes "[Majya]";
-	mes "I've been just standing here, and they haven't found me for 3 hours...";
+	mes "[DRY-RUN] [Majya]";
+	mes "[DRY-RUN] I've been just standing here, and they haven't found me for 3 hours...";
 	emotion ET_SCRATCH;
 	next;
-	mes "[Majya]";
-	mes "What should I do? Come out? I don't want to be IT...";
+	mes "[DRY-RUN] [Majya]";
+	mes "[DRY-RUN] What should I do? Come out? I don't want to be IT...";
 	close;
 }
 
@@ -851,36 +851,36 @@ OnTouch:
 
 dewata,249,87,4	script	Mum#dew	101,2,3,{
 OnTouch:
-	mes "[Mum]";
-	mes "Ukki~ Ukki~ Where did she go?";
+	mes "[DRY-RUN] [Mum]";
+	mes "[DRY-RUN] Ukki~ Ukki~ Where did she go?";
 	emotion ET_KEK;
 	next;
-	mes "[Mum]";
-	mes "I can't take my eyes of her for a second...";
+	mes "[DRY-RUN] [Mum]";
+	mes "[DRY-RUN] I can't take my eyes of her for a second...";
 	next;
-	mes "[Mum]";
-	mes "Ukki~";
+	mes "[DRY-RUN] [Mum]";
+	mes "[DRY-RUN] Ukki~";
 	emotion ET_KEK;
 	close;
 }
 
 dewata,251,85,6	script	Poppa#dew	97,2,3,{
 OnTouch:
-	mes "[Poppa]";
-	mes "Honey, is Ukki lost again?";
+	mes "[DRY-RUN] [Poppa]";
+	mes "[DRY-RUN] Honey, is Ukki lost again?";
 	emotion ET_QUESTION;
 	next;
-	mes "[Poppa]";
-	mes "Arrgg... I can't go anywhere with her... How many times already?";
+	mes "[DRY-RUN] [Poppa]";
+	mes "[DRY-RUN] Arrgg... I can't go anywhere with her... How many times already?";
 	emotion ET_PROFUSELY_SWEAT;
 	next;
-	mes "[Daddy]";
-	mes "She's gotten lost in Luoyang, Amatsu, Moscovia, Brasilis, Kunlun,";
-	mes "and in Ayothaya...";
+	mes "[DRY-RUN] [Daddy]";
+	mes "[DRY-RUN] She's gotten lost in Luoyang, Amatsu, Moscovia, Brasilis, Kunlun,";
+	mes "[DRY-RUN] and in Ayothaya...";
 	emotion ET_PROFUSELY_SWEAT;
 	next;
-	mes "[Daddy]";
-	mes "What!! It's already been 7 times including this time in Dewata... 7 times!!!!!!";
+	mes "[DRY-RUN] [Daddy]";
+	mes "[DRY-RUN] What!! It's already been 7 times including this time in Dewata... 7 times!!!!!!";
 	emotion ET_OTL;
 	close;
 }
@@ -1026,22 +1026,22 @@ dewata,179,204,4	script	Young Lady#dew	537,{
 }
 
 dewata,280,236,4	script	Settler#dew	726,{
-	mes "[Settler]";
-	mes "I'm not really from ^8B4513Dewata^000000.";
-	mes "But while traveling,";
-	mes "I found this place...";
-	mes "And made my decision";
-	mes "to live in this beautiful town.";
+	mes "[DRY-RUN] [Settler]";
+	mes "[DRY-RUN] I'm not really from ^8B4513Dewata^000000.";
+	mes "[DRY-RUN] But while traveling,";
+	mes "[DRY-RUN] I found this place...";
+	mes "[DRY-RUN] And made my decision";
+	mes "[DRY-RUN] to live in this beautiful town.";
 	next;
-	mes "[Settler]";
-	mes "I've been happy to live here";
-	mes "and to find and experience";
-	mes "all these beautiful sights.";
-	mes "It's a dream come true.";
+	mes "[DRY-RUN] [Settler]";
+	mes "[DRY-RUN] I've been happy to live here";
+	mes "[DRY-RUN] and to find and experience";
+	mes "[DRY-RUN] all these beautiful sights.";
+	mes "[DRY-RUN] It's a dream come true.";
 	next;
-	mes "[Settler]";
-	mes "Would you ever think of";
-	mes "settling here too?";
+	mes "[DRY-RUN] [Settler]";
+	mes "[DRY-RUN] Would you ever think of";
+	mes "[DRY-RUN] settling here too?";
 	close;
 }
 

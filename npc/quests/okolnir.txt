@@ -26,68 +26,68 @@ function	script	F_Okolnir	{
 	set .@GID, GetCastleData(strnpcinfo(4),1);
 	if (getcharid(2) == .@GID) {
 		if (getd("$siz_"+.@sub$+"_on") == 0) {
-			mes "[Guide]";
-			mes "This castle has a hidden secret.";
-			mes "That is the ^4d4dff'Okolnir'^000000.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] This castle has a hidden secret.";
+			mes "[DRY-RUN] That is the ^4d4dff'Okolnir'^000000.";
 			next;
-			switch(select("About Okolnir.:Go to Okolnir.:Cancel.")) {
+			switch(select("[DRY-RUN] About Okolnir.:Go to Okolnir.:Cancel.")) {
 			case 1:
-				mes "[Guide]";
-				mes "Okolnir is a kind of virtual realm...";
-				mes "I don't know how Okolnir exists, but I guess only Valkyrie knows.";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] Okolnir is a kind of virtual realm...";
+				mes "[DRY-RUN] I don't know how Okolnir exists, but I guess only Valkyrie knows.";
 				next;
-				mes "[Guide]";
-				mes "As you know this is a place to test the adventurers made by Valkyrie...";
-				mes "...you know the qualifications to enter Okolnir.";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] As you know this is a place to test the adventurers made by Valkyrie...";
+				mes "[DRY-RUN] ...you know the qualifications to enter Okolnir.";
 				next;
-				select("Qualifications?");
-				mes "[Guide]";
-				mes "Yes, Valkyrie definitely prefers strong adventurers.";
-				mes "Only the qualified can enter Okolnir and Valhalla.";
+				select("[DRY-RUN] Qualifications?");
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] Yes, Valkyrie definitely prefers strong adventurers.";
+				mes "[DRY-RUN] Only the qualified can enter Okolnir and Valhalla.";
 				next;
-				mes "[Guide]";
-				mes "It only opens when everyone comes together to work it out.";
-				mes "The key is in the castle.";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] It only opens when everyone comes together to work it out.";
+				mes "[DRY-RUN] The key is in the castle.";
 				next;
-				mes "[Guide]";
-				mes "If a castle's ^4d4dffeconomy is over 65 and defense also over 30^000000, this will be acceptable to access Okolnir.";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] If a castle's ^4d4dffeconomy is over 65 and defense also over 30^000000, this will be acceptable to access Okolnir.";
 				next;
-				mes "[Guide]";
-				mes "And, if you pass all of the tests given by Valkyrie in Okolnir!";
-				mes "You will also receive a mysterious gift.";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] And, if you pass all of the tests given by Valkyrie in Okolnir!";
+				mes "[DRY-RUN] You will also receive a mysterious gift.";
 				next;
-				mes "[Guide]";
-				mes "Would you like to try to enter here?";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] Would you like to try to enter here?";
 				close;
 			case 2:
 				set .@Defence,GetCastleData(strnpcinfo(4),3);
 				set .@Economy,GetCastleData(strnpcinfo(4),2);
 				if ((.@Economy > 64) && (.@Defence > 29)) {
-					mes "[Guide]";
-					mes "Great! Economy and Defense are OK.";
-					mes "You can enter Okolnir now....";
-					mes "Do you want to go there?";
+					mes "[DRY-RUN] [Guide]";
+					mes "[DRY-RUN] Great! Economy and Defense are OK.";
+					mes "[DRY-RUN] You can enter Okolnir now....";
+					mes "[DRY-RUN] Do you want to go there?";
 					next;
-					switch(select("Sure let's go there.:No.")) {
+					switch(select("[DRY-RUN] Sure let's go there.:No.")) {
 					case 1:
 						if (countitem(7839)) delitem 7839,countitem(7839); //Crystal_Key
-						mes "[Guide]";
-						mes "Ok......";
-						mes "Please follow me...";
+						mes "[DRY-RUN] [Guide]";
+						mes "[DRY-RUN] Ok......";
+						mes "[DRY-RUN] Please follow me...";
 						close2;
 						warp "que_q"+.@sub$,346,32;
 						end;
 					case 2:
-						mes "[Guide]";
-						mes "You can try this anytime in the future...";
-						mes "If you are ready to protect this castle.";
+						mes "[DRY-RUN] [Guide]";
+						mes "[DRY-RUN] You can try this anytime in the future...";
+						mes "[DRY-RUN] If you are ready to protect this castle.";
 						close;
 					}
 				}
 				else {
-					mes "[Guide]";
-					mes "You are not qualified yet.";
-					mes "Please develop your castle more...";
+					mes "[DRY-RUN] [Guide]";
+					mes "[DRY-RUN] You are not qualified yet.";
+					mes "[DRY-RUN] Please develop your castle more...";
 					close;
 				}
 			case 3:
@@ -95,46 +95,46 @@ function	script	F_Okolnir	{
 			}
 		}
 		else if (getd("$siz_"+.@sub$+"_on") == 1) {
-			mes "[Guide]";
-			mes "... OK...";
-			mes "Good luck.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] ... OK...";
+			mes "[DRY-RUN] Good luck.";
 			next;
-			switch(select("Enter now.:No.")) {
+			switch(select("[DRY-RUN] Enter now.:No.")) {
 			case 1:
 				if (countitem(7839) > 0) {
 					delitem 7839,countitem(7839); //Crystal_Key
 				}
-				mes "[Guide]";
-				mes "Hope you get everything you want...";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] Hope you get everything you want...";
 				close2;
 				warp "que_q"+.@sub$,346,32;
 				end;
 			case 2:
-				mes "[Guide]";
-				mes "Really?";
-				mes "Sorry to hear that.";
+				mes "[DRY-RUN] [Guide]";
+				mes "[DRY-RUN] Really?";
+				mes "[DRY-RUN] Sorry to hear that.";
 				close;
 			}
 		}
 		else if (getd("$siz_"+.@sub$+"_on") == 2) {
-			mes "[Guide]";
-			mes "Building Okolnir needs quite a long time.";
-			mes "....even though it's only virtual...";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] Building Okolnir needs quite a long time.";
+			mes "[DRY-RUN] ....even though it's only virtual...";
 			next;
-			mes "[Guide]";
-			mes "It takes about 12 - 13 hours to create the virtual realm.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] It takes about 12 - 13 hours to create the virtual realm.";
 			close;
 		}
 		else {
-			mes "[Guide]";
-			mes "You'll have to wait.";
+			mes "[DRY-RUN] [Guide]";
+			mes "[DRY-RUN] You'll have to wait.";
 			close;
 		}
 	}
 	else {
-		mes "[Guide]";
-		mes "... I've never seen you before.";
-		mes "You are strangers here. You'd better get out of here right now.";
+		mes "[DRY-RUN] [Guide]";
+		mes "[DRY-RUN] ... I've never seen you before.";
+		mes "[DRY-RUN] You are strangers here. You'd better get out of here right now.";
 		close;
 	}
 	end;
@@ -414,7 +414,7 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "There are too many people, you can't enter.";
+		mes "[DRY-RUN] There are too many people, you can't enter.";
 		close;
 	}
 	
@@ -940,13 +940,13 @@ que_qsch05,2,3,0	duplicate(#miro_yf_main)	#miro_yf_sch05	844
 OnTouch_:
 	set .@sub$,callfunc("F_Okolnir");
 	if (countitem(7839)) {
-		mes "The Warp Gate responds to the Crystal Key.";
+		mes "[DRY-RUN] The Warp Gate responds to the Crystal Key.";
 		delitem 7839,1; //Crystal_Key
 		close2;
 		warp "que_q"+.@sub$,114,158;
 		end;
 	}
-	mes "You need the Crystal Key to activate the Warp Gate.";
+	mes "[DRY-RUN] You need the Crystal Key to activate the Warp Gate.";
 	close;
 }
 que_qaru01,132,172,0	duplicate(windpath01_main)	windpath01_aru01	45,1,1

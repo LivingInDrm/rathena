@@ -18,121 +18,121 @@
 
 valkyrie,53,50,3	script	Biochemist#Valkyrie	122,{
 	if (Class == Job_Creator && bioeth == 13 && getskilllv("AM_BIOETHICS") == 0) {
-		mes "[Biochemist]";
-		mes "Congratulations.";
-		mes "Honor to the warriors!";
-		mes "[Biochemist]";
-		mes "It's strange that";
-		mes "someone like me is here.";
-		mes "But even someone skilled";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] Congratulations.";
+		mes "[DRY-RUN] Honor to the warriors!";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] It's strange that";
+		mes "[DRY-RUN] someone like me is here.";
+		mes "[DRY-RUN] But even someone skilled";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "in the ways of science";
-			mes "can manage to be a hero.";
-			mes "[Biochemist]";
-			mes "In this instance,";
-			mes "it's not necessarily";
-			mes "the means I've used, but";
-			mes "the ends for which I've";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] in the ways of science";
+			mes "[DRY-RUN] can manage to be a hero.";
+			mes "[DRY-RUN] [Biochemist]";
+			mes "[DRY-RUN] In this instance,";
+			mes "[DRY-RUN] it's not necessarily";
+			mes "[DRY-RUN] the means I've used, but";
+			mes "[DRY-RUN] the ends for which I've";
 			next;
-			mes "fought that earned me";
-			mes "a place in Valhalla...";
-			mes "[Biochemist]";
-			mes "Yes...";
-			mes "It's about time.";
-			mes "We need more geniuses";
-			mes "like you on Rune-Midgard.";
+			mes "[DRY-RUN] fought that earned me";
+			mes "[DRY-RUN] a place in Valhalla...";
+			mes "[DRY-RUN] [Biochemist]";
+			mes "[DRY-RUN] Yes...";
+			mes "[DRY-RUN] It's about time.";
+			mes "[DRY-RUN] We need more geniuses";
+			mes "[DRY-RUN] like you on Rune-Midgard.";
 			next;
 			skill "AM_BIOETHICS",1,SKILL_PERM;
-			mes "[Biochemist]";
-			mes "Would you like to";
-			mes "become a Biochemist?";
-			mes "[Biochemist]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Biochemist]";
+			mes "[DRY-RUN] Would you like to";
+			mes "[DRY-RUN] become a Biochemist?";
+			mes "[DRY-RUN] [Biochemist]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Biochemist]";
-		mes "It is still possible for you to learn more skills. Please use";
-		mes "all of your remaining Skill Points before returning to me.";
-		mes "[Biochemist]";
-		mes "Congratulations!";
-		mes "As a Biochemist,";
-		mes "I hope you use your";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+		mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] As a Biochemist,";
+		mes "[DRY-RUN] I hope you use your";
 		close;
 	}
 	else if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "vast knowledge for the";
-			mes "right purposes.";
-			mes "[Biochemist]";
+			mes "[DRY-RUN] vast knowledge for the";
+			mes "[DRY-RUN] right purposes.";
+			mes "[DRY-RUN] [Biochemist]";
 			close;
 		}
-		mes "Ah, have you come to";
-		mes "retrieve the memories";
-		mes "lost to you? Yes, you";
-		mes "must be here for the";
-		mes "secrets of life that";
-		mes "were once yours...";
+		mes "[DRY-RUN] Ah, have you come to";
+		mes "[DRY-RUN] retrieve the memories";
+		mes "[DRY-RUN] lost to you? Yes, you";
+		mes "[DRY-RUN] must be here for the";
+		mes "[DRY-RUN] secrets of life that";
+		mes "[DRY-RUN] were once yours...";
 		next;
-		mes "[Biochemist]";
-		mes "Close your eyes and";
-		mes "put your mind at rest.";
-		mes "We will return to your";
-		mes "past to recollect the";
-		mes "fragments of your lost";
-		mes "memories.";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] Close your eyes and";
+		mes "[DRY-RUN] put your mind at rest.";
+		mes "[DRY-RUN] We will return to your";
+		mes "[DRY-RUN] past to recollect the";
+		mes "[DRY-RUN] fragments of your lost";
+		mes "[DRY-RUN] memories.";
 		close;
 	}
 	else if (ADVJOB == Job_Creator && Class == Job_Merchant_High && JobLevel > 39) {
-		mes "[Biochemist]";
-		mes "When you open your eyes,";
-		mes "you will clearly remember";
-		mes "the secret of life. You will";
-		mes "also remember the weight of";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] When you open your eyes,";
+		mes "[DRY-RUN] you will clearly remember";
+		mes "[DRY-RUN] the secret of life. You will";
+		mes "[DRY-RUN] also remember the weight of";
 		next;
-		mes "responsibility in using these";
-		mes "secrets for the right ends...";
-		mes "[Biochemist]";
+		mes "[DRY-RUN] responsibility in using these";
+		mes "[DRY-RUN] secrets for the right ends...";
+		mes "[DRY-RUN] [Biochemist]";
 		next;
-		if (select("Yes:No") == 1) {
-			mes "Open your eyes...";
-			mes "Now that you have";
-			mes "remembered how to";
-			mes "create artificial life, I only";
+		if (select("[DRY-RUN] Yes:No") == 1) {
+			mes "[DRY-RUN] Open your eyes...";
+			mes "[DRY-RUN] Now that you have";
+			mes "[DRY-RUN] remembered how to";
+			mes "[DRY-RUN] create artificial life, I only";
 			close;
 		}
 		if (SkillPoint) {
-			mes "ask that you treat all of your";
-			mes "creations with respect.";
-			mes "[Biochemist]";
+			mes "[DRY-RUN] ask that you treat all of your";
+			mes "[DRY-RUN] creations with respect.";
+			mes "[DRY-RUN] [Biochemist]";
 			close;
 		}
 		jobchange Job_Creator;
 		if (bioeth == 13)
 			skill "AM_BIOETHICS",1,SKILL_PERM;
 		set ADVJOB,0;
-		mes "If you wish to";
-		mes "retrieve your lost";
-		mes "memories, please";
-		mes "come back to me.";
-		mes "The secret to creating";
-		mes "life is no trifling thing...";
+		mes "[DRY-RUN] If you wish to";
+		mes "[DRY-RUN] retrieve your lost";
+		mes "[DRY-RUN] memories, please";
+		mes "[DRY-RUN] come back to me.";
+		mes "[DRY-RUN] The secret to creating";
+		mes "[DRY-RUN] life is no trifling thing...";
 		close;
 	}
 	else {
-		mes "[Biochemist]";
-		mes "Welcome";
-		mes "to Valhalla,";
-		mes "the Hall of Honor.";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] Welcome";
+		mes "[DRY-RUN] to Valhalla,";
+		mes "[DRY-RUN] the Hall of Honor.";
 		next;
-		mes "[Biochemist]";
-		mes "Please make";
-		mes "yourself comfortable";
-		mes "while you are here.";
-		mes "Honor to the warriors!";
+		mes "[DRY-RUN] [Biochemist]";
+		mes "[DRY-RUN] Please make";
+		mes "[DRY-RUN] yourself comfortable";
+		mes "[DRY-RUN] while you are here.";
+		mes "[DRY-RUN] Honor to the warriors!";
 		close;
 	}
 }

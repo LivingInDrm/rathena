@@ -19,69 +19,69 @@ valkyrie,53,42,3	script	Champion#Valkyrie	52,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Champion]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Champion]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Champion]";
-		mes "Skill.";
-		mes "Speed.";
-		mes "Strength.";
-		mes "Agility.";
+		mes "[DRY-RUN] [Champion]";
+		mes "[DRY-RUN] Skill.";
+		mes "[DRY-RUN] Speed.";
+		mes "[DRY-RUN] Strength.";
+		mes "[DRY-RUN] Agility.";
 		next;
-		mes "[Champion]";
-		mes "A Champion can";
-		mes "benefit from all";
-		mes "these things. But";
-		mes "one can only master";
-		mes "so much in life...";
+		mes "[DRY-RUN] [Champion]";
+		mes "[DRY-RUN] A Champion can";
+		mes "[DRY-RUN] benefit from all";
+		mes "[DRY-RUN] these things. But";
+		mes "[DRY-RUN] one can only master";
+		mes "[DRY-RUN] so much in life...";
 		close;
 	}
 	else if (ADVJOB == Job_Champion && Class == Job_Acolyte_High && JobLevel > 39) {
-		mes "[Champion]";
-		mes "It's time.";
-		mes "Time for great heroes";
-		mes "to stand up against the";
-		mes "forces of evil which plague";
-		mes "the world of Rune-Midgard!";
+		mes "[DRY-RUN] [Champion]";
+		mes "[DRY-RUN] It's time.";
+		mes "[DRY-RUN] Time for great heroes";
+		mes "[DRY-RUN] to stand up against the";
+		mes "[DRY-RUN] forces of evil which plague";
+		mes "[DRY-RUN] the world of Rune-Midgard!";
 		next;
-		mes "[Champion]";
-		mes "Would you like";
-		mes "to become a Champion?";
+		mes "[DRY-RUN] [Champion]";
+		mes "[DRY-RUN] Would you like";
+		mes "[DRY-RUN] to become a Champion?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Champion]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Champion]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Champion]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Champion]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Champion;
 		set ADVJOB,0;
-		mes "[Champion]";
-		mes "Congratulations!";
-		mes "Live as a Champion,";
-		mes "and bring light into";
-		mes "the world through the";
-		mes "strength of your fists.";
+		mes "[DRY-RUN] [Champion]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] Live as a Champion,";
+		mes "[DRY-RUN] and bring light into";
+		mes "[DRY-RUN] the world through the";
+		mes "[DRY-RUN] strength of your fists.";
 		close;
 	}
-	mes "[Champion]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Champion]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Champion]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Champion]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

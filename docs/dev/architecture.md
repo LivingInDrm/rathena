@@ -48,3 +48,13 @@
 3. 用覆盖率工具统计未汉化区域，优先补 `quests`、`jobs`、`warps`、`pre-re`、13.2 相关链路。
 4. 配套接入 `ROClientFullCN` 解决客户端中文资源。
 5. 对未覆盖文本建立增量翻译流水线，持续补齐。
+
+### 5. 客户端文件管理层
+- 管理目录：`client/`
+- 配置档案：`client/profiles/*.json` 记录各方案的完整配置（EXE、PACKETVER、GRF 来源、补丁列表）
+- data.ini 模板：`client/data-ini/data.ini.template` 标准 GRF 加载顺序
+- 补丁清单：`client/patches/` 各方案必须的 NEMO/WARP 补丁
+- 管理脚本：`client/scripts/verify_client.py`（完整性校验）、`client/scripts/switch_profile.py`（方案切换）
+- 当前激活方案：方案A（2021-11-03 Ragexe + 匹配版本 data.grf）
+- 方案切换原则：通过 Profile JSON 管理，切换时只生成指导不自动执行破坏性操作
+- GRF/EXE 等二进制文件不纳入 Git（已在 .gitignore 排除）

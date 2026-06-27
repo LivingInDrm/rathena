@@ -24,33 +24,33 @@
 //============================================================ 
 
 moc_ruins,86,103,1	script	Thug#rg	118,{
-	mes "[Thug]";
-	mes "*Sigh...*";
-	mes "What is life?";
-	mes "And what use";
-	mes "is money? ...Damn.";
-	mes "Damn this worthless life!";
+	mes "[DRY-RUN] [Thug]";
+	mes "[DRY-RUN] *Sigh...*";
+	mes "[DRY-RUN] What is life?";
+	mes "[DRY-RUN] And what use";
+	mes "[DRY-RUN] is money? ...Damn.";
+	mes "[DRY-RUN] Damn this worthless life!";
 	next;
-	mes "[Thug]";
-	mes "Hey, kid.";
-	mes "What the hell";
-	mes "are you lookin' at?";
+	mes "[DRY-RUN] [Thug]";
+	mes "[DRY-RUN] Hey, kid.";
+	mes "[DRY-RUN] What the hell";
+	mes "[DRY-RUN] are you lookin' at?";
 	next;
-	if (select("Me? N-nothing!':........") == 1) {
-		mes "[Thug]";
-		mes "Then get the";
-		mes "hell out of my face!";
-		mes "Didn't you hear me?";
-		mes "Get lost!";
+	if (select("[DRY-RUN] Me? N-nothing!':........") == 1) {
+		mes "[DRY-RUN] [Thug]";
+		mes "[DRY-RUN] Then get the";
+		mes "[DRY-RUN] hell out of my face!";
+		mes "[DRY-RUN] Didn't you hear me?";
+		mes "[DRY-RUN] Get lost!";
 		close;
 	}
-	mes "[Thug]";
-	mes "Hmmm...";
-	mes "Maybe I'll swing by the ^0000FFRogue Guild^000000 in ^0000FFParos Lighthouse^000000...";
+	mes "[DRY-RUN] [Thug]";
+	mes "[DRY-RUN] Hmmm...";
+	mes "[DRY-RUN] Maybe I'll swing by the ^0000FFRogue Guild^000000 in ^0000FFParos Lighthouse^000000...";
 	next;
-	mes "[Thug]";
-	mes "I needz my money,";
-	mes "and they best have it...";
+	mes "[DRY-RUN] [Thug]";
+	mes "[DRY-RUN] I needz my money,";
+	mes "[DRY-RUN] and they best have it...";
 	close;
 }
 
@@ -1017,52 +1017,52 @@ S_CheckItems:
 
 cmd_fild09,106,195,0	script	Warp#1	45,1,1,{
 OnTouch_:
-	mes "[???]";
-	mes "Who's there?!";
-	mes "Who would dare";
-	mes "intrude my territory?";
+	mes "[DRY-RUN] [???]";
+	mes "[DRY-RUN] Who's there?!";
+	mes "[DRY-RUN] Who would dare";
+	mes "[DRY-RUN] intrude my territory?";
 	next;
-	switch(select("My father:Aragham:Aragon:Legolas")) {
+	switch(select("[DRY-RUN] My father:Aragham:Aragon:Legolas")) {
 	case 1:
 		mes "[" + strcharinfo(0) + "]";
-		mes "My father";
+		mes "[DRY-RUN] My father";
 		break;
 	case 2:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Aragham";
+		mes "[DRY-RUN] Aragham";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Aragon";
+		mes "[DRY-RUN] Aragon";
 		break;
 	case 4:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Legolas";
+		mes "[DRY-RUN] Legolas";
 		break;
 	}
-	switch(select("did not:didn't:never:ever")) {
+	switch(select("[DRY-RUN] did not:didn't:never:ever")) {
 	case 1: mes "did not"; break;
 	case 2: mes "didn't"; break;
 	case 3:
-		mes "never";
+		mes "[DRY-RUN] never";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4: mes "ever"; break;
 	}
-	switch(select("hoard:hoarded:hide:took:take")) {
+	switch(select("[DRY-RUN] hoard:hoarded:hide:took:take")) {
 	case 1: mes "hoard"; break;
 	case 2:
-		mes "hoarded";
+		mes "[DRY-RUN] hoarded";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3: mes "hide"; break;
 	case 4: mes "took"; break;
 	case 5: mes "take"; break;
 	}
-	switch(select("upgrade items.:forging items.:refining item.:upgrade item.")) {
+	switch(select("[DRY-RUN] upgrade items.:forging items.:refining item.:upgrade item.")) {
 	case 1:
-		mes "upgrade items.";
+		mes "[DRY-RUN] upgrade items.";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 2: mes "forging items."; break;
@@ -1071,68 +1071,68 @@ OnTouch_:
 	}
 	next;
 	if (.@rogue_t > 30) {
-		mes "^3355FF*Creeeeak*";
-		mes "The door slowly opens.^000000";
+		mes "[DRY-RUN] ^3355FF*Creeeeak*";
+		mes "[DRY-RUN] The door slowly opens.^000000";
 		close2;
 		warp "in_rogue",246,25;
 		end;
 	}
 	else {
-		mes "[???]";
-		mes "What the...?";
-		mes "Get lost!";
+		mes "[DRY-RUN] [???]";
+		mes "[DRY-RUN] What the...?";
+		mes "[DRY-RUN] Get lost!";
 		close;
 	}
 }
 
 cmd_fild09,335,143,0	script	Warp#2	45,1,1,{
 OnTouch_:
-	mes "[???]";
-	mes "Who's there?!";
-	mes "Who would dare";
-	mes "intrude my territory?";
+	mes "[DRY-RUN] [???]";
+	mes "[DRY-RUN] Who's there?!";
+	mes "[DRY-RUN] Who would dare";
+	mes "[DRY-RUN] intrude my territory?";
 	next;
-	switch(select("My father:Aragham:Aragon:Legolas")) {
+	switch(select("[DRY-RUN] My father:Aragham:Aragon:Legolas")) {
 	case 1:
 		mes "[" + strcharinfo(0) + "]";
-		mes "My father";
+		mes "[DRY-RUN] My father";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 2:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Aragham";
+		mes "[DRY-RUN] Aragham";
 		break;
 	case 3:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Aragon";
+		mes "[DRY-RUN] Aragon";
 		break;
 	case 4:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Legolas";
+		mes "[DRY-RUN] Legolas";
 		break;
 	}
-	switch(select("did not:didn't:never:ever")) {
+	switch(select("[DRY-RUN] did not:didn't:never:ever")) {
 	case 1: mes "did not"; break;
 	case 2: mes "didn't"; break;
 	case 3:
-		mes "never";
+		mes "[DRY-RUN] never";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4: mes "ever"; break;
 	}
-	switch(select("hoard:takes:hide:took:hoarded")) {
+	switch(select("[DRY-RUN] hoard:takes:hide:took:hoarded")) {
 	case 1: mes "hoard"; break;
 	case 2: mes "takes"; break;
 	case 3: mes "hide"; break;
 	case 4: mes "took"; break;
 	case 5:
-		mes "hoarded";
+		mes "[DRY-RUN] hoarded";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	}
-	switch(select("upgrade items.:forging items.:refining item.:upgrade item.")) {
+	switch(select("[DRY-RUN] upgrade items.:forging items.:refining item.:upgrade item.")) {
 	case 1:
-		mes "upgrade items.";
+		mes "[DRY-RUN] upgrade items.";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 2: mes "forging items."; break;
@@ -1141,69 +1141,69 @@ OnTouch_:
 	}
 	next;
 	if (.@rogue_t > 30) {
-		mes "^3355FF*Creeeeak*";
-		mes "The door slowly opens.^000000";
+		mes "[DRY-RUN] ^3355FF*Creeeeak*";
+		mes "[DRY-RUN] The door slowly opens.^000000";
 		close2;
 		warp "in_rogue",169,34;
 		end;
 	}
 	else {
-		mes "[???]";
-		mes "What the...?";
-		mes "Get lost!";
+		mes "[DRY-RUN] [???]";
+		mes "[DRY-RUN] What the...?";
+		mes "[DRY-RUN] Get lost!";
 		close;
 	}
 }
 
 cmd_fild04,304,180,0	script	Warp#3	45,1,1,{
 OnTouch_:
-	mes "[???]";
-	mes "Who's there?!";
-	mes "Who would dare";
-	mes "intrude my territory?";
+	mes "[DRY-RUN] [???]";
+	mes "[DRY-RUN] Who's there?!";
+	mes "[DRY-RUN] Who would dare";
+	mes "[DRY-RUN] intrude my territory?";
 	next;
-	switch(select("Anntonio:Aragham:Antonio:Hollgrehenn")) {
+	switch(select("[DRY-RUN] Anntonio:Aragham:Antonio:Hollgrehenn")) {
 	case 1:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Anntonio";
+		mes "[DRY-RUN] Anntonio";
 		break;
 	case 2:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Aragham";
+		mes "[DRY-RUN] Aragham";
 		break;
 	case 3:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Antonio";
+		mes "[DRY-RUN] Antonio";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4:
 		mes "[" + strcharinfo(0) + "]";
-		mes "Hollgrehenn"; 
+		mes "[DRY-RUN] Hollgrehenn"; 
 		break;
 	}
-	switch(select("enjoys:doesn't enjoy:likes:doesn't like")) {
+	switch(select("[DRY-RUN] enjoys:doesn't enjoy:likes:doesn't like")) {
 	case 1: mes "enjoys"; break;
 	case 2:
-		mes "doesn't enjoy";
+		mes "[DRY-RUN] doesn't enjoy";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3: mes "likes"; break;
 	case 4: mes "doesn't like"; break;
 	}
-	switch(select("damaging:destroying:fixing:forging")) {
+	switch(select("[DRY-RUN] damaging:destroying:fixing:forging")) {
 	case 1: mes "damaging"; break;
 	case 2:
-		mes "destroying";
+		mes "[DRY-RUN] destroying";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3: mes "fixing"; break;
 	case 4: mes "forging"; break;
 	}
-	switch(select("forging item.:refining items.:upgrade items.:refined items.:upgraded items.:forged items.")) {
+	switch(select("[DRY-RUN] forging item.:refining items.:upgrade items.:refined items.:upgraded items.:forged items.")) {
 	case 1: mes "forging item."; break;
 	case 2: mes "refining items."; break;
 	case 3:
-		mes "upgrade items.";
+		mes "[DRY-RUN] upgrade items.";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4: mes "refined items."; break;
@@ -1212,15 +1212,15 @@ OnTouch_:
 	}
 	next;
 	if (.@rogue_t > 30) {
-		mes "^3355FF*Creeeeak*";
-		mes "The door slowly opens.^000000";
+		mes "[DRY-RUN] ^3355FF*Creeeeak*";
+		mes "[DRY-RUN] The door slowly opens.^000000";
 		close2;
 		warp "in_rogue",164,106;
 		end;
 	}
 	else {
-		mes "[???]";
-		mes ".....Get lost!";
+		mes "[DRY-RUN] [???]";
+		mes "[DRY-RUN] .....Get lost!";
 		close;
 	}
 }
@@ -1277,37 +1277,37 @@ in_rogue,272,135,1	script	Hermanthorn Jr#rg	85,{
 
 in_rogue,270,130,0	script	he_to_rogue#rg	45,1,1,{
 OnTouch_:
-	mes "^3355FFThe door is locked. You'll need to enter the four number combination to open it.^000000";
+	mes "[DRY-RUN] ^3355FFThe door is locked. You'll need to enter the four number combination to open it.^000000";
 	next;
 	input .@input;
 	if (.@input < 1 || .@input > 10000) {
 		if (ROGUE_Q == 12)
-			mes "^3355FFIt didn't work. Please re-enter the four number combination.^000000";
+			mes "[DRY-RUN] ^3355FFIt didn't work. Please re-enter the four number combination.^000000";
 		else 
-			mes "^3355FFPlease enter a combination of four numbers.^000000";
+			mes "[DRY-RUN] ^3355FFPlease enter a combination of four numbers.^000000";
 		close;
 	}
 	else if (.@input == 3019) {
 		if (ROGUE_Q == 12) {
-			mes "^3355FFThe door";
-			mes "has opened.^000000";
+			mes "[DRY-RUN] ^3355FFThe door";
+			mes "[DRY-RUN] has opened.^000000";
 			close2;
 			warp "in_rogue",10,21;
 			set ROGUE_Q,12;
 			end;
 		}
 		else {
-			mes "[HermanthornJr.]";
-			mes "Well...";
-			mes "Didn't I tell you";
-			mes "that I changed the";
-			mes "password? *Wink Wink*";
+			mes "[DRY-RUN] [HermanthornJr.]";
+			mes "[DRY-RUN] Well...";
+			mes "[DRY-RUN] Didn't I tell you";
+			mes "[DRY-RUN] that I changed the";
+			mes "[DRY-RUN] password? *Wink Wink*";
 			close;
 		}
 	}
 	else {
-		mes "^3355FFThe door";
-		mes "is still locked.^000000";
+		mes "[DRY-RUN] ^3355FFThe door";
+		mes "[DRY-RUN] is still locked.^000000";
 		close;
 	}
 }
@@ -1995,10 +1995,10 @@ OnInit:
 }
 
 in_rogue,399,286,1	script	switch#rogreset	88,{
-	mes "^F08080Tah dah~";
-	mes "Monsters for the";
-	mes "Rogue Job Change";
-	mes "have been reset^000000.";
+	mes "[DRY-RUN] ^F08080Tah dah~";
+	mes "[DRY-RUN] Monsters for the";
+	mes "[DRY-RUN] Rogue Job Change";
+	mes "[DRY-RUN] have been reset^000000.";
 	donpcevent "mob_rogue#1::OnDisable";
 	donpcevent "mob_rogue#2::OnDisable";
 	donpcevent "mob_rogue#3::OnDisable";

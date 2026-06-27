@@ -18,130 +18,130 @@
 // Main NPC :: resetskill_novice
 //============================================================
 izlude,127,175,3	script	Hypnotist#novice	124,{
-	mes "[Hypnotist]";
-	mes "Greetings, adventurer.";
-	mes "I'm a member of the Hypnotist";
-	mes "Academy sent here to Izlude";
-	mes "to provide Skill Reset services";
-	mes "to certain First Class characters for a really good price: free!";
+	mes "[DRY-RUN] [Hypnotist]";
+	mes "[DRY-RUN] Greetings, adventurer.";
+	mes "[DRY-RUN] I'm a member of the Hypnotist";
+	mes "[DRY-RUN] Academy sent here to Izlude";
+	mes "[DRY-RUN] to provide Skill Reset services";
+	mes "[DRY-RUN] to certain First Class characters for a really good price: free!";
 	next;
-	mes "[Hypnotist]";
-	mes "Although I offer unlimited";
-	mes "stat/skill resets for now, I have";
-	mes "two conditions that must be";
-	mes "fulfilled. First, you must be";
-	mes "lower than ^FF0000Base Level 50^000000.";
+	mes "[DRY-RUN] [Hypnotist]";
+	mes "[DRY-RUN] Although I offer unlimited";
+	mes "[DRY-RUN] stat/skill resets for now, I have";
+	mes "[DRY-RUN] two conditions that must be";
+	mes "[DRY-RUN] fulfilled. First, you must be";
+	mes "[DRY-RUN] lower than ^FF0000Base Level 50^000000.";
 	next;
-	mes "[Hypnotist]";
-	mes "Second, you must be a";
-	mes "^FF0000Swordman, Acolyte, Mage,";
-	mes "Thief, Archer, Merchant,";
-	mes "Taekwon Boy, or Taekwon Girl,";
-	mes "Gunslinger and Ninja^000000";
-	mes "Job character to qualify.";
-	mes "Now, do you have any questions?";
+	mes "[DRY-RUN] [Hypnotist]";
+	mes "[DRY-RUN] Second, you must be a";
+	mes "[DRY-RUN] ^FF0000Swordman, Acolyte, Mage,";
+	mes "[DRY-RUN] Thief, Archer, Merchant,";
+	mes "[DRY-RUN] Taekwon Boy, or Taekwon Girl,";
+	mes "[DRY-RUN] Gunslinger and Ninja^000000";
+	mes "[DRY-RUN] Job character to qualify.";
+	mes "[DRY-RUN] Now, do you have any questions?";
 	next;
-	switch(select("^FF0000Stat/Skill Reset?:Reset stats:Reset skills^000000:Cancel")) {
+	switch(select("[DRY-RUN] ^FF0000Stat/Skill Reset?:Reset stats:Reset skills^000000:Cancel")) {
 	case 1:
-		mes "[Hypnotist]";
-		mes "Stat/Skill Resets allow adventuers";
-		mes "to redistribute their Skill";
-		mes "Points if they are unhappy";
-		mes "with their current skills.";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] Stat/Skill Resets allow adventuers";
+		mes "[DRY-RUN] to redistribute their Skill";
+		mes "[DRY-RUN] Points if they are unhappy";
+		mes "[DRY-RUN] with their current skills.";
 		next;
-		mes "[Hypnotist]";
-		mes "Before proceeding with";
-		mes "a Stat/Skill Reset, you must";
-		mes "reduce all of the weight";
-		mes "of all carried items on your";
-		mes "character to 0. You can put";
-		mes "extra items in Kafra Storage.";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] Before proceeding with";
+		mes "[DRY-RUN] a Stat/Skill Reset, you must";
+		mes "[DRY-RUN] reduce all of the weight";
+		mes "[DRY-RUN] of all carried items on your";
+		mes "[DRY-RUN] character to 0. You can put";
+		mes "[DRY-RUN] extra items in Kafra Storage.";
 		next;
-		mes "[Hypnotist]";
-		mes "Ah, it's also important";
-		mes "to remove your ^FF0000Pushcart^000000";
-		mes "if you have one equipped.";
-		mes "Otherwise, hypnosis won't";
-		mes "work, or will backfire...";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] Ah, it's also important";
+		mes "[DRY-RUN] to remove your ^FF0000Pushcart^000000";
+		mes "[DRY-RUN] if you have one equipped.";
+		mes "[DRY-RUN] Otherwise, hypnosis won't";
+		mes "[DRY-RUN] work, or will backfire...";
 		close;
 	case 2:
 		set .@str$,"Stat";
 	case 3:
 		if (.@str$ == "")
 			set .@str$,"Skill";
-		mes "[Hypnotist]";
-		mes "Are you sure that you";
-		mes "want to proceed with";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] Are you sure that you";
+		mes "[DRY-RUN] want to proceed with";
 		mes "my ^FF0000"+.@str$+" Reset^000000 service?";
 		next;
-		if(select("Yes:Cancel") == 1)
+		if(select("[DRY-RUN] Yes:Cancel") == 1)
 			break;
 	case 4:
-		mes "[Hypnotist]";
-		mes "Thank you, and good";
-		mes "luck on your adventures.";
-		mes "Please travel in safety~";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] Thank you, and good";
+		mes "[DRY-RUN] luck on your adventures.";
+		mes "[DRY-RUN] Please travel in safety~";
 		close;
 	}
 	if ((Class >= Job_Swordman && Class <= Job_Thief) || Class == Job_Taekwon || Class == Job_Gunslinger || Class == Job_Ninja) {
 		if (checkcart()) {
-			mes "[Hypnotist]";
-			mes "Oh! Please remove your";
-			mes "Pushcart before proceeding";
+			mes "[DRY-RUN] [Hypnotist]";
+			mes "[DRY-RUN] Oh! Please remove your";
+			mes "[DRY-RUN] Pushcart before proceeding";
 			mes "with the "+.@str$+" Reset service.";
-			mes "Thanks for cooperating~";
+			mes "[DRY-RUN] Thanks for cooperating~";
 			close;
 		}
 		if (Weight != 0) {
-			mes "[Hypnotist]";
+			mes "[DRY-RUN] [Hypnotist]";
 			mes "If you're here for my "+.@str$;
-			mes "Reset service, please";
-			mes "remember that you can't";
+			mes "[DRY-RUN] Reset service, please";
+			mes "[DRY-RUN] remember that you can't";
 			mes "reset your "+.@str$+"s until the";
-			mes "^FF0000weight of your carried items in";
-			mes "your Inventory is reduced to 0^000000.";
+			mes "[DRY-RUN] ^FF0000weight of your carried items in";
+			mes "[DRY-RUN] your Inventory is reduced to 0^000000.";
 			next;
-			mes "[Hypnotist]";
-			mes "Why don't you place your";
-			mes "things into the Kafra Storage";
-			mes "for now? That way, you can";
-			mes "safely keep all of your goods.";
+			mes "[DRY-RUN] [Hypnotist]";
+			mes "[DRY-RUN] Why don't you place your";
+			mes "[DRY-RUN] things into the Kafra Storage";
+			mes "[DRY-RUN] for now? That way, you can";
+			mes "[DRY-RUN] safely keep all of your goods.";
 			close;
 		}
 		if (BaseLevel >= 50 && (Class == Job_Taekwon || Class == Job_Gunslinger || Class == Job_Ninja)) {
-			mes "[Hypnotist]";
-			mes "I'm sorry, but characters";
-			mes "with Base Levels higher";
-			mes "than 50 are ineligible for the";
+			mes "[DRY-RUN] [Hypnotist]";
+			mes "[DRY-RUN] I'm sorry, but characters";
+			mes "[DRY-RUN] with Base Levels higher";
+			mes "[DRY-RUN] than 50 are ineligible for the";
 			mes .@str$+" Reset service I provide.";
 			close;
 		}
-		mes "[Hypnotist]";
-		mes "Thank you for using";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] Thank you for using";
 		mes "my "+.@str$+" Redistribution";
-		mes "services. Oh, and best";
-		mes "of luck to you on your";
-		mes "travels, adventurer.";
+		mes "[DRY-RUN] services. Oh, and best";
+		mes "[DRY-RUN] of luck to you on your";
+		mes "[DRY-RUN] travels, adventurer.";
 		if (.@str$ == "Stat")
 			resetstatus;
 		else
 			resetskill;
 		close;
 	} else {
-		mes "[Hypnotist]";
-		mes "I'm sorry, but your";
-		mes "Job Class doesn't qualify";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] I'm sorry, but your";
+		mes "[DRY-RUN] Job Class doesn't qualify";
 		mes "for the "+.@str$+" Reset service";
-		mes "that I provide. I can only";
+		mes "[DRY-RUN] that I provide. I can only";
 		mes "offer "+.@str$+" Resets to the";
-		mes "following Jobs...";
+		mes "[DRY-RUN] following Jobs...";
 		next;
-		mes "[Hypnotist]";
-		mes "^FF0000Swordman, Acolyte,";
-		mes "Mage, Thief, Archer,";
-		mes "Merchant, Taekwon";
-		mes "Boy, Taekwon Girl,";
-		mes "Gunslinder and Ninja^000000.";
+		mes "[DRY-RUN] [Hypnotist]";
+		mes "[DRY-RUN] ^FF0000Swordman, Acolyte,";
+		mes "[DRY-RUN] Mage, Thief, Archer,";
+		mes "[DRY-RUN] Merchant, Taekwon";
+		mes "[DRY-RUN] Boy, Taekwon Girl,";
+		mes "[DRY-RUN] Gunslinder and Ninja^000000.";
 		close;
 	}
 }

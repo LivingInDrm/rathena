@@ -8,39 +8,39 @@
 //============================================================
 
 -	script	GuildWarehouse	-1,{
-	mes "[Warehouse Manager]";
-	mes "How are you? We are specialized in guild warehouses. This is our ^0000cdstory^000000:";
-	mes "Why can't guild members share a storage? We started off with that simple question.";
+	mes "[DRY-RUN] [Warehouse Manager]";
+	mes "[DRY-RUN] How are you? We are specialized in guild warehouses. This is our ^0000cdstory^000000:";
+	mes "[DRY-RUN] Why can't guild members share a storage? We started off with that simple question.";
 	next;
-	mes "[Warehouse Manager]";
-	mes "You can open the warehouse for 1000 Zeny or look up the usage history of the guild.";
-	mes "How can I help you?";
+	mes "[DRY-RUN] [Warehouse Manager]";
+	mes "[DRY-RUN] You can open the warehouse for 1000 Zeny or look up the usage history of the guild.";
+	mes "[DRY-RUN] How can I help you?";
 	next;
-	if( select( "Open guild warehouse:View warehouse usage history" ) == 1 ){
+	if( select( "[DRY-RUN] Open guild warehouse:View warehouse usage history" ) == 1 ){
 		.@guildid = getcharid( 2 );
 
 		if( .@guildid == 0 ){
-			mes "[Warehouse Manager]";
-			mes "The guild storage is only available for guild members.";
+			mes "[DRY-RUN] [Warehouse Manager]";
+			mes "[DRY-RUN] The guild storage is only available for guild members.";
 			close;
 		}
 
 		if( getgdskilllv( .@guildid, "GD_GUILD_STORAGE" ) == 0 || !guild_has_permission( GUILD_PERM_STORAGE ) ){
-			mes "[Warehouse Manager]";
-			mes "It seems that it is not yet possible for your guild to use the guild warehouse or you do not have access permissions for the warehouse.";
-			mes "Please come back after checking the guild skill and the permission to access the warehouse.";
+			mes "[DRY-RUN] [Warehouse Manager]";
+			mes "[DRY-RUN] It seems that it is not yet possible for your guild to use the guild warehouse or you do not have access permissions for the warehouse.";
+			mes "[DRY-RUN] Please come back after checking the guild skill and the permission to access the warehouse.";
 			close;
 		}
 
 		if( Zeny < 1000 ){
-			mes "[Warehouse Manager]";
-			mes "I am afraid you do not have enough money to settle the fee.";
-			mes "The fee is 1000 Zeny.";
+			mes "[DRY-RUN] [Warehouse Manager]";
+			mes "[DRY-RUN] I am afraid you do not have enough money to settle the fee.";
+			mes "[DRY-RUN] The fee is 1000 Zeny.";
 			close;
 		}
 
-		mes "[Warehouse Manager]";
-		mes "I will open the guild storage for you then. Have a memorable time!";
+		mes "[DRY-RUN] [Warehouse Manager]";
+		mes "[DRY-RUN] I will open the guild storage for you then. Have a memorable time!";
 		close2;
 
 		if( Zeny < 1000 ){
@@ -52,30 +52,30 @@
 			Zeny -= 1000;
 			end;
 		}else{
-			mes "[Warehouse Manager]";
-			mes "I am afraid someone else is using the warehouse right now.";
-			mes "Please try again after a while.";
+			mes "[DRY-RUN] [Warehouse Manager]";
+			mes "[DRY-RUN] I am afraid someone else is using the warehouse right now.";
+			mes "[DRY-RUN] Please try again after a while.";
 			close;
 		}
 	}else{
 		.@guildid = getcharid( 2 );
 
 		if( .@guildid == 0 ){
-			mes "[Warehouse Manager]";
-			mes "The guild storage is only available for guild members.";
+			mes "[DRY-RUN] [Warehouse Manager]";
+			mes "[DRY-RUN] The guild storage is only available for guild members.";
 			close;
 		}
 
 		if( getgdskilllv( .@guildid, "GD_GUILD_STORAGE" ) == 0 || !guild_has_permission( GUILD_PERM_STORAGE ) ){
-			mes "[Warehouse Manager]";
-			mes "It seems that it is not yet possible for your guild to use the guild warehouse or you do not have access permissions for the warehouse.";
-			mes "Please come back after checking the guild skill and the permission to access the warehouse.";
+			mes "[DRY-RUN] [Warehouse Manager]";
+			mes "[DRY-RUN] It seems that it is not yet possible for your guild to use the guild warehouse or you do not have access permissions for the warehouse.";
+			mes "[DRY-RUN] Please come back after checking the guild skill and the permission to access the warehouse.";
 			close;
 		}
 
-		mes "[Warehouse Manager]";
-		mes "I will show you the usage history of the warehouse. Usage history will be retained for up to 3 months.";
-		mes "Have a memorable time!";
+		mes "[DRY-RUN] [Warehouse Manager]";
+		mes "[DRY-RUN] I will show you the usage history of the warehouse. Usage history will be retained for up to 3 months.";
+		mes "[DRY-RUN] Have a memorable time!";
 		close2;
 		guildopenstorage_log();
 		end;

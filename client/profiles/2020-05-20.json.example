@@ -1,0 +1,48 @@
+{
+  "name": "方案C - 2020-05-20b Ragexe (折中方案)",
+  "description": "介于 2018 和 2021 之间的折中方案，有现成 WARP profile 和 Pre-Renewal Pack 参考。",
+  "status": "inactive",
+
+  "client_exe": {
+    "filename": "2020-05-20bRagexe_patched.exe",
+    "original": "2020-05-20bRagexe.exe",
+    "patch_tool": "WARP",
+    "reference": "https://ragnarokoffline.github.io/"
+  },
+
+  "packetver": {
+    "value": 20200520,
+    "config_file": "src/config/packets.hpp",
+    "override_file": "src/custom/defines_pre.hpp",
+    "override_content": "#define PACKETVER 20200520",
+    "note": "需要在 defines_pre.hpp 中覆盖并重新编译服务端"
+  },
+
+  "data_grf": {
+    "source": "kRO 2020年5月前后完整客户端",
+    "download_urls": [
+      "http://nemo.herc.ws/downloads"
+    ],
+    "required_files": [
+      "data.grf",
+      "rdata.grf"
+    ]
+  },
+
+  "server_changes": "需修改 PACKETVER 并重新编译",
+
+  "cn_compatibility": {
+    "note": "可行，需要额外适配 Lua 文件路径"
+  },
+
+  "pros": [
+    "较新的功能",
+    "有现成 WARP profile",
+    "有 Ragnarok Offline Pre-Renewal Pack 参考"
+  ],
+
+  "cons": [
+    "非 rAthena 默认",
+    "社区案例较 2021/2018 少"
+  ]
+}

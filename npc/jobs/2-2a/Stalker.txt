@@ -19,75 +19,75 @@ valkyrie,53,58,3	script	Stalker#Valkyrie	747,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Stalker]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[DRY-RUN] [Stalker]";
+			mes "[DRY-RUN] Congratulations.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
-		mes "[Stalker]";
-		mes "Heh...";
-		mes "It's tough";
-		mes "being a hero";
-		mes "and being shady,";
-		mes "untrustworthy,";
-		mes "sneaky...";
+		mes "[DRY-RUN] [Stalker]";
+		mes "[DRY-RUN] Heh...";
+		mes "[DRY-RUN] It's tough";
+		mes "[DRY-RUN] being a hero";
+		mes "[DRY-RUN] and being shady,";
+		mes "[DRY-RUN] untrustworthy,";
+		mes "[DRY-RUN] sneaky...";
 		next;
-		mes "[Stalker]";
-		mes "But when the";
-		mes "going gets rough";
-		mes "my pals know they";
-		mes "can count on me.";
-		mes "I need them and";
-		mes "they need me.";
+		mes "[DRY-RUN] [Stalker]";
+		mes "[DRY-RUN] But when the";
+		mes "[DRY-RUN] going gets rough";
+		mes "[DRY-RUN] my pals know they";
+		mes "[DRY-RUN] can count on me.";
+		mes "[DRY-RUN] I need them and";
+		mes "[DRY-RUN] they need me.";
 		close;
 	}
 	else if (ADVJOB == Job_Stalker && Class == Job_Thief_High && JobLevel > 39) {
-		mes "[Stalker]";
-		mes "This world needs";
-		mes "more heroes who are";
-		mes "willing to walk the line";
-		mes "between order and lawlessness.";
+		mes "[DRY-RUN] [Stalker]";
+		mes "[DRY-RUN] This world needs";
+		mes "[DRY-RUN] more heroes who are";
+		mes "[DRY-RUN] willing to walk the line";
+		mes "[DRY-RUN] between order and lawlessness.";
 		next;
-		mes "[Stalker]";
-		mes "Are you ready";
-		mes "to join the ranks";
-		mes "of the sneakiest of";
-		mes "warriors? Are you ready";
-		mes "to become a Stalker?";
+		mes "[DRY-RUN] [Stalker]";
+		mes "[DRY-RUN] Are you ready";
+		mes "[DRY-RUN] to join the ranks";
+		mes "[DRY-RUN] of the sneakiest of";
+		mes "[DRY-RUN] warriors? Are you ready";
+		mes "[DRY-RUN] to become a Stalker?";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Stalker]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("[DRY-RUN] No.:Yes.") == 1) {
+			mes "[DRY-RUN] [Stalker]";
+			mes "[DRY-RUN] When you're ready,";
+			mes "[DRY-RUN] feel free to come back.";
+			mes "[DRY-RUN] Honor to the warriors!";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Stalker]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[DRY-RUN] [Stalker]";
+			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
+			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
 			close;
 		}
 		jobchange Job_Stalker;
 		set ADVJOB,0;
-		mes "[Stalker]";
-		mes "Congratulations!";
-		mes "As a Stalker, I hope";
-		mes "you stab the right people";
-		mes "in the back. Banish the";
-		mes "wicked using their own";
-		mes "dastardly methods!";
+		mes "[DRY-RUN] [Stalker]";
+		mes "[DRY-RUN] Congratulations!";
+		mes "[DRY-RUN] As a Stalker, I hope";
+		mes "[DRY-RUN] you stab the right people";
+		mes "[DRY-RUN] in the back. Banish the";
+		mes "[DRY-RUN] wicked using their own";
+		mes "[DRY-RUN] dastardly methods!";
 		close;
 	}
-	mes "[Stalker]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[DRY-RUN] [Stalker]";
+	mes "[DRY-RUN] Welcome";
+	mes "[DRY-RUN] to Valhalla,";
+	mes "[DRY-RUN] the Hall of Honor.";
 	next;
-	mes "[Stalker]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[DRY-RUN] [Stalker]";
+	mes "[DRY-RUN] Please make";
+	mes "[DRY-RUN] yourself comfortable";
+	mes "[DRY-RUN] while you are here.";
+	mes "[DRY-RUN] Honor to the warriors!";
 	close;
 }

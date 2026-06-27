@@ -21,27 +21,27 @@
 alberta,30,65,3	script	Akagi	730,{
 	if (Class == Job_Novice) {
 		if (JobLevel == 10) {
-			mes "[Akagi]";
-			mes "Hmmm...";
-			mes "You must have come,";
-			mes "sensing that someone";
-			mes "is waiting for you here.";
-			mes "Tell me, do you seek";
-			mes "the path of patience?";
+			mes "[DRY-RUN] [Akagi]";
+			mes "[DRY-RUN] Hmmm...";
+			mes "[DRY-RUN] You must have come,";
+			mes "[DRY-RUN] sensing that someone";
+			mes "[DRY-RUN] is waiting for you here.";
+			mes "[DRY-RUN] Tell me, do you seek";
+			mes "[DRY-RUN] the path of patience?";
 			next;
-			if(select("No:Yes") == 1) {
-				mes "[Akagi]";
-				mes "I see.";
-				mes "To each his own,";
-				mes "I suppose. Take";
-				mes "care of yourself.";
+			if(select("[DRY-RUN] No:Yes") == 1) {
+				mes "[DRY-RUN] [Akagi]";
+				mes "[DRY-RUN] I see.";
+				mes "[DRY-RUN] To each his own,";
+				mes "[DRY-RUN] I suppose. Take";
+				mes "[DRY-RUN] care of yourself.";
 				close;
 			}
-			mes "[Akagi]";
-			mes "Very well.";
-			mes "Then, let me";
-			mes "set you on that";
-			mes "path right away...";
+			mes "[DRY-RUN] [Akagi]";
+			mes "[DRY-RUN] Very well.";
+			mes "[DRY-RUN] Then, let me";
+			mes "[DRY-RUN] set you on that";
+			mes "[DRY-RUN] path right away...";
 			close2;
 			switch(rand(3)) {
 				case 1:
@@ -55,21 +55,21 @@ alberta,30,65,3	script	Akagi	730,{
 					end;
 			}
 		} else {
-			mes "[Akagi]";
-			mes "Hm? I cannot be";
-			mes "of any service to";
-			mes "you until you grow";
-			mes "a little stronger...";
+			mes "[DRY-RUN] [Akagi]";
+			mes "[DRY-RUN] Hm? I cannot be";
+			mes "[DRY-RUN] of any service to";
+			mes "[DRY-RUN] you until you grow";
+			mes "[DRY-RUN] a little stronger...";
 			close;
 		}
 	} else {
-		mes "[Akagi]";
-		mes "Hmm...";
-		mes "You and I...";
-		mes "We are fairly equal in";
-		mes "terms of combat ability.";
-		mes "Perhaps we can spar";
-		mes "together sometime.";
+		mes "[DRY-RUN] [Akagi]";
+		mes "[DRY-RUN] Hmm...";
+		mes "[DRY-RUN] You and I...";
+		mes "[DRY-RUN] We are fairly equal in";
+		mes "[DRY-RUN] terms of combat ability.";
+		mes "[DRY-RUN] Perhaps we can spar";
+		mes "[DRY-RUN] together sometime.";
 		close;
 	}
 }

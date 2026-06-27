@@ -437,110 +437,110 @@ ayo_dun02,91,263,0	script	#Annonblood	111,2,3,{
 if (!$@annonactive) {
 	if (thai_find == 13) {
 		mes "["+strcharinfo(0)+"]";
-		mes "A blood stain?";
-		mes "What's going on?";
-		mes "I should take a look...";
+		mes "[DRY-RUN] A blood stain?";
+		mes "[DRY-RUN] What's going on?";
+		mes "[DRY-RUN] I should take a look...";
 		next;
-		mes "^3355FFUnder a giant tree,";
-		mes "you find some bushes with";
-		mes "blood smudged on some";
-		mes "of the leaves.^000000";
+		mes "[DRY-RUN] ^3355FFUnder a giant tree,";
+		mes "[DRY-RUN] you find some bushes with";
+		mes "[DRY-RUN] blood smudged on some";
+		mes "[DRY-RUN] of the leaves.^000000";
 		next;
-		mes "^3355FFWithin the bushes, you see";
-		mes "that the trail of blood continues, almost as if a bleeding animal struggled to find refuge within";
-		mes "the bushes.^000000";
+		mes "[DRY-RUN] ^3355FFWithin the bushes, you see";
+		mes "[DRY-RUN] that the trail of blood continues, almost as if a bleeding animal struggled to find refuge within";
+		mes "[DRY-RUN] the bushes.^000000";
 		next;
 		mes "[" +strcharinfo(0)+ "]";
-		mes "Hmmm....";
+		mes "[DRY-RUN] Hmmm....";
 		next;
-		switch(select("Scatter the bushes.:Dig up the bushes.")) {
+		switch(select("[DRY-RUN] Scatter the bushes.:Dig up the bushes.")) {
 		case 1:
 			if (!rand(0,2)) {
 				mes "[" +strcharinfo(0)+ "]";
-				mes "^666666*Cough cough*^000000";
-				mes "It's so dusty!";
+				mes "[DRY-RUN] ^666666*Cough cough*^000000";
+				mes "[DRY-RUN] It's so dusty!";
 				next;
-				mes "[?]";
-				mes "...Awwww";
-				mes "Oh... Oh God...!";
+				mes "[DRY-RUN] [?]";
+				mes "[DRY-RUN] ...Awwww";
+				mes "[DRY-RUN] Oh... Oh God...!";
 				next;
 				emotion ET_SURPRISE, playerattached();
 				mes "[" +strcharinfo(0)+ "]";
-				mes "Huh...?";
-				mes "I heard something";
-				mes "from below! Let's";
-				mes "dig it up!";
+				mes "[DRY-RUN] Huh...?";
+				mes "[DRY-RUN] I heard something";
+				mes "[DRY-RUN] from below! Let's";
+				mes "[DRY-RUN] dig it up!";
 				next;
-				mes "^3355FFYou pull up the bushes,";
-				mes "^3355FFand beneath the dust and";
-				mes "^3355FFshrubbery, you find";
-				mes "a small burrow.^000000";
+				mes "[DRY-RUN] ^3355FFYou pull up the bushes,";
+				mes "[DRY-RUN] ^3355FFand beneath the dust and";
+				mes "[DRY-RUN] ^3355FFshrubbery, you find";
+				mes "[DRY-RUN] a small burrow.^000000";
 				next;
 				set $@annonactive,1;
 				enablenpc "Haggard Man";
-				mes "[Haggard Man]";
-				mes "^666666*Cough cough!*^000000";
-				mes "Wh...who's there?";
-				mes "Shuda?! If that's you,";
-				mes "stay back, or I'll kill myself!";
+				mes "[DRY-RUN] [Haggard Man]";
+				mes "[DRY-RUN] ^666666*Cough cough!*^000000";
+				mes "[DRY-RUN] Wh...who's there?";
+				mes "[DRY-RUN] Shuda?! If that's you,";
+				mes "[DRY-RUN] stay back, or I'll kill myself!";
 				emotion ET_HUK, playerattached();
 				next;
-				switch(select("What are you doing here?:I'm not Shuda!")) {
+				switch(select("[DRY-RUN] What are you doing here?:I'm not Shuda!")) {
 				case 1:
 					mes "["+strcharinfo(0)+"]";
-					mes "Hey...";
-					mes "What are you doi--";
+					mes "[DRY-RUN] Hey...";
+					mes "[DRY-RUN] What are you doi--";
 					next;
 					set $@annonactive,0;
 					disablenpc "Haggard Man";
-					mes "^3355FFHe vanished!^000000";
+					mes "[DRY-RUN] ^3355FFHe vanished!^000000";
 					close;
 				case 2:
-					mes "[Haggard Man]";
-					mes "Hmmm...?";
-					mes "I sense kindess, sincerity and a general love for mankind in your voice. Verily, you are not Shuda.";
+					mes "[DRY-RUN] [Haggard Man]";
+					mes "[DRY-RUN] Hmmm...?";
+					mes "[DRY-RUN] I sense kindess, sincerity and a general love for mankind in your voice. Verily, you are not Shuda.";
 					next;
-					mes "[Haggard Man]";
-					mes "You are unfamiliar to me, outsider. I'm unsure of how you found my hiding place, but if you have something to say, make it short!";
+					mes "[DRY-RUN] [Haggard Man]";
+					mes "[DRY-RUN] You are unfamiliar to me, outsider. I'm unsure of how you found my hiding place, but if you have something to say, make it short!";
 					close;
 				}
 			} else {
-				mes "^3355FFYou dig up the bushes, stirring";
-				mes "up a large, choking cloud of dust.^000000";
+				mes "[DRY-RUN] ^3355FFYou dig up the bushes, stirring";
+				mes "[DRY-RUN] up a large, choking cloud of dust.^000000";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "^666666*Cough cough!*^000000";
-				mes "What a large,";
-				mes "choking cloud";
-				mes "of dust!";
+				mes "[DRY-RUN] ^666666*Cough cough!*^000000";
+				mes "[DRY-RUN] What a large,";
+				mes "[DRY-RUN] choking cloud";
+				mes "[DRY-RUN] of dust!";
 				close;
 			}
 		case 2:
-			mes "^3355FFAs you dig up the bushes, the ground beneath one of the bushes crumbles and you hear a scream";
-			mes "from beneath.^000000";
+			mes "[DRY-RUN] ^3355FFAs you dig up the bushes, the ground beneath one of the bushes crumbles and you hear a scream";
+			mes "[DRY-RUN] from beneath.^000000";
 			next;
 			if (!rand(0,2)) {
 				set $@annonactive,1;
 				enablenpc "Haggard Man";
-				mes "[?]";
-				mes "^666666*Cough cough*^000000";
-				mes "...M-my legs!";
+				mes "[DRY-RUN] [?]";
+				mes "[DRY-RUN] ^666666*Cough cough*^000000";
+				mes "[DRY-RUN] ...M-my legs!";
 				close;
 			} else {
 				mes "[" +strcharinfo(0)+ "]";
-				mes "Hmmm...?";
-				mes "What was that noise?";
-				mes "Ugh, it's awfully dusty.";
-				mes "I better stop digging.";
-				mes "^666666*cough cough cough*^000000";
+				mes "[DRY-RUN] Hmmm...?";
+				mes "[DRY-RUN] What was that noise?";
+				mes "[DRY-RUN] Ugh, it's awfully dusty.";
+				mes "[DRY-RUN] I better stop digging.";
+				mes "[DRY-RUN] ^666666*cough cough cough*^000000";
 				close;
 			}
 		}
 	} else if (thai_find == 14) {
-		mes "^3355FFYou find that the burrow is empty. It seems Annon has found a new hiding place.^000000";
+		mes "[DRY-RUN] ^3355FFYou find that the burrow is empty. It seems Annon has found a new hiding place.^000000";
 		close;
 	} else {
-		mes "^3355FFYou find a pile of dead bushes under a large tree. The area around the bushes seems awfully dusty.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a pile of dead bushes under a large tree. The area around the bushes seems awfully dusty.^000000";
 		close;
 	}
 
@@ -549,21 +549,21 @@ OnTouch_:
 		if (!rand(0,2)) {
 			emotion ET_SURPRISE, playerattached();
 			mes "[" +strcharinfo(0)+ "]";
-			mes "Huh...?";
+			mes "[DRY-RUN] Huh...?";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "That looks";
-			mes "like blood!";
+			mes "[DRY-RUN] That looks";
+			mes "[DRY-RUN] like blood!";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "Hmm...";
-			mes "Yes...";
-			mes "That's definitely blood.";
+			mes "[DRY-RUN] Hmm...";
+			mes "[DRY-RUN] Yes...";
+			mes "[DRY-RUN] That's definitely blood.";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "Strange to see";
-			mes "a blood stain in";
-			mes "this kind of place...";
+			mes "[DRY-RUN] Strange to see";
+			mes "[DRY-RUN] a blood stain in";
+			mes "[DRY-RUN] this kind of place...";
 			set thai_find,13;
 			changequest 12033,12034;
 			close;
@@ -837,81 +837,81 @@ OnInit:
 		
 ayothaya,253,99,3	script	Fisherman	843,{
 	if (thai_find == 1) {
-		mes "[Dannai]";
-		mes "This place is known to be";
-		mes "teeming with fish. The fish here tend to eat anything they find,";
-		mes "so it's easy to catch them.";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] This place is known to be";
+		mes "[DRY-RUN] teeming with fish. The fish here tend to eat anything they find,";
+		mes "[DRY-RUN] so it's easy to catch them.";
 		next;
-		mes "[Dannai]";
-		mes "We are providing a fishing rod rental service. Every time you fish, you'll need ^3355FF 1 Monster's Feed^000000 to use as bait, and pay";
-		mes "a rod rental fee of ^3355FF50 Zeny^000000.";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] We are providing a fishing rod rental service. Every time you fish, you'll need ^3355FF 1 Monster's Feed^000000 to use as bait, and pay";
+		mes "[DRY-RUN] a rod rental fee of ^3355FF50 Zeny^000000.";
 		next;
-		mes "[Dannai]";
-		mes "Would you";
-		mes "like to try?";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] Would you";
+		mes "[DRY-RUN] like to try?";
 		next;
-		switch(select("Yes.:No, thanks.")) {
+		switch(select("[DRY-RUN] Yes.:No, thanks.")) {
 		case 1:
 			if (countitem(528) && Zeny > 49) {
-				mes "^3355FFYou cast your";
-				mes "fishing line";
-				mes "into the water.^000000";
+				mes "[DRY-RUN] ^3355FFYou cast your";
+				mes "[DRY-RUN] fishing line";
+				mes "[DRY-RUN] into the water.^000000";
 				next;
-				mes "...";
+				mes "[DRY-RUN] ...";
 				next;
-				mes "...";
-				mes "......";
+				mes "[DRY-RUN] ...";
+				mes "[DRY-RUN] ......";
 				next;
-				mes "^3355FFYou've hooked a Phen!^000000";
+				mes "[DRY-RUN] ^3355FFYou've hooked a Phen!^000000";
 				next;
 				delitem 528,1; //Monster's_Feed
 				set Zeny, Zeny-50;
 				set .@randfish,rand(1,100);
 				if (.@randfish > 0 && .@randfish < 40) {
-					mes "^3355FFWhile cooking the Phen, you";
-					mes "find that it's swallowed a Stone.^000000";
+					mes "[DRY-RUN] ^3355FFWhile cooking the Phen, you";
+					mes "[DRY-RUN] find that it's swallowed a Stone.^000000";
 					close2;
 					getitem 7049,1; //Stone
 					end;
 				} else if (.@randfish > 39 && .@randfish < 60) {
-					mes "^3355FFInside of the Phen,";
-					mes "you find a Red Potion.^000000";
+					mes "[DRY-RUN] ^3355FFInside of the Phen,";
+					mes "[DRY-RUN] you find a Red Potion.^000000";
 					close2;
 					getitem 501,1; //Red_Potion
 					end;
 				} else if (.@randfish > 59 && .@randfish < 70) {
-					mes "^3355FFInside of the Phen,";
-					mes "you find a Yellow Potion.^000000";
+					mes "[DRY-RUN] ^3355FFInside of the Phen,";
+					mes "[DRY-RUN] you find a Yellow Potion.^000000";
 					close2;
 					getitem 503,1; //Yellow_Potion
 					end;
 				} else if (.@randfish > 69 && .@randfish < 80) {
-					mes "^3355FFThere's nothing inside...";
-					mes "But now you can eat Sushi!^000000";
+					mes "[DRY-RUN] ^3355FFThere's nothing inside...";
+					mes "[DRY-RUN] But now you can eat Sushi!^000000";
 					close2;
 					getitem 551,1; //Shusi
 					end;
 				} else if (.@randfish > 79 && .@randfish < 90) {
-					mes "^3355FFYou find";
-					mes "a Flower Ring";
-					mes "inside the Phen.^000000";
+					mes "[DRY-RUN] ^3355FFYou find";
+					mes "[DRY-RUN] a Flower Ring";
+					mes "[DRY-RUN] inside the Phen.^000000";
 					close2;
 					getitem 2612,1; //Flower_Ring
 					end;
 				} else if (.@randfish == 90) {
-					mes "^3355FFYou find";
-					mes "a Diamond Ring";
-					mes "inside the Phen.^000000";
+					mes "[DRY-RUN] ^3355FFYou find";
+					mes "[DRY-RUN] a Diamond Ring";
+					mes "[DRY-RUN] inside the Phen.^000000";
 					close2;
 					getitem 2613,1; //Diamond_Ring
 					end;
 				} else if (.@randfish > 90 && .@randfish < 101) {
-					mes "^3355FFYou find a ring";
-					mes "with a name engraved";
-					mes "inside the band.^000000";
+					mes "[DRY-RUN] ^3355FFYou find a ring";
+					mes "[DRY-RUN] with a name engraved";
+					mes "[DRY-RUN] inside the band.^000000";
 					next;
-					mes "^3355FFYou take the";
-					mes "engagement ring.^000000";
+					mes "[DRY-RUN] ^3355FFYou take the";
+					mes "[DRY-RUN] engagement ring.^000000";
 					close2;
 					set thai_find,2;
 					changequest 12029,12030;
@@ -919,49 +919,49 @@ ayothaya,253,99,3	script	Fisherman	843,{
 					end;
 				}
 			} else {
-				mes "[Dannai]";
-				mes "Remember, you need ^3355FF1 Monster's Feed^000000 to use as bait and ^3355FF50 zeny^000000 to rend a rod.";
+				mes "[DRY-RUN] [Dannai]";
+				mes "[DRY-RUN] Remember, you need ^3355FF1 Monster's Feed^000000 to use as bait and ^3355FF50 zeny^000000 to rend a rod.";
 				close;
 			}
 		case 2:
-			mes "[Dannai]";
-			mes "No problem,";
-			mes "come back anytime you";
-			mes "want. Fishing relaxes";
-			mes "the mind and makes you";
-			mes "feel at peace...";
+			mes "[DRY-RUN] [Dannai]";
+			mes "[DRY-RUN] No problem,";
+			mes "[DRY-RUN] come back anytime you";
+			mes "[DRY-RUN] want. Fishing relaxes";
+			mes "[DRY-RUN] the mind and makes you";
+			mes "[DRY-RUN] feel at peace...";
 			close;
 		}
 		close;
 	} else if (thai_find < 1) {
-		mes "[Dannai]";
-		mes "The fish here tend";
-		mes "to eat anything they find.";
-		mes "When you gut them, you can";
-		mes "often find interesting things inside.";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] The fish here tend";
+		mes "[DRY-RUN] to eat anything they find.";
+		mes "[DRY-RUN] When you gut them, you can";
+		mes "[DRY-RUN] often find interesting things inside.";
 		next;
-		mes "[Dannai]";
-		mes "So when you get a chance,";
-		mes "why don't you sit down, relax";
-		mes "and enjoy some quiet fishing?";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] So when you get a chance,";
+		mes "[DRY-RUN] why don't you sit down, relax";
+		mes "[DRY-RUN] and enjoy some quiet fishing?";
 		close;
 	} else {
-		mes "[Dannai]";
-		mes "Welcome, long time no see!";
-		mes "It seems people learned that you found some kind of fortune from fishing here. After word got around, I've been getting lots";
-		mes "of customers.";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] Welcome, long time no see!";
+		mes "[DRY-RUN] It seems people learned that you found some kind of fortune from fishing here. After word got around, I've been getting lots";
+		mes "[DRY-RUN] of customers.";
 		next;
-		mes "[Dannai]";
-		mes "I understand that you want";
-		mes "fish, but right now there";
-		mes "aren't any fishing spots";
-		mes "for you at the moment.";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] I understand that you want";
+		mes "[DRY-RUN] fish, but right now there";
+		mes "[DRY-RUN] aren't any fishing spots";
+		mes "[DRY-RUN] for you at the moment.";
 		next;
-		mes "[Dannai]";
-		mes "Please let other";
-		mes "people have their";
-		mes "chance to find their";
-		mes "own fortunes.";
+		mes "[DRY-RUN] [Dannai]";
+		mes "[DRY-RUN] Please let other";
+		mes "[DRY-RUN] people have their";
+		mes "[DRY-RUN] chance to find their";
+		mes "[DRY-RUN] own fortunes.";
 		close;
 	}
 }
@@ -971,7 +971,7 @@ OnTouch_:
 	if (thai_find == 4) {
 		if (rand(1,3) < 2) {
 			emotion ET_SURPRISE, playerattached();
-			mes "^3355FFYou find footprints heading to the ^5C3317North^3355FF. It looks like somebody was in quite a hurry, just like the villager said!^000000";
+			mes "[DRY-RUN] ^3355FFYou find footprints heading to the ^5C3317North^3355FF. It looks like somebody was in quite a hurry, just like the villager said!^000000";
 			set thai_find,5;
 			changequest 12032,12033;
 			close;
@@ -985,8 +985,8 @@ OnTouch_:
 	if (thai_find == 5) {
 		if (rand(1,3) < 2) {
 			emotion ET_THINK, playerattached();
-			mes "^3355FFYou find another set of footprints. It seems that somebody was running away from something. These prints are heading to the ^5C3317East^3355FF. You'd better follow them to see what";
-			mes "you can find.^000000";
+			mes "[DRY-RUN] ^3355FFYou find another set of footprints. It seems that somebody was running away from something. These prints are heading to the ^5C3317East^3355FF. You'd better follow them to see what";
+			mes "[DRY-RUN] you can find.^000000";
 			set thai_find,6;
 			close;
 		}
@@ -999,8 +999,8 @@ OnTouch_:
 	if (thai_find == 6) {
 		if (rand(1,3) < 2) {
 			emotion ET_STARE_ABOUT, playerattached();
-			mes "^3355FFThe footprints end around this area. Whoever was running must";
-			mes "have been exhausted and stumbled on something. Perhaps the owner of the footprints is nearby...^000000";
+			mes "[DRY-RUN] ^3355FFThe footprints end around this area. Whoever was running must";
+			mes "[DRY-RUN] have been exhausted and stumbled on something. Perhaps the owner of the footprints is nearby...^000000";
 			set thai_find,7;
 			close;
 		}
@@ -1013,8 +1013,8 @@ OnTouch_:
 	if (thai_find == 7) {
 		if (rand(1,3) < 2) {
 			emotion ET_AHA, playerattached();
-			mes "^3355FFAs you follow the footprints,";
-			mes "you arrive at the '^5C3317Entrance of the Shrine^3355FF.' Whoever this person was, he just ran into the second level.^000000";
+			mes "[DRY-RUN] ^3355FFAs you follow the footprints,";
+			mes "[DRY-RUN] you arrive at the '^5C3317Entrance of the Shrine^3355FF.' Whoever this person was, he just ran into the second level.^000000";
 			set thai_find,8;
 			close;
 		}
@@ -1026,12 +1026,12 @@ ayo_dun02,145,120,0	script	AyoFootprint5	139,2,0,{
 OnTouch_:
 	if (thai_find == 8) {
 		if (rand(1,3) < 2) {
-			mes "^3355FFYou find the same footprints";
-			mes "in this place. It seems pretty";
-			mes "dangerous, and you wonder why";
-			mes "anyone would come here. The";
-			mes "footprints continue towards";
-			mes "the ^5C3317North^3355FF.^000000";
+			mes "[DRY-RUN] ^3355FFYou find the same footprints";
+			mes "[DRY-RUN] in this place. It seems pretty";
+			mes "[DRY-RUN] dangerous, and you wonder why";
+			mes "[DRY-RUN] anyone would come here. The";
+			mes "[DRY-RUN] footprints continue towards";
+			mes "[DRY-RUN] the ^5C3317North^3355FF.^000000";
 			set thai_find,9;
 			close;
 		}
@@ -1044,65 +1044,65 @@ OnTouch_:
 	if (thai_find == 9) {
 		if (rand(1,3) == 1) {
 			emotion ET_SURPRISE, playerattached();
-			mes "^3355FFThe trail of footprints";
-			mes "continue here, and seem";
-			mes "to look more freshly made.^000000.";
+			mes "[DRY-RUN] ^3355FFThe trail of footprints";
+			mes "[DRY-RUN] continue here, and seem";
+			mes "[DRY-RUN] to look more freshly made.^000000.";
 			next;
-			mes "^3355FFHmm...?";
-			mes "There's something here...^000000";
+			mes "[DRY-RUN] ^3355FFHmm...?";
+			mes "[DRY-RUN] There's something here...^000000";
 			next;
-			switch(select("Ignore.:^5C3317Investigate.^000000")) {
+			switch(select("[DRY-RUN] Ignore.:^5C3317Investigate.^000000")) {
 			case 1:
 				mes "["+strcharinfo(0)+"]";
-				mes "Well, it's probably nothing. But which way should I go now?";
+				mes "[DRY-RUN] Well, it's probably nothing. But which way should I go now?";
 				set thai_find,10;
 				close;
 			case 2:
 				set .@randayo,rand(1,10);
 				if (.@randayo < 2) {
 					mes "["+strcharinfo(0)+"]";
-					mes "Why, this is a pack of White Potions. Whoever owned these must have dropped these by accident. Hmm, I could use these for later...";
+					mes "[DRY-RUN] Why, this is a pack of White Potions. Whoever owned these must have dropped these by accident. Hmm, I could use these for later...";
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "Wait...";
-					mes "There are more";
-					mes "footprints heading";
-					mes "toward the ^5C3317East^000000.";
-					mes "I better look";
-					mes "into this.";
+					mes "[DRY-RUN] Wait...";
+					mes "[DRY-RUN] There are more";
+					mes "[DRY-RUN] footprints heading";
+					mes "[DRY-RUN] toward the ^5C3317East^000000.";
+					mes "[DRY-RUN] I better look";
+					mes "[DRY-RUN] into this.";
 					set thai_find,10;
 					getitem 504,10; //White_Potion
 					close;
 				} else if (.@randayo > 2 && .@randayo < 5) {
 					mes "["+strcharinfo(0)+"]";
-					mes "Why, this is a pack of Yellow Potions. Whoever owned these must have dropped these by accident. Hmm, I could use these for later...";
+					mes "[DRY-RUN] Why, this is a pack of Yellow Potions. Whoever owned these must have dropped these by accident. Hmm, I could use these for later...";
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "Wait...";
-					mes "There are more";
-					mes "footprints heading";
-					mes "toward the ^5C3317East^000000.";
-					mes "I better look";
-					mes "into this.";
+					mes "[DRY-RUN] Wait...";
+					mes "[DRY-RUN] There are more";
+					mes "[DRY-RUN] footprints heading";
+					mes "[DRY-RUN] toward the ^5C3317East^000000.";
+					mes "[DRY-RUN] I better look";
+					mes "[DRY-RUN] into this.";
 					set thai_find,10;
 					getitem 503,10; //Yellow potion
 					close;
 				} else {
-					mes "[Rat]";
-					mes "^FF0000Squeak!";
-					mes "^FF0000Squeak Squeak!^000000";
+					mes "[DRY-RUN] [Rat]";
+					mes "[DRY-RUN] ^FF0000Squeak!";
+					mes "[DRY-RUN] ^FF0000Squeak Squeak!^000000";
 					emotion ET_HUK, playerattached();
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "^8C1717Wah^000000!";
-					mes "What was that?!";
+					mes "[DRY-RUN] ^8C1717Wah^000000!";
+					mes "[DRY-RUN] What was that?!";
 					next;
-					mes "^3355FFIt was just a rat.";
-					mes "It feels awful silly to be scared by just a little rat, does it not?^000000";
+					mes "[DRY-RUN] ^3355FFIt was just a rat.";
+					mes "[DRY-RUN] It feels awful silly to be scared by just a little rat, does it not?^000000";
 					next;
-					mes "^3355FFYou find another trail";
-					mes "of footprints that heads";
-					mes "towards the ^5C3317East^3355FF.^000000";
+					mes "[DRY-RUN] ^3355FFYou find another trail";
+					mes "[DRY-RUN] of footprints that heads";
+					mes "[DRY-RUN] towards the ^5C3317East^3355FF.^000000";
 					set thai_find,10;
 					close;
 				}
@@ -1118,11 +1118,11 @@ OnTouch_:
 	if (thai_find == 10) {
 		if (rand(1,3) < 2) {
 			emotion ET_SURPRISE, playerattached();
-			mes "^3355FFWhere is he...?";
-			mes "He seems to have gone";
-			mes "deep into the dungeon.";
-			mes "Just looking for this";
-			mes "guy is exhausting...^000000";
+			mes "[DRY-RUN] ^3355FFWhere is he...?";
+			mes "[DRY-RUN] He seems to have gone";
+			mes "[DRY-RUN] deep into the dungeon.";
+			mes "[DRY-RUN] Just looking for this";
+			mes "[DRY-RUN] guy is exhausting...^000000";
 			set thai_find,11;
 			close;
 		}
@@ -1135,7 +1135,7 @@ OnTouch_:
 	if (thai_find == 11) {
 		if (rand(1,3) < 2) {
 			emotion ET_SURPRISE, playerattached();
-			mes "^3355FFYou find traces of blood. Whoever was running in this direction may have been wounded. The trail of blood leads to the ^5C3317North^3355FF.^000000";
+			mes "[DRY-RUN] ^3355FFYou find traces of blood. Whoever was running in this direction may have been wounded. The trail of blood leads to the ^5C3317North^3355FF.^000000";
 			changequest 12032,12033;
 			set thai_find,12;
 			close;
@@ -1232,99 +1232,99 @@ ayothaya,193,171,3	script	Old Man#02	842,{
 //============================================================
 ayothaya,83,132,0	script	Dusit#thai	843,{
 	if (ayodunquest == 0) {
-		mes "[Dusit]";
-		mes "Oh...!";
-		mes "You must be a traveller.";
-		mes "I have a tale you may wish to hear if you're interested in listening.";
+		mes "[DRY-RUN] [Dusit]";
+		mes "[DRY-RUN] Oh...!";
+		mes "[DRY-RUN] You must be a traveller.";
+		mes "[DRY-RUN] I have a tale you may wish to hear if you're interested in listening.";
 		next;
-		if (select("What is it?:I know what the story is.") == 1) {
-			mes "[Dusit]";
-			mes "Ayothaya has a long history. Perhaps it looks calm and peaceful now, but in the past our village was terrorized by a terrible creature.";
+		if (select("[DRY-RUN] What is it?:I know what the story is.") == 1) {
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] Ayothaya has a long history. Perhaps it looks calm and peaceful now, but in the past our village was terrorized by a terrible creature.";
 			next;
-			mes "[Dusit]";
-			mes "This beast is known to us as";
-			mes "the ^660000Sa-mhing Tiger^000000, which used";
-			mes "to dwell deep in the ancient ruins.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] This beast is known to us as";
+			mes "[DRY-RUN] the ^660000Sa-mhing Tiger^000000, which used";
+			mes "[DRY-RUN] to dwell deep in the ancient ruins.";
 			next;
-			mes "[Dusit]";
-			mes "The Sa-mhing Tiger is addicted";
-			mes "to the taste of human flesh. It has been known to transform into the shape of a person it has eaten in order to lure out his family and friends.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] The Sa-mhing Tiger is addicted";
+			mes "[DRY-RUN] to the taste of human flesh. It has been known to transform into the shape of a person it has eaten in order to lure out his family and friends.";
 			next;
-			mes "[Dusit]";
-			mes "The local people are still afraid that the creature might transform into someone they know, and sneak into their homes to eat them.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] The local people are still afraid that the creature might transform into someone they know, and sneak into their homes to eat them.";
 			next;
-			mes "[Dusit]";
-			mes "However, there is one way you can identify the Sa-mhing Tiger from a human being. Since it's a tiger, it cannot do some of the things";
-			mes "humans are taught to do,";
-			mes "such as light a match.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] However, there is one way you can identify the Sa-mhing Tiger from a human being. Since it's a tiger, it cannot do some of the things";
+			mes "[DRY-RUN] humans are taught to do,";
+			mes "[DRY-RUN] such as light a match.";
 			next;
-			mes "[Dusit]";
-			mes "So, if by any chance you see";
-			mes "a friend acting strangely all";
-			mes "of a sudden, ask him to strike";
-			mes "a match. Make sure he is not";
-			mes "the Sa-mhing Tiger.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] So, if by any chance you see";
+			mes "[DRY-RUN] a friend acting strangely all";
+			mes "[DRY-RUN] of a sudden, ask him to strike";
+			mes "[DRY-RUN] a match. Make sure he is not";
+			mes "[DRY-RUN] the Sa-mhing Tiger.";
 			next;
-			mes "[Dusit]";
-			mes "However...";
-			mes "I'm not sure if this actually works or not. I guess the best thing to do is just run for your life if you even suspect someone of being";
-			mes "the Sa-mhing Tiger.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] However...";
+			mes "[DRY-RUN] I'm not sure if this actually works or not. I guess the best thing to do is just run for your life if you even suspect someone of being";
+			mes "[DRY-RUN] the Sa-mhing Tiger.";
 			next;
-			mes "[Dusit]";
-			mes "Do you believe";
-			mes "in the existance";
-			mes "of man-eating tigers?";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] Do you believe";
+			mes "[DRY-RUN] in the existance";
+			mes "[DRY-RUN] of man-eating tigers?";
 			next;
-			if (select("Well, not really.:Yes, I do and I think they're scary!") == 1) {
-				mes "[Dusit]";
-				mes "Umm...";
-				mes "Oh well. My late grandfather told me about the Sa-mhing Tiger when";
-				mes "I was a little kid. Of course,";
-				mes "I haven't seen it.";
+			if (select("[DRY-RUN] Well, not really.:Yes, I do and I think they're scary!") == 1) {
+				mes "[DRY-RUN] [Dusit]";
+				mes "[DRY-RUN] Umm...";
+				mes "[DRY-RUN] Oh well. My late grandfather told me about the Sa-mhing Tiger when";
+				mes "[DRY-RUN] I was a little kid. Of course,";
+				mes "[DRY-RUN] I haven't seen it.";
 				next;
-				mes "[Dusit]";
-				mes "The closest thing I've seen to the Sa-mhing Tiger was a golden cat with a bell. Somehow, I don't think it ate men.";
+				mes "[DRY-RUN] [Dusit]";
+				mes "[DRY-RUN] The closest thing I've seen to the Sa-mhing Tiger was a golden cat with a bell. Somehow, I don't think it ate men.";
 				close;
 			}
-			mes "[Dusit]";
-			mes "Run for your life if you ever encounter the Sa-mhing Tiger!";
-			mes "It'll eat you alive!";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] Run for your life if you ever encounter the Sa-mhing Tiger!";
+			mes "[DRY-RUN] It'll eat you alive!";
 			next;
-			mes "[Dusit]";
-			mes "If you're interested in finding";
-			mes "out more about the story, I can introduce you to someone who";
-			mes "knows that creature more than";
-			mes "anyone else.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] If you're interested in finding";
+			mes "[DRY-RUN] out more about the story, I can introduce you to someone who";
+			mes "[DRY-RUN] knows that creature more than";
+			mes "[DRY-RUN] anyone else.";
 			next;
-			mes "[Dusit]";
-			mes "Why don't you talk to Boonthom? He's a pretty strange person, but there's something about him...";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] Why don't you talk to Boonthom? He's a pretty strange person, but there's something about him...";
 			next;
-			mes "[Dusit]";
-			mes "...";
-			mes "......";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] ...";
+			mes "[DRY-RUN] ......";
 			next;
-			mes "[Dusit]";
-			mes "Ah well, you'll see what I'm talking about. I hope he'll help you learn more about that evil creature.";
+			mes "[DRY-RUN] [Dusit]";
+			mes "[DRY-RUN] Ah well, you'll see what I'm talking about. I hope he'll help you learn more about that evil creature.";
 			set ayodunquest,1;
 			setquest 12035;
 			close;
 		}
-		mes "[Dusit]";
-		mes "You do now?";
-		mes "Then be careful!";
-		mes "It'll eat you alive!";
+		mes "[DRY-RUN] [Dusit]";
+		mes "[DRY-RUN] You do now?";
+		mes "[DRY-RUN] Then be careful!";
+		mes "[DRY-RUN] It'll eat you alive!";
 		close;
 	} else if (ayodunquest > 0) {
-		mes "[Dusit]";
-		mes "How are you?";
-		mes "If you're interested";
-		mes "in the Sa-mhing Tiger,";
-		mes "please go talk to Boonthom.";
+		mes "[DRY-RUN] [Dusit]";
+		mes "[DRY-RUN] How are you?";
+		mes "[DRY-RUN] If you're interested";
+		mes "[DRY-RUN] in the Sa-mhing Tiger,";
+		mes "[DRY-RUN] please go talk to Boonthom.";
 		next;
-		mes "[Dusit]";
-		mes "But beware!";
-		mes "The Sa-mhing Tiger might be";
-		mes "closer to you than you expect!";
+		mes "[DRY-RUN] [Dusit]";
+		mes "[DRY-RUN] But beware!";
+		mes "[DRY-RUN] The Sa-mhing Tiger might be";
+		mes "[DRY-RUN] closer to you than you expect!";
 		close;
 	}
 }
@@ -1340,164 +1340,164 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 		setarray .@items[0],1059,1022; //Transparent_Cloth, Fox_Tail
 
 	if (ayodunquest == 1) {
-		mes "[Boonthom]";
-		mes "You...!";
-		mes "Isn't it....!";
-		mes "Oooooohhhhhhh!";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] You...!";
+		mes "[DRY-RUN] Isn't it....!";
+		mes "[DRY-RUN] Oooooohhhhhhh!";
 		next;
-		mes "[Boonthom]";
-		mes "Oh...?";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Oh...?";
 		next;
-		mes "[Boonthom]";
-		mes "...";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ...";
 		next;
-		mes "[Boonthom]";
-		mes "...";
-		mes "......";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ...";
+		mes "[DRY-RUN] ......";
 		next;
-		mes "[Boonthom]";
-		mes "...";
-		mes "......";
-		mes ".........";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ...";
+		mes "[DRY-RUN] ......";
+		mes "[DRY-RUN] .........";
 		next;
-		mes "[Boonthom]";
-		mes "Never mind.";
-		mes "Hah! I've lost my";
-		mes "train of thought.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Never mind.";
+		mes "[DRY-RUN] Hah! I've lost my";
+		mes "[DRY-RUN] train of thought.";
 		next;
-		mes "[Boonthom]";
-		mes "So have you come to me to seek help? I can see the fear in your eyes. Let me gaze into your soul, and see what your fear is for myself. Hmmm...";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] So have you come to me to seek help? I can see the fear in your eyes. Let me gaze into your soul, and see what your fear is for myself. Hmmm...";
 		next;
-		mes "[Boonthom]";
-		mes "...";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ...";
 		next;
-		mes "[Boonthom]";
-		mes "...";
-		mes "......";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ...";
+		mes "[DRY-RUN] ......";
 		next;
-		mes "[Boonthom]";
-		mes "...";
-		mes "......";
-		mes ".........";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ...";
+		mes "[DRY-RUN] ......";
+		mes "[DRY-RUN] .........";
 		next;
-		mes "[Boonthom]";
-		mes "What...!";
-		mes "I see that you dread the Sa-mhing Tiger! I haven't heard any news of that monster for a long time...";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] What...!";
+		mes "[DRY-RUN] I see that you dread the Sa-mhing Tiger! I haven't heard any news of that monster for a long time...";
 		next;
-		mes "[Boonthom]";
-		mes "A long time ago,";
-		mes "the Sa-mhing Tiger";
-		mes "really did roam the village";
-		mes "and ate innocent people.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] A long time ago,";
+		mes "[DRY-RUN] the Sa-mhing Tiger";
+		mes "[DRY-RUN] really did roam the village";
+		mes "[DRY-RUN] and ate innocent people.";
 		next;
-		mes "[Boonthom]";
-		mes "However, its terror";
-		mes "was brought to an end when it";
-		mes "was finally captured. I was one of those involved in capturing the Sa-mhing Tiger.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] However, its terror";
+		mes "[DRY-RUN] was brought to an end when it";
+		mes "[DRY-RUN] was finally captured. I was one of those involved in capturing the Sa-mhing Tiger.";
 		next;
-		mes "[Boonthom]";
-		mes "I insisted killing on it, but the other people were too afraid to do so. Instead, the Sa-mhing Tiger";
-		mes "was locked in a cave inside of the ancient ruins.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] I insisted killing on it, but the other people were too afraid to do so. Instead, the Sa-mhing Tiger";
+		mes "[DRY-RUN] was locked in a cave inside of the ancient ruins.";
 		next;
-		mes "[Boonthom]";
-		mes "I believe that was at least 10 years ago. Perhaps it's already dead by now. However, no one";
-		mes "knows how powerful the tiger truly";
-		mes "is. It may still be alive.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] I believe that was at least 10 years ago. Perhaps it's already dead by now. However, no one";
+		mes "[DRY-RUN] knows how powerful the tiger truly";
+		mes "[DRY-RUN] is. It may still be alive.";
 		next;
-		mes "[Boonthom]";
-		mes "I don't think we need to worry about it though. It is locked up and there it shall remain.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] I don't think we need to worry about it though. It is locked up and there it shall remain.";
 		next;
-		switch(select("I want to explore the ancient ruins.:Locked up! Good! I'm not afraid!")) {
+		switch(select("[DRY-RUN] I want to explore the ancient ruins.:Locked up! Good! I'm not afraid!")) {
 		case 1:
-			mes "[Boonthom]";
-			mes "You...";
-			mes "You are strange.";
-			mes "You want to explore the ancient ruins. Do all adventurers disregard their safety like that?";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] You...";
+			mes "[DRY-RUN] You are strange.";
+			mes "[DRY-RUN] You want to explore the ancient ruins. Do all adventurers disregard their safety like that?";
 			next;
-			mes "[Boonthom]";
-			mes "It's your choice. But remember, it is very dangerous to go through the path to the center of the building. Usually, I forbid it.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] It's your choice. But remember, it is very dangerous to go through the path to the center of the building. Usually, I forbid it.";
 			next;
-			mes "[Boonthom]";
-			mes "But if you want to go in,";
-			mes "I can give you some useful tips.";
-			mes "Would you like to listen?";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] But if you want to go in,";
+			mes "[DRY-RUN] I can give you some useful tips.";
+			mes "[DRY-RUN] Would you like to listen?";
 			next;
-			if (select("If it's that dangerous, I'd rather not try.:Sure!") == 1) {
-				mes "[Boonthom]";
-				mes "You made a good decision.";
-				mes "You'd better be careful if";
-				mes "you want to stay alive.";
+			if (select("[DRY-RUN] If it's that dangerous, I'd rather not try.:Sure!") == 1) {
+				mes "[DRY-RUN] [Boonthom]";
+				mes "[DRY-RUN] You made a good decision.";
+				mes "[DRY-RUN] You'd better be careful if";
+				mes "[DRY-RUN] you want to stay alive.";
 				close;
 			}
-			mes "[Boonthom]";
-			mes "Umm, okay.";
-			mes "Since you're";
-			mes "that interested...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Umm, okay.";
+			mes "[DRY-RUN] Since you're";
+			mes "[DRY-RUN] that interested...";
 			next;
-			mes "[Boonthom]";
-			mes "If you wish to enter the ancient building, you must have protection against evil spirits and malice.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] If you wish to enter the ancient building, you must have protection against evil spirits and malice.";
 			next;
 			if (Class == Job_Priest || Class == Job_Acolyte || Class == Job_Crusader) {
-				mes "[Boonthom]";
-				mes "Even if you can";
-				mes "wield the power of";
-				mes "holiness, you will still need the spiritual security of our land.";
+				mes "[DRY-RUN] [Boonthom]";
+				mes "[DRY-RUN] Even if you can";
+				mes "[DRY-RUN] wield the power of";
+				mes "[DRY-RUN] holiness, you will still need the spiritual security of our land.";
 			} else {
-				mes "[Boonthom]";
-				mes "There are many ghosts and";
-				mes "demons within the cave, and they will attack people who do not possess holy power... Like you.";
+				mes "[DRY-RUN] [Boonthom]";
+				mes "[DRY-RUN] There are many ghosts and";
+				mes "[DRY-RUN] demons within the cave, and they will attack people who do not possess holy power... Like you.";
 			}
 			next;
-			mes "[Boonthom]";
-			mes "I can make you an object";
-			mes "containing this holy power if you wish. In order to make it, I will need some materials.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] I can make you an object";
+			mes "[DRY-RUN] containing this holy power if you wish. In order to make it, I will need some materials.";
 			next;
-			mes "[Boonthom]";
+			mes "[DRY-RUN] [Boonthom]";
 			mes "^3366991 "+getitemname(.@items[0])+"^000000,";
 			mes "^3366991 "+getitemname(.@items[1])+"^000000,";
-			mes "^3366991 Solid Husk^000000 and";
-			mes "^3366991 Holy Water^000000...";
-			mes "That's all I need.";
+			mes "[DRY-RUN] ^3366991 Solid Husk^000000 and";
+			mes "[DRY-RUN] ^3366991 Holy Water^000000...";
+			mes "[DRY-RUN] That's all I need.";
 			next;
-			mes "[Boonthom]";
-			mes "Please come back";
-			mes "when you prepare all";
-			mes "the materials.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Please come back";
+			mes "[DRY-RUN] when you prepare all";
+			mes "[DRY-RUN] the materials.";
 			set ayodunquest,2;
 			changequest 12035,12036;
 			close;
 		}
-		mes "[Boonthom]";
-		mes "Hmmm...";
-		mes "Not afraid";
-		mes "of it, are you?";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Hmmm...";
+		mes "[DRY-RUN] Not afraid";
+		mes "[DRY-RUN] of it, are you?";
 		next;
-		mes "[Boonthom]";
-		mes "............";
-		mes "............";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ............";
+		mes "[DRY-RUN] ............";
 		close;
 	} else if (ayodunquest == 2) {
 		if (countitem(.@items[0]) > 0 && countitem(.@items[1]) > 0 && countitem(7190) > 0 && countitem(523) > 0) {
-			mes "[Boonthom]";
-			mes "Excellent!";
-			mes "Now you have brought";
-			mes "everything I need. Let me make";
-			mes "the thing for you as promised...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Excellent!";
+			mes "[DRY-RUN] Now you have brought";
+			mes "[DRY-RUN] everything I need. Let me make";
+			mes "[DRY-RUN] the thing for you as promised...";
 			next;
-			mes "[Boonthom]";
-			mes "Ooooohmmmmm...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Ooooohmmmmm...";
 			next;
-			mes "[Boonthom]";
-			mes "Hmmmmmm...";
-			mes "Hmmmmmmmmm.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Hmmmmmm...";
+			mes "[DRY-RUN] Hmmmmmmmmm.";
 			next;
-			mes "[Boonthom]";
-			mes "Pffff pffff...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Pffff pffff...";
 			next;
-			mes "[Boonthom]";
-			mes "Here you go.";
-			mes "Please take these holy threads.";
-			mes "With this, you will be able to enter the ruins with less worry.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Here you go.";
+			mes "[DRY-RUN] Please take these holy threads.";
+			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
 			delitem .@items[0],1;
 			delitem .@items[1],1;
 			delitem 7190,1; //Solid_Peeling
@@ -1506,145 +1506,145 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			changequest 12036,12037;
 			getitem 7285,1; //Thread_Skein
 			next;
-			mes "[Boonthom]";
-			mes "Even if you lose this, don't worry. Just bring me the materials, and";
-			mes "I will make you another one.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Even if you lose this, don't worry. Just bring me the materials, and";
+			mes "[DRY-RUN] I will make you another one.";
 			next;
-			mes "[Boonthom]";
-			mes "The ancient building consists";
-			mes "of 2 levels. Before you enter the 2nd underground level, please return to me so that I can tell you how to enter that place.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] The ancient building consists";
+			mes "[DRY-RUN] of 2 levels. Before you enter the 2nd underground level, please return to me so that I can tell you how to enter that place.";
 			close;
 		}
-		mes "[Boonthom]";
-		mes "Did you forget what materials";
-		mes "you need to create my object of holy power? Please listen";
-		mes "carefully this time.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Did you forget what materials";
+		mes "[DRY-RUN] you need to create my object of holy power? Please listen";
+		mes "[DRY-RUN] carefully this time.";
 		next;
-		mes "[Boonthom]";
+		mes "[DRY-RUN] [Boonthom]";
 		mes "^3366991 "+getitemname(.@items[0])+"^000000,";
 		mes "^3366991 "+getitemname(.@items[1])+"^000000,";
-		mes "^3366991 Solid Husk^000000 and";
-		mes "^3366991 Holy Water^000000.";
+		mes "[DRY-RUN] ^3366991 Solid Husk^000000 and";
+		mes "[DRY-RUN] ^3366991 Holy Water^000000.";
 		next;
-		mes "[Boonthom]";
-		mes "See you later.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] See you later.";
 		close;
 	} else if (ayodunquest == 3) {
 		if (countitem(.@items[0]) > 0 && countitem(.@items[1]) > 0 && countitem(7190) > 0 && countitem(523) > 0) {
-			mes "[Boonthom]";
-			mes "Excellent! Now you have brought everything I need, let me make the thing for you as I promised...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Excellent! Now you have brought everything I need, let me make the thing for you as I promised...";
 			next;
-			mes "[Boonthom]";
-			mes "Ooooohmmmmm...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Ooooohmmmmm...";
 			next;
-			mes "[Boonthom]";
-			mes "Hmmmmmm...";
-			mes "Hmmmmmmmmm.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Hmmmmmm...";
+			mes "[DRY-RUN] Hmmmmmmmmm.";
 			next;
-			mes "[Boonthom]";
-			mes "Pffff pffff...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Pffff pffff...";
 			next;
-			mes "[Boonthom]";
-			mes "Here you go.";
-			mes "Please take these holy threads.";
-			mes "With this, you will be able to enter the ruins with less worry.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Here you go.";
+			mes "[DRY-RUN] Please take these holy threads.";
+			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
 			delitem .@items[0],1;
 			delitem .@items[1],1;
 			delitem 7190,1; //Solid_Peeling
 			delitem 523,1; //Holy_Water
 			getitem 7285,1; //Thread_Skein
 			next;
-			mes "[Boonthom]";
-			mes "Even if you lose this, don't worry. Just bring me the materials, I can make you another one.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Even if you lose this, don't worry. Just bring me the materials, I can make you another one.";
 			close;
 		}
-		mes "[Boonthom]";
-		mes "If you lose the holy threads, don't worry. I can make some more for you. Just gather the following items.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] If you lose the holy threads, don't worry. I can make some more for you. Just gather the following items.";
 		next;
-		mes "[Boonthom]";
+		mes "[DRY-RUN] [Boonthom]";
 		mes "^3366991 "+getitemname(.@items[0])+"^000000,";
 		mes "^3366991 "+getitemname(.@items[1])+"^000000,";
-		mes "^3366991 Solid Husk^000000 and";
-		mes "^3366991 Holy Water^000000.";
+		mes "[DRY-RUN] ^3366991 Solid Husk^000000 and";
+		mes "[DRY-RUN] ^3366991 Holy Water^000000.";
 		next;
-		mes "[Boonthom]";
-		mes "See you later.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] See you later.";
 		close;
 	} else if (ayodunquest > 3 && ayodunquest < 9) {
-		mes "[Boonthom]";
-		mes "You finally started seeking the tiger. I hope that you will be safe from harm.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] You finally started seeking the tiger. I hope that you will be safe from harm.";
 		next;
-		mes "[Boonthom]";
-		mes "Feel free to ask";
-		mes "me for help at anytime.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Feel free to ask";
+		mes "[DRY-RUN] me for help at anytime.";
 		close;
 	} else if (ayodunquest == 9) {
 		mes "["+strcharinfo(0)+"]";
-		mes "I copied down this";
-		mes "message while exploring";
-		mes "the dungeon. Would you";
-		mes "take a look at this?";
+		mes "[DRY-RUN] I copied down this";
+		mes "[DRY-RUN] message while exploring";
+		mes "[DRY-RUN] the dungeon. Would you";
+		mes "[DRY-RUN] take a look at this?";
 		next;
-		mes "[Stone Slate]";
-		mes "^333333Do not enter the";
-		mes "2nd underground level";
-		mes "...is danger... You wil...";
-		mes "...encounter... tiger...^000000";
+		mes "[DRY-RUN] [Stone Slate]";
+		mes "[DRY-RUN] ^333333Do not enter the";
+		mes "[DRY-RUN] 2nd underground level";
+		mes "[DRY-RUN] ...is danger... You wil...";
+		mes "[DRY-RUN] ...encounter... tiger...^000000";
 		next;
-		mes "[Stone Slate]";
-		mes "^333333You must kill... In order to do... MUST... How to go... the 2nd underground level...";
-		mes "You need more... Holy power... in order to... Otherwise, it's impossible...^000000";
+		mes "[DRY-RUN] [Stone Slate]";
+		mes "[DRY-RUN] ^333333You must kill... In order to do... MUST... How to go... the 2nd underground level...";
+		mes "[DRY-RUN] You need more... Holy power... in order to... Otherwise, it's impossible...^000000";
 		next;
-		mes "[Boonthom]";
-		mes "That was written by one of my comrades who entered the ruins,";
-		mes "as he regretted letting the tiger live, lest it return.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] That was written by one of my comrades who entered the ruins,";
+		mes "[DRY-RUN] as he regretted letting the tiger live, lest it return.";
 		next;
-		mes "[Boonthom]";
-		mes "If you were able to find this note, you must have strong determination to venture through the ruins.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] If you were able to find this note, you must have strong determination to venture through the ruins.";
 		next;
-		mes "[Boonthom]";
-		mes "As you can guess from the";
-		mes "note, the 2nd underground level is very very dangerous. You will need holy threads that contain even more holy protection.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] As you can guess from the";
+		mes "[DRY-RUN] note, the 2nd underground level is very very dangerous. You will need holy threads that contain even more holy protection.";
 		next;
-		mes "[Boonthom]";
-		mes "Now, go and gather some materials so that I can create more powerful holy threads for you.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Now, go and gather some materials so that I can create more powerful holy threads for you.";
 		next;
-		mes "[Boonthom]";
-		mes "^3366992 Holy Water^000000,";
-		mes "^3366991 Yggdrasil Leaf^000000,";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
+		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		set ayodunquest,10;
 		changequest 12037,12038;
 		next;
-		mes "[Boonthom]";
-		mes "Return to me";
-		mes "once you have";
-		mes "gathered everything.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Return to me";
+		mes "[DRY-RUN] once you have";
+		mes "[DRY-RUN] gathered everything.";
 		close;
 	} else if (ayodunquest == 10) {
 		if (countitem(523) > 1 && countitem(610) > 0 && countitem(.@items[0]) > 1 && countitem(.@items[1]) > 1) {
-			mes "[Boonthom]";
-			mes "Hmm~";
-			mes "You've brought";
-			mes "everything. Quite";
-			mes "the enthusiastic one,";
-			mes "aren't you?";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Hmm~";
+			mes "[DRY-RUN] You've brought";
+			mes "[DRY-RUN] everything. Quite";
+			mes "[DRY-RUN] the enthusiastic one,";
+			mes "[DRY-RUN] aren't you?";
 			next;
-			mes "[Boonthom]";
-			mes "Ooooohmmmmm...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Ooooohmmmmm...";
 			next;
-			mes "[Boonthom]";
-			mes "Hmmmmmm...";
-			mes "Hmmmmmmmmm.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Hmmmmmm...";
+			mes "[DRY-RUN] Hmmmmmmmmm.";
 			next;
-			mes "[Boonthom]";
-			mes "Pffff pffff...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Pffff pffff...";
 			next;
-			mes "[Boonthom]";
-			mes "Here you go.";
-			mes "Please take these holy threads.";
-			mes "With this, you will be able to enter the ruins with less worry.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Here you go.";
+			mes "[DRY-RUN] Please take these holy threads.";
+			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
 			delitem .@items[0],2;
 			delitem .@items[1],2;
 			delitem 610,1; //Leaf_Of_Yggdrasil
@@ -1653,56 +1653,56 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			getitem 7287,1; //Thread_Skein_
 			changequest 12038,12039;
 			next;
-			mes "[Boonthom]";
-			mes "Even if you lose this, don't worry. Just bring me the materials, and";
-			mes "I will make you another one.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Even if you lose this, don't worry. Just bring me the materials, and";
+			mes "[DRY-RUN] I will make you another one.";
 			close;
 		}
-		mes "[Boonthom]";
-		mes "Hmm...?";
-		mes "Didn't I tell you";
-		mes "what I need to make";
-		mes "a more powerful";
-		mes "holy thread?";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Hmm...?";
+		mes "[DRY-RUN] Didn't I tell you";
+		mes "[DRY-RUN] what I need to make";
+		mes "[DRY-RUN] a more powerful";
+		mes "[DRY-RUN] holy thread?";
 		next;
-		mes "[Boonthom]";
-		mes "^3366992 Holy Water^000000,";
-		mes "^3366991 Yggdrasil Leaf^000000,";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
+		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		next;
-		mes "[Boonthom]";
-		mes "Return to me";
-		mes "with those items";
-		mes "and I will craft";
-		mes "more powerful holy";
-		mes "threads for you.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Return to me";
+		mes "[DRY-RUN] with those items";
+		mes "[DRY-RUN] and I will craft";
+		mes "[DRY-RUN] more powerful holy";
+		mes "[DRY-RUN] threads for you.";
 		close;
 	} else if (ayodunquest == 11) {
 		if (countitem(7287) > 0) {
-			mes "[Boonthom]";
-			mes "Those threads";
-			mes "will protect you";
-			mes "from the spiritual";
-			mes "dangers, but it's up";
-			mes "to you to defend yourself";
-			mes "from monster attacks, okay?";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Those threads";
+			mes "[DRY-RUN] will protect you";
+			mes "[DRY-RUN] from the spiritual";
+			mes "[DRY-RUN] dangers, but it's up";
+			mes "[DRY-RUN] to you to defend yourself";
+			mes "[DRY-RUN] from monster attacks, okay?";
 			close;
 		} else if (countitem(523) > 1 && countitem(610) > 0 && countitem(.@items[0]) > 1 && countitem(.@items[1]) > 1 && countitem(7287) == 0) {
-			mes "[Boonthom]";
-			mes "Ooooohmmmmm...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Ooooohmmmmm...";
 			next;
-			mes "[Boonthom]";
-			mes "Hmmmmmm...";
-			mes "Hmmmmmmmmm.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Hmmmmmm...";
+			mes "[DRY-RUN] Hmmmmmmmmm.";
 			next;
-			mes "[Boonthom]";
-			mes "Pffff pffff...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Pffff pffff...";
 			next;
-			mes "[Boonthom]";
-			mes "Here you go.";
-			mes "Please take these holy threads.";
-			mes "With this, you will be able to enter the ruins with less worry.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Here you go.";
+			mes "[DRY-RUN] Please take these holy threads.";
+			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
 			delitem .@items[0],2;
 			delitem .@items[1],2;
 			delitem 610,1; //Leaf_Of_Yggdrasil
@@ -1710,78 +1710,78 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			getitem 7287,1; //Thread_Skein_
 			close;
 		}
-		mes "[Boonthom]";
-		mes "Hmm...?";
-		mes "Didn't I tell you";
-		mes "what I need to make";
-		mes "a more powerful";
-		mes "holy thread?";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Hmm...?";
+		mes "[DRY-RUN] Didn't I tell you";
+		mes "[DRY-RUN] what I need to make";
+		mes "[DRY-RUN] a more powerful";
+		mes "[DRY-RUN] holy thread?";
 		next;
-		mes "[Boonthom]";
-		mes "^3366992 Holy Water^000000,";
-		mes "^3366991 Yggdrasil Leaf^000000,";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
+		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		close;
 	} else if (ayodunquest == 12) {
-		mes "[Boonthom]";
-		mes "Huh...!";
-		mes "You must have seen something.";
-		mes "I can tell by the gloomy look on your face, and the shadow looming over your soul.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Huh...!";
+		mes "[DRY-RUN] You must have seen something.";
+		mes "[DRY-RUN] I can tell by the gloomy look on your face, and the shadow looming over your soul.";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "I found";
-		mes "this old letter";
-		mes "in the ruins.";
+		mes "[DRY-RUN] I found";
+		mes "[DRY-RUN] this old letter";
+		mes "[DRY-RUN] in the ruins.";
 		next;
-		mes "[Old Letter]";
-		mes "^333333Dear, Boonthom...I was a fool...There is Sa-mhing Tig'...One who ....my remains... Please take...to Boonthom...";
+		mes "[DRY-RUN] [Old Letter]";
+		mes "[DRY-RUN] ^333333Dear, Boonthom...I was a fool...There is Sa-mhing Tig'...One who ....my remains... Please take...to Boonthom...";
 		next;
-		mes "[Boonthom]";
-		mes "I see...";
-		mes "Oh, my dear";
-		mes "old friend...";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] I see...";
+		mes "[DRY-RUN] Oh, my dear";
+		mes "[DRY-RUN] old friend...";
 		next;
-		mes "[Boonthom]";
-		mes "Thank you for your trouble.";
-		mes "My friend left that box for me.";
-		mes "But I guess he would wish to give that box to the person who found his remains.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Thank you for your trouble.";
+		mes "[DRY-RUN] My friend left that box for me.";
+		mes "[DRY-RUN] But I guess he would wish to give that box to the person who found his remains.";
 		next;
-		mes "[Boonthom]";
-		mes "If you wish to explore the building again, but you don't have any holy thread, feel free to ask me at anytime.";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] If you wish to explore the building again, but you don't have any holy thread, feel free to ask me at anytime.";
 		set ayodunquest,13;
 		completequest 12039;
 		close;
 	} else if (ayodunquest > 12) {
 		if (countitem(7287) > 0) {
-			mes "[Boonthom]";
-			mes "Best of luck on your";
-			mes "expeditions, brave";
-			mes "adventurer~";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Best of luck on your";
+			mes "[DRY-RUN] expeditions, brave";
+			mes "[DRY-RUN] adventurer~";
 			close;
 		} else if (countitem(523) > 1 && countitem(610) > 0 && countitem(.@items[0]) > 1 && countitem(.@items[1]) > 1 && countitem(7287) == 0) {
-			mes "[Boonthom]";
-			mes "Lost the";
-			mes "holy threads";
-			mes "somehow, did you?";
-			mes "With the items you";
-			mes "have, I'll simply";
-			mes "make more of them.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Lost the";
+			mes "[DRY-RUN] holy threads";
+			mes "[DRY-RUN] somehow, did you?";
+			mes "[DRY-RUN] With the items you";
+			mes "[DRY-RUN] have, I'll simply";
+			mes "[DRY-RUN] make more of them.";
 			next;
-			mes "[Boonthom]";
-			mes "Ooooohmmmmm...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Ooooohmmmmm...";
 			next;
-			mes "[Boonthom]";
-			mes "Hmmmmmm...";
-			mes "Hmmmmmmmmm.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Hmmmmmm...";
+			mes "[DRY-RUN] Hmmmmmmmmm.";
 			next;
-			mes "[Boonthom]";
-			mes "Pffff pffff...";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Pffff pffff...";
 			next;
-			mes "[Boonthom]";
-			mes "Here you go.";
-			mes "Please take these holy threads.";
-			mes "With this, you will be able to enter the ruins with less worry.";
+			mes "[DRY-RUN] [Boonthom]";
+			mes "[DRY-RUN] Here you go.";
+			mes "[DRY-RUN] Please take these holy threads.";
+			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
 			delitem .@items[0],2;
 			delitem .@items[1],2;
 			delitem 610,1; //Leaf_Of_Yggdrasil
@@ -1789,153 +1789,153 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			getitem 7287,1; //Thread_Skein_
 			close;
 		}
-		mes "[Boonthom]";
-		mes "Hmm...?";
-		mes "Didn't I tell you";
-		mes "what I need to make";
-		mes "a more powerful";
-		mes "holy thread?";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] Hmm...?";
+		mes "[DRY-RUN] Didn't I tell you";
+		mes "[DRY-RUN] what I need to make";
+		mes "[DRY-RUN] a more powerful";
+		mes "[DRY-RUN] holy thread?";
 		next;
-		mes "[Boonthom]";
-		mes "^3366992 Holy Water^000000,";
-		mes "^3366991 Yggdrasil Leaf^000000,";
+		mes "[DRY-RUN] [Boonthom]";
+		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
+		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		close;
 	}
-	mes "[Boonthom]";
-	mes "Ooooohmmmmm...";
+	mes "[DRY-RUN] [Boonthom]";
+	mes "[DRY-RUN] Ooooohmmmmm...";
 	close;
 }
 
 ayo_fild01,129,197,0	script	Puraim#thai1	842,{
 	if ((ayodunquest > 2 && countitem(7285) > 0) || (ayodunquest > 2 && countitem(7287) > 0)) {
-		mes "[Puraim]";
-		mes "Huh...?";
-		mes "I feel it!";
-		mes "I can feel the";
-		mes "power of holiness!";
-		mes "It's coming from you!";
+		mes "[DRY-RUN] [Puraim]";
+		mes "[DRY-RUN] Huh...?";
+		mes "[DRY-RUN] I feel it!";
+		mes "[DRY-RUN] I can feel the";
+		mes "[DRY-RUN] power of holiness!";
+		mes "[DRY-RUN] It's coming from you!";
 		next;
-		mes "[Puraim]";
-		mes "I guess you can go ahead";
-		mes "into the ruins. So that's";
-		mes "what you want? To explore";
-		mes "this area?";
+		mes "[DRY-RUN] [Puraim]";
+		mes "[DRY-RUN] I guess you can go ahead";
+		mes "[DRY-RUN] into the ruins. So that's";
+		mes "[DRY-RUN] what you want? To explore";
+		mes "[DRY-RUN] this area?";
 		next;
-		mes "[Puraim]";
-		mes "I would suggest";
-		mes "against coming inside.";
-		mes "Even the local people";
-		mes "fear this area.";
+		mes "[DRY-RUN] [Puraim]";
+		mes "[DRY-RUN] I would suggest";
+		mes "[DRY-RUN] against coming inside.";
+		mes "[DRY-RUN] Even the local people";
+		mes "[DRY-RUN] fear this area.";
 		next;
-		mes "[Puraim]";
-		mes "If the Sa-mhing Tiger wasn't around, there would still be all the evil spirits in this place. Even with the holy thread, this place is still dangerous.";
+		mes "[DRY-RUN] [Puraim]";
+		mes "[DRY-RUN] If the Sa-mhing Tiger wasn't around, there would still be all the evil spirits in this place. Even with the holy thread, this place is still dangerous.";
 		next;
-		mes "[Puraim]";
-		mes "So what do you want?";
-		mes "Do you still want to";
-		mes "explore the area,";
-		mes "adventurer?";
+		mes "[DRY-RUN] [Puraim]";
+		mes "[DRY-RUN] So what do you want?";
+		mes "[DRY-RUN] Do you still want to";
+		mes "[DRY-RUN] explore the area,";
+		mes "[DRY-RUN] adventurer?";
 		next;
-		if (select("Yes.:No! I'm too afraid of the ruins now.") == 1) {
-			mes "[Puraim]";
-			mes "Hmmm...";
-			mes "It seems you adventurers are tempted by the thrill of danger,";
-			mes "or you've all got some death wish.";
+		if (select("[DRY-RUN] Yes.:No! I'm too afraid of the ruins now.") == 1) {
+			mes "[DRY-RUN] [Puraim]";
+			mes "[DRY-RUN] Hmmm...";
+			mes "[DRY-RUN] It seems you adventurers are tempted by the thrill of danger,";
+			mes "[DRY-RUN] or you've all got some death wish.";
 			next;
-			mes "[Puraim]";
-			mes "Oh well, that's none of my business. After all, you already";
-			mes "have a holy spirit. Still, be careful. You might not want to go to the 2nd underground level of the ruins.";
+			mes "[DRY-RUN] [Puraim]";
+			mes "[DRY-RUN] Oh well, that's none of my business. After all, you already";
+			mes "[DRY-RUN] have a holy spirit. Still, be careful. You might not want to go to the 2nd underground level of the ruins.";
 			next;
-			mes "[Puraim]";
-			mes "As you Rune-Midgardians";
-			mes "say, 'curiousity killed the cat.'";
-			mes "Anyway, go for it!";
+			mes "[DRY-RUN] [Puraim]";
+			mes "[DRY-RUN] As you Rune-Midgardians";
+			mes "[DRY-RUN] say, 'curiousity killed the cat.'";
+			mes "[DRY-RUN] Anyway, go for it!";
 			next;
-			mes "^3355FFHe shoved you off the hill";
-			mes "and you plummet like a rock.^000000";
+			mes "[DRY-RUN] ^3355FFHe shoved you off the hill";
+			mes "[DRY-RUN] and you plummet like a rock.^000000";
 			close2;
 			percentheal -10,0;
 			warp "ayo_fild02",30,135;
 			end;
 		}
-		mes "[Puraim]";
-		mes "Good decision!";
-		mes "As I expected, you're";
-		mes "smart enough not to";
-		mes "stupidly jeopardize your life.";
+		mes "[DRY-RUN] [Puraim]";
+		mes "[DRY-RUN] Good decision!";
+		mes "[DRY-RUN] As I expected, you're";
+		mes "[DRY-RUN] smart enough not to";
+		mes "[DRY-RUN] stupidly jeopardize your life.";
 		close;
 	}
-	mes "[Puraim]";
-	mes "If I were you, I wouldn't";
-	mes "even dare to approach";
-	mes "the ruins down over there.";
+	mes "[DRY-RUN] [Puraim]";
+	mes "[DRY-RUN] If I were you, I wouldn't";
+	mes "[DRY-RUN] even dare to approach";
+	mes "[DRY-RUN] the ruins down over there.";
 	next;
-	mes "[Puraim]";
-	mes "Anyone who doesn't have the protection of a holy spirit will be easy game for the evil creatures living there. You'd be killed in";
-	mes "no time at all!";
+	mes "[DRY-RUN] [Puraim]";
+	mes "[DRY-RUN] Anyone who doesn't have the protection of a holy spirit will be easy game for the evil creatures living there. You'd be killed in";
+	mes "[DRY-RUN] no time at all!";
 	next;
-	mes "[Puraim]";
-	mes "Go back, adventurer.";
-	mes "If you wish to explore";
-	mes "this area, you'd better";
-	mes "show me some holy spirit.";
+	mes "[DRY-RUN] [Puraim]";
+	mes "[DRY-RUN] Go back, adventurer.";
+	mes "[DRY-RUN] If you wish to explore";
+	mes "[DRY-RUN] this area, you'd better";
+	mes "[DRY-RUN] show me some holy spirit.";
 	close;
 }
 
 ayo_fild02,25,154,0	script	Aik#thai	843,{
-	mes "[Aik]";
-	mes "So, how was your expedition?";
-	mes "I hope that the evil spirits will not follow you outside of the ruins, and haunt your dreams.";
+	mes "[DRY-RUN] [Aik]";
+	mes "[DRY-RUN] So, how was your expedition?";
+	mes "[DRY-RUN] I hope that the evil spirits will not follow you outside of the ruins, and haunt your dreams.";
 	next;
-	mes "[Aik]";
-	mes "When you go back,";
-	mes "remember to ward off";
-	mes "the evil from your mind.";
-	mes "Otherwise you will encounter";
-	mes "trouble later...";
+	mes "[DRY-RUN] [Aik]";
+	mes "[DRY-RUN] When you go back,";
+	mes "[DRY-RUN] remember to ward off";
+	mes "[DRY-RUN] the evil from your mind.";
+	mes "[DRY-RUN] Otherwise you will encounter";
+	mes "[DRY-RUN] trouble later...";
 	next;
-	mes "[Aik]";
-	mes "So, would you";
-	mes "like to go back?";
+	mes "[DRY-RUN] [Aik]";
+	mes "[DRY-RUN] So, would you";
+	mes "[DRY-RUN] like to go back?";
 	next;
-	if (select("Yes.:No, I need to look around more...") == 1) {
-		mes "[Aik]";
-		mes "Alright then...";
-		mes "Here we go...";
+	if (select("[DRY-RUN] Yes.:No, I need to look around more...") == 1) {
+		mes "[DRY-RUN] [Aik]";
+		mes "[DRY-RUN] Alright then...";
+		mes "[DRY-RUN] Here we go...";
 		next;
-		mes "^3355FFHe suddenly grabbed you";
-		mes "and hurled you up into the air!^000000";
+		mes "[DRY-RUN] ^3355FFHe suddenly grabbed you";
+		mes "[DRY-RUN] and hurled you up into the air!^000000";
 		close2;
 		warp "ayo_fild01",115,200;
 		end;
 	}
-	mes "[Aik]";
-	mes "I see.";
-	mes "Take care.";
+	mes "[DRY-RUN] [Aik]";
+	mes "[DRY-RUN] I see.";
+	mes "[DRY-RUN] Take care.";
 	close;
 }
 
 // Water Traps
 ayo_dun01,273,26,0	script	 #th_dun1_1_1::AyoTrap1	111,0,4,{
-	mes "^3355FFYou look down and see a pool";
-	mes "of water in the distance. It looks like a long drop to the bottom.^000000";
+	mes "[DRY-RUN] ^3355FFYou look down and see a pool";
+	mes "[DRY-RUN] of water in the distance. It looks like a long drop to the bottom.^000000";
 	next;
-	mes "^3355FFYou are filled";
-	mes "with apprehension,";
-	mes "After all, if you fall down,^000000";
-	mes "^2F2F4Fyou might get killed.^000000";
+	mes "[DRY-RUN] ^3355FFYou are filled";
+	mes "[DRY-RUN] with apprehension,";
+	mes "[DRY-RUN] After all, if you fall down,^000000";
+	mes "[DRY-RUN] ^2F2F4Fyou might get killed.^000000";
 	close;
 
 OnTouch_:
-	mes "^3355FFYou look down and see a pool";
-	mes "of water in the distance. It looks like a long drop to the bottom.^000000";
+	mes "[DRY-RUN] ^3355FFYou look down and see a pool";
+	mes "[DRY-RUN] of water in the distance. It looks like a long drop to the bottom.^000000";
 	next;
-	mes "^3355FFYou are filled";
-	mes "with apprehension.";
-	mes "After all, if you fall down,";
-	mes "^2F2F4Fyou might get killed.^000000";
+	mes "[DRY-RUN] ^3355FFYou are filled";
+	mes "[DRY-RUN] with apprehension.";
+	mes "[DRY-RUN] After all, if you fall down,";
+	mes "[DRY-RUN] ^2F2F4Fyou might get killed.^000000";
 	close;
 }
 
@@ -1965,7 +1965,7 @@ ayo_dun01,25,271,0	duplicate(AyoTrap2)	 #th_dun1_12	-1
 ayo_dun01,156,148,0	script	 #hint01::AyoHint	-1,0,4,{
 OnTouch_:
 	if (rand(1,100) > 60 && ayodunquest < 11) {
-		mes "^3355FFThe Holy Thread in your pocket suddenly began to glow. You feel that something is near you...^000000";
+		mes "[DRY-RUN] ^3355FFThe Holy Thread in your pocket suddenly began to glow. You feel that something is near you...^000000";
 		close2;
 		viewpoint 1,198,164,0,0xFF0000;
 		viewpoint 1,87,16,1,0xFF0000;
@@ -1985,60 +1985,60 @@ ayo_dun01,259,46,0	duplicate(AyoHint)	 #hint02_3	-1,2,0
 ayo_dun01,198,164,0	script	 #hun_thai_1	111,{
 	if (ayodunquest == 3) {
 		set ayodunquest,4;
-		mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 1st part of the slate.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 1st part of the slate.^000000";
 		next;
-		mes "^3355FFIt reads '^0000FFDo not enter the 2nd underground level^3355FF.' You are unable to read the rest of the message.^000000";
+		mes "[DRY-RUN] ^3355FFIt reads '^0000FFDo not enter the 2nd underground level^3355FF.' You are unable to read the rest of the message.^000000";
 		close;
 	}
-	mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 1st part of the slate.^000000";
+	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 1st part of the slate.^000000";
 	close;
 }
 
 ayo_dun01,87,16,0	script	 #hun_thai_2	111,{
 	if (ayodunquest == 4) {
 		set ayodunquest,5;
-		mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 2nd part of the slate.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 2nd part of the slate.^000000";
 		next;
-		mes "^3355FFIt reads '^0000FF...is danger... You wil...^3355FF.' You are unable to read the rest of the message.^000000";
+		mes "[DRY-RUN] ^3355FFIt reads '^0000FF...is danger... You wil...^3355FF.' You are unable to read the rest of the message.^000000";
 		close;
 	}
-	mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 2nd part of the slate.^000000";
+	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 2nd part of the slate.^000000";
 	close;
 }
 
 ayo_dun01,268,214,0	script	 #hun_thai_3	111,{
 	if (ayodunquest == 5) {
 		set ayodunquest,6;
-		mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 3rd part of the slate.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 3rd part of the slate.^000000";
 		next;
-		mes "^3355FFIt reads '^0000FF...encounter... tiger...^3355FF.' You are unable to read the rest of the message.^000000";
+		mes "[DRY-RUN] ^3355FFIt reads '^0000FF...encounter... tiger...^3355FF.' You are unable to read the rest of the message.^000000";
 		close;
 	}
-	mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 3rd part of the slate.^000000";
+	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 3rd part of the slate.^000000";
 	close;
 }
 
 ayo_dun01,147,274,0	script	 #hun_thai_4	111,{
 	if (ayodunquest == 6) {
 		set ayodunquest,7;
-		mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 4th part of the slate.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 4th part of the slate.^000000";
 		next;
-		mes "^3355FFIt reads '^0000FFYou must kill... In order to do... MUST... How to go... the 2nd underground level...^3355FF' You are unable to read the rest of the message.^000000";
+		mes "[DRY-RUN] ^3355FFIt reads '^0000FFYou must kill... In order to do... MUST... How to go... the 2nd underground level...^3355FF' You are unable to read the rest of the message.^000000";
 		close;
 	}
-	mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 4th part of the slate.^000000";
+	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 4th part of the slate.^000000";
 	close;
 }
 
 ayo_dun01,99,118,0	script	 #hun_thai_5	111,{
 	if (ayodunquest == 7) {
 		set ayodunquest,8;
-		mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 5th part of the slate.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 5th part of the slate.^000000";
 		next;
-		mes "^3355FFIt reads '^0000FFYou need more... Holy power... in order to...^3355FF' You are unable to read the rest of the message.^000000";
+		mes "[DRY-RUN] ^3355FFIt reads '^0000FFYou need more... Holy power... in order to...^3355FF' You are unable to read the rest of the message.^000000";
 		close;
 	}
-	mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 5th part of the slate.^000000";
+	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 5th part of the slate.^000000";
 	close;
 }
 
@@ -2046,24 +2046,24 @@ ayo_dun01,16,188,0	script	 #hun_thai_6	111,{
 	if (ayodunquest == 8) {
 		set ayodunquest,9;
 		// setquest 12036;
-		mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the last part of the slate.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the last part of the slate.^000000";
 		next;
-		mes "^3355FFIt reads '^0000FFOtherwise, it's impossible...^3355FF' You are unable to read the rest of the message.^000000";
+		mes "[DRY-RUN] ^3355FFIt reads '^0000FFOtherwise, it's impossible...^3355FF' You are unable to read the rest of the message.^000000";
 		close;
 	}
-	mes "^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the last part of the slate.^000000";
+	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the last part of the slate.^000000";
 	close;
 }
 
 ayo_dun01,24,283,0	script	 #2_dun_in	111,{
 	if (ayodunquest > 10) {
 		if (countitem(7287) > 0) {
-			mes "^3355FFThe holy threads";
-			mes "emanate a powerful sense";
-			mes "of safety and security.";
-			mes "With the protection of";
-			mes "holiness, you begin your";
-			mes "descent into the 2nd level.^000000.";
+			mes "[DRY-RUN] ^3355FFThe holy threads";
+			mes "[DRY-RUN] emanate a powerful sense";
+			mes "[DRY-RUN] of safety and security.";
+			mes "[DRY-RUN] With the protection of";
+			mes "[DRY-RUN] holiness, you begin your";
+			mes "[DRY-RUN] descent into the 2nd level.^000000.";
 			close2;
 			if (rand(1,10) > 5) {
 				warp "ayo_dun02",23,26;
@@ -2072,27 +2072,27 @@ ayo_dun01,24,283,0	script	 #2_dun_in	111,{
 			}
 			end;
 		}
-		mes "^3355FFYou find what seems to be the entrance to the 2nd level. However, you are filled with an overwhelming sense of dread. Somehow, you can't bring yourself to go down...^000000";
+		mes "[DRY-RUN] ^3355FFYou find what seems to be the entrance to the 2nd level. However, you are filled with an overwhelming sense of dread. Somehow, you can't bring yourself to go down...^000000";
 		close;
 	}
-	mes "^3355FFYou find what seems to be the entrance to the 2nd level. However, you are filled with an overwhelming sense of dread. Somehow, you can't bring yourself to go down...^000000";
+	mes "[DRY-RUN] ^3355FFYou find what seems to be the entrance to the 2nd level. However, you are filled with an overwhelming sense of dread. Somehow, you can't bring yourself to go down...^000000";
 	close;
 }
 
 ayo_dun02,268,108,0	script	 #reward_tiger	111,{
 	if (ayodunquest == 11 && countitem(7287) > 0) {
-		mes "^3355FFYou find half of the skeletal remains of a person sticking out from the ground. It seems to be the remains of Boonthom's comrade.^000000";
+		mes "[DRY-RUN] ^3355FFYou find half of the skeletal remains of a person sticking out from the ground. It seems to be the remains of Boonthom's comrade.^000000";
 		next;
-		mes "^3355FFYou find a piece of paper beside the skeleton, as well as a box.^000000";
+		mes "[DRY-RUN] ^3355FFYou find a piece of paper beside the skeleton, as well as a box.^000000";
 		next;
-		mes "^3355FFYou read what is written on the old sheet of paper. The letters have faded with age, and it is difficult to read.^000000";
+		mes "[DRY-RUN] ^3355FFYou read what is written on the old sheet of paper. The letters have faded with age, and it is difficult to read.^000000";
 		next;
-		mes "[Old Letter]";
-		mes "^333333Dear, Boonthom,";
-		mes "I was a fool. There is 'Sa-mhing Tig'...One who ....my remains... Please take...to Boonthom...";
+		mes "[DRY-RUN] [Old Letter]";
+		mes "[DRY-RUN] ^333333Dear, Boonthom,";
+		mes "[DRY-RUN] I was a fool. There is 'Sa-mhing Tig'...One who ....my remains... Please take...to Boonthom...";
 		next;
-		mes "^3355FFYou pick";
-		mes "up the box.^000000";
+		mes "[DRY-RUN] ^3355FFYou pick";
+		mes "[DRY-RUN] up the box.^000000";
 		set ayodunquest,12;
 		// completequest 12039;
 		getitem 603,1; //Old_Blue_Box
@@ -2104,531 +2104,531 @@ ayo_dun02,268,108,0	script	 #reward_tiger	111,{
 //============================================================
 ayothaya,196,265,3	script	Einon#ayo	842,{
 	if (tomyumgoong == 0) {
-		mes "[Einon]";
-		mes "Do you know what the";
-		mes "most popular cuisine";
-		mes "of this village is?";
+		mes "[DRY-RUN] [Einon]";
+		mes "[DRY-RUN] Do you know what the";
+		mes "[DRY-RUN] most popular cuisine";
+		mes "[DRY-RUN] of this village is?";
 		next;
-		mes "[Einon]";
-		mes "Ayotaya is world famous";
-		mes "for its regional cuisine, but";
-		mes "out of all Ayotayan dishes,";
-		mes "'^3131FFTom Yum Goong^000000' is the best.";
+		mes "[DRY-RUN] [Einon]";
+		mes "[DRY-RUN] Ayotaya is world famous";
+		mes "[DRY-RUN] for its regional cuisine, but";
+		mes "[DRY-RUN] out of all Ayotayan dishes,";
+		mes "[DRY-RUN] '^3131FFTom Yum Goong^000000' is the best.";
 		next;
-		mes "[Einon]";
-		mes "Tom Yum Goong is a type";
-		mes "of soup that is very spicy. Try it once, and you will be amazed by its profound taste. Try it twice, and you will be enraptured by its tantalizing aroma.";
+		mes "[DRY-RUN] [Einon]";
+		mes "[DRY-RUN] Tom Yum Goong is a type";
+		mes "[DRY-RUN] of soup that is very spicy. Try it once, and you will be amazed by its profound taste. Try it twice, and you will be enraptured by its tantalizing aroma.";
 		next;
-		mes "[Einon]";
-		mes "It's really one of the most delicious foods in the world!";
-		mes "Everyone in the world would";
-		mes "want to try this at least once in his lifetime. So, would you like";
-		mes "to try some?";
+		mes "[DRY-RUN] [Einon]";
+		mes "[DRY-RUN] It's really one of the most delicious foods in the world!";
+		mes "[DRY-RUN] Everyone in the world would";
+		mes "[DRY-RUN] want to try this at least once in his lifetime. So, would you like";
+		mes "[DRY-RUN] to try some?";
 		next;
-		if (select("Sure thing.:No, thanks. I hate spicy food.") == 1) {
-			mes "[Einon]";
-			mes "Okay...!";
-			mes "Now who would be";
-			mes "best for preparing";
-			mes "Tom Yum Goong for you?";
-			mes "Hmmmmm...";
+		if (select("[DRY-RUN] Sure thing.:No, thanks. I hate spicy food.") == 1) {
+			mes "[DRY-RUN] [Einon]";
+			mes "[DRY-RUN] Okay...!";
+			mes "[DRY-RUN] Now who would be";
+			mes "[DRY-RUN] best for preparing";
+			mes "[DRY-RUN] Tom Yum Goong for you?";
+			mes "[DRY-RUN] Hmmmmm...";
 			next;
-			mes "[Einon]";
-			mes "Everyone in the village";
-			mes "knows how to make it, but";
-			mes "I recommend that you go";
-			mes "visit ^3131FFMali the Spicy^000000.";
+			mes "[DRY-RUN] [Einon]";
+			mes "[DRY-RUN] Everyone in the village";
+			mes "[DRY-RUN] knows how to make it, but";
+			mes "[DRY-RUN] I recommend that you go";
+			mes "[DRY-RUN] visit ^3131FFMali the Spicy^000000.";
 			next;
 			emotion ET_BEST;
 			set tomyumgoong,1;
 			setquest 8123;
-			mes "[Einon]";
-			mes "She is the best cook when it";
-			mes "comes to Tom Yum Goong!";
-			mes "Why don't you ask her";
-			mes "to cook you some?";
+			mes "[DRY-RUN] [Einon]";
+			mes "[DRY-RUN] She is the best cook when it";
+			mes "[DRY-RUN] comes to Tom Yum Goong!";
+			mes "[DRY-RUN] Why don't you ask her";
+			mes "[DRY-RUN] to cook you some?";
 			close;
 		}
-		mes "[Einon]";
-		mes "Oh I see...";
-		mes "However, when you";
-		mes "change your mind,";
-		mes "please come back.";
+		mes "[DRY-RUN] [Einon]";
+		mes "[DRY-RUN] Oh I see...";
+		mes "[DRY-RUN] However, when you";
+		mes "[DRY-RUN] change your mind,";
+		mes "[DRY-RUN] please come back.";
 		close;
 	} else if (tomyumgoong == 1) {
-		mes "[Einon]";
-		mes "Ah, you wanna know";
-		mes "where ^3131FFMali the Spicy^000000 is?";
-		mes "Well, there's not too many places";
-		mes "a cook would stay other than in";
-		mes "a restaurant, right? Hahaha~";
+		mes "[DRY-RUN] [Einon]";
+		mes "[DRY-RUN] Ah, you wanna know";
+		mes "[DRY-RUN] where ^3131FFMali the Spicy^000000 is?";
+		mes "[DRY-RUN] Well, there's not too many places";
+		mes "[DRY-RUN] a cook would stay other than in";
+		mes "[DRY-RUN] a restaurant, right? Hahaha~";
 		close;
 	}
-	mes "[Einon]";
-	mes "Golden Ayotaya...";
-	mes "Although I've grown";
-	mes "up in this village,";
-	mes "I still think my village";
-	mes "is magnificient and beautiful.";
+	mes "[DRY-RUN] [Einon]";
+	mes "[DRY-RUN] Golden Ayotaya...";
+	mes "[DRY-RUN] Although I've grown";
+	mes "[DRY-RUN] up in this village,";
+	mes "[DRY-RUN] I still think my village";
+	mes "[DRY-RUN] is magnificient and beautiful.";
 	next;
-	mes "[Einon]";
-	mes "What do you think?";
-	mes "Wouldn't you agree with me?";
+	mes "[DRY-RUN] [Einon]";
+	mes "[DRY-RUN] What do you think?";
+	mes "[DRY-RUN] Wouldn't you agree with me?";
 	close;
 }
 
 ayo_in01,145,163,3	script	Cook#ayo	839,{
 	if (tomyumgoong < 2) {
-		mes "[Mali the Spicy]";
-		mes "Hello, there!";
-		mes "I am called Mali the Spicy.";
-		mes "All of my dishes always amaze";
-		mes "my customers with their tempting scents and deep flavors.";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] Hello, there!";
+		mes "[DRY-RUN] I am called Mali the Spicy.";
+		mes "[DRY-RUN] All of my dishes always amaze";
+		mes "[DRY-RUN] my customers with their tempting scents and deep flavors.";
 		next;
-		mes "[Mali the Spicy]";
-		mes "I am especially proud of my";
-		mes "^3131FFTom Yum Goong^000000, which is the";
-		mes "best in the village. I suppose";
-		mes "it's my fate to cook the greatest Tom Yum Goong ever.";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] I am especially proud of my";
+		mes "[DRY-RUN] ^3131FFTom Yum Goong^000000, which is the";
+		mes "[DRY-RUN] best in the village. I suppose";
+		mes "[DRY-RUN] it's my fate to cook the greatest Tom Yum Goong ever.";
 		if (tomyumgoong == 0) {
 			close;
 		} else {
 			next;
-			mes "[Mali the Spicy]";
-			mes "Oh I see...";
-			mes "You want me to cook";
-			mes "Tom Yum Goong for you,";
-			mes "don't you?";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] Oh I see...";
+			mes "[DRY-RUN] You want me to cook";
+			mes "[DRY-RUN] Tom Yum Goong for you,";
+			mes "[DRY-RUN] don't you?";
 			next;
-			mes "[Mali the Spicy]";
-			mes "Honestly, I've been really";
-			mes "busy ever since I opened this restaurant. If you really wish to taste my Tom Yum Goong, would";
-			mes "you do something for me?";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] Honestly, I've been really";
+			mes "[DRY-RUN] busy ever since I opened this restaurant. If you really wish to taste my Tom Yum Goong, would";
+			mes "[DRY-RUN] you do something for me?";
 			next;
-			if (select("Sure!:Eh... I dunno.") == 1) {
-				mes "[Mali the Spicy]";
-				mes "First, would you get";
-				mes "the ingredients to make";
-				mes "Tom Yum Goong for me? I'll need some ^CE0000Shrimps^000000, ^CE0000Chiles^000000 and ^CE0000Lemons^000000.";
+			if (select("[DRY-RUN] Sure!:Eh... I dunno.") == 1) {
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] First, would you get";
+				mes "[DRY-RUN] the ingredients to make";
+				mes "[DRY-RUN] Tom Yum Goong for me? I'll need some ^CE0000Shrimps^000000, ^CE0000Chiles^000000 and ^CE0000Lemons^000000.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Remember, Shrimp is the main ingredient of this dish. So, the fresher the Shrimp, the tastier your food will be.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Remember, Shrimp is the main ingredient of this dish. So, the fresher the Shrimp, the tastier your food will be.";
 				next;
-				select("Where can I find them?");
-				mes "[Mali the Spicy]";
-				mes "I expected you";
-				mes "to ask me that.";
-				mes "For Shrimps, look around";
-				mes "the beach. You should see";
-				mes "a lot of them there.";
+				select("[DRY-RUN] Where can I find them?");
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] I expected you";
+				mes "[DRY-RUN] to ask me that.";
+				mes "[DRY-RUN] For Shrimps, look around";
+				mes "[DRY-RUN] the beach. You should see";
+				mes "[DRY-RUN] a lot of them there.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "However, you might have a hard time finding them since you haven't done that before. So just buy some Shrimp from the guy who sells";
-				mes "the freshest Shrimp around.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] However, you might have a hard time finding them since you haven't done that before. So just buy some Shrimp from the guy who sells";
+				mes "[DRY-RUN] the freshest Shrimp around.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Hmmm...";
-				mes "If you mention";
-				mes "my name, that guy";
-				mes "might give you a discount.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Hmmm...";
+				mes "[DRY-RUN] If you mention";
+				mes "[DRY-RUN] my name, that guy";
+				mes "[DRY-RUN] might give you a discount.";
 				set tomyumgoong,2;
 				changequest 8123,8124;
 				next;
-				mes "[Mali the Spicy]";
-				mes "His name is ^3131FFThongpool^000000.";
-				mes "He will be somewhere around the village selling Shrimps. Go and ask him to give you 20 Shrimps to cook Tom Yum Goong.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] His name is ^3131FFThongpool^000000.";
+				mes "[DRY-RUN] He will be somewhere around the village selling Shrimps. Go and ask him to give you 20 Shrimps to cook Tom Yum Goong.";
 				close;
 			}
-			mes "[Mali the Spicy]";
-			mes "I understand this might be difficult to do, but it's worth";
-			mes "a try if you really want to taste the best Tom Yum Goong.";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] I understand this might be difficult to do, but it's worth";
+			mes "[DRY-RUN] a try if you really want to taste the best Tom Yum Goong.";
 			close;
 		}
 	} else if (tomyumgoong > 1 && tomyumgoong < 4) {
 		if (tomyumgoong == 2 && countitem(567) > 19) {
-			mes "[Mali the Spicy]";
-			mes "Errr...";
-			mes "What's wrong with these Shrimp?";
-			mes "They all have these scratches and rips in them! I can't believe Thongpool sold such bad Shrimp";
-			mes "to his customers!";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] Errr...";
+			mes "[DRY-RUN] What's wrong with these Shrimp?";
+			mes "[DRY-RUN] They all have these scratches and rips in them! I can't believe Thongpool sold such bad Shrimp";
+			mes "[DRY-RUN] to his customers!";
 			next;
-			mes "[Mali the Spicy]";
-			mes "I'm so sorry, but";
-			mes "I can't cook the best";
-			mes "Tom Yum Goong with";
-			mes "these Shrimp.";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] I'm so sorry, but";
+			mes "[DRY-RUN] I can't cook the best";
+			mes "[DRY-RUN] Tom Yum Goong with";
+			mes "[DRY-RUN] these Shrimp.";
 			next;
-			mes "[Mali the Spicy]";
-			mes "I know it's an inconvenience, but would you go back to Thongpool";
-			mes "and ask him to give you the freshest Shrimp to cook the best";
-			mes "Tom Yum Goong?";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] I know it's an inconvenience, but would you go back to Thongpool";
+			mes "[DRY-RUN] and ask him to give you the freshest Shrimp to cook the best";
+			mes "[DRY-RUN] Tom Yum Goong?";
 			close;
 		} else if (tomyumgoong == 3) {
 			if (countitem(567) > 19) {
-				mes "[Mali the Spicy]";
-				mes "Ah, you came back!";
-				mes "Now, let me see what";
-				mes "you've brought. Hmm...";
-				mes "These are...";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Ah, you came back!";
+				mes "[DRY-RUN] Now, let me see what";
+				mes "[DRY-RUN] you've brought. Hmm...";
+				mes "[DRY-RUN] These are...";
 				next;
 				emotion ET_BEST;
-				mes "[Mali the Spicy]";
-				mes "The freshest Shrimp that";
-				mes "I've been looking for! Well done~";
-				mes "With these big and fresh Shrimp,";
-				mes "I can cook the best Tom Yum Goong for you! Thank you so much!";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] The freshest Shrimp that";
+				mes "[DRY-RUN] I've been looking for! Well done~";
+				mes "[DRY-RUN] With these big and fresh Shrimp,";
+				mes "[DRY-RUN] I can cook the best Tom Yum Goong for you! Thank you so much!";
 				delitem 567,20; //Prawn
 				next;
-				mes "[Mali the Spicy]";
-				mes "It will be a perfect food with the natural sweetness of the Shrimp, the sourness of Lemons and a little bit of fish sauce!";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] It will be a perfect food with the natural sweetness of the Shrimp, the sourness of Lemons and a little bit of fish sauce!";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Oh... Right.";
-				mes "But we only have Shrimp.";
-				mes "Now, I want you to bring";
-				mes "me some ^CE0000Lemons^000000.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Oh... Right.";
+				mes "[DRY-RUN] But we only have Shrimp.";
+				mes "[DRY-RUN] Now, I want you to bring";
+				mes "[DRY-RUN] me some ^CE0000Lemons^000000.";
 				next;
-				if (select("Where can I find Lemons?:I hate sour food. I'd better quit!") == 1) {
+				if (select("[DRY-RUN] Where can I find Lemons?:I hate sour food. I'd better quit!") == 1) {
 					set tomyumgoong,4;
 					changequest 8124,8125;
-					mes "[Mali the Spicy]";
-					mes "A few days ago, I saw a good";
-					mes "Lemon tree while taking a walk.";
-					mes "But this tree belongs to an ordinary man who's not a Fruit Merchant.";
+					mes "[DRY-RUN] [Mali the Spicy]";
+					mes "[DRY-RUN] A few days ago, I saw a good";
+					mes "[DRY-RUN] Lemon tree while taking a walk.";
+					mes "[DRY-RUN] But this tree belongs to an ordinary man who's not a Fruit Merchant.";
 					next;
-					mes "[Mali the Spicy]";
-					mes "I'm not sure whether";
-					mes "or not he'd sell Lemons";
-					mes "to you, but you can try,";
-					mes "I guess.";
+					mes "[DRY-RUN] [Mali the Spicy]";
+					mes "[DRY-RUN] I'm not sure whether";
+					mes "[DRY-RUN] or not he'd sell Lemons";
+					mes "[DRY-RUN] to you, but you can try,";
+					mes "[DRY-RUN] I guess.";
 					close;
 				}
 				emotion ET_ANGER;
-				mes "[Mali the Spicy]";
-				mes "What a stupid...!";
-				mes "If you quit just because you really hate sour flavors, you must not be that eager to have my Tom Yum Goong!";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] What a stupid...!";
+				mes "[DRY-RUN] If you quit just because you really hate sour flavors, you must not be that eager to have my Tom Yum Goong!";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Once you taste my";
-				mes "Tom Yum Goong, you'll";
-				mes "regret what you just said!";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Once you taste my";
+				mes "[DRY-RUN] Tom Yum Goong, you'll";
+				mes "[DRY-RUN] regret what you just said!";
 				close;
 			}
-			mes "[Mali the Spicy]";
-			mes "Huh...?";
-			mes "What did you do";
-			mes "with the Shrimps?";
-			mes "You didn't eat them";
-			mes "on the way here, did you?";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] Huh...?";
+			mes "[DRY-RUN] What did you do";
+			mes "[DRY-RUN] with the Shrimps?";
+			mes "[DRY-RUN] You didn't eat them";
+			mes "[DRY-RUN] on the way here, did you?";
 			close;
 		}
-		mes "[Mali the Spicy]";
-		mes "Make sure you ask";
-		mes "Mr. Thongpool to give";
-		mes "you 20 Shrimps.";
-		mes "Now hurry~";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] Make sure you ask";
+		mes "[DRY-RUN] Mr. Thongpool to give";
+		mes "[DRY-RUN] you 20 Shrimps.";
+		mes "[DRY-RUN] Now hurry~";
 		close;
 	} else if (tomyumgoong > 3 && tomyumgoong < 6) {
 		if (tomyumgoong == 4 && countitem(568) > 9) {
-			mes "[Mali the Spicy]";
-			mes "You think these are";
-			mes "the best quality Lemons?";
-			mes "Take a closer look!";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] You think these are";
+			mes "[DRY-RUN] the best quality Lemons?";
+			mes "[DRY-RUN] Take a closer look!";
 			next;
-			mes "[Mali the Spicy]";
-			mes "The skin of these";
-			mes "Lemons lack luster";
-			mes "and they don't even smell";
-			mes "fresh! They're just";
-			mes "common Lemons!";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] The skin of these";
+			mes "[DRY-RUN] Lemons lack luster";
+			mes "[DRY-RUN] and they don't even smell";
+			mes "[DRY-RUN] fresh! They're just";
+			mes "[DRY-RUN] common Lemons!";
 			close;
 		} else if (tomyumgoong == 5) {
 			if (countitem(568) > 9) {
 				emotion ET_SURPRISE;
-				mes "[Mali the Spicy]";
-				mes "Welcome back!";
-				mes "Wow, you came back";
-				mes "really fast! Okay, let me";
-				mes "see the Lemons";
-				mes "you brought?";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Welcome back!";
+				mes "[DRY-RUN] Wow, you came back";
+				mes "[DRY-RUN] really fast! Okay, let me";
+				mes "[DRY-RUN] see the Lemons";
+				mes "[DRY-RUN] you brought?";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Wow, great!";
-				mes "These are really fresh Lemons!";
-				mes "How could you bring all of these by yourself? Thanks for your trouble~";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Wow, great!";
+				mes "[DRY-RUN] These are really fresh Lemons!";
+				mes "[DRY-RUN] How could you bring all of these by yourself? Thanks for your trouble~";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Now, you should go buy";
-				mes "some ^CE0000Chiles^000000 and some";
-				mes "other materials in the Market.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Now, you should go buy";
+				mes "[DRY-RUN] some ^CE0000Chiles^000000 and some";
+				mes "[DRY-RUN] other materials in the Market.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "When you talk";
-				mes "to the Merchants";
-				mes "in the Market, they";
-				mes "will know what you want.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] When you talk";
+				mes "[DRY-RUN] to the Merchants";
+				mes "[DRY-RUN] in the Market, they";
+				mes "[DRY-RUN] will know what you want.";
 				next;
-				if (select("Okay, I'll be right back.:Ah, I'm tired now. Let me take a rest first...") == 1) {
+				if (select("[DRY-RUN] Okay, I'll be right back.:Ah, I'm tired now. Let me take a rest first...") == 1) {
 					delitem 568,10; //Lemon
 					set tomyumgoong,6;
 					changequest 8125,8126;
-					mes "[Mali the Spicy]";
-					mes "See you in a bit~";
+					mes "[DRY-RUN] [Mali the Spicy]";
+					mes "[DRY-RUN] See you in a bit~";
 					close;
 				}
-				mes "[Mali the Spicy]";
-				mes "It's your call.";
-				mes "But remember...";
-				mes "The Shrimps might go bad";
-				mes "while you're taking a rest.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] It's your call.";
+				mes "[DRY-RUN] But remember...";
+				mes "[DRY-RUN] The Shrimps might go bad";
+				mes "[DRY-RUN] while you're taking a rest.";
 				close;
 			}
-			mes "[Mali the Spicy]";
-			mes "Huh...?";
-			mes "What did you";
-			mes "do with Lemons?";
-			mes "You didn't eat them";
-			mes "all on the way here, did you?";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] Huh...?";
+			mes "[DRY-RUN] What did you";
+			mes "[DRY-RUN] do with Lemons?";
+			mes "[DRY-RUN] You didn't eat them";
+			mes "[DRY-RUN] all on the way here, did you?";
 			close;
 		}
-		mes "[Mali the Spicy]";
-		mes "Alright...";
-		mes "I'm counting on you";
-		mes "to get the best Lemons";
-		mes "from the guy that owns that tree.";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] Alright...";
+		mes "[DRY-RUN] I'm counting on you";
+		mes "[DRY-RUN] to get the best Lemons";
+		mes "[DRY-RUN] from the guy that owns that tree.";
 		next;
-		mes "[Mali the Spicy]";
-		mes "Somehow, you've got";
-		mes "to get those high quality";
-		mes "Lemons so that I can make";
-		mes "some Tom Yum Goong!";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] Somehow, you've got";
+		mes "[DRY-RUN] to get those high quality";
+		mes "[DRY-RUN] Lemons so that I can make";
+		mes "[DRY-RUN] some Tom Yum Goong!";
 		close;
 	} else if (tomyumgoong == 6) {
 		if (countitem(7286) > 29) {
-			mes "[Mali the Spicy]";
-			mes "I don't understand...";
-			mes "Where did you get these";
-			mes "bad ingredients?! Didn't";
-			mes "I tell you that my";
-			mes "Tom Yum Goong";
-			mes "requires the best?!";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] I don't understand...";
+			mes "[DRY-RUN] Where did you get these";
+			mes "[DRY-RUN] bad ingredients?! Didn't";
+			mes "[DRY-RUN] I tell you that my";
+			mes "[DRY-RUN] Tom Yum Goong";
+			mes "[DRY-RUN] requires the best?!";
 			close;
 		}
-		mes "[Mali the Spicy]";
-		mes "I know you've been working hard to do me this favor. I hope you'll put forth that last little bit of effort to finish this.";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] I know you've been working hard to do me this favor. I hope you'll put forth that last little bit of effort to finish this.";
 		next;
-		mes "[Malli the Spicy]";
-		mes "Please go take a look in the Market. I don't doubt that it will be a good experience. After all, my fantastic Tom Yum Goong is waiting for you!";
+		mes "[DRY-RUN] [Malli the Spicy]";
+		mes "[DRY-RUN] Please go take a look in the Market. I don't doubt that it will be a good experience. After all, my fantastic Tom Yum Goong is waiting for you!";
 		close;
 	} else if (tomyumgoong == 7) {
 		if (MaxWeight - Weight > 1499) {
 			if (countitem(7286) > 29) {
 				delitem 7286,30; //Chilli
 				emotion ET_SURPRISE;
-				mes "[Mali the Spicy]";
-				mes "Now...";
-				mes "Everything is all set!";
-				mes "Before we start, let me";
-				mes "check the materials.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Now...";
+				mes "[DRY-RUN] Everything is all set!";
+				mes "[DRY-RUN] Before we start, let me";
+				mes "[DRY-RUN] check the materials.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "^CE0000Shrimp^000000, ^CE0000Chiles^000000, ^CE0000Lemons^000000...";
-				mes "Fish sauce and other little things...";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] ^CE0000Shrimp^000000, ^CE0000Chiles^000000, ^CE0000Lemons^000000...";
+				mes "[DRY-RUN] Fish sauce and other little things...";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Perfect!";
-				mes "Shall we begin?";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Perfect!";
+				mes "[DRY-RUN] Shall we begin?";
 				next;
-				mes "^FF0000*Tuk*^000000";
-				mes "^9C009C*Tup*^000000";
-				mes "^009C00*Puk*^000000";
+				mes "[DRY-RUN] ^FF0000*Tuk*^000000";
+				mes "[DRY-RUN] ^9C009C*Tup*^000000";
+				mes "[DRY-RUN] ^009C00*Puk*^000000";
 				specialeffect EF_ENCHANTPOISON;
 				next;
-				mes "^FF0031*Chop chop*^000000";
-				mes "^FF9C00*Tup tup tup*^000000";
-				mes "^639CFF*Pu pu^000000 -";
+				mes "[DRY-RUN] ^FF0031*Chop chop*^000000";
+				mes "[DRY-RUN] ^FF9C00*Tup tup tup*^000000";
+				mes "[DRY-RUN] ^639CFF*Pu pu^000000 -";
 				specialeffect EF_VENOMDUST;
 				next;
-				mes "[Mali the Spicy]";
-				mes "- ^9C6300Tup tup^000000 ^006363chook^000000";
-				mes "^316363Chop chop^000000";
-				mes "^FF0000Tup tup tup^000000 ^009C00Pu pu^000000 -";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] - ^9C6300Tup tup^000000 ^006363chook^000000";
+				mes "[DRY-RUN] ^316363Chop chop^000000";
+				mes "[DRY-RUN] ^FF0000Tup tup tup^000000 ^009C00Pu pu^000000 -";
 				specialeffect EF_STONECURSE;
 				specialeffect EF_HASTEUP;
 				specialeffect EF_BEGINSPELL;
 				next;
-				mes "[Mali the Spicy]";
-				mes "Wah^00009Cah^0000FFahhhh^0063FFaaaahhh^000000!";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Wah^00009Cah^0000FFahhhh^0063FFaaaahhh^000000!";
 				emotion ET_HUK;
 				specialeffect EF_FLASHER;
 				specialeffect EF_LORD;
 				next;
-				mes "[Mali the Spicy]";
-				mes " ...";
-				mes " ......";
-				mes " .........";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN]  ...";
+				mes "[DRY-RUN]  ......";
+				mes "[DRY-RUN]  .........";
 				next;
 				set tomyumgoong,8;
 				completequest 8126;
 				getitem 566,10; //Tomyumkung
 				emotion ET_BEST;
-				mes "[Mali the Spicy]";
-				mes "Here's your";
-				mes "Tom Yum Goong!";
-				mes "Ah~ This taste,";
-				mes "this scent... Yeah.";
-				mes "I know I did a good job.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Here's your";
+				mes "[DRY-RUN] Tom Yum Goong!";
+				mes "[DRY-RUN] Ah~ This taste,";
+				mes "[DRY-RUN] this scent... Yeah.";
+				mes "[DRY-RUN] I know I did a good job.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Do you know what is the secret of Tom Yum Goong? It isn't simply just food. This has the power to heal you, and help you get into better shape.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Do you know what is the secret of Tom Yum Goong? It isn't simply just food. This has the power to heal you, and help you get into better shape.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Because...";
-				mes "It contains the";
-				mes "power of God.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Because...";
+				mes "[DRY-RUN] It contains the";
+				mes "[DRY-RUN] power of God.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Okay...!";
-				mes "I'm giving you";
-				mes "10 Tom Yum Goong";
-				mes "free of charge~";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Okay...!";
+				mes "[DRY-RUN] I'm giving you";
+				mes "[DRY-RUN] 10 Tom Yum Goong";
+				mes "[DRY-RUN] free of charge~";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Thank you for all the trouble that you have been though to get these ingredients. It would make me happy if you shared Tom Yum Goong with your friends.";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Thank you for all the trouble that you have been though to get these ingredients. It would make me happy if you shared Tom Yum Goong with your friends.";
 				next;
-				mes "[Mali the Spicy]";
-				mes "Share the flavor of Ayotaya, and let them know how beautiful our land is. It was good to see you, take care now~";
+				mes "[DRY-RUN] [Mali the Spicy]";
+				mes "[DRY-RUN] Share the flavor of Ayotaya, and let them know how beautiful our land is. It was good to see you, take care now~";
 				close;
 			}
-			mes "[Mali the Spicy]";
-			mes "Huh? What did you do with the Chiles? You didn't eat them all on the way here, did you?";
+			mes "[DRY-RUN] [Mali the Spicy]";
+			mes "[DRY-RUN] Huh? What did you do with the Chiles? You didn't eat them all on the way here, did you?";
 			close;
 		}
-		mes "[Mali the Spicy]";
-		mes "Hmm...";
-		mes "You seem to be carrying too many things. Why don't you free up some space in your inventory first, and then come back?";
+		mes "[DRY-RUN] [Mali the Spicy]";
+		mes "[DRY-RUN] Hmm...";
+		mes "[DRY-RUN] You seem to be carrying too many things. Why don't you free up some space in your inventory first, and then come back?";
 		close;
 	}
 	emotion ET_KEK;
-	mes "[Mali the Spicy]";
-	mes "Ah...!";
-	mes "So busy, so busy!";
-	mes "My customers never get tired of";
-	mes "the taste of my Tom Yum Goong!";
-	mes "Heh heh heh~!";
+	mes "[DRY-RUN] [Mali the Spicy]";
+	mes "[DRY-RUN] Ah...!";
+	mes "[DRY-RUN] So busy, so busy!";
+	mes "[DRY-RUN] My customers never get tired of";
+	mes "[DRY-RUN] the taste of my Tom Yum Goong!";
+	mes "[DRY-RUN] Heh heh heh~!";
 	close;
 }
 
 ayothaya,153,86,5	script	Thongpool#ayo	843,{
 	if ((MaxWeight-Weight) < 2000 || checkweight(1201,1) == 0) {
-		mes "- Wait a minute! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please enlighten your weight -";
-		mes "- and try again. -";
+		mes "[DRY-RUN] - Wait a minute! -";
+		mes "[DRY-RUN] - Currently you're carrying -";
+		mes "[DRY-RUN] - too many items with you. -";
+		mes "[DRY-RUN] - Please enlighten your weight -";
+		mes "[DRY-RUN] - and try again. -";
 		close;
 	}
 	if (tomyumgoong == 2) {
-		mes "[Thongpool]";
-		mes "Come adventurers,";
-		mes "take a look! I have";
-		mes "plenty of Shrimp!";
+		mes "[DRY-RUN] [Thongpool]";
+		mes "[DRY-RUN] Come adventurers,";
+		mes "[DRY-RUN] take a look! I have";
+		mes "[DRY-RUN] plenty of Shrimp!";
 		next;
-		mes "[Thongpool]";
-		mes "You're looking for Shrimp,";
-		mes "aren't you? How many Shrimp";
-		mes "do you need? Twenty? Forty?";
+		mes "[DRY-RUN] [Thongpool]";
+		mes "[DRY-RUN] You're looking for Shrimp,";
+		mes "[DRY-RUN] aren't you? How many Shrimp";
+		mes "[DRY-RUN] do you need? Twenty? Forty?";
 		next;
-		if (select("I need Shrimp for Tom Yum Goong.:Err, they look expensive.") == 1) {
-			mes "[Thongpool]";
-			mes "Ah! I guess Ms. Mali the Spicy recommended me to you. I guess";
-			mes "that also means you want to buy them in bulk?";
+		if (select("[DRY-RUN] I need Shrimp for Tom Yum Goong.:Err, they look expensive.") == 1) {
+			mes "[DRY-RUN] [Thongpool]";
+			mes "[DRY-RUN] Ah! I guess Ms. Mali the Spicy recommended me to you. I guess";
+			mes "[DRY-RUN] that also means you want to buy them in bulk?";
 			next;
-			mes "[Thongpool]";
-			mes "After all,";
-			mes "you'll need a larger";
-			mes "amount of Shrimp to";
-			mes "cook Tom Yum Goong.";
+			mes "[DRY-RUN] [Thongpool]";
+			mes "[DRY-RUN] After all,";
+			mes "[DRY-RUN] you'll need a larger";
+			mes "[DRY-RUN] amount of Shrimp to";
+			mes "[DRY-RUN] cook Tom Yum Goong.";
 			next;
-			mes "[Thongpool]";
-			mes "Oh yes, you will need 20 Shrimps for Ms. Mali's Tom Yum Goong.";
-			mes "I'll even give you a discount:";
-			mes "11,000 zeny for 20 shrimps.";
-			mes "What do you say?";
+			mes "[DRY-RUN] [Thongpool]";
+			mes "[DRY-RUN] Oh yes, you will need 20 Shrimps for Ms. Mali's Tom Yum Goong.";
+			mes "[DRY-RUN] I'll even give you a discount:";
+			mes "[DRY-RUN] 11,000 zeny for 20 shrimps.";
+			mes "[DRY-RUN] What do you say?";
 			next;
-			if (select("I will take them.:I could get 100 Jellopies for that much!") == 1) {
+			if (select("[DRY-RUN] I will take them.:I could get 100 Jellopies for that much!") == 1) {
 				if (Zeny > 10999) {
 					if (MaxWeight - Weight > 3999) {
 						set Zeny, Zeny-11000;
 						set tomyumgoong,3;
 						getitem 567,20; //Prawn
 						emotion ET_BEST;
-						mes "[Thongpool]";
-						mes "Good, now you have the";
-						mes "freshest Shrimp in this village! It's time for you to go back and ask Ms. Mali to cook them for you.";
+						mes "[DRY-RUN] [Thongpool]";
+						mes "[DRY-RUN] Good, now you have the";
+						mes "[DRY-RUN] freshest Shrimp in this village! It's time for you to go back and ask Ms. Mali to cook them for you.";
 						close;
 					}
-					mes "[Thongpool]";
-					mes "Awww...";
-					mes "You're carrying too much stuff with you. I don't think you can carry more than what you have right now.";
+					mes "[DRY-RUN] [Thongpool]";
+					mes "[DRY-RUN] Awww...";
+					mes "[DRY-RUN] You're carrying too much stuff with you. I don't think you can carry more than what you have right now.";
 					close;
 				}
-				mes "[Thongpool]";
-				mes "Awww...";
-				mes "You don't have";
-				mes "enough money.";
+				mes "[DRY-RUN] [Thongpool]";
+				mes "[DRY-RUN] Awww...";
+				mes "[DRY-RUN] You don't have";
+				mes "[DRY-RUN] enough money.";
 				close;
 			}
-			mes "[Thongpool]";
-			mes "Well well well...";
-			mes "You might fill your hungry stomach with that many Jellopies but they wouldn't taste as good as my Shrimp!";
+			mes "[DRY-RUN] [Thongpool]";
+			mes "[DRY-RUN] Well well well...";
+			mes "[DRY-RUN] You might fill your hungry stomach with that many Jellopies but they wouldn't taste as good as my Shrimp!";
 			close;
 		}
-		mes "[Thongpool]";
-		mes "What...?";
-		mes "Do you think";
-		mes "it's expensive?";
-		mes "But the fantastic taste";
-		mes "of Tom Yum Goong";
-		mes "is priceless!";
+		mes "[DRY-RUN] [Thongpool]";
+		mes "[DRY-RUN] What...?";
+		mes "[DRY-RUN] Do you think";
+		mes "[DRY-RUN] it's expensive?";
+		mes "[DRY-RUN] But the fantastic taste";
+		mes "[DRY-RUN] of Tom Yum Goong";
+		mes "[DRY-RUN] is priceless!";
 		close;
 	} else if (tomyumgoong == 3) {
-		mes "[Thongpool]";
-		mes "Mmm...?";
-		mes "Did you need";
-		mes "more Shrimps?";
-		mes "Would you like";
-		mes "to buy more?";
+		mes "[DRY-RUN] [Thongpool]";
+		mes "[DRY-RUN] Mmm...?";
+		mes "[DRY-RUN] Did you need";
+		mes "[DRY-RUN] more Shrimps?";
+		mes "[DRY-RUN] Would you like";
+		mes "[DRY-RUN] to buy more?";
 		next;
-		if (select("Yes!:No, thanks.") == 1) {
+		if (select("[DRY-RUN] Yes!:No, thanks.") == 1) {
 			if (Zeny > 10999) {
 				if (MaxWeight - Weight > 3999) {
 					set Zeny, Zeny-11000;
 					getitem 567,20; //Prawn
-					mes "[Thongpool]";
-					mes "There you go~";
-					mes "The freshest Shrimp you can ever get in this village, and maybe even the world!";
+					mes "[DRY-RUN] [Thongpool]";
+					mes "[DRY-RUN] There you go~";
+					mes "[DRY-RUN] The freshest Shrimp you can ever get in this village, and maybe even the world!";
 					close;
 				}
-				mes "[Thongpool]";
-				mes "Awww...";
-				mes "You're carrying too much stuff with you. I don't think you can carry more than what you have right now.";
+				mes "[DRY-RUN] [Thongpool]";
+				mes "[DRY-RUN] Awww...";
+				mes "[DRY-RUN] You're carrying too much stuff with you. I don't think you can carry more than what you have right now.";
 				close;
 			}
-			mes "[Thongpool]";
-			mes "Awww...";
-			mes "You don't have";
-			mes "enough money.";
+			mes "[DRY-RUN] [Thongpool]";
+			mes "[DRY-RUN] Awww...";
+			mes "[DRY-RUN] You don't have";
+			mes "[DRY-RUN] enough money.";
 			close;
 		}
-		mes "[Thongpool]";
-		mes "Good, now you have gotten the freshest shrimps in this village!";
-		mes "It's time for you to go back and ask Ms. Mali to cook for you.";
+		mes "[DRY-RUN] [Thongpool]";
+		mes "[DRY-RUN] Good, now you have gotten the freshest shrimps in this village!";
+		mes "[DRY-RUN] It's time for you to go back and ask Ms. Mali to cook for you.";
 		close;
 	}
-	mes "[Thongpool]";
-	mes "Welcome, welcome!";
-	mes "I've got the best Shrimp caught in the cleanest waters in the world~!";
+	mes "[DRY-RUN] [Thongpool]";
+	mes "[DRY-RUN] Welcome, welcome!";
+	mes "[DRY-RUN] I've got the best Shrimp caught in the cleanest waters in the world~!";
 	close;
 }
 
@@ -2936,122 +2936,122 @@ OnTouch_:
 
 ayothaya,213,94,7	script	Merchant#ayo	841,{
 	if (tomyumgoong == 6) {
-		mes "[Merchant Thongdum]";
-		mes "Hello, there~";
-		mes "Are you looking for";
-		mes "ingredients to make";
-		mes "Tom Yum Goong?";
+		mes "[DRY-RUN] [Merchant Thongdum]";
+		mes "[DRY-RUN] Hello, there~";
+		mes "[DRY-RUN] Are you looking for";
+		mes "[DRY-RUN] ingredients to make";
+		mes "[DRY-RUN] Tom Yum Goong?";
 		next;
-		mes "[Merchant Thongdum]";
-		mes "Let's see...";
-		mes "I'm selling chiles,";
-		mes "fish sauce, and some";
-		mes "spices and flavorings";
-		mes "you'll need. I'll sell";
-		mes "it all to you for 2,000 zeny.";
+		mes "[DRY-RUN] [Merchant Thongdum]";
+		mes "[DRY-RUN] Let's see...";
+		mes "[DRY-RUN] I'm selling chiles,";
+		mes "[DRY-RUN] fish sauce, and some";
+		mes "[DRY-RUN] spices and flavorings";
+		mes "[DRY-RUN] you'll need. I'll sell";
+		mes "[DRY-RUN] it all to you for 2,000 zeny.";
 		next;
-		if (select("Thanks, I'll take it.:It's a rip-off, man!") == 1) {
+		if (select("[DRY-RUN] Thanks, I'll take it.:It's a rip-off, man!") == 1) {
 			emotion ET_THANKS;
 			if (Zeny > 1999) {
 				if (MaxWeight - Weight > 1199) {
 					set Zeny, Zeny-2000;
 					set tomyumgoong,7;
 					getitem 7286,30; //Chilli
-					mes "[Merchant Thongdum]";
-					mes "Thank you.";
-					mes "I hope you will enjoy";
-					mes "your Tom Yum Goong~";
+					mes "[DRY-RUN] [Merchant Thongdum]";
+					mes "[DRY-RUN] Thank you.";
+					mes "[DRY-RUN] I hope you will enjoy";
+					mes "[DRY-RUN] your Tom Yum Goong~";
 					close;
 				}
-				mes "[Merchant Thongdum]";
-				mes "Uh oh...";
-				mes "It looks like";
-				mes "you're carrying";
-				mes "too much stuff";
-				mes "right now.";
+				mes "[DRY-RUN] [Merchant Thongdum]";
+				mes "[DRY-RUN] Uh oh...";
+				mes "[DRY-RUN] It looks like";
+				mes "[DRY-RUN] you're carrying";
+				mes "[DRY-RUN] too much stuff";
+				mes "[DRY-RUN] right now.";
 				next;
-				mes "[Merchant Thongdum]";
-				mes "I can't give you";
-				mes "anything if you don't";
-				mes "have the room to hold it!";
+				mes "[DRY-RUN] [Merchant Thongdum]";
+				mes "[DRY-RUN] I can't give you";
+				mes "[DRY-RUN] anything if you don't";
+				mes "[DRY-RUN] have the room to hold it!";
 				close;
 			}
-			mes "[Merchant Thongdum]";
-			mes "Hmm...?";
-			mes "Right now, it looks";
-			mes "like you don't have the";
-			mes "money to buy what you";
-			mes "need from me.";
+			mes "[DRY-RUN] [Merchant Thongdum]";
+			mes "[DRY-RUN] Hmm...?";
+			mes "[DRY-RUN] Right now, it looks";
+			mes "[DRY-RUN] like you don't have the";
+			mes "[DRY-RUN] money to buy what you";
+			mes "[DRY-RUN] need from me.";
 			close;
 		}
 		emotion ET_STARE_ABOUT;
-		mes "[Merchant Thongdum]";
-		mes "Don't say that.";
-		mes "My prices are always";
-		mes "reasonable. I want you to know";
-		mes "that I'm a respectable Merchant.";
+		mes "[DRY-RUN] [Merchant Thongdum]";
+		mes "[DRY-RUN] Don't say that.";
+		mes "[DRY-RUN] My prices are always";
+		mes "[DRY-RUN] reasonable. I want you to know";
+		mes "[DRY-RUN] that I'm a respectable Merchant.";
 		close;
 	} else if (tomyumgoong == 7) {
-		mes "[Merchant Thongdum]";
-		mes "I thought I provided you";
-		mes "with enough ingredients, but";
-		mes "now that I think about it, I don't";
-		mes "know how much Tom Yum Goong";
-		mes "you're making.";
+		mes "[DRY-RUN] [Merchant Thongdum]";
+		mes "[DRY-RUN] I thought I provided you";
+		mes "[DRY-RUN] with enough ingredients, but";
+		mes "[DRY-RUN] now that I think about it, I don't";
+		mes "[DRY-RUN] know how much Tom Yum Goong";
+		mes "[DRY-RUN] you're making.";
 		next;
-		mes "[Merchant Thongdum]";
-		mes "Would you like to";
-		mes "buy some more Chilis?";
+		mes "[DRY-RUN] [Merchant Thongdum]";
+		mes "[DRY-RUN] Would you like to";
+		mes "[DRY-RUN] buy some more Chilis?";
 		next;
-		if (select("No, thanks.:Yes, please.") == 1) {
-			mes "[Merchant Thongdum]";
-			mes "Fare well~";
+		if (select("[DRY-RUN] No, thanks.:Yes, please.") == 1) {
+			mes "[DRY-RUN] [Merchant Thongdum]";
+			mes "[DRY-RUN] Fare well~";
 			close;
 		}
 		if (Zeny > 1999) {
 			if (MaxWeight - Weight > 1199) {
 				set Zeny, Zeny-2000;
 				getitem 7286,30; //Chilli
-				mes "[Merchant Thongdum]";
-				mes "Thank you,";
-				mes "come again!";
+				mes "[DRY-RUN] [Merchant Thongdum]";
+				mes "[DRY-RUN] Thank you,";
+				mes "[DRY-RUN] come again!";
 				close;
 			}
-			mes "[Merchant Thongdum]";
-			mes "Uh oh...";
-			mes "It looks like";
-			mes "you're carrying";
-			mes "too much stuff";
-			mes "right now.";
+			mes "[DRY-RUN] [Merchant Thongdum]";
+			mes "[DRY-RUN] Uh oh...";
+			mes "[DRY-RUN] It looks like";
+			mes "[DRY-RUN] you're carrying";
+			mes "[DRY-RUN] too much stuff";
+			mes "[DRY-RUN] right now.";
 			next;
-			mes "[Merchant Thongdum]";
-			mes "I can't give you";
-			mes "anything if you don't";
-			mes "have the room to hold it!";
+			mes "[DRY-RUN] [Merchant Thongdum]";
+			mes "[DRY-RUN] I can't give you";
+			mes "[DRY-RUN] anything if you don't";
+			mes "[DRY-RUN] have the room to hold it!";
 			close;
 		}
-		mes "[Merchant Thongdum]";
-		mes "Hmm...?";
-		mes "Right now, it looks";
-		mes "like you don't have the";
-		mes "money to buy what you";
-		mes "need from me.";
+		mes "[DRY-RUN] [Merchant Thongdum]";
+		mes "[DRY-RUN] Hmm...?";
+		mes "[DRY-RUN] Right now, it looks";
+		mes "[DRY-RUN] like you don't have the";
+		mes "[DRY-RUN] money to buy what you";
+		mes "[DRY-RUN] need from me.";
 		close;
 	}
-	mes "[Merchant Thongdum]";
-	mes "Hello there!";
-	mes "Ever try a Chili before?";
+	mes "[DRY-RUN] [Merchant Thongdum]";
+	mes "[DRY-RUN] Hello there!";
+	mes "[DRY-RUN] Ever try a Chili before?";
 	next;
-	mes "[Merchant Thongdom]";
-	mes "Despite its tiny appearance,";
-	mes "it has a very strong flavor. It's also hot and spicy, so you should be careful when you eat one.";
+	mes "[DRY-RUN] [Merchant Thongdom]";
+	mes "[DRY-RUN] Despite its tiny appearance,";
+	mes "[DRY-RUN] it has a very strong flavor. It's also hot and spicy, so you should be careful when you eat one.";
 	next;
-	mes "[Merchant Thongdum]";
-	mes "The people of Ayotaya enjoy sensational food with distinct, spicy flavors. In Ayotayan cuisine, we use things like Chilis, garlic, ginger and cilantro.";
+	mes "[DRY-RUN] [Merchant Thongdum]";
+	mes "[DRY-RUN] The people of Ayotaya enjoy sensational food with distinct, spicy flavors. In Ayotayan cuisine, we use things like Chilis, garlic, ginger and cilantro.";
 	next;
-	mes "[Merchant Thongdum]";
-	mes "I'm selling Chilis,";
-	mes "so if you need any,";
-	mes "please come to me~";
+	mes "[DRY-RUN] [Merchant Thongdum]";
+	mes "[DRY-RUN] I'm selling Chilis,";
+	mes "[DRY-RUN] so if you need any,";
+	mes "[DRY-RUN] please come to me~";
 	close;
 }
