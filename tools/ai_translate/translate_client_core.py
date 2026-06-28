@@ -31,6 +31,9 @@ CN_RE = re.compile(r"[\u4e00-\u9fff]")
 EN_WORD_RE = re.compile(r"[A-Za-z]{2,}")
 FORMAT_RE = re.compile(r"%(?:\d+\$)?[-+0 #]*(?:\*|\d+)?(?:\.(?:\*|\d+))?[hljztL]*[diuoxXfFeEgGaAcspn%]")
 COLOR_RE = re.compile(r"\^[0-9A-Fa-f]{6}")
+LOOSE_COLOR_RE = re.compile(r"\^\s*[0-9A-Fa-f]{6}")
+INFO_TAG_RE = re.compile(r"<INFO>.*?</INFO>", re.IGNORECASE)
+TAG_RE = re.compile(r"</?[A-Z]+>", re.IGNORECASE)
 LUA_STRING_RE = re.compile(r'"((?:[^"\\]|\\.)*)"')
 XML_TEXT_RE = re.compile(r">(.*?)<")
 
@@ -81,7 +84,10 @@ def should_translate(text: str) -> bool:
         return False
     if re.fullmatch(r"[A-Z0-9_.:/\\-]+", stripped):
         return False
-    return bool(EN_WORD_RE.search(stripped))
+    visible_text = LOOSE_COLOR_RE.sub("", stripped)
+    visible_text = INFO_TAG_RE.sub("", visible_text)
+    visible_text = TAG_RE.sub("", visible_text)
+    return bool(EN_WORD_RE.search(visible_text))
 
 
 def make_item_id(file: str, kind: str, line_index: int, segment_index: int, original: str) -> str:
@@ -291,6 +297,7 @@ Rules:
 - Preserve ids exactly.
 - Preserve # delimiters only if they are part of the provided text.
 - Preserve printf placeholders, color codes like ^RRGGBB, commands (/sit, @commands), item/skill constants and numbers.
+- Preserve client navigation tags like <NAVI>...</NAVI> and <INFO>...</INFO> exactly except visible names may be translated.
 - Use concise in-game Simplified Chinese.
 - Keep proper nouns recognizable; transliterate if needed.
 - Do not add explanations.

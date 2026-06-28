@@ -23,6 +23,7 @@ REPRESENTATIVE_CLIENT_FILES = [
     r"data\luafiles514\lua files\skillinfoz\skilldescript.lub",
     r"System\OngoingQuests.lub",
     r"SystemEN\OngoingQuests.lub",
+    r"System\OngoingQuestInfoList_Sakray.lub",
     r"System\LuaFiles514\itemInfo.lua",
     r"SystemEN\LuaFiles514\itemInfo.lua",
     r"System\spopup.lua",
