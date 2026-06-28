@@ -56,6 +56,11 @@ JOBNAME_MODEL_RE = re.compile(
     r'^(\s*\[jobtbl\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]+\.gr2)(",?\s*)$',
     re.MULTILINE,
 )
+MAP_BACKGROUND_RELS = (
+    r"System\mapInfo_sak.lub",
+    r"SystemEN\mapInfo.lub",
+)
+MAP_BACKGROUND_RE = re.compile(r'backgroundBmp\s*=\s*"(?P<value>[^"]*)"')
 
 
 def read_text_file(path: Path) -> str | None:
@@ -326,6 +331,59 @@ def check_model_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> li
     return issues
 
 
+def map_background_values(text: str) -> list[dict]:
+    values = []
+    for match in MAP_BACKGROUND_RE.finditer(text):
+        values.append(
+            {
+                "line": text.count("\n", 0, match.start()) + 1,
+                "value": match.group("value"),
+            }
+        )
+    return values
+
+
+def check_map_background_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in MAP_BACKGROUND_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_text = read_text_file(current_path)
+        backup_text = read_text_file(backup_path)
+        if current_text is None or backup_text is None:
+            continue
+        current_values = map_background_values(current_text)
+        backup_values = map_background_values(backup_text)
+        diffs = []
+        if len(current_values) != len(backup_values):
+            diffs.append(
+                {
+                    "kind": "value_count",
+                    "current": len(current_values),
+                    "backup": len(backup_values),
+                }
+            )
+        for current, original in zip(current_values, backup_values):
+            has_non_ascii = any(ord(char) > 127 for char in current["value"])
+            if current["value"] == original["value"] and not has_non_ascii:
+                continue
+            diffs.append(
+                {
+                    "kind": "value",
+                    "line": current["line"],
+                    "current": current["value"],
+                    "backup": original["value"],
+                }
+            )
+            if len(diffs) >= 50:
+                break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
 def check_missing_commas(paths: list[Path]) -> list[dict]:
     issues = []
     for path in paths:
@@ -356,6 +414,7 @@ def build_report(client_dir: Path, backup_dir: Path) -> dict:
         "iteminfo_resource_diffs": check_iteminfo_resources(client_dir, backups),
         "itemdb_key_diffs": check_itemdb_key_diffs(client_dir, backups),
         "model_resource_diffs": check_model_resource_diffs(client_dir, backups),
+        "map_background_diffs": check_map_background_diffs(client_dir, backups),
         "missing_commas": check_missing_commas(paths),
     }
 
@@ -379,6 +438,7 @@ def main() -> int:
         "iteminfo_resource_diffs": len(report["iteminfo_resource_diffs"]),
         "itemdb_key_diffs": len(report["itemdb_key_diffs"]),
         "model_resource_diffs": len(report["model_resource_diffs"]),
+        "map_background_diffs": len(report["map_background_diffs"]),
         "missing_commas": len(report["missing_commas"]),
         "output": str(output),
     }
@@ -389,6 +449,7 @@ def main() -> int:
         "iteminfo_resource_diffs",
         "itemdb_key_diffs",
         "model_resource_diffs",
+        "map_background_diffs",
         "missing_commas",
     )
     return 1 if any(summary[key] for key in issue_keys) else 0
