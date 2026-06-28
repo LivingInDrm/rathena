@@ -85,13 +85,13 @@ prt_fild08d,350,219,4	duplicate(Guard_izlude)	Guard#izlude_d	8W_SOLDIER
 // Channel Warper :: channel
 //============================================================
 function	script	F_IzludeChannel	{
-	mes "[Channel Warp Official]";
-	mes "Izlude is a verly lively place is it not?";
-	mes "I am here to help make Izlude feel more smooth!";
-	mes "I can send you to another copy of Izlude.";
-	mes "Do you want to go to another copy?";
+	mes "[频道传送官]";
+	mes "伊兹鲁德是个非常热闹的地方，不是吗？我";
+	mes "在这里帮助让伊兹鲁德变得更加顺畅！我";
+	mes "可以把你送到另一个伊兹鲁德的副本。你";
+	mes "想去另一个副本吗？";
 	next;
-	set .@i, select(getarg(0)+":Never mind");
+	set .@i, select(getarg(0)+":没关系");
 	if (.@i < 6) {
 		setarray .@maps$[1],"izlude","izlude_a","izlude_b","izlude_c","izlude_d";
 		savepoint .@maps$[.@i],128,98,1,1;
@@ -112,59 +112,59 @@ izlude,143,205,7	script	Talkative Kid#iz	4_F_KID2,{
 	end;
 
 OnTimer64000:
-	npctalk "Talkative Kid : I used all my Novice Red Potions. What should I do?";
+	npctalk "爱说话的孩子：我用完了所有的新手红药水。我该怎么办？";
 	end;
 
 OnTimer72000:
-	npctalk "Talkative Kid : Where is the shop?";
+	npctalk "爱说话的孩子：商店在哪里？";
 	end;
 
 OnTimer136000:
-	npctalk "Talkative Kid : Idiot! You do not know about the 'shortcut window'?";
+	npctalk "爱说话的孩子：笨蛋！你不知道‘快捷窗口’吗？";
 	end;
 
 OnTimer144000:
-	npctalk "Talkative Kid : The items in your inventory can be dragged and put in the shortcut window.";
+	npctalk "爱说话的孩子：你可以把背包里的物品拖到快捷窗口里。";
 	end;
 
 OnTimer212000:
-	npctalk "Talkative Kid : I got so many beginner's items in the Academy!";
+	npctalk "爱说话的孩子：我在学院得到了很多新手物品！";
 	end;
 
 OnTimer276000:
-	npctalk "Talkative Kid : They even gave me weapons and a shield!";
+	npctalk "爱说话的孩子：他们甚至给了我武器和盾牌！";
 	end;
 
 OnTimer284000:
-	npctalk "Talkative Kid : Just press  <Ctrl+~key> to open the map you have.";
+	npctalk "爱说话的孩子：只需按 <Ctrl+~键> 打开你拥有的地图。";
 	end;
 
 OnTimer344000:
-	npctalk "Talkative Kid : Then do you want to go Criatura Academy with me? I'm learning how to battle from Instructor Subino!";
+	npctalk "爱说话的孩子：那么，你想和我一起去克里阿图拉学院吗？我正在向苏比诺老师学习战斗！";
 	end;
 
 OnTimer348000:
-	npctalk "Talkative Kid : The Academy is in North side of Izlude. Let's go~!";
+	npctalk "爱说话的孩子：学院在伊兹鲁德的北边。我们走吧~！";
 	end;
 
 OnTimer416000:
-	npctalk "Talkative Kid : It's a system to guide you to a destination.";
+	npctalk "爱说话的孩子：这是一个引导你到达目的地的系统。";
 	end;
 
 OnTimer424000:
-	npctalk "Talkative Kid : In the basic menu, please click the [Navigation] button.";
+	npctalk "爱说话的孩子：在基本菜单中，请点击[导航]按钮。";
 	end;
 
 OnTimer492000:
-	npctalk "Talkative Kid : Whee, Ain't gonna use your brain? Please type /where in the chat window now!";
+	npctalk "爱说话的孩子：哇，难道你不想动脑子吗？请现在在聊天窗口输入 /where！";
 	end;
 
 OnTimer552000:
-	npctalk "Talkative Kid : In this case, you can push the <Enter> key.";
+	npctalk "爱说话的孩子：在这种情况下，你可以按<Enter>键。";
 	end;
 
 OnTimer560000:
-	npctalk "Talkative Kid : We are just repeating the same dialog. HaHaha.";
+	npctalk "爱说话的孩子：我们只是重复同样的对话。哈哈。";
 	end;
 
 OnTimer565000:
@@ -182,67 +182,67 @@ izlude,146,205,7	script	Talkative Adventurer#iz	4_M_KID1,{
 	end;
 
 OnTimer69000:
-	npctalk "Talkative Adventurer : You can buy potion from Merchants.";
+	npctalk "爱说话的冒险者：你可以从商人那里购买药水。";
 	end;
 
 OnTimer77000:
-	npctalk "Talkative Adventurer : It's the Potion image in the mini map.";
+	npctalk "爱说话的冒险者：这是迷你地图上的药水图标。";
 	end;
 
 OnTimer131000:
-	npctalk "Talkative Adventurer : Is there any way to use items easily?";
+	npctalk "爱说话的冒险者：有没有什么方法可以更方便地使用物品？";
 	end;
 
 OnTimer141000:
-	npctalk "Talkative Adventurer : Shortcut window? The slots at the top of the screen? How can I use it?";
+	npctalk "爱说话的冒险者：快捷窗口？屏幕顶部的插槽？我该如何使用它？";
 	end;
 
 OnTimer149000:
-	npctalk "Talkative Adventurer : For inventory, do you mean 'item' menu? Oh, it is!";
+	npctalk "爱说话的冒险者：你是指‘物品’菜单吗？哦，原来是！";
 	end;
 
 OnTimer217000:
-	npctalk "Talkative Adventurer : I have a bunch of potions?";
+	npctalk "爱说话的冒险者：我有一堆药水？";
 	end;
 
 OnTimer281000:
-	npctalk "Talkative Adventurer : What?! I should go to the Academy now!";
+	npctalk "爱说话的冒险者：什么？！我现在应该去学院！";
 	end;
 
 OnTimer279000:
-	npctalk "Talkative Adventurer : Where is Izlude? In the center?";
+	npctalk "爱说话的冒险者：伊兹鲁德在哪里？在中心吗？";
 	end;
 
 OnTimer339000:
-	npctalk "Talkative Adventurer : I do not know what to do.";
+	npctalk "爱说话的冒险者：我不知道该怎么办。";
 	end;
 
 OnTimer349000:
-	npctalk "Talkative Adventurer : Oh yea? I want to know so many things~ I will go with you!";
+	npctalk "爱说话的冒险者：哦，是吗？我想知道很多事情~我会跟你一起去！";
 	end;
 
 OnTimer411000:
-	npctalk "Talkative Adventurer : Navigation, What is that?";
+	npctalk "爱说话的冒险者：导航，那是什么？";
 	end;
 
 OnTimer421000:
-	npctalk "Talkative Adventurer : Oh-! Should I search for a Kafra Employee?";
+	npctalk "爱说话的冒险者：哦！我应该去找卡夫拉员工吗？";
 	end;
 
 OnTimer487000:
-	npctalk "Talkative Adventurer : What is the town name?";
+	npctalk "爱说话的冒险者：城镇的名字是什么？";
 	end;
 
 OnTimer497000:
-	npctalk "Talkative Adventurer : I cannot see the part where I can write something in the chat window?";
+	npctalk "爱说话的冒险者：我看不到可以在聊天窗口输入内容的地方？";
 	end;
 
 OnTimer557000:
-	npctalk "Talkative Adventurer : Oh you smarty...";
+	npctalk "爱说话的冒险者：哦，你真聪明……";
 	end;
 
 OnTimer555000:
-	npctalk "Talkative Adventurer : A while ago, one Novice talked to me like hey 'Talkative Adventurer'?. HaHaha.";
+	npctalk "爱说话的冒险者：不久前，一个新手跟我说‘嘿，爱说话的冒险者’？哈哈。";
 	end;
 
 OnTimer565000:
@@ -260,11 +260,11 @@ prt_fild08,338,217,7	script	Resting Adventurer#iz	4_F_SITDOWN,{
 	end;
 
 OnTimer60000:
-	npctalk "Resting Adventurer : You know what? If you are sitting, HP and SP recovery is faster.";
+	npctalk "休息的冒险者：你知道吗？如果你坐着，HP和SP恢复会更快。";
 	end;
 
 OnTimer65000:
-	npctalk "Resting Adventurer : Sitting is possible if your basic job skill level is more than 3. Shortcut is pressing the <INSERT> key.";
+	npctalk "休息的冒险者：如果你的基础职业技能等级超过3，就可以坐下。快捷键是按<INSERT>键。";
 OnInit:
 	initnpctimer;
 	end;

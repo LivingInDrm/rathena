@@ -7,59 +7,62 @@
 //============================================================
 
 prontera,246,62,3	script	Training Instructor#sol1	8W_SOLDIER,{
-	mes "[Training Instructor]";
-	mes "If you want to train in a wider area, I'll let you in.";
+	mes "[训练指导员]";
+	mes "如果你想在更广阔的区域训练，我会让你";
+	mes "进入。";
 	next;
-	mes "[Training Instructor]";
-	mes "The training ground is divided into two main areas.";
+	mes "[训练指导员]";
+	mes "训练场分为两个主要区域。";
 	next;
-	mes "[Training Instructor]";
-	mes "Upper area where you can check the applied force based on monster size.";
+	mes "[训练指导员]";
+	mes "上层区域，你可以根据怪物的大小检查施";
+	mes "加的力量。";
 	next;
-	mes "[Training Instructor]";
-	mes "The lower area where you can check the force applied depending on the monster's attribute and form.";
+	mes "[训练指导员]";
+	mes "下层区域，你可以根据怪物的属性和形态";
+	mes "检查施加的力量。";
 	next;
-	mes "[Training Instructor]";
-	mes "Where would you like to enter?";
+	mes "[训练指导员]";
+	mes "你想进入哪里？";
 	next;
-	switch( select( "Upper area", "Lower area", "Do not enter" ) ) {
+	switch( select( "上层区域", "下层区域", "禁止进入" ) ) {
 	case 1:
-		mes "[Training Instructor]";
-		mes "Then I will guide you.";
+		mes "[训练指导员]";
+		mes "那么我将引导你。";
 		close2;
 		warp "tra_fild",112,167;
 		end;
 	case 2:
-		mes "[Training Instructor]";
-		mes "Then I will guide you.";
+		mes "[训练指导员]";
+		mes "那么我将引导你。";
 		close2;
 		warp "tra_fild",111,74;
 		end;
 	case 3:
-		mes "[Training Instructor]";
-		mes "If you need guidance, come to me.";
+		mes "[训练指导员]";
+		mes "如果你需要指导，来找我。";
 		close;
 	}
 }
 
 tra_fild,111,79,3	script	Training Instructor#sol3	8W_SOLDIER,{
-	mes "[Training Instructor]";
-	mes "Are you sure you want to move to the upper section?";
+	mes "[训练指导员]";
+	mes "你确定要移动到上层吗？";
 	next;
-	switch( select( "Move", "Do not move", "Warp to Prontera." ) ) {
+	switch( select( "移动", "不要移动", "传送到普隆德拉。" ) ) {
 	case 1:
-		mes "[Training Instructor]";
-		mes "Go to upper section!!!";
+		mes "[训练指导员]";
+		mes "去上层！！！";
 		close2;
 		warp "tra_fild",112,167;
 		end;
 	case 2:
-		mes "[Training Instructor]";
-		mes "Talk to me if you need to move.";
+		mes "[训练指导员]";
+		mes "如果你需要移动，跟我说。";
 		close;
 	case 3:
-		mes "[Training Instructor]";
-		mes "I'll warp you.";
+		mes "[训练指导员]";
+		mes "我将传送你。";
 		close2;
 		warp "prontera",246,60;
 		end;
@@ -67,23 +70,23 @@ tra_fild,111,79,3	script	Training Instructor#sol3	8W_SOLDIER,{
 }
 
 tra_fild,112,171,3	script	Training Instructor#sol2	8W_SOLDIER,{
-	mes "[Training Instructor]";
-	mes "Are you sure you want to move to the lower section?";
+	mes "[训练指导员]";
+	mes "你确定要移动到下层吗？";
 	next;
-	switch( select( "Move", "Do not move", "Warp to Prontera." ) ) {
+	switch( select( "移动", "不要移动", "传送到普隆德拉。" ) ) {
 	case 1:
-		mes "[Training Instructor]";
-		mes "Go to lower section!!!";
+		mes "[训练指导员]";
+		mes "去下层！！！";
 		close2;
 		warp "tra_fild",111,74;
 		end;
 	case 2:
-		mes "[Training Instructor]";
-		mes "Talk to me if you need to move.";
+		mes "[训练指导员]";
+		mes "如果你需要移动，跟我说。";
 		close;
 	case 3:
-		mes "[Training Instructor]";
-		mes "I'll warp you.";
+		mes "[训练指导员]";
+		mes "我将传送你。";
 		close2;
 		warp "prontera",246,60;
 		end;

@@ -68,7 +68,6 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					break;
 				case 7:
 					callsub L_Mark, "^B9062FTaverns^000000";
-					mes "Only the "+F_Navi("northern","prontera,208,154","^B9062F")+" tavern";
 					mes "现在是开放的。";
 					mes .@str$;
 					viewpoint 1,208,154,6,0xFF0000;
@@ -77,10 +76,9 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					break;
 				case 8:
 					mes "[普隆德拉指南]";
-					mes "^0000FF图书馆^000000 是";
-					mes "您可以找到有用的信息，比如怪物百科全书。";
-					mes "目前有两个图书馆可用，";
-					mes "One to the "+F_Navi("northeast","prontera,120,264")+" and the other to the "+F_Navi("northwest","prontera,192,264")+".";
+					mes "^0000FF图书馆^000000是您可以找到有用的信息，比如怪";
+					mes "物百科全书。目前有两个图书馆可用，一个";
+					mes "在";
 					mes .@str$;
 					viewpoint 1,120,264,8,0x0A82FF;
 					viewpoint 1,192,264,9,0x0A82FF;
@@ -104,10 +102,8 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					break;
 				case 11:
 					mes "[普隆德拉指南]";
-					mes "Let me mark the location of "+F_Navi("City Hall","prontera,75,91","^7F3300");
-					mes "在您的迷你地图上。";
-					mes "那里有一个发型师，";
-					mes "可以改变您的发色。";
+					mes "让我在您的迷你地图上标记位置。那里有";
+					mes "一个发型师，可以改变您的发色。";
 					mes .@str$;
 					viewpoint 1,75,91,12,0xD2691E;
 					next;
@@ -130,9 +126,8 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					break;
 				case 2:
 					mes "[普隆德拉指南]";
-					mes "有两个 ^0000FF小鸟骑士^000000 可用，";
-					mes "one for ^0000FFKnights^000000 to the "+F_Navi("northwest","prontera,55,350","^0000FF");
-					mes "and the other for ^0000FFCrusaders^000000 to the "+F_Navi("northeast","prontera,232,310","^0000FF")+".";
+					mes "有两个^0000FF小鸟骑士^000000可用，一个给^0000FF骑士^000000，另一个";
+					mes "给^0000FF十字军^000000。";
 					viewpoint 1,55,350,14,0x0A82FF;
 					viewpoint 1,232,310,15,0x0A82FF;
 					next;
@@ -160,10 +155,8 @@ prontera,154,187,4	script	Guide#01prontera::GuideProntera	105,{
 					break;
 				case 5:
 					mes "[普隆德拉指南]";
-					mes "如果你心爱的佩可佩可拒绝";
-					mes "离开你，";
-					mes "please talk to the "+F_Navi("Peco Peco Remover","prontera,125,208","^7F3300");
-					mes "在中央喷泉附近。";
+					mes "如果你心爱的佩可佩可拒绝离开你，请在";
+					mes "中央喷泉附近找人交谈。";
 					mes .@str$;
 					viewpoint 1,125,208,18,0xD2691E;
 					next;
@@ -284,8 +277,7 @@ L_Mark:
 		mes "让我标记的地点是";
 		mes getarg(0);
 	} else
-		mes "Let me mark the location of the "+getarg(0);
-	mes "在您的迷你地图上。";
+		mes "让我在您的迷你地图上标记位置。";
 	return;
 }
 prontera,282,208,2	duplicate(GuideProntera)	Guide#02prontera	105
