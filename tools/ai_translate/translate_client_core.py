@@ -99,7 +99,7 @@ def lua_unescape(text: str) -> str:
 
 
 def lua_escape(text: str) -> str:
-    return text.replace("\\", "\\\\").replace('"', r"\"")
+    return text.replace("\\", "\\\\").replace("\r", r"\r").replace("\n", r"\n").replace("\t", r"\t").replace('"', r"\"")
 
 
 def is_lua_internal_string(rel: str, line: str, segment_index: int) -> bool:
