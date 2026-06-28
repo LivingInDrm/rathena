@@ -28,6 +28,27 @@ ENTRY_RE = re.compile(r"^\s*\[(\d+)\]\s*=\s*\{")
 RESOURCE_RE = re.compile(r'^(\s*)(unidentifiedResourceName|identifiedResourceName)\s*=\s*"([^"]*)"(,?)\s*$')
 LIST_KEY_RE = re.compile(r'^\s*(?:\["[^"]+"\]\s*=\s*\{|\{\s*"[^"]+"\s*,\s*\d+)')
 ASSIGN_WITHOUT_COMMA_RE = re.compile(r'^\s*\[[^\]]+\]\s*=\s*"[^"]*"\s*$')
+ITEMDB_KEY_RELS = (
+    r"data\luafiles514\lua files\ItemReform\ItemReformSystem.lub",
+    r"data\luafiles514\lua files\datainfo\LapineUpgradeBox.lub",
+    r"data\luafiles514\lua files\datainfo\lapineddukddakbox.lub",
+    r"data\luafiles514\lua files\Enchant\EnchantList.lub",
+)
+ITEMDB_ASSIGN_RE = re.compile(
+    rb"(?P<field>BaseItem|ResultItem|ItemName|ItemDBName)\s*=\s*"
+    rb'"(?P<value>(?:\\.|[^"\\])*)"'
+)
+ITEMDB_MATERIAL_BLOCK_RE = re.compile(rb"Material\s*=\s*\{(?P<body>[^\r\n]*)\}")
+ITEMDB_BRACKET_KEY_RE = re.compile(rb'\[\s*"(?P<value>(?:\\.|[^"\\])*)"\s*\]\s*=')
+ITEMDB_FUNCTION_ARG_RE = re.compile(
+    rb":(?:AddTargetItem|SetEnchant)\s*\([^\"\r\n]*"
+    rb'"(?P<value>(?:\\.|[^"\\])*)"'
+)
+ITEMDB_SET_REQUIRE_RE = re.compile(
+    rb":(?:SetRequire|SetReset)\s*\([^\r\n]*\{\s*"
+    rb'"(?P<value>(?:\\.|[^"\\])*)"\s*,'
+)
+ITEMDB_ARRAY_ITEM_RE = re.compile(rb'\{\s*"(?P<value>(?:\\.|[^"\\])*)"\s*,\s*\d+\s*\}')
 
 
 def read_text_file(path: Path) -> str | None:
@@ -35,6 +56,10 @@ def read_text_file(path: Path) -> str | None:
     if b"\0" in raw[:200000]:
         return None
     return raw.decode("cp936", errors="replace")
+
+
+def preview_bytes(value: bytes) -> str:
+    return value.decode("cp936", errors="replace")
 
 
 def count_unescaped_quotes(line: str) -> int:
@@ -175,6 +200,95 @@ def check_iteminfo_resources(client_dir: Path, backups: dict[str, Path]) -> list
     return issues
 
 
+def itemdb_key_tokens(data: bytes, rel: str) -> list[dict]:
+    tokens: list[dict] = []
+    for match in ITEMDB_ASSIGN_RE.finditer(data):
+        tokens.append(
+            {
+                "offset": match.start(),
+                "context": match.group("field").decode("ascii"),
+                "value": match.group("value"),
+            }
+        )
+    for match in ITEMDB_MATERIAL_BLOCK_RE.finditer(data):
+        for key_match in ITEMDB_BRACKET_KEY_RE.finditer(match.group("body")):
+            tokens.append(
+                {
+                    "offset": match.start() + key_match.start(),
+                    "context": "Material",
+                    "value": key_match.group("value"),
+                }
+            )
+    for match in ITEMDB_FUNCTION_ARG_RE.finditer(data):
+        tokens.append(
+            {
+                "offset": match.start(),
+                "context": "itemdb_function_arg",
+                "value": match.group("value"),
+            }
+        )
+    for match in ITEMDB_SET_REQUIRE_RE.finditer(data):
+        tokens.append(
+            {
+                "offset": match.start(),
+                "context": "require_material",
+                "value": match.group("value"),
+            }
+        )
+    rel_lower = rel.lower()
+    if "lapineupgradebox.lub" in rel_lower or "lapineddukddakbox.lub" in rel_lower:
+        for match in ITEMDB_ARRAY_ITEM_RE.finditer(data):
+            tokens.append(
+                {
+                    "offset": match.start(),
+                    "context": "array_item",
+                    "value": match.group("value"),
+                }
+            )
+    return sorted(tokens, key=lambda token: token["offset"])
+
+
+def check_itemdb_key_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in ITEMDB_KEY_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_data = current_path.read_bytes()
+        backup_data = backup_path.read_bytes()
+        current_tokens = itemdb_key_tokens(current_data, rel)
+        backup_tokens = itemdb_key_tokens(backup_data, rel)
+        diffs = []
+        if len(current_tokens) != len(backup_tokens):
+            diffs.append(
+                {
+                    "kind": "token_count",
+                    "current": len(current_tokens),
+                    "backup": len(backup_tokens),
+                }
+            )
+        for current, original in zip(current_tokens, backup_tokens):
+            if current["context"] == original["context"] and current["value"] == original["value"]:
+                continue
+            diffs.append(
+                {
+                    "kind": "value",
+                    "line": current_data.count(b"\n", 0, current["offset"]) + 1,
+                    "context": current["context"],
+                    "current": preview_bytes(current["value"]),
+                    "backup": preview_bytes(original["value"]),
+                    "current_hex": current["value"].hex(),
+                    "backup_hex": original["value"].hex(),
+                }
+            )
+            if len(diffs) >= 50:
+                break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
 def check_missing_commas(paths: list[Path]) -> list[dict]:
     issues = []
     for path in paths:
@@ -203,6 +317,7 @@ def build_report(client_dir: Path, backup_dir: Path) -> dict:
         "odd_quote": check_odd_quotes(paths),
         "risky_diffs": check_risky_diffs(client_dir, backups),
         "iteminfo_resource_diffs": check_iteminfo_resources(client_dir, backups),
+        "itemdb_key_diffs": check_itemdb_key_diffs(client_dir, backups),
         "missing_commas": check_missing_commas(paths),
     }
 
@@ -224,11 +339,19 @@ def main() -> int:
         "odd_quote": len(report["odd_quote"]),
         "risky_diffs": len(report["risky_diffs"]),
         "iteminfo_resource_diffs": len(report["iteminfo_resource_diffs"]),
+        "itemdb_key_diffs": len(report["itemdb_key_diffs"]),
         "missing_commas": len(report["missing_commas"]),
         "output": str(output),
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
-    return 1 if any(summary[key] for key in ("odd_quote", "risky_diffs", "iteminfo_resource_diffs", "missing_commas")) else 0
+    issue_keys = (
+        "odd_quote",
+        "risky_diffs",
+        "iteminfo_resource_diffs",
+        "itemdb_key_diffs",
+        "missing_commas",
+    )
+    return 1 if any(summary[key] for key in issue_keys) else 0
 
 
 if __name__ == "__main__":
