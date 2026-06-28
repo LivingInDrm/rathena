@@ -45,6 +45,18 @@ File-level verification is not sufficient to declare the whole localization comp
 python tools\ai_translate\probe_client_runtime.py --output tmp\client_runtime_probe.json
 ```
 
+Or use the wrapper after manual launch:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\ai_translate\run_client_runtime_validation.ps1 -WaitSeconds 0 -Output tmp\client_runtime_probe.json
+```
+
+The wrapper does not auto-start the client by default. It can also attempt to start the client when explicitly requested, but this is less reliable from non-interactive shells:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\ai_translate\run_client_runtime_validation.ps1 -AutoStart -StartTimeoutSeconds 5 -WaitSeconds 20 -Output tmp\client_runtime_probe.json
+```
+
 Expected runtime probe result:
 
 - `client_running=true`
