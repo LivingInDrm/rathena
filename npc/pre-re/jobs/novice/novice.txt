@@ -39,9 +39,9 @@ new_4-1,66,114,4	duplicate(Bulletin Board#nv)	Bulletin Board#nv4	111
 new_5-1,66,114,4	duplicate(Bulletin Board#nv)	Bulletin Board#nv5	111
 
 new_1-1,144,116,2	script	Guard#nv1	105,{
-	mes "[DRY-RUN] [Training Grounds Guard]";
-	mes "[DRY-RUN] Welcome to the Training Grounds.";
-	mes "[DRY-RUN] You are now in the outer court yard. Please go inside the castle to begin your training.";
+	mes "[训练场卫兵]";
+	mes "欢迎来到训练场。";
+	mes "你现在在外院。请进入城堡开始你的训练。";
 	close;
 }
 
@@ -51,22 +51,22 @@ new_4-1,144,116,2	duplicate(Guard#nv1)	Guard#nv4-1	105
 new_5-1,144,116,2	duplicate(Guard#nv1)	Guard#nv5-1	105
 
 new_1-1,144,107,2	script	Guard#nv2	105,{
-	mes "[DRY-RUN] [Training Grounds Guard]";
+	mes "[训练场卫兵]";
 	if(rand(2)) {
-		mes "[DRY-RUN] Come in!";
-		mes "[DRY-RUN] I would like";
-		mes "[DRY-RUN] to welcome you to";
-		mes "[DRY-RUN] the Training Grounds!";
+		mes "进来吧！";
+		mes "我想";
+		mes "欢迎你来到";
+		mes "训练场！";
 		next;
-		mes "[DRY-RUN] [Training Grounds Guard]";
-		mes "[DRY-RUN] In here, you can prepare";
-		mes "[DRY-RUN] yourself for your future";
-		mes "[DRY-RUN] adventures throughout the";
-		mes "[DRY-RUN] Ragnarok world!";
+		mes "[训练场卫兵]";
+		mes "在这里，你可以为你的未来";
+		mes "做好准备，";
+		mes "在整个";
+		mes "拉格纳洛克世界中冒险！";
 	}
 	else {
-		mes "[DRY-RUN] Go, Novice, go!";
-		mes "[DRY-RUN] Fight, and grow stronger! Look towards a brighter tomorrow!";
+		mes "去吧，初心者，去吧！";
+		mes "战斗，变得更强！展望更光明的明天！";
 	}
 	close;
 }
@@ -79,50 +79,50 @@ new_5-1,144,107,2	duplicate(Guard#nv2)	Guard#nv5-2	105
 
 // Receptionist
 new_1-2,100,29,4	script	Receptionist#nv1	86,{
-	mes "[DRY-RUN] [Training Grounds Receptionist]";
-	mes "[DRY-RUN] Hello, you look to be new here.";
-	mes "[DRY-RUN] What is your name?";
+	mes "[训练场接待员]";
+	mes "你好，你看起来是新来的。";
+	mes "你叫什么名字？";
 	next;
 	input .@charname$;
 	if (.@charname$!=strcharinfo(0)) {
-		mes "[DRY-RUN] [Training Grounds Receptionist]";
-		mes "[DRY-RUN] Sorry, but I don't think I heard";
-		mes "[DRY-RUN] you correctly";
+		mes "[训练场接待员]";
+		mes "抱歉，我好像没听清楚";
+		mes "你说的内容";
 		close;
 	}
-	mes "[DRY-RUN] [Training Grounds Receptionist]";
-	mes "[DRY-RUN] Welcome!";
-	mes "[DRY-RUN] You are at the entrance";
-	mes "[DRY-RUN] of the ^3355FFTraining Grounds^000000.";
+	mes "[训练场接待员]";
+	mes "欢迎！";
+	mes "你现在在";
+	mes "^3355FF训练场^000000的入口。";
 	next;
-	mes "[DRY-RUN] [Training Grounds Receptionist]";
-	mes "[DRY-RUN] If you're new";
-	mes "[DRY-RUN] to the Ragnarok world,";
-	mes "[DRY-RUN] please choose the";
-	mes "[DRY-RUN] ^3355FFTraining Grounds Introduction^000000";
-	mes "[DRY-RUN] menu for more information.";
+	mes "[训练场接待员]";
+	mes "如果你是新来的";
+	mes "在《 Ragnarok 》的世界中，";
+	mes "请选择";
+	mes "^3355FF训练场介绍^000000";
+	mes "菜单以获取更多信息。";
 	next;
 	while (1) {
-		switch(select("[DRY-RUN] Apply for training.:Direct access to Ragnarok Online.:^3355FFTraining Grounds Introduction.^000000:I need a moment to think.")) {
+		switch(select("申请训练.:直接进入《仙境传说Online》.:^3355FF训练场介绍.^000000:我需要想一想。")) {
 		case 1:
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] Thank you for applying for Novice training. For detailed information of each training course, please inquire the Guides for assistance.";
+			mes "[训练场接待员]";
+			mes "感谢您申请初心者训练。如需详细的训练课程信息，请向指导员咨询。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] When you have questions about the training course process, please feel free to ask any of the Tutors.";
+			mes "[训练场接待员]";
+			mes "如果您对训练课程的流程有任何问题，请随时询问任何一位导师。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] You will now be transferred";
-			mes "[DRY-RUN] to the Training Grounds.";
+			mes "[训练场接待员]";
+			mes "您现在将被转移";
+			mes "到训练场。";
 			close2;
 			warp "new_1-2",100,70;
 			end;
 		case 2:
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] I understand.";
-			mes "[DRY-RUN] Please do your";
-			mes "[DRY-RUN] best, and I wish you";
-			mes "[DRY-RUN] the best of luck!";
+			mes "[训练场接待员]";
+			mes "我明白了。";
+			mes "请尽力而为，";
+			mes "我祝您";
+			mes "好运！";
 			close2;
 			set nov_1st_cos,0;
 			set nov_2nd_cos,0;
@@ -159,37 +159,37 @@ new_1-2,100,29,4	script	Receptionist#nv1	86,{
 			}
 			end;
 		case 3:
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] This training grounds was established in order to provide useful information to new players of Ragnarok Online by the Rune-Midgarts Kingdom's Board of Education.";
+			mes "[训练场接待员]";
+			mes "这个训练场是由卢恩-米德加兹王国教育委员会设立的，旨在为《 Ragnarok Online》的新玩家提供有用的信息。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] The training course is organized into two parts: the Basic Knowledge classes, and Field Combat training.";
+			mes "[训练场接待员]";
+			mes "培训课程分为两个部分：基础知识课程和实地战斗训练。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] Through the first course, players will learn the necessary knowledge for a smoother gaming experience.";
+			mes "[训练场接待员]";
+			mes "通过第一门课程，玩家将学习必要的知识，以获得更顺畅的游戏体验。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] In Field Combat Training,";
-			mes "[DRY-RUN] players will engage in actual battle with weak monsters so they can learn the basics of fighting.";
+			mes "[训练场接待员]";
+			mes "在实地战斗训练中，";
+			mes "玩家将与弱小的怪物进行实际战斗，以学习战斗的基础。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] With this battle practice,";
-			mes "[DRY-RUN] players will be able to gain more experience before they enter the real world.";
+			mes "[训练场接待员]";
+			mes "通过这次战斗练习，";
+			mes "玩家将在进入真实世界之前获得更多经验。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] At the end of the training, we will provide an introduction to the 1st Job Classes. This will help players decide which job class is best for them.";
+			mes "[训练场接待员]";
+			mes "在培训结束时，我们将介绍第一职业类别。这将帮助玩家决定哪个职业最适合他们。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] If you wish to participate in the training grounds, please choose '^3355FFApply for training^000000' in the menu.";
+			mes "[训练场接待员]";
+			mes "如果您希望参加训练场，请在菜单中选择'^3355FF申请训练^000000'。";
 			next;
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] Otherwise, if you want to skip the basic training and immediately enter the world of Ragnarok Online, please choose '^3355FFDirect access to Ragnarok Online^000000.'";
+			mes "[训练场接待员]";
+			mes "否则，如果您想跳过基础训练，直接进入《仙境传说Online》的世界，请选择'^3355FF直接进入《仙境传说Online》^000000'。";
 			next;
 			break;
 		case 4:
-			mes "[DRY-RUN] [Training Grounds Receptionist]";
-			mes "[DRY-RUN] I understand.";
-			mes "[DRY-RUN] Please, take your time.";
+			mes "[训练场接待员]";
+			mes "我明白了。";
+			mes "请慢慢来。";
 			close;
 		}
 	}
@@ -201,169 +201,169 @@ new_5-2,100,29,4	duplicate(Receptionist#nv1)	Receptionist#nv5	86
 
 new_1-1,53,114,4	script	Shion#nv1	727,{
 	if (nov_get_item04 > 9 || nov_get_item05 > 9) {
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Hm...?";
-		mes "[DRY-RUN] What are you";
-		mes "[DRY-RUN] still doing here?";
-		mes "[DRY-RUN] Oh, you used a ^3355FFButterfly Wing^000000, didn't you?";
+		mes "[诗音]";
+		mes "嗯……？";
+		mes "你在这里";
+		mes "还在做什么？";
+		mes "哦，你用了一个^3355FF蝴蝶翅膀^000000，是吗？";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] No, no, no~";
-		mes "[DRY-RUN] You're supposed to use the Butterfly Wing when you want to go back to a town ^666666after^000000 completing your training here, alright?";
+		mes "[诗音]";
+		mes "不，不，不~";
+		mes "在你完成这里的训练后，应该使用蝴蝶翅膀回到城镇^666666，明白了吗？^000000";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Now, let me send";
-		mes "[DRY-RUN] you back to the";
-		mes "[DRY-RUN] Training Grounds.";
+		mes "[诗音]";
+		mes "现在，让我送你去";
+		mes "你属于的";
+		mes "训练场。";
 		close2;
 		warp "new_1-2",99,99;
 		end;
 	}
 	else if (nov_1st_cos > 2) {
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] The Training Grounds";
-		mes "[DRY-RUN] are located just past";
-		mes "[DRY-RUN] the bridge located";
-		mes "[DRY-RUN] to the right.";
+		mes "[诗音]";
+		mes "训练场";
+		mes "位于刚过";
+		mes "那座桥的地方";
+		mes "向右走。";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Although you'll";
-		mes "[DRY-RUN] be sitting through";
-		mes "[DRY-RUN] some classes, you";
-		mes "[DRY-RUN] won't regret it.";
-		mes "[DRY-RUN] Now, go for it!";
+		mes "[诗音]";
+		mes "虽然你会";
+		mes "坐着经历";
+		mes "一些职业，你";
+		mes "不会后悔的。";
+		mes "现在，去吧！";
 		close;
 	}
 	else if (nov_1st_cos == 2) {
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Hey...";
-		mes "[DRY-RUN] You little rascal!";
+		mes "[诗音]";
+		mes "嘿……";
+		mes "你这个小调皮！";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Wait...";
-		mes "[DRY-RUN] Calm down Shion.";
-		mes "[DRY-RUN] You're a professional";
-		mes "[DRY-RUN] trainer! Don't get all";
-		mes "[DRY-RUN] upset at a Novice!";
+		mes "[诗音]";
+		mes "等一下……";
+		mes "冷静下来，希昂。";
+		mes "你是个专业的";
+		mes "训练师！不要对一个初心者";
+		mes "感到不安！";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Go and cross the bridge to the right, right now! ^666666*Ahem*^000000 You'll see and castle, and inside you can meet all sorts of tutors.";
+		mes "[诗音]";
+		mes "现在就去右边的桥上过桥！ ^666666*咳咳*^000000 你会看到一座城堡，里面可以见到各种导师。";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] If you can't see the entrance, just change your in-game camera angle by holding down the ^3355FFright Mouse button^000000 and dragging your mouse. Easy, right?";
+		mes "[诗音]";
+		mes "如果你看不到入口，只需按住 ^3355FF右键^000000 并拖动鼠标来改变游戏内的视角。简单吧？";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] To reset your camera angle,";
-		mes "[DRY-RUN] just double-click the right Mouse button. Okay then, take care!";
+		mes "[诗音]";
+		mes "要重置你的视角，";
+		mes "只需双击右键。好的，保重！";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Oh, and before you leave,";
-		mes "[DRY-RUN] learn how to treat a lady nice, okay? Then they might give you gifts like this!";
+		mes "[诗音]";
+		mes "哦，在你离开之前，";
+		mes "学会如何好好对待女士，好吗？这样她们可能会给你像这样的礼物！";
 		set nov_1st_cos,3;
 		getexp 9,0;
 		close;
 	}
 	else if (nov_1st_cos == 1) {
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Huh...?";
-		mes "[DRY-RUN] Why are you";
-		mes "[DRY-RUN] still here?";
-		mes "[DRY-RUN] ^666666*Sigh...*^000000";
+		mes "[诗音]";
+		mes "哈……？";
+		mes "你为什么还在这里？";
+		mes "你还在这里干什么？";
+		mes "^666666*叹气...*^000000";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Hey, when you enter the Training Grounds, you'll learn all sorts of things that will help you play the game. You'll even have the chance to get zeny and other rewards.";
+		mes "[诗音]";
+		mes "嘿，当你进入训练场时，你会学到各种对你玩游戏有帮助的东西。你甚至还有机会获得金币和其他奖励。";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] You can even gain";
-		mes "[DRY-RUN] experience like this!";
+		mes "[诗音]";
+		mes "你甚至可以获得";
+		mes "经验值！";
 		set nov_1st_cos,3;
 		getexp 9,0;
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Everything you'll learn here in the Training Grounds will benefit your gameplay. So just think positive, okay?";
+		mes "[诗音]";
+		mes "你在训练场学到的一切都会对你的游戏体验有所帮助。所以要积极思考，好吗？";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Hello there~";
-		mes "[DRY-RUN] Welcome to the";
-		mes "[DRY-RUN] Training Grounds!";
+		mes "[诗音]";
+		mes "你好呀~";
+		mes "欢迎来到";
+		mes "训练场！";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Let's see.";
-		mes "[DRY-RUN] Your name is...";
+		mes "[诗音]";
+		mes "让我看看.";
+		mes "你的名字是...";
 		mes "" + strcharinfo(0) + ".";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] My name is Shion.";
-		mes "[DRY-RUN] Yes, this is the first time we've met, of course. Hahahaha~!";
+		mes "[诗音]";
+		mes "我的名字是希昂。";
+		mes "是的，这是我们第一次见面，当然。哈哈哈哈~！";
 		next;
-		mes "[DRY-RUN] [Shion]";
-		mes "[DRY-RUN] Now that we've met, is there anything I can help you with?";
-		mes "[DRY-RUN] I'm here for your questions~";
+		mes "[诗音]";
+		mes "既然我们见面了，有什么我可以帮助你的吗？";
+		mes "我在这里回答你的问题~";
 		next;
-		switch(select("[DRY-RUN] Where should I go?:About Basic Interfaces.:Who the crap are you?")) {
+		switch(select("我应该去哪里?:关于基本界面.:你是谁？")) {
 		case 1:
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Do you see the bridge to your";
-			mes "[DRY-RUN] right side? Just cross the bridge and you'll arrive at a castle. All you have to do is walk inside!";
+			mes "[诗音]";
+			mes "你看到你右边的桥了吗？";
+			mes "只需过桥，你就会到达一座城堡。你只需走进去就可以了！";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] The entrance of the castle";
-			mes "[DRY-RUN] is a ^4D4DFFspinning white light^000000. These portals are what allow you to move from one zone to another.";
+			mes "[诗音]";
+			mes "城堡的入口";
+			mes "是一个^4D4DFF旋转的白光^000000。这个传送门可以让你从一个区域移动到另一个区域。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Do you know how to move?";
-			mes "[DRY-RUN] Left click on a spot, and you'll walk over to that spot. Piece of cake, huh?";
+			mes "[诗音]";
+			mes "你知道怎么移动吗？";
+			mes "左键点击一个地方，你就会走到那个地方。简单吧？";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] So go for it!";
-			mes "[DRY-RUN] Basically, you must enter the castle in order to start your adventures.";
+			mes "[诗音]";
+			mes "那就去吧！";
+			mes "基本上，你必须进入城堡才能开始你的冒险。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] There are soldiers";
-			mes "[DRY-RUN] at the entrance, so don't";
-			mes "[DRY-RUN] worry about getting lost.";
-			mes "[DRY-RUN] Take care now~!";
+			mes "[诗音]";
+			mes "那里有士兵";
+			mes "在入口处，所以不用担心迷路。";
+			mes "现在注意安全~！";
+			mes "基本界面...";
 			set nov_1st_cos,1;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Basic Interfaces...";
-			mes "[DRY-RUN] Do you know what Click, Double-click and Drag mean?";
+			mes "[诗音]";
+			mes "你知道点击、双击和拖动是什么意思吗？";
+			mes "当你按下左键一次时，";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] When you press the";
-			mes "[DRY-RUN] left Mouse button once,";
-			mes "[DRY-RUN] that is a click. When you press the mouse button twice in a row, that's a double-click.";
+			mes "[诗音]";
+			mes "那就是点击。当你连续按下鼠标按钮两次时，那就是双击。";
+			mes "拖动是指在按住鼠标的同时移动鼠标。";
+			mes "那是一次点击。当你连续按下鼠标按钮两次时，这就是双击。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Dragging is when you move your Mouse while holding down the";
-			mes "[DRY-RUN] Mouse button after clicking on something.";
+			mes "[诗音]";
+			mes "拖动是指在按住鼠标的同时移动鼠标。";
+			mes "点击某物后鼠标按钮。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Before we start talking about";
-			mes "[DRY-RUN] the Basic Interfaces, you should remember these terms, just because we'll be using them frequently.";
+			mes "[诗音]";
+			mes "在我们开始谈论之前";
+			mes "基本界面时，你应该记住这些术语，因为我们会经常使用它们。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Inside the castle, there is a Basic Interfaces Tutor who can teach you the basics more clearly, okay? Enter the castle to start your training.";
+			mes "[诗音]";
+			mes "在城堡内，有一位基本界面导师可以更清楚地教你基础知识，好吗？进入城堡开始你的训练。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] The entrance";
-			mes "[DRY-RUN] of the castle is";
-			mes "[DRY-RUN] a ^4D4DFFspinning white light^000000.";
+			mes "[诗音]";
+			mes "城堡的入口";
+			mes "是";
+			mes "一个 ^4D4DFF旋转的白光^000000。";
 			next;
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] There are soldiers";
-			mes "[DRY-RUN] at the entrance, so don't";
-			mes "[DRY-RUN] worry about getting lost.";
-			mes "[DRY-RUN] Take care now~!";
+			mes "[诗音]";
+			mes "那里有士兵";
+			mes "在入口处，所以不用担心迷路。";
+			mes "现在注意安全~！";
+			mes "基本界面...";
 			set nov_1st_cos,1;
 			close;
 		case 3:
-			mes "[DRY-RUN] [Shion]";
-			mes "[DRY-RUN] Me? I'm Shion!";
-			mes "[DRY-RUN] But that's a rude way of asking! I'm volunteering my time and effort here, so you've got to show me a little bit of respect at least!";
+			mes "[诗音]";
+			mes "我？我是希昂！";
+			mes "但那是个无礼的问法！我在这里自愿奉献我的时间和精力，所以你至少要对我表示一点尊重！";
 			set nov_1st_cos,2;
 			close;
 		}
@@ -1559,168 +1559,168 @@ new_1-2,118,108,3	script	Kafra Employee#nv1	117,{
 
 //Interface Assistant
 new_1-2,161,182,5	script	Instructor#nv	92,{
-	mes "[DRY-RUN] [Edwin]";
-	mes "[DRY-RUN] Welcome to my class.";
-	mes "[DRY-RUN] Choose the subject you";
-	mes "[DRY-RUN] wish to learn more about.";
+	mes "[埃德温]";
+	mes "欢迎来到我的课堂。";
+	mes "选择你想要了解更多的主题。";
+	mes "想要了解更多的主题。";
 	next;
 	while(1) {
-		switch(select("[DRY-RUN] Basic Info Window:Party Window:Item Window:Option Window:Equipment Window:Cancel")) {
+		switch(select("基本信息窗口:队伍窗口:物品窗口:选项窗口:装备窗口:取消")) {
 		case 1:
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Let's take a look at";
-			mes "[DRY-RUN] the Basic Info Window,";
-			mes "[DRY-RUN] shall we?";
+			mes "";
+			mes "[埃德温]";
+			mes "让我们来看看";
+			mes "基本信息窗口，";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Your name, job, Basic Level,";
-			mes "[DRY-RUN] and your Job Level are displayed in this window. ^800FFFBase level^000000 is your character's level.";
+			mes "好吗？";
+			mes "[埃德温]";
+			mes "你的名字、职业、基本等级，";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The ^800fffJob Level^000000 shown under the";
-			mes "[DRY-RUN] Base Level displays the Job level of your character. When you just start a job, you will be at";
-			mes "[DRY-RUN] Job Level 1.";
+			mes "和你的职业等级显示在这个窗口中。 ^800FFF基本等级^000000是你角色的等级。";
+			mes "[埃德温]";
+			mes "显示在下面的^800fff职业等级^000000";
+			mes "基本等级显示你角色的职业等级。当你刚开始一个职业时，你将处于";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] In the Basic Info window, your current experience points are displayed in the Base Level experience bar.";
+			mes "职业等级 1.";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Experience points in Ragnarok Online are indicated by percentage. Base and Job experience are separate from each other.";
+			mes "在基本信息窗口中，你当前的经验值显示在基本等级经验条中.";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] When the Base Level or";
-			mes "[DRY-RUN] Job Level bar reaches 100 it will be raised by one level and the bar will then reset to 0 for the next level.";
+			mes "在《 Ragnarok Online》中，经验值以百分比表示。基本经验和职业经验是相互独立的.";
+			mes "[埃德温]";
+			mes "当基本等级或";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] HP stands for 'health points.'";
-			mes "[DRY-RUN] When your HP is reduced to 0, you will faint and be unable to fight. You can either return to your spawn point, or wait for someone to revive you.";
+			mes "职业等级条达到 100 时，将提升一个等级，条将重置为 0 以进行下一个等级.";
+			mes "[埃德温]";
+			mes "HP 代表 '生命值.'";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] If you die in the fields or dungeons, you will receive";
-			mes "[DRY-RUN] a ^FF0000-1 % EXP penalty^000000, so be careful.";
+			mes "当你的HP降至0时，你将昏迷并无法战斗。你可以选择返回出生点，或者等待他人复活你。";
+			mes "[埃德温]";
+			mes "如果你在野外或地下城死亡，你将会受到";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] SP stands for 'spell points.'";
-			mes "[DRY-RUN] When you become a 1st class, you will learn unique class skills of the class that will require SP to use. Your skill instructor can teach you more about skills.";
+			mes "^FF0000-1 % 经验惩罚^000000，务必小心。";
+			mes "[埃德温]";
+			mes "SP代表“法术点数”。";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] If you want to check the weight limit of the items you can carry, check the bottom left of the";
-			mes "[DRY-RUN] Basic Info window.";
+			mes "当你成为1级职业时，你将学习该职业独特的技能，这些技能需要SP来使用。你的技能导师可以教你更多关于技能的知识。";
+			mes "[埃德温]";
+			mes "如果你想检查你可以携带的物品的重量限制，请查看";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The current weight of the items you are carrying will be displayed next to your maximum weight limit.";
+			mes "基本信息窗口的左下角。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] If you carry over 50 % of your maximum weight limit, your HP and SP will not be restored by resting, so be careful.";
+			mes "您当前携带物品的重量将显示在您的最大重量限制旁边。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The numerical value next to the weight limit shows the current amount of Zeny, the currency of Rune-Midgard, that you possess.";
+			mes "如果您携带超过最大重量限制的50%，您的HP和SP将无法通过休息恢复，所以请小心。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] On the right side of the";
-			mes "[DRY-RUN] Basic Info Window is a series of buttons that will open other interface windows. Click them one by one, and check what you can do with them.";
+			mes "重量限制旁边的数字表示您拥有的鲁恩-米德加尔特货币金币的当前数量。";
+			mes "[埃德温]";
+			mes "在右侧的";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The shortcut for minimizing and maximizing the Basic Info Window";
-			mes "[DRY-RUN] is '^3355FFAlt^000000 + ^3355FFV^000000.'";
+			mes "基本信息窗口旁边是一系列按钮，可以打开其他界面窗口。逐个点击它们，查看您可以做什么。";
+			mes "[埃德温]";
+			mes "最小化和最大化基本信息窗口的快捷键";
 			next;
 			break;
 		case 2:
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] You can open the Party Window";
-			mes "[DRY-RUN] by clicking the ^3355FFfriend^000000 button in the Basic Info window. The shortcut for the Party Window is '^3355FFAlt^000000 + ^3355FFZ^000000.' You can use this window to check on the members of your party.";
+			mes "是'^3355FFAlt^000000 + ^3355FFV^000000.'";
+			mes "[埃德温]";
+			mes "您可以打开队伍窗口";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The Party master can determine";
-			mes "[DRY-RUN] the distribution of EXP and items to the party. You can also check the location of your party members on the Mini-Map.";
+			mes "通过点击基本信息窗口中的 ^3355FF好友^000000 按钮。队伍窗口的快捷键是 '^3355FFAlt^000000 + ^3355FFZ^000000'。您可以使用此窗口查看队伍成员。";
+			mes "[埃德温]";
+			mes "队伍队长可以决定";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] In the Party Window, you can click on the ^3355FFFriend^000000 button to see your Friend List. You can use the";
-			mes "[DRY-RUN] Friend List to send whispers";
-			mes "[DRY-RUN] to your friends.";
+			mes "经验值和物品在队伍中的分配。您还可以在小地图上查看队伍成员的位置。";
+			mes "[埃德温]";
+			mes "在队伍窗口中，您可以点击 ^3355FF好友^000000 按钮查看您的好友列表。您可以使用";
+			mes "好友列表发送密语";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] You can ask your skill instructor to learn more about organizing parties. But I guess you can also just try that on your own.";
+			mes "给您的朋友。";
+			mes "[埃德温]";
 			next;
 			break;
 		case 3:
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The item window is divided into";
-			mes "[DRY-RUN] 3 sections: consumable items, equipment and other items.";
+			mes "你可以向你的技能导师询问更多关于组织队伍的知识。不过我想你也可以自己尝试。";
+			mes "[埃德温]";
+			mes "物品窗口分为";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Your weight limit does limit the amount of items you can carry with you. When you're carrying too many things, place your extra stuff in Kafra Storage.";
+			mes "3个部分：消耗品、装备和其他物品。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Also, equipment and consumable items can also be assigned to a Hotkey through the Hotkey bar.";
+			mes "你的重量限制会限制你可以携带的物品数量。当你携带的物品过多时，请将多余的物品放入卡普拉仓库。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The Hotkey window is opened by pressing ^3355FFF12^000000 key. The F1 to F9 keys are the designated hotkeys.";
+			mes "此外，装备和消耗品也可以通过快捷键栏分配到快捷键上。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] There are total of 3 sets";
-			mes "[DRY-RUN] of Hotkeys. You can toggle";
-			mes "[DRY-RUN] between Hotkey sets by";
-			mes "[DRY-RUN] pressing the F12 button.";
+			mes "快捷键窗口通过按下^3355FFF12^000000键打开。F1到F9键是指定的快捷键。";
+			mes "[埃德温]";
+			mes "总共有3组";
+			mes "快捷键。你可以切换";
+			mes "通过热键集之间切换";
 			next;
 			break;
 		case 4:
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] You can open the Option Window";
-			mes "[DRY-RUN] by pressing the ^3355FFoption^000000 button in the Basic Info window. You can also press the '^3355FFAlt^000000 + ^3355FFO^000000' keys as well.";
+			mes "按下 F12 键。";
+			mes "[埃德温]";
+			mes "您可以打开选项窗口";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] In the Option Window, you can adjust sound, GUI skin, and the transparency of the skin.";
+			mes "通过在基本信息窗口中按下 ^3355FF选项^000000 按钮。您也可以按 '^3355FFAlt^000000 + ^3355FFO^000000' 键。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] With the sound button, you can turn the background music on or off, as well as adjust the volume. The same can be done for the sound effects.";
+			mes "在选项窗口中，您可以调整声音、GUI皮肤和皮肤的透明度。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] With the Skin option, you can change the GUI skin for the in-game windows. Scroll through the list of the skins you have and choose";
-			mes "[DRY-RUN] a skin.";
+			mes "通过声音按钮，您可以打开或关闭背景音乐，并调整音量。音效也可以这样操作。";
+			mes "[埃德温]";
+			mes "通过皮肤选项，您可以更改游戏窗口的GUI皮肤。浏览您拥有的皮肤列表并选择";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] You can also download official skins from our official website:";
-			mes "[DRY-RUN] ^0000FFhttp://iro.ragnarokonline.com^000000";
+			mes "一个皮肤。";
+			mes "[埃德温]";
+			mes "您还可以从我们官方网站下载官方皮肤:";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] The Snap option allows your mouse cursor to automatically be placed on a target once it hovers within the target's vicinity.";
+			mes "^0000FFhttp://iro.ragnarokonline.com^000000";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] When you click to attack, your mouse cursor will automatically change into a sword shape. Skill and item targeting also work with the Snap function.";
+			mes "快照选项允许您的鼠标光标在目标附近悬停时自动放置在目标上。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] It might be useful or awkward if you're not used to it. But once you're familiar with the Snap function, you will be able to adjust your own snap options.";
+			mes "当您点击攻击时，鼠标光标会自动变成剑形。技能和物品的目标选择也适用于快照功能。";
+			mes "[埃德温]";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Well, it all depends on your experience. That's all for the Option Window.";
+			mes "如果您不习惯，这可能会很有用或很尴尬。但一旦您熟悉快照功能，您将能够调整自己的快照选项。";
+			mes "[埃德温]";
 			next;
 			break;
 		case 5:
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] Click the ^3355FFequip^000000 button";
-			mes "[DRY-RUN] in your Basic Info Window,";
-			mes "[DRY-RUN] or just press the '^3355FFAlt^000000 + ^3355FFQ^000000' keys.";
+			mes "好吧，这完全取决于您的经验。这就是选项窗口的全部内容。";
+			mes "[埃德温]";
+			mes "点击 ^3355FF装备^000000 按钮";
+			mes "在你的基本信息窗口中，";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] In the Equipment Window,";
-			mes "[DRY-RUN] you will see the items currently equipped on your character. In the very beginning, every character is equipped with a Knife and";
-			mes "[DRY-RUN] a Cotton Shirt.";
+			mes "或者直接按下'^3355FFAlt^000000 + ^3355FFQ^000000'键。";
+			mes "[埃德温]";
+			mes "在装备窗口中，";
+			mes "你将看到当前装备在你角色上的物品。一开始，每个角色都装备有一把刀和";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] There are 2 ways to change your equipment. Double-click equipment in the Inventory Window or click and drag an item into the";
-			mes "[DRY-RUN] Equipment Window.";
+			mes "一件棉质衬衫。";
+			mes "[埃德温]";
+			mes "有两种方法可以更换装备。双击物品栏中的装备，或者点击并拖动物品到";
 			next;
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] You can also assign equipment to Hotkeys. This can be down when you drag equipment from the Inventory into the Hotkey Window.";
-			mes "[DRY-RUN] ('^3355FFF12^000000' key).";
+			mes "装备窗口中。";
+			mes "[埃德温]";
+			mes "你还可以将装备分配到快捷键。这可以通过将装备从物品栏拖动到快捷键窗口来完成。";
 			next;
 			break;
 		case 6:
-			mes "[DRY-RUN] [Edwin]";
-			mes "[DRY-RUN] If you have";
-			mes "[DRY-RUN] any questions,";
-			mes "any questions,";
+			mes "（'^3355FFF12^000000'键）。";
+			mes "[埃德温]";
+			mes "如果你有";
+			mes "任何问题，";
 			close;
 		}
 	}
@@ -2192,53 +2192,53 @@ new_1-2,121,101,2	script	Guide Soldier#nv1	105,{
 
 new_1-2,17,182,5	script	Helper#nv	84,{
 	if (nov_2nd_cos < 11) {
-		mes "[DRY-RUN] [Elmeen]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] You have passed the 1st training course! Wow~ I guess now you understand a little bit more about Ragnarok Online.";
+		mes "[艾尔敏]";
+		mes "恭喜！";
+		mes "你已经通过了第一阶段的培训课程！哇~ 我想现在你对《 Ragnarok Online》有了更多的了解。";
 		next;
-		mes "[DRY-RUN] [Elmeen]";
-		mes "[DRY-RUN] You will learn the fundamentals of actual battle through this class. If you did your best through the Informative class, you are supposed to have been given some starting equipment.";
+		mes "[艾尔敏]";
+		mes "你将在这个课程中学习实际战斗的基础知识。如果你在信息课程中尽了最大努力，你应该已经获得了一些初始装备。";
 		next;
-		mes "[DRY-RUN] [Elmeen]";
-		mes "[DRY-RUN] Please check your";
-		mes "[DRY-RUN] equipment before you engaging in battle. Are you sure you've equipped all of your equipment, your weapons and armor?";
+		mes "[艾尔敏]";
+		mes "请在参与战斗之前检查你的";
+		mes "装备。你确定你已经装备了所有的装备、武器和盔甲吗？";
 		next;
-		switch(select("[DRY-RUN] Yes:No")) {
+		switch(select("是:否")) {
 		case 1:
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] First, you place the cursor on a monster. When you left click, you will hit the monster once.";
+			mes "[艾尔敏]";
+			mes "首先，你将光标放在怪物上。当你左键点击时，你将攻击怪物一次。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] If you are too lazy to keep left clicking, left click on the monster while holding the '^4D4DFFCtrl^000000' key. You will then continue attacking the monster until one of you is dead, or you run away.";
+			mes "[艾尔敏]";
+			mes "如果你懒得一直左键点击，可以在按住'^4D4DFFCtrl^000000'键的同时左键点击怪物。这样你将继续攻击怪物，直到你或怪物死亡，或者你逃跑。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] You can also just hold down the left mouse button while the cursor is on the monster. Still, there are some people who are even too lazy to use the '^4D4DFFCtrl^000000' key every time they attack a monster.";
+			mes "[艾尔敏]";
+			mes "你也可以在光标放在怪物上时按住左键。不过，有些人甚至懒得在每次攻击怪物时都使用'^4D4DFFCtrl^000000'键。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] If you're one of them, type the command ^E79E29//nc^000000 in your Chat Window. Then, when you left click";
-			mes "[DRY-RUN] a monster, you'll just continuously attack it!";
+			mes "[艾尔敏]";
+			mes "如果你是其中之一，请在聊天窗口输入命令^E79E29//nc^000000。然后，当你左键点击";
+			mes "怪物时，你将持续攻击它！";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] If a monster happens to have the Undead property, you can use the 'Heal' skill to attack if you happen to have it.";
+			mes "[艾尔敏]";
+			mes "如果一个怪物恰好具有不死属性，你可以使用'治疗'技能进行攻击，如果你恰好拥有它的话。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] When you use the Heal skill while holding down the '^4D4DFFShift^000000' key, you can target the monster with the Heal skill to damage it.";
+			mes "[艾尔敏]";
+			mes "当你按住'^4D4DFFShift^000000'键使用治疗技能时，你可以用治疗技能对怪物进行攻击。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] Of course for this skill, we do have a very convenient option for lazy people too. Type the command ^E79E29//ns^000000 in your Chat Window.";
+			mes "[艾尔敏]";
+			mes "当然，对于这个技能，我们也为懒人准备了一个非常方便的选项。在你的聊天窗口输入命令^E79E29//ns^000000。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] This will allow you to attack monsters by using the Heal skill without holding the shift key. Handy, huh?";
+			mes "[艾尔敏]";
+			mes "这将允许你在不按住shift键的情况下使用治疗技能攻击怪物。方便吧？";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] Do you understand these battle commands? Now, I will teaching you about monster behaviors and properties, experience gained through battle, and items you can earn from dead monsters.";
+			mes "[艾尔敏]";
+			mes "你明白这些战斗指令了吗？现在，我将教你关于怪物的行为和属性、通过战斗获得的经验，以及你可以从死去的怪物身上获得的物品。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] Field Combat Training can be actually be pretty dangerous for new adventurers. Let me give you";
-			mes "[DRY-RUN] a little more strength through the power of my magic.";
+			mes "[艾尔敏]";
+			mes "野外战斗训练对新冒险者来说实际上可能相当危险。让我给你";
+			mes "一点力量，通过我的魔法。";
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] Haaaaaaa~!";
+			mes "[艾尔敏]";
+			mes "哈~~~~！";
 			if (nov_2nd_cos < 1) {
 				if (BaseLevel == 1) {
 					set nov_2nd_cos,12;
@@ -2270,206 +2270,206 @@ new_1-2,17,182,5	script	Helper#nv	84,{
 				}
 			}
 			next;
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] Which subject";
-			mes "[DRY-RUN] should I cover";
-			mes "[DRY-RUN] first for you?";
+			mes "[艾尔敏]";
+			mes "我应该先讲哪个主题";
+			mes "给你呢？";
+			mes "有很多攻击性怪物会在你接近它们之前先攻击你。";
 			next;
 			while(1) {
-				switch(select("[DRY-RUN] Monsters:Experience:Items:Quit.")) {
+				switch(select("怪物:经验:物品:退出。")) {
 				case 1:
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] There are many aggressive monsters that will attack you first before you even approach them. ";
+					mes "[艾尔敏]";
+					mes "还有一些怪物会与同类合作。攻击其中一个，它们整个群体会围过来，寻求报复。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] There are also a few monsters that will cooperate with others of their kind. Attack one of them, and the whole pack of them will swarm around you, seeking revenge.";
+					mes "[艾尔敏]";
+					mes "还有一些怪物会与同类合作。攻击其中一个，它们整个群体会围绕你，寻求报复。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Every monster can be specified by their types, sizes and properties. For example, there are Demi-human, Brute, Holy and Demon property monsters out there.";
+					mes "[艾尔敏]";
+					mes "每种怪物都可以通过它们的类型、大小和属性来指定。例如，外面有半人类、野兽、神圣和恶魔属性的怪物。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] When you're aware of what property a monster is, you can use that knowledge to help you in battle.";
+					mes "[艾尔敏]";
+					mes "当你知道一个怪物的属性时，你可以利用这个知识来帮助你在战斗中。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] If you manage to get cards for that increase your damage upon certain monster properties, or reduce damage from specific monster properties, you'll have a much easier time in battle.";
+					mes "[艾尔敏]";
+					mes "如果你能获得能够增加对特定怪物属性伤害的卡片，或者减少来自特定怪物属性的伤害，你在战斗中会轻松得多。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Monsters are separated by their size: small, medium and large. There are a few cards that allow you to do more damage to";
-					mes "[DRY-RUN] a specific monster size.";
+					mes "[艾尔敏]";
+					mes "怪物根据大小分为：小型、中型和大型。有一些卡片可以让你对特定怪物造成更多伤害。";
+					mes "对特定怪物大小。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Also, each weapon has its strengths and weaknesses. The size of the weapon will affect the damage it will deal to monsters.";
+					mes "[艾尔敏]";
+					mes "此外，每种武器都有其优缺点。武器的大小会影响它对怪物造成的伤害。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] For example, Dagger class weapons do 100 % damage on small sized monsters but only inflict 50 % on large monsters.";
+					mes "[艾尔敏]";
+					mes "例如，匕首类武器对小型怪物造成100%的伤害，但对大型怪物仅造成50%的伤害。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Common monster properties include Water, Wind, Earth, Fire, Shadow, Ghost and Holy. If you attack a monster with an opposing property, you can inflict additional damage~";
+					mes "[艾尔敏]";
+					mes "常见的怪物属性包括水、风、土、火、暗、鬼魂和神圣。如果你用相反属性攻击怪物，可以造成额外伤害~";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] But if you attack a monster with";
-					mes "[DRY-RUN] a skill or weapon that inflicts damage of the same property as the monster, the damage will be greatly reduced, or completely negated. You might even heal the monster!";
+					mes "[艾尔敏]";
+					mes "但是如果你攻击一个怪物，使用的";
+					mes "技能或武器与怪物的属性相同，伤害将大幅减少，甚至完全抵消。你甚至可能会治愈怪物！";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] In the case of Ghost property monsters, normal weapons cannot do any harm. However, a weapon with any other property will be able to deal out some damage.";
+					mes "[艾尔敏]";
+					mes "对于鬼魂属性的怪物，普通武器无法造成任何伤害。然而，具有其他属性的武器将能够造成一些伤害。";
 					next;
 					break;
 				case 2:
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Basically, a character who deals the most damage on a monster receives the most experience points from the monster.";
+					mes "[艾尔敏]";
+					mes "基本上，对一个怪物造成最多伤害的角色会从该怪物那里获得最多的经验值。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Therefore, you receive a certain percentage of experience points in proportion to the damage you've inflicted on the monster, compared to its total HP.";
+					mes "[艾尔敏]";
+					mes "因此，你获得的经验值是你对怪物造成的伤害与其总HP的比例的一定百分比。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Let's say, there is a character named 'Z.' Z does 65 damage on a monster that has 100 total HP and gives 1000 experience points when it's dead. So, Z will receive 650 experience points.";
+					mes "[艾尔敏]";
+					mes "假设有一个角色名为'Z'。Z对一个总HP为100的怪物造成了65点伤害，而这个怪物被击杀时会给予1000经验值。那么，Z将获得650经验值。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] However, this rule applies differently following certain situations.";
+					mes "[艾尔敏]";
+					mes "然而，这条规则在某些情况下适用的方式有所不同。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] If there are two people who both did 65 damage on the same monster, the experience points that each will receive differs, depending on the monster's remaining HP.";
+					mes "[艾尔敏]";
+					mes "如果有两个人都对同一个怪物造成了65点伤害，那么每个人获得的经验值会有所不同，这取决于怪物剩余的HP。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] For instance, somebody does damage to a monster while you're already hitting it, and he did the same amount of damage you did.";
+					mes "[艾尔敏]";
+					mes "例如，当你已经在攻击一个怪物时，有人对这个怪物造成了伤害，而他造成的伤害与你相同。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] In this case, you will receive 2//3 of the whole experience points that monster can give you, the other one will receive 1//3.";
+					mes "[艾尔敏]";
+					mes "在这种情况下，你将获得该怪物可以给予的全部经验值的2/3，另一个人将获得1/3。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] However, attacking a monster that somebody already started to hit is not suggested in Ragnarok Online. That action is regarded as ill-mannered behavior.";
+					mes "[艾尔敏]";
+					mes "然而，在《 Ragnarok Online》中，攻击一个已经被别人开始攻击的怪物是不建议的。这种行为被视为不礼貌。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] For party play, the party master can set the experience distribution to the equally share option.";
+					mes "[艾尔敏]";
+					mes "对于组队游戏，队长可以将经验分配设置为均等分享选项。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] With this method, party members can share their experience according to the their character levels, and the number of members in the party.";
+					mes "[艾尔敏]";
+					mes "通过这种方法，队员可以根据他们的角色等级和队伍中的成员数量来分享经验。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Also, there is the experience benefit for party play which allows you to gain more experience points than playing solo. You can take advantage of this system for faster leveling.";
+					mes "[艾尔敏]";
+					mes "此外，组队游戏有经验值加成，可以让你获得比单独游戏更多的经验值。你可以利用这个系统更快地升级。";
 					next;
 					break;
 				case 3:
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] When you kill monsters,";
-					mes "[DRY-RUN] you can obtain items by chance. Furthermore, certain characters can use the 'Steal' skill in order to steal items from monsters.";
+					mes "[艾尔敏]";
+					mes "当你击杀怪物时，";
+					mes "你有机会获得物品。此外，某些角色可以使用“偷窃”技能从怪物身上偷取物品。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Don't you worry about the Steal skill causing you to not find any items after you kill them. Using the Steal skill does not at all affect the item drop rate for monsters once they're killed.";
+					mes "[艾尔敏]";
+					mes "你不用担心偷窃技能会导致你在击杀怪物后找不到任何物品。使用偷窃技能完全不会影响怪物被击杀后的物品掉落率。";
 					next;
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] When a group of people kill a monster, the person who did the most damage receives priority in picking up item drops.";
+					mes "[艾尔敏]";
+					mes "当一群人击杀一个怪物时，造成最多伤害的人在拾取掉落物品时优先。";
 					next;
 					break;
 				case 4:
-					mes "[DRY-RUN] [Elmeen]";
-					mes "[DRY-RUN] Feel free to";
-					mes "[DRY-RUN] ask me if you";
-					mes "[DRY-RUN] have any questions.";
+					mes "[艾尔敏]";
+					mes "请随意";
+					mes "问我如果你";
+					mes "有任何问题吗？";
 					close;
 				}
 			}
 		case 2:
-			mes "[DRY-RUN] [Elmeen]";
-			mes "[DRY-RUN] Please take care of the equipment you've received through the training courses. Once you lose the equipment, you can never get them back.";
+			mes "[艾尔敏]";
+			mes "请好好保管您通过训练课程获得的装备。一旦丢失装备，您将无法再找回它们。";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Elmeen]";
-		mes "[DRY-RUN] Which subject";
-		mes "[DRY-RUN] shall I expain?";
+		mes "[艾尔敏]";
+		mes "我应该先讲哪个主题";
+		mes "我该解释吗？";
 		next;
 		while(1) {
-			switch(select("[DRY-RUN] Monsters:Experience:Items:Quit.")) {
+			switch(select("怪物:经验:物品:退出。")) {
 			case 1:
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] There are many aggressive monsters that will attack you first before you even approach them. ";
+				mes "[艾尔敏]";
+				mes "还有一些怪物会与同类合作。攻击其中一个，它们整个群体会围过来，寻求报复。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] There are also a few monsters that will cooperate with others of their kind. Attack one of them, and the whole pack of them will swarm around you, seeking revenge.";
+				mes "[艾尔敏]";
+				mes "还有一些怪物会与同类合作。攻击其中一个，它们整个群体会围绕你，寻求报复。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Every monster can be specified by their types, sizes and properties. For example, there are Demi-human, Brute, Holy and Demon property monsters out there.";
+				mes "[艾尔敏]";
+				mes "每种怪物都可以通过它们的类型、大小和属性来指定。例如，外面有半人类、野兽、神圣和恶魔属性的怪物。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] When you're aware of what property a monster is, you can use that knowledge to help you in battle.";
+				mes "[艾尔敏]";
+				mes "当你知道一个怪物的属性时，你可以利用这个知识来帮助你在战斗中。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] If you manage to get cards for that increase your damage upon certain monster properties, or reduce damage from specific monster properties, you'll have a much easier time in battle.";
+				mes "[艾尔敏]";
+				mes "如果你能获得能够增加对特定怪物属性伤害的卡片，或者减少来自特定怪物属性的伤害，你在战斗中会轻松得多。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Monsters are separated by their size: small, medium and large. There are a few cards that allow you to do more damage to a specific monster size.";
+				mes "[艾尔敏]";
+				mes "怪物根据大小分为小型、中型和大型。有一些卡片可以让您对特定大小的怪物造成更多伤害。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Also, each weapon has its strengths and weaknesses. The size of the weapon will affect the damage it will deal to monsters.";
+				mes "[艾尔敏]";
+				mes "此外，每种武器都有其优缺点。武器的大小会影响它对怪物造成的伤害。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] For example, Dagger class weapons do 100 % damage on small sized monsters but only inflict 50 % on large monsters.";
+				mes "[艾尔敏]";
+				mes "例如，匕首类武器对小型怪物造成100%的伤害，但对大型怪物仅造成50%的伤害。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Common monster properties include Water, Wind, Earth, Fire, Shadow, Ghost and Holy. If you attack a monster with an opposing property, you can inflict additional damage~";
+				mes "[艾尔敏]";
+				mes "常见的怪物属性包括水、风、土、火、暗、鬼魂和神圣。如果你用相反属性攻击怪物，可以造成额外伤害~";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] But if you attack a monster with";
-				mes "[DRY-RUN] a skill or weapon that inflicts damage of the same property as the monster, the damage will be greatly reduced, or completely negated. You might even heal the monster!";
+				mes "[艾尔敏]";
+				mes "但是如果你攻击一个怪物，使用的";
+				mes "技能或武器与怪物的属性相同，伤害将大幅减少，甚至完全抵消。你甚至可能会治愈怪物！";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] In the case of Ghost property monsters, normal weapons cannot do any harm. However, a weapon with any other property will be able to deal out some damage.";
+				mes "[艾尔敏]";
+				mes "对于鬼魂属性的怪物，普通武器无法造成任何伤害。然而，具有其他属性的武器将能够造成一些伤害。";
 				next;
 				break;
 			case 2:
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Basically, a character who deals the most damage on a monster receives the most experience points from the monster.";
+				mes "[艾尔敏]";
+				mes "基本上，对一个怪物造成最多伤害的角色会从该怪物那里获得最多的经验值。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Therefore, you receive a certain percentage of experience points in proportion to the damage you've inflicted on the monster, compared to its total HP.";
+				mes "[艾尔敏]";
+				mes "因此，你获得的经验值是你对怪物造成的伤害与其总HP的比例的一定百分比。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Let's say, there is a character named 'Z.' Z does 65 damage on a monster that has 100 total HP and gives 1000 experience points when it's dead. So, Z will receive 650 experience points.";
+				mes "[艾尔敏]";
+				mes "假设有一个角色名为'Z'。Z对一个总HP为100的怪物造成了65点伤害，而这个怪物被击杀时会给予1000经验值。那么，Z将获得650经验值。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] However, this rule applies differently following certain situations.";
+				mes "[艾尔敏]";
+				mes "然而，这条规则在某些情况下适用的方式有所不同。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] If there are two people who both did 65 damage on the same monster, the experience points that each will receive differs, depending on the monster's remaining HP.";
+				mes "[艾尔敏]";
+				mes "如果有两个人都对同一个怪物造成了65点伤害，那么每个人获得的经验值会有所不同，这取决于怪物剩余的HP。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] For instance, somebody does damage to a monster while you're already hitting it, and he did the same amount of damage you did.";
+				mes "[艾尔敏]";
+				mes "例如，当你已经在攻击一个怪物时，有人对这个怪物造成了伤害，而他造成的伤害与你相同。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] In this case, you will receive 2//3 of the whole experience points that monster can give you, the other one will receive 1//3.";
+				mes "[艾尔敏]";
+				mes "在这种情况下，你将获得该怪物可以给予的全部经验值的2/3，另一个人将获得1/3。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] However, attacking a monster that somebody already started to hit is not suggested in Ragnarok Online. That action is regarded as ill-mannered behavior.";
+				mes "[艾尔敏]";
+				mes "然而，在《 Ragnarok Online》中，攻击一个已经被别人开始攻击的怪物是不建议的。这种行为被视为不礼貌。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] For party play, the party master can set the experience distribution to the equally share option.";
+				mes "[艾尔敏]";
+				mes "对于组队游戏，队长可以将经验分配设置为均等分享选项。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] With this method, party members can share their experience according to the their character levels, and the number of members in the party.";
+				mes "[艾尔敏]";
+				mes "通过这种方法，队员可以根据他们的角色等级和队伍中的成员数量来分享经验。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Also, there is the experience benefit for party play which allows you to gain more experience points than playing solo. You can take advantage of this system for faster leveling.";
+				mes "[艾尔敏]";
+				mes "此外，组队游戏有经验值加成，可以让你获得比单独游戏更多的经验值。你可以利用这个系统更快地升级。";
 				next;
 				break;
 			case 3:
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] When you kill monsters,";
-				mes "[DRY-RUN] you can obtain items by chance. Furthermore, certain characters can use the 'Steal' skill in order to steal items from monsters.";
+				mes "[艾尔敏]";
+				mes "当你击杀怪物时，";
+				mes "你有机会获得物品。此外，某些角色可以使用“偷窃”技能从怪物身上偷取物品。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Don't you worry about the Steal skill causing you to not find any items after you kill them. Using the Steal skill does not at all affect the item drop rate for monsters once they're killed.";
+				mes "[艾尔敏]";
+				mes "你不用担心偷窃技能会导致你在击杀怪物后找不到任何物品。使用偷窃技能完全不会影响怪物被击杀后的物品掉落率。";
 				next;
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] When a group of people kill a monster, the person who did the most damage receives priority in picking up item drops.";
+				mes "[艾尔敏]";
+				mes "当一群人击杀一个怪物时，造成最多伤害的人在拾取掉落物品时优先。";
 				next;
 				break;
 			case 4:
-				mes "[DRY-RUN] [Elmeen]";
-				mes "[DRY-RUN] Feel free to";
-				mes "[DRY-RUN] ask me if you";
-				mes "[DRY-RUN] have any questions.";
+				mes "[艾尔敏]";
+				mes "请随意";
+				mes "问我如果你";
+				mes "有任何问题吗？";
 				close;
 			}
 		}
@@ -2645,31 +2645,31 @@ new_1-2,38,182,3	script	Entrance Guard#nv	92,{
 
 //Teleport NPC
 new_1-3,95,30,4	script	Trainer#nv1::NovHoffman	84,{
-	mes "[DRY-RUN] [Hoffman]";
-	mes "[DRY-RUN] Hey there~";
-	mes "[DRY-RUN] I'm here to provide";
-	mes "[DRY-RUN] you with a little instruction.";
+	mes "[霍夫曼]";
+	mes "嘿~";
+	mes "我在这里提供";
+	mes "一些指导。";
 	next;
-	mes "[DRY-RUN] [Hoffman]";
-	mes "[DRY-RUN] These monsters are all weak";
-	mes "[DRY-RUN] and easy to kill. But be careful,";
-	mes "[DRY-RUN] a lot of them are aggressive";
-	mes "[DRY-RUN] and out for blood!";
+	mes "[霍夫曼]";
+	mes "这些怪物都很弱";
+	mes "且容易被击杀。但要小心，";
+	mes "它们中的很多都是攻击性很强的";
+	mes "而且是来找麻烦的！";
 	next;
-	mes "[DRY-RUN] [Hoffman]";
-	mes "[DRY-RUN] If you think monsters here are too weak for you, I can send you to another training ground where the monsters are stronger than the ones over here.";
+	mes "[霍夫曼]";
+	mes "如果你觉得这里的怪物对你来说太弱，我可以送你去另一个训练场，那里的怪物比这里的强。";
 	next;
-	mes "[DRY-RUN] [Hoffman]";
-	mes "[DRY-RUN] But don't worry so much,";
-	mes "[DRY-RUN] They're not impossible for";
-	mes "[DRY-RUN] Novices. So would you";
-	mes "[DRY-RUN] like to try?";
+	mes "[霍夫曼]";
+	mes "但别太担心，";
+	mes "它们对";
+	mes "初心者来说并不是不可能的。那么你想要";
+	mes "想试试吗？";
 	next;
-	switch(select("[DRY-RUN] I do want more of a challenge~:I wanna fight tough monsters!:Cancel")) {
+	switch(select("我确实想要更多挑战~:我想打强大的怪物!:取消")) {
 	case 1:
-		mes "[DRY-RUN] [Hoffman]";
-		mes "[DRY-RUN] I see, then let me guide";
-		mes "[DRY-RUN] you to a training ground that has stronger monsters. May God be with you...";
+		mes "[霍夫曼]";
+		mes "我明白了，那让我带你去";
+		mes "一个有更强怪物的训练场。愿上帝与你同在...";
 		next;
 		if (strnpcinfo(2) == "nv1") {
 			if (rand(2)) {
@@ -2684,12 +2684,12 @@ new_1-3,95,30,4	script	Trainer#nv1::NovHoffman	84,{
 		}	
 		end;
 	case 2:
-		mes "[DRY-RUN] [Hoffman]";
-		mes "[DRY-RUN] You must like ";
-		mes "[DRY-RUN] rough challenges,";
-		mes "[DRY-RUN] don't you? Please";
-		mes "[DRY-RUN] be careful, it can get";
-		mes "[DRY-RUN] pretty difficult...";
+		mes "[霍夫曼]";
+		mes "你一定喜欢";
+		mes "艰难的挑战，";
+		mes "对吧？请";
+		mes "小心点，这可能会变得";
+		mes "相当困难...";
 		next;
 		if (strnpcinfo(2) == "nv1" || strnpcinfo(2) == "nv2" || strnpcinfo(2) == "nv3") {
 			if (rand(2)) {
@@ -2709,10 +2709,10 @@ new_1-3,95,30,4	script	Trainer#nv1::NovHoffman	84,{
 		}
 		end;
 	case 3:
-		mes "[DRY-RUN] [Hoffman]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Are you worried about going";
-		mes "[DRY-RUN] to more challenging places? That's understandable, since you're still a new adventurer. Good luck~";
+		mes "[霍夫曼]";
+		mes "嗯……？";
+		mes "你担心去";
+		mes "更具挑战性的地方吗？这很可以理解，因为你还是个新冒险者。祝你好运~";
 		close;
 	}
 }
@@ -2758,55 +2758,55 @@ new_1-2,28,185,4	shop	Potato Merchant	90,516:15
 
 new_1-4,100,29,1	script	Hanson#nv	46,{
 	if (checkweight(909,400) == 0) {
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] All of the items you are carrying must be quite a burden. Where did you get so much things? Please lighten your weight by getting rid of things you don't need.";
+		mes "[汉森]";
+		mes "你身上携带的所有物品一定很沉重。你从哪里得到这么多东西？请通过丢弃不需要的东西来减轻你的负担。";
 		close;
 	}
 	if (nov_3_swordman == 20) {
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Good day,";
+		mes "[汉森]";
+		mes "你好，";
 		mes "^A62A2A" + strcharinfo(0) + "'^000000.";
-		mes "[DRY-RUN] You've made quite";
-		mes "[DRY-RUN] an effort to come here.";
+		mes "你来这里真是费了不少劲。";
+		mes "你付出了很大的努力。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] This final test in the Training Grounds is a personality test,";
-		mes "[DRY-RUN] but it's not a mandatory course.";
+		mes "[汉森]";
+		mes "训练场的最后测试是一个性格测试，";
+		mes "但这不是一门必修课程。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] However, there are some benefits";
-		mes "[DRY-RUN] to taking this test. When you take this test, you'll receive many health items which will help you when you join the Ragnarok Online community.";
+		mes "[汉森]";
+		mes "不过，参加这个测试有一些好处";
+		mes "当你参加这个测试时，你将获得许多健康物品，这些物品在你加入《 Ragnarok Online 》社区时会对你有所帮助。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Secondly, after you finish the course we will suggest the job class that seems best suited to your personality and teleport you to a town where you can change into the job we suggested.";
+		mes "[汉森]";
+		mes "其次，在你完成课程后，我们会建议最适合你性格的职业，并传送你到一个可以转职的城镇。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Now...";
-		mes "[DRY-RUN] What would";
-		mes "[DRY-RUN] you like to do?";
+		mes "[汉森]";
+		mes "现在...";
+		mes "你想要";
+		mes "做什么？";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Do you wish to start Ragnarok Online immediately, or take this personality test course first?";
+		mes "[汉森]";
+		mes "你想立即开始《 Ragnarok Online 》，还是先参加这个性格测试课程？";
 		next;
-		switch(select("[DRY-RUN] I'll take the course.:Let me start Ragnarok Online please.")) {
+		switch(select("我想上课。:请让我开始《 Ragnarok Online》。")) {
 		case 1:
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Excellent choice!";
-			mes "[DRY-RUN] You're supposed to take every training course if you really want to be a well-prepared player!";
+			mes "[汉森]";
+			mes "绝佳的选择！";
+			mes "如果你真的想成为一个准备充分的玩家，你应该参加每一个训练课程！";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Alright, let me start the 1st personality test. Please relax";
-			mes "[DRY-RUN] and take it easy.";
+			mes "[汉森]";
+			mes "好的，让我开始第一次性格测试。请放松。";
+			mes "并且放轻松。";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Remember, this test is only to check your personality, there is no set standard for right and wrong. Now! Let's begin the test!";
+			mes "[汉森]";
+			mes "记住，这个测试只是用来检查你的性格，没有绝对的对与错。现在！让我们开始测试吧！";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Please choose the word";
-			mes "[DRY-RUN] that best matches you from";
-			mes "[DRY-RUN] among the following.";
+			mes "[汉森]";
+			mes "请选择一个";
+			mes "最符合你的词语，";
+			mes "从以下选项中选择。";
 			next;
-			switch(select("[DRY-RUN] Study:Exercise:Public service:Violence")) {
+			switch(select("学习:锻炼:公共服务:暴力")) {
 			case 1:
 				set .@magician_p,.@magician_p+1;
 				break;
@@ -2821,7 +2821,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@thief_p,.@thief_p+1;
 				break;
 			}
-			switch(select("[DRY-RUN] Change:Conserve")) {
+			switch(select("改变:保持")) {
 			case 1:
 				set .@magician_p,.@magician_p+1;
 				break;
@@ -2829,7 +2829,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@acolyte_p,.@acolyte_p+1;
 				break;
 			}
-			switch(select("[DRY-RUN] Consumer:Seller:Producer")) {
+			switch(select("消费者:卖家:生产者")) {
 			case 1:
 				set .@swordman_p,.@swordman_p+1;
 				set .@thief_p,.@thief_p+1;
@@ -2842,7 +2842,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@magician_p,.@magician_p+1;
 				break;
 			}
-			switch(select("[DRY-RUN] Celebrity:Prudence")) {
+			switch(select("名人:谨慎")) {
 			case 1:
 				set .@thief_p,.@thief_p+1;
 				break;
@@ -2850,7 +2850,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@archer_p,.@archer_p+1;
 				break;
 			}
-			switch(select("[DRY-RUN] Theory:Experience")) {
+			switch(select("理论:经验")) {
 			case 1:
 				set .@magician_p,.@magician_p+1;
 				break;
@@ -2858,7 +2858,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@swordman_p,.@swordman_p+1;
 				break;
 			}
-			switch(select("[DRY-RUN] The Past:Reality:The Future")) {
+			switch(select("过去:现实:未来")) {
 			case 1:
 				set .@archer_p,.@archer_p+1;
 				break;
@@ -2870,16 +2870,16 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@magician_p,.@magician_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Please answer";
-			mes "[DRY-RUN] 'Yes' or 'No' to";
-			mes "[DRY-RUN] the following questions.";
+			mes "[汉森]";
+			mes "请回答";
+			mes "'是'或'否'，对";
+			mes "以下问题。";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] I'd rather die";
-			mes "[DRY-RUN] than live submissively.";
+			mes "[汉森]";
+			mes "我宁愿死";
+			mes "宁愿活得不屈服。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@swordman_p,.@swordman_p+1;
 				break;
@@ -2888,12 +2888,12 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@merchant_p,.@merchant_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You are often upset";
-			mes "[DRY-RUN] to see someone better";
-			mes "[DRY-RUN] than you.";
+			mes "[汉森]";
+			mes "你常常感到不安";
+			mes "看到比自己更优秀的人";
+			mes "。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@merchant_p,.@merchant_p+1;
 				break;
@@ -2901,12 +2901,12 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@acolyte_p,.@acolyte_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You don't mind";
-			mes "[DRY-RUN] exploring dangerous";
-			mes "[DRY-RUN] places.";
+			mes "[汉森]";
+			mes "你不介意";
+			mes "探索危险的";
+			mes "地方。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@swordman_p,.@swordman_p+1;
 				break;
@@ -2914,12 +2914,12 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@magician_p,.@magician_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You are";
-			mes "[DRY-RUN] a leader-type";
-			mes "[DRY-RUN] person.";
+			mes "[汉森]";
+			mes "你是";
+			mes "一种领导型";
+			mes "的人。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@swordman_p,.@swordman_p+1;
 				break;
@@ -2927,20 +2927,20 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@archer_p,.@archer_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] While exploring";
-			mes "[DRY-RUN] a dungeon, you run";
-			mes "[DRY-RUN] into a dead end.";
+			mes "[汉森]";
+			mes "在探索";
+			mes "地下城时，你遇到了";
+			mes "一个死胡同。";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] However, there is a sign that reads 'Do Not Push' next to a stone that looks strangely like a button on the wall next to you.";
+			mes "[汉森]";
+			mes "然而，旁边有一个标志，上面写着'请勿按'，旁边的墙上有一个看起来奇怪的像按钮的石头。";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Do you give in";
-			mes "[DRY-RUN] to the urge to push";
-			mes "[DRY-RUN] this button?";
+			mes "[汉森]";
+			mes "你会屈服于";
+			mes "推动的冲动吗？";
+			mes "这个按钮？";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@thief_p,.@thief_p+1;
 				break;
@@ -2948,11 +2948,11 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@swordman_p,.@swordman_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You often see";
-			mes "[DRY-RUN] things that don't exist.";
+			mes "[汉森]";
+			mes "你常常看到";
+			mes "不存在的事物。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@acolyte_p,.@acolyte_p+1;
 				break;
@@ -2960,12 +2960,12 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@magician_p,.@magician_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] If you fell off";
-			mes "[DRY-RUN] a cliff, you'd feel";
-			mes "[DRY-RUN] like you were flying.";
+			mes "[汉森]";
+			mes "如果你从悬崖掉下去，";
+			mes "你会觉得";
+			mes "自己在飞翔。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@acolyte_p,.@acolyte_p+1;
 				break;
@@ -2973,10 +2973,10 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@magician_p,.@magician_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Money talks.";
+			mes "[汉森]";
+			mes "金钱能说话。";
 			next;
-			switch(select("[DRY-RUN] Yes.:No.")) {
+			switch(select("是。:否。")) {
 			case 1:
 				set .@merchant_p,.@merchant_p+1;
 				break;
@@ -2984,14 +2984,14 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@archer_p,.@archer_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Now, let me give you some different questions. Please relax and take it easy, and choose the answer that suits you best.";
+			mes "[汉森]";
+			mes "现在，让我问你一些不同的问题。请放松心情，选择最适合你的答案。";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] As you check";
-			mes "[DRY-RUN] your tight schedule....";
+			mes "[汉森]";
+			mes "当你检查";
+			mes "你紧张的日程时....";
 			next;
-			switch(select("[DRY-RUN] You feel like a robot.:You are proud and satisfied.:Schedule? What schedule?")) {
+			switch(select("你感觉像个机器人。:你感到自豪和满足。:日程？什么日程？")) {
 			case 1:
 				set .@swordman_p,.@swordman_p+1;
 				set .@thief_p,.@thief_p+1;
@@ -3005,13 +3005,13 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@merchant_p,.@merchant_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] As you go window shopping,";
-			mes "[DRY-RUN] you find a really interesting item in a store, debating whether or not to buy it. Before making";
-			mes "[DRY-RUN] a purchase, the first thing";
-			mes "[DRY-RUN] you do is...";
+			mes "[汉森]";
+			mes "当你逛街时，";
+			mes "你在商店里发现了一个非常有趣的物品，正在考虑是否购买。在做出决定之前";
+			mes "购买之前，第一件事";
+			mes "你要做的是...";
 			next;
-			switch(select("[DRY-RUN] Consider if you need it.:Check the price.:Don't think twice, just buy it!")) {
+			switch(select("考虑一下你是否需要。:查看价格。:别犹豫，赶紧买！")) {
 			case 1:
 				set .@archer_p,.@archer_p+1;
 				break;
@@ -3022,12 +3022,12 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@thief_p,.@thief_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Fill in the blank:";
-			mes "[DRY-RUN] You ^3355FF_____^000000";
-			mes "[DRY-RUN] competing with other people...";
+			mes "[汉森]";
+			mes "填空:";
+			mes "你 ^3355FF_____^000000";
+			mes "与其他人竞争...";
 			next;
-			switch(select("[DRY-RUN] don't mind...:don't like...:don't care about...")) {
+			switch(select("不在意...:不喜欢...:不关心...")) {
 			case 1:
 				set .@merchant_p,.@merchant_p+1;
 				break;
@@ -3039,13 +3039,13 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@swordman_p,.@swordman_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You're responsible for a task that requires you to cooperate with many people. If you handle it alone, it will take a lot of effort and time.";
+			mes "";
+			mes "[汉森]";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] But if you cooperate with others, it will be simple and an enjoyable task. You would... ";
+			mes "你负责一个需要与许多人合作的任务。如果你单独处理，将会花费很多精力和时间。";
+			mes "[汉森]";
 			next;
-			switch(select("[DRY-RUN] Handle it myself, even if it's hard.:Ask friends to help.")) {
+			switch(select("自己处理，即使很难。:请朋友帮忙。")) {
 			case 1:
 				set .@magician_p,.@magician_p+1;
 				break;
@@ -3053,13 +3053,13 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@merchant_p,.@merchant_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You happen to";
-			mes "[DRY-RUN] find a girl who";
-			mes "[DRY-RUN] fainted on the street.";
-			mes "[DRY-RUN] What would you do?";
+			mes "但如果你与他人合作，这将是一个简单而愉快的任务。你会... ";
+			mes "[汉森]";
+			mes "你恰好";
+			mes "找到一个女孩，她";
+			mes "在街上晕倒了。";
 			next;
-			switch(select("[DRY-RUN] Carry her to a hospital.:Assess the situation before taking action.:Just ignore it.")) {
+			switch(select("把她送到医院。:在采取行动之前评估情况。:就忽略它吧。")) {
 			case 1:
 				set .@acolyte_p,.@acolyte_p+1;
 				break;
@@ -3073,12 +3073,12 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@merchant_p,.@merchant_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You happen to";
-			mes "[DRY-RUN] pick up 'Clothing.'";
-			mes "[DRY-RUN] What would you do?";
+			mes "你会怎么做？";
+			mes "[汉森]";
+			mes "你恰好";
+			mes "捡起‘衣服’。";
 			next;
-			switch(select("[DRY-RUN] Check the brand.:Wonder who lost it.:Finder's keepers!:Leave it where it was.")) {
+			switch(select("检查品牌。:想知道是谁丢的。:找到的就是我的！:把它放回原处。")) {
 			case 1:
 				set .@merchant_p,.@merchant_p+1;
 				break;
@@ -3093,10 +3093,10 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@magician_p,.@magician_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You happened to accidentally slip your tongue in the middle of a conversation. How do you cope with this situation?";
+			mes "你会怎么做？";
+			mes "[汉森]";
 			next;
-			switch(select("[DRY-RUN] Pretend it's a joke.:Change the subject.:Analyze it.:Apologize honestly.")) {
+			switch(select("假装这是个笑话。:换个话题。:分析一下。:诚恳地道歉。")) {
 			case 1:
 				set .@thief_p,.@thief_p+1;
 				break;
@@ -3110,10 +3110,10 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@acolyte_p,.@acolyte_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] You're on a trip with your beloved. Your significant other then asks you to buy a souvenir that's not particularly good. What do you do?";
+			mes "你在谈话中不小心说错了话。你会如何应对这种情况？";
+			mes "[汉森]";
 			next;
-			switch(select("[DRY-RUN] Buy the item for her/him.:Say 'no.':Promise it for next time.")) {
+			switch(select("为她/他买这个物品。:说‘不’。:承诺下次买。")) {
 			case 1:
 				set .@swordman_p,.@swordman_p+1;
 				break;
@@ -3124,11 +3124,11 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				set .@thief_p,.@thief_p+1;
 				break;
 			}
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Okay~! That's all for the test. You've finished all the Training Grounds courses. Congratulations!";
+			mes "你和心爱的人一起旅行。你的另一半让你买一个并不是特别好的纪念品。你会怎么做？";
+			mes "[汉森]";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] I've prepared some items for you since you passed the personality test. Please take them, you've earned it.";
+			mes "好的~！测试到此为止。你已经完成了所有训练场课程。恭喜你！";
+			mes "[汉森]";
 			next;
 			//---------------------------------------------------------------------------------------------------------------------------------------------------
 			set nov_3_swordman,40;
@@ -3137,20 +3137,20 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 			getitem 506,2; //Green_Potion
 			//-------------------------------------------------------------------------------------------------------------------------------------------------
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Now, we will recommend a suitable job for you after analyzing the results of your personality test. Please wait a moment.";
+			mes "我为你准备了一些物品，因为你通过了性格测试。请拿去，你应得的。";
+			mes "[汉森]";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] ...";
+			mes "现在，我们将在分析您的性格测试结果后推荐一个适合您的职业。请稍等片刻。";
+			mes "[汉森]";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] ...";
-			mes "[DRY-RUN] ......";
+			mes "...";
+			mes "[汉森]";
+			mes "...";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Here's the";
-			mes "[DRY-RUN] final result";
-			mes "[DRY-RUN] of your test.";
+			mes "......";
+			mes "[汉森]";
+			mes "这是";
+			mes "最终结果";
 			next;
 			if (.@swordman_p > .@magician_p) {
 				if (.@swordman_p > .@merchant_p) {
@@ -3309,32 +3309,32 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 			if (.@job_c == 1) {
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] Although you're very straight forward and simple minded, you";
-				mes "[DRY-RUN] have a strong will and want to be an important person for this world.";
+				mes "您的测试结果。";
+				mes "[汉森]";
+				mes "虽然您非常直率且简单，但您";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You're also always";
-				mes "[DRY-RUN] trying to protect the weak.";
+				mes "有着强烈的意志，想要成为这个世界的重要人物。";
+				mes "[汉森]";
+				mes "您也总是";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] For you, who has your own will, ^696969Swordman^000000 class is the most suitable job.";
+				mes "试图保护弱者。";
+				mes "[汉森]";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] So would you like to accept our recommendation, or would you like to choose a job on your own?";
+				mes "对于您这样有自己意志的人来说，^696969剑士^000000职业是最适合的选择。";
+				mes "[汉森]";
 				next;
-				switch(select("[DRY-RUN] Swordman!:My own choice!")) {
+				switch(select("剑士！:我自己的选择！")) {
 				case 1:
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] That's a great choice!";
-					mes "[DRY-RUN] After you receive all the supplies, I will teleport you to the Swordman Association.";
+					mes "那么您想接受我们的推荐，还是想自己选择一个职业？";
+					mes "[汉森]";
+					mes "这是一个很好的选择！";
 					next;
-					mes "[DRY-RUN] ^660000List of Supplies^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Storage^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Transportation^000000";
+					mes "在你收到所有物资后，我会传送你到剑士协会。";
+					mes "^660000物资清单^000000";
+					mes "^0000335 卡普拉仓库免费票^000000";
 					////mes "^000099100 zeny^000000";
-					mes "[DRY-RUN] ^0000331 Falchion^000000";
-					mes "[DRY-RUN] ^0000337 Phracon^000000";
+					mes "^0000335 卡普拉传送免费票^000000";
+					mes "^0000331 弯刀^000000";
 					next;
 					set nov_3_swordman,40;
 					getitem 7059,5; //Cargo_Free_Ticket
@@ -3342,27 +3342,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					getitem 1104,1; //Falchion
 					getitem 1010,7; //Phracon
 					////getgold 100
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Please check your inventory to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+					mes "^0000337 矿石^000000";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+					mes "请检查你的背包，看看是否收到了所有列出的物资。让我简单地告诉你你所收到的物品。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Zeny' is the currency of Rune-Midgard. 'Falchion' is a weapon that will be very useful once you become a Swordman.";
+					mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Phracon' is an ore which can be used to upgrade lvl 1 weapons. To strengthen your Falchion with this Phracon, please visit a forge in one of the towns.";
+					mes "'金币'是鲁恩-米德加兹的货币。'弯刀'是一种在你成为剑士后会非常有用的武器。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] The town you will be sent to is called Izlude which is a satellite of Prontera. The Swordman Association is located in the West of town. Please remember this.";
+					mes "'普拉孔'是一种可以用来升级1级武器的矿石。要用这个普拉孔强化你的弯刀，请访问城镇中的锻造厂。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You will now";
-					mes "[DRY-RUN] be teleported.";
-					mes "[DRY-RUN] Good luck,";
+					mes "你将被传送到的城镇叫做依斯鲁得，它是普隆德拉的一个卫星城。剑士协会位于城镇的西部。请记住这一点。";
+					mes "[汉森]";
+					mes "你现在将会";
+					mes "被传送。";
 					mes "^A62A2A" + strcharinfo(0) + "^000000";
-					mes "[DRY-RUN] and farewell.";
+					mes "祝你好运，";
 					close2;
 					set nov_1st_cos,0;
 					set nov_2nd_cos,0;
@@ -3381,28 +3381,28 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 			else if (.@job_c == 2) {
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You enjoy analyzing things around you, and you're very independent. You have use insightful judgment and you can be very shy and logical.";
+				mes "再见。";
+				mes "[汉森]";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] For you, the observative intellectual, ^696969Mage^000000 is the most suitable job.";
+				mes "你喜欢分析周围的事物，并且非常独立。你有敏锐的判断力，并且可能会非常害羞和理性。";
+				mes "[汉森]";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] So, would you like to accept our recommendation or would you like to choose a job on your own?";
+				mes "对于你这个观察力敏锐的知识分子来说，^696969魔法师^000000是最适合的职业。";
+				mes "[汉森]";
 				next;
-				switch(select("[DRY-RUN] Mage!:My own choice!")) {
+				switch(select("魔法师！:我自己的选择！")) {
 				case 1:
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] That's a great choice!";
-					mes "[DRY-RUN] After you receive all the supplies, I'll teleport you to the Mage town.";
+					mes "那么，你想接受我们的推荐，还是想自己选择一个职业？";
+					mes "[汉森]";
+					mes "这是一个很好的选择！";
 					next;
-					mes "[DRY-RUN] ^660000List of Supplies^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Storage^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Transportation^000000";
+					mes "在你收到所有物资后，我会传送你到魔法师城镇。";
+					mes "^660000物资清单^000000";
+					mes "^0000335 卡普拉仓库免费票^000000";
 					////mes "^000099100 zeny^000000";
-					mes "[DRY-RUN] ^0000331 Rod^000000";
-					mes "[DRY-RUN] ^0000331 Cutter^000000";
-					mes "[DRY-RUN] ^0000337 Phracon^000000";
+					mes "^0000335 卡普拉传送免费票^000000";
+					mes "^0000331 法杖^000000";
+					mes "^0000331 刀具^000000";
 					next;
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
 					set nov_3_swordman,40;
@@ -3413,27 +3413,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					getitem 1010,7; //Phracon
 					////getgold 100
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Please check your inventory to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+					mes "^0000337 矿石^000000";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+					mes "请检查你的背包，看看是否收到了所有列出的物资。让我简单地告诉你你所收到的物品。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Zeny' is the currency of Rune-Midgard. That 'Cutter' has been given to you so that you can fight monsters before you become a Mage.";
+					mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Once you become a Mage, you can use the 'Rod' that has been given to you. It will be very useful during your early days as a Mage.";
+					mes "'金币'是鲁恩-米德加兹的货币。这个'刀具'是给你的，以便你在成为魔法师之前可以与怪物战斗。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Phracon' is an ore which can be used to upgrade lvl 1 weapons. To strengthen your Level 1 weapons with this Phracon, please visit a forge in one of the towns.";
+					mes "一旦你成为魔法师，你就可以使用给你的'法杖'。在你作为魔法师的早期阶段，它会非常有用。";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] The town you will arrive is named 'Geffen'.";
-					mes "[DRY-RUN] The mage academy is located in the Northwest part in town. Please remember this.";
+					mes "'普拉孔'是一种可以用来升级1级武器的矿石。要用这个普拉孔强化你的1级武器，请访问城镇中的锻造厂。";
+					mes "[汉森]";
+					mes "你将到达的城镇名为'吉芬'。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You'll now be teleported.";
+					mes "";
+					mes "魔法学院位于城镇的西北部。请记住这一点。";
 					mes "Good luck, ^A62A2A" + strcharinfo(0) + "^000000 and farewell.";
 					close2;
 					set nov_1st_cos,0;
@@ -3453,28 +3453,28 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 			else if (.@job_c == 3) {
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You're very willful and very well organized. You've already set a goal in life and have become very responsible for your actions.";
+				mes "[汉森]";
+				mes "你将被传送。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] Because of your drive and desire to succeed, ^696969Merchant^000000 is the most suitable job for you.";
+				mes "[汉森]";
+				mes "你非常有主见，并且组织能力很强。你已经设定了生活目标，并对自己的行为变得非常负责。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] So, would you like to accept our recommendation or would you like to choose a job on your own?";
+				mes "[汉森]";
+				mes "由于你的动力和成功的渴望，^696969商人^000000是最适合你的职业。";
 				next;
-				switch(select("[DRY-RUN] Merchant!:My own choice!")) {
+				switch(select("商人！:我自己的选择！")) {
 				case 1:
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] That's a great choice!";
-					mes "[DRY-RUN] After you receive all the supplies, I will teleport you to the merchant town.";
+					mes "[汉森]";
+					mes "那么，你想接受我们的推荐，还是想自己选择一个职业？";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] ^660000List of Supplies^000000";
-					mes "[DRY-RUN] ^0000334 Free Ticket for Kafra Storage^000000";
-					mes "[DRY-RUN] ^0000334 Free Ticket for Kafra Transportation^000000";
-					mes "[DRY-RUN] ^0000334 Free Ticket for the Cart Service^000000";
+					mes "这是一个很好的选择！";
+					mes "在你收到所有物资后，我将把你传送到商人城镇。";
+					mes "^660000物资清单^000000";
+					mes "^0000334 卡普拉仓库免费票^000000";
 					////mes "^000099100 zeny^000000";
-					mes "[DRY-RUN] ^0000331 Battle Axe^000000";
-					mes "[DRY-RUN] ^0000337 Phracon^000000";
+					mes "^0000334 卡普拉传送免费票^000000";
+					mes "^0000334 货车服务免费票^000000";
 					next;
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
 					set nov_3_swordman,40;
@@ -3485,27 +3485,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					getitem 1010,7; //Phracon
 					////getgold 100
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Please check your inventory to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+					mes "^0000331 战斗斧^000000";
+					mes "^0000337 矿石^000000";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+					mes "[汉森]";
+					mes "请检查你的背包，看看是否收到了所有列出的物资。让我简单地告诉你你所收到的物品。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Zeny' is the currency of Rune-Midgard. 'Battle Axe' will come in handy once you become a Merchant.";
+					mes "[汉森]";
+					mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Phracon' is an ore which can be used to upgrade lvl 1 weapons. To strengthen your Battle Axe with this Phracon, please visit a forge in one of the towns.";
+					mes "[汉森]";
+					mes "'Zeny' 是米德加尔特的货币。'战斗斧' 在你成为商人后会派上用场。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] The town you will be sent to is named Alberta. The Merchant Guild is located to the SouthWest within Alberta. Please remember this.";
+					mes "[汉森]";
+					mes "'Phracon' 是一种可以用来升级1级武器的矿石。要用这个Phracon强化你的战斗斧，请访问城镇中的锻造厂。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You will now";
-					mes "[DRY-RUN] be teleported.";
-					mes "[DRY-RUN] Good luck,";
+					mes "[汉森]";
+					mes "你将被送往的城镇名为艾尔贝塔。商会位于艾尔贝塔的西南部。请记住这一点。";
+					mes "[汉森]";
+					mes "你现在将会";
 					mes "^A62A2A" + strcharinfo(0) + "^000000";
-					mes "[DRY-RUN] and farewell.";
+					mes "被传送。";
 					close2;
 					set nov_1st_cos,0;
 					set nov_2nd_cos,0;
@@ -3524,34 +3524,34 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 			else if (.@job_c == 4) {
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] Carpe diem:";
-				mes "[DRY-RUN] Seize the day.";
-				mes "[DRY-RUN] That's how you live.";
+				mes "祝你好运，";
+				mes "再见。";
+				mes "[汉森]";
+				mes "把握今天:";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] From your natural curiosity";
-				mes "[DRY-RUN] comes a happy-go-lucky sense of adventure, and a desire to explore.";
+				mes "把握今天。";
+				mes "这就是生活的方式。";
+				mes "[汉森]";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] For someone like you,";
-				mes "[DRY-RUN] ^696969Thief^000000 is the most suitable job.'";
+				mes "源于你天生的好奇心";
+				mes "带来了无忧无虑的冒险感和探索的渴望。";
+				mes "[汉森]";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] So, would you like to accept our recommendation or would you like to choose a job on your own?";
+				mes "对于像你这样的人，";
+				mes "^696969盗贼^000000是最合适的职业。'";
 				next;
-				switch(select("[DRY-RUN] Thief!:My own choice!")) {
+				switch(select("盗贼！:我自己的选择！")) {
 				case 1:
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] That's a great choice!";
-					mes "[DRY-RUN] After you receive all the supplies, I'll teleport you to the Thief town.";
+					mes "[汉森]";
+					mes "那么，你想接受我们的推荐，还是想自己选择一个职业？";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] ^660000List of Supplies^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Storage^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Transportation^000000";
+					mes "这是一个很好的选择！";
+					mes "在你领取所有物资后，我会传送你到盗贼城。";
+					mes "^660000物资清单^000000";
 					////mes "^000099100 Zeny^000000";
-					mes "[DRY-RUN] ^0000331 Main Gauche^000000";
-					mes "[DRY-RUN] ^0000337 Phracon^000000";
+					mes "^0000335 卡普拉仓库免费票^000000";
+					mes "^0000335 卡普拉传送免费票^000000";
 					next;
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
 					set nov_3_swordman,40;
@@ -3561,27 +3561,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					getitem 1010,7; //Phracon
 					////getgold 100
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Please check your inventory to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+					mes "^0000331主手刀^000000";
+					mes "^0000337 矿石^000000";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+					mes "[汉森]";
+					mes "请检查你的背包，看看是否收到了所有列出的物资。让我简单地告诉你你所收到的物品。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Zeny' is the currency of Rune-Midgard. 'Main Gauche' is a weapon that will be very useful once you become a Thief.";
+					mes "[汉森]";
+					mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Phracon' is an ore which can be used to upgrade lvl 1 weapons. To strengthen your Main Gauche with this Phracon, please visit a forge in one of the towns.";
+					mes "[汉森]";
+					mes "'金币'是鲁恩-米德加兹的货币。'主手刀'是一种在你成为盗贼后会非常有用的武器。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] The town you will be sent to is named Morroc. The Thief Guild is in the first underground floor of the pyramid NorthWest of Morroc. Remember this.";
+					mes "[汉森]";
+					mes "'普拉孔'是一种可以用来升级1级武器的矿石。要用这个普拉孔强化你的主手刀，请访问城镇中的锻造厂。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You will now";
-					mes "[DRY-RUN] be teleported.";
-					mes "[DRY-RUN] Good luck,";
+					mes "[汉森]";
+					mes "你将被传送到的城镇名为梦罗克。盗贼公会位于梦罗克西北方金字塔的第一层地下。记住这一点。";
+					mes "[汉森]";
+					mes "你现在将会";
 					mes "^A62A2A" + strcharinfo(0) + "^000000";
-					mes "[DRY-RUN] and farewell.";
+					mes "被传送。";
 					close2;
 					savepoint "morocc",150,99,1,1;
 					warp "moc_ruins",155,44;
@@ -3592,27 +3592,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 			else if (.@job_c == 5) {
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You always try to understand other people, even though they are strange. You expect others to try to understand you.";
+				mes "祝你好运，";
+				mes "再见。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You refuse to be a ordinary person as you persue your dream. As a person sensitive to nature, ^696969Archer^000000 is the most suitable job for you.";
+				mes "[汉森]";
+				mes "你总是试图理解他人，即使他们很奇怪。你希望别人也能试图理解你。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] So, would you like to accept our recommendation or would you like to choose a job on your own?";
+				mes "[汉森]";
+				mes "你拒绝成为一个普通人，因为你追求自己的梦想。作为一个对自然敏感的人，^696969弓箭手^000000是最适合你的职业。";
 				next;
-				switch(select("[DRY-RUN] Archer!:My own choice!")) {
+				switch(select("弓箭手！:我自己的选择！")) {
 				case 1:
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] That's a great choice!";
-					mes "[DRY-RUN] After you receive all the supplies, I'll teleport you to the Archer town.";
+					mes "[汉森]";
+					mes "那么，你想接受我们的推荐，还是想自己选择一个职业？";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] ^660000List of Supplies^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Storage^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Transportation^000000";
+					mes "这是一个很好的选择！";
+					mes "在你收到所有补给后，我会传送你到弓箭手城镇。";
+					mes "^660000物资清单^000000";
 					////mes "^000099100 Zeny^000000";
-					mes "[DRY-RUN] ^0000331 Composite Bow^000000";
-					mes "[DRY-RUN] ^0000337 Phracon^000000";
+					mes "^0000335 卡普拉仓库免费票^000000";
+					mes "^0000335 卡普拉传送免费票^000000";
 					next;
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
 					set nov_3_swordman,40;
@@ -3622,27 +3622,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					getitem 1010,7; //Phracon
 					////getgold 100
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Please check your inventory to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+					mes "^0000331 复合弓^000000";
+					mes "^0000337 矿石^000000";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+					mes "[汉森]";
+					mes "请检查你的背包，看看是否收到了所有列出的物资。让我简单地告诉你你所收到的物品。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Zeny' is the currency of Rune-Midgard. 'Composite Bow' is a weapon that will be very useful once you become an Archer.";
+					mes "[汉森]";
+					mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Phracon' is an ore which can be used to upgrade lvl 1 weapons. To strengthen your Composite Bow with this Phracon, please visit a forge in one of the towns.";
+					mes "[汉森]";
+					mes "'金币'是鲁恩-米德加兹的货币。'复合弓'是一种武器，一旦你成为弓箭手，将会非常有用。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] The town you will be sent to is named Payon. The Archer Guild is located to the NorthWest in town. Please remember this.";
+					mes "[汉森]";
+					mes "'普拉孔'是一种矿石，可以用来升级1级武器。要用这个普拉孔强化你的复合弓，请访问城镇中的锻造厂。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You will now";
-					mes "[DRY-RUN] be teleported.";
-					mes "[DRY-RUN] Good luck,";
+					mes "[汉森]";
+					mes "你将被送往的城镇名为斐扬。弓箭手公会位于城镇的西北方向。请记住这一点。";
+					mes "[汉森]";
+					mes "你现在将会";
 					mes "^A62A2A" + strcharinfo(0) + "^000000";
-					mes "[DRY-RUN] and farewell.";
+					mes "被传送。";
 					close2;
 					set nov_1st_cos,0;
 					set nov_2nd_cos,0;
@@ -3661,30 +3661,30 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 			else if (.@job_c == 6) {
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You are very warm hearted and considerate, and you're willing to sacrifice your well being for the sake of others.";
+				mes "祝你好运，";
+				mes "再见。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] You're always eager to help others, which is why you're so well liked.";
+				mes "[汉森]";
+				mes "你非常热心和体贴，愿意为他人的利益牺牲自己的幸福。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] For you who are kind of heart, ^696969Acolyte^000000 is the most suitable job.";
+				mes "[汉森]";
+				mes "你总是渴望帮助他人，这就是你如此受欢迎的原因。";
 				next;
-				mes "[DRY-RUN] [Hanson]";
-				mes "[DRY-RUN] So, would you like to accept our recommendation or would you like to choose a job on your own?";
+				mes "[汉森]";
+				mes "对于你这样心地善良的人来说，^696969服事^000000是最合适的职业。";
 				next;
-				switch(select("[DRY-RUN] Acolyte!:My own choice!")) {
+				switch(select("服事！:我自己的选择！")) {
 				case 1:
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] That's a great choice!";
-					mes "[DRY-RUN] After you receive all the supplies, I'll teleport you behind the Sanctuary.";
+					mes "[汉森]";
+					mes "那么，你想接受我们的推荐，还是想自己选择一个职业？";
+					mes "[汉森]";
 					next;
-					mes "[DRY-RUN] ^660000List of Supplies^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Storage^000000";
-					mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Transportation^000000";
+					mes "这是一个很好的选择！";
+					mes "在你收到所有物资后，我会把你传送到圣所后面。";
+					mes "^660000物资清单^000000";
 					////mes "^000099100 Zeny^000000";
-					mes "[DRY-RUN] ^0000331 Mace^000000";
-					mes "[DRY-RUN] ^0000337 Phracon^000000";
+					mes "^0000335 卡普拉仓库免费票^000000";
+					mes "^0000335 卡普拉传送免费票^000000";
 					next;
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
 					set nov_3_swordman,40;
@@ -3694,27 +3694,27 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					getitem 1010,7; //Phracon
 					////getgold 100
 					//---------------------------------------------------------------------------------------------------------------------------------------------------
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Please check your inventory to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+					mes "^0000331 钉锤^000000";
+					mes "^0000337 矿石^000000";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+					mes "[汉森]";
+					mes "请检查你的背包，看看是否收到了所有列出的物资。让我简单地告诉你你所收到的物品。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Zeny' is the currency of Rune-Midgard. 'Mace' is a weapon that will be very useful once you become an Acolyte.";
+					mes "[汉森]";
+					mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] 'Phracon' is an ore which can be used to upgrade lvl 1 weapons. To strengthen your Mace with this Phracon, please visit a forge in one of the towns.";
+					mes "[汉森]";
+					mes "'金币'是鲁恩-米德加尔特的货币。'钉锤'是一种在你成为服事后会非常有用的武器。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You have chosen to be an Acolyte. The town you will be sent to is named Prontera. The Sanctuary is NorthEast in Prontera. Please remember this.";
+					mes "[汉森]";
+					mes "'普拉孔'是一种可以用来升级1级武器的矿石。要用这个普拉孔强化你的钉锤，请访问城镇中的锻造铺。";
 					next;
-					mes "[DRY-RUN] [Hanson]";
-					mes "[DRY-RUN] You will now";
-					mes "[DRY-RUN] be teleported.";
-					mes "[DRY-RUN] Good luck,";
+					mes "[汉森]";
+					mes "你选择成为服事。你将被传送到的城镇名为普隆德拉。圣所位于普隆德拉的东北方向。请记住这一点。";
+					mes "[汉森]";
+					mes "你现在将会";
 					mes "^A62A2A" + strcharinfo(0) + "^000000";
-					mes "[DRY-RUN] and farewell.";
+					mes "被传送。";
 					close2;
 					set nov_1st_cos,0;
 					set nov_2nd_cos,0;
@@ -3733,22 +3733,22 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				}
 			}
 		case 2:
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] I understand.";
-			mes "[DRY-RUN] Let me transport";
-			mes "[DRY-RUN] you to the world of";
-			mes "[DRY-RUN] Ragnarok Online";
-			mes "[DRY-RUN] immediately.";
+			mes "祝你好运，";
+			mes "再见。";
+			mes "[汉森]";
+			mes "我明白了。";
+			mes "让我传送你";
+			mes "到这个世界";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] For more information and knowledge, I hope you will obtain your own experiences in Rune-Midgard.";
+			mes "《Ragnarok Online》";
+			mes "马上就来。";
 			next;
-			mes "[DRY-RUN] [Hanson]";
-			mes "[DRY-RUN] Lastly...";
-			mes "[DRY-RUN] I hope you will";
-			mes "[DRY-RUN] become a nice player,";
+			mes "[汉森]";
+			mes "为了获得更多的信息和知识，我希望你能在鲁恩-米德加兹获得自己的经验。";
+			mes "[汉森]";
+			mes "最后...";
 			mes ""+ strcharinfo(0) +".";
-			mes "[DRY-RUN] Fare well.";
+			mes "我希望你会";
 			next;
 			set nov_3_swordman,40;
 			set nov_1st_cos,0;
@@ -3788,19 +3788,19 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 		}
 	}
 	else if (nov_3_swordman == 40) {
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Hmmm...?";
-		mes "[DRY-RUN] Why are you";
-		mes "[DRY-RUN] still here?";
+		mes "成为一个优秀的玩家，";
+		mes "祝你好运。";
+		mes "[汉森]";
+		mes "嗯...?";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] You didn't say anything, so";
-		mes "[DRY-RUN] I assumed you were already gone. Since you have already finished the final test and I gave you all the supplies...";
+		mes "你为什么还在这里？";
+		mes "你还在这里干什么？";
+		mes "[汉森]";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] The only thing";
-		mes "[DRY-RUN] left to do is to lead";
-		mes "[DRY-RUN] you to Rune-Midgard~";
+		mes "你什么都没说，所以";
+		mes "我以为你已经离开了。既然你已经完成了最后的测试，我也给了你所有的补给...";
+		mes "[汉森]";
+		mes "唯一要做的事情";
 		next;
 		set nov_1st_cos,0;
 		set nov_2nd_cos,0;
@@ -3838,92 +3838,92 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Hello, you";
+		mes "就是带你去";
+		mes "鲁恩-米德加兹~";
 		mes "must be "+ strcharinfo(0) +".";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] I am Hanson,";
-		mes "[DRY-RUN] the person in";
-		mes "[DRY-RUN] charge of the";
-		mes "[DRY-RUN] personality test.";
+		mes "[汉森]";
+		mes "你好，你好";
+		mes "[汉森]";
+		mes "我是汉森，";
+		mes "这个地方的人";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] Please speak";
-		mes "[DRY-RUN] to Bruce for";
-		mes "[DRY-RUN] 'Class Explanation'";
-		mes "[DRY-RUN] before we begin your";
-		mes "[DRY-RUN] test. Thank you.";
+		mes "负责";
+		mes "性格测试。";
+		mes "[汉森]";
+		mes "请与";
+		mes "布鲁斯交谈以";
+		mes "了解'职业说明'";
 		close;
 	}
 
 S_UserJobchoice:
-	mes "[DRY-RUN] [Hanson]";
-	mes "[DRY-RUN] I see. It's your choice.";
-	mes "[DRY-RUN] There is no obligation to change to the job we recommend. Please choose the job you wish to become.";
+	mes "然后我们再开始你的";
+	mes "测试。谢谢。";
+	mes "[汉森]";
 	next;
-	select( "[DRY-RUN] Swordsman:Mage:Merchant:Thief:Archer:Acolyte" );
+	select( "剑士:魔法师:商人:盗贼:弓箭手:服事" );
 	// @menu is already set by Core.
 	setarray .@Jobs$[1],"Swordsman","Mage","Merchant","Thief","Archer","Acolyte";
 
-	mes "[DRY-RUN] [Hanson]";
-	mes "[DRY-RUN] You have chosen";
+	mes "我明白了。这是你的选择。";
+	mes "没有义务更改为我们推荐的职业。请选择你希望成为的职业。";
 	if (@menu == 1) {
-		mes "[DRY-RUN] to become a Swordsman.";
-		mes "[DRY-RUN] You will be sent to";
-		mes "[DRY-RUN] the town of Izlude.";
+		mes "[汉森]";
+		mes "你选择了";
+		mes "成为一名剑士。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] The Swordman Association is located to the Northwest in Izlude. Please remember this.";
+		mes "你将被送往";
+		mes "依斯鲁得镇。";
 	}
 	else if (@menu == 2) {
-		mes "[DRY-RUN] to become a Mage.";
-		mes "[DRY-RUN] You will be sent to";
-		mes "[DRY-RUN] the town of Geffen.";
+		mes "[汉森]";
+		mes "剑士协会位于依斯鲁得的西北方向。请记住这一点。";
+		mes "成为魔法师。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] The Mage Academy is located in the NorthWest in town. Please remember this.";
+		mes "你将被送往";
+		mes "吉芬镇。";
 	}
 	else if (@menu == 3) {					
-		mes "[DRY-RUN] to become a Merchant.";
-		mes "[DRY-RUN] You will be sent to";
-		mes "[DRY-RUN] the town of Alberta.";
+		mes "[汉森]";
+		mes "魔法学院位于城镇的西北方向。请记住这一点。";
+		mes "成为商人。";
 	}
 	else if (@menu == 4) {
-		mes "[DRY-RUN] to become a Thief.";
-		mes "[DRY-RUN] You will be sent to";
-		mes "[DRY-RUN] the town of Morroc.";
+		mes "你将被送往";
+		mes "艾尔贝塔镇。";
+		mes "成为盗贼。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] The Thief guild is in the underground 1st floor of a pyramid which is NorthWest of town. Please remember this.";
+		mes "你将被送往";
+		mes "梦罗克镇。";
 	}
 	else if (@menu == 5) {
-		mes "[DRY-RUN] to become an Archer.";
-		mes "[DRY-RUN] You will be sent to";
-		mes "[DRY-RUN] the town of Payon.";
+		mes "[汉森]";
+		mes "盗贼公会位于城镇西北方向的金字塔地下第一层。请记住这一点。";
+		mes "成为弓箭手。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] The Archer Guild is located to the NorthWest in Payon. Please remember this.";
+		mes "你将被送往";
+		mes "斐扬镇。";
 	}
 	else {
-		mes "[DRY-RUN] to become an Acolyte.";
-		mes "[DRY-RUN] You will be sent to";
-		mes "[DRY-RUN] the town of Prontera.";
+		mes "[汉森]";
+		mes "弓箭手公会位于斐扬的西北方向。请记住这一点。";
+		mes "成为服事。";
 		next;
-		mes "[DRY-RUN] [Hanson]";
-		mes "[DRY-RUN] The Prontera Sanctuary is located to the NorthEast in Prontera. Please remember this.";
+		mes "你将被送往";
+		mes "普隆德拉镇。";
 	}
 	next;
-	mes "[DRY-RUN] [Hanson]";
-	mes "[DRY-RUN] Let me give you";
-	mes "[DRY-RUN] some supplies. Then";
-	mes "[DRY-RUN] you will transported";
-	mes "[DRY-RUN] to the chosen town.";
+	mes "[汉森]";
+	mes "普隆德拉的圣所位于东北方向。请记住这一点。";
+	mes "[汉森]";
+	mes "让我给你";
+	mes "一些补给。然后";
 	next;
-	mes "[DRY-RUN] ^660000List of Supplies^000000";
-	mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Storage^000000";
-	mes "[DRY-RUN] ^0000335 Free Ticket for Kafra Transportation^000000";
-	mes "[DRY-RUN] ^0000331 Adventurer's Suit^000000";
+	mes "你将被传送";
+	mes "到指定的城镇。";
+	mes "^660000物资清单^000000";
+	mes "^0000335 卡普拉仓库免费票^000000";
 	////mes "^000099100 Zeny^000000";
 	next;
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3933,22 +3933,22 @@ S_UserJobchoice:
 	getitem 2305,1; //Adventure_Suit
 	////getgold 100
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	mes "[DRY-RUN] [Hanson]";
-	mes "[DRY-RUN] Please check your inventory";
-	mes "[DRY-RUN] to see if you have received all the supplies listed. Let me briefly inform you about the items you've received.";
+	mes "^0000335 卡普拉传送免费票^000000";
+	mes "^0000331 冒险者的套装^000000";
+	mes "[汉森]";
 	next;
-	mes "[DRY-RUN] [Hanson]";
-	mes "[DRY-RUN] Free tickets for Kafra storage and transportation can be used for Kafra storage and teleport services.";
+	mes "请检查你的背包";
+	mes "以查看你是否收到了所有列出的补给。让我简要告知你关于你所收到物品的信息。";
 	next;
-	mes "[DRY-RUN] [Hanson]";
+	mes "[汉森]";
 	mes "'Zeny' is the currency of Midgard. The 'Adventurer's Suit' will come in handy once you become a " + .@Jobs$[@menu] + ".";
 	next;
-	mes "[DRY-RUN] [Hanson]";
-	mes "[DRY-RUN] You will now";
-	mes "[DRY-RUN] be teleported.";
-	mes "You will now";
+	mes "卡普拉仓库和传送的免费票可以用于卡普拉仓库和传送服务。";
+	mes "[汉森]";
+	mes "[汉森]";
+	mes "你现在将会";
 	mes "^A62A2A" + strcharinfo(0) + "^000000";
-	mes "be teleported.";
+	mes "被传送。";
 	next;
 	set nov_1st_cos,0;
 	set nov_2nd_cos,0;
@@ -3989,283 +3989,283 @@ S_UserJobchoice:
 new_1-4,91,22,4	script	Bruce#nv	57,{
 	if (Class == Job_Novice) {
 		if (nov_3_swordman == 20) {
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] Let me explain the";
-			mes "[DRY-RUN] First Job Classes";
-			mes "[DRY-RUN] to you once again.";
-			mes "[DRY-RUN] Which job did you";
-			mes "[DRY-RUN] have in mind?";
+			mes "[布鲁斯]";
+			mes "让我再给你解释一下";
+			mes "初级职业";
+			mes "。";
+			mes "你想要选择哪个职业？";
+			mes "你心中有什么想法？";
 			next;
 			while(1) {
-				switch(select("[DRY-RUN] Swordman:Mage:Archer:Merchant:Thief:Acolyte:End conversation.")) {
+				switch(select("剑士:魔法师:弓箭手:商人:盗贼:服事:结束对话。")) {
 				case 1:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] As the name implies, the";
-					mes "[DRY-RUN] Swordman is an expert in wielding Swords. They can also use Spear weapons, but typically you don't see Spear wielding Swordmen very often.";
+					mes "[布鲁斯]";
+					mes "顾名思义，";
+					mes "剑士擅长使用剑。他们也可以使用矛类武器，但通常你很少看到使用矛的剑士。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] Swordman possess strong physical strength, allowing them to equip heavy armor and weapons. Most weapon classes, except for bows and rods, can be equipped by the Swordman class.";
+					mes "[布鲁斯]";
+					mes "剑士拥有强大的身体力量，使他们能够装备重型盔甲和武器。除了弓和法杖，大多数武器类别都可以被剑士职业装备。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] The only weakness of the Swordman class is that they cannot use magic spells. However, this can be compensated by using weapons with an elemental attribute.";
+					mes "[布鲁斯]";
+					mes "剑士职业唯一的弱点是无法使用魔法。然而，这可以通过使用具有元素属性的武器来弥补。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] One of the greatest benefits of being a Swordman is having an enormous amount of HP, meaning they can more easily withstand damage from their enemies.";
+					mes "[布鲁斯]";
+					mes "成为剑士最大的好处之一是拥有大量的HP，这意味着他们可以更轻松地承受敌人的伤害。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] After learning some strong attack skills, the Swordman is almost unbeatable in a melee fight.";
+					mes "[布鲁斯]";
+					mes "在学习了一些强力攻击技能后，剑士在近战中几乎无敌。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] In Ragnarok Online, Swordman generally takes the position of tanker, protecting characters of other classes from being attacked or hurt.";
+					mes "[布鲁斯]";
+					mes "在《 Ragnarok Online》中，剑士通常担任坦克的角色，保护其他职业的角色不被攻击或受伤。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] A Swordman is the ideal character to take the position of party leader. When advancing to the Second Job Class, Swordmen can change their jobs to ^8E2323Knights^000000 or ^8E2323Crusaders^000000.";
+					mes "[布鲁斯]";
+					mes "剑士是担任队伍领导者的理想角色。当晋升到第二职业时，剑士可以转职为 ^8E2323骑士^000000 或 ^8E2323十字军^000000。";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 2:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] The Mage class specializes in using the forces of Fire, Water, Earth and Lightning to attack their enemies.";
+					mes "[布鲁斯]";
+					mes "魔法师职业专注于使用火、水、土和雷电的力量攻击敌人。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] However, due to their weak physical strength, they are only allowed to equip Rods and Knives as weapons, and wear light armor for defense.";
+					mes "[布鲁斯]";
+					mes "然而，由于他们的身体力量较弱，他们只能装备法杖和匕首作为武器，并穿戴轻甲进行防御。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] Despite their physical weakness, they are able to do massive damage with their powerful spells. This fact alone attracts many people to join this class.";
+					mes "[布鲁斯]";
+					mes "尽管身体较弱，他们能够通过强大的法术造成巨大的伤害。这一事实吸引了许多人加入这个职业。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] In Ragnarok Online, the Mage takes a heavily offensive role in parties and is depended upon to deal great damage to enemies.";
+					mes "[布鲁斯]";
+					mes "在《 Ragnarok Online》中，魔法师在队伍中扮演着高度进攻的角色，依赖于他们对敌人造成巨大的伤害。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] When advancing to the Second Job Class, Mages can change their jobs to ^8E2323Wizards^000000 or ^8E2323Sages^000000.";
+					mes "[布鲁斯]";
+					mes "当晋升到第二职业时，魔法师可以将职业转变为 ^8E2323巫师^000000 或 ^8E2323贤者^000000。";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 3:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] The Archer class are experts in using Bow weapons, and are useful in parties for their long range attacks.";
+					mes "[布鲁斯]";
+					mes "弓箭手职业擅长使用弓类武器，在队伍中因其远程攻击而非常有用。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] Despite being physically weaker, Archers possess high accuracy with powerful long range bows. This allows them to attack and kill monsters from a safe distance.";
+					mes "[布鲁斯]";
+					mes "尽管身体较弱，弓箭手却拥有高准确度和强大的远程弓。这使他们能够在安全的距离攻击并击杀怪物。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] In Ragnarok Online, Archers have relatively little HP, but their long range attacks allow them to easily dispatch enemies before the enemy gets close enough to hurt them.";
+					mes "[布鲁斯]";
+					mes "在《仙境传说》中，弓箭手的HP相对较少，但他们的远程攻击使他们能够在敌人靠近之前轻松消灭敌人。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] When advancing to the Second Job Class, every Archer may advance to the ^8E2323Hunter^000000 class. Alternatively, male Archers may advance to become ^8E2323Bards^000000, and female Archers may become ^8E2323Dancers^000000.";
+					mes "[布鲁斯]";
+					mes "在晋升到第二职业时，每个弓箭手都可以晋升为^8E2323猎人^000000职业。男性弓箭手可以晋升为^8E2323诗人^000000，女性弓箭手可以成为^8E2323舞娘^000000。";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 4:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] The Merchant class specializes in commerce. Due to the strong influence of the Merchant Guild, the Merchant class is attractive to those who wish to focus on earning Zeny.";
+					mes "[布鲁斯]";
+					mes "商人职业专注于商业。由于商会的强大影响力，商人职业对那些希望专注于赚取金币的人具有吸引力。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] In Ragnarok Online, the Merchant class possesses various economic abilities. Merchants can learn to sell items to NPCs for higher prices, as well as receive discounts from NPCs.";
+					mes "[布鲁斯]";
+					mes "在《 Ragnarok Online》中，商人职业拥有各种经济能力。商人可以学习以更高的价格向NPC出售物品，并从NPC那里获得折扣。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] In addition, Merchants may rent";
-					mes "[DRY-RUN] a Cart that greatly expands their carrying capacity and allows them to open shops with their own items and prices.";
+					mes "[布鲁斯]";
+					mes "此外，商人可以租用";
+					mes "一个大大扩展他们携带能力的手推车，并允许他们以自己的物品和价格开设商店。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] When advancing to the Second Job Class, Merchants can change their jobs to ^8E2323Blacksmiths^000000 or ^8E2323Alchemists^000000.";
+					mes "[布鲁斯]";
+					mes "当晋升为第二职业时，商人可以将职业转变为^8E2323铁匠^000000或^8E2323炼金术士^000000。";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 5:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] Thieves are experts at using Dagger class weapons. They strike quickly and easily evade attacks from their enemies.";
+					mes "[布鲁斯]";
+					mes "盗贼擅长使用匕首类武器。他们攻击迅速，能够轻松躲避敌人的攻击。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] Thieves can learn skills that allow them to hide from their enemies, or steal items from monsters. They are also feared for their use of poison, which slowly weakens";
-					mes "[DRY-RUN] their enemies.";
+					mes "[布鲁斯]";
+					mes "盗贼可以学习技能，使他们能够躲避敌人，或从怪物身上偷取物品。他们也因使用毒药而受到恐惧，这会慢慢削弱";
+					mes "敌人。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] When advancing to the Second Job Class, Thieves can change their jobs to ^8E2323Assassins^000000 or ^8E2323Rogues^000000.";
+					mes "[布鲁斯]";
+					mes "在晋升到第二职业时，盗贼可以将职业转为 ^8E2323刺客^000000 或 ^8E2323流氓^000000。";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 6:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] In Ragnarok Online, Acolytes act as messengers of God in Rune-Midgard. They possess skills that support their allies, as well as the life saving Heal ability.";
+					mes "[布鲁斯]";
+					mes "在《 Ragnarok Online》中，服事者作为鲁恩-米德加尔特的神的使者。他们拥有支持盟友的技能，以及救命的治疗能力。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] The Acolyte's support abilities make them a welcome addition to any party. In difficult situations, the Acolyte's skills will ensure the survival of the party, allowing other members to focus on offense.";
+					mes "[布鲁斯]";
+					mes "牧师的支持能力使他们成为任何队伍中受欢迎的成员。在困难情况下，牧师的技能将确保队伍的生存，让其他成员专注于进攻。";
 					next;
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] When advancing to the Second Job Class, Acolytes can change their jobs to ^8E2323Priests^000000 or ^8E2323Monks^000000.";
+					mes "[布鲁斯]";
+					mes "在晋升为第二职业时，牧师可以将职业更改为 ^8E2323牧师^000000 或 ^8E2323武僧^000000。";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 7:
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] For more information,";
-					mes "[DRY-RUN] please visit the official";
-					mes "[DRY-RUN] Ragnarok Online website:";
-					mes "[DRY-RUN] ^0000FFiro.ragnarokonline.com^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "";
+					mes "[布鲁斯]";
+					mes "更多信息，";
+					mes "请访问官方";
+					mes "《 Ragnarok Online 》网站：";
+					mes " ";
 					next;
-					mes "[DRY-RUN] Hanson is waiting";
-					mes "[DRY-RUN] for you now. Good luck";
-					mes "[DRY-RUN] out there, young Novice.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "^0000FFiro.ragnarokonline.com^000000。";
+					mes "[布鲁斯]";
+					mes "汉森在等你";
+					mes "。祝你好运";
 					close;
 				}
 			}
 		}
 		else if (nov_3_swordman == 40) {
-			mes "[DRY-RUN] I'm sorry, but";
-			mes "[DRY-RUN] there's nothing";
-			mes "[DRY-RUN] more I can teach you.";
-			mes "[DRY-RUN] [Bruce]";
+			mes "，年轻的初心者。";
+			mes "[布鲁斯]";
+			mes "抱歉，但是";
+			mes "没有什么";
 			next;
-			mes "[DRY-RUN] Hanson is waiting";
-			mes "[DRY-RUN] for you now. Good luck";
-			mes "[DRY-RUN] out there, young Novice.";
-			mes "[DRY-RUN] [Bruce]";
+			mes "我可以教你更多的东西。";
+			mes "[布鲁斯]";
+			mes "汉森在等你";
+			mes "。祝你好运";
 			close;
 		}
 		else {
-			mes "[DRY-RUN] You've gone";
-			mes "[DRY-RUN] through quite";
-			mes "[DRY-RUN] a bit of trouble";
-			mes "[DRY-RUN] to finish all the";
-			mes "[DRY-RUN] training courses.";
-			mes "[DRY-RUN] [Bruce]";
+			mes "，年轻的初心者。";
+			mes "[布鲁斯]";
+			mes "你已经走过了";
+			mes "相当多的";
+			mes "麻烦";
+			mes "来完成所有的";
 			next;
-			mes "[DRY-RUN] Hello there,";
-			mes "[DRY-RUN] pleased to meet you.";
+			mes "培训课程。";
+			mes "[布鲁斯]";
 			mes "^A62A2A" + strcharinfo(0) + "'^000000,";
-			mes "[DRY-RUN] I am Bruce of the";
-			mes "[DRY-RUN] Rune-Midgarts Kingdom.";
-			mes "[DRY-RUN] [Bruce]";
+			mes "你好，";
+			mes "很高兴见到你。";
+			mes "我是布鲁斯，来自";
 			next;
-			mes "[DRY-RUN] My duty is to assist you by teaching information about each First Job Class, so that you can decide which job you want to be.";
-			mes "[DRY-RUN] [Bruce]";
+			mes "在卢恩-米德加兹王国。";
+			mes "[布鲁斯]";
 			next;
-			mes "[DRY-RUN] The First Job Classes are";
-			mes "[DRY-RUN] ^0000FFSwordman, Mage, Archer, Merchant, Thief and Acolyte^000000.";
-			mes "[DRY-RUN] [Bruce]";
+			mes "我的职责是通过教授每个初级职业的信息来帮助你，以便你可以决定想要成为哪个职业。";
+			mes "[布鲁斯]";
+			mes "初级职业有";
 			next;
-			mes "[DRY-RUN] So...";
-			mes "[DRY-RUN] Which job did";
-			mes "[DRY-RUN] you have in mind?";
-			mes "[DRY-RUN] [Bruce]";
+			mes "^0000FF剑士、魔法师、弓箭手、商人、盗贼和服事^000000。";
+			mes "[布鲁斯]";
+			mes "所以……";
+			mes "你想选择哪个职业？";
 			next;
 			while(1) {
-				switch(select("[DRY-RUN] Swordman:Mage:Archer:Merchant:Thief:Acolyte:End conversation.")) {
+				switch(select("剑士:魔法师:弓箭手:商人:盗贼:服事:结束对话。")) {
 				case 1:
-					mes "[DRY-RUN] As the name implies, the";
-					mes "[DRY-RUN] Swordman is an expert in wielding Swords. They can also use Spear weapons, but typically you don't see Spear wielding Swordmen";
-					mes "[DRY-RUN] very often.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "你有什么想法？";
+					mes "[布鲁斯]";
+					mes "顾名思义，";
+					mes "剑士擅长使用剑。他们也可以使用矛类武器，但通常你不会看到使用矛的剑士";
 					next;
-					mes "[DRY-RUN] Swordmen possess strong physical strength, allowing them to equip heavy armor and weapons. Most weapon classes, except for bows and rods, can be equipped by the Swordman class.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "很少见。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] The only weakness of the Swordman class is that they cannot use magic spells. However, this can be compensated by using weapons with an elemental attribute.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "剑士拥有强大的体力，能够装备重型盔甲和武器。除了弓和法杖，大多数武器类别都可以被剑士职业装备。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] One of the greatest benefits of being a Swordman is having an enormous amount of HP, meaning they can more easily withstand damage from their enemies.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "剑士职业唯一的弱点是无法使用魔法。然而，这可以通过使用具有元素属性的武器来弥补。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] After learning some strong attack skills, the Swordman is almost unbeatable in a melee fight.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "成为剑士最大的好处之一是拥有大量的HP，这意味着他们可以更轻松地承受敌人的伤害。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] In Ragnarok Online, Swordman generally takes the position of tanker, protecting characters of other classes from being attacked or hurt.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在学习了一些强力攻击技能后，剑士在近战中几乎无敌。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] A Swordman is the ideal character to take the position of party leader. When advancing to the Second Job Class, Swordmen can change their jobs to ^8E2323Knights^000000 or ^8E2323Crusaders^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在《 Ragnarok Online》中，剑士通常担任坦克的角色，保护其他职业的角色不被攻击或受伤。";
+					mes "[布鲁斯]";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 2:
-					mes "[DRY-RUN] The Mage class specializes in using the forces of Fire, Water, Earth and Lightning to attack their enemies.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "剑士是担任队伍领导者的理想角色。当晋升到第二职业时，剑士可以转职为 ^8E2323骑士^000000 或 ^8E2323十字军^000000。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] However, due to their weak physical strength, they are only allowed to equip Rods and Knives as weapons, and wear light armor for defense.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "魔法师职业专注于使用火、水、土和雷电的力量攻击敌人。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] Despite their physical weakness, they are able to do massive damage with their powerful spells. This fact alone attracts many people to join this class.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "然而，由于他们的身体力量较弱，他们只能装备法杖和匕首作为武器，并穿戴轻甲进行防御。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] In Ragnarok Online, the Mage takes a heavily offensive role in parties and is depended upon to deal great damage to enemies.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "尽管身体较弱，他们能够通过强大的法术造成巨大的伤害。这一事实吸引了许多人加入这个职业。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] When advancing to the Second Job Class, Mages can change their jobs to ^8E2323Wizards^000000 or ^8E2323Sages^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在《 Ragnarok Online》中，魔法师在队伍中扮演着高度进攻的角色，依赖于他们对敌人造成巨大的伤害。";
+					mes "[布鲁斯]";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 3:
-					mes "[DRY-RUN] The Archer class are experts in using Bow weapons, and are useful in parties for their long range attacks.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "当晋升到第二职业时，魔法师可以将职业转变为 ^8E2323巫师^000000 或 ^8E2323贤者^000000。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] Despite being physically weaker, Archers possess high accuracy with powerful long range bows. This allows them to attack and kill monsters from a safe distance.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "弓箭手职业擅长使用弓类武器，在队伍中因其远程攻击而非常有用。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] In Ragnarok Online, Archers have relatively little HP, but their long range attacks allow them to easily dispatch enemies before the enemy gets close enough to hurt them.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "尽管身体较弱，弓箭手却拥有高准确度和强大的远程弓。这使他们能够在安全的距离攻击并击杀怪物。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] When advancing to the Second Job Class, every Archer may advance to the ^8E2323Hunter^000000 class. Alternatively, male Archers may advance to become ^8E2323Bards^000000, and female Archers may become ^8E2323Dancers^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在《仙境传说》中，弓箭手的HP相对较少，但他们的远程攻击使他们能够在敌人靠近之前轻松消灭敌人。";
+					mes "[布鲁斯]";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 4:
-					mes "[DRY-RUN] The Merchant class specializes in commerce. Due to the strong influence of the Merchant Guild, the Merchant class is attractive to those who wish to focus on earning Zeny.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在晋升到第二职业时，每个弓箭手都可以晋升为^8E2323猎人^000000职业。男性弓箭手可以晋升为^8E2323诗人^000000，女性弓箭手可以成为^8E2323舞娘^000000。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] In Ragnarok Online, the Merchant class possesses various economic abilities. Merchants can learn to sell items to NPCs for higher prices, as well as receive discounts from NPCs.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "商人职业专注于商业。由于商会的强大影响力，商人职业对那些希望专注于赚取金币的人具有吸引力。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] In addition, Merchants may rent";
-					mes "[DRY-RUN] a Cart that greatly expands their carrying capacity and allows them to open shops with their own items and prices.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在《 Ragnarok Online》中，商人职业拥有各种经济能力。商人可以学习以更高的价格向NPC出售物品，并从NPC那里获得折扣。";
+					mes "[布鲁斯]";
+					mes "此外，商人可以租用";
 					next;
-					mes "[DRY-RUN] When advancing to the Second Job Class, Merchants can change their jobs to ^8E2323Blacksmiths^000000 or ^8E2323Alchemists^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "一个大大扩展他们携带能力的手推车，并允许他们以自己的物品和价格开设商店。";
+					mes "[布鲁斯]";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 5:
-					mes "[DRY-RUN] Thieves are experts at using Dagger class weapons. They strike quickly and easily evade attacks from their enemies.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "当晋升为第二职业时，商人可以将职业转变为^8E2323铁匠^000000或^8E2323炼金术士^000000。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] Thieves can learn skills that allow them to hide from their enemies, or steal items from monsters. They are also feared for their use of poison, which slowly weakens";
-					mes "[DRY-RUN] their enemies.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "盗贼擅长使用匕首类武器。他们攻击迅速，能够轻松躲避敌人的攻击。";
+					mes "[布鲁斯]";
+					mes "盗贼可以学习技能，使他们能够躲避敌人，或从怪物身上偷取物品。他们也因使用毒药而受到恐惧，这会慢慢削弱";
 					next;
-					mes "[DRY-RUN] When advancing to the Second Job Class, Thieves can change their jobs to ^8E2323Assassins^000000 or ^8E2323Rogues^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "敌人。";
+					mes "[布鲁斯]";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 6:
-					mes "[DRY-RUN] In Ragnarok Online, Acolytes act as messengers of God in Rune-Midgard. They possess skills that support their allies, as well as the life saving Heal ability.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在晋升到第二职业时，盗贼可以将职业转为 ^8E2323刺客^000000 或 ^8E2323流氓^000000。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] The Acolyte's support abilities make them a welcome addition to any party. In difficult situations, the Acolyte's skills will ensure the survival of the party, allowing other members to focus on offense.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "在《 Ragnarok Online》中，服事者作为鲁恩-米德加尔特的神的使者。他们拥有支持盟友的技能，以及救命的治疗能力。";
+					mes "[布鲁斯]";
 					next;
-					mes "[DRY-RUN] When advancing to the Second Job Class, Acolytes can change their jobs to ^8E2323Priests^000000 or ^8E2323Monks^000000.";
-					mes "[DRY-RUN] [Bruce]";
+					mes "牧师的支持能力使他们成为任何队伍中受欢迎的成员。在困难情况下，牧师的技能将确保队伍的生存，让其他成员专注于进攻。";
+					mes "[布鲁斯]";
 					set nov_3_swordman,20;
 					next;
 					break;
 				case 7:
-					mes "[DRY-RUN] For more information,";
-					mes "[DRY-RUN] please visit the official";
-					mes "[DRY-RUN] Ragnarok Online website:";
-					mes "[DRY-RUN] ^0000FFiro.ragnarokonline.com^000000.";
-					mes "[DRY-RUN] [Bruce]";
-					mes "[DRY-RUN] Hanson is waiting";
+					mes "在晋升为第二职业时，牧师可以将职业更改为 ^8E2323牧师^000000 或 ^8E2323武僧^000000。";
+					mes "";
+					mes "[布鲁斯]";
+					mes "更多信息，";
+					mes "请访问官方";
+					mes "《 Ragnarok Online 》网站：";
 					next;
 					mes " ";
-					mes "^0000FFiro.ragnarokonline.com^000000.";
-					mes "[Bruce]";
-					mes "Hanson is waiting";
+					mes "^0000FFiro.ragnarokonline.com^000000。";
+					mes "[布鲁斯]";
+					mes "汉森在等你";
 					close;
 				}
 			}

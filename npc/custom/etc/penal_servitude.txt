@@ -126,7 +126,7 @@ M_NO_THANKS:
 }
 
 sec_in02,137,57,1	script	Overseer	708,{ 
-	mes "[Oliver]";
+	mes "[奥利弗]";
 
 	delitem 4002,countitem(4002);//Items: Fabre_Card,
 	delitem 4009,countitem(4009);//Items: Chonchon_Card,
@@ -137,12 +137,12 @@ sec_in02,137,57,1	script	Overseer	708,{
 
 	mes "I want you to gather ^FF0000"+PRISON_Q+" Orange Net Mushroom^000000.";
 	if ( countitem(1069)<PRISON_Q ) close;//Items: Orange_Net_Mushroom,
-	mes "OK... hand me all the shrooms...";
+	mes "好的... 把所有的蘑菇给我...";
 	mes "Let me see... "+countitem(1069)+" of almost edible ones...";//Items: Orange_Net_Mushroom,
 	mes "And "+countitem(1070)+" useless deadly ones.";//Items: Orange_Gooey_Mushroom_,
 	next;
-	mes "[Oliver]";
-	mes "Thank you. You are free!";
+	mes "[奥利弗]";
+	mes "谢谢你。你可以走了！";
 	set PRISON_Q,0;
 	delitem 1069,countitem(1069);//Items: Orange_Net_Mushroom,
 	delitem 1070,countitem(1070);//Items: Orange_Gooey_Mushroom_,

@@ -1282,12 +1282,12 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...";
+		mes "[温莎爵士]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...On to";
-		mes "[DRY-RUN] the next level.";
+		mes "[温莎爵士]";
+		mes "...继续前进";
+		mes "到下一个阶段。";
 		close2;
 		warp "job_knt",43,52;
 		donpcevent "Knight1::OnDisable";
@@ -1348,11 +1348,11 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...Hmm.";
+		mes "[温莎爵士]";
+		mes "...嗯。";
 		next;
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...One stage left.";
+		mes "[温莎爵士]";
+		mes "...还剩一个阶段。";
 		close2;
 		warp "job_knt",143,152;
 		donpcevent "Knight2::OnDisable";
@@ -1408,15 +1408,15 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...";
+		mes "[温莎爵士]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...Very good.";
+		mes "[温莎爵士]";
+		mes "...非常好。";
 		next;
-		mes "[DRY-RUN] [Sir Windsor]";
-		mes "[DRY-RUN] ...Go talk to";
-		mes "[DRY-RUN] Amy Beatrice now.";
+		mes "[温莎爵士]";
+		mes "...去和";
+		mes "艾米·比阿特丽斯谈谈吧。";
 		close2;
 		set KNIGHT_Q,8;
 		if(checkquest(9007) == -1) {

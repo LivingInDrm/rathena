@@ -12846,7 +12846,7 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 				mes "需要使用的确认。";
 				mes "正在勉强进行精炼，若是失败的话，装备会受损的，请问要继续进行吗？";
 				next;
-				if (select("Refine.", "Don't Refine.") == 2) {
+				if (select("精炼.", "Don't Refine.") == 2) {
 					mes "[精炼机器 瓦克查]";
 					mes "已经依照使用者的要求取消精炼了。";
 					close;
@@ -12954,20 +12954,20 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 		}
 	} else {
 		mes "精炼结果：成功";
-		mes "^FF0000- error number 8282 -^000000";
-		mes "You are short of refining price.";
+		mes "^FF0000- 错误编号 8282 -^000000";
+		mes "您缺少精炼费用.";
 		close;
 	}
 	if (getequippercentrefinery(.@part) <= rand(100)) {
 		failedrefitem .@part;
-		mes "[Refining Machine Wagjak]";
-		mes "Result : Fail";
-		mes "refining failed. The equipment was destroyed.";
+		mes "[精炼机瓦贾克]";
+		mes "结果 : 失败";
+		mes "精炼失败。装备被摧毁.";
 	} else {
 		successrefitem .@part;
-		mes "[Refining Machine Wagjak]";
-		mes "Result : Success";
-		mes "Congratulations!! You succeeded in refining.";
+		mes "[精炼机瓦贾克]";
+		mes "结果 : 成功";
+		mes "恭喜！！您成功进行了精炼.";
 	}
 	close;
 }

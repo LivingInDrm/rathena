@@ -20,32 +20,32 @@
 // Acolyte Warper (part of other/acolyte_warp.txt)
 //============================================================
 moc_para01,14,32,5	script	Aperture#acolytewarp	90,{
-	mes "[DRY-RUN] [Aperture]";
-	mes "[DRY-RUN] Hello there, adventurer.";
-	mes "[DRY-RUN] I've been studying magic from all over Rune-Midgard to upgrade what I believe to be one of the greatest skills available to the acolyte class.";
+	mes "[孔径]";
+	mes "你好，冒险者。";
+	mes "我一直在研究来自整个米德加尔特的魔法，以提升我认为是服事职业最伟大的技能之一。";
 	next;
 
 	if (is_function("VIP_iRO_Acolyte"))
 		callfunc "VIP_iRO_Acolyte","[Aperture]","Prontera";
 
-	mes "[DRY-RUN] [Aperture]";
-	mes "[DRY-RUN] I am the one and only Acolyte that has attained the Level 10 Warp Portal skill!";
+	mes "[孔径]";
+	mes "我是唯一一个达到了10级传送阵技能的服事！";
 	emotion ET_THINK, playerattached();
 	next;
-	mes "[DRY-RUN] [Aperture]";
-	mes "[DRY-RUN] That's right! And...";
-	mes "[DRY-RUN] I promise you that I don't forget locations that I have already memorized.";
-	mes "[DRY-RUN] One day I will level up my skills to warp to wherever I please~";
+	mes "[孔径]";
+	mes "没错！而且……";
+	mes "我向你保证，我不会忘记我已经记住的位置。";
+	mes "有一天我会提升我的技能，传送到我想去的任何地方~";
 	next;
-	mes "[DRY-RUN] [Aperture]";
-	mes "[DRY-RUN] I am willing to warp you to the many locations that I have memorized for a small fee.";
-	mes "[DRY-RUN] Would you like to use this service?";
+	mes "[孔径]";
+	mes "我愿意以少量费用将你传送到我记住的许多地点。";
+	mes "你想使用这个服务吗？";
 	next;
-	switch(select("[DRY-RUN] Yes:No")) {
+	switch(select("是:否")) {
 	case 1:
-		mes "[DRY-RUN] [Aperture]";
-		mes "[DRY-RUN] Where would you like to go to?";
-		mes "[DRY-RUN] I wish you goodluck on your journey.";
+		mes "[孔径]";
+		mes "你想去哪里？";
+		mes "祝你旅途顺利。";
 		next;
 
 		setarray .@towns$[0], "Prontera", "Izlude", "Geffen", "Payon", "Morocc", "Alberta", "Al De Baran", "Comodo", "Umbala", "Juno", "Einbroch", "Lighthalzen", "Hugel", "Rachel";
@@ -56,15 +56,15 @@ moc_para01,14,32,5	script	Aperture#acolytewarp	90,{
 			set .@menu$, .@menu$+.@towns$[.@i]+" -> "+.@cost[.@i]+"z:";
 		set .@i, select(.@menu$+"Cancel")-1;
 		if (.@i == .@size) {
-			mes "[DRY-RUN] [Aperture]";
-			mes "[DRY-RUN] Come back when you need a warp.";
+			mes "[孔径]";
+			mes "当你需要传送时再回来。";
 			close;
 		}
 		if (Zeny < .@cost[.@i]) {
-			mes "[DRY-RUN] [Aperture]";
-			mes "[DRY-RUN] I'm sorry, but you don't have";
-			mes "[DRY-RUN] enough zeny for the Teleport";
-			mes "[DRY-RUN] Service. The fee to teleport";
+			mes "[孔径]";
+			mes "抱歉，但你没有";
+			mes "足够的金币进行传送服务。";
+			mes "传送的费用是";
 			mes "to "+.@towns$[.@i]+" is "+.@cost[.@i]+" zeny.";
 			close;
 		}
@@ -91,8 +91,8 @@ moc_para01,14,32,5	script	Aperture#acolytewarp	90,{
 		}
 		close;
 	case 2:
-		mes "[DRY-RUN] [Aperture]";
-		mes "[DRY-RUN] Come back when you need a warp.";
+		mes "[孔径]";
+		mes "当你需要传送时再回来。";
 		close;
 	}
 }
@@ -167,34 +167,34 @@ moc_para01,26,15,3	script	Primo d'Buffer	790,{
 //============================================================
 moc_para01,53,30,3	script	Clearchus	470,{
 	if (checkquest(62238,PLAYTIME) > -1 && checkquest(62238,PLAYTIME) < 2) {
-		mes "[DRY-RUN] You must wait for the timer to finish before you can hire a new mercenary.";
+		mes "你必须等待计时器结束才能雇佣新的雇佣兵。";
 		close;	
 	}
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] Greetings young adventurer! I represent the Midgardian Mercenary Mission.";
+	mes "[克利阿库斯]";
+	mes "年轻的冒险者，您好！我代表米德加尔特雇佣兵任务。";
 	next;
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] We provide training to aspiring mercenaries by pairing them with adventurers such as yourself.";
+	mes "[克利阿库斯]";
+	mes "我们通过将有志的雇佣兵与像您这样的冒险者配对来提供培训。";
 	next;
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] Our organization is 10,000 strong! Now let me see if you are registered for this service.";
+	mes "[克利阿库斯]";
+	mes "我们的组织有一万名成员！现在让我看看您是否注册了此服务。";
 	next;
 	if (!vip_status(VIP_STATUS_ACTIVE)) {
-		mes "[DRY-RUN] [Clearchus]";
-		mes "[DRY-RUN] Unfortunately it appears that you are not VIP, please get VIP so that you can use this service. You can get a temporary VIP access by talking to Gramps at the Eden Group Headquarters.";
+		mes "[克利阿库斯]";
+		mes "不幸的是，您似乎不是VIP，请获取VIP以便使用此服务。您可以通过与艾登集团总部的格兰普斯对话获得临时VIP访问。";
 		next;
-		mes "[DRY-RUN] [Clearchus]";
-		mes "[DRY-RUN] Vip is a very useful tool for adventurers to have, giving access to extra Kafra Services, discounted warps, exclusive content, and use of Primo d'Buffer. If an adventurer has full vip they even get an Exp, Drops, and storage boost!";
+		mes "[克利阿库斯]";
+		mes "VIP是冒险者非常有用的工具，可以访问额外的卡普拉服务、折扣传送、独家内容，以及使用Primo d'Buffer。如果冒险者拥有完整的VIP，他们甚至会获得经验、掉落和存储的提升！";
 		close;
 	}
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] Your name is on the list.";
+	mes "[克利阿库斯]";
+	mes "你的名字在名单上。";
 	next;
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] What kind of skill set are you looking for in a mercenary?";
+	mes "[克利阿库斯]";
+	mes "你在寻找什么样的佣兵技能组合？";
 	next;
 
-	switch(select("[DRY-RUN] Swordsman:Archer:Lancer")) {
+	switch(select("剑士:弓箭手:枪骑兵")) {
 	case 1:
 		set .@base_id,12163; //SwordMercenary_Scroll
 		break;
@@ -216,11 +216,11 @@ moc_para01,53,30,3	script	Clearchus	470,{
 	else if (BaseLevel < 91) set .@i,8;
 	else set .@i,9;
 
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] I have just the mercenary in mind!";
+	mes "[克利阿库斯]";
+	mes "我正好有合适的佣兵在心中！";
 	next;
-	mes "[DRY-RUN] [Clearchus]";
-	mes "[DRY-RUN] Have fun now, ya hear?";
+	mes "[克利阿库斯]";
+	mes "现在好好玩，听见了吗？";
 	getitem .@base_id + .@i,1;
 	if (isbegin_quest(62238) > 0)
 		erasequest 62238;
@@ -231,90 +231,90 @@ moc_para01,53,30,3	script	Clearchus	470,{
 // Carrot & Red Potion Traders
 //============================================================
 moc_para01,166,51,3	script	Phelix#edco	85,{
-	mes "[DRY-RUN] [Phelix]";
-	mes "[DRY-RUN] Oh... I see from that look that you want me to work and give you Meat and Carrots...";
-	mes "[DRY-RUN] Well my friend Izaac here has some Red Potions with him, but I only have some Carrots.";
-	mes "[DRY-RUN] So I can trade you ^0000CC1 Carrot for 3 Jellopy^000000.";
+	mes "[菲利克斯]";
+	mes "哦……我从你那种表情中看出你想让我工作并给你肉和胡萝卜……";
+	mes "好吧，我的朋友伊扎克这里有一些红色药水，但我只有一些胡萝卜。";
+	mes "所以我可以用 ^0000CC1 胡萝卜换 3 个果冻。^000000";
 	next;
-	mes "[DRY-RUN] [Phelix]";
-	mes "[DRY-RUN] If you're interested in my offer, get me the Jellopies I mentioned.";
+	mes "[菲利克斯]";
+	mes "如果你对我的提议感兴趣，给我我提到的果冻。";
 	next;
-	select("[DRY-RUN] Carrots please.");
-	mes "[DRY-RUN] [Phelix]";
-	mes "[DRY-RUN] Alright, let's see what ya got...";
+	select("请给我胡萝卜。");
+	mes "[菲利克斯]";
+	mes "好吧，让我看看你有什么……";
 	next;
 	if (countitem(909) < 3) {
-		mes "[DRY-RUN] [Phelix]";
-		mes "[DRY-RUN] Hmm, look dude, I said 3 Jellopies for 1 Carrot... got it?";
+		mes "[菲利克斯]";
+		mes "嗯，听着，我说的是 3 个果冻换 1 个胡萝卜……明白了吗？";
 		close;
 	}
-	mes "[DRY-RUN] [Phelix]";
-	mes "[DRY-RUN] Not too bad...";
-	mes "[DRY-RUN] How many do you want?";
+	mes "[菲利克斯]";
+	mes "还不错……";
+	mes "你想要多少？";
 	next;
-	switch(select("[DRY-RUN] As many as I can get, please.:I want to choose.:Never mind, I like my Jellopy.")) {
+	switch(select("我想要尽可能多的:我想选择:算了，我喜欢我的果冻。")) {
 	case 1:
 		set .@amount, countitem(909) / 3;
 		break;
 	case 2:
 		set .@available, countitem(909) / 3;
-		mes "[DRY-RUN] [Phelix]";
-		mes "[DRY-RUN] How many do you want?";
+		mes "[菲利克斯]";
+		mes "你想要多少？";
 		mes "^ff0000You have enough for up to " + .@available + " Carrots.^000000";
 		input .@input;
 		next;
 		if (.@input < 1 || .@input > 10000) {
-			mes "[DRY-RUN] [Phelix]";
-			mes "[DRY-RUN] Don't want to deal? Fair enough...";
+			mes "[菲利克斯]";
+			mes "不想交易？那也行……";
 			close;
 		}
 		if (.@input > .@available) {
-			mes "[DRY-RUN] [Phelix]";
-			mes "[DRY-RUN] Dude, I said for every 3 Jellopy I'll give you 1 Carrot.";
+			mes "[菲利克斯]";
+			mes "伙计，我说的是每 3 个果冻我给你 1 个胡萝卜。";
 			close;
 		}
 		set .@amount, .@input;
 		break;
 	case 3:
-		mes "[DRY-RUN] [Phelix]";
-		mes "[DRY-RUN] Don't bother me if you don't want to trade.";
+		mes "[菲利克斯]";
+		mes "如果你不想交易，就别打扰我。";
 		close;
 	}
 	if (checkweight(515,.@amount) == 0) {
-		mes "[DRY-RUN] [Phelix]";
-		mes "[DRY-RUN] You are overweight.";
+		mes "[菲利克斯]";
+		mes "你超重了。";
 		close;
 	}
-	mes "[DRY-RUN] [Phelix]";
-	mes "[DRY-RUN] There you go~! As I promised.";
-	mes "[DRY-RUN] Try not to stuff yer face.";
+	mes "[菲利克斯]";
+	mes "给你~！正如我所承诺的。";
+	mes "尽量不要狼吞虎咽。";
 	delitem 909,.@amount*3; //Jellopy
 	getitem 515,.@amount; //Carrot
 	end;
 }
 
 moc_para01,163,51,7	script	Izaac#edco	86,{
-	mes "[DRY-RUN] [Izaac]";
-	mes "[DRY-RUN] Good day!";
-	mes "[DRY-RUN] Have you collected any weird stuff from monsters?";
-	mes "[DRY-RUN] I want things like Jellopy, Fluff, Shell, Feather of Birds, Tree Root, Worm Peelings, and Chrysalis.";
-	mes "[DRY-RUN] I need those for something.";
+	mes "[伊扎克]";
+	mes "你好！";
+	mes "你收集到什么怪物的奇怪东西了吗？";
+	mes "我想要像果冻、毛绒、贝壳、鸟的羽毛、树根、虫皮和蛹这样的东西。";
+	mes "我需要那些东西做点事情。";
 	next;
-	mes "[DRY-RUN] [Izaac]";
-	mes "[DRY-RUN] Of course, I won't ask you to give me that stuff for free. What if I traded the following for ^CC00001 Red Potion^000000:";
-	mes "[DRY-RUN] ^00CC005 Shell^000000";
-	mes "[DRY-RUN] ^0000CC10 Fluff^000000";
-	mes "[DRY-RUN] ^00CC0010 Jellopy^000000";
-	mes "[DRY-RUN] ^0000CC6 Tree Root^000000";
-	mes "[DRY-RUN] ^00CC001 Worm Peeling^000000";
-	mes "[DRY-RUN] ^0000CC7 Feather of Birds^000000";
-	mes "[DRY-RUN] ^00CC006 Chrysalis^000000";
+	mes "[伊扎克]";
+	mes "当然，我不会让你白给我那些东西。如果我用以下物品交换^CC00001 红色药水^000000，怎么样？";
+	mes "^00CC005 贝壳^000000";
+	mes "^0000CC10 毛绒^000000";
+	mes "^00CC0010 果冻^000000";
+	mes "^0000CC6 树根^000000";
+	mes "^00CC001 蛆皮^000000";
+	mes "^0000CC7 鸟羽毛^000000";
+	mes "^00CC006 蛹^000000";
 	next;
-	switch(select("[DRY-RUN] Sure!:I think it's a rip-off!:No, thanks.")) {
+	switch(select("当然！:我觉得这是个坑！:不，谢谢。")) {
 	case 1:
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] So which items do";
-		mes "[DRY-RUN] you want to bring me?";
+		mes "[伊扎克]";
+		mes "那么你想带我哪些物品？";
+		mes "你想带给我什么？";
 		next;
 
 		setarray .@items[0], 935, 914, 909, 902, 955, 916, 915;
@@ -325,9 +325,9 @@ moc_para01,163,51,7	script	Izaac#edco	86,{
 			set .@menu$, .@menu$+getitemname(.@items[.@i])+":";
 		set .@select, select(.@menu$+"Cancel")-1;
 		if (.@select == .@size) {
-			mes "[DRY-RUN] [Izaac]";
-			mes "[DRY-RUN] Sure~";
-			mes "[DRY-RUN] No problem.";
+			mes "[伊扎克]";
+			mes "当然~";
+			mes "没问题。";
 			close;
 		}
 		set .@item, .@items[.@select];
@@ -335,64 +335,64 @@ moc_para01,163,51,7	script	Izaac#edco	86,{
 		set .@price, .@count[.@select];
 
 		if (countitem(.@item) < .@price) {
-			mes "[DRY-RUN] [Izaac]";
-			mes "[DRY-RUN] Hey, where's all";
+			mes "[伊扎克]";
+			mes "嘿，所有的东西在哪里？";
 			mes "that "+.@item$+" that";
-			mes "[DRY-RUN] you promised me?";
+			mes "你答应我的东西呢？";
 			mes "Give me "+.@item$+"!";
 			close;
 		}
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] Okay, let me check";
+		mes "[伊扎克]";
+		mes "好的，让我检查一下";
 		mes "how much "+.@item$;
-		mes "[DRY-RUN] you have on you.";
-		mes "[DRY-RUN] Hmm...";
+		mes "你身上有的。";
+		mes "嗯...";
 		next;
 		set .@amount, countitem(.@item) / .@price;
 		set .@trade_amount, .@amount * .@price;
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] You have";
+		mes "[伊扎克]";
+		mes "你已经";
 		mes "a total of "+countitem(.@item)+" "+.@item$+"...";
-		mes "[DRY-RUN] For all those, I can give you";
+		mes "对于所有这些，我可以给你";
 		mes "a total of "+.@amount+" Red Potion(s).";
 		next;
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] What do you say?";
-		mes "[DRY-RUN] Do we have a deal?";
+		mes "[伊扎克]";
+		mes "你觉得怎么样？";
+		mes "我们达成交易吗？";
 		next;
-		if(select("[DRY-RUN] Deal.:No deal.") == 2) {
-			mes "[DRY-RUN] [Izaac]";
-			mes "[DRY-RUN] Huh~";
-			mes "[DRY-RUN] Alright.";
-			mes "[DRY-RUN] Though are";
+		if(select("交易.:不交易.") == 2) {
+			mes "[伊扎克]";
+			mes "哈~";
+			mes "好的。";
+			mes "不过是";
 			mes .@item$ + " more useful";
-			mes "[DRY-RUN] to an adventurer like you?";
+			mes "对你这样的冒险者？";
 			close;
 		}
 		if (checkweight(501,.@amount) == 0) { //custom check
-			mes "[DRY-RUN] [Izaac]";
-			mes "[DRY-RUN] You are overweight.";
+			mes "[伊扎克]";
+			mes "你超重了。";
 			close;
 		}
 		delitem .@item,.@trade_amount;
 		getitem 501,.@amount; //Red_Potion
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] There you go!";
+		mes "[伊扎克]";
+		mes "给你！";
 		mes "Check how many "+.@item$;
-		mes "[DRY-RUN] I've given you, it should be good.";
-		mes "[DRY-RUN] Thanks, that was a good deal~";
+		mes "我给你的，这应该不错。";
+		mes "谢谢，那是个好交易~";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] A rip-off...?";
-		mes "[DRY-RUN] If you check the market value";
-		mes "[DRY-RUN] of the items being traded, I'm actually the one getting";
-		mes "[DRY-RUN] ripped off here.";
+		mes "[伊扎克]";
+		mes "这是个坑...？";
+		mes "如果你查看市场价值";
+		mes "被交易的物品，我其实是被";
+		mes "坑了。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Izaac]";
-		mes "[DRY-RUN] Alright, No problem.";
-		mes "[DRY-RUN] But come back to me if you change your mind.";
+		mes "[伊扎克]";
+		mes "好的，没问题。";
+		mes "但如果你改变主意，记得回来找我。";
 		close;
 	}
 }
@@ -1059,45 +1059,45 @@ moc_para01,33,185,4	script	Dinorah Lacostt#ed	862,{ end; }
 /* These scripts change on a regular basis, so they're mostly just placeholders for now. */
 
 moc_para01,29,35,4	script	Gramps#huntquests	866,{
-	mes "[DRY-RUN] [Gramps]";
-	mes "[DRY-RUN] When you get to being my";
-	mes "[DRY-RUN] age, you become bitter.";
-	mes "[DRY-RUN] Too long I've done nothing about the monsters that roam around";
-	mes "[DRY-RUN] Rune Midgard.";
+	mes "[老爷爷]";
+	mes "当你到了我这个年纪时，";
+	mes "你会变得愤世嫉俗.";
+	mes "我已经很久没有对那些在";
+	mes "米德加尔特游荡的怪物采取行动了.";
 	next;
-	mes "[DRY-RUN] [Gramps]";
-	mes "[DRY-RUN] That's why I'm asking you wippersnappers to help";
-	mes "[DRY-RUN] me hunt some monsters.";
-	mes "[DRY-RUN] Will you help me, young adventurer?";
+	mes "[老爷爷]";
+	mes "这就是我为什么要请你们这些年轻人来帮我";
+	mes "猎杀一些怪物.";
+	mes "你愿意帮我吗，年轻的冒险者?";
 	close;
 	//next;
-	//switch(select("[DRY-RUN] Yes, I'll help.:Reward Me!:^ff0000I want to quit hunting^000000:^0000ffCan you warp me?^000000:Can you erase the timer?:What missions are you giving?:Give me Limited 3 day VIP:Tell me more about the VIP Access:No thanks, pops.")) {
+	//switch(select("是的，我会帮你.:奖励我!:^ff0000我想退出狩猎^000000:^0000ff你能传送我吗?^000000:你能消除计时器吗?:你给我什么任务?:给我三天的限量VIP:告诉我更多关于VIP通行证的事:不，谢谢，老爷爷.")) {
 }
 
 moc_para01,174,33,3	script	Bathory#2012spirits	1102,{
-	mes "[DRY-RUN] [Bathory]";
-	mes "[DRY-RUN] Eheeheeheehee! The spotlight is on Glast Heim this week, so I'm ferrying people there for a mere 1,000z!";
+	mes "[巴风特]";
+	mes "嘿嘿嘿嘿！本周的焦点是古城，所以我只需1,000金币就能把人送到那里！";
 	next;
-	mes "[DRY-RUN] [Bathory]";
-	mes "[DRY-RUN] How about it? Want to take a ride on a beautiful Bathory's broom?";
+	mes "[巴风特]";
+	mes "怎么样？想坐上美丽的巴风特的扫帚吗？";
 	next;
-	switch(select("[DRY-RUN] Prepare for Takeoff!:No thanks.")) {
+	switch(select("准备起飞！:不，谢谢。")) {
 	case 1:
 		if (Zeny < 1000) {
-			mes "[DRY-RUN] [Bathory]";
-			mes "[DRY-RUN] Come on dearie...";
-			mes "[DRY-RUN] You don't even have 1,000 zeny?";
+			mes "[巴风特]";
+			mes "来吧，亲爱的...";
+			mes "你连1,000金币都没有吗？";
 			close;
 		}
-		mes "[DRY-RUN] [Bathory]";
-		mes "[DRY-RUN] Alright, hold on tight!";
+		mes "[巴风特]";
+		mes "好的，抓紧了！";
 		close2;
 		set Zeny, Zeny-1000;
 		warp "niflheim",194,185;
 		end;
 	case 2:
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] No thanks, maybe later.";
+		mes "不，谢谢，可能稍后再说。";
 		close;
 	}
 }

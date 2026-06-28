@@ -466,157 +466,157 @@ aldeba_in,168,175,4	script	Monster Tamer#alde	125,{
 }
 
 -	script	::MonsterTamer_izlude	-1,{
-	mes "[DRY-RUN] [Shogo]";
-	mes "[DRY-RUN] Are you pre-occupied with";
-	mes "[DRY-RUN] gathering items for monsters";
-	mes "[DRY-RUN] and want a break? ";
-	mes "[DRY-RUN] We will gather items";
-	mes "[DRY-RUN] for your Cute Pets.";
+	mes "[翔悟]";
+	mes "你是否忙于";
+	mes "为怪物收集物品";
+	mes "想要休息一下？";
+	mes "我们将收集物品";
+	mes "为了你的可爱宠物。";
 	next;
-	switch(select("[DRY-RUN] ^3355FF' Monster Taming '^000000?:Order ^3355FF' Book of Devil '^000000:Order ^3355FF' No Recipient '^000000:Order ^3355FF' Orc Trophy '^000000:Cancel")) {
+	switch(select("^3355FF' 驯兽 '^000000?:订单 ^3355FF' 魔鬼之书 '^000000:订单 ^3355FF' 无接收者 '^000000:订单 ^3355FF' 兽人奖杯 '^000000:取消")) {
 	case 1:
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] The monster taming items are necessary to communicate with the monster of your choice! We Monster Tamer guild members have a very reasonable offer...";
+		mes "[翔悟]";
+		mes "驯兽道具是与您选择的怪物沟通所必需的！我们驯兽师公会成员有一个非常合理的提议...";
 		next;
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] We provide a system that allows you to get your hands on these cool items with less of the hassle!";
-		mes "[DRY-RUN] Book of Devil!";
-		mes "[DRY-RUN] No Recipient!";
-		mes "[DRY-RUN] Orc Trophy!";
+		mes "[翔悟]";
+		mes "我们提供一个系统，让您更轻松地获得这些酷炫的道具！";
+		mes "恶魔之书！";
+		mes "没有收件人！";
+		mes "兽人奖杯！";
 		next;
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] For 1 Book of Devil, you can exchange:";
-		mes "[DRY-RUN] ^3355FF1 Old Magic Book^000000";
-		mes "[DRY-RUN] ^3355FF2 Horrendous Mouth^000000.";
+		mes "[翔悟]";
+		mes "用1本恶魔之书可以兑换：";
+		mes "^3355FF1 本古老魔法书^000000";
+		mes "^3355FF2 可怕的嘴巴^000000。";
 		next;
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] For 1 No Recipient, you can exchange ^3355FF1 Old Portrait^000000.";
+		mes "[翔悟]";
+		mes "用1个无接收者可以兑换^3355FF1 古老的肖像^000000。";
 		next;
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] Lastly, you can exchange";
-		mes "[DRY-RUN] ^3355FF1 Chivalry Emblem^000000 and";
-		mes "[DRY-RUN] ^3355FF1 Scorpion Tail^000000";
-		mes "[DRY-RUN] for 1 Orc Trophy.";
-		mes "[DRY-RUN] Try these fantastic items!";
+		mes "[翔悟]";
+		mes "最后，你可以兑换";
+		mes "^3355FF1 骑士徽章^000000和";
+		mes "^3355FF1 蝎子尾巴^000000";
+		mes "换取1个兽人奖杯。";
+		mes "尝试这些奇妙的物品！";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] This is an item far beyond what humans can read! Its name? ^3355FFBook of Devil^000000! A very mysterious item that can supposedly summon demons...";
+		mes "[翔悟]";
+		mes "这是一个人类无法阅读的物品！它的名字？^3355FF恶魔之书^000000！一个非常神秘的物品，传说可以召唤恶魔...";
 		next;
 		if ((countitem(1006) > 0) && (countitem(958) > 1)) {
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Oh! You have all the items necessary to make 1 Book of Devil! Good, good! With all my pride as a monster tamer, I will make one for you right away.";
+			mes "[翔悟]";
+			mes "哦！你拥有制作1本魔鬼之书所需的所有物品！很好很好！作为一名怪物驯养师，我会立刻为你制作一本。";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Let's see...";
-			mes "[DRY-RUN] Hmm, this is going to be hard.";
+			mes "[翔悟]";
+			mes "让我看看……";
+			mes "嗯，这会很难。";
 			next;
-			mes "[DRY-RUN] ^3355FF*Knock knock scrape scrape*^000000";
+			mes "^3355FF*敲敲刮刮*^000000";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Okay. All done.";
-			mes "[DRY-RUN] Please take it for";
-			mes "[DRY-RUN] the cute monster you";
-			mes "[DRY-RUN] are raising.";
-			mes "[DRY-RUN] Book of Devil!";
+			mes "[翔悟]";
+			mes "好的，完成了。";
+			mes "请拿去给";
+			mes "你正在养的可爱怪物。";
+			mes "你正在养的可爱怪物。";
+			mes "恶魔之书！";
 			delitem 958,2;  //Horrendous_Mouth
 			delitem 1006,1;  //Old_Magic_Book
 			getitem 642,1; // Book_Of_Devil
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] For the owner that wishes to raise a monster that can be summoned using the Book of Devil, we provide a way to create 1 Book of Devil!";
+			mes "[翔悟]";
+			mes "对于希望养成可以用魔鬼之书召唤的怪物的主人，我们提供制作1本魔鬼之书的方法！";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Just bring me...";
-			mes "[DRY-RUN] ^3355FF1 Old Magicbook^000000 and";
-			mes "[DRY-RUN] ^3355FF2 Horrendous Mouth^000000!";
-			mes "[DRY-RUN] If you bring me these items, with all my pride as a monster tamer, I will make it for you!";
+			mes "[翔悟]";
+			mes "只需带给我…";
+			mes "^3355FF1本旧魔法书^000000和";
+			mes "^3355FF可怕的嘴巴^000000!";
+			mes "如果你把这些物品带给我，作为一名怪物驯服者的骄傲，我会为你制作的!";
 			close;
 		}
 	case 3:
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] This is an item which expresses feelings beyond what a human can feel. Its name? ^3355FFNo Recipient^000000! Who sent this letter, and who was supposed to receive it?";
+		mes "[翔悟]";
+		mes "这是一个表达超越人类感受的物品。它的名字？^3355FF无接收者^000000! 是谁寄的这封信，谁本该收到它？";
 		next;
 		if (countitem(7014) > 0) {
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Oh! You have all the items necessary to make No Recipient! Good, good! With all my pride as a monster tamer, I will make one for you right away.";
+			mes "[翔悟]";
+			mes "哦！你有制作无接收者所需的所有物品！很好，很好！作为一名怪物驯服者的骄傲，我会立刻为你制作一个。";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Got to fold this Old Portrait just right...";
+			mes "[翔悟]";
+			mes "得把这幅旧画像折得刚刚好...";
 			next;
-			mes "[DRY-RUN] ^3355FF*Scrape scrape brush brush*^000000";
+			mes "^3355FF*刮刮刷刷*^000000";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Okay. All done.";
-			mes "[DRY-RUN] Please take this item";
-			mes "[DRY-RUN] for the cute monster";
-			mes "[DRY-RUN] you are raising.";
-			mes "[DRY-RUN] No Recipient!";
+			mes "[翔悟]";
+			mes "好的，完成了。";
+			mes "请拿着这个物品";
+			mes "给可爱的怪物";
+			mes "你正在养育。";
+			mes "没有收件人！";
 			delitem 7014,1;  //Old_Portrait
 			getitem 636,1; // No_Recipient
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] For the monster owner that is fond of No Recipient, we provide a way to create to special item!";
+			mes "[翔悟]";
+			mes "对于喜欢无接收者的怪物主人，我们提供了一种制作特殊物品的方法！";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Just bring me...";
-			mes "[DRY-RUN] ^3355FF1 Old Portrait^000000!";
-			mes "[DRY-RUN] If you bring this to me, with all my pride as a monster tamer, I will make it for you!";
+			mes "[翔悟]";
+			mes "只需带给我…";
+			mes "^3355FF1 旧画像^000000！";
+			mes "如果你把这个带给我，作为一个怪物驯养师的骄傲，我会为你制作它！";
 			close;
 		}
 	case 4:
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] This is an item far beyond the pride of humans!";
-		mes "[DRY-RUN] Its name?";
-		mes "[DRY-RUN] ^3355FFOrc Trophy^000000!";
+		mes "[翔悟]";
+		mes "这是一个远超人类骄傲的物品！";
+		mes "它的名字？";
+		mes "^3355FF兽人奖杯^000000！";
 		next;
 		if ((countitem(1004) > 0) && (countitem(904) > 0)) {
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Oh! You have all the items necessary to make an Orc Trophy! Good, good! With all my pride as a monster tamer, let me make one for you right away!";
+			mes "[翔悟]";
+			mes "哦！你拥有制作兽人奖杯所需的所有物品！很好，很好！作为一个怪物驯养师的骄傲，让我立刻为你制作一个！";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Got to...";
-			mes "[DRY-RUN] Fit this Scorpion Tail...";
-			mes "[DRY-RUN] Just right...";
+			mes "[翔悟]";
+			mes "得去...";
+			mes "把这个蝎子尾巴放进去...";
+			mes "正合适...";
 			next;
-			mes "[DRY-RUN] ^3355FF*Clang clang Boong*^000000";
+			mes "^3355FF*叮叮当当*^000000";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] Okay. All done.";
-			mes "[DRY-RUN] Please take this for";
-			mes "[DRY-RUN] the cute monster";
-			mes "[DRY-RUN] you are raising...";
-			mes "[DRY-RUN] Orc Trophy!";
+			mes "[翔悟]";
+			mes "好的，完成了。";
+			mes "请拿这个给";
+			mes "可爱的怪物";
+			mes "你正在养的...";
+			mes "兽人奖杯！";
 			delitem 904,1;  //Scorpion's_Tail
 			delitem 1004,1;  //Patriotism_Marks
 			getitem 635,1; // Horror_Of_Tribe
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] For the monster owner";
-			mes "[DRY-RUN] who is fond of Horror of Tribe...";
-			mes "[DRY-RUN] One way to make Horror of Tribe !";
-			mes "[DRY-RUN] ^3355FF 1 Chivalry Emblem^000000!";
-			mes "[DRY-RUN] ^3355FF 1 Scorpion Tail^000000!";
+			mes "[翔悟]";
+			mes "对于怪物的主人";
+			mes "喜欢部落恐怖的...";
+			mes "制作部落恐怖的一种方法！";
+			mes "^3355FF 1 骑士徽章^000000!";
+			mes "^3355FF 1 蝎子尾巴^000000!";
 			next;
-			mes "[DRY-RUN] [Shogo]";
-			mes "[DRY-RUN] If you bring these items to me,";
-			mes "[DRY-RUN] with all my pride as a monster";
-			mes "[DRY-RUN] tamer, I will make it for you!";
+			mes "[翔悟]";
+			mes "如果你把这些物品带给我，";
+			mes "以我作为怪物驯养师的所有骄傲，";
+			mes "我会为你制作的！";
 			close;
 		}
 	case 5:
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] Ah...!";
-		mes "[DRY-RUN] You must have not decided which Monster you want to raise.";
+		mes "[翔悟]";
+		mes "啊...！";
+		mes "你还没有决定想要养哪种怪物。";
 		next;
-		mes "[DRY-RUN] [Shogo]";
-		mes "[DRY-RUN] Definitely not a decision to be made carelessly! Your pet monster will accompany you throughout your life. Please take your time and return when you have decided.";
+		mes "[翔悟]";
+		mes "这绝对不是一个可以草率做出的决定！你的宠物怪物将伴随你一生。请慢慢考虑，决定后再回来。";
 		close;
 	}
 }

@@ -21,27 +21,27 @@
 alberta,30,65,3	script	Akagi	730,{
 	if (Class == Job_Novice) {
 		if (JobLevel == 10) {
-			mes "[DRY-RUN] [Akagi]";
-			mes "[DRY-RUN] Hmmm...";
-			mes "[DRY-RUN] You must have come,";
-			mes "[DRY-RUN] sensing that someone";
-			mes "[DRY-RUN] is waiting for you here.";
-			mes "[DRY-RUN] Tell me, do you seek";
-			mes "[DRY-RUN] the path of patience?";
+			mes "[赤城]";
+			mes "嗯……";
+			mes "你一定是来了，";
+			mes "感知到有人";
+			mes "在这里等你。";
+			mes "告诉我，你是否在寻求";
+			mes "耐心之道？";
 			next;
-			if(select("[DRY-RUN] No:Yes") == 1) {
-				mes "[DRY-RUN] [Akagi]";
-				mes "[DRY-RUN] I see.";
-				mes "[DRY-RUN] To each his own,";
-				mes "[DRY-RUN] I suppose. Take";
-				mes "[DRY-RUN] care of yourself.";
+			if(select("否:是") == 1) {
+				mes "[赤城]";
+				mes "我明白了。";
+				mes "各人有各人的选择，";
+				mes "我想是这样。请";
+				mes "好好照顾自己。";
 				close;
 			}
-			mes "[DRY-RUN] [Akagi]";
-			mes "[DRY-RUN] Very well.";
-			mes "[DRY-RUN] Then, let me";
-			mes "[DRY-RUN] set you on that";
-			mes "[DRY-RUN] path right away...";
+			mes "[赤城]";
+			mes "很好。那么，让我";
+			mes "立即引导你走上那条";
+			mes "道路……";
+			mes "嗯？我无法为你";
 			close2;
 			switch(rand(3)) {
 				case 1:
@@ -55,21 +55,21 @@ alberta,30,65,3	script	Akagi	730,{
 					end;
 			}
 		} else {
-			mes "[DRY-RUN] [Akagi]";
-			mes "[DRY-RUN] Hm? I cannot be";
-			mes "[DRY-RUN] of any service to";
-			mes "[DRY-RUN] you until you grow";
-			mes "[DRY-RUN] a little stronger...";
+			mes "[赤城]";
+			mes "提供任何帮助。";
+			mes "任何服务";
+			mes "你直到变得更强";
+			mes "一点点更强...";
 			close;
 		}
 	} else {
-		mes "[DRY-RUN] [Akagi]";
-		mes "[DRY-RUN] Hmm...";
-		mes "[DRY-RUN] You and I...";
-		mes "[DRY-RUN] We are fairly equal in";
-		mes "[DRY-RUN] terms of combat ability.";
-		mes "[DRY-RUN] Perhaps we can spar";
-		mes "[DRY-RUN] together sometime.";
+		mes "[赤城]";
+		mes "嗯...";
+		mes "你和我...";
+		mes "在某种程度上我们是相当平等的";
+		mes "在战斗能力方面。";
+		mes "也许我们可以一起";
+		mes "切磋一下。";
 		close;
 	}
 }

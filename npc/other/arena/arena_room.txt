@@ -18,63 +18,63 @@
 //============================================================
 
 arena_room,94,93,5	script	Vendigos	97,{
-	mes "[DRY-RUN] [Vendigos]";
-	mes "[DRY-RUN] Welcome to the world of Arena, the battle against a time limit.";
-	mes "[DRY-RUN] My name is Vendigos, I am here to help you.";
+	mes "[文迪戈斯]";
+	mes "欢迎来到竞技场的世界，和时间限制作斗争。";
+	mes "我的名字是文迪戈斯，我在这里帮助你。";
 	next;
-	mes "[DRY-RUN] [Vendigos]";
-	mes "[DRY-RUN] If you have any questions, feel free to ask me.";
+	mes "[文迪戈斯]";
+	mes "如果你有任何问题，请随时问我。";
 	next;
 	while(1) {
-		switch(select("[DRY-RUN] How to challenge:About Arena Points:My Current Arena Points:Cancel")) {
+		switch(select("如何挑战:关于竞技场积分:我当前的竞技场积分:取消")) {
 		case 1:
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] There are two different kinds of arena mode such as ^3131FFPlayer Mode^000000 and ^3131FFParty Mode^000000.";
+			mes "[文迪戈斯]";
+			mes "竞技场模式有两种不同的类型，如 ^3131FF玩家模式^000000 和 ^3131FF队伍模式^000000。";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] ^3131FFPlayer Mode^000000 consists of 4 different stages based on character level from 50~80.";
-			mes "[DRY-RUN] For a party with 5 members, they can participate in ^3131FFParty Mode^000000.";
+			mes "[文迪戈斯]";
+			mes "^3131FF玩家模式^000000 包含4个不同的阶段，基于角色等级从50~80。";
+			mes "对于5名成员的队伍，他们可以参加 ^3131FF队伍模式^000000。";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] For ^3131FFeach Player Mode Stage^000000, characters who are 20 levels higher than the level requirement on each stage cannot enter. This is to prevent high level characters preoccupying a low level stage.";
+			mes "[文迪戈斯]";
+			mes "对于 ^3131FF每个玩家模式阶段^000000，角色如果比每个阶段的等级要求高出20级，则无法进入。这是为了防止高等级角色占据低等级阶段。";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] There are the NPCs for Player Mode Stages from 12 o'clock direction to the reversed clock direction.";
-			mes "[DRY-RUN] While you're waiting in a chat room, you will be automatically guided to an arena room by the waiting order.";
+			mes "[文迪戈斯]";
+			mes "从12点钟方向到逆时针方向有玩家模式阶段的NPC。";
+			mes "当你在聊天室等待时，你将根据等待顺序自动引导到竞技场房间。";
 			break;
 		case 2:
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] Let me explain about the ^3131FFArena Point^000000.";
-			mes "[DRY-RUN] It is a reward point for players who ^3131FFsuccessfully cleared a arena stage^000000, a player can possess the maximum 30,000 points.";
+			mes "[文迪戈斯]";
+			mes "让我来解释一下 ^3131FF竞技场积分^000000。";
+			mes "这是对 ^3131FF成功通关竞技场阶段^000000 的玩家的奖励积分，玩家最多可以拥有30,000积分。";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] Even if you did not clear a stage due to time-over or other errors, you will be given a very small amount of arena points.";
+			mes "[文迪戈斯]";
+			mes "即使由于时间结束或其他错误未能完成某个阶段，您仍将获得非常少量的竞技场积分。";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] Regarding the use of Arena Points,";
-			mes "[DRY-RUN] we are providing various services such as souvenir photograph services through an NPC named Givu.";
+			mes "[文迪戈斯]";
+			mes "关于竞技场积分的使用，";
+			mes "我们通过一个名为Givu的NPC提供各种服务，例如纪念照片服务。";
 			break;
 		case 3:
-			mes "[DRY-RUN] [Vendigos]";
+			mes "[文迪戈斯]";
 			mes "Let me check "+strcharinfo(0)+"'s current arena points.";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
+			mes "[文迪戈斯]";
 			mes ""+strcharinfo(0)+" has total ^3131FF"+arena_point+"^000000 points.";
 			next;
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] If you wish to know how to use arena points, please refer to the 2nd menu ^3131FF'About Arena Points'^000000.";
+			mes "[文迪戈斯]";
+			mes "如果您想知道如何使用竞技场积分，请参考第二个菜单 ^3131FF'关于竞技场积分'^000000。";
 			break;
 		case 4:
-			mes "[DRY-RUN] [Vendigos]";
-			mes "[DRY-RUN] Okay then,";
-			mes "[DRY-RUN] please have";
-			mes "[DRY-RUN] a good time.";
+			mes "[文迪戈斯]";
+			mes "好的，那么，";
+			mes "请问有什么可以帮助您的吗？";
+			mes "过得不错。";
 			close;
 		}
 		next;
-		mes "[DRY-RUN] [Vendigos]";
-		mes "[DRY-RUN] Is there anything";
-		mes "[DRY-RUN] more I can help you with?";
+		mes "[文迪戈斯]";
+		mes "还有什么我可以帮助您的吗？";
+		mes "更多我可以帮助您的吗？";
 		next;
 	}
 	close;
@@ -549,47 +549,47 @@ sec_in02,79,171,3	script	Reward Manager#arena	802,{
 }
 
 arena_room,105,93,5	script	Teleporter#arena	55,{
-	mes "[DRY-RUN] [Teleporter]";
-	mes "[DRY-RUN] I can move you to the reward arena!";
-	mes "[DRY-RUN] Would you like to go there?";
+	mes "[女武神]";
+	mes "我可以把你移动到奖励竞技场！";
+	mes "你想去那里吗？";
 	next;
-	switch(select("[DRY-RUN] Yes:No.")) {
+	switch(select("是:否。")) {
 	case 1:
-		mes "[DRY-RUN] [Teleporter]";
-		mes "[DRY-RUN] Let me guide you.";
+		mes "[女武神]";
+		mes "让我来引导你。";
 		close2;
 		warp "prt_are_in",60,14;
 		end;
 	case 2:
-		mes "[DRY-RUN] [Teleporter]";
-		mes "[DRY-RUN] No problem, feel free to come back any time.";
+		mes "[女武神]";
+		mes "没问题，随时欢迎你回来。";
 		close;
 	}
 }
 
 prt_are_in,98,14,3	script	Givu#arena	728,{
 	if (checkweight(526,5) == 0) {
-		mes "[DRY-RUN] - Wait a moment! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please lighten your weight -";
-		mes "[DRY-RUN] - and try again. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请减轻你的重量 -";
+		mes "- 然后再试一次。 -";
 		close;
 	}
-	mes "[DRY-RUN] [Givu]";
-	mes "[DRY-RUN] Hello, there. Welcome to the world of Arena.";
-	mes "[DRY-RUN] My name is Givu, I am in charge of arena point exchange program.";
+	mes "[Givu]";
+	mes "你好，欢迎来到竞技场的世界。";
+	mes "我叫Givu，我负责竞技场积分兑换项目。";
 	next;
-	mes "[DRY-RUN] [Givu]";
-	mes "[DRY-RUN] You can exchange your arena points with various stuffs.";
-	mes "[DRY-RUN] Please choose a menu below.";
+	mes "[Givu]";
+	mes "你可以用你的竞技场积分兑换各种物品。";
+	mes "请选择下面的菜单。";
 	next;
-	switch(select("[DRY-RUN] Exchange with Consumable items:Exchange with EXP points:Take a Souvenir Picture:Check Current Arena Points")) {
+	switch(select("与消耗品交换:与经验值交换:拍摄纪念照片:查看当前竞技场积分")) {
 	case 1:
-		mes "[DRY-RUN] [Givu]";
-		mes "[DRY-RUN] What consumable item do you wish to exchange?";
+		mes "[Givu]";
+		mes "您希望兑换什么消耗品？";
 		next;
-		switch(select("[DRY-RUN] Honey:Royal Jelly:Mastela Fruit:Condensed White Potion:Anodyne:Yggdrasil Seed:Yggdrasilberry:Old Blue Box:Old Purple Box:Old Card Album")) {
+		switch(select("蜂蜜:皇家果冻:玛斯特拉果:浓缩白色药水:解毒药:世界树种子:世界树浆果:旧蓝色箱子:旧紫色箱子:旧卡片册")) {
 			case 1: callfunc "Func_Are_Rew",518,5,20;
 			case 2: callfunc "Func_Are_Rew",526,5,30;
 			case 3: callfunc "Func_Are_Rew",522,5,30;
@@ -602,20 +602,20 @@ prt_are_in,98,14,3	script	Givu#arena	728,{
 			case 10: callfunc "Func_Are_Rew",616,1,1000;
 		}
 	case 2:
-		mes "[DRY-RUN] [Givu]";
-		mes "[DRY-RUN] Would you like to exchange your arena points with experience points?";
-		mes "[DRY-RUN] It requires 40 arena points.";
+		mes "[Givu]";
+		mes "您想用竞技场积分兑换经验值吗？";
+		mes "这需要40个竞技场积分。";
 		next;
-		switch(select("[DRY-RUN] Cancel:Yes")) {
+		switch(select("取消:是")) {
 		case 1:
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] You have canceled your request.";
+			mes "[Givu]";
+			mes "您已取消请求。";
 			close;
 		case 2:
 			if (arena_point < 40) {
-				mes "[DRY-RUN] [Givu]";
-				mes "[DRY-RUN] You do not have enough arena points.";
-				mes "[DRY-RUN] Please check the total amount of arena points you have.";
+				mes "[Givu]";
+				mes "您的竞技场积分不足。";
+				mes "请检查您拥有的竞技场积分总数。";
 				close;
 			}
 			set arena_point, arena_point-40;
@@ -630,39 +630,39 @@ prt_are_in,98,14,3	script	Givu#arena	728,{
 				else if (BaseLevel < 90) getexp 10000,0;
 				else getexp 30000,0;
 			}
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] You have gained experience points. Thank you.";
+			mes "[Givu]";
+			mes "您获得了经验值。谢谢。";
 			close;
 		}
 	case 3:
-		mes "[DRY-RUN] [Givu]";
-		mes "[DRY-RUN] You have chosen a souvenir picture services.";
+		mes "[Givu]";
+		mes "您选择了纪念照片服务。";
 		next;
-		switch(select("[DRY-RUN] About souvenir Picture Services:Take a picture")) {
+		switch(select("关于纪念照片服务:拍照")) {
 		case 1:
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] Do you see stairs at the right side of me?";
+			mes "[Givu]";
+			mes "您看到我右侧的楼梯了吗？";
 			next;
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] At the stairs, you can take a screenshot with an NPC or a monster.";
+			mes "[Givu]";
+			mes "在楼梯上，你可以和NPC或怪物拍照。";
 			next;
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] When you choose an NPC or a monster, it will show some emotion icons ^FF0000for 1 minute^000000.";
+			mes "[Givu]";
+			mes "当你选择一个NPC或怪物时，它会显示一些情感图标 ^FF0000持续1分钟^000000。";
 			next;
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] Don't miss the chance to take a picture with your favorite NPC!";
+			mes "[Givu]";
+			mes "不要错过和你最喜欢的NPC拍照的机会！";
 			close;
 		case 2:
 			if ($@arena_picture) {
-				mes "[DRY-RUN] [Givu]";
-				mes "[DRY-RUN] A souvenir picture services is on progress. Please wait.";
+				mes "[Givu]";
+				mes "纪念照片服务正在进行中。请稍候。";
 				close;
 			}
-			mes "[DRY-RUN] [Givu]";
-			mes "[DRY-RUN] Please choose an NPC at below.";
-			mes "[DRY-RUN] The NPC will appear for 1 minute and this service requires 10 arena points.";
+			mes "[Givu]";
+			mes "请在下面选择一个NPC。";
+			mes "NPC将出现1分钟，此服务需要10个竞技场积分。";
 			next;
-			switch(select("[DRY-RUN] Baphomet:Dark Lord:Doppelganger:Eddga:Dracula:Samurai:Stormy Knight:Phreeoni:Girl:Valkyrie")) {
+			switch(select("巴风特:黑暗领主:双胞胎:艾德加:德古拉:武士:暴风骑士:弗利昂:少女:女武神")) {
 				case 1: set $@arena_picture_id,1039; break;
 				case 2: set $@arena_picture_id,1272; break;
 				case 3: set $@arena_picture_id,1046; break;
@@ -675,20 +675,20 @@ prt_are_in,98,14,3	script	Givu#arena	728,{
 				case 10: set $@arena_picture_id,7777; break;
 			}
 			if (arena_point < 10) {
-				mes "[DRY-RUN] [Givu]";
-				mes "[DRY-RUN] You do not have enough arena points.";
-				mes "[DRY-RUN] Please check the total amount of arena points you have.";
+				mes "[Givu]";
+				mes "您的竞技场积分不足。";
+				mes "请检查您拥有的竞技场积分总数。";
 				close;
 			}
-			mes "[DRY-RUN] [Givu]";
+			mes "[Givu]";
 			if ($@arena_picture_id == 6969)
-				mes "[DRY-RUN] Would you like to take a picture with pretty girls?";
+				mes "你想和漂亮女孩拍照吗？";
 			else if ($@arena_picture_id == 7777)
-				mes "[DRY-RUN] Would you like to take a picture with a Valkyrie?";
+				mes "你想和女武神拍照吗？";
 			else
 				mes "Would you like to take a picture with a "+getmonsterinfo($@arena_picture_id, MOB_NAME)+"?";
 			next;
-			switch(select("[DRY-RUN] Yes:No")) {
+			switch(select("是:否")) {
 			case 1:
 				set arena_point, arena_point-10;
 				set $@arena_picture,1;
@@ -700,20 +700,20 @@ prt_are_in,98,14,3	script	Givu#arena	728,{
 					enablenpc "#arena_ss_4";
 				}
 				donpcevent "npctime#arena::OnStart";
-				mes "[DRY-RUN] [Givu]";
-				mes "[DRY-RUN] Thank you.";
+				mes "[Givu]";
+				mes "谢谢你。";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Givu]";
-				mes "[DRY-RUN] Would you like to consider a little longer?";
+				mes "[Givu]";
+				mes "你想考虑一下吗？";
 				close;
 			}
 		}
 	case 4:
-		mes "[DRY-RUN] [Givu]";
+		mes "[Givu]";
 		mes "Let me check "+strcharinfo(0)+"'s current arena points.";
 		next;
-		mes "[DRY-RUN] [Givu]";
+		mes "[Givu]";
 		mes ""+strcharinfo(0)+" has total ^3131FF"+arena_point+"^000000 points.";
 		close;
 	}

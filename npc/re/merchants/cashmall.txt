@@ -207,13 +207,13 @@ itemmall,24,74,5	script	Blacksmith Brock#im	4_M_HUMAN_01,{
 
 itemmall,19,74,5	script	Stylist#cash	91,{
 	if( getbattleflag( "feature.stylist" ) ){
-		mes "[DRY-RUN] [Jeremy]";
-		mes "[DRY-RUN] Hello cutie~";
-		mes "[DRY-RUN] I would like you to call me Head Stylist Jeremy.";
+		mes "[杰瑞米]";
+		mes "你好，亲爱的~";
+		mes "我希望你叫我首席造型师杰瑞米。";
 		next;
-		if( select( "[DRY-RUN] Change style:End conversation" ) == 2 ){
-			mes "[DRY-RUN] [Jeremy]";
-			mes "[DRY-RUN] My shop is always open, so please come back anytime.";
+		if( select( "更改风格:结束对话" ) == 2 ){
+			mes "[杰瑞米]";
+			mes "我的店铺随时开放，欢迎随时回来。";
 			close;
 		}
 		close2;
@@ -221,93 +221,93 @@ itemmall,19,74,5	script	Stylist#cash	91,{
 		end;
 	}
 
-	mes "[DRY-RUN] [Stylist]";
-	mes "[DRY-RUN] Hey, I'm Kaniki.";
-	mes "[DRY-RUN] I'm here to start a new";
-	mes "[DRY-RUN] trend by introducing my";
-	mes "[DRY-RUN] special new hairstyles!";
-	mes "[DRY-RUN] Give me a ^FF0000New Style Coupon^000000,";
-	mes "[DRY-RUN] and I'll change your hair~";
+	mes "[造型师]";
+	mes "嘿，我是卡尼基。";
+	mes "我在这里开始一个新的";
+	mes "潮流，推出我的";
+	mes "特别新发型！";
+	mes "给我一个^FF0000新风格优惠券^000000，";
+	mes "我就会为你换发型~";
 	next;
 	if (Sex == SEX_MALE) {
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] I have two special";
-		mes "[DRY-RUN] hairstyles for men, the";
-		mes "[DRY-RUN] Emergency Heal Perm";
-		mes "[DRY-RUN] and the Aura Blade Cut.";
-		mes "[DRY-RUN] and aura blade cut.";
+		mes "[卡尼基]";
+		mes "我有两个特别的";
+		mes "男士发型，";
+		mes "紧急治疗烫发";
+		mes "和光环刀切。";
+		mes "和光环刀切。";
 		next;
 		cutin "hair_m_24.bmp",4;
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] This is the Emergency";
-		mes "[DRY-RUN] Heal Perm. It's a brand";
-		mes "[DRY-RUN] new style I invented recently.";
-		mes "[DRY-RUN] What do you think? Cool, huh?";
+		mes "[卡尼基]";
+		mes "这是紧急治疗";
+		mes "烫发。这是一个全新的";
+		mes "风格，我最近发明的。";
+		mes "你觉得怎么样？酷吧？";
 		next;
 		cutin "",255;
 		cutin "hair_m_25.bmp",4;
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] Now this is the Aura";
-		mes "[DRY-RUN] Blade Cut. You haven't";
-		mes "[DRY-RUN] seen anything like it";
-		mes "[DRY-RUN] before, haven't you?";
+		mes "[卡尼基]";
+		mes "现在这是光环";
+		mes "刀切。你还没有";
+		mes "见过这样的东西";
+		mes "吧？";
 		next;
 		cutin "",255;
 	}else{
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] I have two new hairstyles for";
-		mes "[DRY-RUN] women, the Assumptio Perm";
-		mes "[DRY-RUN] and the Soul Changer Cut.";
-		mes "[DRY-RUN] Do you want to see how";
-		mes "[DRY-RUN] these styles look?";
+		mes "[卡尼基]";
+		mes "我有两个新的发型给";
+		mes "女士，假设烫发";
+		mes "和灵魂转换发型。";
+		mes "你想看看如何";
+		mes "这些风格看起来吗？";
 		next;
 		cutin "hair_f_24.bmp",4;
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] This is the Assumptio";
-		mes "[DRY-RUN] Perm. It'd really good";
-		mes "[DRY-RUN] on you, wouldn't it?";
+		mes "[卡尼基]";
+		mes "这是假设之力";
+		mes "永久的。真的很好";
+		mes "在你身上，不是吗？";
 		next;
 		cutin "",255;
 		cutin "hair_f_25.bmp",4;
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] Next is the Soul";
-		mes "[DRY-RUN] Changer Cut. What do";
-		mes "[DRY-RUN] you think? Isn't it nice?";
+		mes "[卡尼基]";
+		mes "接下来是灵魂";
+		mes "转换发型。你觉得";
+		mes "怎么样？是不是很好？";
 		next;
 		cutin "",255;
 	}
-	mes "[DRY-RUN] [Kaniki]";
-	mes "[DRY-RUN] Have you decided";
-	mes "[DRY-RUN] if you'd like me to";
-	mes "[DRY-RUN] change your hairstyle?";
+	mes "[卡尼基]";
+	mes "你决定好了吗";
+	mes "是否想让我";
+	mes "改变你的发型？";
 	next;
-	if (select( "[DRY-RUN] Change Hairstyle", "Don't Change" ) == 2) {
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] Really? Oh, that's too bad.";
-		mes "[DRY-RUN] Well, if you ever change your";
-		mes "[DRY-RUN] mind about updating your";
-		mes "[DRY-RUN] hairstyle, come back";
-		mes "[DRY-RUN] and let me know, okay?";
+	if (select( "更改发型", "Don't Change" ) == 2) {
+		mes "[卡尼基]";
+		mes "真的？哦，那太可惜了。";
+		mes "好吧，如果你有一天改变你的";
+		mes "请注意更新你的";
+		mes "发型，回来时";
+		mes "告诉我，好吗？";
 		close;
 	}
 	if (countitem(7622) < 1) {
-		mes "[DRY-RUN] [Kaniki]";
-		mes "[DRY-RUN] I'm sorry, but I can";
-		mes "[DRY-RUN] only provide my hairstyling";
-		mes "[DRY-RUN] service if you bring a New";
-		mes "[DRY-RUN] Style Coupon. Please come";
-		mes "[DRY-RUN] back to me after you manage to";
-		mes "[DRY-RUN] get one of those coupons, okay?";
+		mes "[卡尼基]";
+		mes "对不起，但我只能";
+		mes "提供我的发型设计";
+		mes "服务，如果你带来一张新";
+		mes "样式优惠券。请来";
+		mes "在你成功之后再来找我";
+		mes "拿到其中一张优惠券，好吗？";
 		close;
 	}
-	mes "[DRY-RUN] [Kaniki]";
-	mes "[DRY-RUN] Great, you brought";
-	mes "[DRY-RUN] a New Style Coupon!";
-	mes "[DRY-RUN] Alright, which hairstyle";
-	mes "[DRY-RUN] did you want to have?";
+	mes "[卡尼基]";
+	mes "太好了，你带来了";
+	mes "一张新风格优惠券！";
+	mes "好的，你想要哪种发型？";
+	mes "你想要的发型是什么？";
 	next;
 	if (Sex == SEX_MALE) {
-		if(select("[DRY-RUN] Emergency Heal Perm", "Aura Blade Cut") == 1) {
+		if(select("紧急治疗烫发", "Aura Blade Cut") == 1) {
 			delitem 7622,1;	// New_Style_Coupon
 			setlook 1,24;
 		}else{
@@ -315,7 +315,7 @@ itemmall,19,74,5	script	Stylist#cash	91,{
 			setlook 1,25;
 		}
 	}else{
-		if(select("[DRY-RUN] Assumptio Perm", "Soul Changer Cut") == 1) {
+		if(select("假发", "Soul Changer Cut") == 1) {
 			delitem 7622,1;	// New_Style_Coupon
 			setlook 1,24;
 		}else{
@@ -323,11 +323,11 @@ itemmall,19,74,5	script	Stylist#cash	91,{
 			setlook 1,25;
 		}
 	}
-	mes "[DRY-RUN] [Kaniki]";
-	mes "[DRY-RUN] There--! It's done!";
-	mes "[DRY-RUN] How do you like your";
-	mes "[DRY-RUN] new hair? Well, I hope";
-	mes "[DRY-RUN] to see you again. Take care!";
+	mes "[卡尼基]";
+	mes "好了！完成了！";
+	mes "你喜欢你的";
+	mes "新发型吗？我希望";
+	mes "再次见到你。保重！";
 	close;
 }
 

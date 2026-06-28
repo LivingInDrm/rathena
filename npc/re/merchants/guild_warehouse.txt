@@ -8,39 +8,39 @@
 //============================================================
 
 -	script	GuildWarehouse	-1,{
-	mes "[DRY-RUN] [Warehouse Manager]";
-	mes "[DRY-RUN] How are you? We are specialized in guild warehouses. This is our ^0000cdstory^000000:";
-	mes "[DRY-RUN] Why can't guild members share a storage? We started off with that simple question.";
+	mes "[仓库管理员]";
+	mes "你好吗？我们专注于公会仓库。这是我们的^0000cd故事^000000:";
+	mes "为什么公会成员不能共享存储？我们就是从这个简单的问题开始的。";
 	next;
-	mes "[DRY-RUN] [Warehouse Manager]";
-	mes "[DRY-RUN] You can open the warehouse for 1000 Zeny or look up the usage history of the guild.";
-	mes "[DRY-RUN] How can I help you?";
+	mes "[仓库管理员]";
+	mes "你可以花费1000金币开启仓库，或者查看公会的使用历史。";
+	mes "我能帮你什么吗？";
 	next;
-	if( select( "[DRY-RUN] Open guild warehouse:View warehouse usage history" ) == 1 ){
+	if( select( "打开公会仓库:查看仓库使用历史" ) == 1 ){
 		.@guildid = getcharid( 2 );
 
 		if( .@guildid == 0 ){
-			mes "[DRY-RUN] [Warehouse Manager]";
-			mes "[DRY-RUN] The guild storage is only available for guild members.";
+			mes "[仓库管理员]";
+			mes "公会存储仅对公会成员开放。";
 			close;
 		}
 
 		if( getgdskilllv( .@guildid, "GD_GUILD_STORAGE" ) == 0 || !guild_has_permission( GUILD_PERM_STORAGE ) ){
-			mes "[DRY-RUN] [Warehouse Manager]";
-			mes "[DRY-RUN] It seems that it is not yet possible for your guild to use the guild warehouse or you do not have access permissions for the warehouse.";
-			mes "[DRY-RUN] Please come back after checking the guild skill and the permission to access the warehouse.";
+			mes "[仓库管理员]";
+			mes "看来你的公会还无法使用公会仓库，或者你没有访问仓库的权限。";
+			mes "请在检查公会技能和访问仓库的权限后再回来。";
 			close;
 		}
 
 		if( Zeny < 1000 ){
-			mes "[DRY-RUN] [Warehouse Manager]";
-			mes "[DRY-RUN] I am afraid you do not have enough money to settle the fee.";
-			mes "[DRY-RUN] The fee is 1000 Zeny.";
+			mes "[仓库管理员]";
+			mes "恐怕你没有足够的金币来支付费用。";
+			mes "费用是1000金币。";
 			close;
 		}
 
-		mes "[DRY-RUN] [Warehouse Manager]";
-		mes "[DRY-RUN] I will open the guild storage for you then. Have a memorable time!";
+		mes "[仓库管理员]";
+		mes "我将为你打开公会仓库。祝你有个难忘的时光！";
 		close2;
 
 		if( Zeny < 1000 ){
@@ -52,30 +52,30 @@
 			Zeny -= 1000;
 			end;
 		}else{
-			mes "[DRY-RUN] [Warehouse Manager]";
-			mes "[DRY-RUN] I am afraid someone else is using the warehouse right now.";
-			mes "[DRY-RUN] Please try again after a while.";
+			mes "[仓库管理员]";
+			mes "我担心现在有人正在使用仓库。";
+			mes "请稍后再试。";
 			close;
 		}
 	}else{
 		.@guildid = getcharid( 2 );
 
 		if( .@guildid == 0 ){
-			mes "[DRY-RUN] [Warehouse Manager]";
-			mes "[DRY-RUN] The guild storage is only available for guild members.";
+			mes "[仓库管理员]";
+			mes "公会存储仅对公会成员开放。";
 			close;
 		}
 
 		if( getgdskilllv( .@guildid, "GD_GUILD_STORAGE" ) == 0 || !guild_has_permission( GUILD_PERM_STORAGE ) ){
-			mes "[DRY-RUN] [Warehouse Manager]";
-			mes "[DRY-RUN] It seems that it is not yet possible for your guild to use the guild warehouse or you do not have access permissions for the warehouse.";
-			mes "[DRY-RUN] Please come back after checking the guild skill and the permission to access the warehouse.";
+			mes "[仓库管理员]";
+			mes "看来你的公会还无法使用公会仓库，或者你没有访问仓库的权限。";
+			mes "请在检查公会技能和访问仓库的权限后再回来。";
 			close;
 		}
 
-		mes "[DRY-RUN] [Warehouse Manager]";
-		mes "[DRY-RUN] I will show you the usage history of the warehouse. Usage history will be retained for up to 3 months.";
-		mes "[DRY-RUN] Have a memorable time!";
+		mes "[仓库管理员]";
+		mes "我将向你展示仓库的使用历史。使用历史将保留最多3个月。";
+		mes "祝你有个难忘的时光！";
 		close2;
 		guildopenstorage_log();
 		end;

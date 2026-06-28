@@ -205,31 +205,31 @@ mjolnir_01,272,363,4	script	Rocks#08StPattysDay	-1,1,1,{
 
 OnTouch:
 	if (StPatrick2008 < 1) {
-		mes "[DRY-RUN] - You've found a pile of rocks covered with soil. -";
+		mes "- 你发现了一堆被土覆盖的石头。 -";
 		close;
 	}
 	if (StPatrick2008 == 1) {
-		mes "[DRY-RUN] - You've found a pile of rocks covered with soil. -";
+		mes "- 你发现了一堆被土覆盖的石头。 -";
 		next;
 		if (countitem(12018) < 200) {
-			mes "[DRY-RUN] The rocks won't budge.";
-			mes "[DRY-RUN] Maybe O'Riley knows a way to move the rocks.";
+			mes "这些石头动不了。";
+			mes "也许奥赖利知道如何移动这些石头。";
 			close;
 		}
 		else {
-			if (select("[DRY-RUN] Use Firecrackers.:Ignore") == 2) {
+			if (select("使用鞭炮.:忽略") == 2) {
 				close;
 			}
-			mes "[DRY-RUN] You buried 200 Firecrackers under the pile of rocks.";
-			mes "[DRY-RUN] You light the fuse.";
+			mes "你在石头堆下埋了200个鞭炮。";
+			mes "你点燃了引线。";
 			next;
-			mes "[DRY-RUN] *BOOM!*";
+			mes "*轰!*";
 			specialeffect2 EF_LORD;
 			next;
-			mes "[DRY-RUN] After A cloud of dust and smoke has dissipated,";
-			mes "[DRY-RUN] You've found a box between the rocks and soil.";
-			mes "[DRY-RUN] This box must contain O'Riley's valuables.";
-			mes "[DRY-RUN] Let's bring the box to O'Riley.";
+			mes "一阵灰尘和烟雾散去后，";
+			mes "你在石头和土壤之间找到了一个箱子。";
+			mes "这个箱子里一定是奥赖利的贵重物品。";
+			mes "我们把箱子带给奥赖利吧。";
 			close2;
 			set StPatrick2008,2;
 			delitem 12018,200;

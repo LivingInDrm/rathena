@@ -52,44 +52,44 @@
 // Stop Post Quest
 // ============================================================
 -	script	William	89,{
-	mes "[William]";
-	mes "Welcome to";
-	mes "MacMillan's ^3355FFPost^000000 Workshop.";
+	mes "[威廉]";
+	mes "欢迎来到";
+	mes "麦克米伦的 ^3355FF工坊^000000。";
 	next;
-	mes "[William]";
-	mes "My family, the MacMillan Clan, has been producing Professional Traffic Signal Posts for more than 250 years. Nowadays, we are booking Special Orders for our unique ornament, ^3355FFStop Post^000000.";
+	mes "[威廉]";
+	mes "我的家族，麦克米伦家族，已经生产专业交通信号杆超过250年。如今，我们正在接受我们独特装饰品的特别订单，^3355FF停止杆^000000。";
 	next;
-	switch(select("Could I order one ^3355FFStop Post^000000?:Nah...")) {
+	switch(select("我可以订购一个 ^3355FF停止邮寄^000000 吗？:不……")) {
 	case 1:
-		mes "[William]";
-		mes "This unique ornament, ^3355FFStop Post^000000, is a traffic signal on the road, and doubles as a hair ornament! This, we solemnly promise on the strength of a 100-year guarantee.";
+		mes "[威廉]";
+		mes "这个独特的装饰品，^3355FF停止杆^000000，是路上的交通信号，同时也可以作为发饰！我们郑重承诺，提供100年的质量保证。";
 		next;
-		mes "[William]";
-		mes "To produce a ^3355FFStop Post^000000, we need ^3355FF91100 Zeny^000000, ^3355FF50 Trunk^000000 and ^3355FF1 Black Dyestuffs^000000.";
+		mes "[威廉]";
+		mes "要制作一个^3355FF停止杆^000000，我们需要^3355FF91100金币^000000，^3355FF50根树干^000000和^3355FF1个黑色染料^000000。";
 		next;
 		if ((countitem(1019) > 49) && (countitem(983) > 0) && (Zeny > 91099)) {
 			delitem 1019,50;  //Wooden_Block
 			delitem 983,1;  //Black_Dyestuffs
 			set Zeny, Zeny-91100;
-			mes "[William]";
-			mes "Here you are~!";
-			mes "This ^3355FFStop Post^000000 has";
-			mes "been especially made";
-			mes "just for you!";
-			mes "Thank you for stopping by!";
-			mes "...Get the joke?";
+			mes "[威廉]";
+			mes "给你~！";
+			mes "这个^3355FF停止杆^000000有";
+			mes "特别制作的";
+			mes "专为你准备的！";
+			mes "感谢你光临！";
+			mes "……明白这个笑话了吗？";
 			getitem 2272,1; // Stop_Post
 			close;
 		}
 		else {
-			mes "[William]";
-			mes "So...";
-			mes "When you get those items, swing on by and we'll give you a Stop Post.";
+			mes "[威廉]";
+			mes "所以……";
+			mes "当你获得那些物品时，过来找我们，我们会给你一个停止邮寄。";
 			close;
 		}
 	case 2:
-		mes "[William]";
-		mes "Anyway, thank you for coming by 'MacMillan's Workshop.' But think about buying something next time, will ya?";
+		mes "[威廉]";
+		mes "无论如何，感谢你光临‘麦克米伦的工作坊’。不过下次考虑买点东西吧，好吗？";
 		close;
 	}
 }
@@ -101,67 +101,67 @@
 	mes "哇哇哇哇!";
 	mes "^660000这本书的封面严重破损,但出版日期却很近.应该有很多人翻阅过它.^000000";
 	next;
-	switch(select("What is that?:Manufacture:Ignore him")) {
+	switch(select("那是什么？:制造:忽略他")) {
 	case 1:
 		mes "^660000你感觉到脚下的地面上下移动,然后在被遗弃的老建筑中听到一声尖叫.^000000";
 		mes "^660000在破旧巨大的建筑打开的窗户中飘出了暗红色的烟雾.^000000";
-		mes "Well, the official name for them is ^3355FFBinoculars^000000! An optical device that works like a pair of field glasses, they're designed for simultaneous use by both eyes!";
+		mes "嗯，它们的正式名称是 ^3355FF双筒望远镜^000000！这是一种像双目镜一样工作的光学设备，设计为双眼同时使用！";
 		next;
-		mes "[Marius]";
-		mes "They're made up of two small telescopes joined with a single focusing device. You can arrange the lenses to produce stereoscopic vision.";
+		mes "[马里乌斯]";
+		mes "它们由两个小望远镜通过一个单一的聚焦装置连接而成。你可以调整镜片以产生立体视觉。";
 		next;
-		mes "[Marius]";
-		mes "So?";
-		mes "Ain't that";
-		mes "something, huh?";
-		mes "Muhahahahahaha!";
+		mes "[马里乌斯]";
+		mes "那又怎样？";
+		mes "难道不是吗？";
+		mes "这不是很特别吗？";
+		mes "呜哈哈哈哈哈！";
 		mes ". . . . .";
 		next;
-		mes "[Marius]";
-		mes "Hm? You don't seem to";
-		mes "believe what I just said?";
-		mes "Oh c'mon, jerk. It's real!!";
+		mes "[马里乌斯]";
+		mes "嗯？你似乎不太相信我刚才说的话？";
+		mes "你不相信我刚才说的话吗？";
+		mes "哦，拜托，混蛋。这是真的！！";
 		next;
-		mes "[Marius]";
-		mes "I will let you";
-		mes "know the items I need...";
-		mes "1 ^3355FFGeek Glasses^000000! 100 ^3355FFSteel^000000!";
-		mes "And ^3355FF50000 Zeny^000000!";
+		mes "[马里乌斯]";
+		mes "我会让你知道";
+		mes "我需要的物品...";
+		mes "1 ^3355FF极客眼镜^000000！100 ^3355FF钢铁^000000！";
+		mes "还有 ^3355FF50000金币^000000！";
 		close;
 	case 2:
 		if ((countitem(2243) > 0) && (countitem(999) > 99) && (Zeny > 49999)) {
-			mes "[Marius]";
-			mes "Perfect, perfect !";
-			mes "Now my masterpiece will be complete!";
-			mes "Muhahahaha !";
+			mes "[马里乌斯]";
+			mes "完美，完美！";
+			mes "现在我的杰作将会完成！";
+			mes "哈哈哈！";
 			next;
 			delitem 2243,1;  //Spinning_Eyes
 			delitem 999,100;  //Steel
 			set Zeny, Zeny-50000;
-			mes "[Marius]";
-			mes "Here you are!";
-			mes "Binoculars !";
+			mes "[马里乌斯]";
+			mes "给你！";
+			mes "望远镜！";
 			getitem 2296,1; // Binoculars
 			next;
-			mes "[Marius]";
-			mes "Just remember...";
-			mes "Don't peep at something you shouldn't look at. Well, at least try not to.";
+			mes "[马里乌斯]";
+			mes "记住……";
+			mes "不要偷看不该看的东西。好吧，至少尽量不要。";
 			close;
 		}
 		else {
-			mes "[Marius]";
-			mes "Argggghhhhhhh!!";
-			mes "You didn't bring";
-			mes "enough items!!!!";
-			mes "How dare you";
-			mes "disgrace me!!!";
-			mes "Baaaadddd !!";
+			mes "[马里乌斯]";
+			mes "啊啊啊啊啊啊啊啊！！";
+			mes "你没有带来";
+			mes "足够的物品！！！！";
+			mes "你竟敢";
+			mes "侮辱我！！！";
+			mes "太糟糕了！！";
 			close;
 		}
 	case 3:
-		mes "[Marius]";
-		mes "Hey you~!";
-		mes "Now you're in front of Marius, an Alchemist among Alchemists. Ignoring me, eh? Come on, I'll beat your ass!";
+		mes "[马里乌斯]";
+		mes "嘿，你~！";
+		mes "现在你在玛瑞斯面前，他是炼金术士中的炼金术士。无视我，是吗？来吧，我要揍你！";
 		close;
 	}
 }
@@ -255,7 +255,7 @@ OnTouch_:
 			mes "你必须知道,沃尔特和吉尔伯格家族是全国第一的.";
 			mes "[中年贵族]";
 			next;
-			switch(select("Sure:Why should I?!")) {
+			switch(select("当然:我为什么要这样做？！")) {
 			case 1:
 				if (Zeny > 999) {
 					mes "七个家族中最弱的是贾尔伯格家族,而最团结的是施密特和沃尔特家族.";
@@ -292,25 +292,25 @@ OnTouch_:
 				mes "(沃尔特家族候选人是艾伦.";
 				mes "理查家族候选人是珀.)";
 				mes "(这是两个家族之间的阴谋?这到底是怎么回事.)";
-				mes "me any favors, then why";
-				mes "should I help you? Go away!";
+				mes "你帮我什么忙，那为什么";
+				mes "我为什么要帮你？滚开！";
 				close2;
 				warp "que_job01",85,77;
 				end;
 			}
 		}
 		else {
-			mes "[Master]";
-			mes "Not at all.";
-			mes "Make sure that this";
-			mes "one isn't allowed";
-			mes "to enter.";
+			mes "[大师]";
+			mes "一点也不。";
+			mes "确保这个";
+			mes "不被允许";
+			mes "进入。";
 			next;
-			mes "[Litheron]";
-			mes "You heard the man.";
-			mes "You better retreat";
-			mes "from this place while";
-			mes "you still have legs...";
+			mes "[利瑟龙]";
+			mes "你听到那个人说的了。";
+			mes "你最好撤退";
+			mes "离开这个地方，趁";
+			mes "你还有腿的时候...";
 			close2;
 			warp "que_job01",85,77;
 			end;
@@ -592,75 +592,75 @@ que_job01,49,49,5	script	Tao#dan_09	877,{
 		mes "多么无礼的人!";
 		next;
 		if (prt_curse == 24) {
-			switch(select("Is Marjana in?:I'm here to see you,Tao.")) {
+			switch(select("玛尔贾娜在吗？:我来见你，陶。")) {
 			case 1:
-				mes "[Tao]";
-				mes "She's in the room on your left, meow~";
-				mes "But then, how d'you know she's here, meow?";
+				mes "[陶]";
+				mes "她在你左边的房间里，喵~";
+				mes "但是，你怎么知道她在这里，喵？";
 				close;
 			case 2:
-				mes "[Tao]";
-				mes "This is no place for playing, meow..";
-				mes "... Hey, it's awkward you looking at me like that, meow..";
+				mes "[陶]";
+				mes "这里不是玩耍的地方，喵..";
+				mes "... 嘿，你这样看着我让我觉得很尴尬，喵..";
 				close;
 			}
 		}
 		else {
-			mes "[Tao]";
-			mes "Is this all because of that dude called Raiyan Moore or More.. or.. blar?";
-			mes "... Meow..";
+			mes "[陶]";
+			mes "这一切都是因为那个叫莱扬·摩尔的人吗，还是摩尔..或者..呜呜？";
+			mes "... 喵..";
 			next;
-			mes "[Tao]";
-			mes "Ugh, you've got nothing to do, then get lost, meow?!";
-			mes "You know this place is prohibited, meow.";
-			mes "You won'e even be able to go into that room, anyway, meow~.";
+			mes "[陶]";
+			mes "呃，你没事做的话，就快走开，喵？";
+			mes "你知道这个地方是禁止进入的，喵。";
+			mes "反正你连那个房间都进不去，喵~。";
 			next;
-			mes "[Tao]";
-			mes "Or, else.... You could?.. Oh, who knows, meow..";
-			mes "Tao hates to watch the gate anymore, meow~ meow~";
+			mes "[陶]";
+			mes "或者，或者....你可以？..哦，谁知道呢，喵..";
+			mes "陶不想再看守大门了，喵~ 喵~";
 			close;
 		}
 	}
 	else {
-		mes "[Tao]";
-		mes "What's up, meow!";
+		mes "[陶]";
+		mes "怎么了，喵！";
 		next;
-		switch(select("So, it's just you, little brat?:What has gotten into you?!:Hey, stop meowing?!")) {
+		switch(select("所以，只有你这个小鬼？:你怎么了？！:嘿，别再喵了？!")) {
 		case 1:
-			mes "[Tao]";
-			mes "What are you talking about, meow!";
-			mes "Tao's the greatest gate keeper!";
-			mes "Don't ever low estimate, meow!";
+			mes "[陶]";
+			mes "你在说什么，喵！";
+			mes "陶是最伟大的守门员！";
+			mes "别低估我，喵！";
 			next;
-			mes "[Tao]";
-			mes "Looks like you came for some reasons, but don't even dream of getting my help, meow!!";
-			mes "Do you think I'm stupid enough to tell you that";
-			mes "the Master and Marjana are in that room on the right? Meow, meow, meow~~";
+			mes "[陶]";
+			mes "看起来你是有原因来的，但别想得到我的帮助，喵！！";
+			mes "你觉得我傻到会告诉你这个吗";
+			mes "大师和马尔贾娜在右边的房间里？喵，喵，喵~~";
 			close;
 		case 2:
-			mes "[Tao]";
-			mes "Are you looking down on me because I'm a gate keeper?!";
-			mes "Grrrr...";
+			mes "[陶]";
+			mes "你是因为我是守门人就看不起我吗？!";
+			mes "咕噜...";
 			next;
-			mes "[Tao]";
-			mes "Get outta here while you have chances!!!!";
+			mes "[陶]";
+			mes "趁你还有机会快滚出去！！！！";
 			close;
 		case 3:
-			mes "[Tao]";
-			mes "Meow, meow.";
-			mes "It's a long story, meow.";
-			mes "That day, Tao really wanted a Big Ribbon, meow.";
+			mes "[陶]";
+			mes "喵，喵。";
+			mes "这是个长故事，喵。";
+			mes "那天，陶真的想要一个大丝带，喵。";
 			next;
-			mes "[Tao]";
-			mes "So I went out looking for Wild Roses, meow...";
-			mes "...Meow? Wait a minute, why am I telling this story, meow?!";
+			mes "[陶]";
+			mes "所以我出去找野玫瑰，喵...";
+			mes "...喵？等一下，我为什么要讲这个故事，喵？!";
 			next;
-			mes "[Tao]";
-			mes "Krrrr!";
-			mes "Who the hell are you!";
+			mes "[陶]";
+			mes "咕噜！";
+			mes "你到底是谁！";
 			next;
-			mes "[Tao]";
-			mes "Get out of here, meow!!!";
+			mes "[陶]";
+			mes "快滚出去，喵！！！";
 			close;
 		}
 	}
@@ -678,21 +678,21 @@ OnTouch_:
 			set $@maobar_room,1;
 			donpcevent " #room1timer::OnEnable";
 			donpcevent "Marjana#poison::OnEnable";
-			mes "[Tao]";
-			mes "Ah, that place is protected";
-			mes "by security magic, so you'll";
-			mes "only have ^4D4DFF4 minutes^000000 to remain";
-			mes "there. Don't waste time, meow!";
+			mes "[陶]";
+			mes "啊，那个地方是受到";
+			mes "安全魔法保护的，所以你只能";
+			mes "在这里待 ^4D4DFF4 分钟^000000";
+			mes "。不要浪费时间，喵！";
 			close2;
 			warp "que_job01",11,7;
 			end;
 		}
 		else {
-			mes "[Tao]";
-			mes "Sooo sorry, meow~";
-			mes "Someone else is already";
-			mes "inside. Just come back";
-			mes "again later, meow?";
+			mes "[陶]";
+			mes "非常抱歉，喵~";
+			mes "里面已经有其他人了";
+			mes "请稍后再来";
+			mes "喵？";
 			close2;
 			warp "que_job01",52,50;
 			end;
@@ -703,33 +703,33 @@ OnTouch_:
 			set $@maobar_room,1;
 			donpcevent " #room1timer::OnEnable";
 			donpcevent "Valdes#moc_master_1::OnEnable";
-			mes "[Tao]";
-			mes "Ah, that place is protected";
-			mes "by security magic, so you'll";
-			mes "only have ^4D4DFF4 minutes^000000 to remain";
-			mes "there. Don't waste time, meow!";
+			mes "[陶]";
+			mes "啊，那个地方是受到";
+			mes "安全魔法保护的，所以你只能";
+			mes "在这里待 ^4D4DFF4 分钟^000000";
+			mes "。不要浪费时间，喵！";
 			close2;
 			warp "que_job01",11,7;
 			end;
 		}
 		else {
-			mes "[Tao]";
-			mes "Sooo sorry, meow~";
-			mes "Someone else is already";
-			mes "inside. Just come back";
-			mes "again later, meow?";
+			mes "[陶]";
+			mes "非常抱歉，喵~";
+			mes "里面已经有其他人了";
+			mes "请稍后再来";
+			mes "喵？";
 			close2;
 			warp "que_job01",52,50;
 			end;
 		}
 	}
 	else {
-		mes "[Tao]";
-		mes "Wh-who are you?";
-		mes "This is a restricted";
-		mes "area, meow! If you don't";
-		mes "have permission, then get";
-		mes "out of there right meow!";
+		mes "[陶]";
+		mes "你是谁？";
+		mes "这里是禁止进入的";
+		mes "区域，喵！如果你没有";
+		mes "许可，就请立刻离开";
+		mes "那里，喵！";
 		close2;
 		warp "que_job01",52,50;
 		end;
@@ -799,19 +799,19 @@ que_job01,80,27,0	warp	que_job01#room2_1_out	1,1,que_job01,52,50
 
 que_job01,16,21,5	script	Valdes#moc_master_1	55,{
 	if (BaseClass == Job_Assassin) {
-		mes "[Valdes]";
-		mes "What is it? I have nothing to ask you to do.";
-		mes "Could you please leave me alone? I have a bad headache.";
+		mes "[瓦尔德斯]";
+		mes "怎么了？我没有什么要问你的。";
+		mes "你能不能让我一个人待会儿？我头疼得厉害。";
 		next;
-		mes "[Valdes]";
-		mes "I'll ask you for a help some other time.";
-		mes "You look pretty passionate after all.";
+		mes "[瓦尔德斯]";
+		mes "我会在其他时候请你帮忙的。";
+		mes "毕竟你看起来很热情。";
 	}
 	else {
-		mes "[Valdez]";
-		mes "....Sorry, but could you please leave?";
-		mes "I'm really stressed out right now.";
-		mes "If you're here for the request that we made earlier, you can just forget about it.";
+		mes "[瓦尔德斯]";
+		mes "....抱歉，但你能离开吗？";
+		mes "我现在真的很有压力。";
+		mes "如果你是来处理我们之前的请求，那就忘了吧。";
 	}
 	if (countitem(7417) > 0) {
 		delitem 7417,countitem(7417); //Mission_ScrollA
@@ -867,25 +867,25 @@ yuno_in04,180,106,3	script	Reading Girl#moc_girl1	73,{
 }
 
 morocc_in,46,125,5	script	Assistant#moc_ex1	729,{
-	mes "[Sephit]";
-	mes "I've always believed in Satan..";
-	mes "Haah... Guess it's good to be living, after all.";
+	mes "[塞菲特]";
+	mes "我一直相信撒旦..";
+	mes "哈...看来活着也不错。";
 	next;
-	mes "[Sephit]";
-	mes "Who would've thought to actually see the Satan while alive.....?";
+	mes "[塞菲特]";
+	mes "谁会想到活着的时候真的能见到撒旦.....？";
 	close;
 }
 
 que_job01,70,84,1	script	Girl#moc_ex002	882,{
-	mes "[Girl]";
-	mes "Oh, the world.. the world is doomed..";
-	mes "-sobbing-";
-	mes "Nothing seems to be working now..";
+	mes "[少女]";
+	mes "哦，世界.. 世界完蛋了..";
+	mes "-抽泣-";
+	mes "现在似乎什么都不管用了..";
 	emotion ET_CRY;
 	next;
 	mes "["+ strcharinfo(0) +"]";
-	mes "....Tsk..tsk...";
-	mes "Good heavens.. I can't believe this young girl's drinking with sadness....";
+	mes "....啧..啧...";
+	mes "天哪.. 我真不敢相信这个年轻女孩在悲伤中喝酒....";
 	close;
 }
 
@@ -2640,91 +2640,91 @@ yuno,333,210,5	script	Library Master#garas	57,{
 yuno,336,203,0	script	#garas_catch	139,3,3,{
 OnTouch:
 	if (barmunt_crow == 2) {
-		mes "[Dog]";
-		mes "Bowwow!";
-		mes "Grrr... Bowwow!";
+		mes "[狗]";
+		mes "汪汪!";
+		mes "呜呜... 汪汪!";
 		next;
-		mes "^660000A dog is barking loudly at the front of the library.^000000";
+		mes "^660000一只狗在图书馆前面大声吠叫.^000000";
 		next;
-		mes "[Library Master]";
-		mes "You damn bird! Fly away, leave!";
+		mes "[图书馆管理员]";
+		mes "你这该死的鸟! 飞走，离开!";
 		next;
-		mes "^660000A man is also yelling at the front of the library.^000000";
+		mes "^660000一个男人也在图书馆前面大喊.^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "What's happening here?";
+		mes "这里发生了什么?";
 		next;
-		mes "[Library Master]";
-		mes "It's nothing, but there's a gigantic crow sitting on the roof of this library, crowing for at least a few hours now.";
-		mes "I was trying to drive it away because... It feels ominous somehow.";
+		mes "[图书馆管理员]";
+		mes "没什么，但这座图书馆的屋顶上坐着一只巨大的乌鸦，已经叫了至少几个小时了。";
+		mes "我试图把它赶走，因为……感觉有些不祥。";
 		next;
-		mes "[Library Master]";
-		mes "Go! Fly away, you damn bird! Leave!!";
+		mes "[图书馆管理员]";
+		mes "去吧！飞走吧，你这该死的鸟！离开！！";
 		next;
-		mes "^660000You looked up, and found a huge crow sitting on the roof of the library as if it owned the place.^000000";
+		mes "^660000你抬头一看，发现一只巨大的乌鸦正坐在图书馆的屋顶上，仿佛这里是它的地盘。^000000";
 		next;
-		mes "[Library Master]";
-		mes "Leave! Gosh, it won't go away!";
-		mes "I'm afraid that creepy bird will scare away my patrons!";
+		mes "[图书馆管理员]";
+		mes "离开！天哪，它就是不走！";
+		mes "我担心那只可怕的鸟会吓跑我的顾客！";
 		next;
-		mes "[Library Master]";
-		mes "Umm... Oh, well.";
-		mes "(Grabbing a pebble)";
-		mes "I said go away, you stupid bird!";
+		mes "[图书馆管理员]";
+		mes "嗯……好吧。";
+		mes "（抓起一块小石子）";
+		mes "我说过要走开，你这愚蠢的鸟！";
 		next;
-		mes "(WHIZZ-)";
+		mes "（嗖——）";
 		next;
-		mes "(THUD!)";
+		mes "(砰!)";
 		specialeffect EF_PIERCE;
 		next;
-		mes "(Gush)";
+		mes "(哗)";
 		next;
-		mes "^660000Hit by the pebble which the man threw, the crow quickly flew up into the air.^000000";
-		mes "^660000But then it started flying above the roof in a circle, and looked even spookier.^000000";
+		mes "^660000被那个男人扔的石子打中，乌鸦迅速飞上了天空。^000000";
+		mes "^660000但它开始在屋顶上方盘旋，看起来更加阴森。^000000";
 		specialeffect EF_BAT;
 		next;
-		mes "[Library Master]";
-		mes "Grrr... Can't you just go away?!";
+		mes "[图书馆管理员]";
+		mes "咕噜... 你就不能离开吗？!";
 		next;
-		mes "^660000He started yelling at the crow, but it didn't seem to care. Instead, it flew up a little higher.";
-		mes "Eventually he turned his head away from the crow, and gave up on driving it away. Then the dog stopped barking as well.^000000";
+		mes "^660000他开始对着乌鸦大喊，但乌鸦似乎并不在意。相反，它飞得更高了。";
+		mes "最终他转过头不再看乌鸦，放弃了驱赶它的想法。然后狗也停止了吠叫。^000000";
 		next;
-		mes "^660000You looked down on the ground, and then found a couple of feathers dropped from the crow when it was hit by the pebble.^000000";
-		next;
-		mes "["+ strcharinfo(0) +"]";
-		mes "Wow, look at the size of these feathers. I guess such a huge crow needs big feathers to fly.";
-		next;
-		mes "[Library Master]";
-		mes "When I was young, I heard that bird feathers bring Odin's servants to bless their owner, and so many poets used them as bookmarks.";
-		next;
-		mes "[Library Master]";
-		mes "I used to have a small feather. I guess it's only natural that I've become a library master. Hahaha!";
-		next;
-		mes "[Library Master]";
-		mes "You know the old saying, 'you can memorize Edda after 3 years of working at a library.'";
-		mes "Why don't you keep one of the feathers? Who knows? It may bring you good luck.";
+		mes "^660000你低头看向地面，发现几根乌鸦被石子打中时掉落的羽毛。^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "I guess so.";
+		mes "哇，看看这些羽毛的大小。我想这么大的乌鸦需要大羽毛才能飞翔。";
 		next;
-		mes "^660000You picked up one of the big dark feathers from the ground.";
-		mes "Looking at the lustrous feather somehow made you feel so happy, as if you had obtained treasure.^000000";
+		mes "[图书馆管理员]";
+		mes "我年轻的时候听说鸟羽毛能带来奥丁的仆人来祝福它的主人，许多诗人也用它们作为书签。";
+		next;
+		mes "[图书馆管理员]";
+		mes "我以前有一根小羽毛。我想我成为图书馆大师也是理所当然的。哈哈哈！";
+		next;
+		mes "[图书馆管理员]";
+		mes "你知道那句老话，‘在图书馆工作三年后你就能背诵《埃达》。’";
+		mes "你为什么不留下一根羽毛呢？谁知道呢？它可能会给你带来好运。";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "...Ahchoo!";
+		mes "我想是的。";
+		next;
+		mes "^660000你从地上捡起了一根大黑羽毛。";
+		mes "看着那闪亮的羽毛让你感到无比快乐，就像你获得了宝藏一样。^000000";
+		next;
+		mes "["+ strcharinfo(0) +"]";
+		mes "……阿嚏！";
 		specialeffect2 EF_VENOMDUST;
 		next;
-		mes "[Library Master]";
-		mes "God bless you. Oh, did you catch cold?";
-		mes "You should take good care of yourself, especially if you're an adventurer.";
+		mes "[图书馆管理员]";
+		mes "上帝保佑你。哦，你感冒了吗？";
+		mes "你应该好好照顾自己，尤其是如果你是个冒险者的话。";
 		next;
-		mes "^660000You started feeling cold and began to shiver.^000000";
+		mes "^660000你开始感到寒冷并开始发抖。^000000";
 		next;
-		mes "[Library Master]";
-		mes "Try to drink hot Jellopy broth mixed with honey. My mother used to make that for me whenever I caught cold.";
-		mes "I gurantee you that you'll get better quickly.";
+		mes "[图书馆管理员]";
+		mes "试着喝热的果冻汤加蜂蜜。我母亲每当我感冒时都会给我做这个。";
+		mes "我保证你会很快好起来的。";
 		next;
-		mes "^660000He sounded sincere, but it doesn't sound like that kind of broth would even be effective...^000000";
+		mes "^660000他说得很真诚，但听起来这种汤似乎并不会有效……^000000";
 		emotion ET_THINK, playerattached();
 		set barmunt_crow,3;
 		close;
@@ -2737,8 +2737,8 @@ yuno,343,204,1	script	#garas_eff	111,{
 }
 
 yuno,335,208,5	script	Dog#garas	81,{
-	mes "[Dog]";
-	mes "Bowwow!";
+	mes "[狗]";
+	mes "汪汪!";
 	close;
 }
 
@@ -2913,50 +2913,50 @@ OnTouch:
 		mes "...................................";
 		mes "...................................";
 		next;
-		mes "^660000You are still inside the library,";
-		mes "but you do not know if this is a dream or reality.^000000";
+		mes "^660000你仍然在图书馆里，";
+		mes "但你不知道这是真实还是梦境。^000000";
 		next;
-		mes "^660000You turned your head toward the bookshelf, and found the bookshelf with the empty shelf.^000000";
+		mes "^660000你转过头看向书架，发现书架上有一个空架子。^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "Phew... I guess I had a dream or something... Ahchoo!";
+		mes "呼...我想我做了个梦或者其他什么...阿嚏！";
 		specialeffect2 EF_VENOMDUST;
 		next;
-		mes "^660000It was an indescribable dream: a burning laboratory in an unknown place in Schwarzwald.";
-		mes "You tried to think hard, but could not figure out what the dream meant.^000000";
+		mes "^660000这是一个无法形容的梦：在斯瓦尔特海姆一个未知地方燃烧的实验室。";
+		mes "你努力思考，但无法弄清楚这个梦的意义。^000000";
 		next;
-		mes "^660000You carefully opened the book again, but nothing happened.^000000";
+		mes "^660000你小心翼翼地再次打开书，但什么也没有发生。^000000";
 		next;
-		mes "<....at the end of the sooty fog and chaotic screams, there was a creature that looked too outrageous to be a human...>";
+		mes "<....在烟雾弥漫和混乱的尖叫声尽头，有一个看起来太过离谱的生物，似乎不是人类...>";
 		next;
 		mes "...................................";
 		next;
-		mes "<- Eva, what are you doing? Come over here! Hurry!-";
-		mes "-I can't leave him here!-";
-		mes "Ignoring the collapsing laboratory ceiling, Eva approached a test tube, carefully took out something, and then put it under her jacket. >";
+		mes "<- 伊娃，你在做什么？快过来！快点！-";
+		mes "-我不能把他留在这里！-";
+		mes "无视坍塌的实验室天花板，伊娃走向一个试管，小心翼翼地拿出一些东西，然后把它放在她的夹克下。>";
 		next;
 		mes "^660000...................................^000000";
 		next;
-		mes "^660000The books was telling the exact scene that you have seen in your dream.^000000";
+		mes "^660000书中描述的正是你在梦中看到的场景。^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "Deja Vu? Am I having Deja Vu?";
+		mes "似曾相识？我是在经历似曾相识吗？";
 		next;
-		mes "^660000Of course, it was just a dream, but still was a very mysterious experience.^000000";
-		next;
-		mes "...................................";
+		mes "^660000当然，这只是一个梦，但仍然是一次非常神秘的经历。^000000";
 		next;
 		mes "...................................";
 		next;
-		mes "'^660000Now I wonder if the scene is describing an accident that really happened in the past. If there was such big fire, I'm sure I can verify it in a newspaper.";
-		mes "...I just want to know it out of curiosity...^000000'";
+		mes "...................................";
+		next;
+		mes "'^660000现在我想知道这个场景是否描述了过去真的发生过的事故。如果真的发生过这么大的火灾，我相信我可以在报纸上验证。";
+		mes "...我只是出于好奇想知道一下...^000000'";
 		set barmunt_crow,7;
 		changequest 2064,2065;
 		close;
 	}
 	else if (barmunt_crow == 7) {
 		mes "["+ strcharinfo(0) +"]";
-		mes "If I want to read news articles about fires, which section should I go to?";
+		mes "如果我想阅读关于火灾的新闻文章，我应该去哪个版块？";
 		close;
 	}
 	end;
@@ -3568,13 +3568,13 @@ OnTouch:
 	else {
 		sc_end SC_Blind;
 		mes "[???]";
-		mes "Waaaaah!";
+		mes "哇啊啊！";
 		next;
-		mes "^660000Startled by a terrifying scream, you regained consciousness. It seems that you were lost in time for quite a while.^000000";
+		mes "^660000被可怕的尖叫声吓到，你恢复了意识。看来你在时间中迷失了很长一段时间。^000000";
 		next;
-		mes "^660000You scrambled to stand on you feet, and then followed the sound of the scream to an old and abandoned building.^000000";
+		mes "^660000你慌忙站起身，然后跟随尖叫声的方向走向一座古老而废弃的建筑。^000000";
 		next;
-		mes "^660000The old, huge and somehow intimidating building was expelling dark red smoke out of broken and open windows.^000000";
+		mes "^660000那座古老、巨大且有些令人畏惧的建筑正从破碎的窗户中喷出暗红色的烟雾。^000000";
 		close;
 	}
 }
@@ -3610,17 +3610,17 @@ que_ba,265,34,0	warp	#bpast_1to2	1,1,que_ba,156,37
 
 que_ba,176,43,7	script	Researcher#bpast_2_1	402,{
 	specialeffect EF_CLOAKING;
-	mes "[Researcher]";
-	mes "Fire!";
-	mes "Everybody, move, move!";
+	mes "[研究员]";
+	mes "火灾！";
+	mes "大家，快走，快走！";
 	close;
 }
 
 que_ba,181,14,7	script	Researcher#bpast_2_2	865,{
 	specialeffect EF_CLOAKING;
-	mes "[Researcher]";
-	mes "Cough, cough!";
-	mes "Argh... I can't breathe... I have to get out...";
+	mes "[研究员]";
+	mes "咳，咳！";
+	mes "啊……我无法呼吸……我必须出去……";
 	close;
 }
 
@@ -3633,50 +3633,50 @@ OnTouch:
 		warp "yuno_in04",100,3;
 	}
 	else {
-		mes "^660000You walked through the flame engulfed hallway and ended at a room that was about to collapse, just like everywhere else in this place.^000000";
+		mes "^660000你走过被火焰吞噬的走廊，最终来到一个即将倒塌的房间，就像这个地方的其他地方一样。^000000";
 		next;
-		mes "^660000You could not clearly see what was inside the room because of all the smoke, but you knew there was something there.^000000";
+		mes "^660000由于烟雾弥漫，你无法清楚地看到房间里的东西，但你知道那里有东西。^000000";
 		next;
-		mes "^660000You squinted your eyes, and listened. You could hear human voices, but their silhouettes of whomever was talking were not human shaped.^000000";
+		mes "^660000你眯起眼睛，倾听。你能听到人声，但说话者的身影却不是人形。^000000";
 		next;
-		mes "[Female]";
-		mes "Cough! Fire... Cough!";
-		mes "Goddamn humans... Cough, cough!";
+		mes "[女性]";
+		mes "咳！火……咳！";
+		mes "该死的人类……咳，咳！";
 		next;
-		mes "^660000Her coughing grew worse as the roaring of the flames grew stronger.^000000";
+		mes "^660000她的咳嗽随着火焰的咆哮声愈发严重。^000000";
 		next;
-		mes "[Male]";
-		mes "They ran away, and left us behind to die!";
+		mes "[男性]";
+		mes "他们逃跑了，把我们留在这里等死！";
 		next;
-		mes "[Female]";
-		mes "...Are we going to die?";
+		mes "[女性]";
+		mes "...我们要死了吗？";
 		next;
-		mes "[Male]";
-		mes "Die? ...Haha.";
-		mes "^3131FF'Eva'^000000, we won't die... We were never exactly alive to begin with.";
+		mes "[男性]";
+		mes "死？...哈哈。";
+		mes "^3131FF'埃娃'^000000，我们不会死的... 我们从来就不算真正活过。";
 		next;
-		mes "- Crumbling -";
+		mes "- 崩溃 -";
 		next;
-		mes "[Male]";
-		mes "Argh!";
+		mes "[男性]";
+		mes "啊！";
 		next;
-		mes "^660000The only exit was blocked by steel bars; no one could get out of the room enveloped in flames. Then, a corner of a wall crumbled by the heat from the fire.^000000";
+		mes "^660000唯一的出口被钢条封住；没有人能逃出被火焰包围的房间。然后，墙角的一部分在火焰的高温下崩溃了。^000000";
 		next;
-		mes "^660000The male silhouette quickly approached the wall, and started to dig at the crumbled corner.^000000";
+		mes "^660000男性的轮廓迅速靠近墙壁，开始挖掘崩溃的角落。^000000";
 		next;
-		mes "[Male]";
-		mes "...It's done!";
+		mes "[男性]";
+		mes "...完成了！";
 		next;
-		mes "[Male]";
-		mes "Let's go, Eva!";
+		mes "[男性]";
+		mes "我们走吧，艾娃！";
 		next;
-		mes "[Eva]";
-		mes "Wait, we have to take the children with us.";
+		mes "[艾娃]";
+		mes "等一下，我们必须带上孩子们。";
 		next;
-		mes "^660000The female silhouette called Eva approached the test tubes standing in a row against a wall.^000000";
+		mes "^660000那个名叫艾娃的女性身影走近了靠墙排成一排的试管。^000000";
 		next;
-		mes "[Male]";
-		mes "Eva!! We don't have time to save all of them! Come here!";
+		mes "[男性]";
+		mes "艾娃！！我们没有时间去救他们所有人！过来！";
 		if (barmunt_crow == 4) {
 			set barmunt_crow,5;
 		}
@@ -3702,25 +3702,25 @@ que_ba,53,232,0	script	#garas_f_yume	139,1,1,{
 OnTouch:
 	if (barmunt_crow == 5) {
 		//GetHEALTHSTATE VAR_HEALTHSTATENORMAL 0
-		mes "^660000Suddenly a flash of light stung your eyes. A few seconds later, you opened your eyes and found that you were somewhere in Schwarzwald.^000000";
+		mes "^660000突然，一道光刺痛了你的眼睛。几秒钟后，你睁开眼睛，发现自己身处于斯瓦尔特海姆的某个地方。^000000";
 		next;
-		mes "^660000And you aren't alone: you can now clearly see the man and woman that escaped the laboratory.^000000";
+		mes "^660000而且你并不孤单：你现在可以清楚地看到从实验室逃出来的男女。^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "Umm...";
+		mes "嗯...";
 		next;
-		mes "[Grotesque Man]";
-		mes "Where should we go?";
-		mes "No one will welcome us... We look like monsters!";
+		mes "[畸形男人]";
+		mes "我们应该去哪里？";
+		mes "没有人会欢迎我们……我们看起来像怪物！";
 		next;
-		mes "[Eva]";
+		mes "[艾娃]";
 		mes "...";
-		mes "I know a cave that's hidden in the north.";
-		mes "We can stay there for a while.";
+		mes "我知道一个隐藏在北方的洞穴。";
+		mes "我们可以在那待一段时间。";
 		next;
-		mes "^660000They seemed completely oblivious of your presence, and headed north.^000000";
+		mes "^660000他们似乎完全没有注意到你的存在，朝北走去。^000000";
 		next;
-		mes "^660000You were looking at their backs as they left, and then noticed that you were holding the book you were reading in your hands. Then....^000000";
+		mes "^660000你看着他们离去的背影，然后注意到你手中还拿着你正在阅读的书。然后……^000000";
 		set barmunt_crow,6;
 		specialeffect2 EF_FLASHER;
 		close2;
@@ -3745,27 +3745,27 @@ que_ba,48,227,7	script	Grotesque Man#zid2	999,{
 que_ba,264,186,0	script	#barmut_room1	139,2,2,{
 OnTouch:
 	if (barmunt_crow == 11) {
-		mes "^660000You wake up, and look around you. Somehow, you've now ended up in a huge mansion.^000000";
+		mes "^660000你醒来，环顾四周。不知怎么的，你现在已经来到了一个巨大的豪宅里。^000000";
 		next;
-		mes "^660000You suddenly feel a sharp pain in your chest, as if someone were squeezing your heart.^000000";
+		mes "^660000你突然感到胸口一阵剧痛，仿佛有人在挤压你的心脏。^000000";
 		next;
-		mes "^660000This mansion looks very elegant and expensive, but it is on fire, just like the laboratory in your first dream.^000000";
+		mes "^660000这座豪宅看起来非常优雅和昂贵，但它正在燃烧，就像你第一次梦中的实验室一样。^000000";
 		next;
-		mes "^660000You're having trouble thinking because of your chest pain and the fire, but you know that this mansion won't last long. You look around for an exit, and see a man standing downstairs in the center of flames.^000000";
+		mes "^660000由于胸痛和火焰，你很难思考，但你知道这座豪宅不会再撑多久。你四处寻找出口，看到一个男人站在火焰中央的楼下。^000000";
 		next;
-		mes "^660000He didn't seem to care that he'd perish along with the mansion, and was talking slowly in a low, sad voice.^000000";
+		mes "^660000他似乎并不在乎自己会和豪宅一起毁灭，低沉而悲伤地慢慢说着话。^000000";
 		next;
-		mes "[Mysterious Man]";
+		mes "[神秘男子]";
 		mes ".....................";
-		mes "After all, God has trifled with me...";
-		mes "This was his plan all long...";
-		mes "Even my best friends were his puppets...";
+		mes "毕竟，上帝一直在戏弄我...";
+		mes "这一直是他的计划...";
+		mes "甚至我最好的朋友也是他的傀儡...";
 		next;
-		mes "[Mysterious Man]";
-		mes "I strongly resent my fate...";
-		mes "But I'm ready to accept the end... Of everything...";
+		mes "[神秘男子]";
+		mes "我强烈反感我的命运...";
+		mes "但我准备接受一切的结束...";
 		next;
-		mes "^660000He could not finish his words before flames swallowed him up. At the same time, you were...^000000";
+		mes "^660000他的话还没说完就被火焰吞没了。与此同时，你也...^000000";
 		specialeffect EF_METEORSTORM;
 		set barmunt_crow,12;
 		close2;
@@ -3788,62 +3788,62 @@ OnTouch:
 	mes "..................";
 	mes "..................";
 	next;
-	mes "[Mysterious Man]";
+	mes "[神秘男子]";
 	mes "..................";
 	mes "..................";
 	mes "..................";
-	mes "E...Eva, no!";
+	mes "E...艾娃，不！";
 	next;
-	mes "[Mysterious Man]";
-	mes "Was it a dream?";
+	mes "[神秘男子]";
+	mes "这是梦吗？";
 	mes "..................";
-	mes "...Gosh, that was strange.";
+	mes "...天哪，那真奇怪。";
 	next;
-	mes "[Mysterious Man]";
-	mes "Mother was... She was a regular human.";
-	mes "Was I standing next to her?";
+	mes "[神秘男子]";
+	mes "母亲是... 她是一个普通人类。";
+	mes "我是在她身边吗？";
 	mes "..................";
 	next;
-	mes "^660000He mumbled to himself, and brushed back his sweaty hair with a trembling hand.^000000";
+	mes "^660000他自言自语，颤抖着的手拨开额头上的汗发。^000000";
 	next;
 	mes "["+ strcharinfo(0) +"]";
-	mes "A dream again.";
-	mes "I guess he won't be able to see or hear me, just like the others.";
+	mes "又是一个梦。";
+	mes "我想他看不见也听不见我，就像其他人一样。";
 	next;
-	mes "^660000You put your guard down, and stare at him.";
-	mes "Suddenly his face distorted in anger as he looked right back at you.^000000";
+	mes "^660000你放下了警惕，盯着他看。";
+	mes "突然，他的脸因愤怒而扭曲，直视着你。^000000";
 	next;
-	mes "[Mysterious Man]";
-	mes "How the hell did you find me?!";
+	mes "[神秘男子]";
+	mes "你到底是怎么找到我的？！";
 	next;
 	mes "["+ strcharinfo(0) +"]";
-	mes "...Wah! He can see me! He can see me!";
+	mes "…哇！他能看见我！他能看见我！";
 	next;
 	enablenpc "#barmut_onna";
-	mes "[Mysterious Woman]";
-	mes "You don't have to be so angry at me, sir.";
+	mes "[神秘女子]";
+	mes "您不必对我这么生气，先生。";
 	next;
-	mes "^660000As soon as you heard her voice,";
-	mes "you turned around and found a woman standing there.^000000";
+	mes "^660000当你听到她的声音时，";
+	mes "你转过身，发现一位女士站在那里。^000000";
 	next;
-	mes "[Mysterious Woman]";
-	mes "It was almost done, but then you broke all of them -- even ^FF00FFBEEP^000000 and ^FF00FFBEEP^000000 -- and were hiding in here.";
+	mes "[神秘女子]";
+	mes "几乎完成了，但你把它们全部打破了——甚至是 ^FF00FFBEEP^000000 和 ^FF00FFBEEP^000000——然后躲在这里。";
 	next;
-	mes "[Mysterious Man]";
-	mes "They weren't supposed to exist in this world!";
+	mes "[神秘男子]";
+	mes "它们本不该存在于这个世界！";
 	next;
-	mes "[Mysterious Woman]";
-	mes "It's his decision. Your fate is on his...";
+	mes "[神秘女子]";
+	mes "这是他的决定。你的命运掌握在他手中...";
 	next;
-	mes "[Mysterious Man]";
-	mes "Shut up!";
+	mes "[神秘男子]";
+	mes "闭嘴！";
 	next;
-	mes "^660000The raging man drew a sword, and pointed it at her. She then suddenly transformed into a crow and flew away. The echos of her laughter could be heard outside the window.^000000";
+	mes "^660000愤怒的男人拔出剑，指向她。她随即变成了一只乌鸦飞走了。她的笑声在窗外回荡。^000000";
 	disablenpc "#barmut_onna";
 	specialeffect EF_BAT;
 	next;
-	mes "[Echoing Voice]";
-	mes "You are bound to your fate, no matter how hard you try to escape...";
+	mes "[回声]";
+	mes "无论你多么努力地想逃避，你都注定要面对你的命运...";
 	soundeffect "loli_ruri_stand.wav",0;
 	next;
 	mes "..................";

@@ -13,37 +13,37 @@
 //============================================================
 
 prontera,146,92,3	script	Cellerb	58,{
-	mes "[DRY-RUN] [Staff Idul Fitri]";
+	mes "[伊杜尔·菲特里工作人员]";
 	if((gettime(DT_MONTH)==OCTOBER && (gettime(DT_DAYOFMONTH)==24 || gettime(DT_DAYOFMONTH)==25))==0) {
-		mes "[DRY-RUN] Congratulation! Celebrate Feast Day Of Ramadan Idul Fitri 1427 H.";
+		mes "恭喜！庆祝拉马丹伊杜尔·菲特里1427年。";
 		specialeffect EF_SANDMAN;
 		close;
 	}
 	mes "Haii......^FF8800"+strcharinfo(0)+"^000000!!";
-	mes "[DRY-RUN] First day of Idul Fitri has arrived.";
-	mes "[DRY-RUN] Congratulation celebrate him.";
-	mes "[DRY-RUN] There is event special today.";
+	mes "伊杜尔·菲特里的第一天已经到来。";
+	mes "恭喜庆祝他。";
+	mes "今天有特别活动。";
 	next;
-	mes "[DRY-RUN] [Staff Idul Fitri]";
-	mes "[DRY-RUN] Event today.....^009500Idul Fitri Quest!^000000";
+	mes "[伊杜尔·菲特里工作人员]";
+	mes "今天的活动.....^009500伊杜尔·菲特里任务！^000000";
 	next;
-	mes "[DRY-RUN] [Staff Idul Fitri]";
-	mes "[DRY-RUN] If you interest to follow this event, I will cook it to you.";
+	mes "[伊杜尔·菲特里工作人员]";
+	mes "如果你有兴趣参加这个活动，我会为你准备。";
 	next;
-	switch(select("[DRY-RUN] Allright. I like that!!","Next time.... Thanks.")){
+	switch(select("好的。我喜欢这个！！","Next time.... Thanks.")){
 	case 1:
-		mes "[DRY-RUN] [Staff Idul Fitri]";
-		mes "[DRY-RUN] I have something that might interest you.";
-		mes "[DRY-RUN] I need all of the following items:";
-		mes "[DRY-RUN] ^D5A500Ketupat Sayur Ingredient :^000000";
-		mes "[DRY-RUN] ^00B6FF~5 Ketupat, 5 Carrot~,^000000";
-		mes "[DRY-RUN] ^CC6633~5 Sweet Potato, 10 Meat~,^000000";
-		mes "[DRY-RUN] ^000088~2 Green Herb, 5 Stem~.^000000";
+		mes "[伊杜尔·菲特里工作人员]";
+		mes "我有一些可能会让你感兴趣的东西。";
+		mes "我需要以下所有物品：";
+		mes "^D5A500椰浆饭配料：^000000";
+		mes "^00B6FF~5个椰浆饭，5根胡萝卜~,^000000";
+		mes "^CC6633~5个红薯，10块肉~,^000000";
+		mes "^000088~2个绿草药，5根茎~.^000000";
 		next;
-		mes "[DRY-RUN] [Staff Idul Fitri]";
+		mes "[伊杜尔·菲特里工作人员]";
 		if ( (countitem(552)<5 || countitem(515)<5 ||countitem(516)<5 || countitem(517)<10 || countitem(511)<2 || countitem(905)<5) ) { 
-			mes "[DRY-RUN] You don't have enough items.";
-			mes "[DRY-RUN] Come back when you have them all.";
+			mes "你没有足够的物品。";
+			mes "当你拥有所有物品时再回来。";
 			close;
 		}
 		delitem 552,5;
@@ -52,21 +52,21 @@ prontera,146,92,3	script	Cellerb	58,{
 		delitem 517,10;
 		delitem 511,2;
 		delitem 905,5;
-		mes "[DRY-RUN] I see you already have all the items you need.";
-		mes "[DRY-RUN] Just a moment, please!!";
+		mes "我看到你已经拥有了所需的所有物品。";
+		mes "请稍等片刻！！";
 		next;
-		mes "[DRY-RUN] ^009500-Plupping snapping bubbling~^000000";
-		mes "[DRY-RUN] ^009500-Clinking clingking~^000000";
-		mes "[DRY-RUN] ^009500-Clang clang~^000000";
+		mes "^009500-咕噜咕噜冒泡~^000000";
+		mes "^009500-叮当叮当~^000000";
+		mes "^009500-铿锵铿锵~^000000";
 		getitem 583,1;
 		next;
-		mes "[DRY-RUN] [Staff Idul Fitri]";
-		mes "[DRY-RUN] We appreciate your participation in this special event.";
+		mes "[伊杜尔·菲特里工作人员]";
+		mes "我们感谢你参与这个特别活动。";
 		emotion ET_THANKS;
 		close;
 	case 2:
-		mes "[DRY-RUN] [Staff Idul Fitri]";
-		mes "[DRY-RUN] Oh well, maybe you will participate in tommorow's quest.";
+		mes "[伊杜尔·菲特里工作人员]";
+		mes "哦，好吧，也许你会参加明天的任务。";
 		emotion ET_SCRATCH;
 		close;
 	}

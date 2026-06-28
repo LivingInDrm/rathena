@@ -116,56 +116,56 @@ prt_in,47,173,3	script	Morrison#juice	97,{
 			mes "这个家伙最近不太敢吃水果.已经很久没吃了 脸色都变不好一直想吃肉...";
 			mes "哎..无论如何想个办法让他吃青菜和水果...";
 			next;
-			mes "[Little Morrison]";
-			mes "And they're all slippery and sour... Even if I eat it, I still feel hungry. Aaaah~! Give me Meat!";
+			mes "[小莫里森]";
+			mes "它们都滑滑的，还酸酸的……即使我吃了，我还是觉得饿。啊啊~！给我肉！";
 			close;
 		case 2:
-			mes "[Little Morrison]";
-			mes "Ooh! M-Meaaat~";
-			mes "Ah... hu...hungry...";
-			mes "The scent of Meat...";
-			mes "Excuse me...";
-			mes "C-can I please have one?";
+			mes "[小莫里森]";
+			mes "哦！肉~";
+			mes "啊……呜……饿……";
+			mes "肉的香味……";
+			mes "打扰一下……";
+			mes "我可以请你给我一个吗？";
 			next;
-			if (select("Give Meat:Don't Give Meat") == 1) {
+			if (select("给肉:不给肉") == 1) {
 				delitem 517,1; //Meat
 				set morison_meat,morison_meat+1;
-				mes "[Little Morrison]";
-				mes "Wow~!!! Meat!!";
-				mes "So yummy!";
-				mes "Thank you,";
-				mes "I think I can";
-				mes "live now.";
-				mes "*Chew chew*";
+				mes "[小莫里森]";
+				mes "哇~！！！肉！！";
+				mes "太好吃了！";
+				mes "谢谢你，";
+				mes "我想我可以";
+				mes "活下去了。";
+				mes "*咀嚼咀嚼*";
 				close;
 			}
 			set morison_meat,15;
-			mes "[Little Morrison]";
-			mes "Waah...!";
-			mes "Fine, I get it now.";
-			mes "Adults are all the same!";
+			mes "[小莫里森]";
+			mes "哇啊……！";
+			mes "好吧，我明白了。";
+			mes "大人都是一样的！";
 			close;
 		case 3:
-			mes "[Little Morrison]";
-			mes "Aaaaah!!! No matter what, I'm not going to eat fruits and vegetables!";
+			mes "[小莫里森]";
+			mes "啊啊啊！！！无论如何，我都不想吃水果和蔬菜！";
 			close;
 		}
 	}
-	if (select("Talk:Cancel") == 1) {
-		mes "[Little Morrison]";
-		mes "Aaah!! I can't eat any more fruits!";
+	if (select("对话:取消") == 1) {
+		mes "[小莫里森]";
+		mes "啊啊！！我再也吃不下水果了！";
 		next;
-		mes "[Little Morrison]";
-		mes "I refuse to eat any more fruits! You have to peel them and there's so much juice that it makes you feel icky...";
+		mes "[小莫里森]";
+		mes "我拒绝再吃水果了！你得剥皮，而且汁水太多让人感觉恶心...";
 		next;
-		mes "[Little Morrison]";
-		mes "And they're all slippery and sour... Even if I eat it, I still feel hungry.";
-		mes "Aaaah~!";
-		mes "Give me Meat!";
+		mes "[小莫里森]";
+		mes "而且它们都滑滑的又酸...即使我吃了，我还是觉得饿。";
+		mes "啊啊~！";
+		mes "给我肉！";
 		close;
 	}
-	mes "[Little Morrison]";
-	mes "Aaaaah!!! No matter what, I'm not going to eat fruits and vegetables!";
+	mes "[小莫里森]";
+	mes "啊啊啊！！！无论如何，我都不想吃水果和蔬菜！";
 	close;
 }
 

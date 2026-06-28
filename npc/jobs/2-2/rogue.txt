@@ -1,19 +1,19 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Rogue Job Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= kobra_k88
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 2.9
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Job quest for Rogue classes
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 2.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //=     No longer uses function "F_BlockHigh"
 //= 2.4a Deleted unused variables. [Samuray22]
-//= 2.4b Changed a Problem with JobLevel what made 
+//= 2.4b Changed a Problem with JobLevel what made
 //=     impossible get a Gladius [3]. (bugreport:481) [Samuray22]
 //= 2.4c Corrected a Typo error ";;" and a typo error with "rouge". (bugreport:909) [Samuray22]
 //= 2.5 Added dummy "OnMyMobDead" labels. (bugreport:1100) [L0ne_W0lf]
@@ -21,36 +21,36 @@
 //= 2.7 Fixed a bug on Markie question 5, bugreport:1600 [Brainstorm]
 //= 2.8 Moved "Thug" to Morocc Ruins. [L0ne_W0lf]
 //= 2.9 Added Quest Log commands. [Kisuka]
-//============================================================ 
+//============================================================
 
 moc_ruins,86,103,1	script	Thug#rg	118,{
-	mes "[DRY-RUN] [Thug]";
-	mes "[DRY-RUN] *Sigh...*";
-	mes "[DRY-RUN] What is life?";
-	mes "[DRY-RUN] And what use";
-	mes "[DRY-RUN] is money? ...Damn.";
-	mes "[DRY-RUN] Damn this worthless life!";
+	mes "[流氓]";
+	mes "*叹气...*";
+	mes "生活是什么？";
+	mes "那钱有什么用？";
+	mes "真该死。";
+	mes "该死的无用生活！";
 	next;
-	mes "[DRY-RUN] [Thug]";
-	mes "[DRY-RUN] Hey, kid.";
-	mes "[DRY-RUN] What the hell";
-	mes "[DRY-RUN] are you lookin' at?";
+	mes "[流氓]";
+	mes "嘿，孩子。";
+	mes "你在看什么？";
+	mes "你在看什么？";
 	next;
-	if (select("[DRY-RUN] Me? N-nothing!':........") == 1) {
-		mes "[DRY-RUN] [Thug]";
-		mes "[DRY-RUN] Then get the";
-		mes "[DRY-RUN] hell out of my face!";
-		mes "[DRY-RUN] Didn't you hear me?";
-		mes "[DRY-RUN] Get lost!";
+	if (select("我？没，没什么！':........") == 1) {
+		mes "[流氓]";
+		mes "那就给我";
+		mes "滚出我的视线！";
+		mes "你没听见我吗？";
+		mes "快走！";
 		close;
 	}
-	mes "[DRY-RUN] [Thug]";
-	mes "[DRY-RUN] Hmmm...";
-	mes "[DRY-RUN] Maybe I'll swing by the ^0000FFRogue Guild^000000 in ^0000FFParos Lighthouse^000000...";
+	mes "[流氓]";
+	mes "嗯……";
+	mes "也许我会去^0000FF流氓公会^000000在^0000FF帕罗斯灯塔^000000...";
 	next;
-	mes "[DRY-RUN] [Thug]";
-	mes "[DRY-RUN] I needz my money,";
-	mes "[DRY-RUN] and they best have it...";
+	mes "[流氓]";
+	mes "我需要我的钱，";
+	mes "他们最好有...";
 	close;
 }
 
@@ -1017,52 +1017,52 @@ S_CheckItems:
 
 cmd_fild09,106,195,0	script	Warp#1	45,1,1,{
 OnTouch_:
-	mes "[DRY-RUN] [???]";
-	mes "[DRY-RUN] Who's there?!";
-	mes "[DRY-RUN] Who would dare";
-	mes "[DRY-RUN] intrude my territory?";
+	mes "[???]";
+	mes "谁在那里？!";
+	mes "谁敢";
+	mes "侵犯我的领地？";
 	next;
-	switch(select("[DRY-RUN] My father:Aragham:Aragon:Legolas")) {
+	switch(select("我父亲:阿拉戈姆:阿拉贡:莱戈拉斯")) {
 	case 1:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] My father";
+		mes "我父亲";
 		break;
 	case 2:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Aragham";
+		mes "阿拉甘";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Aragon";
+		mes "阿拉贡";
 		break;
 	case 4:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Legolas";
+		mes "莱戈拉斯";
 		break;
 	}
-	switch(select("[DRY-RUN] did not:didn't:never:ever")) {
+	switch(select("没有:不:从不:曾经")) {
 	case 1: mes "did not"; break;
 	case 2: mes "didn't"; break;
 	case 3:
-		mes "[DRY-RUN] never";
+		mes "从不";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4: mes "ever"; break;
 	}
-	switch(select("[DRY-RUN] hoard:hoarded:hide:took:take")) {
+	switch(select("囤积:囤积了:隐藏:拿走:拿")) {
 	case 1: mes "hoard"; break;
 	case 2:
-		mes "[DRY-RUN] hoarded";
+		mes "囤积";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3: mes "hide"; break;
 	case 4: mes "took"; break;
 	case 5: mes "take"; break;
 	}
-	switch(select("[DRY-RUN] upgrade items.:forging items.:refining item.:upgrade item.")) {
+	switch(select("升级物品.:锻造物品.:精炼物品.:升级物品.")) {
 	case 1:
-		mes "[DRY-RUN] upgrade items.";
+		mes "升级物品。";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 2: mes "forging items."; break;
@@ -1071,68 +1071,68 @@ OnTouch_:
 	}
 	next;
 	if (.@rogue_t > 30) {
-		mes "[DRY-RUN] ^3355FF*Creeeeak*";
-		mes "[DRY-RUN] The door slowly opens.^000000";
+		mes "^3355FF*吱吱声*";
+		mes "门慢慢打开。^000000";
 		close2;
 		warp "in_rogue",246,25;
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] What the...?";
-		mes "[DRY-RUN] Get lost!";
+		mes "[???]";
+		mes "这是什么...?";
+		mes "快走！";
 		close;
 	}
 }
 
 cmd_fild09,335,143,0	script	Warp#2	45,1,1,{
 OnTouch_:
-	mes "[DRY-RUN] [???]";
-	mes "[DRY-RUN] Who's there?!";
-	mes "[DRY-RUN] Who would dare";
-	mes "[DRY-RUN] intrude my territory?";
+	mes "[???]";
+	mes "谁在那里？!";
+	mes "谁敢";
+	mes "侵犯我的领地？";
 	next;
-	switch(select("[DRY-RUN] My father:Aragham:Aragon:Legolas")) {
+	switch(select("我父亲:阿拉戈姆:阿拉贡:莱戈拉斯")) {
 	case 1:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] My father";
+		mes "我父亲";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 2:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Aragham";
+		mes "阿拉甘";
 		break;
 	case 3:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Aragon";
+		mes "阿拉贡";
 		break;
 	case 4:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Legolas";
+		mes "莱戈拉斯";
 		break;
 	}
-	switch(select("[DRY-RUN] did not:didn't:never:ever")) {
+	switch(select("没有:不:从不:曾经")) {
 	case 1: mes "did not"; break;
 	case 2: mes "didn't"; break;
 	case 3:
-		mes "[DRY-RUN] never";
+		mes "从不";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4: mes "ever"; break;
 	}
-	switch(select("[DRY-RUN] hoard:takes:hide:took:hoarded")) {
+	switch(select("囤积:拿:隐藏:拿走:囤积了")) {
 	case 1: mes "hoard"; break;
 	case 2: mes "takes"; break;
 	case 3: mes "hide"; break;
 	case 4: mes "took"; break;
 	case 5:
-		mes "[DRY-RUN] hoarded";
+		mes "囤积";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	}
-	switch(select("[DRY-RUN] upgrade items.:forging items.:refining item.:upgrade item.")) {
+	switch(select("升级物品.:锻造物品.:精炼物品.:升级物品.")) {
 	case 1:
-		mes "[DRY-RUN] upgrade items.";
+		mes "升级物品。";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 2: mes "forging items."; break;
@@ -1141,69 +1141,69 @@ OnTouch_:
 	}
 	next;
 	if (.@rogue_t > 30) {
-		mes "[DRY-RUN] ^3355FF*Creeeeak*";
-		mes "[DRY-RUN] The door slowly opens.^000000";
+		mes "^3355FF*吱吱声*";
+		mes "门慢慢打开。^000000";
 		close2;
 		warp "in_rogue",169,34;
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] What the...?";
-		mes "[DRY-RUN] Get lost!";
+		mes "[???]";
+		mes "这是什么...?";
+		mes "快走！";
 		close;
 	}
 }
 
 cmd_fild04,304,180,0	script	Warp#3	45,1,1,{
 OnTouch_:
-	mes "[DRY-RUN] [???]";
-	mes "[DRY-RUN] Who's there?!";
-	mes "[DRY-RUN] Who would dare";
-	mes "[DRY-RUN] intrude my territory?";
+	mes "[???]";
+	mes "谁在那里？!";
+	mes "谁敢";
+	mes "侵犯我的领地？";
 	next;
-	switch(select("[DRY-RUN] Anntonio:Aragham:Antonio:Hollgrehenn")) {
+	switch(select("安顿尼奥:阿拉戈姆:安东尼奥:霍尔格雷亨")) {
 	case 1:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Anntonio";
+		mes "安顿尼奥";
 		break;
 	case 2:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Aragham";
+		mes "阿拉甘";
 		break;
 	case 3:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Antonio";
+		mes "安东尼奥";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4:
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Hollgrehenn"; 
+		mes "霍尔格雷亨";
 		break;
 	}
-	switch(select("[DRY-RUN] enjoys:doesn't enjoy:likes:doesn't like")) {
+	switch(select("喜欢:不喜欢:享受:不享受")) {
 	case 1: mes "enjoys"; break;
 	case 2:
-		mes "[DRY-RUN] doesn't enjoy";
+		mes "不喜欢";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3: mes "likes"; break;
 	case 4: mes "doesn't like"; break;
 	}
-	switch(select("[DRY-RUN] damaging:destroying:fixing:forging")) {
+	switch(select("破坏:摧毁:修复:锻造")) {
 	case 1: mes "damaging"; break;
 	case 2:
-		mes "[DRY-RUN] destroying";
+		mes "摧毁";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 3: mes "fixing"; break;
 	case 4: mes "forging"; break;
 	}
-	switch(select("[DRY-RUN] forging item.:refining items.:upgrade items.:refined items.:upgraded items.:forged items.")) {
+	switch(select("锻造物品.:精炼物品.:升级物品.:精炼后的物品.:升级后的物品.:锻造后的物品.")) {
 	case 1: mes "forging item."; break;
 	case 2: mes "refining items."; break;
 	case 3:
-		mes "[DRY-RUN] upgrade items.";
+		mes "升级物品。";
 		set .@rogue_t,.@rogue_t+10;
 		break;
 	case 4: mes "refined items."; break;
@@ -1212,15 +1212,15 @@ OnTouch_:
 	}
 	next;
 	if (.@rogue_t > 30) {
-		mes "[DRY-RUN] ^3355FF*Creeeeak*";
-		mes "[DRY-RUN] The door slowly opens.^000000";
+		mes "^3355FF*吱吱声*";
+		mes "门慢慢打开。^000000";
 		close2;
 		warp "in_rogue",164,106;
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] .....Get lost!";
+		mes "[???]";
+		mes ".....滚开!";
 		close;
 	}
 }
@@ -1277,37 +1277,37 @@ in_rogue,272,135,1	script	Hermanthorn Jr#rg	85,{
 
 in_rogue,270,130,0	script	he_to_rogue#rg	45,1,1,{
 OnTouch_:
-	mes "[DRY-RUN] ^3355FFThe door is locked. You'll need to enter the four number combination to open it.^000000";
+	mes "^3355FF门是锁着的。你需要输入四个数字的组合才能打开它。^000000";
 	next;
 	input .@input;
 	if (.@input < 1 || .@input > 10000) {
 		if (ROGUE_Q == 12)
-			mes "[DRY-RUN] ^3355FFIt didn't work. Please re-enter the four number combination.^000000";
-		else 
-			mes "[DRY-RUN] ^3355FFPlease enter a combination of four numbers.^000000";
+			mes "^3355FF没有成功。请重新输入四个数字的组合。^000000";
+		else
+			mes "^3355FF请输入四个数字的组合。^000000";
 		close;
 	}
 	else if (.@input == 3019) {
 		if (ROGUE_Q == 12) {
-			mes "[DRY-RUN] ^3355FFThe door";
-			mes "[DRY-RUN] has opened.^000000";
+			mes "^3355FF门";
+			mes "已经打开。^000000";
 			close2;
 			warp "in_rogue",10,21;
 			set ROGUE_Q,12;
 			end;
 		}
 		else {
-			mes "[DRY-RUN] [HermanthornJr.]";
-			mes "[DRY-RUN] Well...";
-			mes "[DRY-RUN] Didn't I tell you";
-			mes "[DRY-RUN] that I changed the";
-			mes "[DRY-RUN] password? *Wink Wink*";
+			mes "[赫尔曼索恩Jr.]";
+			mes "嗯……";
+			mes "我不是告诉过你";
+			mes "我更改了";
+			mes "密码吗？*眨眼*";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFThe door";
-		mes "[DRY-RUN] is still locked.^000000";
+		mes "^3355FF门";
+		mes "仍然是锁着的。^000000";
 		close;
 	}
 }
@@ -1995,10 +1995,10 @@ OnInit:
 }
 
 in_rogue,399,286,1	script	switch#rogreset	88,{
-	mes "[DRY-RUN] ^F08080Tah dah~";
-	mes "[DRY-RUN] Monsters for the";
-	mes "[DRY-RUN] Rogue Job Change";
-	mes "[DRY-RUN] have been reset^000000.";
+	mes "^F08080塔达~";
+	mes "怪物已重置为";
+	mes "盗贼职业转职";
+	mes "^000000.";
 	donpcevent "mob_rogue#1::OnDisable";
 	donpcevent "mob_rogue#2::OnDisable";
 	donpcevent "mob_rogue#3::OnDisable";
@@ -2016,9 +2016,9 @@ in_rogue,399,286,1	script	switch#rogreset	88,{
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.1 fixed 3 wrong questions, added missing lines [Lupus]
 //= 1.3 Baby Class Support + 40/50 JobLevel Item fix [Lupus]
 //= 1.5 Fixed possible EXP abuse [Lupus]
@@ -2032,4 +2032,4 @@ in_rogue,399,286,1	script	switch#rogreset	88,{
 //=     to enter Rogue guild as there's a NPC inside [SinSloth]
 //= 2.3a fixed test4 person interaction, let BABY thieves pass
 //=     the test, too [Lupus]
-//============================================================ 
+//============================================================

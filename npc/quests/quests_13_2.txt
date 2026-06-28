@@ -953,8 +953,8 @@ spl_fild02,45,214,0	script	????#ep13_mdplant01	844,{
 	if (ep13_mdrama == 2) {
 		cutin "ep13_plant01",2;
 		mes "[猫手官员]";
-		mes "Welcome to Cat Trading.";
-		mes "I guess you're a first-time customer, huh?";
+		mes "欢迎来到猫咪交易。";
+		mes "我想你是第一次来吧？";
 		next;
 		mes "[猫手官员]";
 		set ep13_mdrama,3;
@@ -962,7 +962,7 @@ spl_fild02,45,214,0	script	????#ep13_mdplant01	844,{
 		close2;
 	}
 	else if (ep13_mdrama > 2) {
-		mes "For more details about our contract, you need to talk to our staff first.";
+		mes "关于我们合同的更多细节，你需要先和我们的员工对话。";
 		mes "[猫手官员]";
 		close2;
 	}
@@ -980,14 +980,14 @@ spl_fild02,122,106,0	script	????#ep13_mdplant02	844,{
 		cutin "ep13_plant01",2;
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
-		mes "It looks like this is Terra's trace that Arc told me about.";
+		mes "这看起来是阿克告诉我的特拉的痕迹。";
 		next;
-		mes "A knotted leaf is pointing ^4d4dff East^000000.";
+		mes "一片打结的叶子指向 ^4d4dff 东 ^000000。";
 		close2;
 	}
 	else {
-		mes "Weeds are easy to find around here...";
-		mes "There's nothing too special about it.";
+		mes "这里的杂草很容易找到...";
+		mes "没什么特别的。";
 		close2;
 	}
 	cutin "ep13_plant01",255;
@@ -999,14 +999,14 @@ spl_fild02,329,191,0	script	????#ep13_mdplant03	844,{
 	cutin "ep13_plant01",2;
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
-		mes "It looks like this is Terra's trace that Arc told me about.";
+		mes "这看起来是阿克告诉我的特拉的痕迹。";
 		next;
-		mes "A knotted leaf is pointing ^4d4dff North^000000.";
+		mes "一片打结的叶子指向 ^4d4dff 北 ^000000。";
 		close2;
 	}
 	else {
-		mes "Weeds are easy to find around here...";
-		mes "There's nothing too special about it.";
+		mes "这里的杂草很容易找到...";
+		mes "没什么特别的。";
 		close2;
 	}
 	cutin "ep13_plant01",255;
@@ -1017,19 +1017,19 @@ spl_fild02,328,323,0	script	????#ep13_mdplant04	844,{
 	if (ep13_mdrama == 3) {
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
-		mes "But who?";
+		mes "但是谁呢？";
 		next;
-		mes "There are footprints heading ^4d4dffNorth^000000.";
+		mes "有脚印指向 ^4d4dff 北 ^000000。";
 		set ep13_mdrama,4;
 		close;
 	}
 	else if (ep13_mdrama > 3) {
-		mes "Someone must have had a fight here.";
-		mes "There are footprints heading ^4d4dffNorth^000000.";
+		mes "这里一定发生过打斗。";
+		mes "有脚印指向 ^4d4dff 北 ^000000。";
 		close;
 	}
 	else {
-		mes "There are footprints here that seem to be leading towards something.";
+		mes "这里有一些脚印，似乎指向某个地方。";
 		close;
 	}
 }
@@ -1039,16 +1039,16 @@ spl_fild01,341,109,0	script	????#ep13_mdplant05	844,{
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
 		next;
-		mes "There are footprints that lead to^4d4dff the Root of a huge tree^000000.";
+		mes "有一些脚印通向^4d4dff一棵巨树的根部^000000。";
 		set ep13_mdrama,5;
 		close;
 	}
 	else if (ep13_mdrama > 4) {
-		mes "There are footprints that lead to^4d4dff the Root of a huge tree^000000.";
+		mes "有一些脚印通向^4d4dff一棵巨树的根部^000000。";
 		close;
 	}
 	else {
-		mes "There are footprints here that seem to be leading towards something.";
+		mes "这里有一些脚印，似乎指向某个地方。";
 		close;
 	}
 }
@@ -1059,40 +1059,40 @@ OnTouch:
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
 		next;
-		mes "A cold breeze is blowing out from deep inside the tree.";
+		mes "一阵寒风从树的深处吹出。";
 		next;
-		switch(select("Follow the trace.:Looks dangerous... head back.")) {
+		switch(select("跟随痕迹。:看起来很危险……回去吧。")) {
 		case 1:
-			mes "You take a one step forward carefully through the muddy roots and slip.";
+			mes "你小心翼翼地迈出一步，穿过泥泞的根部，却滑倒了。";
 			set ep13_mdrama,6;
 			close2;
 			percentheal -30,0;
 			warp "nyd_dun01",72,125;
 			end;
 		case 2:
-			mes "It's too dark to see anything inside...but it feels like there's a big hole at the bottom.";
-			mes "I'd better step back...It looks dangerous.";
+			mes "里面太黑了，看不见任何东西……但感觉底部有一个大洞。";
+			mes "我最好退后……看起来很危险。";
 			close;
 		}
 	}
 	else if (ep13_mdrama > 5) {
-		mes "Between huge roots, there is a hole leads to the underground cave.";
+		mes "在巨大的根之间，有一个洞通向地下洞穴。";
 		next;
-		switch(select("Go inside.:I'm not going in there.")) {
+		switch(select("进去。:我不想进去。")) {
 		case 1:
-			mes "Again, you slip through the muddy roots.";
+			mes "你再次在泥泞的根部滑倒。";
 			close2;
 			percentheal -30,0;
 			warp "nyd_dun01",72,125;
 			end;
 		case 2:
-			mes "You decide to come back later.";
+			mes "你决定稍后再回来。";
 			close;
 		}
 	}
 	else {
-		mes "Strange looking stems are entangled inside an opening of huge roots.";
-		mes "Surface looks unstable...I should step away before I slip on it.";
+		mes "奇怪的茎缠绕在巨大根系的开口里。";
+		mes "表面看起来不稳定……我应该在滑倒之前离开。";
 		close;
 	}
 }
@@ -1353,96 +1353,96 @@ manuk,278,177,5	script	Villager#ep13_11	454,{
 	if (checkweight(1201,2) == 0) {
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "你无法接收这个。";
+		mes "减轻你的重量并";
+		mes "再试一次。";
 		close;
 	}
 	if (isequipped(2782) == 1) {
 		if (ep13_mdrama == 10) {
-			mes "[Villager Lawine]";
-			mes "By the way, how did that Fairy come this far?";
-			mes "Is she captured?";
+			mes "[村民 洛维]";
+			mes "顺便问一下，那只仙女是怎么来到这里的？";
+			mes "她被捕了吗？";
 			next;
-			mes "[Villager Rivier]";
-			mes "No, She's not.";
-			mes "That Fairy came here by her own accord.";
-			mes "How impudent. She was horribly wounded when she got here.";
+			mes "[村民 瑞维尔]";
+			mes "不，她没有。";
+			mes "那个仙女是自愿来到这里的。";
+			mes "真是无礼。她到这里时受了重伤。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "(Hmm? a Fairy? Wounded?";
-			mes "Are they talking about Terra..?!)";
+			mes "（嗯？仙女？受伤了？";
+			mes "他们是在说特拉吗..?!)";
 			next;
-			switch(select("Break into their conversation.:Keep quiet and listen.")) {
+			switch(select("打断他们的对话。:保持安静，倾听。")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "Excuse me for interrupting your conversation.";
-				mes "You were talking about a Fairy, would you be kind to tell me the details?";
+				mes "打扰你们的谈话，真是抱歉。";
+				mes "你们在谈论仙女，能否告诉我详细情况？";
 				next;
-				mes "[Villager Lawine]";
-				mes "Outsider!!";
-				mes "Why is he here?";
+				mes "[村民 洛维]";
+				mes "外人！！";
+				mes "他为什么在这里？";
 				next;
-				mes "[Villager Rivier]";
-				mes "We weren't saying anything.";
-				mes "There's nothing to tell you.";
-				mes "Lawine, Come with me to the Refinery later.";
+				mes "[村民 瑞维尔]";
+				mes "我们什么都没说。";
+				mes "没有什么好告诉你的。";
+				mes "拉维娜，稍后跟我去炼金所。";
 				next;
-				mes "- The Sapha people are not willing to tell you anything. But the";
-				mes "captured Fairy may be Terra. -";
+				mes "- 萨法人不愿意告诉你任何事情。但是";
+				mes "被捕的仙女可能是特拉。 -";
 				set ep13_mdrama,11;
 				changequest 7060,7061;
 				close;
 			case 2:
 				// Custom Translation
-				mes "[Villager Lawine]";
-				mes "I heard a fairy was crying and begging, she was badly hurt.";
+				mes "[村民 洛维]";
+				mes "我听说有个仙女在哭泣和乞求，她受了重伤。";
 				next;
-				mes "[Villager Rivier]";
-				mes "No one understand the words of fairy...";
-				mes "In the end we had no idea what to do.";
+				mes "[村民 瑞维尔]";
+				mes "没有人理解仙女的话语...";
+				mes "最后我们不知道该怎么办。";
 				next;
-				mes "[Villager Rivier]";
-				mes "Anyway, that fairy is now in prison.";
-				mes "By the way, pull within feather";
-				mes "Today we have to go to the refinery,";
-				mes "do not forget.";
+				mes "[村民 瑞维尔]";
+				mes "无论如何，那仙女现在在监狱里。";
+				mes "顺便说一下，拉入羽毛";
+				mes "今天我们必须去炼金厂，";
+				mes "不要忘记。";
 				next;
-				mes "[Villager Lawine]";
-				mes "You know, right?";
-				mes "Ahh! A foreign visitor!";
+				mes "[村民 洛维]";
+				mes "你知道，对吧？";
+				mes "啊！一位外国访客！";
 				next;
-				mes "[Villager Rivier]";
-				mes "Nevermind him, he can not understand our words.";
+				mes "[村民 瑞维尔]";
+				mes "没关系，他无法理解我们的语言。";
 				next;
-				mes "- Fortunately, Sapha had thought I could not understand them,";
-				mes "but they must be talking about Terra... -";
+				mes "- 幸运的是，萨法认为我无法理解他们，";
+				mes "但他们一定是在谈论泰拉... -";
 				set ep13_mdrama,11;
 				changequest 7060,7061;
 				close;
 			}
 		}
 		else if (ep13_mdrama > 10) {
-			mes "- The Sapha are having a conversation and not paying attention to my movements. -";
+			mes "- 萨法正在交谈，没有注意我的动作。 -";
 			next;
-			mes "- They are talking mostly about common town matters, not much useful information. -";
+			mes "- 他们主要在谈论一些普通的城镇事务，没有什么有用的信息。 -";
 			next;
-			mes "- I'd better move away from them before they get suspicious of my presence. -";
+			mes "- 我最好离开他们，以免他们对我的存在产生怀疑。 -";
 			close;
 		}
 		else {
-			mes "[Villager]";
-			mes "...Outsider?";
-			mes "Do you have a permission to come into our village?";
-			mes "That's right..Do you even understand me?";
+			mes "[村民]";
+			mes "...外来者？";
+			mes "你有进入我们村庄的许可吗？";
+			mes "没错..你甚至能理解我吗？";
 			close;
 		}
 	}
 	else {
-		mes "[Villager]";
-		mes "Das?";
-		mes "idh sd!";
-		mes "Dh apa sd!-is Das idh.";
+		mes "[村民]";
+		mes "什么？";
+		mes "我不知道！";
+		mes "那是什么？-这是我不知道的。";
 		close;
 	}
 }
@@ -1451,100 +1451,100 @@ manuk,281,177,3	script	Villager#ep13_12	449,{
 	if (checkweight(1201,2) == 0) {
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "你无法接收这个。";
+		mes "减轻你的重量并";
+		mes "再试一次。";
 		close;
 	}
 	if (isequipped(2782) == 1) {
 		if (ep13_mdrama == 10) {
-			mes "[Villager Lawine]";
-			mes "By the way, how did that Fairy come this far?";
-			mes "Is she captured?";
+			mes "[村民 洛维]";
+			mes "顺便问一下，那只仙女是怎么来到这里的？";
+			mes "她被捕了吗？";
 			next;
-			mes "[Villager Rivier]";
-			mes "No, She's not.";
-			mes "That Fairy came here by her own accord.";
-			mes "How impudent. She was horribly wounded when she got here.";
+			mes "[村民 瑞维尔]";
+			mes "不，她没有。";
+			mes "那个仙女是自愿来到这里的。";
+			mes "真是无礼。她到这里时受了重伤。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "(Hmm? a Fairy? Wounded?";
-			mes "Are they talking about Terra..?!)";
+			mes "（嗯？仙女？受伤了？";
+			mes "他们是在说特拉吗..?!)";
 			next;
-			switch(select("Break into their conversation.:Keep quiet and listen.")) {
+			switch(select("打断他们的对话。:保持安静，倾听。")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "Excuse me for interrupting your conversation.";
-				mes "You were talking about a Fairy, would you be kind to tell me the details?";
+				mes "打扰你们的谈话，真是抱歉。";
+				mes "你们在谈论仙女，能否告诉我详细情况？";
 				next;
-				mes "[Villager Lawine]";
-				mes "Outsider!!";
-				mes "Why is he here?";
+				mes "[村民 洛维]";
+				mes "外人！！";
+				mes "他为什么在这里？";
 				next;
-				mes "[Villager Rivier]";
-				mes "We weren't saying anything.";
-				mes "There's nothing to tell you.";
-				mes "Lawine, Come with me to the Refinery later.";
+				mes "[村民 瑞维尔]";
+				mes "我们什么都没说。";
+				mes "没有什么好告诉你的。";
+				mes "拉维娜，稍后跟我去炼金所。";
 				next;
-				mes "- The Sapha people are not willing to tell you anything. But the";
-				mes "captured Fairy may be Terra. -";
+				mes "- 萨法人不愿意告诉你任何事情。但是";
+				mes "被捕的仙女可能是特拉。 -";
 				set ep13_mdrama,11;
 				changequest 7060,7061;
 				close;
 			case 2:
 				// Custom Translation
-				mes "[Villager Lawine]";
-				mes "I heard a fairy was crying and begging, she was badly hurt.";
+				mes "[村民 洛维]";
+				mes "我听说有个仙女在哭泣和乞求，她受了重伤。";
 				next;
-				mes "[Villager Rivier]";
-				mes "No one understand the words of fairy...";
-				mes "In the end we had no idea what to do.";
+				mes "[村民 瑞维尔]";
+				mes "没有人理解仙女的话语...";
+				mes "最后我们不知道该怎么办。";
 				next;
-				mes "[Villager Rivier]";
-				mes "Anyway, that fairy is now in prison.";
-				mes "By the way, pull within feather";
-				mes "Today we have to go to the refinery,";
-				mes "do not forget.";
+				mes "[村民 瑞维尔]";
+				mes "无论如何，那仙女现在在监狱里。";
+				mes "顺便说一下，拉入羽毛";
+				mes "今天我们必须去炼金厂，";
+				mes "不要忘记。";
 				next;
-				mes "[Villager Lawine]";
-				mes "You know, right?";
-				mes "Ahh! A foreign visitor!";
+				mes "[村民 洛维]";
+				mes "你知道，对吧？";
+				mes "啊！一位外国访客！";
 				next;
-				mes "[Villager Rivier]";
-				mes "Nevermind him, he can not understand our words.";
+				mes "[村民 瑞维尔]";
+				mes "没关系，他无法理解我们的语言。";
 				next;
-				mes "- Fortunately, Sapha had thought I could not understand them,";
-				mes "but they must be talking about Terra... -";
+				mes "- 幸运的是，萨法认为我无法理解他们，";
+				mes "但他们一定是在谈论泰拉... -";
 				set ep13_mdrama,11;
 				changequest 7060,7061;
 				close;
 			}
 		}
 		else if (ep13_mdrama > 10) {
-			mes "- The Sapha are having a conversation and not paying attention to my movements. -";
+			mes "- 萨法正在交谈，没有注意我的动作。 -";
 			next;
-			mes "- They are talking mostly about common town matters, not much useful information. -";
+			mes "- 他们主要在谈论一些普通的城镇事务，没有什么有用的信息。 -";
 			next;
-			mes "- I'd better move away from them before they get suspicious of my presence. -";
+			mes "- 我最好离开他们，以免他们对我的存在产生怀疑。 -";
 			close;
 		}
 		else {
-			mes "[Villager]";
-			mes "...Outsider, huh...";
-			mes "Since when did we allow outsiders to come and visit?";
-			mes "That's right..Do you even understand me?";
+			mes "[村民]";
+			mes "……外人，嗯……";
+			mes "我们什么时候允许外人来访的？";
+			mes "没错..你甚至能理解我吗？";
 			next;
-			mes "[Villager]";
-			mes "...I guess it doesn't matter....";
-			mes "Ah, Do we even understand each other?";
+			mes "[村民]";
+			mes "……我想这无所谓……";
+			mes "啊，我们真的能互相理解吗？";
 			close;
 		}
 	}
 	else {
-		mes "[Villager]";
-		mes "Fsd a idh as?";
-		mes "Nsf iu ai sd a sd!";
-		mes "Asd fo sdj fso df.";
+		mes "[村民]";
+		mes "你在说什么？";
+		mes "我不知道你在说什么！";
+		mes "我不知道该怎么说。";
 		close;
 	}
 }
@@ -1553,307 +1553,307 @@ man_in01,175,59,5	script	Snorren#ep13_13	454,{
 	if (checkweight(1201,2) == 0) {
 		mes "这块石头包含不明的矿物质.";
 		mes "但是不能提取超过限度.";
-		mes "You can't receive this.";
-		mes "Lighten your weight and";
-		mes "try again.";
+		mes "你无法接收这个。";
+		mes "减轻你的重量并";
+		mes "再试一次。";
 		close;
 	}
 	if (isequipped(2782) == 1) {
 		if (ep13_mdrama == 11) {
-			mes "He seems anxious as he wanders back and forth..";
-			mes "Is he the guard of this prison?";
+			mes "他似乎很焦虑，不停地来回走动……";
+			mes "他是这个监狱的守卫吗？";
 			next;
-			mes "[Snorren]";
-			mes ".. Argh.. Why not?!";
-			mes "What a blockhead...";
-			mes "Hmm?";
-			mes "Who are you?!";
-			mes "How could an outsider be here...?";
+			mes "[斯诺伦]";
+			mes ".. 啊哈.. 为什么不呢?!";
+			mes "真是个笨蛋...";
+			mes "嗯?";
+			mes "你是谁?!";
+			mes "外人怎么会在这里...? ";
 			next;
-			switch(select("About the Captured Fairy.:What is this place?")) {
+			switch(select("关于被捕的仙女。:这个地方是什么？")) {
 			case 1:
-				mes "[Snorren]";
-				mes "How does an outsider like you know that?";
-				mes "And..? What? How can you understand what I'm saying?";
+				mes "[斯诺伦]";
+				mes "像你这样的外人怎么会知道这个?";
+				mes "那..? 什么? 你怎么能理解我在说什么?";
 				next;
-				mes "[Snorren]";
-				mes "Helloo...?";
-				mes "Can you understand the words coming out of my mouth?";
+				mes "[斯诺伦]";
+				mes "你好...?";
+				mes "你能理解我说的话吗?";
 				next;
-				mes "- I show the ring to Snorren. -";
+				mes "- 我把戒指给斯诺伦看。 -";
 				next;
-				mes "[Snorren]";
-				mes "Aha! Now I understand...";
-				mes "That's amazing. a ring capable of interpreting between different languages... and you were able to come all the way here.";
+				mes "[斯诺伦]";
+				mes "啊哈! 现在我明白了...";
+				mes "这真令人惊讶。一枚能够翻译不同语言的戒指……而你居然能来到这里。";
 				next;
-				mes "[Snorren]";
-				mes "I heard there are outsiders helping our people.";
-				mes "You must be one of them!";
+				mes "[斯诺伦]";
+				mes "我听说有外人正在帮助我们的人。";
+				mes "你一定是其中之一！";
 				next;
-				mes "[Snorren]";
-				mes "But where did you hear about that Fairy?";
-				mes "Frankly, I want to have a word with that Fairy.";
-				mes "But I don't understand their language.";
+				mes "[斯诺伦]";
+				mes "但你是从哪里听说那个精灵的？";
+				mes "坦白说，我想和那个精灵谈谈。";
+				mes "但我不懂他们的语言。";
 				next;
-				switch(select("Why do you want to talk to her?:Do you need an interpreter?")) {
+				switch(select("你为什么想和她谈话？:你需要翻译吗？")) {
 				case 1:
 					break;
 				case 2:
-					mes "[Snorren]";
-					mes "An interpreter? Certainly!";
-					mes "But I can't just do it arbitrarily...";
-					mes "The reason why I want to have a word with that fairy, I mean Laphine...";
+					mes "[斯诺伦]";
+					mes "翻译者？当然可以！";
+					mes "但我不能随便这样做……";
+					mes "我想和那个精灵谈谈，意思是拉菲娜……";
 					next;
 					break;
 				}
-				mes "[Snorren]";
-				mes "I... want to find out if she's got anything to do with my friend...";
+				mes "[斯诺伦]";
+				mes "我……想知道她是否和我的朋友有关……";
 				next;
-				select("Your friend?");
-				mes "[Snorren]";
-				mes "Yeah. Ogen is missing.";
-				mes "He said he was curious about the area you are living in and went to check it out. How foolish of him.";
+				select("你的朋友？");
+				mes "[斯诺伦]";
+				mes "是的。奥根失踪了。";
+				mes "他说他对你们居住的地区感到好奇，于是去查看。真是愚蠢。";
 				next;
-				mes "[Snorren]";
-				mes "And he never came back.";
-				mes "After quite a while, that fairy came.";
+				mes "[斯诺伦]";
+				mes "而且他再也没有回来。";
+				mes "过了一段时间，那只精灵来了。";
 				next;
-				mes "[Snorren]";
-				mes "I don't know what guts she had to just fly into our territory.";
-				mes "That fairy just kept on yelling 'a bradium!' 'a bradium!'";
+				mes "[斯诺伦]";
+				mes "我不知道她有什么胆量敢飞进我们的领地。";
+				mes "那只精灵一直在喊着‘一块铂金！’‘一块铂金！’";
 				next;
-				mes "[Snorren]";
-				mes "Our village's vigilantes are saying that fairy is affected by the power of bradium and went crazy.";
-				mes "That's what Laphine are all like!";
+				mes "[斯诺伦]";
+				mes "我们村的治安人员说那只精灵受到了铂金的力量影响，变得疯狂。";
+				mes "这就是拉菲娜们的全部特征！";
 				next;
-				mes "[Snorren]";
-				mes "They just try to make accesories out of the ore which is our source of life.";
-				mes "They collect anything that possesses magical power.";
+				mes "[斯诺伦]";
+				mes "她们只是试图用这种矿石制作饰品，而这正是我们的生命来源。";
+				mes "他们收集任何拥有魔法力量的东西。";
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "You should calm down a bit... Tell me about that captured Laphine.";
+				mes "你应该冷静一点……告诉我关于那个被捕的拉菲娜的事。";
 				next;
-				mes "[Snorren]";
-				mes "Right, I'm sorry.";
-				mes "Anyways, shortly after Ogen went missing the fairy appears... this is too suspicious...";
-				mes "and that fairy was severely wounded too.";
+				mes "[斯诺伦]";
+				mes "对不起，我很抱歉。";
+				mes "总之，在奥根失踪后不久，仙女就出现了……这太可疑了……";
+				mes "而且那位仙女也受了重伤。";
 				next;
-				mes "[Snorren]";
-				mes "I think...";
+				mes "[斯诺伦]";
+				mes "我想...";
 				next;
-				mes "[Snorren]";
-				mes "That fairy attacked Ogen as he was trying to peek on your camp.";
-				mes "And she was drawn by Ogen's bradium and came all the way here to find more bradium!";
+				mes "[斯诺伦]";
+				mes "那位仙女在奥根试图偷看你们的营地时攻击了他。";
+				mes "她被奥根的布拉迪姆吸引，特意来到这里寻找更多的布拉迪姆！";
 				next;
-				switch(select("That could be right...:I don't see it that way...")) {
+				switch(select("这可能是对的...:我并不这样认为...")) {
 				case 1:
 					mes "[" + strcharinfo(0) + "]";
-					mes "But does that Ore called bradium really possess an overwhelming magical power?";
-					mes "It didn't seem like that...";
+					mes "但是那种叫布拉迪姆的矿石真的拥有压倒性的魔法力量吗？";
+					mes "看起来并不是那样……";
 					next;
-					mes "[Snorren]";
-					mes "Really? But, we Sapha can't live without bradium.";
-					mes "This war with the Laphine... is to protect the bradium from them...";
+					mes "[斯诺伦]";
+					mes "真的吗？但是，我们萨法人离不开铂金。";
+					mes "这场与拉菲尼的战争……是为了保护铂金不被他们夺走……";
 					next;
 					mes "[" + strcharinfo(0) + "]";
-					mes "I see...";
-					mes "Your people and their people are fighting over the bradium...";
+					mes "我明白了……";
+					mes "你们的人民和他们的人民正在为铂金而战……";
 					next;
 					break;
 				case 2:
-					mes "[Snorren]";
-					mes "Is... Is that so?";
-					mes "Then how do you see this situation?";
+					mes "[斯诺伦]";
+					mes "是……是这样吗？";
+					mes "那么你怎么看待这个情况？";
 					next;
 					mes "[" + strcharinfo(0) + "]";
-					mes "It just occurred to me...";
-					mes "It's like some kind of forbidden area...";
+					mes "我刚想到……";
+					mes "这就像某种禁区……";
 					next;
 					break;
 				}
 				mes "[" + strcharinfo(0) + "]";
-				mes "Anyhow, You are going to ask that fairy about Ogen, right?";
-				mes "If that's the case, I could interpret between you two...";
+				mes "无论如何，你要去问那个精灵关于奥根的事，对吧？";
+				mes "如果是这样的话，我可以在你们之间翻译……";
 				next;
-				mes "[Snorren]";
-				mes "Yeah?!";
-				mes "Then just wait here for a sec!";
-				mes "I will go and ask Luik about this!";
+				mes "[斯诺伦]";
+				mes "是吗？";
+				mes "那就等我一下！";
+				mes "我去问一下卢伊克！";
 				set ep13_mdrama,12;
 				close;
 			case 2:
-				mes "[Snorren]";
-				mes "Uh, Ah~!";
-				mes "This is a prison.";
-				mes "You need to obey the rules to keep a peaceful group life.";
+				mes "[斯诺伦]";
+				mes "呃，啊~！";
+				mes "这里是监狱。";
+				mes "你需要遵守规则以维持和平的团体生活。";
 				next;
-				mes "[Snorren]";
-				mes "This is where people who break the rules are kept overnight.";
+				mes "[斯诺伦]";
+				mes "这里是那些违反规则的人过夜的地方。";
 				next;
-				mes "[Snorren]";
-				mes "Oh. I'm not one of them.";
-				mes "I just have some business here.";
-				mes "Snorren is a good Sapha.";
+				mes "[斯诺伦]";
+				mes "哦。我不是他们中的一员。";
+				mes "我只是有些事情要处理。";
+				mes "斯诺伦是个好萨法。";
 				close;
 			}
 		}
 		else if (ep13_mdrama == 12) {
-			mes "[Snorren]";
-			mes "Umm.. Hold on a sec...";
-			mes "Luik. It's me. Snorren.";
+			mes "[斯诺伦]";
+			mes "嗯.. 等一下...";
+			mes "卢伊克。是我，斯诺伦。";
 			next;
-			mes "[Voice through the door]";
-			mes "Ah, I told you it's not possible Snorren!";
-			mes "I can only put you in a cell for one night!";
+			mes "[门后传来的声音]";
+			mes "啊，我告诉过你不可能的，斯诺伦！";
+			mes "我只能把你关在牢房里一晚！";
 			next;
-			mes "[Snorren]";
-			mes "Yikes-! Luik, It's not that!";
-			mes "I brought someone who would interpret that fairy's words!";
-			mes "till, Can't I come in?";
+			mes "[斯诺伦]";
+			mes "哎呀！卢伊克，事情不是这样的！";
+			mes "我带来了一个可以翻译那个仙女话的人！";
+			mes "蒂尔，我可以进来吗？";
 			next;
-			mes "[Luik's Voice]";
-			mes "Shut up! Anyway, we have more things to worry about. This Laphine, we need to treat her wounds...";
+			mes "[卢伊克的声音]";
+			mes "闭嘴！无论如何，我们还有更多事情要担心。这个拉菲娜，我们需要治疗她的伤口...";
 			next;
-			mes "[Luik's Voice]";
-			mes "Her body is completely different from ours. What should we do?";
-			mes "Hey, Snorren! Bring me anything. Anything like herbs!";
+			mes "[卢伊克的声音]";
+			mes "她的身体和我们的完全不同。我们该怎么办？";
+			mes "嘿，斯诺伦！给我拿点什么。任何像草药的东西！";
 			next;
-			mes "[Snorren]";
-			mes "Herbs? Is her condition that bad?";
-			mes "Can't we fix her with bradium?";
-			mes "Oh right, She's not Sapha, ey?";
+			mes "[斯诺伦]";
+			mes "草药？她的情况那么糟糕吗？";
+			mes "我们不能用铂金修复她吗？";
+			mes "哦，对了，她不是萨法，对吧？";
 			next;
-			select("Nothing gets past you...");
-			mes "[Snorren]";
-			mes "Do you have anything on your mind?";
-			next;
-			mes "[" + strcharinfo(0) + "]";
-			mes "She's a Laphine, right? Then we should ask a Laphine about it...";
-			mes "Like what we need to treat her...";
-			mes "I can take care of it.";
-			next;
-			mes "[Snorren]";
-			mes "Really?";
-			mes "Then hurry up and bring something back...";
-			mes "We will wait.";
+			select("没有什么能逃过你的眼睛...");
+			mes "[斯诺伦]";
+			mes "你有什么想法吗？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "(I think I have no choice but to go back and ask Arc....)";
+			mes "她是拉菲娜，对吧？那我们应该去问问拉菲娜...";
+			mes "比如我们需要治疗她的东西...";
+			mes "我可以处理这个。";
+			next;
+			mes "[斯诺伦]";
+			mes "真的吗？";
+			mes "那就快点带点东西回来...";
+			mes "我们会等的。";
+			next;
+			mes "[" + strcharinfo(0) + "]";
+			mes "（我想我别无选择，只能回去问阿克...）";
 			set ep13_mdrama,13;
 			changequest 7061,7062;
 			close;
 		}
 		else if ((ep13_mdrama > 12) && (ep13_mdrama < 17)) {
-			mes "[Snorren]";
-			mes "Hurry up and go find a way to cure this Laphine...";
-			mes "Then Luik might let us in.";
+			mes "[斯诺伦]";
+			mes "快去找办法治愈这个拉菲娜...";
+			mes "那卢克可能会让我们进去。";
 			close;
 		}
 		else if (ep13_mdrama == 17) {
 			if (countitem(607) > 5) {
-				mes "[Snorren]";
-				mes "Did you find a cure?";
-				mes "This.. is one strange looking fruit.";
-				mes "I saw this fruit from time to time, but never thought this would be a cure..?";
+				mes "[斯诺伦]";
+				mes "你找到治疗方法了吗？";
+				mes "这个...看起来真奇怪的水果。";
+				mes "我时不时看到这个水果，但从没想过这会是解药..？";
 				next;
-				mes "[Snorren]";
-				mes "I will take everything you've brought with you!";
+				mes "[斯诺伦]";
+				mes "我会收下你带来的所有东西！";
 				set .@temp_ig,countitem(607);
 				delitem 607,.@temp_ig; //Yggdrasilberry
 				set ep13_mdrama,18;
 				next;
-				mes "[Snorren]";
-				mes "Now, Let's go inside!";
+				mes "[斯诺伦]";
+				mes "现在，我们进去吧！";
 				close;
 			}
 			else {
 				mes "[" + strcharinfo(0) + "]";
-				mes "Hmm...this won't be enough....";
-				mes "I would need at least 6~7 of these...";
+				mes "嗯……这还不够……";
+				mes "我至少需要6~7个这些……";
 				next;
-				mes "[Snorren]";
-				mes "Is something wrong?";
+				mes "[斯诺伦]";
+				mes "有什么问题吗？";
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "Huh? Ah, I think we would need more than what I've brought here... I'll be back.";
+				mes "哈？啊，我想我们需要的比我带来的还要多……我会回来的。";
 				close;
 			}
 		}
 		else if (ep13_mdrama == 18) {
-			mes "[Snorren]";
-			mes "I already told Luik everything about you...";
-			mes "Let's go inside.";
+			mes "[斯诺伦]";
+			mes "我已经把你的一切告诉了卢克……";
+			mes "我们进去吧。";
 			close;
 		}
 		else if (((ep13_mdrama > 18) && (ep13_mdrama < 21)) || (ep13_mdrama == 22)) {
-			mes "[Snorren]";
-			mes "I've been waiting for you...";
-			mes "Let's make haste.";
+			mes "[斯诺伦]";
+			mes "我一直在等你……";
+			mes "我们快点吧。";
 			close;
 		}
 		else if (ep13_mdrama == 21) {
-			mes "[Snorren]";
-			mes "I'm really confused now...Should I believe your story or not.";
-			mes "If it is true that cave really exists and Ogen is hurt...";
+			mes "[斯诺伦]";
+			mes "我现在真的很困惑……我该相信你的故事还是不相信。";
+			mes "如果洞穴真的存在，而奥根受伤了...";
 			close;
 		}
 		else if (ep13_mdrama == 23) {
-			mes "[Snorren]";
-			mes "The approximate location is...";
-			mes "Huge Roots of a tree. Got it.";
-			mes "You go ahead first. I will stop by at a refinery and be right after you.";
+			mes "[斯诺伦]";
+			mes "大致位置是...";
+			mes "一棵树的巨大根部。明白了。";
+			mes "你先走。我会在炼金厂停一下，马上就到。";
 			next;
-			mes "[Snorren]";
-			mes "Since that place is Laphine's territory, I will go quitely so they won't notice me.";
-			mes "You just go on ahead, I will be right behind you.";
+			mes "[斯诺伦]";
+			mes "既然那个地方是拉菲娜的领地，我会悄悄过去，他们不会注意到我。";
+			mes "你先走，我会紧跟在后面。";
 			close;
 		}
 		else if (ep13_mdrama == 24) {
-			mes "[Snorren]";
-			mes "You are back. .. Luik wanted me to tell you this...";
-			mes "Terra, that Laphine, is free now.";
+			mes "[斯诺伦]";
+			mes "你回来了...卢伊克让我告诉你这个...";
+			mes "特拉，那个拉菲娜，现在是自由的。";
 			next;
-			mes "[Snorren]";
-			mes "We are tired of fighting. We didn't even want to start...";
-			mes "And we saw her true intention before everything else.";
+			mes "[斯诺伦]";
+			mes "我们厌倦了战斗。我们甚至不想开始...";
+			mes "而且我们在一切发生之前就看到了她的真实意图。";
 			next;
-			mes "[Snorren]";
-			mes "Go and check if Terra went back to her home safely...";
-			mes "Ogen... He went back to Mother Nature.";
+			mes "[斯诺伦]";
+			mes "去检查一下特拉是否安全回家了...";
+			mes "奥根... 他回到大自然母亲那里了.";
 			next;
-			mes "[Snorren]";
-			mes "I really don't think what Ogen did was the right thing to do...";
-			mes "But that was... Ogen...";
+			mes "[斯诺伦]";
+			mes "我真的不认为奥根所做的是正确的...";
+			mes "但那是... 奥根...";
 			next;
-			mes "[Snorren]";
-			mes "Forgive me, I'm a bit depressed...";
-			mes "I'd rather just rest here.";
-			mes "I really appreciate what you've done.";
+			mes "[斯诺伦]";
+			mes "对不起，我有点沮丧...";
+			mes "我宁愿就待在这里休息.";
+			mes "我非常感谢你所做的一切.";
 			next;
-			mes "[Snorren]";
-			mes "Come back anytime...";
-			mes "Ok?";
+			mes "[斯诺伦]";
+			mes "随时欢迎回来...";
+			mes "好吗?";
 			set ep13_mdrama,25;
 			getitem 6080,15; //Manuk_Coin
 			changequest 7069,7070;
 			close;
 		}
 		else if (ep13_mdrama > 24) {
-			mes "[Snorren]";
-			mes "What do you think of this muffler?";
-			mes "This belonged to Ogen...";
-			mes "Does it look good on me?";
+			mes "[斯诺伦]";
+			mes "你觉得这个围巾怎么样?";
+			mes "这是奥根的...";
+			mes "我戴着好看吗?";
 			close;
 		}
 		else {
-			mes "[Snorren]";
-			mes "Outsiders shouldn't be here without permission.";
-			mes "Please get out of here.";
+			mes "[斯诺伦]";
+			mes "外人没有许可不应该在这里。";
+			mes "请离开这里。";
 			close;
 		}
 	}
 	else {
-		mes "[Snorren]";
+		mes "[斯诺伦]";
 		mes "Ids ad?";
 		mes "Ns ai dha si asd!";
 		mes "Ms dfaa sd a.";
@@ -2199,122 +2199,122 @@ man_in01,19,126,3	script	Luik#ep13md16	450,{
 		if (ep13_mdrama < 20) {
 			mes "叶片方向指向^4d4ff南^000000.";
 			mes "杂草很容易在这里找到......它没有什么太特殊的.";
-			mes "Your interpretion is trustworthy, right?";
+			mes "你的翻译是可信的，对吧？";
 			close;
 		}
 		else if (ep13_mdrama == 20) {
-			mes "[Luik]";
-			mes "First of all, Why did that Laphine come here?";
-			mes "Why does she need a bradium?";
+			mes "[卢伊克]";
+			mes "首先，那个拉菲娜为什么会来这里？";
+			mes "她为什么需要一种铂金？";
 			next;
-			select("To give it to a Sapha in a cave...");
-			mes "[Luik]";
-			mes "Sapha in a cave? What cave?";
-			mes "Nevermind.... Snorren. You must know something about that cave, right?";
+			select("把它给洞穴里的萨法...");
+			mes "[卢伊克]";
+			mes "萨法在洞穴里？哪个洞穴？";
+			mes "算了....斯诺伦。你一定知道那个洞穴的事情，对吧？";
 			next;
-			mes "[Luik]";
-			mes "Wait...";
-			mes "Why would a Laphine give a bradium to our ally?";
-			next;
-			mes "[" + strcharinfo(0) + "]";
-			mes "They fought in the cave and your friend got hurt and began to petrify.";
-			mes "So she came here to get a bradium to try to save his life...";
-			next;
-			mes "[Luik]";
-			mes "They fought?";
-			mes "Snorren! What's that look on your face?";
-			mes "Spit if out if you have anything to say.";
-			next;
-			mes "[Snorren]";
-			mes "Frankly, Luik. I... told you... Ogen's missing.";
-			mes "Ogen's disappearance and that Laphine's arrival coincide...";
-			next;
-			mes "[Luik]";
-			mes "And?";
-			next;
-			mes "[Snorren]";
-			mes "Maybe the Sapha that Laphine is talking about is Ogen.";
-			mes "Or do we have any other comrades who go to strange caves?";
-			next;
-			mes "[Luik]";
-			mes "We don't, because there are no caves like that here.";
-			mes "First, we should find out about the cave they are talking about.";
-			next;
-			mes "[Luik]";
-			mes "You outsiders are in contact with the Laphine right?";
-			mes "What if this is an evil plot by them?";
-			next;
-			select("That's not true!");
-			mes "[Luik]";
-			mes "And how would you prove it?";
-			mes "We've been fighting them for a long time.";
-			mes "We don't have any reason to trust what you or they are saying.";
-			next;
-			mes "[Luik]";
-			mes "And talking about some cave that doesn't even exist.";
+			mes "[卢伊克]";
+			mes "等一下……";
+			mes "为什么一个拉菲娜会把铂金给我们的盟友？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "That cave really exists, I swear!";
-			mes "I.. yeah. I saw a petrified Sapha in that cave.";
+			mes "他们在洞穴里打斗，你的朋友受伤了，开始石化。";
+			mes "所以她来这里是为了获取铂金，试图拯救他的生命...";
+			next;
+			mes "[卢伊克]";
+			mes "他们打斗了吗？";
+			mes "斯诺伦！你脸上的表情是什么？";
+			mes "如果你有话要说，就快说出来。";
+			next;
+			mes "[斯诺伦]";
+			mes "老实说，卢伊克。我…告诉过你…奥根失踪了。";
+			mes "奥根的失踪和拉菲娜的到来正好重合…";
+			next;
+			mes "[卢伊克]";
+			mes "然后呢？";
+			next;
+			mes "[斯诺伦]";
+			mes "也许拉菲娜所说的萨法就是奥根。";
+			mes "或者我们还有其他同伴去过奇怪的洞穴吗？";
+			next;
+			mes "[卢伊克]";
+			mes "没有，因为这里没有那样的洞穴。";
+			mes "首先，我们应该弄清楚他们所说的洞穴。";
+			next;
+			mes "[卢伊克]";
+			mes "你们这些外来者和拉菲娜有联系，对吧？";
+			mes "如果这是他们的阴谋呢？";
+			next;
+			select("那不是真的！");
+			mes "[卢伊克]";
+			mes "那你怎么证明呢？";
+			mes "我们已经和他们战斗很久了。";
+			mes "我们没有理由相信你或他们所说的。";
+			next;
+			mes "[卢伊克]";
+			mes "还谈论一些根本不存在的洞穴。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "I will bring back something that will make you believe.";
-			mes "I'm not sure if that Sapha is this Ogen you are looking for...";
-			mes "But I'll come back...";
+			mes "那个洞穴确实存在，我发誓！";
+			mes "我……是的。我在那个洞穴里看到了一个石化的萨法。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Don't you dare...try to do any harm to Terra.";
+			mes "我会带回一些东西让你相信。";
+			mes "我不确定那个萨法是否就是你们在寻找的奥根……";
+			mes "但我会回来……";
+			next;
+			mes "[" + strcharinfo(0) + "]";
+			mes "你敢……试图对泰拉做任何伤害。";
 			set ep13_mdrama,21;
 			changequest 7065,7066;
 			close;
 		}
 		else if (ep13_mdrama == 21) {
-			mes "[Luik]";
-			mes "...Anything will do. Try and make me believe you -Outsider- and that Laphine.";
-			mes "We Sapha are not stupid people.";
+			mes "[卢伊克]";
+			mes "……任何东西都可以。试着让我相信你——外来者——和那个拉菲娜。";
+			mes "我们萨法人可不是傻子。";
 			next;
-			mes "[Luik]";
-			mes "I promise you that we will continue to treat that Laphine as we did so far and will not do any harm to her.";
+			mes "[卢伊克]";
+			mes "我向你保证，我们会继续像之前一样对待那个拉菲娜，不会对她造成任何伤害。";
 			next;
-			mes "[Luik]";
-			mes "Hence, you just focus on finding a way to make us believe you.";
+			mes "[卢伊克]";
+			mes "所以，你只需专注于找到让我们相信你的方法。";
 			close;
 		}
 		else if (ep13_mdrama == 22) {
 			if ((countitem(6085) > 0) && (countitem(6084) > 0)) {
-				mes "[Luik]";
-				mes "...This Bradium has not been refined properly...";
-				mes "This would be no help...";
-				mes "and, this muffler...";
+				mes "[卢伊克]";
+				mes "……这个铂金没有被正确提炼……";
+				mes "这没有任何帮助……";
+				mes "还有，这个围巾……";
 				next;
-				mes "[Snorren]";
-				mes "This is Ogen's! Ogen's muffler!";
-				mes "Luik! Ogen! This is Ogen!";
-				mes "Unrefined Bradium!";
+				mes "[斯诺伦]";
+				mes "这是奥根的！奥根的围巾！";
+				mes "卢伊克！奥根！这是奥根！";
+				mes "未提炼的铂金！";
 				next;
-				mes "[Snorren]";
-				mes "Lu.. Luik. Ogen.. Ogen...?!";
-				mes "I'm going to Ogen!";
-				mes "Where is that cave?! Where!";
+				mes "[斯诺伦]";
+				mes "卢……卢伊克。奥根……奥根……？！";
+				mes "我要去找奥根！";
+				mes "那个洞穴在哪里？！在哪里！";
 				next;
-				select("Calm down!");
-				mes "[Luik]";
-				mes "Yeah. Listen to him, calm down. Snorren.";
-				mes "If it is Ogen... We could be able to save him if we make haste.";
+				select("冷静下来！");
+				mes "[卢伊克]";
+				mes "是的。听他的，冷静点。斯诺伦。";
+				mes "如果是奥根……我们如果赶快行动，可能能救他。";
 				next;
-				mes "[Luik]";
-				mes "Snorren. Go to Refinery and get the finest bradium...";
-				mes "Save him.";
+				mes "[卢伊克]";
+				mes "斯诺伦。去炼金厂拿最好的铂金……";
+				mes "救他。";
 				next;
-				mes "[Luik]";
+				mes "[卢伊克]";
 				mes "" + strcharinfo(0) + "...eh?...";
-				mes "Please look after Snorren...and Ogen.";
-				mes "This Laphine, I mean Terra...";
-				mes "She truly wanted to save Ogen...";
+				mes "请照顾好斯诺伦……和奥根。";
+				mes "这个拉菲娜，我是说泰拉……";
+				mes "她真的想要救奥根……";
 				next;
-				mes "[Luik]";
-				mes "I will talk to my superiors to try and settle this matter...";
-				mes "Please save Ogen.";
+				mes "[卢伊克]";
+				mes "我会和我的上级谈谈，试着解决这个问题……";
+				mes "请救救奥根。";
 				delitem 6085,1; //Shaggy_Muffler
 				delitem 6084,1; //Bradium_Fragments
 				set ep13_mdrama,23;
@@ -2323,35 +2323,35 @@ man_in01,19,126,3	script	Luik#ep13md16	450,{
 			}
 			else {
 				// custom translation
-				mes "[Luik]";
-				mes "You should bring something that can prove it?";
-				mes "... We have been fighting them for so long, it is hard for us to believe you.";
+				mes "[卢伊克]";
+				mes "你应该带一些可以证明的东西吗？";
+				mes "...我们与他们战斗了这么久，真让我们难以相信你。";
 				next;
-				mes "[Snorren]";
-				mes "...Yes... regardless of anything, just to prove what you say is true.";
+				mes "[斯诺伦]";
+				mes "...是的...无论如何，只为证明你所说的是真的。";
 				close;
 			}
 		}
 		else if (ep13_mdrama == 23) {
-			mes "[Luik]";
-			mes "Please... Help Ogen.";
+			mes "[卢伊克]";
+			mes "请...帮助奥根。";
 			close;
 		}
 		else {
 			// custom translation
-			mes "[Luik]";
-			mes "How did you get in here?";
-			mes "You shouldn't be here.";
+			mes "[卢伊克]";
+			mes "你是怎么进来的？";
+			mes "你不应该在这里。";
 			close;
 		}
 	}
 	else {
-		mes "[Luik]";
+		mes "[卢伊克]";
 		mes "Na w ewe w";
-		mes "Aewrf sd fsd iyu. ";
+		mes "Aewrf sd fsd iyu.";
 		mes "Ou uur?";
 		next;
-		mes "Looks like Luik is giving me a look of scorn.";
+		mes "看起来卢伊克在用鄙视的眼光看着我。";
 		close;
 	}
 }
@@ -2374,88 +2374,88 @@ spl_in02,236,92,5	script	Arc#ep13md_l02	447,{
 	}
 	if (isequipped(2782) == 1) {
 		if (ep13_mdrama == 26) {
-			mes "[Terra]";
+			mes "[特拉]";
 			mes ".........";
 			next;
-			mes "[Arc]";
-			mes "I see. That's what happened.";
-			mes "But... That Sapha...What has he become to you in that short period of time?";
+			mes "[阿克]";
+			mes "我明白了。事情就是这样发生的。";
+			mes "但是……那个萨法……在这么短的时间里，他对你来说变成了什么？";
 			next;
-			select("Arc?");
-			mes "[Arc]";
-			mes "Ah, finally. I've been speaking with Terra while we waited for you.";
-			mes "Terra. This is who saved you...";
+			select("弧？");
+			mes "[阿克]";
+			mes "啊，终于。我在等你期间一直在和泰拉交谈。";
+			mes "泰拉。这就是救了你的人……";
 			mes "You should thank "+((Sex == SEX_MALE)?"him.":"her.");
 			next;
-			mes "[Terra]";
-			mes "Thank you...";
-			mes "I'm sorry Arc... Sorry...";
+			mes "[特拉]";
+			mes "谢谢你...";
+			mes "对不起，阿克……对不起……";
 			mes "......";
 			next;
-			mes "[Arc]";
-			mes "So, this is the story.";
-			mes "Terra was wandering around your Camp and found a Sapha who was also wandering around your Camp at the time.";
+			mes "[阿克]";
+			mes "所以，这就是故事。";
+			mes "泰拉在你的营地附近徘徊，发现了一个当时也在你营地附近徘徊的萨法。";
 			next;
-			mes "[Arc]";
-			mes "They were both being cautious not to be seen by you humans but they caught sight of each other and started to fight.";
+			mes "[阿克]";
+			mes "他们都小心翼翼地不让你们人类看到，但他们彼此看到了，开始打斗。";
 			next;
-			mes "[Arc]";
-			mes "And then they eventually fell into that hole in the swamp and ended up in that cave.";
+			mes "[阿克]";
+			mes "然后他们最终掉进了沼泽里的那个洞，结果到了那个洞穴里。";
 			next;
-			mes "[Terra]";
-			mes "Yeah... We were both unconscious for some time..";
-			mes "And by the time we were able to wake up and see... We were surrounded.";
+			mes "[特拉]";
+			mes "是啊……我们两个都昏迷了一段时间……";
+			mes "等我们能够醒来并看到的时候……我们已经被包围了。";
 			next;
-			mes "[Terra]";
-			mes "Our main concern was getting out of there...";
-			mes "Even though we couldn't understand each other's language... We made a temporary truce.";
+			mes "[特拉]";
+			mes "我们最关心的是如何逃出去……";
+			mes "尽管我们无法理解彼此的语言……我们还是达成了暂时的停火。";
 			next;
-			mes "[Terra]";
-			mes "And then.....";
+			mes "[特拉]";
+			mes "然后……";
 			mes ".........";
 			next;
-			select("So that's what happened.");
+			select("原来是这样发生的。");
 			mes "[" + strcharinfo(0) + "]";
-			mes "You were outnumbered and at the last moment Ogen sacrificed himself to protect you.";
+			mes "你们人多势众，最后时刻奥根为了保护你牺牲了自己。";
 			next;
-			mes "[Terra]";
-			mes "So... I wanted to help him...";
-			mes "I was just trying to repay him...";
+			mes "[特拉]";
+			mes "所以……我想要帮助他……";
+			mes "我只是想报答他……";
 			next;
-			mes "[Terra]";
-			mes "Was I wrong...?";
-			mes "Was I thinking wrong?";
+			mes "[特拉]";
+			mes "我错了吗……？";
+			mes "我想错了吗？";
 			next;
-			mes "[Arc]";
-			mes "Repaying one's dept is a good thing.";
-			mes "Especially for a proud Laphine, It sure is.";
+			mes "[阿克]";
+			mes "偿还债务是一件好事。";
+			mes "对于一个骄傲的拉菲恩来说，确实如此。";
 			next;
-			mes "[Arc]";
-			mes "But Terra...";
-			mes "You've made two big mistakes.";
-			mes "First is, You went away without permission...";
-			mes "And secondly...";
+			mes "[阿克]";
+			mes "但是，特拉...";
+			mes "你犯了两个大错误。";
+			mes "第一个是，你未经允许就离开了...";
+			mes "其次...";
 			next;
-			mes "[Arc]";
-			mes "You didn't ask for help.";
-			mes "If something like that happened... of course I would help...";
+			mes "[阿克]";
+			mes "你没有请求帮助。";
+			mes "如果发生那样的事...我当然会帮助你...";
 			next;
-			mes "[Terra]";
-			mes "I'm sorry Arc... I'm sorry...";
-			mes "I won't act foolish ever again.";
+			mes "[特拉]";
+			mes "对不起，阿克...我很抱歉...";
+			mes "我再也不会傻乎乎地行动了。";
 			next;
-			mes "[Arc]";
-			mes "Get some rest.";
-			mes "I will put in a good word to the superiors...";
+			mes "[阿克]";
+			mes "好好休息一下。";
+			mes "我会向上级推荐你...";
 			mes "And " + strcharinfo(0) + "...";
-			mes "Thank you.";
+			mes "谢谢你。";
 			next;
-			mes "[Arc]";
-			mes "Here, I will give you these to show my appreciation.";
-			mes "It's not much, but you will be able to buy things in Splendide with these.";
+			mes "[阿克]";
+			mes "这里，我会给你这些以表示我的感谢。";
+			mes "这不算多，但你可以用这些在斯普兰蒂德购买东西。";
 			next;
-			mes "[Arc]";
-			mes "I'm sorry this is all I can give you for now.";
+			mes "[阿克]";
+			mes "抱歉，这就是我现在能给你的全部。";
 			set ep13_mdrama,27;
 			getitem 6081,25; //Splendide_Coin
 			if (checkre(3))
@@ -2467,64 +2467,64 @@ spl_in02,236,92,5	script	Arc#ep13md_l02	447,{
 		}
 		else if (ep13_mdrama == 27) {
 			if (strnpcinfo(1) == "Arc") {
-				mes "[Arc]";
-				mes "Terra. Get some rest...";
-				mes "Rest easy...";
-				mes "And...";
+				mes "[阿克]";
+				mes "特拉。好好休息...";
+				mes "安息吧...";
+				mes "还有...";
 			}
 			else {
-				mes "[Terra]";
-				mes "Arc... I will get some rest...";
-				mes "I'm sorry... And. You...";
+				mes "[特拉]";
+				mes "阿克... 我会去休息一下...";
+				mes "抱歉... 还有你...";
 			}
 			next;
 			mes "["+strnpcinfo(1)+"]";
-			mes "Originally... we Laphine were extremely reluctant to have others in our area.";
+			mes "最初... 我们拉菲尼非常不愿意让其他人进入我们的区域。";
 			mes strcharinfo(0) + ", you will be a special exception.";
 			next;
 			mes "["+strnpcinfo(1)+"]";
 			if (strnpcinfo(1) == "Arc") mes "That's what Terra wants too.";
-			mes "It might be cramped, but you are always welcome to visit us.";
+			mes "可能会有些拥挤，但你总是欢迎来拜访我们。";
 			set ep13_mdrama,28;
 			close;
 		}
 		else if (ep13_mdrama > 27) {
 			if (strnpcinfo(1) == "Arc") {
-				mes "[Arc]";
-				mes "How are you adapting to Splendide?";
-				mes "Terra's still not fully recovered yet, so keep that in mind.";
+				mes "[阿克]";
+				mes "你适应斯普兰蒂德吗？";
+				mes "特拉还没有完全恢复，所以请记住这一点。";
 			}
 			else {
-				mes "[Terra]";
-				mes "I'm sorry...";
-				mes "My body is not fully recovered yet...";
+				mes "[特拉]";
+				mes "对不起...";
+				mes "我的身体还没有完全恢复...";
 			}
 			close;
 		}
 		else {
 			// custom translation
 			if (strnpcinfo(1) == "Arc") {
-				mes "[Arc]";
-				mes "The back of the right ... ";
+				mes "[阿克]";
+				mes "右边的后面... ";
 				mes "......";
 			}
 			else {
-				mes "[Terra]";
-				mes "I'm sorry... I'm so sleepy...";
-				mes "...I want to sleep...";
+				mes "[特拉]";
+				mes "对不起... 我好困...";
+				mes "...我想睡觉...";
 			}
 			close;
 		}
 	}
 	else {
 		if (strnpcinfo(1) == "Arc") {
-			mes "[Arc]";
+			mes "[阿克]";
 			mes "HirWosWeh. Yee DiebVilFar U manTalVil.";
 			mes "LarsNeiser...??";
 			mes "VeldTiTal Ko SharDurYur Di ?";
 		}
 		else {
-			mes "[Terra]";
+			mes "[特拉]";
 			mes "ModBurDana...? Mu AnduWehFus Yee OsaLoLars...";
 			mes "eoFusser....";
 			mes "maurNohser Ur...... ThorNuffLars So ";
@@ -2559,40 +2559,40 @@ spl_fild01,357,44,0	script	???#ep13mdf01	844,{
 	}
 	if (ep13_mdrama == 14) {
 		mes "有足迹的迹象, 似乎是在暗示或引导什么事情.";
-		mes "I see a small berry inside of a big outer shell...";
-		mes "It is a Yggdrasil!";
+		mes "我看到一个小浆果在一个大外壳里面...";
+		mes "这是一个世界树！";
 		set ep13_mdrama,15;
 		getitem 607,1; //Yggdrasilberry
 		getitem 522,1; //Fruit_Of_Mastela
 		close;
 	}
 	else if (ep13_mdrama == 15) {
-		mes "I've already pulled out a Yggdradsil... but is there anyting else..?";
+		mes "我已经拔出了一个世界树... 但还有其他东西吗？";
 		next;
 		set .@apple,rand(1,100);
 		if (.@apple < 50) {
-			mes "I've been bitten by an unknown insect.";
-			mes "It hurts!";
+			mes "我被一种未知的昆虫咬了。";
+			mes "好痛！";
 			percentheal -30,0;
 			close;
 		}
 		else if (.@apple == 50) {
-			mes "I found an apple.";
+			mes "我找到一个苹果。";
 			getitem 512,1; //Apple
 			close;
 		}
 		else {
-			mes "There's nothing else.";
+			mes "没有其他东西了。";
 			close;
 		}
 	}
 	else if (ep13_mdrama > 15) {
-		mes "There's only an empty shell left.";
+		mes "只剩下一个空壳了。";
 		close;
 	}
 	else {
-		mes "A huge fruit is here.";
-		mes "I don't know what kind of fruit it is.";
+		mes "这里有一个巨大的水果。";
+		mes "我不知道这是什么水果。";
 		close;
 	}
 }
@@ -2603,45 +2603,45 @@ spl_fild01,312,79,0	script	???#ep13mdf02	844,{
 		mes "战斗的痕迹一直通往^4d4dff巨大的树根那边^000000.";
 		mes "战斗的痕迹一直通往^4d4dff巨大的树根那边^000000.";
 		mes "有足迹的迹象, 似乎是在暗示或引导什么事情.";
-		mes "try again.";
+		mes "再试一次。";
 		close;
 	}
 	if (ep13_mdrama == 15) {
-		mes "There's some kind of fruit lying on the ground.";
-		mes "I see a small berry inside of a big outer shell...";
-		mes "It is a Yggdrasil!";
+		mes "地上有一些水果。";
+		mes "我看到一个小浆果在一个大外壳里面...";
+		mes "这是一个世界树！";
 		set ep13_mdrama,16;
 		getitem 607,1; //Yggdrasilberry
 		getitem 522,1; //Fruit_Of_Mastela
 		close;
 	}
 	else if (ep13_mdrama == 16) {
-		mes "I've already pulled out a Yggdradsil... but is there anyting else..?";
+		mes "我已经拔出了一个世界树... 但还有其他东西吗？";
 		next;
 		set .@apple,rand(1,100);
 		if (.@apple < 50) {
-			mes "I've been bitten by an unknown insect.";
-			mes "It hurts!";
+			mes "我被一种未知的昆虫咬了。";
+			mes "好痛！";
 			percentheal -30,0;
 			close;
 		}
 		else if (.@apple == 50) {
-			mes "I found an apple.";
+			mes "我找到一个苹果。";
 			getitem 512,1; //Apple
 			close;
 		}
 		else {
-			mes "There's nothing else.";
+			mes "没有其他东西了。";
 			close;
 		}
 	}
 	else if (ep13_mdrama > 16) {
-		mes "There's only an empty shell left.";
+		mes "只剩下一个空壳了。";
 		close;
 	}
 	else {
-		mes "A huge fruit is here.";
-		mes "I don't know what kind of fruit it is.";
+		mes "这里有一个巨大的水果。";
+		mes "我不知道这是什么水果。";
 		close;
 	}
 }
@@ -2666,37 +2666,37 @@ spl_fild01,329,29,0	script	???#ep13mdf03	844,{
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "奇怪的茎内一个巨大的根开幕式上纠缠.表面上看起来不稳定......差点滑下去之前, 我止步了.";
-		mes "I've found... three. Six of them should be enough.";
-		mes "Let's go back to Snorren.";
+		mes "我找到了……三个。六个应该足够了。";
+		mes "我们回去找斯诺伦吧。";
 		close;
 	}
 	else if (ep13_mdrama == 17) {
-		mes "I've already pulled out a Yggdradsil... but is there anyting else..?";
+		mes "我已经拔出了一个世界树... 但还有其他东西吗？";
 		next;
 		set .@apple,rand(1,100);
 		if (.@apple < 50) {
-			mes "I've been bitten by an unknown insect.";
-			mes "It hurts!";
+			mes "我被一种未知的昆虫咬了。";
+			mes "好痛！";
 			percentheal -30,0;
 			close;
 		}
 		else if (.@apple == 50) {
-			mes "I found an apple.";
+			mes "我找到一个苹果。";
 			getitem 512,1; //Apple
 			close;
 		}
 		else {
-			mes "There's nothing else.";
+			mes "没有其他东西了。";
 			close;
 		}
 	}
 	else if (ep13_mdrama > 17) {
-		mes "There's only an empty shell left.";
+		mes "只剩下一个空壳了。";
 		close;
 	}
 	else {
-		mes "A huge fruit is here.";
-		mes "I don't know what kind of fruit it is.";
+		mes "这里有一个巨大的水果。";
+		mes "我不知道这是什么水果。";
 		close;
 	}
 }
@@ -4715,24 +4715,24 @@ man_in01,372,221,5	script	Scientist#lifeguard	449,{
 			mes "你被允许进入我们部落?";
 			mes "好吧, 你能听懂我说话吗?";
 			mes "[村民]";
-			mes "Das?";
+			mes "什么？";
 			next;
-			mes "idh sd!";
+			mes "我不知道！";
 			mes "Dh apa sd＃is Das idh.";
-			mes "satisfy his lead!";
+			mes "满足他的要求！";
 			set ep13_2_tre,1;
 			close;
 		}
 		else if ((ep13_2_tre == 1) || (ep13_2_tre == 100)) {
 			if (checkweight(1201,1) == 0) {
-				mes "It looks like you're carrying too many things.";
-				mes "Why not put some of your items in storage and come back?";
+				mes "看起来你携带的物品太多了。";
+				mes "为什么不把一些物品放入仓库再回来呢？";
 				close;
 			}
 			set .@dayq_chk,checkquest(2182,PLAYTIME);
 			if ((.@dayq_chk == 0) || (.@dayq_chk == 1)) {
-				mes "The future of the Sapha is up to you.";
-				mes "I do not have any need of your help right now.";
+				mes "萨法的未来掌握在你手中。";
+				mes "我现在不需要你的帮助。";
 				close;
 			}
 			else {
@@ -4742,42 +4742,42 @@ man_in01,372,221,5	script	Scientist#lifeguard	449,{
 					case 2: setarray .@rand_dayq$[0],"Abyss Lake","5","3"; break;
 					case 3: setarray .@rand_dayq$[0],"Thor Volcano","5","4"; break;
 				}
-				mes "Recently, someone who came from Schwarzwald gave me a small mineral as a gift from his home town when he saw our study of Bradium.";
+				mes "最近，有人从斯瓦尔特海姆来，看到我们对铂金的研究，送了我一个小矿石作为家乡的礼物。";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "I can't say for sure until now,";
-				mes "but this mineral seems to have";
-				mes "many interesting features.";
+				mes "[医生救生员]";
+				mes "我现在还不能确定，";
+				mes "但这个矿物似乎有";
+				mes "许多有趣的特性。";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "As I examine this mineral";
-				mes "more and more, it's really";
-				mes "different from the one in Jotunheim.";
-				mes "This mineral must be helpful";
-				mes "to make a new vaccine!";
+				mes "[医生救生员]";
+				mes "随着我对这个矿物的研究";
+				mes "越来越深入，它真的";
+				mes "与约顿海姆的矿物不同。";
+				mes "这个矿物一定对";
+				mes "制造新疫苗有帮助！";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "But the amount of the mineral";
-				mes "is too little to make a";
-				mes "preparation for the";
-				mes "examination.";
+				mes "[医生救生员]";
+				mes "但这个矿物的数量";
+				mes "太少了，无法制作";
+				mes "用于";
+				mes "检查的制剂。";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "You said you're from Midgard, right? Do you think you can bring me a little bit more of that mineral..";
+				mes "[医生救生员]";
+				mes "你说你来自米德加尔特，对吧？你觉得你能再给我带一点那种矿石吗..";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "He said it's from";
+				mes "[医生救生员]";
+				mes "他说这是来自";
 				mes "^FF0000"+.@rand_dayq$[0]+"^000000.";
 				mes "I think ^FF0000"+.@rand_dayq$[1]+"^000000 would be enough.";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "I'll give you this portable toolbox.";
-				mes "Things like a detector and a little hammer for mining minerals are included in this toolbox.";
+				mes "[医生救生员]";
+				mes "我会给你这个便携工具箱。";
+				mes "这个工具箱里包括了探测器和小锤子，用于开采矿石。";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "Take it, it shold be";
-				mes "helpful in collecting";
-				mes "the minerals I need.";
+				mes "[医生救生员]";
+				mes "拿着它，它应该是";
+				mes "在收集方面很有帮助";
+				mes "我需要的矿石。";
 				set ep13_2_tre,atoi(.@rand_dayq$[2]);
 				setquest 2179+(atoi(.@rand_dayq$[2])-2);
 				getitem 6076,1; //Portable_Toolbox
@@ -4786,19 +4786,19 @@ man_in01,372,221,5	script	Scientist#lifeguard	449,{
 		}
 		else if (ep13_2_tre == 2 || ep13_2_tre == 3 || ep13_2_tre == 4) {
 			if ((ep13_2_tre == 2 && countitem(6077) > 9) || (ep13_2_tre != 2 && countitem(6077) > 4)) {
-				mes "Oh! Yes, that's it!";
-				mes "This much will be enough!";
+				mes "哦！是的，就是这个！";
+				mes "这么多就足够了！";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "I really appreciate your help.";
+				mes "[医生救生员]";
+				mes "我真的很感谢你的帮助。";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "These are coins of the Manuk.";
-				mes "This may not be much, but if you collect more, they can be used to buy some items from our merchants.";
+				mes "[医生救生员]";
+				mes "这些是马努克的金币。";
+				mes "这可能不算什么，但如果你收集更多，它们可以用来从我们的商人那里购买一些物品。";
 				next;
-				mes "[Dr. Lifeguard]";
-				mes "If you want to help my study for the sake of the Sapha, come to me at any time.";
-				mes "I will be very happy for any help you can give.";
+				mes "[医生救生员]";
+				mes "如果你想为了萨法的研究帮助我，随时来找我。";
+				mes "我会非常感激你能给予的任何帮助。";
 				set .@stone_chk,countitem(6077);
 				set .@stoneelse_chk,countitem(6078);
 				delitem 6077,.@stone_chk; //Rough_Mineral
@@ -4811,23 +4811,23 @@ man_in01,372,221,5	script	Scientist#lifeguard	449,{
 				close;
 			}
 			else {
-				mes "The future of the Sapha is up to you.";
-				mes "I wish you good luck.";
+				mes "萨法的未来掌握在你手中。";
+				mes "祝你好运。";
 				close;
 			}
 		}
 		else {
-			mes "Hmm...";
+			mes "嗯...";
 			close;
 		}
 	}
 	else {
-		mes "[Scientist]";
+		mes "[科学家]";
 		mes "Pdh doud pjfdd";
 		mes "fo pdi Wrdpp doff";
-		mes "WosNuffremu Ha TurAshTi";
-		mes "SeGothShar An AshDur";
-		mes "UorVeLars No Ador";
+		mes "沃斯努夫雷穆 哈 图尔阿什蒂";
+		mes "塞戈斯沙尔 安 阿什杜尔";
+		mes "乌尔维尔拉斯 诺 阿多尔";
 		close;
 	}
 }
@@ -4894,18 +4894,18 @@ mjolnir_12,220,37,0	duplicate(mjo_no_find)	#mj12_find_3	-1,5,5
 		if (countitem(6077) < 10) {
 			mes "门锁上了, 我们无法进入.";
 			next;
-			switch(select("Mine minerals.:Do nothing.")) {
+			switch(select("挖矿.:什么都不做.")) {
 			case 1:
-				mes "Clang! Clang! Clang! Clang!";
+				mes "叮！叮！叮！叮！";
 				close2;
 				progressbar "ffff00",4;
 				if (rand(1,6) < 4) {
-					mes "- You failed to mine minerals. -";
+					mes "- 你未能开采矿物。 -";
 					getitem 6078,1; //Stone_Fragments
 					close;
 				}
 				else {
-					mes "- You succeeded to mine minerals. -";
+					mes "- 你成功开采了矿物。 -";
 					emotion ET_AHA, playerattached();
 					set .@stst,rand(1,5);
 					if (.@stst == 5) getitem 6077,5; //Rough_Mineral
@@ -4917,12 +4917,12 @@ mjolnir_12,220,37,0	duplicate(mjo_no_find)	#mj12_find_3	-1,5,5
 					end;
 				}
 			case 2:
-				mes "- You decide to do nothing. -";
+				mes "- 你决定什么也不做。 -";
 				close;
 			}
 		}
 		else {
-			mes "- I think I have enough minerals. -";
+			mes "- 我想我有足够的矿物了。 -";
 			close;
 		}
 	}
@@ -5243,20 +5243,20 @@ OnTouch_:
 -	script	hu_find	-1,{
 	if ((ep13_2_tre == 3) && (countitem(6076) == 1)) {
 		if (countitem(6077) < 5) {
-			mes "- I can see some different colored minerals where the detector pointed to. This must be the mineral that Mr. Lifeguard told me about. -";
+			mes "- 我可以看到探测器指向的地方有一些不同颜色的矿石。这一定是救生员先生告诉我的矿石。-";
 			next;
-			switch(select("Mine minerals.:Do nothing.")) {
+			switch(select("挖矿.:什么都不做.")) {
 			case 1:
-				mes "Clang! Clang! Clang! Clang!";
+				mes "叮！叮！叮！叮！";
 				close2;
 				progressbar "ffff00",4;
 				if (rand(1,6) < 4) {
-					mes "- You failed to mine minerals. -";
+					mes "- 你未能开采矿物。 -";
 					getitem 6078,1; //Stone_Fragments
 					close;
 				}
 				else {
-					mes "- You succeeded to mine minerals. -";
+					mes "- 你成功开采了矿物。 -";
 					emotion ET_AHA, playerattached();
 					set .@stst,rand(1,5);
 					if (.@stst == 5) getitem 6077,5; //Rough_Mineral
@@ -5267,12 +5267,12 @@ OnTouch_:
 					close;
 				}
 			case 2:
-				mes "- You decide to do nothing. -";
+				mes "- 你决定什么也不做。 -";
 				close;
 			}
 		}
 		else {
-			mes "- I think I have enough minerals. -";
+			mes "- 我想我有足够的矿物了。 -";
 			close;
 		}
 	}
@@ -5785,16 +5785,16 @@ spl_in02,139,65,3	script	Middle-Ranked Laphine#la	438,{
 -	script	Purifier	-1,{
 	if (ep13_2_tre1 == 2) {
 		if (countitem(7193) > 0) {
-			mes "- You put the seed in the";
-			mes "device and watched it";
-			mes "as Grenouille told you. -";
+			mes "- 你把种子放入";
+			mes "装置中，看着它";
+			mes "正如格雷努伊告诉你的。-";
 			next;
-			mes "- Booowoong -";
+			mes "- 呜呜呜 -";
 			specialeffect2 EF_HEALSP;
 			next;
-			mes "- When the lights gone,";
-			mes "a big flower of Alfheim was lied";
-			mes "in your hand, instead of the seed. -";
+			mes "- 当光消失时，";
+			mes "一朵阿尔夫海姆的大花躺在你的手中，";
+			mes "而不是种子。 -";
 			delitem 7193,1; //Germinating_Sprout
 			set ep13_2_tre1,3;
 			getitem 6079,1; //Flower_Of_Alfheim
@@ -5802,7 +5802,7 @@ spl_in02,139,65,3	script	Middle-Ranked Laphine#la	438,{
 		}
 		else {
 			mes "["+ strcharinfo(0) +"]";
-			mes "Where are the seeds?";
+			mes "种子在哪里？";
 			close;
 		}
 	}
@@ -6638,97 +6638,97 @@ manuk,193,135,0	script	Worker#ep13bs	454,{
 	if (isequipped(2782) == 1) {
 		if (ep13_2_busut == 3) {
 			if (ep13_2_bs1 == 1) {
-				mes "[Worker]";
-				mes "Oops, it's dangerous, almost broken.";
-				mes "I should hurry to change it...otherwise.";
+				mes "[工人]";
+				mes "哎呀，这很危险，差点坏掉。";
+				mes "我应该赶快去改变它……否则。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "What's the matter?";
+				mes "怎么了？";
 				next;
-				mes "[Worker]";
-				mes "Ah....here.....um...";
+				mes "[工人]";
+				mes "啊……这里……呃……";
 				mes "......";
 				mes ".........";
-				mes "Nothing!!";
+				mes "什么都没有！！";
 				emotion ET_HUK;
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "What's up?";
+				mes "怎么了？";
 				next;
-				mes "[Worker]";
-				mes "You are an outsider.";
+				mes "[工人]";
+				mes "你是个外人。";
 				mes "......";
-				mes "I was suprised by your voice.";
+				mes "你的声音让我很惊讶。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Yes, sorry to startle you.";
+				mes "是的，抱歉吓到你了。";
 				emotion ET_SMILE, playerattached();
 				next;
-				mes "[Worker]";
-				mes "Haha, it's ok.";
-				mes "Recently I heard about people like you but it's the first time I've actually met one.";
+				mes "[工人]";
+				mes "哈哈，没关系。";
+				mes "最近我听说过像你这样的人，但这是我第一次见到一个。";
 				next;
-				mes "[Worker]";
-				mes "You speak our language pretty good.";
-				next;
-				mes "["+strcharinfo(0)+"]";
-				mes "Ah...anyway..you look like you're having some trouble. What happened?";
-				next;
-				mes "[Worker]";
-				mes "Nothing!!";
+				mes "[工人]";
+				mes "你的语言说得很好。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Are you sure? Fate has to have brought us together for a reason.";
-				mes "Tell me~";
+				mes "啊……无论如何……你看起来有些麻烦。发生了什么事？";
 				next;
-				mes "[Worker]";
+				mes "[工人]";
+				mes "什么都没有！！";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "你确定吗？命运一定是为了某种原因把我们聚在一起的。";
+				mes "告诉我~";
+				next;
+				mes "[工人]";
 				mes "......";
-				mes "Frankly...";
+				mes "坦白说...";
 				next;
-				mes "[Worker]";
-				mes "The screw is too old to use to fix the tent, so I should change it before it breaks.";
+				mes "[工人]";
+				mes "这个螺丝太旧了，无法用来修理帐篷，所以我应该在它坏掉之前换掉它。";
 				next;
-				mes "[Worker]";
-				mes "I can't leave so I'm just waiting for my friend to pass by to help me.";
-				next;
-				mes "["+strcharinfo(0)+"]";
-				mes "Can I help you?";
-				next;
-				mes "[Worker]";
-				mes "No~that's alright. We just met so I can't ask you for a favor.";
+				mes "[工人]";
+				mes "我不能离开，所以我只能等我的朋友路过来帮我。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "That's ok! We can help each other!";
+				mes "我可以帮你吗？";
 				next;
-				mes "- Suddenly there is a screeching sound as the screw breaks -";
+				mes "[工人]";
+				mes "不~没关系。我们才刚见面，所以我不能请你帮忙。";
 				next;
-				mes "[Worker]";
-				mes "Ugh!!!";
-				mes "**Sigh**";
+				mes "["+strcharinfo(0)+"]";
+				mes "没关系！我们可以互相帮助！";
+				next;
+				mes "- 突然传来一声尖锐的声音，螺丝断了 -";
+				next;
+				mes "[工人]";
+				mes "呃！！！";
+				mes "**叹气**";
 				emotion ET_CRY;
 				emotion ET_CRY, playerattached();
 				next;
-				mes "[Worker]";
-				mes "Well that's that!";
-				mes "Anyway my name is ^0000FFGill^000000.";
+				mes "[工人]";
+				mes "好吧，就是这样！";
+				mes "不过我叫 ^0000FF吉尔^000000。";
 				next;
-				mes "[Gill]";
-				mes "I need something to fix the tent with, if you can get^0000FF 30 Horn of Hillslion^000000, I can make them into sturdy enough screws.";
+				mes "[吉尔]";
+				mes "我需要一些东西来修帐篷，如果你能带来^0000FF 30个山狮角^000000，我可以把它们做成足够坚固的螺丝。";
 				next;
-				mes "[Gill]";
-				mes "Sorry, again for making you do this but I will be waiting here for you.";
+				mes "[吉尔]";
+				mes "抱歉，再次让你做这个，但我会在这里等你。";
 				set ep13_2_bs1,2;
 				setquest 11105;
 				close;
 			}
 			else if (ep13_2_bs1 == 2) {
 				if (countitem(6032) > 29) {
-					mes "[Gill]";
-					mes "You helped me collect all of the Horns of Hillslion?";
-					mes "Thank you so much.";
+					mes "[吉尔]";
+					mes "你帮我收集了所有的山狮角？";
+					mes "非常感谢你。";
 					next;
-					mes "[Gill]";
-					mes "It's all because of you, we are able to prevent anything disastrous.";
+					mes "[吉尔]";
+					mes "都是因为你，我们才能防止任何灾难发生。";
 					mes "^0000FFEven though you're also an alien race, but compared to the vile fairies^000000, I'm glad to have met someone like "+strcharinfo(0)+".";
 					delitem 6032,30; //Horn_Of_Hilsrion
 					set ep13_2_bs1,3;
@@ -6737,120 +6737,120 @@ manuk,193,135,0	script	Worker#ep13bs	454,{
 					close;
 				}
 				else {
-					mes "[Gill]";
-					mes "Sorry, again for making you do this but I will be waiting here for you to bring back the^0000FF 30 Horn of Hillslions.^000000.";
+					mes "[吉尔]";
+					mes "抱歉，再次让你做这个，但我会在这里等你带回^0000FF 30个山狮角^000000。";
 					close;
 				}
 			}
 			else if (ep13_2_bs1 == 3) {
-				mes "[Gill]";
-				mes "Thank you for helping me.";
+				mes "[吉尔]";
+				mes "谢谢你帮我。";
 				mes "^0000FFEven though you're also an alien race, but compared to the vile fairies^000000, I'm glad to have met someone like "+strcharinfo(0)+".";
 				close;
 			}
 			else {
-				mes "[Worker]";
-				mes "This is too dangerous, it's become too loose...";
-				mes "It must be replaced soon...";
+				mes "[工人]";
+				mes "这太危险了，变得太松了...";
+				mes "必须尽快更换...";
 				close;
 			}
 		}
 		else if (ep13_2_busut == 4) {
 			if (ep13_2_bs1 == 1) {
-				mes "[Worker]";
-				mes "This is too dangerous, it's become too loose...";
-				mes "It must be replaced soon...";
+				mes "[工人]";
+				mes "这太危险了，变得太松了...";
+				mes "必须尽快更换...";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Is something wrong?";
+				mes "有什么问题吗？";
 				next;
-				mes "[Worker]";
-				mes "Ah... see here...";
+				mes "[工人]";
+				mes "啊...看这里...";
 				mes "......";
 				mes ".........";
-				mes "Nevermind. Nothing.";
+				mes "没关系。没什么。";
 				emotion ET_HUK;
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "You don't have to be like this.";
+				mes "你不必这样。";
 				next;
-				mes "[Worker]";
-				mes "You are one of the strange race, aren't you?";
+				mes "[工人]";
+				mes "你是那个奇怪种族的人，对吧？";
 				mes "......";
-				mes "To suddenly hear you speak our language gave me a bit of a shock.";
+				mes "突然听到你说我们的语言让我有点震惊。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Since I'm travelling here, so I thought I'd need it...";
+				mes "既然我在这里旅行，我想我需要它...";
 				emotion ET_SMILE, playerattached();
 				next;
-				mes "[Worker]";
-				mes "Haha, is that so?";
-				mes "I've heard of the rumour that your race exists, but I've never seen one before.";
+				mes "[工人]";
+				mes "哈哈，是吗？";
+				mes "我听说过你们种族存在的传闻，但我从未见过一个。";
 				next;
-				mes "[Worker]";
-				mes "And to think you can speak our language. Interesting.";
-				next;
-				mes "["+strcharinfo(0)+"]";
-				mes "Ah...but just a moment ago, you were having a hard time with something. Is something wrong?";
-				next;
-				mes "[Worker]";
-				mes "It's nothing.";
+				mes "[工人]";
+				mes "没想到你会说我们的语言。真有趣。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Ah~ It must be fate that we met~";
-				mes "You can just tell me.";
+				mes "啊...不过就在刚才，你似乎在为某事烦恼。有什么问题吗？";
 				next;
-				mes "[Worker]";
+				mes "[工人]";
+				mes "没什么。";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "啊~ 我们相遇一定是命运的安排~";
+				mes "你可以直接告诉我。";
+				next;
+				mes "[工人]";
 				mes "......";
-				mes "Well...";
+				mes "嗯……";
 				next;
-				mes "[Worker]";
-				mes "The screw that is used to keep our tent in place is rusting away... we must get a new one.";
+				mes "[工人]";
+				mes "用来固定我们帐篷的螺丝正在生锈……我们必须找一个新的。";
 				next;
-				mes "[Worker]";
-				mes "But I can't leave this place, so I was waiting for someone to pass by.";
-				mes "And you just happened to talk to me. I thought you were someone from our tribe.";
-				next;
-				mes "["+strcharinfo(0)+"]";
-				mes "I can help you.";
-				next;
-				mes "[Worker]";
-				mes "No, it's alright. We just met, so I don't want to trouble you.";
+				mes "[工人]";
+				mes "但我不能离开这个地方，所以我在等着有人路过。";
+				mes "而你刚好和我说话。我以为你是我们部落的人。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Don't worry about it! Life is all about helping eachother, don't you think so?";
+				mes "我可以帮你。";
 				next;
-				mes " - While the disagreement is taking place, - ";
-				mes " - The screw that has held its ground til now - ";
-				mes " - Finally gives in and breaks in half. - ";
+				mes "[工人]";
+				mes "不，没关系。我们才刚见面，我不想麻烦你。";
 				next;
-				mes "[Worker]";
-				mes "Ah!!!";
+				mes "["+strcharinfo(0)+"]";
+				mes "别担心！生活就是互相帮助，你不觉得吗？";
+				next;
+				mes " - 当争执发生时， - ";
+				mes " - 这个螺丝一直坚守到现在 - ";
+				mes " - 最终屈服并折成两半。 - ";
+				next;
+				mes "[工人]";
+				mes "啊！！！";
 				emotion ET_CRY;
 				emotion ET_CRY, playerattached();
 				next;
-				mes "[Worker]";
-				mes "I can't just care about pride now.";
-				mes "Let me introduce myself, I am ^0000FFGill^000000.";
+				mes "[工人]";
+				mes "我现在不能只顾面子。";
+				mes "让我自我介绍，我是 ^0000FF吉尔^000000。";
 				next;
-				mes "[Gill]";
-				mes "I need a screw to stablize our tent, and it can be found from the ^0000FFHillslion^000000 monster.";
-				mes "Please help me collect ^0000FF30 Horns of Hillslion^000000, and that should be enough for now.";
+				mes "[吉尔]";
+				mes "我需要一个螺丝来稳固我们的帐篷，它可以从 ^0000FF山狮^000000 怪物那里找到。";
+				mes "请帮我收集 ^0000FF30个山狮的角^000000，暂时够用了。";
 				next;
-				mes "[Gill]";
-				mes "I'm really sorry, so please hurry.";
+				mes "[吉尔]";
+				mes "我真的很抱歉，请快点。";
 				set ep13_2_bs1,2;
 				setquest 11105;
 				close;
 			}
 			else if (ep13_2_bs1 == 2) {
 				if (countitem(6032) > 29) {
-					mes "[Gill]";
-					mes "You helped me collect all of the Horns of Hillslion?";
-					mes "Thank you so much.";
+					mes "[吉尔]";
+					mes "你帮我收集了所有的山狮角？";
+					mes "非常感谢你。";
 					next;
-					mes "[Gill]";
-					mes "It's all because of you, we are able to prevent anything disastrous.";
+					mes "[吉尔]";
+					mes "都是因为你，我们才能防止任何灾难发生。";
 					mes "^0000FFEven though you're also an alien race, but compared to the vile fairies^000000, I'm glad to have met someone like "+strcharinfo(0)+".";
 					delitem 6032,30; //Horn_Of_Hilsrion
 					set ep13_2_bs1,3;
@@ -6858,43 +6858,43 @@ manuk,193,135,0	script	Worker#ep13bs	454,{
 					close;
 				}
 				else {
-					mes "[Gill]";
-					mes "Making you do something like this, I feel ashamed.";
+					mes "[吉尔]";
+					mes "让你做这样的事情，我感到羞愧。";
 					close;
 				}
 			}
 			else if (ep13_2_bs1 == 3) {
-				mes "[Gill]";
-				mes "Thank you for helping me.";
+				mes "[吉尔]";
+				mes "谢谢你帮我。";
 				mes "^0000FFEven though you're also an alien race, but compared to the vile Fairies^000000, I'm glad to have met someone like "+strcharinfo(0)+".";
 				close;
 			}
 			else {
-				mes "[Worker]";
-				mes "This is too dangerous, it's become too loose...";
-				mes "It must be replaced soon...";
+				mes "[工人]";
+				mes "这太危险了，变得太松了...";
+				mes "必须尽快更换...";
 				close;
 			}
 		}
 		else {
-			mes "[Gill]";
-			mes "You're here again?";
-			mes "Talking with someone occasionally is quite relaxing.";
+			mes "[吉尔]";
+			mes "你又来了？";
+			mes "偶尔和人聊天挺放松的。";
 			close;
 		}
 	}
 	else {
-		mes "[Worker]";
-		mes "Ehahdie O Ehai";
-		mes "Ohek Hekdh I dkek";
-		mes "Ohehp Qe Tehdhah";
+		mes "[工人]";
+		mes "埃哈迪·欧·埃哈";
+		mes "欧赫克·赫克德·我·德克";
+		mes "欧赫普·Qe·特赫德哈";
 		next;
-		mes "[Worker]";
-		mes "Ehaodke Thdieqak Khehdi";
+		mes "[工人]";
+		mes "埃哈德克·特赫迪克·赫赫迪";
 		mes "PHhdkel";
-		mes "Thhdqdcczk U dheagelokd dok";
+		mes "特赫德克·U·德赫阿格洛克德·多克";
 		next;
-		mes "- You can't understand what he's saying. - ";
+		mes "- 你听不懂他在说什么。 - ";
 		close;
 	}
 }

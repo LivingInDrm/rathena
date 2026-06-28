@@ -17,102 +17,102 @@
 //============================================================
 yuno,179,174,4	script	Gomer	851,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] You are carrying so much. Drop off some of your luggage and come back to me.";
+		mes "[戈默]";
+		mes "你背负的东西太多了。放下一些行李再来找我。";
 		close;
 	}
 	if (countitem(1549)) {
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] So how's that Pilebuncker working out for you?";
+		mes "[戈默]";
+		mes "那么，那个堆叠炮使用得怎么样？";
 		close;
 	}
 	if (Class != Job_Mechanic && Class != Job_Mechanic_T && Class != Job_Baby_Mechanic) {
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] I'm a retired Mechanic and I don't think I have any business with you.";
+		mes "[戈默]";
+		mes "我是一名退休的机械师，我想我和你没有什么生意。";
 		close;
 	}
-	mes "[DRY-RUN] [Gomer]";
-	mes "[DRY-RUN] So? What does it feel like to be on a Madogear?";
-	mes "[DRY-RUN] It's something that's not allowed for those who failed to seek out their own path.";
+	mes "[戈默]";
+	mes "那么？骑上疯狂齿轮的感觉怎么样？";
+	mes "这是一种不允许那些未能找到自己道路的人体验的东西。";
 	next;
-	mes "[DRY-RUN] [Gomer]";
-	mes "[DRY-RUN] Me? I retired a long time ago. Because I got into an accident... got badly hurt and won't be able to ride again. I am upset about it.";
+	mes "[戈默]";
+	mes "我？我很久以前就退休了。因为我发生了事故……受了重伤，无法再骑上去了。我对此感到很沮丧。";
 	next;
-	mes "[DRY-RUN] [Gomer]";
-	mes "[DRY-RUN] So I've decided to stay here forging gears for Madogear.";
-	mes "[DRY-RUN] Huh? I'm not saying I have any complaints about this work.";
+	mes "[戈默]";
+	mes "所以我决定留在这里为疯狂齿轮打造齿轮。";
+	mes "嗯？我并不是说我对这份工作有什么不满。";
 	next;
-	mes "[DRY-RUN] [Gomer]";
-	mes "[DRY-RUN] Forced to do something you don't like, there is nothing more miserable than that.";
+	mes "[戈默]";
+	mes "被迫做自己不喜欢的事情，没有比这更痛苦的了。";
 	next;
-	mes "[DRY-RUN] [Gomer]";
-	mes "[DRY-RUN] There are people who are happy just being props, you know, like being the wall for someone to lean on.";
+	mes "[戈默]";
+	mes "有些人只是当道具也很开心，你知道吗，就像是成为别人依靠的墙。";
 	next;
-	mes "[DRY-RUN] [Gomer]";
-	mes "[DRY-RUN] That makes me feel good and I am about to make a new gear. I want you to help me. What do you say?";
+	mes "[戈默]";
+	mes "这让我感觉很好，我正准备制作一个新装备。我想让你帮我。你觉得怎么样？";
 	next;
-	switch(select("[DRY-RUN] I am not that interested.:What are you going to make?:Where do you get the materials?:I brought the materials.")) {
+	switch(select("我对此不太感兴趣。:你打算做什么？:你从哪里得到材料？:我带来了材料。")) {
 	case 1:
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] Nothing I can do";
-		mes "[DRY-RUN] about it then.";
-		mes "[DRY-RUN] See you next time!";
+		mes "[戈默]";
+		mes "我无能为力。";
+		mes "那也没办法。";
+		mes "下次见！";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] Um, a huge metal stick that could smash an opponent in one hit!";
+		mes "[戈默]";
+		mes "嗯，一个可以一击击倒对手的巨大金属棒！";
 		next;
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] It doesn't look fancy, but I've designed a spring-loaded device to attack with great strength.";
+		mes "[戈默]";
+		mes "它看起来并不华丽，但我设计了一个弹簧装置，可以用强大的力量进行攻击。";
 		next;
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] It's concealed, so when you find a chance, one shot could put an opponent in critical condition!";
-		mes "[DRY-RUN] I can't wait to see it in action!";
+		mes "[戈默]";
+		mes "它是隐蔽的，所以当你找到机会时，一击就能让对手陷入危急状态！";
+		mes "我迫不及待想看到它的实际效果！";
 		next;
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] If you were to imagine how good this kind of weapon could be, I will make it come true.";
+		mes "[戈默]";
+		mes "如果你能想象这种武器有多强，我会让它变成现实。";
 		next;
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] Bring me 200 Steel, 30 Flexible Tubes, and 1 Brocca. I could make what I just described with those materials.";
+		mes "[戈默]";
+		mes "给我200个钢铁、30根柔性管和1个布罗卡。我可以用这些材料制造我刚才描述的东西。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] You should be able get steel from many monsters like Kobolds.";
+		mes "[戈默]";
+		mes "你应该能从很多怪物那里获得钢铁，比如科博尔特。";
 		next;
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] Flexible Tubes are more rare, dropped by Metalings around Einbroch and Lighthalzen.";
+		mes "[戈默]";
+		mes "柔性管比较稀有，由艾因布罗克和利希塔恩附近的金属怪掉落。";
 		next;
-		mes "[DRY-RUN] [Gomer]";
-		mes "[DRY-RUN] Lastly, finding a Brocca is very hard, but you should be able to do something about it. Haha, go get it!";
+		mes "[戈默]";
+		mes "最后，找到一个布罗卡是非常困难的，但你应该能想办法解决。哈哈，去找吧！";
 		close;
 	case 4:
 		if (countitem(999) < 200 || countitem(7325) < 30 || countitem(1415) < 1) {
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] You haven't brought all of the materials that I asked for.";
+			mes "[戈默]";
+			mes "你还没有带来我要求的所有材料。";
 			next;
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] I have a habit of giving up what I've been making and trying to make new things when the inspiration comes up.";
-			mes "[DRY-RUN] You'd better hurry!";
+			mes "[戈默]";
+			mes "我有一个习惯，就是在灵感来临时放弃我正在制作的东西，尝试制作新的东西。";
+			mes "你最好快点！";
 			close;
 		} else {
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] Oh, I've been waiting. You didn't come on time, so I was wondering if you forgot about it. Please wait there a little bit.";
+			mes "[戈默]";
+			mes "哦，我一直在等你。你没有准时来，我在想你是不是忘了这件事。请稍等一下。";
 			specialeffect EF_REPAIRWEAPON;
 			next;
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] It's done. What do you think? Not bad, eh? Although I made it myself, I have to say it's pretty decently done.";
+			mes "[戈默]";
+			mes "完成了。你觉得怎么样？还不错吧？虽然是我自己做的，但我得说做得相当不错。";
 			next;
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] Combination of weight, volume and look at its color and gloss. It catches my heart!";
+			mes "[戈默]";
+			mes "结合重量、体积以及颜色和光泽的外观。它抓住了我的心！";
 			next;
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] ...........";
+			mes "[戈默]";
+			mes "...........";
 			next;
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] Uh, with little improvement, it could be mass produced and delivered. I'm sure I can make more of these so I will give this one to you.";
+			mes "[戈默]";
+			mes "呃，稍微改进一下，就可以大规模生产和交付。我相信我可以做更多这些，所以我会把这个给你。";
 			next;
-			mes "[DRY-RUN] [Gomer]";
-			mes "[DRY-RUN] Oh, and it turns out that I didn't need all that Steel after all. So here, take most of it back.";
+			mes "[戈默]";
+			mes "哦，结果我并不需要那么多钢铁。所以，拿回大部分吧。";
 			delitem 999,50; //Steel
 			delitem 7325,30; //Tube
 			delitem 1415,1; //Skewer

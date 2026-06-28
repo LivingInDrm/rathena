@@ -70,17 +70,17 @@ prt_church,100,123,4	script	Vomars	60,{
 	
 	if (getpartnerid() > 0) {
 		mes "["+@name$+"]";
-		mes "You have my blessings, have a wonderful married life.";
+		mes "愿你们幸福美满，拥有美好的婚姻生活。";
 		close;
 	}
 	if ($wed_progress == 0) { // Official iRO dialog
 		mes "["+@name$+"]";
-		mes "You must apply for";
-		mes "marriage with Happy Marry";
-		mes "before you can get married.";
-		mes "Happy Marry will let you know";
-		mes "what else you'll need to do";
-		mes "to prepare for marriage";
+		mes "你必须申请";
+		mes "与快乐婚姻的婚姻";
+		mes "才能结婚。";
+		mes "快乐婚姻会告诉你";
+		mes "你还需要做什么";
+		mes "来准备婚礼。";
 		close;
 	} // End official iRO dialog
 	
@@ -94,7 +94,7 @@ prt_church,100,123,4	script	Vomars	60,{
 	}
 	mes "["+@name$+"]";
 	if ($wed_groom_progress == 0 || $wed_bride_progress == 0) {
-		mes "There is a wedding being planned. I would appreciate it if you would not interrupt me.";
+		mes "正在筹备一场婚礼。如果你能不打扰我，我将不胜感激。";
 		close;
 	}
 	if ($wed_groom_progress == 6) {
@@ -102,23 +102,23 @@ prt_church,100,123,4	script	Vomars	60,{
 		close;
 	}
 	mes "I am going to wed "+$wed_groom$+" and "+$wed_bride$+", do you have an objection to it?";
-	if (select("Sorry, please go on.","Yes, I actually do.") == 2) {
+	if (select("抱歉，请继续。","Yes, I actually do.") == 2) {
 		//Abort
 		npctalk @name$ +" : Ladies and gentlemen, "+strcharinfo(0)+" has an objection to the wedding!";
 		SF_wed_end();
-		mes "Why should they not be wed?";
+		mes "他们为什么不应该结婚？";
 		input $@msg$;
 		npctalk @name$ +" : "+ strcharinfo(0) +"'s objection is: "+$@msg$;
 		emotion ET_CRY;
-		mes "I see...";
+		mes "我明白了……";
 	} else
-		mes "Very well, go sit and enjoy the ceremony.";
+		mes "很好，去坐下享受仪式吧。";
 	close;
 
 function SF_Groom {
 	if ($wed_bride_progress == 0) {
 		mes "["+@name$+"]";
-		mes "Looks like your bride has yet to arrive and register.";
+		mes "看起来你的新娘还没有到达并注册。";
 		close;
 	}
 	if (SF_equip_check() == 0)
@@ -130,14 +130,14 @@ function SF_Groom {
 		break;
 	case 2:
 		mes "["+@name$+"]";
-		mes "I am waiting for your partner to accept you to start the ceremony.";
+		mes "我在等待你的伴侣接受你以开始仪式。";
 		close;
 	case 3:
 		SF_RetrieveRingM();
 		break;
 	case 4:
 		mes "["+@name$+"]";
-		mes "Your partner's wedding ring hasn't been retrieved yet. The ceremony will start as soon as you both have claimed your rings.";
+		mes "你的伴侣的婚戒还没有领取。仪式将在你们都领取戒指后开始。";
 		close;
 	case 5:
 		mes "["+@name$+"]";
@@ -145,7 +145,7 @@ function SF_Groom {
 		break;
 	default:
 		mes "["+@name$+"]";
-		mes "Please don't interrupt me now.";
+		mes "请现在不要打扰我。";
 		close;
 	}
 }
@@ -153,7 +153,7 @@ function SF_Groom {
 function SF_Bride {
 	if ($wed_groom_progress == 0) {
 		mes "["+@name$+"]";
-		mes "Looks like your groom has yet to arrive and register.";
+		mes "看起来你的新郎还没有到达并注册。";
 		close;
 	}
 
@@ -166,14 +166,14 @@ function SF_Bride {
 		break;
 	case 2:
 		mes "["+@name$+"]";
-		mes "I am waiting for your partner to accept you to start the ceremony.";
+		mes "我在等待你的伴侣接受你以开始仪式。";
 		close;
 	case 3:
 		SF_RetrieveRingF();
 		break;
 	case 4:
 		mes "["+@name$+"]";
-		mes "Your partner's wedding ring hasn't been retrieved yet. The ceremony will start as soon as you both have claimed your rings.";
+		mes "你的伴侣的婚戒还没有领取。仪式将在你们都领取戒指后开始。";
 		close;
 	case 5:
 		mes "["+@name$+"]";
@@ -181,7 +181,7 @@ function SF_Bride {
 		break;
 	default:
 		mes "["+@name$+"]";
-		mes "Please don't interrupt me now.";
+		mes "请现在不要打扰我。";
 		close;
 	}
 }
@@ -190,17 +190,17 @@ function SF_AcceptGroom {
 	mes "["+@name$+"]";
 	mes $wed_bride$+", "+$wed_groom$+" has requested to be your husband for the rest of your life. Do you accept?";
 	next;
-	switch(select("I need time to think about it.","No, I don't!","Yes, I do!")) {
+	switch(select("我需要时间考虑一下。","No, I don't!","Yes, I do!")) {
 	case 1:
 		mes "["+@name$+"]";
-		mes "You what!?";
-		mes "err.. *cough* *cough* very well... come back after you've made up your mind.";
+		mes "你说什么！？";
+		mes "呃……*咳* *咳* 很好……在你下定决心后再回来。";
 		emotion ET_ANGER;
 		close;
 	case 2:
 		mes "["+@name$+"]";
-		mes "!!";
-		mes "Ah... err... ehm... okay. You two seem to have some differences to settle first.";
+		mes "！！";
+		mes "啊……呃……嗯……好的。你们似乎有一些分歧需要先解决。";
 		close2;
 		emotion ET_HUK;
 		npctalk @name$ +" : Ladies and gentlemen, "+$wed_bride$+" has rejected to marry "+$wed_groom$+"!";
@@ -214,7 +214,7 @@ function SF_AcceptGroom {
 		}
 		emotion ET_OK;
 		mes "["+@name$+"]";
-		mes "After your groom approves, you will be given your rings, the ceremony will begin and you will be officially married.";
+		mes "在你的新郎批准后，你将获得戒指，仪式将开始，你们将正式结为夫妻。";
 		close;
 	}
 }
@@ -223,17 +223,17 @@ function SF_AcceptBride {
 	mes "["+@name$+"]";
 	mes $wed_groom$+", "+$wed_bride$+" has requested to be your wife for the rest of your life. Do you accept?";
 	next;
-	switch(select("I need time to think about it.","No, I don't!","Yes, I do!")) {
+	switch(select("我需要时间考虑一下。","No, I don't!","Yes, I do!")) {
 	case 1:
 		mes "["+@name$+"]";
-		mes "You what!?";
-		mes "err.. *cough* *cough* very well... come back after you've made up your mind.";
+		mes "你说什么！？";
+		mes "呃……*咳* *咳* 很好……在你下定决心后再回来。";
 		emotion ET_ANGER;
 		close;
 	case 2:
 		mes "["+@name$+"]";
-		mes "!!";
-		mes "Ah... err... ehm... okay. You two seem to have some differences to settle first.";
+		mes "！！";
+		mes "啊……呃……嗯……好的。你们似乎有一些分歧需要先解决。";
 		emotion ET_HUK;
 		close2;
 		npctalk @name$ +" : Ladies and gentlemen, "+$wed_groom$+" has rejected to marry "+$wed_bride$+"!";
@@ -247,14 +247,14 @@ function SF_AcceptBride {
 		}
 		emotion ET_OK;
 		mes "["+@name$+"]";
-		mes "After your bride approves, you will be given your rings, the ceremony will begin and you will be officially married.";
+		mes "在你的新娘批准后，你将获得戒指，仪式将开始，你们将正式结为夫妻。";
 		close;
 	}
 }
 
 function SF_RingsAccepted {
 	mes "["+@name$+"]";
-	mes "Now that you both have accepted, the wedding will begin. Please come forth, you and your partner, to retrieve your rings.";
+	mes "现在你们都已接受，婚礼将开始。请你和你的伴侣上前领取戒指。";
 	set $wed_bride_progress,3;
 	set $wed_groom_progress,3;
 	announce $wed_groom$+" and "+$wed_bride$+"'s wedding ceremony will be held at the church!",8;
@@ -274,17 +274,17 @@ function SF_RetrieveRingM {
 	else
 		set @item, 2635;	//Bride's wedding ring
 	if (getnameditem(@item,$wed_groom$) == 0) {
-		mes "You don't seem to have enough space to carry the ring... go free up some space and come back to reclaim your partner's ring.";
+		mes "你似乎没有足够的空间来携带戒指……去腾出一些空间，然后回来领取你伴侣的戒指。";
 		close;
 	}
-	mes "Here's the wedding ring for your bride.";
+	mes "这是你新娘的婚戒。";
 	if ($@wed_ring) delitem $@wed_ring,1;
 	set $wed_groom_progress,4;
 	
 	if ($wed_bride_progress == 4)
 		SF_StartCeremony();
 	else {
-		mes "Once your bride retrieves the ring, the ceremony will begin.";
+		mes "一旦你的新娘领取戒指，仪式将开始。";
 		close;
 	}
 }
@@ -301,23 +301,23 @@ function SF_RetrieveRingF {
 		set @item, 2635;	//Bride's wedding ring
 
 	if (getnameditem(@item,$wed_bride$) == 0) {
-		mes "You don't seem to have enough space to carry the ring... go free up some space and come back to reclaim your partner's ring.";
+		mes "你似乎没有足够的空间来携带戒指……去腾出一些空间，然后回来领取你伴侣的戒指。";
 		close;
 	}
-	mes "Here's the wedding ring for your groom.";
+	mes "这是你新郎的婚戒。";
 	if ($@wed_ring) delitem $@wed_ring,1;
 	set $wed_bride_progress,4;
 
 	if ($wed_groom_progress == 4)
 		SF_StartCeremony();
 	else {
-		mes "Once your groom retrieves the ring, the ceremony will begin.";
+		mes "一旦你的新郎领取戒指，仪式将开始。";
 		close;
 	}
 }
 
 function SF_StartCeremony {
-	mes "I will now start the wedding ceremony, and you will be declared forth husband and wife.";
+	mes "我现在将开始婚礼仪式，你们将被宣布为夫妻。";
 	set $wed_bride_progress,5;
 	set $wed_groom_progress,5;
 	set $@msg$,$wed_groom$;

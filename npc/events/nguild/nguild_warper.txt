@@ -83,14 +83,14 @@ prontera,146,163,6	script	Novice Castles	729,{
 }
 
 n_castle,102,107,5	script	Cita	729,{
-	mes "[DRY-RUN] [Cita]";
+	mes "[西塔]";
 	mes "Hello, "+ strcharinfo(0) +". Can I help you?";
 	next;
-	if (select("[DRY-RUN] Warp me to Prontera!","Cancel") == 1) {
+	if (select("传送我到普隆德拉！","Cancel") == 1) {
 		warp "prontera",155,177+rand(5);
 	} else {
-		mes "[DRY-RUN] [Cita]";
-		mes "[DRY-RUN] Ok.";
+		mes "[西塔]";
+		mes "好的。";
 	}
 	close;
 }

@@ -19,65 +19,65 @@ valkyrie,44,55,5	script	Sniper#Valkyrie	727,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Sniper]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[神射手]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Sniper]";
-		mes "[DRY-RUN] One shot.";
-		mes "[DRY-RUN] One kill.";
-		mes "[DRY-RUN] It's not so hard";
-		mes "[DRY-RUN] once you develop the";
-		mes "[DRY-RUN] vision for that style";
-		mes "[DRY-RUN] of battling.";
+		mes "[神射手]";
+		mes "一击。";
+		mes "一杀。";
+		mes "这并不难";
+		mes "一旦你培养出";
+		mes "那种风格的";
+		mes "战斗视野。";
 		close;
 	}
 	else if (ADVJOB == Job_Sniper && Class == Job_Archer_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Sniper]";
-		mes "[DRY-RUN] The world is in";
-		mes "[DRY-RUN] need of mighty Bowmen";
-		mes "[DRY-RUN] like you. Are you ready for";
-		mes "[DRY-RUN] the awesome responsibility?";
+		mes "[神射手]";
+		mes "这个世界需要";
+		mes "强大的弓箭手";
+		mes "像你一样。你准备好";
+		mes "承担这个伟大的责任吗？";
 		next;
-		mes "[DRY-RUN] [Sniper]";
-		mes "[DRY-RUN] Are you willing to";
-		mes "[DRY-RUN] take the next step and";
-		mes "[DRY-RUN] become a Sniper?";
+		mes "[神射手]";
+		mes "你愿意";
+		mes "迈出下一步并";
+		mes "成为一名神射手吗？";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [Sniper]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[神射手]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Sniper]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[神射手]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Sniper;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [Sniper]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] As a Sniper, I hope";
-		mes "[DRY-RUN] that the minions of evil";
-		mes "[DRY-RUN] will never be safe so";
-		mes "[DRY-RUN] long as they are in";
-		mes "[DRY-RUN] your sight!";
+		mes "[神射手]";
+		mes "恭喜！";
+		mes "作为一名神射手，我希望";
+		mes "邪恶的爪牙";
+		mes "永远不会安全，只要";
+		mes "他们在";
+		mes "你的视线之内！";
 		close;
 	}
-	mes "[DRY-RUN] [Sniper]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[神射手]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [Sniper]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[神射手]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

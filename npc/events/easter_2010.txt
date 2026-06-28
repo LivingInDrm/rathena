@@ -15,14 +15,14 @@
 prontera,202,297,3	script	Rina#Easter	727,{
 	disable_items;
 	if (BaseLevel < 40) {
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] Hi~!";
-		mes "[DRY-RUN] You are an adventurer like me.";
+		mes "[丽娜]";
+		mes "嗨~!";
+		mes "你和我一样是冒险者。";
 		next;
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] I am put under a curse.";
-		mes "[DRY-RUN] I know you want to help me,";
-		mes "[DRY-RUN] but your experience is not enough.";
+		mes "[丽娜]";
+		mes "我被施下了诅咒。";
+		mes "我知道你想帮助我，";
+		mes "但你的经验还不够。";
 		next;
 		consumeitem 607; //Yggdrasilberry
 		consumeitem 12068; //Luk_Dish03
@@ -30,89 +30,89 @@ prontera,202,297,3	script	Rina#Easter	727,{
 		consumeitem 12053; //Vit_Dish03
 		npcskill "AL_INCAGI",1,0,0;
 		npcskill "AL_BLESSING",1,0,0;
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] I am not in the good condition,";
-		mes "[DRY-RUN] so what I can do for you";
-		mes "[DRY-RUN] is just like this.";
-		mes "[DRY-RUN] Then, good bye.";
-		mes "[DRY-RUN] Take care~!";
+		mes "[丽娜]";
+		mes "我现在的状态不好，";
+		mes "所以我能为你做的";
+		mes "就只有这样。";
+		mes "那么，再见。";
+		mes "保重~!";
 		close;
 	}
 	set .@quest1, checkquest(9117);
 	if (.@quest1 == -1) {
 		playbgm "30.mp3"; // One Step Closer
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] Hi~!";
-		mes "[DRY-RUN] You are an adventurer like me.";
-		mes "[DRY-RUN] Well... In fact, I am";
-		mes "[DRY-RUN] put under a strange curse.";
+		mes "[丽娜]";
+		mes "嗨~!";
+		mes "你和我一样是冒险者。";
+		mes "嗯... 其实，我是";
+		mes "被施下了一个奇怪的诅咒。";
 		next;
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] To release this curse,";
-		mes "[DRY-RUN] somebody needs to do ^800080Oath-taking ceremony^000000";
-		mes "[DRY-RUN] with me,";
-		mes "[DRY-RUN] and then needs to solve";
-		mes "[DRY-RUN] several problems instead of me.";
+		mes "[丽娜]";
+		mes "要解除这个诅咒，";
+		mes "有人需要进行 ^800080宣誓仪式^000000";
+		mes "和我一起，";
+		mes "然后需要解决";
+		mes "几个问题，而不是我。";
 		next;
-		if (select("[DRY-RUN] Let's help ^800080Rina^000000.:Just skip it.") == 2) {
+		if (select("让我们帮助 ^800080Rina^000000.:就跳过它。") == 2) {
 			emotion ET_OHNO;
-			mes "[DRY-RUN] [Rina]";
-			mes "[DRY-RUN] To help me,";
-			mes "[DRY-RUN] I need a competent adventurer.";
-			mes "[DRY-RUN] If you know those people,";
-			mes "[DRY-RUN] I hope you to introduce them to me later.";
+			mes "[丽娜]";
+			mes "为了帮助我，";
+			mes "我需要一个有能力的冒险者。";
+			mes "如果你认识那些人，";
+			mes "我希望你能把他们介绍给我。";
 			close;
 		}
 		emotion ET_COOL;
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] Are you really going to help me?";
-		mes "[DRY-RUN] Thank you.";
-		mes "[DRY-RUN] You are so brave.";
+		mes "[丽娜]";
+		mes "你真的会帮助我吗？";
+		mes "谢谢你。";
+		mes "你真勇敢。";
 		next;
 		playbgm "01.mp3"; // Title
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] Then I'll start ^800080Oath-taking ceremony^000000.";
-		mes "[DRY-RUN] ^787878( A mysterious atmosphere hangs in the air. )^000000";
-		mes "[DRY-RUN] [Rina]";
+		mes "[丽娜]";
+		mes "那么我将开始 ^800080宣誓仪式^000000。";
+		mes " ";
+		mes "^787878（空气中弥漫着神秘的气氛。）^000000";
 		next;
 		specialeffect2 EF_COUPLECASTING;
 		next;
-		mes "[DRY-RUN] Blah blah blah...";
-		mes "[DRY-RUN] Blah blah blah...";
-		mes "[DRY-RUN] ^787878( ... This is a strange spell. )^000000";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] Haaaaah~";
-		mes "[DRY-RUN] ^800080Oath-taking ceremony^000000 is done enough now.";
+		mes "[丽娜]";
+		mes "唠唠叨叨……";
+		mes " ";
+		mes "唠唠叨叨……";
+		mes " ";
+		mes "^787878(……这是一个奇怪的咒语。)^000000";
 		next;
 		specialeffect2 EF_SIGNUM;
-		mes "[DRY-RUN] Isn't that so simple?";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] Okay, from no on,";
-		mes "[DRY-RUN] you need to go on ^006400a real adventure";
+		mes "[丽娜]";
+		mes "哈啊~";
+		mes "^800080宣誓仪式^000000现在已经完成了。";
+		mes "这不是很简单吗？";
 		next;
 		emotion ET_HUM;
-		mes "[DRY-RUN] to release my curse^000000.";
-		mes "[DRY-RUN] Let me know when you are ready.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] What you need to do is";
-		mes "[DRY-RUN] to choose one monster among";
+		mes "[丽娜]";
+		mes "好的，从现在开始，";
+		mes "你需要去进行一次^006400真正的冒险";
+		mes "来解除我的诅咒^000000。";
+		mes "当你准备好的时候告诉我。";
 		setquest 9117;
 		close;
 	} else if (.@quest1 == 0 || .@quest1 == 1) {
 	L_HuntingInfo:
-		mes "[DRY-RUN] ^FF0000DEVIRUCHI,^000000 ^FF0000WRAITH DEAD,^000000";
-		mes "[DRY-RUN] ^FF0000DULLAHAN,^000000 ^FF0000NIGHTMARE TERROR^000000";
-		mes "[DRY-RUN] and then kill ^0000FF50^000000 monsters";
-		mes "[DRY-RUN] and come back to me.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] It must be a tough task,";
-		mes "[DRY-RUN] but you are the right person";
+		mes "[丽娜]";
+		mes "你需要做的是";
+		mes "在以下怪物中选择一个";
+		mes "^FF0000德维鲁奇,^000000 ^FF0000幽灵死者,^000000";
+		mes "^FF0000杜拉汉,^000000 ^FF0000梦魇恐惧^000000";
+		mes "然后杀死 ^0000FF50^000000 怪物";
+		mes "然后回来找我。";
 		next;
-		mes "[DRY-RUN] who did the oath-taking ceremony.";
-		mes "[DRY-RUN] I hope you succeed.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] You did it.";
-		mes "[DRY-RUN] I can feel that my body is recovering.";
+		mes "[丽娜]";
+		mes "这一定是个艰难的任务，";
+		mes "但你是合适的人选";
+		mes "曾参加过宣誓仪式。";
+		mes "我希望你能成功。";
 		if (.@quest1 < 2) {
 			completequest 9117;
 			setquest 9118;
@@ -127,14 +127,14 @@ prontera,202,297,3	script	Rina#Easter	727,{
 	} else if (.@quest1 == 2) {
 		if (checkquest(9118) < 2 || checkquest(9119) < 2 || checkquest(9120) < 2 || checkquest(9121) < 2) {
 			if (checkquest(9118,HUNTING) == 2 || checkquest(9119,HUNTING) == 2 || checkquest(9120,HUNTING) == 2 || checkquest(9121,HUNTING) == 2) {
-				mes "[DRY-RUN] But it is not enough.";
-				mes "[DRY-RUN] [Rina]";
-				mes "[DRY-RUN] ^006400You have one more thing to do.^000000";
-				mes "[DRY-RUN] Let me know when you're ready.";
+				mes "[丽娜]";
+				mes "你做到了。";
+				mes "我能感觉到我的身体正在恢复。";
+				mes "但这还不够。";
 				next;
-				mes "[DRY-RUN] [Rina]";
-				mes "[DRY-RUN] I will check one thing.";
-				mes "[DRY-RUN] For this task,";
+				mes "[丽娜]";
+				mes "^006400你还有一件事要做。^000000";
+				mes "告诉我你准备好了。";
 				close2;
 				completequest 9118;
 				completequest 9119;
@@ -148,37 +148,37 @@ prontera,202,297,3	script	Rina#Easter	727,{
 	}
 	set .@quest2, checkquest(9122);
 	if (.@quest2 == 0 || .@quest2 == 1) {
-		mes "[DRY-RUN] You need to feel the music.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] You cannot complete the task";
-		mes "[DRY-RUN] without the music.";
+		mes "[丽娜]";
+		mes "我会检查一件事。";
+		mes "为了这个任务，";
+		mes "你需要感受音乐。";
 		next;
-		mes "[DRY-RUN] do you have any problem?";
-		mes "[DRY-RUN] - Check! -";
-		mes "[DRY-RUN] ^787878- BGM option should be turned on -^000000";
-		mes "[DRY-RUN] ^787878- in the game option menu. -^000000";
+		mes "[丽娜]";
+		mes "你无法完成这个任务";
+		mes "没有音乐。";
+		mes "你有什么问题吗？";
 		next;
-		mes "[DRY-RUN] ^787878- Please check -^000000";
-		mes "[DRY-RUN] ^787878- whether you can listen -^000000";
-		mes "[DRY-RUN] ^787878- to the music sound. -^000000";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] I am so shocked that";
-		mes "[DRY-RUN] you cannot feel the music.";
+		mes "- 检查！ -";
+		mes "^787878- 背景音乐选项应该开启 -^000000";
+		mes "^787878- 在游戏选项菜单中。 -^000000";
+		mes "^787878- 请检查 -^000000";
+		mes "^787878- 你是否能听到 -^000000";
+		mes "^787878- 音乐声。 -^000000";
 		next;
-		if(select("[DRY-RUN] [I'm ready to listen to the BGM.]:[I can't listen to the BGM.]") == 2) {
-			mes "[DRY-RUN] What should we do now...";
-			mes "[DRY-RUN] [Rina]";
-			mes "[DRY-RUN] Listen carefully";
-			mes "[DRY-RUN] the feelings of it...";
+		if(select("[我准备好听背景音乐了。]:[我不能听背景音乐。]") == 2) {
+			mes "[丽娜]";
+			mes "我非常震惊，";
+			mes "你无法感受到音乐。";
+			mes "我们现在该怎么办...";
 			close2;
 			emotion ET_CRY;
 			end;
 		}
-		mes "[DRY-RUN] I can't hear it,";
-		mes "[DRY-RUN] but you can hear the sound.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] ^006400The music you're hearing now^000000";
-		mes "[DRY-RUN] has something to do with the one specific city.";
+		mes "[丽娜]";
+		mes "仔细听";
+		mes "它的感觉...";
+		mes "我听不见它，";
+		mes "但你能听到声音。";
 		next;
 		if (oversea_event2 < 520 || oversea_event3 < 270 || oversea_event6 < 245 || oversea_event9 < 197) {
 			     if (oversea_event2 == 520) playbgm "13.mp3"; // Theme of Geffen
@@ -194,26 +194,26 @@ prontera,202,297,3	script	Rina#Easter	727,{
 				}
 			}
 		}
-		mes "[DRY-RUN] Think carefully ^006400what kind of city^000000";
-		mes "[DRY-RUN] has similar feeling with this music.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] And...";
-		mes "[DRY-RUN] Go to ^006400the city";
+		mes "[丽娜]";
+		mes "^006400你现在听到的音乐^000000";
+		mes "与某个特定城市有关。";
+		mes "仔细想想 ^006400什么样的城市^000000";
+		mes "与这音乐有相似的感觉。";
 		next;
-		mes "[DRY-RUN] where you can remind by this music^000000.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] After that,";
-		mes "[DRY-RUN] find ^FF0000the strange mark^000000";
+		mes "[丽娜]";
+		mes "还有...";
+		mes "去 ^006400那个城市";
+		mes "你可以通过这音乐想起的地方^000000。";
 		next;
-		mes "[DRY-RUN] around the entrances of the city.";
-		mes "[DRY-RUN] Then you can release the curse on me.";
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] It must be tough";
-		mes "[DRY-RUN] but I hope you good luck.";
+		mes "[丽娜]";
+		mes "之后，";
+		mes "找到 ^FF0000奇怪的标记^000000";
+		mes "在城市的入口周围。";
+		mes "然后你就可以解除对我的诅咒。";
 		next;
-		mes "[DRY-RUN] [Rina]";
-		mes "[DRY-RUN] You're back~!";
-		mes "[DRY-RUN] My curse has been released.";
+		mes "[丽娜]";
+		mes "这一定很艰难";
+		mes "但我希望你好运。";
 		close2;
 		emotion ET_OHNO;
 		end;
@@ -221,17 +221,17 @@ prontera,202,297,3	script	Rina#Easter	727,{
 		set .@quest3, checkquest(9123);
 		if (.@quest3 == 0 || .@quest3 == 1) {
 			emotion ET_CHUP;
-			mes "[DRY-RUN] Thank you so much.";
-			mes "[DRY-RUN] [Rina]";
-			mes "[DRY-RUN] Your bag is too full.";
-			mes "[DRY-RUN] I have a present for you";
+			mes "[丽娜]";
+			mes "你回来了~！";
+			mes "我的诅咒已经解除。";
+			mes "非常感谢你。";
 			next;
 			if (checkweight(5852,1) == 0) {
-				mes "[DRY-RUN] so make your bag lighter.";
-				mes "[DRY-RUN] I'll wait for you.";
-				mes "[DRY-RUN] [Rina]";
-				mes "[DRY-RUN] This is the present for you.";
-				mes "[DRY-RUN] It's not a big one";
+				mes "[丽娜]";
+				mes "你的包太满了。";
+				mes "我有一个礼物给你";
+				mes "所以请让你的包轻一点。";
+				mes "我会等你的。";
 				close;
 			}
 			completequest 9123;
@@ -262,16 +262,16 @@ prontera,202,297,3	script	Rina#Easter	727,{
 				set .@nJobExp, (JobLevel * JobLevel * (JobLevel / 5 + 2) + (20 - JobLevel)) * 3;
 			}
 			getexp .@nBaseExp,.@nJobExp;
-			mes "[DRY-RUN] but please take it";
-			mes "[DRY-RUN] as a token of my gratitude.";
-			mes "[DRY-RUN] [Rina]";
-			mes "[DRY-RUN] I'll take a rest for a few days";
-			mes "[DRY-RUN] and then I'll go on an adventure.";
+			mes "[丽娜]";
+			mes "这是给你的礼物。";
+			mes "这不是一个大东西";
+			mes "但请接受它";
+			mes "作为我感激的象征。";
 			next;
-			mes "[DRY-RUN] See you again.";
-			mes "[DRY-RUN] [Rina]";
-			mes "[DRY-RUN] Thank you for releasing my curse.";
-			mes "[DRY-RUN] I'll take a rest for a few days";
+			mes "[丽娜]";
+			mes "我会休息几天";
+			mes "然后我会去冒险。";
+			mes "再见。";
 			close2;
 			consumeitem 607; //Yggdrasilberry
 			consumeitem 12068; //Luk_Dish03
@@ -281,11 +281,11 @@ prontera,202,297,3	script	Rina#Easter	727,{
 			npcskill "AL_BLESSING",1,0,0;
 			end;
 		} else {
-			mes "[DRY-RUN] and then go on an adventure again.";
-			mes "[DRY-RUN] Have a happy day~!";
-			mes "I'll take a rest for a few days";
-			mes "and then go on an adventure again.";
-			mes "Have a happy day~!";
+			mes "[丽娜]";
+			mes "谢谢你解除我的诅咒。";
+			mes "我会休息几天";
+			mes "然后再去冒险。";
+			mes "祝你有个愉快的一天~！";
 			close2;
 			consumeitem 607; //Yggdrasilberry
 			npcskill "AL_INCAGI",1,0,0;
@@ -299,13 +299,13 @@ geffen,207,114,4	script	#Hiddne01Easter	844,{
 	if (oversea_event2 > 519) {
 	OnRelease:
 		specialeffect EF_PATTACK;
-		mes "[DRY-RUN] - I found ^0000FFthe strange mark^000000. -";
+		mes "- 我发现了 ^0000FF奇怪的标记^000000。 -";
 		next;
 		specialeffect2 EF_HOLYHIT;
-		mes "[DRY-RUN] - I can definitely feel that";
-		mes "[DRY-RUN] - ^0000FFRina^000000 has been released";
-		mes "[DRY-RUN] - from the curse.";
-		mes "[DRY-RUN] - ^006400Let's go back to Rina!^000000";
+		mes "- 我确实能感觉到这个";
+		mes "- ^0000FF瑞娜^000000已经被释放了";
+		mes "- 摆脱了诅咒。";
+		mes "- ^006400我们回去找瑞娜吧！^000000";
 		if (checkquest(9122) < 2) {
 			completequest 9122;
 			setquest 9123;
@@ -530,55 +530,55 @@ prontera,204,297,3	script	Rina's Little Friend	463,{
 }
 
 prontera,116,82,5	script	Traveler#01Easter	85,{
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] I'm a traveler";
-	mes "[DRY-RUN] and I often visit ^8B4513Prontera^000000.";
-	mes "[DRY-RUN] Hmm, I think I might";
-	mes "[DRY-RUN] see you around here before.";
+	mes "[旅行者]";
+	mes "我是一名旅行者";
+	mes "我经常访问^8B4513普隆德拉^000000。";
+	mes "嗯，我想我可能";
+	mes "以前在这里见过你。";
 	next;
-	if(select("[DRY-RUN] Listen some more.:Just ignore it.") == 2) {
-		mes "[DRY-RUN] [Traveler]";
-		mes "[DRY-RUN] As I expected,";
-		mes "[DRY-RUN] you are a silent person. Ha ha.";
-		mes "[DRY-RUN] Good bye.";
+	if(select("再听听吧。:就忽略它吧。") == 2) {
+		mes "[旅行者]";
+		mes "正如我所料，";
+		mes "你是个沉默的人。哈哈。";
+		mes "再见。";
 		close;
 	}
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] A few days ago,";
-	mes "[DRY-RUN] I saw a new adventurer";
-	mes "[DRY-RUN] who were standing";
-	mes "[DRY-RUN] near the ^8B4513Cathedral^000000.";
+	mes "[旅行者]";
+	mes "几天前，";
+	mes "我看到一个新的冒险者";
+	mes "他站在";
+	mes "^8B4513大教堂^000000附近。";
 	next;
 	emotion ET_THROB;
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] That adventurer seemed pretty.";
-	mes "[DRY-RUN] But...";
-	mes "[DRY-RUN] I feel some strange energy";
-	mes "[DRY-RUN] so I don't come close to that person.";
+	mes "[旅行者]";
+	mes "那个冒险者看起来很漂亮。";
+	mes "但是……";
+	mes "我感到一些奇怪的能量，";
+	mes "所以我不敢靠近那个人。";
 	next;
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] Look like";
-	mes "[DRY-RUN] you're interested in";
-	mes "[DRY-RUN] that new adventurer?";
-	mes "[DRY-RUN] Or that is just your face look. Ha ha.";
+	mes "[旅行者]";
+	mes "看起来";
+	mes "你对";
+	mes "那个新冒险者感兴趣？";
+	mes "还是这只是你的面相。哈哈。";
 	next;
-	if(select("[DRY-RUN] I'm interested in it.:I don't care at all.") == 2) {
-		mes "[DRY-RUN] [Traveler]";
-		mes "[DRY-RUN] Ah~ I see~!";
-		mes "[DRY-RUN] Then, Good bye.";
+	if(select("我对它感兴趣。:我一点也不在乎。") == 2) {
+		mes "[旅行者]";
+		mes "啊~我明白了~！";
+		mes "那么，再见。";
 		close;
 	}
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] Just as I expected!";
-	mes "[DRY-RUN] You can find";
-	mes "[DRY-RUN] that new adventurer";
-	mes "[DRY-RUN] on the way to the ^8B4513Cathedral^000000";
-	mes "[DRY-RUN] at the direction of 1o'clock in ^8B4513Prontera^000000.";
+	mes "[旅行者]";
+	mes "正如我所料！";
+	mes "你可以找到";
+	mes "那个新冒险者";
+	mes "在通往^8B4513大教堂^000000的路上，";
+	mes "在^8B4513普隆德拉^000000的1点钟方向。";
 	next;
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] She was carrying";
-	mes "[DRY-RUN] ^800080a big egg thing^000000.";
-	mes "[DRY-RUN] That's what I know.";
+	mes "[旅行者]";
+	mes "她手里拿着";
+	mes "^800080一个大蛋东西^000000。";
+	mes "这就是我所知道的。";
 	close;
 OnInit:
 	initnpctimer;
@@ -591,23 +591,23 @@ OnTimer5000:
 }
 
 prontera,163,194,5	script	Traveler#02Easter	92,{
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] A while ago,";
-	mes "[DRY-RUN] I met a lady";
-	mes "[DRY-RUN] and she said she has been";
-	mes "[DRY-RUN] under a strange curse.";
+	mes "[旅行者]";
+	mes "不久前，";
+	mes "我遇到了一位女士，";
+	mes "她说她一直被";
+	mes "一种奇怪的诅咒所困扰。";
 	next;
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] I wanted to help her";
-	mes "[DRY-RUN] but my experience is not enough.";
-	mes "[DRY-RUN] So I couldn't help her.";
+	mes "[旅行者]";
+	mes "我想帮助她，";
+	mes "但我的经验不足。";
+	mes "所以我无法帮助她。";
 	next;
-	mes "[DRY-RUN] [Traveler]";
-	mes "[DRY-RUN] If you are more than";
-	mes "[DRY-RUN] level ^0000FF40^000000,";
-	mes "[DRY-RUN] go to the ^8B4513Cathedral^000000";
-	mes "[DRY-RUN] at the direction of 1'o clock.";
-	mes "[DRY-RUN] I hope you can help her...";
+	mes "[旅行者]";
+	mes "如果你的等级超过";
+	mes "等级 ^0000FF40^000000，";
+	mes "去^8B4513大教堂^000000，";
+	mes "在1点钟的方向。";
+	mes "我希望你能帮助她...";
 	close;
 OnInit:
 	initnpctimer;

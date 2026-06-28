@@ -18,33 +18,33 @@
 moc_ruins,118,99,5	script	Roberto	88,{
 	if (BaseClass == Job_Archer) {
 		if (getskilllv("AC_MAKINGARROW") == 1) {
-			mes "[DRY-RUN] [Roberto]";
-			mes "[DRY-RUN] Ooh, you're from my home town!";
-			mes "[DRY-RUN] Nice to see you!";
-			mes "[DRY-RUN] How are you?";
-			mes "[DRY-RUN] Ah! That arrow!";
-			mes "[DRY-RUN] You made it, didn't you!";
+			mes "[罗伯托]";
+			mes "哦，你是我家乡的人！";
+			mes "很高兴见到你！";
+			mes "你好吗？";
+			mes "啊！那支箭！";
+			mes "你做的，对吧！";
 			next;
-			mes "[DRY-RUN] [Roberto]";
-			mes "[DRY-RUN] Haha...!";
-			mes "[DRY-RUN] Do you think it's a lot better?";
-			mes "[DRY-RUN] Haha... anyways, I am glad.";
-			mes "[DRY-RUN] Come back with once in a while";
-			mes "[DRY-RUN] with news from home.";
-			mes "[DRY-RUN] Then byebye~";
+			mes "[罗伯托]";
+			mes "哈哈…！";
+			mes "你觉得它好多了吗？";
+			mes "哈哈…无论如何，我很高兴。";
+			mes "有空常回来看看";
+			mes "带些家乡的消息。";
+			mes "那么再见~";
 			close;
 		}
 		else if (JobLevel >= 30 || (BaseJob == Job_Hunter || BaseJob == Job_Bard || BaseJob == Job_Dancer)) {
-			mes "[DRY-RUN] [Roberto]";
-			mes "[DRY-RUN] Eh!";
-			mes "[DRY-RUN] You are...";
-			mes "[DRY-RUN] [Roberto]";
+			mes "[罗伯托]";
+			mes "哎！";
+			mes " ";
+			mes "你是…";
 			next;
 			if ((countitem(907) > 19) && (countitem(921) > 6) && (countitem(906) > 40) && (countitem(1019) > 12) && (countitem(501) > 0)) {
-				mes "[DRY-RUN] You brought them!";
-				mes "[DRY-RUN] Thank you very much.";
-				mes "[DRY-RUN] Then, as I promised, I will teach you the skill.";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "你带来了他们！";
+				mes "非常感谢你。";
+				mes "那么，正如我承诺的，我会教你这个技能。";
 				next;
 				delitem 907,20; //Resin
 				delitem 921,7; //Mushroom_Spore
@@ -52,172 +52,172 @@ moc_ruins,118,99,5	script	Roberto	88,{
 				delitem 1019,13; //Wooden_Block
 				delitem 501,1; //Red_Potion
 				skill "AC_MAKINGARROW",1,SKILL_PERM;
-				mes "[DRY-RUN] No need to worry about arrows now.";
-				mes "[DRY-RUN] Oh, and did you happen to see";
-				mes "[DRY-RUN] someone called Jason in Payon?";
-				mes "[DRY-RUN] Be careful. He is a";
-				mes "[DRY-RUN] ferocious one.";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "现在不需要担心箭矢了。";
+				mes "哦，你有没有看到过";
+				mes "在斐扬叫杰森的人？";
+				mes "小心点。他是个";
+				mes "凶猛的人。";
 				next;
-				mes "[DRY-RUN] You just have to be careful of Jason in Payon.";
-				mes "[DRY-RUN] Remember.";
-				mes "[DRY-RUN] Then bubye~ Thank you for the presents~";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "你只需要小心斐扬的杰森。";
+				mes "记住。";
+				mes "那么再见~ 谢谢你的礼物~";
 				close;
 			}
-			mes "[DRY-RUN] An archer in Morroc!?";
-			mes "[DRY-RUN] Nice to see you! Meeting a fellow";
-			mes "[DRY-RUN] archer in a place like this! *sniffsniff*!";
-			mes "[DRY-RUN] I came alone to Morroc..";
-			mes "[DRY-RUN] but I was a newcomer, and the pressure... waaah~";
-			mes "[DRY-RUN] I was very lonely~";
-			mes "[DRY-RUN] [Roberto]";
+			mes "[罗伯托]";
+			mes "在梦罗克的弓箭手！？";
+			mes "很高兴见到你！在这样的地方遇到同伴";
+			mes "弓箭手！* sniffsniff *！";
+			mes "我一个人来到梦罗克..";
+			mes "但我还是个新手，压力... 哇啊~";
+			mes "我非常孤独~";
 			next;
-			switch (select("[DRY-RUN] It must be hard. It's ok have faith.:Keep suffering.")) {
+			switch (select("这一定很难。没关系，要有信心。:继续忍耐。")) {
 			case 1:
-				mes "[DRY-RUN] Yes. Thank you...";
-				mes "[DRY-RUN] You must be having a hard";
-				mes "[DRY-RUN] time in a place like this.";
-				mes "[DRY-RUN] Isn't it hard to find arrows?";
-				mes "[DRY-RUN] That's why I make my own.";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "是的。谢谢你...";
+				mes "你一定很难受";
+				mes "在这样的地方生活。";
+				mes "找箭矢不是很困难吗？";
+				mes "所以我自己制作箭矢。";
 				next;
-				select("[DRY-RUN] Eh, really?!");
-				mes "[DRY-RUN] Yeah! I gather different items";
-				mes "[DRY-RUN] and make arrows using them.";
-				mes "[DRY-RUN] It is a useful skill to help me";
-				mes "[DRY-RUN] survive alone in this tough world.";
-				mes "[DRY-RUN] If you'd like, I can teach you.";
-				mes "[DRY-RUN] [Roberto]";
+				select("嗯，真的？！");
+				mes "[罗伯托]";
+				mes "是的！我收集不同的材料";
+				mes "并用它们制作箭矢。";
+				mes "这是一项有用的技能，可以帮助我";
+				mes "在这个艰难的世界中独自生存。";
+				mes "如果你愿意，我可以教你。";
 				next;
-				select("[DRY-RUN] That would be wonderful.");
-				mes "[DRY-RUN] But.. I can't do it for free.";
-				mes "[DRY-RUN] Nothing is free in this world~";
-				mes "[DRY-RUN] Mmm... How about this?";
-				mes "[DRY-RUN] You bring me what I ask for.";
-				mes "[DRY-RUN] Then I will teach you the skill.";
-				mes "[DRY-RUN] [Roberto]";
+				select("那太好了。");
+				mes "[罗伯托]";
+				mes "但是……我不能免费帮你。";
+				mes "这个世界上没有免费的东西~";
+				mes "嗯……这样怎么样？";
+				mes "你给我带来我要求的东西。";
+				mes "然后我会教你这个技能。";
 				next;
-				mes "[DRY-RUN] I've been very lonely since I left my hometown.";
-				mes "[DRY-RUN] I would like to treat my homesick-ness";
-				mes "[DRY-RUN] with things from there.";
-				mes "[DRY-RUN] Bring me 20 Resins from the trees in the ";
-				mes "[DRY-RUN] Payon forest, and 1 Red Potion";
-				mes "[DRY-RUN] sold in the store.";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "自从我离开家乡后，我一直很孤独。";
+				mes "我想治疗我的思乡之情";
+				mes "用那里的东西。";
+				mes "给我带来20个树脂，来自于";
+				mes "斐扬森林，还有1个红色药水";
+				mes "在商店出售。";
 				next;
-				mes "[DRY-RUN] Also, 13 Trunks from the Willows that";
-				mes "[DRY-RUN] lives near the Payon Forest,";
-				mes "[DRY-RUN] 41 Pointed Scale,";
-				mes "[DRY-RUN] 7 Mushroom Spores.";
-				mes "[DRY-RUN] If you bring me all of these.";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "另外，13个来自柳树的树干。";
+				mes "住在斐扬森林附近，";
+				mes "41个尖刺鳞片，";
+				mes "7个蘑菇孢子。";
+				mes "如果你把这些都带给我。";
 				next;
-				mes "[DRY-RUN] I will teach you the skill.";
-				mes "[DRY-RUN] Then.. I'll be waiting.";
-				mes "[DRY-RUN] For news from our home.";
-				mes "[DRY-RUN] [Roberto]";
+				mes "[罗伯托]";
+				mes "我会教你这个技能。";
+				mes "那么……我会等着。";
+				mes "等待来自我们家的消息。";
 				close;
 			case 2:
-				mes "[DRY-RUN] ...be careful at night.";
+				mes "[罗伯托]";
 				mes "...hey "+((Sex == SEX_MALE)?"mister":"miss")+".";
-				mes "[DRY-RUN] [Roberto]";
+				mes "……晚上要小心。";
 				close;
 			}
 		}
-		mes "[DRY-RUN] Hmm... Do you";
-		mes "[DRY-RUN] have something to say?";
-		mes "[DRY-RUN] I have nothing.";
-		mes "[DRY-RUN] Difference in levels";
-		mes "[DRY-RUN] cuts off conversations.";
-		mes "[DRY-RUN] [?]";
+		mes "[罗伯托]";
+		mes "嗯……你有想说的吗？";
+		mes "你有什么想说的吗？";
+		mes "我没有什么。";
+		mes "等级差异";
+		mes "会切断对话。";
 		close;
 	}
-	mes "[DRY-RUN] Eh... First time seeing an archer or something?";
-	mes "[DRY-RUN] Just go where you were going.";
-	mes "[DRY-RUN] I only talk to high level archers.";
-	mes "[DRY-RUN] Won't open my mouth otherwise!";
-	mes "Won't open my mouth otherwise!";
+	mes "[?]";
+	mes "呃……第一次见到弓箭手吗？";
+	mes "就去你要去的地方吧。";
+	mes "我只和高等级的弓箭手交谈。";
+	mes "否则我不会开口！";
 	close;
 }
 
 payon,103,63,3	script	Jason	88,3,3,{
 	if (BaseClass == Job_Archer) {
 		if (getskilllv("AC_CHARGEARROW") == 1) {
-			mes "[DRY-RUN] [Jason]";
-			mes "[DRY-RUN] Eh, we meet again.";
-			mes "[DRY-RUN] Ehhhh so weird.";
-			mes "[DRY-RUN] Whenever I see someone again";
-			mes "[DRY-RUN] I start eh-ing a lot.";
-			mes "[DRY-RUN] Ehhh... anyways nice to see you again.";
-			mes "[DRY-RUN] Ehhhh... don't come any more ehh...";
+			mes "[杰森]";
+			mes "嗯，我们又见面了。";
+			mes "哎呀，真奇怪。";
+			mes "每当我再次见到某人时";
+			mes "我就开始不停地“嗯”。";
+			mes "嗯... 不管怎样，很高兴再次见到你。";
+			mes "嗯... 不要再来了嗯...";
 			close;
 		}
 		else if (JobLevel >= 35 || (BaseJob == Job_Hunter || BaseJob == Job_Bard || BaseJob == Job_Dancer)) {
-			mes "[DRY-RUN] [Jason]";
-			mes "[DRY-RUN] Darn... my wound isn't healing.";
-			mes "[DRY-RUN] Bleh.. I was too careless... ";
-			mes "[DRY-RUN] to become like this.. err...";
-			mes "[DRY-RUN] But still, hurting me like this";
-			mes "[DRY-RUN] giving me so many injuries...";
+			mes "[杰森]";
+			mes "该死……我的伤口还没愈合。";
+			mes "唔……我太粗心了……";
+			mes "变成这样……呃……";
+			mes "但还是，这样伤害我";
+			mes "给我这么多伤……";
 			next;
-			mes "[DRY-RUN] What should I do about Roberto.";
-			mes "[DRY-RUN] Mmmm... Ah!";
-			mes "[DRY-RUN] You? How long have you been there?";
-			mes "[DRY-RUN] Mmm... very high level.";
-			mes "[DRY-RUN] Someone like you would definitely be";
-			mes "[DRY-RUN] able to know how to use Arrow Repel.";
+			mes "我该怎么处理罗伯托。";
+			mes "嗯……啊！";
+			mes "你？你在那儿待了多久？";
+			mes "嗯……等级很高。";
+			mes "像你这样的人肯定会";
+			mes "知道怎么使用箭矢击退。";
 			next;
-			switch (select("[DRY-RUN] What is that?:Teach me.")) {
+			switch (select("那是什么？:教我。")) {
 			case 1:
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] ...you're kidding, right?";
-				mes "[DRY-RUN] Oh my, you don't even know";
-				mes "[DRY-RUN] Arrow Repel at that level?";
-				mes "[DRY-RUN] You're a strange person.";
+				mes "[杰森]";
+				mes "……你在开玩笑吧？";
+				mes "哦，我的，你连这个都不知道。";
+				mes "在那个等级可以使用箭矢击退吗？";
+				mes "你真是个奇怪的人。";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] (Jason was in the lala land.)";
+				mes "[杰森]";
+				mes "（杰森在梦幻世界里。）";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] Well, ok. I'll teach you what";
-				mes "[DRY-RUN] Arrow Repel is.";
+				mes "[杰森]";
+				mes "好吧，我会教你什么是";
+				mes "箭矢击退。";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] Arrow Repel is a skill that allows you to";
-				mes "[DRY-RUN] push the opponent away as soon as you attack.";
-				mes "[DRY-RUN] You can only use it when you aim exactly";
-				mes "[DRY-RUN] at the target. But unlike magic, ";
-				mes "[DRY-RUN] it doesn't de-spell.";
+				mes "[杰森]";
+				mes "箭矢击退是一项技能，可以让你在攻击时";
+				mes "立即将对手推开。";
+				mes "你只能在准确瞄准目标时使用它。";
+				mes "但与魔法不同，";
+				mes "它不会解除魔法。";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] It is very useful for an archer";
-				mes "[DRY-RUN] that is weak in close ranges.";
-				mes "[DRY-RUN] If you would like to learn,";
-				mes "[DRY-RUN] come find me again.";
-				mes "[DRY-RUN] There are some necessary materials.";
+				mes "[杰森]";
+				mes "对于在近距离弱势的弓箭手来说，这非常有用。";
+				mes "。";
+				mes "如果你想学习，";
+				mes "再来找我。";
+				mes "有一些必要的材料。";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] First, because you must modify a bow";
-				mes "[DRY-RUN] bring a crossbow you do not use.";
-				mes "[DRY-RUN] 10 Tentacles, 10 Bill of Birds,";
-				mes "[DRY-RUN] 3 Yoyo Tails.. these are very elastic.";
-				mes "[DRY-RUN] Also, 2 Emeralds. And last but not least...";
-				mes "[DRY-RUN] 36 bottles of Banana Juice that I love!";
+				mes "[杰森]";
+				mes "首先，因为你必须修改一把弓";
+				mes "带来一把你不使用的弩。";
+				mes "10根触手，10张鸟的账单，";
+				mes "3条悠悠尾巴……这些非常有弹性。";
+				mes "还有，2颗翡翠。最后但并非最不重要的……";
+				mes "36瓶我最爱的香蕉汁！";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] ......Ehem!";
-				mes "[DRY-RUN] If you bring all of these,";
-				mes "[DRY-RUN] I shall teach you Arrow Repel.";
-				mes "[DRY-RUN] Then, see you again.";
-				mes "[DRY-RUN] (I'm going to be mad if you don't bring the Banana Juice.)";
+				mes "[杰森]";
+				mes "……咳！";
+				mes "如果你带来所有这些，";
+				mes "我将教你箭矢反弹。";
+				mes "那么，再见了。";
+				mes "（如果你不带香蕉汁来，我会生气的。）";
 				close;
 			case 2:
 				if ((countitem(721) > 1) && (countitem(942) > 2) && (countitem(962) > 9) && (countitem(925) > 9) && (countitem(532) > 35)) {
-					mes "[DRY-RUN] [Jason]";
-					mes "[DRY-RUN] Ok! Perfect!";
-					mes "[DRY-RUN] I shall teach you the nationally";
-					mes "[DRY-RUN] renowned skill, Arrow Repel!";
+					mes "[杰森]";
+					mes "好的！完美！";
+					mes "我将教你这个国家的";
+					mes "著名技能，箭矢反弹！";
 					next;
 					delitem 721,2; //Azure_Jewel
 					delitem 942,3; //Yoyo_Tail
@@ -225,44 +225,44 @@ payon,103,63,3	script	Jason	88,3,3,{
 					delitem 925,10; //Bill_Of_Birds
 					delitem 532,36; //Banana_Juice
 					skill "AC_CHARGEARROW",1,SKILL_PERM;
-					mes "[DRY-RUN] [Jason]";
-					mes "[DRY-RUN] Oh, works better than I expected!";
-					mes "[DRY-RUN] Won't be needing to modify the bow!";
-					mes "[DRY-RUN] You can take this back~";
-					mes "[DRY-RUN] And enjoy using your newly inherited";
-					mes "[DRY-RUN] skill in fields and dungeons!";
-					mes "[DRY-RUN] He~heh~!";
+					mes "[杰森]";
+					mes "哦，效果比我预期的好！";
+					mes "不需要修改弓了！";
+					mes "你可以把这个带回去~";
+					mes "并享受你新继承的";
+					mes "技能在野外和地下城的使用！";
+					mes "嘿~嘿~！";
 					close;
 				}
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] Mmm... too bad.";
-				mes "[DRY-RUN] You are missing some things.";
-				mes "[DRY-RUN] Once again, you need 2 Emeralds,";
-				mes "[DRY-RUN] 3 Yoyo Tails, 10 Tentacles,";
-				mes "[DRY-RUN] 10 Bill of Birds, and last but";
-				mes "[DRY-RUN] not least 36 bottles of Banana juice!";
+				mes "[杰森]";
+				mes "嗯……太可惜了。";
+				mes "你缺少了一些东西。";
+				mes "你需要2个翡翠，";
+				mes "3条悠悠尾巴，10个触手，";
+				mes "10张鸟类账单，最后但并非最不重要的，";
+				mes "至少需要36瓶香蕉汁！";
 				next;
-				mes "[DRY-RUN] [Jason]";
-				mes "[DRY-RUN] Make sure you have all of them and come again!";
+				mes "[杰森]";
+				mes "确保你有所有这些材料，然后再来！";
 				close;
 			}
 		}
-		mes "[DRY-RUN] [Jason]";
-		mes "[DRY-RUN] Ooh... you are an archer.";
-		mes "[DRY-RUN] If you try a little more";
-		mes "[DRY-RUN] you will have a great";
-		mes "[DRY-RUN] reputation as an archer!";
-		mes "[DRY-RUN] Exert yourself!";
+		mes "[杰森]";
+		mes "哦……你是一名弓箭手。";
+		mes "再努力一点";
+		mes "你将会有很好的";
+		mes "弓箭手声望！";
+		mes "加油！";
 		close;
 	}
-	mes "[DRY-RUN] [?]";
-	mes "[DRY-RUN] What does life need from";
-	mes "[DRY-RUN] a lonely lad like me?";
+	mes "[?]";
+	mes "生活对";
+	mes "像我这样的孤独少年需要什么？";
 	close;
 
 OnTouch_:
-	mes "[DRY-RUN] [???]";
-	mes "[DRY-RUN] Errrrrrr...";
+	mes "[???]";
+	mes "呃呃呃...";
 	close;
 }
 

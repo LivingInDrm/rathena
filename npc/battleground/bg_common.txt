@@ -335,7 +335,7 @@ bat_room,138,144,4	script	Repairman#bg	86,{
 bat_room,1,151,3	script	Switch#batgnd	81,{
 	set .@i, callfunc("F_GM_NPC",1854,0);
 	if (.@i == -1) {
-		mes "The command has been cancelled.";
+		mes "命令已被取消。";
 		close;
 	} else if (.@i == 0) {
 		end;
@@ -376,7 +376,7 @@ bat_room,1,151,3	script	Switch#batgnd	81,{
 			donpcevent "start#bat_b02::OnEnable";
 			break;
 		}
-		mes "Complete";
+		mes "完成";
 		close;
 	}
 }
@@ -385,11 +385,11 @@ bat_room,1,151,3	script	Switch#batgnd	81,{
 //============================================================
 bat_room,160,150,3	script	Erundek	109,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute !! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again -";
-		mes "- after you loose some weight. -";
+		mes "- 等一下 !! -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请再试一次 -";
+		mes "- 在你减轻一些重量后。 -";
 		close;
 	}
 	mes "[艾伦德克]";
@@ -459,13 +459,13 @@ bat_room,160,150,3	script	Erundek	109,{
 				mes "Would you like to spend ^FF0000100 "+getitemname(.@Weapons[.@i+1])+"^000000 and receive a ^3131FF"+getitemname(.@Weapons[.@i])+.@type$+"^000000?";
 				next;
 				mes "[艾伦德克]";
-				mes "Remember, Battleground Reward Items are ^FF0000Character Bound^000000. Are you sure you want this item?";
+				mes "请记住，战场奖励物品是 ^FF0000角色绑定^000000 的。你确定要这个物品吗？";
 				next;
-				switch(select("Yes:No")) {
+				switch(select("是:否")) {
 				case 1:
 					mes "[艾伦德克]";
 					if (countitem(.@Weapons[.@i+1]) >= 100) {
-						mes "Thank you for exchanging.";
+						mes "谢谢你的兑换。";
 						delitem .@Weapons[.@i+1],100;
 						getitem .@Weapons[.@i],1;
 					}
@@ -477,7 +477,7 @@ bat_room,160,150,3	script	Erundek	109,{
 				break;
 			}
 			mes "[艾伦德克]";
-			mes "Do you need more time to check the items?";
+			mes "你需要更多时间检查物品吗？";
 			close;
 		case 2:
 			mes "[艾伦德克]";
@@ -535,7 +535,7 @@ bat_room,160,150,3	script	Erundek	109,{
 		default: break;
 	}
 	mes "You can exchange for this item with ^FF0000"+.@Items[.@i+1]+" "+getitemname(7828)+" or "+.@Items[.@i+1]+" "+getitemname(7829)+"^000000.";
-	mes "Would you like to exchange?";
+	mes "你想要兑换吗？";
 	next;
 	switch(select("不交换:交换")) {
 	case 1:
@@ -549,7 +549,7 @@ bat_room,160,150,3	script	Erundek	109,{
 		next;
 		if (.@item[0] < 12269 || .@item[0] > 12273 ) {
 			mes "[艾伦德克]";
-			mes "Remember, Battleground Reward Items are ^FF0000Character Bound^000000. Are you sure you want this item?";
+			mes "请记住，战场奖励物品是 ^FF0000角色绑定^000000 的。你确定要这个物品吗？";
 			next;
 		}
 		set .@j, select("勇猛徽章:特攻徽章:取消交换");

@@ -42,109 +42,109 @@
 
 valkyrie,48,86,4	script	Valkyrie#	811,{
 	if (ADVJOB != 0 || Upper == 1) {
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] Welcome";
-		mes "[DRY-RUN] to Valhalla,";
-		mes "[DRY-RUN] the Hall of Honor.";
+		mes "[女武神]";
+		mes "欢迎";
+		mes "来到瓦尔哈拉，";
+		mes "荣誉殿堂。";
 		next;
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] Please make";
-		mes "[DRY-RUN] yourself comfortable";
-		mes "[DRY-RUN] while you are here.";
-		mes "[DRY-RUN] Honor to the warriors!";
+		mes "[女武神]";
+		mes "请做出选择。";
+		mes "让自己舒服些";
+		mes "在这里的时候。";
+		mes "荣耀属于战士们！";
 		close;
 	}
 	else if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] Welcome";
-		mes "[DRY-RUN] to Valhalla,";
-		mes "[DRY-RUN] the Hall of Honor.";
+		mes "[女武神]";
+		mes "欢迎";
+		mes "来到瓦尔哈拉，";
+		mes "荣誉殿堂。";
 		next;
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] You will now end";
-		mes "[DRY-RUN] your present life and";
-		mes "[DRY-RUN] begin an entirely new life.";
-		mes "[DRY-RUN] Honor to the warriors!";
+		mes "[女武神]";
+		mes "你将结束";
+		mes "你现在的生活，并";
+		mes "开始全新的生活。";
+		mes "荣耀属于战士们！";
 		next;
 		if (Weight > 0 || Zeny > 0 || checkcart() != 0 || checkfalcon() != 0 || checkriding() != 0) {
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] There are a few things you must";
-			mes "[DRY-RUN] do before we start. You must";
-			mes "[DRY-RUN] first empty your mind and body.";
-			mes "[DRY-RUN] Honor comes when you abandon";
-			mes "[DRY-RUN] all your selfish desires...";
+			mes "[女武神]";
+			mes "在我们开始之前，有几件事你必须";
+			mes "做。你必须";
+			mes "首先清空你的心灵和身体。";
+			mes "荣誉来自于你放弃";
+			mes "所有自私的欲望...";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] You cannot take anything with you to the next life. Your items, zeny, pets and Pushcart all have to be left behind.";
+			mes "[女武神]";
+			mes "你不能带任何东西去下一个生活。你的物品、金币、宠物和推车都必须留在这里。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] When you are ready";
-			mes "[DRY-RUN] please return to me,";
-			mes "[DRY-RUN] brave adventurer.";
+			mes "[女武神]";
+			mes "当你准备好时";
+			mes "请回来找我，";
+			mes "勇敢的冒险者。";
 			close2;
 			warp "yuno_in02",93,205;
 			end;
 		}
 		else {
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] I see you've already";
-			mes "[DRY-RUN] released yourself from";
-			mes "[DRY-RUN] all worldy attachments,";
+			mes "[女武神]";
+			mes "我看到你已经";
+			mes "摆脱了";
+			mes "所有世俗的牵挂，";
 			mes ""+ strcharinfo(0) +".";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] That's an admirable attitude for an adventurer such as yourself. Honor comes when you abandon all personal desires for the sake of mankind.";
+			mes "[女武神]";
+			mes "这对于像你这样的冒险者来说是一种令人钦佩的态度。为了人类而放弃所有个人欲望，才会获得荣誉。";
 			next;
 			if (SkillPoint) {
-				mes "[DRY-RUN] [Valkyrie]";
-				mes "[DRY-RUN] Hmm... I sense that you have";
-				mes "[DRY-RUN] some lingering attachment or";
-				mes "[DRY-RUN] unfinished business in your";
-				mes "[DRY-RUN] current life. Take care of that,";
-				mes "[DRY-RUN] and bring closure to your present life.";
+				mes "[女武神]";
+				mes "嗯……我感觉到你有";
+				mes "一些挥之不去的牵挂或";
+				mes "未了的心愿在你的";
+				mes "现世生活中。处理好这些，";
+				mes "为你现在的生活画上句号。";
 				close2;
 				warp "yuno_in02",93,205;
 				end;
 			}
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Now, let me remove all";
-			mes "[DRY-RUN] of your present memories...";
-			mes "[DRY-RUN] However, you will be able to";
-			mes "[DRY-RUN] remember the most honorable";
-			mes "[DRY-RUN] moments of this life.";
+			mes "[女武神]";
+			mes "现在，让我去除你所有";
+			mes "现在的记忆……";
+			mes "然而，你将能够";
+			mes "记住这生命中最荣耀的";
+			mes "时刻。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] With one,";
-			mes "[DRY-RUN] I will ask the";
-			mes "[DRY-RUN] goddess Urd to remove";
-			mes "[DRY-RUN] all of your present";
-			mes "[DRY-RUN] memories.";
+			mes "[女武神]";
+			mes "有了一个，";
+			mes "我将请求";
+			mes "女神乌尔德解除";
+			mes "你现在所有的";
+			mes "记忆。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] With two,";
-			mes "[DRY-RUN] I will ask the";
-			mes "[DRY-RUN] goddess Verdandi to keep";
-			mes "[DRY-RUN] and record the most honorable moments of your present life.";
+			mes "[女武神]";
+			mes "与两个，";
+			mes "我将请求";
+			mes "女神维尔丹迪保持";
+			mes "并记录你现在生活中最光荣的时刻。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] With three,";
-			mes "[DRY-RUN] I will ask the";
-			mes "[DRY-RUN] goddess Skuld to";
-			mes "[DRY-RUN] guide you to your";
-			mes "[DRY-RUN] next life.";
+			mes "[女武神]";
+			mes "与三个，";
+			mes "我将请求";
+			mes "女神斯库尔德来";
+			mes "引导你进入你的";
+			mes "下一个生命。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] One...";
+			mes "[女武神]";
+			mes "一个......";
 			callfunc "F_ClearJobVar";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] One...";
-			mes "[DRY-RUN] Two......";
+			mes "[女武神]";
+			mes "一个......";
+			mes "两个......";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] One...";
-			mes "[DRY-RUN] Two......";
-			mes "[DRY-RUN] And Three.";
+			mes "[女武神]";
+			mes "一个......";
+			mes "两个......";
+			mes "还有三个。";
 			set ADVJOB, Class+Job_Novice_High; //memo the target 3rd Job ID
 			if(ADVJOB == Job_Lord_Knight2) set ADVJOB,Job_Lord_Knight;
 			if(ADVJOB == Job_Paladin2) set ADVJOB,Job_Paladin;
@@ -155,20 +155,20 @@ valkyrie,48,86,4	script	Valkyrie#	811,{
 			skill "NV_TRICKDEAD",1,SKILL_PERM;
 			completequest 1000;
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] You are now reborn";
-			mes "[DRY-RUN] into a brand new life.";
-			mes "[DRY-RUN] Please take these small gifts";
-			mes "[DRY-RUN] in preparation for your new adventures.";
+			mes "[女武神]";
+			mes "恭喜你。";
+			mes "你现在重生了";
+			mes "进入一个全新的生活。";
+			mes "请接受这些小礼物";
+			mes "为你的新冒险做准备。";
 			getitem 1202,1; //Knife_
 			getitem 2302,1; //Cotton_Shirt_
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] I wish that the release the goddess Urd has granted you proves to be a blessing. I hope that the memories Verdandi has recorded will always honor you.";
+			mes "[女武神]";
+			mes "我希望女神乌尔德赐予你的释放能成为一种祝福。我希望维尔丹蒂所记录的记忆永远能荣耀你。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] And I pray that the new life to which the goddess Skuld will guide you will be even more honorable than your last.";
+			mes "[女武神]";
+			mes "我祈祷女神斯库尔德将引导你走向的新生活会比你之前的生活更加荣耀。";
 			close2;
 			switch (ADVJOB) {
 			case 4008:
@@ -199,13 +199,13 @@ valkyrie,48,86,4	script	Valkyrie#	811,{
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] Welcome";
-		mes "[DRY-RUN] to Valhalla,";
-		mes "[DRY-RUN] the Hall of Honor.";
+		mes "[女武神]";
+		mes "欢迎";
+		mes "来到瓦尔哈拉，";
+		mes "荣誉殿堂。";
 		next;
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] Unfortunately, you have not yet been invited here. I ask you to leave immediately. Honor to the warriors!";
+		mes "[女武神]";
+		mes "不幸的是，你还没有被邀请到这里。我请你立即离开。荣耀属于战士们！";
 		close2;
 		warp "yuno_in02",93,205;
 		end;
@@ -356,24 +356,24 @@ valkyrie,44,33,5	script	Teleporter	124,{
 	if (Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Teleporter]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[女武神]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Teleporter]";
-		mes "[DRY-RUN] Please refrain";
-		mes "[DRY-RUN] from touching any";
-		mes "[DRY-RUN] of the exhibitions.";
-		mes "[DRY-RUN] ..........";
+		mes "[女武神]";
+		mes "请勿触碰";
+		mes "任何";
+		mes "展品。";
+		mes "..........";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Teleporter]";
-		mes "[DRY-RUN] Honorable one,";
-		mes "[DRY-RUN] which place do you wish to go?";
+		mes "[女武神]";
+		mes "尊贵的您，";
+		mes "您想去哪个地方？";
 		next;
-		switch(select("[DRY-RUN] Prontera:Morroc:Payon:Geffen:Alberta:Izlude:Al De Baran:Comodo:Juno")) {
+		switch(select("普隆德拉:梦罗克:斐扬:吉芬:艾尔贝塔:依斯鲁得:艾尔帕兰:科莫多:朱诺")) {
 		case 1: callsub S_Warpchar,"prontera",116,72;
 		case 2: callsub S_Warpchar,"morocc",156,46;
 		case 3: callsub S_Warpchar,"payon",69,100;
@@ -388,8 +388,8 @@ valkyrie,44,33,5	script	Teleporter	124,{
 		}
 	}
 S_WarpChar:
-	mes "[DRY-RUN] [Teleporter]";
-	mes "[DRY-RUN] Have a nice trip.";
+	mes "[女武神]";
+	mes "祝您旅途愉快。";
 	close2;
 	savepoint getarg(0),getarg(1),getarg(2),1,1;
 	warp getarg(0),getarg(1),getarg(2);

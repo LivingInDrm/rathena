@@ -171,37 +171,37 @@ ve_in,237,125,0	script	King Crab#job_shu	107,{
 ve_in,241,128,4	duplicate(King Crab#job_shu)	Sludge Worm#job_shu	110
 
 ve_in,244,126,3	script	Waitress#job_shu	69,{
-	mes "[DRY-RUN] [Waitress]";
+	mes "[女服务员]";
 	if (job_shu == 0) {
-		mes "[DRY-RUN] Oh no~";
-		mes "[DRY-RUN] I hate those noisy and impolite customers!";
-		mes "[DRY-RUN] I hope there is someone who can scold them for me.";
+		mes "哦，不~";
+		mes "我讨厌那些吵闹且无礼的顾客！";
+		mes "我希望有人能替我骂他们。";
 		close;
 	} else if (job_shu == 1) {
 		if (BaseJob == Job_Monk) {
-			mes "[DRY-RUN] Oh dear~";
+			mes "哦，亲爱的~";
 			mes "I really appreciate you, "+jobname(Class)+", for helping me a while ago.";
 			next;
 		}
-		mes "[DRY-RUN] Ah, the person we saw before?";
-		mes "[DRY-RUN] She has been staying in this village for days,";
-		mes "[DRY-RUN] Isn't she so great?";
+		mes "啊，我们之前看到的那个人？";
+		mes "她在这个村子里待了好几天，";
+		mes "她真是太棒了，不是吗？";
 		next;
-		mes "[DRY-RUN] [Waitress]";
-		mes "[DRY-RUN] Although she is a woman like me, she was so cool!";
-		mes "[DRY-RUN] Aaahh~ That beautiful and imposing figure...";
+		mes "[女服务员]";
+		mes "虽然她和我一样是个女人，但她真酷！";
+		mes "啊啊~ 那美丽而威严的身影…";
 		next;
-		mes "[DRY-RUN] [Waitress]";
-		mes "[DRY-RUN] Oh my!!";
-		mes "[DRY-RUN] I forgot to do something!";
-		mes "[DRY-RUN] I should cook right away and then bring the meal to the Inn. Aaahh~";
+		mes "[女服务员]";
+		mes "哦，我的天！！";
+		mes "我忘记做某件事了！";
+		mes "我应该马上去做饭，然后把餐点带到旅馆。啊啊~";
 		next;
-		mes "[DRY-RUN] [Waitress]";
-		mes "[DRY-RUN] If you still don't know where to stay, please use ^f57d7dthe Inn at the upper side of this building^000000.";
+		mes "[女服务员]";
+		mes "如果你还不知道住在哪里，请使用^f57d7d这栋建筑上方的旅馆^000000。";
 		close;
 	}
-	mes "[DRY-RUN] Now that the customers have become a little quiet.";
-	mes "[DRY-RUN] Ahhhh, I feel better now!!";
+	mes "现在顾客们安静了一些。";
+	mes "啊啊啊，我感觉好多了！！";
 	close;
 }
 
@@ -228,54 +228,54 @@ ve_in,97,149,0	script	#Suraryokan	139,3,3,{
 OnTouch:
 	if (job_shu == 1) {
 		set .@n$, "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Who is it?!";
+		mes "[???]";
+		mes "谁啊？！";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] I am the person who was at the pub a while ago.";
-		mes "[DRY-RUN] I have something to ask.";
+		mes "我是刚才在酒吧的人。";
+		mes "我有事情想问。";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Don't bother me, just go away!";
-		next;
-		mes .@n$;
-		mes "[DRY-RUN] Please, I just want to talk.";
-		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] ...";
+		mes "[???]";
+		mes "别打扰我，快走开！";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] Don't ignore me, just talk to me.";
+		mes "请，我只是想聊聊。";
+		next;
+		mes "[???]";
+		mes "...";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] Just for a moment, isn't it okay?";
+		mes "别忽视我，跟我说话。";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] I'm not here to hurt you.";
+		mes "就一会儿，可以吗？";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] How could you treat someone who came to your door so badly?";
+		mes "我不是来伤害你的。";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] You're going too far.";
+		mes "你怎么能如此对待一个上门的人呢？";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] After I saw you fighting...";
+		mes "你太过分了。";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] I thought that you must have practiced martial arts and I came here to meet you.";
+		mes "在我看到你打斗之后……";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] But seeing that you stood me up outside like this...";
+		mes "我以为你一定练过武术，所以我来这里见你。";
 		next;
 		mes .@n$;
-		mes "[DRY-RUN] You must be advanced in martial arts...";
+		mes "但看到你把我晾在外面……";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] How persistent...";
+		mes .@n$;
+		mes "你一定是武术高手……";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] What the hell do you want?";
+		mes "[???]";
+		mes "真是执着……";
+		next;
+		mes "[???]";
+		mes "你到底想要什么？";
 		set job_shu,2;
 		close;
 	}
@@ -284,235 +284,235 @@ OnTouch:
 
 ve_in,98,159,0	script	Fighter#job_shu	484,{
 	if (job_shu < 2) {
-		mes "[DRY-RUN] [Fighter]";
-		mes "[DRY-RUN] Ahhhh~ I'm so tired.";
-		mes "[DRY-RUN] Training is so tough and I have a long way to go!";
+		mes "[战士]";
+		mes "啊啊啊~ 我好累。";
+		mes "训练太艰苦了，我还有很长的路要走！";
 		close;
 	} else if (job_shu == 2) {
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I want to know about the skill you used a while ago.";
+		mes "我想知道你刚才使用的技能。";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
-		mes "[DRY-RUN] .........";
-		mes "[DRY-RUN] ............ A rookie like you doesn't need to know.";
-		next;
-		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] Rookie?!";
-		mes "[DRY-RUN] I have steadily practiced martial arts.";
-		mes "[DRY-RUN] I am confident that I will never lose.";
-		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] So you can beat me, too?";
+		mes "[???]";
+		mes "...";
+		mes "......";
+		mes ".........";
+		mes "............ 像你这样的菜鸟不需要知道。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] No...";
-		mes "[DRY-RUN] I guess that's too much...";
-		mes "[DRY-RUN] Frankly speaking, I was quite amazed by you.";
+		mes "菜鸟？！";
+		mes "我一直在稳步练习武术。";
+		mes "我相信我永远不会输。";
+		next;
+		mes "[???]";
+		mes "所以你也能打败我吗？";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I had thought that I was strong enough but after seeing you fight, I realized that I was full of conceit.";
-		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Huuuh~ No matter how strong you are,";
-		mes "[DRY-RUN] you cannot avoid reaching for your true limit.";
+		mes "不...";
+		mes "我想这有点过分了...";
+		mes "坦白说，我对你感到相当惊讶。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] You are just the person that I expected.";
+		mes "我曾以为自己足够强大，但在看到你战斗后，我意识到自己太自负了。";
+		next;
+		mes "[???]";
+		mes "呜~ 无论你多强，";
+		mes "你都无法避免触及你的真实极限。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I think you would know";
-		mes "[DRY-RUN] how to overcome this limitation.";
-		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Stop it.";
+		mes "你正是我所期待的人。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] What? Why?";
+		mes "我想你应该知道";
+		mes "如何克服这个限制。";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Are you a human?";
-		next;
-		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] What?";
-		mes "[DRY-RUN] Of course, I am a human.";
-		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] To become stronger is too hard for a mere human.";
-		mes "[DRY-RUN] If you want to, just buy better equipment.";
+		mes "[???]";
+		mes "停止吧。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] Then, what are you?";
-		mes "[DRY-RUN] You mean you're not a human being?";
+		mes "什么？为什么？";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] To overstep the limit...";
-		mes "[DRY-RUN] is impossible for a human.";
-		mes "[DRY-RUN] It's a ghost's way...";
+		mes "[???]";
+		mes "你是人类吗？";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] Ghost?";
+		mes "什么？";
+		mes "当然，我是人类。";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] I gave up being a human after I chose this way.";
-		mes "[DRY-RUN] The way to become a Sura abandoning divine protection.";
+		mes "[???]";
+		mes "对一个普通人来说，变得更强是太困难了。";
+		mes "如果你想的话，就买更好的装备。";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] You won't even have time to take a rest if you choose this way.";
-		mes "[DRY-RUN] You'll become a puppet for war...";
+		mes "["+strcharinfo(0)+"]";
+		mes "那么，你是什么？";
+		mes "你的意思是你不是人类？";
 		next;
-		switch(select("[DRY-RUN] But I still want to know more.:Well, I quit then.")) {
+		mes "[???]";
+		mes "超越极限...";
+		mes "对人类来说是不可能的。";
+		mes "这是鬼的道路...";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "鬼？";
+		next;
+		mes "[???]";
+		mes "我在选择这条路后放弃了做人的机会。";
+		mes "成为一个抛弃神圣保护的修罗之路。";
+		next;
+		mes "[???]";
+		mes "如果你选择这条路，你连休息的时间都没有。";
+		mes "你将成为战争的傀儡...";
+		next;
+		switch(select("但我还是想知道更多。:好吧，那我就退出。")) {
 		case 1:
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] Aren't you an idiot?";
-			mes "[DRY-RUN] Why are you so happy about becoming a ghost?";
+			mes "[???]";
+			mes "难道你不是个傻瓜吗？";
+			mes "你为什么对成为鬼这么开心？";
 			next;
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] You'll regret it, so just be satisfied with your present life.";
+			mes "[???]";
+			mes "你会后悔的，所以就满足于你现在的生活吧。";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] Well, now that I've met you, I won't live my life this way anymore!";
+			mes "好吧，既然我遇见了你，我就不再这样生活了！";
 			next;
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] Hah... you're really making me tired.";
+			mes "[???]";
+			mes "哈...你真让我感到疲惫。";
 			next;
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] Okay, then^f57d7d go and kill 100 Desert Wolves.^000000";
-			mes "[DRY-RUN] After that, I'll think about it again.";
+			mes "[???]";
+			mes "好的，那么^f57d7d去杀100只沙漠狼。^000000";
+			mes "之后，我会再考虑的。";
 			set job_shu,3;
 			changequest 11155,11156;
 			close;
 		case 2:
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] Well, good choice.";
-			mes "[DRY-RUN] You don't need to look for trouble.";
+			mes "[???]";
+			mes "嗯，选择不错。";
+			mes "你不需要主动找麻烦。";
 			close;
 		}
 	} else if (job_shu == 3) {
 		if (checkquest(11156,HUNTING) == 2) {
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] Wow~";
-			mes "[DRY-RUN] Did you really kill all those wolves?";
-			mes "[DRY-RUN] I figured you'd have given up.";
+			mes "[???]";
+			mes "哇~";
+			mes "你真的杀了所有那些狼吗？";
+			mes "我还以为你会放弃呢。";
 			next;
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] A woman's word is her bond!!";
-			mes "[DRY-RUN] A promise is a promise.";
+			mes "[???]";
+			mes "女人的话就是她的承诺！！";
+			mes "承诺就是承诺。";
 			next;
-			mes "[DRY-RUN] [???]";
-			mes "[DRY-RUN] Go to ^f57d7dEl Mes Gorge Southeast of Juno^000000.";
-			mes "[DRY-RUN] My colleague ^f57d7dBuddy^000000 will be training himself near the center of that area.";
+			mes "[???]";
+			mes "去^f57d7d朱诺东南的埃尔梅斯峡谷^000000。";
+			mes "我的同事^f57d7d巴迪^000000会在那个区域的中心附近训练。";
 			next;
-			mes "[DRY-RUN] [Bruno]";
-			mes "[DRY-RUN] Tell him that 'Bruno' sent you there and after that, just suit yourself.";
+			mes "[布鲁诺]";
+			mes "告诉他是'布鲁诺'派你来的，之后就随便你了。";
 			set job_shu,4;
 			changequest 11156,11157;
 			close;
 		}
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Hah... you're really making me tired.";
+		mes "[???]";
+		mes "哈...你真让我感到疲惫。";
 		next;
-		mes "[DRY-RUN] [???]";
-		mes "[DRY-RUN] Okay, then^f57d7d go and kill 100 Desert Wolves.^000000";
-		mes "[DRY-RUN] Then I'll think about it again.";
+		mes "[???]";
+		mes "好的，那么^f57d7d去杀100只沙漠狼。^000000";
+		mes "那我再考虑一下。";
 		close;
 	} else if (job_shu == 4) {
-		mes "[DRY-RUN] [Bruno]";
-		mes "[DRY-RUN] Go to ^f57d7dEl Mes Gorge Southeast of Juno^000000.";
-		mes "[DRY-RUN] My colleague ^f57d7dBuddy^000000 will be training himself near the center of that area.";
+		mes "[布鲁诺]";
+		mes "去^f57d7d朱诺东南的埃尔梅斯峡谷^000000。";
+		mes "我的同事^f57d7d巴迪^000000会在那个区域的中心附近训练。";
 		next;
-		mes "[DRY-RUN] [Bruno]";
-		mes "[DRY-RUN] Tell him that 'Bruno' sent you there and after that, just suit yourself.";
+		mes "[布鲁诺]";
+		mes "告诉他是'布鲁诺'派你来的，之后就随便你了。";
 		close;
 	} else if (job_shu == 100) {
-		mes "[DRY-RUN] [Bruno]";
-		mes "[DRY-RUN] Hey~ !";
-		mes "[DRY-RUN] How are you doing?";
+		mes "[布鲁诺]";
+		mes "嘿~！";
+		mes "你最近怎么样？";
 		next;
-		mes "[DRY-RUN] [Bruno]";
-		mes "[DRY-RUN] Don't you have any presents for your teacher?";
+		mes "[布鲁诺]";
+		mes "你没有给老师带礼物吗？";
 		close;
 	}
-	mes "[DRY-RUN] [Bruno]";
-	mes "[DRY-RUN] I recommend you to reconsider being a Sura.";
-	mes "[DRY-RUN] Sura is strong and cool, but that's not all.";
+	mes "[布鲁诺]";
+	mes "我建议你重新考虑成为一个Sura。";
+	mes "Sura很强大也很酷，但这并不是全部。";
 	next;
-	mes "[DRY-RUN] [Bruno]";
-	mes "[DRY-RUN] Me?";
-	mes "[DRY-RUN] If I need to choose a job again, I will definitely choose Sura.";
+	mes "[布鲁诺]";
+	mes "我？";
+	mes "如果我需要重新选择职业，我一定会选择Sura。";
 	close;
 }
 
 yuno_fild07,254,176,7	script	Buddy#job_shu	753,{
 	if (job_shu < 4) {
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] Haaap!!! Haaaap!!! Whoo!! Haahhp!!!";
+		mes "[伙伴]";
+		mes "哈啊啊！！！哈啊啊！！！哇！！哈啊啊！！！";
 		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] I don't know why you're here but please don't stand behind me unless you want to die.";
+		mes "[伙伴]";
+		mes "我不知道你为什么在这里，但请不要站在我身后，除非你想死。";
 		close;
 	} else if (job_shu == 4) {
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] Haaap!!! Haaaap!!! Whoo!! Haahhp!!!";
+		mes "[伙伴]";
+		mes "哈啊啊！！！哈啊啊！！！哇！！哈啊啊！！！";
 		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] I don't know why you're here but please don't stand behind me unless you want to die.";
-		next;
-		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] 'Bruno' sent me here.";
-		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] Ah! My colleague introduced me to you!";
-		mes "[DRY-RUN] Anyway, why are you here to see me?";
+		mes "[伙伴]";
+		mes "我不知道你为什么在这里，但请不要站在我身后，除非你想死。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I asked Bruno about her strength, and she recommended me to you.";
+		mes "‘布鲁诺’让我来这里的。";
 		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] That difficult girl... no, just kidding.";
-		mes "[DRY-RUN] You must be a special person for her to send you to me.";
+		mes "[伙伴]";
+		mes "啊！我的同事向我介绍了你！";
+		mes "无论如何，你来找我有什么事？";
 		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] Well, I can't answer your question because I'm in the process of self-training, so I will take you to our master.";
+		mes "["+strcharinfo(0)+"]";
+		mes "我问布鲁诺关于她的实力，她推荐我来找你。";
 		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] My master doesn't like noise, so please ^f57d7dwait in the living room silently.^000000";
+		mes "[伙伴]";
+		mes "那个难对付的女孩……开玩笑的。";
+		mes "你一定是个特别的人，她才会把你送来找我。";
 		next;
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] This way...";
+		mes "[伙伴]";
+		mes "嗯，我无法回答你的问题，因为我正在自我训练中，所以我会带你去见我们的师傅。";
+		next;
+		mes "[伙伴]";
+		mes "我的师傅不喜欢吵闹，所以请 ^f57d7d安静地在客厅等候。^000000";
+		next;
+		mes "[伙伴]";
+		mes "这边...";
 		set job_shu,5;
 		changequest 11157,11158;
 		close2;
 		warp "sword_1-1",215,244;
 		end;
 	} else if (job_shu == 100) {
-		mes "[DRY-RUN] [Buddy]";
+		mes "[伙伴]";
 		mes "Ah, long time no see, "+strcharinfo(0)+".";
-		mes "[DRY-RUN] Are you here to meet my master?";
+		mes "你是来见我的主人吗？";
 		next;
-		switch(select("[DRY-RUN] Yes:No")) {
+		switch(select("是:否")) {
 		case 1:
-			mes "[DRY-RUN] [Buddy]";
-			mes "[DRY-RUN] I'll take you right away.";
+			mes "[伙伴]";
+			mes "我马上带你去。";
 			close2;
 			warp "sword_1-1",216,168;
 			end;
 		case 2:
-			mes "[DRY-RUN] [Buddy]";
-			mes "[DRY-RUN] Then, why are you here?";
-			mes "[DRY-RUN] You are not here to see me, aren't you?";
+			mes "[伙伴]";
+			mes "那么，你为什么在这里？";
+			mes "你不是来见我的，对吧？";
 			close;
 		}
 	}
-	mes "[DRY-RUN] [Buddy]";
+	mes "[伙伴]";
 	mes strcharinfo(0)+", didn't you meet the master yet?";
 	next;
-	mes "[DRY-RUN] [Buddy]";
-	mes "[DRY-RUN] My master doesn't like noise, so please ^f57d7dwait in the living room silently.^000000";
+	mes "[伙伴]";
+	mes "我的师傅不喜欢吵闹，所以请 ^f57d7d安静地在客厅等候。^000000";
 	next;
-	mes "[DRY-RUN] [Buddy]";
-	mes "[DRY-RUN] This way...";
+	mes "[伙伴]";
+	mes "这边...";
 	close2;
 	warp "sword_1-1",215,244;
 	end;
@@ -538,17 +538,17 @@ OnDisable:
 }
 
 sword_1-1,223,243,4	script	Buddy#job_shu_Salong	753,{
-	mes "[DRY-RUN] [Buddy]";
-	mes "[DRY-RUN] My master doesn't like noise, so please ^f57d7dwait in the living room silently.^000000";
+	mes "[伙伴]";
+	mes "我的师傅不喜欢吵闹，所以请 ^f57d7d安静地在客厅等候。^000000";
 	next;
-	switch(select("[DRY-RUN] Go to the living room.:Go outside.")) {
+	switch(select("去客厅。:出去。")) {
 	case 1:
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] Please wait in the living room at the upper side.";
+		mes "[伙伴]";
+		mes "请在上面的客厅等候。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Buddy]";
-		mes "[DRY-RUN] Then, see you again.";
+		mes "[伙伴]";
+		mes "那么，再见了。";
 		close2;
 		warp "yuno_fild07",255,178;
 		end;
@@ -658,13 +658,13 @@ OnTimer320000:
 
 sword_2-1,223,205,7	script	Buddy#job_shuaneh	753,{
 	if (job_shu > 4) {
-		mes "[DRY-RUN] I'll show you the way. This way.";
+		mes "我带你去。这边。";
 		close2;
 		warp "sword_1-1",216,168;
 		donpcevent "Buddy#job_shuaneh::OnDisable";
 		end;
 	}
-	mes "[DRY-RUN] Why are you here?";
+	mes "你为什么在这里？";
 	close2;
 	warp "yuno_fild07",248,179;
 	end;
@@ -692,129 +692,129 @@ OnEnable:
 
 sword_1-1,222,169,5	script	Bruno#job_shu	484,{
 	if (job_shu > 4) {
-		mes "[DRY-RUN] [Bruno]";
+		mes "[布鲁诺]";
 		mes "Hey~ "+strcharinfo(0)+", what's up?";
 		next;
-		switch(select("[DRY-RUN] Let's have conversation.:Go outside.")) {
+		switch(select("让我们谈谈.:出去吧.")) {
 		case 1:
 			if (job_shu == 100) {
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] My master?";
-				mes "[DRY-RUN] He said he has put the world out of his mind and he is a ghost who gave up being a human but he seems to have a lingering desire for the world.";
+				mes "[布鲁诺]";
+				mes "我的主人？";
+				mes "他说他已经将这个世界抛诸脑后，他是一个放弃做人而成为幽灵的人，但他似乎对这个世界仍有留恋。";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] Well, I am also a Sura but I still enjoy traveling and meeting many people~";
+				mes "[布鲁诺]";
+				mes "好吧，我也是一名修罗，但我仍然喜欢旅行和结识许多人~";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] In the old days, my master had one close friend but after becoming a Sura,";
+				mes "[布鲁诺]";
+				mes "在过去，我的师父有一个亲密的朋友，但在成为修罗之后，";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] I heard that he wrote a letter to the friend that he had died.";
-				mes "[DRY-RUN] Then he sometimes visits 'the place of memory' secretly.";
+				mes "[布鲁诺]";
+				mes "我听说他给那个朋友写了一封信，说他已经去世了。";
+				mes "然后他有时会偷偷去“记忆之地”拜访。";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] It would be better not saying that he died and just keep meeting his friend.";
-				mes "[DRY-RUN] He's a bit of a stick-in-the-mud.";
+				mes "[布鲁诺]";
+				mes "最好不要说他已经去世，而是继续见他的朋友。";
+				mes "他有点死板。";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] But he is really cool and awesome.";
-				mes "[DRY-RUN] Ho ho.";
+				mes "[布鲁诺]";
+				mes "但他真的很酷，很棒。";
+				mes "呵呵。";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] The reason why I keep traveling is to find 'the precious friend' of my master and not to training myself more.";
+				mes "[布鲁诺]";
+				mes "我继续旅行的原因是为了找到我师父的“珍贵朋友”，而不是为了更多地训练自己。";
 				next;
-				mes "[DRY-RUN] [Bruno]";
-				mes "[DRY-RUN] I feel heavy-hearted when I see my master missing his friend...";
-				mes "[DRY-RUN] It's not... not just for my... master!";
+				mes "[布鲁诺]";
+				mes "当我看到我的主人失去朋友时，我感到心情沉重...";
+				mes "这不仅仅是为了我的... 主人!";
 				close;
 			}
-			mes "[DRY-RUN] [Bruno]";
-			mes "[DRY-RUN] Wow~ I thought you would be knocked out before seeing my master but you are finally here now?";
+			mes "[布鲁诺]";
+			mes "哇~ 我以为你会在见到我的主人之前就被击倒，但你现在终于来了?";
 			next;
-			mes "[DRY-RUN] [Bruno]";
-			mes "[DRY-RUN] Anyway you are here now, so I am your immediate superior.";
+			mes "[布鲁诺]";
+			mes "无论如何，你现在在这里，所以我是你的直接上司.";
 			next;
-			mes "[DRY-RUN] [Bruno]";
-			mes "[DRY-RUN] We don't care about your age in our world!";
+			mes "[布鲁诺]";
+			mes "在我们的世界里，我们不在乎你的年龄!";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Bruno]";
-			mes "[DRY-RUN] Come again whenever you want to~";
-			mes "[DRY-RUN] I will show you the training course of the dead~";
+			mes "[布鲁诺]";
+			mes "随时欢迎你再来~";
+			mes "我会向你展示死亡的训练课程~";
 			close2;
 			warp "yuno_fild07",255,178;
 			end;
 		}
 	}
-	mes "[DRY-RUN] [Bruno]";
-	mes "[DRY-RUN] What are you?";
-	mes "[DRY-RUN] How did you find this place!";
-	mes "[DRY-RUN] Go away!!!";
+	mes "[布鲁诺]";
+	mes "你是什么职业？";
+	mes "你是怎么找到这个地方的!";
+	mes "滚开!!!";
 	close2;
 	warp "yuno_fild07",255,178;
 	end;
 }
 
 sword_1-1,223,167,2	script	Master#job_shu	483,{
-	mes "[DRY-RUN] [Master]";
+	mes "[大师]";
 	if (job_shu == 5) {
-		mes "[DRY-RUN] You must have bright eyes to see that you finally came to this room.";
+		mes "你必须有明亮的眼睛才能看到你终于来到了这个房间。";
 		next;
-		mes "[DRY-RUN] [Master]";
+		mes "[大师]";
 		if (SkillPoint != 0) {
-			mes "[DRY-RUN] You can't become a Sura unless you use all your skill points.";
+			mes "除非你使用所有的技能点，否则你无法成为修罗。";
 			close;
 		}
 		if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
-			mes "[DRY-RUN] You seem to be heavily burdened. Please remove some of it.";
+			mes "你似乎负担很重。请去掉一些负担。";
 			close;
 		}
 		if (BaseLevel < 99 || JobLevel < 50) {
-			mes "[DRY-RUN] You don't seem to have reached the limit of a human, you still have far to go in order to become Sura.";
-			mes "[DRY-RUN] Please go practice some more.";
+			mes "你似乎还没有达到人类的极限，要成为修罗还有很长的路要走。";
+			mes "请再去练习一下。";
 			close;
 		}
 		if (BaseJob != Job_Monk) {
-			mes "[DRY-RUN] Hmm?";
+			mes "嗯?";
 			close;
 		}
-		mes "[DRY-RUN] Of course~";
-		mes "[DRY-RUN] I have keen eyes.";
+		mes "当然~";
+		mes "我有敏锐的眼光。";
 		next;
-		mes "[DRY-RUN] [Bruno]";
-		mes "[DRY-RUN] Master! This is a wolf fur coat.";
-		mes "[DRY-RUN] Put it on when it's cold.";
+		mes "[布鲁诺]";
+		mes "师傅！这是狼皮大衣。";
+		mes "天气冷的时候穿上它。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] Ahhk! That is the wolf I... caught... Uhh.";
+		mes "啊哈！那是我... 捕到的狼... 呜。";
 		next;
-		mes "[DRY-RUN] - Whack -";
+		mes "- 啪 -";
 		next;
-		mes "[DRY-RUN] [Bruno]";
-		mes "[DRY-RUN] Ho ho ho~";
+		mes "[布鲁诺]";
+		mes "哈哈哈~";
 		mes "Do you have something to say, "+strcharinfo(0)+"?";
-		mes "[DRY-RUN] You became a member of our family, let's get along together ~";
+		mes "你成为了我们家族的一员，让我们好好相处吧~";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] Right, I now accept you as my student, too.";
+		mes "[大师]";
+		mes "没错，我现在也接受你作为我的学生。";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] I think you already know it, but to live as a Sura will not be that easy.";
+		mes "[大师]";
+		mes "我想你已经知道了，但作为一名修罗生活并不会那么简单。";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] I also shut myself off from the world. If there comes a day when we go to the world again, it must be the day when the world needs ghosts for the wars.";
+		mes "[大师]";
+		mes "我也曾与世隔绝。如果有一天我们再次回到这个世界，那一定是这个世界需要幽灵来参与战争的日子。";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] I hope those days will not come but... I'll willingly be the ghost and kill all enemies.";
+		mes "[大师]";
+		mes "我希望那些日子不会到来，但……我会心甘情愿地成为幽灵，消灭所有敌人。";
 		next;
 		if (ismounting()) {
-			mes "[DRY-RUN] [Master]";
-			mes "[DRY-RUN] So... please get down from your riding pet!";
-			mes "[DRY-RUN] It is a loss of etiquette on this situation.";
+			mes "[大师]";
+			mes "所以……请你从你的骑宠上下来！";
+			mes "在这种情况下，这是失礼的表现。";
 			close;
 		}
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] You should train yourself steadily until that day.";
+		mes "[大师]";
+		mes "你应该在那一天之前不断地训练自己。";
 		set job_shu,100;
 		jobchange roclass(eaclass()|EAJL_THIRD);
 		completequest 11158;
@@ -822,20 +822,20 @@ sword_1-1,223,167,2	script	Master#job_shu	483,{
 		getitem 2795,1; //Green_Apple_Ring
 		close;
 	} else if (job_shu > 5) {
-		mes "[DRY-RUN] Once I was also an ordinary young man who traveled a lot and met many friends.";
+		mes "曾经我也是一个普通的年轻人，旅行很多，结识了许多朋友。";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] However, as you might have felt, I finally faced my limitation.";
+		mes "[大师]";
+		mes "然而，正如你可能感受到的，我最终面对了我的极限。";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] Sometimes I wondered 'should I have to give up everything to be more powerful...?'";
+		mes "[大师]";
+		mes "有时我会想，'我是否应该放弃一切以变得更强大...？'";
 		next;
-		mes "[DRY-RUN] [Master]";
-		mes "[DRY-RUN] But what's done is done...";
+		mes "[大师]";
+		mes "但事情已经发生了...";
 		close;
 	}
-	mes "[DRY-RUN] This is not a place where you can stay.";
-	mes "[DRY-RUN] Please go back.";
+	mes "这里不是你可以停留的地方。";
+	mes "请回去。";
 	close2;
 	warp "yuno_fild07",255,178;
 	end;

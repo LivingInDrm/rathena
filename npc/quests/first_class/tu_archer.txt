@@ -1832,59 +1832,59 @@ prontera,144,301,5	script	Mage#tu	2_F_MAGICMASTER,{
 // Minister
 //============================================================
 -	script	Minister#tu_	-1,{
-	mes "[Minister]";
-	mes "The royal family";
-	mes "is extremely busy";
-	mes "at the moment, handling";
-	mes "our nation's administration.";
+	mes "[部长]";
+	mes "王室";
+	mes "非常忙碌";
+	mes "目前正在处理";
+	mes "我们国家的管理。";
 	if(tu_archer02 == 5){
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "I heard screams";
-		mes "from outside! Did";
-		mes "something happen?";
+		mes "我听到了尖叫声";
+		mes "从外面传来的！发生了";
+		mes "什么事吗？";
 		next;
-		mes "[Minister]";
+		mes "[部长]";
 		mes "...";
 		mes "......";
 		next;
-		mes "[Minister]";
-		mes "Ah, there are a few stray cats running around, those Wild Roses, so those noises you heard must have been them. Everything is fine here in the palace.";
+		mes "[部长]";
+		mes "啊，有几只流浪猫在外面乱跑，那些野玫瑰，所以你听到的声音一定是它们发出的。这里在宫殿里一切都很好。";
 		tu_archer02 = 6;
 	}
 	else if(tu_archer02 == 7){
 		next;
-		mes "^3355FFThe urgency that the Minister expressed earlier has been";
-		mes "replaced with a stone cold feeling of sternness. He probably won't tell you much more information,";
-		mes "no matter how much you ask him.";
+		mes "^3355FF部长之前表达的紧迫感已经被";
+		mes "一种冷酷的严厉感所取代。他可能不会告诉你更多的信息，";
+		mes "无论你问他多少次。";
 	}
 	else if(tu_acolyte01 == 25){
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Um...";
-		mes "I hear that";
-		mes "the royal family";
-		mes "might be in sort of";
-		mes "trouble. Is there any";
-		mes "way I could help?";
+		mes "嗯...";
+		mes "我听说";
+		mes "王室";
+		mes "可能正处于某种";
+		mes "麻烦中。有什么";
+		mes "我可以帮忙的吗？";
 		next;
-		mes "[Minister]";
+		mes "[部长]";
 		mes "...";
 		mes "......";
 		next;
-		mes "[Minister]";
-		mes "You must be mistaken.";
-		mes "The royal family is fine,";
-		mes "especially since our";
-		mes "kingdom is at peace.";
+		mes "[部长]";
+		mes "你一定是搞错了。";
+		mes "王室很好，";
+		mes "尤其是我们的";
+		mes "王国正处于和平时期。";
 		next;
-		mes "[Minister]";
-		mes "Perhaps you've gotten that idea because it's very difficult to meet any member of the royal family. Please understand that they're";
-		mes "all very busy trying to serve";
-		mes "the people.";
+		mes "[部长]";
+		mes "也许你会有这样的想法，因为很难见到任何王室成员。请理解他们";
+		mes "都非常忙于为";
+		mes "人民服务。";
 		next;
-		mes "[Minister]";
-		mes "As a holy servant, I'm sure that you'll find plenty of other people who have need of your help and abilities outside of the palace.";
+		mes "[部长]";
+		mes "作为一名神圣的仆人，我相信你会在宫殿外找到许多需要你帮助和能力的人。";
 	}
 	close;
 }
@@ -1895,10 +1895,10 @@ prontera,144,301,5	script	Mage#tu	2_F_MAGICMASTER,{
 	end;
 OnTouch_:
 	if(tu_archer02 == 6) {
-		mes "[Minister]";
-		mes "Contact the";
-		mes "Prontera Church.";
-		mes "Hurry, this is urgent!";
+		mes "[部长]";
+		mes "联系";
+		mes "普隆德拉教堂。";
+		mes "快点，这很紧急！";
 		tu_archer02 = 7;
 		close;
 	}

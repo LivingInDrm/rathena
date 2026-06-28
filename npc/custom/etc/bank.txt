@@ -17,26 +17,26 @@
 
 prontera,132,217,5	script	Banker	109,{
 	set @cost,500;
-	mes "[Banker]";
-	mes "Welcome to the First Bank of Prontera. How can I help you today?";
+	mes "[银行家]";
+	mes "欢迎来到普隆德拉第一银行。今天我能帮您什么？";
 	next;
-	switch(select("I'd like to make a deposit.:I'd like to make a withdrawal.:What's my current balance?:Cancel")) {
+	switch(select("我想存款.:我想取款.:我当前的余额是多少?:取消")) {
 	case 1:
-		mes "[Banker]";
-		mes "Very well... How much would you like to deposit? The maximum you can deposit at once is 999,999 Zeny.";
+		mes "[银行家]";
+		mes "很好……您想存入多少？一次最多可以存入999,999金币。";
 		next;
 		if (@cost > 0) {
-			mes "[Banker]";
+			mes "[银行家]";
 			mes "Oh, and do realize there is a " +@cost + " Zeny charge on all transactions!";
 			next;
 		}
 		input @deposit;
 		if (@deposit < 1) {
-			mes "Make sure you ask me to deposit a real amount.";
+			mes "请确保您告诉我一个真实的存款金额。";
 			close;
 		}
 		else if (@deposit > Zeny) {
-			mes "It does not appear like you have the amount of zeny you're trying to deposit!";
+			mes "您似乎没有您想存入的金币数量！";
 			close;
 		}
 		else if (@deposit > (Zeny - @cost)) {
@@ -47,22 +47,22 @@ prontera,132,217,5	script	Banker	109,{
 			set Zeny,Zeny - @deposit;
 			set Zeny,Zeny - @cost;
 			set #bankstorage,#bankstorage + @deposit;
-			mes "[Banker]";
-			mes "Thank you very much... Your zeny is in good hands.";
+			mes "[银行家]";
+			mes "非常感谢……您的金币会被妥善保管。";
 			close;
 		}
 	case 2:
-		mes "[Banker]";
-		mes "Very well... How much would you like to withdraw? The maximum you can withdraw at one time is 999,999 Zeny";
+		mes "[银行家]";
+		mes "很好……您想取出多少？一次最多可以取出999,999金币。";
 		next;
 		if (@cost > 0) {
-			mes "[Banker]";
+			mes "[银行家]";
 			mes "Oh, and do realize there is a " +@cost + " Zeny charge on all transactions!";
 			next;
 		}
 		input @withdrawl;
 		if (@withdrawl < 1) {
-			mes "Please don't play games. I need a real amount to withdraw.";
+			mes "请不要玩游戏。我需要一个真实的取款金额。";
 			close;
 		}
 		else if (@withdrawl > #bankstorage) {
@@ -70,12 +70,12 @@ prontera,132,217,5	script	Banker	109,{
 			close;
 		}
 		else if ((@cost > Zeny) && ((Zeny + @withdrawl) > @cost)) {
-			mes "[Banker]";
-			mes "You don't have the Zeny for the transaction fee right now. Would you like me to take the fee directly from your withdrawal?";
+			mes "[银行家]";
+			mes "您现在没有足够的金币支付交易费用。您希望我直接从您的取款中扣除费用吗？";
 			next;
-			switch(select("Yes please.:No, Thanks")){
+			switch(select("是的，请.:不，谢谢")){
 			case 1:
-				mes "[Banker]";
+				mes "[银行家]";
 				mes "Removing " + @cost + " from your withdrawal to cover the deposit fee...";
 				set @withdrawl,@withdrawl - @cost;
 				set #bankstorage,#bankstorage - @cost;
@@ -84,12 +84,12 @@ prontera,132,217,5	script	Banker	109,{
 				set Zeny,Zeny - @cost;
 				set Zeny,Zeny + @withdrawl;
 				set #bankstorage,#bankstorage - @withdrawl;
-				mes "[Banker]";
-				mes "There's your Zeny. Have a good day.";
+				mes "[银行家]";
+				mes "这是您的金币。祝您有美好的一天。";
 				close;
 			case 2:
-				mes "[Banker]";
-				mes "Very well... come again soon.";
+				mes "[银行家]";
+				mes "很好……欢迎再次光临。";
 				close;
 			}
 		}
@@ -97,22 +97,22 @@ prontera,132,217,5	script	Banker	109,{
 			set Zeny,Zeny - @cost;
 			set Zeny,Zeny + @withdrawl;
 			set #bankstorage,#bankstorage - @withdrawl;
-			mes "[Banker]";
-			mes "There's your Zeny. Have a good day.";
+			mes "[银行家]";
+			mes "这是您的金币。祝您有美好的一天。";
 			close;
 		}
 	case 3:
-		mes "[Banker]";
-		mes "Hmmmm... let me check some paper work.";
+		mes "[银行家]";
+		mes "嗯……让我检查一些文件。";
 		next;
-		mes "*Rustle, Rustle*";
+		mes "*沙沙声*";
 		next;
-		mes "[Banker]";
+		mes "[银行家]";
 		mes "You currently have " + callfunc("F_InsertComma",#bankstorage) + " Zeny in your account.";
 		close;
 	case 4:
-		mes "[Banker]";
-		mes "Very well... come again soon.";
+		mes "[银行家]";
+		mes "很好……欢迎再次光临。";
 		close;
 	}
 }

@@ -1,16 +1,16 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Crusader Job Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Made by: Black Dragon
 //= Converted by: Shin
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 3.3
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Job quest for Crusader classes
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 2.2 Updated All NPCs to the officials one [Samuray22]
 //=     -Based on the ASB 4.0 Package.
 //=-Maybe need be checked the monsters in the test 2 and 4.
@@ -46,7 +46,7 @@
 		mes "You don't belong here, my friend.";
 		mes "Be advised to continue practicing yourself.";
 		close;
-	} 
+	}
 	else if(BaseJob != Job_Swordman) {
 		if(BaseJob == Job_Crusader) {
 			mes "Go and train yourself in preparation for the holy war that is coming. Victory will be in the hands of those who are most ready to receive it.";
@@ -71,7 +71,7 @@
 		mes "[Michael Halig]";
 		mes "As it happened one thousand years ago, evil forces will one day attack in droves in an attempt to take over the world once again.";
 		close;
-	} 
+	}
 	else if(CRUS_Q <= 3 && countitem(1004) && countitem(1009)) {
 		mes "Ah...";
 		mes "I see that you have been called to become a Crusader. We are assured of your will, but now we must test your capabilities.";
@@ -127,7 +127,7 @@
 					mes "[Michael Halig]";
 					mes "Train yourself more as a Swordsman and wait for your calling. I understand your intent, but as of now, you cannot join us.";
 					close;
-				} 
+				}
 				if (SkillPoint) {
 					mes "[Michael Halig]";
 					mes "You haven't finished learning everything as a Swordsman. Use all of your remaining skill points, and then return to me.";
@@ -452,349 +452,349 @@
 // Gabriel Valentine: 3rd Knowledge Test
 //============================================================
 prt_church,95,127,3	script	Crusader	745,{
-	mes "[DRY-RUN] [Gabriel Valentine]";
+	mes "[加布里埃尔·瓦伦丁]";
 	if(BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Crusader) {
-			mes "[DRY-RUN] Welcome, fellow Crusader.";
-			mes "[DRY-RUN] How is your training";
-			mes "[DRY-RUN] coming along?";
+			mes "欢迎，战友，十字军。";
+			mes "你的训练进展如何";
+			mes "进展如何？";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] You must not forget to train everyday, and prepare for the day the Holy War will come upon us.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "你必须记得每天训练，为圣战的到来做好准备。";
 			close;
 		}
 		else if(BaseJob == Job_Novice) {
-			mes "[DRY-RUN] Welcome, I am a Crusader.";
-			mes "[DRY-RUN] I am preparing for the";
-			mes "[DRY-RUN] foretold Holy War";
-			mes "[DRY-RUN] that is to come.";
+			mes "欢迎，我是一名十字军。";
+			mes "我正在为即将到来的";
+			mes "预言中的圣战";
+			mes "做准备。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] If you are interested in becoming a Crusader, you must train first as a Swordman. Come and visit us again when you believe that you have learned enough as a Swordman...";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "如果你有兴趣成为十字军，你必须先作为剑士进行训练。当你认为自己作为剑士学到了足够的知识时，欢迎再次来访我们...";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] We are located in the Prontera Central Palace, so if you have time, it wouldn't hurt to stop by.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "我们位于普隆德拉中央宫殿，所以如果你有时间，来看看也不错。";
 			close;
 		}
-		mes "[DRY-RUN] Welcome, we are Crusaders.";
-		mes "[DRY-RUN] We are preparing for the";
-		mes "[DRY-RUN] foretold Holy War";
-		mes "[DRY-RUN] that is to come.";
+		mes "欢迎，我们是十字军。";
+		mes "我们正在为即将到来的";
+		mes "预言中的圣战";
+		mes "做准备。";
 		next;
-		mes "[DRY-RUN] [Gabriel Valentine]";
-		mes "[DRY-RUN] I hope you will train yourself in preparation for the future as well.";
+		mes "[加布里埃尔·瓦伦丁]";
+		mes "我希望你也能为未来做好准备，进行自我训练。";
 		close;
 	}
 	else if(CRUS_Q == 0) {
-		mes "[DRY-RUN] Welcome. We are Crusaders.";
-		mes "[DRY-RUN] We are preparing for the";
-		mes "[DRY-RUN] foretold Holy War";
-		mes "[DRY-RUN] that is to come.";
+		mes "欢迎。我们是十字军。";
+		mes "我们正在为即将到来的";
+		mes "预言中的圣战";
+		mes "做准备。";
 		next;
-		mes "[DRY-RUN] [Gabriel Valentine]";
-		mes "[DRY-RUN] If you would like to become a Crusader, please speak with our leader in the Prontera Central Palace.";
+		mes "[加布里埃尔·瓦伦丁]";
+		mes "如果你想成为十字军，请与我们在普隆德拉中央宫殿的领袖交谈。";
 		close;
 	}
 	else if((CRUS_Q == 6) || (CRUS_Q == 7)) {
 		if(CRUS_Q == 6) {
-			mes "[DRY-RUN] Welcome.";
-			mes "[DRY-RUN] Did you do well";
-			mes "[DRY-RUN] on those painful tests?";
-			mes "[DRY-RUN] I will be conducting your next test.";
+			mes "欢迎。";
+			mes "你做得好吗";
+			mes "那些痛苦的测试？";
+			mes "我将进行你的下一个测试。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] My name is Gabriel Valentine. I, too, am preparing for the Holy War. For the time being, I act as guard for this church.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "我的名字是加布里埃尔·瓦伦丁。我也在为圣战做准备。暂时，我在这座教堂担任守卫。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] I will test to see if you have acquired the knowledge that is necessary to become a Crusader.";
-			mes "[DRY-RUN] We can't very well win the Holy War just by swinging a sword.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "我将测试你是否掌握了成为圣骑士所需的知识。";
+			mes "我们可不能仅仅靠挥舞剑来赢得圣战。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] I will give";
-			mes "[DRY-RUN] you 10 questions.";
-			mes "[DRY-RUN] Answer them correctly.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "我将给你";
+			mes "10个问题。";
+			mes "正确回答它们。";
 			next;
 		}
 		else if(CRUS_Q == 7) {
-			mes "[DRY-RUN] Welcome back~";
-			mes "[DRY-RUN] Did you prepare";
-			mes "[DRY-RUN] well for this test?";
-			mes "[DRY-RUN] Let's try again,";
-			mes "[DRY-RUN] shall we...?";
+			mes "欢迎回来~";
+			mes "你为这次测试准备好";
+			mes "了吗？";
+			mes "我们再试一次，";
+			mes "好不好...？";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] Once again, I'm going";
-			mes "[DRY-RUN] to give you 10 questions";
-			mes "[DRY-RUN] Listen carefully, and";
-			mes "[DRY-RUN] choose the correct answer.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "我将再次给你";
+			mes "10个问题";
+			mes "仔细听，然后";
+			mes "选择正确的答案。";
 			next;
 		}
 		set .@cru_m,rand(1,3);
 		if (.@cru_m == 1) {
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 1. Which attribute is the most effective in atttacking the Undead?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "1. 哪个属性在攻击不死生物时最有效？";
 			next;
-			if (select("[DRY-RUN] Neutral:Earth:Undead:Holy") == 4)
+			if (select("中立:土:不死:神圣") == 4)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 2. If the monster is a Level 2 Undead, how much more damage does a Holy attack do compared to Fire?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "2. 如果怪物是等级2的不死生物，神圣攻击相比火焰攻击造成的伤害多多少？";
 			next;
-			if (select("[DRY-RUN] 25 %:50 %:75 %:100 %") == 1)
+			if (select("25 %:50 %:75 %:100 %") == 1)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 3. What item can you not get from an Evil Druid?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "3. 你无法从邪恶德鲁伊那里获得什么物品？";
 			next;
-			if (select("[DRY-RUN] Monk Hat:Yggdrasil leaf:White Herb:Amulet ") == 1)
+			if (select("僧侣帽:伊格德拉希尔叶:白色草药:护身符") == 1)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 4. Which Undead monster";
-			mes "[DRY-RUN] has the highest HP?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "4. 哪个不死生物";
+			mes "拥有最高的HP？";
 			next;
-			if (select("[DRY-RUN] Ghoul:Skeleton Prisoner:Wraith:Zombie Prisoner") == 4) 
+			if (select("食尸鬼:骷髅囚徒:幽灵:僵尸囚徒") == 4)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 5. Which of the following monsters is a different size than the others?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "5. 以下哪个怪物的体型与其他怪物不同？";
 			next;
-			if (select("[DRY-RUN] Wraith:Khalitzburg:Drake:Evil Druid") == 3)
+			if (select("幽灵:卡利兹堡:德雷克:邪恶德鲁伊") == 3)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 6. Which card grants you tolerance to Undead property attacks?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "6. 哪张卡片可以让你对不死属性攻击有耐性？";
 			next;
-			if (select("[DRY-RUN] Orc Skeleton Card:Orc Zombie Card:Ghoul Card:Skel Worker Card") == 2)
+			if (select("兽人骷髅卡片:兽人僵尸卡片:食尸鬼卡片:骷髅工人卡片") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 7. What was the relationship between Munak and Bongun before they passed away?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "7. 穆纳克和邦古恩在去世之前的关系是什么？";
 			next;
-			if (select("[DRY-RUN] Big Brother and Little Sister:Childhood friends in the same village:Stepbrother and sister:Complete strangers") == 2)
+			if (select("大哥和妹妹:同村的青梅竹马:异父异母的兄妹:完全陌生人") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 8. Which of the following monsters is not aggressive?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "8. 以下哪个怪物不是攻击性的？";
 			next;
-			if (select("[DRY-RUN] Soldier Skeleton:Orc Skeleton:Skeleton:Skel Worker") == 3)
+			if (select("士兵骷髅:兽人骷髅:骷髅:骷髅工人") == 3)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 9. What is the name of the shield in which a Munak Card has been inserted?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "9. 插入Munak卡的盾牌名称是什么？";
 			next;
-			if (select("[DRY-RUN] Atomic Shield:Amulet Shield:Hypnotic Shield:Homeroth Shield") == 2)
+			if (select("原子盾:护身符盾:催眠盾:霍梅罗斯盾") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 10. Which of the following monsters does not drop Memento?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "10. 以下哪个怪物不掉落纪念品？";
 			next;
-			if (select("[DRY-RUN] Munak:Ghoul:Mummy:Soldier Skeleton") == 1)
+			if (select("穆纳克:食尸鬼:木乃伊:士兵骷髅") == 1)
 				set .@cru_t,.@cru_t+10;
 		}
 		else if (.@cru_m == 2) {
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 1. Which of the following monsters is a different attribute than the others?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "1. 以下哪个怪物的属性与其他怪物不同？";
 			next;
-			if (select("[DRY-RUN] Carat:Wind Ghost:Isis:Wanderer") == 3)
+			if (select("卡拉特:风之幽灵:伊西斯:流浪者") == 3)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 2. Which sword is effective in attacking Demon monsters?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "2. 哪把剑对攻击恶魔怪物有效？";
 			next;
-			if (select("[DRY-RUN] Decussate Tsurugi:Hollowed Tsurugi:Damned Tsurugi:Drowsy Tsurugi") == 1)
+			if (select("交叉刀:空心刀:被诅咒的刀:昏昏欲睡的刀") == 1)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 3. Which item is NOT dropped by Dokebi?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "3. 以下哪个物品不是Dokebi掉落的？";
 			next;
-			if (select("[DRY-RUN] Rough Elunium:Golden Hammer:Sword Mace:Mighty Staff") == 2)
+			if (select("粗糙的艾露尼姆:金锤:剑锤:强力法杖") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 4. Which Demon monster has the most HP?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "4. 哪个恶魔怪物的HP最高？";
 			next;
-			if (select("[DRY-RUN] Giearth:Magnolia:Dokebi:Marionette") == 4)
+			if (select("吉尔斯:木兰:独角鬼:木偶") == 4)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 5. Which Demon monster is a different size than the others?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "5. 哪个恶魔怪物的体型与其他怪物不同？";
 			next;
-			if (select("[DRY-RUN] Ghostring:Whisper:Deviruchi:Baphomet Junior") == 1)
+			if (select("幽灵:低语者:德维鲁奇:巴风特小") == 1)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 6. Which shield reduces damage inflicted by Demon monsters?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "6. 哪个盾牌可以减少恶魔怪物造成的伤害？";
 			next;
-			if (select("[DRY-RUN] Satanic Shield:Shield from Hell:Amulet Shield:Excellent Shield") == 2)
+			if (select("撒旦盾:地狱之盾:护身符盾:优秀盾") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 7. Which attribute is the most effective on the Wind Ghost?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "7. 哪个属性对风之幽灵最有效？";
 			next;
-			if (select("[DRY-RUN] Water:Earth:Fire:Wind") == 2)
+			if (select("水:土:火:风") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 8. Which monster is different from the other Demon monsters?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "8. 哪个怪物与其他恶魔怪物不同？";
 			next;
-			if (select("[DRY-RUN] Sohee:Isis:Dokebi:Whisper") == 4)
+			if (select("小希:Isis:独角鬼:低语者") == 4)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 9. What effect does the Marionette Card have?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "9. 木偶卡有什么效果？";
 			next;
-			if (select("[DRY-RUN] Increase defense against Shadow attacks by 30 %:Increase defense against poison attacks by 30 %:Increase defense against Ghost attacks by 30 %:Increase defense against Neutral attacks by 30 %") == 3)
+			if (select("提高对暗影攻击的防御30%:提高对毒攻击的防御30%:提高对幽灵攻击的防御30%:提高对中立攻击的防御30%") == 3)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 10. Which of the following is an effective way to react when encountering a demon monster?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "10. 遇到恶魔怪物时，以下哪种反应方式有效？";
 			next;
-			if (select("[DRY-RUN] Scream, 'Evil one, go away!':Offer your soul and get a deal.:Put Holy Water on a weapon and attack.:Put on a Deviruchi hat.") == 3)
+			if (select("大喊，‘邪恶的东西，走开！’:献出你的灵魂并达成交易.:在武器上涂抹圣水并攻击.:戴上德维鲁奇帽子。") == 3)
 				set .@cru_t,.@cru_t+10;
 		}
 		else {
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 1. What level of 'Divine Protection' do you need to learn 'Demon Bane?'";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "1. 学习‘驱魔’需要多少级的‘神圣保护’？";
 			next;
-			if (select("[DRY-RUN] Level 1:Level 2:Level 3:Level 4") == 3)
+			if (select("等级 1:等级 2:等级 3:等级 4") == 3)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 2. If your INT is 30, including INT bonuses from quipment, at level 55, how much HP does Level 5 Heal recover?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "2. 如果你的智力为30，包括装备的智力加成，在55级时，5级治疗能恢复多少HP？";
 			next;
-			if (select("[DRY-RUN] 396:440:484:528") == 2)
+			if (select("396:440:484:528") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 3. With Level 7 Divine Protection, by how much is your defense against the Undead increased?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "3. 拥有7级神圣保护时，你对不死生物的防御提高了多少？";
 			next;
-			if (select("[DRY-RUN] 21:22:23:24") == 1)
+			if (select("21:22:23:24") == 1)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 4. Which of the following spears can attack Nightmare, which is endowed with the Ghost attribute?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "4. 以下哪种长矛可以攻击拥有幽灵属性的梦魇？";
 			next;
-			if (select("[DRY-RUN] Lance:Bill Guisarme:Cresent scythe:Zephyrus") == 4)
+			if (select("长矛:比尔戈萨姆:新月镰刀:西风") == 4)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 5. What level of 'Heal' do you need to learn 'Cure?'";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "5. 学习'治疗'需要达到什么等级？";
 			next;
-			if (select("[DRY-RUN] Level 1:Level 2:Level 3:Level 4") == 2)
+			if (select("等级 1:等级 2:等级 3:等级 4") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 6. What is the attack speed when Level 3 Cavalier Mastery is learned?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "6. 学习3级骑士精通后的攻击速度是多少？";
 			next;
-			if (select("[DRY-RUN] 70 % of normal speed:80 % of normal speed:90 % of normal speed:100 % of normal speed") == 2)
+			if (select("70%的正常速度:80%的正常速度:90%的正常速度:100%的正常速度") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 7. Which of the following is not correct of the Demon Bane skill?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "7. 以下关于恶魔克星技能的说法哪个是不正确的？";
 			next;
-			if (select("[DRY-RUN] Increase attack on Undead:Only Acolytes can learn the skill:When mastered, + 30 increase:Passive Skill") == 2)
+			if (select("提高对不死生物的攻击:只有服事可以学习该技能:掌握后，+30增加:被动技能") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 8. How much SP does Level 7 Heal use?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "8. 7级治疗消耗多少SP？";
 			next;
-			if (select("[DRY-RUN] 30:31:33:35") == 2)
+			if (select("30:31:33:35") == 2)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 9. What status cannot be";
-			mes "[DRY-RUN] cured with the Cure skill?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "9. 什么状态无法被治愈？";
+			mes "用治疗技能无法治愈的状态是什么？";
 			next;
-			if (select("[DRY-RUN] Curse:Silence:Chaos:Blind") == 1)
+			if (select("诅咒:沉默:混乱:失明") == 1)
 				set .@cru_t,.@cru_t+10;
 
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] 10. What best describes a Crusader?";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "10. 如何最恰当地描述一个骑士？";
 			next;
-			if (select("[DRY-RUN] One preparing for matrimony.:One preparing for the Holy War.:One preparing consummation.:One preparing potions.") == 2)
+			if (select("准备结婚的人.:准备圣战的人.:准备完婚的人.:准备药水的人.") == 2)
 				set .@cru_t,.@cru_t+10;
 
 		}
-		mes "[DRY-RUN] [Gabriel Valentine]";
-		mes "[DRY-RUN] Good work~";
-		mes "[DRY-RUN] Well, first let me";
-		mes "[DRY-RUN] look at your results.";
+		mes "[加布里埃尔·瓦伦丁]";
+		mes "干得好~";
+		mes "那么，首先让我";
+		mes "看看你的结果。";
 		next;
-		mes "[DRY-RUN] [Gabriel Valentine]";
+		mes "[加布里埃尔·瓦伦丁]";
 		mes " " + strcharinfo(0) + "'s score";
 		mes "is " + .@cru_t + " points...";
 		if(.@cru_t == 100) {
 			set CRUS_Q, 8;
 			changequest 3011,3013;
-			mes "[DRY-RUN] Superb! Now, it's time for";
-			mes "[DRY-RUN] you to take the next test.";
+			mes "太棒了！现在，是时候去";
+			mes "你参加下一个测试了。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] Go to Prontera Castle";
-			mes "[DRY-RUN] and meet Bliant Piyord.";
-			mes "[DRY-RUN] I will inform him that";
-			mes "[DRY-RUN] he will be testing you next.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "去普隆德拉城堡";
+			mes "并见见布里安特·皮约德。";
+			mes "我会通知他";
+			mes "他将会测试你。";
 			close;
 		}
 		else if(.@cru_t == 90) {
 			set CRUS_Q, 8;
 			changequest 3011,3013;
-			mes "[DRY-RUN] Well done~ Now, it's time for";
-			mes "[DRY-RUN] you to take the next test.";
+			mes "做得好~ 现在，是时候去";
+			mes "你参加下一个测试了。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] Go to Prontera Castle";
-			mes "[DRY-RUN] and meet Bliant Piyord.";
-			mes "[DRY-RUN] I will inform him that";
-			mes "[DRY-RUN] he will be testing you next.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "去普隆德拉城堡";
+			mes "并见见布里安特·皮约德。";
+			mes "我会通知他";
+			mes "他将会测试你。";
 			close;
 		}
 		else if (.@cru_t == 80 && CRUS_Q == 7) {
 			set CRUS_Q,8;
 			changequest 3011,3013;
-			mes "[DRY-RUN] Seems like you prepared a lot so I'll let you pass this time.";
-			mes "[DRY-RUN] Hurry now and go take the next test.";
+			mes "看起来你准备了很多，所以这次我让你通过。";
+			mes "快去参加下一个测试。";
 			next;
-			mes "[DRY-RUN] [Gabriel Valentine]";
-			mes "[DRY-RUN] Go to the Prontera Castle and meet Bliant Piyord.";
-			mes "[DRY-RUN] I will inform him to prepare the next test.";
+			mes "[加布里埃尔·瓦伦丁]";
+			mes "去普隆德拉城堡见布里安特·皮约德。";
+			mes "我会通知他准备下一个测试。";
 			close;
 		}
 		set CRUS_Q,7;
 		if(checkquest(3011) != -1) {
 			changequest 3011,3012;
 		}
-		mes "[DRY-RUN] Hmmm... What a pity.";
-		mes "[DRY-RUN] Go study some more and";
-		mes "[DRY-RUN] take this test again, okay?";
+		mes "嗯……真可惜。";
+		mes "再去学习一下，";
+		mes "再来参加这个测试，好吗？";
 		next;
-		mes "[DRY-RUN] [Gabriel Valentine]";
-		mes "[DRY-RUN] Don't stress, you need to know a lot in order to pass this test. In any case, I'll be waiting right here. When you think you're ready, come back, alright?";
+		mes "[加布里埃尔·瓦伦丁]";
+		mes "别紧张，你需要知道很多东西才能通过这个测试。无论如何，我会在这里等你。当你觉得准备好了，回来找我，好吗？";
 		close;
-	} 
+	}
 	else if(CRUS_Q == 8 || CRUS_Q == 9) {
-		mes "[DRY-RUN] Like I mentioned before, you should go to Prontera Castle and meet with Bliant Piyord to take your next test. Good luck, and become a Crusder soon, alright?";
+		mes "正如我之前提到的，你应该去普隆德拉城堡见布里安特·皮约德，参加你的下一个测试。祝你好运，快点成为一名十字军，好吗？";
 		close;
 	}
 	else if(CRUS_Q == 10) {
-		mes "[DRY-RUN] What are you still doing here? You've already completed all the tests. Go talk to our leader, you're pretty much ready to become a Crusader now.";
+		mes "你还在这里干什么？你已经完成了所有测试。去和我们的领导谈谈，你几乎准备好成为一名十字军了。";
 		next;
-		mes "[DRY-RUN] [Gabriel Valentine]";
-		mes "[DRY-RUN] You will soon join us in our preparations for the Holy War. Continue to live with faith after becoming a Crusader.";
+		mes "[加布里埃尔·瓦伦丁]";
+		mes "你将很快加入我们为圣战做准备。在成为十字军后，继续保持信仰生活。";
 		close;
 	}
-	mes "[DRY-RUN] Mmm...?";
-	mes "[DRY-RUN] It seems that you're";
-	mes "[DRY-RUN] an aspiring Crusader...";
-	mes "[DRY-RUN] But, it's not my turn";
-	mes "[DRY-RUN] to test you quite yet.";
+	mes "嗯……？";
+	mes "看来你是";
+	mes "一名有志的十字军...";
+	mes "但是，现在还轮不到我";
+	mes "来测试你。";
 	next;
-	mes "[DRY-RUN] [Gabriel Valentine]";
-	mes "[DRY-RUN] Finish those other tests,";
-	mes "[DRY-RUN] and come to me once you're";
-	mes "[DRY-RUN] instructed. Until then,";
-	mes "[DRY-RUN] I'll see you later~";
+	mes "[加布里埃尔·瓦伦丁]";
+	mes "完成其他测试后，";
+	mes "来找我，一旦你";
+	mes "被指示。直到那时，";
+	mes "再见~";
 	close;
 }
 
@@ -941,7 +941,7 @@ prt_church,95,127,3	script	Crusader	745,{
 		mes "I shall be";
 		mes "waiting.";
 		close;
-	} 
+	}
 	else if(CRUS_Q == 10) {
 		mes "Congratulations.";
 		mes "You have completed";
@@ -1434,9 +1434,9 @@ OnStop:
 	end;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= Need optimalization and fixing
 //= thanks to Komurka, KiLLaLeN, Lupus (fixing error)
 //= just a temp Job Quest
@@ -1455,4 +1455,4 @@ OnStop:
 //= 2.0 Changed numbers to constants. [Vicious]
 //= 2.1 Fixed endless loop, wrong condition check [Lupus]
 //=     also changed all job numbers to constants, fixed logic
-//============================================================ 
+//============================================================

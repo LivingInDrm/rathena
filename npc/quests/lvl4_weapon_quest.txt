@@ -24,137 +24,137 @@
 
 umbala,117,285,3	script	Bazo#lv4	85,{
 	if (checkweight(908,300) == 0) {
-		mes "^3355FFWait a second! Right now, you're carrying too many items with you. Please come back after putting some of your things into Kafra Storage.^000000";
+		mes "^3355FF等一下！你现在携带的物品太多了。请在把一些东西放入卡普拉仓库后再回来。^000000";
 		close;
 	}
 	if (lv4_weapon == 0) {
-		mes "[Bazo]";
-		mes "Hello...";
-		mes "Not from around";
-		mes "here, are you?";
+		mes "[巴佐]";
+		mes "你好...";
+		mes "你不是这里的人吧？";
+		mes "你不是这里的人吧？";
 		next;
-		mes "[Bazo]";
-		mes "My name is Bazo Heburiech. I'm pleased to make your acquaintance. As you can see, I'm also not from around here either. I feel as if... We were meant to meet.";
+		mes "[巴佐]";
+		mes "我叫巴佐·赫布里奇。很高兴认识你。正如你所看到的，我也不是这里的人。我感觉我们... 注定要相遇。";
 		next;
-		mes "[Bazo]";
-		mes "If you don't mind, let me tell you a little about this place. When I first got here, I could tell there was something different about";
-		mes "this village.";
+		mes "[巴佐]";
+		mes "如果你不介意，我想告诉你一些关于这个地方的事。当我第一次来到这里时，我就能感觉到这个村庄有些不同。";
+		mes "这个村庄。";
 		next;
-		mes "[Bazo]";
-		mes "For one thing, Umbala is close";
-		mes "to Niflheim, realm of the dead. Because it's so near, some of the people here can actually draw evil power from that realm.";
+		mes "[巴佐]";
+		mes "首先，乌姆巴拉很近。";
+		mes "前往尼芙菲姆，死者的领域。因为离得很近，这里的一些人实际上可以从那个领域汲取邪恶的力量。";
 		next;
-		mes "[Bazo]";
-		mes "Don't worry, the locals here only use this power to produce specialty items. During my stay here, I too have learned some of those crafting methods.";
+		mes "[巴佐]";
+		mes "别担心，这里的当地人只用这种力量来生产特产。在我在这里的期间，我也学会了一些那些制作方法。";
 		next;
-		mes "[Bazo]";
-		mes "If you like, I'd be willing to show you my skills. Now how does that sound?";
+		mes "[巴佐]";
+		mes "如果你愿意，我可以向你展示我的技能。你觉得怎么样？";
 		next;
-		switch(select("Sounds good~:No, thanks.")) {
+		switch(select("听起来不错~:不，谢谢。")) {
 		case 1:
 			if (BaseLevel < 70) {
-				mes "[Bazo]";
-				mes "Hmm. For now, you should level";
-				mes "up and get stronger first. Please understand that I mean well when I say that I don't think you're quite ready for my goods.";
+				mes "[巴佐]";
+				mes "嗯。现在，你应该先提升等级";
+				mes "变得更强。请理解我说这话是出于好意，我认为你还没有准备好接受我的商品。";
 				next;
-				mes "[Bazo]";
-				mes "Like I said before, these";
-				mes "goods have some evil power. If you're not strong or experienced enough, you'd be driven insane.";
+				mes "[巴佐]";
+				mes "就像我之前说的，这些";
+				mes "商品有一些邪恶的力量。如果你不够强大或经验不足，你会被逼疯。";
 				next;
-				mes "[Bazo]";
-				mes "Once you're ready,";
-				mes "I'll gladly make you";
-				mes "something great~";
+				mes "[巴佐]";
+				mes "一旦你准备好了，";
+				mes "我很乐意为你制作";
+				mes "一些伟大的东西~";
 				close;
 			}
-			mes "[Bazo]";
-			mes "Excellent! Let me tell you what materials I'll need. There's not that many, but you might want to write them down.";
+			mes "[巴佐]";
+			mes "太好了！让我告诉你我需要什么材料。数量不多，但你可能想把它们写下来。";
 			next;
-			mes "[Bazo]";
-			mes "First, I'll need";
-			mes "some basic materials.";
-			mes "10 Gold,";
-			mes "50 Steel and";
-			mes "10 Emperium.";
+			mes "[巴佐]";
+			mes "首先，我需要";
+			mes "一些基本材料。";
+			mes "10金币，";
+			mes "50钢铁和";
+			mes "10魔石。";
 			next;
-			mes "[Bazo]";
-			mes "Then, I'll need some rare ore to enchant this product. The product's trait will depend on the ore that you use.";
+			mes "[巴佐]";
+			mes "然后，我需要一些稀有矿石来为这个产品附魔。产品的特性将取决于你使用的矿石。";
 			next;
-			mes "[Bazo]";
-			mes "Please bring me 30 of either Citrin, Turquoise or Agate. Well then, I wish you luck in finding those things and I'll be waiting for you~";
+			mes "[巴佐]";
+			mes "请给我带来30个黄水晶、绿松石或玛瑙。那么，我祝你好运找到这些东西，我会在这里等你~";
 			set lv4_weapon,1;
 			close;
 		case 2:
-			mes "[Bazo]";
-			mes "Oh, okay.";
-			mes "That's fine with me.";
-			mes "But I'll be right here if you";
-			mes "ever change your mind.";
+			mes "[巴佐]";
+			mes "哦，好吧。";
+			mes "我没问题。";
+			mes "但我会在这里等你。";
+			mes "如果你改变主意的话。";
 			close;
 		}
 	}
 	if (lv4_weapon > 7) {
-		mes "[Bazo]";
-		mes "Hmm...";
-		mes "I sense something different about you. I can't quite describe it, but I get the distince feeling that there's nothing I can do for you.";
+		mes "[巴佐]";
+		mes "嗯...";
+		mes "我感觉到你身上有些不同。我无法准确描述，但我有一种强烈的感觉，我无法为你做任何事情。";
 		next;
-		mes "[Bazo]";
-		mes "In any case, I wish you safety in your travels, adventurer.";
+		mes "[巴佐]";
+		mes "无论如何，我祝你在旅行中平安，冒险者。";
 		close;
 	}
 	if ((lv4_weapon >= 5) && (lv4_weapon <= 7)) {
-		mes "[Bazo]";
-		mes "Great...!";
-		mes "Now, let's do this!";
-		mes "Oh, and you should know";
-		mes "now that I can't tell what kind of thing we might get. But let's hope that it'll be good.";
+		mes "[巴佐]";
+		mes "太好了...！";
+		mes "现在，让我们开始吧！";
+		mes "哦，你应该知道";
+		mes "现在我无法判断我们可能会得到什么。但希望它会是好的。";
 		next;
-		mes "^3355FFYou feel a mysterious energy gathering around the materials";
-		mes "and the air around them begins to crackle. It seems as if the materials were absorbing";
-		mes "all of the ambient energy.^000000";
+		mes "^3355FF你感觉到一种神秘的能量在材料周围聚集";
+		mes "周围的空气开始发出 crackle 声。似乎这些材料正在吸收";
+		mes "所有的环境能量。^000000";
 		next;
-		mes "^3355FFWithout any discernable action from Bazo, the materials began to fuse into each other.^000000";
+		mes "^3355FF在巴佐没有任何明显的动作下，材料开始相互融合。^000000";
 		next;
-		mes "[Bazo]";
-		mes "Can you feel that? The materials are now gathering power on their own. It's out of my hands now. All we can do now is wait and pray.";
+		mes "[巴佐]";
+		mes "你能感觉到吗？材料现在正在自行聚集力量。现在一切都不在我的掌控之中。我们现在能做的就是等待和祈祷。";
 		next;
-		mes "^3355FFThe materials finish melding";
-		mes "and the air grows calm.^000000";
+		mes "^3355FF材料融合完成";
+		mes "空气变得平静。^000000";
 		next;
-		mes "[Bazo]";
-		mes "Ooooooh! It's done!";
-		mes "We've succeeded! Ah,";
-		mes "this is amazing! Our prayers";
-		mes "must have been answered!";
+		mes "[巴佐]";
+		mes "哦哦哦！完成了！";
+		mes "我们成功了！啊，";
+		mes "太棒了！我们的祈祷";
+		mes "一定得到了回应！";
 		next;
-		mes "[Bazo]";
-		mes "It looks like all those materials turned into some kind of weapon. That ought to be quite useful to you. Now let's see...";
+		mes "[巴佐]";
+		mes "看起来所有的材料变成了一种武器。这对你来说应该非常有用。现在让我们看看……";
 		next;
-		mes "[Bazo]";
+		mes "[巴佐]";
 		if (lv4_weapon == 5) {
-			mes "Immaterial Sword!";
-			mes "This sword was born to be yours!";
-			mes "Congratulations and hopefully it will be useful to you.";
+			mes "无形之剑！";
+			mes "这把剑注定是属于你的！";
+			mes "恭喜你，希望它对你有用。";
 			set lv4_weapon,0;
 			getitem 1141,1; //Immaterial_Sword
 		}
 		else if (lv4_weapon == 6) {
-			mes "Slash!";
-			mes "This mace was born to be yours!";
-			mes "Congratulations and hopefully it will be useful to you.";
+			mes "砍！";
+			mes "这把钉锤注定是属于你的！";
+			mes "恭喜你，希望它对你有用。";
 			set lv4_weapon,0;
 			getitem 1526,1; //Slash
 		}
 		else if (lv4_weapon == 7) {
-			mes "Quadrille!";
-			mes "This mace was born to be yours!";
-			mes "Congratulations and hopefully it will be useful to you.";
+			mes "四重奏！";
+			mes "这把钉锤注定是属于你的！";
+			mes "恭喜你，希望它对你有用。";
 			set lv4_weapon,0;
 			getitem 1527,1; //Quadrille
 		}
 		next;
-		mes "[Bazo]";
-		mes "Ah, I'm very satisfied with these results. If you wish to have another one, please feel free to visit me anytime. Alright then, enjoy your travels~";
+		mes "[巴佐]";
+		mes "啊，我对这些结果非常满意。如果你想再要一个，请随时来找我。好的，祝你旅途愉快~";
 		close;
 	}
 	if (((lv4_weapon == 2) && (countitem(7295) > 29)) || ((lv4_weapon == 3) && (countitem(7294) > 29)) || ((lv4_weapon == 4) && (countitem(7291) > 29))) {
@@ -167,58 +167,58 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 		else if (lv4_weapon == 4) {
 			set .@itemreq,7291; // Agate
 		}
-		mes "[Bazo]";
-		mes "Okay, it seems like you're";
-		mes "ready so let's get started. Now, my favorite monsters are Poring, Hode, Obeaune and Minorous.";
+		mes "[巴佐]";
+		mes "好的，看来你已经";
+		mes "准备好了，那我们开始吧。现在，我最喜欢的怪物是波利、霍德、欧比昂和米诺斯。";
 		next;
 		for( set .@i, 1; .@i <= 5; set .@i,.@i+1 ) {
 			setarray .@mons[.@i],rand(1,4);
-			mes "[Bazo]";
+			mes "[巴佐]";
 			if (.@i == 1) {
-				mes "Here's the first question.";
-				mes "What monster am I thinking";
-				mes "of right now?";
+				mes "这是第一个问题。";
+				mes "我在想哪个怪物";
+				mes "呢？";
 			}
 			else if (.@i == 2) {
-				mes "Alright...";
-				mes "Now guess which monster";
-				mes "I'm thinking about right... Now!";
+				mes "好的...";
+				mes "现在猜猜我在想哪个怪物";
+				mes "……现在！";
 			}
 			else if (.@i == 3) {
-				mes "Now what monster";
-				mes "am I thinking about?";
+				mes "现在我在想哪个怪物？";
+				mes "我在想哪个怪物？";
 			}
 			else if (.@i == 4) {
-				mes "Which monster am";
-				mes "I thinking about right now?";
+				mes "哪个怪物是我在想的？";
+				mes "我现在在想什么？";
 			}
 			else if (.@i == 5) {
-				mes "Okay, one last time.";
-				mes "Guess which monster I'm";
-				mes "thinking about right now.";
+				mes "好吧，再来一次。";
+				mes "猜猜我在想哪个怪物。";
+				mes "我现在在想的。";
 			}
 			next;
-			set .@answer,select("Poring:Hode:Obeaune:Minorous");
+			set .@answer,select("波利:霍德:欧贝昂:米诺鲁斯");
 			if (.@answer == .@mons[.@i]) {
 				set .@dap,.@dap + 1;
 			}
 		}
-		mes "[Bazo]";
-		mes "Okay, let me give you the answers for the questions in the order I was thinking. Now, it might seem like I'm making them up right now, but I'm not. We gotta trust each other on this.";
+		mes "[巴佐]";
+		mes "好吧，让我按我想的顺序给你问题的答案。现在，这可能看起来像我现在在编造，但我不是。我们必须互相信任。";
 		next;
-		mes "[Bazo]";
+		mes "[巴佐]";
 		for( set .@i, 1; .@i <= 5; set .@i,.@i+1 ) {
 			if (.@mons[.@i] == 1) {
-				mes "Poring";
+				mes "波利";
 			}
 			else if (.@mons[.@i] == 2) {
-				mes "Hode";
+				mes "霍德";
 			}
 			else if (.@mons[.@i] == 3) {
-				mes "Obeaune";
+				mes "欧比昂";
 			}
 			else if (.@mons[.@i] == 4) {
-				mes "Minorous";
+				mes "米诺鲁斯";
 			}
 		}
 		if (.@dap > 0) {
@@ -230,47 +230,47 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 		}
 		next;
 		if (.@dap > 0) {
-			mes "[Bazo]";
+			mes "[巴佐]";
 			mes "You got the right answer " + .@dap + " times! Incredible! As promised, I shall create a specialty Umbala item for you. Give me a little time to get ready, and then we'll get started.";
 			close;
 		}
 		else if (.@dap < 1) {
-			mes "[Bazo]";
-			mes "Huh. You must not be able to";
-			mes "read minds, or you've got really bad luck. Either way, we can't try this until we drive away the ill fortune around you.";
+			mes "[巴佐]";
+			mes "哈。你一定不能";
+			mes "读心，或者你的运气真的很差。无论如何，我们不能在驱散你身边的不幸之前尝试这个。";
 			next;
-			mes "[Bazo]";
-			mes "Hm, we need at least";
+			mes "[巴佐]";
+			mes "嗯，我们至少需要";
 			mes "10 "+getitemname(.@itemreq)+" to try this";
-			mes "again, so go ahead";
-			mes "and give me that.";
+			mes "再来一次，所以请继续";
+			mes "把那个给我。";
 			next;
-			mes "[Bazo]";
-			mes "Well, if you want to try this mind reading game again, just come";
-			mes "back with the materials. I'll be waiting to gauge your luck.";
+			mes "[巴佐]";
+			mes "好吧，如果你想再试一次这个读心游戏，就来";
+			mes "带着材料回来。我会等着评估你的运气。";
 			close;
 		}
 	}
 	if ((lv4_weapon == 2) || (lv4_weapon == 3) || (lv4_weapon == 4)) {
-		mes "[Bazo]";
-		mes "Hmm. Something doesn't";
-		mes "feel right. We must be missing";
-		mes "something. Would you check the";
-		mes "materials you've brought again?";
+		mes "[巴佐]";
+		mes "嗯。有些事情不对劲。";
+		mes "我们一定遗漏了什么。";
+		mes "你能检查一下吗？";
+		mes "你又带来了材料吗？";
 		close;
 	}
 	if ((lv4_weapon == 1) && (countitem(969) > 9) && (countitem(999) > 49) && (countitem(714) > 9)) {
-		mes "[Bazo]";
-		mes "Oh, you've brought all the basic materials. Now, let me check to see if you brought any of the rare ores I asked for...";
+		mes "[巴佐]";
+		mes "哦，你带来了所有基本材料。现在，让我检查一下你是否带来了我要求的稀有矿石……";
 		next;
 		if ((countitem(7295) > 29) || (countitem(7294) > 29) || (countitem(7291) > 29)) {
 			if ((countitem(7295) > 29) && (countitem(7294) > 29) && (countitem(7291) > 29)) {
-				mes "[Bazo]";
-				mes "Hahaha, I asked you to";
-				mes "bring one kind of ore, not all of them. So which one would you";
-				mes "like to use?";
+				mes "[巴佐]";
+				mes "哈哈哈，我让你带的";
+				mes "带一种矿石，而不是所有的。那么你想要哪个？";
+				mes "想要使用？";
 				next;
-				switch(select("Citrin:Turquoise:Agate")) {
+				switch(select("黄水晶:绿松石:玛瑙")) {
 				case 1:
 					set .@itemreq,7295; // Citrine
 					break;
@@ -283,11 +283,11 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 				}
 			}
 			else if ((countitem(7295) > 29) && (countitem(7294) > 29)) {
-				mes "Hahaha, I asked you to";
-				mes "bring one kind of ore, not";
-				mes "two. So which one would";
-				mes "you like to use?";
-				switch(select("Citrin:Turquoise")) {
+				mes "哈哈哈，我让你带的";
+				mes "带一种矿石，而不是";
+				mes "两种。那么你想要哪个？";
+				mes "你喜欢使用什么？";
+				switch(select("黄水晶:绿松石")) {
 				case 1:
 					set .@itemreq,7295; // Citrine
 					break;
@@ -297,11 +297,11 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 				}
 			}
 			else if ((countitem(7295) > 29) && (countitem(7291) > 29)) {
-				mes "Hahaha, I asked you to";
-				mes "bring one kind of ore, not";
-				mes "two. So which one would";
-				mes "you like to use?";
-				switch(select("Citrin:Agate")) {
+				mes "哈哈哈，我让你带的";
+				mes "带一种矿石，而不是";
+				mes "两种。那么你想要哪个？";
+				mes "你喜欢使用什么？";
+				switch(select("黄水晶:玛瑙")) {
 				case 1:
 					set .@itemreq,7295; // Citrine
 					break;
@@ -311,11 +311,11 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 				}
 			}
 			else if ((countitem(7294) > 29) && (countitem(7291) > 29)) {
-				mes "Hahaha, I asked you to";
-				mes "bring one kind of ore, not";
-				mes "two. So which one would";
-				mes "you like to use?";
-				switch(select("Turquoise:Agate")) {
+				mes "哈哈哈，我让你带的";
+				mes "带一种矿石，而不是";
+				mes "两种。那么你想要哪个？";
+				mes "你喜欢使用什么？";
+				switch(select("绿松石:玛瑙")) {
 				case 1:
 					set .@itemreq,7294; //Turqoise
 					break;
@@ -335,29 +335,29 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 					set .@itemreq,7291; // Agate
 				}
 			}
-			mes "[Bazo]";
+			mes "[巴佐]";
 			mes getitemname(.@itemreq)+", huh?";
-			mes "Alright then. Before we start, we must first test your luck. As you may have guessed, item crafting in Umbala is a very delicate process.";
+			mes "好的。那么在开始之前，我们必须先测试一下你的运气。正如你所猜测的，乌姆巴拉的物品制作是一个非常精细的过程。";
 			next;
-			mes "[Bazo]";
-			mes "But if we do this during a time when your luck is high, we'll have a good chance of succeeding in creating something great. That makes sense, right?";
+			mes "[巴佐]";
+			mes "但是如果我们在你运气好的时候进行这个过程，我们就有很大的机会成功制作出一些伟大的东西。这很有道理，对吧？";
 			next;
-			mes "[Bazo]";
-			mes "Now, we'll test your luck by playing a simple mind reading";
-			mes "game. I'll think of a specific monster, and you'll have to";
-			mes "guess what it is from among";
-			mes "my favorites.";
+			mes "[巴佐]";
+			mes "现在，我们将通过玩一个简单的心灵感应来测试你的运气，";
+			mes "游戏。我会想一个特定的怪物，而你需要";
+			mes "猜猜它是什么";
+			mes "我最喜欢的。";
 			next;
-			mes "[Bazo]";
-			mes "I'll give you five different chances, and if you can guess right once, we'll go ahead and craft the item. But if you get all of them wrong, we've got to drive away all the bad luck!";
+			mes "[巴佐]";
+			mes "我会给你五次不同的机会，如果你能猜对一次，我们就继续制作这个物品。但如果你全部都猜错了，我们就得驱走所有的厄运！";
 			next;
-			mes "[Bazo]";
-			mes "In order to drive away ill fortune, I'll be taking 10 of the special ore you've brought along. I know it sounds bad, but it's a lot better than losing 30 ores if we failed to create the item, right?";
+			mes "[巴佐]";
+			mes "为了驱走厄运，我会收走你带来的10块特殊矿石。我知道这听起来不好，但比起如果我们制作物品失败要损失30块矿石要好得多，对吧？";
 			next;
-			mes "[Bazo]";
-			mes "Okay, now I need";
-			mes "some time to preprare...";
-			mes "Talk to you later!";
+			mes "[巴佐]";
+			mes "好的，现在我需要";
+			mes "一些时间来准备...";
+			mes "稍后再聊！";
 			delitem 969,10; //Gold
 			delitem 999,50; //Steel
 			delitem 714,10; //Emperium
@@ -373,92 +373,92 @@ umbala,117,285,3	script	Bazo#lv4	85,{
 			close;
 		}
 		else {
-			mes "[Bazo]";
-			mes "Please bring me 30 Citrin, Turquoise or Agate. You must";
-			mes "have forgotten to bring any of those, so please go back and get them so we can begin.";
+			mes "[巴佐]";
+			mes "请给我带来30块黄水晶、绿松石或玛瑙。你必须";
+			mes "我忘记带这些东西了，请你回去拿一下，这样我们就可以开始了。";
 			close;
 		}
 	}
 	if (lv4_weapon == 1) {
-		mes "[Bazo]";
-		mes "If you'd like me to make you one of Umbala's specialty items, I'll need you to bring me some stuff so I can craft it for you.";
+		mes "[巴佐]";
+		mes "如果你想让我为你制作乌姆巴拉的特色物品，我需要你带一些东西来，这样我才能为你制作。";
 		next;
-		mes "[Bazo]";
-		mes "First, I'll need";
-		mes "some basic materials.";
-		mes "10 Gold,";
-		mes "50 Steel and";
-		mes "10 Emperium.";
+		mes "[巴佐]";
+		mes "首先，我需要";
+		mes "一些基本材料。";
+		mes "10金币，";
+		mes "50钢铁和";
+		mes "10魔石。";
 		next;
-		mes "[Bazo]";
-		mes "Then, I'll need some rare ore to enchant this product. The product's trait will depend on the ore that you use.";
+		mes "[巴佐]";
+		mes "然后，我需要一些稀有矿石来为这个产品附魔。产品的特性将取决于你使用的矿石。";
 		next;
-		mes "[Bazo]";
-		mes "Please bring me 30 of either Citrin, Turquoise or Agate. Well then, I wish you luck in finding those things and I'll be waiting for you~";
+		mes "[巴佐]";
+		mes "请给我带来30个黄水晶、绿松石或玛瑙。那么，我祝你好运找到这些东西，我会在这里等你~";
 		close;
 	}
-	mes "[Bazo]";
-	mes "Hello...";
-	mes "Not from around";
-	mes "here, are you?";
+	mes "[巴佐]";
+	mes "你好...";
+	mes "你不是这里的人吧？";
+	mes "你不是这里的人吧？";
 	next;
-	mes "[Bazo]";
-	mes "My name is Bazo Heburiech. I'm pleased to make your acquaintance. As you can see, I'm also not from around here either. I feel as if... We were meant to meet.";
+	mes "[巴佐]";
+	mes "我叫巴佐·赫布里奇。很高兴认识你。正如你所看到的，我也不是这里的人。我感觉我们... 注定要相遇。";
 	next;
-	mes "[Bazo]";
-	mes "If you don't mind, let me tell you a little about this place. When I first got here, I could tell there was something different about";
-	mes "this village.";
+	mes "[巴佐]";
+	mes "如果你不介意，我想告诉你一些关于这个地方的事。当我第一次来到这里时，我就能感觉到这个村庄有些不同。";
+	mes "这个村庄。";
 	next;
-	mes "[Bazo]";
-	mes "For one thing, Umbala is close";
-	mes "to Niflheim, realm of the dead. Because it's so near, some of the people here can actually draw evil power from that realm.";
+	mes "[巴佐]";
+	mes "首先，乌姆巴拉很近。";
+	mes "前往尼芙菲姆，死者的领域。因为离得很近，这里的一些人实际上可以从那个领域汲取邪恶的力量。";
 	next;
-	mes "[Bazo]";
-	mes "Don't worry, the locals here only use this power to produce specialty items. During my stay here, I too have learned some of those crafting methods.";
+	mes "[巴佐]";
+	mes "别担心，这里的当地人只用这种力量来生产特产。在我在这里的期间，我也学会了一些那些制作方法。";
 	next;
-	mes "[Bazo]";
-	mes "If you like, I'd be willing to show you my skills. Now how does that sound?";
+	mes "[巴佐]";
+	mes "如果你愿意，我可以向你展示我的技能。你觉得怎么样？";
 	next;
-	switch(select("Sounds good~:No, thanks.")) {
+	switch(select("听起来不错~:不，谢谢。")) {
 	case 1:
 		if (BaseLevel < 70) {
-			mes "[Bazo]";
-			mes "Hmm. For now, you should level";
-			mes "up and get stronger first. Please understand that I mean well when I say that I don't think you're quite ready for my goods.";
+			mes "[巴佐]";
+			mes "嗯。现在，你应该先提升等级";
+			mes "变得更强。请理解我说这话是出于好意，我认为你还没有准备好接受我的商品。";
 			next;
-			mes "[Bazo]";
-			mes "Like I said before, these";
-			mes "goods have some evil power. If you're not strong or experienced enough, you'd be driven insane.";
+			mes "[巴佐]";
+			mes "就像我之前说的，这些";
+			mes "商品有一些邪恶的力量。如果你不够强大或经验不足，你会被逼疯。";
 			next;
-			mes "[Bazo]";
-			mes "Once you're ready,";
-			mes "I'll gladly make you";
-			mes "something great~";
+			mes "[巴佐]";
+			mes "一旦你准备好了，";
+			mes "我很乐意为你制作";
+			mes "一些伟大的东西~";
 			close;
 		}
-		mes "[Bazo]";
-		mes "Excellent! Let me tell you what materials I'll need. There's not that many, but you might want to write them down.";
+		mes "[巴佐]";
+		mes "太好了！让我告诉你我需要什么材料。数量不多，但你可能想把它们写下来。";
 		next;
-		mes "[Bazo]";
-		mes "First, I'll need";
-		mes "some basic materials.";
-		mes "10 Gold,";
-		mes "50 Steel and";
-		mes "10 Emperium.";
+		mes "[巴佐]";
+		mes "首先，我需要";
+		mes "一些基本材料。";
+		mes "10金币，";
+		mes "50钢铁和";
+		mes "10魔石。";
 		next;
-		mes "[Bazo]";
-		mes "Then, I'll need some rare ore to enchant this product. The product's trait will depend on the ore that you use.";
+		mes "[巴佐]";
+		mes "然后，我需要一些稀有矿石来为这个产品附魔。产品的特性将取决于你使用的矿石。";
 		next;
-		mes "[Bazo]";
-		mes "Please bring me 30 of either Citrin, Turquoise or Agate. Well then, I wish you luck in finding those things and I'll be waiting for you~";
+		mes "[巴佐]";
+		mes "请给我带来30个黄水晶、绿松石或玛瑙。那么，我祝你好运找到这些东西，我会在这里等你~";
 		set lv4_weapon,1;
 		close;
 	case 2:
-		mes "[Bazo]";
-		mes "Oh, okay.";
-		mes "That's fine with me.";
-		mes "But I'll be right here if you";
-		mes "ever change your mind.";
+		mes "[巴佐]";
+		mes "哦，好吧。";
+		mes "我没问题。";
+		mes "但我会在这里等你。";
+		mes "如果你改变主意的话。";
 		close;
 	}
 }
@@ -875,7 +875,7 @@ umbala,163,257,3	script	Hibilaithan#lv4	785,{
 	mes "- 你感觉到未知的力量开始集 -";
 	mes "- 中在材料上. 材料似乎正在 -";
 	next;
-	switch(select("Yes. Yes, I do.:Sorry, I don't need it!")) {
+	switch(select("是的。我确实需要。:抱歉，我不需要！")) {
 	case 1:
 		if (BaseLevel < 70) {
 			mes "- 吸收空气中所有的邪恶力量 -";
@@ -1307,7 +1307,7 @@ um_in,156,77,5	script	Tabezthan#lv4	788,{
 	mes "[希必拉伊坦]";
 	mes "糟糕啊, 很糟糕啊!";
 	next;
-	switch(select("Yes, please.:No, thank you.")) {
+	switch(select("是的，请。:不，谢谢。")) {
 	case 1:
 		if (BaseLevel < 70) {
 			mes "你连一个正确答案都没有.";
@@ -1680,84 +1680,84 @@ geffen,203,146,5	script	Citizen#lv4-1	97,{
 }
 
 morocc,289,230,3	script	Citizen#lv4-2	92,{
-	mes "- Wait a minute! -";
-	mes "- You are currently overweight. -";
+	mes "- 等一下！ -";
+	mes "- 你目前超重了。 -";
 	next;
-	mes "- Please lose some Weight -";
-	mes "- and try again. -";
+	mes "- 请减轻一些重量 -";
+	mes "- 然后再试一次。 -";
 	next;
-	mes "[Kayron]";
-	mes "Bah, I cannot believe";
-	mes "that such a weak man like you even came here.";
+	mes "[凯伦]";
+	mes "哼，我真不敢相信";
+	mes "像你这样弱小的人居然能来到这里。";
 	close;
 }
 
 niflheim,240,193,3	script	Kayron#lv4	794,{
 	if (checkweight(908,300) == 0) {
-		mes "- Wait a minute! -";
+		mes "- 等一下！ -";
 		close;
 	}
 	if (BaseLevel < 80) {
-		mes "- You are currently overweight. -";
-		mes "- Please lose some Weight -";
-		mes "- and try again. -";
-		mes "[Reyghema]";
+		mes "- 你目前超重了。 -";
+		mes "- 请减轻一些重量 -";
+		mes "- 然后再试一次。 -";
+		mes "[雷格赫玛]";
 		next;
-		mes "Um? Do you have any business with me?";
-		mes "Sorry but I don't. I'm also not";
+		mes "嗯？你有什么事找我吗？";
+		mes "抱歉，我没有。我也不想";
 		close;
 	}
 	if (lv4_weapon == 0) {
-		mes "speaking to a weak person like you.";
-		mes "Have a safe travel~";
-		mes "[Reyghema]";
-		mes "Darn it...I didn't want to die!";
-		mes "Well...there is no living thing that wants to die but...";
+		mes "和你这样弱小的人说话。";
+		mes "祝你旅途平安~";
+		mes "[雷格赫玛]";
+		mes "该死...我不想死！";
+		mes "好吧...没有生物会想要死亡，但是...";
 		next;
-		switch(select("Show interest.:Igonore him.")) {
+		switch(select("表现出兴趣.:忽视他.")) {
 		case 1:
-			mes "Especially me, I was too young to die!";
-			mes "Youth! ...Ah...I just remember the word.";
-			mes "Speaking of which...I think I usually said something related to that...";
+			mes "尤其是我，我太年轻了，不能死！";
+			mes "青春！...啊...我只记得这个词。";
+			mes "说到这个...我想我通常会说一些与此相关的话...";
 			set lv4_weapon,22;
 			close;
 		case 2:
-			mes "[Reyghema]";
-			mes "Ah...I cannot remember what I was going to say...";
-			mes "Waaahhh.....I cannot remember....";
+			mes "[雷格赫玛]";
+			mes "啊...我记不起我想说什么了...";
+			mes "哇啊啊.....我记不起....";
 			close;
 		}
 	}
 	if ((lv4_weapon < 22) || (lv4_weapon > 30)) {
-		mes "My memory is gone...!";
-		mes "[Reyghema]";
-		mes "Ah...I cannot remember what I was going to say...";
-		mes "Waaahhh.....I cannot remember....";
+		mes "我的记忆消失了...！";
+		mes "[雷格赫玛]";
+		mes "啊...我记不起我想说什么了...";
+		mes "哇啊啊.....我记不起....";
 		next;
-		mes "My memory is gone...!";
-		mes "- Because you decided to ignore him, -";
-		mes "- you are no longer able to hear him. -";
-		mes "[Reyghema]";
-		mes "I feel something different about you.";
-		mes "Did you come here with a purpose?";
+		mes "我的记忆消失了...！";
+		mes "- 因为你决定忽视他，-";
+		mes "- 你再也听不到他了。-";
+		mes "[雷格赫玛]";
+		mes "我感觉到你有些不同。";
+		mes "你是带着目的来的这里吗？";
 		close;
 	}
 	if ((lv4_weapon == 29) || (lv4_weapon == 30)) {
-		mes "I am envious of you...";
-		mes "[Reyghema]";
-		mes "I used to be called Reyghema when I was alive.";
-		mes "But now I am nothing but";
-		mes "a ghost wandering this place.";
-		mes "I am worthless...I cannot do anything";
+		mes "我羡慕你...";
+		mes "[雷格赫玛]";
+		mes "我活着的时候曾被称为雷格赫玛。";
+		mes "但现在我只是一无所有的";
+		mes "在这个地方徘徊的幽灵。";
+		mes "我毫无价值……我什么都做不了";
 		next;
 		if (rand(1,2) == 1) {
-			mes "without a body...";
-			mes "[Reyghema]";
-			mes "What? Do you want to play a game with me or what?";
-			mes "Unfortunately I have something to do...";
-			mes "wait...what was I going to do?";
+			mes "没有身体……";
+			mes "[雷格赫玛]";
+			mes "什么？你想和我玩游戏吗？";
+			mes "不幸的是，我有事情要做……";
+			mes "等等……我本来要做什么？";
 			if (lv4_weapon == 29) {
-				mes "[Reyghema]";
+				mes "[雷格赫玛]";
 				getitem 1364,1; //Great_Axe
 			}
 			else {
@@ -1766,93 +1766,93 @@ niflheim,240,193,3	script	Kayron#lv4	794,{
 			}
 			set lv4_weapon,0;
 			next;
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 			mes "...";
 			mes "......";
 			next;
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 			mes "...";
 			mes "......";
 			mes ".........";
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 			close;
 		}
 		else {
-			mes "That's right! I am Bill Thayer the Weaponsmith's";
-			mes "second son! And I must forge a weapon";
-			mes "in order to not regret my youth!";
-			mes "Even if I am dead, I cannot give it up!";
-			mes "[Reyghema]";
+			mes "没错！我是武器匠比尔·塞耶的";
+			mes "二儿子！我必须锻造一把武器";
+			mes "以免对我的青春感到遗憾！";
+			mes "即使我死了，我也无法放弃它！";
+			mes "[雷格赫玛]";
 			if (lv4_weapon == 29) {
-				mes "Hey you, thank you for letting me have my memory back!";
+				mes "嘿，你，谢谢你让我恢复了记忆！";
 				getitem 1369,1; //Guillotine
 			}
 			else {
-				mes "You need to do me another favor!";
+				mes "你需要再帮我一个忙！";
 				getitem 1470,1; //Brionac
 			}
 			set lv4_weapon,0;
 			next;
-			mes "Bring me some items, I need to forge a weapon.";
-			mes "Once I make one, I will give it to you in return for your favor.";
-			mes "[Reyghema]";
+			mes "给我带一些物品，我需要锻造一把武器。";
+			mes "一旦我做好了，我会把它作为回报给你。";
+			mes "[雷格赫玛]";
 			next;
-			mes "Reyghema, breathe deeply first...phew~.";
-			mes "Give me a second!";
-			mes "[Reyghema]";
-			mes "Oh...you brought everything I need!";
-			mes "You are a reliable person unlike you appear.";
+			mes "雷格赫玛，先深呼吸……呼~。";
+			mes "给我一秒钟！";
+			mes "[雷格赫玛]";
+			mes "哦……你带来了我需要的一切！";
+			mes "你是个可靠的人，和你看起来不一样。";
 			close;
 		}
 	}
 	if (((lv4_weapon == 27) && (countitem(7289) > 29) && (countitem(7294) > 29) && (countitem(7291) > 29)) || ((lv4_weapon == 28) && (countitem(7290) > 29) && (countitem(7296) > 29) && (countitem(7293) > 29))) {
-		mes "But here is the thing...";
-		mes "There are some more materials I need...";
-		mes "But I cannot think of any of them...my memory";
-		mes "is unclear...arrrrph...";
-		mes "[Reyghema]";
+		mes "但事情是这样的……";
+		mes "我还需要一些材料……";
+		mes "但是我想不起来它们的任何事情……我的记忆";
+		mes "不清晰……呜呜呜……";
+		mes "[雷格赫玛]";
 		next;
-		mes "I need to think about that a little longer.";
-		mes "I know that I really need those materials...awwww....";
-		mes "Do you have any idea to bring my memory back?";
+		mes "我需要再想一想。";
+		mes "我知道我真的需要那些材料……唉……";
+		mes "你有没有什么办法让我恢复记忆？";
 		next;
-		mes "At the same time, rest assured that the materials";
-		mes "you brought will be used for my creation. So let me keep them for you.";
+		mes "同时，请放心你带来的材料";
+		mes "将会用于我的创造。所以让我为你保管它们。";
 		next;
-		mes "[Reyghema]";
-		mes "Okay. You don't need any other explaination, do you?";
-		mes "I will tell you what I need";
+		mes "[雷格赫玛]";
+		mes "好的。你不需要其他解释，对吧？";
+		mes "我会告诉你我需要什么";
 		next;
-		mes "so please do not forget those materials.";
-		mes "[Reyghema]";
+		mes "所以请不要忘记那些材料。";
+		mes "[雷格赫玛]";
 		next;
-		mes "I will tell you the list of materials I need again.";
-		mes "I think I need a lot of materials...so";
-		mes "write them down if you need.";
+		mes "我会再告诉你我需要的材料清单。";
+		mes "我想我需要很多材料……所以";
+		mes "如果需要的话就写下来。";
 		next;
 		set .@npchand1,rand(1,3);
-		set .@myhand1,select("Scissors:Rock:Paper");
+		set .@myhand1,select("剪刀:石头:布");
 		if (((.@myhand1 == 1) && (.@npchand1 == 3)) || ((.@myhand1 == 2) && (.@npchand1 == 1)) || ((.@myhand1 == 3) && (.@npchand1 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
-		mes "[Reyghema]";
+		mes "[雷格赫玛]";
 		mes "I need 2 高级铁砧,";
 		mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
-		mes "...wait...are they all...or do I need more?!";
+		mes "……等等……它们都是……还是我需要更多？!";
 		next;
 		set .@npchand2,rand(1,3);
-		set .@myhand2,select("Scissors:Rock:Paper");
+		set .@myhand2,select("剪刀:石头:布");
 		if (((.@myhand2 == 1) && (.@npchand2 == 3)) || ((.@myhand2 == 2) && (.@npchand2 == 1)) || ((.@myhand2 == 3) && (.@npchand2 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
-		mes "[Reyghema]";
-		mes "...Um? The items that you brought to me seem";
-		mes "to be good materials for my creation...";
-		mes "Give them to me, I shall try first!";
-		mes "[Reyghema]";
+		mes "[雷格赫玛]";
+		mes "……嗯？你带给我的物品似乎";
+		mes "是我制作的好材料……";
+		mes "把它们给我，我先试试！";
+		mes "[雷格赫玛]";
 		next;
 		set .@npchand3,rand(1,3);
-		set .@myhand3,select("Scissors:Rock:Paper");
+		set .@myhand3,select("剪刀:石头:布");
 		if (((.@myhand3 == 1) && (.@npchand3 == 3)) || ((.@myhand3 == 2) && (.@npchand3 == 1)) || ((.@myhand3 == 3) && (.@npchand3 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
@@ -1896,110 +1896,110 @@ niflheim,240,193,3	script	Kayron#lv4	794,{
 				}
 			}
 		}
-		mes "Oh...I was right! How did you";
-		mes "know these are materials I need?";
-		mes "Great, give me a moment!";
+		mes "哦……我没错！你是怎么";
+		mes "知道这些是我需要的材料的？";
+		mes "太好了，给我一点时间！";
 		if (.@npchand1 == 1) {
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 		}
 		else if (.@npchand1 == 2) {
-			mes "...wait, I must test your luck first.";
+			mes "……等等，我必须先测试你的运气。";
 		}
 		else if (.@npchand1 == 3) {
-			mes "Since I am not sure about the result,";
+			mes "因为我不确定结果，";
 		}
 		if (.@npchand2 == 1) {
-			mes "we should place trust in luck for the result of my creation.";
+			mes "我们应该把信任寄托在运气上，来决定我的创造结果。";
 		}
 		else if (.@npchand2 == 2) {
-			mes "You must have good luck...";
+			mes "你一定要有好运气...";
 		}
 		else if (.@npchand2 == 3) {
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 		}
 		if (.@npchand3 == 1) {
-			mes "We are going to play 'Rock, Paper, Scissors'.";
+			mes "我们要玩“剪刀石头布”。";
 		}
 		else if (.@npchand3 == 2) {
-			mes "You must win at least 2 out of 3 times.";
+			mes "你必须赢得至少三局中的两局。";
 		}
 		else if (.@npchand3 == 3) {
-			mes "If you fail, you must leave a large amount";
+			mes "如果你失败了，你必须留下大量";
 		}
 		next;
-		mes "of one material you have brought.";
-		mes "It is for driving away your bad luck.";
+		mes "你带来的某种材料。";
+		mes "这是为了驱赶你的坏运气。";
 		if (.@myhand1 == 1) {
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 		}
 		else if (.@myhand1 == 2) {
-			mes "I will give you a piece of paper.";
+			mes "我会给你一张纸。";
 		}
 		else if (.@myhand1 == 3) {
-			mes "You will write down one among 'Rock, Paper, or Scissors'.";
+			mes "你将写下“石头、剪刀或布”中的一个。";
 		}
 		if (.@myhand2 == 1) {
-			mes "I will do the same at the same time.";
+			mes "我会同时做同样的事情。";
 		}
 		else if (.@myhand2 == 2) {
-			mes "We will then compare each other's paper.";
+			mes "我们将比较彼此的纸张。";
 		}
 		else if (.@myhand2 == 3) {
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 		}
 		if (.@myhand3 == 1) {
-			mes "Okay...I played in the order of...";
+			mes "好的……我按照……的顺序玩了。";
 		}
 		else if (.@myhand3 == 2) {
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 		}
 		else if (.@myhand3 == 3) {
-			mes "You did in the order of...";
+			mes "你是按照……的顺序玩的。";
 		}
 		next;
 		if (.@shobu > 1) {
-			mes "[Reyghema]";
-			mes "Well well well...you lost the game.";
+			mes "[雷格赫玛]";
+			mes "好吧好吧……你输了这场游戏。";
 			mes "You won " + .@shobu + " times.";
-			mes "Ah~ you were close though...";
-			mes "We must drive away bad luck.";
-			mes "[Reyghema]";
+			mes "啊~ 不过你很接近了……";
+			mes "我们必须驱赶坏运气。";
+			mes "[雷格赫玛]";
 			next;
-			mes "Okay, I will wait here,";
-			mes "go bring me the materials again...";
-			mes "[Reyghema]";
+			mes "好的，我会在这里等，";
+			mes "去再给我带来材料……";
+			mes "[雷格赫玛]";
 			close;
 		}
 		else if (.@shobu < 2) {
-			mes "Let's see...";
-			mes "Ah~ you must be really good at game!";
-			mes "Yes, your luck is at its highest!";
+			mes "让我看看……";
+			mes "啊~ 你一定很擅长这个游戏！";
+			mes "是的，你的运气达到了巅峰！";
 			next;
-			mes "[Reyghema]";
-			mes "I am going to keep my promise.";
-			mes "But I need some time to prepare.";
+			mes "[雷格赫玛]";
+			mes "我会遵守我的承诺。";
+			mes "但我需要一些时间来准备。";
 			close;
 		}
 	}
 	if ((lv4_weapon == 26) || (lv4_weapon == 27) || (lv4_weapon == 28)) {
-		mes "Give me the materials now and I will talk to you later.";
-		mes "[Reyghema]";
-		mes "Not yet! I have not remembered it yet! Awwww...";
+		mes "现在把材料给我，我稍后再和你谈。";
+		mes "[雷格赫玛]";
+		mes "还没有！我还没记住！哎呀...";
 		next;
-		mes "This is killing me...";
-		mes "Oh, wait...I died already...";
+		mes "这让我受不了...";
+		mes "哦，等等...我已经死了...";
 		close;
 	}
 	if ((lv4_weapon == 25) && (countitem(1005) > 1) && (countitem(989) > 0) && (countitem(710) > 0) && (countitem(969) > 19)) {
-		mes "God damn it!";
-		mes "[Reyghema]";
+		mes "该死！";
+		mes "[雷格赫玛]";
 		mes "..................";
 		next;
-		mes "[Reyghema]";
-		mes "...YES! It's a success!";
+		mes "[雷格赫玛]";
+		mes "...是的！成功了！";
 		next;
-		mes "I created the weapon that got me killed last time!";
-		mes "Look at this...haha! I died while making this!";
+		mes "我创造了上次让我死的武器！";
+		mes "看看这个...哈哈！我在制作这个的时候死了！";
 		delitem 1005,2; //Hammer_Of_Blacksmith
 		delitem 989,1; //Emperium_Anvil
 		delitem 710,1; //Illusion_Flower
@@ -2008,299 +2008,299 @@ niflheim,240,193,3	script	Kayron#lv4	794,{
 		close;
 	}
 	if (lv4_weapon == 25) {
-		mes "... The name of the weapon is...";
-		mes "[Reyghema]";
-		mes "...*sigh*.";
+		mes "...这把武器的名字是...";
+		mes "[雷格赫玛]";
+		mes "...*叹气*.";
 		next;
-		mes "[Reyghema]";
-		mes "Happiness lasts too short...";
-		mes "As I am a dead man, I think I am not allowed";
-		mes "to keep the memory of past....";
-		mes "My memory is fading again...";
-		mes "[Reyghema]";
+		mes "[雷格赫玛]";
+		mes "幸福来得太短暂了...";
+		mes "作为一个死去的人，我想我不被允许";
+		mes "为了铭记过去的记忆....";
+		mes "我的记忆又在消退了...";
+		mes "[雷格赫玛]";
 		next;
-		mes "But thank you for letting me achieve";
-		mes "my long-cherished desire.";
-		mes "If we meet again, please let me";
-		mes "retrieve my memory of past again.";
+		mes "但谢谢你让我实现了";
+		mes "我长久以来的愿望。";
+		mes "如果我们再次相遇，请让我";
+		mes "再次找回我过去的记忆。";
 		close;
 	}
 	if (lv4_weapon == 24) {
-		mes "So I can try forging another weapon.";
-		mes "[Reyghema]";
-		mes "Farewell, adventurer.";
-		mes "[Reyghema]";
+		mes "这样我就可以尝试锻造另一件武器。";
+		mes "[雷格赫玛]";
+		mes "再见，冒险者。";
+		mes "[雷格赫玛]";
 		mes "嗯. 似乎有点什么小问题.";
-		mes "a great weapon.";
+		mes "一件伟大的武器。";
 		next;
-		mes "[Kayron]";
-		mes "I believe it's fair to let you know that I can't guarantee what weapon will be produced from this work since, quite frankly, I can't remember.";
+		mes "[凯伦]";
+		mes "我相信让你知道我无法保证这项工作会生产出什么武器是公平的，因为，坦白说，我记不清了。";
 		next;
-		mes "[Kayron]";
-		mes "So far, I know I'll need";
-		mes "2 Hammer of Blacksmith";
-		mes "1 Emperium Anvil";
-		mes "1 Illusion Flower and";
-		mes "20 Gold.";
+		mes "[凯伦]";
+		mes "到目前为止，我知道我需要";
+		mes "2 黑smith的锤子";
+		mes "1 魔石铁砧";
+		mes "1 幻影花和";
+		mes "20 金币.";
 		next;
-		mes "[Kayron]";
-		mes "Bring those items to me first. I'm pretty sure there was something else I'll be needing, but I can't seem to remember. This memory";
-		mes "of mine is beginning to worry me a little bit...";
+		mes "[凯伦]";
+		mes "先把这些物品带给我。我很确定我还需要其他东西，但我似乎记不起来了。这段记忆";
+		mes "让我有点担心...";
 		next;
-		mes "[Kayron]";
-		mes "Anyway, I'll be waiting for you here while you go out and collect those things. Be careful, alright?";
+		mes "[凯伦]";
+		mes "无论如何，我会在这里等你，你去收集那些东西时要小心，好吗？";
 		set lv4_weapon,25;
 		close;
 	}
 	if (lv4_weapon == 23) {
-		mes "[Kayron]";
-		mes "In life, I was known as Kayron.";
-		mes "But now I'm just another ghost wandering around this realm of";
-		mes "the dead. Without a body, I feel";
-		mes "so useless.";
+		mes "[凯伦]";
+		mes "在世时，我被称为凯伦。";
+		mes "但现在我只是这个领域中游荡的另一个幽灵。";
+		mes "没有身体，我感到";
+		mes "真没用。";
 		next;
-		mes "[Kayron]";
-		mes "There's nothing I can do.";
-		mes "I'm... Um... I'm...?";
+		mes "[凯伦]";
+		mes "我无能为力。";
+		mes "我... 嗯... 我...?";
 		input .@input$;
 		next;
 		if (.@input$ == "I'm utterly helpless here.") {
-			mes "[Kayron]";
-			mes "I'm utterly helpless here.";
-			mes "Right, right! My father always used to say that! I guess my brothers and I take after our father in a lot of ways.";
+			mes "[凯伦]";
+			mes "我在这里完全无助。";
+			mes "对，对！我父亲总是这么说！我想我和我的兄弟们在很多方面都像我们的父亲。";
 			next;
-			mes "[Kayron]";
-			mes "My mind's been so hazy.";
-			mes "I forgot that I even used";
-			mes "to be a living human.";
-			mes "^333333*Sigh...*^000000";
+			mes "[凯伦]";
+			mes "我的思维一直很模糊。";
+			mes "我甚至忘了我曾经使用过";
+			mes "作为一个活生生的人。";
+			mes "^333333*唉...*^000000";
 			next;
-			mes "[Kayron]";
-			mes "Still, that little memory has brought me a little peace of";
-			mes "mind. I really appreciate that.";
+			mes "[凯伦]";
+			mes "不过，那段小小的记忆给了我一点平静。";
+			mes "我真的很感激。";
 			next;
-			mes "[Kayron]";
-			mes "I used to be a weaponsmith";
-			mes "when I was alive, so if you like, I can forge something nice for you. You'll have to bring me the materials, though.";
+			mes "[凯伦]";
+			mes "我曾经是个武器匠。";
+			mes "当我还活着的时候，如果你愿意，我可以为你锻造一些不错的东西。不过，你得给我带来材料。";
 			next;
-			mes "[Kayron]";
-			mes "You understand that being";
-			mes "dead sort of restricts my mobility. Still, it's actually useful to be stuck in Niflheim. This place is filled with some strange energy that will help in my smithing.";
+			mes "[凯伦]";
+			mes "你明白，作为一个";
+			mes "死去确实限制了我的行动。不过，实际上被困在尼芙菲姆也有好处。这个地方充满了奇怪的能量，可以帮助我的锻造。";
 			next;
-			mes "[Kayron]";
-			mes "Even though experimental";
-			mes "smithing got me killed, I won't have to worry about it this time. After all, I'm already dead! Hahahah~";
+			mes "[凯伦]";
+			mes "即使实验性的";
+			mes "锻造让我死去，但这次我不必担心。毕竟，我已经死了！哈哈哈~";
 			next;
-			mes "[Kayron]";
-			mes "Alright, just give me a little time so that I can try to remember the things that I'll need, alright?";
+			mes "[凯伦]";
+			mes "好吧，给我一点时间让我试着记住我需要的东西，好吗？";
 			set lv4_weapon,24;
 			close;
 		}
 		else {
-			mes "[Kayron]";
-			mes "Huh...?";
-			mes "What did you just say?";
-			mes "I'm sorry, I'm trying to remember something my father always used";
-			mes "to say...";
+			mes "[凯伦]";
+			mes "哈……？";
+			mes "你刚才说了什么？";
+			mes "对不起，我在试着回忆我父亲总是说的某些事情";
+			mes "要说的...";
 			close;
 		}
 	}
 	if (lv4_weapon == 22) {
-		mes "[Kayron]";
-		mes "In life, I was known as Kayron.";
-		mes "But now I'm just another ghost wandering around this realm of";
-		mes "the dead. Without a body, I feel";
-		mes "so useless.";
+		mes "[凯伦]";
+		mes "在世时，我被称为凯伦。";
+		mes "但现在我只是这个领域中游荡的另一个幽灵。";
+		mes "没有身体，我感到";
+		mes "真没用。";
 		next;
-		mes "[Kayron]";
-		mes "Huh...?";
-		mes "I can't remember what I was going to say. M-my memories! I... I can't seem to recollect...";
+		mes "[凯伦]";
+		mes "哈……？";
+		mes "我记不起来我想说什么了。我的记忆！我... 我似乎无法回忆起...";
 		close;
 	}
-	mes "[Kayron]";
-	mes "In life, I was known as Kayron.";
-	mes "But now I'm just another ghost wandering around this realm of";
-	mes "the dead. Without a body, I feel";
-	mes "so useless.";
+	mes "[凯伦]";
+	mes "在世时，我被称为凯伦。";
+	mes "但现在我只是这个领域中游荡的另一个幽灵。";
+	mes "没有身体，我感到";
+	mes "真没用。";
 	next;
-	switch(select("Show interest.:Ignore him.")) {
+	switch(select("表现出兴趣.:忽视他.")) {
 	case 1:
-		mes "[Kayron]";
-		mes "Huh...?";
-		mes "I can't remember what I was going to say. M-my memories! I... I can't seem to recollect...";
+		mes "[凯伦]";
+		mes "哈……？";
+		mes "我记不起来我想说什么了。我的记忆！我... 我似乎无法回忆起...";
 		set lv4_weapon,22;
 		close;
 	case 2:
-		mes "[Kayron]";
-		mes "Useless...";
-		mes "Absolutely useless...";
+		mes "[凯伦]";
+		mes "没用...";
+		mes "绝对没用...";
 		close;
 	}
 }
 
 niflheim,99,268,5	script	Reyghema#lv4	794,{
 	if (MaxWeight - Weight < 3000) {
-		mes "- Wait a minute! -";
+		mes "- 等一下！ -";
 		close;
 	}
 	if (BaseLevel < 80) {
-		mes "- You are currently overweight. -";
-		mes "- Please lose some Weight -";
-		mes "- and try again. -";
+		mes "- 你目前超重了。 -";
+		mes "- 请减轻一些重量 -";
+		mes "- 然后再试一次。 -";
 		next;
-		mes "[Hein]";
-		mes "You should care about other people";
+		mes "[海因]";
+		mes "你应该关心其他人";
 		close;
 	}
 	if (lv4_weapon == 0) {
-		mes "more than yourself...";
-		mes "You are quite weak for an adventurer.";
-		mes "[Hein]";
+		mes "比关心自己更多...";
+		mes "作为一个冒险者，你实在太弱了。";
+		mes "[海因]";
 		next;
-		mes "Ah...are you going to ask me something?";
-		mes "However, I am not accepting money";
+		mes "啊...你要问我什么吗？";
+		mes "不过，我不接受钱。";
 		next;
-		mes "from my client. Because.";
-		mes "It brings me bad luck to...";
-		mes "...whaat? What did I just say?";
-		mes "Awww....I am confused.";
-		mes "[Hein]";
-		mes "Why did I speak of money?";
+		mes "来自我的客户。因为。";
+		mes "这让我倒霉...";
+		mes "...什么？我刚才说了什么？";
+		mes "哎呀....我很困惑。";
+		mes "[海因]";
+		mes "我为什么会提到钱？";
 		next;
-		switch(select("Show interest.:Igonore him.")) {
+		switch(select("表现出兴趣.:忽视他.")) {
 		case 1:
-			mes "I am a dead man and dead people";
-			mes "do not need money...arf!";
-			mes "My head is hurting...I guess that";
-			mes "a dead man can have a headache!";
+			mes "我已经是个死人了，死人";
+			mes "不需要钱...呜！";
+			mes "我的头很痛...我想";
+			mes "一个死人也会头痛！";
 			next;
-			mes "[Hein]";
-			mes "Why did I speak of money?";
-			mes "I am a dead man and dead people";
-			mes "do not need money...arf!";
-			mes "My head is hurting...I guess that";
+			mes "[海因]";
+			mes "我为什么会提到钱？";
+			mes "我已经是个死人了，死人";
+			mes "不需要钱...呜！";
+			mes "我的头很痛...我想";
 			set lv4_weapon,31;
 			close;
 		case 2:
-			mes "a dead man can have a headache!";
-			mes "- Because you decided to ignore him, -";
-			mes "- you are no longer able to hear him. -";
-			mes "[Hein]";
+			mes "一个死人也会头痛！";
+			mes "- 因为你决定忽视他，-";
+			mes "- 你再也听不到他了。-";
+			mes "[海因]";
 			close;
 		}
 	}
 	if ((lv4_weapon < 31) || (lv4_weapon > 39)) {
-		mes "I feel something different from you.";
-		mes "Did you come here with a purpose?";
-		mes "I am envious of you...";
-		mes "[Hein]";
-		mes "Ah...are you going to ask me something?";
+		mes "我感觉到你有些不同。";
+		mes "你是带着目的来的这里吗？";
+		mes "我羡慕你...";
+		mes "[海因]";
+		mes "啊...你要问我什么吗？";
 		next;
-		mes "However, I am not accepting money";
-		mes "from my client. Because.";
+		mes "不过，我不接受钱。";
+		mes "来自我的客户。因为。";
 		close;
 	}
 	if ((lv4_weapon == 38) || (lv4_weapon == 39)) {
-		mes "It brings me bad luck to...";
-		mes "[Hein]";
-		mes "...? What are you talking about?";
+		mes "这让我倒霉...";
+		mes "[海因]";
+		mes "...？你在说什么？";
 		next;
 		if (rand(1,2) == 1) {
-			mes "What was I going to say?";
-			mes "Arf....my head is hurting...!";
-			mes "[Hein]";
-			mes "That's right! It's bad luck!";
+			mes "我本来想说什么来着？";
+			mes "呜......我的头好痛...！";
+			mes "[海因]";
+			mes "对了！这真是倒霉！";
 			if (lv4_weapon == 38) {
-				mes "Creating weapons is betting! And I am...I am?";
+				mes "制作武器就是在赌博！而我...我是谁？";
 				getitem 1814,1; //Berserk
 			}
 			else {
-				mes "Oh right...I forgot that. Yes, I am dead.";
+				mes "哦对了...我忘了这件事。是的，我死了。";
 				getitem 1416,1; //Tjungkuletti
 			}
 			set lv4_weapon,0;
 			next;
-			mes "Ahahahahaha.";
-			mes "[Hein]";
+			mes "哈哈哈哈哈。";
+			mes "[海因]";
 			next;
-			mes "Well, I must be a lucky dead man";
-			mes "for remembering my past!";
+			mes "好吧，我一定是个幸运的死人";
+			mes "因为我还记得我的过去！";
 			next;
-			mes "Hahahahaha!";
-			mes "[Hein]";
-			mes "Perhaps God wants me to";
+			mes "哈哈哈哈哈！";
+			mes "[海因]";
+			mes "也许上帝想让我";
 			close;
 		}
 		else {
-			mes "continue my research...?";
-			mes "wait, let me ask you a favor.";
-			mes "[Hein]";
-			mes "Can you bring me some materials";
+			mes "继续我的研究...？";
+			mes "等等，让我请你帮个忙。";
+			mes "[海因]";
+			mes "你能给我带一些材料吗";
 			if (lv4_weapon == 38) {
-				mes "that I need for my research?";
+				mes "我需要的材料是为了我的研究吗？";
 				getitem 1720,1; //Bow_Of_Rudra
 			}
 			else {
-				mes "If I succeed in the research,";
+				mes "如果我在研究中成功，";
 				getitem 1415,1; //Skewer
 			}
 			set lv4_weapon,0;
 			next;
-			mes "I will give you the result in return.";
-			mes "[Hein]";
+			mes "我会把结果给你作为回报。";
+			mes "[海因]";
 			next;
-			mes "You can take your time to think of my offer.";
-			mes "Please talk to me later.";
+			mes "你可以慢慢考虑我的提议。";
+			mes "请稍后再和我谈。";
 			next;
-			mes "[Hein]";
-			mes "Oh, you have brought the materials I asked.";
-			mes "Here's the thing. I cannot remember what I need other than those...";
+			mes "[海因]";
+			mes "哦，你带来了我要求的材料。";
+			mes "事情是这样的。我记不得我需要的其他东西了……";
 			close;
 		}
 	}
 	if (((lv4_weapon == 36) && (countitem(7292) > 29) && (countitem(7293) > 29) && (countitem(7289) > 29)) || ((lv4_weapon == 37) && (countitem(7297) > 29) && (countitem(7291) > 29) && (countitem(7295) > 29))) {
-		mes "Aww....I need some more time to think of them...";
-		mes "[Hein]";
-		mes "Please try to search what I need...if you can.";
+		mes "唉……我需要更多时间来想想它们……";
+		mes "[海因]";
+		mes "请尽量找出我需要的东西……如果可以的话。";
 		next;
-		mes "Of course, it will not be an easy job for you";
-		mes "to do so...but I know you have a body to move with your will...";
-		mes "It is still better than being a ghost like me...";
+		mes "当然，这对你来说不会是一件容易的工作。";
+		mes "这样做……但我知道你有一个可以随心所欲移动的身体……";
+		mes "这总比像我一样成为幽灵要好……";
 		next;
-		mes "[Hein]";
-		mes "Please give me all the materials you have brought.";
-		mes "I will keep them for you.";
+		mes "[海因]";
+		mes "请把你带来的所有材料给我。";
+		mes "我会为你保管它们。";
 		next;
-		mes "[Hein]";
-		mes "I will take you speaking to me again";
+		mes "[海因]";
+		mes "我会再次让你和我说话，";
 		next;
-		mes "as the approval of my request.";
-		mes "Thank you so much.";
+		mes "作为我请求的批准。";
+		mes "非常感谢你。";
 		next;
-		mes "[Hein]";
+		mes "[海因]";
 		mes "I need 2 高级铁砧,";
 		next;
 		set .@npchand1,rand(1,3);
-		set .@myhand1,select("Scissors:Rock:Paper");
+		set .@myhand1,select("剪刀:石头:布");
 		if (((.@myhand1 == 1) && (.@npchand1 == 3)) || ((.@myhand1 == 2) && (.@npchand1 == 1)) || ((.@myhand1 == 3) && (.@npchand1 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
 		mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
-		mes "Most likely they are the ones I need.";
-		mes "[Hein]";
+		mes "它们很可能是我需要的东西。";
+		mes "[海因]";
 		next;
 		set .@npchand2,rand(1,3);
-		set .@myhand2,select("Scissors:Rock:Paper");
+		set .@myhand2,select("剪刀:石头:布");
 		if (((.@myhand2 == 1) && (.@npchand2 == 3)) || ((.@myhand2 == 2) && (.@npchand2 == 1)) || ((.@myhand2 == 3) && (.@npchand2 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
-		mes "And I do need 3 more things...";
-		mes "but I have a hard time remembering what they are.";
-		mes "That means that my memory of the past is not";
-		mes "absolutely back.";
+		mes "而且我还需要另外3样东西……";
+		mes "但我很难记住它们是什么。";
+		mes "这意味着我对过去的记忆并不";
+		mes "完全恢复。";
 		next;
 		set .@npchand3,rand(1,3);
-		set .@myhand3,select("Scissors:Rock:Paper");
+		set .@myhand3,select("剪刀:石头:布");
 		if (((.@myhand3 == 1) && (.@npchand3 == 3)) || ((.@myhand3 == 2) && (.@npchand3 == 1)) || ((.@myhand3 == 3) && (.@npchand3 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
@@ -2344,17 +2344,17 @@ niflheim,99,268,5	script	Reyghema#lv4	794,{
 				}
 			}
 		}
-		mes "[Hein]";
-		mes "*sigh*...I am so sorry to ask of you this...";
-		mes "but please search for what those 3 things are.";
+		mes "[海因]";
+		mes "*叹气*...我很抱歉要你做这个...";
+		mes "但请你帮我找出那三样东西是什么。";
 		if (.@npchand1 == 1) {
-			mes "In the meantime, I will try to remember them.";
+			mes "在此期间，我会努力记住它们。";
 		}
 		else if (.@npchand1 == 2) {
-			mes "Thank you.";
+			mes "谢谢你。";
 		}
 		else if (.@npchand1 == 3) {
-			mes "[Hein]";
+			mes "[海因]";
 		}
 		if (.@npchand2 == 1) {
 			mes "I need 2 高级铁砧,";
@@ -2363,99 +2363,99 @@ niflheim,99,268,5	script	Reyghema#lv4	794,{
 			mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 		}
 		else if (.@npchand2 == 3) {
-			mes "Most likely they are the ones I need.";
+			mes "它们很可能是我需要的东西。";
 		}
 		if (.@npchand3 == 1) {
-			mes "[Hein]";
+			mes "[海因]";
 		}
 		else if (.@npchand3 == 2) {
-			mes "...Um? The items that you brought to me seem";
+			mes "……嗯？你带给我的物品似乎";
 		}
 		else if (.@npchand3 == 3) {
-			mes "to be good materials for my creation...";
+			mes "是我制作的好材料……";
 		}
 		next;
-		mes "Give them to me, I shall try first!";
-		mes "[Hein]";
+		mes "把它们给我，我先试试！";
+		mes "[海因]";
 		if (.@myhand1 == 1) {
-			mes "Oh...I was right! How did you";
+			mes "哦……我没错！你是怎么";
 		}
 		else if (.@myhand1 == 2) {
-			mes "know these are materials I need?";
+			mes "知道这些是我需要的材料的？";
 		}
 		else if (.@myhand1 == 3) {
-			mes "Great, give me a moment!";
+			mes "太好了，给我一点时间！";
 		}
 		if (.@myhand2 == 1) {
-			mes "[Hein]";
+			mes "[海因]";
 		}
 		else if (.@myhand2 == 2) {
-			mes "...Wait, I must test your luck first.";
+			mes "...等一下，我必须先测试一下你的运气。";
 		}
 		else if (.@myhand2 == 3) {
-			mes "Since I am not sure about the result,";
+			mes "因为我不确定结果，";
 		}
 		if (.@myhand3 == 1) {
-			mes "we should trust to luck for the result of my creation.";
+			mes "我们应该相信运气来决定我的创造结果。";
 		}
 		else if (.@myhand3 == 2) {
-			mes "You must have good luck...";
+			mes "你一定要有好运气...";
 		}
 		else if (.@myhand3 == 3) {
-			mes "[Hein]";
+			mes "[海因]";
 		}
 		next;
 		if (.@shobu > 1) {
-			mes "We are going to play 'Rock, Paper, Scissors'.";
+			mes "我们要玩“剪刀石头布”。";
 			mes "Nice. You won " + .@shobu + " times. Your luck is really good, so now we're finally finished with this nonsense.";
 			next;
-			mes "You must win at least 2 out of 3 times.";
-			mes "If you fail, you must leave a large amount";
-			mes "of one material you have brought.";
+			mes "你必须赢得至少三局中的两局。";
+			mes "如果你失败了，你必须留下大量";
+			mes "你带来的某种材料。";
 			close;
 		}
 		else if (.@shobu < 2) {
-			mes "It is for driving away your bad luck.";
-			mes "[Hein]";
-			mes "I will give you a piece of paper.";
-			mes "You will write down one among 'Rock, Paper, or Scissors'.";
+			mes "这是为了驱赶你的坏运气。";
+			mes "[海因]";
+			mes "我会给你一张纸。";
+			mes "你将写下“石头、剪刀或布”中的一个。";
 			next;
-			mes "I will do the same at the same time.";
-			mes "We will then compare each other's paper at the end.";
+			mes "我会同时做同样的事情。";
+			mes "然后我们将在最后比较彼此的纸条。";
 			close;
 		}
 	}
 	if ((lv4_weapon == 35) || (lv4_weapon == 36) || (lv4_weapon == 37)) {
-		mes "[Hein]";
-		mes "Okay...I played in the order of...";
-		mes "[Hein]";
-		mes "You did in the order of...";
-		mes "[Hein]";
-		mes "Well well well...you lost the game.";
+		mes "[海因]";
+		mes "好的……我按照……的顺序玩了。";
+		mes "[海因]";
+		mes "你是按照……的顺序玩的。";
+		mes "[海因]";
+		mes "好吧好吧……你输了这场游戏。";
 		next;
-		mes "Ah~ you were close though...";
-		mes "We must drive away bad luck.";
+		mes "啊~ 不过你很接近了……";
+		mes "我们必须驱赶坏运气。";
 		next;
-		mes "[Hein]";
-		mes "Okay, I will wait here,";
-		mes "go bring me the materials again...";
+		mes "[海因]";
+		mes "好的，我会在这里等，";
+		mes "去再给我带来材料……";
 		next;
-		mes "[Hein]";
-		mes "Let's see...";
-		mes "Ah~ you must be really good at game!";
-		mes "Yes, your luck is at its highest!";
+		mes "[海因]";
+		mes "让我看看……";
+		mes "啊~ 你一定很擅长这个游戏！";
+		mes "是的，你的运气达到了巅峰！";
 		close;
 	}
 	if ((lv4_weapon == 34) && (countitem(1005) > 1) && (countitem(989) > 0) && (countitem(710) > 0) && (countitem(969) > 19)) {
-		mes "[Hein]";
-		mes "I am going to keep my promise.";
+		mes "[海因]";
+		mes "我会遵守我的承诺。";
 		next;
-		mes "But I need some time to prepare.";
-		mes "Give me the materials now and I will talk to you later.";
+		mes "但我需要一些时间来准备。";
+		mes "现在把材料给我，我稍后再和你谈。";
 		next;
-		mes "[Hein]";
-		mes "I am sorry but please give me more time to remember the materials...";
-		mes "I had really good memory when I was alive...";
+		mes "[海因]";
+		mes "我很抱歉，但请给我更多时间来记住材料...";
+		mes "我活着的时候记忆真的很好...";
 		delitem 1005,2; //Hammer_Of_Blacksmith
 		delitem 989,1; //Emperium_Anvil
 		delitem 710,1; //Illusion_Flower
@@ -2464,305 +2464,305 @@ niflheim,99,268,5	script	Reyghema#lv4	794,{
 		close;
 	}
 	if (lv4_weapon == 34) {
-		mes "So I could even recite them right after I woke up...";
-		mes "[Hein]";
-		mes "Oh, yes. I just finished the work.";
-		mes "Do you want to know the result? Okay...";
-		mes "Breathe deeply...before we check.";
+		mes "所以我甚至可以在醒来后立刻背诵它们...";
+		mes "[海因]";
+		mes "哦，是的。我刚完成这项工作。";
+		mes "你想知道结果吗？好的...";
+		mes "深呼吸...在我们检查之前。";
 		next;
-		mes "The result is...";
-		mes "[Hein]";
-		mes "a Big Success! This is great!";
-		mes "I have not labored in vain!";
-		mes "Let's see the weapon...it is...";
+		mes "结果是...";
+		mes "[海因]";
+		mes "大成功！太棒了！";
+		mes "我没有白费力气！";
+		mes "让我们看看武器...它是...";
 		next;
-		mes "[Hein]";
-		mes "Well...this is it.";
+		mes "[海因]";
+		mes "好吧...就是这个。";
 		close;
 	}
 	if (lv4_weapon == 33) {
-		mes "I feel my memory is fading again...";
-		mes "Hahaha...being dead is not good.";
+		mes "我感觉我的记忆又在消退...";
+		mes "哈哈哈...死去可不好。";
 		next;
-		mes "[Hein]";
-		mes "Thank you for your help. And if you have";
-		mes "a chance to visit Nifflheim again,";
-		mes "please come back and retrieve my memory once more...";
-		mes "[Hein]";
+		mes "[海因]";
+		mes "谢谢你的帮助。如果你有";
+		mes "再次访问尼芙菲姆的机会，";
+		mes "请回来再帮我找回我的记忆...";
+		mes "[海因]";
 		next;
-		mes "Aaahhhh! I don't think I will";
-		mes "remember you next time...";
-		mes "Take care, adventurer...father, I made it...";
+		mes "啊啊啊啊！我想我不会";
+		mes "下次记得你...";
+		mes "保重，冒险者...父亲，我成功了...";
 		next;
-		mes "[Hein]";
+		mes "[海因]";
 		mes "嗯. 似乎有点什么小问题.";
 		set lv4_weapon,34;
 		close;
 	}
 	if (lv4_weapon == 32) {
-		mes "[Reyghema]";
-		mes "Damn it...";
-		mes "I didn't want to die!";
+		mes "[雷格赫玛]";
+		mes "该死...";
+		mes "我不想死！";
 		next;
-		mes "[Reyghema]";
-		mes "Well, nothing that's alive really wants to die, but I was so close to finishing what I wanted to do. Ah, youth...";
+		mes "[雷格赫玛]";
+		mes "嗯，活着的东西都不想死，但我离完成我想做的事情太近了。啊，青春...";
 		next;
-		mes "[Reyghema]";
-		mes "Youth...";
-		mes "Enjoy your youth...";
-		mes "I remember hearing";
-		mes "something like that,";
-		mes "but there was more to it...";
+		mes "[雷格赫玛]";
+		mes "青春...";
+		mes "享受你的青春...";
+		mes "我记得听到过";
+		mes "类似的话，";
+		mes "但还有更多...";
 		next;
 		input .@input$;
 		if (.@input$ == "Live without regret.") {
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 			mes "...";
 			next;
-			mes "[Reyghema]";
+			mes "[雷格赫玛]";
 			mes "...";
 			mes ".......";
-			mes "Enjoy your youth.";
-			mes "Live without regret.";
+			mes "享受你的青春。";
+			mes "活得无怨无悔。";
 			next;
-			mes "[Reyghema]";
-			mes "Of course...";
-			mes "My father, Bill Thayer used to say that all the time! That's right!";
+			mes "[雷格赫玛]";
+			mes "当然...";
+			mes "我父亲比尔·塞耶常常这么说！没错！";
 			next;
-			mes "[Reyghema]";
-			mes "Hey you, thanks for refreshing my memory. It's all coming back to me. I used to be a weaponsmith, but I regret never finishing my final project...";
+			mes "[雷格赫玛]";
+			mes "嘿，你，谢谢你让我想起这些。所有的记忆都回来了。我曾经是个武器匠，但我后悔没有完成我的最后一个项目...";
 			next;
-			mes "[Reyghema]";
-			mes "You just gotta help me realize";
-			mes "my final goal. Even if I am dead,";
-			mes "I really wanna complete the experiment that got me killed.";
+			mes "[雷格赫玛]";
+			mes "你只需要帮我实现";
+			mes "我的最终目标。即使我已经死了，";
+			mes "我真的想完成导致我死亡的实验。";
 			next;
-			mes "[Reyghema]";
-			mes "All you need to do for now is bring me the things I need. I don't think I'll be able to gather much, being here in Niflheim and all.";
+			mes "[雷格赫玛]";
+			mes "你现在只需要做的就是把我需要的东西带来。我想我在尼芙菲姆这里无法收集太多东西。";
 			next;
-			mes "[Reyghema]";
-			mes "Come back a little later.";
-			mes "By then, I should remember what kinds of things I'll need.";
+			mes "[雷格赫玛]";
+			mes "稍后再回来。";
+			mes "到那时，我应该会记得我需要什么样的东西。";
 			set lv4_weapon,33;
 			close;
 		}
 		else {
-			mes "[Reyghema]";
-			mes "What...?";
-			mes "You playin' games";
-			mes "with me or what?";
-			mes "Get outta my face~";
+			mes "[雷格赫玛]";
+			mes "什么...?";
+			mes "你在玩游戏吗";
+			mes "跟我玩吗？";
+			mes "别靠近我~";
 			close;
 		}
 	}
 	if (lv4_weapon == 31) {
-		mes "[Reyghema]";
-		mes "Damn it...";
-		mes "I didn't want to die!";
+		mes "[雷格赫玛]";
+		mes "该死...";
+		mes "我不想死！";
 		next;
-		mes "[Reyghema]";
-		mes "Well, nothing that's alive really wants to die, but I was so close to finishing what I wanted to do. Ah, youth...";
+		mes "[雷格赫玛]";
+		mes "嗯，活着的东西都不想死，但我离完成我想做的事情太近了。啊，青春...";
 		next;
-		mes "[Reyghema]";
-		mes "Youth...";
-		mes "Enjoy your youth...";
-		mes "I remember hearing";
-		mes "something like that,";
-		mes "but there was more to it...";
+		mes "[雷格赫玛]";
+		mes "青春...";
+		mes "享受你的青春...";
+		mes "我记得听到过";
+		mes "类似的话，";
+		mes "但还有更多...";
 		next;
-		mes "[Reyghema]";
-		mes "Enjoy your youth...";
-		mes "Enjoy your youth...";
-		mes "...What came after that?";
+		mes "[雷格赫玛]";
+		mes "享受你的青春...";
+		mes "享受你的青春...";
+		mes "……接下来发生了什么？";
 		next;
-		mes "[Reyghema]";
-		mes "Argh!";
-		mes "I can't remember!";
-		mes "Everything in my";
-		mes "head is so cloudy!";
+		mes "[雷格赫玛]";
+		mes "啊！";
+		mes "我记不起来了！";
+		mes "我脑子里的一切";
+		mes "都模糊不清！";
 		close;
 	}
-	mes "[Reyghema]";
-	mes "Damn it...";
-	mes "I didn't want to die!";
+	mes "[雷格赫玛]";
+	mes "该死...";
+	mes "我不想死！";
 	next;
-	mes "[Reyghema]";
-	mes "Well, nothing that's alive really wants to die, but I was so close to finishing what I wanted to do. Ah, youth...";
+	mes "[雷格赫玛]";
+	mes "嗯，活着的东西都不想死，但我离完成我想做的事情太近了。啊，青春...";
 	next;
-	mes "[Reyghema]";
-	mes "Youth...";
-	mes "Enjoy your youth...";
-	mes "I remember hearing";
-	mes "something like that,";
-	mes "but there was more to it...";
+	mes "[雷格赫玛]";
+	mes "青春...";
+	mes "享受你的青春...";
+	mes "我记得听到过";
+	mes "类似的话，";
+	mes "但还有更多...";
 	next;
-	switch(select("Show interest.:Ignore him.")) {
+	switch(select("表现出兴趣.:忽视他.")) {
 	case 1:
-		mes "[Reyghema]";
-		mes "Enjoy your youth...";
-		mes "Enjoy your youth...";
-		mes "...What came after that?";
+		mes "[雷格赫玛]";
+		mes "享受你的青春...";
+		mes "享受你的青春...";
+		mes "……接下来发生了什么？";
 		next;
-		mes "[Reyghema]";
-		mes "Argh!";
-		mes "I can't remember!";
-		mes "Everything in my";
-		mes "head is so cloudy!";
+		mes "[雷格赫玛]";
+		mes "啊！";
+		mes "我记不起来了！";
+		mes "我脑子里的一切";
+		mes "都模糊不清！";
 		set lv4_weapon,31;
 		close;
 	case 2:
-		mes "[Reyghema]";
-		mes "Enjoy your youth...";
-		mes "Enjoy your youth...";
-		mes "...What came after that?";
+		mes "[雷格赫玛]";
+		mes "享受你的青春...";
+		mes "享受你的青春...";
+		mes "……接下来发生了什么？";
 		close;
 	}
 }
 
 niflheim,187,280,3	script	Hein#lv4	795,{
 	if (checkweight(908,300) == 0) {
-		mes "- Wait a minute! -";
+		mes "- 等一下！ -";
 		close;
 	}
 	if (lv4_weapon == 0) {
-		mes "- You are currently overweight. -";
-		mes "- Please lose some Weight -";
+		mes "- 你目前超重了。 -";
+		mes "- 请减轻一些重量 -";
 		next;
-		mes "- and try again. -";
-		mes "[Waltboughst]";
-		mes "...Hah!";
+		mes "- 然后再试一次。 -";
+		mes "[沃尔特博斯]";
+		mes "……哈！";
 		next;
-		switch(select("Show interest.:Igonore him.")) {
+		switch(select("表现出兴趣.:忽视他.")) {
 		case 1:
-			mes "[Waltboughst]";
-			mes "Ah~ it is so frustrating to be a dead man.";
-			mes "Because I cannot do anything without a body.";
-			mes "You know what my father used to say?";
+			mes "[沃尔特博斯]";
+			mes "啊~ 作为一个死者真让人沮丧。";
+			mes "因为我没有身体什么都做不了。";
+			mes "你知道我父亲常说什么吗？";
 			next;
-			mes "Trying best does not always";
-			mes "result in a success.";
-			mes "However...errr?";
-			mes "[Waltboughst]";
-			mes "...What was my father's";
-			mes "quote? Why am I stuck in";
+			mes "尽力而为并不总是";
+			mes "结果是成功的。";
+			mes "不过……呃？";
+			mes "[沃尔特博斯]";
+			mes "……我父亲的";
+			mes "名言是什么？我为什么会被困在";
 			set lv4_weapon,40;
 			close;
 		case 2:
-			mes "here after death? Hey, you";
-			mes "Do you know anything about";
-			mes "Waltboughst when he was";
+			mes "这里，死后？嘿，你";
+			mes "知道关于";
+			mes "沃尔特博斯特的事吗，当他";
 			close;
 		}
 	}
 	if ((lv4_weapon < 40) || (lv4_weapon > 48)) {
-		mes "alive?";
-		mes "[Waltboughst]";
+		mes "活着的时候？";
+		mes "[沃尔特博斯]";
 		next;
-		mes "...what did he say afterwards?";
-		mes "Speaking of which, why am I";
-		mes "so anxious to do something?";
-		mes "I am a dead man, and a dead man is not supposed to do anything!";
-		mes "Hey, do you know anything about me when I was alive?";
-		mes "- Because you decided to ignore him, -";
+		mes "……他之后说了什么？";
+		mes "说到这个，我为什么会";
+		mes "如此焦虑想要做点什么？";
+		mes "我已经是个死人，死人是不应该做任何事情的！";
+		mes "嘿，你知道我活着的时候的事吗？";
+		mes "- 因为你决定忽视他，-";
 		close;
 	}
 	if ((lv4_weapon == 47) || (lv4_weapon == 48)) {
-		mes "- you are no longer able to hear him. -";
-		mes "[Waltboughst]";
-		mes "I feel something different about you.";
-		mes "Did you come here with a purpose?";
-		mes "I am envious of you...";
+		mes "- 你再也听不到他了。-";
+		mes "[沃尔特博斯]";
+		mes "我感觉到你有些不同。";
+		mes "你是带着目的来的这里吗？";
+		mes "我羡慕你...";
 		next;
 		if (rand(1,2) == 1) {
-			mes "[Waltboughst]";
-			mes "Ah~ it is so frustrating to be a dead man.";
-			mes "Because I cannot do anything without a body.";
-			mes "You know what my father used to say?";
-			mes "Trying best does not always";
-			mes "result in a success.";
+			mes "[沃尔特博斯]";
+			mes "啊~ 作为一个死者真让人沮丧。";
+			mes "因为我没有身体什么都做不了。";
+			mes "你知道我父亲常说什么吗？";
+			mes "尽力而为并不总是";
+			mes "结果是成功的。";
 			if (lv4_weapon == 47) {
-				mes "However...";
+				mes "不过…";
 				getitem 1132,1; //Edge
 			}
 			else {
-				mes "[Waltboughst]";
+				mes "[沃尔特博斯]";
 				getitem 1166,1; //Dragon_Slayer
 			}
 			set lv4_weapon,0;
 			next;
 		}
 		else {
-			mes "...What? What did you just say?";
-			mes "Hmmm.";
-			mes "[Waltboughst]";
-			mes "Yes! That was it!";
-			mes "Since I am dead, I cannot even try!";
-			mes "Eh...?! Ah!";
+			mes "…什么？你刚才说了什么？";
+			mes "嗯…";
+			mes "[沃尔特博斯]";
+			mes "是的！就是这样！";
+			mes "既然我已经死了，我连尝试都不能！";
+			mes "呃…？！啊！";
 			if (lv4_weapon == 47) {
-				mes "I see, I see now.";
+				mes "我明白了，我现在明白了。";
 				getitem 1137,1; //Excalibur
 			}
 			else {
-				mes "I must have been killed by some kind of accident!";
+				mes "我一定是被某种意外杀死的！";
 				getitem 1167,1; //Schweizersabel
 			}
 			set lv4_weapon,0;
 			next;
 		}
-		mes "[Waltboughst]";
-		mes "Okay, I am not going to end this way.";
-		mes "Hey, you were meant to meet me!";
+		mes "[沃尔特博斯]";
+		mes "好的，我不想就这样结束。";
+		mes "嘿，你本该来见我的！";
 		next;
-		mes "You got to do me a favor, now!";
-		mes "[Waltboughst]";
-		mes "I will give you the result of my research";
+		mes "你现在得帮我一个忙！";
+		mes "[沃尔特博斯]";
+		mes "我会把我的研究结果给你，";
 		close;
 	}
 	if (((lv4_weapon == 45) && (countitem(7294) > 29) && (countitem(7297) > 29) && (countitem(7293) > 29)) || ((lv4_weapon == 46) && (countitem(7295) > 29) && (countitem(7296) > 29) && (countitem(7290) > 29))) {
-		mes "in return! All I want is to compete my research,";
-		mes "not the result.";
-		mes "[Waltboughst]";
+		mes "作为回报！我只想完成我的研究，";
+		mes "不是结果。";
+		mes "[沃尔特博斯]";
 		next;
-		mes "Well, give me some time to remember";
-		mes "what I need for my research.";
-		mes "I will talk to you later.";
-		mes "[Waltboughst]";
+		mes "好吧，给我一些时间来回忆。";
+		mes "我需要什么来进行我的研究。";
+		mes "我稍后再和你谈。";
+		mes "[沃尔特博斯]";
 		next;
-		mes "Oh...you brought everything I need!";
-		mes "You were quick this time...I am still having";
+		mes "哦……你带来了我需要的一切！";
+		mes "这次你来得很快……我仍然在努力回忆。";
 		next;
-		mes "a hard time remembering what I need other than those.";
-		mes "This is not good, this is not good at all.";
+		mes "除了那些，我还需要什么我记不起来了。";
+		mes "这不好，这一点也不好。";
 		next;
-		mes "[Waltboughst]";
-		mes "Anyways, I will keep those materials for you.";
+		mes "[沃尔特博斯]";
+		mes "无论如何，我会为你保留那些材料。";
 		next;
-		mes "And give me some more times to";
-		mes "remember what I need...arph!";
-		mes "[Waltboughst]";
+		mes "再给我一些时间来";
+		mes "记住我需要什么……呜呜！";
+		mes "[沃尔特博斯]";
 		next;
 		set .@npchand1,rand(1,3);
-		set .@myhand1,select("Scissors:Rock:Paper");
+		set .@myhand1,select("剪刀:石头:布");
 		if (((.@myhand1 == 1) && (.@npchand1 == 3)) || ((.@myhand1 == 2) && (.@npchand1 == 1)) || ((.@myhand1 == 3) && (.@npchand1 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
-		mes "Umm, you came back so early.";
-		mes "I just remembered the materials.";
-		mes "[Waltboughst]";
+		mes "嗯，你这么早就回来了。";
+		mes "我刚刚想起了材料。";
+		mes "[沃尔特博斯]";
 		next;
 		set .@npchand2,rand(1,3);
-		set .@myhand2,select("Scissors:Rock:Paper");
+		set .@myhand2,select("剪刀:石头:布");
 		if (((.@myhand2 == 1) && (.@npchand2 == 3)) || ((.@myhand2 == 2) && (.@npchand2 == 1)) || ((.@myhand2 == 3) && (.@npchand2 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
 		mes "I need 2 高级铁砧,";
 		mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
-		mes "[Waltboughst]";
-		mes "I do need some other items...but I need some time";
-		mes "to remember those. Oh well,";
+		mes "[沃尔特博斯]";
+		mes "我确实需要一些其他的物品……但我需要一些时间";
+		mes "来记住那些。唉，";
 		next;
 		set .@npchand3,rand(1,3);
-		set .@myhand3,select("Scissors:Rock:Paper");
+		set .@myhand3,select("剪刀:石头:布");
 		set .@aekddam,rand(1,3);
 		if (((.@myhand3 == 1) && (.@npchand3 == 3)) || ((.@myhand3 == 2) && (.@npchand3 == 1)) || ((.@myhand3 == 3) && (.@npchand3 == 2))) {
 			set .@shobu,.@shobu+1;
@@ -2806,113 +2806,113 @@ niflheim,187,280,3	script	Hein#lv4	795,{
 				}
 			}
 		}
-		mes "we have enough time, so let me think of them.";
-		mes "[Waltboughst]";
+		mes "我们有足够的时间，所以让我想想它们。";
+		mes "[沃尔特博斯]";
 		mes "I need 2 高级铁砧,";
 		if (.@npchand1 == 1) {
 			mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 		}
 		else if (.@npchand1 == 2) {
-			mes "Most likey they will be the ones I need...";
+			mes "很可能它们就是我需要的……";
 		}
 		else if (.@npchand1 == 3) {
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
 		}
 		if (.@npchand2 == 1) {
-			mes "...Um? The items that you brought to me seem";
+			mes "……嗯？你带给我的物品似乎";
 		}
 		else if (.@npchand2 == 2) {
-			mes "to be good materials for my creation...";
+			mes "是我制作的好材料……";
 		}
 		else if (.@npchand2 == 3) {
-			mes "Give them to me, I shall try first!";
+			mes "把它们给我，我先试试！";
 		}
 		if (.@npchand3 == 1) {
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
 		}
 		else if (.@npchand3 == 2) {
-			mes "Oh...I was right! How did you";
+			mes "哦……我没错！你是怎么";
 		}
 		else if (.@npchand3 == 3) {
-			mes "know these are materials I need?";
+			mes "知道这些是我需要的材料的？";
 		}
 		next;
-		mes "Great, give me a moment!";
-		mes "[Waltboughst]";
-		mes "...wait, I must test your luck first.";
-		mes "Since I am not sure about the result,";
+		mes "太好了，给我一点时间！";
+		mes "[沃尔特博斯]";
+		mes "……等等，我必须先测试你的运气。";
+		mes "因为我不确定结果，";
 		if (.@myhand1 == 1) {
-			mes "we should trust to luck for the result of my creation.";
+			mes "我们应该相信运气来决定我的创造结果。";
 		}
 		else if (.@myhand1 == 2) {
-			mes "You must have good luck...";
+			mes "你一定要有好运气...";
 		}
 		else if (.@myhand1 == 3) {
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
 		}
 		if (.@myhand2 == 1) {
-			mes "We are going to play 'Rock, Paper, Scissors'.";
+			mes "我们要玩“剪刀石头布”。";
 		}
 		else if (.@myhand2 == 2) {
-			mes "You must win at least 2 out of 3 times.";
+			mes "你必须赢得至少三局中的两局。";
 		}
 		else if (.@myhand2 == 3) {
-			mes "If you fail, you must leave a large amount";
+			mes "如果你失败了，你必须留下大量";
 		}
 		if (.@myhand3 == 1) {
-			mes "of one material you have brought.";
+			mes "你带来的某种材料。";
 		}
 		else if (.@myhand3 == 2) {
-			mes "It is for driving away your bad luck.";
+			mes "这是为了驱赶你的坏运气。";
 		}
 		else if (.@myhand3 == 3) {
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
 		}
 		next;
 		if (.@shobu > 1) {
-			mes "I will give you a piece of paper.";
-			mes "You will write down one among 'Rock, Paper, or Scissors'.";
+			mes "我会给你一张纸。";
+			mes "你将写下“石头、剪刀或布”中的一个。";
 			mes "You won " + shobu + " times.";
-			mes "I will do the same at the same time.";
-			mes "We will then compare each other's paper at the end.";
+			mes "我会同时做同样的事情。";
+			mes "然后我们将在最后比较彼此的纸条。";
 			next;
-			mes "[Waltboughst]";
-			mes "Okay...I played in the order of...";
+			mes "[沃尔特博斯]";
+			mes "好的……我按照……的顺序玩了。";
 			close;
 		}
 		else if (.@shobu < 2) {
-			mes "[Waltboughst]";
-			mes "You did in the order of...";
-			mes "[Waltboughst]";
-			mes "Well well well...you lost the game.";
-			mes "Ah~ you were close though...";
-			mes "We must drive away bad luck.";
+			mes "[沃尔特博斯]";
+			mes "你是按照……的顺序玩的。";
+			mes "[沃尔特博斯]";
+			mes "好吧好吧……你输了这场游戏。";
+			mes "啊~ 不过你很接近了……";
+			mes "我们必须驱赶坏运气。";
 			next;
-			mes "[Waltboughst]";
-			mes "Okay, I will wait here,";
-			mes "go bring me the materials again...";
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
+			mes "好的，我会在这里等，";
+			mes "去再给我带来材料……";
+			mes "[沃尔特博斯]";
 			close;
 		}
 	}
 	if ((lv4_weapon == 44) || (lv4_weapon == 45) || (lv4_weapon == 46)) {
-		mes "Let's see...";
-		mes "Ah~ you must be really good at game!";
+		mes "让我看看……";
+		mes "啊~ 你一定很擅长这个游戏！";
 		next;
-		mes "Yes, your luck is at its highest!";
-		mes "[Waltboughst]";
+		mes "是的，你的运气达到了巅峰！";
+		mes "[沃尔特博斯]";
 		close;
 	}
 	if ((lv4_weapon == 43) && (countitem(1005) > 1) && (countitem(989) > 0) && (countitem(710) > 0) && (countitem(969) > 19)) {
-		mes "I am going to keep my promise.";
-		mes "But I need some time to prepare.";
+		mes "我会遵守我的承诺。";
+		mes "但我需要一些时间来准备。";
 		next;
-		mes "Give me the materials now and I will talk to you later.";
-		mes "[Waltboughst]";
-		mes "Arph...I haven't remembered them yet.";
+		mes "现在把材料给我，我稍后再和你谈。";
+		mes "[沃尔特博斯]";
+		mes "唉……我还没有记起来。";
 		next;
-		mes "Awww....this is a problem.";
-		mes "I must think of them as soon as possible...";
+		mes "唉呀……这真是个问题。";
+		mes "我必须尽快想起它们……";
 		delitem 1005,2; //Hammer_Of_Blacksmith
 		delitem 989,1; //Emperium_Anvil
 		delitem 710,1; //Illusion_Flower
@@ -2921,314 +2921,314 @@ niflheim,187,280,3	script	Hein#lv4	795,{
 		close;
 	}
 	if (lv4_weapon == 43) {
-		mes "[Waltboughst]";
-		mes "Hehe, I made something with the materials";
-		mes "in this short time! Wanna see?";
-		mes "Aren't you wondering about the result?";
-		mes "Hmmm....let's see...";
-		mes "[Waltboughst]";
+		mes "[沃尔特博斯]";
+		mes "嘿嘿，我用这些材料做了一些东西";
+		mes "在这么短的时间内！想看看吗？";
+		mes "你难道不想知道结果吗？";
+		mes "嗯……让我们看看……";
+		mes "[沃尔特博斯]";
 		next;
-		mes "Waltboughst never fails!";
-		mes "Besides you had good luck,";
-		mes "so it resulted in a perfect success!";
-		mes "You got a nice weapon here, it is...";
-		mes "[Waltboughst]";
+		mes "瓦尔特堡从不失败！";
+		mes "除了你运气不错，";
+		mes "所以结果是完美的成功！";
+		mes "你得到了一个不错的武器，它是...";
+		mes "[沃尔特博斯]";
 		close;
 	}
 	if (lv4_weapon == 42) {
-		mes "I am genius! Hahahaha!";
-		mes "I made it when my brothers could not!";
-		mes "Muhahahahahaha!";
-		mes "Eh...err? Arrr...phhh?";
-		mes "[Waltboughst]";
-		mes "Damn...I must try too hard.";
+		mes "我真是天才！哈哈哈哈！";
+		mes "我做到了，而我的兄弟们却做不到！";
+		mes "呜哈哈哈哈哈！";
+		mes "呃...呃？啊...呸？";
+		mes "[沃尔特博斯]";
+		mes "该死...我一定是太努力了。";
 		next;
-		mes "My memory is fading again...";
-		mes "Oh well, somehow I proved";
-		mes "that I am a genius even after I died.";
-		mes "[Waltboughst]";
-		mes "If you want me to display my genius again,";
-		mes "come retrieve my memory again.";
+		mes "我的记忆又在消退了...";
+		mes "哦，好吧，不知怎么的我证明了";
+		mes "即使在我死后，我仍然是个天才。";
+		mes "[沃尔特博斯]";
+		mes "如果你想让我再次展示我的天才，";
+		mes "来再次找回我的记忆。";
 		next;
-		mes "And thank you!";
-		mes "[Waltboughst]";
-		mes "Ah...my memory's dying again...";
+		mes "谢谢你！";
+		mes "[沃尔特博斯]";
+		mes "啊……我的记忆又在消逝了……";
 		next;
-		mes "Farewell~ I don't think I will remember you";
-		mes "but I hope you will remember me as Waltboughst";
+		mes "再见~ 我想我不会记得你了";
+		mes "但我希望你能记住我，作为瓦尔特博斯特";
 		next;
-		mes "the genius in the age!";
-		mes "[Waltboughst]";
+		mes "这个时代的天才！";
+		mes "[沃尔特博斯]";
 		set lv4_weapon,43;
 		close;
 	}
 	if (lv4_weapon == 41) {
 		mes "嗯. 似乎有点什么小问题.";
-		mes "It looks like you want to ask me something. Heh, my customers used to have that look on that faces too when I worked as a weaponsmith...";
+		mes "看起来你想问我什么。呵呵，我的顾客在我当铁匠的时候也常常有这样的表情……";
 		next;
-		mes "[Hein]";
-		mes "Back during those days,";
-		mes "I never accepted money for my work. Father always used to say, 'Never accept payment to forge a good weapon. It... It...'";
+		mes "[海因]";
+		mes "在那些日子里，";
+		mes "我从不为我的工作收钱。父亲总是说，‘永远不要为了锻造一把好武器而接受报酬。它……它……’";
 		next;
 		input .@input$;
 		if (.@input$ == "It brings bad luck.") {
-			mes "[Hein]";
-			mes "That's right!";
-			mes "And you need luck when you're creating high quality weapons!";
+			mes "[海因]";
+			mes "没错！";
+			mes "而且在创造高质量武器时，你需要运气！";
 			next;
-			mes "[Hein]";
-			mes "Oh... crap.";
-			mes "I'm a dead man.";
-			mes "I just realized.";
-			mes "Or remembered.";
-			mes "Perhaps I'm brain";
-			mes "dead too, huh?";
+			mes "[海因]";
+			mes "哦……糟糕。";
+			mes "我完蛋了。";
+			mes "我刚刚意识到。";
+			mes "或者记起来了。";
+			mes "也许我脑袋";
+			mes "也死了，是吧？";
 			set lv4_weapon,42;
 			next;
-			mes "[Hein]";
-			mes "Well, I must be a lucky dead man for remembering some of my past, right? Hahahaha!";
+			mes "[海因]";
+			mes "好吧，我一定是个幸运的死者，因为我还记得我的一些过去，对吧？哈哈哈哈！";
 			next;
-			mes "[Hein]";
-			mes "Right, I died while trying to finish my weapon research. Maybe this is fate's way of allowing me to finish my uncompleted work?";
+			mes "[海因]";
+			mes "没错，我是在完成我的武器研究时死去的。也许这是命运让我完成我未完成的工作的方式？";
 			next;
-			mes "[Hein]";
-			mes "Hey, let me ask you a favor. Would you bring the materials I need to finish my research? If I succeed, the finished product is yours to keep. All yours!";
+			mes "[海因]";
+			mes "嘿，让我请你帮个忙。你能把我需要的材料带来完成我的研究吗？如果我成功了，成品就归你了。全都归你！";
 			next;
-			mes "[Hein]";
-			mes "Take your time";
-			mes "and think about it.";
-			mes "It can't be that bad";
-			mes "of a deal... Right?";
+			mes "[海因]";
+			mes "慢慢来";
+			mes "然后考虑一下。";
+			mes "这交易应该不会太糟糕";
+			mes "吧？";
 			close;
 		}
 		else {
-			mes "[Hein]";
-			mes "Wha...?";
-			mes "What are you talking about?";
-			mes "What was I going to say?";
-			mes "Oww... My head hurts!";
+			mes "[海因]";
+			mes "什么...?";
+			mes "你在说什么?";
+			mes "我本来想说什么来着？";
+			mes "哎... 我的头好痛!";
 			close;
 		}
 	}
 	if (lv4_weapon == 40) {
-		mes "[Hein]";
-		mes "It looks like you want to ask me something. Heh, my customers used to have that look on that faces too when I worked as a weaponsmith...";
+		mes "[海因]";
+		mes "看起来你想问我什么。呵呵，我的顾客在我当铁匠的时候也常常有这样的表情……";
 		next;
-		mes "[Hein]";
-		mes "Back during those days,";
-		mes "I never accepted money for my work. Father always used to say, 'Never accept payment to forge a good weapon. It... It...'";
+		mes "[海因]";
+		mes "在那些日子里，";
+		mes "我从不为我的工作收钱。父亲总是说，‘永远不要为了锻造一把好武器而接受报酬。它……它……’";
 		next;
-		mes "[Hein]";
-		mes "What was the rest of it?";
-		mes "Why can't I remember the";
-		mes "rest of that saying?!";
+		mes "[海因]";
+		mes "剩下的是什么?";
+		mes "我为什么记不住";
+		mes "那句谚语的剩下部分?!";
 		next;
-		mes "[Hein]";
-		mes "It's so weird.";
-		mes "How could I forget";
-		mes "something I used to";
-		mes "say all the time? I...";
-		mes "I hate being dead!";
+		mes "[海因]";
+		mes "真奇怪.";
+		mes "我怎么会忘记";
+		mes "我曾经会";
+		mes "一直说的? 我...";
+		mes "我讨厌死去!";
 		close;
 	}
-	mes "[Hein]";
-	mes "It looks like you want to ask me something. Heh, my customers used to have that look on that faces too when I worked as a weaponsmith...";
+	mes "[海因]";
+	mes "看起来你想问我什么。呵呵，我的顾客在我当铁匠的时候也常常有这样的表情……";
 	next;
-	mes "[Hein]";
-	mes "Back during those days,";
-	mes "I never accepted money for my work. Father always used to say, 'Never accept payment to forge a good weapon. It... It...'";
+	mes "[海因]";
+	mes "在那些日子里，";
+	mes "我从不为我的工作收钱。父亲总是说，‘永远不要为了锻造一把好武器而接受报酬。它……它……’";
 	next;
-	switch(select("Show interest.:Ignore him.")) {
+	switch(select("表现出兴趣.:忽视他.")) {
 	case 1:
-		mes "[Hein]";
-		mes "What was the rest of it?";
-		mes "Why can't I remember the";
-		mes "rest of that saying?!";
+		mes "[海因]";
+		mes "剩下的是什么?";
+		mes "我为什么记不住";
+		mes "那句谚语的剩下部分?!";
 		next;
-		mes "[Hein]";
-		mes "It's so weird.";
-		mes "How could I forget";
-		mes "something I used to";
-		mes "say all the time? I...";
-		mes "I hate being dead!";
+		mes "[海因]";
+		mes "真奇怪.";
+		mes "我怎么会忘记";
+		mes "我曾经会";
+		mes "一直说的? 我...";
+		mes "我讨厌死去!";
 		set lv4_weapon,40;
 		close;
 	case 2:
-		mes "[Hein]";
-		mes "Nuts! Why can't I remember";
-		mes "the rest of that saying?!";
+		mes "[海因]";
+		mes "真糟糕! 我为什么记不住";
+		mes "那句谚语的剩下部分?!";
 		close;
 	}
 }
 
 niflheim,331,72,3	script	Waltboughst#lv4	795,{
 	if (checkweight(908,300) == 0) {
-		mes "^3355FFWait a second! Right now, you're carrying too many items with you. Please come back after putting some of your things into Kafra Storage.^000000";
+		mes "^3355FF等一下！你现在携带的物品太多了。请在把一些东西放入卡普拉仓库后再回来。^000000";
 		close;
 	}
 	if (BaseLevel < 80) {
-		mes "[Waltboughst]";
-		mes "Hah...!";
-		mes "A living person!";
-		mes "But not for long!";
+		mes "[沃尔特博斯]";
+		mes "哈...!";
+		mes "一个活着的人!";
+		mes "但不会太久！";
 		next;
-		mes "[Waltboughst]";
-		mes "I hope you came here with some strong allies. Judging from your strength, there's no way you'll survive in this kind of place on";
-		mes "your own, you know.";
+		mes "[沃尔特博斯]";
+		mes "我希望你是和一些强大的盟友一起来的。根据你的实力，单靠你自己在这种地方是无法生存的。";
+		mes "你知道的。";
 		close;
 	}
 	if (lv4_weapon == 0) {
-		mes "[Waltboughst]";
-		mes "It's so frustrating being dead.";
-		mes "I can't do anything without a body, no matter how hard I try.";
+		mes "[沃尔特博斯]";
+		mes "死去真让人沮丧。";
+		mes "没有身体我什么都做不了，无论我多么努力。";
 		next;
-		mes "[Waltboughst]";
-		mes "It's funny, you know. My father always used to say, 'Trying your best won't always result in success...' Um, that's ... Huh? There was more, I think.";
+		mes "[沃尔特博斯]";
+		mes "这很有趣，你知道吗。我的父亲总是说，‘尽力而为并不总是会成功……’嗯，那是……哈？我想还有更多。";
 		next;
-		switch(select("Show interest.:Ignore him.")) {
+		switch(select("表现出兴趣.:忽视他.")) {
 		case 1:
-			mes "[Waltboughst]";
-			mes "Let me try it again.";
-			mes "'Trying your best won't";
-			mes "always result in success...'";
-			mes "I'm sure that's not all of it...";
+			mes "[沃尔特博斯]";
+			mes "让我再试一次。";
+			mes "‘尽力而为并不总是会";
+			mes "成功……’";
+			mes "我确定这不是全部……";
 			next;
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
 			mes "I...";
-			mes "I can't think!";
-			mes "What was supposed";
-			mes "to come after that part?";
+			mes "我想不出来！";
+			mes "本来应该";
+			mes "在那部分之后发生什么？";
 			set lv4_weapon,49;
 			close;
 		case 2:
-			mes "[Waltboughst]";
-			mes "Let me try it again.";
-			mes "'Trying your best won't";
-			mes "always result in success...'";
-			mes "I'm sure that's not all of it...";
+			mes "[沃尔特博斯]";
+			mes "让我再试一次。";
+			mes "‘尽力而为并不总是会";
+			mes "成功……’";
+			mes "我确定这不是全部……";
 			close;
 		}
 	}
 	if ((lv4_weapon < 49) || (lv4_weapon > 57)) {
-		mes "[Waltboughst]";
-		mes "It doesn't look like you're just wandering around. You're here for something specific, aren't you? But what does the realm of the dead have to offer the living?";
+		mes "[沃尔特博斯]";
+		mes "看起来你并不是在闲逛。你是为了某个特定的目的而来，对吧？但是死者的领域能给活人带来什么呢？";
 		close;
 	}
 	if ((lv4_weapon == 56) || (lv4_weapon == 57)) {
-		mes "[Waltboughst]";
-		mes "Take a look at this!";
-		mes "In just a short time, I made something with the materials you've given me. You're curious what the result is, aren't you?";
+		mes "[沃尔特博斯]";
+		mes "看看这个！";
+		mes "在短短的时间内，我用你给我的材料做了一些东西。你想知道结果是什么，对吧？";
 		next;
 		if (rand(1,2) == 1) {
-			mes "[Waltboughst]";
-			mes "Waltboughst never fails!";
+			mes "[沃尔特博斯]";
+			mes "瓦尔特堡从不失败！";
 			if (lv4_weapon == 56) {
-				mes "With my skill and your luck, there was zero probability for failure. Behold... Byeollungum!";
+				mes "凭我的技艺和你的运气，失败的概率为零。看啊……别龙金！";
 				getitem 1140,1; //Byeorrun_Gum
 			}
 			else {
-				mes "With my skill and your luck, there was zero probability for failure. Behold... Exorcise!";
+				mes "凭我的技艺和你的运气，失败的概率为零。看啊……驱邪！";
 				getitem 1233,1; //Exercise
 			}
 			set lv4_weapon,0;
 			next;
-			mes "[Waltboughst]";
-			mes "I'm a genius!";
-			mes "Hahahahahahahaha!";
-			mes "I succeeded where my brothers";
-			mes "could not! Mwahahahaha ha ha ...ha?";
+			mes "[沃尔特博斯]";
+			mes "我是天才！";
+			mes "哈哈哈哈哈哈哈！";
+			mes "我在我的兄弟们无法做到的地方成功了";
+			mes "哈哈哈哈哈...哈？";
 			next;
-			mes "[Waltboughst]";
-			mes "Damn, I can feel that fuzziness in my head again. This can't be good. But still, I was able to prove my genius even after I died.";
+			mes "[沃尔特博斯]";
+			mes "该死，我又能感觉到头脑中的模糊感。这可不好。不过，我还是能证明我的天才，即使在我死后。";
 			next;
-			mes "[Waltboughst]";
-			mes "I'm sure that if you come back and help me retrieve my memories, I can be of service to you again. But for now, I must thank you, even if I do end up forgetting everything...";
+			mes "[沃尔特博斯]";
+			mes "我相信，如果你能回来帮助我找回我的记忆，我可以再次为你服务。但现在，我必须感谢你，即使我最终会忘记一切...";
 			next;
-			mes "[Waltboughst]";
-			mes "Yes...";
-			mes "It will be your job to remember the accomplishments of Waltboughst, and that he was a weaponsmith ahead of his time. Good bye for now, adventurer...";
+			mes "[沃尔特博斯]";
+			mes "是的...";
+			mes "记住沃尔特博斯特的成就，以及他是一位超越时代的武器匠，这将是你的工作。再见了，冒险者...";
 			close;
 		}
 		else {
-			mes "[Waltboughst]";
-			mes "Waltboughst never fails!";
+			mes "[沃尔特博斯]";
+			mes "瓦尔特堡从不失败！";
 			if (lv4_weapon == 56) {
-				mes "With my skill and your luck, there was zero probability for failure. Behold... Combat Knife!";
+				mes "凭借我的技能和你的运气，失败的概率为零。看... 战斗刀！";
 				getitem 1228,1; //Combat_Knife
 			}
 			else {
-				mes "With my skill and your luck, there was zero probability for failure. Behold...Grand Cross!!";
+				mes "凭我的技能和你的运气，失败的概率为零。看...大十字架！！";
 				getitem 1528,1; //Grand_Cross
 			}
 			set lv4_weapon,0;
 			next;
-			mes "[Waltboughst]";
-			mes "I'm a genius!";
-			mes "Hahahahahahahaha!";
-			mes "I succeeded where my brothers";
-			mes "could not! Mwahahahaha ha ha ...ha?";
+			mes "[沃尔特博斯]";
+			mes "我是天才！";
+			mes "哈哈哈哈哈哈哈！";
+			mes "我在我的兄弟们无法做到的地方成功了";
+			mes "哈哈哈哈哈...哈？";
 			next;
-			mes "[Waltboughst]";
-			mes "Damn, I can feel that fuzziness in my head again. This can't be good. But still, I was able to prove my genius even after I died.";
+			mes "[沃尔特博斯]";
+			mes "该死，我又能感觉到头脑中的模糊感。这可不好。不过，我还是能证明我的天才，即使在我死后。";
 			next;
-			mes "[Waltboughst]";
-			mes "I'm sure that if you come back and help me retrieve my memories, I can be of service to you again. But for now, I must thank you, even if I do end up forgetting everything...";
+			mes "[沃尔特博斯]";
+			mes "我相信，如果你能回来帮助我找回我的记忆，我可以再次为你服务。但现在，我必须感谢你，即使我最终会忘记一切...";
 			next;
-			mes "[Waltboughst]";
-			mes "Yes...";
-			mes "It will be your job to remember the accomplishments of Waltboughst, and that he was a weaponsmith ahead of his time. Good bye for now, adventurer...";
+			mes "[沃尔特博斯]";
+			mes "是的...";
+			mes "记住沃尔特博斯特的成就，以及他是一位超越时代的武器匠，这将是你的工作。再见了，冒险者...";
 			close;
 		}
 	}
 	if (((lv4_weapon == 54) && (countitem(7292) > 29) && (countitem(7291) > 29) && (countitem(7295) > 29)) || ((lv4_weapon == 55) && (countitem(7296) > 29) && (countitem(7294) > 29) && (countitem(7290) > 29))) {
-		mes "[Waltboughst]";
-		mes "Wait, what's that you're holding?";
-		mes "I think those are the exact things we need for me to make you a weapon...";
+		mes "[沃尔特博斯]";
+		mes "等一下，你手里拿的是什么？";
+		mes "我想那些正是我们需要的东西，才能为你制作武器...";
 		next;
-		mes "[Waltboughst]";
-		mes "Yes...!";
-		mes "This is perfect.";
-		mes "It looks like I'll";
-		mes "be able to start work";
-		mes "on this really soon.";
+		mes "[沃尔特博斯]";
+		mes "是的...！";
+		mes "这太完美了。";
+		mes "看起来我将";
+		mes "能够很快开始工作";
+		mes "在这个上面。";
 		next;
-		mes "[Waltboughst]";
-		mes "Now we need to test your luck. And to do that, we need to play '^660000Rock, Paper, Scissors^000000.' I'm serious about this...";
+		mes "[沃尔特博斯]";
+		mes "现在我们需要测试你的运气。为此，我们需要玩'^660000石头、剪刀、布^000000'。我对此是认真的...";
 		next;
-		mes "[Waltboughst]";
-		mes "If your luck is strong today, there'll be less risk of failing the weapon creation process. You need to win 2 out of 3 times for us to begin.";
+		mes "[沃尔特博斯]";
+		mes "如果你今天的运气很好，武器制作过程失败的风险会更小。你需要赢得3局中的2局，我们才能开始。";
 		next;
-		mes "[Waltboughst]";
-		mes "But if you lose...";
-		mes "We'll need to expel your bad luck by getting rid of a good amount of one of the ores you brought.";
+		mes "[沃尔特博斯]";
+		mes "但如果你输了...";
+		mes "我们需要通过处理掉你带来的某种矿石来驱除你的坏运气。";
 		next;
-		mes "[Waltboughst]";
-		mes "Take this piece of paper.";
-		mes "Now, when I tell you to, write down 'Rock,' 'Paper' or 'Scissors.' Let's begin...!";
+		mes "[沃尔特博斯]";
+		mes "拿着这张纸。";
+		mes "现在，当我告诉你时，写下'石头'、'剪刀'或'布'。我们开始吧...！";
 		next;
 		set .@npchand1,rand(1,3);
-		set .@myhand1,select("Scissors:Rock:Paper");
+		set .@myhand1,select("剪刀:石头:布");
 		if (((.@myhand1 == 1) && (.@npchand1 == 3)) || ((.@myhand1 == 2) && (.@npchand1 == 1)) || ((.@myhand1 == 3) && (.@npchand1 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
-		mes "[Waltboughst]";
-		mes "Alright...";
-		mes "Now, let's play";
-		mes "a second time.";
+		mes "[沃尔特博斯]";
+		mes "好的...";
+		mes "现在，我们来玩";
+		mes "第二次。";
 		next;
 		set .@npchand2,rand(1,3);
-		set .@myhand2,select("Scissors:Rock:Paper");
+		set .@myhand2,select("剪刀:石头:布");
 		if (((.@myhand2 == 1) && (.@npchand2 == 3)) || ((.@myhand2 == 2) && (.@npchand2 == 1)) || ((.@myhand2 == 3) && (.@npchand2 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
-		mes "[Waltboughst]";
-		mes "One last time.";
-		mes "After this, we";
-		mes "compare results";
-		mes "and check your luck.";
+		mes "[沃尔特博斯]";
+		mes "最后一次。";
+		mes "在这之后，我们";
+		mes "比较结果";
+		mes "并检查你的运气。";
 		next;
 		set .@npchand3,rand(1,3);
-		set .@myhand3,select("Scissors:Rock:Paper");
+		set .@myhand3,select("剪刀:石头:布");
 		if (((.@myhand3 == 1) && (.@npchand3 == 3)) || ((.@myhand3 == 2) && (.@npchand3 == 1)) || ((.@myhand3 == 3) && (.@npchand3 == 2))) {
 			set .@shobu,.@shobu+1;
 		}
@@ -3272,111 +3272,111 @@ niflheim,331,72,3	script	Waltboughst#lv4	795,{
 				}
 			}
 		}
-		mes "[Waltboughst]";
-		mes "Okay...";
-		mes "I wrote down...";
+		mes "[沃尔特博斯]";
+		mes "好的...";
+		mes "我写下了...";
 		if (.@npchand1 == 1) {
-			mes "Scissors";
+			mes "剪刀";
 		}
 		else if (.@npchand1 == 2) {
-			mes "Rock";
+			mes "石头";
 		}
 		else if (.@npchand1 == 3) {
-			mes "Paper";
+			mes "纸张";
 		}
 		if (.@npchand2 == 1) {
-			mes "Scissors";
+			mes "剪刀";
 		}
 		else if (.@npchand2 == 2) {
-			mes "Rock";
+			mes "石头";
 		}
 		else if (.@npchand2 == 3) {
-			mes "Paper";
+			mes "纸张";
 		}
 		if (.@npchand3 == 1) {
-			mes "Scissors";
+			mes "剪刀";
 		}
 		else if (.@npchand3 == 2) {
-			mes "Rock";
+			mes "石头";
 		}
 		else if (.@npchand3 == 3) {
-			mes "Paper";
+			mes "纸张";
 		}
 		next;
-		mes "[Waltboughst]";
-		mes "Now, you wrote...";
+		mes "[沃尔特博斯]";
+		mes "现在，你写下了...";
 		if (.@myhand1 == 1) {
-			mes "Scissors";
+			mes "剪刀";
 		}
 		else if (.@myhand1 == 2) {
-			mes "Rock";
+			mes "石头";
 		}
 		else if (.@myhand1 == 3) {
-			mes "Paper";
+			mes "纸张";
 		}
 		if (.@myhand2 == 1) {
-			mes "Scissors";
+			mes "剪刀";
 		}
 		else if (.@myhand2 == 2) {
-			mes "Rock";
+			mes "石头";
 		}
 		else if (.@myhand2 == 3) {
-			mes "Paper";
+			mes "纸张";
 		}
 		if (.@myhand3 == 1) {
-			mes "Scissors";
+			mes "剪刀";
 		}
 		else if (.@myhand3 == 2) {
-			mes "Rock";
+			mes "石头";
 		}
 		else if (.@myhand3 == 3) {
-			mes "Paper";
+			mes "纸张";
 		}
 		next;
 		if (.@shobu > 1) {
-			mes "[Waltboughst]";
+			mes "[沃尔特博斯]";
 			mes "Excellent. You won " + shobu + " times,";
-			mes "so your luck must be really high.";
-			mes "That means we can begin~!";
+			mes "所以你的运气一定很高。";
+			mes "这意味着我们可以开始了~！";
 			next;
-			mes "[Waltboughst]";
-			mes "Leave the ores here and give";
-			mes "me some time to complete my preparations. Come back later, and I should be finished.";
+			mes "[沃尔特博斯]";
+			mes "把矿石留在这里，给";
+			mes "我一些时间来完成我的准备。稍后回来，我应该就完成了。";
 			close;
 		}
 		else if (.@shobu < 2) {
-			mes "[Waltboughst]";
-			mes "You lost...";
-			mes "I'm sorry, but we";
-			mes "need to repel the bad";
-			mes "luck by throwing away";
-			mes "some of your ores...";
+			mes "[沃尔特博斯]";
+			mes "你输了...";
+			mes "对不起，但我们";
+			mes "需要通过扔掉坏的";
+			mes "运气来抵消";
+			mes "你的一些矿石...";
 			next;
-			mes "[Waltboughst]";
-			mes "Gather the required ores again,";
-			mes "and come back to me so we can test your luck. I'll be waiting right here.";
+			mes "[沃尔特博斯]";
+			mes "再次收集所需的矿石，";
+			mes "然后回来找我，我们可以测试你的运气。我会在这里等你。";
 			close;
 		}
 	}
 	if ((lv4_weapon == 53) || (lv4_weapon == 54) || (lv4_weapon == 55)) {
-		mes "[Waltboughst]";
-		mes "Why can't I remember...?!";
-		mes "A good weaponsmith is supposed";
-		mes "to know these things by heart!";
-		mes "When I was alive, I had no such recall problems...";
+		mes "[沃尔特博斯]";
+		mes "我为什么记不起来……？！";
+		mes "一个好的武器匠应该";
+		mes "把这些事情牢记于心！";
+		mes "当我还活着的时候，我没有这样的记忆问题...";
 		next;
-		mes "[Waltboughst]";
-		mes "If Father were";
-		mes "to see me now, I'm";
-		mes "sure he'd be ashamed...";
+		mes "[沃尔特博斯]";
+		mes "如果父亲在的话，";
+		mes "看到我现在的样子，我会";
+		mes "相信他会感到羞愧...";
 		close;
 	}
 	if ((lv4_weapon == 52) && (countitem(1005) > 1) && (countitem(989) > 0) && (countitem(710) > 0) && (countitem(969) > 19)) {
-		mes "[Waltboughst]";
-		mes "You brought everything I needed already? That's great, but somehow, I can't still remember the other materials I need...";
+		mes "[沃尔特博斯]";
+		mes "你已经带来了我需要的一切？太好了，但不知为何，我还是记不起我需要的其他材料...";
 		next;
-		mes "[Waltboughst]";
-		mes "Tell you what. Let me hold on to these things, and I promise you that I'll use them to create a weapon for you. In the meantime, we need to figure out the rest of the necessary materials...";
+		mes "[沃尔特博斯]";
+		mes "告诉你吧。让我保管这些东西，我向你保证我会用它们为你制作一把武器。与此同时，我们需要弄清楚其他必要的材料...";
 		delitem 1005,2; //Hammer_Of_Blacksmith
 		delitem 989,1; //Emperium_Anvil
 		delitem 710,1; //Illusion_Flower
@@ -3385,124 +3385,124 @@ niflheim,331,72,3	script	Waltboughst#lv4	795,{
 		close;
 	}
 	if (lv4_weapon == 52) {
-		mes "[Waltboughst]";
-		mes "For now, bring";
-		mes "the basic things...";
-		mes "1 Emperium Anvil,";
-		mes "2 Hammer of Blacksmith,";
-		mes "1 Illusion Flower and";
-		mes "20 Gold...";
+		mes "[沃尔特博斯]";
+		mes "现在，带来";
+		mes "基本的东西...";
+		mes "1 个魔石铁砧，";
+		mes "2 个铁匠锤，";
+		mes "1 幻影花和";
+		mes "20 个金币...";
 		close;
 	}
 	if (lv4_weapon == 51) {
-		mes "[Waltboughst]";
-		mes "I just remembered some of the most basic materials we need for me to make a weapon for you.";
+		mes "[沃尔特博斯]";
+		mes "我刚想起一些我们制作武器所需的最基本材料。";
 		next;
-		mes "[Waltboughst]";
-		mes "For now, bring";
-		mes "the basic things...";
-		mes "1 Emperium Anvil,";
-		mes "2 Hammer of Blacksmith,";
-		mes "1 Illusion Flower and";
-		mes "20 Gold...";
+		mes "[沃尔特博斯]";
+		mes "现在，带来";
+		mes "基本的东西...";
+		mes "1 个魔石铁砧，";
+		mes "2 个铁匠锤，";
+		mes "1 幻影花和";
+		mes "20 个金币...";
 		next;
-		mes "[Waltboughst]";
-		mes "There were a few other necessary materials, but I need some time to focus and remember what they were.";
+		mes "[沃尔特博斯]";
+		mes "还有一些其他必要的材料，但我需要一些时间来集中精力记住它们是什么。";
 		set lv4_weapon,52;
 		close;
 	}
 	if (lv4_weapon == 50) {
-		mes "[Waltboughst]";
-		mes "It's so frustrating being dead.";
-		mes "I can't do anything without a body, no matter how hard I try.";
+		mes "[沃尔特博斯]";
+		mes "死去真让人沮丧。";
+		mes "没有身体我什么都做不了，无论我多么努力。";
 		next;
-		mes "[Waltboughst]";
-		mes "It's funny, you know. My father always used to say, 'Trying your best won't always result in success...' Um, that's ... Huh? There was more, I think.";
+		mes "[沃尔特博斯]";
+		mes "这很有趣，你知道吗。我的父亲总是说，‘尽力而为并不总是会成功……’嗯，那是……哈？我想还有更多。";
 		next;
 		input .@input$;
 		if (.@input$ == "But that's no excuse!") {
-			mes "[Waltboughst]";
-			mes "Yes! That was it!";
-			mes "But that's no excuse!";
-			mes "Every successful man in";
-			mes "history has tried his best!";
+			mes "[沃尔特博斯]";
+			mes "是的！就是这样！";
+			mes "但这不是借口！";
+			mes "每一个成功的人在";
+			mes "历史已经尽力而为！";
 			set lv4_weapon,51;
 			next;
-			mes "[Waltboughst]";
-			mes "I remember now...";
-			mes "I got myself killed trying to make some kind of special weapon.";
-			mes "Heh heh, but not this time!";
+			mes "[沃尔特博斯]";
+			mes "我现在想起来了……";
+			mes "我为了制造某种特殊武器而死了。";
+			mes "嘿嘿，但这次可不一样！";
 			next;
-			mes "[Waltboughst]";
-			mes "We must have been fated to meet. Yes, adventurers of great strength and men of genius naturally attract each other.";
+			mes "[沃尔特博斯]";
+			mes "我们一定是命中注定要相遇的。是的，强大的冒险者和天才之人自然会吸引彼此。";
 			next;
-			mes "[Waltboughst]";
-			mes "Lend me your power.";
-			mes "Help me complete the experiment";
-			mes "I left unfinished in life, and I will let you keep the finished product. All I wish to do is complete my life's work.";
+			mes "[沃尔特博斯]";
+			mes "借我你的力量。";
+			mes "帮助我完成这个实验";
+			mes "我在生前未完成的，我会让你保留成品。我只希望完成我一生的工作。";
 			next;
-			mes "[Waltboughst]";
-			mes "It seems that being deceased has impaired my rententive faculties. Give me some time to remember the things I'll need to conduct my experiment. We shall talk later.";
+			mes "[沃尔特博斯]";
+			mes "看来我已经去世，导致我的记忆能力受到了影响。请给我一些时间来回忆进行实验所需的东西。我们稍后再谈。";
 			close;
 		}
 		else {
-			mes "[Waltboughst]";
-			mes "What...?";
-			mes "No, no. That";
-			mes "wasn't it at all...";
-			mes "Hmmm.";
+			mes "[沃尔特博斯]";
+			mes "什么...?";
+			mes "不，不。那";
+			mes "根本不是...";
+			mes "嗯…";
 			close;
 		}
 	}
 	if (lv4_weapon == 49) {
-		mes "[Waltboughst]";
-		mes "It's so frustrating being dead.";
-		mes "I can't do anything without a body, no matter how hard I try.";
+		mes "[沃尔特博斯]";
+		mes "死去真让人沮丧。";
+		mes "没有身体我什么都做不了，无论我多么努力。";
 		next;
-		mes "[Waltboughst]";
-		mes "It's funny, you know. My father always used to say, 'Trying your best won't always result in success...' Um, that's ... Huh? There was more, I think.";
+		mes "[沃尔特博斯]";
+		mes "这很有趣，你知道吗。我的父亲总是说，‘尽力而为并不总是会成功……’嗯，那是……哈？我想还有更多。";
 		next;
-		mes "[Waltboughst]";
-		mes "Let me try it again.";
-		mes "'Trying your best won't";
-		mes "always result in success...'";
-		mes "I'm sure that's not all of it...";
+		mes "[沃尔特博斯]";
+		mes "让我再试一次。";
+		mes "‘尽力而为并不总是会";
+		mes "成功……’";
+		mes "我确定这不是全部……";
 		next;
-		mes "[Waltboughst]";
+		mes "[沃尔特博斯]";
 		mes "I...";
-		mes "I can't think!";
-		mes "What was supposed";
-		mes "to come after that part?";
+		mes "我想不出来！";
+		mes "本来应该";
+		mes "在那部分之后发生什么？";
 		close;
 	}
-	mes "[Waltboughst]";
-	mes "It's so frustrating being dead.";
-	mes "I can't do anything without a body, no matter how hard I try.";
+	mes "[沃尔特博斯]";
+	mes "死去真让人沮丧。";
+	mes "没有身体我什么都做不了，无论我多么努力。";
 	next;
-	mes "[Waltboughst]";
-	mes "It's funny, you know. My father always used to say, 'Trying your best won't always result in success...' Um, that's ... Huh? There was more, I think.";
+	mes "[沃尔特博斯]";
+	mes "这很有趣，你知道吗。我的父亲总是说，‘尽力而为并不总是会成功……’嗯，那是……哈？我想还有更多。";
 	next;
-	switch(select("Show interest.:Ignore him.")) {
+	switch(select("表现出兴趣.:忽视他.")) {
 	case 1:
-		mes "[Waltboughst]";
-		mes "Let me try it again.";
-		mes "'Trying your best won't";
-		mes "always result in success...'";
-		mes "I'm sure that's not all of it...";
+		mes "[沃尔特博斯]";
+		mes "让我再试一次。";
+		mes "‘尽力而为并不总是会";
+		mes "成功……’";
+		mes "我确定这不是全部……";
 		next;
-		mes "[Waltboughst]";
+		mes "[沃尔特博斯]";
 		mes "I...";
-		mes "I can't think!";
-		mes "What was supposed";
-		mes "to come after that part?";
+		mes "我想不出来！";
+		mes "本来应该";
+		mes "在那部分之后发生什么？";
 		set lv4_weapon,49;
 		close;
 	case 2:
-		mes "[Waltboughst]";
-		mes "Let me try it again.";
-		mes "'Trying your best won't";
-		mes "always result in success...'";
-		mes "I'm sure that's not all of it...";
+		mes "[沃尔特博斯]";
+		mes "让我再试一次。";
+		mes "‘尽力而为并不总是会";
+		mes "成功……’";
+		mes "我确定这不是全部……";
 		close;
 	}
 }

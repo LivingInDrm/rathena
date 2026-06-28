@@ -599,7 +599,7 @@ while(1) {
 			set .@i, select(" ~ ^FF0000结束赛季...^000000:"+((.Options&1)?" ~ ^FF0000End session without rewards...^000000":"")+": ~ ^777777Cancel^000000");
 			mes "结束当前 WOE 赛季?";
 			if (.@i == 3)
-				mes "[Force Agit End]";
+				mes "[强制结束攻城战]";
 			else {
 				set .ForceEnd, .@i;
 				donpcevent "WOE_CONTROL::OnWOEEnd";

@@ -6,9 +6,9 @@
 //= 1.2
 //===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
-//= Turbo Track Course: 
+//= Turbo Track Course:
 //= - Solo Mode/Time Attack
 //= - Normal (Non-PVP) - 4/8/16 Person
 //= - Expert (PVP) - 4/8/16 Person
@@ -47,7 +47,7 @@ OnStartArena:
 	donpcevent "Broadcast#"+.@in$+.@in+"::OnEnable";
 	disablewaitingroomevent strnpcinfo(0);
 	end;
-	
+
 OnInit:
 	if (compare(strnpcinfo(0),"main")) end;
 	if (compare(strnpcinfo(2),"n1")) {
@@ -68,15 +68,15 @@ turbo_room,77,135,3	duplicate(entrance#tt_main)	Normal mode - 4 person	124
 turbo_room,84,135,3	duplicate(entrance#tt_main)	Normal mode - 8 person	124
 turbo_room,91,135,3	duplicate(entrance#tt_main)	Normal mode - 16 person	124
 turbo_room,72,132,3	duplicate(entrance#tt_main)	Solo Mode#n1	124
-	
+
 turbo_e_4,298,167,3	script	Helper#tt_main	124,{
-	mes "[DRY-RUN] [Helper]";
-	mes "[DRY-RUN] You are now in the";
-	mes "[DRY-RUN] Waiting Room. You will";
-	mes "[DRY-RUN] be guided to the Starting Line";
-	mes "[DRY-RUN] after 30 seconds, so please use";
-	mes "[DRY-RUN] this time to prepare your items";
-	mes "[DRY-RUN] and equipment. Thank you.";
+	mes "[助手]";
+	mes "您现在在";
+	mes "等待室。您将会";
+	mes "在30秒后被引导到起跑线，因此请利用";
+	mes "这段时间准备您的物品";
+	mes "和装备。谢谢您。";
+	mes "和装备。谢谢你。";
 	close;
 }
 turbo_e_4,298,167,3	duplicate(Helper#tt_main)	Helper#e4_F	124
@@ -98,7 +98,7 @@ OnTouch_:
 	else
 		warp strnpcinfo(4),59,364;
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc "Point Give-Away Guy#"+.@w$;
@@ -393,12 +393,12 @@ OnTimer927000:
 	disablenpc "Flasher_Exit_1#"+.@w$;
 	disablenpc "Flasher_Exit_2#"+.@w$;
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc "Master#"+.@w$;
 	end;
-	
+
 	function	RName	{
 		.@string$ = getarg(0);
 		.@s = ( getstrlen(.@string$) > 2 ? substr(.@string$,1,2) : charat(.@string$,getstrlen(.@string$)-1) );
@@ -1182,56 +1182,56 @@ OnTouch_:
 	if (rand(1,3) == 1) {
 		set .@w$,callfunc("F_tt");
 		cutin "kafra_03",2;
-		mes "[DRY-RUN] ^4d4dffAl De Baran";
-		mes "[DRY-RUN] Turbo Track";
-		mes "[DRY-RUN] is brought to you by";
-		mes "[DRY-RUN] the ^800000Kafra Corporation^4d4dff.^000000";
+		mes "^4d4dff艾尔帕兰";
+		mes "涡轮赛道";
+		mes "由您带来";
+		mes "^800000卡普拉公司^4d4dff.^000000";
 		next;
-		mes "[DRY-RUN] ^4d4dffWe wish the best of luck to all";
-		mes "[DRY-RUN] Turbo Track participants today";
-		mes "[DRY-RUN] and thank everyone for using the Kafra Services with all our hearts.^000000";
+		mes "^4d4dff祝今天所有的";
+		mes "涡轮赛道参与者好运";
+		mes "衷心感谢大家使用卡普拉服务。^000000";
 		next;
-		mes "[DRY-RUN] ^800000Kafra Corporation^4d4dff has been providing Storage Services,";
-		mes "[DRY-RUN] Save Point Services and Teleport Services^4d4dff to our valued customers for years. Just listen to these real customers...^000000";
+		mes "^800000卡普拉公司^4d4dff多年来一直为我们的尊贵客户提供存储服务，";
+		mes "存档点服务和传送服务^4d4dff。听听这些真实客户的声音……^000000";
 		next;
 		if (.@w$ == "e4") {
-			mes "[DRY-RUN] ^4d4dff[Kachua]";
-			mes "[DRY-RUN] Oh yes, they provide the best Storage! There's even enough";
-			mes "[DRY-RUN] room for my Diaaaamonds!";
-			mes "[DRY-RUN] [Chief Mahnsoo]";
-			mes "[DRY-RUN] I looove you Kafra!^000000";
-			mes "[DRY-RUN] ^4d4dff[Errende]";
+			mes "^4d4dff[卡丘亚]";
+			mes "哦，是的，他们提供最好的存储！甚至有足够的";
+			mes "空间放我的钻石！";
+			mes " ";
+			mes "[族长马汉苏]";
+			mes "我爱你，卡普拉！^000000";
 		} else if (.@w$ == "e8" || .@w$ == "n8") {
-			mes "[DRY-RUN] Kafra Ladies? Exquisite! Oh, and their service is good too~!^000000";
-			mes "[DRY-RUN] [Tristram III]";
-			mes "[DRY-RUN] By my crown! Such low prices!";
-			mes "[DRY-RUN] ^4d4dff[Union Staff Kay]";
-			mes "[DRY-RUN] Of course I love 'em, especially their Pushcart Service~";
+			mes "^4d4dff[艾伦德]";
+			mes "卡普拉小姐？精致！哦，他们的服务也很好~！^000000";
+			mes " ";
+			mes "[特里斯特姆 III]";
+			mes "我的皇冠！如此低的价格！";
 		} else if (.@w$ == "e16" || .@w$ == "n16") {
-			mes "[DRY-RUN] [Santa Claus]";
-			mes "[DRY-RUN] Ho ho ho!";
-			mes "[DRY-RUN] Such Merry Prices!";
-			mes "[DRY-RUN] ^4d4dff[Xenophon Zolotas]";
-			mes "[DRY-RUN] I wouldn't be able to do business without the Kafra Services. Thank you, Kafra!";
-			mes "[DRY-RUN] [Chief Mahnsoo]";
+			mes "^4d4dff[联盟职员凯]";
+			mes "当然我喜欢他们，特别是他们的推车服务~";
+			mes " ";
+			mes "[圣诞老人]";
+			mes "哈哈哈！";
+			mes "如此愉快的价格！";
 		} else if (.@w$ == "n4") {
-			mes "[DRY-RUN] I looove you Kafra!^000000";
-			mes "[DRY-RUN] ^4d4dff[Karkatan]";
-			mes "[DRY-RUN] My land suffered from poor customer service...until Kafra came along!";
-			mes "[DRY-RUN] [Curator Guiss]";
-			mes "[DRY-RUN] Oh, Kafra is simply the best!^000000";				
+			mes "^4d4dff[泽诺丰·佐洛塔斯]";
+			mes "没有卡普拉服务我无法做生意。谢谢你，卡普拉！";
+			mes " ";
+			mes "[族长马汉苏]";
+			mes "我爱你，卡普拉！^000000";
 		} else {
-			mes "[DRY-RUN] ^ff0000Turbo Track";
-			mes "[DRY-RUN] ^ff0000Traps in the Cursed Desert!";
-			mes "[DRY-RUN] ^4d4dffSponsored by ^800000Kafra Corporation^4d4dff";
-			mes "[DRY-RUN] ''We are always by your side.''^000000";
-			mes "Oh, Kafra is simply the best!^000000";
-		}			
+			mes "^4d4dff[卡尔卡坦]";
+			mes "我的土地曾经遭受糟糕的客户服务……直到卡普拉出现！";
+			mes " ";
+			mes "[馆长吉斯]";
+			mes "哦，卡普拉真是太棒了！^000000";
+		}
 		next;
-		mes "^ff0000Turbo Track";
-		mes "^ff0000Traps in the Cursed Desert!";
-		mes "^4d4dffSponsored by ^800000Kafra Corporation^4d4dff";
-		mes "''We are always by your side.''^000000";
+		mes "^ff0000极速赛道";
+		mes "^ff0000诅咒沙漠中的陷阱！";
+		mes "^4d4dff由^800000卡普拉公司^4d4dff赞助";
+		mes "“我们永远在你身边。”^000000";
 		close2;
 		cutin "kafra_03",255;
 		end;
@@ -1682,7 +1682,7 @@ turbo_n_1,332,270,0	duplicate(snake04#tt_main)	snake04#n1	45,1,1
 
 -	script	SnakeHunt#tt_main	-1,{
 	end;
-	
+
 OnReset:
 	killmonsterall strnpcinfo(4);
 	end;
@@ -1733,7 +1733,7 @@ OnTouch_:
 		case 2:
 			mapannounce strnpcinfo(4),strcharinfo(0) +" has just passed the Cube Hills course!",bc_map,"0x70DBDB";
 			warp strnpcinfo(4),316,365;
-			end;		
+			end;
 		case 3:
 			mapannounce strnpcinfo(4),strcharinfo(0) +" has just passed the Cursed Desert!",bc_map,"0x70DBDB";
 			switch (rand(1,4)) {
@@ -1950,15 +1950,15 @@ OnTouch_:
 	}
 	disablenpc "#cos_"+.@w$+"_end";
 	end;
-	
+
 	function	GetNumber	{
 		setarray .@w_n$[1], "n4","n8","n16","e4","e8","e16";
 		for (set .@i, 1; .@i <= getarraysize(.@w_n$); set .@i, .@i + 1) {
-			if (getarg(0) == .@w_n$[.@i]) 
+			if (getarg(0) == .@w_n$[.@i])
 				return .@i;
-		}		
+		}
 	}
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	enablenpc "#cos_"+.@w$+"_end";
@@ -1983,7 +1983,7 @@ OnTouch_:
 	disablenpc "#cos_"+.@w$+"_end2";
 	enablenpc "#cos_"+.@w$+"_end3";
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc "#cos_"+.@w$+"_end2";
@@ -2041,7 +2041,7 @@ OnTouch_:
 	mapannounce strnpcinfo(4),strcharinfo(0) +" has just passed the Flasher Maze!",bc_map,"0x70DBDB";
 	warp strnpcinfo(4),185,227;
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc();
@@ -2065,56 +2065,56 @@ turbo_n_1,114,190,0	duplicate(Flasher#tt_main)	Flasher_Exit_2#n1	45,1,1
 -	script	WHelper#tt_main	-1,{
 	function	RName;
 	if (tt_rank < 29999) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Congratulations!";
+		mes "[指南]";
+		mes "恭喜！";
 		set .@w$,callfunc("F_tt");
 		if (compare(.@w$,"4")) {
 			if (tt_point < 28961) {
-				mes "[DRY-RUN] As the winner, your reward";
-				mes "[DRY-RUN] is 40 Turbo Track Points~";
+				mes "作为获胜者，你的奖励";
+				mes "是40个极速赛道积分~";
 				set tt_point,tt_point+40;
 				set my_point,tt_point;
-				mes "[DRY-RUN] You now have a total of";
+				mes "你现在总共有";
 				mes tt_point + " Turbo Track points,";
 				mes strcharinfo(0) +".";
 			}
-			mes "[DRY-RUN] Unfortunately, I can't give";
-			mes "[DRY-RUN] you any Turbo Track Points";
-			mes "[DRY-RUN] since you would exceed the";
-			mes "[DRY-RUN] maximum limit. Sorry,";
+			mes "很遗憾，我不能给你";
+			mes "任何极速赛道积分";
+			mes "因为你将超过";
+			mes "最大限制。抱歉，";
 			mes strcharinfo(0) +"...";
 		} else {
-			mes "[DRY-RUN] As the winner, your reward";
+			mes "作为获胜者，你的奖励";
 			mes "is "+((compare(.@w$,"8"))?"50":"40")+" Turbo Track Points,";
 			mes strcharinfo(0) +"~";
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] However, you cannot receive";
-			mes "[DRY-RUN] any points if you exceed the";
+			mes "[指南]";
+			mes "但是，如果超过了";
+			mes "您将无法获得任何积分";
 			mes "point limit. You now have a total of " + my_point + " Turbo Track points.";
-		} 
+		}
 		set tt_rank,tt_rank+1;
 		next;
 		if (tt_rank > $ttranks[1]) {
 			setarray $ttranks[0],$ttranks[0],tt_rank,$ttranks[1],$ttranks[2],$ttranks[3],$ttranks[4];
 			setarray $ttnames$[9],strcharinfo(0);
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Congratulations!";
-			mes "[DRY-RUN] You are ranked as";
-			mes "[DRY-RUN] the top player for";
-			mes "[DRY-RUN] winning the most games!";
+			mes "[指南]";
+			mes "恭喜！";
+			mes "您的排名是";
+			mes "您是";
+			mes "赢得最多游戏的顶尖玩家！";
 			donpcevent "Turbo Track Guide::OnNew_Top1";
 			if (tt_rank == 29999) {
 				if ($ttnames$[7] == "Breezy Havana") {
 					set $ttnames$[7],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 				else if ($ttnames$[8] == "RS125") {
 					set $ttnames$[8],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					if (compare(.@w$,"4")) announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 			}
@@ -2122,23 +2122,23 @@ turbo_n_1,114,190,0	duplicate(Flasher#tt_main)	Flasher_Exit_2#n1	45,1,1
 		else if (tt_rank > $ttranks[2]) {
 			setarray $ttranks[0],$ttranks[0],$ttranks[1],tt_rank,$ttranks[3],$ttranks[4],$ttranks[5];
 			setarray $ttnames$[10],strcharinfo(0);
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Congratulations!";
-			mes "[DRY-RUN] You've ranked Second";
-			mes "[DRY-RUN] among the Top Five Players";
-			mes "[DRY-RUN] who've won the most games!";
+			mes "[指南]";
+			mes "恭喜！";
+			mes "您排名第二";
+			mes "在前五名玩家中";
+			mes "赢得最多游戏的玩家！";
 			donpcevent "Turbo Track Guide::OnNew_Top2";
 			if (tt_rank == 29999) {
 				if ($ttnames$[7] == "Breezy Havana") {
 					set $ttnames$[7],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 				else if ($ttnames$[8] == "RS125") {
 					set $ttnames$[8],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 			}
@@ -2146,23 +2146,23 @@ turbo_n_1,114,190,0	duplicate(Flasher#tt_main)	Flasher_Exit_2#n1	45,1,1
 		else if (tt_rank > $ttranks[3]) {
 			setarray $ttranks[0],$ttranks[0],$ttranks[1],$ttranks[2],tt_rank,$ttranks[4],$ttranks[5];
 			setarray $ttnames$[11],strcharinfo(0);
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Congratulations!";
-			mes "[DRY-RUN] You've ranked Third";
-			mes "[DRY-RUN] among the Top Five Players";
-			mes "[DRY-RUN] who've won the most games!";
+			mes "[指南]";
+			mes "恭喜！";
+			mes "您排名第三";
+			mes "在前五名玩家中";
+			mes "赢得最多游戏的玩家！";
 			donpcevent "Turbo Track Guide::OnNew_Top3";
 			if (tt_rank == 29999) {
 				if ($ttnames$[7] == "Breezy Havana") {
 					set $ttnames$[7],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 				else if ($ttnames$[8] == "RS125") {
 					set $ttnames$[8],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 			}
@@ -2170,23 +2170,23 @@ turbo_n_1,114,190,0	duplicate(Flasher#tt_main)	Flasher_Exit_2#n1	45,1,1
 		else if (tt_rank > $ttranks[4]) {
 			setarray $ttranks[0],$ttranks[0],$ttranks[1],$ttranks[2],$ttranks[3],tt_rank,$ttranks[5];
 			setarray $ttnames$[12],strcharinfo(0);
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Congratulations!";
-			mes "[DRY-RUN] You've ranked Fourth";
-			mes "[DRY-RUN] among the Top Five Players";
-			mes "[DRY-RUN] who've won the most games!";
+			mes "[指南]";
+			mes "恭喜！";
+			mes "您排名第四";
+			mes "在前五名玩家中";
+			mes "赢得最多游戏的玩家！";
 			donpcevent "Turbo Track Guide::OnNew_Top4";
 			if (tt_rank == 29999) {
 				if ($ttnames$[7] == "Breezy Havana") {
 					set $ttnames$[7],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 				else if ($ttnames$[8] == "RS125") {
 					set $ttnames$[8],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 			}
@@ -2194,47 +2194,47 @@ turbo_n_1,114,190,0	duplicate(Flasher#tt_main)	Flasher_Exit_2#n1	45,1,1
 		else if (tt_rank > $ttranks[5]) {
 			setarray $ttranks[0],$ttranks[0],$ttranks[1],$ttranks[2],$ttranks[3],$ttranks[4],tt_rank;
 			setarray $ttnames$[13],strcharinfo(0);
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Congratulations!";
-			mes "[DRY-RUN] You've ranked Fifth";
-			mes "[DRY-RUN] among the Top Five Players";
-			mes "[DRY-RUN] who've won the most games!";
+			mes "[指南]";
+			mes "恭喜！";
+			mes "您排名第五";
+			mes "在前五名玩家中";
+			mes "赢得最多游戏的玩家！";
 			donpcevent "Turbo Track Guide::OnNew_Top5";
 			if (tt_rank == 29999) {
 				if ($ttnames$[7] == "Breezy Havana") {
 					set $ttnames$[7],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce "" + strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 				else if ($ttnames$[8] == "RS125") {
 					set $ttnames$[8],strcharinfo(0);
-					mes "[DRY-RUN] You've secured your place in";
-					mes "[DRY-RUN] the Turbo Track Hall of Honor!";
+					mes "您已经在";
+					mes "涡轮赛道荣誉殿堂中占据了您的位置！";
 					announce strcharinfo(0) + " has joined the Turbo Track Hall of Honor!",bc_all,"FF0000";
 				}
 			}
 		}
 		else {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] If you can win more games";
-			mes "[DRY-RUN] than everybody else, your";
-			mes "[DRY-RUN] name will be registered in";
-			mes "[DRY-RUN] our Top Five Player Ranking.";
+			mes "[指南]";
+			mes "如果您能赢得更多游戏";
+			mes "比其他人都要多，你的";
+			mes "名字将被注册在";
+			mes "我们的前五名玩家排名中。";
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] What do you";
+			mes "[指南]";
+			mes "你想要什么？";
 			mes "think, " + strcharinfo(0) +"?";
-			mes "[DRY-RUN] Glory can be yours if";
-			mes "[DRY-RUN] you can achieve victory!";
+			mes "荣耀属于你，如果";
+			mes "你能取得胜利！";
 		}
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Thank you for";
-		mes "[DRY-RUN] participating in";
-		mes "[DRY-RUN] the Turbo Track.";
-		mes "[DRY-RUN] You will be transported";
-		mes "[DRY-RUN] to a Waiting Room shortly.";
+		mes "[指南]";
+		mes "谢谢你使用我们的服务。";
+		mes "参与";
+		mes "涡轮赛道。";
+		mes "你将很快被传送到";
+		mes "等待室。";
 		close2;
 		warp "turbo_room",72,89;
 		end;
@@ -2242,129 +2242,129 @@ turbo_n_1,114,190,0	duplicate(Flasher#tt_main)	Flasher_Exit_2#n1	45,1,1
 	else {
 		if ($ttnames$[7] == strcharinfo(0)) {
 			if (compare(.@w$,"4")) {
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Oh wow!";
-				mes "[DRY-RUN] You're a member";
-				mes "[DRY-RUN] in our Hall of Honor,";
-				mes "[DRY-RUN] aren't you? This is great!";
-				mes "[DRY-RUN] I'm talking to a living legend!";
+				mes "[指南]";
+				mes "哦哇！";
+				mes "你是我们荣誉殿堂的成员，";
+				mes "对吧？太棒了！";
+				mes "你不是吗？这太棒了！";
+				mes "我在和一位活传奇对话！";
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Right, your reward...";
+				mes "[指南]";
+				mes "对了，你的奖励……";
 				if (tt_point < 28961) {
-					mes "[DRY-RUN] 40 Turbo Track Points!";
+					mes "40个涡轮赛道积分！";
 					set tt_point,tt_point+40;
-					mes "[DRY-RUN] You now have a total of";
+					mes "你现在总共有";
 					mes tt_point +" Turbo Track Points.";
 				}
 				else {
-					mes "[DRY-RUN] Unfortunately, I can't give";
-					mes "[DRY-RUN] you any Turbo Track Points";
-					mes "[DRY-RUN] since you would exceed the";
-					mes "[DRY-RUN] maximum limit. Sorry,";
+					mes "很遗憾，我不能给你";
+					mes "任何极速赛道积分";
+					mes "因为你将超过";
+					mes "最大限制。抱歉，";
 					mes strcharinfo(0) +"...";
 				}
 			} else {
-				mes "[DRY-RUN] Oh, I'm sorry! You're";
-				mes "[DRY-RUN] here so that I can tell you";
-				mes "[DRY-RUN] how many Turbo Track Points";
+				mes "哦，我很抱歉！你是";
+				mes "来这里是为了让我告诉你";
+				mes "多少个涡轮赛道积分";
 				set my_point,tt_point;
 				mes "you have, right? You've got a total of " + my_point + " Turbo Track Points, "+ strcharinfo(0) +".";
 			}
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Oh, and thanks for";
-				mes "[DRY-RUN] participating in the";
-				mes "[DRY-RUN] Turbo Track! You'll be sent";
-				mes "[DRY-RUN] to the Waiting Room soon~";
+				mes "[指南]";
+				mes "哦，谢谢你";
+				mes "参与涡轮赛道！你将很快被送到";
+				mes "等待室~";
+				mes "嘿，你不是";
 				close2;
 				warp "turbo_room",72,89;
 				end;
 		}
 		else if ($ttnames$[8] == strcharinfo(0)) {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Hey, aren't you";
-			mes "[DRY-RUN] in our Hall of Honor?";
-			mes "[DRY-RUN] I've been watching your";
-			mes "[DRY-RUN] races... You're pretty quick";
-			mes "[DRY-RUN] on your feet, hotshot~";
+			mes "[指南]";
+			mes "在我们的荣誉殿堂吗？";
+			mes "我一直在关注你的";
+			mes "比赛……你真快";
+			mes "。";
+			mes "站起来，高手~";
 			next;
-			mes "[DRY-RUN] [Guide]";
+			mes "[指南]";
 			if (compare(.@w$,"4")) {
-				mes "[DRY-RUN] Right, your reward...";
+				mes "对了，你的奖励……";
 				if (tt_point < 28961) {
-					mes "[DRY-RUN] 40 Turbo Track Points!";
+					mes "40个涡轮赛道积分！";
 					set tt_point,tt_point+40;
-					mes "[DRY-RUN] You now have a total of";
+					mes "你现在总共有";
 					mes tt_point +" Turbo Track Points.";
 				}
 				else {
-					mes "[DRY-RUN] Unfortunately, I can't give";
-					mes "[DRY-RUN] you any Turbo Track Points";
-					mes "[DRY-RUN] since you would exceed the";
-					mes "[DRY-RUN] maximum limit. Sorry...";
-				} 
+					mes "很遗憾，我不能给你";
+					mes "任何极速赛道积分";
+					mes "因为你将超过";
+					mes "最大限制。抱歉...";
+				}
 			} else {
-				mes "[DRY-RUN] Oh right, your current";
+				mes "哦，对了，你当前的";
 				set my_point,tt_point;
-				mes "[DRY-RUN] Turbo Track Point total!";
-				mes "[DRY-RUN] You've got a total of";
+				mes "涡轮赛道积分总数！";
+				mes "你总共有";
 				mes my_point + " Turbo Track points,";
 				mes strcharinfo(0) + ".";
 			}
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Oh, and thanks for";
-			mes "[DRY-RUN] participating in the";
-			mes "[DRY-RUN] Turbo Track! You'll be sent";
-			mes "[DRY-RUN] to the Waiting Room soon~";
+			mes "[指南]";
+			mes "哦，谢谢你";
+			mes "参与涡轮赛道！你将很快被送到";
+			mes "等待室~";
+			mes "嘿，你不是";
 			close2;
 			warp "turbo_room",72,89;
 			end;
 		}
 		else {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Awwww~";
-			mes "[DRY-RUN] You were almost able";
-			mes "[DRY-RUN] to join our Hall of Honor...!";
-			mes "[DRY-RUN] But don't let that get you";
-			mes "[DRY-RUN] down. Maybe next time!";
+			mes "[指南]";
+			mes "哎呀~";
+			mes "你差一点就能";
+			mes "加入我们的荣誉殿堂...！";
+			mes "但不要因此气馁";
+			mes "。也许下次会更好！";
 			next;
-			mes "[DRY-RUN] [Guide]";
+			mes "[指南]";
 			if (compare(.@w$,"4")) {
-				mes "[DRY-RUN] Right, your reward...";
-				mes "[DRY-RUN] 40 Turbo Track Points!";
+				mes "对了，你的奖励……";
+				mes "40个涡轮赛道积分！";
 				if (tt_point < 28961) {
 					set tt_point,tt_point+40;
 					set my_point,tt_point;
-					mes "[DRY-RUN] You now have a total of";
+					mes "你现在总共有";
 					mes tt_point +" Turbo Track Points.";
 				}
 				else {
-					mes "[DRY-RUN] Unfortunately, I can't give";
-					mes "[DRY-RUN] you any Turbo Track Points";
-					mes "[DRY-RUN] since you would exceed the";
-					mes "[DRY-RUN] maximum limit. Sorry...";
+					mes "很遗憾，我不能给你";
+					mes "任何极速赛道积分";
+					mes "因为你将超过";
+					mes "最大限制。抱歉...";
 				}
 			} else {
-				mes "[DRY-RUN] Oh, right.";
-				mes "[DRY-RUN] Currently, you";
-				mes "[DRY-RUN] have a total of";
+				mes "哦，对了。";
+				mes "目前，你";
+				mes "总共有";
 				mes tt_point + " Turbo Track points.";
 			}
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Thank you for";
-			mes "[DRY-RUN] participating in";
-			mes "[DRY-RUN] the Turbo Track.";
-			mes "[DRY-RUN] You will be transported";
-			mes "[DRY-RUN] to a Waiting Room shortly.";
+			mes "[指南]";
+			mes "谢谢你使用我们的服务。";
+			mes "参与";
+			mes "涡轮赛道。";
+			mes "你将很快被传送到";
+			mes "等待室。";
 			close2;
 			warp "turbo_room",72,89;
 			end;
 		}
 	}
-	
+
 OnEnable:
 	set .@w$,callfunc("F_tt");
 	enablenpc "Winner Helper#TBT_"+.@w$;
@@ -2406,12 +2406,12 @@ OnTimer25000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapannounce strnpcinfo(4),"In the meantime, winners must procceed to receive their rewards as soon as possible.",bc_map,"0x33FF66";
 	end;
-	
+
 OnTimer28000:
 	set .@w$,callfunc("F_tt");
 	if (compare(.@w$,"4")) mapannounce strnpcinfo(4),"Al De Baran Turbo Track is brought to you by...",bc_map,"0x33FF66";
 	end;
-	
+
 OnTimer30000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapannounce strnpcinfo(4),"Thank you for visiting Al De Baran Turbo Track.",bc_map,"0x33FF66";
@@ -2425,7 +2425,7 @@ OnTimer35000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapannounce strnpcinfo(4),"Al De Baran Turbo Track is brought to you by...",bc_map,"0x33FF66";
 	end;
-	
+
 OnTimer36000:
 	set .@w$,callfunc("F_tt");
 	if (compare(.@w$,"4")) mapannounce strnpcinfo(4),"[Al De Baran Guild Castle Management Luina]",bc_map,"0x33FF66";
@@ -2433,7 +2433,7 @@ OnTimer36000:
 
 OnTimer40000:
 	set .@w$,callfunc("F_tt");
-	if (compare(.@w$,"4")) 
+	if (compare(.@w$,"4"))
 		mapannounce strnpcinfo(4),"[Blacksmith Union]",bc_map,"0x33FF66";
 	else
 		mapannounce strnpcinfo(4),"[Al De Baran Kafra Corporation Headquarters]",bc_map,"0x33FF66";
@@ -2453,7 +2453,7 @@ OnTimer48000:
 	set .@w$,callfunc("F_tt");
 	if (compare(.@w$,"4")) mapannounce strnpcinfo(4),"Once again, we'd like to thank our sponsors.",bc_map,"0x33FF66";
 	end;
-	
+
 OnTimer50000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapannounce strnpcinfo(4),"[Blacksmith Union]",bc_map,"0x33FF66";
@@ -2463,7 +2463,7 @@ OnTimer52000:
 	set .@w$,callfunc("F_tt");
 	if (compare(.@w$,"4")) mapannounce strnpcinfo(4),"Have a good day.",bc_map,"0x33FF66";
 	end;
-	
+
 OnTimer55000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapannounce strnpcinfo(4),"And [Comodo Casino].",bc_map,"0x33FF66";
@@ -2495,17 +2495,17 @@ OnTimer60000:
 		mapannounce strnpcinfo(4),"Once again, we'd like to thank our sponsors.",bc_map,"0x33FF66";
 	}
 	end;
-	
+
 OnTimer65000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapannounce strnpcinfo(4),"Have a good day.",bc_map,"0x33FF66";
 	end;
-	
+
 OnTimer70000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) mapwarp strnpcinfo(4),"turbo_room",72,89;
 	end;
-	
+
 OnTimer71000:
 	set .@w$,callfunc("F_tt");
 	if (!compare(.@w$,"4")) {
@@ -2528,14 +2528,14 @@ OnTimer71000:
 		stopnpctimer;
 	}
 	end;
-	
+
 	function	RName	{
 		.@string$ = getarg(0);
 		.@s = ( getstrlen(.@string$) > 2 ? substr(.@string$,1,2) : charat(.@string$,getstrlen(.@string$)-1) );
 		set .@rn$,((compare(strnpcinfo(4),"_e_"+.@s))?"Expert mode":"Normal mode")+" - "+.@s+" person";
 		return .@rn$;
 	}
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc "Winner Helper#TBT_"+.@w$;
@@ -2563,36 +2563,36 @@ turbo_n_1,384,167,1	script	Guide#TBT_n1	47,{
 	set .@record_min,((.@record_time % 3600) / 60);
 	set .@record_sec,.@record_time % 60;
 	if (.@record_min < 0) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Good work! Maybe you didn't";
-		mes "[DRY-RUN] set any new records, but you";
-		mes "[DRY-RUN] went the distance. Now, let";
-		mes "[DRY-RUN] me relieve you of your fatigue~";
+		mes "[指南]";
+		mes "干得好！也许你没有";
+		mes "设定任何新的记录，但你";
+		mes "走过了这段距离。现在，让";
+		mes "我来解除你的疲劳~";
 		percentheal 100,100;
 		next;
-		mes "[DRY-RUN] [Guide]";
+		mes "[指南]";
 		if (tt_point < 28991) {
-			mes "[DRY-RUN] You will be rewarded";
-			mes "[DRY-RUN] with 10 Turbo Track points~!";
+			mes "你将会得到奖励";
+			mes "获得10个涡轮赛道积分~!";
 			set tt_point,tt_point+10;
 			set my_point,tt_point;
-			mes "[DRY-RUN] You now have a total of";
+			mes "你现在总共有";
 			mes tt_point + " Turbo Track points.";
 		}
 		else {
-			mes "[DRY-RUN] Unfortunately, I can't give";
-			mes "[DRY-RUN] you any Turbo Track Points";
-			mes "[DRY-RUN] since you would exceed the";
-			mes "[DRY-RUN] maximum limit. Sorry,";
+			mes "很遗憾，我不能给你";
+			mes "任何极速赛道积分";
+			mes "因为你将超过";
+			mes "最大限制。抱歉，";
 			mes strcharinfo(0) +"...";
 		}
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Thank you for";
-		mes "[DRY-RUN] participating in";
-		mes "[DRY-RUN] in Turbo Track.";
-		mes "[DRY-RUN] You will be guided";
-		mes "[DRY-RUN] to a Waiting Room soon.";
+		mes "[指南]";
+		mes "谢谢你使用我们的服务。";
+		mes "参与";
+		mes "在涡轮赛道中.";
+		mes "您将很快被引导到";
+		mes "一个等待室.";
 		close2;
 		warp "turbo_room",72,89;
 		end;
@@ -2602,81 +2602,81 @@ turbo_n_1,384,167,1	script	Guide#TBT_n1	47,{
 		set .@topcho,$ttranks[0] % 60;
 		set .@gap,$ttranks[0] - .@record_time;
 		if (.@gap < 0) {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Good work! Maybe you didn't";
-			mes "[DRY-RUN] set any new records, but you";
-			mes "[DRY-RUN] went the distance. Now, let";
-			mes "[DRY-RUN] me relieve you of your fatigue~";
+			mes "[指南]";
+			mes "干得好！也许你没有";
+			mes "设定任何新的记录，但你";
+			mes "走过了这段距离。现在，让";
+			mes "我来解除你的疲劳~";
 			percentheal 100,100;
 			next;
-			mes "[DRY-RUN] [Guide]";
+			mes "[指南]";
 			if (tt_point < 28991) {
-				mes "[DRY-RUN] You will be rewarded";
-				mes "[DRY-RUN] with 10 Turbo Track points~!";
+				mes "你将会得到奖励";
+				mes "获得10个涡轮赛道积分~!";
 				set tt_point,tt_point+10;
 				set my_point,tt_point;
-				mes "[DRY-RUN] You now have a total of";
+				mes "你现在总共有";
 				mes tt_point + " Turbo Track points.";
 			}
 			else {
-				mes "[DRY-RUN] Unfortunately, I can't give";
-				mes "[DRY-RUN] you any Turbo Track Points";
-				mes "[DRY-RUN] since you would exceed the";
-				mes "[DRY-RUN] maximum limit. Sorry,";
+				mes "很遗憾，我不能给你";
+				mes "任何极速赛道积分";
+				mes "因为你将超过";
+				mes "最大限制。抱歉，";
 				mes strcharinfo(0) +"...";
 			}
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Thank you for";
-			mes "[DRY-RUN] participating in";
-			mes "[DRY-RUN] in Turbo Track.";
-			mes "[DRY-RUN] You will be guided";
-			mes "[DRY-RUN] to a Waiting Room soon.";
+			mes "[指南]";
+			mes "谢谢你使用我们的服务。";
+			mes "参与";
+			mes "在涡轮赛道中.";
+			mes "您将很快被引导到";
+			mes "一个等待室.";
 			close2;
 			warp "turbo_room",72,89;
 			end;
 		}
 		else {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Congratulations!";
-			mes "[DRY-RUN] You ranked as the";
-			mes "[DRY-RUN] top player in Solo Mode!";
-			mes "[DRY-RUN] Your name will be entered";
+			mes "[指南]";
+			mes "恭喜！";
+			mes "您在单人模式中排名为";
+			mes "顶级玩家!";
+			mes "您的名字将被记录";
 			mes "into our records, "+ strcharinfo(0) +"~";
 			setarray $ttranks[0],.@record_time;
 			setarray $ttnames$[0],strcharinfo(0);
 			next;
 			if (tt_point < 28961) {
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Since you've set";
-				mes "[DRY-RUN] a new record, you";
-				mes "[DRY-RUN] will be rewarded with";
-				mes "[DRY-RUN] 40 Turbo Track Points!";
+				mes "[指南]";
+				mes "由于您已经设定了";
+				mes "新的记录，您";
+				mes "将获得奖励";
+				mes "40个涡轮赛道积分！";
 				set tt_point,tt_point+40;
-				mes "[DRY-RUN] You now have a total of";
+				mes "你现在总共有";
 				mes tt_point + " Turbo Track points.";
 			}
 			else {
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Unfortunately, I can't give";
-				mes "[DRY-RUN] you any Turbo Track Points";
-				mes "[DRY-RUN] since you would exceed the";
-				mes "[DRY-RUN] maximum limit. Sorry,";
+				mes "[指南]";
+				mes "很遗憾，我不能给你";
+				mes "任何极速赛道积分";
+				mes "因为你将超过";
+				mes "最大限制。抱歉，";
 				mes strcharinfo(0) +"...";
 			}
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Thank you for";
-			mes "[DRY-RUN] participating in";
-			mes "[DRY-RUN] in Turbo Track.";
-			mes "[DRY-RUN] You will be guided";
-			mes "[DRY-RUN] to a Waiting Room soon.";
+			mes "[指南]";
+			mes "谢谢你使用我们的服务。";
+			mes "参与";
+			mes "在涡轮赛道中.";
+			mes "您将很快被引导到";
+			mes "一个等待室.";
 			close2;
 			warp "turbo_room",72,89;
 			end;
 		}
 	}
-	
+
 OnEnable:
 	set .@w$,callfunc("F_tt");
 	enablenpc "Guide#TBT_"+.@w$;
@@ -2756,7 +2756,7 @@ OnTimer60000:
 	donpcevent "Solo Mode#"+.@w$+"::OnEnable";
 	stopnpctimer;
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc "Guide#TBT_"+.@w$;
@@ -2770,7 +2770,7 @@ OnTouch_:
 	donpcevent "Turbo Track Guide::OnEnd_"+.@w$;
 	disablenpc "Notice_Maker1#TBT_"+.@w$;
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	enablenpc "Notice_Maker1#TBT_"+.@w$;
@@ -2790,7 +2790,7 @@ OnTouch_:
 	mapannounce strnpcinfo(4),strcharinfo(0) +" is now entering the Single Snail! " + strcharinfo(0) +" is now in the lead!",bc_map,"0xFFFF00";
 	disablenpc "Notice_Maker3#TBT_"+.@w$;
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	enablenpc "Notice_Maker3#TBT_"+.@w$;
@@ -3629,7 +3629,7 @@ OnTouch_:
 		default: break;
 	}
 	end;
-	
+
 OnInit:
 	set .@w$,callfunc("F_tt");
 	disablenpc "bing2#"+.@w$;
@@ -4255,7 +4255,7 @@ turbo_room,93,117,5	script	Point Exchange Helper	125,{
 						mes "Points you have earned before";
 						mes "redeeming your points again.";
 						close;
-	
+
 					}
 					set tt_point,tt_point-40;
 					if (BaseLevel < 70) getexp 3000,0;
@@ -4596,33 +4596,33 @@ S_ExchangePoints:
 alde_gld,183,204,0	script	en_turbo	45,1,1,{
 OnTouch_:
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a second!";
-		mes "[DRY-RUN] Right now, you're carrying";
-		mes "[DRY-RUN] too many items with you.";
-		mes "[DRY-RUN] Please come back after";
-		mes "[DRY-RUN] putting storing some of your";
-		mes "[DRY-RUN] things using the Kafra Service.^000000";
+		mes "^3355FF等一下！";
+		mes "现在，你身上携带了";
+		mes "携带太多物品.";
+		mes "请在使用完";
+		mes "将一些您的物品存放在";
+		mes "卡普拉服务中.^000000";
 		close;
 	}
 	if ((BaseJob == Job_Knight || BaseJob == Job_Crusader) && (checkriding() || checkdragon())) {
 		if (MaxWeight-Weight < 20000) {
 			if (!(eaclass()&EAJL_THIRD)) {
 				set .@mount$,(BaseJob == Job_Knight)?"Peco Peco":"Grand Peco";
-				mes "[DRY-RUN] [Helper]";
+				mes "[助手]";
 				mes .@mount$+"s are prohibited";
-				mes "[DRY-RUN] in the Turbo Track Arena.";
-				mes "[DRY-RUN] Please dismount from your";
+				mes "在涡轮赛道竞技场.";
+				mes "请下马.";
 				mes .@mount$+" and you will receive";
-				mes "[DRY-RUN] a Free Ticket for Peco Ride";
+				mes "一张免费的Peco骑乘票";
 				mes "for retrieving your "+.@mount$+".";
 			} else {
 				set .@mount$,(BaseJob == Job_Knight)?"Dragon":"Gryphon";
-				mes "[DRY-RUN] [Helper]";
+				mes "[助手]";
 				mes .@mount$+"s are prohibited";
-				mes "[DRY-RUN] in the Turbo Track Arena.";
-				mes "[DRY-RUN] Please dismount from your";
+				mes "在涡轮赛道竞技场.";
+				mes "请下马.";
 				mes .@mount$+". You can retrieve";
-				mes "[DRY-RUN] it for free outside.";
+				mes "在外面免费获取.";
 			}
 			close2;
 			warp "alde_gld",183,199;
@@ -4641,10 +4641,10 @@ OnTouch_:
 		}
 	} else if ((Class == Job_Ranger || Class == Job_Ranger_T || Class == Job_Baby_Ranger) && checkoption(Option_Wugrider)) {
 		if (MaxWeight-Weight < 20000) {
-			mes "[DRY-RUN] [Helper]";
-			mes "[DRY-RUN] Wargs are prohibited";
-			mes "[DRY-RUN] in the Turbo Track Arena.";
-			mes "[DRY-RUN] Please dismount from your Warg.";
+			mes "[助手]";
+			mes "禁止使用狼.";
+			mes "在涡轮赛道竞技场.";
+			mes "请下马您的狼.";
 			close2;
 			warp "alde_gld",183,199;
 			end;
@@ -4654,12 +4654,12 @@ OnTouch_:
 		}
 	} else if ((Class == Job_Mechanic || Class == Job_Mechanic_T || Class == Job_Baby_Mechanic) && checkmadogear()) {
 		if (MaxWeight-Weight < 20000) {
-			mes "[DRY-RUN] [Helper]";
-			mes "[DRY-RUN] Magic Gears are prohibited";
-			mes "[DRY-RUN] in the Turbo Track Arena.";
-			mes "[DRY-RUN] Please dismount from your";
-			mes "[DRY-RUN] Magic Gear. You can retrieve";
-			mes "[DRY-RUN] it for free outside.";
+			mes "[助手]";
+			mes "禁止使用魔法装备.";
+			mes "在涡轮赛道竞技场.";
+			mes "请下马.";
+			mes "魔法装备。您可以取回";
+			mes "在外面免费获取.";
 			close2;
 			warp "alde_gld",183,199;
 			end;
@@ -4696,8 +4696,8 @@ alde_gld,186,199,3	script	Turbo Track Guide#Entran	845,{
 	set .@n$, "["+strnpcinfo(1)+"]";
 	mes .@n$;
 	if (ismounting()) {
-		mes "[DRY-RUN] Please get off of that creature you're riding on.";
-		mes "[DRY-RUN] Then talk to me again.";
+		mes "请下车.";
+		mes "然后再和我说话.";
 		close;
 	}
 	if (BaseJob == Job_Knight || BaseJob == Job_Crusader) {
@@ -4737,45 +4737,45 @@ alde_gld,186,199,3	script	Turbo Track Guide#Entran	845,{
 		set .@riding, checkmadogear();
 		set .@i,3;
 	} else {
-		mes "[DRY-RUN] Thank you for";
-		mes "[DRY-RUN] visiting Al De Baran's";
-		mes "[DRY-RUN] Turbo Track~";
+		mes "谢谢你使用我们的服务。";
+		mes "访问艾尔帕兰的";
+		mes "涡轮赛道~";
 		close;
 	}
-	mes "[DRY-RUN] Welcome, would you like";
+	mes "欢迎，您想要";
 	mes "to retrieve your "+.@mount$+"?";
 	if (.@zeny) {
-		mes "[DRY-RUN] Please show me your Free";
-		mes "[DRY-RUN] Ticket for Peco Ride. You";
-		mes "[DRY-RUN] may also pay a rental fee";
+		mes "请出示您的免费";
+		mes "Peco骑乘票。您";
+		mes "也可以支付租金";
 		mes "of "+.@zeny$+" zeny.";
 	}
 	next;
-	switch(select("[DRY-RUN] Yes:Cancel")) {
+	switch(select("是:取消")) {
 	case 1:
 		if (getskilllv(.@skill) == 0) {
 			mes .@n$;
-			mes "[DRY-RUN] I'm sorry, but you're";
-			mes "[DRY-RUN] not eligible for this";
-			mes "[DRY-RUN] service. Please go learn";
+			mes "对不起，但您";
+			mes "不符合此项";
+			mes "服务的资格。请去学习";
 			mes "the "+.@skill$+" skill first.";
 			close;
 		} else {
 			if (.@riding) {
 				mes .@n$;
-				mes "[DRY-RUN] You're already";
-				mes "[DRY-RUN] mounted on a";
+				mes "您已经";
+				mes "骑上了一个";
 				mes .@mount$+".";
-				mes "[DRY-RUN] Thank you~";
+				mes "谢谢~";
 				close;
 			} else {
 				if (.@zeny) {
 					if (countitem(7310) < 1 && Zeny < .@zeny) {
 						mes .@n$;
-						mes "[DRY-RUN] I'm sorry, but you";
-						mes "[DRY-RUN] don't have a Free Ticket";
+						mes "对不起，但你";
+						mes "没有免费的票";
 						mes "for Peco Ride or "+.@zeny$+" zeny.";
-						mes "[DRY-RUN] to use the Peco rental service.";
+						mes "使用Peco租赁服务.";
 						close;
 					} else {
 						if (countitem(7310) > 0)
@@ -4790,30 +4790,30 @@ alde_gld,186,199,3	script	Turbo Track Guide#Entran	845,{
 					case 3: setmadogear; break;
 				}
 				mes .@n$;
-				mes "[DRY-RUN] Thank you for";
-				mes "[DRY-RUN] your patronage~";
+				mes "谢谢你使用我们的服务。";
+				mes "感谢您的光临~";
 				close;
 			}
 		}
 	case 2:
 		mes .@n$;
-		mes "[DRY-RUN] Are you going";
-		mes "[DRY-RUN] back to race in";
-		mes "[DRY-RUN] the Turbo Track?";
-		mes "[DRY-RUN] Good luck!";
+		mes "您要去";
+		mes "回去参加";
+		mes "涡轮赛道的比赛吗?";
+		mes "祝你好运！";
 		close;
 	}
 }
 
 alde_gld,178,180,0	script	Sign#TBT	837,{
-	mes "[DRY-RUN] [Al De Baran Turbo Track]";
-	mes "[DRY-RUN] This way...";
-	mes "[DRY-RUN] to the Al De Baran";
-	mes "[DRY-RUN] Turbo Track Arena!";
+	mes "[艾尔帕兰涡轮赛道]";
+	mes "这边...";
+	mes "前往艾尔帕兰";
+	mes "涡轮赛道竞技场!";
 	next;
-	mes "[DRY-RUN] [Al De Baran Turbo Track]";
-	mes "[DRY-RUN] Turbo Track is";
-	mes "[DRY-RUN] an arena where";
-	mes "[DRY-RUN] participants compete to be the first to reach the Finish Line! Don't miss the chance to race against your friends!";
+	mes "[艾尔帕兰涡轮赛道]";
+	mes "涡轮赛道是";
+	mes "一个参与者竞争";
+	mes "第一个到达终点线的竞技场! 不要错过与朋友比赛的机会!";
 	close;
 }

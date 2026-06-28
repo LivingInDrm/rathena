@@ -625,33 +625,33 @@ hu_in01,382,382,4	script	Guild Receptionist#hnt	732,{
 
 payon_in03,131,7,3	script	Hunter#htnGM	59,{
 	if (HNTR_Q == 10) {
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Hmpf. You must be here for the Hunter job test. Let me tell you about the testing process. What would you like to know?";
+		mes "[猎人公会长]";
+		mes "哼。你一定是来参加猎人职业测试的。让我告诉你测试的过程。你想知道什么？";
 		next;
-		switch( select( "[DRY-RUN] What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "测试是什么？:通过要求是什么？:有什么警告？:开始测试。", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name. But you must avoid all the traps while you're at it.";
+			mes "[猎人公会长]";
+			mes "你必须猎杀特定名称的怪物。但你必须在此期间避免所有的陷阱。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] This is to test your ability to move swiftly and locate targets in various situations.";
+			mes "[猎人公会长]";
+			mes "这是为了测试你在各种情况下快速移动和定位目标的能力。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] Within the time limit, starting in the 6 o'clock direction of the map, you must hunt the target monsters and then hit the escape switch that will appear in the center of the map.";
+			mes "[猎人公会长]";
+			mes "在时间限制内，从地图的6点钟方向开始，你必须猎杀目标怪物，然后按下出现在地图中心的逃生开关。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map after you hit the switch.";
+			mes "[猎人公会长]";
+			mes "如果你能在按下开关后朝地图的12点钟方向逃脱，你就通过了。";
 			close;
 		case 3:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] Hmm. Warnings... Well, if you fall into a trap, you have to start from the beginning. Also, only one person can take the test at a time.";
+			mes "[猎人公会长]";
+			mes "嗯。警告……如果你掉进陷阱，你必须从头开始。此外，每次只能有一个人参加测试。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] I will send you to the testing place. There will be a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
+			mes "[猎人公会长]";
+			mes "我会把你送到测试地点。那里会有一个等待室，但如果有人正在参加测试，你必须在聊天室等候。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] If the person in front succeeds, resigns or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "[猎人公会长]";
+			mes "如果前面的人成功、辞职或失败，聊天室中下一个等待的人将被送到测试区域。如果没有人等待，测试将在你进入聊天室后立即开始。";
 			close;
 		case 4:
 			// Note: aegis typo
@@ -664,12 +664,12 @@ payon_in03,131,7,3	script	Hunter#htnGM	59,{
 			// 	mes "Okay. Best of luck.";
 			// 	mes "I'll send you right now.";
 			// }
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] Okay. I'll send you to the testing area right now. Don't blame me if you get lost or confused because you didn't listen to my explanation.";
+			mes "[猎人公会长]";
+			mes "好的。我现在就把你送到测试区域。如果你迷路或困惑，不要怪我，因为你没有听我的解释。";
 			next;
 		}
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Okay. Best of luck.";
+		mes "[猎人公会长]";
+		mes "好的。祝你好运。";
 		HNTR_Q = 12;
 		changequest 4009,4011;
 		getitem 1751,200; // Silver_Arrow
@@ -678,104 +678,104 @@ payon_in03,131,7,3	script	Hunter#htnGM	59,{
 		end;
 	}
 	else if (HNTR_Q > 1 && HNTR_Q < 10) {
-		mes "[DRY-RUN] I'll send you right now.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Well, then. Your arrows are probably still being made, so you can use mine to take the test.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "我现在就送你过去。";
+		mes "[猎人公会长]";
+		mes "那么，你的箭可能还在制作中，所以你可以用我的箭来参加测试。";
+		mes "[猎人公会长]";
 		next;
-		mes "[DRY-RUN] Mmm...?";
-		mes "[DRY-RUN] What is an Archer";
+		mes "嗯……？";
+		mes "弓箭手来找我有什么事？";
 		next;
-		mes "[DRY-RUN] visiting me for?";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "你来找我干什么？";
+		mes "[猎人公会长]";
 		close;
 	}
 	else if (HNTR_Q == 11) {
-		mes "[DRY-RUN] I wasn't notified about anything in particular from the Hunter Guild. You're not trying to skip the middle part of the Hunter test, are you?";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "我没有收到猎人公会的任何特别通知。你不是想跳过猎人测试的中间部分吧？";
+		mes "[猎人公会长]";
 		close;
 	}
 	else if (HNTR_Q > 11 && HNTR_Q < 16) {
-		mes "[DRY-RUN] Go gather the items for the test, and come back after you've visited the Hunter Guild.";
-		mes "[DRY-RUN] [Hunter]";
+		mes "去收集测试所需的物品，去猎人公会后再回来。";
+		mes "[猎人]";
 		next;
-		mes "[DRY-RUN] Hmm? Can I help you? If you wish to change jobs, you should visit the person at the Archer Guild, not me.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Hmm. You're the Archer that almost gave up on changing jobs. You do have everything ready, right? Then I'll send you to take the test right away.";
+		mes "嗯？我能帮你吗？如果你想换职业，应该去找弓箭手公会的人，而不是我。";
+		mes "[猎人公会长]";
+		mes "嗯。你是那个几乎放弃换职业的弓箭手。你准备好一切了吗？那么我马上就送你去参加测试。";
 		next;
-		switch( select( "[DRY-RUN] What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "测试是什么？:通过要求是什么？:有什么警告？:开始测试。", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] If you have any";
+			mes "[猎人公会长]";
+			mes "如果你有任何";
 			close;
 		case 2:
-			mes "[DRY-RUN] questions, ask now.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "问题，现在问吧。";
+			mes "[猎人公会长]";
 			next;
-			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name, but you also avoid all the traps at the same time. This is to test your ability to move swiftly and locate targets in various situations.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "你必须猎杀特定名称的怪物，但同时也要避免所有的陷阱。这是为了测试你在各种情况下快速移动和定位目标的能力。";
+			mes "[猎人公会长]";
 			close;
 		case 3:
-			mes "[DRY-RUN] Within the given time, you will start at the 6 o'clock direction of the map, hunt the target monsters, and then hit the escape switch that will appear in the center of the map.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "在给定的时间内，你将从地图的6点钟方向开始，猎杀目标怪物，然后按下出现在地图中心的逃生开关。";
+			mes "[猎人公会长]";
 			next;
-			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map after you hit the switch.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "如果你能在按下开关后朝地图的12点钟方向逃脱，你就通过了。";
+			mes "[猎人公会长]";
 			next;
-			mes "[DRY-RUN] Hmm. Warnings... Well, if you fall into a trap, you have to start from the beginning. Also, only one person can take the test at a time.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "嗯。警告……如果你掉进陷阱，你必须从头开始。此外，每次只能有一个人参加测试。";
+			mes "[猎人公会长]";
 			close;
 		case 4:
-			mes "[DRY-RUN] I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] If the person in front succeeds, resigns or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "我会把你送到测试地点。那里有一个等待室，但如果有人正在参加测试，你必须在聊天室等候。";
+			mes "[猎人公会长]";
+			mes "如果前面的人成功、辞职或失败，聊天室中下一个等待的人将被送到测试区域。如果没有人等待，测试将在你进入聊天室后立即开始。";
 			next;
 		}
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Okay. Good luck.";
+		mes "[猎人公会长]";
+		mes "好的。祝你好运。";
 		next;
-		mes "[DRY-RUN] I'll send you right now.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "我现在就送你过去。";
+		mes "[猎人公会长]";
 		next;
-		if (select( "[DRY-RUN] Okay. Let's start...:Ah, wait a sec.", "Ah, wait a sec." ) == 1) {
-			mes "[DRY-RUN] Eh? Why won't I give you Silver Arrows? Don't expect anything when you don't bring any materials.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] Anyway, I believe you've prepared it yourself. Let's begin now.";
+		if (select( "好的。让我们开始……:啊，等一下。", "Ah, wait a sec." ) == 1) {
+			mes "呃？我为什么不给你银箭？当你没有带任何材料时，不要期待任何东西。";
+			mes "[猎人公会长]";
+			mes "无论如何，我相信你自己准备好了。现在开始吧。";
 			close2;
 			HNTR_Q = 12;
 			warp "job_hunte",176,22;
 			end;
 		}
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Okay!! I hope";
-		mes "[DRY-RUN] you will pass this time!";
+		mes "[猎人公会长]";
+		mes "好的！！我希望";
+		mes "你这次能通过！";
 		close;
 	}
 	else if (HNTR_Q == 16) {
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Then hurry and finish";
-		mes "[DRY-RUN] all of your preparations.";
+		mes "[猎人公会长]";
+		mes "那么快点完成";
+		mes "你所有的准备。";
 		HNTR_Q = 17;
 		savepoint "payon",104,99,1,1;
 		getitem 1007,1; // Penetration
 		changequest 4012,4013;
 		next;
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Wow, you came back in one piece!";
+		mes "[猎人公会长]";
+		mes "哇，你平安回来！";
 		close;
 	}
 	else if (HNTR_Q == 17) {
-		mes "[DRY-RUN] I mean, good job. I'll give you the item which proves that you have passed the test.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "我意思是，干得好。我会给你一个证明你通过测试的物品。";
+		mes "[猎人公会长]";
 		next;
-		mes "[DRY-RUN] Okay, here it is. Now, go back to the Hunter Guild. I have some more business left to do here, but I hope you can become a Hunter soon.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "好的，给你。现在，回到猎人公会。我还有一些事情要处理，但我希望你能尽快成为猎人。";
+		mes "[猎人公会长]";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] I see you aren't in a hurry to become a Hunter? When I first became a Hunter, I ran around for a month wildly brandishing my bow because I was so happy. Hehe~";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Now, you should go back to the Hunter Guild~";
+		mes "我看到你并不急于成为猎人？当我第一次成为猎人时，我兴奋得满城乱跑，狂挥我的弓，哈哈~";
+		mes "[猎人公会长]";
+		mes "现在，你应该回到猎人公会~";
 		close;
 	}
 }
@@ -783,33 +783,33 @@ payon_in03,131,7,3	script	Hunter#htnGM	59,{
 payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 	cutin "job_huntermaster",2;
 	if (HNTR_Q == 11) {
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Mmm. I see you're here for the Hunter job test. Let me explain the testing process. What would you like to know?";
+		mes "[猎人公会长]";
+		mes "嗯。我看到你是来参加猎人职业测试的。让我解释一下测试过程。你想知道什么？";
 		next;
-		switch( select( "[DRY-RUN] What is the test?:What are the passing requirements?:Any warnings?:Begin test.", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "测试是什么？:通过要求是什么？:有什么警告？:开始测试。", "What are the passing requirements?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name, but you must avoid all of the traps here at the same time.";
+			mes "[猎人公会长]";
+			mes "你必须猎杀特定名称的怪物，但你必须同时避免这里所有的陷阱。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] This is to test your ability to move swiftly and locate targets in various situations.";
+			mes "[猎人公会长]";
+			mes "这是为了测试你在各种情况下快速移动和定位目标的能力。";
 			close3;
 		case 2:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] Within the given time, you will start in the 6 o'clock direction of the map, hunt the target monsters, and hit the escape switch that will appear in the center of the map.";
+			mes "[猎人公会长]";
+			mes "在给定的时间内，你将从地图的6点钟方向开始，猎杀目标怪物，并按下出现在地图中心的逃生开关。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
+			mes "[猎人公会长]";
+			mes "如果你能在激活开关时朝地图的12点钟方向逃脱，你就通过了。";
 			close3;
 		case 3:
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] Mmm. Warnings... Well, if you fall into a trap, you have to start the test over from the beginning. And only one person can take the test at a time.";
+			mes "[猎人公会长]";
+			mes "嗯。警告……如果你掉进陷阱，你必须从头开始测试。而且每次只能有一个人参加测试。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
+			mes "[猎人公会长]";
+			mes "我会把你送到测试地点。那里有一个等待室，但如果有人正在参加测试，你必须在聊天室等候。";
 			next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "[猎人公会长]";
+			mes "如果当前参加测试的人通过或失败，聊天室中下一个等待的人将被送到测试区域。如果没有人等待，测试将在你进入聊天室后立即开始。";
 			close3;
 		case 4:
 			// Note: aegis typo
@@ -824,141 +824,141 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			// 	mes "I'll send you right now.";
 			// }
 			// next;
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] ...Okay. I'll send you to the testing area right now. Don't blame me if you get lost or confused because you didn't listen to the explanation.";
+			mes "[猎人公会长]";
+			mes "……好的。我现在就把你送到测试区域。如果你迷路或困惑，不要怪我，因为你没有听解释。";
 			next;
 		}
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Okay, best of luck.";
+		mes "[猎人公会长]";
+		mes "好的，祝你好运。";
 		getitem 1751,200; // Silver_Arrow
 		next;
-		mes "[DRY-RUN] I'll send you right now.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "我现在就送你过去。";
+		mes "[猎人公会长]";
 		HNTR_Q = 12;
 		changequest 4010,4011;
 		warp "job_hunte",176,22;
 		end;
 	}
 	else if (HNTR_Q > 1 && HNTR_Q < 10) {
-		mes "[DRY-RUN] Well, your arrows are probably still being made, so you can use mine to take the test.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Good luck.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "那么，你的箭可能还在制作中，所以你可以用我的箭来参加测试。";
+		mes "[猎人公会长]";
+		mes "祝你好运。";
+		mes "[猎人公会长]";
 		next;
-		mes "[DRY-RUN] Mmm...?";
-		mes "[DRY-RUN] Why is an Archer";
+		mes "嗯……？";
+		mes "为什么一个弓箭手";
 		next;
-		mes "[DRY-RUN] visiting me?";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "来找我？";
+		mes "[猎人公会长]";
 		close3;
 	}
 	else if (HNTR_Q == 10) {
-		mes "[DRY-RUN] I wasn't notified by the Hunter Guild about anything. You're not trying to skip the middle part of the Hunter test, are you?";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Stop by once you have gathered all the items needed for the test.";
-		mes "[DRY-RUN] [Hunter]";
-		mes "[DRY-RUN] Mmm?";
-		mes "[DRY-RUN] Can I help you";
+		mes "我没有收到猎人公会的任何通知。你不是想跳过猎人测试的中间部分吧？";
+		mes "[猎人公会长]";
+		mes "收集好测试所需的所有物品后再来找我。";
+		mes "[猎人]";
+		mes "嗯？";
+		mes "我能帮你";
 		next;
-		mes "[DRY-RUN] with something?";
-		mes "[DRY-RUN] Oh, you must be";
+		mes "什么吗？";
+		mes "哦，你一定是";
 		close3;
 	}
 	else if (HNTR_Q > 11 && HNTR_Q < 16) {
-		mes "[DRY-RUN] a Hunter applicant.";
-		mes "[DRY-RUN] [Hunter]";
+		mes "一名猎人申请者。";
+		mes "[猎人]";
 		next;
-		mes "[DRY-RUN] If you wish to change jobs, I think you need to go visit the person at Payon Central Palace.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Mmm? Aren't you the Archer who gave up last time? Now you're ready, right? Then I'll send you to the job change area right now.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "如果你想换职业，我想你需要去找位于斐扬中央宫殿的人。";
+		mes "[猎人公会长]";
+		mes "嗯？你不是上次放弃的弓箭手吗？现在你准备好了吗？那么我马上就送你去换职业区域。";
+		mes "[猎人公会长]";
 		next;
-		switch( select( "[DRY-RUN] What is the test?:What are the requirements to pass the test?:Any warnings?:Begin test.", "What are the requirements to pass the test?", "Any warnings?", "Begin test." ) ) {
+		switch( select( "测试是什么？:通过测试的要求是什么？:有什么警告？:开始测试。", "What are the requirements to pass the test?", "Any warnings?", "Begin test." ) ) {
 		case 1:
-			mes "[DRY-RUN] If you still";
-			mes "[DRY-RUN] have questions,";
+			mes "如果你还有";
+			mes "问题，";
 			next;
-			mes "[DRY-RUN] feel free to ask.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "随时问我。";
+			mes "[猎人公会长]";
 			close3;
 		case 2:
-			mes "[DRY-RUN] You have to hunt down certain monsters with a particular name, but you must avoid all of the traps here at the same time.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "你必须猎杀特定名称的怪物，但你必须同时避免这里所有的陷阱。";
+			mes "[猎人公会长]";
 			next;
-			mes "[DRY-RUN] This is to test your ability to move swiftly and locate targets in various situations.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "这是为了测试你在各种情况下快速移动和定位目标的能力。";
+			mes "[猎人公会长]";
 			close3;
 		case 3:
-			mes "[DRY-RUN] Within the given time, you will start in the 6 o'clock direction of the map, hunt the target monsters, and hit the escape switch that will appear in the center of the map.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "在给定的时间内，你将从地图的6点钟方向开始，猎杀目标怪物，并按下出现在地图中心的逃生开关。";
+			mes "[猎人公会长]";
 			next;
-			mes "[DRY-RUN] You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "如果你能在激活开关时朝地图的12点钟方向逃脱，你就通过了。";
+			mes "[猎人公会长]";
 			next;
-			mes "[DRY-RUN] Mmm. Warnings... Well, if you fall into a trap, you have to start the test over from the beginning. And only one person can take the test at a time.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
+			mes "嗯。警告……如果你掉进陷阱，你必须从头开始测试。而且每次只能有一个人参加测试。";
+			mes "[猎人公会长]";
 			close3;
 		case 4:
-			mes "[DRY-RUN] I'll send you to the testing place. There is a waiting room, but if someone else is taking the test, you must wait in the chatroom.";
-			mes "[DRY-RUN] [Hunter Guildmaster]";
-			mes "[DRY-RUN] If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
+			mes "我会把你送到测试地点。那里有一个等待室，但如果有人正在参加测试，你必须在聊天室等候。";
+			mes "[猎人公会长]";
+			mes "如果当前参加测试的人通过或失败，聊天室中下一个等待的人将被送到测试区域。如果没有人等待，测试将在你进入聊天室后立即开始。";
 			next;
 		}
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Okay, good luck.";
+		mes "[猎人公会长]";
+		mes "好的，祝你好运。";
 		next;
-		mes "[DRY-RUN] I'll send you right now...";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Eh? Why don't I give you any Silver Arrows? Well, you shouldn't expect to get anything when you didn't even bring the materials.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Well...";
+		mes "我现在就送你...";
+		mes "[猎人公会长]";
+		mes "呃？为什么我不给你任何银箭？嗯，你没带材料就不应该期待得到任何东西。";
+		mes "[猎人公会长]";
+		mes "嗯……";
 		next;
-		if (select( "[DRY-RUN] Yes, let's start.:Ah, wait a moment.", "Ah, wait a moment." ) == 1) {
-			mes "[DRY-RUN] I believe";
-			mes "[DRY-RUN] you're ready.";
-			mes "[DRY-RUN] Let's begin.";
+		if (select( "是的，让我们开始。:啊，等一下。", "Ah, wait a moment." ) == 1) {
+			mes "我相信";
+			mes "你准备好了。";
+			mes "让我们开始吧。";
 			close2;
 			cutin "",255;
 			HNTR_Q = 12;
 			warp "job_hunte",176,22;
 			end;
 		}
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Okay!! Now...";
-		mes "[DRY-RUN] Pass this time!";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] *Sigh...*";
+		mes "[猎人公会长]";
+		mes "好的！！现在...";
+		mes "这次通过！";
+		mes "[猎人公会长]";
+		mes "*叹气...*";
 		close3;
 	}
 	else if (HNTR_Q == 16) {
-		mes "[DRY-RUN] Come back when";
-		mes "[DRY-RUN] you're done with";
-		mes "[DRY-RUN] your preparations.";
+		mes "完成后再回来";
+		mes "你完成了";
+		mes "你的准备。";
 		HNTR_Q = 17;
 		savepoint "payon",104,99,1,1;
 		getitem 1007,1; //Penetration
 		changequest 4012,4013;
 		next;
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Wow. You're back in one piece!";
-		mes "[DRY-RUN] I mean, good job. Well then, I'll give you the item which serves as proof that you passed the test.";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
+		mes "[猎人公会长]";
+		mes "哇。你平安回来了！";
+		mes "我的意思是，干得好。那么，我将给你一件作为你通过测试的证明的物品。";
+		mes "[猎人公会长]";
 		close3;
 	}
 	else if (HNTR_Q == 17) {
-		mes "[DRY-RUN] Well...";
-		mes "[DRY-RUN] There you go.";
+		mes "嗯……";
+		mes "给你。";
 		next;
-		mes "[DRY-RUN] Now hurry back to the Hunter Guild, and join us~";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] I see you're not in a hurry to become a Hunter. I was running around with joy, wildly brandishing my bow the first month I became a Hunter. Hehe~";
-		mes "[DRY-RUN] [Hunter Guildmaster]";
-		mes "[DRY-RUN] Now hurry~";
+		mes "现在快回到猎人公会，加入我们~";
+		mes "[猎人公会长]";
+		mes "我看你并不急于成为猎人。我成为猎人的第一个月里，满心欢喜，疯狂挥舞着我的弓。呵呵~";
+		mes "[猎人公会长]";
+		mes "现在快点~";
 		close3;
 	}
 	else {
-		mes "[DRY-RUN] They're waiting";
-		mes "[DRY-RUN] for you back";
+		mes "他们在等你";
+		mes "回来";
 		close3;
 	}
 }
@@ -966,42 +966,42 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 job_hunte,178,32,1	script	Guide#hnt	107,5,2,{
 OnTouch_:
 	if (HNTR_Q == 12) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Good day. Welcome to the Hunter testing site. The test begins when you enter the next room.";
+		mes "[指南]";
+		mes "你好。欢迎来到猎人测试地点。测试在你进入下一个房间时开始。";
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] As explained before, hunt 4 or more of the monsters named ^3355FFJob change monster^000000. Upon doing so, a switch in the center of the map will then appear.";
+		mes "[指南]";
+		mes "如之前所述，猎杀4只或更多名为^3355FF职业变更怪物^000000的怪物。完成后，地图中央将出现一个开关。";
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] When you destroy the switch, the exit will appear in the 12 o'clock direction of the map. Complete everything within the given time and escape.";
+		mes "[指南]";
+		mes "当你摧毁开关时，出口将出现在地图的12点钟方向。在规定时间内完成所有任务并逃脱。";
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] If you faint in the middle, fall into a trap, or go over the time limit, you'll fail. Then you must then retake the test.";
+		mes "[指南]";
+		mes "如果你在途中昏迷，掉入陷阱，或超过时间限制，你将失败。然后你必须重新参加测试。";
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] We will provide the arrows, so just make sure that you bring a bow. Well, then. Please enter when you are ready.";
+		mes "[指南]";
+		mes "我们会提供箭矢，所以只需确保你带上弓。好了，请在准备好时进入。";
 		savepoint "job_hunte",176,22,1,1;
 		close;
 	}
 	else if (HNTR_Q > 12 && HNTR_Q < 16) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Hmm...";
-		mes "[DRY-RUN] Did you mess up?";
-		mes "[DRY-RUN] I'll recover some";
-		mes "[DRY-RUN] of your HP and SP for now.";
+		mes "[指南]";
+		mes "嗯...";
+		mes "你搞砸了吗？";
+		mes "我会为你恢复一些";
+		mes "你的HP和SP。";
 		percentheal 100,100;
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] If it's too hard, it wouldn't hurt to try again next time. Would you like to resign for now?";
+		mes "[指南]";
+		mes "如果太难，下次再试也没关系。你想现在退出吗？";
 		next;
-		if (select( "[DRY-RUN] Keep trying.:Resign.", "Resign." ) == 1) {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Okay. Do your best and become a great Hunter. Please enter the waiting room. If someone is already taking the test, you must wait until that person is done.";
+		if (select( "继续尝试。:退出。", "Resign." ) == 1) {
+			mes "[指南]";
+			mes "好的。加油，成为伟大的猎人。请进入候诊室。如果有人正在进行测试，你必须等到那个人完成。";
 			close;
 		}
 		mapannounce "job_hunte",strcharinfo(0)+ " has resigned. Next person, please enter.",bc_map;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Very well. I'll send you to Payon. Hope to see you next time. Don't forget to save when you leave.";
+		mes "[指南]";
+		mes "很好。我会送你去斐扬。希望下次见到你。离开时别忘了保存。";
 		// donpcevent "Waiting Room#hnt::OnStart";
 		close2;
 		HNTR_Q = 13;
@@ -1009,8 +1009,8 @@ OnTouch_:
 		warp "payon_in02",21,27;
 	}
 	else if (HNTR_Q > 15) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] You shouldn't be here. How about finding the required job change item first?";
+		mes "[指南]";
+		mes "你不应该在这里。先去找所需的职业变更物品怎么样？";
 		close2;
 		savepoint "payon",104,99,1,1;
 		warp "payon_in02",21,27;
@@ -1200,29 +1200,29 @@ OnTimer197000:
 
 job_hunte,93,101,1	script	Switch#hnt	723,1,1,{
 OnTouch_:
-	mes "[DRY-RUN] ^3355FFThere are 3 buttons";
-	mes "[DRY-RUN] on the escape switch.^000000";
+	mes "^3355FF有3个按钮";
+	mes "在逃脱开关上。^000000";
 	HNTR_Q = 15;
 	next;
-	switch( select( "[DRY-RUN] Escape:Cancel:Re-test", "Cancel", "Re-test" ) ) {
+	switch( select( "逃脱:取消:重新测试", "Cancel", "Re-test" ) ) {
 	case 1:
-		mes "[DRY-RUN] ^3355FFThe Escape Warp Portal";
-		mes "[DRY-RUN] has now been activated.^000000";
+		mes "^3355FF逃脱传送阵";
+		mes "现在已被激活。^000000";
 		close2;
 		mapannounce "job_hunte"," !! Escape Warp Portal activation complete. !! ",bc_map;
 		enablenpc "exit#hnttest";
 		end;
 	case 2:
-		mes "[DRY-RUN] ^3355FFCanceling";
-		mes "[DRY-RUN] Operation.^000000";
+		mes "^3355FF取消";
+		mes "操作。^000000";
 		close2;
 		mapannounce "job_hunte"," !! Operation has been cancelled. !! ",bc_map;
 		end;
 	case 3:
 		mapannounce "job_hunte"," !! Cancellation warp activating... !! ",bc_map;
-		mes "[DRY-RUN] ^3355FFYou will soon be";
-		mes "[DRY-RUN] returned to the";
-		mes "[DRY-RUN] waiting room.^000000";
+		mes "^3355FF你将很快被";
+		mes "送回";
+		mes "候诊室。^000000";
 		close2;
 		HNTR_Q = 13;
 		warp "job_hunte",176,22;

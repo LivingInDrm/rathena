@@ -67,7 +67,7 @@ payon_in01,99,72,4	script	Granny	103,{
 		mes "....";
 		next;
 		mes "感谢您购买我们家所制造的物品, 您一定会满意它的品质的...";
-		mes "Young traveler, please help me. When you find some ^3355FFSkirt of Virgin^000000, please bring them to me. I'd really appreciate it...";
+		mes "年轻的旅行者，请帮我。当你找到一些 ^3355FF处女裙^000000 时，请把它们带给我。我会非常感激的……";
 		close;
 	}
 }
@@ -124,92 +124,92 @@ payon_in01,18,10,4	script	Mystic Lady	76,{
 //============================================================
 payon_in02,25,71,4	script	Boy	86,{
 	if (countitem(701) > 4) {
-		mes "[Young Man]";
-		mes "ArrrGggghh!";
-		mes "Ah, No I can't...";
+		mes "[年轻人]";
+		mes "啊啊啊啊啊！";
+		mes "啊，不，我做不到……";
 		next;
-		mes "[Young Man]";
-		mes "*Huk*";
-		mes "Now even my eyes have gone mad!! Why do these bugs suddenly seem so cute?! Nooooooo~!!!";
+		mes "[年轻人]";
+		mes "*呜*";
+		mes "现在连我的眼睛都疯了！！为什么这些虫子突然看起来这么可爱？！不~~~~！！！";
 		next;
-		switch(select("Show Ora Ora:Give Ora Ora:Cancel")) {
+		switch(select("展示Ora Ora:给予Ora Ora:取消")) {
 		case 1:
-			mes "[Young Man]";
-			mes "Oooooohhhh!!!";
-			mes "Is, is this";
-			mes "the one?!";
-			mes "This is...";
-			mes "Ora Ora!!";
+			mes "[年轻人]";
+			mes "哦哦哦哦哦！！！";
+			mes "这，这个是";
+			mes "那个吗？！";
+			mes "这是……";
+			mes "喔喔！！";
 			next;
-			mes "[Young Man]";
-			mes "I'll make it short! Give it to me, and I will give you my treasure! So how's my idea? Wanna deal?";
+			mes "[年轻人]";
+			mes "我会简短点！把它给我，我就把我的宝藏给你！我的主意怎么样？想交易吗？";
 			close;
 		case 2:
 			if (countitem(701) > 4) {
 				delitem 701,5; //Ora_Ora
 			}
-			mes "[Young Man]";
-			mes "Muhahahahah!!!";
-			mes "I finally have this!";
-			mes "Ora Ora!";
-			mes "Stupid and Disgusting";
-			mes "Thief Bugs!!";
-			mes "You will pay!!!";
+			mes "[年轻人]";
+			mes "哈哈哈哈哈！！！";
+			mes "我终于得到了这个！";
+			mes "哦啦哦啦！";
+			mes "愚蠢又恶心";
+			mes "盗贼虫！！";
+			mes "你会付出代价的！！！";
 			next;
-			mes "[Young Man]";
-			mes "Huk...Huk...";
-			mes "Sorry, I was out of control with pleasure for a while. Now, I will give my treasure as promised.";
+			mes "[年轻人]";
+			mes "呼...呼...";
+			mes "抱歉，我刚才有点失控。现在，我会如承诺的那样把我的宝藏给你。";
 			next;
 			getitem 5004,1; //Oxygen_Mask
-			mes "[Young Man]";
-			mes "When you wear this over your mouth and start to breathe, it filters junk out before getting to your lungs.";
+			mes "[年轻人]";
+			mes "当你把这个戴在嘴上并开始呼吸时，它会在到达你的肺部之前过滤掉垃圾。";
 			next;
-			mes "[Young Man]";
-			mes "Kakakakakaka!";
-			mes "I can't wait";
-			mes "to use this";
-			mes "Ora Ora!";
+			mes "[年轻人]";
+			mes "哈哈哈哈哈！";
+			mes "我等不及了";
+			mes "要使用这个";
+			mes "哦啦哦啦！";
 			close;
 		case 3:
-			mes "[Young Man]";
-			mes "Huhuhuhuhu...";
-			mes "What if I can't get rid of all these Thief Bugs? I might even grow to love them... *Huk*";
+			mes "[年轻人]";
+			mes "呜呜呜呜...";
+			mes "如果我无法摆脱这些盗贼虫怎么办？我甚至可能会爱上它们…… *呜*";
 			close;
 		}
 	}
 	else {
-		mes "[Young Man]";
-		mes "Wahhhhhh! I, I...";
-		mes "I can't take it any more!";
-		mes "You little stinky filthy bastards!";
+		mes "[年轻人]";
+		mes "哇啊啊啊！我，我……";
+		mes "我再也受不了了！";
+		mes "你们这些小臭虫！";
 		next;
-		switch(select("Continue:Cancel")) {
+		switch(select("继续:取消")) {
 		case 1:
-			mes "[Young Man]";
-			mes "Oh man...";
-			mes "It all started when my parents passed away when I was a little kid. Early on I had to work for a living, and had a really hard time.";
+			mes "[年轻人]";
+			mes "哦，天哪...";
+			mes "一切都始于我小时候父母去世。早期我不得不为生计而工作，过得非常艰难。";
 			next;
-			mes "[Young Man]";
-			mes "I've worked for 10 years in hopes of buying my dream house where I could find some sense of peace and comfort again. Eventually I thought I had enough zeny to afford my very own sweet home.";
+			mes "[年轻人]";
+			mes "我工作了10年，希望能买得起我梦想中的房子，让我再次找到一些平静和舒适。最终我以为我攒够了金币，可以负担得起我自己的甜蜜家园。";
 			next;
-			mes "[Young Man]";
-			mes "Unfortunately I didn't have enough money to buy the nice house that I had my eye on. But then, I found this house, which was bigger and cheaper than the first. I bought it without thinking...";
+			mes "[年轻人]";
+			mes "不幸的是，我没有足够的钱去买我心仪的漂亮房子。但后来，我发现了这栋房子，它比第一栋更大也更便宜。我毫不犹豫地买下了它...";
 			next;
-			mes "[Young Man]";
-			mes "Sweet Jesus! Turns out, it's a Heaven for Thief Bugs!!!";
+			mes "[年轻人]";
+			mes "天哪！原来这是盗贼虫的乐园！！！";
 			next;
-			mes "[Young Man]";
-			mes "I tried to do everything I could do. I coaxed them, killed them, but it only brought peace for a moment! I even tried to burn this house down...!";
+			mes "[年轻人]";
+			mes "我试着做我能做的一切。我劝说它们，杀死它们，但这只带来了片刻的平静！我甚至试图把这栋房子烧掉...！";
 			next;
-			mes "[Young Man]";
-			mes "*Gasp* I mean, really, do I need ^3355FF Ora Ora^000000 to get rid of them? People say it is very rarely seen in distant countries.";
+			mes "[年轻人]";
+			mes "*喘气* 我的意思是，真的，我需要^3355FF Ora Ora^000000才能摆脱它们吗？人们说它在遥远的国家非常罕见。";
 			next;
-			mes "[Young Man]";
-			mes "If I could afford 5 of them, I won't have to be frustrated with these disgusting bugs any more...";
+			mes "[年轻人]";
+			mes "如果我能买得起5个，我就不必再为这些恶心的虫子感到沮丧了...";
 			close;
 		case 2:
-			mes "[Young Man]";
-			mes "This never ending fight with the bugs has really exhausted me. I give up. Do as you wish you scumbags!";
+			mes "[年轻人]";
+			mes "与这些虫子的无尽战斗真的让我精疲力竭。我放弃了。随你们怎么做这些混蛋！";
 			close;
 		}
 	}

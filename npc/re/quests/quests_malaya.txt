@@ -765,28 +765,28 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 					mes "告诉裴多乐!";
 					erasequest 7381;
 					next;
-					switch (select("Sure.:I need some preparations.")) {
+					switch (select("当然可以。:我需要一些准备。")) {
 					case 1:
 						mes "狄瓦泰将会成为这片海的女神. 算是我的慷慨, 他可以启航了.";
-						mes "As usual then.";
-						mes "6 Salt Bags. Silver Crosses and Sharpened Bamboos, please.";
+						mes "照常。";
+						mes "6个盐袋。请给我银十字架和削尖的竹子。";
 						setquest 7380;
 						close;
 					case 2:
-						mes "[Imelda]";
-						mes ".......I see.";
-						mes "I'll be waiting then.";
+						mes "[伊梅尔达]";
+						mes ".......我明白了。";
+						mes "那我就等着吧。";
 						close;
 					}
 				} else {
-					mes "[Imelda]";
-					mes "That is great news indeed.";
-					mes "You know what you need for making Spiritual Protections?";
-					mes "Of course, it's not your first time...";
+					mes "[伊梅尔达]";
+					mes "这确实是个好消息。";
+					mes "你知道制作精神保护需要什么吗？";
+					mes "当然，这不是你第一次……";
 					next;
-					mes "[Imelda]";
-					mes "I'll leave you to it then.";
-					mes "6 Salt Bags. Silver Crosses and Sharpened Bamboos, please.";
+					mes "[伊梅尔达]";
+					mes "那我就不打扰你了。";
+					mes "6个盐袋。请给我银十字架和削尖的竹子。";
 					setquest 7380;
 					close;
 				}
@@ -794,22 +794,22 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 		case 2:
 			if (checkquest(7374) != -1) {
 				if (checkquest(7379) == -1) {
-					mes "[Imelda]";
-					mes "Please deliver these new Spiritual Protections to the villagers.";
-					mes "You know them, right?";
+					mes "[伊梅尔达]";
+					mes "请把这些新的精神保护交给村民们。";
+					mes "你认识他们，对吧？";
 					close;
 				}
-				mes "[Imelda]";
-				mes "They cannot rely on these Spiritual Protections forever...";
-				mes "It would be much better to have a strong mind such as yours.";
+				mes "[伊梅尔达]";
+				mes "他们不能永远依赖这些精神保护……";
+				mes "拥有像你这样强大的心智会更好。";
 				next;
-				mes "[Imelda]";
-				mes "Strong spirits are full of light.";
-				mes "Those of the dark cannot approach due the blinding light";
+				mes "[伊梅尔达]";
+				mes "强大的灵魂充满了光明。";
+				mes "黑暗中的人无法靠近，因为耀眼的光芒。";
 				next;
-				mes "[Imelda]";
-				mes "I guess that's it for today.";
-				mes "Thank you very much.";
+				mes "[伊梅尔达]";
+				mes "我想今天就到此为止。";
+				mes "非常感谢你。";
 				setquest 7375;
 				erasequest 7374;
 				erasequest 7379;
@@ -824,27 +824,27 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 			} else {
 				.@playtime = checkquest(7375, PLAYTIME);
 				if (.@playtime == 0 || .@playtime == 1) {
-					mes "[Imelda]";
-					mes "The Spiritual Protections given before will still be in effect";
-					mes "It's okay for now.";
+					mes "[伊梅尔达]";
+					mes "之前给予的精神保护仍然有效。";
+					mes "现在还好。";
 					close;
 				} else if (.@playtime == 2) {
-					mes "[Imelda]";
-					mes "I was wondering when you would drop by.";
-					mes "Could you deliver Spiritual Protections to the folks today?";
+					mes "[伊梅尔达]";
+					mes "我在想你什么时候会过来。";
+					mes "你今天能把精神保护送给大家吗？";
 					erasequest 7375;
 					next;
-					if (select("Of course.:Not today.") == 2) {
-						mes "[Imelda]";
-						mes "Yes.";
-						mes "Why not take a stroll in Malaya today?";
-						mes "Of course, you'll still encounter ghosts here and there.";
+					if (select("当然。:今天不行。") == 2) {
+						mes "[伊梅尔达]";
+						mes "是的。";
+						mes "今天为什么不在马来亚散步呢？";
+						mes "当然，你仍然会在这里遇到鬼魂。";
 						close;
 					}
 					if ((checkquest(7381) == 0) || (checkquest(7381) == 1)) {
-						mes "[Imelda]";
-						mes "Thank you very much.";
-						mes "Come back when you've given them all out.";
+						mes "[伊梅尔达]";
+						mes "非常感谢你。";
+						mes "等你把它们都发完再回来。";
 						setquest 7374;
 						setquest 7368;
 						setquest 7369;
@@ -855,31 +855,31 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 						getitem 6503, 6; // Soul_Protection
 						close;
 					} else {
-						mes "[Imelda]";
-						mes "Thanks for your concern, but I couldn't make any because I ran out of materials.";
-						mes "Shame, is it not?";
-						mes "I do hope there's somebody willing to get them for me.";
+						mes "[伊梅尔达]";
+						mes "谢谢你的关心，但我无法制作，因为材料用完了。";
+						mes "真可惜，不是吗？";
+						mes "我希望有人愿意为我去拿它们。";
 						close;
 					}
 				} else {
-					mes "[Imelda]";
-					mes "Are you at peace? I could feel your serenity all the way from here.";
-					mes "You want to spend that extra time for me?";
+					mes "[伊梅尔达]";
+					mes "你安宁吗？我能从这里感受到你的宁静。";
+					mes "你想花额外的时间为我吗？";
 					next;
-					mes "[Imelda]";
-					mes "Could you give out these Spiritual Protections to the villagers for me?";
+					mes "[伊梅尔达]";
+					mes "你能把这些灵魂保护发给村民吗？";
 					next;
-					switch (select("Yes.:Not today.") == 2) {
-						mes "[Imelda]";
-						mes "Yes.";
-						mes "Why not take a stroll in Malaya today?";
-						mes "Of course, you'll still encounter ghosts here and there.";
+					switch (select("是的。:今天不行。") == 2) {
+						mes "[伊梅尔达]";
+						mes "是的。";
+						mes "今天为什么不在马来亚散步呢？";
+						mes "当然，你仍然会在这里遇到鬼魂。";
 						close;
 					}
 					if ((checkquest(7381, PLAYTIME) == 0) || (checkquest(7381, PLAYTIME) == 1)) {
-						mes "[Imelda]";
-						mes "Thank you very much.";
-						mes "Come back when you've given them all out.";
+						mes "[伊梅尔达]";
+						mes "非常感谢你。";
+						mes "等你把它们都发完再回来。";
 						setquest 7374;
 						setquest 7368;
 						setquest 7369;
@@ -890,10 +890,10 @@ malaya,169,350,5	script	Imelda#malaya	475,{
 						getitem 6503, 6; // Soul_Protection
 						close;
 					} else {
-						mes "[Imelda]";
-						mes "Thanks for your concern, but I couldn't make any because I ran out of materials.";
-						mes "Shame, is it not?";
-						mes "I do hope there's somebody willing to get them for me.";
+						mes "[伊梅尔达]";
+						mes "谢谢你的关心，但我无法制作，因为材料用完了。";
+						mes "真可惜，不是吗？";
+						mes "我希望有人愿意为我去拿它们。";
 						close;
 					}
 				}
@@ -1189,80 +1189,80 @@ malaya,224,267,3	script	Romel#malaya	573,{
 			close;
 		} else {
 			mes "它温暖的就像妈妈的怀抱.";
-			mes "Ahh....";
-			mes "... You..";
-			mes "I'm sorry I ignored you.";
-			mes "But... you must be the one they're talking about...";
+			mes "啊……";
+			mes "... 你..";
+			mes "对不起，我忽视了你。";
+			mes "但是……你一定就是他们所说的那个人……";
 			next;
-			mes "[Romel]";
-			mes "Are you the one who fends off the ghosts?";
-			mes "If it's okay with you, can I have one of your belongings or some hair?";
+			mes "[罗梅尔]";
+			mes "你是那个驱赶鬼魂的人吗？";
+			mes "如果你不介意，我可以要你的一件物品或一些头发吗？";
 			next;
-			mes "[Romel]";
-			mes "I want to carry it... Like a charm of sort.";
+			mes "[罗梅尔]";
+			mes "我想带着它……就像一种护身符。";
 			next;
-			mes "-The troubled villagers desire your belongings because you fend off the ghosts. -";
+			mes "-困扰的村民们渴望你的物品，因为你驱赶鬼魂。-";
 			setquest 7357;
 			completequest 7357;
 			if ((checkquest(7352) + checkquest(7353) + checkquest(7354) + checkquest(7355) + checkquest(7356) + checkquest(7357)) > 9) {
 				next;
-				mes "- So many have already asked you for this. Perhaps it will be better to speak with Phong in Mumbaki.-";
+				mes "- 已经有很多人向你请求这个。也许和穆姆巴基的丰谈谈会更好。-";
 				set malaya_hi, 11;
 				setquest 7358;
 			}
 			close;
 		}
 	} else if (malaya_hi == 11) {
-		mes "Romel looks in your way with a sad look.";
-		mes "He'll surely take a hair or pull a sleeve if he had his way!";
+		mes "罗梅尔用悲伤的眼神看着你。";
+		mes "如果他有机会，肯定会拿走一根头发或拉扯一下袖子！";
 		close;
 	} else if (malaya_hi == 12) {
 		if (checkquest(7364) != -1) {
-			mes "[Romel]";
-			mes "Frankly speaking, it's for the peace of mind.";
-			mes "With it, I could face them with more boldness.";
+			mes "[罗梅尔]";
+			mes "坦白说，这是为了安心。";
+			mes "有了它，我可以更大胆地面对他们。";
 			next;
-			mes "[Romel]";
-			mes "I mean, I'm relying on such items,";
-			mes "but I am braver with them.";
+			mes "[罗梅尔]";
+			mes "我的意思是，我依赖这样的物品，";
+			mes "但有了它们我会更勇敢。";
 			close;
 		}
 		if (!countitem(523) || !countitem(717)) {
-			mes "^4d4dffPrepare and give Blue Gemstone and Holy Water. ^000000";
+			mes "^4d4dff准备并给予蓝色魔力矿石和圣水。^000000";
 			close;
 		}
-		mes "[Romel]";
-		mes "...What is it?";
+		mes "[罗梅尔]";
+		mes "...这是什么？";
 		next;
-		select ("Hand him the prepared items");
-		mes "[Romel]";
-		mes "Oh... Thank you.";
-		mes "I can feel your spirit.";
-		mes "This will keep me safe.";
+		select ("把准备好的物品交给他");
+		mes "[罗梅尔]";
+		mes "哦... 谢谢你。";
+		mes "我能感受到你的精神。";
+		mes "这将让我保持安全。";
 		next;
-		mes "[Romel]";
-		mes "Hey... Could you give some for my daughter as well?";
+		mes "[罗梅尔]";
+		mes "嘿... 你能给我女儿一些吗？";
 		next;
-		mes "- Gave Romel the prepared Holy Water and Blue Gemstone.-";
+		mes "- 给了罗梅尔准备好的圣水和蓝色魔力矿石。-";
 		delitem 717, 1; //Blue_Gemstone
 		delitem 523, 1; //Holy_Water
 		setquest 7364;
 		completequest 7364;
 		if ((checkquest(7359) + checkquest(7360) + checkquest(7361) + checkquest(7362) + checkquest(7363) + checkquest(7364)) > 11) {
-			mes "-With Romel as last, I think enough Holy Artifacts have been given.-";
+			mes "-最后是罗梅尔，我想足够的神圣遗物已经交给了。-";
 			set malaya_hi, 13;
 			erasequest 7351;
 			setquest 7365;
 		}
 		close;
 	} else if (malaya_hi == 13) {
-		mes "[Romel]";
-		mes "The Holy Artifact is in good hands.";
-		mes "Same with my daughter.";
+		mes "[罗梅尔]";
+		mes "神圣遗物在好人手中。";
+		mes "和我女儿一样。";
 		close;
 	} else {
-		mes "[Romel]";
-		mes "Hello there.";
+		mes "[罗梅尔]";
+		mes "你好。";
 		switch(rand(1, 6)) {
 		case 1:
 			mes "Ha ha, I had a dream last night, you see, and there was " + $malayaNames$[0] + " in the dream. Ha ha... Strange indeed...";
@@ -1274,7 +1274,7 @@ malaya,224,267,3	script	Romel#malaya	573,{
 			mes  "It's all thanks to " + $malayaNames$[0] + " for changing the atmosphere of the house. It seems like we were saved by the Holy Artifact and Spiritual Protection.";
 			break;
 		case 4:
-			mes  "The people of the neighboring Baryo Mahiwaga are so strong. Even their children play in the forest. I can't imagine myself doing that.";
+			mes  "邻近的马希瓦加村的人们真强大。甚至他们的孩子也在森林里玩。我无法想象自己会那样做。";
 			break;
 		case 5:
 			mes  "Without the slightest doubt, the most famous person in town is " + $malayaNames$[2] + ". Even famous in Baryo they say.";
@@ -1284,33 +1284,33 @@ malaya,224,267,3	script	Romel#malaya	573,{
 			break;
 		}
 		next;
-		if (select("Give Spiritual Protection:How are things?") == 2) {
-			mes "[Romel]";
-			mes "I am at peace these days.";
+		if (select("给灵魂保护:情况怎么样？") == 2) {
+			mes "[罗梅尔]";
+			mes "这些天我很平静。";
 			close;
 		}
 		if ((checkquest(7374) == -1) || (checkquest(7373) == -1)) {
-			mes "[Romel]";
-			mes "A new Spiritual Protection?";
-			mes "The one you gave me before still works fine.";
-			mes "I'm okay for now.";
+			mes "[罗梅尔]";
+			mes "新的精神保护？";
+			mes "你之前给我的那个仍然很好用。";
+			mes "我现在还好。";
 			close;
 		}
 		if (!countitem(6503)) {
-			mes "^4d4dffThere are no Spiritual Protections to give to Romel.^000000";
+			mes "^4d4dff没有可以给罗梅尔的精神保护。^000000";
 			close;
 		}
-		mes "[Romel]";
-		mes "A new Spiritual Protection.";
-		mes "I was thinking this one had worn out... Thanks for coming.";
-		mes "This Spiritual Protection will also protect us.";
+		mes "[罗梅尔]";
+		mes "新的精神保护。";
+		mes "我在想这个可能已经磨损了……谢谢你来。";
+		mes "这个灵魂保护也会保护我们。";
 		next;
-		mes "- Delivered Romel his Spiritual Protection.-";
+		mes "- 将灵魂保护交给罗梅尔。-";
 		delitem 6503, 1; // Soul_Protection
 		erasequest 7373;
 		setquest 7387;
 		if ((checkquest(7382) + checkquest(7383) + checkquest(7384) + checkquest(7385) + checkquest(7386) + checkquest(7387)) > 5) {
-			mes "- With Romel as last, all Spiritual Protections have been delivered. Head back to Imelda.-";
+			mes "- 最后将所有灵魂保护交给罗梅尔。回去找伊梅尔达。-";
 			if (malaya_hi == 23) {
 				set malaya_hi, 24;
 			}
@@ -1329,112 +1329,112 @@ malaya,224,267,3	script	Romel#malaya	573,{
 
 malaya,223,267,5	script	Talah#malaya	941,{
 	if (malaya_hi < 10) {
-		mes "[Talah]";
-		mes "..........gasp!";
+		mes "[塔拉]";
+		mes "..........哎呀！";
 		mes " ";
-		mes "(When your eyes met with hers, she ran and hid behind her father.)";
+		mes "（当你的目光与她相遇时，她跑去躲在她父亲身后。）";
 		close;
 	} else if (malaya_hi == 10) {
 		if (checkquest(7356) == 2) {
-			mes "[Talah]";
-			mes "Talah might be taken away tonight.";
-			mes "Scary kids might come to Talah.";
+			mes "[塔拉]";
+			mes "塔拉今晚可能会被带走。";
+			mes "可怕的孩子们可能会来找塔拉。";
 			next;
-			mes "When Talah tugs at Romel's shirt, Romel looks at you with a sad gaze.";
-			mes "Better do something before they take a button from you...";
+			mes "当塔拉拉拉扯罗梅尔的衬衫时，罗梅尔用悲伤的目光看着你。";
+			mes "最好在他们从你身上拿走一个纽扣之前做点什么……";
 			close;
 		} else {
-			mes "[Talah]";
-			mes "....I..umm... that.....";
-			mes ".........oh... Daddy....";
+			mes "[塔拉]";
+			mes "……我……那个……";
+			mes "……哦……爸爸……";
 			next;
-			mes "[Romel]";
-			mes "Hey, could you give my daughter a button or some hair of yours?";
-			mes "She has trouble sleeping at night .......";
+			mes "[罗梅尔]";
+			mes "嘿，你能给我女儿一个纽扣或者你的一些头发吗？";
+			mes "她晚上睡觉有困难……";
 			next;
-			mes "[Romel]";
-			mes "Wouldn't she be able to sleep well if she had something from you as a lucky charm?";
+			mes "[罗梅尔]";
+			mes "如果她有你的一些东西作为幸运符，她就能睡得好些吗？";
 			next;
-			mes "- The troubled villagers desire your belongings because you fend off the ghosts. -";
+			mes "- 困扰的村民们渴望你的财物，因为你驱赶了鬼魂。 -";
 			setquest 7356;
 			completequest 7356;
 			if ((checkquest(7352) + checkquest(7353) + checkquest(7354) + checkquest(7355) + checkquest(7356) + checkquest(7357)) > 9) {
 				next;
-				mes "- So many have already asked you for this. Perhaps it will be better to speak with Phong in Mumbaki. -";
+				mes "- 已经有很多人向你请求这个。也许和穆姆巴基的丰谈谈会更好。 -";
 				set malaya_hi, 11;
 				setquest 7358;
 			}
 			close;
 		}
 	} else if (malaya_hi == 11) {
-		mes "Talah looks from you to her father with inquisitive eyes.";
+		mes "塔拉用好奇的眼神从你身上看向她的父亲。";
 		close;
 	} else if (malaya_hi == 12) {
 		if (checkquest(7363) != -1) {
-			mes "[Talah]";
-			mes "I dont know for sure";
-			mes "but I get a warm feel from them.";
-			mes "Daddy's braver now and that makes Talah stronger too.";
+			mes "[塔拉]";
+			mes "我不太确定。";
+			mes "但我从他们身上感受到温暖。";
+			mes "爸爸现在更勇敢了，这也让塔拉变得更强。";
 			close;
 		}
 		if (!countitem(523) || !countitem(717)) {
-			mes "^4d4dffPrepare and give Blue Gemstone and Holy Water. ^000000";
+			mes "^4d4dff准备并给予蓝色魔力矿石和圣水。^000000";
 			close;
 		}
-		mes "[Talah]";
-		mes ".... Can I say hello?";
-		mes "Hello... there...";
+		mes "[塔拉]";
+		mes ".... 我可以打个招呼吗？";
+		mes "你好... 嗨...";
 		next;
-		select("Give the prepared items.");
-		mes "[Talah]";
-		mes "Pretty blue stones...!";
-		mes "Oooooh~ They're beautiful!";
-		mes "Is this stone going to keep Talah safe?";
+		select("给出准备好的物品。");
+		mes "[塔拉]";
+		mes "漂亮的蓝色宝石...！";
+		mes "哇~ 它们真美！";
+		mes "这块石头会保护塔拉吗？";
 		next;
-		mes "- Delivered the Holy Water and Blue Gemstone to Talah. -";
+		mes "- 将圣水和蓝色魔力矿石交给塔拉。 -";
 		delitem 717, 1; //Blue_Gemstone
 		delitem 523, 1; //Holy_Water
 		setquest 7363;
 		completequest 7363;
 		if ((checkquest(7359) + checkquest(7360) + checkquest(7361) + checkquest(7362) + checkquest(7363) + checkquest(7364)) > 11) {
-			mes "-With Talah as last, I think enough Holy Artifacts have been given.-";
+			mes "- 以塔拉为最后，我想已经给了足够的圣物。 -";
 			set malaya_hi, 13;
 			erasequest 7351;
 			setquest 7365;
 		}
 		close;
 	} else if (malaya_hi == 13) {
-		mes "[Talah]";
-		mes "Daddy told me to hold on to the Holy Artifact really tight.";
-		mes "So it keeps away bad ghosts...";
+		mes "[塔拉]";
+		mes "爸爸让我紧紧握住圣物。";
+		mes "这样可以驱赶坏鬼魂……";
 		close;
 	} else {
-		mes "[Talah]";
-		mes "Hello...";
+		mes "[塔拉]";
+		mes "你好...";
 		next;
-		if (select("Give Spiritual Protection.:Hi there?") == 2) {
-			mes "[Talah]";
-			mes "...Hey...Thank you.";
-			mes "You're keeping us safe aren't you?";
+		if (select("给予精神保护。:你好？") == 2) {
+			mes "[塔拉]";
+			mes "……嘿……谢谢你。";
+			mes "你是在保护我们，对吧？";
 			close;
 		}
 		if ((checkquest(7374) != -1) && (checkquest(7372) != -1)) {
 			if (!countitem(6503)) {
-				mes "^4d4dffThere is no Spiritual Protection to give to Talah.^000000";
+				mes "^4d4dff没有可以给予塔拉的灵魂保护。^000000";
 				close;
 			}
-			mes "[Talah]";
-			mes "Is this a new Spiritual Protection?";
-			mes "Thank you.";
-			mes "Talah can sleep well now with the Spiritual Protection.";
-			mes "Daddy likes it too.";
+			mes "[塔拉]";
+			mes "这是新的灵魂保护吗？";
+			mes "谢谢你。";
+			mes "塔拉现在可以安心睡觉了，有了灵魂保护。";
+			mes "爸爸也喜欢这个。";
 			next;
-			mes "- Delivered new Spiritual Protection to Talah.-";
+			mes "- 已经将新的灵魂保护交给塔拉。-";
 			delitem 6503, 1; // Soul_Protection
 			erasequest 7372;
 			setquest 7386;
 			if ((checkquest(7382) + checkquest(7383) + checkquest(7384) + checkquest(7385) + checkquest(7386) + checkquest(7387)) > 5) {
-				mes "- With Talah as last, all Spiritual Protections have been delivered. Head back to Imelda. -";
+				mes "- 最后一个塔拉的灵魂保护已经交付。回去找伊梅尔达。-";
 				if (malaya_hi == 23) {
 					set malaya_hi, 24;
 				}
@@ -1448,10 +1448,10 @@ malaya,223,267,5	script	Talah#malaya	941,{
 			}
 			close;
 		} else {
-			mes "[Talah]";
-			mes "Umm...";
-			mes "The one you gave before still keeps Talah safe.";
-			mes "I'm okay.";
+			mes "[塔拉]";
+			mes "嗯...";
+			mes "你之前给的那个仍然保护着塔拉。";
+			mes "我没事。";
 			close;
 		}
 	}
@@ -2984,45 +2984,45 @@ ma_fild01,238,257,2	script	Guard Dog Vantai	972,{
 
 ma_fild01,200,190,3	script	Maries#malaya	579,{
 	if (MaxWeight - Weight < 1000 || checkweight(1201,1) == 0) {
-		mes "- Cannot proceed with the quest. You are carrying too many items. -";
+		mes "- 无法继续任务。你携带的物品太多了。 -";
 		close;
 	}
 	if (BaseLevel < 100) {
-		mes "[Maries]";
-		mes "Umm... Hey...";
-		mes "Oh, no, sorry. You don't look so strong or bold.";
-		mes "I'm sorry. I'm just not quite myself...";
+		mes "[玛丽斯]";
+		mes "嗯... 嘿...";
+		mes "哦，不，抱歉。你看起来不太强壮或大胆。";
+		mes "对不起。我只是有点不太对劲...";
 		close;
 	}
 	if (malaya_hi < 20) {
-		mes "An anxious looking woman is stands.";
+		mes "一个看起来焦虑的女人站着。";
 		close;
 	}
 	.@playtime = checkquest(7390, PLAYTIME);
 	if (.@playtime == 0 || .@playtime == 1) {
-		mes "[Maries]";
-		mes "Now that the children know that they can get back home with an Inside-out Shirt,";
-		mes "they play out in the forest recklessly and timelessly.";
+		mes "[玛丽斯]";
+		mes "现在孩子们知道他们可以用反穿衬衫回家，";
+		mes "他们在森林里无所顾忌、无尽无休地玩耍。";
 		next;
-		mes "[Maries]";
-		mes "The children will surely get lost again in these conditions.";
-		mes "If it happens again, I'll seek your help again.";
+		mes "[玛丽斯]";
+		mes "在这种情况下，孩子们肯定又会迷路。";
+		mes "如果再发生一次，我会再次寻求你的帮助。";
 		close;
 	} else if (.@playtime == 2) {
-		mes "[Maries]";
-		mes "I'm missing a child... again.";
-		mes "Oh my goodness...";
+		mes "[玛丽斯]";
+		mes "我又丢了一个孩子...。";
+		mes "天哪...。";
 		erasequest 7390;
 		close;
 	} else {
 		if (checkquest(7389) != -1) {
-			mes "[Maries]";
-			mes "You came back.";
-			mes "Thanks to you, the child has returned home safely.";
+			mes "[玛丽斯]";
+			mes "你回来了。";
+			mes "多亏了你，孩子安全回家了。";
 			next;
-			mes "[Maries]";
-			mes "Although the shirt is inside-out, it miraculously brings them back to where they should be.";
-			mes "Thank you for delivering those precious shirts to my children.";
+			mes "[玛丽斯]";
+			mes "虽然衬衫穿反了，但它奇迹般地把他们带回了该去的地方。";
+			mes "谢谢你把那些珍贵的衬衫送给我的孩子们。";
 			setquest 7390;
 			erasequest 7389;
 			if (!VIP_SCRIPT || vip_status(VIP_STATUS_ACTIVE))
@@ -3035,53 +3035,53 @@ ma_fild01,200,190,3	script	Maries#malaya	579,{
 			close;
 		} else {
 			if (checkquest(7388) != -1) {
-				mes "[Maries]";
-				mes "I'm sure they're lost in the woods because of mischievous spirits.";
-				mes "Please give the child the ^4d4dffInside-out Shirt^000000 when found.";
+				mes "[玛丽斯]";
+				mes "我相信他们在森林里迷路是因为调皮的精灵。";
+				mes "请在找到时把 ^4d4dff反穿衬衫^000000 给孩子。";
 				next;
-				mes "[Maries]";
-				mes "The Inside-out Shirts...";
-				mes "You can probably get them from the demons, since they ran away with them.";
+				mes "[玛丽斯]";
+				mes "反穿衬衫...";
+				mes "你可能可以从那些逃跑的恶魔那里得到它们。";
 				close;
 			} else {
-				mes "[Maries]";
-				mes "Hello... I'm looking for my child...";
-				mes "My daughter did not return.";
-				mes "Please help, I think she's lost in the forest.";
+				mes "[玛丽斯]";
+				mes "你好... 我在找我的孩子...";
+				mes "我的女儿没有回来。";
+				mes "请帮忙，我觉得她在森林里迷路了。";
 				next;
-				switch (select("Of course.:I'm too busy right now.:You have so many children.")) {
+				switch (select("当然。:我现在太忙了。:你有这么多孩子。")) {
 				case 1:
-					mes "[Maries]";
-					mes "I'm sure she's lost in the woods because of mischievous spirits.";
+					mes "[玛丽斯]";
+					mes "我相信她是因为顽皮的精灵而在树林里迷路了。";
 					next;
-					mes "[Maries]";
-					mes "If she's cursed, it will be difficult to get her out of there.";
-					mes "She'll drift around in the maze so mesmerizing, even for you, in fact.";
+					mes "[玛丽斯]";
+					mes "如果她被诅咒了，要把她从那里救出来会很困难。";
+					mes "她会在迷宫中漂流，甚至连你也会被迷住。";
 					next;
-					mes "[Maries]";
-					mes "Acquire an ^4d4dffInside-out Shirt^000000 and give it to my daughter.";
-					mes "Although the shirt is inside-out, it miraculously brings them back to where they should be.";
+					mes "[玛丽斯]";
+					mes "获得一件^4d4dff反穿衬衫^000000并把它给我的女儿。";
+					mes "虽然衬衫穿反了，但它奇迹般地把他们带回了该去的地方。";
 					next;
-					mes "[Maries]";
-					mes "The Inside-out Shirts...";
-					mes "You can probably get them from the demons, since they ran away with them.";
+					mes "[玛丽斯]";
+					mes "反穿衬衫...";
+					mes "你可能可以从那些逃跑的恶魔那里得到它们。";
 					setquest 7388;
 					close;
 				case 2:
-					mes "[Maries]";
-					mes "... Yes... I see.";
-					mes "I'll have to ask someone else.";
-					mes "Alright.";
-					mes "Sigh...";
+					mes "[玛丽斯]";
+					mes "...是的...我明白了。";
+					mes "我得去问别人。";
+					mes "好的。";
+					mes "唉...";
 					close;
 				case 3:
-					mes "[Maries]";
-					mes "...I ended up having triplets.";
-					mes "Even I sometimes get confused. *Chuckle*";
+					mes "[玛丽斯]";
+					mes "...我最后生了三胞胎。";
+					mes "即使我有时也会感到困惑。*笑*";
 					next;
-					mes "[Maries]";
-					mes "They seem to be under a curse because one of them always get's lost in the woods..";
-					mes "Sigh...";
+					mes "[玛丽斯]";
+					mes "他们似乎被诅咒了，因为其中一个总是在森林里迷路..";
+					mes "唉...";
 					close;
 				}
 			}
@@ -3843,56 +3843,56 @@ ma_fild01,158,243,6	script	Tribe Blacksmith#malaya	582,{
 //============================================================
 malaya,305,281,3	script	Guard#buwaya	570,7,7,{
 	if (malaya_hi < 10) {
-		mes "- From the wary looks on the guard's face, it is obvious he is at alert at the sight of you. He won't intimidate you but seems he won't even deal with you either. -";
+		mes "- 从卫兵警惕的目光来看，很明显他在你面前保持警惕。他不会威胁你，但似乎也不想和你打交道。-";
 		next;
-		mes "- Would there be anyone to talk to in the village? -";
+		mes "- 村子里会有人可以交谈吗？ -";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[Guard]";
-		mes "There is a small area called ^3131FFBaryo Mahiwaga^000000 outside of Port Malaya.";
-		mes "The place is closer to mother nature than what we have here.";
+		mes "[卫兵]";
+		mes "在马来亚港外有一个叫做 ^3131FFBaryo Mahiwaga^000000 的小区域。";
+		mes "这个地方比我们这里更接近大自然。";
 		next;
-		mes "[Guard]";
-		mes "On the other hand, the area is full of fierce monsters. Take care of yourself while you're traveling there.";
+		mes "[卫兵]";
+		mes "另一方面，这个区域充满了凶猛的怪物。旅行时请小心。";
 		close;
 	}
 	if (malaya_buwaya == 0) {
-		mes "[Guard]";
-		mes "There are more people leaving the village secretly these days. Are you also heading for the woods to look for the mysterious treasure?";
+		mes "[卫兵]";
+		mes "最近有更多的人悄悄离开村子。你也是去森林寻找神秘宝藏吗？";
 		next;
 		if (BaseLevel < 100) {
-			mes "[Guard]";
-			mes "I take that back. On second thought, I don't think a weakling like you would even dare to go there.";
+			mes "[卫兵]";
+			mes "我收回刚才的话。再想想，我觉得像你这样的弱者根本不敢去那里。";
 			next;
-			mes "[Guard]";
-			mes "You'd better hold tight to your mommy's hand if you want to go outside of Port Malaya or else the monsters will eat you alive. Ha ha.";
+			mes "[卫兵]";
+			mes "如果你想要走出马来亚港，最好紧紧握住你妈妈的手，不然怪物会把你活活吃掉。哈哈。";
 			close;
 		}
-		mes "[Guard]";
-		mes "Is that why there are more outsiders here these days? Now don't be sneaky and a know-it-all. How would you know if I'd offered to take you around?";
+		mes "[卫兵]";
+		mes "这就是为什么最近这里有更多外来者的原因吗？别偷偷摸摸的，也别自以为是。你怎么知道我是否愿意带你四处转转？";
 		next;
-		if (select("Treasure?:Ignore.") == 2) {
-			mes "[Guard]";
-			mes "Are you ignoring me? Bah.";
+		if (select("宝藏？:忽略。") == 2) {
+			mes "[卫兵]";
+			mes "你是在忽视我吗？哼。";
 			close;
 		}
-		mes "[Guard]";
-		mes "Oh, so you aren't here to look for treasure?";
+		mes "[卫兵]";
+		mes "哦，所以你不是来找宝藏的？";
 		next;
-		mes "[Guard]";
-		mes "I hear people are talking about a mysterious treasure hidden deep in the woods.";
+		mes "[卫兵]";
+		mes "我听说人们在谈论一个隐藏在森林深处的神秘宝藏。";
 		set malaya_buwaya,1;
 		setquest 2271;
 		next;
 	}
 	if (malaya_buwaya == 1) {
-		mes "[Guard]";
-		mes "Do you see that group of people over there? They always gather and talk about it every day.";
-		mes "Try talking to them if you are interested, too.";
+		mes "[卫兵]";
+		mes "你看到那边那群人了吗？他们每天都会聚在一起谈论这个。";
+		mes "如果你感兴趣，也可以试着和他们交谈。";
 		close;
 	}
-	mes "[Guard]";
-	mes "So the talk about treasure was just a rumor? I'm not asking because I want to be rich overnight. Ha ha.";
+	mes "[卫兵]";
+	mes "所以关于宝藏的谈论只是个谣言？我不是因为想一夜暴富才问的。哈哈。";
 	close;
 OnTouch:
 	if ((malaya_hi > 19) && (malaya_buwaya == 0)) {
@@ -4006,268 +4006,268 @@ malaya,276,286,7	duplicate(buwaya_A)	Port Malaya Villager::buwaya_C	582
 
 ma_in01,47,101,3	script	Totoy#buwaya	577,7,7,{
 	if ((malaya_hi < 20) || (malaya_buwaya < 2)) {
-		mes "- See someone shaky with dopey eyes. -";
+		mes "- 看到一个眼神呆滞的人。 -";
 		close;
 	}
 	if (malaya_buwaya == 2) {
-		mes "- See someone shaky with dopey eyes. -";
+		mes "- 看到一个眼神呆滞的人。 -";
 		next;
-		if (select("Tap him on the shoulder.:Ignore him.") == 2)
+		if (select("拍他的肩膀.:忽视他.") == 2)
 			close;
 		emotion ET_HUK;
-		mes "[Totoy]";
-		mes "Wah! No! Go away! Leave me alone!";
+		mes "[托托]";
+		mes "哇！不！走开！别打扰我！";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Hey, are you alright?";
+		mes "嘿，你还好吗？";
 		next;
-		mes "[Totoy]";
-		mes "Huh... you're a person? Who are you?";
+		mes "[托托]";
+		mes "嗯……你是个人吗？你是谁？";
 		next;
-		mes "- He looks you straight in the face but doesn't seem to recognize you. -";
+		mes "- 他直视你的脸，但似乎不认识你。 -";
 		next;
-		mes "[Totoy]";
-		mes "Who's there?";
+		mes "[托托]";
+		mes "谁在那里？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "I am " + strcharinfo(0) + ". You are Totoy, right? People say you've found a treasure. Is it true?";
 		next;
-		mes "[Totoy]";
-		mes "What treasure?";
-		mes "I can't see. I'm blinded. Please help me. I'm tired and frustrated.";
+		mes "[托托]";
+		mes "什么宝藏？";
+		mes "我看不见。我失明了。请帮帮我。我累了，感到沮丧。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "What happened?";
+		mes "发生了什么？";
 		next;
-		mes "[Totoy]";
-		mes "Can't talk long. I need to heal my eyes first.";
-		mes "There should be some ^3131FFGreen Potion^000000 left inside the drawer. Will you take it out for me?";
+		mes "[托托]";
+		mes "不能长时间说话。我需要先治疗我的眼睛。";
+		mes "抽屉里应该还有一些^3131FF绿色药水^000000。你能帮我拿出来吗？";
 		set malaya_buwaya,3;
 		close;
 	} else if (malaya_buwaya == 3) {
 		if (!countitem(506)) {
-			mes "[Totoy]";
-			mes "Can't talk long. I need to heal my eyes first.";
-			mes "There should be some ^3131FFGreen Potion^000000 left inside the drawer. Will you get it for me?";
+			mes "[托托]";
+			mes "不能长时间说话。我需要先治疗我的眼睛。";
+			mes "抽屉里应该还有一些^3131FF绿色药水^000000。你能帮我拿一下吗？";
 			close;
 		}
-		mes "[Totoy]";
-		mes "Hello? Hey, are you still there? What happened to the Green Potion? Jeez, this is driving me crazy.";
+		mes "[托托]";
+		mes "你好？嘿，你还在吗？绿色药水怎么了？天哪，这让我快疯了。";
 		next;
-		if (select("Hand over the Green Potion.:Do not hand over the potion.") == 2) {
-			mes "[Totoy]";
-			mes "Did you really leave? Hey! Darn!";
+		if (select("交出绿色药水.:不交出药水.") == 2) {
+			mes "[托托]";
+			mes "你真的离开了吗？嘿！真是的！";
 		} else {
-			mes "[Totoy]";
-			mes "Gulp, gulp...";
+			mes "[托托]";
+			mes "咕噜，咕噜……";
 			delitem 506,1; //Green_Potion
 			set malaya_buwaya,4;
 		}
 		close;
 	} else if (malaya_buwaya == 4) {
 		emotion ET_SURPRISE;
-		mes "[Totoy]";
-		mes "I can see!! My eyes work!!!";
-		mes "Yay! I feel better now!";
+		mes "[托托]";
+		mes "我能看见了！！我的眼睛能用了！！！";
+		mes "耶！我现在感觉好多了！";
 		next;
 		emotion ET_THINK, playerattached();
 		emotion ET_BEST;
-		mes "[Totoy]";
-		mes "Wow! You look better than you sounded. Ha ha.";
+		mes "[托托]";
+		mes "哇！你看起来比听起来好。哈哈。";
 		next;
-		mes "[Totoy]";
-		mes "But what did you say? Something about a treasure?";
-		mes "Did you say I found a treasure?";
-		mes "What is that about?";
+		mes "[托托]";
+		mes "但你刚才说了什么？关于宝藏的事？";
+		mes "你说我找到了宝藏吗？";
+		mes "那是什么？";
 		next;
-		select("Tell him what the people are talking about.");
+		select("告诉他人们在谈论什么.");
 		emotion ET_SMILE;
-		mes "[Totoy]";
-		mes "WHAT?";
-		mes "Puhaha! Totoy is rich! Became rich overnight! Chief Ed!";
+		mes "[托托]";
+		mes "什么？";
+		mes "哈哈！托托伊变得富有了！一夜之间变得富有！族长埃德！";
 		next;
 		emotion ET_HNG;
-		mes "[Totoy]";
-		mes "Sorry but I went to the woods to collect bugs. Wish I saw a treasure while I was at it. Hmph!";
+		mes "[托托]";
+		mes "抱歉，我去森林里收集虫子。希望我能在这期间发现宝藏。哼！";
 		next;
 		emotion ET_THINK;
-		mes "[Totoy]";
-		mes "I did go deep in the woods because I wasn't getting anywhere with collecting bugs. But who would have thought I'd get into this mess?";
+		mes "[托托]";
+		mes "我确实深入森林，因为我在收集虫子时没有任何进展。但谁能想到我会陷入这种麻烦？";
 		next;
-		if (select("What Totoy saw:About bugs") == 2) {
-			mes "[Totoy]";
-			mes "I only wanted to show people my collection of cute bugs. Ha ha.";
+		if (select("托托看到的:关于虫子") == 2) {
+			mes "[托托]";
+			mes "我只是想向人们展示我可爱的虫子收藏。哈哈。";
 			next;
 			emotion ET_SMILE;
-			mes "[Totoy]";
-			mes "Dropping ice or bugs down peoples clothes is just like a daily greeting, isn't it?";
+			mes "[托托]";
+			mes "把冰块或虫子掉到人们的衣服里就像是日常问候，不是吗？";
 			next;
-			mes "[Totoy]";
-			mes "I love to see people run around the village like they are in a marathon. He he.";
+			mes "[托托]";
+			mes "我喜欢看人们在村子里像马拉松一样跑来跑去。嘿嘿。";
 			next;
 		}
-		mes "[Totoy]";
-		mes "I thought people wouldn't run away because of an ordinary bug so I went in the woods with Ed.";
+		mes "[托托]";
+		mes "我以为人们不会因为一只普通的虫子而逃跑，所以我和艾德一起进入了森林。";
 		next;
-		mes "[Totoy]";
-		mes "Ah, Ed is my cute puppy. He's very nice and cuddly. My best friend in the whole wide world.";
+		mes "[托托]";
+		mes "啊，艾德是我可爱的狗狗。他非常友好和可爱。是我在这个广阔世界中最好的朋友。";
 		next;
 		emotion ET_THINK;
-		mes "[Totoy]";
-		mes "Ed usually barks a lot but I should have looked around when he barked and pulled on my sleeves.";
+		mes "[托托]";
+		mes "艾德通常会吠叫很多，但我应该在他吠叫并拉扯我的袖子时四处看看。";
 		next;
-		mes "[Totoy]";
-		mes "- Totoy bends over and whispers to you as if walls have ears. -";
+		mes "[托托]";
+		mes "- 托托伊弯下腰，像是墙壁有耳朵一样对你低声说。 -";
 		next;
-		mes "[Totoy]";
-		mes "There was a monster with a mouth the size of a house right behind me.";
+		mes "[托托]";
+		mes "就在我身后有一只嘴巴大得像房子一样的怪物。";
 		next;
-		select("A monster?!");
-		mes "[Totoy]";
-		mes "Shssh! Be quiet. I've never seen a mouth that big before. It was full of a river of saliva flowing out of spiky teeth. Just the thought of it makes me want to hide.";
+		select("怪物?!");
+		mes "[托托]";
+		mes "嘘！安静点。我从未见过这么大的嘴巴。里面满是流出尖牙的唾液河。光是想想就让我想躲起来。";
 		next;
-		mes "[Totoy]";
-		mes "The scariest part is that the monster has two heads. You won't believe it till you see it.";
+		mes "[托托]";
+		mes "最可怕的是那个怪物有两个头。你不亲眼见到是不会相信的。";
 		next;
 		emotion ET_CRY;
-		mes "[Totoy]";
-		mes "Ed bit the monsters leg with all his might to let me get away. But I don't know what happened to him afterwards. Sniff~";
+		mes "[托托]";
+		mes "艾德拼尽全力咬住了怪物的腿，让我得以逃脱。但我不知道他之后发生了什么。呜呜~";
 		next;
-		mes "[Totoy]";
-		mes "That's when I hurt my eye. To tell you the truth I don't even remember how I came back.";
+		mes "[托托]";
+		mes "就是在那时我伤到了眼睛。说实话，我甚至不记得我是怎么回来的。";
 		next;
-		select("About the monster");
-		mes "[Totoy]";
-		mes "Don't know. It was the first time I saw a monster like that. Who could live to tell the story?";
+		select("关于怪物");
+		mes "[托托]";
+		mes "不知道。这是我第一次看到这样的怪物。谁能活着讲述这个故事呢？";
 		next;
-		mes "[Totoy]";
-		mes "Wait, maybe the ^FF0000Master of Hunting^000000 might know about the monster. They say he fought with all sorts of monsters.";
+		mes "[托托]";
+		mes "等一下，也许^FF0000狩猎大师^000000可能知道那个怪物。他们说他与各种怪物战斗过。";
 		next;
-		mes "[Totoy]";
-		mes "I need some time alone. I need to make a tombstone for Ed. If you want to meet the ^FF0000Master of Hunting^000000, you'll find him near the Weapon Store.";
+		mes "[托托]";
+		mes "我需要一些独处的时间。我需要为艾德做一个墓碑。如果你想见^FF0000狩猎大师^000000，您可以在武器商店附近找到他。";
 		next;
-		mes "[Totoy]";
-		mes "And tell everyone else to stop spreading rumors about treasure. They don't know what I went through. Sniff! I'm going to put Ancient Worms in everyones clothes!";
+		mes "[托托]";
+		mes "并告诉其他人停止传播关于宝藏的谣言。他们不知道我经历了什么。呜呜！我要把古代虫子放进每个人的衣服里！";
 		set malaya_buwaya,5;
 		erasequest 2272;
 		setquest 2273;
 		close;
 	} else if (malaya_buwaya == 5) {
-		mes "[Totoy]";
-		mes "I have to make a grave for Ed. My loyal friend, Ed...";
-		mes "If you want to meet the ^FF0000Master of Hunting^000000, you'll find him near the Weapon Store.";
+		mes "[托托]";
+		mes "我必须为艾德做个坟墓。我的忠实朋友，艾德……";
+		mes "如果你想见到^FF0000狩猎大师^000000，您可以在武器商店附近找到他。";
 		close;
 	} else if (malaya_buwaya == 6) {
-		mes "[Totoy]";
-		mes "Ed!! Eeeeeddddddd!!!";
-		mes "Can't believe you gave your life to save me. Wail!!!";
+		mes "[托托]";
+		mes "艾德！！艾德dddddd！！！";
+		mes "真不敢相信你为了救我而献出了生命。呜呜！！！";
 		next;
-		mes "- Totoy can't be lying when he's crying his heart out like this. -";
+		mes "- 托托伊在这样哭得撕心裂肺的时候不可能在说谎。 -";
 		close;
 	} else if (malaya_buwaya == 7) {
-		mes "[Totoy]";
-		mes "Where I saw the monster?";
+		mes "[托托]";
+		mes "我看到怪物的地方？";
 		next;
-		mes "[Totoy]";
-		mes "Um... Hmm...";
-		mes "I was so busy running away...";
+		mes "[托托]";
+		mes "嗯……嗯……";
+		mes "我忙着逃跑……";
 		next;
-		mes "[Totoy]";
-		mes "It was really deep in the woods. Probably even past Baryo Mahiwaga.";
-		mes "I think I heard the sound of ^3131FFFlowing Water^000000. A large whooshing sound. This is all I remember.";
+		mes "[托托]";
+		mes "它真的在森林深处。可能甚至在巴里约·马希瓦加之后。";
+		mes "我想我听到了^3131FF流水声^000000。一个巨大的呼啸声。这是我所记得的一切。";
 		close;
 	} else if ((malaya_buwaya > 7) && (malaya_buwaya < 12)) {
-		mes "[Totoy]";
-		mes "Poor Ed. I miss Ed. Wail!!!!";
+		mes "[托托]";
+		mes "可怜的艾德。我想念艾德。呜呜！！！！";
 		close;
 	} else if (malaya_buwaya == 12) {
 		emotion ET_CRY;
-		mes "[Totoy]";
-		mes "Poor Ed. I miss Ed. Wail!!!!";
+		mes "[托托]";
+		mes "可怜的艾德。我想念艾德。呜呜！！！！";
 		next;
 		enablenpc "Dog#buwaya_totoi";
-		mes "[Dog]";
-		mes "Bark bark!!";
+		mes "[狗]";
+		mes "汪汪！！";
 		next;
 		emotion ET_HUK;
-		mes "[Totoy]";
-		mes "Ed!!";
-		mes "Ed!!! You're alive!!!";
-		mes "You've come back!!! I'm so happy!!!!";
+		mes "[托托]";
+		mes "艾德！！";
+		mes "艾德！！！你还活着！！！";
+		mes "你回来了！！！我太高兴了！！！！";
 		next;
-		mes "[Totoy]";
-		mes "Did you bring Ed back?";
-		mes "Thank you so much!";
-		mes "You didn't see the monster, did you?";
+		mes "[托托]";
+		mes "你把艾德带回来了吗？";
+		mes "非常感谢你！";
+		mes "你没看到那个怪物吧？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "The monster is called Buwaya. I told the Guard about the monster. You better not go near the place again.";
+		mes "那个怪物叫布瓦亚。我告诉了卫兵关于那个怪物。你最好不要再靠近那个地方。";
 		next;
-		mes "[Totoy]";
-		mes "Okay!";
-		mes "He he. Ed, the woods are too dangerous so we can't go there for bugs anymore.";
+		mes "[托托]";
+		mes "好的！";
+		mes "嘿嘿。艾德，森林太危险了，所以我们不能再去那里抓虫子了。";
 		next;
-		mes "[Dog]";
-		mes "Whimper...";
+		mes "[狗]";
+		mes "呜呜...";
 		next;
-		mes "[Totoy]";
-		mes "But I'm sure we can find a way to keep our reputation with other creepy stuff!";
+		mes "[托托]";
+		mes "但我相信我们可以找到其他可怕的东西来保持我们的声誉！";
 		next;
-		mes "[Dog]";
-		mes "Bark bark!!";
+		mes "[狗]";
+		mes "汪汪！！";
 		next;
 		/*
 		// Better translation needed.
-		mes "[Totoy]";
-		mes "Um... hey!";
+		mes "[托托]";
+		mes "嗯...嘿！";
 		next;
-		select("You are a " + ((Sex == SEX_MALE) ? "boy" : "girl") + ", aren't you?");
+		select("你是一个 " + ((Sex == SEX_MALE) ? "boy" : "girl") + ", aren't you?");
 		emotion ET_HUK, playerattached();
-		mes "[Totoy]";
-		mes "Huh?";
+		mes "[托托]";
+		mes "哈？";
 		if (Sex == SEX_FEMALE) {
-			mes "Totoy is a girl, and you are a boy.";
-			mes "You're not a boy?";
+			mes "托托是女孩，而你是男孩。";
+			mes "你不是男孩吗？";
 		} else {
-			mes "Totoy is a girl, and you are a girl.";
-			mes "You're not a girl?";
+			mes "托托是女孩，而你是女孩。";
+			mes "你不是女孩吗？";
 		}
 		next;
-		mes "[Totoy]";
-		mes "Is it because my name, Totoy? But that's the name my parents gave me thinking I would be a boy when I was born. Ha ha!";
+		mes "[托托]";
+		mes "是因为我的名字，托托吗？但这是我父母给我的名字，他们以为我出生时会是男孩。哈哈！";
 		next;
 		*/
-		mes "[Totoy]";
-		mes "Anyway, thanks for bringing my best friend back.";
-		mes "I don't have much but would like to thank you. Wait, let me see what's inside my drawer. He he-";
+		mes "[托托]";
+		mes "无论如何，谢谢你把我最好的朋友带回来。";
+		mes "我没有太多东西，但想感谢你。等一下，让我看看我抽屉里有什么。嘿嘿-";
 		set malaya_buwaya,13;
 		erasequest 2278;
 		setquest 2279;
 		close;
 	} else if (malaya_buwaya == 13) {
 		if (checkweight(1201,1) == 0 || MaxWeight - Weight < 2000) {
-			mes "- Wait!! -";
-			mes "- You have too many items on you. -";
-			mes "- Cannot receive the item. -";
-			mes "- Clean up your items -";
-			mes "- And please try again. -";
+			mes "- 等等！！ -";
+			mes "- 你身上有太多物品了。 -";
+			mes "- 无法接收物品。 -";
+			mes "- 清理你的物品 -";
+			mes "- 然后请再试一次。 -";
 			close;
 		}
-		mes "- Totoy goes through the drawer, turning it upside down. Making a mess of the room. -";
+		mes "- Totoy 翻遍抽屉，把它翻了个底朝天。弄得房间一团糟。 -";
 		next;
-		mes "[Totoy]";
-		mes "Found it!";
+		mes "[托托]";
+		mes "找到了！";
 		next;
-		mes "[Totoy]";
-		mes "Here. My mom gave it to me but I don't know how to use it... He he.";
-		mes "I hope you can use it.";
+		mes "[托托]";
+		mes "给你。妈妈给我的，但我不知道怎么用...嘿嘿。";
+		mes "我希望你能用得上。";
 		next;
-		mes "[Totoy]";
-		mes "Visit me when you get bored!";
-		mes "Just don't ask about the treasure again~!";
+		mes "[托托]";
+		mes "无聊的时候来找我！";
+		mes "别再问关于宝藏的事了~!";
 		next;
-		mes "[Dog]";
-		mes "Woof woof woof!!!!";
+		mes "[狗]";
+		mes "汪汪汪!!!!";
 		set malaya_buwaya,14;
 		if (!VIP_SCRIPT || vip_status(VIP_STATUS_ACTIVE))
 			getitem 6497,10; //Lesser_Agimat
@@ -4278,9 +4278,9 @@ ma_in01,47,101,3	script	Totoy#buwaya	577,7,7,{
 		setquest 2280;
 		close;
 	} else {
-		mes "[Totoy]";
-		mes "Ed went out to play so I'm alone.";
-		mes "Would there be something awesome to surprise people with?";
+		mes "[托托]";
+		mes "艾德出去玩了，所以我一个人。";
+		mes "会不会有什么惊人的东西让人惊讶呢？";
 		close;
 	}
 OnTouch_:
@@ -4297,18 +4297,18 @@ OnInit:
 
 ma_in01,44,105,3	script	Drawer#buwaya	844,{
 	if (malaya_buwaya == 3) {
-		mes "- You look for the Green Potion in Totoys drawer. -";
+		mes "- 你在托托的抽屉里寻找绿色药水。 -";
 		next;
-		mes "- Rummaging, fumbling. -";
+		mes "- 翻找，摸索。 -";
 		next;
-		mes "- Rummaging, fumbling. -";
-		mes "- Rummaging, fumbling. -";
+		mes "- 翻找，摸索。 -";
+		mes "- 翻找，摸索。 -";
 		next;
-		mes "- Clunk, clank, crunch. -";
+		mes "- 咔嗒，叮当，嘎吱。 -";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "What? I only see an empty potion bottle.";
-		mes "Does this mean I have to get the potion myself? That Totoy is really a troublemaker.";
+		mes "什么？我只看到一个空药水瓶。";
+		mes "这意味着我必须自己去拿药水吗？那个托托真是个麻烦制造者。";
 		close;
 	}
 	end;
@@ -4460,59 +4460,59 @@ malaya,290,152,5	script	Master of Hunting#buwaya	578,{
 
 malaya,291,152,3	script	#buwaya_soil	557,{
 	if (malaya_buwaya == 9) {
-		mes "- Rummaging, fumbling. -";
+		mes "- 翻找，摸索。 -";
 		next;
-		mes "- Rummaging, fumbling. -";
-		mes "- Wriggling, wiggling. -";
+		mes "- 翻找，摸索。 -";
+		mes "- 扭动，摇摆。 -";
 		next;
-		mes "- Rummaging, fumbling. -";
-		mes "- Wriggling, wiggling. -";
-		mes "- Sway, swag. -";
+		mes "- 翻找，摸索。 -";
+		mes "- 扭动，摇摆。 -";
+		mes "- 摇晃，摆动。 -";
 		next;
 		if (rand(1,10) <= 5) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "I don't see anything.";
+			mes "我什么也没看到。";
 			next;
-			mes "[Master of Hunting]";
-			mes "It can't be! Look closer!";
+			mes "[狩猎大师]";
+			mes "不可能！仔细看看！";
 		} else {
-			mes "- Felt something pointy with the end of your fingers. -";
+			mes "- 用手指尖感觉到了一些尖锐的东西。 -";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Ouch!";
-			mes "What is this?";
+			mes "哎呀！";
+			mes "这是什么？";
 			next;
-			mes "[Master of Hunting]";
-			mes "Ho! This is huge! And so dense that it can easily scratch steel!";
+			mes "[狩猎大师]";
+			mes "哇！这个好大！而且这么密，轻易就能划伤钢铁！";
 			next;
-			mes "[Master of Hunting]";
-			mes "This is ^3131FFBuwaya^000000's tooth!";
-			mes "How could this be!";
+			mes "[狩猎大师]";
+			mes "这是^3131FFBuwaya^000000的牙齿！";
+			mes "这怎么可能！";
 			next;
-			select("Buwaya?");
-			mes "[Master of Hunting]";
-			mes "Ah! Yes! Stop holding it up. It stinks. Go wash your hands.";
+			select("布瓦亚？");
+			mes "[狩猎大师]";
+			mes "啊！是的！别再举着了。太臭了。去洗手吧。";
 			next;
-			mes "[Master of Hunting]";
-			mes "Hmm. The monster the kid saw must be Buwaya. No doubt about it.";
+			mes "[狩猎大师]";
+			mes "嗯。孩子看到的怪物一定是Buwaya。毫无疑问。";
 			next;
-			mes "[Master of Hunting]";
-			mes "I've heard that the wife of the neighbor of my grandfather's uncle on my mom's side was also killed by Buwaya.";
+			mes "[狩猎大师]";
+			mes "我听说我母亲那边的祖父的叔叔的邻居的妻子也被Buwaya杀了。";
 			next;
-			mes "[Master of Hunting]";
-			mes "They say no living thing is left after Buwaya passes by.";
-			mes "Totoy is one lucky kid. Wow!";
+			mes "[狩猎大师]";
+			mes "他们说Buwaya经过后没有生物幸存。";
+			mes "Totoy真是个幸运的孩子。哇！";
 			next;
-			mes "[Master of Hunting]";
-			mes "Buwaya was inactive for a long time. Wonder if it was hibernating? Hmm.";
+			mes "[狩猎大师]";
+			mes "Buwaya已经很长时间没有活动了。想知道它是不是在冬眠？嗯。";
 			next;
-			mes "[Master of Hunting]";
-			mes "Now that I know that a monster like that is out there, I should be cautious, too.";
-			mes "Must tell the villagers not to go too deep into the woods.";
+			mes "[狩猎大师]";
+			mes "现在我知道外面有这样的怪物，我也应该小心了。";
+			mes "必须告诉村民们不要深入森林。";
 			next;
-			mes "[Master of Hunting]";
-			mes "Please go and tell the Guard Leader that Buwaya is active again.";
-			mes "I will contact other hunters in the meantime and think of a plan to kill Buwaya.";
+			mes "[狩猎大师]";
+			mes "请去告诉卫兵队长，布瓦亚又活跃了。";
+			mes "我会联系其他猎人，同时想个计划来杀掉布瓦亚。";
 			set malaya_buwaya,10;
 			disablenpc "#buwaya_soil";
 			erasequest 2275;
@@ -4725,7 +4725,7 @@ OnTouch:
 	if (malaya_buwaya == 11) {
 		enablenpc "Dog#buwaya";
 		//mes "[Here something]";
-		mes "Bark bark!!";
+		mes "汪汪！！";
 		close;
 	}
 	end;
@@ -4735,62 +4735,62 @@ ma_fild02,317,250,0	duplicate(#buwaya_todog1)	#buwaya_todog3	139,7,7
 
 ma_fild02,312,259,3	script	Dog#buwaya	81,{
 	if (malaya_buwaya == 11) {
-		mes "[Dog]";
-		mes "Bark bark!!";
+		mes "[狗]";
+		mes "汪汪！！";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Why is a dog here?";
+		mes "一只狗怎么会在这里？";
 		next;
-		if (select("Look closely at the dog.:Ignore it.") == 2) {
+		if (select("仔细看看这只狗。:忽略它。") == 2) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "Looks like a lost dog.";
+			mes "看起来是一只迷路的狗。";
 			close;
 		}
-		mes "- Looked real hard at the dirty dog and noticed an old collar on its neck. -";
+		mes "- 认真看了看这只脏狗，发现它脖子上有个旧项圈。 -";
 		next;
-		mes "- The collar says, 'Forever with Totoy'. -";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "So you are Ed?";
-		next;
-		mes "[Dog]";
-		mes "Bark bark!";
+		mes "- 项圈上写着：‘永远和托托在一起’。 -";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "You didn't get killed by Buwaya. You lucky little dog. Let's go back to your owner.";
+		mes "所以你是艾德？";
+		next;
+		mes "[狗]";
+		mes "汪汪！";
+		next;
+		mes "[" + strcharinfo(0) + "]";
+		mes "你没有被布瓦亚杀死。你这只幸运的小狗。我们回去找你的主人吧。";
 		next;
 		emotion ET_DELIGHT;
-		mes "[Dog]";
-		mes "Bark bark!!";
+		mes "[狗]";
+		mes "汪汪！！";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Ah, before we go, do you happen to know where Buwaya's nest is?";
+		mes "啊，在我们走之前，你知道布瓦亚的巢在哪里吗？";
 		next;
-		mes "[Dog]";
-		mes "Woof!";
+		mes "[狗]";
+		mes "汪！";
 		next;
-		mes "- Ed is one smart dog and understood what you asked him. Ed started to bark towards the north. -";
+		mes "- 艾德是一只聪明的狗，明白你问了什么。艾德开始朝北方吠叫。-";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Buwaya is over there!";
-		mes "Then I should shoot the smoke bomb here.";
+		mes "布瓦亚就在那边！";
+		mes "那我应该在这里发射烟雾弹。";
 		next;
-		mes "- You take the smoke bomb out of your inventory and shoot towards the sky. -";
+		mes "- 你从背包中拿出烟雾弹，朝天空发射。-";
 		next;
-		mes "^FF0000- Shoook-^000000";
+		mes "^FF0000- 嘭-^000000";
 		enablenpc "Guard#buwayacave";
 		specialeffect2 EF_MVP;
 		next;
-		mes "[Guard]";
-		mes "Job well done!";
-		mes "So Buwaya lives in remote place like this. I will make sure this information goes to the Guard Leader!";
+		mes "[卫兵]";
+		mes "干得好！";
+		mes "所以布瓦亚住在这样的偏远地方。我会确保这个信息传达给卫兵队长！";
 		disablenpc "Guard#buwayacave";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Should I return Ed to Totoy first and then go see the Guard Leader?";
+		mes "我应该先把埃德带回托托伊，然后再去见卫兵队长吗？";
 		next;
-		mes "[Dog]";
-		mes "Bark bark!";
+		mes "[狗]";
+		mes "汪汪！";
 		set malaya_buwaya,12;
 		disablenpc "Dog#buwaya";
 		erasequest 2277;
@@ -4798,7 +4798,7 @@ ma_fild02,312,259,3	script	Dog#buwaya	81,{
 		close;
 	} else if (malaya_buwaya == 12) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "Lets first bring Ed to Totoy and then go back to the Guard Leader.";
+		mes "我们先把埃德带到托托伊，然后再回去见卫兵队长。";
 		close;
 	}
 	end;
@@ -5482,11 +5482,11 @@ ma_fild01,171,235,0	script	#bako1	139,2,2,{
 	end;
 OnTouch_:
 	if (malaya_bakona1 == 5) {
-		mes "The damage is so severe";
-		mes "that the record is unidentifiable.";
-		mes "When inserting the Slate Piece";
-		mes "to a hole on the wall, it fits perfectly like a piece of puzzle.";
-		mes "The letters are not clear but you can still read it.";
+		mes "损坏程度非常严重";
+		mes "以至于记录无法辨认。";
+		mes "当插入石板碎片时";
+		mes "它完美地适合墙上的一个洞，就像拼图的一块。";
+		mes "字母不清晰，但你仍然可以读到。";
 		next;
 		callsub L_Record;
 		set malaya_bakona1,6;
@@ -5494,14 +5494,14 @@ OnTouch_:
 		setquest 1179;
 		close;
 	} else if (malaya_bakona1 == 6) {
-		mes "Here is the record left by a swordsman";
-		mes "from a hundred years ago.";
+		mes "这是剑士留下的记录";
+		mes "来自一百年前。";
 		next;
-		switch(select("I don't need to read it.:Read the record again.")) {
+		switch(select("我不需要再读它。:再次阅读记录。")) {
 		case 1:
-			mes "I remember the story clearly.";
-			mes "Let's tell the ^0000FFOld Legend Teller^000000 in Malaya";
-			mes "about what I discovered.";
+			mes "我清楚地记得这个故事。";
+			mes "让我们去找^0000FF老传奇讲述者^000000在马来亚";
+			mes "告诉他我发现的事情。";
 			close;
 		case 2:
 			callsub L_Record;
@@ -5511,44 +5511,44 @@ OnTouch_:
 	end;
 
 L_Record:
-	mes "[Record left by a swordsman from a hundred years ago]";
-	mes "After fighting with Bakonawa, I sustained a critical wound";
-	mes "and came to this place.";
-	mes "Only thing I can do is";
-	mes "Place the Wooden Doll in one place";
-	mes "the monster would come.";
+	mes "[一位来自一百年前的剑士留下的记录]";
+	mes "在与巴科纳瓦战斗后，我受了重伤";
+	mes "并来到了这个地方。";
+	mes "我能做的只有";
+	mes "把木偶放在一个地方";
+	mes "怪物就会出现。";
 	next;
-	mes "[Record left by a swordsman from a hundred years ago]";
-	mes "^0000FFSometimes transforming into a child, or even a old lady,^000000";
-	mes "I know that ^0000FFBakonawa^000000has been";
-	mes "chasing after me in secret to kill me.";
-	mes "Because of that critical injury the monster * sustained,";
+	mes "[一位来自一百年前的剑士留下的记录]";
+	mes "^0000FF有时会变成小孩，甚至是老妇人，^000000";
+	mes "我知道 ^0000FF巴科纳瓦^000000 一直在";
+	mes "暗中追杀我想要杀了我。";
+	mes "因为那只怪物受到的致命伤害，*";
 	next;
-	mes "[Record left by a swordsman from a hundred years ago]";
-	mes "** it will need nearly a hundred years";
-	mes "for Bakonawa to absorb the power of the moon";
-	mes "to fully recover its power.";
-	mes "Beware of the day the moon disappears.";
+	mes "[一位来自一百年前的剑士留下的记录]";
+	mes "** 它需要近百年的时间";
+	mes "才能吸收月亮的力量";
+	mes "以完全恢复它的力量。";
+	mes "要小心月亮消失的那一天。";
 	next;
-	mes "[Record left by a swordsman from a hundred years ago]";
-	mes "The day will come when Bakonawa";
-	mes "will run amuck.";
-	mes "But it will take nearly a hundred years to fully recover its power.";
-	mes "There will always be someone better than me";
-	mes "to defeat the vile creature.";
+	mes "[一位来自一百年前的剑士留下的记录]";
+	mes "那一天将会到来，巴科纳瓦";
+	mes "将会失控。";
+	mes "但它需要近百年的时间才能完全恢复力量。";
+	mes "总会有人比我更强。";
+	mes "去击败这个邪恶的生物。";
 	next;
-	mes "[Record left by a swordsman from a hundred years ago]";
-	mes "I will place my trust in the one that will replace me ages from now...";
+	mes "[一位来自一百年前的剑士留下的记录]";
+	mes "我将把我的信任寄托在未来将取代我的人身上...";
 	next;
-	mes "How could this be...";
-	mes "Lie told by Bakonawa when it turned into an old lady";
-	mes "in order to take revenge on the swordsman";
-	mes "turned into a legend after all these years.";
+	mes "这怎么可能...";
+	mes "巴科纳瓦变成老妇人时所说的谎言";
+	mes "为了报复那个剑士";
+	mes "经过这些年变成了传奇。";
 	next;
-	mes "I found out that Bakonawa";
-	mes "is nothing but a blood thirsty monster.";
-	mes "I must tell what I know to the ^0000FFOld Legend Teller^000000";
-	mes "in Malaya.";
+	mes "我发现巴科纳瓦";
+	mes "不过是一个嗜血的怪物。";
+	mes "我必须把我所知道的告诉^0000FF老传奇讲述者^000000";
+	mes "在马来亚。";
 	return;
 }
 
@@ -6203,38 +6203,38 @@ ma_fild01,54,244,0	script	#bako2	139,2,2,{
 	end;
 OnTouch_:
 	if (malaya_bakona2 == 9) {
-		mes "I should set up the trap";
-		mes "right about here.";
+		mes "我应该设置陷阱";
+		mes "就在这里。";
 		next;
-		mes "[Gruffy Worker]";
-		mes "Using the tools like this";
-		mes "bang bang bang!";
+		mes "[粗犷的工人]";
+		mes "这样使用工具";
+		mes "砰砰砰！";
 		next;
-		mes "bang bang bang!";
+		mes "砰砰砰！";
 		next;
-		mes "The trap is now set.";
+		mes "陷阱已经设置好了。";
 		next;
-		mes "[Gruffy Worker]";
-		mes "You can find the";
-		mes "Grumpy Worker near where";
-		mes "Baryo Mahiwaga Field connects to Bakonawa Lake.";
-		mes "Go and set up the trap together.";
+		mes "[粗犷的工人]";
+		mes "你可以找到";
+		mes "脾气暴躁的工人在";
+		mes "巴里奥·马希瓦加田与巴科纳瓦湖连接的地方。";
+		mes "去和他一起设置陷阱。";
 		erasequest 1188;
 		setquest 1189;
 		set malaya_bakona2,10;
 		close;
 	} else if (malaya_bakona2 == 10) {
-		mes "The trap has been set up here.";
+		mes "陷阱已经设置在这里。";
 		next;
-		mes "[Gruffy Worker]";
-		mes "This trap is not meant to capture you,";
-		mes "so move.";
+		mes "[粗犷的工人]";
+		mes "这个陷阱不是用来捕捉你的，";
+		mes "所以快走。";
 		next;
-		mes "[Gruffy Worker]";
-		mes "You can find the";
-		mes "Grumpy Worker near where";
-		mes "Baryo Mahiwaga Field connects to Bakonawa Lake.";
-		mes "Go there to him.";
+		mes "[粗犷的工人]";
+		mes "你可以找到";
+		mes "脾气暴躁的工人在";
+		mes "巴里奥·马希瓦加田与巴科纳瓦湖连接的地方。";
+		mes "去那里找他。";
 		close;
 	}
 	end;
@@ -6272,39 +6272,39 @@ ma_fild01,242,116,0	script	#bako3	139,2,2,{
 	end;
 OnTouch_:
 	if (malaya_bakona2 == 10) {
-		mes "I should set up the trap";
-		mes "right about here.";
+		mes "我应该设置陷阱";
+		mes "就在这里。";
 		next;
-		mes "[Grumpy Worker]";
-		mes "I really don't like it here!";
+		mes "[愤怒的工人]";
+		mes "我真的不喜欢这里！";
 		mes "...";
-		mes "With this pickax,";
-		mes "dig dig dig!";
+		mes "用这个镐头，";
+		mes "挖挖挖！";
 		next;
-		mes "dig dig dig!";
+		mes "挖挖挖！";
 		next;
-		mes "The trap is now set.";
+		mes "陷阱已经设置好了。";
 		next;
-		mes "[Grumpy Worker]";
-		mes "Go find the Cowardly Worker";
-		mes "near the entrance of Bakonawa Lake.";
-		mes "Come on, move it!";
+		mes "[愤怒的工人]";
+		mes "去找懦弱的工人";
+		mes "在巴科纳瓦湖的入口附近。";
+		mes "快点，动起来！";
 		erasequest 1189;
 		setquest 1190;
 		set malaya_bakona2,11;
 		close;
 	} else if (malaya_bakona2 == 11) {
-		mes "The trap has been set up here.";
+		mes "陷阱已经设置在这里。";
 		next;
-		mes "[Grumpy Worker]";
-		mes "Are you trying to test";
-		mes "with your body if the trap works?";
-		mes "Move aside!";
+		mes "[愤怒的工人]";
+		mes "你是在用身体测试";
+		mes "陷阱是否有效吗？";
+		mes "让开！";
 		next;
-		mes "[Grumpy Worker]";
-		mes "Go find the Cowardly Worker";
-		mes "near the entrance of Bakonawa Lake.";
-		mes "Come on, move it!";
+		mes "[愤怒的工人]";
+		mes "去找懦弱的工人";
+		mes "在巴科纳瓦湖的入口附近。";
+		mes "快点，动起来！";
 		close;
 	}
 	end;
@@ -6345,37 +6345,37 @@ ma_scene01,179,85,0	script	#bako4	139,2,2,{
 	end;
 OnTouch_:
 	if (malaya_bakona2 == 11) {
-		mes "I should set up the trap";
-		mes "right about here.";
+		mes "我应该设置陷阱";
+		mes "就在这里。";
 		next;
-		mes "[Cowardly Worker]";
-		mes "There is nothing weird";
-		mes "buried here right?";
+		mes "[懦弱的工人]";
+		mes "这里没有什么奇怪的";
+		mes "东西埋着，对吧？";
 		mes "...";
-		mes "Using the shovel, dig dig dig!";
+		mes "用铲子，挖挖挖！";
 		next;
-		mes "dig dig dig!";
+		mes "挖挖挖！";
 		next;
-		mes "The trap is now set.";
+		mes "陷阱已经设置好了。";
 		next;
-		mes "[Cowardly Worker]";
-		mes "Go up and you will";
-		mes "find the Gloomy Worker.";
+		mes "[懦弱的工人]";
+		mes "上去你会";
+		mes "找到阴郁的工人。";
 		erasequest 1190;
 		setquest 1191;
 		set malaya_bakona2,12;
 		close;
 	} else if (malaya_bakona2 == 12) {
-		mes "The trap has been set up here.";
+		mes "陷阱已经设置在这里。";
 		next;
-		mes "[Cowardly Worker]";
-		mes "Step aside immediately!";
-		mes "Bakonawa might find out this is a trap";
-		mes "and come for us.";
+		mes "[懦弱的工人]";
+		mes "立刻让开！";
+		mes "巴科纳瓦可能会发现这是一个陷阱";
+		mes "并来找我们。";
 		next;
-		mes "[Cowardly Worker]";
-		mes "Go up and you will";
-		mes "find the Gloomy Worker.";
+		mes "[懦弱的工人]";
+		mes "上去你会";
+		mes "找到阴郁的工人。";
 		emotion ET_SWEAT, playerattached();
 		close;
 	}
@@ -6415,31 +6415,31 @@ ma_scene01,138,122,0	script	#bako5	139,2,2,{
 	end;
 OnTouch_:
 	if (malaya_bakona2 == 12) {
-		mes "I should set up the trap";
-		mes "right about here.";
+		mes "我应该设置陷阱";
+		mes "就在这里。";
 		next;
-		mes "[Gloomy Worker]";
-		mes "Just catch this net,";
-		mes "throw throw!";
+		mes "[阴郁的工人]";
+		mes "就抓住这个网，";
+		mes "扔扔！";
 		next;
-		mes "throw throw!";
+		mes "扔扔！";
 		next;
-		mes "The trap is now set.";
+		mes "陷阱已经设置好了。";
 		next;
-		mes "[Gloomy Worker]";
-		mes "Just go up the path and you will find";
-		mes "Sentimental Worker.";
-		mes "Though I doubt it will be much help.";
+		mes "[阴郁的工人]";
+		mes "沿着小路走上去你会找到";
+		mes "多愁善感的工人。";
+		mes "不过我怀疑这不会有什么帮助。";
 		erasequest 1191;
 		setquest 1192;
 		set malaya_bakona2,13;
 		close;
 	} else if (malaya_bakona2 == 13) {
-		mes "The trap has been set up here.";
+		mes "陷阱已经设置在这里。";
 		next;
-		mes "[Gloomy Worker]";
-		mes "The trap is meaningless.";
-		mes "See? It doesn't even work.";
+		mes "[阴郁的工人]";
+		mes "这个陷阱毫无意义。";
+		mes "看？它根本不起作用。";
 		close;
 	}
 	end;
@@ -6482,32 +6482,32 @@ ma_scene01,171,174,0	script	#bako6	139,2,2,{
 	end;
 OnTouch_:
 	if (malaya_bakona2 == 13) {
-		mes "I should set up the trap";
-		mes "right about here.";
+		mes "我应该设置陷阱";
+		mes "就在这里。";
 		next;
-		mes "[Sentimental Worker]";
-		mes "Wow! This really is a perfect place";
-		mes "to set up a trap.";
-		mes "I'm going to throw the rope!";
-		mes "Here goes the rope!";
+		mes "[多愁善感的工人]";
+		mes "哇！这真是一个完美的地方";
+		mes "来设置一个陷阱。";
+		mes "我要扔绳子了！";
+		mes "绳子来了！";
 		next;
-		mes "Here goes the rope!";
+		mes "绳子来了！";
 		next;
-		mes "The trap is now set.";
-		mes "Let's go to the Village Chief";
-		mes "now that the trap is set.";
+		mes "陷阱已经设置好了。";
+		mes "我们去找村长吧";
+		mes "现在陷阱已经设置好了。";
 		erasequest 1192;
 		setquest 1193;
 		set malaya_bakona2,14;
 		close;
 	} else if (malaya_bakona2 == 14) {
-		mes "The trap is set here.";
+		mes "陷阱就设置在这里。";
 		next;
-		mes "[Sentimental Worker]";
-		mes "Try out the trap first!";
-		mes "I'm so curious";
-		mes "what would happen!";
-		mes "It's going to be so much fun!";
+		mes "[多愁善感的工人]";
+		mes "先试试这个陷阱！";
+		mes "我好好奇";
+		mes "会发生什么！";
+		mes "这会非常有趣！";
 		close;
 	}
 	end;
@@ -6840,105 +6840,105 @@ L_Incomplete:
 
 malaya,55,72,4	script	Nurse#ma_n1	569,{
 	if (malaya_hi < 20) {
-		mes "[Nurse]";
-		mes "People of this town are too cautious of outsiders.";
+		mes "[护士]";
+		mes "这个镇的人对外来者太谨慎了。";
 		emotion ET_ANGER;
 		cutin "malaya_nurseA01",2;
 		next;
-		mes "[Nurse]";
-		mes "I'm sure they have their reasons, but I wish they'd tell me how to get closer...";
+		mes "[护士]";
+		mes "我相信他们有他们的理由，但我希望他们能告诉我如何更接近……";
 		close2;
 		cutin "",255;
 		end;
 	}
 	if (BaseLevel < 100) {
-		mes "There's a nurse outside the hospital holding a large bag.";
-		mes "I don't think I can help her.";
+		mes "医院外面有一位护士拿着一个大袋子。";
+		mes "我觉得我帮不了她。";
 		close;
 	}
 	if (malaya_bang == 0) {
-		mes "[Nurse]";
-		mes "Hey, hold on.";
-		mes "Are you planning on going inside?";
+		mes "[护士]";
+		mes "嘿，等一下。";
+		mes "你打算进去吗？";
 		cutin "malaya_nurseA01",2;
 		next;
-		switch(select("Yes.:No.")) {
+		switch(select("是。:否。")) {
 		case 1:
-			mes "[Nurse]";
-			mes "Oh~";
-			mes "I'm so glad!";
-			mes "I was literally waiting all day for someone to some by.";
+			mes "[护士]";
+			mes "哦~";
+			mes "我太高兴了！";
+			mes "我今天整天都在等人过来。";
 			cutin "malaya_nurseA02",2;
 			next;
-			switch(select("About the hospital:Reason for stalling me:Ignore.")) {
+			switch(select("关于医院:拖延我的原因:忽略。")) {
 			case 1:
-				mes "[Nurse]";
-				mes "This hospital is the only one in town.";
-				mes "And it's going to be my new job.";
+				mes "[护士]";
+				mes "这家医院是镇上唯一的一家。";
+				mes "而且这将是我的新工作。";
 				cutin "malaya_nurseA03",2;
 				next;
-				mes "[Nurse]";
-				mes "I heard it was just built, but it seems so creepy....";
+				mes "[护士]";
+				mes "我听说它刚建好，但看起来真让人毛骨悚然……";
 				emotion ET_SWEAT;
 				next;
-				mes "[Nurse]";
-				mes "I was surprised when I got here too.";
-				mes "It says 'closed' all around it!";
+				mes "[护士]";
+				mes "我来到这里时也很惊讶。";
+				mes "周围写着“关闭”!";
 				next;
-				select("Reason for stalling me.");
-				mes "[Nurse]";
-				mes "I was told that they needed nurses in this town,";
-				mes "so I came here after turning down numerous proposals.";
+				select("拖延我的原因。");
+				mes "[护士]";
+				mes "我被告知这个城镇需要护士，";
+				mes "所以我拒绝了许多提议后来了这里。";
 				next;
-				mes "[Nurse]";
-				mes "I'd heard they were really cautious of outsiders...";
+				mes "[护士]";
+				mes "我听说他们对外来者非常谨慎......";
 				next;
-				mes "[Nurse]";
-				mes "Not even a soul to welcome me, let alone a party!";
-				mes "Shocking!";
+				mes "[护士]";
+				mes "连一个人都没有欢迎我，更不用说聚会了!";
+				mes "太震惊了!";
 				emotion ET_CRY;
 				next;
-				mes "[Nurse]";
-				mes "What's more, I made it here after being lost and now I'm facing a creepy and locked hospital!";
+				mes "[护士]";
+				mes "更糟的是，我迷路后终于到了这里，现在却面对着一个阴森森的锁着的医院!";
 				next;
 				break;
 			case 2:
-				mes "[Nurse]";
-				mes "I was told that they needed nurses in this town,";
-				mes "so I came here after turning down numerous proposals.";
+				mes "[护士]";
+				mes "我被告知这个城镇需要护士，";
+				mes "所以我拒绝了许多提议后来了这里。";
 				cutin "malaya_nurseA03",2;
 				next;
-				mes "[Nurse]";
-				mes "I'd heard they were really cautious of outsiders...";
+				mes "[护士]";
+				mes "我听说他们对外来者非常谨慎......";
 				next;
-				mes "[Nurse]";
-				mes "Not even a soul to welcome me, let alone a party!";
-				mes "Shocking!";
+				mes "[护士]";
+				mes "连一个人都没有欢迎我，更不用说聚会了!";
+				mes "太震惊了!";
 				emotion ET_CRY;
 				next;
-				mes "[Nurse]";
-				mes "What's more, I made it here after being lost and now I'm facing a creepy and locked hospital!";
+				mes "[护士]";
+				mes "更糟的是，我迷路后终于到了这里，现在却面对着一个阴森森的锁着的医院!";
 				next;
-				select("About the hospital");
-				mes "[Nurse]";
-				mes "This hospital is the only one in town.";
-				mes "And it's going to be my new job.";
+				select("关于医院");
+				mes "[护士]";
+				mes "这家医院是镇上唯一的一家。";
+				mes "而且这将是我的新工作。";
 				next;
-				mes "[Nurse]";
-				mes "I heard it was just built, but it seems so creepy....";
+				mes "[护士]";
+				mes "我听说它刚建好，但看起来真让人毛骨悚然……";
 				emotion ET_SWEAT;
 				next;
-				mes "[Nurse]";
-				mes "I was surprised when I got here too.";
-				mes "It says 'closed' all around it!";
+				mes "[护士]";
+				mes "我来到这里时也很惊讶。";
+				mes "周围写着“关闭”!";
 				next;
 				break;
 			case 3:
-				mes "[Nurse]";
-				mes "Yes, you must be busy.";
-				mes "Oh, well.";
-				mes "I'll let you be on your way.";
-				mes "Don't mind me. *Sob*";
+				mes "[护士]";
+				mes "是的，你一定很忙。";
+				mes "哦，好吧。";
+				mes "我让你继续你的事情。";
+				mes "别在意我。*呜*";
 				emotion ET_CRY;
 				cutin "malaya_nurseA03",2;
 				close2;
@@ -6947,61 +6947,61 @@ malaya,55,72,4	script	Nurse#ma_n1	569,{
 			}
 			break;
 		case 2:
-			mes "[Nurse]";
-			mes "Oh, I see...";
+			mes "[护士]";
+			mes "哦，我明白了...";
 			emotion ET_CRY;
 			close2;
 			cutin "",255;
 			end;
 		}
-		mes "[Nurse]";
-		mes "Now that you say it... If you're going inside, could you take me with you?";
+		mes "[护士]";
+		mes "既然你这么说... 如果你要进去，可以带我一起吗？";
 		cutin "malaya_nurseA04",2;
 		next;
-		mes "[Nurse]";
-		mes "Doors are locked!";
-		mes "My bags are heavy!";
-		mes "And my legs are killing me.";
+		mes "[护士]";
+		mes "门锁上了！";
+		mes "我的包太重了！";
+		mes "我的腿也快要断了。";
 		cutin "malaya_nurseA03",2;
 		next;
-		mes "[Nurse]";
-		mes "If I knew this was going to happen, I would've worn ER night-shift shoes instead of first-day shoes... *sniff*";
+		mes "[护士]";
+		mes "如果我知道会发生这种事，我就该穿上夜班鞋，而不是第一天的鞋子... *抽泣*";
 		emotion ET_CRY;
 		next;
-		switch(select("Help.:Don't help.")) {
+		switch(select("帮助。:不帮助。")) {
 		case 1:
-			mes "[Nurse]";
-			mes "*Sob*";
-			mes "I guess this world is still worth living in.";
-			mes "You are too kind.";
+			mes "[护士]";
+			mes "*呜*";
+			mes "我想这个世界还是值得活下去的。";
+			mes "你真是太好了。";
 			emotion ET_CRY;
 			next;
-			mes "[Nurse Las]";
-			mes "I'm 'Las', who's supposed to work in this hospital.";
-			mes "By the looks of it, though, I may become jobless...";
+			mes "[护士 拉斯]";
+			mes "我是'拉斯'，本该在这家医院工作的。";
+			mes "不过看起来，我可能会失业...";
 			next;
-			mes "[Nurse Las]";
-			mes "Let's start by getting inside.";
+			mes "[护士 拉斯]";
+			mes "我们先进去吧。";
 			next;
-			mes "[Nurse Las]";
-			mes "Before that....";
-			mes "Could you get something to wrap my feet? I can't put my shoes on because I've got blisters.";
+			mes "[护士 拉斯]";
+			mes "在此之前....";
+			mes "你能帮我找点东西包裹我的脚吗？我因为起水泡不能穿鞋。";
 			emotion ET_HELP;
 			cutin "malaya_nurseA04",2;
 			next;
-			mes "[Nurse Las]";
-			mes "2 Rotten Bandages should do to wrap both my feet. They may look dirty, but they have special liquid on them that have amazing effects.";
+			mes "[护士 拉斯]";
+			mes "2个腐烂的绷带就可以包裹我的双脚。它们看起来可能很脏，但上面有特殊的液体，效果惊人。";
 			set malaya_bang,1;
 			setquest 11284;
 			close2;
 			cutin "",255;
 			end;
 		case 2:
-			mes "[Nurse]";
-			mes "Yes, you must be busy.";
-			mes "Oh, well.";
-			mes "I'll let you be on your way.";
-			mes "Don't mind me. *Sob*";
+			mes "[护士]";
+			mes "是的，你一定很忙。";
+			mes "哦，好吧。";
+			mes "我让你继续你的事情。";
+			mes "别在意我。*呜*";
 			emotion ET_CRY;
 			cutin "malaya_nurseA03",2;
 			close2;
@@ -7010,224 +7010,224 @@ malaya,55,72,4	script	Nurse#ma_n1	569,{
 		}
 	} else if (malaya_bang == 1) {
 		if (countitem(930) > 1) {
-			mes "[Nurse Las]";
-			mes "Oh......";
-			mes "I know they're effective but... Not so tempting.";
+			mes "[护士 拉斯]";
+			mes "哦......";
+			mes "我知道它们有效，但...并不那么诱人。";
 			cutin "malaya_nurseA01",2;
 			next;
-			mes "[Nurse Las]";
-			mes "Rotten Bandages... A fit name for something that seems to have been cut fresh from a mummy.";
+			mes "[护士 拉斯]";
+			mes "腐烂的绷带... 这个名字真贴切，似乎是刚从木乃伊身上割下来的。";
 			next;
-			mes "[Nurse Las]";
-			mes "I'm having second thoughts looking at them, but as I am to be a professional nurse!!";
-			mes "Here goes nothing!!!";
-			mes "Ewwww!!";
+			mes "[护士 拉斯]";
+			mes "看着它们我有些犹豫，但我作为一名专业护士！！";
+			mes "来吧，试试看！！！";
+			mes "呃呃呃！！";
 			next;
-			mes "[Nurse Las]";
-			mes "*Squish*";
-			mes "*Squelch*";
+			mes "[护士 拉斯]";
+			mes "*挤压*";
+			mes "*咕噜*";
 			delitem 930,2; //Rotten_Bandage
 			set malaya_bang,2;
 			close2;
 			cutin "",255;
 			end;
 		} else {
-			mes "[Nurse Las]";
-			mes "Before that...";
-			mes "Could you get something to wrap my feet? I can't put my shoes on because I've got blisters.";
+			mes "[护士 拉斯]";
+			mes "在此之前……";
+			mes "你能帮我找点东西包裹我的脚吗？我因为起水泡不能穿鞋。";
 			emotion ET_HELP;
 			cutin "malaya_nurseA03",2;
 			next;
-			mes "[Nurse Las]";
-			mes "2 Rotten Bandages should do to wrap both my feet. They may look dirty, but they have special liquid on that have with amazing effects.";
+			mes "[护士 拉斯]";
+			mes "2个腐烂的绷带就足够包裹我的双脚。它们看起来很脏，但上面有特殊的液体，效果惊人。";
 			close2;
 			cutin "",255;
 			end;
 		}
 	} else if (malaya_bang == 2) {
-		mes "[Nurse Las]";
-		mes "Ahhhhh...";
-		mes "My feet feel a lot better now, but it smells funny.";
+		mes "[护士 拉斯]";
+		mes "啊啊啊啊...";
+		mes "我的脚感觉好多了，但闻起来很奇怪。";
 		cutin "malaya_nurseA01",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Oh...... the smell......";
-		mes "My new shoes will be ruined...";
+		mes "[护士 拉斯]";
+		mes "哦……这个味道……";
+		mes "我的新鞋子要毁了……";
 		emotion ET_PROFUSELY_SWEAT;
 		next;
-		mes "[Nurse Las]";
-		mes "Okay!!!!!!";
-		mes "I don't know if it's locked or stuck, let's try pushing it together!";
+		mes "[护士 拉斯]";
+		mes "好的！！！！";
+		mes "我不知道它是锁住了还是卡住了，咱们一起试着推一下！";
 		set malaya_bang,3;
 		changequest 11284,11285;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 3) {
-		mes "[Nurse Las]";
-		mes "Okay!!!!!!";
-		mes "I don't know if it's locked or stuck, let's try pushing it together!";
+		mes "[护士 拉斯]";
+		mes "好的！！！！";
+		mes "我不知道它是锁住了还是卡住了，咱们一起试着推一下！";
 		cutin "malaya_nurseA01",2;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 4) {
 		mes "["+strcharinfo(0)+"]";
-		mes "We pushed and pulled, but it won't budge.";
+		mes "我们推了又拉，但它就是不动。";
 		emotion ET_PROFUSELY_SWEAT, playerattached();
 		next;
-		mes "[Nurse Las]";
-		mes "Strange~";
-		mes "They wouldn't have sent me to a closed down hospital.";
+		mes "[护士 拉斯]";
+		mes "奇怪~";
+		mes "他们不会把我派到一个关闭的医院。";
 		cutin "malaya_nurseA03",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Hmmm!";
-		mes "I can't stand it anymore!";
+		mes "[护士 拉斯]";
+		mes "嗯！";
+		mes "我再也忍受不了了！";
 		emotion ET_FRET;
 		next;
-		mes "[Nurse Las]";
-		mes "Could you ask the townsfolk about the hospital while I contact HQ?";
+		mes "[护士 拉斯]";
+		mes "你能问问镇上的人关于医院的事吗？我去联系总部。";
 		cutin "malaya_nurseA01",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Hey, why don't you start with that girl over there?";
-		mes "Perhaps she'll tell you something.";
+		mes "[护士 拉斯]";
+		mes "嘿，为什么不先问问那边的女孩？";
+		mes "也许她会告诉你一些事情。";
 		set malaya_bang,5;
 		changequest 11286,11287;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 5) {
-		mes "[Nurse Las]";
-		mes "Could you ask the townsfolk about the hospital while I contact HQ?";
+		mes "[护士 拉斯]";
+		mes "你能问问镇上的人关于医院的事吗？我去联系总部。";
 		cutin "malaya_nurseA01",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Hey, why don't you start with that girl over there?";
-		mes "Perhaps she'll tell you something.";
+		mes "[护士 拉斯]";
+		mes "嘿，为什么不先问问那边的女孩？";
+		mes "也许她会告诉你一些事情。";
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 6) {
-		mes "[Nurse Las]";
-		mes "What did she say?";
+		mes "[护士 拉斯]";
+		mes "她说了什么？";
 		emotion ET_QUESTION;
 		cutin "malaya_nurseA02",2;
 		next;
-		select("Tell her what she said.");
-		mes "[Nurse Las]";
-		mes "Strange.";
-		mes "HQ confirmed that I am assigned here.";
+		select("告诉她她说了什么。");
+		mes "[护士 拉斯]";
+		mes "奇怪。";
+		mes "总部确认我被派到这里。";
 		cutin "malaya_nurseA01",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Maybe that girl doesn't know about this place?";
-		mes "HQ couldn't have sent me here and be lying about it. Could you ask someone else in town?";
+		mes "[护士 拉斯]";
+		mes "也许那个女孩不知道这个地方？";
+		mes "总部不可能把我派到这里并且撒谎。你能问问镇上的其他人吗？";
 		next;
-		mes "[Nurse Las]";
-		mes "I'll contact HQ again for more info.";
-		mes "Hey, why not ask that man over there?";
-		mes "I'm sure he'll know something.";
+		mes "[护士 拉斯]";
+		mes "我会再联系总部获取更多信息。";
+		mes "嘿，为什么不问问那边的男人呢？";
+		mes "我相信他会知道一些事情。";
 		set malaya_bang,7;
 		changequest 11288,11289;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 7) {
-		mes "[Nurse Las]";
-		mes "I'll contact HQ again for more info.";
-		mes "Hey, why not ask that man over there?";
-		mes "I'm sure he'll know something.";
+		mes "[护士 拉斯]";
+		mes "我会再联系总部获取更多信息。";
+		mes "嘿，为什么不问问那边的男人呢？";
+		mes "我相信他会知道一些事情。";
 		cutin "malaya_nurseA01",2;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 8) {
-		mes "[Nurse Las]";
-		mes "An inn?";
-		mes "Good gracious!";
-		mes "If they'd have told me earlier I wouldn't have had to stand out here for so long!";
+		mes "[护士 拉斯]";
+		mes "旅馆？";
+		mes "天哪！";
+		mes "如果他们早点告诉我，我就不必在这里站这么久了！";
 		emotion ET_HNG;
 		cutin "malaya_nurseA01",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Ummm......";
+		mes "[护士 拉斯]";
+		mes "嗯......";
 		mes "......";
 		mes "......";
 		next;
-		mes "[Nurse Las]";
-		mes "Hey... you know what...";
+		mes "[护士 拉斯]";
+		mes "嘿... 你知道吗...";
 		next;
-		mes "[Nurse Las]";
-		mes "I don't think I can move anymore because of my feet. Could you go to the inn for me?";
+		mes "[护士 拉斯]";
+		mes "我觉得我再也动不了了，因为我的脚。你能帮我去旅馆吗？";
 		emotion ET_PROFUSELY_SWEAT;
 		cutin "malaya_nurseA03",2;
 		next;
-		mes "[Nurse Las]";
-		mes "I can't carry my bags around so I'll stay here and watch over them while I treat my feet.";
+		mes "[护士 拉斯]";
+		mes "我不能把我的包带着，所以我会留在这里看着它们，同时处理我的脚。";
 		next;
-		mes "[Nurse Las]";
-		mes "I have to be back here again anyway.";
-		mes "Thank you.";
+		mes "[护士 拉斯]";
+		mes "反正我还得再回来这里。";
+		mes "谢谢你。";
 		set malaya_bang,9;
 		changequest 11290,11291;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 9) {
-		mes "[Nurse Las]";
-		mes "I don't think I can move anymore because of my feet. Could you go to the inn for me?";
+		mes "[护士 拉斯]";
+		mes "我觉得我再也动不了了，因为我的脚。你能帮我去旅馆吗？";
 		emotion ET_PROFUSELY_SWEAT;
 		cutin "malaya_nurseA03",2;
 		next;
-		mes "[Nurse Las]";
-		mes "I can't carry my bags around so I'll stay here and watch over them while I treat my feet.";
+		mes "[护士 拉斯]";
+		mes "我不能把我的包带着，所以我会留在这里看着它们，同时处理我的脚。";
 		next;
-		mes "[Nurse Las]";
-		mes "I have to be back here again anyway.";
-		mes "Thank you.";
+		mes "[护士 拉斯]";
+		mes "反正我还得再回来这里。";
+		mes "谢谢你。";
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 10) {
-		mes "[Nurse Las]";
-		mes "Hey~";
-		mes "How'd it go?";
+		mes "[护士 拉斯]";
+		mes "嘿~";
+		mes "怎么样？";
 		cutin "malaya_nurseA02",2;
 		next;
-		select("Hand over the key and message.");
-		mes "[Nurse Las]";
-		mes "Keys?";
-		mes "Well this is one step closer to my goals!";
-		mes "Let's open the door right now!";
+		select("交出钥匙和消息。");
+		mes "[护士 拉斯]";
+		mes "钥匙？";
+		mes "这离我的目标又近了一步！";
+		mes "我们现在就打开门！";
 		set malaya_bang,11;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 11) {
-		mes "[Nurse Las]";
-		mes "Keys?";
-		mes "Well this is one step closer to my goals!";
-		mes "Let's open the door right now!";
+		mes "[护士 拉斯]";
+		mes "钥匙？";
+		mes "这离我的目标又近了一步！";
+		mes "我们现在就打开门！";
 		cutin "malaya_nurseA02",2;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 12) {
-		mes "[Nurse Las]";
-		mes "That's weird~!";
-		mes "The door's not locked?";
-		mes "How can this be?????";
+		mes "[护士 拉斯]";
+		mes "这太奇怪了~！";
+		mes "门没锁吗？";
+		mes "这怎么可能？？？？";
 		mes "????";
 		emotion ET_QUESTION;
 		emotion ET_QUESTION, playerattached();
 		cutin "malaya_nurseA04",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Oh no!!!";
-		mes "Everything's falling apart.";
-		mes "Maybe we should wait for the doctor to come.....";
+		mes "[护士 拉斯]";
+		mes "哦不！！！";
+		mes "一切都崩溃了。";
+		mes "也许我们应该等医生来.....";
 		cutin "malaya_nurseA03",2;
 		next;
 		mes "[???]";
@@ -7235,151 +7235,151 @@ malaya,55,72,4	script	Nurse#ma_n1	569,{
 		cutin "",255;
 		next;
 		mes "[???]";
-		mes "*Snigger*";
+		mes "*窃笑*";
 		emotion ET_QUESTION, playerattached();
 		emotion ET_QUESTION;
 		next;
 		mes "[???]";
 		mes "Hey "+((Sex == SEX_MALE)?"dude":"missy")+",";
-		mes "You're not getting in the hospital.";
+		mes "你不能进医院。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Who's there?!";
+		mes "谁在那里？!";
 		next;
 		mes "[???]";
-		mes "*Snigger*";
+		mes "*窃笑*";
 		next;
 		mes "[???]";
-		mes "That's a secret~";
-		mes "My mom will kill me if she knew I was here!";
+		mes "这是个秘密~";
+		mes "如果我妈妈知道我在这里，她会杀了我的！";
 		next;
-		switch(select("About entering the hospital.:About it's mom.:About ???:Quit.")) {
+		switch(select("关于进入医院。:关于她的妈妈。:关于？？？:退出。")) {
 		case 1:
 			mes "[???]";
-			mes "A few days ago, the old lady who lives near us went around the hospital sticking some kind of sticks into the ground.";
+			mes "几天前，住在我们附近的老妇人到医院四处插一些棍子。";
 			next;
 			mes "[???]";
-			mes "She was mumbling and looking around a lot.";
+			mes "她一边嘟囔着一边四处张望。";
 			next;
 			mes "[???]";
-			mes "I was well hidden here because I wasn't supposed to be here.";
+			mes "我藏得很好，因为我不应该在这里。";
 			next;
 			break;
 		case 2:
 			mes "[???]";
-			mes "My mom once told me.";
-			mes "The old lady's daughter was hospitalized here.";
+			mes "我妈妈曾经告诉我。";
+			mes "老妇人的女儿在这里住院。";
 			next;
 			mes "[???]";
-			mes "She never got out of it though...";
+			mes "不过她从来没有出院过……";
 			next;
 			mes "[???]";
-			mes "She wasn't the only one. There were many strange things going on at the hospital.";
+			mes "她并不是唯一一个。医院里发生了很多奇怪的事情。";
 			next;
 			mes "[???]";
-			mes "That's why my mom doesn't want me coming around here.";
+			mes "这就是我妈妈不想让我来这里的原因。";
 			next;
 			break;
 		case 3:
 			mes "[???]";
-			mes "No way Jose!";
-			mes "I got a spanking last time I was caught around here!";
+			mes "绝对不行，何塞！";
+			mes "上次我在这里被抓的时候挨了一顿打！";
 			next;
 			mes "[???]";
-			mes "If I'm caught again, it won't end with a spanking....";
-			mes "So scary.";
+			mes "如果我再被抓，就不会只是挨打了....";
+			mes "好可怕。";
 			next;
 			break;
 		case 4:
 			mes "[???]";
-			mes "Humph!!";
+			mes "哼！！";
 			close;
 		}
-		mes "The voice seems to be coming from the bushes near the entrance of the hospital.";
+		mes "声音似乎是从医院入口附近的灌木丛传来的。";
 		specialeffect EF_STEAL,AREA,"Bushes#ma";
 		set malaya_bang,13;
 		changequest 11293,11294;
 		close;
 	} else if (malaya_bang == 13) {
-		mes "The voice seems to be coming from the bushes near the entrance of the hospital.";
-		mes "Let's check around.";
+		mes "声音似乎是从医院入口附近的灌木丛传来的。";
+		mes "我们去看看周围。";
 		specialeffect EF_STEAL,AREA,"Bushes#ma";
 		close;
 	} else if (malaya_bang == 14) {
-		mes "[Nurse Las]";
-		mes "Hmmm... Let's look around the hospital.";
+		mes "[护士 拉斯]";
+		mes "嗯... 我们去医院周围看看。";
 		cutin "malaya_nurseA01",2;
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 15) {
-		mes "[Nurse Las]";
-		mes "Hey... ummm...";
-		mes "You know...";
-		mes "Could you give that old lady a visit?";
+		mes "[护士 拉斯]";
+		mes "嘿... 嗯...";
+		mes "你知道的...";
+		mes "你能去看看那位老妇人吗？";
 		cutin "malaya_nurseA04",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Oh, me? I'll look be looking around here.";
+		mes "[护士 拉斯]";
+		mes "哦，我？我会在这里四处看看。";
 		next;
-		mes "[Nurse Las]";
-		mes "As you know, my feet hurt...";
-		mes "Yes?";
-		mes "Yes?";
+		mes "[护士 拉斯]";
+		mes "你知道的，我的脚很疼...";
+		mes "是吗？";
+		mes "是吗？";
 		next;
-		switch(select("Go.:Don't go.")) {
+		switch(select("去。:不去。")) {
 		case 1:
-			mes "[Nurse Las]";
-			mes "Okay, off you go.";
-			mes "I think she lives on the west side of town.";
-			mes "Go on.";
+			mes "[护士 拉斯]";
+			mes "好的，走吧。";
+			mes "我想她住在城镇的西侧。";
+			mes "继续吧。";
 			next;
-			mes "[Nurse Las]";
-			mes "Hey you in the bushes, I'll tell on you if you don't go home now!";
+			mes "[护士 拉斯]";
+			mes "嘿，你在灌木丛里，如果你现在不回家，我就告诉你！";
 			set malaya_bang,16;
 			changequest 11296,11297;
 			close2;
 			cutin "",255;
 			end;
 		case 2:
-			mes "[Nurse Las]";
-			mes "Why!?";
-			mes "Staying here won't solve anything.";
+			mes "[护士 拉斯]";
+			mes "为什么！？";
+			mes "待在这里解决不了任何问题。";
 			close2;
 			cutin "",255;
 			end;
 		}
 	} else if (malaya_bang == 16 || malaya_bang == 17) {
-		mes "[Nurse Las]";
-		mes "Okay, off you go.";
-		mes "I think she lives on the west side of town.";
-		mes "Go on.";
+		mes "[护士 拉斯]";
+		mes "好的，走吧。";
+		mes "我想她住在城镇的西侧。";
+		mes "继续吧。";
 		cutin "malaya_nurseA04",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Hey you in the bushes, I'll tell on you if you don't go home now!";
+		mes "[护士 拉斯]";
+		mes "嘿，你在灌木丛里，如果你现在不回家，我就告诉你！";
 		emotion ET_HUK, getnpcid(0, "Bushes#ma");
 		close2;
 		cutin "",255;
 		end;
 	} else if (malaya_bang == 18) {
-		mes "[Nurse Las]";
-		mes "How'd it go?";
-		mes "Did you meet the old lady?";
+		mes "[护士 拉斯]";
+		mes "怎么样？";
+		mes "你见到那个老妇人了吗？";
 		cutin "malaya_nurseA02",2;
 		next;
-		mes "[Nurse Las]";
+		mes "[护士 拉斯]";
 		mes "Oh by the way, when ["+strcharinfo(0)+"], you were gone, I tried the door.";
-		mes "It did open...";
+		mes "确实打开了...";
 		next;
-		mes "[Nurse Las]";
-		mes "But the way to the 2nd floor was blocked.";
-		mes "I thought the door opening was a break through, but turns out it wasn't.";
+		mes "[护士 拉斯]";
+		mes "但是通往二楼的路被堵住了。";
+		mes "我以为门的打开是个突破，但结果并不是。";
 		cutin "malaya_nurseA03",2;
 		next;
-		mes "[Nurse Las]";
-		mes "Anyway, the first floor door is open, so let's go inside.";
-		mes "Everything would be meaningless if the second floor door is not opened.";
+		mes "[护士 拉斯]";
+		mes "无论如何，第一层的门是开的，我们进去吧。";
+		mes "如果二楼的门没有打开，一切都将毫无意义。";
 		emotion ET_CRY;
 		set malaya_bang,19;
 		changequest 11299,11300;
@@ -7388,9 +7388,9 @@ malaya,55,72,4	script	Nurse#ma_n1	569,{
 		warp "ma_dun01",33,110;
 		end;
 	} else if (malaya_bang == 19) {
-		mes "[Nurse Las]";
-		mes "Anyway, the first floor door is open, so let's go inside.";
-		mes "Everything would be meaningless if the second floor door is not opened.";
+		mes "[护士 拉斯]";
+		mes "无论如何，第一层的门是开的，我们进去吧。";
+		mes "如果二楼的门没有打开，一切都将毫无意义。";
 		emotion ET_CRY;
 		cutin "malaya_nurseA01",2;
 		close2;
@@ -7398,8 +7398,8 @@ malaya,55,72,4	script	Nurse#ma_n1	569,{
 		warp "ma_dun01",33,110;
 		end;
 	} else if (malaya_bang < 30) {
-		mes "[Nurse Las]";
-		mes "Could you check the 2nd floor door again in case I missed something?";
+		mes "[护士 拉斯]";
+		mes "你能再检查一下二楼的门吗，以防我漏掉了什么？";
 		cutin "malaya_nurseA01",2;
 		close2;
 		cutin "",255;
@@ -7409,8 +7409,8 @@ malaya,55,72,4	script	Nurse#ma_n1	569,{
 		callfunc "F_Malaya_Nurse",1;
 		end;
 	}
-	mes "There's a nurse outside the hospital holding a large bag.";
-	mes "I don't think I can help her.";
+	mes "医院外面有一位护士拿着一个大袋子。";
+	mes "我觉得我帮不了她。";
 	close;
 }
 
@@ -7419,25 +7419,25 @@ ma_dun01,35,108,4	script	Nurse#ma_n2	569,{
 		// fall through
 	} else if (malaya_bang < 30) {
 		if (malaya_bang == 19) {
-			mes "The hospital is infested with monsters, like the old lady said.";
-			mes "How could she have gone back and forth to the 2nd floor with her feet like that....";
+			mes "医院里充满了怪物，就像老太太说的那样。";
+			mes "她怎么能这样走来走去上二楼....";
 			next;
 			set malaya_bang,20;
 			changequest 11300,11301;
 		}
-		mes "[Nurse Las]";
-		mes "Could you check the 2nd floor door again in case I missed something?";
+		mes "[护士 拉斯]";
+		mes "你能再检查一下二楼的门吗，以防我漏掉了什么？";
 		cutin "malaya_nurseA01",2;
 		next;
-		switch(select("Go outside.:Quit.")) {
+		switch(select("出去.:退出.")) {
 		case 1:
 			close2;
 			cutin "",255;
 			warp "malaya",58,76;
 			end;
 		case 2:
-			mes "[Nurse Las]";
-			mes "Tsk...";
+			mes "[护士 拉斯]";
+			mes "啧...";
 			close2;
 			cutin "",255;
 			end;
@@ -7446,9 +7446,9 @@ ma_dun01,35,108,4	script	Nurse#ma_n2	569,{
 		callfunc "F_Malaya_Nurse",2;
 		end;
 	}
-	mes "[Nurse]";
-	mes "I want to be left alone.";
-	mes "Please leave.";
+	mes "[护士]";
+	mes "我想一个人待着.";
+	mes "请离开.";
 	close2;
 	warp "malaya",58,76;
 	end;
@@ -7778,108 +7778,108 @@ malaya,210,200,5	script	Dr. Boon#ma	865,{
 
 malaya,53,68,4	script	Bushes#ma	844,{
 	if (malaya_bang < 13) {
-		mes "It's just a bush.";
-		mes "A sweet scent of wood rises when shaken.";
+		mes "这只是一个灌木丛.";
+		mes "摇动时散发出甜美的木香.";
 		close;
 	}
 	if (malaya_bang == 13) {
 		mes "[???]";
-		mes "Don't come any closer!";
+		mes "不要靠近！";
 		mes "Old "+((Sex == SEX_MALE)?"man":"lady")+"!";
-		mes "How'd you know I was here?";
+		mes "你怎么知道我在这里?";
 		emotion ET_HUK;
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "I'm not old.";
+		mes "我并不老.";
 		emotion ET_FRET, playerattached();
 		next;
-		switch(select("About entering the hospital.:About its mom.:About ???.:Ask about the old lady.:Ask about the hospital grounds.:Quit.")) {
+		switch(select("关于进入医院。:关于她的妈妈。:关于???:询问老太太。:询问医院的场地。:退出。")) {
 		case 1:
 			mes "[???]";
-			mes "A few days ago, the old lady who lives near us went around the hospital sticking some kind of sticks into the ground.";
+			mes "几天前，住在我们附近的老妇人到医院四处插一些棍子。";
 			next;
 			mes "[???]";
-			mes "She was mumbling and looking around a lot.";
+			mes "她一边嘟囔着一边四处张望。";
 			next;
 			mes "[???]";
-			mes "I was well hidden here because I wasn't supposed to be here.";
+			mes "我藏得很好，因为我不应该在这里。";
 			next;
 			break;
 		case 2:
 			mes "[???]";
-			mes "My mom once told me.";
-			mes "The old lady's daughter was hospitalized here.";
+			mes "我妈妈曾经告诉我。";
+			mes "老妇人的女儿在这里住院。";
 			next;
 			mes "[???]";
-			mes "She never got out of it though...";
+			mes "不过她从来没有出院过……";
 			next;
 			mes "[???]";
-			mes "She wasn't the only one. There were many strange things going on at the hospital.";
+			mes "她并不是唯一一个。医院里发生了很多奇怪的事情。";
 			next;
 			mes "[???]";
-			mes "That's why my mom doesn't want me coming around here.";
+			mes "这就是我妈妈不想让我来这里的原因。";
 			next;
 			break;
 		case 3:
 			mes "[???]";
-			mes "No way Jose!";
-			mes "I got a spanking last time I was caught around here!";
+			mes "绝对不行，何塞！";
+			mes "上次我在这里被抓的时候挨了一顿打！";
 			next;
 			mes "[???]";
-			mes "If I'm caught again, it won't end with a spanking....";
-			mes "So scary.";
+			mes "如果我再被抓，就不会只是挨打了....";
+			mes "好可怕。";
 			next;
 			break;
 		case 4:
 			mes "[???]";
-			mes "It's the lady who lives next door to us.";
+			mes "是住在我们隔壁的女士.";
 			next;
 			mes "[???]";
-			mes "I saw her a few days ago doing something around the hospital.";
+			mes "我几天前看到她在医院附近忙碌.";
 			next;
 			mes "[???]";
-			mes "I couldn't see what she was doing from here, but I found some sticks there after she'd left.";
+			mes "我在这里看不见她在做什么，但她离开后我在那儿发现了一些树枝。";
 			set malaya_bang,14;
 			changequest 11294,11295;
 			close;
 		case 5:
 			mes "[???]";
-			mes "I dunno.";
-			mes "Nothing's different except for the sticks.";
+			mes "我不知道。";
+			mes "除了树枝，没什么不同。";
 			next;
 			mes "[???]";
-			mes "The old lady comes back once in a while to check on the sticks.";
-			mes "My heart races when that happens!";
+			mes "老太太偶尔会回来检查那些树枝。";
+			mes "每当那样的时候，我的心就会加速跳动！";
 			next;
 			break;
 		case 6:
 			mes "[???]";
-			mes "Humph!!";
+			mes "哼！！";
 			emotion ET_HNG;
 			close;
 		}
 		mes "[???]";
-		mes "Promise me you won't tell anyone that you saw me!!!";
-		mes "Promise?!";
+		mes "答应我你不会告诉任何人你见过我！！！";
+		mes "答应吗？！";
 		close;
 	} else if (malaya_bang == 14) {
 		mes "[???]";
-		mes "I couldn't see what she was doing from here, but I found some sticks there after she'd left.";
+		mes "我在这里看不见她在做什么，但她离开后我在那儿发现了一些树枝。";
 		close;
 	} else if (malaya_bang == 15) {
 		mes "[???]";
-		mes "Don't come any closer!";
+		mes "不要靠近！";
 		mes "Old "+((Sex == SEX_MALE)?"man":"lady")+"!";
-		mes "How'd you know I was here?";
+		mes "你怎么知道我在这里?";
 		emotion ET_HUK;
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "I'm not old.";
+		mes "我并不老.";
 		emotion ET_FRET, playerattached();
 		close;
 	} else {
-		mes "There's a trace of a young child.";
-		mes "Think the child's gone home now.";
+		mes "有一个小孩的痕迹。";
+		mes "想必那个小孩现在已经回家了。";
 		close;
 	}
 }
@@ -8607,120 +8607,120 @@ ma_fild01,179,260,2	script	Festival Helper Boy#pin	577,{
 
 ma_fild01,172,223,6	script	Tattooist#pin	574,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
-		mes "Cannot proceed because you have too many items in your possession.";
+		mes "无法继续，因为你身上的物品太多了。";
 		close;
 	}
 	emotion ET_QUESTION;
-	mes "[Tattooist]";
-	mes "Why do you want a Tattoo?";
+	mes "[纹身师]";
+	mes "你为什么想要纹身？";
 	next;
-	switch(select("What is a Tattoo?:I'm curious about the effect of Tattoos.:I need a Tattoo.")) {
+	switch(select("纹身是什么？:我对纹身的效果很感兴趣。:我需要一个纹身。")) {
 	case 1:
-		mes "[Tattooist]";
-		mes "A Tattoo of a powerful monster is said to increase the ability of the holder.";
+		mes "[纹身师]";
+		mes "据说强大怪物的纹身可以增强持有者的能力。";
 		next;
-		select("Awesome. How can I get one?");
-		mes "[Tattooist]";
-		mes "Drawing a Tattoo is a very holy task.";
+		select("太棒了。我该如何获得一个？");
+		mes "[纹身师]";
+		mes "绘制纹身是一项非常神圣的任务。";
 		next;
-		mes "[Tattooist]";
-		mes "10 Ancient Grudges to protect me while I draw Tattoos.";
+		mes "[纹身师]";
+		mes "10个古老的仇恨来保护我在绘制纹身时。";
 		next;
-		mes "[Tattooist]";
-		mes "1 Doll that looks like a powerful monster.";
+		mes "[纹身师]";
+		mes "1个看起来像强大怪物的玩偶。";
 		next;
-		mes "[Tattooist]";
-		mes "And last but not least, 1 Spirit Piece to imbue the energy of a powerful monster into the Tattoo.";
+		mes "[纹身师]";
+		mes "最后但同样重要的是，1个灵魂碎片，将强大怪物的能量注入纹身。";
 		next;
-		select("What kind of Tattoo will you draw?");
-		mes "[Tattooist]";
-		mes "I can draw 3 kinds of Tattoos.";
+		select("你会画什么样的纹身？");
+		mes "[纹身师]";
+		mes "我可以绘制3种类型的纹身。";
 		next;
-		mes "[Tattooist]";
-		mes "Bangungot Agimat Tattoo for a powerful monster that comes from an old gigantic tree in Port Malaya.";
+		mes "[纹身师]";
+		mes "来自普马拉亚一棵古老巨大树木的强大怪物的梦魇阿吉玛特纹身。";
 		next;
-		mes "[Tattooist]";
-		mes "Bakonawa Agimat Tattoo for a huge monster that can swallow the moon.";
+		mes "[纹身师]";
+		mes "可以吞噬月亮的巨大怪物的巴科纳瓦阿吉玛特纹身。";
 		next;
-		mes "[Tattooist]";
-		mes "Buwaya Agimat Tattoo for a giant alligator that kidnaps people.";
+		mes "[纹身师]";
+		mes "绑架人类的巨型鳄鱼的布瓦亚阿吉玛特纹身。";
 		next;
-		select("Where can I get the Spirit Pieces and Doll?");
-		mes "[Tattooist]";
-		mes "You can get these powerful items from Buwaya, Bangungot, and Bakonawa themselves but it won't be an easy task.";
+		select("我在哪里可以获得灵魂碎片和玩偶？");
+		mes "[纹身师]";
+		mes "你可以从布瓦亚、梦魇和巴科纳瓦身上获得这些强大的物品，但这并不是一项简单的任务。";
 		next;
-		mes "[Tattooist]";
-		mes "This holy task isn't done every day. Tattoos are drawn only during the '^7A96E0Pintados Festival^000000'.";
+		mes "[纹身师]";
+		mes "这个神圣的任务并不是每天都能完成。纹身仅在'^7A96E0皮纳托斯节^000000'期间绘制。";
 		close;
 	case 2:
-		mes "[Tattooist]";
-		mes "Which Tattoo's effect are you curious about?";
+		mes "[纹身师]";
+		mes "你对哪个纹身的效果感到好奇？";
 		next;
 		while(1) {
-			switch (select("Bangungot Agimat Tattoo:Buwaya Agimat Tattoo:Bakonawa Agimat Tattoo:I have no questions.")) {
+			switch (select("梦魇阿吉玛特纹身:鳄鱼阿吉玛特纹身:巴科纳瓦阿吉玛特纹身:我没有问题。")) {
 			case 1:
-				mes "[Tattooist]";
-				mes "Need 10 Ancient Grudges, 1 Piece of Bangungot's Spirit, and 1 Bangungot Doll to create";
+				mes "[纹身师]";
+				mes "需要10个古老的怨恨、1个梦魇的灵魂碎片和1个梦魇娃娃来制作";
 				next;
-				mes "[Tattooist]";
-				mes "The Bangungot Agimat Tattoo holds the energy of an old gigantic tree in Port Malaya.";
+				mes "[纹身师]";
+				mes "巴贡戈特阿吉玛特纹身蕴含了来自马来亚港一棵古老巨大树木的能量。";
 				next;
-				mes "[Tattooist]";
-				mes "Increases the effect of healing others by 4% and healing from others by 7%.";
+				mes "[纹身师]";
+				mes "增加他人治疗效果4%和他人治疗效果7%。";
 				next;
 				break;
 			case 2:
-				mes "[Tattooist]";
-				mes "Need 10 Ancient Grudges, 1 Piece of Buwaya's Spirit, and 1 Buwaya Doll to create";
+				mes "[纹身师]";
+				mes "制作需要10个古老的怨恨、1块布瓦亚的灵魂和1个布瓦亚玩偶。";
 				next;
-				mes "[Tattooist]";
-				mes "The Buwaya Agimat Tattoo contains the energy from a giant alligator.";
+				mes "[纹身师]";
+				mes "布瓦亚阿吉玛特纹身蕴含了来自一只巨型鳄鱼的能量。";
 				next;
-				mes "[Tattooist]";
-				mes "Increases MATK by +7% and decreases Fixed Casting by 7%.";
+				mes "[纹身师]";
+				mes "增加魔法攻击力+7%并减少固定施法时间7%。";
 				next;
 				break;
 			case 3:
-				mes "[Tattooist]";
-				mes "Need 10 Ancient Grudges, 1 Piece of Bakonawa's Spirit, and 1 Bakonawa Doll to create";
+				mes "[纹身师]";
+				mes "制作需要10个古老的怨恨、1块巴科纳瓦的灵魂和1个巴科纳瓦玩偶。";
 				next;
-				mes "[Tattooist]";
-				mes "The Bakonawa Agimat Tattoo holds the energy from a gigantic monster that can swallow the moon.";
+				mes "[纹身师]";
+				mes "巴科纳瓦阿吉玛特纹身蕴含了来自一只能够吞噬月亮的巨大怪物的能量。";
 				next;
-				mes "[Tattooist]";
-				mes "Increases ATK by +7% and ASPD by 10%.";
+				mes "[纹身师]";
+				mes "增加攻击力+7%和攻击速度+10%。";
 				next;
 				break;
 			case 4:
-				mes "[Tattooist]";
-				mes "Looks like you've got all the answers. Hope you enjoy your journey.";
+				mes "[纹身师]";
+				mes "看起来你已经得到了所有的答案。希望你享受你的旅程。";
 				close;
 			}
-			mes "[Tattooist]";
-			mes "Do you have any questions about other Tattoo effects?";
+			mes "[纹身师]";
+			mes "你对其他纹身效果有任何问题吗？";
 			next;
 		}
 	case 3:
 		break;
 	}
 	if ($malaya_pintados_00 == 0) {
-		mes "[Tattooist]";
-		mes "The holy task of drawing Tattoos is only done during the '^7A96E0Pintados Festival^000000'. Sorry but looks like the festival is not on.";
+		mes "[纹身师]";
+		mes "绘制纹身的神圣任务仅在'^7A96E0Pintados Festival^000000'期间进行。抱歉，但看起来节日并没有进行。";
 		close;
 	}
-	mes "[Tattooist]";
-	mes "You've come right on time during the '^7A96E0Pintados Festival^000000'.";
+	mes "[纹身师]";
+	mes "你正好在'^7A96E0Pintados Festival^000000'期间来到这里。";
 	next;
-	mes "[Tattooist]";
-	mes "There is no time like during the holy '^7A96E0Pintados Festival^000000' to draw Tattoos.";
+	mes "[纹身师]";
+	mes "没有比在神圣的'^7A96E0Pintados Festival^000000'期间绘制纹身更好的时机了。";
 	next;
-	mes "[Tattooist]";
-	mes "The festival doesn't last long so I should start drawing. What Tattoo do you need?";
+	mes "[纹身师]";
+	mes "节日不会持续太久，所以我应该开始绘制。你需要什么纹身？";
 	next;
-	switch(select("I will think it over.:Bangungot Agimat Tattoo:Buwaya Agimat Tattoo:Bakonawa Agimat Tattoo")) {
+	switch(select("我会考虑一下。:梦魇阿吉玛特纹身:鳄鱼阿吉玛特纹身:巴科纳瓦阿吉玛特纹身")) {
 	case 1:
-		mes "[Tattooist]";
-		mes "Hope you enjoy the '^7A96E0Pintados Festival^000000'.";
+		mes "[纹身师]";
+		mes "希望你享受'^7A96E0Pintados Festival^000000'。";
 		close;
 	case 2:
 		set .@tattoo,2911; //Bangungot_Tattoo
@@ -8742,108 +8742,108 @@ ma_fild01,172,223,6	script	Tattooist#pin	574,{
 		break;
 	}
 	if (countitem(6499) < 10 || countitem(.@spirit) == 0 || countitem(.@doll) == 0) {
-		mes "[Tattooist]";
-		mes "I think you are short on materials.";
+		mes "[纹身师]";
+		mes "我想你材料不够。";
 		mes "Need 10 Ancient Grudges, 1 Piece of "+.@name$+"'s Spirit, and 1 "+.@name$+" Doll to create a ^EE1D11"+.@name$+" Agimat Tattoo^000000.";
 		close;
 	}
 	emotion ET_SPARK;
-	mes "[Tattooist]";
-	mes "The materials are full with holy energy. I'm sure we'll get a great Tattoo using these.";
+	mes "[纹身师]";
+	mes "这些材料充满了神圣的能量。我相信我们会用这些材料得到一个很棒的纹身。";
 	next;
-	mes "[Tattooist]";
-	mes "Please don't interrupt while I'm working on drawing a holy Tattoo if you want it to come out right.";
+	mes "[纹身师]";
+	mes "如果你想要纹身画得好，请不要在我绘制神圣纹身时打扰我。";
 	next;
-	mes "The Tattooist placed the Ancient Grudges around the workplace.";
+	mes "纹身师把古老的怨恨放在了工作场所周围。";
 	next;
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#01";
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#02";
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#03";
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#04";
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#05";
-	mes "The Ancient Grudge lit up and tools starts to glow. He smiled satisfyingly at the glowing tools and materials.";
+	mes "古老的怨恨发光了，工具开始闪烁。他满意地看着发光的工具和材料。";
 	next;
 	mes "And then "+.@name$+" stared intensely at the doll as if to remember every detail of it in his head.";
 	next;
-	if(select("Aren't you going to start?:... ... ..") == 1) {
+	if(select("你不打算开始吗？:... ... ..") == 1) {
 		emotion ET_FRET;
 		delitem 6499,5; //Ancient_Grudge
-		mes "[Tattooist]";
-		mes "Oh no, now you ruined it.";
-		mes "I cannot draw a Tattoo for someone like you who doesn't understand art. You can take back the remaining materials.";
+		mes "[纹身师]";
+		mes "哦不，现在你把它搞砸了。";
+		mes "我无法为像你这样不懂艺术的人绘制纹身。你可以把剩下的材料带回去。";
 		next;
 		mes "Received back 5 Ancient Grudges, "+.@name$+" Doll, and Piece of "+.@name$+"'s Spirit.";
 		close;
 	}
 	emotion ET_STARE;
-	mes "Think he will melt the doll with his eyes?";
+	mes "他会用眼神融化那个娃娃吗？";
 	next;
 	specialeffect EF_SONICBLOWHIT;
-	mes "He closed and opened his eyes slowly as if to memorize the doll in his head and then held up a glowing tool to start drawing.";
+	mes "他缓缓闭上并睁开眼睛，仿佛在脑海中记住那个玩偶，然后举起一件发光的工具开始绘画。";
 	next;
 	mes "The "+.@name$+" Tattoo was completed almost instantly.";
 	next;
 	emotion ET_FRET;
-	mes "But he kept on looking at each corner of the drawing as if he didn't like some of its details.";
+	mes "但他不断地查看画的每个角落，似乎对某些细节不满意。";
 	next;
-	if(select("Looks good to me.:... ... ..") == 1) {
+	if(select("我觉得不错。:... ... ..") == 1) {
 		emotion ET_FRET;
 		emotion ET_ANGER;
 		delitem 6499,5; //Ancient_Grudge
-		mes "[Tattooist]";
-		mes "Ergh! I told you not to interrupt!";
+		mes "[纹身师]";
+		mes "呃！我告诉过你不要打扰！";
 		next;
-		mes "The Tattooist ripped up the drawing irritably.";
+		mes "纹身师烦躁地撕掉了画。";
 		next;
-		mes "[Tattooist]";
-		mes "I can't continue like this. Maybe another time. You can take back the remaining materials.";
+		mes "[纹身师]";
+		mes "我无法继续这样。也许下次吧。你可以把剩下的材料拿回去。";
 		next;
 		mes "Received back 5 Ancient Grudges, "+.@name$+" Doll, and Piece of "+.@name$+"'s Spirit.";
 		close;
 	}
-	mes "He looked at the drawing intensely for a long time and then nodded with a satisfied smile.";
+	mes "他专注地看着画了很久，然后满意地点了点头，露出了微笑。";
 	next;
 	mes "Looks like he is satisfied with the "+.@name$+" drawing.";
 	next;
 	emotion ET_HUM;
-	mes "But now he is staring at the sky without doing anything else. What is he waiting for?";
+	mes "但现在他只是盯着天空，什么也不做。他在等待什么？";
 	next;
-	if(select("When will it be done?:... ... ..") == 1) {
+	if(select("什么时候能完成？:... ... ..") == 1) {
 		emotion ET_FRET;
 		emotion ET_ANGER;
 		delitem 6499,5; //Ancient_Grudge
-		mes "[Tattooist]";
-		mes "Ergh! I told you not to interrupt!";
+		mes "[纹身师]";
+		mes "呃！我告诉过你不要打扰！";
 		next;
-		mes "The Tattooist ripped up the drawing irritably.";
+		mes "纹身师烦躁地撕掉了画。";
 		next;
-		mes "[Tattooist]";
-		mes "I can't continue like this. Maybe another time. You can take back the remaining materials.";
+		mes "[纹身师]";
+		mes "我无法继续这样。也许下次吧。你可以把剩下的材料拿回去。";
 		next;
 		mes "Received back 5 Ancient Grudges, "+.@name$+" Doll, and Piece of "+.@name$+"'s Spirit.";
 		close;
 	}
 	emotion ET_THINK;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ".";
 	next;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ". .";
 	next;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ". . .";
 	next;
 	emotion ET_THINK;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ". . . .";
 	next;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ". . . . .";
 	next;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ". . . . . .";
 	next;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes ". . . . . . .";
 	next;
 	emotion ET_SPARK;
@@ -8852,23 +8852,23 @@ ma_fild01,172,223,6	script	Tattooist#pin	574,{
 	specialeffect EF_DETOXICATION;
 	mes "The Piece of "+.@name$+"'s Spirit is shattered into powder. The Tattooist's hands are glowing.";
 	next;
-	if(select("Why did you break the pieces...:... ... ..") == 1) {
+	if(select("你为什么要打破这些碎片...:... ... ..") == 1) {
 		delitem 6499,5; //Ancient_Grudge
 		delitem .@spirit,1;
 		emotion ET_FRET;
 		emotion ET_ANGER;
-		mes "[Tattooist]";
-		mes "Ergh! I told you not to interrupt!";
+		mes "[纹身师]";
+		mes "呃！我告诉过你不要打扰！";
 		next;
-		mes "The glowing light from his hands faded away. He starred at his hands for a while and then ripped up the drawing irritably.";
+		mes "他手中的光芒渐渐消失。他盯着自己的手看了一会儿，然后恼怒地撕毁了画作。";
 		next;
-		mes "[Tattooist]";
-		mes "I was this close to completing a wonderful piece but you ruined it. Not in a good mood. You can take the remaining materials.";
+		mes "[纹身师]";
+		mes "我离完成一幅精彩的作品就差一步，但你毁了它。心情不好。你可以拿走剩下的材料。";
 		next;
-		mes "Received back 5 Ancient Grudges and the doll.";
+		mes "收回了5个古老的怨恨和玩偶。";
 		close;
 	}
-	mes "He held up the powder in both hands and then blew it onto the drawing.";
+	mes "他双手捧起粉末，然后将其吹向画作。";
 	next;
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#01";
 	specialeffect EF_FLAMELAUNCHER,AREA,"Ancient Grudge#02";
@@ -8878,31 +8878,31 @@ ma_fild01,172,223,6	script	Tattooist#pin	574,{
 	mes "All Ancient Grudges started to burn and then the glowing light from the "+.@name$+" drawing faded away.";
 	next;
 	specialeffect EF_LIGHTSPHERE;
-	mes "Blinking light on top of the drawing.";
+	mes "画作上方闪烁着光芒。";
 	next;
 	mes "Light faded away and the "+.@name$+" drawing is no longer the simple one it was before.";
 	next;
 	mes "The "+.@name$+" drawing looks as if it is... alive.";
 	next;
-	mes "The Tattooist is finally satisfied and is all smiles.";
+	mes "纹身师终于满意了，满脸笑容。";
 	next;
 	emotion ET_SMILE;
-	mes "[Tattooist]";
-	mes "Ha ha. It came out great.";
+	mes "[纹身师]";
+	mes "哈哈，效果很好。";
 	next;
 	delitem 6499,10; //Ancient_Grudge
 	delitem .@spirit,1;
 	delitem .@doll,1;
 	getitem .@tattoo,1;
 	set $malaya_pintados_04$, strcharinfo(0);
-	mes "[Tattooist]";
-	mes "I'm sorry you had to wait for a long time. But it was worth it cause I haven't created a Tattoo of this quality in a long time.";
+	mes "[纹身师]";
+	mes "抱歉让你等了很久。但这是值得的，因为我已经很久没有创作出如此高质量的纹身了。";
 	next;
-	mes "[Tattooist]";
+	mes "[纹身师]";
 	mes "The ^EE1D11"+.@name$+" Agimat Tattoo^000000 you've waited for is now completed.";
 	next;
-	mes "[Tattooist]";
-	mes "Hope you enjoy the '^7A96E0Pintados Festival^000000'.";
+	mes "[纹身师]";
+	mes "希望你享受'^7A96E0Pintados Festival^000000'。";
 	close;
 }
 
@@ -8913,23 +8913,23 @@ ma_fild01,172,222,0	duplicate(Ancient Grudge#01)	Ancient Grudge#04	139
 ma_fild01,171,223,0	duplicate(Ancient Grudge#01)	Ancient Grudge#05	139
 
 ma_fild01,192,200,8	script	Tourist#pin01	58,{
-	mes "[Tourist]";
-	mes "I came from afar and dropped everything to come and enjoy the 'Pintados Festival'.";
+	mes "[游客]";
+	mes "我来自遥远的地方，放下一切来享受'皮纳塔节'。";
 	next;
-	mes "[Tourist]";
-	mes "I don't regret visiting but...";
+	mes "[游客]";
+	mes "我不后悔来访，但……";
 	next;
-	mes "[Tourist]";
-	mes "I don't like the Tattoo I got after all I've gone through to get it.";
+	mes "[游客]";
+	mes "我不喜欢我得到的纹身，毕竟我为此付出了很多。";
 	next;
-	mes "[Tourist]";
-	mes "I've looked at it in the light but I think the Tattooist made a mistake.";
+	mes "[游客]";
+	mes "我在光线下看过它，但我觉得纹身师犯了错误。";
 	next;
-	mes "[Tourist]";
-	mes "This ruined my whole visit.";
+	mes "[游客]";
+	mes "这毁了我整个的访问。";
 	next;
-	mes "[Tourist]";
-	mes "Tsk!";
+	mes "[游客]";
+	mes "啧！";
 	close;
 OnInit:
 	if (!$malaya_pintados_00)
@@ -8944,11 +8944,11 @@ OnDisable:
 }
 
 ma_fild01,211,200,6	script	Tourist#pin02	775,{
-	mes "[Tourist]";
-	mes "I heard of the 'Pintados Festival' and came all the way from Kunlun.";
+	mes "[游客]";
+	mes "我听说了'皮纳塔节'，特意从昆仑赶来。";
 	next;
-	mes "[Tourist]";
-	mes "Just in case you might think otherwise, this is a mask on my face and not a tattoo.";
+	mes "[游客]";
+	mes "以防你有其他想法，这只是我脸上的面具，而不是纹身。";
 	close;
 OnInit:
 	if (!$malaya_pintados_00)
@@ -8963,20 +8963,20 @@ OnDisable:
 }
 
 ma_fild01,251,205,2	script	Tourist#pin03	824,{
-	mes "[Tourist]";
-	mes "Hey, hear me. This isn't the Tattoo I wanted.";
+	mes "[游客]";
+	mes "嘿，听我说。这不是我想要的纹身。";
 	next;
-	mes "[Tourist]";
-	mes "I asked for a Bakonawa Tattoo but the more I look at it, this is Bangungot.";
+	mes "[游客]";
+	mes "我要求一个巴科纳瓦纹身，但越看越像是班贡戈特。";
 	next;
-	mes "[Tattooist]";
-	mes "No... you said that you wanted that one. Don't be so difficult.";
+	mes "[纹身师]";
+	mes "不……你说你想要那个。别这么难搞。";
 	next;
-	mes "[Tourist]";
-	mes "Don't you know that customer is king? Huh? Do you want a bad reputation?";
+	mes "[游客]";
+	mes "你不知道顾客就是上帝吗？嗯？你想要坏名声吗？";
 	next;
-	mes "[Tattooist]";
-	mes "Ugh... Can't believe this.";
+	mes "[纹身师]";
+	mes "呃……真不敢相信。";
 	close;
 OnInit:
 	if (!$malaya_pintados_00)
@@ -9013,11 +9013,11 @@ OnDisable:
 }
 
 ma_fild01,162,235,6	script	Tourist#pin05	815,{
-	mes "[Tourist]";
-	mes "They say the Pintados Festival will only be held for one week.";
+	mes "[游客]";
+	mes "他们说皮塔多斯节只会举办一周。";
 	next;
-	mes "[Tourist]";
-	mes "I came from Luoyang without knowing about the festival. Must be my lucky day.";
+	mes "[游客]";
+	mes "我从洛阳来，却不知道这个节日。真是我的幸运日。";
 	close;
 OnInit:
 	if (!$malaya_pintados_00)

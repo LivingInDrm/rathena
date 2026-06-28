@@ -437,110 +437,110 @@ ayo_dun02,91,263,0	script	#Annonblood	111,2,3,{
 if (!$@annonactive) {
 	if (thai_find == 13) {
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] A blood stain?";
-		mes "[DRY-RUN] What's going on?";
-		mes "[DRY-RUN] I should take a look...";
+		mes "血迹？";
+		mes "发生了什么事？";
+		mes "我应该去看看...";
 		next;
-		mes "[DRY-RUN] ^3355FFUnder a giant tree,";
-		mes "[DRY-RUN] you find some bushes with";
-		mes "[DRY-RUN] blood smudged on some";
-		mes "[DRY-RUN] of the leaves.^000000";
+		mes "^3355FF在一棵巨树下，";
+		mes "你发现一些灌木丛，里面有";
+		mes "一些叶子上沾有血迹。";
+		mes "^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFWithin the bushes, you see";
-		mes "[DRY-RUN] that the trail of blood continues, almost as if a bleeding animal struggled to find refuge within";
-		mes "[DRY-RUN] the bushes.^000000";
+		mes "^3355FF在灌木丛中，你看到";
+		mes "血迹继续延伸，几乎就像一只流血的动物挣扎着寻找庇护";
+		mes "在灌木丛中。^000000";
 		next;
 		mes "[" +strcharinfo(0)+ "]";
-		mes "[DRY-RUN] Hmmm....";
+		mes "嗯....";
 		next;
-		switch(select("[DRY-RUN] Scatter the bushes.:Dig up the bushes.")) {
+		switch(select("打散灌木丛。:挖掘灌木丛。")) {
 		case 1:
 			if (!rand(0,2)) {
 				mes "[" +strcharinfo(0)+ "]";
-				mes "[DRY-RUN] ^666666*Cough cough*^000000";
-				mes "[DRY-RUN] It's so dusty!";
+				mes "^666666*咳咳*^000000";
+				mes "太尘土飞扬了！";
 				next;
-				mes "[DRY-RUN] [?]";
-				mes "[DRY-RUN] ...Awwww";
-				mes "[DRY-RUN] Oh... Oh God...!";
+				mes "[?]";
+				mes "...哎呀";
+				mes "哦……天哪……！";
 				next;
 				emotion ET_SURPRISE, playerattached();
 				mes "[" +strcharinfo(0)+ "]";
-				mes "[DRY-RUN] Huh...?";
-				mes "[DRY-RUN] I heard something";
-				mes "[DRY-RUN] from below! Let's";
-				mes "[DRY-RUN] dig it up!";
+				mes "哈……？";
+				mes "我听到什么了";
+				mes "从下面！我们";
+				mes "挖出来吧！";
 				next;
-				mes "[DRY-RUN] ^3355FFYou pull up the bushes,";
-				mes "[DRY-RUN] ^3355FFand beneath the dust and";
-				mes "[DRY-RUN] ^3355FFshrubbery, you find";
-				mes "[DRY-RUN] a small burrow.^000000";
+				mes "^3355FF你拨开灌木，";
+				mes "^3355FF在尘土和";
+				mes "^3355FF灌木丛下，你发现了";
+				mes "一个小洞穴。^000000";
 				next;
 				set $@annonactive,1;
 				enablenpc "Haggard Man";
-				mes "[DRY-RUN] [Haggard Man]";
-				mes "[DRY-RUN] ^666666*Cough cough!*^000000";
-				mes "[DRY-RUN] Wh...who's there?";
-				mes "[DRY-RUN] Shuda?! If that's you,";
-				mes "[DRY-RUN] stay back, or I'll kill myself!";
+				mes "[疲惫的男人]";
+				mes "^666666*咳咳!*^000000";
+				mes "谁……谁在那儿？";
+				mes "舒达？！如果是你，";
+				mes "就待在后面，否则我会自杀的！";
 				emotion ET_HUK, playerattached();
 				next;
-				switch(select("[DRY-RUN] What are you doing here?:I'm not Shuda!")) {
+				switch(select("你在这里做什么？:我不是舒达！")) {
 				case 1:
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] Hey...";
-					mes "[DRY-RUN] What are you doi--";
+					mes "嘿……";
+					mes "你在做什么——";
 					next;
 					set $@annonactive,0;
 					disablenpc "Haggard Man";
-					mes "[DRY-RUN] ^3355FFHe vanished!^000000";
+					mes "^3355FF他消失了！^000000";
 					close;
 				case 2:
-					mes "[DRY-RUN] [Haggard Man]";
-					mes "[DRY-RUN] Hmmm...?";
-					mes "[DRY-RUN] I sense kindess, sincerity and a general love for mankind in your voice. Verily, you are not Shuda.";
+					mes "[疲惫的男人]";
+					mes "嗯...?";
+					mes "我在你的声音中感受到善良、真诚和对人类的普遍热爱。确实，你不是舒达。";
 					next;
-					mes "[DRY-RUN] [Haggard Man]";
-					mes "[DRY-RUN] You are unfamiliar to me, outsider. I'm unsure of how you found my hiding place, but if you have something to say, make it short!";
+					mes "[疲惫的男人]";
+					mes "你对我来说很陌生，外来者。我不确定你是如何找到我的藏身之处的，但如果你有话要说，请简短些！";
 					close;
 				}
 			} else {
-				mes "[DRY-RUN] ^3355FFYou dig up the bushes, stirring";
-				mes "[DRY-RUN] up a large, choking cloud of dust.^000000";
+				mes "^3355FF你挖掘灌木丛，搅动";
+				mes "一大团令人窒息的尘土。^000000";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "[DRY-RUN] ^666666*Cough cough!*^000000";
-				mes "[DRY-RUN] What a large,";
-				mes "[DRY-RUN] choking cloud";
-				mes "[DRY-RUN] of dust!";
+				mes "^666666*咳咳!*^000000";
+				mes "多么大的一团，";
+				mes "令人窒息的尘土";
+				mes "！";
 				close;
 			}
 		case 2:
-			mes "[DRY-RUN] ^3355FFAs you dig up the bushes, the ground beneath one of the bushes crumbles and you hear a scream";
-			mes "[DRY-RUN] from beneath.^000000";
+			mes "^3355FF当你挖掘灌木丛时，某个灌木下的地面崩塌，你听到一声尖叫";
+			mes "从下面传来。^000000";
 			next;
 			if (!rand(0,2)) {
 				set $@annonactive,1;
 				enablenpc "Haggard Man";
-				mes "[DRY-RUN] [?]";
-				mes "[DRY-RUN] ^666666*Cough cough*^000000";
-				mes "[DRY-RUN] ...M-my legs!";
+				mes "[?]";
+				mes "^666666*咳咳*^000000";
+				mes "……我，我的腿！";
 				close;
 			} else {
 				mes "[" +strcharinfo(0)+ "]";
-				mes "[DRY-RUN] Hmmm...?";
-				mes "[DRY-RUN] What was that noise?";
-				mes "[DRY-RUN] Ugh, it's awfully dusty.";
-				mes "[DRY-RUN] I better stop digging.";
-				mes "[DRY-RUN] ^666666*cough cough cough*^000000";
+				mes "嗯...?";
+				mes "那是什么声音？";
+				mes "呃，这里真是尘土飞扬。";
+				mes "我最好停止挖掘。";
+				mes "^666666*咳咳咳*^000000";
 				close;
 			}
 		}
 	} else if (thai_find == 14) {
-		mes "[DRY-RUN] ^3355FFYou find that the burrow is empty. It seems Annon has found a new hiding place.^000000";
+		mes "^3355FF你发现这个洞穴是空的。看来安农找到了一个新的藏身之处。^000000";
 		close;
 	} else {
-		mes "[DRY-RUN] ^3355FFYou find a pile of dead bushes under a large tree. The area around the bushes seems awfully dusty.^000000";
+		mes "^3355FF你在一棵大树下发现了一堆死去的灌木。灌木周围的区域似乎非常尘土飞扬。^000000";
 		close;
 	}
 
@@ -549,21 +549,21 @@ OnTouch_:
 		if (!rand(0,2)) {
 			emotion ET_SURPRISE, playerattached();
 			mes "[" +strcharinfo(0)+ "]";
-			mes "[DRY-RUN] Huh...?";
+			mes "哈……？";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] That looks";
-			mes "[DRY-RUN] like blood!";
+			mes "那看起来";
+			mes "像血！";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] Hmm...";
-			mes "[DRY-RUN] Yes...";
-			mes "[DRY-RUN] That's definitely blood.";
+			mes "嗯...";
+			mes "是的...";
+			mes "那绝对是血。";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] Strange to see";
-			mes "[DRY-RUN] a blood stain in";
-			mes "[DRY-RUN] this kind of place...";
+			mes "在这种地方看到";
+			mes "血迹真奇怪";
+			mes "...";
 			set thai_find,13;
 			changequest 12033,12034;
 			close;
@@ -837,81 +837,81 @@ OnInit:
 		
 ayothaya,253,99,3	script	Fisherman	843,{
 	if (thai_find == 1) {
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] This place is known to be";
-		mes "[DRY-RUN] teeming with fish. The fish here tend to eat anything they find,";
-		mes "[DRY-RUN] so it's easy to catch them.";
+		mes "[丹奈]";
+		mes "这个地方被认为是";
+		mes "鱼类繁多。这里的鱼倾向于吃到的任何东西，";
+		mes "所以很容易捕到它们。";
 		next;
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] We are providing a fishing rod rental service. Every time you fish, you'll need ^3355FF 1 Monster's Feed^000000 to use as bait, and pay";
-		mes "[DRY-RUN] a rod rental fee of ^3355FF50 Zeny^000000.";
+		mes "[丹奈]";
+		mes "我们提供钓鱼竿租赁服务。每次钓鱼时，你需要^3355FF 1 只怪物的饲料^000000作为饵料，并支付";
+		mes "钓竿租赁费^3355FF50金币^000000。";
 		next;
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] Would you";
-		mes "[DRY-RUN] like to try?";
+		mes "[丹奈]";
+		mes "你能否";
+		mes "想试试吗？";
 		next;
-		switch(select("[DRY-RUN] Yes.:No, thanks.")) {
+		switch(select("是:否，谢谢。")) {
 		case 1:
 			if (countitem(528) && Zeny > 49) {
-				mes "[DRY-RUN] ^3355FFYou cast your";
-				mes "[DRY-RUN] fishing line";
-				mes "[DRY-RUN] into the water.^000000";
+				mes "^3355FF你抛出了你的";
+				mes "钓鱼线";
+				mes "进入水中。^000000";
 				next;
-				mes "[DRY-RUN] ...";
+				mes "...";
 				next;
-				mes "[DRY-RUN] ...";
-				mes "[DRY-RUN] ......";
+				mes "...";
+				mes "......";
 				next;
-				mes "[DRY-RUN] ^3355FFYou've hooked a Phen!^000000";
+				mes "^3355FF你钓到了一只幻影！^000000";
 				next;
 				delitem 528,1; //Monster's_Feed
 				set Zeny, Zeny-50;
 				set .@randfish,rand(1,100);
 				if (.@randfish > 0 && .@randfish < 40) {
-					mes "[DRY-RUN] ^3355FFWhile cooking the Phen, you";
-					mes "[DRY-RUN] find that it's swallowed a Stone.^000000";
+					mes "^3355FF在烹饪幻影时，你";
+					mes "发现它吞下了一块石头。^000000";
 					close2;
 					getitem 7049,1; //Stone
 					end;
 				} else if (.@randfish > 39 && .@randfish < 60) {
-					mes "[DRY-RUN] ^3355FFInside of the Phen,";
-					mes "[DRY-RUN] you find a Red Potion.^000000";
+					mes "^3355FF在幻影内部，";
+					mes "你发现了一瓶红色药水。^000000";
 					close2;
 					getitem 501,1; //Red_Potion
 					end;
 				} else if (.@randfish > 59 && .@randfish < 70) {
-					mes "[DRY-RUN] ^3355FFInside of the Phen,";
-					mes "[DRY-RUN] you find a Yellow Potion.^000000";
+					mes "^3355FF在幻影内部，";
+					mes "你发现了一瓶黄色药水。^000000";
 					close2;
 					getitem 503,1; //Yellow_Potion
 					end;
 				} else if (.@randfish > 69 && .@randfish < 80) {
-					mes "[DRY-RUN] ^3355FFThere's nothing inside...";
-					mes "[DRY-RUN] But now you can eat Sushi!^000000";
+					mes "^3355FF里面什么都没有...";
+					mes "但现在你可以吃寿司了！^000000";
 					close2;
 					getitem 551,1; //Shusi
 					end;
 				} else if (.@randfish > 79 && .@randfish < 90) {
-					mes "[DRY-RUN] ^3355FFYou find";
-					mes "[DRY-RUN] a Flower Ring";
-					mes "[DRY-RUN] inside the Phen.^000000";
+					mes "^3355FF你发现了";
+					mes "一枚花环";
+					mes "在幻影内部。^000000";
 					close2;
 					getitem 2612,1; //Flower_Ring
 					end;
 				} else if (.@randfish == 90) {
-					mes "[DRY-RUN] ^3355FFYou find";
-					mes "[DRY-RUN] a Diamond Ring";
-					mes "[DRY-RUN] inside the Phen.^000000";
+					mes "^3355FF你发现了";
+					mes "一枚钻石戒指";
+					mes "在幻影内部。^000000";
 					close2;
 					getitem 2613,1; //Diamond_Ring
 					end;
 				} else if (.@randfish > 90 && .@randfish < 101) {
-					mes "[DRY-RUN] ^3355FFYou find a ring";
-					mes "[DRY-RUN] with a name engraved";
-					mes "[DRY-RUN] inside the band.^000000";
+					mes "^3355FF你找到了一枚戒指";
+					mes "上面刻有名字";
+					mes "在戒指内侧。^000000";
 					next;
-					mes "[DRY-RUN] ^3355FFYou take the";
-					mes "[DRY-RUN] engagement ring.^000000";
+					mes "^3355FF你拿起了";
+					mes "订婚戒指。^000000";
 					close2;
 					set thai_find,2;
 					changequest 12029,12030;
@@ -919,49 +919,49 @@ ayothaya,253,99,3	script	Fisherman	843,{
 					end;
 				}
 			} else {
-				mes "[DRY-RUN] [Dannai]";
-				mes "[DRY-RUN] Remember, you need ^3355FF1 Monster's Feed^000000 to use as bait and ^3355FF50 zeny^000000 to rend a rod.";
+				mes "[丹奈]";
+				mes "记住，你需要^3355FF1个怪物的饲料^000000作为诱饵，以及^3355FF50金币^000000来租用钓竿。";
 				close;
 			}
 		case 2:
-			mes "[DRY-RUN] [Dannai]";
-			mes "[DRY-RUN] No problem,";
-			mes "[DRY-RUN] come back anytime you";
-			mes "[DRY-RUN] want. Fishing relaxes";
-			mes "[DRY-RUN] the mind and makes you";
-			mes "[DRY-RUN] feel at peace...";
+			mes "[丹奈]";
+			mes "没问题，";
+			mes "随时回来。";
+			mes "钓鱼可以放松";
+			mes "心情，让你";
+			mes "感到平静...";
 			close;
 		}
 		close;
 	} else if (thai_find < 1) {
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] The fish here tend";
-		mes "[DRY-RUN] to eat anything they find.";
-		mes "[DRY-RUN] When you gut them, you can";
-		mes "[DRY-RUN] often find interesting things inside.";
+		mes "[丹奈]";
+		mes "这里的鱼通常";
+		mes "会吃到它们找到的任何东西。";
+		mes "当你剖开它们时，你可以";
+		mes "经常能在里面找到有趣的东西。";
 		next;
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] So when you get a chance,";
-		mes "[DRY-RUN] why don't you sit down, relax";
-		mes "[DRY-RUN] and enjoy some quiet fishing?";
+		mes "[丹奈]";
+		mes "所以当你有机会时，";
+		mes "为什么不坐下来，放松一下";
+		mes "享受一下安静的钓鱼呢？";
 		close;
 	} else {
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] Welcome, long time no see!";
-		mes "[DRY-RUN] It seems people learned that you found some kind of fortune from fishing here. After word got around, I've been getting lots";
-		mes "[DRY-RUN] of customers.";
+		mes "[丹奈]";
+		mes "欢迎，好久不见！";
+		mes "似乎人们知道你在这里钓鱼找到了某种财富。消息传开后，我来了很多";
+		mes "顾客。";
 		next;
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] I understand that you want";
-		mes "[DRY-RUN] fish, but right now there";
-		mes "[DRY-RUN] aren't any fishing spots";
-		mes "[DRY-RUN] for you at the moment.";
+		mes "[丹奈]";
+		mes "我知道你想要";
+		mes "鱼，但现在这里";
+		mes "没有钓鱼的地方";
+		mes "供你使用。";
 		next;
-		mes "[DRY-RUN] [Dannai]";
-		mes "[DRY-RUN] Please let other";
-		mes "[DRY-RUN] people have their";
-		mes "[DRY-RUN] chance to find their";
-		mes "[DRY-RUN] own fortunes.";
+		mes "[丹奈]";
+		mes "请让其他人";
+		mes "有机会找到他们的";
+		mes "自己的财富。";
+		mes "。";
 		close;
 	}
 }
@@ -971,7 +971,7 @@ OnTouch_:
 	if (thai_find == 4) {
 		if (rand(1,3) < 2) {
 			emotion ET_SURPRISE, playerattached();
-			mes "[DRY-RUN] ^3355FFYou find footprints heading to the ^5C3317North^3355FF. It looks like somebody was in quite a hurry, just like the villager said!^000000";
+			mes "^3355FF你发现了通往^5C3317北方^3355FF的脚印。看起来有人很匆忙，就像村民说的那样！^000000";
 			set thai_find,5;
 			changequest 12032,12033;
 			close;
@@ -985,8 +985,8 @@ OnTouch_:
 	if (thai_find == 5) {
 		if (rand(1,3) < 2) {
 			emotion ET_THINK, playerattached();
-			mes "[DRY-RUN] ^3355FFYou find another set of footprints. It seems that somebody was running away from something. These prints are heading to the ^5C3317East^3355FF. You'd better follow them to see what";
-			mes "[DRY-RUN] you can find.^000000";
+			mes "^3355FF你发现了另一组脚印。似乎有人在逃避什么。这些脚印正朝着^5C3317东方^3355FF走去。你最好跟着它们看看你能找到什么";
+			mes "你能找到的。^000000";
 			set thai_find,6;
 			close;
 		}
@@ -999,8 +999,8 @@ OnTouch_:
 	if (thai_find == 6) {
 		if (rand(1,3) < 2) {
 			emotion ET_STARE_ABOUT, playerattached();
-			mes "[DRY-RUN] ^3355FFThe footprints end around this area. Whoever was running must";
-			mes "[DRY-RUN] have been exhausted and stumbled on something. Perhaps the owner of the footprints is nearby...^000000";
+			mes "^3355FF脚印在这个区域结束。跑的人一定是";
+			mes "已经精疲力竭，跌跌撞撞地发现了一些东西。也许脚印的主人就在附近...^000000";
 			set thai_find,7;
 			close;
 		}
@@ -1013,8 +1013,8 @@ OnTouch_:
 	if (thai_find == 7) {
 		if (rand(1,3) < 2) {
 			emotion ET_AHA, playerattached();
-			mes "[DRY-RUN] ^3355FFAs you follow the footprints,";
-			mes "[DRY-RUN] you arrive at the '^5C3317Entrance of the Shrine^3355FF.' Whoever this person was, he just ran into the second level.^000000";
+			mes "^3355FF当你跟随脚印时，";
+			mes "你来到了'^5C3317神社的入口^3355FF'。无论这个人是谁，他刚刚跑进了第二层。^000000";
 			set thai_find,8;
 			close;
 		}
@@ -1026,12 +1026,12 @@ ayo_dun02,145,120,0	script	AyoFootprint5	139,2,0,{
 OnTouch_:
 	if (thai_find == 8) {
 		if (rand(1,3) < 2) {
-			mes "[DRY-RUN] ^3355FFYou find the same footprints";
-			mes "[DRY-RUN] in this place. It seems pretty";
-			mes "[DRY-RUN] dangerous, and you wonder why";
-			mes "[DRY-RUN] anyone would come here. The";
-			mes "[DRY-RUN] footprints continue towards";
-			mes "[DRY-RUN] the ^5C3317North^3355FF.^000000";
+			mes "^3355FF你发现了相同的脚印";
+			mes "在这个地方。看起来相当";
+			mes "危险，你不禁想知道为什么";
+			mes "会有人来到这里。";
+			mes "脚印继续朝着";
+			mes "^5C3317北方^3355FF。^000000";
 			set thai_find,9;
 			close;
 		}
@@ -1044,65 +1044,65 @@ OnTouch_:
 	if (thai_find == 9) {
 		if (rand(1,3) == 1) {
 			emotion ET_SURPRISE, playerattached();
-			mes "[DRY-RUN] ^3355FFThe trail of footprints";
-			mes "[DRY-RUN] continue here, and seem";
-			mes "[DRY-RUN] to look more freshly made.^000000.";
+			mes "^3355FF脚印的踪迹";
+			mes "继续这里，似乎";
+			mes "看起来更像是新做的。^000000.";
 			next;
-			mes "[DRY-RUN] ^3355FFHmm...?";
-			mes "[DRY-RUN] There's something here...^000000";
+			mes "^3355FF嗯...?";
+			mes "这里有些东西...^000000";
 			next;
-			switch(select("[DRY-RUN] Ignore.:^5C3317Investigate.^000000")) {
+			switch(select("忽略。:^5C3317调查。^000000")) {
 			case 1:
 				mes "["+strcharinfo(0)+"]";
-				mes "[DRY-RUN] Well, it's probably nothing. But which way should I go now?";
+				mes "嗯，这可能没什么。但我现在该往哪个方向走呢？";
 				set thai_find,10;
 				close;
 			case 2:
 				set .@randayo,rand(1,10);
 				if (.@randayo < 2) {
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] Why, this is a pack of White Potions. Whoever owned these must have dropped these by accident. Hmm, I could use these for later...";
+					mes "哎呀，这是一包白色药水。拥有这些的人一定是意外掉落的。嗯，我可以留着以后用...";
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] Wait...";
-					mes "[DRY-RUN] There are more";
-					mes "[DRY-RUN] footprints heading";
-					mes "[DRY-RUN] toward the ^5C3317East^000000.";
-					mes "[DRY-RUN] I better look";
-					mes "[DRY-RUN] into this.";
+					mes "等一下……";
+					mes "还有更多";
+					mes "脚印朝着";
+					mes "^5C3317东^000000。";
+					mes "我最好看看";
+					mes "这个。";
 					set thai_find,10;
 					getitem 504,10; //White_Potion
 					close;
 				} else if (.@randayo > 2 && .@randayo < 5) {
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] Why, this is a pack of Yellow Potions. Whoever owned these must have dropped these by accident. Hmm, I could use these for later...";
+					mes "这是一包黄色药水。拥有这些药水的人一定是不小心掉下来的。嗯，我可以留着以后用...";
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] Wait...";
-					mes "[DRY-RUN] There are more";
-					mes "[DRY-RUN] footprints heading";
-					mes "[DRY-RUN] toward the ^5C3317East^000000.";
-					mes "[DRY-RUN] I better look";
-					mes "[DRY-RUN] into this.";
+					mes "等一下……";
+					mes "还有更多";
+					mes "脚印朝着";
+					mes "^5C3317东^000000。";
+					mes "我最好看看";
+					mes "这个。";
 					set thai_find,10;
 					getitem 503,10; //Yellow potion
 					close;
 				} else {
-					mes "[DRY-RUN] [Rat]";
-					mes "[DRY-RUN] ^FF0000Squeak!";
-					mes "[DRY-RUN] ^FF0000Squeak Squeak!^000000";
+					mes "[老鼠]";
+					mes "^FF0000吱！";
+					mes "^FF0000吱吱！^000000";
 					emotion ET_HUK, playerattached();
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] ^8C1717Wah^000000!";
-					mes "[DRY-RUN] What was that?!";
+					mes "^8C1717哇^000000！";
+					mes "那是什么？";
 					next;
-					mes "[DRY-RUN] ^3355FFIt was just a rat.";
-					mes "[DRY-RUN] It feels awful silly to be scared by just a little rat, does it not?^000000";
+					mes "^3355FF只是只老鼠。";
+					mes "被一只小老鼠吓到真是太傻了，不是吗？^000000";
 					next;
-					mes "[DRY-RUN] ^3355FFYou find another trail";
-					mes "[DRY-RUN] of footprints that heads";
-					mes "[DRY-RUN] towards the ^5C3317East^3355FF.^000000";
+					mes "^3355FF你发现另一条足迹";
+					mes "通向";
+					mes "^5C3317东边^3355FF。^000000";
 					set thai_find,10;
 					close;
 				}
@@ -1118,11 +1118,11 @@ OnTouch_:
 	if (thai_find == 10) {
 		if (rand(1,3) < 2) {
 			emotion ET_SURPRISE, playerattached();
-			mes "[DRY-RUN] ^3355FFWhere is he...?";
-			mes "[DRY-RUN] He seems to have gone";
-			mes "[DRY-RUN] deep into the dungeon.";
-			mes "[DRY-RUN] Just looking for this";
-			mes "[DRY-RUN] guy is exhausting...^000000";
+			mes "^3355FF他在哪里...?";
+			mes "他似乎已经走了";
+			mes "深入地下城。";
+			mes "只是寻找这个";
+			mes "家伙真是累人...^000000";
 			set thai_find,11;
 			close;
 		}
@@ -1135,7 +1135,7 @@ OnTouch_:
 	if (thai_find == 11) {
 		if (rand(1,3) < 2) {
 			emotion ET_SURPRISE, playerattached();
-			mes "[DRY-RUN] ^3355FFYou find traces of blood. Whoever was running in this direction may have been wounded. The trail of blood leads to the ^5C3317North^3355FF.^000000";
+			mes "^3355FF你发现了血迹。朝这个方向跑的人可能受了伤。血迹通向^5C3317北方^3355FF。^000000";
 			changequest 12032,12033;
 			set thai_find,12;
 			close;
@@ -1232,99 +1232,99 @@ ayothaya,193,171,3	script	Old Man#02	842,{
 //============================================================
 ayothaya,83,132,0	script	Dusit#thai	843,{
 	if (ayodunquest == 0) {
-		mes "[DRY-RUN] [Dusit]";
-		mes "[DRY-RUN] Oh...!";
-		mes "[DRY-RUN] You must be a traveller.";
-		mes "[DRY-RUN] I have a tale you may wish to hear if you're interested in listening.";
+		mes "[杜西特]";
+		mes "哦……！";
+		mes "你一定是个旅行者。";
+		mes "我有一个故事你可能想听，如果你有兴趣的话。";
 		next;
-		if (select("[DRY-RUN] What is it?:I know what the story is.") == 1) {
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] Ayothaya has a long history. Perhaps it looks calm and peaceful now, but in the past our village was terrorized by a terrible creature.";
+		if (select("怎么了?:我知道故事是什么。") == 1) {
+			mes "[杜西特]";
+			mes "阿尤塔亚有着悠久的历史。也许现在看起来平静而安宁，但在过去，我们的村庄曾被一种可怕的生物所恐吓。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] This beast is known to us as";
-			mes "[DRY-RUN] the ^660000Sa-mhing Tiger^000000, which used";
-			mes "[DRY-RUN] to dwell deep in the ancient ruins.";
+			mes "[杜西特]";
+			mes "这种野兽在我们这里被称为";
+			mes "^660000萨明虎^000000，它曾使用";
+			mes "深入古代遗迹中居住。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] The Sa-mhing Tiger is addicted";
-			mes "[DRY-RUN] to the taste of human flesh. It has been known to transform into the shape of a person it has eaten in order to lure out his family and friends.";
+			mes "[杜西特]";
+			mes "萨明虎对人肉的味道上瘾，";
+			mes "它已知会变成它所吃过的人的形状，以引诱出他的家人和朋友。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] The local people are still afraid that the creature might transform into someone they know, and sneak into their homes to eat them.";
+			mes "[杜西特]";
+			mes "当地人仍然害怕这个生物可能会变成他们认识的人，潜入他们的家中吃掉他们。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] However, there is one way you can identify the Sa-mhing Tiger from a human being. Since it's a tiger, it cannot do some of the things";
-			mes "[DRY-RUN] humans are taught to do,";
-			mes "[DRY-RUN] such as light a match.";
+			mes "[杜西特]";
+			mes "然而，有一种方法可以让你区分萨姆辛虎和人类。由于它是老虎，它无法做一些事情";
+			mes "人类被教导要做的，";
+			mes "例如点燃火柴。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] So, if by any chance you see";
-			mes "[DRY-RUN] a friend acting strangely all";
-			mes "[DRY-RUN] of a sudden, ask him to strike";
-			mes "[DRY-RUN] a match. Make sure he is not";
-			mes "[DRY-RUN] the Sa-mhing Tiger.";
+			mes "[杜西特]";
+			mes "所以，如果你碰巧看到";
+			mes "一个朋友突然表现得很奇怪，";
+			mes "就问他是否能点燃";
+			mes "一根火柴。确保他不是";
+			mes "萨姆辛虎。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] However...";
-			mes "[DRY-RUN] I'm not sure if this actually works or not. I guess the best thing to do is just run for your life if you even suspect someone of being";
-			mes "[DRY-RUN] the Sa-mhing Tiger.";
+			mes "[杜西特]";
+			mes "不过…";
+			mes "我不确定这是否真的有效。我想最好的办法就是如果你怀疑某人是";
+			mes "萨姆辛虎。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] Do you believe";
-			mes "[DRY-RUN] in the existance";
-			mes "[DRY-RUN] of man-eating tigers?";
+			mes "[杜西特]";
+			mes "你相信吗";
+			mes "在存在中";
+			mes "吃人的老虎？";
 			next;
-			if (select("[DRY-RUN] Well, not really.:Yes, I do and I think they're scary!") == 1) {
-				mes "[DRY-RUN] [Dusit]";
-				mes "[DRY-RUN] Umm...";
-				mes "[DRY-RUN] Oh well. My late grandfather told me about the Sa-mhing Tiger when";
-				mes "[DRY-RUN] I was a little kid. Of course,";
-				mes "[DRY-RUN] I haven't seen it.";
+			if (select("嗯，不是的.:是的，我知道，我觉得他们很可怕！") == 1) {
+				mes "[杜西特]";
+				mes "嗯...";
+				mes "哦，我已故的祖父在我还是个小孩的时候告诉我关于萨明虎的事。";
+				mes "当然，";
+				mes "我没有见过它。";
 				next;
-				mes "[DRY-RUN] [Dusit]";
-				mes "[DRY-RUN] The closest thing I've seen to the Sa-mhing Tiger was a golden cat with a bell. Somehow, I don't think it ate men.";
+				mes "[杜西特]";
+				mes "我见过的最接近萨明虎的东西是一只带铃铛的金色猫。总觉得它不会吃人。";
 				close;
 			}
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] Run for your life if you ever encounter the Sa-mhing Tiger!";
-			mes "[DRY-RUN] It'll eat you alive!";
+			mes "[杜西特]";
+			mes "如果你遇到萨明虎，快跑！";
+			mes "它会活活吃了你！";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] If you're interested in finding";
-			mes "[DRY-RUN] out more about the story, I can introduce you to someone who";
-			mes "[DRY-RUN] knows that creature more than";
-			mes "[DRY-RUN] anyone else.";
+			mes "[杜西特]";
+			mes "如果你有兴趣了解更多关于这个故事的事，我可以介绍你认识一个";
+			mes "更了解那种生物的人。";
+			mes "知道那种生物的人。";
+			mes "其他人。";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] Why don't you talk to Boonthom? He's a pretty strange person, but there's something about him...";
+			mes "[杜西特]";
+			mes "你为什么不去找布恩通？他是个相当奇怪的人，但他身上有些特别的东西……";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] ...";
-			mes "[DRY-RUN] ......";
+			mes "[杜西特]";
+			mes "...";
+			mes "......";
 			next;
-			mes "[DRY-RUN] [Dusit]";
-			mes "[DRY-RUN] Ah well, you'll see what I'm talking about. I hope he'll help you learn more about that evil creature.";
+			mes "[杜西特]";
+			mes "啊，好吧，你会明白我在说什么的。我希望他能帮助你更多地了解那个邪恶的生物。";
 			set ayodunquest,1;
 			setquest 12035;
 			close;
 		}
-		mes "[DRY-RUN] [Dusit]";
-		mes "[DRY-RUN] You do now?";
-		mes "[DRY-RUN] Then be careful!";
-		mes "[DRY-RUN] It'll eat you alive!";
+		mes "[杜西特]";
+		mes "你现在知道了吗？";
+		mes "那就小心点！";
+		mes "它会活活吃了你！";
 		close;
 	} else if (ayodunquest > 0) {
-		mes "[DRY-RUN] [Dusit]";
-		mes "[DRY-RUN] How are you?";
-		mes "[DRY-RUN] If you're interested";
-		mes "[DRY-RUN] in the Sa-mhing Tiger,";
-		mes "[DRY-RUN] please go talk to Boonthom.";
+		mes "[杜西特]";
+		mes "你好吗？";
+		mes "如果你有兴趣";
+		mes "关于萨明虎，";
+		mes "请去找布恩通。";
 		next;
-		mes "[DRY-RUN] [Dusit]";
-		mes "[DRY-RUN] But beware!";
-		mes "[DRY-RUN] The Sa-mhing Tiger might be";
-		mes "[DRY-RUN] closer to you than you expect!";
+		mes "[杜西特]";
+		mes "但要小心！";
+		mes "萨明虎可能比你想象的更接近你！";
+		mes "比你想象的更接近你！";
 		close;
 	}
 }
@@ -1340,164 +1340,164 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 		setarray .@items[0],1059,1022; //Transparent_Cloth, Fox_Tail
 
 	if (ayodunquest == 1) {
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] You...!";
-		mes "[DRY-RUN] Isn't it....!";
-		mes "[DRY-RUN] Oooooohhhhhhh!";
+		mes "[布恩通]";
+		mes "你...！";
+		mes "难道不是吗....！";
+		mes "哦哦哦哦哦哦哦！";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Oh...?";
+		mes "[布恩通]";
+		mes "哦...? ";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ...";
+		mes "[布恩通]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[布恩通]";
+		mes "...";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
-		mes "[DRY-RUN] .........";
+		mes "[布恩通]";
+		mes "...";
+		mes "......";
+		mes ".........";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Never mind.";
-		mes "[DRY-RUN] Hah! I've lost my";
-		mes "[DRY-RUN] train of thought.";
+		mes "[布恩通]";
+		mes "没关系。";
+		mes "哈！我失去了我的";
+		mes "思路。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] So have you come to me to seek help? I can see the fear in your eyes. Let me gaze into your soul, and see what your fear is for myself. Hmmm...";
+		mes "[布恩通]";
+		mes "那么你是来找我寻求帮助的吗？我能看到你眼中的恐惧。让我凝视你的灵魂，看看你的恐惧是什么。嗯...";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ...";
+		mes "[布恩通]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[布恩通]";
+		mes "...";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
-		mes "[DRY-RUN] .........";
+		mes "[布恩通]";
+		mes "...";
+		mes "......";
+		mes ".........";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] What...!";
-		mes "[DRY-RUN] I see that you dread the Sa-mhing Tiger! I haven't heard any news of that monster for a long time...";
+		mes "[布恩通]";
+		mes "什么...！";
+		mes "我看到你害怕萨明虎！我很久没有听到关于那个怪物的消息了...";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] A long time ago,";
-		mes "[DRY-RUN] the Sa-mhing Tiger";
-		mes "[DRY-RUN] really did roam the village";
-		mes "[DRY-RUN] and ate innocent people.";
+		mes "[布恩通]";
+		mes "很久以前，";
+		mes "萨明虎";
+		mes "确实在村庄里游荡过，";
+		mes "并且吃掉了无辜的人。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] However, its terror";
-		mes "[DRY-RUN] was brought to an end when it";
-		mes "[DRY-RUN] was finally captured. I was one of those involved in capturing the Sa-mhing Tiger.";
+		mes "[布恩通]";
+		mes "然而，它的恐怖";
+		mes "在它被捕获时结束了。";
+		mes "我参与了捕获萨明虎的行动。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] I insisted killing on it, but the other people were too afraid to do so. Instead, the Sa-mhing Tiger";
-		mes "[DRY-RUN] was locked in a cave inside of the ancient ruins.";
+		mes "[布恩通]";
+		mes "我坚持要杀掉它，但其他人太害怕了。相反，萨明虎";
+		mes "被锁在古代遗迹中的一个洞穴里。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] I believe that was at least 10 years ago. Perhaps it's already dead by now. However, no one";
-		mes "[DRY-RUN] knows how powerful the tiger truly";
-		mes "[DRY-RUN] is. It may still be alive.";
+		mes "[布恩通]";
+		mes "我相信那至少是十年前的事了。也许它现在已经死了。不过，没有人";
+		mes "知道老虎究竟有多强大";
+		mes "。它可能还活着。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] I don't think we need to worry about it though. It is locked up and there it shall remain.";
+		mes "[布恩通]";
+		mes "不过我认为我们不需要担心它。它被锁起来了，就应该保持在那里。";
 		next;
-		switch(select("[DRY-RUN] I want to explore the ancient ruins.:Locked up! Good! I'm not afraid!")) {
+		switch(select("我想探索古代遗迹。:锁住了！好！我不怕！")) {
 		case 1:
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] You...";
-			mes "[DRY-RUN] You are strange.";
-			mes "[DRY-RUN] You want to explore the ancient ruins. Do all adventurers disregard their safety like that?";
+			mes "[布恩通]";
+			mes "你...";
+			mes "你真奇怪。";
+			mes "你想探索古代遗迹。所有冒险者都这样不顾安全吗？";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] It's your choice. But remember, it is very dangerous to go through the path to the center of the building. Usually, I forbid it.";
+			mes "[布恩通]";
+			mes "这取决于你。但请记住，走到建筑中心的道路是非常危险的。通常，我是禁止的。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] But if you want to go in,";
-			mes "[DRY-RUN] I can give you some useful tips.";
-			mes "[DRY-RUN] Would you like to listen?";
+			mes "[布恩通]";
+			mes "但如果你想进去，";
+			mes "我可以给你一些有用的建议。";
+			mes "你想听吗？";
 			next;
-			if (select("[DRY-RUN] If it's that dangerous, I'd rather not try.:Sure!") == 1) {
-				mes "[DRY-RUN] [Boonthom]";
-				mes "[DRY-RUN] You made a good decision.";
-				mes "[DRY-RUN] You'd better be careful if";
-				mes "[DRY-RUN] you want to stay alive.";
+			if (select("如果真的那么危险，我宁愿不试。:当然！") == 1) {
+				mes "[布恩通]";
+				mes "你做了一个好决定。";
+				mes "如果你想活下去，最好小心。";
+				mes "你想活下去。";
 				close;
 			}
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Umm, okay.";
-			mes "[DRY-RUN] Since you're";
-			mes "[DRY-RUN] that interested...";
+			mes "[布恩通]";
+			mes "嗯，好吧。";
+			mes "既然你是";
+			mes "那很有趣...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] If you wish to enter the ancient building, you must have protection against evil spirits and malice.";
+			mes "[布恩通]";
+			mes "如果你想进入古老的建筑，你必须有抵御邪灵和恶意的保护。";
 			next;
 			if (Class == Job_Priest || Class == Job_Acolyte || Class == Job_Crusader) {
-				mes "[DRY-RUN] [Boonthom]";
-				mes "[DRY-RUN] Even if you can";
-				mes "[DRY-RUN] wield the power of";
-				mes "[DRY-RUN] holiness, you will still need the spiritual security of our land.";
+				mes "[布恩通]";
+				mes "即使你可以";
+				mes "掌握力量";
+				mes "的神圣性，你仍然需要我们土地的精神保护。";
 			} else {
-				mes "[DRY-RUN] [Boonthom]";
-				mes "[DRY-RUN] There are many ghosts and";
-				mes "[DRY-RUN] demons within the cave, and they will attack people who do not possess holy power... Like you.";
+				mes "[布恩通]";
+				mes "这里有许多鬼魂和";
+				mes "洞穴中的恶魔，他们会攻击没有神圣力量的人……就像你一样。";
 			}
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] I can make you an object";
-			mes "[DRY-RUN] containing this holy power if you wish. In order to make it, I will need some materials.";
+			mes "[布恩通]";
+			mes "我可以为你制作一个物品";
+			mes "如果你愿意，我可以制作一个包含这种神圣力量的物品。为了制作它，我需要一些材料。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
+			mes "[布恩通]";
 			mes "^3366991 "+getitemname(.@items[0])+"^000000,";
 			mes "^3366991 "+getitemname(.@items[1])+"^000000,";
-			mes "[DRY-RUN] ^3366991 Solid Husk^000000 and";
-			mes "[DRY-RUN] ^3366991 Holy Water^000000...";
-			mes "[DRY-RUN] That's all I need.";
+			mes "^3366991 坚固的外壳^000000 和";
+			mes "^3366991 圣水^000000……";
+			mes "这就是我所需要的一切.";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Please come back";
-			mes "[DRY-RUN] when you prepare all";
-			mes "[DRY-RUN] the materials.";
+			mes "[布恩通]";
+			mes "请回来";
+			mes "当你准备好所有";
+			mes "材料时。";
 			set ayodunquest,2;
 			changequest 12035,12036;
 			close;
 		}
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Hmmm...";
-		mes "[DRY-RUN] Not afraid";
-		mes "[DRY-RUN] of it, are you?";
+		mes "[布恩通]";
+		mes "嗯……";
+		mes "不怕";
+		mes "它，是吗？";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ............";
-		mes "[DRY-RUN] ............";
+		mes "[布恩通]";
+		mes "............";
+		mes "............";
 		close;
 	} else if (ayodunquest == 2) {
 		if (countitem(.@items[0]) > 0 && countitem(.@items[1]) > 0 && countitem(7190) > 0 && countitem(523) > 0) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Excellent!";
-			mes "[DRY-RUN] Now you have brought";
-			mes "[DRY-RUN] everything I need. Let me make";
-			mes "[DRY-RUN] the thing for you as promised...";
+			mes "[布恩通]";
+			mes "太棒了！";
+			mes "现在你带来了";
+			mes "我需要的一切。让我来制作";
+			mes "如承诺的那样给你的东西...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Ooooohmmmmm...";
+			mes "[布恩通]";
+			mes "哦哦哦嗯嗯嗯...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Hmmmmmm...";
-			mes "[DRY-RUN] Hmmmmmmmmm.";
+			mes "[布恩通]";
+			mes "嗯嗯嗯嗯嗯...";
+			mes "嗯嗯嗯嗯嗯嗯嗯。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Pffff pffff...";
+			mes "[布恩通]";
+			mes "噗噗噗...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Here you go.";
-			mes "[DRY-RUN] Please take these holy threads.";
-			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
+			mes "[布恩通]";
+			mes "给你。";
+			mes "请拿着这些神圣的线。";
+			mes "有了这个，你将能够更少担忧地进入遗迹。";
 			delitem .@items[0],1;
 			delitem .@items[1],1;
 			delitem 7190,1; //Solid_Peeling
@@ -1506,145 +1506,145 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			changequest 12036,12037;
 			getitem 7285,1; //Thread_Skein
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Even if you lose this, don't worry. Just bring me the materials, and";
-			mes "[DRY-RUN] I will make you another one.";
+			mes "[布恩通]";
+			mes "即使你丢失了这个，也不用担心。只需把材料带给我，";
+			mes "我会再给你做一个。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] The ancient building consists";
-			mes "[DRY-RUN] of 2 levels. Before you enter the 2nd underground level, please return to me so that I can tell you how to enter that place.";
+			mes "[布恩通]";
+			mes "古老的建筑由";
+			mes "2层组成。在你进入第二层地下之前，请返回找我，这样我可以告诉你如何进入那个地方。";
 			close;
 		}
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Did you forget what materials";
-		mes "[DRY-RUN] you need to create my object of holy power? Please listen";
-		mes "[DRY-RUN] carefully this time.";
+		mes "[布恩通]";
+		mes "你忘记了制作我神圣力量物品所需的材料吗？";
+		mes "请听好这次。";
+		mes "这次要仔细听。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
+		mes "[布恩通]";
 		mes "^3366991 "+getitemname(.@items[0])+"^000000,";
 		mes "^3366991 "+getitemname(.@items[1])+"^000000,";
-		mes "[DRY-RUN] ^3366991 Solid Husk^000000 and";
-		mes "[DRY-RUN] ^3366991 Holy Water^000000.";
+		mes "^3366991 坚固的外壳^000000 和";
+		mes "^3366991 圣水^000000。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] See you later.";
+		mes "[布恩通]";
+		mes "再见。";
 		close;
 	} else if (ayodunquest == 3) {
 		if (countitem(.@items[0]) > 0 && countitem(.@items[1]) > 0 && countitem(7190) > 0 && countitem(523) > 0) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Excellent! Now you have brought everything I need, let me make the thing for you as I promised...";
+			mes "[布恩通]";
+			mes "太好了！现在你带来了我需要的一切，让我按照承诺为你制作这个...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Ooooohmmmmm...";
+			mes "[布恩通]";
+			mes "哦哦哦嗯嗯嗯...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Hmmmmmm...";
-			mes "[DRY-RUN] Hmmmmmmmmm.";
+			mes "[布恩通]";
+			mes "嗯嗯嗯嗯嗯...";
+			mes "嗯嗯嗯嗯嗯嗯嗯。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Pffff pffff...";
+			mes "[布恩通]";
+			mes "噗噗噗...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Here you go.";
-			mes "[DRY-RUN] Please take these holy threads.";
-			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
+			mes "[布恩通]";
+			mes "给你。";
+			mes "请拿着这些神圣的线。";
+			mes "有了这个，你将能够更少担忧地进入遗迹。";
 			delitem .@items[0],1;
 			delitem .@items[1],1;
 			delitem 7190,1; //Solid_Peeling
 			delitem 523,1; //Holy_Water
 			getitem 7285,1; //Thread_Skein
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Even if you lose this, don't worry. Just bring me the materials, I can make you another one.";
+			mes "[布恩通]";
+			mes "即使你丢失了这个，也不用担心。只需把材料带给我，我可以再为你制作一个。";
 			close;
 		}
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] If you lose the holy threads, don't worry. I can make some more for you. Just gather the following items.";
+		mes "[布恩通]";
+		mes "如果你丢失了神圣线，不用担心。我可以再为你制作一些。只需收集以下物品。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
+		mes "[布恩通]";
 		mes "^3366991 "+getitemname(.@items[0])+"^000000,";
 		mes "^3366991 "+getitemname(.@items[1])+"^000000,";
-		mes "[DRY-RUN] ^3366991 Solid Husk^000000 and";
-		mes "[DRY-RUN] ^3366991 Holy Water^000000.";
+		mes "^3366991 坚固的外壳^000000 和";
+		mes "^3366991 圣水^000000。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] See you later.";
+		mes "[布恩通]";
+		mes "再见。";
 		close;
 	} else if (ayodunquest > 3 && ayodunquest < 9) {
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] You finally started seeking the tiger. I hope that you will be safe from harm.";
+		mes "[布恩通]";
+		mes "你终于开始寻找老虎了。我希望你能平安无事。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Feel free to ask";
-		mes "[DRY-RUN] me for help at anytime.";
+		mes "[布恩通]";
+		mes "随时问我";
+		mes "寻求帮助。";
 		close;
 	} else if (ayodunquest == 9) {
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I copied down this";
-		mes "[DRY-RUN] message while exploring";
-		mes "[DRY-RUN] the dungeon. Would you";
-		mes "[DRY-RUN] take a look at this?";
+		mes "我在探索时抄下了这个";
+		mes "信息";
+		mes "在地下城。你能";
+		mes "看看这个吗？";
 		next;
-		mes "[DRY-RUN] [Stone Slate]";
-		mes "[DRY-RUN] ^333333Do not enter the";
-		mes "[DRY-RUN] 2nd underground level";
-		mes "[DRY-RUN] ...is danger... You wil...";
-		mes "[DRY-RUN] ...encounter... tiger...^000000";
+		mes "[石板]";
+		mes "^333333请勿进入";
+		mes "第二层地下";
+		mes "...有危险...你将...";
+		mes "...遇到...老虎...^000000";
 		next;
-		mes "[DRY-RUN] [Stone Slate]";
-		mes "[DRY-RUN] ^333333You must kill... In order to do... MUST... How to go... the 2nd underground level...";
-		mes "[DRY-RUN] You need more... Holy power... in order to... Otherwise, it's impossible...^000000";
+		mes "[石板]";
+		mes "^333333你必须杀死...为了做到这一点...必须...如何进入...第二层地下...";
+		mes "你需要更多的……神圣力量……否则，这是不可能的……^000000";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] That was written by one of my comrades who entered the ruins,";
-		mes "[DRY-RUN] as he regretted letting the tiger live, lest it return.";
+		mes "[布恩通]";
+		mes "这是我进入遗迹的同伴写的，";
+		mes "他后悔让老虎活着，以免它回来。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] If you were able to find this note, you must have strong determination to venture through the ruins.";
+		mes "[布恩通]";
+		mes "如果你能找到这张纸条，你一定有强烈的决心去探索遗迹。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] As you can guess from the";
-		mes "[DRY-RUN] note, the 2nd underground level is very very dangerous. You will need holy threads that contain even more holy protection.";
+		mes "[布恩通]";
+		mes "正如你从这";
+		mes "张纸条上可以猜到的，第二层地下非常非常危险。你需要更多神圣保护的神圣线。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Now, go and gather some materials so that I can create more powerful holy threads for you.";
+		mes "[布恩通]";
+		mes "现在，去收集一些材料，这样我就可以为你制作更强大的神圣线。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
-		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
+		mes "[布恩通]";
+		mes "^3366992 圣水^000000，";
+		mes "^3366991 世界树叶^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		set ayodunquest,10;
 		changequest 12037,12038;
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Return to me";
-		mes "[DRY-RUN] once you have";
-		mes "[DRY-RUN] gathered everything.";
+		mes "[布恩通]";
+		mes "带着这些回来找我";
+		mes "一旦你收集完毕";
+		mes "所有东西.";
 		close;
 	} else if (ayodunquest == 10) {
 		if (countitem(523) > 1 && countitem(610) > 0 && countitem(.@items[0]) > 1 && countitem(.@items[1]) > 1) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Hmm~";
-			mes "[DRY-RUN] You've brought";
-			mes "[DRY-RUN] everything. Quite";
-			mes "[DRY-RUN] the enthusiastic one,";
-			mes "[DRY-RUN] aren't you?";
+			mes "[布恩通]";
+			mes "嗯~";
+			mes "你带来了";
+			mes "所有东西. 真是";
+			mes "热情洋溢的人,";
+			mes "不是吗?";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Ooooohmmmmm...";
+			mes "[布恩通]";
+			mes "哦哦哦嗯嗯嗯...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Hmmmmmm...";
-			mes "[DRY-RUN] Hmmmmmmmmm.";
+			mes "[布恩通]";
+			mes "嗯嗯嗯嗯嗯...";
+			mes "嗯嗯嗯嗯嗯嗯嗯。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Pffff pffff...";
+			mes "[布恩通]";
+			mes "噗噗噗...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Here you go.";
-			mes "[DRY-RUN] Please take these holy threads.";
-			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
+			mes "[布恩通]";
+			mes "给你。";
+			mes "请拿着这些神圣的线。";
+			mes "有了这个，你将能够更少担忧地进入遗迹。";
 			delitem .@items[0],2;
 			delitem .@items[1],2;
 			delitem 610,1; //Leaf_Of_Yggdrasil
@@ -1653,56 +1653,56 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			getitem 7287,1; //Thread_Skein_
 			changequest 12038,12039;
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Even if you lose this, don't worry. Just bring me the materials, and";
-			mes "[DRY-RUN] I will make you another one.";
+			mes "[布恩通]";
+			mes "即使你丢失了这个，也不用担心。只需把材料带给我，";
+			mes "我会再给你做一个。";
 			close;
 		}
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Didn't I tell you";
-		mes "[DRY-RUN] what I need to make";
-		mes "[DRY-RUN] a more powerful";
-		mes "[DRY-RUN] holy thread?";
+		mes "[布恩通]";
+		mes "嗯……？";
+		mes "我不是告诉过你";
+		mes "我需要这些来制作";
+		mes "更强大的";
+		mes "神圣线?";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
-		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
+		mes "[布恩通]";
+		mes "^3366992 圣水^000000，";
+		mes "^3366991 世界树叶^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Return to me";
-		mes "[DRY-RUN] with those items";
-		mes "[DRY-RUN] and I will craft";
-		mes "[DRY-RUN] more powerful holy";
-		mes "[DRY-RUN] threads for you.";
+		mes "[布恩通]";
+		mes "带着这些回来找我";
+		mes "用这些物品";
+		mes "我将为你制作";
+		mes "更强大的神圣线.";
+		mes "为你准备的线索。";
 		close;
 	} else if (ayodunquest == 11) {
 		if (countitem(7287) > 0) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Those threads";
-			mes "[DRY-RUN] will protect you";
-			mes "[DRY-RUN] from the spiritual";
-			mes "[DRY-RUN] dangers, but it's up";
-			mes "[DRY-RUN] to you to defend yourself";
-			mes "[DRY-RUN] from monster attacks, okay?";
+			mes "[布恩通]";
+			mes "那些线";
+			mes "将保护你";
+			mes "免受灵魂";
+			mes "的危险，但这取决于你";
+			mes "来保护自己";
+			mes "免受怪物攻击，明白了吗？";
 			close;
 		} else if (countitem(523) > 1 && countitem(610) > 0 && countitem(.@items[0]) > 1 && countitem(.@items[1]) > 1 && countitem(7287) == 0) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Ooooohmmmmm...";
+			mes "[布恩通]";
+			mes "哦哦哦嗯嗯嗯...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Hmmmmmm...";
-			mes "[DRY-RUN] Hmmmmmmmmm.";
+			mes "[布恩通]";
+			mes "嗯嗯嗯嗯嗯...";
+			mes "嗯嗯嗯嗯嗯嗯嗯。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Pffff pffff...";
+			mes "[布恩通]";
+			mes "噗噗噗...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Here you go.";
-			mes "[DRY-RUN] Please take these holy threads.";
-			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
+			mes "[布恩通]";
+			mes "给你。";
+			mes "请拿着这些神圣的线。";
+			mes "有了这个，你将能够更少担忧地进入遗迹。";
 			delitem .@items[0],2;
 			delitem .@items[1],2;
 			delitem 610,1; //Leaf_Of_Yggdrasil
@@ -1710,78 +1710,78 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			getitem 7287,1; //Thread_Skein_
 			close;
 		}
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Didn't I tell you";
-		mes "[DRY-RUN] what I need to make";
-		mes "[DRY-RUN] a more powerful";
-		mes "[DRY-RUN] holy thread?";
+		mes "[布恩通]";
+		mes "嗯……？";
+		mes "我不是告诉过你";
+		mes "我需要这些来制作";
+		mes "更强大的";
+		mes "神圣线?";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
-		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
+		mes "[布恩通]";
+		mes "^3366992 圣水^000000，";
+		mes "^3366991 世界树叶^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		close;
 	} else if (ayodunquest == 12) {
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Huh...!";
-		mes "[DRY-RUN] You must have seen something.";
-		mes "[DRY-RUN] I can tell by the gloomy look on your face, and the shadow looming over your soul.";
+		mes "[布恩通]";
+		mes "哈...！";
+		mes "你一定看到了什么。";
+		mes "我可以从你脸上的阴郁表情和你灵魂上笼罩的阴影看出来。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I found";
-		mes "[DRY-RUN] this old letter";
-		mes "[DRY-RUN] in the ruins.";
+		mes "我找到";
+		mes "这封旧信";
+		mes "在废墟中。";
 		next;
-		mes "[DRY-RUN] [Old Letter]";
-		mes "[DRY-RUN] ^333333Dear, Boonthom...I was a fool...There is Sa-mhing Tig'...One who ....my remains... Please take...to Boonthom...";
+		mes "[旧信]";
+		mes "^333333亲爱的，Boonthom...我真是个傻瓜...有Sa-mhing Tig'...一个...我的遗骸...请把...带给Boonthom...";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] I see...";
-		mes "[DRY-RUN] Oh, my dear";
-		mes "[DRY-RUN] old friend...";
+		mes "[布恩通]";
+		mes "我明白了……";
+		mes "哦，我的亲爱的";
+		mes "老朋友...";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Thank you for your trouble.";
-		mes "[DRY-RUN] My friend left that box for me.";
-		mes "[DRY-RUN] But I guess he would wish to give that box to the person who found his remains.";
+		mes "[布恩通]";
+		mes "谢谢你的辛苦。";
+		mes "我的朋友留给我那个箱子。";
+		mes "但我想他希望把那个箱子给找到他遗骸的人。";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] If you wish to explore the building again, but you don't have any holy thread, feel free to ask me at anytime.";
+		mes "[布恩通]";
+		mes "如果你想再次探索这栋建筑，但没有任何圣线，随时可以来问我。";
 		set ayodunquest,13;
 		completequest 12039;
 		close;
 	} else if (ayodunquest > 12) {
 		if (countitem(7287) > 0) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Best of luck on your";
-			mes "[DRY-RUN] expeditions, brave";
-			mes "[DRY-RUN] adventurer~";
+			mes "[布恩通]";
+			mes "祝你好运，";
+			mes "勇敢的";
+			mes "冒险者~";
 			close;
 		} else if (countitem(523) > 1 && countitem(610) > 0 && countitem(.@items[0]) > 1 && countitem(.@items[1]) > 1 && countitem(7287) == 0) {
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Lost the";
-			mes "[DRY-RUN] holy threads";
-			mes "[DRY-RUN] somehow, did you?";
-			mes "[DRY-RUN] With the items you";
-			mes "[DRY-RUN] have, I'll simply";
-			mes "[DRY-RUN] make more of them.";
+			mes "[布恩通]";
+			mes "失去了";
+			mes "神圣的线";
+			mes "不知怎么的，你做到了？";
+			mes "有了你手中的物品，我";
+			mes "会简单地";
+			mes "制作更多的它们。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Ooooohmmmmm...";
+			mes "[布恩通]";
+			mes "哦哦哦嗯嗯嗯...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Hmmmmmm...";
-			mes "[DRY-RUN] Hmmmmmmmmm.";
+			mes "[布恩通]";
+			mes "嗯嗯嗯嗯嗯...";
+			mes "嗯嗯嗯嗯嗯嗯嗯。";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Pffff pffff...";
+			mes "[布恩通]";
+			mes "噗噗噗...";
 			next;
-			mes "[DRY-RUN] [Boonthom]";
-			mes "[DRY-RUN] Here you go.";
-			mes "[DRY-RUN] Please take these holy threads.";
-			mes "[DRY-RUN] With this, you will be able to enter the ruins with less worry.";
+			mes "[布恩通]";
+			mes "给你。";
+			mes "请拿着这些神圣的线。";
+			mes "有了这个，你将能够更少担忧地进入遗迹。";
 			delitem .@items[0],2;
 			delitem .@items[1],2;
 			delitem 610,1; //Leaf_Of_Yggdrasil
@@ -1789,153 +1789,153 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			getitem 7287,1; //Thread_Skein_
 			close;
 		}
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Didn't I tell you";
-		mes "[DRY-RUN] what I need to make";
-		mes "[DRY-RUN] a more powerful";
-		mes "[DRY-RUN] holy thread?";
+		mes "[布恩通]";
+		mes "嗯……？";
+		mes "我不是告诉过你";
+		mes "我需要这些来制作";
+		mes "更强大的";
+		mes "神圣线?";
 		next;
-		mes "[DRY-RUN] [Boonthom]";
-		mes "[DRY-RUN] ^3366992 Holy Water^000000,";
-		mes "[DRY-RUN] ^3366991 Yggdrasil Leaf^000000,";
+		mes "[布恩通]";
+		mes "^3366992 圣水^000000，";
+		mes "^3366991 世界树叶^000000,";
 		mes "^3366992 "+getitemname(.@items[0])+"^000000 and";
 		mes "^3366992 "+getitemname(.@items[1])+"^000000.";
 		close;
 	}
-	mes "[DRY-RUN] [Boonthom]";
-	mes "[DRY-RUN] Ooooohmmmmm...";
+	mes "[布恩通]";
+	mes "哦哦哦嗯嗯嗯...";
 	close;
 }
 
 ayo_fild01,129,197,0	script	Puraim#thai1	842,{
 	if ((ayodunquest > 2 && countitem(7285) > 0) || (ayodunquest > 2 && countitem(7287) > 0)) {
-		mes "[DRY-RUN] [Puraim]";
-		mes "[DRY-RUN] Huh...?";
-		mes "[DRY-RUN] I feel it!";
-		mes "[DRY-RUN] I can feel the";
-		mes "[DRY-RUN] power of holiness!";
-		mes "[DRY-RUN] It's coming from you!";
+		mes "[普拉伊姆]";
+		mes "哈……？";
+		mes "我感觉到了！";
+		mes "我能感觉到";
+		mes "神圣的力量！";
+		mes "它来自于你！";
 		next;
-		mes "[DRY-RUN] [Puraim]";
-		mes "[DRY-RUN] I guess you can go ahead";
-		mes "[DRY-RUN] into the ruins. So that's";
-		mes "[DRY-RUN] what you want? To explore";
-		mes "[DRY-RUN] this area?";
+		mes "[普拉伊姆]";
+		mes "我想你可以继续前进";
+		mes "进入遗迹。所以这就是";
+		mes "你想要什么？探索";
+		mes "这个区域吗？";
 		next;
-		mes "[DRY-RUN] [Puraim]";
-		mes "[DRY-RUN] I would suggest";
-		mes "[DRY-RUN] against coming inside.";
-		mes "[DRY-RUN] Even the local people";
-		mes "[DRY-RUN] fear this area.";
+		mes "[普拉伊姆]";
+		mes "我建议你";
+		mes "不要进来。";
+		mes "连当地人都";
+		mes "害怕这个区域。";
 		next;
-		mes "[DRY-RUN] [Puraim]";
-		mes "[DRY-RUN] If the Sa-mhing Tiger wasn't around, there would still be all the evil spirits in this place. Even with the holy thread, this place is still dangerous.";
+		mes "[普拉伊姆]";
+		mes "如果萨明虎不在，这里仍然会有所有的恶灵。即使有圣线，这个地方仍然很危险。";
 		next;
-		mes "[DRY-RUN] [Puraim]";
-		mes "[DRY-RUN] So what do you want?";
-		mes "[DRY-RUN] Do you still want to";
-		mes "[DRY-RUN] explore the area,";
-		mes "[DRY-RUN] adventurer?";
+		mes "[普拉伊姆]";
+		mes "那么你想要什么？";
+		mes "你还想要";
+		mes "探索这个区域，";
+		mes "冒险者？";
 		next;
-		if (select("[DRY-RUN] Yes.:No! I'm too afraid of the ruins now.") == 1) {
-			mes "[DRY-RUN] [Puraim]";
-			mes "[DRY-RUN] Hmmm...";
-			mes "[DRY-RUN] It seems you adventurers are tempted by the thrill of danger,";
-			mes "[DRY-RUN] or you've all got some death wish.";
+		if (select("是。:不！我现在太害怕废墟了。") == 1) {
+			mes "[普拉伊姆]";
+			mes "嗯……";
+			mes "看来你们这些冒险者被危险的刺激所吸引，";
+			mes "或者你们都是在寻死。";
 			next;
-			mes "[DRY-RUN] [Puraim]";
-			mes "[DRY-RUN] Oh well, that's none of my business. After all, you already";
-			mes "[DRY-RUN] have a holy spirit. Still, be careful. You might not want to go to the 2nd underground level of the ruins.";
+			mes "[普拉伊姆]";
+			mes "哦，好吧，这与我无关。毕竟，你们已经";
+			mes "有一个神圣的灵魂了。不过，还是要小心。你可能不想去遗迹的第二层地下。";
 			next;
-			mes "[DRY-RUN] [Puraim]";
-			mes "[DRY-RUN] As you Rune-Midgardians";
-			mes "[DRY-RUN] say, 'curiousity killed the cat.'";
-			mes "[DRY-RUN] Anyway, go for it!";
+			mes "[普拉伊姆]";
+			mes "作为你们的鲁恩-米德加尔特人";
+			mes "说的那样，'好奇害死猫。'";
+			mes "无论如何，去吧！";
 			next;
-			mes "[DRY-RUN] ^3355FFHe shoved you off the hill";
-			mes "[DRY-RUN] and you plummet like a rock.^000000";
+			mes "^3355FF他把你推下了山";
+			mes "你像石头一样坠落。^000000";
 			close2;
 			percentheal -10,0;
 			warp "ayo_fild02",30,135;
 			end;
 		}
-		mes "[DRY-RUN] [Puraim]";
-		mes "[DRY-RUN] Good decision!";
-		mes "[DRY-RUN] As I expected, you're";
-		mes "[DRY-RUN] smart enough not to";
-		mes "[DRY-RUN] stupidly jeopardize your life.";
+		mes "[普拉伊姆]";
+		mes "好决定！";
+		mes "果然，你是";
+		mes "聪明到不去做的事。";
+		mes "愚蠢地危及你的生命。";
 		close;
 	}
-	mes "[DRY-RUN] [Puraim]";
-	mes "[DRY-RUN] If I were you, I wouldn't";
-	mes "[DRY-RUN] even dare to approach";
-	mes "[DRY-RUN] the ruins down over there.";
+	mes "[普拉伊姆]";
+	mes "如果我是你，我就不会";
+	mes "甚至敢靠近";
+	mes "那边的废墟。";
 	next;
-	mes "[DRY-RUN] [Puraim]";
-	mes "[DRY-RUN] Anyone who doesn't have the protection of a holy spirit will be easy game for the evil creatures living there. You'd be killed in";
-	mes "[DRY-RUN] no time at all!";
+	mes "[普拉伊姆]";
+	mes "没有圣灵保护的人在那里的恶性生物面前将会变得毫无防备。你会很快被杀死";
+	mes "！";
 	next;
-	mes "[DRY-RUN] [Puraim]";
-	mes "[DRY-RUN] Go back, adventurer.";
-	mes "[DRY-RUN] If you wish to explore";
-	mes "[DRY-RUN] this area, you'd better";
-	mes "[DRY-RUN] show me some holy spirit.";
+	mes "[普拉伊姆]";
+	mes "回去吧，冒险者。";
+	mes "如果你想探索";
+	mes "这个区域，你最好";
+	mes "给我展示一些圣灵。";
 	close;
 }
 
 ayo_fild02,25,154,0	script	Aik#thai	843,{
-	mes "[DRY-RUN] [Aik]";
-	mes "[DRY-RUN] So, how was your expedition?";
-	mes "[DRY-RUN] I hope that the evil spirits will not follow you outside of the ruins, and haunt your dreams.";
+	mes "[艾克]";
+	mes "那么，你的探险怎么样？";
+	mes "我希望那些邪灵不会跟随你走出遗迹，缠扰你的梦境。";
 	next;
-	mes "[DRY-RUN] [Aik]";
-	mes "[DRY-RUN] When you go back,";
-	mes "[DRY-RUN] remember to ward off";
-	mes "[DRY-RUN] the evil from your mind.";
-	mes "[DRY-RUN] Otherwise you will encounter";
-	mes "[DRY-RUN] trouble later...";
+	mes "[艾克]";
+	mes "当你回去时，";
+	mes "记得驱除";
+	mes "你心中的邪恶。";
+	mes "否则你将遭遇到";
+	mes "以后会有麻烦...";
 	next;
-	mes "[DRY-RUN] [Aik]";
-	mes "[DRY-RUN] So, would you";
-	mes "[DRY-RUN] like to go back?";
+	mes "[艾克]";
+	mes "那么，你想要";
+	mes "回去吗？";
 	next;
-	if (select("[DRY-RUN] Yes.:No, I need to look around more...") == 1) {
-		mes "[DRY-RUN] [Aik]";
-		mes "[DRY-RUN] Alright then...";
-		mes "[DRY-RUN] Here we go...";
+	if (select("是。:否，我需要再看看...") == 1) {
+		mes "[艾克]";
+		mes "好的...";
+		mes "我们开始吧...";
 		next;
-		mes "[DRY-RUN] ^3355FFHe suddenly grabbed you";
-		mes "[DRY-RUN] and hurled you up into the air!^000000";
+		mes "^3355FF他突然抓住了你";
+		mes "并把你扔向空中！^000000";
 		close2;
 		warp "ayo_fild01",115,200;
 		end;
 	}
-	mes "[DRY-RUN] [Aik]";
-	mes "[DRY-RUN] I see.";
-	mes "[DRY-RUN] Take care.";
+	mes "[艾克]";
+	mes "我明白了。";
+	mes "保重。";
 	close;
 }
 
 // Water Traps
 ayo_dun01,273,26,0	script	 #th_dun1_1_1::AyoTrap1	111,0,4,{
-	mes "[DRY-RUN] ^3355FFYou look down and see a pool";
-	mes "[DRY-RUN] of water in the distance. It looks like a long drop to the bottom.^000000";
+	mes "^3355FF你低头看到远处有一个水池";
+	mes "看起来底部有很长的下落。^000000";
 	next;
-	mes "[DRY-RUN] ^3355FFYou are filled";
-	mes "[DRY-RUN] with apprehension,";
-	mes "[DRY-RUN] After all, if you fall down,^000000";
-	mes "[DRY-RUN] ^2F2F4Fyou might get killed.^000000";
+	mes "^3355FF你感到一阵不安，";
+	mes "充满了忧虑，";
+	mes "毕竟，如果你掉下去，^000000";
+	mes "^2F2F4F你可能会被杀死。^000000";
 	close;
 
 OnTouch_:
-	mes "[DRY-RUN] ^3355FFYou look down and see a pool";
-	mes "[DRY-RUN] of water in the distance. It looks like a long drop to the bottom.^000000";
+	mes "^3355FF你低头看到远处有一个水池";
+	mes "看起来底部有很长的下落。^000000";
 	next;
-	mes "[DRY-RUN] ^3355FFYou are filled";
-	mes "[DRY-RUN] with apprehension.";
-	mes "[DRY-RUN] After all, if you fall down,";
-	mes "[DRY-RUN] ^2F2F4Fyou might get killed.^000000";
+	mes "^3355FF你感到一阵不安，";
+	mes "充满了忧虑。";
+	mes "毕竟，如果你掉下去，";
+	mes "^2F2F4F你可能会被杀死。^000000";
 	close;
 }
 
@@ -1965,7 +1965,7 @@ ayo_dun01,25,271,0	duplicate(AyoTrap2)	 #th_dun1_12	-1
 ayo_dun01,156,148,0	script	 #hint01::AyoHint	-1,0,4,{
 OnTouch_:
 	if (rand(1,100) > 60 && ayodunquest < 11) {
-		mes "[DRY-RUN] ^3355FFThe Holy Thread in your pocket suddenly began to glow. You feel that something is near you...^000000";
+		mes "^3355FF你口袋里的圣线突然开始发光。你感觉到有什么东西在你附近...^000000";
 		close2;
 		viewpoint 1,198,164,0,0xFF0000;
 		viewpoint 1,87,16,1,0xFF0000;
@@ -1985,60 +1985,60 @@ ayo_dun01,259,46,0	duplicate(AyoHint)	 #hint02_3	-1,2,0
 ayo_dun01,198,164,0	script	 #hun_thai_1	111,{
 	if (ayodunquest == 3) {
 		set ayodunquest,4;
-		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 1st part of the slate.^000000";
+		mes "^3355FF你找到了一块刻有字母的石板碎片。它似乎是石板的第一部分。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFIt reads '^0000FFDo not enter the 2nd underground level^3355FF.' You are unable to read the rest of the message.^000000";
+		mes "^3355FF上面写着'^0000FF请勿进入第二层地下室^3355FF。' 你无法阅读消息的其余部分。^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 1st part of the slate.^000000";
+	mes "^3355FF你找到了一块刻有字母的石板碎片。它似乎是石板的第一部分。^000000";
 	close;
 }
 
 ayo_dun01,87,16,0	script	 #hun_thai_2	111,{
 	if (ayodunquest == 4) {
 		set ayodunquest,5;
-		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 2nd part of the slate.^000000";
+		mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第二部分。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFIt reads '^0000FF...is danger... You wil...^3355FF.' You are unable to read the rest of the message.^000000";
+		mes "^3355FF上面写着'^0000FF...是危险... 你将...^3355FF。' 你无法阅读消息的其余部分。^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 2nd part of the slate.^000000";
+	mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第二部分。^000000";
 	close;
 }
 
 ayo_dun01,268,214,0	script	 #hun_thai_3	111,{
 	if (ayodunquest == 5) {
 		set ayodunquest,6;
-		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 3rd part of the slate.^000000";
+		mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第三部分。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFIt reads '^0000FF...encounter... tiger...^3355FF.' You are unable to read the rest of the message.^000000";
+		mes "^3355FF上面写着'^0000FF...遭遇... 老虎...^3355FF。' 你无法阅读消息的其余部分。^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 3rd part of the slate.^000000";
+	mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第三部分。^000000";
 	close;
 }
 
 ayo_dun01,147,274,0	script	 #hun_thai_4	111,{
 	if (ayodunquest == 6) {
 		set ayodunquest,7;
-		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 4th part of the slate.^000000";
+		mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第四部分。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFIt reads '^0000FFYou must kill... In order to do... MUST... How to go... the 2nd underground level...^3355FF' You are unable to read the rest of the message.^000000";
+		mes "^3355FF上面写着 '^0000FF你必须杀死...为了...必须...如何去...第二个地下层...^3355FF' 你无法读取消息的其余部分。^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 4th part of the slate.^000000";
+	mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第四部分。^000000";
 	close;
 }
 
 ayo_dun01,99,118,0	script	 #hun_thai_5	111,{
 	if (ayodunquest == 7) {
 		set ayodunquest,8;
-		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 5th part of the slate.^000000";
+		mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第五部分。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFIt reads '^0000FFYou need more... Holy power... in order to...^3355FF' You are unable to read the rest of the message.^000000";
+		mes "^3355FF上面写着 '^0000FF你需要更多...神圣的力量...才能...^3355FF' 你无法读取消息的其余部分。^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the 5th part of the slate.^000000";
+	mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的第五部分。^000000";
 	close;
 }
 
@@ -2046,24 +2046,24 @@ ayo_dun01,16,188,0	script	 #hun_thai_6	111,{
 	if (ayodunquest == 8) {
 		set ayodunquest,9;
 		// setquest 12036;
-		mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the last part of the slate.^000000";
+		mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的最后一部分。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFIt reads '^0000FFOtherwise, it's impossible...^3355FF' You are unable to read the rest of the message.^000000";
+		mes "^3355FF上面写着 '^0000FF否则，这是不可能的...^3355FF' 你无法读取消息的其余部分。^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find a piece of a stone slate with letters etched on it. It seems to be the last part of the slate.^000000";
+	mes "^3355FF你发现一块刻有字母的石板碎片。它似乎是石板的最后一部分。^000000";
 	close;
 }
 
 ayo_dun01,24,283,0	script	 #2_dun_in	111,{
 	if (ayodunquest > 10) {
 		if (countitem(7287) > 0) {
-			mes "[DRY-RUN] ^3355FFThe holy threads";
-			mes "[DRY-RUN] emanate a powerful sense";
-			mes "[DRY-RUN] of safety and security.";
-			mes "[DRY-RUN] With the protection of";
-			mes "[DRY-RUN] holiness, you begin your";
-			mes "[DRY-RUN] descent into the 2nd level.^000000.";
+			mes "^3355FF神圣的线索";
+			mes "散发出强烈的感觉";
+			mes "安全与保障感。";
+			mes "在神圣的保护下，";
+			mes "你开始你的";
+			mes "下降到第二层。^000000";
 			close2;
 			if (rand(1,10) > 5) {
 				warp "ayo_dun02",23,26;
@@ -2072,27 +2072,27 @@ ayo_dun01,24,283,0	script	 #2_dun_in	111,{
 			}
 			end;
 		}
-		mes "[DRY-RUN] ^3355FFYou find what seems to be the entrance to the 2nd level. However, you are filled with an overwhelming sense of dread. Somehow, you can't bring yourself to go down...^000000";
+		mes "^3355FF你发现似乎是通往第二层的入口。然而，你感到一种压倒性的恐惧感。不知为何，你无法让自己下去……^000000";
 		close;
 	}
-	mes "[DRY-RUN] ^3355FFYou find what seems to be the entrance to the 2nd level. However, you are filled with an overwhelming sense of dread. Somehow, you can't bring yourself to go down...^000000";
+	mes "^3355FF你发现似乎是通往第二层的入口。然而，你感到一种压倒性的恐惧感。不知为何，你无法让自己下去……^000000";
 	close;
 }
 
 ayo_dun02,268,108,0	script	 #reward_tiger	111,{
 	if (ayodunquest == 11 && countitem(7287) > 0) {
-		mes "[DRY-RUN] ^3355FFYou find half of the skeletal remains of a person sticking out from the ground. It seems to be the remains of Boonthom's comrade.^000000";
+		mes "^3355FF你发现半具尸骨从地面伸出。似乎是布恩通的同伴的遗骸。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFYou find a piece of paper beside the skeleton, as well as a box.^000000";
+		mes "^3355FF你在骸骨旁边发现一张纸和一个盒子。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFYou read what is written on the old sheet of paper. The letters have faded with age, and it is difficult to read.^000000";
+		mes "^3355FF你阅读了旧纸张上的内容。字母因岁月而褪色，难以辨认。^000000";
 		next;
-		mes "[DRY-RUN] [Old Letter]";
-		mes "[DRY-RUN] ^333333Dear, Boonthom,";
-		mes "[DRY-RUN] I was a fool. There is 'Sa-mhing Tig'...One who ....my remains... Please take...to Boonthom...";
+		mes "[旧信]";
+		mes "^333333亲爱的，Boonthom，";
+		mes "我真是个傻瓜。这里有‘Sa-mhing Tig’……一个……我的遗骸……请带……给Boonthom……";
 		next;
-		mes "[DRY-RUN] ^3355FFYou pick";
-		mes "[DRY-RUN] up the box.^000000";
+		mes "^3355FF你捡起了";
+		mes "这个盒子。^000000";
 		set ayodunquest,12;
 		// completequest 12039;
 		getitem 603,1; //Old_Blue_Box
@@ -2104,531 +2104,531 @@ ayo_dun02,268,108,0	script	 #reward_tiger	111,{
 //============================================================
 ayothaya,196,265,3	script	Einon#ayo	842,{
 	if (tomyumgoong == 0) {
-		mes "[DRY-RUN] [Einon]";
-		mes "[DRY-RUN] Do you know what the";
-		mes "[DRY-RUN] most popular cuisine";
-		mes "[DRY-RUN] of this village is?";
+		mes "[艾农]";
+		mes "你知道这个村庄的";
+		mes "最受欢迎的菜肴";
+		mes "是什么吗？";
 		next;
-		mes "[DRY-RUN] [Einon]";
-		mes "[DRY-RUN] Ayotaya is world famous";
-		mes "[DRY-RUN] for its regional cuisine, but";
-		mes "[DRY-RUN] out of all Ayotayan dishes,";
-		mes "[DRY-RUN] '^3131FFTom Yum Goong^000000' is the best.";
+		mes "[艾农]";
+		mes "阿尤塔亚因其地方菜肴而闻名于世，";
+		mes "但";
+		mes "在所有阿尤塔亚菜肴中，";
+		mes "'^3131FF冬阴功^000000' 是最好的。";
 		next;
-		mes "[DRY-RUN] [Einon]";
-		mes "[DRY-RUN] Tom Yum Goong is a type";
-		mes "[DRY-RUN] of soup that is very spicy. Try it once, and you will be amazed by its profound taste. Try it twice, and you will be enraptured by its tantalizing aroma.";
+		mes "[艾农]";
+		mes "冬阴功是一种";
+		mes "非常辣的汤。试一次，你会惊叹于它深邃的味道。试两次，你会被它诱人的香气所迷住。";
 		next;
-		mes "[DRY-RUN] [Einon]";
-		mes "[DRY-RUN] It's really one of the most delicious foods in the world!";
-		mes "[DRY-RUN] Everyone in the world would";
-		mes "[DRY-RUN] want to try this at least once in his lifetime. So, would you like";
-		mes "[DRY-RUN] to try some?";
+		mes "[艾农]";
+		mes "它真的是世界上最美味的食物之一！";
+		mes "世界上每个人都会";
+		mes "想在一生中至少尝试一次。那么，你想";
+		mes "尝试一下吗？";
 		next;
-		if (select("[DRY-RUN] Sure thing.:No, thanks. I hate spicy food.") == 1) {
-			mes "[DRY-RUN] [Einon]";
-			mes "[DRY-RUN] Okay...!";
-			mes "[DRY-RUN] Now who would be";
-			mes "[DRY-RUN] best for preparing";
-			mes "[DRY-RUN] Tom Yum Goong for you?";
-			mes "[DRY-RUN] Hmmmmm...";
+		if (select("当然可以。:不，谢谢。我讨厌辛辣食物。") == 1) {
+			mes "[艾农]";
+			mes "好的...！";
+			mes "那么谁最适合";
+			mes "为你准备";
+			mes "冬阴功呢？";
+			mes "嗯嗯嗯...";
 			next;
-			mes "[DRY-RUN] [Einon]";
-			mes "[DRY-RUN] Everyone in the village";
-			mes "[DRY-RUN] knows how to make it, but";
-			mes "[DRY-RUN] I recommend that you go";
-			mes "[DRY-RUN] visit ^3131FFMali the Spicy^000000.";
+			mes "[艾农]";
+			mes "村子里每个人";
+			mes "都知道怎么做，但";
+			mes "我建议你去";
+			mes "拜访 ^3131FF玛莉^000000.";
 			next;
 			emotion ET_BEST;
 			set tomyumgoong,1;
 			setquest 8123;
-			mes "[DRY-RUN] [Einon]";
-			mes "[DRY-RUN] She is the best cook when it";
-			mes "[DRY-RUN] comes to Tom Yum Goong!";
-			mes "[DRY-RUN] Why don't you ask her";
-			mes "[DRY-RUN] to cook you some?";
+			mes "[艾农]";
+			mes "她是做";
+			mes "冬阴功的最佳厨师！";
+			mes "你为什么不问问她";
+			mes "给你做一些呢？";
 			close;
 		}
-		mes "[DRY-RUN] [Einon]";
-		mes "[DRY-RUN] Oh I see...";
-		mes "[DRY-RUN] However, when you";
-		mes "[DRY-RUN] change your mind,";
-		mes "[DRY-RUN] please come back.";
+		mes "[艾农]";
+		mes "哦，我明白了...";
+		mes "不过，当你";
+		mes "改变主意时，";
+		mes "请再回来。";
 		close;
 	} else if (tomyumgoong == 1) {
-		mes "[DRY-RUN] [Einon]";
-		mes "[DRY-RUN] Ah, you wanna know";
-		mes "[DRY-RUN] where ^3131FFMali the Spicy^000000 is?";
-		mes "[DRY-RUN] Well, there's not too many places";
-		mes "[DRY-RUN] a cook would stay other than in";
-		mes "[DRY-RUN] a restaurant, right? Hahaha~";
+		mes "[艾农]";
+		mes "啊，你想知道";
+		mes "^3131FF玛莉^000000在哪里吗？";
+		mes "嗯，这里没有太多地方";
+		mes "除了在";
+		mes "餐馆，没错吧？哈哈哈~";
 		close;
 	}
-	mes "[DRY-RUN] [Einon]";
-	mes "[DRY-RUN] Golden Ayotaya...";
-	mes "[DRY-RUN] Although I've grown";
-	mes "[DRY-RUN] up in this village,";
-	mes "[DRY-RUN] I still think my village";
-	mes "[DRY-RUN] is magnificient and beautiful.";
+	mes "[艾农]";
+	mes "黄金阿尤塔亚...";
+	mes "虽然我在这个村庄长大，";
+	mes "但...";
+	mes "我仍然认为我的村庄";
+	mes "是宏伟而美丽的。";
 	next;
-	mes "[DRY-RUN] [Einon]";
-	mes "[DRY-RUN] What do you think?";
-	mes "[DRY-RUN] Wouldn't you agree with me?";
+	mes "[艾农]";
+	mes "你觉得怎么样？";
+	mes "你不觉得我说得对吗？";
 	close;
 }
 
 ayo_in01,145,163,3	script	Cook#ayo	839,{
 	if (tomyumgoong < 2) {
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] Hello, there!";
-		mes "[DRY-RUN] I am called Mali the Spicy.";
-		mes "[DRY-RUN] All of my dishes always amaze";
-		mes "[DRY-RUN] my customers with their tempting scents and deep flavors.";
+		mes "[辣味玛丽]";
+		mes "你好啊！";
+		mes "我叫辣味玛丽。";
+		mes "我所有的菜肴总是让人惊艳";
+		mes "我的顾客们都被它们诱人的香气和浓郁的味道所吸引。";
 		next;
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] I am especially proud of my";
-		mes "[DRY-RUN] ^3131FFTom Yum Goong^000000, which is the";
-		mes "[DRY-RUN] best in the village. I suppose";
-		mes "[DRY-RUN] it's my fate to cook the greatest Tom Yum Goong ever.";
+		mes "[辣味玛丽]";
+		mes "我特别为我的";
+		mes "^3131FF冬阴功汤^000000感到自豪，这是村里最好的。我想";
+		mes "我注定要做出最伟大的冬阴功汤。";
+		mes "你想让我为你做冬阴功汤，";
 		if (tomyumgoong == 0) {
 			close;
 		} else {
 			next;
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] Oh I see...";
-			mes "[DRY-RUN] You want me to cook";
-			mes "[DRY-RUN] Tom Yum Goong for you,";
-			mes "[DRY-RUN] don't you?";
+			mes "[辣味玛丽]";
+			mes "哦，我明白了...";
+			mes "老实说，自从我开了这家餐厅，我一直很忙。如果你真的想尝尝我的冬阴功汤，";
+			mes "你愿意为我做点什么吗？";
+			mes "不是吗？";
 			next;
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] Honestly, I've been really";
-			mes "[DRY-RUN] busy ever since I opened this restaurant. If you really wish to taste my Tom Yum Goong, would";
-			mes "[DRY-RUN] you do something for me?";
+			mes "[辣味玛丽]";
+			mes "我一直很忙";
+			mes "自从我开了这家餐厅。如果你真的想尝尝我的冬阴功汤，";
+			mes "你愿意为我做点什么吗？";
 			next;
-			if (select("[DRY-RUN] Sure!:Eh... I dunno.") == 1) {
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] First, would you get";
-				mes "[DRY-RUN] the ingredients to make";
-				mes "[DRY-RUN] Tom Yum Goong for me? I'll need some ^CE0000Shrimps^000000, ^CE0000Chiles^000000 and ^CE0000Lemons^000000.";
+			if (select("当然！:呃...我不知道。") == 1) {
+				mes "[辣味玛丽]";
+				mes "首先，你能帮我拿到";
+				mes "制作";
+				mes "冬阴功所需的材料吗？我需要一些^CE0000虾^000000，^CE0000辣椒^000000和^CE0000柠檬^000000。";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Remember, Shrimp is the main ingredient of this dish. So, the fresher the Shrimp, the tastier your food will be.";
+				mes "[辣味玛丽]";
+				mes "记住，虾是这道菜的主要成分。所以，虾越新鲜，你的食物就会越美味。";
 				next;
-				select("[DRY-RUN] Where can I find them?");
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] I expected you";
-				mes "[DRY-RUN] to ask me that.";
-				mes "[DRY-RUN] For Shrimps, look around";
-				mes "[DRY-RUN] the beach. You should see";
-				mes "[DRY-RUN] a lot of them there.";
+				select("我在哪里可以找到它们？");
+				mes "[辣味玛丽]";
+				mes "我就知道你会问我这个。";
+				mes "我就知道你会问我这个。";
+				mes "关于虾，看看周围的海滩。你应该能看到";
+				mes "很多虾。";
+				mes "不过，你可能会很难找到它们，因为你之前没有做过这个。所以就去找那个卖虾的人买一些吧。";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] However, you might have a hard time finding them since you haven't done that before. So just buy some Shrimp from the guy who sells";
-				mes "[DRY-RUN] the freshest Shrimp around.";
+				mes "[辣味玛丽]";
+				mes "不过，你可能会很难找到它们，因为你之前没有做过这个。所以就去找那个卖虾的人买一些吧。";
+				mes "最新鲜的虾。";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Hmmm...";
-				mes "[DRY-RUN] If you mention";
-				mes "[DRY-RUN] my name, that guy";
-				mes "[DRY-RUN] might give you a discount.";
+				mes "[辣味玛丽]";
+				mes "嗯……";
+				mes "如果你提到";
+				mes "我的名字，那家伙";
+				mes "可能会给你打折。";
 				set tomyumgoong,2;
 				changequest 8123,8124;
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] His name is ^3131FFThongpool^000000.";
-				mes "[DRY-RUN] He will be somewhere around the village selling Shrimps. Go and ask him to give you 20 Shrimps to cook Tom Yum Goong.";
+				mes "[辣味玛丽]";
+				mes "他的名字是^3131FFThongpool^000000。";
+				mes "他会在村子附近卖虾。去问问他能不能给你20只虾来做冬阴功。";
 				close;
 			}
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] I understand this might be difficult to do, but it's worth";
-			mes "[DRY-RUN] a try if you really want to taste the best Tom Yum Goong.";
+			mes "[辣味玛丽]";
+			mes "我知道这可能很难做到，但如果你真的想尝尝最好的冬阴功，";
+			mes "值得一试。";
 			close;
 		}
 	} else if (tomyumgoong > 1 && tomyumgoong < 4) {
 		if (tomyumgoong == 2 && countitem(567) > 19) {
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] Errr...";
-			mes "[DRY-RUN] What's wrong with these Shrimp?";
-			mes "[DRY-RUN] They all have these scratches and rips in them! I can't believe Thongpool sold such bad Shrimp";
-			mes "[DRY-RUN] to his customers!";
+			mes "[辣味玛丽]";
+			mes "呃...";
+			mes "这些虾怎么了？";
+			mes "它们上面都有这些划痕和撕裂！我真不敢相信通普尔会卖这么差的虾";
+			mes "给他的顾客！";
 			next;
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] I'm so sorry, but";
-			mes "[DRY-RUN] I can't cook the best";
-			mes "[DRY-RUN] Tom Yum Goong with";
-			mes "[DRY-RUN] these Shrimp.";
+			mes "[辣味玛丽]";
+			mes "我很抱歉，但是";
+			mes "我做不出最好的";
+			mes "冬阴功汤，使用";
+			mes "这些虾。";
 			next;
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] I know it's an inconvenience, but would you go back to Thongpool";
-			mes "[DRY-RUN] and ask him to give you the freshest Shrimp to cook the best";
-			mes "[DRY-RUN] Tom Yum Goong?";
+			mes "[辣味玛丽]";
+			mes "我知道这很麻烦，但你能回到通普尔吗？";
+			mes "并请他给你最新鲜的虾来做最好吃的";
+			mes "冬阴功？";
 			close;
 		} else if (tomyumgoong == 3) {
 			if (countitem(567) > 19) {
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Ah, you came back!";
-				mes "[DRY-RUN] Now, let me see what";
-				mes "[DRY-RUN] you've brought. Hmm...";
-				mes "[DRY-RUN] These are...";
+				mes "[辣味玛丽]";
+				mes "啊，你回来了！";
+				mes "现在，让我看看你带来了什么。";
+				mes "嗯...";
+				mes "这些是...";
 				next;
 				emotion ET_BEST;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] The freshest Shrimp that";
-				mes "[DRY-RUN] I've been looking for! Well done~";
-				mes "[DRY-RUN] With these big and fresh Shrimp,";
-				mes "[DRY-RUN] I can cook the best Tom Yum Goong for you! Thank you so much!";
+				mes "[辣味玛丽]";
+				mes "最新鲜的虾...";
+				mes "我一直在寻找的！干得好~";
+				mes "有了这些又大又新鲜的虾，";
+				mes "我可以为你做出最好的冬阴功汤！非常感谢你！";
 				delitem 567,20; //Prawn
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] It will be a perfect food with the natural sweetness of the Shrimp, the sourness of Lemons and a little bit of fish sauce!";
+				mes "[辣味玛丽]";
+				mes "这将是完美的食物，结合了虾的自然甜味、柠檬的酸味和一点鱼露！";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Oh... Right.";
-				mes "[DRY-RUN] But we only have Shrimp.";
-				mes "[DRY-RUN] Now, I want you to bring";
-				mes "[DRY-RUN] me some ^CE0000Lemons^000000.";
+				mes "[辣味玛丽]";
+				mes "哦...对了。";
+				mes "但我们只有虾。";
+				mes "现在，我想让你带来";
+				mes "一些^CE0000柠檬^000000给我。";
 				next;
-				if (select("[DRY-RUN] Where can I find Lemons?:I hate sour food. I'd better quit!") == 1) {
+				if (select("我在哪里可以找到柠檬？:我讨厌酸的食物。我最好退出！") == 1) {
 					set tomyumgoong,4;
 					changequest 8124,8125;
-					mes "[DRY-RUN] [Mali the Spicy]";
-					mes "[DRY-RUN] A few days ago, I saw a good";
-					mes "[DRY-RUN] Lemon tree while taking a walk.";
-					mes "[DRY-RUN] But this tree belongs to an ordinary man who's not a Fruit Merchant.";
+					mes "[辣味玛丽]";
+					mes "几天前，我看到了一些好的...";
+					mes "散步时看到的柠檬树。";
+					mes "但这棵树属于一个普通人，他不是水果商人。";
 					next;
-					mes "[DRY-RUN] [Mali the Spicy]";
-					mes "[DRY-RUN] I'm not sure whether";
-					mes "[DRY-RUN] or not he'd sell Lemons";
-					mes "[DRY-RUN] to you, but you can try,";
-					mes "[DRY-RUN] I guess.";
+					mes "[辣味玛丽]";
+					mes "我不确定他是否会";
+					mes "卖柠檬给你，";
+					mes "但你可以试试，";
+					mes "我想。";
 					close;
 				}
 				emotion ET_ANGER;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] What a stupid...!";
-				mes "[DRY-RUN] If you quit just because you really hate sour flavors, you must not be that eager to have my Tom Yum Goong!";
+				mes "[辣味玛丽]";
+				mes "真是个愚蠢的...！";
+				mes "如果你只是因为真的讨厌酸味就放弃，那你一定不太渴望尝我的冬阴功汤！";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Once you taste my";
-				mes "[DRY-RUN] Tom Yum Goong, you'll";
-				mes "[DRY-RUN] regret what you just said!";
+				mes "[辣味玛丽]";
+				mes "一旦你尝过我的";
+				mes "冬阴功汤，你会";
+				mes "后悔你刚才说的话！";
 				close;
 			}
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] Huh...?";
-			mes "[DRY-RUN] What did you do";
-			mes "[DRY-RUN] with the Shrimps?";
-			mes "[DRY-RUN] You didn't eat them";
-			mes "[DRY-RUN] on the way here, did you?";
+			mes "[辣味玛丽]";
+			mes "哈……？";
+			mes "你做了什么";
+			mes "和虾一起？";
+			mes "你没有吃它们";
+			mes "在来这里的路上，对吧？";
 			close;
 		}
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] Make sure you ask";
-		mes "[DRY-RUN] Mr. Thongpool to give";
-		mes "[DRY-RUN] you 20 Shrimps.";
-		mes "[DRY-RUN] Now hurry~";
+		mes "[辣味玛丽]";
+		mes "确保你问问";
+		mes "通普先生给";
+		mes "你20只虾。";
+		mes "现在快点~";
 		close;
 	} else if (tomyumgoong > 3 && tomyumgoong < 6) {
 		if (tomyumgoong == 4 && countitem(568) > 9) {
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] You think these are";
-			mes "[DRY-RUN] the best quality Lemons?";
-			mes "[DRY-RUN] Take a closer look!";
+			mes "[辣味玛丽]";
+			mes "你觉得这些是";
+			mes "最优质的柠檬吗？";
+			mes "仔细看看！";
 			next;
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] The skin of these";
-			mes "[DRY-RUN] Lemons lack luster";
-			mes "[DRY-RUN] and they don't even smell";
-			mes "[DRY-RUN] fresh! They're just";
-			mes "[DRY-RUN] common Lemons!";
+			mes "[辣味玛丽]";
+			mes "这些柠檬的皮";
+			mes "缺乏光泽";
+			mes "而且它们甚至没有";
+			mes "新鲜的气味！它们只是";
+			mes "普通的柠檬！";
 			close;
 		} else if (tomyumgoong == 5) {
 			if (countitem(568) > 9) {
 				emotion ET_SURPRISE;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Welcome back!";
-				mes "[DRY-RUN] Wow, you came back";
-				mes "[DRY-RUN] really fast! Okay, let me";
-				mes "[DRY-RUN] see the Lemons";
-				mes "[DRY-RUN] you brought?";
+				mes "[辣味玛丽]";
+				mes "欢迎回来！";
+				mes "哇，你回来了";
+				mes "真快！好的，让我";
+				mes "看看你带来的柠檬？";
+				mes "你带来了？";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Wow, great!";
-				mes "[DRY-RUN] These are really fresh Lemons!";
-				mes "[DRY-RUN] How could you bring all of these by yourself? Thanks for your trouble~";
+				mes "[辣味玛丽]";
+				mes "哇，太棒了！";
+				mes "这些柠檬真新鲜！";
+				mes "你怎么能自己带这么多？谢谢你的辛苦~";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Now, you should go buy";
-				mes "[DRY-RUN] some ^CE0000Chiles^000000 and some";
-				mes "[DRY-RUN] other materials in the Market.";
+				mes "[辣味玛丽]";
+				mes "现在，你应该去买一些";
+				mes "^CE0000辣椒^000000和一些";
+				mes "其他材料在市场上。";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] When you talk";
-				mes "[DRY-RUN] to the Merchants";
-				mes "[DRY-RUN] in the Market, they";
-				mes "[DRY-RUN] will know what you want.";
+				mes "[辣味玛丽]";
+				mes "当你和";
+				mes "市场上的商人交谈时，他们";
+				mes "会...";
+				mes "会知道你想要什么。";
 				next;
-				if (select("[DRY-RUN] Okay, I'll be right back.:Ah, I'm tired now. Let me take a rest first...") == 1) {
+				if (select("好的，我马上回来。:啊，我现在累了。让我先休息一下...") == 1) {
 					delitem 568,10; //Lemon
 					set tomyumgoong,6;
 					changequest 8125,8126;
-					mes "[DRY-RUN] [Mali the Spicy]";
-					mes "[DRY-RUN] See you in a bit~";
+					mes "[辣味玛丽]";
+					mes "稍后见~";
 					close;
 				}
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] It's your call.";
-				mes "[DRY-RUN] But remember...";
-				mes "[DRY-RUN] The Shrimps might go bad";
-				mes "[DRY-RUN] while you're taking a rest.";
+				mes "[辣味玛丽]";
+				mes "这由你决定。";
+				mes "但请记住...";
+				mes "虾可能会变坏";
+				mes "在你休息的时候。";
 				close;
 			}
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] Huh...?";
-			mes "[DRY-RUN] What did you";
-			mes "[DRY-RUN] do with Lemons?";
-			mes "[DRY-RUN] You didn't eat them";
-			mes "[DRY-RUN] all on the way here, did you?";
+			mes "[辣味玛丽]";
+			mes "哈……？";
+			mes "你刚才说了什么？";
+			mes "用柠檬做什么？";
+			mes "你没有吃它们";
+			mes "一路上都没有吧？";
 			close;
 		}
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] Alright...";
-		mes "[DRY-RUN] I'm counting on you";
-		mes "[DRY-RUN] to get the best Lemons";
-		mes "[DRY-RUN] from the guy that owns that tree.";
+		mes "[辣味玛丽]";
+		mes "好的...";
+		mes "我依靠你了";
+		mes "去拿最好的柠檬";
+		mes "从那个拥有那棵树的人那里。";
 		next;
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] Somehow, you've got";
-		mes "[DRY-RUN] to get those high quality";
-		mes "[DRY-RUN] Lemons so that I can make";
-		mes "[DRY-RUN] some Tom Yum Goong!";
+		mes "[辣味玛丽]";
+		mes "不知怎么的，你得";
+		mes "拿到那些高质量的";
+		mes "柠檬，这样我才能做";
+		mes "一些冬阴功！";
 		close;
 	} else if (tomyumgoong == 6) {
 		if (countitem(7286) > 29) {
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] I don't understand...";
-			mes "[DRY-RUN] Where did you get these";
-			mes "[DRY-RUN] bad ingredients?! Didn't";
-			mes "[DRY-RUN] I tell you that my";
-			mes "[DRY-RUN] Tom Yum Goong";
-			mes "[DRY-RUN] requires the best?!";
+			mes "[辣味玛丽]";
+			mes "我不明白...";
+			mes "你从哪里得到这些";
+			mes "劣质材料？！难道";
+			mes "我告诉过你我的";
+			mes "冬阴功";
+			mes "需要最好的？！";
 			close;
 		}
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] I know you've been working hard to do me this favor. I hope you'll put forth that last little bit of effort to finish this.";
+		mes "[辣味玛丽]";
+		mes "我知道你一直在努力帮我这个忙。希望你能再加把劲，完成这个。";
 		next;
-		mes "[DRY-RUN] [Malli the Spicy]";
-		mes "[DRY-RUN] Please go take a look in the Market. I don't doubt that it will be a good experience. After all, my fantastic Tom Yum Goong is waiting for you!";
+		mes "[辣味玛莉]";
+		mes "请去市场看看。我相信这会是一次很好的体验。毕竟，我的美味冬阴功在等着你！";
 		close;
 	} else if (tomyumgoong == 7) {
 		if (MaxWeight - Weight > 1499) {
 			if (countitem(7286) > 29) {
 				delitem 7286,30; //Chilli
 				emotion ET_SURPRISE;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Now...";
-				mes "[DRY-RUN] Everything is all set!";
-				mes "[DRY-RUN] Before we start, let me";
-				mes "[DRY-RUN] check the materials.";
+				mes "[辣味玛丽]";
+				mes "现在...";
+				mes "一切都准备好了！";
+				mes "在我们开始之前，让我";
+				mes "检查一下材料。";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] ^CE0000Shrimp^000000, ^CE0000Chiles^000000, ^CE0000Lemons^000000...";
-				mes "[DRY-RUN] Fish sauce and other little things...";
+				mes "[辣味玛丽]";
+				mes "^CE0000虾^000000, ^CE0000辣椒^000000, ^CE0000柠檬^000000...";
+				mes "鱼露和其他小东西...";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Perfect!";
-				mes "[DRY-RUN] Shall we begin?";
+				mes "[辣味玛丽]";
+				mes "完美！";
+				mes "我们开始吧？";
 				next;
-				mes "[DRY-RUN] ^FF0000*Tuk*^000000";
-				mes "[DRY-RUN] ^9C009C*Tup*^000000";
-				mes "[DRY-RUN] ^009C00*Puk*^000000";
+				mes "^FF0000*Tuk*^000000";
+				mes "^9C009C*Tup*^000000";
+				mes "^009C00*Puk*^000000";
 				specialeffect EF_ENCHANTPOISON;
 				next;
-				mes "[DRY-RUN] ^FF0031*Chop chop*^000000";
-				mes "[DRY-RUN] ^FF9C00*Tup tup tup*^000000";
-				mes "[DRY-RUN] ^639CFF*Pu pu^000000 -";
+				mes "^FF0031*快点快点*^000000";
+				mes "^FF9C00*Tup tup tup*^000000";
+				mes "^639CFF*Pu pu^000000 -";
 				specialeffect EF_VENOMDUST;
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] - ^9C6300Tup tup^000000 ^006363chook^000000";
-				mes "[DRY-RUN] ^316363Chop chop^000000";
-				mes "[DRY-RUN] ^FF0000Tup tup tup^000000 ^009C00Pu pu^000000 -";
+				mes "[辣味玛丽]";
+				mes "- ^9C6300Tup tup^000000 ^006363咕咕^000000";
+				mes "^316363快点快点^000000";
+				mes "^FF0000咚咚咚^000000 ^009C00噗噗^000000 -";
 				specialeffect EF_STONECURSE;
 				specialeffect EF_HASTEUP;
 				specialeffect EF_BEGINSPELL;
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Wah^00009Cah^0000FFahhhh^0063FFaaaahhh^000000!";
+				mes "[辣味玛丽]";
+				mes "哇^00009C啊^0000FF啊啊啊^0063FF啊啊啊^000000!";
 				emotion ET_HUK;
 				specialeffect EF_FLASHER;
 				specialeffect EF_LORD;
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN]  ...";
-				mes "[DRY-RUN]  ......";
-				mes "[DRY-RUN]  .........";
+				mes "[辣味玛丽]";
+				mes " ...";
+				mes " ......";
+				mes " .........";
 				next;
 				set tomyumgoong,8;
 				completequest 8126;
 				getitem 566,10; //Tomyumkung
 				emotion ET_BEST;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Here's your";
-				mes "[DRY-RUN] Tom Yum Goong!";
-				mes "[DRY-RUN] Ah~ This taste,";
-				mes "[DRY-RUN] this scent... Yeah.";
-				mes "[DRY-RUN] I know I did a good job.";
+				mes "[辣味玛丽]";
+				mes "这是你的";
+				mes "冬阴功汤!";
+				mes "啊~ 这个味道,";
+				mes "这个香气... 是的.";
+				mes "我知道我做得很好.";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Do you know what is the secret of Tom Yum Goong? It isn't simply just food. This has the power to heal you, and help you get into better shape.";
+				mes "[辣味玛丽]";
+				mes "你知道冬阴功汤的秘密是什么吗？这不仅仅是食物。这有治愈你的力量，帮助你变得更健康.";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Because...";
-				mes "[DRY-RUN] It contains the";
-				mes "[DRY-RUN] power of God.";
+				mes "[辣味玛丽]";
+				mes "因为...";
+				mes "它包含了";
+				mes "上帝的力量.";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Okay...!";
-				mes "[DRY-RUN] I'm giving you";
-				mes "[DRY-RUN] 10 Tom Yum Goong";
-				mes "[DRY-RUN] free of charge~";
+				mes "[辣味玛丽]";
+				mes "好的...！";
+				mes "我给你";
+				mes "10 冬阴功";
+				mes "免费~";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Thank you for all the trouble that you have been though to get these ingredients. It would make me happy if you shared Tom Yum Goong with your friends.";
+				mes "[辣味玛丽]";
+				mes "感谢你为获取这些食材所付出的辛劳。如果你能和你的朋友分享冬阴功，我会很开心的。";
 				next;
-				mes "[DRY-RUN] [Mali the Spicy]";
-				mes "[DRY-RUN] Share the flavor of Ayotaya, and let them know how beautiful our land is. It was good to see you, take care now~";
+				mes "[辣味玛丽]";
+				mes "分享阿尤塔亚的美味，让他们知道我们土地的美丽。很高兴见到你，保重~";
 				close;
 			}
-			mes "[DRY-RUN] [Mali the Spicy]";
-			mes "[DRY-RUN] Huh? What did you do with the Chiles? You didn't eat them all on the way here, did you?";
+			mes "[辣味玛丽]";
+			mes "嗯？你把辣椒怎么了？你不会在路上把它们全吃掉了吧？";
 			close;
 		}
-		mes "[DRY-RUN] [Mali the Spicy]";
-		mes "[DRY-RUN] Hmm...";
-		mes "[DRY-RUN] You seem to be carrying too many things. Why don't you free up some space in your inventory first, and then come back?";
+		mes "[辣味玛丽]";
+		mes "嗯...";
+		mes "你似乎携带了太多东西。为什么不先清理一下你的背包，然后再回来呢？";
 		close;
 	}
 	emotion ET_KEK;
-	mes "[DRY-RUN] [Mali the Spicy]";
-	mes "[DRY-RUN] Ah...!";
-	mes "[DRY-RUN] So busy, so busy!";
-	mes "[DRY-RUN] My customers never get tired of";
-	mes "[DRY-RUN] the taste of my Tom Yum Goong!";
-	mes "[DRY-RUN] Heh heh heh~!";
+	mes "[辣味玛丽]";
+	mes "啊...！";
+	mes "忙得不可开交，忙得不可开交！";
+	mes "我的顾客从来不会厌倦";
+	mes "我泰式虾汤的味道！";
+	mes "嘿嘿嘿~!";
 	close;
 }
 
 ayothaya,153,86,5	script	Thongpool#ayo	843,{
 	if ((MaxWeight-Weight) < 2000 || checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please enlighten your weight -";
-		mes "[DRY-RUN] - and try again. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请告诉我你的重量 -";
+		mes "- 然后再试一次。 -";
 		close;
 	}
 	if (tomyumgoong == 2) {
-		mes "[DRY-RUN] [Thongpool]";
-		mes "[DRY-RUN] Come adventurers,";
-		mes "[DRY-RUN] take a look! I have";
-		mes "[DRY-RUN] plenty of Shrimp!";
+		mes "[通普]";
+		mes "来吧，冒险者们，";
+		mes "来看看！我有";
+		mes "很多虾！";
 		next;
-		mes "[DRY-RUN] [Thongpool]";
-		mes "[DRY-RUN] You're looking for Shrimp,";
-		mes "[DRY-RUN] aren't you? How many Shrimp";
-		mes "[DRY-RUN] do you need? Twenty? Forty?";
+		mes "[通普]";
+		mes "你在找虾，";
+		mes "对吧？你需要多少虾？";
+		mes "二十只？四十只？";
 		next;
-		if (select("[DRY-RUN] I need Shrimp for Tom Yum Goong.:Err, they look expensive.") == 1) {
-			mes "[DRY-RUN] [Thongpool]";
-			mes "[DRY-RUN] Ah! I guess Ms. Mali the Spicy recommended me to you. I guess";
-			mes "[DRY-RUN] that also means you want to buy them in bulk?";
+		if (select("我需要虾来做冬阴功汤。:呃，它们看起来很贵。") == 1) {
+			mes "[通普]";
+			mes "啊！我想是玛莉小姐推荐我给你的。";
+			mes "那也意味着你想要批量购买吗？";
 			next;
-			mes "[DRY-RUN] [Thongpool]";
-			mes "[DRY-RUN] After all,";
-			mes "[DRY-RUN] you'll need a larger";
-			mes "[DRY-RUN] amount of Shrimp to";
-			mes "[DRY-RUN] cook Tom Yum Goong.";
+			mes "[通普]";
+			mes "毕竟，";
+			mes "你需要更多的";
+			mes "虾来";
+			mes "做冬阴功。";
 			next;
-			mes "[DRY-RUN] [Thongpool]";
-			mes "[DRY-RUN] Oh yes, you will need 20 Shrimps for Ms. Mali's Tom Yum Goong.";
-			mes "[DRY-RUN] I'll even give you a discount:";
-			mes "[DRY-RUN] 11,000 zeny for 20 shrimps.";
-			mes "[DRY-RUN] What do you say?";
+			mes "[通普]";
+			mes "哦，是的，你需要20只虾来做玛莉小姐的冬阴功。";
+			mes "我还会给你打折：";
+			mes "20只虾只要11,000金币。";
+			mes "你觉得怎么样？";
 			next;
-			if (select("[DRY-RUN] I will take them.:I could get 100 Jellopies for that much!") == 1) {
+			if (select("我会买下它们。:我可以用那么多钱买到100个果冻！") == 1) {
 				if (Zeny > 10999) {
 					if (MaxWeight - Weight > 3999) {
 						set Zeny, Zeny-11000;
 						set tomyumgoong,3;
 						getitem 567,20; //Prawn
 						emotion ET_BEST;
-						mes "[DRY-RUN] [Thongpool]";
-						mes "[DRY-RUN] Good, now you have the";
-						mes "[DRY-RUN] freshest Shrimp in this village! It's time for you to go back and ask Ms. Mali to cook them for you.";
+						mes "[通普]";
+						mes "很好，现在你有了";
+						mes "这个村子里最新鲜的虾！是时候回去请玛莉小姐给你做了。";
 						close;
 					}
-					mes "[DRY-RUN] [Thongpool]";
-					mes "[DRY-RUN] Awww...";
-					mes "[DRY-RUN] You're carrying too much stuff with you. I don't think you can carry more than what you have right now.";
+					mes "[通普]";
+					mes "哎呀……";
+					mes "你身上背的东西太多了。我觉得你现在不能再携带更多了。";
 					close;
 				}
-				mes "[DRY-RUN] [Thongpool]";
-				mes "[DRY-RUN] Awww...";
-				mes "[DRY-RUN] You don't have";
-				mes "[DRY-RUN] enough money.";
+				mes "[通普]";
+				mes "哎呀……";
+				mes "你没有";
+				mes "足够的金币。";
 				close;
 			}
-			mes "[DRY-RUN] [Thongpool]";
-			mes "[DRY-RUN] Well well well...";
-			mes "[DRY-RUN] You might fill your hungry stomach with that many Jellopies but they wouldn't taste as good as my Shrimp!";
+			mes "[通普]";
+			mes "好吧好吧好吧……";
+			mes "你可能能用那么多果冻填饱肚子，但它们的味道可比不上我的虾好！";
 			close;
 		}
-		mes "[DRY-RUN] [Thongpool]";
-		mes "[DRY-RUN] What...?";
-		mes "[DRY-RUN] Do you think";
-		mes "[DRY-RUN] it's expensive?";
-		mes "[DRY-RUN] But the fantastic taste";
-		mes "[DRY-RUN] of Tom Yum Goong";
-		mes "[DRY-RUN] is priceless!";
+		mes "[通普]";
+		mes "什么...?";
+		mes "你觉得";
+		mes "这很贵吗？";
+		mes "但是那绝妙的味道";
+		mes "的冬阴功虾";
+		mes "是无价的！";
 		close;
 	} else if (tomyumgoong == 3) {
-		mes "[DRY-RUN] [Thongpool]";
-		mes "[DRY-RUN] Mmm...?";
-		mes "[DRY-RUN] Did you need";
-		mes "[DRY-RUN] more Shrimps?";
-		mes "[DRY-RUN] Would you like";
-		mes "[DRY-RUN] to buy more?";
+		mes "[通普]";
+		mes "嗯……？";
+		mes "你需要";
+		mes "更多虾吗？";
+		mes "作为拳圣生活，";
+		mes "再买更多吗？";
 		next;
-		if (select("[DRY-RUN] Yes!:No, thanks.") == 1) {
+		if (select("是的！:不，谢谢。") == 1) {
 			if (Zeny > 10999) {
 				if (MaxWeight - Weight > 3999) {
 					set Zeny, Zeny-11000;
 					getitem 567,20; //Prawn
-					mes "[DRY-RUN] [Thongpool]";
-					mes "[DRY-RUN] There you go~";
-					mes "[DRY-RUN] The freshest Shrimp you can ever get in this village, and maybe even the world!";
+					mes "[通普]";
+					mes "给你~";
+					mes "在这个村庄里，甚至可能是全世界最新鲜的虾！";
 					close;
 				}
-				mes "[DRY-RUN] [Thongpool]";
-				mes "[DRY-RUN] Awww...";
-				mes "[DRY-RUN] You're carrying too much stuff with you. I don't think you can carry more than what you have right now.";
+				mes "[通普]";
+				mes "哎呀……";
+				mes "你身上背的东西太多了。我觉得你现在不能再携带更多了。";
 				close;
 			}
-			mes "[DRY-RUN] [Thongpool]";
-			mes "[DRY-RUN] Awww...";
-			mes "[DRY-RUN] You don't have";
-			mes "[DRY-RUN] enough money.";
+			mes "[通普]";
+			mes "哎呀……";
+			mes "你没有";
+			mes "足够的金币。";
 			close;
 		}
-		mes "[DRY-RUN] [Thongpool]";
-		mes "[DRY-RUN] Good, now you have gotten the freshest shrimps in this village!";
-		mes "[DRY-RUN] It's time for you to go back and ask Ms. Mali to cook for you.";
+		mes "[通普]";
+		mes "很好，现在你已经在这个村庄里得到了最新鲜的虾！";
+		mes "是时候回去请玛莉小姐给你做饭了。";
 		close;
 	}
-	mes "[DRY-RUN] [Thongpool]";
-	mes "[DRY-RUN] Welcome, welcome!";
-	mes "[DRY-RUN] I've got the best Shrimp caught in the cleanest waters in the world~!";
+	mes "[通普]";
+	mes "欢迎，欢迎！";
+	mes "我有在世界上最干净的水域捕获的最佳虾~！";
 	close;
 }
 
@@ -2936,122 +2936,122 @@ OnTouch_:
 
 ayothaya,213,94,7	script	Merchant#ayo	841,{
 	if (tomyumgoong == 6) {
-		mes "[DRY-RUN] [Merchant Thongdum]";
-		mes "[DRY-RUN] Hello, there~";
-		mes "[DRY-RUN] Are you looking for";
-		mes "[DRY-RUN] ingredients to make";
-		mes "[DRY-RUN] Tom Yum Goong?";
+		mes "[商人通杜姆]";
+		mes "你好呀~";
+		mes "你在寻找";
+		mes "制作的材料吗";
+		mes "冬阴功？";
 		next;
-		mes "[DRY-RUN] [Merchant Thongdum]";
-		mes "[DRY-RUN] Let's see...";
-		mes "[DRY-RUN] I'm selling chiles,";
-		mes "[DRY-RUN] fish sauce, and some";
-		mes "[DRY-RUN] spices and flavorings";
-		mes "[DRY-RUN] you'll need. I'll sell";
-		mes "[DRY-RUN] it all to you for 2,000 zeny.";
+		mes "[商人通杜姆]";
+		mes "让我看看……";
+		mes "我在卖辣椒，";
+		mes "鱼露和一些";
+		mes "香料和调味料";
+		mes "你需要的。我会把";
+		mes "这些全部卖给你，价格是2000金币。";
 		next;
-		if (select("[DRY-RUN] Thanks, I'll take it.:It's a rip-off, man!") == 1) {
+		if (select("谢谢，我就要这个。:这太坑人了，伙计！") == 1) {
 			emotion ET_THANKS;
 			if (Zeny > 1999) {
 				if (MaxWeight - Weight > 1199) {
 					set Zeny, Zeny-2000;
 					set tomyumgoong,7;
 					getitem 7286,30; //Chilli
-					mes "[DRY-RUN] [Merchant Thongdum]";
-					mes "[DRY-RUN] Thank you.";
-					mes "[DRY-RUN] I hope you will enjoy";
-					mes "[DRY-RUN] your Tom Yum Goong~";
+					mes "[商人通杜姆]";
+					mes "谢谢你。";
+					mes "希望你会喜欢";
+					mes "你的冬阴功~";
 					close;
 				}
-				mes "[DRY-RUN] [Merchant Thongdum]";
-				mes "[DRY-RUN] Uh oh...";
-				mes "[DRY-RUN] It looks like";
-				mes "[DRY-RUN] you're carrying";
-				mes "[DRY-RUN] too much stuff";
-				mes "[DRY-RUN] right now.";
+				mes "[商人通杜姆]";
+				mes "哦哦...";
+				mes "看起来";
+				mes "你背着";
+				mes "太多东西了";
+				mes "现在。";
 				next;
-				mes "[DRY-RUN] [Merchant Thongdum]";
-				mes "[DRY-RUN] I can't give you";
-				mes "[DRY-RUN] anything if you don't";
-				mes "[DRY-RUN] have the room to hold it!";
+				mes "[商人通杜姆]";
+				mes "如果你不";
+				mes "腾出空间，我无法给你";
+				mes "有足够的空间来放置它！";
 				close;
 			}
-			mes "[DRY-RUN] [Merchant Thongdum]";
-			mes "[DRY-RUN] Hmm...?";
-			mes "[DRY-RUN] Right now, it looks";
-			mes "[DRY-RUN] like you don't have the";
-			mes "[DRY-RUN] money to buy what you";
-			mes "[DRY-RUN] need from me.";
+			mes "[商人通杜姆]";
+			mes "嗯……？";
+			mes "现在，看起来";
+			mes "你没有足够的";
+			mes "钱来购买你想要的";
+			mes "东西。";
 			close;
 		}
 		emotion ET_STARE_ABOUT;
-		mes "[DRY-RUN] [Merchant Thongdum]";
-		mes "[DRY-RUN] Don't say that.";
-		mes "[DRY-RUN] My prices are always";
-		mes "[DRY-RUN] reasonable. I want you to know";
-		mes "[DRY-RUN] that I'm a respectable Merchant.";
+		mes "[商人通杜姆]";
+		mes "别这么说。";
+		mes "我的价格总是";
+		mes "合理的。我想让你知道";
+		mes "我是一位受人尊敬的商人。";
 		close;
 	} else if (tomyumgoong == 7) {
-		mes "[DRY-RUN] [Merchant Thongdum]";
-		mes "[DRY-RUN] I thought I provided you";
-		mes "[DRY-RUN] with enough ingredients, but";
-		mes "[DRY-RUN] now that I think about it, I don't";
-		mes "[DRY-RUN] know how much Tom Yum Goong";
-		mes "[DRY-RUN] you're making.";
+		mes "[商人通杜姆]";
+		mes "我以为我提供了足够的";
+		mes "材料给你，但";
+		mes "现在想想，我不知道";
+		mes "你要做多少碗冬阴功。";
+		mes "你正在制作的。";
 		next;
-		mes "[DRY-RUN] [Merchant Thongdum]";
-		mes "[DRY-RUN] Would you like to";
-		mes "[DRY-RUN] buy some more Chilis?";
+		mes "[商人通杜姆]";
+		mes "你想要";
+		mes "再买一些辣椒吗？";
 		next;
-		if (select("[DRY-RUN] No, thanks.:Yes, please.") == 1) {
-			mes "[DRY-RUN] [Merchant Thongdum]";
-			mes "[DRY-RUN] Fare well~";
+		if (select("不，谢谢。:是的，请。") == 1) {
+			mes "[商人通杜姆]";
+			mes "再见~";
 			close;
 		}
 		if (Zeny > 1999) {
 			if (MaxWeight - Weight > 1199) {
 				set Zeny, Zeny-2000;
 				getitem 7286,30; //Chilli
-				mes "[DRY-RUN] [Merchant Thongdum]";
-				mes "[DRY-RUN] Thank you,";
-				mes "[DRY-RUN] come again!";
+				mes "[商人通杜姆]";
+				mes "谢谢你，";
+				mes "欢迎再来！";
 				close;
 			}
-			mes "[DRY-RUN] [Merchant Thongdum]";
-			mes "[DRY-RUN] Uh oh...";
-			mes "[DRY-RUN] It looks like";
-			mes "[DRY-RUN] you're carrying";
-			mes "[DRY-RUN] too much stuff";
-			mes "[DRY-RUN] right now.";
+			mes "[商人通杜姆]";
+			mes "哦哦...";
+			mes "看起来";
+			mes "你背着";
+			mes "太多东西了";
+			mes "现在。";
 			next;
-			mes "[DRY-RUN] [Merchant Thongdum]";
-			mes "[DRY-RUN] I can't give you";
-			mes "[DRY-RUN] anything if you don't";
-			mes "[DRY-RUN] have the room to hold it!";
+			mes "[商人通杜姆]";
+			mes "如果你不";
+			mes "腾出空间，我无法给你";
+			mes "有足够的空间来放置它！";
 			close;
 		}
-		mes "[DRY-RUN] [Merchant Thongdum]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Right now, it looks";
-		mes "[DRY-RUN] like you don't have the";
-		mes "[DRY-RUN] money to buy what you";
-		mes "[DRY-RUN] need from me.";
+		mes "[商人通杜姆]";
+		mes "嗯……？";
+		mes "现在，看起来";
+		mes "你没有足够的";
+		mes "钱来购买你想要的";
+		mes "东西。";
 		close;
 	}
-	mes "[DRY-RUN] [Merchant Thongdum]";
-	mes "[DRY-RUN] Hello there!";
-	mes "[DRY-RUN] Ever try a Chili before?";
+	mes "[商人通杜姆]";
+	mes "你好！";
+	mes "你尝过辣椒吗？";
 	next;
-	mes "[DRY-RUN] [Merchant Thongdom]";
-	mes "[DRY-RUN] Despite its tiny appearance,";
-	mes "[DRY-RUN] it has a very strong flavor. It's also hot and spicy, so you should be careful when you eat one.";
+	mes "[商人通德]";
+	mes "尽管它看起来很小，";
+	mes "但它的味道非常浓烈。它也很热辣，所以吃的时候要小心。";
 	next;
-	mes "[DRY-RUN] [Merchant Thongdum]";
-	mes "[DRY-RUN] The people of Ayotaya enjoy sensational food with distinct, spicy flavors. In Ayotayan cuisine, we use things like Chilis, garlic, ginger and cilantro.";
+	mes "[商人通杜姆]";
+	mes "阿尤塔亚的人们喜欢具有独特辛辣风味的美食。在阿尤塔亚的菜肴中，我们使用辣椒、大蒜、生姜和香菜等食材。";
 	next;
-	mes "[DRY-RUN] [Merchant Thongdum]";
-	mes "[DRY-RUN] I'm selling Chilis,";
-	mes "[DRY-RUN] so if you need any,";
-	mes "[DRY-RUN] please come to me~";
+	mes "[商人通杜姆]";
+	mes "我在卖辣椒，";
+	mes "如果你需要的话，";
+	mes "请来找我~";
 	close;
 }

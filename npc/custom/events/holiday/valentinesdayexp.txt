@@ -23,41 +23,41 @@ prontera,156,172,4	script	Tine	58,{
 //	mes "Sex == "+Sex;
 //	if(@dsv == gettime(DT_HOUR)+1) mes "@dsv == gettime(DT_HOUR)+1";
 
-	mes "[Tine]";
-	mes "The legend says that on 14th February... on the Day of Saint Valentine...";
-	mes "Only in Run-Midgard kingdom...";
+	mes "[蒂娜]";
+	mes "传说在2月14日... 圣瓦伦丁节那天...";
+	mes "只有在卢恩-米德加兹王国...";
 	next;
 	specialeffect EF_HITBODY;
-	mes "[Tine]";
-	mes "Some married chocolate lovers almost double their experience at trainings!";
-	mes "But everything isn't so simply...";
+	mes "[蒂娜]";
+	mes "一些已婚的巧克力爱好者在训练中几乎可以翻倍他们的经验值！";
+	mes "但事情并不是那么简单...";
 	next;
 	menu "Wow! Tell me more!",M_INFO,"Marri... what?",-;
 
-	mes "[Tine]";
-	mes "Are you a single?";
-	mes "Today is a great date to ask your beloved half for marriage!";
+	mes "[蒂娜]";
+	mes "你是单身吗？";
+	mes "今天是向你心爱的另一半求婚的好日子！";
 	next;
-	mes "[Tine]";
-	mes "The Marriage fee is ridiculous low these days!";
+	mes "[蒂娜]";
+	mes "如今的结婚费用低得离谱！";
 	close;
 
 M_INFO:
-	mes "[Tine]";
-	mes "The magic effect posesses only handmade chocolate from grand-grand-grand-whoever recipes!";
+	mes "[蒂娜]";
+	mes "只有来自祖祖辈辈食谱的手工巧克力才具有魔法效果！";
 	next;
-	mes "[Tine]";
-	mes "It being known that Black Handmade Chocolate works on married guys... And the White one on the married girls!";
-	mes "If you lose your wedding ring... then alas, it won't work on you.";
+	mes "[蒂娜]";
+	mes "众所周知，黑色手工巧克力对已婚男性有效... 而白色的对已婚女性有效！";
+	mes "如果你丢失了婚戒... 那么可惜，它对你就不起作用了。";
 	next;
-	mes "[Tine]";
-	mes "On having a Chocolate, you should put off your ring then... put it back... And if your partner is online, then magc would last till the next hour!";
+	mes "[蒂娜]";
+	mes "在吃巧克力时，你应该先把戒指摘掉... 然后再戴上... 如果你的伴侣在线，那么魔法效果会持续到下一个小时！";
 	next;
-	mes "[Tine]";
-	mes "Rumors bark that guys and gals have +50% EXP bonuses on FIVE different races of the monsters... Exluding bloody bosses, of course.";
+	mes "[蒂娜]";
+	mes "传闻说，男孩和女孩在五种不同种族的怪物身上有+50%的经验值加成... 当然，血腥的boss除外。";
 	next;
-	mes "[Tine]";
-	mes "There's a fameous confectioner in the Castle of Prontera! He's the one you need.";
+	mes "[蒂娜]";
+	mes "在普隆德拉城堡里有一位著名的糖果师！他就是你需要的那个人。";
 	close;
 
 OnInit:
@@ -75,31 +75,31 @@ OnInit:
 
 // Stephen - Valentine Event Chocolate seller ------------------
 alberta,26,243,4	script	Stephen#val1	58,{
-	mes "[Stephen]";
-	mes "Guess what I've got?";
-	mes "A tasty treat not easily found in Rune-Midgard....";
+	mes "[斯蒂芬]";
+	mes "猜猜我有什么？";
+	mes "一种在鲁恩-米德加兹不容易找到的美味佳肴....";
 	next;
-	mes "[Stephen]";
-	mes "Chocolate!";
-	mes "That's right, don't you love chocolate.... I do.";
-	mes "And you are in luck, because I'm selling them for only 5,000 zeny a piece!";
+	mes "[斯蒂芬]";
+	mes "巧克力！";
+	mes "没错，你不喜欢巧克力吗....我喜欢。";
+	mes "而且你真幸运，因为我只卖每个5,000金币！";
 	next;
 	menu "I want some chocolate!",M_CHOCO,"No thanks.",-;
 
-	mes "[Stephen]";
-	mes "You don't want any chocolate?";
-	mes "I'm telling you! You'll regret it!";
-	mes "You better get some now... you won't come across Chocolate like this ever again!";
-	mes "Think it over and visit me again sometime.";
+	mes "[斯蒂芬]";
+	mes "你不想要巧克力吗？";
+	mes "我告诉你！你会后悔的！";
+	mes "你最好现在就买一些... 你再也不会遇到这样的巧克力了！";
+	mes "考虑一下，过段时间再来找我。";
 	close;
 
 M_CHOCO:
-	mes "[Stephen]";
-	mes "Hah!";
-	mes "I knew it!";
-	mes "But I can't sell you more then 5 at once....but, if you really need more....";
-	mes "you can come back again.";
-	mes "So how many do you want?";
+	mes "[斯蒂芬]";
+	mes "哈！";
+	mes "我就知道！";
+	mes "但我一次不能卖给你超过5个....不过，如果你真的需要更多....";
+	mes "你可以再回来。";
+	mes "那么你想要多少个？";
 	next;
 	set @needmon,0;
 	input @flag_num;
@@ -109,58 +109,58 @@ M_CHOCO:
 	if (Zeny < @needmon) goto L_NOTENO;
 	set Zeny,Zeny - @needmon;
 	getitem 558,@flag_num;
-	mes "[Stephen]";
-	mes "There you go!";
-	mes "You can give that to someone as a gift, or enjoy it yourself!";
-	mes "Mmm....sweet chocolate...";
-	mes "Visit me anytime...!";
+	mes "[斯蒂芬]";
+	mes "给你！";
+	mes "你可以把它送给别人作为礼物，或者自己享用！";
+	mes "嗯....甜蜜的巧克力...";
+	mes "随时欢迎你来找我...！";
 	close;
 
 L_ERR:
-	mes "[Stephen]";
-	mes "I'm sorry but I can't give you that many.";
+	mes "[斯蒂芬]";
+	mes "对不起，我不能给你那么多。";
 L_NONE:
 	close;
 
 L_NOTENO:
-	mes "[Stephen]";
-	mes "I'm sorry but it seems you can't afford to buy these of me.";
+	mes "[斯蒂芬]";
+	mes "对不起，但看起来你买不起这些。";
 	close;
 }
 
 // Jainie -- Gives information about Valentine Event ------------------------
 alberta,29,243,4	script	Jainie#val1	53,{
-	mes "[Jainie]";
-	mes "You know what? The chocolate that my boyfriend sells are from me!";
-	mes "I made them by myself. Now I need some Milk for my special White Chocolate.";
+	mes "[贾妮]";
+	mes "你知道吗？我男朋友卖的巧克力是我做的！";
+	mes "我自己亲手做的。现在我需要一些牛奶来制作我的特别白巧克力。";
 	next;
-	mes "[Jainie]";
-	mes "You know ... In cetain countries, there's a tradition of presenting chocolates to a person that you love...";
-	mes "They call it ^3355FFValentine's Day^000000.";
+	mes "[贾妮]";
+	mes "你知道……在某些国家，有一种向你爱的人赠送巧克力的传统……";
+	mes "他们称之为 ^3355FF情人节^000000。";
 	next;
-	mes "[Jainie]";
-	mes "So I gave him my delicious chocolate...";
-	mes "And then he made me cook a lot more...";
-	mes "And now he is selling them to everyone.";
-	mes "I guess he really enjoyed it.";
-	mes "But, I do feel good when people buy something I have made.";
+	mes "[贾妮]";
+	mes "所以我给了他我美味的巧克力……";
+	mes "然后他让我做了更多……";
+	mes "现在他把它们卖给每个人。";
+	mes "我想他真的很喜欢。";
+	mes "但是，当人们购买我做的东西时，我确实感到很高兴。";
 	next;
-	mes "[Jainie]";
-	mes "It would be great if you bought some too...";
-	mes "I will be making white chocolates for a while so...";
+	mes "[贾妮]";
+	mes "如果你也买一些就好了……";
+	mes "我会做一段时间的白巧克力，所以……";
 	next;
 	menu "I want some white chocolate!",M_CHOCO,"No thanks.",-;
 
-	mes "[Jainie]";
-	mes "You don't like white chocolate?";
-	mes "Then buy some Stephen's black one!";
+	mes "[贾妮]";
+	mes "你不喜欢白巧克力吗？";
+	mes "那就买一些斯蒂芬的黑巧克力吧！";
 	close;
 
 M_CHOCO:
-	mes "[Jainie]";
-	mes "I can't sell you more then 5 at once....but, if you really need more....";
-	mes "you can come back again.";
-	mes "So how many do you want? 1 portion is 4500z + 1 Milk.";
+	mes "[贾妮]";
+	mes "我一次不能卖给你超过5个……但是，如果你真的需要更多……";
+	mes "你可以再回来。";
+	mes "那么你想要多少？1份是4500金币 + 1牛奶。";
 	next;
 	set @needmon,0;
 	input @flag_num;
@@ -172,26 +172,26 @@ M_CHOCO:
 	set Zeny,Zeny - @needmon;
 	delitem 519,@flag_num;
 	getitem 561,@flag_num;
-	mes "[Jainie]";
-	mes "There you go!";
-	mes "You can give that to someone as a gift, or enjoy it yourself!";
-	mes "Mmm... sweet chocolate...";
-	mes "Visit me anytime...!";
+	mes "[贾妮]";
+	mes "给你！";
+	mes "你可以把它送给某人作为礼物，或者自己享用！";
+	mes "嗯……甜蜜的巧克力……";
+	mes "随时来找我……！";
 	close;
 
 L_ERR:
-	mes "[Jainie]";
-	mes "I'm sorry but I can't give you that many.";
+	mes "[贾妮]";
+	mes "对不起，我不能给你那么多。";
 L_NONE:
 	close;
 
 L_NOTENO:
-	mes "[Jainie]";
-	mes "I'm sorry but it seems you can't afford to buy these of me.";
+	mes "[贾妮]";
+	mes "对不起，但看起来你买不起这些。";
 	close;
 
 L_NOMILK:
-	mes "[Jainie]";
+	mes "[贾妮]";
 	mes "You need "+@flag_num+" Milk for "+@flag_num+" portions of my special White Chocolate...";
 	close;
 }

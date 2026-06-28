@@ -19,65 +19,65 @@ valkyrie,53,56,3	script	Gypsy#Valkyrie	101,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Gypsy]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[舞姬]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Gypsy]";
-		mes "[DRY-RUN] Move left,";
-		mes "[DRY-RUN] move right~!";
-		mes "[DRY-RUN] And step...!";
-		mes "[DRY-RUN] Dancing can be";
-		mes "[DRY-RUN] more than a hobby.";
-		mes "[DRY-RUN] For me, it's a way of life~";
+		mes "[舞姬]";
+		mes "向左移动，";
+		mes "向右移动~！";
+		mes "然后踏步...！";
+		mes "舞蹈不仅仅是";
+		mes "一种爱好。";
+		mes "对我来说，这是一种生活方式~";
 		close;
 	}
 	else if (ADVJOB == Job_Gypsy && Class == Job_Archer_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Gypsy]";
-		mes "[DRY-RUN] The land of Rune-Midgard";
-		mes "[DRY-RUN] is in need of talented women";
-		mes "[DRY-RUN] to subtly change the balances";
-		mes "[DRY-RUN] in the battle between good";
-		mes "[DRY-RUN] and evil.";
+		mes "[舞姬]";
+		mes "鲁恩-米德加兹的土地";
+		mes "需要有才华的女性";
+		mes "来微妙地改变";
+		mes "善与恶之间的平衡。";
+		mes "和邪恶。";
 		next;
-		mes "[DRY-RUN] [Gypsy]";
-		mes "[DRY-RUN] Are you ready";
-		mes "[DRY-RUN] to take up this role,";
-		mes "[DRY-RUN] and become a Gypsy?";
+		mes "[舞姬]";
+		mes "你准备好了吗";
+		mes "来承担这个角色，";
+		mes "并成为一名舞姬？";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [Gypsy]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[舞姬]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Gypsy]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[舞姬]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Gypsy;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [Gypsy]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] As a Gypsy, I know";
-		mes "[DRY-RUN] that your performances";
-		mes "[DRY-RUN] sway the hearts of all";
-		mes "[DRY-RUN] those who will be watching...";
+		mes "[舞姬]";
+		mes "恭喜！";
+		mes "作为一名舞姬，我知道";
+		mes "你的表演";
+		mes "能够打动所有人的心";
+		mes "那些将要观看的人...";
 		close;
 	}
-	mes "[DRY-RUN] [Gypsy]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[舞姬]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [Gypsy]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[舞姬]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

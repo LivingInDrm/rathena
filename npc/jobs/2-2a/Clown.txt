@@ -21,63 +21,63 @@ valkyrie,53,54,3	script	Minstrel#Valkyrie	741,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Minstrel]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[吟游诗人]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Minstrel]";
-		mes "[DRY-RUN] Do you want to";
-		mes "[DRY-RUN] sing a song with me?";
-		mes "[DRY-RUN] Sha la la la la~";
+		mes "[吟游诗人]";
+		mes "你想要";
+		mes "和我一起唱首歌吗？";
+		mes "沙啦啦啦啦~";
 		close;
 	}
 	else if (ADVJOB == Job_Clown && Class == Job_Archer_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Minstrel]";
-		mes "[DRY-RUN] The dreary world";
-		mes "[DRY-RUN] of mortals is in need";
-		mes "[DRY-RUN] of more cheerful song.";
-		mes "[DRY-RUN] Will you bring it to them";
-		mes "[DRY-RUN] and turn the tide in the";
-		mes "[DRY-RUN] battle against evil?";
+		mes "[吟游诗人]";
+		mes "阴沉的世界";
+		mes "凡人需要";
+		mes "更多欢快的歌曲。";
+		mes "你会把它带给他们";
+		mes "并在";
+		mes "与邪恶的斗争中扭转局势吗？";
 		next;
-		mes "[DRY-RUN] [Minstrel]";
-		mes "[DRY-RUN] Will you do this";
-		mes "[DRY-RUN] for Rune-Midgard...";
-		mes "[DRY-RUN] As a Minstrel?";
+		mes "[吟游诗人]";
+		mes "你会为此而做";
+		mes "为了鲁恩-米德加兹...";
+		mes "作为一名吟游诗人？";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [Minstrel]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[吟游诗人]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Minstrel]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[吟游诗人]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Clown;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [Minstrel]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] As a Minstrel, your";
-		mes "[DRY-RUN] your songs will bring";
-		mes "[DRY-RUN] hope to your allies, and";
-		mes "[DRY-RUN] desperation to your foes.";
+		mes "[吟游诗人]";
+		mes "恭喜！";
+		mes "作为一名吟游诗人，你的";
+		mes "歌曲将带来";
+		mes "希望给你的盟友，";
+		mes "绝望给你的敌人。";
 		close;
 	}
-	mes "[DRY-RUN] [Minstrel]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[吟游诗人]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [Minstrel]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[吟游诗人]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

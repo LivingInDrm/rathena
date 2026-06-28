@@ -24,22 +24,22 @@
 //============================================================
 
 comodo,180,153,4	script	Sonotora#1	90,{
-	mes "[DRY-RUN] [Athena Sonotora]";
-	mes "[DRY-RUN] They say the";
-	mes "[DRY-RUN] famous dance school";
-	mes "[DRY-RUN] here in Comodo is going";
-	mes "[DRY-RUN] to open soon.";
+	mes "[雅典娜·索诺托拉]";
+	mes "他们说";
+	mes "著名的舞蹈学校";
+	mes "在科莫多这里即将";
+	mes "开幕。";
 	next;
-	mes "[DRY-RUN] [Athena Sonotora]";
-	mes "[DRY-RUN] Aah...";
-	mes "[DRY-RUN] To be a prima donna";
-	mes "[DRY-RUN] in the spotlight!";
+	mes "[雅典娜·索诺托拉]";
+	mes "啊...";
+	mes "成为一名首席舞者";
+	mes "在聚光灯下！";
 	next;
-	mes "[DRY-RUN] [Athena Sonotora]";
-	mes "[DRY-RUN] I want to sign up too,";
-	mes "[DRY-RUN] but the requirements are";
-	mes "[DRY-RUN] so specific. I wonder if";
-	mes "[DRY-RUN] I should just try anyways...";
+	mes "[雅典娜·索诺托拉]";
+	mes "我也想报名，";
+	mes "但要求太苛刻了";
+	mes "我在想是否";
+	mes "我应该试试……";
 	close;
 }
 
@@ -78,23 +78,23 @@ comodo,193,151,4	script	Bor Robin#1	86,{
 
 job_duncer,43,93,4	script	Aile#da	724,{
 	if (Upper == 1) {
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] One two three four,";
-		mes "[DRY-RUN] Two two three four,";
-		mes "[DRY-RUN] three four, three four,";
-		mes "[DRY-RUN] one two three four.";
-		mes "[DRY-RUN] Um?";
+		mes "[艾尔]";
+		mes "一二三四，";
+		mes "二二三四，";
+		mes "三四，三四，";
+		mes "一二三四。";
+		mes "嗯？";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] I'm sorry, but you're interrupting my practice by looking at me funny.";
+		mes "[艾尔]";
+		mes "抱歉，你这样看着我打扰了我的练习。";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] .......";
-		mes "[DRY-RUN] .....Hey, haven't I seen you before?";
+		mes "[艾尔]";
+		mes ".......";
+		mes ".....嘿，我好像见过你？";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Err...";
-		mes "[DRY-RUN] That's weird, I can't remember where I've seen you.";
+		mes "[艾尔]";
+		mes "呃...";
+		mes "这很奇怪，我记不起来在哪里见过你。";
 		close2;
 		cutin "",255;
 		end;
@@ -102,80 +102,80 @@ job_duncer,43,93,4	script	Aile#da	724,{
 	if (BaseJob != Job_Archer) {
 		if (BaseJob == Job_Bard) {
 			cutin "job_dancer_eir01",2;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Welcome~!";
-			mes "[DRY-RUN] Let me know";
-			mes "[DRY-RUN] if you have any new songs. We can always use some new music to complement our performances.";
+			mes "[艾尔]";
+			mes "欢迎~！";
+			mes "如果你有新的歌曲，请告诉我。";
+			mes "我们总是需要一些新音乐来丰富我们的表演。";
 			close2;
 			cutin "",255;
 			end;
 		}
 		else if (BaseJob == Job_Dancer) {
 			cutin "",2;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Welcome~!";
-			mes "[DRY-RUN] How are you";
-			mes "[DRY-RUN] these days?";
-			mes "[DRY-RUN] Do many people enjoy";
-			mes "[DRY-RUN] your performances?";
+			mes "[艾尔]";
+			mes "欢迎~！";
+			mes "你最近怎么样";
+			mes "？";
+			mes "很多人喜欢吗";
+			mes "你的表演？";
 			close2;
 			cutin "",255;
 			end;
 		}
 		cutin "job_dancer_eir03",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Welco--Mmm?";
-		mes "[DRY-RUN] Hey, only authorized personnel can come here. Not just anyone can enter the Dance School.";
+		mes "[艾尔]";
+		mes "欢迎——嗯？";
+		mes "嘿，只有授权人员才能进入这里。不是任何人都可以进入舞蹈学校的。";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] If you want to watch, why don't you go to the Dance Stage in town?";
+		mes "[艾尔]";
+		mes "如果你想观看，何不去城里的舞蹈舞台呢？";
 		close2;
 		cutin "",255;
 		end;
 	}
 	if (DANC_Q == 0 && Sex == SEX_FEMALE && BaseJob == Job_Archer) {
 		cutin "job_dancer_eir01",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Welcome~!";
-		mes "[DRY-RUN] This is the";
-		mes "[DRY-RUN] 'Comodo Dance School,'";
-		mes "[DRY-RUN] where we teach various dances from different countries. We provide entertainement for travelers from all over the world.";
+		mes "[艾尔]";
+		mes "欢迎~！";
+		mes "这里是";
+		mes "‘科莫多舞蹈学校’，";
+		mes "我们教授来自不同国家的各种舞蹈。我们为来自世界各地的旅行者提供娱乐。";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] We also provide the opportunity for aspiring Dancers to become famous throughout the Rune-Midgarts Kingdom! Doesn't dancing in the spotlight sound spectacular?";
+		mes "[艾尔]";
+		mes "我们还为有志成为舞者的人提供机会，让他们在卢恩-米德加兹王国中成名！在聚光灯下跳舞听起来是不是很壮观？";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] I think it's fair to let you know that our school is selective. So we don't accept students who don't seem to have the talent to become Dancers.";
+		mes "[艾尔]";
+		mes "我认为告诉你我们的学校是有选择性的，这很公平。所以我们不接受那些似乎没有成为舞娘才能的学生。";
 		next;
 		cutin "job_dancer_eir02",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] What do you think?";
-		mes "[DRY-RUN] Do you want to sign up? You only have to write a couple of things on the application, and you can just come to the lessons once or twice and try it out.";
+		mes "[艾尔]";
+		mes "你觉得怎么样？";
+		mes "你想报名吗？你只需要在申请表上写几件事情，然后你可以只来上几次课试试看。";
 		next;
 		cutin "job_dancer_eir01",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] So what do";
-		mes "[DRY-RUN] you want to do~?";
+		mes "[艾尔]";
+		mes "那么你想做什么~？";
+		mes "你想做什么~？";
 		next;
-		if (select("[DRY-RUN] Fill out the application.:I'll pass.") == 1) {
+		if (select("填写申请表。:我不想。") == 1) {
 			if (JobLevel > 39) {
 				cutin "job_dancer_eir02",2;
-				mes "[DRY-RUN] [Aile]";
-				mes "[DRY-RUN] Good choice!!";
-				mes "[DRY-RUN] Just fill out the application right there.";
+				mes "[艾尔]";
+				mes "好选择！！";
+				mes "就在这里填写申请表。";
 				next;
-				mes "[DRY-RUN] ...";
+				mes "...";
 				next;
-				mes "[DRY-RUN] ...";
-				mes "[DRY-RUN] ......";
+				mes "...";
+				mes "......";
 				next;
-				mes "[DRY-RUN] ^3355FF*Shuffle Shuffle*^000000";
+				mes "^3355FF*洗牌洗牌*^000000";
 				next;
 				cutin "job_dancer_eir01",2;
-				mes "[DRY-RUN] [Aile]";
-				mes "[DRY-RUN] Your name is";
+				mes "[艾尔]";
+				mes "你的名字是";
 				mes "" + strcharinfo(0) + "?";
-				mes "[DRY-RUN] Wow! What a pretty name! Just a moment, I have to show this to the director, so come back in a little bit, okay?";
+				mes "哇！真好听的名字！等一下，我得把这个给主任看一下，稍后再回来，好吗？";
 				close2;
 				cutin "",255;
 				set DANC_Q,1;
@@ -184,104 +184,104 @@ job_duncer,43,93,4	script	Aile#da	724,{
 			}
 			else {
 				cutin "job_dancer_eir01",2;
-				mes "[DRY-RUN] [Aile]";
-				mes "[DRY-RUN] Mmm...";
-				mes "[DRY-RUN] It seems that";
-				mes "[DRY-RUN] you aren't quite qualified to enroll in our school yet. You need to be at least Job Level 40.";
+				mes "[艾尔]";
+				mes "嗯...";
+				mes "似乎";
+				mes "你还不够资格加入我们的学校。你需要至少达到职业等级40。";
 				next;
-				mes "[DRY-RUN] [Aile]";
-				mes "[DRY-RUN] Well, I hope";
-				mes "[DRY-RUN] that you apply";
-				mes "[DRY-RUN] again when you meet";
-				mes "[DRY-RUN] the requirements.";
+				mes "[艾尔]";
+				mes "好吧，我希望";
+				mes "你申请";
+				mes "当你满足条件时再来申请";
+				mes "要求.";
 				close2;
 				cutin "",255;
 				end;
 			}
 		}
 		cutin "job_dancer_eir01",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Aww~";
-		mes "[DRY-RUN] Just think about it.";
-		mes "[DRY-RUN] Don't forget to come back";
-		mes "[DRY-RUN] if you change your mind.";
+		mes "[艾尔]";
+		mes "哎呀~";
+		mes "想想看吧。";
+		mes "别忘了回来";
+		mes "如果你改变主意的话。";
 		close2;
 		cutin "",255;
 		end;
 	}
 	else if (Sex == SEX_MALE) {
 		cutin "job_dancer_eir03",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Welco--Mmm?";
-		mes "[DRY-RUN] Hey, this place is only for authorized personnel. If you want to sing, you should go look into being a Bard.";
+		mes "[艾尔]";
+		mes "欢迎——嗯？";
+		mes "嘿，这个地方只供授权人员使用。如果你想唱歌，你应该考虑成为一名诗人。";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Not all Archers";
-		mes "[DRY-RUN] can become Dancers.";
-		mes "[DRY-RUN] At least, not without some sort of sex change~";
+		mes "[艾尔]";
+		mes "并不是所有的弓箭手";
+		mes "都能成为舞娘。";
+		mes "至少，不经过某种变性手术是不能的~";
 		close2;
 		cutin "",255;
 		end;
 	}
 	else if (DANC_Q == 1) {
 		cutin "job_dancer_eir01",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Good.";
-		mes "[DRY-RUN] Since you signed up earlier, I'll let you know some things you'll need to bring for your lessons.";
+		mes "[艾尔]";
+		mes "很好。";
+		mes "既然你早些时候报名了，我会告诉你一些上课需要带的东西。";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] We're short on some supplies, but you'll be using them for yourself anyway. Just think of it as part of the tuition, so don't worry too much.";
+		mes "[艾尔]";
+		mes "我们缺少一些用品，但你自己也会用到它们。把它当作学费的一部分，所以不要太担心。";
 		next;
 		set .@item_nd,rand(1,10);
 		if (.@item_nd > 0 && .@item_nd < 3) {
 			set DANC_Q,2;
 			changequest 7000,7001;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] First, there's the tuition fee of ^CD688910,000 Zeny^000000. Then, you'll about ^CD688920 Sticky Mucus^000000 for shoe polish.";
+			mes "[艾尔]";
+			mes "首先，学费是 ^CD688910,000 Zeny^000000。然后，你需要大约 ^CD688920 粘液^000000 来做鞋油。";
 			next;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Then, bring ^CD68893 Jellopy^000000 and ^CD68895 Red Potions^000000 to use as ointment. And of course, you'll need a pair of ^CD6889Shoes^000000.";
+			mes "[艾尔]";
+			mes "然后，带上 ^CD68893 明胶^000000 和 ^CD68895 红色药水^000000 作为药膏。当然，你还需要一双 ^CD6889鞋子^000000。";
 			next;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Once again, that's";
-			mes "[DRY-RUN] ^CD688910,000 Zeny^000000,";
-			mes "[DRY-RUN] ^CD688920 Sticky Mucus^000000,";
-			mes "[DRY-RUN] ^CD68893 Jellopy^000000,";
-			mes "[DRY-RUN] ^CD68895 Red Potions^000000 and";
-			mes "[DRY-RUN] ^CD68891 Shoes^000000.";
+			mes "[艾尔]";
+			mes "再说一遍，就是";
+			mes "^CD688910,000 Zeny^000000，";
+			mes "^CD688920 粘液^000000，";
+			mes "^CD68893 果冻^000000,";
+			mes "^CD68895 红色药水^000000 和";
+			mes "^CD68891 鞋子^000000.";
 		}
 		else if (.@item_nd == 4) {
 			set DANC_Q,3;
 			changequest 7000,7002;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] First, there's the tuition fee of ^CD688910,000 Zeny^000000. Then, bring ^CD68895 Earthworm Peelings^000000 for polishing the floor and, of course, a pair of ^CD6889Boots^000000.";
+			mes "[艾尔]";
+			mes "首先，学费是 ^CD688910,000 金币^000000。然后，带上 ^CD68895 蚯蚓皮^000000 来擦地板，当然，还有一双 ^CD6889 靴子^000000.";
 			next;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Once again that's";
-			mes "[DRY-RUN] ^CD688910,000 Zeny^000000,";
-			mes "[DRY-RUN] ^CD68895 Earthworm Peelings^000000 and ";
-			mes "[DRY-RUN] ^CD68891 Boots^000000.";
+			mes "[艾尔]";
+			mes "再说一次是";
+			mes "^CD688910,000 Zeny^000000，";
+			mes "^CD68895 蚯蚓皮^000000 和 ";
+			mes "^CD68891 靴子^000000.";
 		}
 		else {
 			set DANC_Q,4;
 			changequest 7000,7003;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] First, there's the tuition fee of ^CD688910,000 Zeny^000000. Then, bring ^CD68892 Clam Shells^000000 for your costume, ^CD68895 Yellow Potions^000000 and ^CD688920 Jellopy^000000 to treat foot injuries.";
+			mes "[艾尔]";
+			mes "首先，学费是 ^CD688910,000 金币^000000。然后，带上 ^CD68892 蛤蜊壳^000000 作为你的服装，^CD68895 黄色药水^000000 和 ^CD688920 果冻^000000 来治疗脚伤.";
 			next;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] You'll also need to bring ^CD688910 Black Hairs^000000 to make wigs for the performances and, of course, a pair of ^CD6889Sandals^000000. Once again, that's...";
+			mes "[艾尔]";
+			mes "你还需要带上 ^CD688910 黑色头发^000000 来制作表演用的假发，当然，还有一双 ^CD6889凉鞋^000000。再说一次，就是……";
 			next;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] ^CD688910,000 Zeny^000000,";
-			mes "[DRY-RUN] ^CD68892 Clam Shells^000000,";
-			mes "[DRY-RUN] ^CD68895 Yellow Potions^000000,";
-			mes "[DRY-RUN] ^CD688920 Jellopy^000000,";
-			mes "[DRY-RUN] ^CD688910 Black Hairs^000000 and";
-			mes "[DRY-RUN] ^CD6889Sandals^000000.";
+			mes "[艾尔]";
+			mes "^CD688910,000 Zeny^000000，";
+			mes "^CD68892 蛤蜊壳^000000，";
+			mes "^CD68895 黄色药水^000000，";
+			mes "^CD688920 明胶^000000，";
+			mes "^CD688910 黑色头发^000000 和";
+			mes "^CD6889凉鞋^000000。";
 		}
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Once you've gathered everything that you need, come back so that we can begin the lessons, okay?";
+		mes "[艾尔]";
+		mes "一旦你收集齐所需的一切，回来我们就可以开始上课了，好吗？";
 		close2;
 		cutin "",255;
 		end;
@@ -309,18 +309,18 @@ job_duncer,43,93,4	script	Aile#da	724,{
 		}
 		if( .@i == .@size && Zeny > 9999 ) {
 			cutin "job_dancer_eir02",2;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Oh...!";
-			mes "[DRY-RUN] You brought";
-			mes "[DRY-RUN] everything!";
-			mes "[DRY-RUN] Alright then,";
-			mes "[DRY-RUN] let me take your";
-			mes "[DRY-RUN] tuition fee.";
+			mes "[艾尔]";
+			mes "哦……！";
+			mes "你带来了";
+			mes "所有东西！";
+			mes "好的，那么，";
+			mes "让我收你的";
+			mes "学费。";
 			next;
 			cutin "job_dancer_eir01",2;
 			set Zeny, Zeny-10000;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Next, go to ^CD6889Bijou^000000, who is in charge of the interviewing process. She will have a couple of things she'll need to ask you.";
+			mes "[艾尔]";
+			mes "接下来，去找^CD6889Bijou^000000，她负责面试流程。她会有几件事情需要问你。";
 			set DANC_Q,5;
 			if(checkquest(7001) != -1) {
 				changequest 7001,7004;
@@ -337,17 +337,17 @@ job_duncer,43,93,4	script	Aile#da	724,{
 		}
 		else {
 			cutin "job_dancer_eir01",2;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Mmm...?";
-			mes "[DRY-RUN] You don't have";
-			mes "[DRY-RUN] everything yet?";
-			mes "[DRY-RUN] Let me remind you";
-			mes "[DRY-RUN] so you can bring";
-			mes "[DRY-RUN] what you need next time.";
+			mes "[艾尔]";
+			mes "嗯……？";
+			mes "你没有";
+			mes "还没有准备好所有东西吗？";
+			mes "让我提醒你";
+			mes "这样你可以带上";
+			mes "你下次需要的东西。";
 			next;
-			mes "[DRY-RUN] [Aile]";
-			mes "[DRY-RUN] Bring...";
-			mes "[DRY-RUN] ^CD688910,000 Zeny^000000,";
+			mes "[艾尔]";
+			mes "带上...";
+			mes "^CD688910,000 Zeny^000000，";
 			if (DANC_Q == 2) {
 				mes "^CD6889"+.@count[0]+" "+getitemname(.@item[0])+"^000000,";
 				mes "^CD6889"+.@count[1]+" "+getitemname(.@item[1])+"^000000,";
@@ -372,38 +372,38 @@ job_duncer,43,93,4	script	Aile#da	724,{
 	}
 	else if (DANC_Q == 5) {
 		cutin "job_dancer_eir01",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Are you having";
-		mes "[DRY-RUN] trouble finding";
-		mes "[DRY-RUN] ^CD6889Bijou^000000?";
+		mes "[艾尔]";
+		mes "嗯……？";
+		mes "你遇到问题了吗？";
+		mes "找不到";
+		mes "^CD6889Bijou^000000？";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] You need to talk to her because she's in charge of the interviewing process. Don't worry, she should be somewhere here in the Dance School.";
+		mes "[艾尔]";
+		mes "你需要和她对话，因为她负责面试流程。别担心，她应该在舞蹈学校的某个地方。";
 		close2;
 		cutin "",255;
 		end;
 	}
 	else if (DANC_Q > 5) {
 		cutin "job_dancer_eir01",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] I'll be looking";
-		mes "[DRY-RUN] forward to a great";
-		mes "[DRY-RUN] performance~";
+		mes "[艾尔]";
+		mes "我会留意的";
+		mes "迈向伟大的";
+		mes "表演~";
 		close2;
 		cutin "",255;
 		end;
 	}
 	else {
 		cutin "job_dancer_eir03",2;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] Welcom--Hm?";
-		mes "[DRY-RUN] Hey, only authorized";
-		mes "[DRY-RUN] personnel are allowed";
-		mes "[DRY-RUN] in here.";
+		mes "[艾尔]";
+		mes "欢迎——嗯？";
+		mes "嘿，只有授权的";
+		mes "人员可以进入";
+		mes "这里。";
 		next;
-		mes "[DRY-RUN] [Aile]";
-		mes "[DRY-RUN] If you want to watch, be quiet and don't disturb the performers. Everyone here is busy practicing so that they can become fine Dancers.";
+		mes "[艾尔]";
+		mes "如果你想观看，请保持安静，不要打扰表演者。这里的每个人都在忙着练习，以便他们能成为优秀的舞娘。";
 		close2;
 		cutin "",255;
 		end;
@@ -412,107 +412,107 @@ job_duncer,43,93,4	script	Aile#da	724,{
 
 job_duncer,95,93,4	script	Bijou#da	101,{
 	if (SkillPoint) {
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] You can't change jobs";
-		mes "[DRY-RUN] if you still have skill";
-		mes "[DRY-RUN] points left. Use the rest";
-		mes "[DRY-RUN] and come back later.";
+		mes "[比珠]";
+		mes "如果你还有技能";
+		mes "点数未用完，就不能换职业。";
+		mes "使用剩下的点数，";
+		mes "然后再回来。";
 		close;
 	}
 	if (BaseJob != Job_Archer) {
 		if (BaseJob == Job_Bard) {
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Welcome~";
-			mes "[DRY-RUN] Ooh, a Bard! Do you have any new songs to show us? We can always use some musical accompaniment for our dances.";
+			mes "[比珠]";
+			mes "欢迎~";
+			mes "哦，诗人！你有什么新歌要给我们听吗？我们总是需要一些音乐来伴随我们的舞蹈。";
 			close;
 		}
 		else if (BaseJob == Job_Dancer) {
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Oh my...!";
-			mes "[DRY-RUN] Welcome back~";
+			mes "[比珠]";
+			mes "哦，我的天...！";
+			mes "欢迎回来~";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] How are you";
-			mes "[DRY-RUN] these days?";
-			mes "[DRY-RUN] A lot of people";
-			mes "[DRY-RUN] must love watching";
-			mes "[DRY-RUN] you dance. Are you";
-			mes "[DRY-RUN] enjoying the spotlight?";
+			mes "[比珠]";
+			mes "你最近怎么样";
+			mes "？";
+			mes "很多人";
+			mes "一定喜欢看";
+			mes "你跳舞。你";
+			mes "享受聚光灯吗？";
 			close;
 		}
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Oh dear~";
-		mes "[DRY-RUN] You seem to have traveled quite a distance to watch me perform.";
+		mes "[比珠]";
+		mes "哦，亲爱的~";
+		mes "你似乎走了很远的路来看我表演。";
 		next;
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] I'm sorry, but I've retired. Now I'm focusing on training new Dancers. If you go to the Center Stage, you can watch my students~";
+		mes "[比珠]";
+		mes "对不起，我已经退休了。现在我专注于培养新的舞娘。如果你去中心舞台，你可以观看我的学生们~";
 		close;
 	}
 	else if (DANC_Q < 5) {
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Oh my~";
-		mes "[DRY-RUN] You want to";
-		mes "[DRY-RUN] become a Dancer,";
-		mes "[DRY-RUN] don't you?";
+		mes "[比珠]";
+		mes "哦，我的~";
+		mes "你想要";
+		mes "成为舞娘，";
+		mes "不是吗？";
 		next;
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] I know you're excited, but the first step is the application. Go over to the left side of the stage where Aile can help you with that.";
+		mes "[比珠]";
+		mes "我知道你很兴奋，但第一步是申请。去舞台左侧，艾尔可以帮你处理这个。";
 		close;
 	}
 	else if (DANC_Q > 4 && DANC_Q < 7) {
 		if (DANC_Q == 5) {
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Oh my~";
-			mes "[DRY-RUN] You want to";
-			mes "[DRY-RUN] become a Dancer,";
-			mes "[DRY-RUN] don't you?";
+			mes "[比珠]";
+			mes "哦，我的~";
+			mes "你想要";
+			mes "成为舞娘，";
+			mes "不是吗？";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] G-goodness!";
-			mes "[DRY-RUN] Look at that stomach fat!";
-			mes "[DRY-RUN] Well, it's not much, so you'll lose it in no time. Especially since I'll be handling your training~";
+			mes "[比珠]";
+			mes "天哪！";
+			mes "看看那肚子上的脂肪！";
+			mes "好吧，这没多少，所以你很快就会减掉。尤其是因为我会负责你的训练~";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Still...";
-			mes "[DRY-RUN] The idea of the";
-			mes "[DRY-RUN] perfect body sure";
-			mes "[DRY-RUN] has changed since";
-			mes "[DRY-RUN] I was young. Anyway...";
+			mes "[比珠]";
+			mes "不过...";
+			mes "完美身材的想法确实";
+			mes "自从我年轻以来";
+			mes "发生了变化。";
+			mes "无论如何...";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Let's start";
-			mes "[DRY-RUN] with the interview.";
-			mes "[DRY-RUN] I'm only going to ask";
-			mes "[DRY-RUN] a couple of simple things";
-			mes "[DRY-RUN] so don't worry~";
+			mes "[比珠]";
+			mes "让我们开始吧";
+			mes "面试。";
+			mes "我只会问";
+			mes "几个简单的问题";
+			mes "所以别担心~";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Okay...";
-			mes "[DRY-RUN] Let's begin.";
+			mes "[比珠]";
+			mes "好的...";
+			mes "让我们开始吧。";
 			next;
 		}
 		else {
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Oh, you're back~";
-			mes "[DRY-RUN] Have you studied";
-			mes "[DRY-RUN] some more? Try to";
-			mes "[DRY-RUN] pass this time, okay?";
+			mes "[比珠]";
+			mes "哦，你回来了~";
+			mes "你学习得怎么样";
+			mes "多一些了吗？试着";
+			mes "这次通过，好吗？";
 			next;
 		}
 		switch(rand(1,3)) {
 		case 1:
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 1. The Dancer's dance, ^CD6889Lady Luck^000000,";
-			mes "[DRY-RUN] increases which of the following?";
+			mes "[比珠]";
+			mes "1. 舞者的舞蹈，^CD6889幸运女神^000000，";
+			mes "增加以下哪项？";
 			next;
-			if (select("[DRY-RUN] Intelligence (INT):Dexterity (DEX):Vitality (VIT):Critical Attack Rate") == 4)
+			if (select("智力 (INT):敏捷 (DEX):体力 (VIT):暴击攻击率") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 2. Of the following,";
-			mes "[DRY-RUN] which can you not consider";
-			mes "[DRY-RUN] to be a dance?";
+			mes "[比珠]";
+			mes "2. 以下哪项，";
+			mes "你不能认为";
+			mes "是舞蹈？";
 			next;
-			switch(select("[DRY-RUN] Tango:Tap Dance:HIP-HOP:Hip Shaker:Lightning Bolt")) {
+			switch(select("探戈:踢踏舞:嘻哈:摇臀:闪电冲击")) {
 			default:
 				set .@da_score,.@da_score-10;
 				break;
@@ -520,36 +520,36 @@ job_duncer,95,93,4	script	Bijou#da	101,{
 				set .@da_score,.@da_score+10;
 				break;
 			}
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 3. Which of the following";
-			mes "[DRY-RUN] best describes a Dancer?";
+			mes "[比珠]";
+			mes "3. 以下哪项";
+			mes "最能描述舞娘的是？";
 			next;
-			if (select("[DRY-RUN] Person who yells.:A loud person.:A person who dances.:A person who sings.") == 3)
+			if (select("大声喊叫的人.:一个吵闹的人.:一个跳舞的人.:一个唱歌的人.") == 3)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 4. Which of the following";
-			mes "[DRY-RUN] cannot be associated with Comodo?";
+			mes "[比珠]";
+			mes "4. 以下哪项";
+			mes "不能与科莫多相关联？";
 			next;
-			if (select("[DRY-RUN] Beach city.:Dancer Job Change.:Always dark like the night.:Dungeons in 3 directions.:A lot of Thieves.") == 5)
+			if (select("海滩城市.:舞娘职业转职.:总是像夜晚一样黑暗.:三个方向的地下城.:很多盗贼.") == 5)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 5. Before Comodo, what is the region name of the region NorthEast of Pharoah's Lighthouse Island?";
+			mes "[比珠]";
+			mes "5. 在科莫多之前，法老灯塔岛东北方的地区名称是什么？";
 			next;
-			if (select("[DRY-RUN] Elmeth Plateau:Comuko Beach:Comodo Beach:Ginai Swamp") == 3)
+			if (select("艾尔帕兰高原:科莫多海滩:科莫多海滩:吉奈沼泽") == 3)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 6. Who is the most";
-			mes "[DRY-RUN] beautiful dancer?";
+			mes "[比珠]";
+			mes "6. 谁是最";
+			mes "美丽的舞娘？";
 			next;
-			switch(select("[DRY-RUN] Assassin:Bard:Alchemist:Sage" + strcharinfo(0) + ":Bijou:Aile:Bonjour")) {
+			switch(select("" + strcharinfo(0) + ":Bijou:Aile:Bonjour")) {
 			case 1:
-				mes "[DRY-RUN] [Bijou]";
-				mes "[DRY-RUN] ...";
-				mes "[DRY-RUN] That's...";
-				mes "[DRY-RUN] ^660000completely wrong^000000.";
-				mes "[DRY-RUN] Didn't you see the";
-				mes "[DRY-RUN] other choices?!";
-				mes "[DRY-RUN] Minus points...!";
+				mes "[比珠]";
+				mes "...";
+				mes "那是...";
+				mes "^660000完全错误^000000.";
+				mes "你没看到";
+				mes "其他选项吗?!";
+				mes "扣分...!";
 				set .@da_score,.@da_score-10;
 				next;
 				break;
@@ -559,90 +559,90 @@ job_duncer,95,93,4	script	Bijou#da	101,{
 			default:
 				break;
 			}
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 7. Of the following,";
-			mes "[DRY-RUN] who can perform together";
-			mes "[DRY-RUN] with a Dancer?";
+			mes "[比珠]";
+			mes "7. 以下谁可以一起表演";
+			mes "一起表演";
+			mes "与舞娘？";
 			next;
-			if (select("[DRY-RUN] Berserk Potion:Clam Shell:Crab Shell:Shining Stone") == 2)
+			if (select("刺客:诗人:炼金术士:贤者") == 2)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 8. Which of the following";
-			mes "[DRY-RUN] is not a specialty of Comodo?";
+			mes "[比珠]";
+			mes "8. 以下哪项";
+			mes "不是科莫多的特产？";
 			next;
-			if (select("[DRY-RUN] Yoo:Moo:Hoon:Roul") == 4)
+			if (select("狂暴药水:蛤蜊壳:螃蟹壳:闪亮的石头") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 9. Who is the manager";
-			mes "[DRY-RUN] of the Comodo Casino?";
+			mes "[比珠]";
+			mes "9. 谁是";
+			mes "科莫多赌场的经理？";
 			next;
-			if (select("[DRY-RUN] Bijou:Aile:Athena:Sonotora") == 2)
+			if (select("尤:穆:洪:罗尔") == 2)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 10. Who accepts the";
-			mes "[DRY-RUN] Dancer job change";
-			mes "[DRY-RUN] applications?";
+			mes "[比珠]";
+			mes "10. 谁接受";
+			mes "舞娘职业转职";
+			mes "申请？";
 			next;
-			if (select("[DRY-RUN] Instant monster death.:Doubles damage.:Increases experience.:Increases attack speed.") == 2)
+			if (select("比珠:艾尔:雅典娜:索诺托拉") == 2)
 				set .@da_score,.@da_score+10;
 			break;
 		case 2:
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 1. What is the effect";
-			mes "[DRY-RUN] of the combined skill,";
-			mes "[DRY-RUN] ^CD6889Mental Sensing^000000?";
+			mes "[比珠]";
+			mes "1. 结合技能的效果是什么？";
+			mes "组合技能的";
+			mes "^CD6889精神感知^000000?";
 			next;
-			if (select("[DRY-RUN] Thank your partner.:Praise your partner's dance.:Ask to dance a different dance.:Criticize your partner.") == 3)
+			if (select("瞬间怪物死亡。:双倍伤害。:增加经验值。:增加攻击速度。") == 3)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 2. Which is considered";
-			mes "[DRY-RUN] bad etiquette on the dance";
-			mes "[DRY-RUN] floor after a dance?";
+			mes "[比珠]";
+			mes "在舞蹈后？";
+			mes "不礼貌的行为是什么？";
+			mes "舞池中？";
 			next;
-			if (select("[DRY-RUN] Smile at each other and continue dancing.:Point out the mistake.:Ignore it if the dancer does not realize it.:Give them a smile.") == 4)
+			if (select("感谢你的搭档。:赞美你搭档的舞蹈。:请求跳不同的舞蹈。:批评你的搭档。") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 3. Which is not an";
-			mes "[DRY-RUN] appropriate response";
-			mes "[DRY-RUN] when someone makes";
-			mes "[DRY-RUN] a mistake while you";
-			mes "[DRY-RUN] are dancing together?";
+			mes "[比珠]";
+			mes "3. 哪个不是一个";
+			mes "适当的回应";
+			mes "当有人做出";
+			mes "你在跳舞时犯了一个错误？";
+			mes "你们在一起跳舞吗？";
 			next;
-			if (select("[DRY-RUN] Cocomo:Sandarman:Comudo:Comodo") == 2)
+			if (select("彼此微笑并继续跳舞.:指出错误.:如果舞者没有意识到，就忽略它.:给他们一个微笑.") == 2)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 4. In which town";
-			mes "[DRY-RUN] can you change jobs";
-			mes "[DRY-RUN] to a Dancer?";
+			mes "[比珠]";
+			mes "4. 在哪个城镇";
+			mes "可以转职？";
+			mes "成为舞娘？";
 			next;
-			if (select("[DRY-RUN] 1:2:3:4") == 4)
+			if (select("科莫多:沙丹曼:科莫多:科莫多") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 5. How many dungeons";
-			mes "[DRY-RUN] are directly connected";
-			mes "[DRY-RUN] to Comodo?";
+			mes "[比珠]";
+			mes "5. 有多少个地下城";
+			mes "直接连接";
+			mes "到科莫多？";
 			next;
-			if (select("[DRY-RUN] Isis:Argiope:Dokebi:Deviruchi") == 3)
+			if (select("1:2:3:4") == 3)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 6. Which of the following";
-			mes "[DRY-RUN] is not a Cute Pet monster?";
+			mes "[比珠]";
+			mes "6. 以下哪个";
+			mes "不是可爱宠物怪物？";
 			next;
-			if (select("[DRY-RUN] Kafra Headquarters:Kafra West Headquarters:Kafra Service:Kafra Headquarters: Western Branch") == 2)
+			if (select("伊西斯:阿尔基欧佩:独眼鬼:德维鲁奇") == 2)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 7. Who is the most";
-			mes "[DRY-RUN] graceful dancer?";
+			mes "[比珠]";
+			mes "7. 谁是最";
+			mes "优雅的舞娘？";
 			next;
-			switch(select("[DRY-RUN] Borjuis:Bourgeois:Bijou:Beruberu" + strcharinfo(0) + ":Bijou:Isis:Mercy Bokou")) {
+			switch(select("" + strcharinfo(0) + ":Bijou:Isis:Mercy Bokou")) {
 			case 1:
-				mes "[DRY-RUN] [Bijou]";
-				mes "[DRY-RUN] ...";
-				mes "[DRY-RUN] That's...";
-				mes "[DRY-RUN] ^660000completely wrong^000000.";
-				mes "[DRY-RUN] Didn't you see the";
-				mes "[DRY-RUN] other choices?!";
-				mes "[DRY-RUN] Minus points...!";
+				mes "[比珠]";
+				mes "...";
+				mes "那是...";
+				mes "^660000完全错误^000000.";
+				mes "你没看到";
+				mes "其他选项吗?!";
+				mes "扣分...!";
 				set .@da_score,.@da_score-10;
 				next;
 				break;
@@ -652,31 +652,31 @@ job_duncer,95,93,4	script	Bijou#da	101,{
 			default:
 				break;
 			}
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 8. What is the";
-			mes "[DRY-RUN] exact name of the";
-			mes "[DRY-RUN] Kafra in Comodo?";
+			mes "[比珠]";
+			mes "8. 这是什么";
+			mes "确切的名字是";
+			mes "科莫多的卡普拉？";
 			next;
-			if (select("[DRY-RUN] Casts the Blind effect in the area.:Casts the Sleep effect on the area.:Puts a night effect on the area.:Freezes the area.") == 4)
+			if (select("卡普拉总部:卡普拉西部总部:卡普拉服务:卡普拉总部: 西部分部") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [......]";
-			mes "[DRY-RUN] 9. What is my name?";
+			mes "[......]";
+			mes "9. 我叫什么名字？";
 			next;
-			if (select("[DRY-RUN] Increases INT:Increases the effect of dancing skills:Increase damage of Whip weapons.:Inflict Stun on a certain area around the caster.") == 3)
+			if (select("博尔朱瓦:资产阶级:珠宝:贝鲁贝鲁") == 3)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 10. What is the";
-			mes "[DRY-RUN] effect of ^CD6889Lullaby^000000?";
+			mes "[比珠]";
+			mes "10. 这是什么";
+			mes "^CD6889摇篮曲^000000的效果是什么？";
 			next;
-			if (select("[DRY-RUN] Tap Dance:Improve Concentration:Tango:Double Strafing") == 2)
+			if (select("在区域内施加失明效果.:在区域内施加睡眠效果.:在区域内施加夜晚效果.:冻结区域.") == 2)
 				set .@da_score,.@da_score+10;
 			break;
 		case 3:
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 1. What is the effect";
-			mes "[DRY-RUN] of the skill ^CD6889Dance Lessons^000000?";
+			mes "[比珠]";
+			mes "1. 结合技能的效果是什么？";
+			mes "技能 ^CD6889舞蹈课程^000000 的？";
 			next;
-			switch(select("[DRY-RUN] Uses Dance skills. :Attacks from a distance.:Uses Whips.:Uses Two-handed swords.")) {
+			switch(select("增加智力:增加舞蹈技能的效果:增加鞭子武器的伤害.:在施法者周围的特定区域施加眩晕.")) {
 			default:
 				break;
 			case 2:
@@ -684,40 +684,40 @@ job_duncer,95,93,4	script	Bijou#da	101,{
 				set .@da_score,.@da_score+10;
 				break;
 			}
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 2. What dance uses shoes";
-			mes "[DRY-RUN] that are designed to make";
-			mes "[DRY-RUN] sound as the dancer rolls";
-			mes "[DRY-RUN] their feet and taps the";
-			mes "[DRY-RUN] ground to create a rhythm?";
+			mes "[比珠]";
+			mes "2. 什么舞蹈使用鞋子";
+			mes "这些鞋子设计用来发出";
+			mes "声音，当舞者滚动";
+			mes "他们的脚并轻敲";
+			mes "地面以创造节奏？";
 			next;
-			if (select("[DRY-RUN] Al De Baran:Juno:Morroc:Comodo") == 1)
+			if (select("踢踏舞:提高集中力:探戈:双重射击") == 1)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 3. Which of the following";
-			mes "[DRY-RUN] is not a characteristic of a Dancer?";
+			mes "[比珠]";
+			mes "3. 以下哪项";
+			mes "不是舞娘的特征？";
 			next;
-			if (select("[DRY-RUN] Health:Acting :Dancing :Magic ") == 4)
+			if (select("使用舞蹈技能。:远程攻击。:使用鞭子。:使用双手剑。") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 4. Which town has";
-			mes "[DRY-RUN] the most Dancers?";
+			mes "[比珠]";
+			mes "4. 哪个城镇有";
+			mes "最多的舞娘？";
 			next;
-			if (select("[DRY-RUN] Ryu:Moo:Roul:Hoon") == 4)
+			if (select("艾尔帕兰:朱诺:梦罗克:科莫多") == 4)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 5. Of the following,";
-			mes "[DRY-RUN] who dances most beautifully?";
+			mes "[比珠]";
+			mes "5. 以下哪项，";
+			mes "谁跳得最美？";
 			next;
-			switch(select("[DRY-RUN] Kitty Band :Two-handed Sword:Sandals:Earring" + strcharinfo(0) + ":Bijou:Isis:Guton Tak")) {
+			switch(select("" + strcharinfo(0) + ":Bijou:Isis:Guton Tak")) {
 			case 1:
-				mes "[DRY-RUN] [Bijou]";
-				mes "[DRY-RUN] ...";
-				mes "[DRY-RUN] That's...";
-				mes "[DRY-RUN] ^660000completely wrong^000000.";
-				mes "[DRY-RUN] Didn't you see the";
-				mes "[DRY-RUN] other choices?!";
-				mes "[DRY-RUN] Minus points...!";
+				mes "[比珠]";
+				mes "...";
+				mes "那是...";
+				mes "^660000完全错误^000000.";
+				mes "你没看到";
+				mes "其他选项吗?!";
+				mes "扣分...!";
 				set .@da_score,.@da_score-10;
 				next;
 				break;
@@ -727,111 +727,111 @@ job_duncer,95,93,4	script	Bijou#da	101,{
 			default:
 				break;
 			}
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 6. What is the Dancer";
-			mes "[DRY-RUN] better at than the other";
-			mes "[DRY-RUN] job classes?";
+			mes "[比珠]";
+			mes "6. 舞娘比其他";
+			mes "职业更擅长什么？";
+			mes "工作类别？";
 			next;
-			if (select("[DRY-RUN] Yes:No") == 3)
+			if (select("健康:表演 :舞蹈 :魔法 ") == 3)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 7. Who is the manager";
-			mes "[DRY-RUN] of the Comodo Casino?";
+			mes "[比珠]";
+			mes "7. 谁是经理";
+			mes "科莫多赌场的经理？";
 			next;
-			if (select("[DRY-RUN] Art Blakey:Billie Holiday :Louis Armstrong :Bud Powell :Elder Willow ") == 2)
+			if (select("龙:牛:轮:勋") == 2)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 8. What item cannot";
-			mes "[DRY-RUN] be equipped by a Dancer?";
+			mes "[比珠]";
+			mes "8. 什么物品不能";
+			mes "被舞娘装备？";
 			next;
-			if (select("[DRY-RUN] Listen to instructions.:Go to the testing area.") == 2)
+			if (select("小猫乐队 :双手剑:凉鞋:耳环") == 2)
 				set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 9. Do you think you";
-			mes "[DRY-RUN] can say this quiz is";
-			mes "[DRY-RUN] frustrating and annoying?";
+			mes "[比珠]";
+			mes "9. 你认为你";
+			mes "能说这个测验是";
+			mes "令人沮丧和恼人的？";
 			next;
-			select("Yes:No");
+			select("是:否");
 			set .@da_score,.@da_score+10;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] 10. Which of the following";
-			mes "[DRY-RUN] is not a Jazz musician?";
+			mes "[比珠]";
+			mes "10. 以下哪个";
+			mes "不是爵士乐手吗？";
 			next;
-			if (select("Art Blakey:Billie Holiday :Louis Armstrong :Bud Powell :Elder Willow ") == 5)
+			if (select("阿特·布雷基:比莉·哈乐黛 :路易斯·阿姆斯特朗 :巴德·鲍威尔 :老柳树 ") == 5)
 				set .@da_score,.@da_score+10;
 		}
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Good job~";
-		mes "[DRY-RUN] It seems like you";
-		mes "[DRY-RUN] answered all the";
-		mes "[DRY-RUN] questions~";
+		mes "[比珠]";
+		mes "干得好~";
+		mes "看起来你";
+		mes "回答了所有的";
+		mes "问题~";
 		next;
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Let's see...";
-		mes "[DRY-RUN] Your score is";
+		mes "[比珠]";
+		mes "让我看看……";
+		mes "你的得分是";
 		mes "" + .@da_score + " points...";
 		if (.@da_score == 100) {
 			set DANC_Q,7;
-			mes "[DRY-RUN] Very well done!";
-			mes "[DRY-RUN] A perfect score!";
+			mes "非常好！";
+			mes "满分！";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] There aren't too many people who apply for the Dancer job with this kind of knowledge. I'm sorry for judging you by your looks~";
+			mes "[比珠]";
+			mes "申请舞娘职业的人中，拥有这种知识的人并不多。抱歉我以貌取人~";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Whew~";
-			mes "[DRY-RUN] Now you only have the Dance Test. While we prepare the test, why don't you rest a bit? Ho ho ho~";
+			mes "[比珠]";
+			mes "呼~";
+			mes "现在你只需要进行舞蹈测试。在我们准备测试的时候，为什么不休息一下呢？哈哈哈~";
 			close;
 		}
 		else if (.@da_score > 70) {
 			set DANC_Q,7;
-			mes "[DRY-RUN] It wasn't perfect, but I'll let you pass.";
+			mes "虽然不是完美，但我会让你通过。";
 			close;
 		}
 		else {
 			set DANC_Q,6;
-			mes "[DRY-RUN] You.. You failed!";
+			mes "你.. 你失败了！";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Was it too hard?";
-			mes "[DRY-RUN] When I was young, everyone knew at least enough to pass this test. Go and study some more before coming back, okay?";
+			mes "[比珠]";
+			mes "这太难了吗？";
+			mes "我年轻的时候，每个人至少都知道足够的知识来通过这个测试。去多学习一些再回来，好吗？";
 			close;
 		}
 	}
 	else if (DANC_Q == 7) {
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Okay...";
-		mes "[DRY-RUN] Are you ready";
-		mes "[DRY-RUN] for the Dance Test?";
-		mes "[DRY-RUN] If you like, I can";
-		mes "[DRY-RUN] explain the instructions.";
+		mes "[比珠]";
+		mes "好的...";
+		mes "你准备好了吗";
+		mes "参加舞蹈测试？";
+		mes "如果你愿意，我可以";
+		mes "解释一下说明。";
 		next;
-		if (select("Listen to instructions.:Go to the testing area.") == 1) {
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] First of all, each person gets ^CD68891 minute^000000 for the test, and everyone dances ^CD6889one at a time^000000. Don't worry if you've never danced before~";
+		if (select("听从指示.:前往测试区域.") == 1) {
+			mes "[比珠]";
+			mes "首先，每个人有 ^CD68891分钟^000000 的时间进行测试，每个人 ^CD6889一次一个^000000 跳舞。如果你从来没有跳过舞也不用担心~";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Once you enter the testing area, you will see the stage. First, ^CD6889change your camera angle so that it faces forward^000000. It will probably work if you ^CD6889double-click on the right mouse button^000000.";
+			mes "[比珠]";
+			mes "一旦你进入测试区域，你会看到舞台。首先，^CD6889将相机角度调整为正面^000000。可能通过^CD6889双击右键^000000来实现。";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] If you don't reset your camera angle, you may get the ^CD6889Up, Down, Left, Right^000000 commands confused.";
+			mes "[比珠]";
+			mes "如果你不重置相机角度，你可能会混淆^CD6889上、下、左、右^000000命令。";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Wait for your turn in the ^CD6889waiting room^000000. If the person in front of you fails, or if it's your turn in line, your test will begin.";
+			mes "[比珠]";
+			mes "在^CD6889候诊室^000000等候你的轮到。如果你前面的人失败，或者轮到你时，你的测试将开始。";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] If there are a lot of people, not everyone might fit in the waiting room. If that's the case, just create an orderly line~";
+			mes "[比珠]";
+			mes "如果有很多人，可能并不是每个人都能在候诊室里容纳。如果是这种情况，请排成有序的队伍~";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] When the test begins, the music will be broadcast, as well as the direction in which you should move. Just follow the instructions and move your legs.";
+			mes "[比珠]";
+			mes "当测试开始时，音乐将被播放，以及你应该移动的方向。只需按照指示移动你的腿。";
 			next;
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] Remember, ^CD6889you will be disqualified if you don't perform the steps with the right timing^000000. Be careful, the test is very strict~";
+			mes "[比珠]";
+			mes "记住，^CD6889如果你没有在正确的时机表演步骤，你将被取消资格^000000。小心，测试非常严格~";
 			close;
 		}
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Well then~";
-		mes "[DRY-RUN] Good luck...!!";
+		mes "[比珠]";
+		mes "那么~";
+		mes "祝你好运...!!";
 		changequest 7004,7005;
 		set DANC_Q,8;
 		close2;
@@ -839,52 +839,52 @@ job_duncer,95,93,4	script	Bijou#da	101,{
 		end;
 	}
 	else if (DANC_Q == 8) {
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Oh my...";
-		mes "[DRY-RUN] Did you";
-		mes "[DRY-RUN] fail last time?";
-		mes "[DRY-RUN] Don't worry, just";
-		mes "[DRY-RUN] try to feel the rhythm~";
+		mes "[比珠]";
+		mes "哦，我的...";
+		mes "你";
+		mes "上次失败了吗？";
+		mes "别担心，尽量";
+		mes "感受节奏~";
 		close2;
 		warp "job_duncer",105,109;
 		end;
 	}
 	else if (DANC_Q == 9) {
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Bijou]";
-			mes "[DRY-RUN] You can't change jobs";
-			mes "[DRY-RUN] if you still have skill";
-			mes "[DRY-RUN] points left. Use the rest";
-			mes "[DRY-RUN] and come back later.";
+			mes "[比珠]";
+			mes "如果你还有技能";
+			mes "点数未用完，就不能换职业。";
+			mes "使用剩下的点数，";
+			mes "然后再回来。";
 			close;
 		}
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Oh my...";
-		mes "[DRY-RUN] I saw your";
-		mes "[DRY-RUN] dance earlier.";
-		mes "[DRY-RUN] You were great!";
+		mes "[比珠]";
+		mes "哦，我的...";
+		mes "我看到你的";
+		mes "舞蹈了。";
+		mes "你表现得很棒！";
 		next;
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Your performance shows that you are than qualified to become a Dancer. Well then, let me change your job.";
+		mes "[比珠]";
+		mes "你的表演显示你完全有资格成为舞娘。那么，让我为你转职。";
 		next;
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] With the blessing of our goddess, you shall be reborn as a Dancer. From now on, no one will leave your presense without a smile~";
+		mes "[比珠]";
+		mes "在我们女神的祝福下，你将重生为舞娘。从今往后，没有人会在你面前离开时不带着微笑~";
 		next;
 		set .@jlevel,JobLevel;
-		mes "[DRY-RUN] [Bijou]";
+		mes "[比珠]";
 		completequest 7006;
 		callfunc "Job_Change",Job_Dancer;
 		callfunc "F_ClearJobVar";
-		mes "[DRY-RUN] Ooh...!";
-		mes "[DRY-RUN] You look great";
-		mes "[DRY-RUN] as a Dancer~";
-		mes "[DRY-RUN] Congratulations!";
+		mes "哦...！";
+		mes "你看起来很棒";
+		mes "作为舞娘~";
+		mes "恭喜！";
 		next;
-		mes "[DRY-RUN] [Bijou]";
-		mes "[DRY-RUN] Here's a small";
-		mes "[DRY-RUN] gift from me.";
-		mes "[DRY-RUN] Please take it.";
-		mes "[DRY-RUN] May your performances always bring joy to your audience~";
+		mes "[比珠]";
+		mes "这是我送给你的一个小礼物。";
+		mes "请收下它。";
+		mes "愿你的表演永远给观众带来快乐~";
+		mes "智力 (INT):敏捷 (DEX):体力 (VIT):暴击攻击率";
 		if (.@jlevel == 50)
 			getitem 1953,1; //Line_
 		else

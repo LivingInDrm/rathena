@@ -24,7 +24,7 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 
 	//custom translation -  all checks below
 	if (checkweight(1301,1) == 0 || MaxWeight - Weight < 800) {
-		mes "[DRY-RUN] - Carrying too many items, cannot proceed. -";
+		mes "- 背负物品过多，无法继续。 -";
 		close;
 	}
 
@@ -36,7 +36,7 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 	for (set .@i,0; .@i<6; set .@i,.@i+1) {
 		if (checkquest(.@quests_playtime[.@i],PLAYTIME) == 2) {
 			erasequest .@quests_playtime[.@i];
-			mes "[DRY-RUN] [Reno]";
+			mes "[雷诺]";
 			if (.@i < 3)	// hunting quest wait time
 				mes "The waiting time for a "+.@type$[.@i]+" collection quest has expired. You can now take another request.";
 			else        	// buff wait time
@@ -58,52 +58,52 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			if (isbegin_quest(.@i + 5222)) {
 				set .@item, 6623 + .@i;
 				set .@amount, 2 + rand(3);
-				mes "[DRY-RUN] [Reno]";
+				mes "[雷诺]";
 				mes getitemname(.@item)+" storage is now complete.";
 				next;
 				setquest 5225 + .@i;
 				erasequest 5222 + .@i;
 				getitem .@item,.@amount;
-				mes "[DRY-RUN] [Reno]";
+				mes "[雷诺]";
 				mes "^0000FF"+.@amount+" "+getitemname(.@item)+"s^000000 were extracted.";
 				close;
 			}
 		}
 	}
 
-	mes "[DRY-RUN] [Reno]";
-	mes "[DRY-RUN] Hi? I am Reno from the Energy Crystal Research Association, or ECRA.";
+	mes "[雷诺]";
+	mes "你好？我是来自能源水晶研究协会的雷诺，简称ECRA。";
 	next;
-	switch(select("[DRY-RUN] ECRA?:Quest to get Energy Crystals:Energy Crystal Buffs:Compress Energy Crystals:Exchange Crystals for Headgear:Random Gear for Crystals" + ((.@features_iRO)?":See Equipment List":""))) {
+	switch(select("ECRA?:获取能量水晶的任务:能量水晶增益:压缩能量水晶:用水晶兑换头饰:随机装备换水晶" + ((.@features_iRO)?":See Equipment List":""))) {
 	case 1:
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] ECRA is the institute that researches '^0000FFEnergy Crystals^000000' that shall be used as an alternative energy source in the Rune Midgart Kingdom, which suffers from a shortage of energy.";
+		mes "[雷诺]";
+		mes "ECRA是研究'^0000FF能源水晶^000000'的机构，这些水晶将作为鲁恩-米德加兹王国替代能源的来源，该王国正面临能源短缺的问题。";
 		next;
-		select("[DRY-RUN] The reason for doing this?");
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] I would like to explain that we are not trying to make an excuse to get away from facing problem before I explain the reason. Never! So please let me finish.";
+		select("这样做的原因？");
+		mes "[雷诺]";
+		mes "我想在解释原因之前说明，我们并不是想找借口逃避问题。绝对不是！所以请让我说完。";
 		next;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] The Research Team has sent me the results they found.";
+		mes "[雷诺]";
+		mes "研究小组已经将他们找到的结果发送给我。";
 		next;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Energy Crystals turned out to be ^0000FFgenerated inside the bodies of some monsters^000000, and according to the research, stronger monsters generate higher-class energy crystals in their bodies.";
+		mes "[雷诺]";
+		mes "能量水晶是^0000FF在某些怪物体内生成的^000000，研究表明，强大的怪物在其体内生成更高等级的能量水晶。";
 		next;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] The Research Team decided to collect Energy Crystals by giving requests to adventurers, with appropriate rewards. That enables us to collect better and be more ^FF0000efficient^000000.";
+		mes "[雷诺]";
+		mes "研究小组决定通过向冒险者发出请求来收集能量水晶，并给予适当的奖励。这使我们能够更好地收集并更加^FF0000高效^000000。";
 		next;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Energy Crystals, accumulated through hunting monsters by my request, shall be used for my research. ^0000FFSome of them are planned to be returned to adventurers.^000000";
+		mes "[雷诺]";
+		mes "通过我请求而积累的能量水晶将用于我的研究。^0000FF其中一些计划归还给冒险者。^000000";
 		next;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Adventurers can use collected Energy Crystals for ^FF0000upgrading equipments^000000 through me.";
+		mes "[雷诺]";
+		mes "冒险者可以通过我使用收集到的能量水晶进行^FF0000装备升级^000000。";
 		next;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] If it works well, it seems to be good for both ECRA and adventurers.";
+		mes "[雷诺]";
+		mes "如果一切顺利，这似乎对ECRA和冒险者都有好处。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] The hunting quests are ranked by monster level and difficulty. The ranges are lower, intermediate, high quests and can only be taken once per day.";
+		mes "[雷诺]";
+		mes "狩猎任务按怪物等级和难度进行排名。范围分为低级、中级和高级任务，每天只能接受一次。";
 		next;
 
 		setarray .@quest_status[0],
@@ -112,30 +112,30 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			isbegin_quest(5175) + isbegin_quest(5176) + isbegin_quest(5177) + isbegin_quest(5178) + isbegin_quest(5179) + isbegin_quest(5180) + isbegin_quest(5181) + isbegin_quest(5182);
 		setarray .@quest_index[0],5161,5169,5174;
 
-		set .@select, select("[DRY-RUN] Lower level hunting [61-80]:Intermediate level hunting [80-99]:High level hunting [90 and up]:Cancel my current quest.") - 1;
+		set .@select, select("低等级狩猎 [61-80]:中等级狩猎 [80-99]:高等级狩猎 [90及以上]:取消我当前的任务.") - 1;
 		if (.@select < 3) {
 			setarray .@min_level[0],60,80,90,100;
 			if (BaseLevel < .@min_level[.@select]) {
-				mes "[DRY-RUN] [Reno]";
+				mes "[雷诺]";
 				mes "I am sorry but the request for the "+.@type$[.@select]+" collection is only available for those level "+.@min_level[.@select]+" and higher. You do not seem to be capable of carrying out this request.";
 				close;
 			}
 			if (.@quest_status[.@select]) {
-				mes "[DRY-RUN] [Reno]";
+				mes "[雷诺]";
 				mes "You seem to be under the other request of "+.@type$[.@select]+" collection. If the quest seems to be too hard... how about you ^FF0000give up on the request^000000?";
 				close;
 			}
 			set .@playtime, checkquest(.@quest_index[.@select],PLAYTIME);
 			if (.@playtime == 0 || .@playtime == 1) {
-				mes "[DRY-RUN] [Reno]";
+				mes "[雷诺]";
 				mes "Currently waiting for the "+.@type$[.@select]+" collection commission. Tasks in each collection can only be completed once per day."; //custom translation
 				close;
 			}
-			mes "[DRY-RUN] [Reno]";
+			mes "[雷诺]";
 			mes "You selected to hunt a monster from the "+.@type$[.@select]+" collection. After hunting these monsters you will receive "+((.@features_iRO)?"10 ":"")+"^0000FF"+.@crystal$[.@select]+" Energy Crystals^000000 when you return to me.";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Please select the monster that you think you can easily hunt from the list.";
+			mes "[雷诺]";
+			mes "请从列表中选择你认为可以轻松猎杀的怪物。";
 			next;
 			switch (.@select) {
 			case 0:
@@ -169,24 +169,24 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 					"[Highest] Ancient Mimic"
 				);
 				if (.@quest > 4 && BaseLevel < .@min_level[3]) {
-					mes "[DRY-RUN] [Reno]";
+					mes "[雷诺]";
 					mes "I am sorry but the request for the most advanced collection is only available for those level "+.@min_level[3]+" and higher. You do not seem to be capable of carrying out this request.";
 					close;
 				}
 				break;
 			}
 			setquest .@quest_index[.@select] + .@quest;
-			mes "[DRY-RUN] [Reno]";
+			mes "[雷诺]";
 			mes "The request for "+.@type$[.@select]+" collection monsters has been issued. Please check the details on the issued document.";
 			close;
 		} else {
 			setarray .@quest_count[0],7,4,8;
 			for (set .@i,0; .@i<3; set .@i,.@i+1) {
 				if (.@quest_status[.@i]) {
-					mes "[DRY-RUN] [Reno]";
+					mes "[雷诺]";
 					mes "You are currently under the request of the "+.@type$[.@i]+" collection. If you give up now, all your history will be lost. Do you really want to give up?";
 					next;
-					set .@erase_quest, select("[DRY-RUN] Yes:No");
+					set .@erase_quest, select("是:否");
 					switch (.@erase_quest) {
 					case 1:
 						for (set .@quest,.@quest_index[.@i]+1; .@quest<=.@quest_index[.@i]+.@quest_count[.@i]; set.@quest,.@quest+1) {
@@ -201,34 +201,34 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			}
 			switch (.@erase_quest) {
 			case 0:
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] You are not under any request.";
+				mes "[雷诺]";
+				mes "你没有任何请求。";
 				close;
 			case 1:
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] The written request for you has been withdrawn.";
+				mes "[雷诺]";
+				mes "为你书写的请求已被撤回。";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] Please keep up on it.";
+				mes "[雷诺]";
+				mes "请继续关注此事。";
 				close;
 			}
 		}
 	case 3:
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Do you want to accumulate Energy Crystals inside of your body to receive a buff?";
+		mes "[雷诺]";
+		mes "你想在体内积累能量水晶以获得增益效果吗？";
 		next;
-		set .@select, select("[DRY-RUN] Accumulating Energy Crystals?:Accumulate Rough Energy Crystal:Accumulate Purified Energy Crystal:Accumulate High Energy Crystal");
+		set .@select, select("积累能量水晶?:积累粗糙能量水晶:积累净化能量水晶:积累高级能量水晶");
 		switch (.@select) {
 		case 1:
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Energy Crystals are accumulated in your body when you hunt the monsters we ask you to.";
+			mes "[雷诺]";
+			mes "当你猎杀我们要求的怪物时，能量水晶会在你体内积累。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Our research shows that some methods enable humans to accumulate the energy crystals inside of the body in the form of a buff.";
+			mes "[雷诺]";
+			mes "我们的研究表明，一些方法可以使人类以增益效果的形式在体内积累能量水晶。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] If you spend about 3 hours, you will be able to gain a small amount of Energy Crystals. So do you want to receive the buff?";
+			mes "[雷诺]";
+			mes "如果你花费大约3个小时，你将能够获得少量的能量水晶。你想要接受这个增益吗？";
 			close;
 		case 2:
 			set .@playtime, checkquest(5225,PLAYTIME);
@@ -253,64 +253,64 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			break;
 		}
 		if (.@playtime == 0 || .@playtime == 1) {
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Were you successful? While storing other Energy Crystals will not have much effect on your body, storing the same one may cause you harm."; //custom translation
+			mes "[雷诺]";
+			mes "你成功了吗？虽然储存其他能量水晶对你的身体影响不大，但储存相同的水晶可能会对你造成伤害。"; //custom translation
 			close;
 		}
 		if (BaseLevel < .@min_level) {
-			mes "[DRY-RUN] [Reno]";
+			mes "[雷诺]";
 			mes "With a body like that, you can't accumulate "+.@crystal$[.@select-2]+" Energy Crystals. You must be level "+.@min_level+" or your body will be harmed in the process."; //custom translation
 			close;
 		}
 		if (.@energy_buf00) {
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Accumulating Energy Crystal has already begun. I am sorry but it is impossible to accumulate two different types of Energy Crystals at a time.";
+			mes "[雷诺]";
+			mes "能量水晶的积累已经开始。抱歉，但同时积累两种不同类型的能量水晶是不可能的。";
 			close;
 		}
 		if (isbegin_quest(.@quest) > 0) {
 			erasequest .@quest;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] An error has occurred. Please forgive me for the inconvenience."; //custom translation
+			mes "[雷诺]";
+			mes "发生了错误。请原谅我带来的不便。"; //custom translation
 			close;
 		}
-		mes "[DRY-RUN] [Reno]";
+		mes "[雷诺]";
 		mes "It takes 3 hours for your body to accumulate 2 to 4 "+.@crystal$[.@select-2]+" Energy Crystals. Do you want to start?";
 		next;
-		if(select("[DRY-RUN] Cancel:Start") == 1) {
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] I recommend that you try to ccumulate Energy Crystal when you have time.";
+		if(select("取消:开始") == 1) {
+			mes "[雷诺]";
+			mes "我建议你在有时间的时候尝试积累能量水晶。";
 			close;
 		}
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] You might feel a slight tingle.";
+		mes "[雷诺]";
+		mes "你可能会感到轻微的刺痛。";
 		next;
 		specialeffect2 EF_BASH3D;
 		percentheal .@rate * -5,0;
 		//consumeitem ??; //Keep_Connection_[.@rate]
 		sc_start .@buff,10800000,.@rate;	// Atk/Matk + 5*rate (+5, +10, +15)
 		setquest .@quest;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] - Puck -";
+		mes "[雷诺]";
+		mes "- 普克 -";
 		next;
-		mes "[DRY-RUN] [Reno]";
+		mes "[雷诺]";
 		mes "Everything seems to be in order. Let's start accumulating "+.@crystal$[.@select-2]+" Energy Crystals. Remember to come back to me after 3 hours to get the "+.@crystal$[.@select-2]+" Energy Crystals.";
 		close;
 	case 4:
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Do you want to compress the Energy Crystals?";
+		mes "[雷诺]";
+		mes "你想要压缩能量水晶吗？";
 		next;
-		switch(select("[DRY-RUN] What does compressing do?:Compress Rough to Purified Crystal:Compress Purified to High Crystal")) {
+		switch(select("压缩有什么用?:将粗糙水晶压缩为净化水晶:将净化水晶压缩为高级水晶")) {
 		case 1:
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Are you curious about Energy Crystal compression? I can compress lower level Energy Crystals into higher ones.";
+			mes "[雷诺]";
+			mes "你对能量水晶压缩感兴趣吗？我可以将低级能量水晶压缩成高级的。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Here is what I can make.";
-			mes "[DRY-RUN] ^FF000010 Rough Energy Crystals^000000 = ^FF00001 Purified Energy Crystal^000000";
-			mes "[DRY-RUN] ^FF00005 Purified Energy Crystals^000000 = ^FF00001 High Energy Crystal^000000";
+			mes "[雷诺]";
+			mes "这是我可以制作的。";
+			mes "^FF000010 粗糙能量水晶^000000 = ^FF00001 精炼能量水晶^000000";
+			mes "^FF00005 精炼能量水晶^000000 = ^FF00001 高级能量水晶^000000";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] If you need higher grade Energy Crystals, this is a good way to get them since the lower ones are easier to get.";
+			mes "[雷诺]";
+			mes "如果你需要更高级的能量水晶，这是一种不错的获取方式，因为低级的更容易获得。";
 			close;
 		case 2:
 			set .@crystal,6623;  //Rough_Energy_Crystal
@@ -325,16 +325,16 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 		}
 		set .@crystal_count, countitem(.@crystal);
 		set .@crystal_get, .@crystal_count / .@rate;
-		mes "[DRY-RUN] [Reno]";
+		mes "[雷诺]";
 		mes sprintf("^FF0000%d %s^000000 = ^FF00001 %s^000000",.@rate,getitemname(.@crystal),getitemname(.@crystal_));
 		next;
-		mes "[DRY-RUN] [Reno]";
+		mes "[雷诺]";
 		mes sprintf("%d %ss will be compressed to %d %ss.",.@crystal_count,getitemname(.@crystal),.@crystal_get,getitemname(.@crystal_));
-		mes "[DRY-RUN] Do you want to compress?";
+		mes "你想要压缩吗？";
 		next;
-		if(select("[DRY-RUN] Compress:Stop") == 2) {
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Okay, please contact if you need me in the future.";
+		if(select("压缩:停止") == 2) {
+			mes "[雷诺]";
+			mes "好的，如果你将来需要我，请联系我。";
 			close;
 		}
 		while(1) {
@@ -343,32 +343,32 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 				getitem .@crystal_,1;
 				set .@crystal_count, countitem(.@crystal);
 				set .@crystal_get, .@crystal_count / .@rate;
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] The compression was very successful.";
+				mes "[雷诺]";
+				mes "压缩非常成功。";
 				mes "There are "+.@crystal_count+" Energy Crystals left, which can compress into "+.@crystal_get+" Energy Crystals. Do you want to continue?";
 				next;
-				if(select("[DRY-RUN] Compress:Stop") == 2)
+				if(select("压缩:停止") == 2)
 					break;
 			} else {
-				mes "[DRY-RUN] [Reno]";
+				mes "[雷诺]";
 				mes "You don't have enough "+getitemname(.@crystal)+"s.";
 				next;
 				break;
 			}
 		}
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Compression completed.";
+		mes "[雷诺]";
+		mes "压缩完成。";
 		close;
 	case 5:
 		disable_items;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Do you want to exchange Energy Crystals for equipment? Please select the type of Energy Crystal that you wish to exchange.";
+		mes "[雷诺]";
+		mes "您想用能量水晶兑换装备吗？请选择您希望兑换的能量水晶类型。";
 		next;
 		setarray .@crystals[0], countitem(6623), countitem(6624), countitem(6625);
-		switch(select("[DRY-RUN] See Equipment List:["+.@crystals[0]+"] Rough Energy Crystal:["+.@crystals[1]+"] Purified Energy Crystal:["+.@crystals[2]+"] High Energy Crystal")) {
+		switch(select("查看装备列表:["+.@crystals[0]+"] Rough Energy Crystal:["+.@crystals[1]+"] Purified Energy Crystal:["+.@crystals[2]+"] High Energy Crystal")) {
 		case 1:
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] This is the brochure regarding the equipment upgrade that our Energy Crystal research association provides. Please take a look around.";
+			mes "[雷诺]";
+			mes "这是我们能量水晶研究协会提供的装备升级宣传册。请您四处看看。";
 			close2;
 			readbook 11060,1; //Energy_Xtal_Combi_Book
 			end;
@@ -401,7 +401,7 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			setarray .@rewards[0],  18765,18768,18766,18767,18767,22014,2957,2958,15068,2183,22015,20710,18776;
 			break;
 		}
-		mes "[DRY-RUN] [Reno]";
+		mes "[雷诺]";
 		mes "Please select the equipment to exchange for "+getitemname(.@crystal)+"s.";
 		next;
 		set .@crystal_count, countitem(.@crystal);
@@ -420,38 +420,38 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 		if (.@material == 2615) {  // Special case: Safety Ring
 			if (countitem(2615) < 1 || countitem(2621) < 1 || countitem(2622) < 1 || countitem(2624) < 1 ||
 			    countitem(2625) < 1 || countitem(2623) < 1 || countitem(2626) < 1 || countitem(.@crystal) < .@cost) {
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] The materials to make a Safety Ring[1] are insufficient. Please check your inventory.";
+				mes "[雷诺]";
+				mes "制作安全戒指[1]所需的材料不足。请检查您的背包。";
 				close;
 			}
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Before upgrading your Safety Ring, please listen to these ^FF0000precautions^000000.";
+			mes "[雷诺]";
+			mes "在升级您的安全戒指之前，请先听取这些^FF0000注意事项^000000。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] ^FF0000In addition to the Safety Ring, all refinements and cards of the required materials will also disappear.^000000";
+			mes "[雷诺]";
+			mes "^FF0000除了安全戒指外，所需材料的所有精炼和卡片也将消失。^000000";
 			next;
 		} else {
 			if (countitem(.@material) < 1 || countitem(.@crystal) < .@cost) {
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] The materials are insufficient. Please check your materials.";
+				mes "[雷诺]";
+				mes "材料不足。请检查您的材料。";
 				close;
 			}
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Before upgrading your equipment, please listen to these ^FF0000precautions^000000.";
+			mes "[雷诺]";
+			mes "在升级您的装备之前，请听取这些^FF0000注意事项^000000。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] ^FF0000When using Energy Crystals to upgrade equipment, all previous refinements, enchantments, and cards will be lost.^000000";
+			mes "[雷诺]";
+			mes "^FF0000使用能量水晶升级装备时，所有之前的强化、附魔和卡片将会丢失。^000000";
 			next;
 		}
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Are you familiar with the ^FF0000precautions^000000?";
+		mes "[雷诺]";
+		mes "您熟悉^FF0000注意事项^000000吗？";
 		next;
-		if(select("[DRY-RUN] I am.:No.") == 2) {
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Okay. Next time, then.";
+		if(select("我在.:否.") == 2) {
+			mes "[雷诺]";
+			mes "好的，下次再说。";
 			close;
 		}
-		mes "[DRY-RUN] [Reno]";
+		mes "[雷诺]";
 		mes "Then let's begin to upgrade "+.@item_name$+".";
 		next;
 		specialeffect2 EF_REPAIRWEAPON;
@@ -467,67 +467,67 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 		}
 		delitem .@crystal,.@cost;
 		getitem .@reward,1;
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] The upgrade was successful. Your Energy Crystals will help our research greatly.";
+		mes "[雷诺]";
+		mes "升级成功。您的能量水晶将大大帮助我们的研究。";
 		close;
 	case 6:
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Do you want to donate Energy Crystals to get a random new headgear?";
+		mes "[雷诺]";
+		mes "您想捐赠能量水晶以获得随机的新头饰吗？";
 		next;
-		switch(select("[DRY-RUN] Donate Energy Crystals?:Donate 300 Rough Energy Crystals.:Donate 600 Purified Energy Crystals.:Donate 900 High Energy Crystals.")) {
+		switch(select("捐赠能量水晶?:捐赠300个粗糙能量水晶.:捐赠600个净化能量水晶.:捐赠900个高级能量水晶.")) {
 		case 1:
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] We are collecting Energy Crystals so that we can research more combinations of headgears for adventurers.";
+			mes "[雷诺]";
+			mes "我们正在收集能量水晶，以便研究更多的冒险者头饰组合。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] Thanks to the support of adventurers we can use these Energy Crystals to further our research.";
+			mes "[雷诺]";
+			mes "感谢冒险者们的支持，我们可以利用这些能量水晶进一步进行研究。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] So we receive a minimum of 300 Rough Energy Crystals, 600 Purified Energy Crystals, and 900 High Energy Crystals.";
+			mes "[雷诺]";
+			mes "所以我们需要至少300个粗糙能量水晶、600个净化能量水晶和900个高级能量水晶。";
 			if (!.@features_iRO) {
 				next;
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] You may feel that this is a burden, but for the sake of our research, please continue."; //custom translation
+				mes "[雷诺]";
+				mes "你可能觉得这是一种负担，但为了我们的研究，请继续。"; //custom translation
 				close;
 			}
-			mes "[DRY-RUN] For the donation, I'll give you a random new headgear.";
+			mes "作为捐赠，我会给你一个随机的新头饰。";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] 300 Rough Energy Crystals";
-			mes "[DRY-RUN] - New Mage Hat";
-			mes "[DRY-RUN] - New Magician Hat";
-			mes "[DRY-RUN] - New Kitsune Mask";
-			mes "[DRY-RUN] - New Joker Jester";
-			mes "[DRY-RUN] - New Bunny Band";
-			mes "[DRY-RUN] - New Munak Hat";
-			mes "[DRY-RUN] - New Bongun Hat";
-			mes "[DRY-RUN] - New Phantom Opera Mask";
+			mes "[雷诺]";
+			mes "300个粗糙能量水晶";
+			mes "- 新魔法师帽";
+			mes "- 新魔法师帽";
+			mes "- 新狐狸面具";
+			mes "- 新小丑小丑帽";
+			mes "- 新兔子头带";
+			mes "- 新穆纳克帽";
+			mes "- 新的邦古帽";
+			mes "- 新的幻影歌剧面具";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] 600 Purified Energy Crystals";
-			mes "[DRY-RUN] - Good Binoculars";
-			mes "[DRY-RUN] - Good Fin Helm";
-			mes "[DRY-RUN] - Good Assassin Mask";
-			mes "[DRY-RUN] - Good Welding Mask";
-			mes "[DRY-RUN] - Good Safety Ring";
-			mes "[DRY-RUN] - Good Angelic Protection";
-			mes "[DRY-RUN] - Good Angelic Guard";
-			mes "[DRY-RUN] - Good Angelic Cardigan";
-			mes "[DRY-RUN] - Good Angel's Reincarnation";
+			mes "[雷诺]";
+			mes "600个净化能量水晶";
+			mes "- 好的双筒望远镜";
+			mes "- 好的鱼鳍头盔";
+			mes "- 好的刺客面具";
+			mes "- 好的焊接面具";
+			mes "- 好的安全戒指";
+			mes "- 好的天使保护";
+			mes "- 好的天使守卫";
+			mes "- 好的天使开衫";
+			mes "- 好的天使转世";
 			next;
-			mes "[DRY-RUN] [Reno]";
-			mes "[DRY-RUN] 900 High Energy Crystals";
-			mes "[DRY-RUN] - Enhanced Corsair";
-			mes "[DRY-RUN] - Enhanced Bone Helm";
-			mes "[DRY-RUN] - Enhanced Helm of Angel";
-			mes "[DRY-RUN] - Enhanced Variant Shoes";
-			mes "[DRY-RUN] - Enhanced Ring of Flame Lord";
-			mes "[DRY-RUN] - Enhanced Ring of Resonance";
+			mes "[雷诺]";
+			mes "900个高级能量水晶";
+			mes "- 强化的海盗";
+			mes "- 强化骨盔";
+			mes "- 强化天使头盔";
+			mes "- 强化变体鞋";
+			mes "- 强化火焰领主之戒";
+			mes "- 强化共鸣之戒";
 			close;
 		case 2:
 			if (countitem(6623) < 300) {
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] Thank for your support, but we need 300 Rough Energy Crystals.";
+				mes "[雷诺]";
+				mes "感谢你的支持，但我们需要300个粗糙能量水晶。";
 				close;
 			}
 			delitem 6623,300; //Rough_Energy_Crystal
@@ -543,8 +543,8 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			break;
 		case 3:
 			if (countitem(6624) < 600) {
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] Thank for your support, but we need 600 Purified Energy Crystals.";
+				mes "[雷诺]";
+				mes "感谢你的支持，但我们需要600个纯净能量水晶。";
 				close;
 			}
 			delitem 6624,600; //Purified_Energy_Crystal
@@ -562,8 +562,8 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			break;
 		case 4:
 			if (countitem(6625) < 900) {
-				mes "[DRY-RUN] [Reno]";
-				mes "[DRY-RUN] Thank for your support, but we need 900 High Energy Crystals.";
+				mes "[雷诺]";
+				mes "感谢你的支持，但我们需要900个高级能量水晶。";
 				close;
 			}
 			delitem 6625,900; //High_Purity_Energy_Xtal
@@ -576,12 +576,12 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 			else                getitem 2958,1;  //Good_Ring_Of_Resonance
 			break;
 		}
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] Thank you very much. The Energy Crystals you donated will be greatly helpful for our research. This is your reward for your donation."; //custom translation
+		mes "[雷诺]";
+		mes "非常感谢。你捐赠的能量水晶将对我们的研究大有帮助。这是你捐赠的奖励。"; //custom translation
 		close;
 	case 7:  // iRO only
-		mes "[DRY-RUN] [Reno]";
-		mes "[DRY-RUN] This is the brochure regarding the equipment upgrade that our Energy Crystal research association provides. Please take a look around.";
+		mes "[雷诺]";
+		mes "这是我们能量水晶研究协会提供的装备升级宣传册。请您四处看看。";
 		close2;
 		readbook 11060,1; //Energy_Xtal_Combi_Book
 		end;
@@ -591,7 +591,7 @@ moc_para01,41,169,3	script	Reno#2012hat	64,{
 L_CheckHunting:
 	for (set .@quest,getarg(0)+1; .@quest<getarg(1)+getarg(2); set .@quest,.@quest+1) {
 		if (checkquest(.@quest,HUNTING) == 2) {
-			mes "[DRY-RUN] [Reno]";
+			mes "[雷诺]";
 			mes "Finished "+getarg(3)+" collection hunting quest.";
 			next;
 			setquest getarg(0);

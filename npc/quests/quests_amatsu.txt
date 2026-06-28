@@ -22,120 +22,120 @@
 //============================================================ 
 amatsu,223,236,3	script	Publisher#ama	763,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a moment!! -";
-		mes "- Currently you are carrying -";
-		mes "- too many items with you. -";
-		mes "- Please store some items into your Kafra storage -";
-		mes "- and try again. -";
+		mes "- 等一下！！ -";
+		mes "- 你目前携带着 -";
+		mes "- 太多物品。 -";
+		mes "- 请将一些物品存入你的卡普拉仓库 -";
+		mes "- 然后再试一次。 -";
 		close;
 	}
 	if (event_momo < 2) {
-		mes "[Publisher]";
-		mes "Hello~!!";
-		mes "Our ^009CFFScroll Publishing Company^000000";
-		mes "is professionally publishing";
-		mes "tales.";
+		mes "[出版商]";
+		mes "你好~！！";
+		mes "我们的 ^009CFF卷轴出版公司^000000";
+		mes "正在专业地出版";
+		mes "故事。";
 		mes " ";
 		next;
-		mes "[Publisher]";
-		mes "We established";
-		mes "^3163FFMomotaro Field Trip^000000";
-		mes "to celebrate ^009CFF<Momotaro Story>^000000 selling over a million copies.";
+		mes "[出版商]";
+		mes "我们成立了";
+		mes "^3163FF桃太郎实地考察^000000";
+		mes "以庆祝 ^009CFF<桃太郎故事>^000000 销售超过一百万本。";
 		next;
-		mes "[Publisher]";
-		mes "Become Momotaro and eliminate";
-		mes "Dokebis, just like in the story!";
-		mes "There will also be rewards.";
+		mes "[出版商]";
+		mes "成为桃太郎并消灭";
+		mes "就像故事中的独角兽！";
+		mes "还会有奖励哦。";
 		next;
-		switch(select("What is Momotaro Story?:I want to try!:I'm busy right now...")) {
+		switch(select("什么是桃太郎故事？:我想试试！:我现在很忙…")) {
 		case 1:
-			mes "[Publisher]";
-			mes "Eh~!? How can you not know about";
-			mes "Momotaro? Don't they have this";
-			mes "tale in Midgard?? Well...";
-			mes "Let me tell you the story.";
+			mes "[出版商]";
+			mes "哎~！？你怎么不知道";
+			mes "桃太郎？难道他们在";
+			mes "米德加尔特没有这个";
+			mes "故事吗？好吧...";
 			next;
-			mes "[Publisher]";
-			mes "Long ago, there lived an old married couple. They were happy, but didn't have any children.";
+			mes "[出版商]";
+			mes "让我来告诉你这个故事。";
 			next;
-			mes "[Publisher]";
-			mes "One day, while old lady was doing the laundy, she found a humongous";
-			mes "peach. She cut it in half and...";
-			mes "'Poof!' There was a baby inside!";
+			mes "[出版商]";
+			mes "很久以前，有一对老夫妻。他们很幸福，但没有孩子。";
+			mes "一天，老奶奶在洗衣服时，发现了一个巨大的";
+			mes "桃子。她把它切开，结果...！";
 			next;
-			mes "[Publisher]";
-			mes "The old man and lady were shocked.";
-			mes "They decided to adopt that baby,";
-			mes "and give him their love...";
+			mes "[出版商]";
+			mes "里面竟然有一个婴儿！老夫妻都惊呆了。";
+			mes "他们决定收养那个婴儿，";
+			mes "并给予他他们的爱...";
 			next;
-			mes "[Publisher]";
-			mes "That baby grew so fast, like that beanstalk from 'Jack and Beanstalk,' and became a strong boy in only a few days.";
+			mes "[出版商]";
+			mes "那个婴儿长得非常快，就像《杰克与豆茎》中的豆茎一样，仅仅几天就变成了一个强壮的男孩。";
 			mes " ";
 			next;
-			mes "[Publisher]";
-			mes "That boy's name was...";
-			mes "<Momotaro>!!!";
-			mes "Momotaro traveled to eliminate";
-			mes "dokebis that were harassing";
-			mes "the towners.";
+			mes "[出版商]";
+			mes "那个男孩的名字是...";
+			mes "<桃太郎>!!!";
+			mes "桃太郎出发去消灭";
+			mes "骚扰";
+			mes "镇民的独角兽。";
 			next;
-			mes "[Publisher]";
-			mes "He became friends with";
-			mes "^3163FFYoyo, Picky, and Desert Wolf^000000";
-			mes "and eliminated all of the Dokebis. Then he lived happily ever after with the old couple.";
+			mes "[出版商]";
+			mes "他和";
+			mes "^3163FFYoyo, Picky, 和 Desert Wolf^000000";
+			mes "成为了朋友，并消灭了所有的独角兽。然后他和老夫妻幸福地生活在一起。";
 			next;
-			mes "[Publisher]";
-			mes "How was it?";
-			mes "Great, right?";
-			mes "I mean, this story sold a million copies!";
+			mes "[出版商]";
+			mes "怎么样？";
+			mes "很好吧？";
+			mes "我的意思是，这个故事卖出了百万本！";
 			close;
 		case 2:
 			if (BaseLevel > 29) {
-				mes "[Publisher]";
-				mes "Yay-! You look excited!";
-				mes "You'll be ready to go soon.";
-				mes "Please fill out this registration card.";
+				mes "[出版商]";
+				mes "耶-！你看起来很兴奋！";
+				mes "你很快就准备好了。";
+				mes "请填写这张注册卡。";
 				next;
-				mes "[Publisher]";
+				mes "[出版商]";
 				mes "....................";
-				mes "......Mm.....Let's see.....";
-				mes ".............Good!";
-				mes "Alright, then!";
-				mes "Let it begin~~~!!!!!!!!!";
-				mes "<Momotaro Field Trip>~!";
+				mes "......嗯.....让我看看.....";
+				mes ".............好！";
+				mes "好的，那么！";
+				mes "让我们开始吧~~~!!!!!!!!!";
+				mes "<桃太郎实地考察>~！";
 				next;
 				warp "ama_test",52,35;
 				end;
 			}
-			mes "[Publisher]";
-			mes "Hmm~";
-			mes "Why don't you train yourself more";
-			mes "and come back?";
+			mes "[出版商]";
+			mes "嗯~";
+			mes "为什么不多训练一下";
+			mes "然后再回来呢？";
 			close;
 		case 3:
-			mes "[Publisher]";
-			mes "Eh?";
-			mes "...But there are sweet rewards waiting...";
+			mes "[出版商]";
+			mes "嗯？";
+			mes "…但有甜蜜的奖励在等待着…";
 			close;
 		}
 	}
 	else if (event_momo == 4) {
-		mes "[Publisher]";
-		mes "Ah~ What nice weather!";
-		mes "This is the perfect weather to do some reading.";
+		mes "[出版商]";
+		mes "啊~ 多么好的天气！";
+		mes "这是阅读的完美天气。";
 		close;
 	}
 	else if (event_momo > 1) {
-		mes "[Publisher]";
-		mes "How was it? Did you have fun?";
-		mes "I hope you had a good time";
-		mes "during the field trip.";
+		mes "[出版商]";
+		mes "怎么样？你玩得开心吗？";
+		mes "我希望你玩得愉快";
+		mes "在这次实地考察中。";
 		mes " ";
 		mes " ";
 		next;
-		mes "[Publisher]";
-		mes "This is your reward for you.";
-		mes "Please continue to enjoy stories~";
+		mes "[出版商]";
+		mes "这是给你的奖励。";
+		mes "请继续享受故事~";
 		mes " ";
 		set .@event_momo, event_momo;
 		set event_momo,4;
@@ -214,119 +214,119 @@ amatsu,223,236,3	script	Publisher#ama	763,{
 
 ama_test,52,44,3	script	Assistant#ama	109,{
 	if (event_momo == 0) {
-		mes "[Satoshi]";
-		mes "Welcome to <Momotaro Field Trip>";
+		mes "[佐藤]";
+		mes "欢迎来到<Momotaro Field Trip>！";
 		mes " ";
 		next;
-		mes "[Satoshi]";
-		mes "I'm Satoshi who is in charge of the waiting room in <Momotaro Field Trip>.";
+		mes "[佐藤]";
+		mes "我是负责<Momotaro Field Trip>等候室的佐藤。";
 		next;
-		mes "[Satoshi]";
-		mes "Originally, I was working for the publishing company, but we lacked workers for the Field Trip...";
-		mes "But working here is much better!";
-		mes "Now I just watch people trying to accomplish the mission. Heh hehe~";
+		mes "[佐藤]";
+		mes "最初，我在出版社工作，但我们缺少参加实地考察的工作人员...";
+		mes "但在这里工作要好得多！";
+		mes "现在我只需看着人们尝试完成任务。嘿嘿~";
 		next;
-		mes "[Satoshi]";
+		mes "[佐藤]";
 		mes "................";
-		mes "Just kidding";
-		mes "*Wipes away sweat*";
+		mes "开玩笑的";
+		mes "*擦去汗水*";
 		next;
-		mes "[Satoshi]";
-		mes "Well, let me explain";
-		mes "about the rules in the Field Trip.";
+		mes "[佐藤]";
+		mes "好吧，让我来解释一下";
+		mes "实地考察的规则。";
 		mes " ";
 		next;
-		mes "[Satoshi]";
-		mes "First of all...Did you hear";
-		mes "about the story from the publisher?";
+		mes "[佐藤]";
+		mes "首先...你听说过";
+		mes "出版社的故事吗？";
 		next;
-		if (select("Yes:No") == 1) {
-			mes "[Satoshi]";
-			mes "Hehe...Good.";
-			mes "Momotaro Story is our";
-			mes "pride. It's the best story EVER.";
-			mes "Hahahah!!!";
+		if (select("是:否") == 1) {
+			mes "[佐藤]";
+			mes "嘿嘿...很好。";
+			mes "桃太郎的故事是我们的";
+			mes "骄傲。这是最好的故事。";
+			mes "哈哈哈!!!";
 			next;
-			mes "[Satoshi]";
-			mes "...Hmmhmm.";
+			mes "[佐藤]";
+			mes "...嗯嗯。";
 			next;
-			mes "[Satoshi]";
-			mes "The Field Trip is simple.";
-			mes "Go inside and eliminate";
-			mes "Dokebis bravely!!!";
-			mes "Just like Momotaro!!!";
-			mes "Understand? Bravely!!!";
+			mes "[佐藤]";
+			mes "实地考察很简单。";
+			mes "进去消灭";
+			mes "勇敢的独角兽!!!";
+			mes "就像桃太郎一样!!!";
+			mes "明白了吗？勇敢一点!!!";
 			next;
-			mes "[Satoshi]";
-			mes "In addition, there are three";
-			mes "things you need to know.";
+			mes "[佐藤]";
+			mes "另外，还有三件事";
+			mes "你需要知道。";
 			next;
-			mes "[Satoshi]";
-			mes "First....";
-			mes "You can't come back once you clear the field trip. Keep that in mind.";
+			mes "[佐藤]";
+			mes "第一....";
+			mes "一旦完成实地考察，你就不能回来。记住这一点。";
 			next;
-			mes "[Satoshi]";
-			mes "Secondly....";
-			mes "Q-pet is prohibited";
-			mes "inside of the field trip.";
-			mes "If you are with a pet,";
-			mes "please change it to egg status.";
+			mes "[佐藤]";
+			mes "第二....";
+			mes "禁止带Q宠物";
+			mes "进入实地考察。";
+			mes "如果你带着宠物，";
+			mes "请将其更改为蛋状态。";
 			next;
-			mes "[Satoshi]";
-			mes "And finally...";
-			mes "One person can be on the";
-			mes "field trip for 6 minutes.";
+			mes "[佐藤]";
+			mes "最后...";
+			mes "一个人可以在";
+			mes "实地考察中待6分钟。";
 			next;
-			mes "[Satoshi]";
-			mes "Well then, please";
-			mes "wait your turn";
-			mes "in the waiting room.";
-			mes "Good luck in fighting!!";
+			mes "[佐藤]";
+			mes "那么，请";
+			mes "耐心等待你的顺序";
+			mes "在候诊室中。";
+			mes "祝你战斗好运！！";
 			close;
 		}
-		mes "[Assistant]";
-		mes "Eh? You can't just";
-		mes "skip the story";
-		mes "when you enter field trip!!";
-		mes "I can't allow you to do that";
-		mes "as Momotaro's fan!!!";
+		mes "[助手]";
+		mes "嗯？你不能就这样";
+		mes "跳过故事";
+		mes "当你进入实地考察时！！";
+		mes "我不能允许你这样做。";
+		mes "作为桃太郎的扇子!!!";
 		next;
-		mes "[Assistant]";
-		mes "Please listen to the story";
-		mes "from the publisher.";
-		mes "Thank you.";
-		mes "Bye~~";
+		mes "[助手]";
+		mes "请听我讲这个故事";
+		mes "来自出版者。";
+		mes "谢谢你。";
+		mes "再见~~";
 		next;
 		warp "amatsu",223,230;
 		end;
 	}
 	else if (event_momo == 1) {
-		mes "[Satoshi]";
-		mes "Oh my...Are you alright?";
-		mes "I thought it was entertaining but maybe it was too hard for you?";
+		mes "[佐藤]";
+		mes "哦，我的...你还好吗？";
+		mes "我觉得这很有趣，但也许对你来说太难了？";
 		next;
-		mes "[Satoshi]";
-		mes "Now what are you going to do?";
-		mes "Do you want to go in again?";
+		mes "[佐藤]";
+		mes "那么你打算怎么办？";
+		mes "你想再进去一次吗？";
 		next;
-		if (select("Yes:No, I want to go back") == 1) {
-			mes "[Satoshi]";
-			mes "The more effort you put into this, the sweeter victory will taste.";
-			mes "Good luck in fighting!";
+		if (select("是:否，我想回去") == 1) {
+			mes "[佐藤]";
+			mes "你付出越多努力，胜利的滋味就会越甜。";
+			mes "祝你战斗好运！";
 			close;
 		}
-		mes "[Satoshi]";
-		mes "Well, I guess the reality of the situation is that you just can't fulfill the role of Momotaro...";
-		mes "Still, don't be depressed.";
+		mes "[佐藤]";
+		mes "嗯，我想现实情况是你根本无法扮演桃太郎的角色...";
+		mes "不过，别沮丧。";
 		next;
-		mes "[Satoshi]";
-		mes "I think you've gained enough experience from the field trip.";
+		mes "[佐藤]";
+		mes "我想你在实地考察中获得了足够的经验。";
 		next;
-		mes "[Assistant]";
-		mes "If you hear a good story,";
-		mes "Please, contact our";
-		mes "publishing company.";
-		mes "Bye-";
+		mes "[助手]";
+		mes "如果你听到一个好故事，";
+		mes "请联系我们的";
+		mes "出版公司。";
+		mes "再见-";
 		close2;
 		percentheal 100,0;
 		set event_momo,0;
@@ -334,32 +334,32 @@ ama_test,52,44,3	script	Assistant#ama	109,{
 		end;
 	}
 	else if (event_momo == 2) {
-		mes "[Satoshi]";
-		mes "Woohoo~ Congratulations!!";
-		mes "You were so great!";
+		mes "[佐藤]";
+		mes "哇哦~ 恭喜你！！";
+		mes "你真棒！";
 		next;
-		mes "[Satoshi]";
-		mes "It is time to say good bye.";
-		mes "If you hear a good story,";
-		mes "Please, contact our";
-		mes "publishing company.";
-		mes "Bye-";
+		mes "[佐藤]";
+		mes "是时候说再见了。";
+		mes "如果你听到一个好故事，";
+		mes "请联系我们的";
+		mes "出版公司。";
+		mes "再见-";
 		close2;
 		percentheal 100,0;
 		warp "amatsu",223,230;
 		end;
 	}
-	mes "[Satoshi]";
-	mes "Woohoo~ Congratulations!!";
-	mes "You were so great!!";
-	mes "Even though your finish was kind of weak...";
+	mes "[佐藤]";
+	mes "哇哦~ 恭喜你！！";
+	mes "你真棒！！";
+	mes "尽管你的结尾有点弱……";
 	next;
-	mes "[Satoshi]";
-	mes "It is time to say good bye.";
-	mes "If you hear a good story,";
-	mes "Please, contact our";
-	mes "publishing company.";
-	mes "Bye-";
+	mes "[佐藤]";
+	mes "是时候说再见了。";
+	mes "如果你听到一个好故事，";
+	mes "请联系我们的";
+	mes "出版公司。";
+	mes "再见-";
 	close2;
 	warp "amatsu",223,230;
 	end;
@@ -419,40 +419,40 @@ OnInit:
 	end;
 
 OnTouch_:
-	mes "[Grandma]";
-	mes "Arrrk!!!";
+	mes "[奶奶]";
+	mes "啊啊啊！！！";
 	next;
-	mes "[Grandma]";
-	mes "Honey!! Someone hacked my account and stole my equipment!! ";
+	mes "[奶奶]";
+	mes "亲爱的！！有人黑了我的账号，偷了我的装备！！";
 	next;
-	mes "[Grandpa]";
-	mes "Hmm. The Chief said Dokebi earned 20 million zeny by hacking others' accounts...";
+	mes "[爷爷]";
+	mes "嗯，族长说独角鬼通过黑别人账号赚了2000万金币...";
 	next;
 	setquest 8127;
-	mes "[Grandma]";
-	mes "Dohhhhhhh!!!! ";
+	mes "[奶奶]";
+	mes "哎呀！！！！";
 	next;
-	mes "[Grandpa]";
-	mes "....Huh I've heard that somewhere.. ..... ";
+	mes "[爷爷]";
+	mes "....嗯，我好像在哪里听过这个.. .....";
 	next;
-	mes "[Grandpa]";
-	mes "Anyway, Momotaro...";
+	mes "[爷爷]";
+	mes "总之，桃太郎...";
 	next;
-	mes "[Grandpa]";
-	mes "As you know, since we towners spend our time sitting and chatting,";
-	mes "we can't kill Dokebis because we're low level, so...Please do it for us. ";
+	mes "[爷爷]";
+	mes "如你所知，由于我们这些城镇居民总是坐着聊天，";
+	mes "我们无法击杀独角鬼，因为我们的等级太低了，所以...请你帮我们做这件事。";
 	next;
-	mes "[Grandma]";
-	mes "Momotaro...";
-	mes "I really wanted to give you";
-	mes "a handmade ^3163FFYummiest Red Potion in the whole world^000000 ...but...";
-	mes ".....I failed to make them ....";
+	mes "[奶奶]";
+	mes "桃太郎...";
+	mes "我真的很想给你";
+	mes "一瓶手工制作的 ^3163FF世界上最好吃的红色药水^000000 ...但是...";
+	mes ".....我没能做出来 ....";
 	next;
-	mes "[Grandma]";
-	mes "...I'm sorry. I should have been leveling up before...*Sob*";
+	mes "[奶奶]";
+	mes "...对不起。我本该先升级的...*呜呜*";
 	next;
-	mes "[Grandma & Grandpa]";
-	mes "So...Do me this favor, kid~";
+	mes "[奶奶和爷爷]";
+	mes "所以...请帮我这个忙，孩子~";
 	close2;
 	set event_momo,1;
 	if (countitem(9010) > 0 || countitem(9005) > 0 || countitem(9016) > 0) {
@@ -575,7 +575,7 @@ ama_test,50,100,3	script	Coach#ama	762,15,15,{
 	mes "只拿这样子";
 	mes "是不能把我怎样的!! 镪镪!^000000";
 	next;
-	switch(select("Well, well. It is nothing~:It was boring.")) {
+	switch(select("好吧，好吧。这没什么~:太无聊了。")) {
 	case 1:
 		mes "[...]";
 		mes "^FF0066镪镪! 哈哈! 镪镪! 哈哈哈!";
@@ -624,7 +624,7 @@ ama_test,50,100,3	script	Coach#ama	762,15,15,{
 		mes "现在我的精神有点恍惚";
 		mes "我要休息了,年轻人.....";
 		next;
-		if (select("Nah.. I'm good.:Bring it on, foo'!") == 1) {
+		if (select("不..我很好。:来吧，伙计！") == 1) {
 			erasequest 8129;
 			mes "赶快去找我儿子吧...";
 			mes "[宜希答 撒伍克]";
@@ -1444,314 +1444,314 @@ amatsu,171,174,4	script	Gate Soldier#ama6	767,{
 }
 	
 ama_in02,187,57,2	script	Soldier#ama1	767,{
-	mes "[Ichiro]";
-	mes "Welcome.";
-	mes "Our lord prepared guest rooms";
-	mes "for travelers like you.";
+	mes "[一郎]";
+	mes "欢迎。";
+	mes "我们的主人准备了客房";
+	mes "给像你这样的旅行者。";
 	next;
-	mes "[Ichiro]";
-	mes "If you are having any problems,";
-	mes "tell me. I would appreciate it if you talk to our lord of the";
-	mes "palace. This is all provided by him.";
+	mes "[一郎]";
+	mes "如果你遇到任何问题，";
+	mes "告诉我。如果你能和我们的领主谈谈，我将不胜感激。";
+	mes "宫殿。这一切都是他提供的。";
 	close;
 }
 	
 ama_in02,170,62,4	script	Soldier#ama2	767,{
-	mes "[Jiro]";
-	mes "I'm Jiro, the administrator";
-	mes "of this Palace. What can I do for you?";
+	mes "[次郎]";
+	mes "我是次郎，这个宫殿的管理员";
+	mes "我能为你做些什么？";
 	next;
-	switch(select("Issue me a Transit Permit:I want to live in Amatsu:Nothing")) {
+	switch(select("给我发放通行证:我想在天津生活:没什么")) {
 	case 1:
 		if (event_amatsu == 6) {
 			if (countitem(7160) > 0) {
-				mes "[Jiro]";
-				mes "You already have one...";
-				mes "You don't need to have two of them.";
+				mes "[次郎]";
+				mes "你已经有一个了...";
+				mes "你不需要有两个。";
 				close;
 			}
-			mes "[Jiro]";
-			mes "Did you lose your Transit Permit?";
-			mes "You need to pay 10,000 zeny as a tax";
-			mes "to issue another Transit Permit.";
+			mes "[次郎]";
+			mes "你丢失了你的通行证吗？";
+			mes "你需要支付10,000金币作为税费";
+			mes "以便重新发放一张通行证。";
 			next;
-			if (select("Issue one:Talk to you later") == 1) {
+			if (select("发一个:稍后再和你说") == 1) {
 				set Zeny, Zeny-10000;
 				getitem 7160,1; //Lord's_Passable_Ticket
-				mes "[Jiro]";
-				mes "There you go.";
-				mes "Don't lose it this time.";
+				mes "[次郎]";
+				mes "给你。";
+				mes "这次不要丢失它。";
 				close;
 			}
-			mes "[Jiro]";
-			mes "Okay, then...";
-			mes "Talk to me when you need help.";
+			mes "[次郎]";
+			mes "好的，那么...";
+			mes "需要帮助时请和我说话。";
 			close;
 		}
-		mes "[Gate Soldier]";
-		mes "The lord announced that";
-		mes "he grants guests from Midgard the right to go anywhere.";
-		mes "You don't need me to issue you a Transit Permit.";
+		mes "[门卫]";
+		mes "领主宣布";
+		mes "他给予来自米德加尔特的客人随处可去的权利。";
+		mes "你不需要我给你发放通行证。";
 		close;
 	case 2:
-		mes "[Jiro]";
-		mes "That is impossible. You're free to";
-		mes "go anywhere in Amatsu, but my lord doesn't want to concern himself with immigration.";
-		mes "Instead of that, you can stay here as long as you want.";
+		mes "[次郎]";
+		mes "这是不可能的。你可以自由地";
+		mes "在天津的任何地方，但我的领主不想关心移民问题。";
+		mes "与其那样，你可以在这里待多久都可以。";
 		close;
 	case 3:
-		mes "[Jiro]";
-		mes "Well then...";
-		mes "Talk to me when you need help.";
+		mes "[次郎]";
+		mes "那么……";
+		mes "需要帮助时请和我说话。";
 		close;
 	}
 }
 	
 ama_in02,37,157,4	script	Soldier#ama3	767,{
-	mes "[Saburo]";
-	mes "This is the training ground for improving our battle skills.";
-	mes "Please look around...";
+	mes "[三郎]";
+	mes "这里是提高我们战斗技能的训练场。";
+	mes "请四处看看...";
 	next;
-	mes "[Saburo]";
-	mes "By the way, recently I've felt";
-	mes "like the soldiers have changed";
-	mes "lately. How do I say it...";
-	mes "Their faces are gloomy and";
-	mes "some of them are no longer around.";
-	mes "Have they gone to Midgard??";
+	mes "[三郎]";
+	mes "顺便说一下，最近我感觉到";
+	mes "士兵们似乎变了";
+	mes "最近。我该怎么说呢...";
+	mes "他们的脸色阴沉，";
+	mes "有些人已经不在了。";
+	mes "他们去米德加尔特了吗??";
 	next;
-	mes "[Saburo]";
-	mes "In this job, I encounter";
-	mes "many strangers. But downstairs,";
-	mes "there's a guest from a distant land who seems suspicious...";
-	mes "I told my guards to watch him...";
+	mes "[三郎]";
+	mes "在这个工作中，我遇到了";
+	mes "许多陌生人。但是在楼下，";
+	mes "有位来自遥远地方的客人看起来很可疑...";
+	mes "我告诉我的卫兵要看着他...";
 	next;
-	mes "[Saburo]";
-	mes "Of course, my lord precisely knows everything that's going on.";
-	mes "Haha, don't take what I said seriously~";
-	mes "See ya...";
+	mes "[三郎]";
+	mes "当然，我的主人确切地知道发生的一切。";
+	mes "哈哈，别把我说的话当真~";
+	mes "再见...";
 	close;
 }
 	
 ama_in02,32,51,6	script	Soldier#ama4	767,{
-	mes "[Shiro]";
-	mes "*Cough, Cough* What...";
-	mes "Don't talk to me...";
-	mes "*Cough, Cough*... Oh, my freakin' neck.";
+	mes "[白狼]";
+	mes "*咳，咳* 什么...";
+	mes "别跟我说话...";
+	mes "*咳，咳*... 哦，我的脖子真是受不了。";
 	next;
-	mes "[Shiro]";
-	mes "That quack's cold medicine";
-	mes "is useless! I should never have trusted people from Midgard!";
-	mes "*Cough, Cough*...";
+	mes "[白狼]";
+	mes "那个江湖医生的感冒药";
+	mes "没用！我真不该相信米德加尔特的人！";
+	mes "*咳，咳*...";
 	next;
-	mes "[Shiro]";
-	mes "I don't know why but...";
-	mes "I'm getting worse and worse...";
-	mes "What kind of cold is this?";
-	mes "*Cough*... *Cough*...";
+	mes "[白狼]";
+	mes "我不知道为什么，但是...";
+	mes "我越来越糟糕了...";
+	mes "这是什么冷啊？";
+	mes "*咳*... *咳*...";
 	close;
 }
 	
 ama_in02,40,167,3	script	Soldier#ama5	767,{
-	mes "[Goro]";
-	mes "*Psst*... Please, be quiet.";
-	mes "I will tell you a story, okay?";
+	mes "[五郎]";
+	mes "*嘘*... 请安静。";
+	mes "我会告诉你一个故事，好吗？";
 	mes " ";
 	next;
-	mes "[Goro]";
-	mes "There is a rumor in Amatsu.";
-	mes "The lord of this palace isn't";
-	mes "real... *Psst*, Quiet!";
-	mes "Don't panic and listen to me.";
+	mes "[五郎]";
+	mes "在天津有一个传闻。";
+	mes "这个宫殿的领主并不";
+	mes "真实... *嘘*，安静！";
+	mes "不要惊慌，听我说。";
 	next;
-	mes "[Goro]";
-	mes "There is a real lord behind";
-	mes "the kind lord and he is scheming";
-	mes "something. He is controlling";
-	mes "our town in some hidden place.";
-	mes "...Our kind lord is just a figurehead~!";
+	mes "[五郎]";
+	mes "在善良的领主背后有一个";
+	mes "真正的领主，他正在策划";
+	mes "一些事情。他在操控着";
+	mes "我们镇子在某个隐秘的地方。";
+	mes "……我们的仁慈领主只是个傀儡~！";
 	next;
-	mes "[Goro]";
-	mes "It's for real! Trust me~";
-	mes "I saw him. The lord who was";
-	mes "laughing at the town on the";
-	mes "TenguGak!!";
-	mes "Just don't tell anyone that I've told you this, okay?";
+	mes "[五郎]";
+	mes "这是真的！相信我~";
+	mes "我见过他。那个领主";
+	mes "在镇子上笑着";
+	mes "天狗学!!";
+	mes "只要别告诉任何人我告诉过你这个，好吗？";
 	close;
 }
 	
 ama_in02,32,167,5	script	Soldier#ama6	767,{
-	mes "[Rokuro]";
-	mes "He always talks nonsense.";
-	mes "He says that our lord";
-	mes "is not real, but a fake.";
-	mes "It's not even funny.";
+	mes "[六郎]";
+	mes "他总是说些废话。";
+	mes "他说我们的领主";
+	mes "不是真的，而是假的。";
+	mes "这根本不好笑。";
 	next;
-	mes "[Rokuro]";
-	mes "However, it is true that";
-	mes "recently, weird things are";
-	mes "happening. There were no";
-	mes "prohibited places before...";
+	mes "[六郎]";
+	mes "不过，确实有这样的事。";
+	mes "最近，有些奇怪的事情发生了";
+	mes "之前没有这样的地方...";
+	mes "我有时听到奇怪的声音。";
 	next;
-	mes "[Rokuro]";
-	mes "I hear strange sounds sometimes.";
-	mes "The mother of the lord has been";
-	mes "visited by doctors several times.";
-	mes "I guess her health hasn't";
-	mes "improve after their visits...";
+	mes "[六郎]";
+	mes "领主的母亲已经被医生多次拜访过。";
+	mes "领主的母亲已经被医生多次拜访过。";
+	mes "领主的母亲已经被医生多次拜访过。";
+	mes "我想她的健康没有";
+	mes "在他们的探访后改善...";
 	close;
 }
 	
 ama_in02,42,34,2	script	Soldier#ama7	767,{
-	mes "[Shichiro]";
-	mes "Have a good time.";
-	mes "My lord prepared some";
-	mes "guest rooms.";
+	mes "[七郎]";
+	mes "祝你玩得愉快。";
+	mes "我的主人准备了一些";
+	mes "客房。";
 	next;
-	mes "[Shichiro]";
-	mes "If you have any problems,";
-	mes "please call me. Also, try not to disturb the other guests.";
+	mes "[七郎]";
+	mes "如果你有任何问题，";
+	mes "请叫我。另外，尽量不要打扰其他客人。";
 	mes " ";
 	next;
-	mes "[Shichiro]";
-	mes "Have a good day.";
+	mes "[七郎]";
+	mes "祝你有美好的一天。";
 	close;
 }
 	
 ama_in02,203,156,4	script	Soldier#ama8	767,{
-	mes "[Hachiro]";
-	mes "My lord is inside.";
-	mes "If you'd like to greet him, feel free to enter.";
+	mes "[八千代]";
+	mes "我的主人在里面。";
+	mes "如果你想问候他，请随意进入。";
 	next;
-	mes "[Hachiro]";
-	mes "Don't be rude in front of him.";
-	mes "He is somehow not feeling well.";
-	mes "Usually, he greets people from";
-	mes "other continents gladly, but...";
-	mes "What could have happened to him...?";
+	mes "[八千代]";
+	mes "在他面前不要失礼。";
+	mes "他似乎身体不太舒服。";
+	mes "通常，他会很高兴地接待来自";
+	mes "其他大陆的人，但……";
+	mes "他到底发生了什么事……？";
 	close;
 }
 	
 ama_in02,195,156,4	script	Soldier#ama9	767,{
-	mes "[Kyuro]";
-	mes "This is not good.";
-	mes "My lord is really kind, but";
-	mes "recently he is not doing well...";
+	mes "[九郎]";
+	mes "这可不好。";
+	mes "我的主人真的很善良，但";
+	mes "最近他状态不太好...";
 	next;
-	mes "[Kyuro]";
-	mes "I've heard about the rumors";
-	mes "but I trust him. He made";
-	mes "Amatsu into a great town.";
-	mes "That is why I'm following";
-	mes "him as a soldier.";
+	mes "[九郎]";
+	mes "我听说过那些传闻";
+	mes "但我相信他。他让";
+	mes "天津变成了一个伟大的城镇。";
+	mes "这就是我作为士兵跟随他的原因。";
+	mes "他作为士兵。";
 	close;
 }
 	
 ama_in02,115,177,7	script	Soldier#ama10	767,{
-	mes "[Jyuro]";
-	mes "What are you doing in here?";
-	mes "There is nothing interesting here.";
+	mes "[十郎]";
+	mes "你在这里做什么？";
+	mes "这里没有什么有趣的东西。";
 	next;
-	if (select("That is true:Open the gate") == 1) {
-		mes "[Jyuro]";
-		mes "There are much better things to enjoy in town. Have a good time...";
+	if (select("这是真的:打开大门") == 1) {
+		mes "[十郎]";
+		mes "镇上有更好的东西可以享受。祝你玩得愉快...";
 		close;
 	}
 	if (event_amatsu == 6) {
 		if (countitem(7160) > 0) {
-			mes "[Jyuro]";
-			mes "You have the ticket...";
-			mes "Do you want me to send you now, or do you need a little instruction?";
+			mes "[十郎]";
+			mes "你有票...";
+			mes "你想让我现在送你，还是需要一点指导？";
 			next;
-			if (select("I will go in:Instruction, please") == 1) {
-				mes "[Jyuro]";
-				mes "I will open the gate.";
-				mes "Take care of yourself...";
+			if (select("我会进去:请给我指示") == 1) {
+				mes "[十郎]";
+				mes "我会打开大门。";
+				mes "照顾好自己……";
 			}
 			else {
-				mes "[Jyuro]";
-				mes "The area beyond this gate is";
-				mes "protected by some kind of magic.";
-				mes "You may get killed by someone";
-				mes "or get lost.";
+				mes "[十郎]";
+				mes "这扇门后面的区域是";
+				mes "被某种魔法保护的。";
+				mes "你可能会被人杀死，";
+				mes "或者迷路。";
 				mes " ";
 				next;
-				mes "[Jyuro]";
-				mes "I can't tell you much.";
-				mes "I didn't go far inside and";
-				mes "and just took a quick look.";
+				mes "[十郎]";
+				mes "我不能告诉你太多。";
+				mes "我没有深入，";
+				mes "只是快速看了一眼。";
 				mes " ";
 				mes " ";
 				next;
-				mes "[Jyuro]";
-				mes "First.....";
-				mes "'Do not trust what you are";
-				mes "seeing.' I don't know what";
-				mes "it means, but I guess you shouldn't believe everything before your eyes.";
+				mes "[十郎]";
+				mes "首先…..";
+				mes "‘不要相信你所看到的。’";
+				mes "我不知道这是什么意思，";
+				mes "但我想你不应该相信眼前的一切。";
 				next;
-				mes "[Jyuro]";
-				mes "Second.....";
-				mes "'There are certain rules in";
-				mes "magic.' Everything has a";
-				mes "reason to exist. Magic is not an exception. You can probably find the answer...";
+				mes "[十郎]";
+				mes "第二.....";
+				mes "‘在魔法中有某些规则’";
+				mes "魔法。‘一切都有存在的理由。魔法也不例外。你可能会找到答案...";
+				mes "好吧，我将打开这个大门。";
 				next;
-				mes "[Jyuro]";
-				mes "Well, I will open this gate.";
-				mes "Take care of yourself...";
+				mes "[十郎]";
+				mes "你需要一个通行证才能进入。";
+				mes "照顾好自己……";
 			}
 			close2;
 			warp "ama_dun01",229,10;
 			end;
 		}
-		mes "[Jyuro]";
-		mes "I'm sorry.";
-		mes "You need a Transit Permit to go in.";
-		mes "Please, go back.";
+		mes "[十郎]";
+		mes "对不起。";
+		mes "你需要一个通行证才能进入。";
+		mes "请，回去吧。";
 		close;
 	}
-	mes "[Jyuro]";
-	mes "What gate are you talking about?";
-	mes "A gate? On the top floor of the building??? Surely, you must been be mistaken.";
+	mes "[十郎]";
+	mes "你在说哪个门？";
+	mes "一个门？在大楼的顶层？？？你一定是搞错了。";
 	emotion ET_SWEAT;
 	next;
 	if (countitem(7160) > 0) {
-		if (select("Show him the ticket:Cancel") == 1) {
-			mes "[Jyuro]";
-			mes "What? That pass is...?";
-			mes "That Transit Permit is from";
-			mes "the lord but I guess it has";
-			mes "been issued to the wrong person.";
+		if (select("给他看票:取消") == 1) {
+			mes "[十郎]";
+			mes "什么？那个通行证是...？";
+			mes "那个通行证是来自";
+			mes "领主，但我想它已经";
+			mes "被发给了错误的人。";
 			next;
 			delitem 7160,1; //Lord's_Passable_Ticket
-			mes "[Jyuro]";
-			mes "I will keep this ticket because";
-			mes "it was issued without permission.";
-			mes "This is a warning.";
-			mes "Be careful.";
+			mes "[十郎]";
+			mes "我会保留这张票，因为";
+			mes "这是在没有许可的情况下发出的。";
+			mes "这是一个警告。";
+			mes "小心点。";
 			close;
 		}
-		mes "[Jyuro]";
-		mes "There are more things to enjoy in town. Have a good time...";
+		mes "[十郎]";
+		mes "城里还有更多的乐趣。祝你玩得愉快...";
 		close;
 	}
-	mes "[Jyuro]";
-	mes "There are more things to enjoy in town. Have yourself a good time...";
+	mes "[十郎]";
+	mes "城里还有更多的乐趣。祝你玩得开心...";
 	close;
 }
 	
 ama_dun01,229,7,0	script	Soldier#ama11	767,{
-	mes "[Jyuro]";
-	mes "Do you want to go back?";
+	mes "[十郎]";
+	mes "你想回去吗？";
 	next;
-	if (select("Yes, I do:I will stay here") == 1) {
-		mes "[Jyuro]";
-		mes "Take care of yourself.";
+	if (select("是的，我会:我会留在这里") == 1) {
+		mes "[十郎]";
+		mes "照顾好自己。";
 		close2;
 		warp "ama_in02",119,181;
 		end;
 	}
-	mes "[Jyuro]";
-	mes "Take care...";
+	mes "[十郎]";
+	mes "小心点...";
 	close;
 }
 	
@@ -1916,16 +1916,16 @@ ama_in02,200,176,4	script	Lord of Palace#ama	768,{
 ama_in01,22,111,0	script	Grandma#ama2	761,{
 	if (event_amatsu == 4) {
 		mes "[....]";
-		mes "^FF6060Yelp, Yelp, a foolish human";
-		mes "again! What are you going to do";
-		mes "to get rid of me!?^000000";
+		mes "^FF6060哎呀，哎呀，一个愚蠢的人类";
+		mes "又来了！你打算怎么做";
+		mes "来摆脱我！？^000000";
 		next;
 		mes "[....]";
-		mes "^FF6060You look like you learned";
-		mes "something from somewhere, but";
-		mes "it won't harm me!! Yelp!^000000";
+		mes "^FF6060你看起来好像从某处学到了";
+		mes "一些东西，但";
+		mes "这对我没有伤害！！哎呀！^000000";
 		next;
-		select("Taaaah!!");
+		select("哇！！");
 		if (BaseJob == Job_Priest) {
 			if (rand(1,4) == 1)
 				set .@fox_kill,0;
@@ -1946,14 +1946,14 @@ ama_in01,22,111,0	script	Grandma#ama2	761,{
 		}
 		if (.@fox_kill == 1) {
 			mes "[....]";
-			mes "^FF6060Yelp! Yelp! Yelp! Human!";
-			mes "To expel me from this body like";
-			mes "this! Curse you! Darn you!!^000000";
+			mes "^FF6060哎呀！哎呀！哎呀！人类！";
+			mes "像这样把我驱逐出这个身体";
+			mes "！诅咒你！该死的！！^000000";
 			next;
 			mes "[....]";
-			mes "^FF6060I will curse the Ishida family";
-			mes "who made me like this! Forever!";
-			mes "You better watch out, human!^000000";
+			mes "^FF6060我会诅咒石田家族";
+			mes "是谁让我变成这样的！永远！";
+			mes "你最好小心点，人类！^000000";
 			next;
 			monster "ama_in01",22,111,"Nine Tails",1180,1;
 			killmonsterall "ama_in01";
@@ -1961,181 +1961,181 @@ ama_in01,22,111,0	script	Grandma#ama2	761,{
 			changequest 8134,8135;
 			getitem 1022,1; //Fox_Tail
 			mes "[....]";
-			mes "^FF6060Everything that";
-			mes "Yoshinaga does will cause you";
-			mes "unhappiness...^000000";
-			mes "^FF0000Yaaaaaaaaaaaaap!!^000000";
+			mes "^FF6060一切都会导致你";
+			mes "吉田做的事情都会让你";
+			mes "不快乐...^000000";
+			mes "^FF0000呀啊啊啊啊啊啊啊啊！！^000000";
 			close;
 		}
 		mes "[....]";
-		mes "^FF6060Yelp! Haha! Yelp! Hahaha!";
-		mes "Are you trying to expel me from this body!?";
-		mes "Shoo!! Yelp!^000000";
+		mes "^FF6060哎呀！哈哈！哎呀！哈哈哈！";
+		mes "你是在试图把我赶出这个身体吗！？";
+		mes "走开！！哎呀！^000000";
 		close2;
 		warp "amatsu",167,197;
 		end;
 	}
 	else if (event_amatsu == 5) {
-		mes "[Ishida Saoko]";
-		mes "...Huh? Why are you here...?";
-		mes "*Urrmmm* My head hurts...";
-		mes "But I'm starting to remember everything...";
+		mes "[石田沙绪子]";
+		mes "...嗯？你为什么在这里...？";
+		mes "*呃嗯* 我的头好痛...";
+		mes "但我开始记起一切了...";
 		next;
-		mes "[Ishida Saoko]";
-		mes "Thank you, traveler from a far off";
-		mes "land. I owe you a great debt... Thank you very much...";
+		mes "[石田沙绪子]";
+		mes "谢谢你，来自遥远土地的旅行者";
+		mes "我欠你一个大人情……非常感谢你……";
 		next;
-		mes "[Ishida Saoko]";
-		mes "I will tell my son that";
-		mes "you exorcised the fox...";
-		mes "Thank you...";
+		mes "[石田沙绪子]";
+		mes "我会告诉我的儿子";
+		mes "你驱除了狐狸……";
+		mes "谢谢你...";
 		next;
-		mes "[Ishida Saoko]";
-		mes "I should get some rest.";
-		mes "My head aches, Young one.....";
-		mes "Go to my son...";
+		mes "[石田沙绪子]";
+		mes "我应该休息一下。";
+		mes "我的头很痛，年轻人……";
+		mes "去找我的儿子...";
 		close;
 	}
 	else if (event_amatsu == 6) {
-		mes "[Ishida Saoko]";
-		mes "Oh, Are you...? You are the one";
-		mes "who exorcised the fox... Welcome.";
-		mes "Please, have a seat...";
+		mes "[石田沙绪子]";
+		mes "哦，你是...? 你就是那个人";
+		mes "驱除狐狸的... 欢迎。";
+		mes "请，坐下...";
 		next;
-		mes "[Ishida Saoko]";
-		mes "When I think over, being possessed";
-		mes "by the fox was my fault. I raised";
-		mes "my son badly... Oh~";
-		mes "He was a good boy when he was";
-		mes "young. I wasn't strict to him...";
+		mes "[石田沙绪子]";
+		mes "当我回想起来，被附身";
+		mes "是我的错。我把我的儿子养坏了... 哦~";
+		mes "我儿子太糟糕了……哦~";
+		mes "他小时候是个好孩子。";
+		mes "我对他并不严格……";
 		next;
-		mes "[Ishida Saoko]";
-		mes "Long ago, this town wasn't as big";
-		mes "as it is today. There was no big";
-		mes "palace like Toukoujyo. Then, one";
-		mes "day, my son brought great riches";
-		mes "to the village. He never told me what he did to earn that fortune...";
+		mes "[石田沙绪子]";
+		mes "很久以前，这个城镇并没有今天这么大。";
+		mes "当时没有像东公城那样的大宫殿。";
+		mes "然后，有一天，我的儿子带来了巨额财富。";
+		mes "他从未告诉我他是如何赚到那笔财富的……";
+		mes "他建造了宫殿，帮助了镇上的人们，让城镇变得更大。";
 		next;
-		mes "[Ishida Saoko]";
-		mes "He built the palace and helped";
-		mes "the towners and make the town bigger.";
-		mes "He was perfect until...";
-		mes "he started doing strange things.";
+		mes "[石田沙绪子]";
+		mes "他一直很完美，直到……";
+		mes "他开始做一些奇怪的事情。";
+		mes "那些事情……惹怒了上帝。";
+		mes "他做的事情……惹怒了上帝。";
 		next;
-		mes "[Ishida Saoko]";
-		mes "Things...which angered God.";
-		mes "He learned forbidden magic,";
-		mes "performed experiments";
-		mes "in the palace, caged monsters,";
-		mes "did all sorts of horrible things...";
+		mes "[石田沙绪子]";
+		mes "事情……惹怒了上帝。";
+		mes "他学习了禁忌魔法，";
+		mes "进行了实验";
+		mes "在宫殿里，囚禁怪物，";
+		mes "做了各种可怕的事情...";
 		next;
-		mes "[Ishida Saoko]";
-		mes "That is the reason why there are";
-		mes "monsters in Toukoujyo... Finally,";
-		mes "God's wrath was unleashed. Even the Priest in the shrine couldn't help...";
+		mes "[石田沙绪子]";
+		mes "这就是为什么会有";
+		mes "怪物出现在东口城...最后，";
+		mes "上帝的愤怒被释放了。连神社里的牧师也无能为力...";
 		next;
-		mes "[Ishida Saoko]";
-		mes "At last, the anger came toward";
-		mes "me...It seems God tried to warn my son with the fox.";
-		mes "However, my son won't stop.";
+		mes "[石田沙绪子]";
+		mes "最终，愤怒降临到";
+		mes "我身上...似乎上帝试图用狐狸警告我的儿子。";
+		mes "然而，我的儿子不会停止。";
 		next;
-		mes "[Ishida Saoko]";
-		mes "If it is okay, please stop my son.";
-		mes "I don't have much time.";
-		mes "I don't know what to do...";
-		mes "Please save this peaceful village.";
-		mes "I beg you please...";
-		mes "What is he truly thinking...?";
+		mes "[石田沙绪子]";
+		mes "如果可以的话，请阻止我的儿子。";
+		mes "我没有太多时间了。";
+		mes "我不知道该怎么办...";
+		mes "请拯救这个和平的村庄。";
+		mes "我求求你了...";
+		mes "他到底在想什么...? ";
 		close;
 	}
 	mes "[....]";
-	mes "^FF6060Yelp, Yelp, Another foolish human!";
-	mes "Yelp, Yelp, Who! Human!?";
-	mes "What are you doing!";
-	mes "Shoo... Yelp! Yelp!^000000";
+	mes "^FF6060哎呀，哎呀，又一个愚蠢的人类！";
+	mes "哎呀，哎呀，谁！人类！？";
+	mes "你在做什么！";
+	mes "走开... 哎呀！哎呀！^000000";
 	next;
 	mes "[....]";
-	mes "^FF6060I will be in here until";
-	mes "the Ishida family line dies out!";
-	mes "Don't disturb me! Yelp!^000000";
+	mes "^FF6060我会一直待在这里，直到";
+	mes "石田家族的血脉消亡！";
+	mes "不要打扰我！哎呀！^000000";
 	close2;
 	warp "amatsu",167,197;
 	end;
 }
 	
 amatsu,189,166,5	script	Kouji#ama	764,{
-	mes "[Kouji]";
-	mes "Ralralrah Ralralrah Ralralrahralralrah~";
-	mes "Ralralrah Ralralrah Ralralrahralralrah~";
+	mes "[光司]";
+	mes "拉尔拉拉 拉尔拉拉 拉尔拉拉拉尔拉拉~";
+	mes "拉尔拉拉 拉尔拉拉 拉尔拉拉拉尔拉拉~";
 	next;
-	mes "[Kouji]";
+	mes "[光司]";
 	if (event_amatsu == 1) {
-		mes "When you're sick, rice cakes are no good~";
-		mes "Family is the best help, as it should~";
-		mes "When medicine doesn't help, that's when you'll see~";
-		mes "That Mommy's love is best for me~";
+		mes "生病的时候，年糕可不好~";
+		mes "家人是最好的帮助，理应如此~";
+		mes "当药物无效时，你就会看到~";
+		mes "妈妈的爱对我最好~";
 	}
 	else if (event_amatsu == 2) {
 		set event_amatsu,3;
-		mes "Priest, Priest~";
-		mes "A fox is following me!";
-		mes "It's funny and a little absurd,";
-		mes "But I'll need noodles with fried bean curd!";
+		mes "牧师，牧师~";
+		mes "有只狐狸在跟着我！";
+		mes "这很有趣，有点荒谬，";
+		mes "但我需要炸豆腐面条！";
 	}
 	else if (event_amatsu == 3) {
-		mes "Priest, priest~";
-		mes "A fox is following me!";
-		mes "If he doesn't leave when I scream and shout!";
-		mes "The North Shrine Priest should help me out~";
+		mes "牧师，牧师~";
+		mes "有只狐狸在跟着我！";
+		mes "如果他在我尖叫和喊叫时不离开！";
+		mes "北方神社的牧师应该帮我~";
 		if (isbegin_quest(8132) == 1)
 			changequest 8132,8133;
 	}
 	else if (event_amatsu == 4) {
-		mes "Priest, priest~";
-		mes "A fox is following me.";
-		mes "If shouts alone don't make Fox scared,";
-		mes "I might need help from Tiger and Bear~!";
+		mes "牧师，牧师~";
+		mes "一只狐狸在跟着我。";
+		mes "如果光靠喊叫不能让狐狸害怕，";
+		mes "我可能需要老虎和熊的帮助~！";
 		next;
-		mes "[Kouji]";
-		mes "Anything else I need in this fight???";
-		mes "Maybe some water from an Acolyte~!";
+		mes "[光司]";
+		mes "在这场战斗中我还需要什么？？？";
+		mes "也许需要一些来自服事的水~！";
 	}
 	else if (event_amatsu == 5) {
-		mes "Scary scary harbor ship~";
-		mes "Empty of people, full of treasure~";
-		mes "But I don't remember~!";
-		mes "the rest of this...song???";
+		mes "可怕可怕的港口船~";
+		mes "空无一人，满是宝藏~";
+		mes "但我不记得~！";
+		mes "这首...歌的其余部分？？？";
 	}
 	else {
-		mes "Blue roof under the blue sky";
-		mes "Blue wall on the blue lake";
-		mes "Blue wishes in the blue minds";
-		mes "Blue Blue Everything is Blue";
+		mes "蓝色屋顶在蓝色天空下";
+		mes "蓝色墙壁在蓝色湖泊上";
+		mes "蓝色的愿望在蓝色的心灵中";
+		mes "蓝色 蓝色 一切都是蓝色";
 	}
 	next;
-	mes "[Kouji]";
-	mes "Ralralrah Ralralrah Ralralrahralralrah~";
-	mes "Ralralrah Ralralrah Ralralrahralralrah~";
+	mes "[光司]";
+	mes "拉尔拉拉 拉尔拉拉 拉尔拉拉拉尔拉拉~";
+	mes "拉尔拉拉 拉尔拉拉 拉尔拉拉拉尔拉拉~";
 	close;
 }
 	
 ama_in01,169,173,1	script	Shaman#ama	769,{
-	mes "[Tokako]";
-	mes "Er, I'm not really a shaman...";
-	mes "My friend, Takehue-kun brought";
-	mes "me here and invited me to try on these clothes.";
+	mes "[托卡科]";
+	mes "呃，我其实不是一个萨满...";
+	mes "我的朋友，武雄君带我来这里";
+	mes "并邀请我试穿这些衣服。";
 	next;
-	mes "[Tokako]";
-	mes "He asks me to do a lot of";
-	mes "weird stuff, but he is funny.";
-	mes "Sometimes, I don't know what";
-	mes "he is thinking. Still, he is a good friend.";
+	mes "[托卡科]";
+	mes "他让我做很多事情";
+	mes "奇怪的东西，但他很有趣。";
+	mes "有时候，我不知道他在想什么。";
+	mes "不过，他是个好朋友。";
 	next;
-	mes "[Tokako]";
-	mes "If you are curious about,";
-	mes "something, ask Takehue-kun.";
-	mes "He knows stuff about";
-	mes "mysticism and the occult that other people don't know about.";
+	mes "[托卡科]";
+	mes "如果你对某些事情好奇，";
+	mes "可以问竹辉君。";
+	mes "他知道一些事情。";
+	mes "其他人不知道的神秘主义和 occult。";
 	mes " ";
 	close;
 }

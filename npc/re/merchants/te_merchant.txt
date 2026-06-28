@@ -14,7 +14,7 @@ te_alde_gld,215,184,4	duplicate(TE Potion Merchant#prt)	TE Potion Merchant#alde	
 // Rental Items manager
 //=======================================
 -	script	rental_woe_TE	-1,{
-	mes "[DRY-RUN] [Rental Items Manager]";
+	mes "[租赁物品管理员]";
 	if (jobcanentermap("te_prtcas01") == 1) {
 		.@list01$ = "[Shield] [Armor] [Garment]";
 		.@list02$ = "[Helmet] [Accessory] [Shoes]";
@@ -22,21 +22,21 @@ te_alde_gld,215,184,4	duplicate(TE Potion Merchant#prt)	TE Potion Merchant#alde	
 		.@list04$ = "[Mace] [Staff] [Fist] [Book]";
 		.@list05$ = "[Bow] [Gun] [Musical Instrument] [Whip]";
 
-		mes "[DRY-RUN] ^4d4dffWe offer various battlegears that you can use in the regions of Gloria and Kafragarten based on the rules of Siege Battle TE.^000000";
+		mes "^4d4dff我们提供各种战斗装备，您可以根据攻城战TE的规则在格洛里亚和卡夫拉根特地区使用。^000000";
 		next;
-		mes "[DRY-RUN] [Rental Items Manager]";
-		mes "[DRY-RUN] ^4d4dffWe provide 1-day rental periods for free.^000000";
-		mes "[DRY-RUN] However, the provided rental items ^4d4dffwill not be effective outside the Siege Battle TE area.^000000";
+		mes "[租赁物品管理员]";
+		mes "^4d4dff我们提供1天的免费租赁期。^000000";
+		mes "但是，提供的租赁物品^4d4dff在攻城战TE区域外将无效。^000000";
 		next;
-		mes "[DRY-RUN] [Rental Items Manager]";
-		mes "[DRY-RUN] ^4d4dffYou have to be Lv 40 or higher in order to rent an item.^000000";
-		mes "[DRY-RUN] Select the desired equipment.";
+		mes "[租赁物品管理员]";
+		mes "^4d4dff您必须达到40级或以上才能租赁物品。^000000";
+		mes "选择所需的装备。";
 		next;
 		while(1) {
-			switch( select( "[DRY-RUN] View rental equipments", .@list01$, .@list02$, .@list03$, .@list04$, .@list05$, "Leave" ) ) {
+			switch( select( "查看租赁装备", .@list01$, .@list02$, .@list03$, .@list04$, .@list05$, "Leave" ) ) {
 			case 1:
-				mes "[DRY-RUN] [Rental Items Manager]";
-				mes "[DRY-RUN] Here is a list of rental items and descriptions.";
+				mes "[租赁物品管理员]";
+				mes "这里是租赁物品及其描述的列表。";
 				close2;
 				readbook 11059,1;// WoE_TE_Rental_List
 				end;
@@ -96,28 +96,28 @@ te_alde_gld,215,184,4	duplicate(TE Potion Merchant#prt)	TE Potion Merchant#alde	
 					1987,"TE Siege Rope" );			// TE_Woe_Rope
 				break;
 			case 7:
-				mes "[DRY-RUN] [Rental Items Manager]";
-				mes "[DRY-RUN] Come back anytime then.";
+				mes "[租赁物品管理员]";
+				mes "随时欢迎回来。";
 				close;
 			}
 		}
 	}
-	mes "[DRY-RUN] We offer various battlegears that you can use in the regions of Gloria and Kafragarten based on the rules of Siege Battle TE.";
+	mes "我们提供各种战斗装备，您可以根据攻城战TE的规则在格洛里亚和卡夫拉根特地区使用。";
 	next;
-	mes "[DRY-RUN] [Rental Items Manager]";
-	mes "[DRY-RUN] I'm sorry but your job class is not allowed to participate in Siege Battles TE.";
-	mes "[DRY-RUN] I'm afraid I can't offer any items to you.";
+	mes "[租赁物品管理员]";
+	mes "抱歉，但您的职业不允许参加攻城战TE。";
+	mes "恐怕我无法为您提供任何物品。";
 	close;
 
 S_Rent:
-	mes "[DRY-RUN] [Rental Items Manager]";
+	mes "[租赁物品管理员]";
 	if (checkweight(1304,3) == 0) {
-		mes "[DRY-RUN] You already have too many items to receive a new rental equipment.";
-		mes "[DRY-RUN] Please organize your items and try again.";
+		mes "您已经拥有太多物品，无法再租用新的装备。";
+		mes "请整理您的物品后再试。";
 		close;
 	}
 	mes "We have "+ getarg(0) +" ready for you.";
-	mes "[DRY-RUN] Select the desired item.";
+	mes "选择您想要的物品。";
 	next;
 	for ( .@i = 1; .@i < getargcount(); .@i += 2 ) {
 		if (rentalcountitem(getarg(.@i)) > isequippedcnt(getarg(.@i)))// don't count item equipped
@@ -129,15 +129,15 @@ S_Rent:
 	.@s = select( .@menu$ + ":View other items" ) -1;
 	if (.@s <= .@total_item) {
 		.@index = .@s *2 +1;
-		mes "[DRY-RUN] [Rental Items Manager]";
+		mes "[租赁物品管理员]";
 		if (rentalcountitem(getarg(.@index)) > isequippedcnt(getarg(.@index)))
 			mes "You already have "+ getarg(.@index+1) +".";
 		else {
 			mes "Here is "+ getarg(.@index+1) +".";
-			mes "[DRY-RUN] ^4d4dffThis item is effective for the next 24 hours^000000 and after that it expires.";
+			mes "^4d4dff此物品在接下来的24小时内有效^000000，之后将失效。";
 			rentitem getarg(.@index),86400;
 		}
-		mes "[DRY-RUN] Do you need anything else?";
+		mes "您还需要其他东西吗？";
 		next;
 	}
 	return;

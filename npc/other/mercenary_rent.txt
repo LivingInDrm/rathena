@@ -300,26 +300,26 @@ pay_arche,102,167,5	duplicate(MercMerchant)	Mercenary Merchant#Bow	4_F_CAPEGIRL
 	for (.@size = getarraysize(.@name$); .@type < .@size; .@type++)
 		if (.@npc$ == .@name$[.@type]) break;
 
-	mes "[DRY-RUN] [Checker]";
-	mes "[DRY-RUN] Please input a password.";
+	mes "[¼ì²éÔ±]";
+	mes "ÇëÊäÈëÃÜÂë¡£";
 	next;
 	.@i = callfunc("F_GM_NPC",1854,0,0,10000);
-	mes "[DRY-RUN] [Checker]";
+	mes "[¼ì²éÔ±]";
 	if (.@i == -2)
-		mes "[DRY-RUN] Error.";
+		mes "´íÎó¡£";
 	else if (.@i == 0)
-		mes "[DRY-RUN] Wrong number";
+		mes "´íÎóµÄºÅÂë";
 	else if (.@i == 1) {
-		mes "[DRY-RUN] Please select.";
+		mes "ÇëÑ¡Ôñ¡£";
 		next;
-		switch( select( "[DRY-RUN] Turn off Mercenary NPC","Turn on Mercenary NPC" ) ) {
+		switch( select( "¹Ø±Õ¹ÍÓ¶±øNPC","Turn on Mercenary NPC" ) ) {
 		case 1:
-			mes "[DRY-RUN] NPCs are turned off.";
+			mes "NPCÒÑ¹Ø±Õ¡£";
 			disablenpc "Mercenary Manager#" + .@name$[.@type];
 			disablenpc "Mercenary Merchant#" + .@name$[.@type];
 			break;
 		case 2:
-			mes "[DRY-RUN] NPCs are turned on.";
+			mes "NPCÒÑ¿ªÆô¡£";
 			enablenpc "Mercenary Manager#" + .@name$[.@type];
 			enablenpc "Mercenary Merchant#" + .@name$[.@type];
 			break;

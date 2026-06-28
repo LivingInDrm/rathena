@@ -706,28 +706,28 @@ OnDisable:
 		next;
 		mes "彩虹桥以外的世界看起来黑暗和令人窒息.";
 		mes "你的直觉告诉你这片森林是危险的.";
-		mes "whom I was looking for.";
-		mes "Now she won't wander around crazy any more.";
+		mes "我一直在找的人。";
+		mes "现在她不会再胡乱游荡了。";
 		next;
-		select("What are you going to do now?");
-		mes "[Loki]";
-		mes "I'll wait for her to wake up and get out of this forest.";
-		mes "I can manage it on my own.";
-		mes "I'll see you in Mora.";
+		select("你现在打算怎么做？");
+		mes "[洛基]";
+		mes "我会等她醒来，然后一起离开这个森林。";
+		mes "我可以自己处理。";
+		mes "我会在莫拉见到你。";
 		set ep14_1_mistwoods,3;
 		erasequest 7212;
 		setquest 7213;
 		close;
 	} else if (ep14_1_mistwoods == 3) {
-		mes "[Loki]";
-		mes "I don't want to go with you.";
-		mes "I can manage her on my own.";
-		mes "If you have something to say, say it after we get out of the forest.";
+		mes "[洛基]";
+		mes "我不想和你一起去。";
+		mes "我可以自己照顾她。";
+		mes "如果你有什么话要说，等我们离开森林再说。";
 		close;
 	} else {
-		mes "[Loki]";
-		mes "I don't want to go with you.";
-		mes "If you have something to say, say it after we get out of the forest.";
+		mes "[洛基]";
+		mes "我不想和你一起去。";
+		mes "如果你有什么话要说，等我们离开森林再说。";
 		close;
 	}
 	end;

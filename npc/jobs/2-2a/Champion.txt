@@ -19,69 +19,69 @@ valkyrie,53,42,3	script	Champion#Valkyrie	52,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Champion]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[拳圣]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Champion]";
-		mes "[DRY-RUN] Skill.";
-		mes "[DRY-RUN] Speed.";
-		mes "[DRY-RUN] Strength.";
-		mes "[DRY-RUN] Agility.";
+		mes "[拳圣]";
+		mes "技能。";
+		mes "速度。";
+		mes "力量。";
+		mes "敏捷。";
 		next;
-		mes "[DRY-RUN] [Champion]";
-		mes "[DRY-RUN] A Champion can";
-		mes "[DRY-RUN] benefit from all";
-		mes "[DRY-RUN] these things. But";
-		mes "[DRY-RUN] one can only master";
-		mes "[DRY-RUN] so much in life...";
+		mes "[拳圣]";
+		mes "拳圣可以";
+		mes "从所有这些中受益。";
+		mes "但是一个人只能掌握";
+		mes "生活中的如此多...";
+		mes "是时候了。";
 		close;
 	}
 	else if (ADVJOB == Job_Champion && Class == Job_Acolyte_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Champion]";
-		mes "[DRY-RUN] It's time.";
-		mes "[DRY-RUN] Time for great heroes";
-		mes "[DRY-RUN] to stand up against the";
-		mes "[DRY-RUN] forces of evil which plague";
-		mes "[DRY-RUN] the world of Rune-Midgard!";
+		mes "[拳圣]";
+		mes "伟大的英雄们是时候";
+		mes "站起来对抗";
+		mes "困扰着";
+		mes "这个世界的邪恶势力！";
+		mes "你想成为一名拳圣吗？";
 		next;
-		mes "[DRY-RUN] [Champion]";
-		mes "[DRY-RUN] Would you like";
-		mes "[DRY-RUN] to become a Champion?";
+		mes "[拳圣]";
+		mes "作为拳圣生活，";
+		mes "并通过你的拳头带来光明";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [Champion]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[拳圣]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Champion]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[拳圣]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Champion;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [Champion]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] Live as a Champion,";
-		mes "[DRY-RUN] and bring light into";
-		mes "[DRY-RUN] the world through the";
-		mes "[DRY-RUN] strength of your fists.";
+		mes "[拳圣]";
+		mes "恭喜！";
+		mes "进入这个世界。";
+		mes "通过你拳头的力量。";
+		mes "通过你的";
+		mes "拳头的力量。";
 		close;
 	}
-	mes "[DRY-RUN] [Champion]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[拳圣]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [Champion]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[拳圣]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

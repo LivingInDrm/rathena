@@ -1338,27 +1338,27 @@ que_house_s,24,46,3	script	Jonathan#homun_s	6002,{
 que_house_s,23,46,3	script	#05homun_s	111,{
 	emotion ET_STARE_ABOUT, getnpcid(0, "Jonathan#homun_s");
 	if (gethominfo(1) < 6048 || gethominfo(1) > 6052) { // Not mutated Homunculus-S
-		mes "[Jonathan]";
-		mes "Hwang~ Hwang!";
+		mes "[乔纳森]";
+		mes "黄~ 黄!";
 		next;
-		mes ":: It seems to be Viorel's";
-		mes ":: Homunculus.";
-		mes ":: It is wearing a small necklace";
-		mes ":: with the name Jonathan engraved";
-		mes ":: on it.";
+		mes ":: 这似乎是维奥雷尔的";
+		mes ":: 宠物.";
+		mes ":: 它戴着一条小项链";
+		mes ":: 上面刻着乔纳森的名字";
+		mes ":: .";
 		close;
 	} else {
-		mes "[Jonathan]";
-		mes "Hwang~?!";
+		mes "[乔纳森]";
+		mes "黄~?!";
 		next;
 		emotion ET_PROFUSELY_SWEAT, getnpcid(0, "Jonathan#homun_s");
-		mes "[Jonathan]";
-		mes "*Sniff* ...";
+		mes "[乔纳森]";
+		mes "*嗅嗅* ...";
 		next;
-		mes ":: This Amistr";
-		mes ":: called Jonathan";
-		mes ":: seems to be surprised by my";
-		mes ":: new Homunculus.";
+		mes ":: 这个阿米斯特";
+		mes ":: 叫乔纳森";
+		mes ":: 似乎对我的";
+		mes ":: 新宠物感到惊讶.";
 		close;
 	}
 }

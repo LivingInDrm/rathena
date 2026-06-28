@@ -391,22 +391,22 @@ OnReset:
 
 prt_gld,2,2,0	script	Investment_total#fund00	844,{
 	callfunc "F_GM_NPC";
-	mes "[DRY-RUN] Is this not working properly?";
+	mes "这不是正常工作吗？";
 	next;
 	if (callfunc("F_GM_NPC",1854,0) == 1) {
-		mes "[DRY-RUN] If you think the investment timer is dead, please adjust the timer.";
+		mes "如果你认为投资计时器坏了，请调整计时器。";
 		next;
-		switch(select("[DRY-RUN] Turn on the timer:Cancel")) {
+		switch(select("开启计时器:取消")) {
 		case 1:
 			donpcevent "Investment_total#fund00::OnTimerReset";
-			mes "[DRY-RUN] You've turned on the timer.";
+			mes "你已经开启了计时器。";
 			close;
 		case 2:
-			mes "[DRY-RUN] Canceled.";
+			mes "已取消。";
 			close;
 		}
 	} else {
-		mes "[DRY-RUN] I don't need to adjust anything now.";
+		mes "我现在不需要调整任何东西。";
 		close;
 	}
 
@@ -670,7 +670,7 @@ OnTimer20000:
 
 /*
 prtg_cas01,2,2,0	script	Abrai	55,{
-	mes "[DRY-RUN] I should quit my steward job.";
+	mes "我应该辞去我的管家工作。";
 	close;
 OnAgitInvest:
 	switch(callfunc("F_Invest_Status")) {
@@ -1323,61 +1323,61 @@ malangdo,218,126,4	script	Cat Paw Merchants Notice	857,{
 
 malangdo,218,123,1	script	Namis#invest	545,4,4,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after you -";
-		mes "[DRY-RUN] - lose some weight. -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请在你 -";
+		mes "- 减肥后再试。 -";
 		close;
 	}
 	emotion ET_HUK;
 	emotion ET_FRET;
 	emotion ET_ANGER;
-	mes "[DRY-RUN] [Namis]";
-	mes "[DRY-RUN] Purr-Purr-Purrr-Purrrr-Pur~ Meow!!";
-	mes "[DRY-RUN] Wh-- What? How rude. You scared me.";
+	mes "[纳米斯]";
+	mes "喵喵喵喵喵~ 喵！！";
+	mes "什、什么？太无礼了。你吓到我了。";
 	next;
-	switch(select("[DRY-RUN] What do you need? I'll invest!:What's the purpose of this event?:Were you asleep?")) {
+	switch(select("你需要什么？我会投资！:这个活动的目的是什么？:你在睡觉吗？")) {
 	case 1:
 		break;
 	case 2:
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] So, another pushover in contract with the Cat Paw Merchants?";
+		mes "[纳米斯]";
+		mes "所以，又一个在与猫爪商人签约的软弱者？";
 		next;
-		select("[DRY-RUN] Huh? What! You calling me a pushover?");
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] I'll say this just once, so you listen good!";
-		mes "[DRY-RUN] We, the Cat Paw Merchants have planned an event for loyal workers like yourself.";
+		select("哈？什么！你在叫我软弱吗？");
+		mes "[纳米斯]";
+		mes "我只说一次，你要好好听着！";
+		mes "我们，猫爪商人，为像你这样的忠诚工作者策划了一场活动。";
 		next;
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Run along to your storage and bring back rotting antiques to us and we'll exchange them for the oh-so valuable 'Cat Paw Merchants Investment Certificate'.";
+		mes "[纳米斯]";
+		mes "快去你的仓库，带回腐烂的古董给我们，我们会用极其珍贵的‘猫爪商人投资证书’来交换它们。";
 		next;
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] It will be wise for you to do so because the Cat Paw Merchants are doing this at a loss!";
+		mes "[纳米斯]";
+		mes "这样做对你来说是明智的，因为猫爪商人是以亏损的方式进行这项活动！";
 		next;
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Details are on the notice.";
+		mes "[纳米斯]";
+		mes "详情请查看公告。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Hick- Slurp-";
-		mes "[DRY-RUN] Remember, human! There's no other cat who works as hard as I do.";
+		mes "[纳米斯]";
+		mes "啧- 吸-";
+		mes "记住，人类！没有其他猫能像我一样努力工作。";
 		close;
 	}
-	mes "[DRY-RUN] [Namis]";
-	mes "[DRY-RUN] You must be here to participate in the '^C379CEInvest Unused Items for Prizes!^000000' event of the Cat Paw Merchants.";
+	mes "[纳米斯]";
+	mes "你一定是来参加猫爪商人的‘^C379CE投资未使用物品换奖品！^000000’活动的。";
 	next;
-	mes "[DRY-RUN] [Namis]";
-	mes "[DRY-RUN] So, which event do you wish to participate in?";
+	mes "[纳米斯]";
+	mes "那么，你想参加哪个活动？";
 	next;
-	switch(select("[DRY-RUN] Not interested:Event 1 Items:Event 2 Items")) {
+	switch(select("不感兴趣:活动 1 物品:活动 2 物品")) {
 	case 1:
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Don't you mess with a busy cat!";
+		mes "[纳米斯]";
+		mes "别惹忙碌的猫！";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] So you're in for Event 1.";
-		mes "[DRY-RUN] Choose from the shown list.";
+		mes "[纳米斯]";
+		mes "所以你选择了活动1。";
+		mes "从显示的列表中选择。";
 		next;
 		setarray .@event1$[0],
 			"Wings of the Insect Queen","Crown of the Fly King","I hear Dragon Scales are tough 01","The Meaning of the Mother's Nightmare",
@@ -1410,9 +1410,9 @@ malangdo,218,123,1	script	Namis#invest	545,4,4,{
 			case 21: callsub L_Check,"2 Foolishness of the Blind",7021,2,"This blind man is foolish in not knowing that gathering 300 cats cures blindness...",.@event1$[.@i];
 		}
 	case 3:
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Participate in Event 2?";
-		mes "[DRY-RUN] It is not yet in motion. Wait for it!";
+		mes "[纳米斯]";
+		mes "参加活动2吗？";
+		mes "还没有开始。等一下！";
 		close;
 	}
 	end;
@@ -1425,31 +1425,31 @@ L_Check:
 			set .@items,2; //complete
 	}
 	if (countitem(getarg(1)) < getarg(2) || .@items == 1) {
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] You don't have the items?";
+		mes "[纳米斯]";
+		mes "你没有道具吗？";
 		mes getarg(0)+" exchange for one Cat Paw Merchants Investment Certificate.";
 		next;
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Don't bother me and look up the details on the board over there!";
+		mes "[纳米斯]";
+		mes "别打扰我，去那边的公告板上查详情！";
 		close;
 	}
-	mes "[DRY-RUN] [Namis]";
+	mes "[纳米斯]";
 	mes "'^8E5601"+getarg(4)+" Event^000000'";
-	mes "[DRY-RUN] Seems to be the right items.";
+	mes "似乎是正确的道具。";
 	mes getarg(3);
-	mes "[DRY-RUN] Oh! Almost forgot. Will you invest?";
+	mes "哦！差点忘了。你会投资吗？";
 	next;
-	if(select("[DRY-RUN] Invest:Don't Invest") == 2) {
-		mes "[DRY-RUN] [Namis]";
-		mes "[DRY-RUN] Don't you mess with a busy cat!";
+	if(select("投资:不投资") == 2) {
+		mes "[纳米斯]";
+		mes "别惹忙碌的猫！";
 		close;
 	}
 	delitem getarg(1),getarg(2);
 	if (.@items == 2)
 		delitem getarg(5),getarg(6);
 	getitem 6489,1; //Cats_Invest_Certif
-	mes "[DRY-RUN] [Namis]";
-	mes "[DRY-RUN] Here's your Certificate. Always be grateful to the Merchants for these events!";
+	mes "[纳米斯]";
+	mes "这是你的证书。永远要感谢商人为这些活动所做的贡献！";
 	close;
 OnTouch:
 	if (rand(2))

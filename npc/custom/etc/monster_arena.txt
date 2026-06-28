@@ -104,8 +104,8 @@ function	script	monstersummon	{
 	end;
 
 L_Start:
-	mes "[Referee]";
-	mes "Your monster is:";
+	mes "[裁判]";
+	mes "你的怪物是：";
 
 	// 2. ---Change to Add Monsters--- //
 	if (#monster == 10) mes "Poring";
@@ -130,7 +130,7 @@ L_Start:
 	if (#monster == 102) mes "Antonio";
 	if (#monster == 103) mes "Thief Bug Female";
 
-	mes "Would you like to fight?";
+	mes "你想要战斗吗？";
 	next;
 	menu "Fight",-,"Cancel",L_Exit;
 
@@ -191,8 +191,8 @@ Special5:
 	close;
 
 L_Exit:
-	mes "[Referee]";
-	mes "Alright";
+	mes "[裁判]";
+	mes "好的";
 	close;
 }
 gon_test,56,91,6	duplicate(monsterreferee)	Referee#01	61
@@ -201,8 +201,8 @@ gon_test,56,91,6	duplicate(monsterreferee)	Referee#01	61
 // Usher //
 gon_test,58,94,6	script	Usher	86,{
 	set @marena,1;
-	mes "[Usher]";
-	mes "What would you like to do?";
+	mes "[引导者]";
+	mes "你想做什么？";
 	next;
 	menu "^0000FFSpectate",L_Spec,"^FF0000Compete^000000",-,"Return to Town",L_Exit,"Cancel",L_Cancel;
 
@@ -262,13 +262,13 @@ L_Spec:
 	end;
 
 L_NoMon:
-	mes "[Usher]";
-	mes "You haven't got a monster, you can only spectate.";
+	mes "[引导者]";
+	mes "你没有怪物，只能观战。";
 	close;
 
 L_Heal:
-	mes "[Usher]";
-	mes "You have to heal your monster before you can fight again.";
+	mes "[引导者]";
+	mes "你必须先治疗你的怪物才能再次战斗。";
 	close;
 
 L_Cancel:

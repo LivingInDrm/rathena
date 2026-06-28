@@ -26,68 +26,68 @@ function	script	F_Okolnir	{
 	set .@GID, GetCastleData(strnpcinfo(4),1);
 	if (getcharid(2) == .@GID) {
 		if (getd("$siz_"+.@sub$+"_on") == 0) {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] This castle has a hidden secret.";
-			mes "[DRY-RUN] That is the ^4d4dff'Okolnir'^000000.";
+			mes "[指南]";
+			mes "这座城堡有一个隐藏的秘密。";
+			mes "那就是^4d4dff'奥科尔尼'^000000。";
 			next;
-			switch(select("[DRY-RUN] About Okolnir.:Go to Okolnir.:Cancel.")) {
+			switch(select("关于奥科尔尼尔。:前往奥科尔尼尔。:取消。")) {
 			case 1:
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Okolnir is a kind of virtual realm...";
-				mes "[DRY-RUN] I don't know how Okolnir exists, but I guess only Valkyrie knows.";
+				mes "[指南]";
+				mes "奥科尔尼是一种虚拟领域...";
+				mes "我不知道奥科尔尼是如何存在的，但我想只有女武神知道。";
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] As you know this is a place to test the adventurers made by Valkyrie...";
-				mes "[DRY-RUN] ...you know the qualifications to enter Okolnir.";
+				mes "[指南]";
+				mes "正如你所知，这里是女武神为冒险者们准备的测试场所...";
+				mes "...你知道进入奥科尔尼的资格。";
 				next;
-				select("[DRY-RUN] Qualifications?");
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Yes, Valkyrie definitely prefers strong adventurers.";
-				mes "[DRY-RUN] Only the qualified can enter Okolnir and Valhalla.";
+				select("资格？");
+				mes "[指南]";
+				mes "是的，女武神绝对更喜欢强大的冒险者。";
+				mes "只有合格者才能进入奥科尔尼和瓦尔哈拉。";
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] It only opens when everyone comes together to work it out.";
-				mes "[DRY-RUN] The key is in the castle.";
+				mes "[指南]";
+				mes "只有当每个人齐心协力时，它才会开启。";
+				mes "钥匙就在城堡里。";
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] If a castle's ^4d4dffeconomy is over 65 and defense also over 30^000000, this will be acceptable to access Okolnir.";
+				mes "[指南]";
+				mes "如果一个城堡的 ^4d4dffe经济超过 65 且防御也超过 30^000000，这将被接受进入 Okolnir.";
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] And, if you pass all of the tests given by Valkyrie in Okolnir!";
-				mes "[DRY-RUN] You will also receive a mysterious gift.";
+				mes "[指南]";
+				mes "而且，如果你通过了女武神在 Okolnir 给出的所有测试!";
+				mes "你还将收到一个神秘的礼物.";
 				next;
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Would you like to try to enter here?";
+				mes "[指南]";
+				mes "你想尝试进入这里吗?";
 				close;
 			case 2:
 				set .@Defence,GetCastleData(strnpcinfo(4),3);
 				set .@Economy,GetCastleData(strnpcinfo(4),2);
 				if ((.@Economy > 64) && (.@Defence > 29)) {
-					mes "[DRY-RUN] [Guide]";
-					mes "[DRY-RUN] Great! Economy and Defense are OK.";
-					mes "[DRY-RUN] You can enter Okolnir now....";
-					mes "[DRY-RUN] Do you want to go there?";
+					mes "[指南]";
+					mes "太好了! 经济和防御都可以.";
+					mes "你现在可以进入 Okolnir....";
+					mes "你想去那里吗?";
 					next;
-					switch(select("[DRY-RUN] Sure let's go there.:No.")) {
+					switch(select("当然，我们去那里吧。:不。")) {
 					case 1:
 						if (countitem(7839)) delitem 7839,countitem(7839); //Crystal_Key
-						mes "[DRY-RUN] [Guide]";
-						mes "[DRY-RUN] Ok......";
-						mes "[DRY-RUN] Please follow me...";
+						mes "[指南]";
+						mes "好的......";
+						mes "请跟我来...";
 						close2;
 						warp "que_q"+.@sub$,346,32;
 						end;
 					case 2:
-						mes "[DRY-RUN] [Guide]";
-						mes "[DRY-RUN] You can try this anytime in the future...";
-						mes "[DRY-RUN] If you are ready to protect this castle.";
+						mes "[指南]";
+						mes "你可以在未来的任何时候尝试这个...";
+						mes "如果你准备好保护这个城堡.";
 						close;
 					}
 				}
 				else {
-					mes "[DRY-RUN] [Guide]";
-					mes "[DRY-RUN] You are not qualified yet.";
-					mes "[DRY-RUN] Please develop your castle more...";
+					mes "[指南]";
+					mes "你还不合格。";
+					mes "请多发展你的城堡...";
 					close;
 				}
 			case 3:
@@ -95,46 +95,46 @@ function	script	F_Okolnir	{
 			}
 		}
 		else if (getd("$siz_"+.@sub$+"_on") == 1) {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] ... OK...";
-			mes "[DRY-RUN] Good luck.";
+			mes "[指南]";
+			mes "...好的...";
+			mes "祝你好运。";
 			next;
-			switch(select("[DRY-RUN] Enter now.:No.")) {
+			switch(select("现在进入。:不。")) {
 			case 1:
 				if (countitem(7839) > 0) {
 					delitem 7839,countitem(7839); //Crystal_Key
 				}
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Hope you get everything you want...";
+				mes "[指南]";
+				mes "希望你能得到你想要的一切...";
 				close2;
 				warp "que_q"+.@sub$,346,32;
 				end;
 			case 2:
-				mes "[DRY-RUN] [Guide]";
-				mes "[DRY-RUN] Really?";
-				mes "[DRY-RUN] Sorry to hear that.";
+				mes "[指南]";
+				mes "真的吗？";
+				mes "很遗憾听到这个。";
 				close;
 			}
 		}
 		else if (getd("$siz_"+.@sub$+"_on") == 2) {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Building Okolnir needs quite a long time.";
-			mes "[DRY-RUN] ....even though it's only virtual...";
+			mes "[指南]";
+			mes "建设奥科尔尼尔需要相当长的时间。";
+			mes "...即使这只是虚拟的...";
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] It takes about 12 - 13 hours to create the virtual realm.";
+			mes "[指南]";
+			mes "创建虚拟领域大约需要12到13个小时。";
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] You'll have to wait.";
+			mes "[指南]";
+			mes "你得等一等。";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] ... I've never seen you before.";
-		mes "[DRY-RUN] You are strangers here. You'd better get out of here right now.";
+		mes "[指南]";
+		mes "...我从未见过你。";
+		mes "你们在这里是陌生人。你们最好现在就离开这里。";
 		close;
 	}
 	end;
@@ -414,7 +414,7 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[DRY-RUN] There are too many people, you can't enter.";
+		mes "人太多了，你无法进入。";
 		close;
 	}
 	
@@ -940,13 +940,13 @@ que_qsch05,2,3,0	duplicate(#miro_yf_main)	#miro_yf_sch05	844
 OnTouch_:
 	set .@sub$,callfunc("F_Okolnir");
 	if (countitem(7839)) {
-		mes "[DRY-RUN] The Warp Gate responds to the Crystal Key.";
+		mes "传送门响应水晶钥匙。";
 		delitem 7839,1; //Crystal_Key
 		close2;
 		warp "que_q"+.@sub$,114,158;
 		end;
 	}
-	mes "[DRY-RUN] You need the Crystal Key to activate the Warp Gate.";
+	mes "你需要水晶钥匙来激活传送门。";
 	close;
 }
 que_qaru01,132,172,0	duplicate(windpath01_main)	windpath01_aru01	45,1,1

@@ -11,23 +11,23 @@
 
 ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	if (checkweight(1201,3) == 0) {
-		mes "[DRY-RUN] ^ff0000It seems that the type or weight of the item you have is too much. Please organize your inventory.^000000";
+		mes "^ff0000您拥有的物品类型或重量似乎过多。请整理您的背包。^000000";
 		close;
 	}
 	disable_items;
-	mes "[DRY-RUN] [Lisa]";
-	mes "[DRY-RUN] Welcome welcome~";
+	mes "小镇上没有隐私。总有一天，";
+	mes "欢迎欢迎~";
 	next;
-	switch( select( "[DRY-RUN] Explore Devices", "Automatic Engine Wing Enhancement", "Automatic Armor Enhancement", "Automatic Leg Enhancement", "Automatic Accessories(R) Enhancement", "Automatic Accessories(L) Enhancement" ) ) {
+	switch( select( "探索设备", "Automatic Engine Wing Enhancement", "Automatic Armor Enhancement", "Automatic Leg Enhancement", "Automatic Accessories(R) Enhancement", "Automatic Accessories(L) Enhancement" ) ) {
 	case 1:
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] If you bring automatic equipment and reinforcement modules, we can enchant the appropriate module on the equipment.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "如果您带来自动装备和强化模块，我们可以在装备上附加适当的模块。";
 		next;
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] This is done according to the specification module, so the equipment will not be destroyed. However, the number of upgrades can vary depending on the module.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "这是根据规格模块进行的，因此装备不会被破坏。不过，升级的数量可能会根据模块而有所不同。";
 		next;
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Then please visit again when you need help~";
+		mes "小镇上没有隐私。总有一天，";
+		mes "那么请在需要帮助时再来拜访~";
 		close;
 	case 2:
 		.@part = EQI_GARMENT;
@@ -56,17 +56,17 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	for ( .@i = 0; .@i < 4; ++.@i )
 		.@card[.@i] = getequipcardid(.@part,.@i);
 
-	mes "[DRY-RUN] [Lisa]";
-	mes "[DRY-RUN] If you bring automatic equipment and reinforcement modules, we can enchant the appropriate module on the equipment.";
+	mes "小镇上没有隐私。总有一天，";
+	mes "如果您带来自动装备和强化模块，我们可以在装备上附加适当的模块。";
 	next;
-	mes "[DRY-RUN] [Lisa]";
+	mes "小镇上没有隐私。总有一天，";
 	mes strcharinfo(0) + ".";
-	mes "[DRY-RUN] Please select the grade of module that you want to use.";
+	mes "请选择您想使用的模块等级。";
 	next;
-	switch( select( "[DRY-RUN] Cancel", "Normal Grade", "Rare Grade", "Unique Grade", "Legendary Grade", "Epic Grade 1", "Epic Grade 2", "Epic Grade 3" ) ) {
+	switch( select( "取消", "Normal Grade", "Rare Grade", "Unique Grade", "Legendary Grade", "Epic Grade 1", "Epic Grade 2", "Epic Grade 3" ) ) {
 	case 1:
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Stopping conversation.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "停止对话。";
 		close;
 	case 2:
 		setarray .@module_etc[0],1000105,1000106,1000107,1000108,1000109,1000110,1000111,1000112;
@@ -106,31 +106,31 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	}
 	.@s = select(.@menu$) - 2;
 	if (.@s == -1) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Stopping conversation.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "停止对话。";
 		close;
 	}
 	.@module_id = .@module_etc[.@s];
 
 	if (countitem(.@module_id) < 1) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] You must possess a module in your inventory that matches the efficacy to proceed with the enhancement.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "您必须在您的背包中拥有一个与增强效果相匹配的模块才能继续增强。";
 		close;
 	}
 	if (.@equip_required[0] != .@equip_id && .@equip_required[1] != .@equip_id) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Please make sure you have equipped the proper automatic equipment that you want to enhance.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "请确保您已装备好想要增强的正确自动装备。";
 		close;
 	}
 	if (.@card[1] > 0) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] This automatic equipment is already at its maximum capacity.";
-		mes "[DRY-RUN] Please try another automatic equipment.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "该自动装备已经达到了最大容量。";
+		mes "请尝试其他自动装备。";
 		close;
 	}
 	if (.@module_id < 1000105 || .@module_id == 1000150 || .@module_id == 1000151 || (.@module_id >= 1000203 && .@module_id != 1000207 && .@module_id != 1000208)) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Unknown error has occurred.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "发生了未知错误。";
 		close;
 	}
 
@@ -163,8 +163,8 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	.@data_index = inarray(.@module_etc_data, .@module_id);
 
 	if (.@data_index == -1) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] You can not enchant this module to this automatic equipment.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "您无法将此模块附魔到此自动装备上。";
 		close;
 	}
 	// Max number of the selected module allowed
@@ -183,22 +183,22 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	// Check the count of the corresponding enchant in card slots
 	.@enchant_id = .@auto_module[.@module_id];
 	if (.@enchant_id == 0) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Unknown error has occurred.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "发生了未知错误。";
 		close;
 	}
 	if (countinarray(.@card[0], .@enchant_id) >= .@max_module) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] This automatic equipment has already maximized the enhancement from this module.";
-		mes "[DRY-RUN] Please try another module.";
+		mes "小镇上没有隐私。总有一天，";
+		mes "此自动装备已经最大化了此模块的增强。";
+		mes "请尝试另一个模块。";
 		close;
 	}
-	mes "[DRY-RUN] [Lisa]";
+	mes "小镇上没有隐私。总有一天，";
 	mes "Are you sure you want to enchance your ^FF0000" + .@equip_name$ + "^000000 with ^0000CD" + getitemname(.@module_id) + "^000000? This process cannot be reversed.";
 	next;
-	if (select( "[DRY-RUN] Wait... Don't", "I'm sure. Do it." ) == 1) {
-		mes "[DRY-RUN] [Lisa]";
-		mes "[DRY-RUN] Stopping conversation.";
+	if (select( "等一下... 不要", "I'm sure. Do it." ) == 1) {
+		mes "小镇上没有隐私。总有一天，";
+		mes "停止对话。";
 		close;
 	}
 	delitem .@module_id,1;
@@ -214,8 +214,8 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	}
 	delequip .@part;
 	getitem2 .@equip_id,1,1,.@refine,0,.@card[0],.@card[1],.@card[2],.@card[3];
-	mes "[DRY-RUN] [Lisa]";
-	mes "[DRY-RUN] Woaaaah~ I can feel the power of your automatic equipment already~!";
+	mes "小镇上没有隐私。总有一天，";
+	mes "哇哦~ 我已经能感受到你自动装备的力量了~！";
 	close;
 }
 

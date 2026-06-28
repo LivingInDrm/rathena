@@ -793,20 +793,20 @@ OnMyMobDead:
 }
 
 prt_are_in,129,135,3	script	Staff#60-1	67,{
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] You did a good job.";
-	mes "[DRY-RUN] Even if you have failed to clear a time attack battle, I will reward you with a small amount of arena points.";
+	mes "[法杖]";
+	mes "你做得很好。";
+	mes "即使你未能完成时间攻击战斗，我也会奖励你一些竞技场积分。";
 	next;
 	if (arena_point == 30000) {
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Uh huh!";
-		mes "[DRY-RUN] You already have enough arena points.";
-		mes "[DRY-RUN] Please spend some arena points later. When I see you next time, I will make sure to give you some reward.";
+		mes "[法杖]";
+		mes "嗯哼！";
+		mes "你已经拥有足够的竞技场积分。";
+		mes "请稍后花费一些竞技场积分。下次见到你时，我会确保给你一些奖励。";
 		next;
 	}
 	else set arena_point, arena_point + 1;
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] Let me guide you outside. I hope you had a good time.";
+	mes "[法杖]";
+	mes "让我带你出去。我希望你玩得愉快。";
 	close2;
 	specialeffect2 EF_EXIT;
 	warp "arena_room",100,75;
@@ -832,46 +832,46 @@ prt_are_in,25,135,3	script	Staff#60-2	67,{
 		}
 	}
 	set @gap60,(60 * $top_60min + $top_60sec) - (60 * @record_min60 + @record_sec60);
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] Wow, you did a good job~ ";
+	mes "[法杖]";
+	mes "哇，你做得很好~";
 	mes "Your name is...^3131FF" + strcharinfo(0) +"^000000, isn't it?";
 	mes "^3131FF"+ strcharinfo(0) +"^000000, total time you spent to pass the battle..";
 	next;
-	mes "[DRY-RUN] [Staff]";
+	mes "[法杖]";
 	mes "is "+@record_min60+"minutes "+@record_sec60+"seconds.";
-	mes "[DRY-RUN] Congratulations!";
+	mes "恭喜！";
 	next;
-	mes "[DRY-RUN] [Staff]";
+	mes "[法杖]";
 	mes "The fastest player among people who cleared Lv60 arena time force battle is ^3131FF"+$arena_60topn$+"^000000.";
 	next;
-	mes "[DRY-RUN] [Staff]";
+	mes "[法杖]";
 	mes "^3131FF"+$arena_60topn$+"^000000's running time was ^3131FF"+$top_60min+"^000000minutes ^3131FF"+$top_60sec+"^000000seconds.";
 	next;
 	if (@gap60 < 0) {
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Although you failed to make a new record, I hope you will succeed next time.";
+		mes "[法杖]";
+		mes "虽然你未能创造新纪录，但我希望你下次能成功。";
 		next;
 		if (arena_point > 29980) {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Then let me reward you with some arena points....eh?";
-			mes "[DRY-RUN] Your arena points have exceeded the maximum amount. I cannot give you more points until you spend some points.";
+			mes "[法杖]";
+			mes "那么让我奖励你一些竞技场积分……呃？";
+			mes "你的竞技场积分已超过最大值。在你花费一些积分之前，我无法再给你更多积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] You can check the amount of arena points you have in the arena waiting room.";
+			mes "[法杖]";
+			mes "你可以在竞技场候机室查看你的竞技场积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] I hope you had a good time and let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] Thank you.";
+			mes "[法杖]";
+			mes "我希望你玩得愉快，让我带你去竞技场的入口。";
+			mes "谢谢你。";
 			close2;
 		} else {
 			set arena_point, arena_point + 20;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me reward you some arena points.";
-			mes "[DRY-RUN] If you wish to check the amount of arena points you have, please go talk to ^3131FFVendigos^000000 at the arena entrance.";
+			mes "[法杖]";
+			mes "让我奖励你一些竞技场积分。";
+			mes "如果你想查看你的竞技场积分，请去竞技场入口找^3131FFVendigos^000000谈谈。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] See you later~";
+			mes "[法杖]";
+			mes "让我带你去竞技场的入口。";
+			mes "再见~";
 			close2;
 		}
 		specialeffect2 EF_EXIT;
@@ -883,11 +883,11 @@ prt_are_in,25,135,3	script	Staff#60-2	67,{
 		end;
 	} else {
 		emotion ET_HUK;
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Wow! You have renewed the record!";
-		mes "[DRY-RUN] What a great job!";
+		mes "[法杖]";
+		mes "哇！你刷新了纪录！";
+		mes "真是太棒了！";
 		next;
-		mes "[DRY-RUN] [Staff]";
+		mes "[法杖]";
 		mes "You have been recorded as the fastest player among people who cleared ^FF0000Arena Time Force Battle lvl 60s^000000, ^3131FF"+strcharinfo(0)+"^000000.";
 		set $top_60min, @record_min60;
 		set $top_60sec, @record_sec60;
@@ -895,30 +895,30 @@ prt_are_in,25,135,3	script	Staff#60-2	67,{
 		donpcevent "Vendigos::OnLineRec_60";
 		next;
 		if (arena_point > 29950) {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Then let me reward you with some arena points....eh?";
-			mes "[DRY-RUN] Your arena points have exceeded the maximum amount. I cannot give you more points until you spend some points.";
+			mes "[法杖]";
+			mes "那么让我奖励你一些竞技场积分……呃？";
+			mes "你的竞技场积分已超过最大值。在你花费一些积分之前，我无法再给你更多积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] You can check the amount of arena points you have in the arena waiting room.";
+			mes "[法杖]";
+			mes "你可以在竞技场候机室查看你的竞技场积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] I hope you had a good time and let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] Thank you.";
+			mes "[法杖]";
+			mes "我希望你玩得愉快，让我带你去竞技场的入口。";
+			mes "谢谢你。";
 			close2;
 		} else {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me reward you with some arena points.";
-			mes "[DRY-RUN] At the same time, since you have renewed the record you will receive an extra amount of the points this time.";
+			mes "[法杖]";
+			mes "让我奖励你一些竞技场积分。";
+			mes "同时，由于你刷新了纪录，这次你将额外获得一些积分。";
 			next;
 			set arena_point, arena_point + 50;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me reward you some arena points.";
-			mes "[DRY-RUN] If you wish to check the amount of arena points you have, please go talk to ^3131FFVendigos^000000 at the arena entrance.";
+			mes "[法杖]";
+			mes "让我奖励你一些竞技场积分。";
+			mes "如果你想查看你的竞技场积分，请去竞技场入口找^3131FFVendigos^000000谈谈。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] See you later~";
+			mes "[法杖]";
+			mes "让我带你去竞技场的入口。";
+			mes "再见~";
 			close2;
 		}
 		specialeffect2 EF_HIT5;

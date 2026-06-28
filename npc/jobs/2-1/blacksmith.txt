@@ -45,226 +45,226 @@
 
 ein_in01,18,28,4	script	Guildsman#BLS	731,{
 	if (Upper == 1) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Hey hey. I don't have time for chit-chat, I'm a pretty busy guy. There's all these Merchants working hard to become Blacksmiths.";
+		mes "[阿尔提雷根]";
+		mes "嘿嘿。我没时间闲聊，我很忙。这些商人都在努力成为铁匠。";
 		next;
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Wait a minute, I think I've met you before.";
-		mes "[DRY-RUN] Ummm.....";
+		mes "[阿尔提雷根]";
+		mes "等一下，我觉得我以前见过你。";
+		mes "嗯.....";
 		next;
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Are you the one who broke my weapon and ran away? Or are you the one who tortured me so that I'd forge a weapon for you? Why can't I remember?";
+		mes "[阿尔提雷根]";
+		mes "你是那个打坏我武器然后逃跑的人吗？还是你是那个折磨我让我为你锻造武器的人？我怎么记不起来了？";
 		next;
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] .......";
-		mes "[DRY-RUN] I can't remember who you are for the life of me. Is this deja vu?";
+		mes "[阿尔提雷根]";
+		mes ".......";
+		mes "我实在想不起来你是谁。这是既视感吗？";
 		next;
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Argh!! This is really bugging me! But still, I can sense that there's something special about you. Oh well, whatever. Have a good day~";
+		mes "[阿尔提雷根]";
+		mes "啊！！这真的让我很烦恼！不过，我能感觉到你身上有些特别的东西。哦，好吧，祝你有个愉快的一天~";
 		close;
 	}
-	mes "[DRY-RUN] [Altiregen]";
-	mes "[DRY-RUN] Welcome!";
-	mes "[DRY-RUN] We are Workers of Steel,";
-	mes "[DRY-RUN] the Blacksmith Guild.";
+	mes "[阿尔提雷根]";
+	mes "欢迎！";
+	mes "我们是钢铁工人，";
+	mes "铁匠公会。";
 	next;
-	mes "[DRY-RUN] [Altiregen]";
-	mes "[DRY-RUN] We pour the fervor";
-	mes "[DRY-RUN] and passion of our souls into";
-	mes "[DRY-RUN] our craft. Our skills of melting metal into new weapons";
-	mes "[DRY-RUN] and tools is truly a form of art!";
+	mes "[阿尔提雷根]";
+	mes "我们将热情";
+	mes "和灵魂的激情倾注于";
+	mes "我们的工艺中。我们将金属熔化成新武器的技能，";
+	mes "和工具确实是一种艺术！";
 	if (BaseClass >= Job_Thief) close;	// Custom expanded class check.
 	next;
 
 	// Third class check - precedes other BaseClass dialogue.
 	if (Class >= Job_Rune_Knight && Class <= Job_Baby_Mechanic2) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] You... look like a stranger. But somehow it seems that you're related to our guild. Haha~";
-		mes "[DRY-RUN] Am I right?";
+		mes "[阿尔提雷根]";
+		mes "你...看起来像个陌生人。但不知为何似乎你和我们的公会有关系。哈哈~";
+		mes "我说得对吗？";
 		close;
 	}
 
 	if (BaseClass == Job_Novice) {
-		mes "[DRY-RUN] [Altiregen]";
+		mes "[阿尔提雷根]";
 		if (Sex == SEX_FEMALE) {
-			mes "[DRY-RUN] Oh~";
-			mes "[DRY-RUN] what a very";
-			mes "[DRY-RUN] pretty lady!";
+			mes "哦~";
+			mes "真是个";
+			mes "漂亮的女士！";
 		}
-		mes "[DRY-RUN] Are you interested in";
-		mes "[DRY-RUN] becoming a Blacksmith?";
+		mes "你有兴趣";
+		mes "成为铁匠吗？";
 		next;
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] First, you must become a Merchant before you can become a Blacksmith. Go to the city of Alberta to learn the Merchant trade.";
+		mes "[阿尔提雷根]";
+		mes "首先，你必须先成为商人，然后才能成为铁匠。去艾尔贝塔学习商人技能。";
 		close;
 	}
 	else if (BaseClass == Job_Swordman) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Oh, are you interested in having a weapon forged? I'm sorry to disappoint you, but I actually have a lot of business to attend to.";
+		mes "[阿尔提雷根]";
+		mes "哦，你有兴趣锻造武器吗？很抱歉让你失望，但我实际上有很多事情要处理。";
 		close;
 	}
 	else if (BaseClass == Job_Archer) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Oh...";
-		mes "[DRY-RUN] There's not much we can offer you here. And you can't really help out around here unless you know how to make stuff...";
+		mes "[阿尔提雷根]";
+		mes "哦...";
+		mes "我们这里能提供的东西不多。而且，除非你知道怎么制作东西，否则你真的帮不了这里的忙...";
 		close;
 	}
 	else if (BaseClass == Job_Mage) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Oh? What's a magic user doing here? I'm surprised. Usually this kind of rough work is beneath you intellectual types.";
+		mes "[阿尔提雷根]";
+		mes "哦？一个魔法师在这里做什么？我很惊讶。通常这种粗活是你们这些知识分子所不屑的。";
 		close;
 	}
 	else if (BaseClass == Job_Acolyte) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Oh! Am I correct in assuming you're a member of the Clergy? Would you please bless me before you leave!";
+		mes "[阿尔提雷根]";
+		mes "哦！我可以假设你是教会的成员吗？在你离开之前请祝福我！";
 		close;
 	}
 	else if (BaseClass == Job_Thief) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] I'm sorry...";
-		mes "[DRY-RUN] But there really isn't anything for you to steal here. Well, there are the Daggers we keep in the back, but...";
+		mes "[阿尔提雷根]";
+		mes "对不起...";
+		mes "但这里真的没有什么可以让你偷的。好吧，我们在后面放着的匕首是有，但...";
 		close;
 	}
 	else if (BaseJob == Job_Alchemist) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] So how's the pharmacy business going on recently?";
-		mes "[DRY-RUN] Well, my forging business does not seem to grow any longer.";
+		mes "[阿尔提雷根]";
+		mes "那么最近药剂商的生意怎么样？";
+		mes "嗯，我的锻造生意似乎不再增长了。";
 		close;
 	}
 	else if (BaseJob == Job_Blacksmith) {
-		mes "[DRY-RUN] [Altiregen]";
-		mes "[DRY-RUN] Oh! Long time no see.";
-		mes "[DRY-RUN] Have you come to purchase supplies from Christopher? These days I'm stuck behind this desk. My body's itching to strike the ol' anvil.";
+		mes "[阿尔提雷根]";
+		mes "哦！好久不见。";
+		mes "你是来向克里斯托弗购买材料的吗？这些天我被困在这张桌子后面。我的身体渴望敲打老铁砧。";
 		close;
 	}
 	else if (BaseJob == Job_Merchant) {
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] You can't change to the Blacksmith Job Class without first using all your skill points. Please come back after wisely using your skill points.";
+			mes "[阿尔提雷根]";
+			mes "你必须先使用完所有的技能点才能转职为铁匠。请在明智地使用技能点后再回来。";
 			close;
 		}
 		if (BSMITH_Q == 0) {
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Why don't you stop struggling";
-			mes "[DRY-RUN] to make zeny as a Merchant and";
-			mes "[DRY-RUN] join the elite Blacksmith class?";
-			mes "[DRY-RUN] If you're interested, fill out this application with your name";
-			mes "[DRY-RUN] and Job Level.";
+			mes "[阿尔提雷根]";
+			mes "你为什么不停止挣扎";
+			mes "作为商人赚取金币，";
+			mes "加入精英铁匠职业呢？";
+			mes "如果你感兴趣，请填写这份申请表，写上你的名字";
+			mes "和职业等级。";
 			next;
-			switch(select("[DRY-RUN] Fill out Application.:What are the requirements?:Um, I need to think about it.")) {
+			switch(select("填写申请表。:要求是什么？:嗯，我需要考虑一下。")) {
 			case 1:
 				if (SkillPoint) {
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] You can't change to the Blacksmith Job Class without first using all your skill points. Please come back after wisely using your skill points.";
+					mes "[阿尔提雷根]";
+					mes "你必须先使用完所有的技能点才能转职为铁匠。请在明智地使用技能点后再回来。";
 					close;
 				}
 				else if (JobLevel > 39 && BSMITH_Q == 0) {
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] Hmmm...";
-					mes "[DRY-RUN] Looks like you";
-					mes "[DRY-RUN] meet the Job Level";
-					mes "[DRY-RUN] Requirement.";
+					mes "[阿尔提雷根]";
+					mes "嗯……";
+					mes "看起来你";
+					mes "符合职业等级";
+					mes "要求。";
 					next;
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] You see, we don't accept just anybody into our guild. First, we only accept experienced Merchants with a true desire to become great Blacksmiths. Let's see...";
+					mes "[阿尔提雷根]";
+					mes "你看，我们不接受任何人加入我们的公会。首先，我们只接受有经验的商人，他们真正渴望成为伟大的铁匠。让我们看看...";
 					next;
-					mes "[DRY-RUN] ^3355FF*Shuffling of papers*^000000";
+					mes "^3355FF*翻阅文件*^000000";
 					next;
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] Hmmm...";
-					mes "[DRY-RUN] One of our Blacksmiths in Einbech, ^8E6B23Geschupenschte^000000 has sent us word that he's short on help. Your first test of character will be to help him out.";
+					mes "[阿尔提雷根]";
+					mes "嗯……";
+					mes "我们在艾因贝赫的一个铁匠，^8E6B23格舒本施特^000000给我们发来消息，说他缺少帮助。你的人格第一测试就是去帮助他。";
 					next;
 					set BSMITH_Q,1;
 					setquest 2000;
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] Be careful";
-					mes "[DRY-RUN] and good luck!";
+					mes "[阿尔提雷根]";
+					mes "小心";
+					mes "祝你好运！";
 					close;
 				}
 				else if (JobLevel < 40) {
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] Hmmm, it seems that you lack experience as a Merchant. We require that you are at least Job Level 40, you see.";
+					mes "[阿尔提雷根]";
+					mes "嗯，看来你缺乏作为商人的经验。我们要求你至少达到职业等级40，你明白吗。";
 					next;
-					mes "[DRY-RUN] [Altiregen]";
-					mes "[DRY-RUN] I feel bad turning you away after you've come so far, but rules are rules. Sorry to disappoint you, but we'll welcome you back once you're ready.";
+					mes "[阿尔提雷根]";
+					mes "我很抱歉在你走了这么远之后把你拒之门外，但规则就是规则。很抱歉让你失望，但一旦你准备好了，我们会欢迎你回来。";
 					close;
 				}
 			case 2:
-				mes "[DRY-RUN] [Altiregen]";
-				mes "[DRY-RUN] You want to know our requirements? First, you need to have Job Level 40 or higher as a Merchant. Second, you need to pass a test that will be given by the Blacksmith Guild.";
+				mes "[阿尔提雷根]";
+				mes "你想知道我们的要求吗？首先，你需要作为商人达到职业等级40或更高。其次，你需要通过铁匠公会将要进行的测试。";
 				next;
-				mes "[DRY-RUN] [Altiregen]";
-				mes "[DRY-RUN] The test may consist of difficult tasks, but it's definitely not impossible. You will need to deliver certain items to different areas around the world";
-				mes "[DRY-RUN] to complete the test.";
+				mes "[阿尔提雷根]";
+				mes "测试可能包括困难的任务，但绝对不是不可能。你需要将某些物品送到世界各地";
+				mes "以完成测试。";
 				close;
 			case 3:
-				mes "[DRY-RUN] [Altiregen]";
-				mes "[DRY-RUN] Hmmm...";
-				mes "[DRY-RUN] Well, I hope";
-				mes "[DRY-RUN] to see you again.";
+				mes "[阿尔提雷根]";
+				mes "嗯……";
+				mes "好吧，我希望";
+				mes "再次见到你。";
 				close;
 			}
 		}
 		else if (BSMITH_Q > 0  && BSMITH_Q < 8) {
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] You haven't left yet?";
-			mes "[DRY-RUN] Go to Einbech and find ^8E6B23Geschupenschte^000000. Finish helping him out, and when you're done, come back to me.";
+			mes "[阿尔提雷根]";
+			mes "你还没走吗？";
+			mes "去艾因贝赫找^8E6B23格舒本施特^000000。完成帮助他，当你完成后，回来找我。";
 			close;
 		}
 		else if (BSMITH_Q > 8 && BSMITH_Q < 15) {
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Was the work you did for ^8E6B23Geschupenschte^000000 to your liking? He's known for being pretty exacting...";
+			mes "[阿尔提雷根]";
+			mes "你为^8E6B23格舒本施特^000000所做的工作还满意吗？他以严格著称...";
 			close;
 		}
 		else if (BSMITH_Q == 15) {
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Great job!!";
-			mes "[DRY-RUN] You have passed";
-			mes "[DRY-RUN] the first test...";
+			mes "[阿尔提雷根]";
+			mes "做得好！！";
+			mes "你通过了";
+			mes "第一个测试...";
 			next;
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Hm? You look surprised.";
-			mes "[DRY-RUN] I guess you didn't know that there's more than one test. ";
-			mes "[DRY-RUN] Haha, but don't worry, you are not going to travel that far.";
-			mes "[DRY-RUN] Please go talk to the guildsman inside the building for more details about your next test.";
+			mes "[阿尔提雷根]";
+			mes "嗯？你看起来很惊讶。";
+			mes "我想你不知道还有不止一个测试。";
+			mes "哈哈，但别担心，你不会走得太远。";
+			mes "请去和建筑内的公会成员谈谈，了解你下一个测试的更多细节。";
 			next;
-			if (select("[DRY-RUN] I want to change my job quickly! But...oh well.:Grrr! Enough is enough!") == 1) {
+			if (select("我想快速换工作！但是……好吧。:咕噜！够了！") == 1) {
 				set BSMITH_Q,16;
 				changequest 2013,2014;
-				mes "[DRY-RUN] [Altiregen]";
-				mes "[DRY-RUN] I'm sorry, but I'm sure you understand, right? We can't just casually accept anybody into";
-				mes "[DRY-RUN] our guild!";
+				mes "[阿尔提雷根]";
+				mes "对不起，但我相信你能理解，对吧？我们不能随便接受任何人加入";
+				mes "我们的公会！";
 				next;
-				mes "[DRY-RUN] [Altiregen]";
-				mes "[DRY-RUN] If we don't keep our standards,";
-				mes "[DRY-RUN] we won't be able to maintain the respectability of the Blacksmith Guild!";
-				mes "[DRY-RUN] We can't embarass our guild in this manner! *Ahem* Anyway, you talk to the guildsman inside the building now.";
+				mes "[阿尔提雷根]";
+				mes "如果我们不保持我们的标准，";
+				mes "我们将无法维护铁匠公会的声望！";
+				mes "我们不能以这种方式让我们的公会丢脸！*咳嗽* 不管怎样，你现在去和建筑内的公会成员谈谈。";
 				close;
 			}
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Are you saying you're going";
-			mes "[DRY-RUN] to quit the application process? That's an insult to our guild!";
-			mes "[DRY-RUN] Get out of here! With that kind of attitude, you can forget becoming a member of the Blacksmith Guild!";
+			mes "[阿尔提雷根]";
+			mes "你是说你要";
+			mes "放弃申请过程吗？这对我们的公会是种侮辱！";
+			mes "滚出去！有这种态度，你可以忘记成为铁匠公会的成员！";
 			next;
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] You have no spirit!";
-			mes "[DRY-RUN] If you can't endure this, you'll never be a Blacksmith!";
+			mes "[阿尔提雷根]";
+			mes "你没有精神！";
+			mes "如果你不能忍受这一点，你永远不会成为铁匠！";
 			close;
 		}
 		else if (BSMITH_Q == 16) {
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Um? Haven't you talk to the guildsman yet?";
-			mes "[DRY-RUN] If you haven't, I suggest you to do so as soon as possible.";
+			mes "[阿尔提雷根]";
+			mes "嗯？你还没有和公会成员谈过吗？";
+			mes "如果没有，我建议你尽快去做。";
 			close;
 		}
 		else if (BSMITH_Q == 17 && countitem(1005) > 0 && JobLevel > 39) {
-			mes "[DRY-RUN] [Altiregen]";
+			mes "[阿尔提雷根]";
 			if (ismounting()) {
-				mes "[DRY-RUN] You are on a riding pet, so you cannot change your job.";
-				mes "[DRY-RUN] Please unequip your riding pet and try again!";
+				mes "您正在骑乘宠物，因此无法更改职业。";
+				mes "请卸下您的骑乘宠物，然后再试一次！";
 				close;
 			}
-			mes "[DRY-RUN] Excellent, I can tell by the twinkle in your eye that you were successful. I can now bestow upon you the gift of the smithing, the art of the Blacksmith.";
+			mes "太好了，我可以从您眼中的光芒看出您成功了。我现在可以将锻造的礼物，黑smith的艺术赐予您。";
 			if (checkquest(2015) != -1) {
 				changequest 2015,2016;
 			}
@@ -272,18 +272,18 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 			set .@joblvl,JobLevel;
 			callfunc "Job_Change",Job_Blacksmith;
 			callfunc "F_ClearJobVar";		// clears all job variables for the current player
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Always remember that we are creators, and artists over metals. Be wary that you do not fall into the pitfalls of selfishness";
-			mes "[DRY-RUN] and greed.";
+			mes "[阿尔提雷根]";
+			mes "请始终记住，我们是创造者，是金属的艺术家。要小心不要陷入自私的陷阱中。";
+			mes "和贪婪。";
 			next;
 			delitem 1005,1; //Hammer_Of_Blacksmith
 			completequest 2016;
-			mes "[DRY-RUN] [Altiregen]";
-			mes "[DRY-RUN] Here is a little";
-			mes "[DRY-RUN] gift to mark the";
-			mes "[DRY-RUN] beginning of your";
-			mes "[DRY-RUN] life as a Blacksmith.";
-			mes "[DRY-RUN] Congratulations!!!";
+			mes "[阿尔提雷根]";
+			mes "这是一个小小的";
+			mes "礼物，以标志着";
+			mes "您作为黑smith的";
+			mes "生活的开始。";
+			mes "恭喜！！！";
 			if (.@joblvl > 48)
 				getitem 999,30; //Steel
 			else 
@@ -294,209 +294,209 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 }
 
 ein_in01,201,27,3	script	Guildsman#alberta	63,{
-	mes "[DRY-RUN] [Geschupenschte]";
-	mes "[DRY-RUN] Hello there!";
-	mes "[DRY-RUN] I'm ^8E6B23Geschupenschte^000000,";
-	mes "[DRY-RUN] a Blacksmith by trade.";
-	mes "[DRY-RUN] Nice to meet you!";
+	mes "[格什普恩施特]";
+	mes "你好！";
+	mes "我是^8E6B23格什普恩施特^000000，";
+	mes "一名铁匠。";
+	mes "很高兴见到你！";
 	next;
 	if (BaseJob == Job_Merchant) {
-		mes "[DRY-RUN] [Geschupenschte]";
-		mes "[DRY-RUN] Oh ho ho!";
-		mes "[DRY-RUN] You're a Merchant!";
-		mes "[DRY-RUN] Excellent! I was";
-		mes "[DRY-RUN] in need of some help!";
+		mes "[格什普恩施特]";
+		mes "哦呵呵！";
+		mes "你是商人！";
+		mes "太好了！我正";
+		mes "需要一些帮助！";
 		next;
 		if (BSMITH_Q == 0) {
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] But, of course,";
-			mes "[DRY-RUN] I wouldn't bother you";
-			mes "[DRY-RUN] if you're busy. Go along";
-			mes "[DRY-RUN] your way if you must~";
+			mes "[格什普恩施特]";
+			mes "但是，当然，";
+			mes "我不会打扰你";
+			mes "如果你忙的话，就请继续吧";
+			mes "如果你必须的话~";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] After all...";
-			mes "[DRY-RUN] I should know";
-			mes "[DRY-RUN] how it's like";
-			mes "[DRY-RUN] to be busy~";
+			mes "[格什普恩施特]";
+			mes "毕竟...";
+			mes "我应该知道";
+			mes "是什么感觉";
+			mes "忙碌的感觉~";
 			close;
 		}
 		else if ((BSMITH_Q == 1) || (BSMITH_Q == 2)) {
 			if (BSMITH_Q == 1) {
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Am I correct in assuming you are the help sent by the Blacksmith Guild? There aren't many trustyworthy people I can hire to help me, so I'm always";
-				mes "[DRY-RUN] short on help.";
+				mes "[格什普恩施特]";
+				mes "我可以假设你是黑smith公会派来的帮手吗？我能雇到的可靠帮手不多，所以我总是";
+				mes "缺少帮手。";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Hmm, in any case,";
-				mes "[DRY-RUN] you are the help that was sent, right? Okay, I have some work for you that must be handled";
-				mes "[DRY-RUN] right away!";
+				mes "[格什普恩施特]";
+				mes "嗯，无论如何，";
+				mes "你就是被派来的帮手，对吧？好吧，我有一些工作需要你立刻处理";
+				mes "！";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Some time ago, I had a boy working for me who had no experience and bought the wrong supplies! It was terrible...";
+				mes "[格什普恩施特]";
+				mes "不久前，我有一个没有经验的男孩为我工作，他买错了材料！真是糟糕……";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Anyone would hate to lose money through a foolish mistake like that. However, I have a slightly more difficult job for you.";
+				mes "[格什普恩施特]";
+				mes "任何人都不想因为这样的愚蠢错误而损失金钱。不过，我有一个稍微困难一点的工作要交给你。";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] However, I want to make sure that you have some basic knowledge as a Merchant. I'd like to ask you some questions, if that's okay.";
+				mes "[格什普恩施特]";
+				mes "不过，我想确保你作为商人有一些基本知识。我想问你一些问题，可以吗？";
 				next;
-				set .@selection,select("[DRY-RUN] Yes.:Um, can I have some time to prepare?");
+				set .@selection,select("是的。:嗯，我可以花点时间准备吗？");
 			}
 			else if (BSMITH_Q == 2) {
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] So, have you";
-				mes "[DRY-RUN] studied a little";
-				mes "[DRY-RUN] more this time?";
+				mes "[格什普恩施特]";
+				mes "那么，你";
+				mes "这次学习得稍微多一点";
+				mes "吗？";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] I admit that it's pretty unreasonable to expect anyone to get a perfect score the first time around, so I'll give you";
-				mes "[DRY-RUN] a little break...";
+				mes "[格什普恩施特]";
+				mes "我承认，第一次就期待任何人能得满分是相当不合理的，所以我会给你";
+				mes "一点小休息……";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] You can miss";
-				mes "[DRY-RUN] one problem!";
-				mes "[DRY-RUN] Alright, let's start";
-				mes "[DRY-RUN] with the questions~";
+				mes "[格什普恩施特]";
+				mes "你可以错过";
+				mes "一个问题！";
+				mes "好的，我们开始吧";
+				mes "问问题~";
 				next;
 			}
 			if (.@selection != 2) {
 				if (rand(2)) {
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 1. Which one of the following regions is matched incorrectly";
-					mes "[DRY-RUN] with its specialty item?";
+					mes "[格什普恩施特]";
+					mes "1. 以下哪个地区与其特产不匹配？";
+					mes "与其特产物品？";
 					next;
-					if (select("[DRY-RUN] Morroc - Thief Clothes:Alberta - Two Hand Axe:Comodo - Berserk Potion:Alberta - Swordmace") == 4)
+					if (select("梦罗克 - 盗贼服:艾尔贝塔 - 双手斧:科莫多 - 狂暴药水:艾尔贝塔 - 剑锤") == 4)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 2. What status can";
-					mes "[DRY-RUN] be inflicted with the";
-					mes "[DRY-RUN] ^8E6B23Hammer Fall^000000 skill?";
+					mes "[格什普恩施特]";
+					mes "2. 什么状态可以";
+					mes "被施加在";
+					mes "^8E6B23锤击^000000技能上？";
 					next;
-					if (select("[DRY-RUN] Stun:Blind:Silence:Sleep") == 1)
+					if (select("眩晕:失明:沉默:睡眠") == 1)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 3. Which one of the following skills cannot be performed";
-					mes "[DRY-RUN] by a Merchant?";
+					mes "[格什普恩施特]";
+					mes "3. 以下哪个技能不能由";
+					mes "商人？";
 					next;
-					if (select("[DRY-RUN] Vending:Discount:Overcharge:Increase AGI") == 4)
+					if (select("出售:折扣:超额收费:增加敏捷") == 4)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 4. Where can you find a store";
-					mes "[DRY-RUN] that sells Blue Gemstones?";
+					mes "[格什普恩施特]";
+					mes "4. 哪里可以找到一个出售";
+					mes "蓝色魔力矿石的商店？";
 					next;
-					if (select("[DRY-RUN] Alberta:Morroc:Geffen:Prontera") == 3)
+					if (select("艾尔贝塔:梦罗克:吉芬:普隆德拉") == 3)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 5. Where is the";
-					mes "[DRY-RUN] Tool Dealer";
-					mes "[DRY-RUN] located in Geffen?";
+					mes "[格什普恩施特]";
+					mes "5. 哪里是";
+					mes "道具商人";
+					mes "位于吉芬吗？";
 					next;
-					if (select("[DRY-RUN] 8 o'clock direction from the town square:11 o'clock direction from the town square:6 o'clock direction from the town square:5 o'clock direction from the town square") == 1)
+					if (select("从市中心8点方向:从市中心11点方向:从市中心6点方向:从市中心5点方向") == 1)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 6. Which weapon";
-					mes "[DRY-RUN] cannot be used";
-					mes "[DRY-RUN] by a Merchant?";
+					mes "[格什普恩施特]";
+					mes "6. 哪种武器";
+					mes "无法使用";
+					mes "商人？";
 					next;
-					if (select("[DRY-RUN] Stiletto:Ring Pommel Saber:Chain:Bible") == 4)
+					if (select("匕首:环柄剑:链子:圣经") == 4)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 7. Which one of the following";
-					mes "[DRY-RUN] has the highest defense rate?";
+					mes "[格什普恩施特]";
+					mes "7. 以下哪一个";
+					mes "防御率最高？";
 					next;
-					if (select("[DRY-RUN] Panties:Mink Coat:Wooden Mail:Silk Robe") == 2)
+					if (select("内裤:貂皮大衣:木制护甲:丝绸长袍") == 2)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 8. For Level 3 weapons,";
-					mes "[DRY-RUN] what is the ^8E6B23Safe^000000 limit";
-					mes "[DRY-RUN] for upgrading?";
+					mes "[格什普恩施特]";
+					mes "8. 对于三级武器，";
+					mes "安全^8E6B23限制^000000是多少";
+					mes "用于升级？";
 					next;
-					if (select("[DRY-RUN] up to + 3:up to + 4:up to + 5:up to + 6") == 3)
+					if (select("最高+3:最高+4:最高+5:最高+6") == 3)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] 9. What item";
-					mes "[DRY-RUN] can be made using";
-					mes "[DRY-RUN] the ^8E6B23Trunks^000000 item?";
+					mes "9. 什么物品";
+					mes "可以使用";
+					mes "^8E6B23树干^000000制作？";
 					next;
-					if (select("[DRY-RUN] Sakkat:Ghost Bandana:Majestic Goat:Antler") == 1)
+					if (select("萨卡特:幽灵头巾:威严山羊:鹿角") == 1)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 10. The most important";
-					mes "[DRY-RUN] part of being a Merchant is...?";
+					mes "[格什普恩施特]";
+					mes "10. 成为商人最重要的";
+					mes "部分是...?";
 					next;
-					select("[DRY-RUN] Credit:Integrity:Money:Rhetoric");
+					select("信用:诚信:金币:修辞");
 					set .@black_q,.@black_q+10;
 				}
 				else {
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 1. Among the following cities, which one is not correctly matched with its specialty?";
+					mes "[格什普恩施特]";
+					mes "1. 在以下城市中，哪个与其特长不正确匹配？";
 					next;
-					if (select("[DRY-RUN] Al De Baran - Yggdrasil Leaf:Alberta - Hammer:Comodo - Berserk Potion:Al De Baran - Hammer") == 4)
+					if (select("艾尔帕兰 - 生命树叶:艾尔贝塔 - 锤子:科莫多 - 狂暴药水:艾尔帕兰 - 锤子") == 4)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 2. How much Zeny";
-					mes "[DRY-RUN] is one Jellopy worth?";
+					mes "[格什普恩施特]";
+					mes "2. 多少金币";
+					mes "一个果冻果值多少？";
 					next;
-					if (select("[DRY-RUN] 1 Zeny:2 Zeny:3 Zeny:4 Zeny") == 3)
+					if (select("1 金币:2 金币:3 金币:4 金币") == 3)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 3. What is required";
-					mes "[DRY-RUN] for a Merchant to use";
-					mes "[DRY-RUN] the ^8E6B23Vending^000000 Skill?";
+					mes "[格什普恩施特]";
+					mes "3. 需要什么";
+					mes "让商人使用";
+					mes "^8E6B23自动贩卖^000000 技能？";
 					next;
-					if (select("[DRY-RUN] Must have a Cart.:Must have items to sell.:Must be wielding a weapon.:Must be wearing armor.") == 1)
+					if (select("必须拥有手推车.:必须有可出售的物品.:必须装备武器.:必须穿戴盔甲.") == 1)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 4. Where can you";
-					mes "[DRY-RUN] change your Job to";
-					mes "[DRY-RUN] become a Merchant?";
+					mes "[格什普恩施特]";
+					mes "4. 你可以在哪里";
+					mes "将你的职业改为";
+					mes "成为商人吗？";
 					next;
-					if (select("[DRY-RUN] Alberta:Morroc:Geffen:Prontera") == 1)
+					if (select("艾尔贝塔:梦罗克:吉芬:普隆德拉") == 1)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 5. Where is the";
-					mes "[DRY-RUN] Weapons Dealer";
-					mes "[DRY-RUN] located in Morroc?";
+					mes "[格什普恩施特]";
+					mes "5. 哪里是";
+					mes "武器商人";
+					mes "位于梦罗克？";
 					next;
-					if (select("[DRY-RUN] 7 o'clock from the town's center:11 o'clock from the town's center:6 o'clock from the town's center:5 o'clock from the town's center") == 4)
+					if (select("从城镇中心7点钟方向:从城镇中心11点钟方向:从城镇中心6点钟方向:从城镇中心5点钟方向") == 4)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 6. What weapon";
-					mes "[DRY-RUN] can a Merchant";
-					mes "[DRY-RUN] not use?";
+					mes "[格什普恩施特]";
+					mes "6. 商人";
+					mes "不能使用什么武器？";
+					mes "不使用？";
 					next;
-					if (select("[DRY-RUN] Main Gauche:Claymore:Chain:Two handed Axe") == 2)
+					if (select("主手刀:大剑:链子:双手斧") == 2)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 7. Which one of the following";
-					mes "[DRY-RUN] has the highest defense rate?";
+					mes "[格什普恩施特]";
+					mes "7. 以下哪一个";
+					mes "防御率最高？";
 					next;
-					if (select("[DRY-RUN] Panties:Mink Coat:Wooden Mail:Silk Robe") == 2)
+					if (select("内裤:貂皮大衣:木制护甲:丝绸长袍") == 2)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 8. For Level 3 weapons,";
-					mes "[DRY-RUN] what is the ^8E6B23Safe^000000 limit";
-					mes "[DRY-RUN] for upgrading?";
+					mes "[格什普恩施特]";
+					mes "8. 对于三级武器，";
+					mes "安全^8E6B23限制^000000是多少";
+					mes "用于升级？";
 					next;
-					if (select("[DRY-RUN] up to + 3:up to + 4:up to + 5:up to + 6") == 3)
+					if (select("最高+3:最高+4:最高+5:最高+6") == 3)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 9. What monster does";
-					mes "[DRY-RUN] NOT drop Iron Ore?";
+					mes "[格什普恩施特]";
+					mes "9. 什么怪物不掉落铁矿？";
+					mes "不掉落铁矿的怪物是？";
 					next;
-					if (select("[DRY-RUN] Chon Chon:Steel Chon Chon:Zerom:Anolian") == 4)
+					if (select("虫虫:钢虫:零度:安诺利亚") == 4)
 						set .@black_q,.@black_q+10;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] 10. What is most";
-					mes "[DRY-RUN] important to a Merchant?";
+					mes "[格什普恩施特]";
+					mes "10. 对商人来说，最重要的是什么？";
+					mes "对商人来说，最重要的是什么？";
 					next;
-					select("[DRY-RUN] Rhetoric:Credit:Money:Experience");
+					select("修辞:信用:金钱:经验");
 					set .@black_q,.@black_q+10;
 				}
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Umm. You did a good job!";
+				mes "[格什普恩施特]";
+				mes "嗯。你做得很好！";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
+				mes "[格什普恩施特]";
 				mes "Let's see...your score is..." + .@black_q + " points.";
 				if (.@black_q == 100) {
 					set BSMITH_Q,3;
@@ -505,81 +505,81 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 					} else {
 						changequest 2000,2002;
 					}
-					mes "[DRY-RUN] Oh ho ho~";
-					mes "[DRY-RUN] You'll have";
-					mes "[DRY-RUN] no problem";
-					mes "[DRY-RUN] with this score!";
+					mes "哦呵呵~";
+					mes "你会没问题的";
+					mes "没有问题";
+					mes "这个分数！";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] I will entrust you with a job!";
-					mes "[DRY-RUN] Give me a little time to make the necessary arrangements.";
-					mes "[DRY-RUN] When you get back, I'll be ready!";
+					mes "[格什普恩施特]";
+					mes "我会把工作托付给你！";
+					mes "给我一点时间来做必要的安排。";
+					mes "等你回来时，我会准备好的！";
 					close;
 				}
 				set BSMITH_Q,2;
 				if (checkquest(2001) == -1) {
 					changequest 2000,2001;
 				}
-				mes "[DRY-RUN] .............";
+				mes ".............";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
+				mes "[格什普恩施特]";
 				if (BSMITH_Q == 2) {
-					mes "[DRY-RUN] How do I say this?";
-					mes "[DRY-RUN] How did you fail again?!";
-					mes "[DRY-RUN] If you plan to perform your duties in this manner, I can't trust you with any kind of job...";
+					mes "我该怎么说呢？";
+					mes "你怎么又失败了？！";
+					mes "如果你打算以这种方式履行职责，我无法信任你承担任何工作...";
 					close;
 				}
-				mes "[DRY-RUN] Hmm...";
-				mes "[DRY-RUN] It pains me to say this, but it seems you need to study a little more. You can never be";
-				mes "[DRY-RUN] a Blacksmith with";
-				mes "[DRY-RUN] this score!";
+				mes "嗯...";
+				mes "我很痛心地说，但看来你需要再学习一些。你永远无法成为";
+				mes "一名铁匠，";
+				mes "这个分数太低了！";
 				close;
 			}
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Ah, of course I don't mind if you came back a little later. Being prepared prevents disasters";
-			mes "[DRY-RUN] later, after all. No harm in";
-			mes "[DRY-RUN] being careful~";
+			mes "[格什普恩施特]";
+			mes "啊，当然我不介意你稍后再回来。做好准备可以防止灾难";
+			mes "毕竟，没什么坏处";
+			mes "小心一点没坏处~";
 			close;
 		}
 		/*
 		else if (BSMITH_Q == 2) {
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] So, have you";
-			mes "[DRY-RUN] studied a little";
-			mes "[DRY-RUN] more this time?";
+			mes "[格什普恩施特]";
+			mes "那么，你";
+			mes "这次学习得稍微多一点";
+			mes "吗？";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] I admit that it's pretty unreasonable to expect anyone to get a perfect score the first time around, so I'll give you";
-			mes "[DRY-RUN] a little break...";
+			mes "[格什普恩施特]";
+			mes "我承认，第一次就期待任何人能得满分是相当不合理的，所以我会给你";
+			mes "一点小休息……";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] You can miss";
-			mes "[DRY-RUN] one problem!";
-			mes "[DRY-RUN] Alright, let's start";
-			mes "[DRY-RUN] with the questions~";
+			mes "[格什普恩施特]";
+			mes "你可以错过";
+			mes "一个问题！";
+			mes "好的，我们开始吧";
+			mes "问问题~";
 			next;
 			goto L_AskQuestions;
 		}
 		*/
 		else if (BSMITH_Q == 3) {
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Hmm...";
-			mes "[DRY-RUN] Now, where were";
-			mes "[DRY-RUN] those order request forms...";
+			mes "[格什普恩施特]";
+			mes "嗯...";
+			mes "现在，在哪里";
+			mes "那些订单请求表格...";
 			next;
-			mes "[DRY-RUN] ^3355FF*Shuffling of Papers*";
-			mes "[DRY-RUN] *Rustling of Papers*^000000";
+			mes "^3355FF*翻动文件*";
+			mes "*纸张沙沙作响*^000000";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Oh! Here it is!";
-			mes "[DRY-RUN] This is order that";
-			mes "[DRY-RUN] has been delayed";
-			mes "[DRY-RUN] the most...";
-			mes "[DRY-RUN] Heh heh~";
+			mes "[格什普恩施特]";
+			mes "哦！在这里！";
+			mes "这是订单";
+			mes "已经延迟了";
+			mes "最久的...";
+			mes "嘿嘿~";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Well, to make";
-			mes "[DRY-RUN] this you will need...";
+			mes "[格什普恩施特]";
+			mes "那么，要制作";
+			mes "你需要这个...";
 			next;
 			switch(rand(1,5)) {
 			//Steel, Rotten_Bandage, Blue_Gemstone, Arc_Wand
@@ -594,21 +594,21 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 			default: setarray .@items[0], 998,1, 511,1, 919,2, 1122,1, 8; changequest 2002,2007; break;
 			}
 			set BSMITH_Q,.@items[8];
-			mes "[DRY-RUN] [Geschupenschte]";
+			mes "[格什普恩施特]";
 			mes "^8E6B23"+.@items[1]+" "+getitemname(.@items[0])+"^000000,";
 			mes "^8E6B23"+.@items[3]+" "+getitemname(.@items[2])+"^000000,";
 			mes "^8E6B23"+.@items[5]+" "+getitemname(.@items[4])+"^000000, and";
 			mes "^8E6B23"+.@items[7]+" "+getitemname(.@items[6])+"^000000, the kind";
-			mes "[DRY-RUN] you can buy from";
-			mes "[DRY-RUN] an NPC shop.";
+			mes "你可以从这里购买";
+			mes "一个NPC商店.";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Collecting these items will be your test. Coincidentally, it's also a bit of a good way for me to save money. I'll repeat what you'll need to bring back to me...";
+			mes "[格什普恩施特]";
+			mes "收集这些物品将是你的测试。碰巧的是，这也是我省钱的好方法。我会重复你需要带回给我的东西...";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Okay~";
-			mes "[DRY-RUN] Good luck";
-			mes "[DRY-RUN] on your first job!";
+			mes "[格什普恩施特]";
+			mes "好的~";
+			mes "祝你好运";
+			mes "在你的第一次工作中!";
 			close;
 		}
 		else if (BSMITH_Q > 3 && BSMITH_Q < 9) {
@@ -619,251 +619,251 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 			case 7: setarray .@items[0], 1002,1, 2212,1, 717,2, 1713,1, 12; break;
 			case 8: setarray .@items[0], 998,1, 511,1, 919,2, 1122,1, 13; break;
 			}
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Ah, you're back!";
-			mes "[DRY-RUN] Did you bring";
-			mes "[DRY-RUN] everything that";
-			mes "[DRY-RUN] I requested?";
+			mes "[格什普恩施特]";
+			mes "啊，你回来了！";
+			mes "你带来了";
+			mes "我要求的所有东西吗？";
+			mes "我要求的？";
 			next;
 			if (countitem(.@items[0]) >= .@items[1] && countitem(.@items[2]) >= .@items[3] && countitem(.@items[4]) >= .@items[5] && countitem(.@items[6]) >= .@items[7]) {
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Wait...";
-				mes "[DRY-RUN] Didn't I tell you";
-				mes "[DRY-RUN] to get 3 Steel?";
+				mes "[格什普恩施特]";
+				mes "等一下……";
+				mes "我不是告诉过你";
+				mes "要拿3个钢铁吗？";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Oh, I guess it was";
-				mes "[DRY-RUN] two after all. Let's see...";
-				mes "[DRY-RUN] Yeah, you got everything!";
-				mes "[DRY-RUN] Now, just give me a second.";
+				mes "[格什普恩施特]";
+				mes "哦，我想其实是";
+				mes "两个。让我看看……";
+				mes "是的，你拿到了所有东西！";
+				mes "现在，给我一秒钟。";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
+				mes "[格什普恩施特]";
 				mes "Oh, you should make sure that you are not carrying ^FF0000more than one "+getitemname(.@items[6])+"^000000, you should really only have an "+getitemname(.@items[6])+" that you bought from an NPC shop in your inventory.";
 				next;
-				if (select("[DRY-RUN] Oh, could you give me a second?:Oh, I brought what you asked for.") == 1) {
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Hmmm, it would be";
-					mes "[DRY-RUN] a good idea to put the";
-					mes "[DRY-RUN] rest of your items";
-					mes "[DRY-RUN] in Kafra Storage.";
+				if (select("哦，能给我一秒钟吗?:哦，我带来了你要的东西。") == 1) {
+					mes "[格什普恩施特]";
+					mes "嗯，把其余的物品放入";
+					mes "卡普拉仓库是个好主意。";
+					mes "卡普拉仓库。";
+					mes "卡普拉仓库。";
 					close;
 				}
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Okay.";
-				mes "[DRY-RUN] Great~!!";
+				mes "[格什普恩施特]";
+				mes "好的。";
+				mes "太棒了~!!";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] ^3355FF*Clang...!*^000000";
+				mes "[格什普恩施特]";
+				mes "^3355FF*叮...!*^000000";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] ^3355FF*Crash Crash!*^000000";
+				mes "[格什普恩施特]";
+				mes "^3355FF*砰砰!*^000000";
 				next;
 				delitem .@items[0],.@items[1];
 				delitem .@items[2],.@items[3];
 				delitem .@items[4],.@items[5];
 				delitem .@items[6],.@items[7];
 				set BSMITH_Q,.@items[8];
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Wooooo~~~";
-				mes "[DRY-RUN] All done...";
+				mes "[格什普恩施特]";
+				mes "哇~~~";
+				mes "全部完成...";
 				switch(BSMITH_Q) {
 				case 9:
-					mes "[DRY-RUN] Okay, now take this to ^8E6B23Baisulist^000000 in Geffen of Rune-Midgarts Kingdom. Simply deliver it and bring me the receipt.";
+					mes "好了，现在把这个带给^8E6B23Baisulist^000000，在米德加尔特王国的吉芬。只需送达并带回收据给我。";
 					getitem 1610,1; //Arc_Wand
 					if (checkquest(2003) != -1) {
 						changequest 2003,2008;
 					}
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Hmm...?";
-					mes "[DRY-RUN] What's that look for?";
-					mes "[DRY-RUN] This is not a normal";
-					mes "[DRY-RUN] Arc Wand! Look closely";
-					mes "[DRY-RUN] at the handle...";
+					mes "[格什普恩施特]";
+					mes "嗯……？";
+					mes "你那是什么表情？";
+					mes "这可不是普通的";
+					mes "弧形法杖！仔细看看";
+					mes "把手...";
 					next;
-					mes "[DRY-RUN] ^3355FFThe handle reads:";
-					mes "[DRY-RUN] 'Super Arc Wand";
-					mes "[DRY-RUN] of Geschupenschte";
-					mes "[DRY-RUN] Mark 2.' It does seem";
-					mes "[DRY-RUN] to have a completely";
-					mes "[DRY-RUN] different feel.^000000";
+					mes "^3355FF把手上写着:";
+					mes "'超级弧形法杖";
+					mes "的盖舒本施特";
+					mes "马克2。确实有些";
+					mes "完全不同的";
+					mes "感觉。^000000";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Anyway, take this";
-					mes "[DRY-RUN] to ^8E6B23Baisulist^000000 in Geffen of Rune-Midgarts Kingdom,";
+					mes "[格什普恩施特]";
+					mes "无论如何，拿这个";
+					mes "去^8E6B23巴伊苏利斯^000000在吉芬的卢恩-米德加兹王国，";
 					break;
 				case 10:
-					mes "[DRY-RUN] Okay, now take this to ^8E6B23Wickebine^000000 in Morroc of Rune-Midgarts Kingdom. Simply deliver it and bring me the receipt.";
+					mes "好的，现在把这个带到^8E6B23维基贝因^000000在梦罗克的卢恩-米德加兹王国。只需送达并把收据带给我。";
 					getitem 1219,1; //Gladius
 					if (checkquest(2004) != -1) {
 						changequest 2004,2009;
 					}
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Hmm...?";
-					mes "[DRY-RUN] What's that look for?";
-					mes "[DRY-RUN] This is not a normal";
-					mes "[DRY-RUN] Gladius! Look closely";
-					mes "[DRY-RUN] at the handle...";
+					mes "[格什普恩施特]";
+					mes "嗯……？";
+					mes "你那是什么表情？";
+					mes "这可不是普通的";
+					mes "格拉迪乌斯！仔细看看";
+					mes "把手...";
 					next;
-					mes "[DRY-RUN] ^3355FFThe handle reads:";
-					mes "[DRY-RUN] 'Super Gladius";
-					mes "[DRY-RUN] of Geschupenschte";
-					mes "[DRY-RUN] Mark 2.' It does seem";
-					mes "[DRY-RUN] to have a completely";
-					mes "[DRY-RUN] different feel.^000000";
+					mes "^3355FF把手上写着:";
+					mes "‘超级格拉迪乌斯";
+					mes "的盖舒本施特";
+					mes "马克2。确实有些";
+					mes "完全不同的";
+					mes "感觉。^000000";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Anyway, take this";
-					mes "[DRY-RUN] to ^8E6B23Wickebine^000000 in Morroc of Rune-Midgarts Kingdom,";
+					mes "[格什普恩施特]";
+					mes "无论如何，拿这个";
+					mes "去^8E6B23维基贝因^000000在梦罗克的卢恩-米德加兹王国，";
 					break;
 				case 11:
-					mes "[DRY-RUN] Okay, now take this to ^8E6B23Krongast^000000 in Lighthalzen. Simply deliver it and bring me the receipt.";
+					mes "好的，现在把这个带到 ^8E6B23Krongast^000000 在利希塔恩。只需送达并把收据带回来。";
 					getitem 1119,1; //Tsurugi
 					if (checkquest(2005) != -1) {
 						changequest 2005,2010;
 					}
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Hmm...?";
-					mes "[DRY-RUN] What's that look for?";
-					mes "[DRY-RUN] This is not a normal";
-					mes "[DRY-RUN] Tsurugi! Look closely";
-					mes "[DRY-RUN] at the blade...";
+					mes "[格什普恩施特]";
+					mes "嗯……？";
+					mes "你那是什么表情？";
+					mes "这可不是普通的";
+					mes "刀剑！仔细看看";
+					mes "刀刃...";
 					next;
-					mes "[DRY-RUN] ^3355FFThe blade reads:";
-					mes "[DRY-RUN] 'Fine-edged";
-					mes "[DRY-RUN] Geschupenschte";
-					mes "[DRY-RUN] Tsurugi Special.'";
-					mes "[DRY-RUN] It does seem to feel";
-					mes "[DRY-RUN] completely different";
-					mes "[DRY-RUN] than normal Tsurugis...^000000";
+					mes "^3355FF刀刃上写着：";
+					mes "‘锋利的";
+					mes "Geschupenschte";
+					mes "Tsurugi 特制。’";
+					mes "确实感觉";
+					mes "完全不同";
+					mes "与普通的 Tsurugi...^000000";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Anyway, take this";
-					mes "[DRY-RUN] to ^8E6B23Krongast^000000 in Lighthalzen";
+					mes "[格什普恩施特]";
+					mes "无论如何，拿这个";
+					mes "到 ^8E6B23Krongast^000000 在利希塔恩";
 					break;
 				case 12:
-					mes "[DRY-RUN] Okay, now take this to ^8E6B23Talpiz^000000 in Payon of Rune-Midgarts Kingdom. Simply deliver this and bring me the receipt.";
+					mes "好的，现在把这个带给^8E6B23Talpiz^000000，在米德加尔特王国的斐扬。只需交付这个并带回收据给我。";
 					getitem 1713,1; //Arbalest
 					if (checkquest(2006) != -1) {
 						changequest 2006,2011;
 					}
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Hmm...?";
-					mes "[DRY-RUN] What's that look for?";
-					mes "[DRY-RUN] This is not a normal";
-					mes "[DRY-RUN] Arbalest! Look closely";
-					mes "[DRY-RUN] at the bow...";
+					mes "[格什普恩施特]";
+					mes "嗯……？";
+					mes "你那是什么表情？";
+					mes "这可不是普通的";
+					mes "弩炮！仔细看看";
+					mes "这个弓...";
 					next;
-					mes "[DRY-RUN] ^3355FFThe bow reads:";
-					mes "[DRY-RUN] Geschupenschte";
-					mes "[DRY-RUN] Arbalest Luxury Edition.";
-					mes "[DRY-RUN] It does seem more luxurious";
-					mes "[DRY-RUN] than regular Arbalests.^000000";
+					mes "^3355FF这个弓上写着：";
+					mes "Geschupenschte";
+					mes "奢华版弩炮。";
+					mes "确实看起来更奢华";
+					mes "比普通的弩炮更奢华。^000000";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Anyway, take this";
-					mes "[DRY-RUN] to ^8E6B23Talpiz^000000 in Payon of Rune-Midgarts Kindgom,";
+					mes "[格什普恩施特]";
+					mes "无论如何，拿这个";
+					mes "给^8E6B23Talpiz^000000，在米德加尔特王国的斐扬，";
 					break;
 				case 13:
-					mes "[DRY-RUN] Okay, now take this to ^8E6B23Bismarc^000000 in Hugel. Simply deliver this and bring back the receipt.";
+					mes "好的，现在把这个带给^8E6B23Bismarc^000000，在胡乐。只需交付这个并带回收据。";
 					getitem 1122,1; //Ring_Pommel_Saber
 					if (checkquest(2007) != -1) {
 						changequest 2007,2012;
 					}
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Hmm...?";
-					mes "[DRY-RUN] What's that look for?";
-					mes "[DRY-RUN] This is not a normal";
-					mes "[DRY-RUN] Ring Pommel Saber!";
-					mes "[DRY-RUN] Look closely at";
-					mes "[DRY-RUN] the handle...";
+					mes "[格什普恩施特]";
+					mes "嗯……？";
+					mes "你那是什么表情？";
+					mes "这可不是普通的";
+					mes "环 pommel 剑！";
+					mes "仔细看看";
+					mes "手柄...";
 					next;
-					mes "[DRY-RUN] ^3355FFThe handle reads:";
-					mes "[DRY-RUN] 'Green Herbal";
-					mes "[DRY-RUN] Ring Pommel Saber";
-					mes "[DRY-RUN] of Geschupenschte";
-					mes "[DRY-RUN] Mark 2.' It does seem";
-					mes "[DRY-RUN] to have a completely";
-					mes "[DRY-RUN] different feel.^000000";
+					mes "^3355FF把手上写着:";
+					mes "‘绿色草药’";
+					mes "环 pommel 剑";
+					mes "的盖舒本施特";
+					mes "马克2。确实有些";
+					mes "完全不同的";
+					mes "感觉。^000000";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] The power of Green Herbs, which is imbued in this sword, can be very useful! You can save someone from slowly dying of poison by stabbing them quickly with this weapon!";
+					mes "[格什普恩施特]";
+					mes "这把剑中蕴含的绿色草药的力量非常有用！你可以通过快速刺击这个武器来拯救一个正在缓慢中毒而死的人！";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Anyway, take this";
-					mes "[DRY-RUN] to ^8E6B23Bismarc^000000 in Hugel";
+					mes "[格什普恩施特]";
+					mes "无论如何，拿这个";
+					mes "去 ^8E6B23比斯马克^000000 在胡乐";
 				}
-				mes "[DRY-RUN] and don't forget";
-				mes "[DRY-RUN] the receipt!";
+				mes "别忘了";
+				mes "收据！";
 				close;
 			}
 			else {
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] You still haven't";
-				mes "[DRY-RUN] brought all the items.";
-				mes "[DRY-RUN] Do you need to be reminded";
-				mes "[DRY-RUN] or something? Bring me...";
+				mes "[格什普恩施特]";
+				mes "你还没有";
+				mes "带齐所有物品。";
+				mes "你需要被提醒";
+				mes "或者其他什么吗？带给我...";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
+				mes "[格什普恩施特]";
 				mes "^8E6B23"+.@items[1]+" "+getitemname(.@items[0])+"^000000,";
 				mes "^8E6B23"+.@items[3]+" "+getitemname(.@items[2])+"^000000,";
 				mes "^8E6B23"+.@items[5]+" "+getitemname(.@items[4])+"^000000, and";
 				mes "^8E6B23"+.@items[7]+" "+getitemname(.@items[6])+"^000000, the kind";
-				mes "[DRY-RUN] you can buy from";
-				mes "[DRY-RUN] an NPC shop.";
+				mes "你可以从这里购买";
+				mes "一个NPC商店.";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] Now, be sure to have";
-				mes "[DRY-RUN] everything I need when";
-				mes "[DRY-RUN] you come back. Remember,";
-				mes "[DRY-RUN] this is a test! You can't";
-				mes "[DRY-RUN] be a Blacksmith if you";
-				mes "[DRY-RUN] slack off!";
+				mes "[格什普恩施特]";
+				mes "现在，确保你有";
+				mes "我需要的一切在";
+				mes "你回来时。记住，";
+				mes "这是一个测试！你不能";
+				mes "成为一名铁匠如果你";
+				mes "偷懒！";
 				close;
 			}
 		}
 		else if (BSMITH_Q > 8 && BSMITH_Q < 14) {
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] What are you";
-			mes "[DRY-RUN] still doing here?";
-			mes "[DRY-RUN] Hurry and deliver";
-			mes "[DRY-RUN] the package~!";
-			mes "[DRY-RUN] Did you forget";
-			mes "[DRY-RUN] where to go?";
+			mes "[格什普恩施特]";
+			mes "你在这里";
+			mes "还在做什么？";
+			mes "快去送";
+			mes "包裹~！";
+			mes "你忘了";
+			mes "去哪里吗？";
 			next;
-			mes "[DRY-RUN] [Geschupenschte]";
+			mes "[格什普恩施特]";
 			if (BSMITH_Q == 9) {
-				mes "[DRY-RUN] In Geffen, at the";
-				mes "[DRY-RUN] 11 o'clock direction from the town center, you will find ^8E6B23Baisulist^000000. And don't forget the receipt.";
+				mes "在吉芬，";
+				mes "从城镇中心的11点方向，你会找到 ^8E6B23Baisulist^000000。别忘了收据。";
 			}
 			else if (BSMITH_Q == 10) {
-				mes "[DRY-RUN] Find the Swordmace";
-				mes "[DRY-RUN] dealer ^8E6B23Wickebine^000000 in Morroc. And don't forget the receipt.";
+				mes "找到剑锤";
+				mes "在梦罗克的商人 ^8E6B23Wickebine^000000 那里。别忘了收据。";
 			}
 			else if (BSMITH_Q == 11) {
-				mes "[DRY-RUN] In Lighthalzen, 6 o'clock direction from the town center, you will find ^8E6B23Krongast^000000 near the weapon shop. And don't forget the receipt.";
+				mes "在利希塔恩，朝市中心的6点方向，你会在武器商店附近找到 ^8E6B23Krongast^000000。别忘了收据。";
 			}
 			else if (BSMITH_Q == 12) {
-				mes "[DRY-RUN] In Payon, at the 5 o'clock direction from the town center, you will find ^8E6B23Talpiz^000000. And don't forget the receipt.";
+				mes "在斐扬，朝市中心的5点方向，你会找到 ^8E6B23Talpiz^000000。别忘了收据。";
 			}
 			else {
-				mes "[DRY-RUN] In Hugel, at the 1 o'clock direction from the town center, you will find ^8E6B23Bismarc^000000 near the airship. And don't forget the receipt.";
+				mes "在胡乐，朝市中心的1点方向，你会在飞空船附近找到 ^8E6B23Bismarc^000000。别忘了收据。";
 			}
 			close;
 		}
 		else if (BSMITH_Q == 14) {
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Hmmm...?";
-			mes "[DRY-RUN] Have you";
-			mes "[DRY-RUN] completed";
-			mes "[DRY-RUN] the delivery?";
-			mes "[DRY-RUN] Let's see that receipt~";
+			mes "[格什普恩施特]";
+			mes "嗯...?";
+			mes "你完成了";
+			mes "交付";
+			mes "吗？";
+			mes "让我看看那张收据~";
 			next;
-			if (select("[DRY-RUN] Yes sir, here it is.:Receipt? I, uh, have it somewhere.") == 1) {
+			if (select("是的，先生，这就是了。:收据？我，呃，放在某个地方。") == 1) {
 				if (countitem(1073) > 0) {
 					set BSMITH_Q,15;
 					delitem 1073,1; //Merchant_Voucher_1
@@ -882,143 +882,143 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 					else {
 						changequest 2012,2013;
 					}
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Oh ho ho~";
-					mes "[DRY-RUN] Great!";
-					mes "[DRY-RUN] You're truly";
-					mes "[DRY-RUN] a great Merchant!";
+					mes "[格什普恩施特]";
+					mes "哦呵呵~";
+					mes "太好了！";
+					mes "你真是个";
+					mes "伟大的商人!";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] Good job!";
-					mes "[DRY-RUN] Return to ^8E6B23Altiregen^000000 in Einbroch, the guy you first met when you applied for the Blacksmith job.";
+					mes "[格什普恩施特]";
+					mes "干得好!";
+					mes "返回到^8E6B23阿尔提雷根^000000，在艾因布罗克，你第一次申请铁匠工作时遇到的那个人。";
 					next;
-					mes "[DRY-RUN] [Geschupenschte]";
-					mes "[DRY-RUN] I have faith that you";
-					mes "[DRY-RUN] will be a great Blacksmith!";
+					mes "[格什普恩施特]";
+					mes "我相信你";
+					mes "会成为一名伟大的铁匠!";
 					close;
 				}
 				set BSMITH_Q,3;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] You mean...";
-				mes "[DRY-RUN] You didn't get";
-				mes "[DRY-RUN] a receipt?";
-				mes "[DRY-RUN] What...?";
+				mes "[格什普恩施特]";
+				mes "你是说...?";
+				mes "你没有拿到";
+				mes "收据?";
+				mes "什么...?";
 				next;
-				mes "[DRY-RUN] [Geschupenschte]";
-				mes "[DRY-RUN] A receipt is";
-				mes "[DRY-RUN] a Merchant's best friend!";
-				mes "[DRY-RUN] It's necessary to your job!";
-				mes "[DRY-RUN] You'll have to start your";
-				mes "[DRY-RUN] test all over again!";
+				mes "[格什普恩施特]";
+				mes "收据是";
+				mes "商人的最佳朋友!";
+				mes "这对你的工作是必要的!";
+				mes "你需要重新开始你的";
+				mes "测试!";
 				close;
 			}
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Return when you";
-			mes "[DRY-RUN] find the receipt~";
-			mes "[DRY-RUN] You didn't forget";
-			mes "[DRY-RUN] to receive a receipt.";
-			mes "[DRY-RUN] Right...?";
+			mes "[格什普恩施特]";
+			mes "完成后再回来";
+			mes "找到账单~";
+			mes "你没有忘记";
+			mes "去拿到账单吧.";
+			mes "对吧...?";
 			close;
 		}
 		else if (BSMITH_Q == 15) {
-			mes "[DRY-RUN] [Geschupenschte]";
-			mes "[DRY-RUN] Thank you";
-			mes "[DRY-RUN] very much";
-			mes "[DRY-RUN] your help.";
-			mes "[DRY-RUN] Return to Einbroch";
-			mes "[DRY-RUN] and see ^8E6B23Altiregen^000000!";
+			mes "[格什普恩施特]";
+			mes "谢谢你";
+			mes "非常感谢";
+			mes "你的帮助.";
+			mes "返回艾因布罗克";
+			mes "去见 ^8E6B23阿尔提雷根^000000!";
 			close;
 		}
-		mes "[DRY-RUN] [Geschupenschte]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] You already finished";
-		mes "[DRY-RUN] your test here with me!";
-		mes "[DRY-RUN] And surprisingly, I don't";
-		mes "[DRY-RUN] need any more help, today.";
+		mes "[格什普恩施特]";
+		mes "嗯……？";
+		mes "你已经完成了";
+		mes "和我在这里的测试!";
+		mes "而且令人惊讶的是，我并不";
+		mes "今天还需要什么帮助吗？";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Geschupenschte]";
-		mes "[DRY-RUN] Being";
-		mes "[DRY-RUN] a Blacksmith";
-		mes "[DRY-RUN] is truly great!";
-		mes "[DRY-RUN] Don't you think so?";
-		mes "[DRY-RUN] Mwahahahahah!!";
+		mes "[格什普恩施特]";
+		mes "成为";
+		mes "一名铁匠";
+		mes "真是太棒了！";
+		mes "你不觉得吗？";
+		mes "哈哈哈哈哈！！";
 		close;
 	}
 }
 
 geffen,46,164,1	script	Baisulist#BLS	69,{
 	if (BSMITH_Q == 9 && countitem(1610) > 0) {
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] Oh, hello!";
-		mes "[DRY-RUN] Have you come";
-		mes "[DRY-RUN] to deliver my";
-		mes "[DRY-RUN] Arc Wand?";
+		mes "[拜苏利斯]";
+		mes "哦，您好！";
+		mes "您来是为了";
+		mes "送我的";
+		mes "法杖吗？";
 		next;
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] You sure this is what I ordered, right? I mean, if it's been used,";
-		mes "[DRY-RUN] I don't want it.";
+		mes "[拜苏利斯]";
+		mes "你确定这是我订的东西，对吧？我的意思是，如果它被使用过，";
+		mes "我不想要它。";
 		next;
-		if (select("[DRY-RUN] Whoops, this is one of the items I use...:I'm sure! It's brand new!") == 1) {
-			mes "[DRY-RUN] [Baisulist]";
-			mes "[DRY-RUN] Well...";
-			mes "[DRY-RUN] I guess I can";
-			mes "[DRY-RUN] wait a little longer.";
-			mes "[DRY-RUN] Please hurry with";
-			mes "[DRY-RUN] my delivery~";
+		if (select("哎呀，这是我用的物品之一...:我确定！它是全新的！") == 1) {
+			mes "[拜苏利斯]";
+			mes "嗯……";
+			mes "我想我可以";
+			mes "再等一会儿。";
+			mes "请快点";
+			mes "我的快递~";
 			close;
 		}
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] You're";
-		mes "[DRY-RUN] absolutely sure?";
+		mes "[拜苏利斯]";
+		mes "你是";
+		mes "绝对确定吗？";
 		set BSMITH_Q,14;
 		delitem 1610,1; //Arc_Wand
 		next;
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] Thank you so much for traveling all the way here. That Geschupenschte, please smack him for me when you meet him for being so late on this order...";
+		mes "[拜苏利斯]";
+		mes "非常感谢你特意来到这里。那个Geschupenschte，见到他时请替我打他一巴掌，因为他这次订单太迟了...";
 		next;
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] Please wait";
-		mes "[DRY-RUN] a second, let";
-		mes "[DRY-RUN] me give you a receipt~";
+		mes "[拜苏利斯]";
+		mes "请等";
+		mes "一秒，让";
+		mes "我给你一张收据~";
 		next;
 		getitem 1073,1; //Merchant_Voucher_1
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] Here it is.";
-		mes "[DRY-RUN] Thank you so much!";
-		mes "[DRY-RUN] Oh, and good luck~";
+		mes "[拜苏利斯]";
+		mes "给你。";
+		mes "非常感谢你！";
+		mes "哦，祝你好运~";
 		mapannounce "geffen","Hey, " +strcharinfo(0)+ ", thank you so much for the delivery~",bc_map;
 		close;
 	}
 	else if (BSMITH_Q == 14) {
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] Thank you";
-		mes "[DRY-RUN] so much for";
-		mes "[DRY-RUN] the delivery~";
+		mes "[拜苏利斯]";
+		mes "谢谢你";
+		mes "太多了";
+		mes "这个交付~";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] Oh...";
-		mes "[DRY-RUN] It's been a while";
-		mes "[DRY-RUN] since I've been";
-		mes "[DRY-RUN] to Alberta.";
+		mes "[拜苏利斯]";
+		mes "哦...";
+		mes "好久不见了";
+		mes "自从我去过";
+		mes "艾尔贝塔。";
 		next;
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] I ordered something";
-		mes "[DRY-RUN] from there a while ago,";
-		mes "[DRY-RUN] but I haven't received";
-		mes "[DRY-RUN] my delivery...";
+		mes "[拜苏利斯]";
+		mes "我之前从那里订购了一些东西，";
+		mes "但我还没有收到";
+		mes "但我还没有收到";
+		mes "我的交付...";
 		next;
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] I wonder...";
-		mes "[DRY-RUN] Could the Blacksmith Guild";
-		mes "[DRY-RUN] be undermanned? I can't think of any other reason for them to be late...";
+		mes "[拜苏利斯]";
+		mes "我在想...";
+		mes "黑smith公会可能";
+		mes "人手不足？我想不出其他原因导致他们迟到...";
 		next;
-		mes "[DRY-RUN] [Baisulist]";
-		mes "[DRY-RUN] When will I get";
-		mes "[DRY-RUN] my special Arc Wand?";
+		mes "[拜苏利斯]";
+		mes "我什么时候能得到";
+		mes "我的特殊弧形法杖？";
 		close;
 	}
 }
@@ -1026,61 +1026,61 @@ geffen,46,164,1	script	Baisulist#BLS	69,{
 morocc,27,112,4	script	Wickebine#BLS	725,{
 	if (BSMITH_Q == 10 && countitem(1219) > 0) {
 		cutin "Job_Black_hucke01",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] ...!";
-		mes "[DRY-RUN] It's here!";
+		mes "[维基贝恩]";
+		mes "...!";
+		mes "它在这里！";
 		next;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] This is what I ordered, right?";
-		mes "[DRY-RUN] I don't want any used or old Gladius that you might have!";
+		mes "[维基贝恩]";
+		mes "这是我订购的，对吧？";
+		mes "我不想要你可能有的任何旧的或二手的格拉迪乌斯！";
 		next;
-		if (select("[DRY-RUN] Whoops, not that one.:I guarantee you it is new.") == 1) {
+		if (select("哎呀，不是那个。:我保证它是新的。") == 1) {
 			cutin "Job_Black_hucke03",2;
-			mes "[DRY-RUN] [Wickebine]";
-			mes "[DRY-RUN] Oooh...!";
-			mes "[DRY-RUN] Hurry up";
-			mes "[DRY-RUN] with my Gladius~";
+			mes "[维基贝恩]";
+			mes "哦哦...！";
+			mes "快点";
+			mes "给我我的格拉迪乌斯~";
 			next;
-			mes "[DRY-RUN] - She seems to be upset. -";
+			mes "- 她似乎很不高兴。 -";
 			close2;
 			cutin "Job_Black_hucke03",255;
 			end;
 		}
 		cutin "Job_Black_hucke02",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] Hah hah hah!";
-		mes "[DRY-RUN] Finally! Now...";
-		mes "[DRY-RUN] Let me have";
-		mes "[DRY-RUN] a look!";
+		mes "[维基贝恩]";
+		mes "哈哈哈！";
+		mes "终于！现在...";
+		mes "让我拥有";
+		mes "看看！";
 		next;
-		mes "[DRY-RUN] - She looks very happy. -";
+		mes "- 她看起来很高兴。 -";
 		next;
 		set BSMITH_Q,14;
 		delitem 1219,1; //Gladius
 		cutin "Job_Black_hucke01",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] Are you with the";
-		mes "[DRY-RUN] Einbroch Blacksmith Guild?";
-		mes "[DRY-RUN] Give this message to Geschupenschte!";
+		mes "[维基贝恩]";
+		mes "你是来自";
+		mes "艾因布罗克铁匠公会吗？";
+		mes "把这个消息交给格舒彭施特！";
 		next;
 		cutin "Job_Black_hucke03",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] '^660000You're late!";
-		mes "[DRY-RUN] Do you know how long";
-		mes "[DRY-RUN] I've been waiting?!^000000'";
+		mes "[维基贝恩]";
+		mes "'^660000你迟到了！";
+		mes "你知道我等了多久吗？";
+		mes "我等了多久？！^000000'";
 		next;
 		cutin "Job_Black_hucke02",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] But, this is also";
-		mes "[DRY-RUN] a masterfully crafted item.";
-		mes "[DRY-RUN] Tell him I'm satisfied with the quality of the workmanship.";
+		mes "[维基贝恩]";
+		mes "不过，这也是";
+		mes "一件精心制作的物品。";
+		mes "告诉他我对工艺的质量很满意。";
 		next;
 		getitem 1073,1; //Merchant_Voucher_1
 		emotion ET_THROB;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] Here's the receipt.";
-		mes "[DRY-RUN] I think you did";
-		mes "[DRY-RUN] a good job.";
+		mes "[维基贝恩]";
+		mes "这是收据。";
+		mes "我觉得你做得很好。";
+		mes "干得不错。";
 		mapannounce "morocc","Thanks for delivering, " + strcharinfo(0) + "~!",bc_map;
 		close2;
 		cutin "Job_Black_hucke02",255;
@@ -1089,35 +1089,35 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 	else if (BSMITH_Q == 14) {
 		emotion ET_THROB;
 		cutin "Job_Black_hucke02",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] Thanks for the delivery.";
+		mes "[维基贝恩]";
+		mes "谢谢你的送货。";
 		close2;
 		cutin "Job_Black_hucke02",255;
 		end;
 	}
 	else {
 		cutin "Job_Black_hucke03",2;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] ...";
+		mes "[维基贝恩]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Wickemine]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[维基梅]";
+		mes "...";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Wickmine]";
-		mes "[DRY-RUN] They're late.";
-		mes "[DRY-RUN] They're late,";
-		mes "[DRY-RUN] they're late,";
-		mes "[DRY-RUN] they're late~!";
+		mes "[维基矿]";
+		mes "他们迟到了。";
+		mes "他们迟到了，";
+		mes "他们迟到了，";
+		mes "他们迟到了~！";
 		next;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] How long does it take for something to ship from Geschupenschte? Usually, the Geffen Blacksmith Guild is pretty prompt...";
+		mes "[维基贝恩]";
+		mes "从格舒本施特寄东西需要多长时间？通常，吉芬铁匠公会的反应很快……";
 		next;
 		emotion ET_THROB;
-		mes "[DRY-RUN] [Wickebine]";
-		mes "[DRY-RUN] Ooohh...";
-		mes "[DRY-RUN] This is very";
-		mes "[DRY-RUN] upsetting...";
+		mes "[维基贝恩]";
+		mes "哦哦哦……";
+		mes "这真是很";
+		mes "令人不安……";
 		close2;
 		cutin "Job_Black_hucke03",255;
 		end;
@@ -1126,249 +1126,249 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 
 lighthalzen,209,80,4	script	Krongast#BLS	734,{
 	if (BSMITH_Q == 11 && countitem(1119) > 0) {
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] Ohhhhhh~";
-		mes "[DRY-RUN] Is it here?";
-		mes "[DRY-RUN] Very nice.";
-		mes "[DRY-RUN] Let me take a look.";
+		mes "[克朗加斯特]";
+		mes "哦哦哦哦~";
+		mes "在这里吗？";
+		mes "非常好。";
+		mes "让我看看。";
 		next;
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] So you're sure this is the item";
-		mes "[DRY-RUN] I ordered, right? I wouldn't want it if it's been used.";
+		mes "[克朗加斯特]";
+		mes "所以你确定这是我订购的物品";
+		mes "对吧？如果它被使用过，我可不想要。";
 		next;
-		if (select("[DRY-RUN] Whoops, this one is used!:It was just made, so it's new.") == 1) {
-			mes "[DRY-RUN] [Krongast]";
-			mes "[DRY-RUN] Hmmmmm!";
-			mes "[DRY-RUN] Please deliver";
-			mes "[DRY-RUN] the right sword!";
-			mes "[DRY-RUN] I've been waiting";
-			mes "[DRY-RUN] long enough already...";
+		if (select("哎呀，这个是用过的！:刚刚制作，所以是新的。") == 1) {
+			mes "[克朗加斯特]";
+			mes "????";
+			mes "????";
+			mes "?????";
+			mes "?????";
+			mes "?????";
 			close;
 		}
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] You double checked?";
-		mes "[DRY-RUN] Alright then, I'll take it!";
+		mes "[克朗加斯特]";
+		mes "???????";
+		mes "?????????";
 		next;
 		set BSMITH_Q,14;
 		delitem 1119,1; //Tsurugi
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] Oh ho...";
-		mes "[DRY-RUN] This is good.";
-		mes "[DRY-RUN] Much better than";
-		mes "[DRY-RUN] what I expected.";
+		mes "[克朗加斯特]";
+		mes "????";
+		mes "?????";
+		mes "比我预期的好得多";
+		mes ".";
 		next;
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] With this sword...";
-		mes "[DRY-RUN] My special moves will be even more powerful! I may even be able to perfect my fast attacking techniques! I love it!";
+		mes "[克朗加斯特]";
+		mes "有了这把剑...";
+		mes "我的特殊技能会更强大！我甚至可能能够完善我的快速攻击技巧！我太喜欢它了！";
 		next;
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] Okay then.";
-		mes "[DRY-RUN] Let me give";
-		mes "[DRY-RUN] you a receipt.";
+		mes "[克朗加斯特]";
+		mes "好的。那么。";
+		mes "让我给你";
+		mes "一张收据。";
 		next;
 		getitem 1073,1; //Merchant_Voucher_1
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] Here is";
-		mes "[DRY-RUN] your receipt.";
-		mes "[DRY-RUN] Thank you for";
-		mes "[DRY-RUN] your business!";
+		mes "[克朗加斯特]";
+		mes "这是";
+		mes "你的收据。";
+		mes "谢谢你使用我们的服务。";
+		mes "你的生意！";
 		mapannounce "lighthalzen",strcharinfo(0)+"... Thank you for the delivery.",bc_map;
 		close;
 	}
 	else if (BSMITH_Q == 14) {
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] Thank you";
-		mes "[DRY-RUN] for the delivery.";
+		mes "[克朗加斯特]";
+		mes "谢谢你";
+		mes "关于交付的事。";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] ...";
+		mes "[克朗加斯特]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[克朗加斯特]";
+		mes "...";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] When will the sword";
-		mes "[DRY-RUN] I ordered finally arrive?";
-		mes "[DRY-RUN] I need to try my ultimate skill, ^2F4F4FFine Edge^000000 with it.";
+		mes "[克朗加斯特]";
+		mes "我订购的剑";
+		mes "什么时候才能到？";
+		mes "我需要尝试我的终极技能，^2F4F4FF精细边缘^000000。";
 		next;
-		mes "[DRY-RUN] [Krongast]";
-		mes "[DRY-RUN] Ahhhhhhh!";
-		mes "[DRY-RUN] I need to";
-		mes "[DRY-RUN] have that sword!";
+		mes "[克朗加斯特]";
+		mes "啊啊啊啊啊！";
+		mes "我需要";
+		mes "那把剑！";
 		close;
 	}
 }
 
 payon,214,79,4	script	Talpiz#BLS	59,{
 	if (BSMITH_Q == 12 && countitem(1713) > 0) {
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Oh~";
-		mes "[DRY-RUN] Is it finally here?";
-		mes "[DRY-RUN] The package I ordered?";
+		mes "[塔尔皮兹]";
+		mes "哦~";
+		mes "它终于来了？";
+		mes "我订购的包裹？";
 		next;
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Um, this is what I ordered, right? I don't want an Arbalest that's been used before.";
+		mes "[塔尔皮兹]";
+		mes "嗯，这就是我订的，对吧？我不想要一个用过的弩。";
 		next;
-		if (select("[DRY-RUN] Whoops, this is a used one.:I'm sure it's new.") == 1) {
-			mes "[DRY-RUN] [Talpiz]";
-			mes "[DRY-RUN] Hmmmm.";
-			mes "[DRY-RUN] Please hurry";
-			mes "[DRY-RUN] and bring the";
-			mes "[DRY-RUN] correct item.";
-			mes "[DRY-RUN] I've waited too";
-			mes "[DRY-RUN] long already...";
+		if (select("哎呀，这是一个二手的。:我确定它是新的。") == 1) {
+			mes "[塔尔皮兹]";
+			mes "嗯嗯。";
+			mes "请快点";
+			mes "把";
+			mes "正确的物品带来。";
+			mes "我等得太久了";
+			mes "已经很久了...";
 			close;
 		}
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] So, you're sure?";
-		mes "[DRY-RUN] Let me take a look...";
+		mes "[塔尔皮兹]";
+		mes "所以，你确定吗？";
+		mes "让我看看...";
 		next;
 		set BSMITH_Q,14;
 		delitem 1713,1; //Arbalest
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] *wheet whoo*";
-		mes "[DRY-RUN] Very nice!!";
+		mes "[塔尔皮兹]";
+		mes "*呼啸声*";
+		mes "非常好！！";
 		next;
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] This is truly a quality made custom item. I love how there is a case for an eye patch! I really reallly love this~";
+		mes "[塔尔皮兹]";
+		mes "这真的是一件高质量的定制物品。我喜欢它有一个眼罩的盒子！我真的非常非常喜欢这个~";
 		next;
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Thank you!";
-		mes "[DRY-RUN] For something of this quality,";
-		mes "[DRY-RUN] I can even sell it for a high price even after I've used it!";
+		mes "[塔尔皮兹]";
+		mes "谢谢你！";
+		mes "对于这种质量的东西，";
+		mes "即使我用过，我也能以高价出售它！";
 		next;
 		getitem 1073,1; //Merchant_Voucher_1
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Here!";
-		mes "[DRY-RUN] Please take";
-		mes "[DRY-RUN] your receipt.";
-		mes "[DRY-RUN] I really appreciate";
-		mes "[DRY-RUN] your hard work.";
+		mes "[塔尔皮兹]";
+		mes "给你！";
+		mes "请收下";
+		mes "你的收据。";
+		mes "我真的很感激";
+		mes "你的辛勤工作。";
 		mapannounce "payon","Thanks, " +strcharinfo(0)+ ", you really delivered. Everytime I look at this, I love it even more~",bc_map;
 		close;
 	}
 	else if (BSMITH_Q == 14) {
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Really,";
-		mes "[DRY-RUN] I can't say it";
-		mes "[DRY-RUN] enough. This is";
-		mes "[DRY-RUN] top quality work~!";
+		mes "[塔尔皮兹]";
+		mes "真的，";
+		mes "我无法说得足够清楚。";
+		mes "这是";
+		mes "顶级的工艺~！";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Eh...";
-		mes "[DRY-RUN] When will my";
-		mes "[DRY-RUN] order arrive?";
+		mes "[塔尔皮兹]";
+		mes "呃……";
+		mes "我的";
+		mes "订单什么时候到？";
 		next;
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] A custom made Arbalest";
-		mes "[DRY-RUN] with a quality case to hold your eye patches. Only one person can make something like that...";
+		mes "[塔尔皮兹]";
+		mes "一把定制的弩，";
+		mes "带有优质的箱子来放你的眼罩。只有一个人能做出这样的东西……";
 		next;
-		mes "[DRY-RUN] [Talpiz]";
-		mes "[DRY-RUN] Ahhhhhh...";
-		mes "[DRY-RUN] The waiting";
-		mes "[DRY-RUN] is unbearable!";
+		mes "[塔尔皮兹]";
+		mes "啊啊啊啊……";
+		mes "等待";
+		mes "是无法忍受的！";
 		close;
 	}
 }
 
 hugel,168,183,1	script	Bismarc#BLS	118,{
 	if (BSMITH_Q == 13 && countitem(1122) > 0) {
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] Sweet God...";
-		mes "[DRY-RUN] Have you sent";
-		mes "[DRY-RUN] an angel...?";
-		mes "[DRY-RUN] Is that the Ring Pommel Saber";
-		mes "[DRY-RUN] I ordered? It's my only hope...";
+		mes "[比斯马克]";
+		mes "天哪...";
+		mes "你送了吗";
+		mes "一个天使...?";
+		mes "那是我订的环柄剑吗";
+		mes "这是我唯一的希望...";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] ^666666*Huuuk*^000000 This is what I ordered, right? I needed one especially";
-		mes "[DRY-RUN] made to stop this poison...";
+		mes "[比斯马克]";
+		mes "^666666*呜呜*^000000 这是我订的，对吧？我特别需要一个";
+		mes "来阻止这个毒药...";
 		next;
-		if (select("[DRY-RUN] Whoops, this is my own Ring Pommel Saber.:I'm sure this is the one.") == 1) {
-			mes "[DRY-RUN] [Bismarc]";
-			mes "[DRY-RUN] N-Nooo...";
-			mes "[DRY-RUN] Hurry...!";
-			mes "[DRY-RUN] I need that";
-			mes "[DRY-RUN] sword for its";
-			mes "[DRY-RUN] an...ti...d-dote!";
+		if (select("哎呀，这是我自己的环形剑柄剑。:我确定这就是那把。") == 1) {
+			mes "[比斯马克]";
+			mes "不...不...";
+			mes "快点...!";
+			mes "我需要那个";
+			mes "剑来解";
+			mes "毒！";
 			next;
-			mes "[DRY-RUN] ^3355FFIt looks like";
-			mes "[DRY-RUN] he's slowly dying...!";
-			mes "[DRY-RUN] You'd better hurry.^000000";
+			mes "^3355FF看起来";
+			mes "他正在慢慢死去...!";
+			mes "你最好快点。^000000";
 			close;
 		}
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] ^666666*Ghklk*^000000";
-		mes "[DRY-RUN] Give it...!";
-		mes "[DRY-RUN] Pleeeease!";
+		mes "[比斯马克]";
+		mes "^666666*Ghklk*^000000";
+		mes "给我...！";
+		mes "拜托了！";
 		next;
 		set BSMITH_Q,14;
 		delitem 1122,1; //Ring_Pommel_Saber
-		mes "[DRY-RUN] ^3355FFBismarc stabs";
-		mes "[DRY-RUN] himself, repeatedly,";
-		mes "[DRY-RUN] with the Ring Pommel Saber";
-		mes "[DRY-RUN] that has been imbued with";
-		mes "[DRY-RUN] the power of Green Herbs.^000000";
+		mes "^3355FF比斯马克刺杀";
+		mes "他自己，一次又一次，";
+		mes "用环柄剑";
+		mes "被注入了";
+		mes "绿色草药的力量。^000000";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] ^666666*Ghyklk*^000000";
-		mes "[DRY-RUN] *Gasp gasp*";
+		mes "[比斯马克]";
+		mes "^666666*Ghyklk*^000000";
+		mes "*喘息喘息*";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] Please...";
-		mes "[DRY-RUN] Help me up.";
-		mes "[DRY-RUN] The poison is";
-		mes "[DRY-RUN] still coarsing";
-		mes "[DRY-RUN] through my body...";
+		mes "[比斯马克]";
+		mes "请...";
+		mes "帮我起来。";
+		mes "毒药是";
+		mes "仍在流动";
+		mes "在我的身体里...";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] OwwwWWWW!!";
-		mes "[DRY-RUN] IT'S BURNING!";
+		mes "[比斯马克]";
+		mes "哎哟哟哟!!";
+		mes "它在燃烧!";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] *Gasp Gasp*";
-		mes "[DRY-RUN] *Whew* Okay,";
-		mes "[DRY-RUN] I can feel the";
-		mes "[DRY-RUN] antidote working now.";
-		mes "[DRY-RUN] Just what I needed.";
+		mes "[比斯马克]";
+		mes "*喘息喘息*";
+		mes "*呼* 好的，";
+		mes "我能感觉到";
+		mes "解药正在起作用。";
+		mes "正是我所需要的。";
 		next;
 		getitem 1073,1; //Merchant_Voucher_1
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] Here is";
-		mes "[DRY-RUN] your receipt.";
-		mes "[DRY-RUN] T-take it...!";
-		mes "[DRY-RUN] It's yours!";
+		mes "[比斯马克]";
+		mes "这是";
+		mes "你的收据。";
+		mes "拿着吧...！";
+		mes "这是你的！";
 		mapannounce "hugel","Thanks, " +strcharinfo(0)+ ", for the delivery. You saved my life...",bc_map;
 		close;
 	}
 	else if (BSMITH_Q == 14) {
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] Thank you.";
-		mes "[DRY-RUN] You saved";
-		mes "[DRY-RUN] my life...";
+		mes "[比斯马克]";
+		mes "谢谢你。";
+		mes "你救了";
+		mes "我的命...";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] ^666666*Ghyklk*^000000";
-		mes "[DRY-RUN] ^666666*Huk Hukk*^000000";
-		mes "[DRY-RUN] When will my";
-		mes "[DRY-RUN] o-order arrive...?";
+		mes "[比斯马克]";
+		mes "^666666*Ghyklk*^000000";
+		mes "^666666*呜呜*^000000";
+		mes "我的";
+		mes "订购到了...？";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] The poison in";
-		mes "[DRY-RUN] my body... the pain...";
-		mes "[DRY-RUN] excruciating... L-lord...";
+		mes "[比斯马克]";
+		mes "体内的毒";
+		mes "...疼痛...";
+		mes "痛苦不堪... 大人...";
 		next;
-		mes "[DRY-RUN] [Bismarc]";
-		mes "[DRY-RUN] When is the";
-		mes "[DRY-RUN] antidote gonna";
-		mes "[DRY-RUN] get here?!";
+		mes "[比斯马克]";
+		mes "解药什么时候";
+		mes "能到这里？!";
+		mes "能到这里？!";
 		close;
 	}
 }

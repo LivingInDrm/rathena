@@ -110,146 +110,146 @@ payon,115,131,3	script	Neko Neko#1	725,{
 geffen,129,148,3	script	Argen#1	779,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] Hey~ why are you carrying so many items?";
-		mes "[DRY-RUN] You mind sharing them with me?";
+		mes "[阿根]";
+		mes "嘿~ 你为什么带着这么多物品？";
+		mes "你介意和我分享一下吗？";
 		close;
 	}
 	emotion ET_SCRATCH;
-	mes "[DRY-RUN] [Argen]";
-	mes "[DRY-RUN] Man, oh man~";
-	mes "[DRY-RUN] Am I bored~!";
-	mes "[DRY-RUN] If I only knew more tricks with this yo-yo. Then I could really impress the ladies.";
+	mes "[阿根]";
+	mes "天哪~";
+	mes "我真无聊~！";
+	mes "如果我能掌握更多的溜溜球技巧，那我就能真正吸引到女孩了。";
 	next;
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] Impress the ladies...?";
+	mes "吸引女孩...？";
 	next;
 	emotion ET_SURPRISE;
 	if (Sex == SEX_MALE) {
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] Yeah dude. There are two things chicks dig. Small, adorable presents. And suave dudes.";
+		mes "[阿根]";
+		mes "是的，兄弟。女孩喜欢两样东西。小巧可爱的礼物，还有风度翩翩的家伙。";
 		next;
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] So, I got the cutesy present junk down. You know, instead of like, spending money on like a real gift, I make these little hairpin thingees.";
+		mes "[阿根]";
+		mes "所以，我已经掌握了可爱的礼物。你知道的，与其花钱买真正的礼物，我不如做这些小发夹。";
 		next;
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] As for being suave? Well, I do have this yo-yo...";
+		mes "[阿根]";
+		mes "至于风度翩翩？嗯，我确实有这个溜溜球...";
 		next;
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] Heh. You look like you don't like wasting cash on girls either. I'm down with that. If you like, I can make you a hairpin that you can give as gifts to the ^FF3333ladies^000000.";
+		mes "[阿根]";
+		mes "嘿。你看起来也不喜欢在女孩身上浪费钱。我对此很赞同。如果你愿意，我可以给你做一个发夹，你可以把它作为礼物送给^FF3333女士^000000。";
 		next;
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] All you gotta do is bring me the stuff to make it. And if that hairpin's for yourself, well, I'm down with that jive too.";
+		mes "[阿根]";
+		mes "你只需要给我带来制作它的材料。如果那个发夹是给你自己的，那我也很赞同这种风格。";
 	}
 	else {
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] Whoa~! A lady...";
-		mes "[DRY-RUN] Wow, you're really cute! Tell you what...";
+		mes "[阿根]";
+		mes "哇~！一个女孩...";
+		mes "哇，你真的很可爱！告诉你...";
 		next;
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] Since you're such a cutie, I'll put together a nice little hairpin for you. All you gotta do is bring me the stuff to make it.";
+		mes "[阿根]";
+		mes "既然你这么可爱，我会为你准备一个漂亮的发夹。你只需要给我带来制作它的材料。";
 		next;
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] So go ahead and tell me what kinda hairpin you're interested in.";
+		mes "[阿根]";
+		mes "那么请告诉我你想要什么样的发夹。";
 	}
 	next;
 	emotion ET_SMILE;
-	switch(select("[DRY-RUN] ^3131FFX Hairpin^000000:^3131FFBand Aid^000000:^3131FFFlower Hairpin^000000:No thanks.")) {
+	switch(select("^3131FFX 发夹^000000:^3131FF创可贴^000000:^3131FF花发夹^000000:不，谢谢。")) {
 	case 1:
 		if (countitem(2294) > 0 && countitem(7220) > 399) {
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] X Hairpin!";
-			mes "[DRY-RUN] Nice choice~!";
+			mes "[阿根]";
+			mes "X 发夹！";
+			mes "不错的选择~！";
 			next;
 			emotion ET_SURPRISE;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Ah... Right.";
-			mes "[DRY-RUN] About the Stellar...";
-			mes "[DRY-RUN] ^CE3100If you use an upgraded Stellar to make this item, any upgrades will be lost. That okay with you?^000000";
+			mes "[阿根]";
+			mes "啊...对了。";
+			mes "关于星辰...";
+			mes "^CE3100如果你使用升级过的星辰来制作这个物品，任何升级都会丢失。你可以接受吗？^000000";
 			next;
-			switch(select("[DRY-RUN] I don't mind.:I will come back later.")) {
+			switch(select("我不介意。:我稍后会回来。")) {
 			case 1:
-				mes "[DRY-RUN] [Argen]";
-				mes "[DRY-RUN] Alright, let's get to work.";
+				mes "[阿根]";
+				mes "好的，我们开始吧。";
 				next;
-				mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
-				mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
+				mes "^3131FF * 刮刮 * ^000000";
+				mes "^3131FF * 刮刮 * ^000000";
 				next;
 				emotion ET_BEST;
-				mes "[DRY-RUN] [Argen]";
-				mes "[DRY-RUN] Alright, I'm done!";
-				mes "[DRY-RUN] So what do you think?";
-				mes "[DRY-RUN] Pretty cool, eh?";
+				mes "[阿根]";
+				mes "好了，我完成了！";
+				mes "你觉得怎么样？";
+				mes "挺酷的，对吧？";
 				delitem 2294,1; //Star_Dust
 				delitem 7220,400; //Ectoplasm
 				getitem 5079,1; //Crossed_Hair_Band
 				next;
 				break;
 			case 2:
-				mes "[DRY-RUN] [Argen]";
-				mes "[DRY-RUN] No problem, take your time.";
+				mes "[阿根]";
+				mes "没问题，慢慢来。";
 				close;
 			}
 		}
 		else {
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Oh~";
-			mes "[DRY-RUN] You want a ^3131FFX Hairpin?^000000";
-			mes "[DRY-RUN] That's easy!";
+			mes "[阿根]";
+			mes "哦~";
+			mes "你想要一个^3131FFX发夹？^000000";
+			mes "那很简单！";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] I need ^FF00001 Stellar^000000";
-			mes "[DRY-RUN] and ^FF0000400 Ectoplasm^000000.";
-			mes "[DRY-RUN] Tell me when you're ready!";
+			mes "[阿根]";
+			mes "我需要^FF00001颗星辰^000000";
+			mes "和 ^FF0000400 幽灵物质^000000。";
+			mes "告诉我你准备好了！";
 			close;
 		}
 		break;
 	case 2:
 		if (countitem(970) > 0 && countitem(930) > 499) {
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Band Aid, eh?";
-			mes "[DRY-RUN] Got it! Hold on";
-			mes "[DRY-RUN] a sec, I'll be";
-			mes "[DRY-RUN] done in a bit.";
+			mes "[阿根]";
+			mes "创可贴，嗯？";
+			mes "明白了！等一下";
+			mes "一会儿，我就好。";
+			mes "马上就完成。";
 			next;
-			mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
-			mes "[DRY-RUN] ^3131FF * Scrape Scrape * ^000000";
+			mes "^3131FF * 刮刮 * ^000000";
+			mes "^3131FF * 刮刮 * ^000000";
 			next;
 			emotion ET_BEST;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] *Whew~!*";
-			mes "[DRY-RUN] I'm finished!";
-			mes "[DRY-RUN] Pretty cool, huh?";
+			mes "[阿根]";
+			mes "*呼~!*";
+			mes "我完成了！";
+			mes "很酷吧？";
 			delitem 970,1; //Alchol
 			delitem 930,500; //Rotten_Bandage
 			getitem 5063,1; //Plaster
 			next;
 		}
 		else {
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Ah, a ^3131FFBand Aid^000000!";
-			mes "[DRY-RUN] That stuff is great for faking injuries, or hiding a bald spot. Handy to have when you wanna ditch school.";
+			mes "[阿根]";
+			mes "啊，一个 ^3131FF创可贴^000000！";
+			mes "那东西非常适合伪装受伤，或者掩盖秃顶。想逃学的时候带着很方便。";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Bring me ^FF00001 Alcohol^000000 and";
-			mes "[DRY-RUN] ^FF0000500 Rotten Bandage^000000!";
-			mes "[DRY-RUN] Tell me when you're ready, yeah?";
+			mes "[阿根]";
+			mes "给我带来 ^FF00001 酒精^000000 和";
+			mes "^FF0000500 腐烂绷带^000000！";
+			mes "告诉我你准备好了，好的？";
 			close;
 		}
 		break;
 	case 3:
 		if (countitem(2269) > 0 && countitem(999) > 9 && Zeny > 19999) {
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] You wanna a Flower Hairpin~?";
-			mes "[DRY-RUN] Alright, gimmie a minute, yeah?";
+			mes "[阿根]";
+			mes "你想要一个花发夹吗~？";
+			mes "好的，给我一分钟，好的？";
 			next;
-			mes "[DRY-RUN] ^3131FF - Scrape Scrape - ^000000";
-			mes "[DRY-RUN] ^3131FF - Scrape Scrape - ^000000";
+			mes "^3131FF - 刮刮 - ^000000";
+			mes "^3131FF - 刮刮 - ^000000";
 			next;
 			emotion ET_BEST;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Ah... It's done!";
-			mes "[DRY-RUN] Hey, that looks pretty smooth! Oh, and uh, you can keep this leftover Stem.";
+			mes "[阿根]";
+			mes "啊... 完成了！";
+			mes "嘿，看起来很不错！哦，还有，你可以留着这个剩下的茎。";
 			delitem 2269,1; //Centimental_Flower
 			delitem 999,10; //Steel
 			set Zeny, Zeny-20000;
@@ -258,40 +258,40 @@ geffen,129,148,3	script	Argen#1	779,{
 			next;
 		}
 		else {
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] You wanna a ^3131FFFlower Hairpin^000000!";
-			mes "[DRY-RUN] Yeah, I've noticed cuties just love walking around with flowers in their mouths, and I was always like 'Whaaaat~?' But then I got this great idea!";
+			mes "[阿根]";
+			mes "你想要一个^3131FF花发夹^000000！";
+			mes "是啊，我注意到可爱的女孩们总喜欢嘴里叼着花，我一直在想‘什么呀~？’但后来我想到了这个好主意！";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Wouldn't some kinda... ^3131FFFlower Hairpin^000000 be a hit with chicks? So I tried making one, and it seemed to be pretty popular among my lady friends.";
+			mes "[阿根]";
+			mes "难道某种... ^3131FF花发夹^000000会受到女孩们的欢迎吗？所以我试着做了一个，似乎在我的女朋友中很受欢迎。";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] And it's a much better way to use a flower than to put it on Pet Orc Warriors. Man, those things just look gnarly~";
+			mes "[阿根]";
+			mes "把花用在宠物兽人战士身上可不是更好的用法吗。天哪，那些东西看起来真是太糟糕了~";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] Well, if you want one, I'll make it. But I want you should pay me some royalties for my services. It's pretty hard to attach a flower to a hairpin, you know?";
+			mes "[阿根]";
+			mes "好吧，如果你想要一个，我可以做。但我希望你给我一些服务费。把花固定在发夹上可不容易，你知道吗？";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] It takes mad skill.";
+			mes "[阿根]";
+			mes "这需要很高的技巧。";
 			next;
-			mes "[DRY-RUN] [Argen]";
-			mes "[DRY-RUN] So, I want you to bring...";
-			mes "[DRY-RUN] ^FF00001 Romantic Flower^000000,";
-			mes "[DRY-RUN] ^FF000010 Steel^000000";
-			mes "[DRY-RUN] and ^3131FF20,000 zeny^000000!";
-			mes "[DRY-RUN] Got it? Cool~";
+			mes "[阿根]";
+			mes "所以，我希望你带来...";
+			mes "^FF00001 玫瑰花^000000,";
+			mes "^FF000010 钢铁^000000";
+			mes "和 ^3131FF20,000金币^000000!";
+			mes "明白了吗？酷~";
 			close;
 		}
 		break;
 	case 4:
-		mes "[DRY-RUN] [Argen]";
-		mes "[DRY-RUN] I'm down with that.";
-		mes "[DRY-RUN] If you want some kinda hairpin, just come back. I'll just be here, looking ^FF3333suaaave^000000 with this yo-yo.";
+		mes "[阿根]";
+		mes "我同意这个。";
+		mes "如果你想要什么发夹，随时回来找我。我就在这里，拿着这个^FF3333摇摇^000000。";
 		close;
 	}
 	emotion ET_WRAP;
-	mes "[DRY-RUN] [Argen]";
-	mes "[DRY-RUN] Feel free to come ask me if you want more hairpins. Hey, I know I look lazy, but I do like to make things for the ladies. See ya later~!";
+	mes "[阿根]";
+	mes "如果你想要更多发夹，随时来问我。嘿，我知道我看起来很懒，但我确实喜欢为女士们制作东西。再见~！";
 	close;
 }
 
@@ -300,94 +300,94 @@ geffen,129,148,3	script	Argen#1	779,{
 yuno,300,188,5	script	Zhenbolt#1	753,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after -";
-		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请稍后再试 -";
+		mes "- 你把一些物品放入卡普拉仓库后 -";
 		close;
 	}
 	if (countitem(7216) > 299 && countitem(7097) > 299 && countitem(2211) > 0 && countitem(982) > 0) {
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] What's this?!";
-		mes "[DRY-RUN] You've already brought everything I've asked! Good job, hero~! Let me get to work right away...";
+		mes "[震雷]";
+		mes "这是什么？！";
+		mes "你已经带来了我要求的一切！干得好，英雄~！让我马上开始工作...";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] ...";
+		mes "[震雷]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] ......";
+		mes "[震雷]";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] ......*Cling*";
+		mes "[震雷]";
+		mes "......*紧贴*";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] Take this...";
-		mes "[DRY-RUN] It's known as the ^FF0000Hot-blooded Headband^000000, my personal symbol of fighting spirit! With this on your head, nothing can stop you!";
+		mes "[震雷]";
+		mes "拿着这个......";
+		mes "这被称为^FF0000热血头带^000000， 是我个人的战斗精神象征！戴上它，没人能阻止你！";
 		delitem 7216,300; //Red_Scarf
 		delitem 7097,300; //Burning_Heart
 		delitem 2211,1; //Bandana
 		delitem 982,1; //White_Dyestuffs
 		getitem 5070,1; //Headband_Of_Power
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] Now, go!";
-		mes "[DRY-RUN] Unleash your fighting spirit upon the villains of the world!";
+		mes "[震雷]";
+		mes "现在，出发！";
+		mes "将你的战斗精神释放到这个世界的恶徒身上！";
 		close;
 	}
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] I...";
-	mes "[DRY-RUN] am called ^FF0000Zhenbolt^000000!!";
+	mes "[震雷]";
+	mes "I...";
+	mes "我叫^FF0000震电^000000！！";
 	next;
-	if (select("[DRY-RUN] THE Zhenbolt!?:Oh my gosh, it's Zhenbolt!") == 1) {
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] Yes, it is I, the man who has pummelled over a trillion foes and rising. Raging Hurricane Hero of Justice: Zhenbolt!";
+	if (select("THE Zhenbolt!?:哦我的天，它是Zhenbolt！") == 1) {
+		mes "[震雷]";
+		mes "是的，我就是那个击败了超过一万亿敌人的人。正义的狂暴飓风英雄：震电！";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] I see in your eyes that you also fight with a heart of purity, a heart of passion!";
+		mes "[震雷]";
+		mes "我在你的眼中看到了你也以纯洁的心、热情的心在战斗！";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] It is decided! If you bring me the following items, I will give you the famous symbol of battle by which villains fear Zhenbolt.";
+		mes "[震雷]";
+		mes "决定了！如果你带给我以下物品，我将给你一个让恶棍们畏惧的著名战斗象征。";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] Bring me...";
-		mes "[DRY-RUN] 300 ^FF0000Red Muffler^000000,";
-		mes "[DRY-RUN] 300 ^FF0000Burning Heart^000000,";
-		mes "[DRY-RUN] 1 ^FF0000Bandana^000000 and 1 ^FF0000White Dyestuffs^000000.";
-		mes "[DRY-RUN] That's all I need.";
+		mes "[震雷]";
+		mes "带给我...";
+		mes "300 ^FF0000红色围巾^000000,";
+		mes "300 ^FF0000燃烧的心^000000,";
+		mes "1 ^FF0000头巾^000000 和 1 ^FF0000白色染料^000000.";
+		mes "这就是我所需要的一切.";
 		next;
-		mes "[DRY-RUN] [Zhenbolt]";
-		mes "[DRY-RUN] Come back soon, adventurer!";
-		mes "[DRY-RUN] I expect great things of you!";
+		mes "[震雷]";
+		mes "快点回来，冒险者！";
+		mes "我对你寄予厚望！";
 		close;
 	}
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] Yes.";
-	mes "[DRY-RUN] It is I, Zhenbolt.";
-	mes "[DRY-RUN] Warrior of Might!";
-	mes "[DRY-RUN] Whirling Tempest";
-	mes "[DRY-RUN] of Raging Passion!";
+	mes "[震雷]";
+	mes "是的。";
+	mes "我是，Zhenbolt.";
+	mes "力量的战士！";
+	mes "旋风暴风";
+	mes "的狂热激情！";
 	next;
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] I see in your eyes that you have seen many a skirmish. To have survived this long, you must know the secret to victory...";
+	mes "[震雷]";
+	mes "我从你的眼中看到你经历了许多小冲突。能够活到现在，你一定知道胜利的秘密……";
 	next;
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] Pure, unbridled rage!";
-	mes "[DRY-RUN] Battles are won with vigor and passion!";
+	mes "[震雷]";
+	mes "纯粹、无拘无束的愤怒！";
+	mes "战斗是靠活力和激情赢得的！";
 	next;
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] Seeing as you understand this fundamental, I recognize you as an ally in the eternal struggle for justice! I shall bestow upon you the very symbol with which I have struck fear into evil hearts...";
+	mes "[震雷]";
+	mes "既然你理解这个基本原则，我就把你视为在永恒正义斗争中的盟友！我将赐予你我用来震慑邪恶之心的象征……";
 	next;
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] Bring me";
-	mes "[DRY-RUN] 300 ^FF0000Red Muffler^000000,";
-	mes "[DRY-RUN] 300 ^FF0000Burning Heart^000000,";
-	mes "[DRY-RUN] 1 ^FF0000Bandana^000000 and 1 ^FF0000White Dyestuffs^000000.";
-	mes "[DRY-RUN] That's all I need.";
+	mes "[震雷]";
+	mes "把我带来";
+	mes "300 ^FF0000红色围巾^000000,";
+	mes "300 ^FF0000燃烧的心^000000,";
+	mes "1 ^FF0000头巾^000000 和 1 ^FF0000白色染料^000000.";
+	mes "这就是我所需要的一切.";
 	next;
-	mes "[DRY-RUN] [Zhenbolt]";
-	mes "[DRY-RUN] Bring me those items...";
-	mes "[DRY-RUN] And you too can become a fighting legend...";
+	mes "[震雷]";
+	mes "把我带来那些物品……";
+	mes "你也可以成为一个战斗传奇……";
 	close;
 }
 
@@ -396,112 +396,112 @@ yuno,300,188,5	script	Zhenbolt#1	753,{
 prontera,165,232,3	script	Nephia#1	744,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after -";
-		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请稍后再试 -";
+		mes "- 你把一些物品放入卡普拉仓库后 -";
 		close;
 	}
 	if (countitem(2244) > 0 && countitem(2209) > 0 && countitem(10007) > 0) {
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Oh...";
-		mes "[DRY-RUN] You've brought all these ribbons! I can't wait to tie you a new ribbon to put on your ^FF66CCbeautiful hair!^000000";
+		mes "[尼菲亚]";
+		mes "哦...";
+		mes "你带来了这么多丝带！我迫不及待想给你扎一个新的丝带，放在你那^FF66CC美丽的头发^000000上！";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] ...";
+		mes "[尼菲亚]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] ......";
+		mes "[尼菲亚]";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] .......*Cling*";
+		mes "[尼菲亚]";
+		mes ".......*咔嚓*";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] That's it~! We're done! Oh, I just know you're going to look precious wearing this.";
+		mes "[尼菲亚]";
+		mes "就这样~！我们完成了！哦，我知道你戴上这个一定会显得很可爱。";
 		delitem 2244,1; //Big_Sis'_Ribbon
 		delitem 2209,1; //Ribbon_
 		delitem 10007,1; //Silk_Ribbon
 		getitem 5083,1; //Red_Tailed_Ribbon
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Hopefully, we can get together and do each other's hair sometime! Wouldn't that be soooo much fun?";
+		mes "[尼菲亚]";
+		mes "希望我们能聚在一起，给彼此做发型！那一定会非常有趣吧？";
 		close;
 	}
-	mes "[DRY-RUN] [Nephia]";
-	mes "[DRY-RUN] Wow~";
-	mes "[DRY-RUN] Such beautiful hair! I'm sorry, it's just that I love pretty hairstyles, and accessories!";
+	mes "[尼菲亚]";
+	mes "哇~";
+	mes "真是美丽的头发！抱歉，我只是太喜欢漂亮的发型和配饰了！";
 	next;
-	mes "[DRY-RUN] [Nephia]";
-	mes "[DRY-RUN] Ooh~! You know what would make your hair so much cuter? I think if you tied it back with a big, red ribbon, you would look sooo ^FF66CCadorable^000000!";
+	mes "[尼菲亚]";
+	mes "哦~！你知道什么能让你的头发更可爱吗？我觉得如果你用一个大红色丝带把它扎起来，你会显得^FF66CC超级可爱^000000！";
 	next;
 	if (Sex == SEX_MALE) {
-		if (select("[DRY-RUN] Um, lady, I'm a dude.:^FF66CCOoh~! You're right!^000000") == 1) {
+		if (select("嗯，女士，我是男的。:^FF66CC哦~！你说得对！^000000") == 1) {
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] Woman, can't you that I'm a man?";
+			mes "女人，你难道看不出来我是个男人吗？";
 			next;
-			mes "[DRY-RUN] [Nephia]";
-			mes "[DRY-RUN] Awww...";
-			mes "[DRY-RUN] But you would look so ^FF66CCpretty~!^000000";
+			mes "[尼菲亚]";
+			mes "哎呀……";
+			mes "但是你看起来会如此 ^FF66CC漂亮~!^000000";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] That...";
-			mes "[DRY-RUN] Was the worst";
-			mes "[DRY-RUN] compliment anyone";
-			mes "[DRY-RUN] has ever given me.";
+			mes "那...";
+			mes "是最糟糕的";
+			mes "任何人给过的赞美。";
+			mes "这是我收到过的最糟糕的赞美。";
 			close;
 		}
 		mes "["+ strcharinfo(0) +"]";
-		mes "[DRY-RUN] Oooh~!";
-		mes "[DRY-RUN] That sounds great!";
+		mes "哦哦~!";
+		mes "听起来不错!";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Like, oh my God! That's what I was thinking! Oh hey~! I can go ahead and tie that ribbon for you if you want!";
+		mes "[尼菲亚]";
+		mes "就像，哦我的天! 这正是我在想的! 哦嘿~! 如果你想的话，我可以帮你绑那个丝带!";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Ooh! Bring...";
-		mes "[DRY-RUN] 1 ^FF0000Big Ribbon^000000,";
-		mes "[DRY-RUN] 1 ^FF0000slotted Ribbon^000000 and";
-		mes "[DRY-RUN] 1 ^FF0000Silk Ribbon^000000!";
+		mes "[尼菲亚]";
+		mes "哦! 带来...";
+		mes "1 ^FF0000大丝带^000000，";
+		mes "1 ^FF0000带孔丝带^000000 和";
+		mes "1 ^FF0000丝绸丝带^000000!";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Oh, I almost forgot!";
-		mes "[DRY-RUN] ^FF0000If you bring me any upgraded items, or items compounded with cards, those cards and upgrades will be lost once I create the new item for you. So please don't forget that!^000000";
+		mes "[尼菲亚]";
+		mes "哦，我差点忘了!";
+		mes "^FF0000如果你给我带来任何升级过的物品，或者与卡片合成的物品，一旦我为你制作新物品，这些卡片和升级将会丢失。所以请不要忘记这一点！^000000";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Ooh, hurry hurry! I can't wait to accessorize your hair!";
+		mes "[尼菲亚]";
+		mes "哦，快点快点！我等不及要给你的头发加上配饰了！";
 		close;
 	}
 	else {
-		if (select("[DRY-RUN] No thanks.:^FF66CCOoh~! You're right!^000000") == 1) {
+		if (select("不，谢谢。:^FF66CC哦~！你说得对！^000000") == 1) {
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] Er...";
-			mes "[DRY-RUN] No thanks.";
+			mes "呃...";
+			mes "不，谢谢。";
 			next;
-			mes "[DRY-RUN] [Nephia]";
-			mes "[DRY-RUN] Awwww~";
-			mes "[DRY-RUN] But you're just the cutest little thing. I just know you would look so preeeetty!";
+			mes "[尼菲亚]";
+			mes "哎呀~";
+			mes "但是你真是太可爱了。我知道你一定会看起来非常漂亮！";
 			close;
 		}
 		mes "["+ strcharinfo(0) +"]";
-		mes "[DRY-RUN] Oooh~!";
-		mes "[DRY-RUN] That sounds great!";
+		mes "哦哦~!";
+		mes "听起来不错!";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Like, oh my God! That's what I was thinking! Oh hey~! I can go ahead and tie a ribbon for you if you want!";
+		mes "[尼菲亚]";
+		mes "就像，哦我的天！这正是我在想的！哦嘿~！如果你想的话，我可以先给你绑个丝带！";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Ooh! To do that I need";
-		mes "[DRY-RUN] 1 ^FF0000Big Ribbon^000000,";
-		mes "[DRY-RUN] 1 ^FF0000slotted Ribbon^000000 and";
-		mes "[DRY-RUN] 1 ^FF0000Silk Ribbon^000000!";
+		mes "[尼菲亚]";
+		mes "哦！要做到这一点我需要";
+		mes "1 ^FF0000大丝带^000000，";
+		mes "1 ^FF0000带孔丝带^000000 和";
+		mes "1 ^FF0000丝绸丝带^000000!";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Oh, I almost forgot!";
-		mes "[DRY-RUN] ^FF0000If you bring me any upgraded items, or items compounded with cards, those cards and upgrades will be lost once I create the new item for you. So please don't forget that!^000000";
+		mes "[尼菲亚]";
+		mes "哦，我差点忘了!";
+		mes "^FF0000如果你给我带来任何升级过的物品，或者与卡片合成的物品，一旦我为你制作新物品，这些卡片和升级将会丢失。所以请不要忘记这一点！^000000";
 		next;
-		mes "[DRY-RUN] [Nephia]";
-		mes "[DRY-RUN] Ooh, hurry hurry! I can't wait to accessorize your hair!";
+		mes "[尼菲亚]";
+		mes "哦，快点快点！我等不及要给你的头发加上配饰了！";
 		close;
 	}
 }
@@ -510,52 +510,52 @@ prontera,165,232,3	script	Nephia#1	744,{
 //============================================================
 comodo,237,217,5	script	Meruntei#1	732,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after -";
-		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请稍后再试 -";
+		mes "- 你把一些物品放入卡普拉仓库后 -";
 		close;
 	}
 	if (countitem(5010) > 0 && countitem(5049) > 0 && countitem(7101) > 9 && Zeny > 9999) {
-		mes "[DRY-RUN] [Meruntei]";
-		mes "[DRY-RUN] Oh! You brought all of them! Now I shall make you an Indian Headband of your very own.";
+		mes "[梅伦特]";
+		mes "哦！你把所有的都带来了！现在我将为你制作一顶属于你自己的印度头巾。";
 		next;
-		mes "[DRY-RUN] [Meruntei]";
-		mes "[DRY-RUN] Take this! The items you have brought will be very useful for continuing my work in spreading headbands around Rune-Midgard.";
+		mes "[梅伦特]";
+		mes "拿着这个！你带来的物品对我继续在鲁恩-米德加兹传播头巾非常有用。";
 		delitem 5010,1; //Indian_Hair_Piece
 		delitem 5049,1; //Stripe_Band
 		delitem 7101,10; //Peco_Wing_Feather
 		set Zeny, Zeny-10000;
 		getitem 5071,1; //Indian_Headband
 		next;
-		mes "[DRY-RUN] [Meruntei]";
-		mes "[DRY-RUN] iiiyiyiyiyiyiyiiiiii~~!";
+		mes "[梅伦特]";
+		mes "iiiyiyiyiyiyiyiiiiii~~!";
 		close;
 	}
-	mes "[DRY-RUN] [Meruntei]";
-	mes "[DRY-RUN] iiiyiyiyiyiyiyiiiiii~~!";
-	mes "[DRY-RUN] Indian spirit, forever~!";
-	mes "[DRY-RUN] On behalf of the Comodo Indians, I give reverence to all Indian Tribes!";
-	mes "[DRY-RUN] [Meruntei]";
+	mes "[梅伦特]";
+	mes "iiiyiyiyiyiyiyiiiiii~~!";
+	mes " ";
+	mes "印度精神，永远~！";
+	mes "我代表科莫多的印第安人，向所有印第安部落致敬！";
 	next;
-	mes "[DRY-RUN] Would you like to have an Indian Headband? You wouldn't become an official member of my tribe, but wearing it would show your respect if you happen to encounter tribal Indians in your adventures.";
-	mes "[DRY-RUN] [Meruntei]";
+	mes "[梅伦特]";
+	mes "你想要一顶印度头巾吗？你不会成为我部落的正式成员，但如果你在冒险中遇到部落印第安人，佩戴它会显示你的尊重。";
 	next;
-	mes "[DRY-RUN] You could just bring...";
-	mes "[DRY-RUN] 1 ^FF0000Indian Fillet^000000,";
-	mes "[DRY-RUN] 1 ^FF0000Striped Hairband^000000,";
-	mes "[DRY-RUN] 10 ^FF0000PecoPeco Feather^000000";
-	mes "[DRY-RUN] and ^FF000010,000 zeny!";
-	mes "[DRY-RUN] [Meruntei]";
+	mes "[梅伦特]";
+	mes "你可以直接带...";
+	mes "1 ^FF0000印度鱼片^000000,";
+	mes "1 ^FF0000条纹发带^000000,";
+	mes "10 ^FF0000皮可皮可羽毛^000000";
+	mes "和 ^FF000010,000金币!";
 	next;
-	mes "[DRY-RUN] I will be using the items you've given me so I can continue my work in spreading Indian Headbands, and paying homage to the tribes of Rune-Midgard.";
-	mes "[DRY-RUN] [Meruntei]";
+	mes "[梅伦特]";
+	mes "我将使用你给我的物品，以便继续我的工作，传播印度头带，并向米德加尔特的部落致敬。";
 	next;
-	mes "[DRY-RUN] ^FF0000For your information, if you bring me any item that has a card inserted, or has been upgraded, the additional abilities of the item will disappear after I have used them. So please keep that in mind.^000000";
-	mes "[DRY-RUN] [Meruntei]";
+	mes "[梅伦特]";
+	mes "^FF0000为了你的信息，如果你带给我任何插卡的物品，或者已经升级的物品，使用后物品的额外能力将会消失。所以请记住这一点。^000000";
 	next;
-	mes "[DRY-RUN] iiiyiyiyiyiyiyiiiiii~~!";
+	mes "[梅伦特]";
 	mes "iiiyiyiyiyiyiyiiiiii~~!";
 	close;
 }
@@ -564,79 +564,79 @@ comodo,237,217,5	script	Meruntei#1	732,{
 //============================================================
 geffen,67,87,3	script	Ipore#1	700,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after -";
-		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请稍后再试 -";
+		mes "- 你把一些物品放入卡普拉仓库后 -";
 		close;
 	}
 	if (countitem(921) > 299) {
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] Wow! Did you really gather these 300 Mushroom Spores all by yoruself? Nice! Now it's time to use my magic~";
+		mes "[伊波尔]";
+		mes "哇！你真的自己收集了这300个蘑菇孢子吗？太棒了！现在是时候使用我的魔法了~";
 		next;
-		mes "[DRY-RUN] ^3355FF*Sprinkle Sprinkle*";
-		mes "[DRY-RUN] Ipore pours the Mushroom Spores onto your head.^000000";
+		mes "^3355FF*洒洒洒*";
+		mes "伊波尔把蘑菇孢子洒在你的头上。^000000";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] Hocus pocus!";
+		mes "[伊波尔]";
+		mes "变变变！";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] .......................";
-		mes "[DRY-RUN] Phew! Success! There's a mushroom growing out of your head!";
+		mes "[伊波尔]";
+		mes ".......................";
+		mes "呼！成功了！你的头上长出了一个蘑菇！";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] But...";
-		mes "[DRY-RUN] I don't like the way it's tilting. It should have grown in the ^FF3333other^000000 direction.";
+		mes "[伊波尔]";
+		mes "但是……";
+		mes "我不喜欢它倾斜的样子。它应该朝着^FF3333另一个^000000方向长。";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] I guess...";
-		mes "[DRY-RUN] I guess we should make that mushroom into a headband so that you can adjust it to your style.";
+		mes "[伊波尔]";
+		mes "我想...";
+		mes "我想我们应该把那个蘑菇做成一个头带，这样你就可以根据自己的风格调整它。";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] I know, I know...";
-		mes "[DRY-RUN] It's not as cool as having the mushroom actually attached to your skull, but it's all we can do. I'm sorry I let you down.";
+		mes "[伊波尔]";
+		mes "我知道，我知道……";
+		mes "这并不像把蘑菇真正贴在你的头骨上那么酷，但这是我们能做的。我很抱歉让你失望了。";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] ...There.";
-		mes "[DRY-RUN] It's done. But are you okay? Luckily, I don't think I scalped you.";
+		mes "[伊波尔]";
+		mes "...好了。";
+		mes "完成了。不过你还好吗？幸运的是，我想我没有把你的头皮剥掉。";
 		next;
-		mes "[DRY-RUN] [Ipore]";
-		mes "[DRY-RUN] Anyway, now you can wear that mushroom at a rakish angle, the way it's supposed to be worn. Stay cool, you fashion rebel, you.";
+		mes "[伊波尔]";
+		mes "无论如何，现在你可以把那个蘑菇戴得时尚一点，正如它应该被戴的那样。保持酷炫，你这个时尚叛逆者。";
 		delitem 921,300; //Mushroom_Spore
 		getitem 5082,1; //Mushroom_Band
 		close;
 	}
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Finally...";
-	mes "[DRY-RUN] I've created a magic spell that can make mushrooms grow anywhere! Anyplace you can imagine, I can make a mushroom grow there.";
+	mes "[伊波尔]";
+	mes "终于...";
+	mes "我创造了一种魔法，可以让蘑菇在任何地方生长！你能想象的任何地方，我都能让蘑菇在那儿生长。";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Even...";
-	mes "[DRY-RUN] On top of the human head...";
+	mes "[伊波尔]";
+	mes "甚至...";
+	mes "在人类的头顶上...";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Some may think it grotesque, but wouldn't you agree that sporting a mushroom, grown from your head, would start an art revolution?";
+	mes "[伊波尔]";
+	mes "有些人可能会觉得这很可怕，但你不觉得从你头上长出来的蘑菇会引发一场艺术革命吗？";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Just think! It's the perfect fusion of magic and art, fashion and living life...";
-	mes "[DRY-RUN] Man and mushroom?";
-	mes "[DRY-RUN] Ah...I've piqued your curiosity I see.";
+	mes "[伊波尔]";
+	mes "想想看！这是魔法与艺术、时尚与生活的完美融合...";
+	mes "人和蘑菇？";
+	mes "啊……我看你对我很感兴趣。";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] So...";
-	mes "[DRY-RUN] But in order to cast this spell, I need the magical power in ^FF0000300 Mushroom Spores^000000. So, if you bring me all of those Mushroom Spores, you can see my magic for yourself!";
+	mes "[伊波尔]";
+	mes "所以……";
+	mes "但是为了施展这个魔法，我需要^FF0000300蘑菇孢子^000000中的魔力。所以，如果你把所有的蘑菇孢子都带给我，你就可以亲眼见证我的魔法！";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Now now, you do understand that I have to make the mushroom grow out of your head. Anywhere else, you could suspect that there's some kind of trick or illusion involved.";
+	mes "[伊波尔]";
+	mes "现在，现在，你明白我必须让蘑菇从你的头上长出来吧。其他地方，你可能会怀疑这有什么把戏或幻觉。";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Besides, nothing says 'rebel without a cause' like a mushroom growing out of your head! You would look soooo cool, independent and countercultured!";
+	mes "[伊波尔]";
+	mes "而且，没有什么比从你头上长出蘑菇更能体现“无因反叛”的精神了！你看起来会超级酷，独立又反文化！";
 	next;
-	mes "[DRY-RUN] [Ipore]";
-	mes "[DRY-RUN] Remember, bring me...";
-	mes "[DRY-RUN] ^FF0000300 Mushroom Spore^000000,";
-	mes "[DRY-RUN] so that I can let you experience my amazing magic for yourself~!";
+	mes "[伊波尔]";
+	mes "记住，带给我……";
+	mes "^FF0000300蘑菇孢子^000000，";
+	mes "这样我就可以让你亲自体验我惊人的魔法~！";
 	close;
 }
 
@@ -1168,159 +1168,159 @@ xmas,175,156,3	script	Fuzzy Fuzz#1	712,{
 payon_in03,8,193,4	script	Nanhyang#1	77,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after -";
-		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请稍后再试 -";
+		mes "- 你把一些物品放入卡普拉仓库后 -";
 		close;
 	}
 	if ((MaxWeight-Weight) < 2430) {
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Hmmm...";
-		mes "[DRY-RUN] You look like you're having trouble carrying all of your things. Why don't you place some of your extra items into the Kafra Storage?";
+		mes "[南乡]";
+		mes "嗯……";
+		mes "你看起来很难携带所有的东西。为什么不把一些多余的物品放入卡普拉仓库呢？";
 		close;
 	}
 	if (countitem(5073) > 0 && countitem(1750) > 0) {
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Hello, there.";
-		mes "[DRY-RUN] Ah, I can tell that you already have a ^8C1717'Model Training Hat'^000000. I see that using it has corrected your posture.";
+		mes "[南乡]";
+		mes "你好，";
+		mes "啊，我可以看出你已经有了一个 ^8C1717'模型训练帽'^000000。我看到使用它纠正了你的姿势。";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Oh...";
-		mes "[DRY-RUN] I forgot to tell you that I can not only put together a 'Model Training Hat,' I can disassemble it into its original parts.";
+		mes "[南乡]";
+		mes "哦...";
+		mes "我忘了告诉你，我不仅可以组装一个'模型训练帽'，还可以将其拆解为原始部件。";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] If you give me ^0000FF1 'Model Training Hat'^000000 and ^0000FF1 'Arrow'^000000, I give you ^8C17171 'Apple of Archer'^000000 and ^8C17171 'Book'^000000. So, would you like to disassemble the items?";
+		mes "[南乡]";
+		mes "如果你给我 ^0000FF1 '模型训练帽'^000000 和 ^0000FF1 '箭'^000000，我会给你 ^8C17171 '弓箭手的苹果'^000000 和 ^8C17171 '书'^000000。你想拆解这些物品吗？";
 		next;
-		if (select("[DRY-RUN] Disassemble:Cancel") == 1) {
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] Thank you.";
-			mes "[DRY-RUN] It will not take that much time to make this hat, so please wait a moment.";
+		if (select("拆解:取消") == 1) {
+			mes "[南乡]";
+			mes "谢谢你。";
+			mes "制作这个帽子不会花太多时间，请稍等片刻。";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
+			mes "[南乡]";
+			mes " . . . . . . . . . . . . . .";
+			mes " . . . . . . . . . . . . . ";
+			mes " . . . . . . . . . . . . . .";
+			mes " . . . . . . . . . . . . . ";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
+			mes "[南乡]";
 			delitem 5073,1; //Cap_Of_Concentration
 			delitem 1750,1; //Arrow
 			getitem 2285,1; //Apple_Of_Archer
 			getitem 1550,1; //Book
-			mes "[DRY-RUN] There you go.";
+			mes "给你。";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] If you want to make a";
-			mes "[DRY-RUN] 'Model Training Hat' again,";
-			mes "[DRY-RUN] feel free to come back.";
+			mes "[南乡]";
+			mes "如果你想再制作一个";
+			mes "‘模特训练帽’，";
+			mes "随时可以回来找我。";
 			close;
 		}
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] I see.";
-		mes "[DRY-RUN] I hope you will";
-		mes "[DRY-RUN] continue to use that hat";
-		mes "[DRY-RUN] to improve your posture";
-		mes "[DRY-RUN] and glamorous poise.";
+		mes "[南乡]";
+		mes "我明白了。";
+		mes "我希望你会";
+		mes "继续使用那顶帽子";
+		mes "来改善你的姿势";
+		mes "和优雅的气质。";
 		close;
 	}
 	if (countitem(2285) > 0 && countitem(1550) > 0) {
-		mes "[DRY-RUN] [Nanhyang]";
+		mes "[南乡]";
 		emotion ET_SMILE;
-		mes "[DRY-RUN] You brought the materials~";
+		mes "你带来了材料~";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Before I start to create the item, I'm obligated to warn you...";
+		mes "[南乡]";
+		mes "在我开始制作物品之前，我有义务警告你...";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] If the ^FF0000'Book' and 'Apple of Archer' items you have brought to make a 'Model Training Hat' was ^FF0000upgraded^000000, after I create the hat out of the book, ^FF0000these upgrades, including compounded cards, will be lost.^000000";
+		mes "[南乡]";
+		mes "如果你带来用于制作“模型训练帽”的 ^FF0000“书”和“弓箭手的苹果”已经 ^FF0000升级^000000，那么我用书制作帽子后，^FF0000这些精炼等级和插入卡片都会消失。^000000";
 		next;
-		mes "[DRY-RUN] [Hanhyang]";
-		mes "[DRY-RUN] So would you like to create the Model Training Hat right now?";
+		mes "[汉阳]";
+		mes "那么您现在想要制作模型训练帽吗？";
 		next;
-		if (select("[DRY-RUN] Create:Cancel") == 1) {
-			mes "[DRY-RUN] [Nanhyang]";
+		if (select("创建:取消") == 1) {
+			mes "[南乡]";
 			emotion ET_OK;
-			mes "[DRY-RUN] Thank you.";
-			mes "[DRY-RUN] Let me create one for you right away. Please have a seat and make yourself comfortable.";
+			mes "谢谢你。";
+			mes "让我马上为您制作一个。请坐下，放松一下。";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] Usually we have a zeny service charge, but since you've got ^3355FFthe look^000000, I'll waive it.";
+			mes "[南乡]";
+			mes "通常我们会收取金币服务费，但因为您有 ^3355FF这个造型^000000， 我会免除它。";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] Please wait a moment while I put this together.";
+			mes "[南乡]";
+			mes "请稍等片刻，我来把这个准备好。";
 			next;
-			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . .";
-			mes "[DRY-RUN]  . . . . . . . . . . . . . ";
+			mes " . . . . . . . . . . . . . .";
+			mes " . . . . . . . . . . . . . ";
+			mes " . . . . . . . . . . . . . .";
+			mes " . . . . . . . . . . . . . ";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
+			mes "[南乡]";
 			emotion ET_AHA;
-			mes "[DRY-RUN] That wasn't too difficult. I hope you wear this hat everyday to improve your posture.";
+			mes "这并不太难。希望您每天都能戴上这个帽子，改善您的姿势。";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] You may have trouble at first, keeping your balance and trying not to drop the apple. You may even feel incredible neck pain. But for the sake of beauty, it'll all be worth it.";
+			mes "[南乡]";
+			mes "一开始你可能会有些困难，保持平衡并尽量不掉下苹果。你甚至可能会感到难以置信的颈部疼痛。但为了美丽，这一切都是值得的。";
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] Here it is.";
-			mes "[DRY-RUN] Oh, right, this arrow from the Apple of Archer is left over, so you can go ahead and take that.";
+			mes "[南乡]";
+			mes "给你。";
+			mes "哦，对了，这个来自弓箭手苹果的箭还剩下，所以你可以拿走它。";
 			delitem 2285,1; //Apple_Of_Archer
 			delitem 1550,1; //Book
 			getitem 5073,1; //Cap_Of_Concentration
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] Also, I can disassemble the Model Training Hat into its original materials. So if you want the original items back, bring the Model Training Hat and the arrow I gave you.";
+			mes "[南乡]";
+			mes "另外，我可以将模型训练帽拆解成原材料。所以如果你想要原来的物品，带上模型训练帽和我给你的箭。";
 			getitem 1750,1; //Arrow
 			next;
-			mes "[DRY-RUN] [Nanhyang]";
-			mes "[DRY-RUN] I hope you";
-			mes "[DRY-RUN] will have a";
-			mes "[DRY-RUN] good day.";
-			mes "[DRY-RUN] Farewell.";
+			mes "[南乡]";
+			mes "我希望你";
+			mes "将会有一个";
+			mes "好日子。";
+			mes "再见。";
 			close;
 		}
-		mes "[DRY-RUN] [Nanhyang]";
+		mes "[南乡]";
 		emotion ET_THINK;
-		mes "[DRY-RUN] I see. You must have brought items with cards or upgrades that you didn't want to lose. Feel free to come back anytime when you are ready.";
+		mes "我明白了。你一定带来了不想丢失的带卡片或升级的物品。随时欢迎你回来，当你准备好的时候。";
 		close;
 	}
-	mes "[DRY-RUN] [Nanhyang]";
+	mes "[南乡]";
 	emotion ET_SURPRISE;
-	mes "[DRY-RUN] Hello~";
-	mes "[DRY-RUN] Welcome to the Handsome Charm Modeling School. May I help you?";
+	mes "你好~";
+	mes "欢迎来到英俊魅力模特学校。我能帮您什么吗？";
 	next;
-	if (select("[DRY-RUN] I want to be a model~!:Cancel") == 1) {
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] I see~";
-		mes "[DRY-RUN] Although it's clear that you've got '^3355FFthe look^000000,' we can't accept any students at the moment.";
+	if (select("我想成为模特~!:取消") == 1) {
+		mes "[南乡]";
+		mes "我明白了~";
+		mes "虽然很明显您拥有'^3355FF这种气质^000000'，但我们目前无法接受任何学生。";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Lately, our director has been gone, and we aren't sure when he'll come back. ^333333*Sigh* I can't even remember the last time we got paid.^000000";
+		mes "[南乡]";
+		mes "最近，我们的主任不在，我们也不确定他什么时候会回来。^333333*唉*我甚至记不起上次我们拿到工资是什么时候了。^000000";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Hmm... Wait a minute!";
-		mes "[DRY-RUN] At the very least, we could train you to improve your posture so that you can walk with regal poise.";
+		mes "[南乡]";
+		mes "嗯……等一下！";
+		mes "至少，我们可以训练您改善姿势，让您走路时更加优雅。";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Although we can't offer any classes at this time, I can create a special 'Model Training Hat' for you. That way, you can practice the glamourous way of walking down the catwalk on your own.";
+		mes "[南乡]";
+		mes "虽然我们目前无法提供任何课程，但我可以为您制作一顶特别的'模特训练帽'。这样，您就可以自己练习走秀的魅力方式。";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
+		mes "[南乡]";
 		emotion ET_QUESTION;
-		mes "[DRY-RUN] But since our director is gone, we can't really use our budget to give you a hat. If you want, please bring me the following items...";
+		mes "但是由于我们的主任不在，我们无法真正使用预算给你一个帽子。如果你想，请带给我以下物品...";
 		next;
-		mes "[DRY-RUN] [Nanhyang]";
-		mes "[DRY-RUN] Please bring...";
-		mes "[DRY-RUN] ^0000FF1 Apple of Archer^000000 and";
-		mes "[DRY-RUN] ^0000FF1 Book^000000.";
-		mes "[DRY-RUN] Then I can fashion a 'Model Training Hat' for you right away.";
+		mes "[南乡]";
+		mes "请带来...";
+		mes "^0000FF1 弓箭手的苹果^000000 和";
+		mes "^0000FF1 书籍^000000.";
+		mes "然后我可以立即为你制作一个'模特训练帽'.";
 		close;
 	}
-	mes "[DRY-RUN] [Nanhyang]";
-	mes "[DRY-RUN] I understand.";
-	mes "[DRY-RUN] Well, have a good day.";
-	mes "[DRY-RUN] Thank you~";
+	mes "[南乡]";
+	mes "我明白了。";
+	mes "那么，祝你有美好的一天.";
+	mes "谢谢~";
 	close;
 }
 
@@ -1329,116 +1329,116 @@ payon_in03,8,193,4	script	Nanhyang#1	77,{
 geffen,83,189,5	script	Seth#1	716,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN]  [Seth]";
-		mes "[DRY-RUN] Whoa, why are you carrying so many items with you?";
-		mes "[DRY-RUN] You look so heavy...! Maybe you can walk more easily if you put some of your stuff away?";
+		mes " [塞斯]";
+		mes "哇，你为什么带着这么多物品?";
+		mes "你看起来好重啊...！也许如果你把一些东西放起来，你会走得更轻松一些？";
 		close;
 	}
-	mes "[DRY-RUN]  [Seth]";
-	mes "[DRY-RUN] Hello, my name is Seth!";
-	mes "[DRY-RUN] I like folding paper and making origami. I made my mommy a big paper boat, and she gave me a big smile and patted my head!";
+	mes " [塞斯]";
+	mes "你好，我叫塞斯！";
+	mes "我喜欢折纸和做 origami。我给妈妈做了一个大纸船，她给了我一个大大的微笑并拍了拍我的头！";
 	emotion ET_SMILE;
 	next;
-	mes "[DRY-RUN] [Seth]";
-	mes "[DRY-RUN] Today at school, I learned how to make a paper flower! The flower was sort of hard, but now I can do it! Then I made a tiny tiny flower and put in on my head~";
+	mes "[塞斯]";
+	mes "今天在学校，我学会了怎么做纸花！这朵花有点难，但现在我可以做了！然后我做了一个小小的花，放在我的头上~";
 	emotion ET_THROB;
 	next;
 	if (countitem(2278) > 0 && countitem(975) > 0) {
-		mes "[DRY-RUN] [Seth]";
-		mes "[DRY-RUN] Hey~!";
-		mes "[DRY-RUN] You have a Mr. Smile and Scarlet Dyestuffs! Yaaay~! I could use those and make you a paper flower. C'mon, lemme show you!";
+		mes "[塞斯]";
+		mes "嘿~！";
+		mes "你有微笑先生和猩红染料！耶~！我可以用这些给你做一朵纸花。来吧，让我给你看看！";
 		emotion ET_PROFUSELY_SWEAT;
 		next;
-		mes "[DRY-RUN] [Seth]";
-		mes "[DRY-RUN] Lemme make";
-		mes "[DRY-RUN] one for you,";
-		mes "[DRY-RUN] pwease pwease?";
+		mes "[塞斯]";
+		mes "让我做";
+		mes "一朵给你，";
+		mes "请请？";
 		emotion ET_PROFUSELY_SWEAT;
 		next;
-		switch(select("[DRY-RUN] Alright!:No thanks kid.:Boys aren't supposed to make flowers.")) {
+		switch(select("好的！:不，谢谢小孩。:男孩不应该做花。")) {
 		case 1:
 			emotion ET_SMILE;
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Yay~";
-			mes "[DRY-RUN] You're the best!";
+			mes "[塞斯]";
+			mes "耶~";
+			mes "你是最棒的！";
 			next;
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Let's see...";
-			mes "[DRY-RUN] I cut Mr. Smile this way~.";
-			mes "[DRY-RUN] *Snip Snip Snip~~*";
-			mes "[DRY-RUN] *Snip...Snip...*";
-			mes "[DRY-RUN] Yyyyyaaaeeep...";
+			mes "[塞斯]";
+			mes "让我看看……";
+			mes "我这样剪了微笑先生~。";
+			mes "*剪剪剪~~*";
+			mes "*剪...剪...*";
+			mes "耶耶耶...";
 			emotion ET_DELIGHT;
 			next;
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Tah dah~!";
+			mes "[塞斯]";
+			mes "看！~！";
 			next;
 			delitem 2278,1; //Mr_Smile
 			delitem 975,1; //Scarlet_Dyestuffs
 			getitem 5077,1; //Tulip_Hairpin
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Heheheh~!";
-			mes "[DRY-RUN] I'm done!";
-			mes "[DRY-RUN] I did a good job, didn't I?";
+			mes "[塞斯]";
+			mes "嘿嘿嘿~！";
+			mes "我完成了！";
+			mes "我做得不错，对吧？";
 			next;
 			if (BaseJob == Job_Novice || BaseJob == Job_Super_Novice) {
-				mes "[DRY-RUN] [Seth]";
-				mes "[DRY-RUN] Oh, here's the leftovers. Mommy says that we should always save things. Heh heh~";
+				mes "[塞斯]";
+				mes "哦，这里是剩下的。妈妈说我们应该总是保存东西。嘿嘿~";
 				getitem 935,1; //Shell
 				next;
 			}
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] I'm a good boy!";
-			mes "[DRY-RUN] I'm gonna make one for my little sister~! And everybody I love!";
+			mes "[塞斯]";
+			mes "我是个好孩子！";
+			mes "我要给我的小妹妹做一个~！还有我爱的人！";
 			next;
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] If you want to see me make another one, just bring more Scarlet Dyestuffs and Mr.Smile, okay? Bye bye~!";
+			mes "[塞斯]";
+			mes "如果你想让我再做一个，就带更多的猩红染料和微笑先生来，好吗？再见~！";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] *Sniff sniff*";
-			mes "[DRY-RUN] O-okay...";
-			mes "[DRY-RUN] But I just wanted to show you how good I am...";
+			mes "[塞斯]";
+			mes "*吸吸*";
+			mes "好吧...";
+			mes "但我只是想让你看看我有多厉害...";
 			emotion ET_CRY;
 			close;
 		case 3:
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Hey.";
+			mes "嘿。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Boys aren't supposed to make flowers.";
+			mes "男孩不应该做花。";
 			next;
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Waaaaaaah~!";
-			mes "[DRY-RUN] But flowers are so nice and pweety!!!";
+			mes "[塞斯]";
+			mes "哇啊啊啊~！";
+			mes "但是花是如此美丽和可爱！！！";
 			emotion ET_CRY;
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Seth]";
-		mes "[DRY-RUN] You want me to show you? Huh?";
-		mes "[DRY-RUN] I can do it you want!";
+		mes "[塞斯]";
+		mes "你想让我给你展示吗？嗯？";
+		mes "我可以做到，如果你想的话！";
 		next;
-		mes "[DRY-RUN] [Seth]";
-		mes "[DRY-RUN] Uh oh...";
-		mes "[DRY-RUN] But I don't have anything to make paper flowers out of.";
+		mes "[塞斯]";
+		mes "哦哦...";
+		mes "但我没有任何东西可以做纸花。";
 		next;
-		if (select("[DRY-RUN] I'll get what you need.:Too bad!") == 1) {
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Okay okay...";
-			mes "[DRY-RUN] I neeeeed...";
-			mes "[DRY-RUN] ^3131FF1 Mr. Smile^000000 and";
-			mes "[DRY-RUN] ^3131FF1 Scarlet Dyestuffs^000000.";
-			mes "[DRY-RUN] Then I can make you a tiiiiny little flower.";
+		if (select("我会拿到你需要的东西。:太可惜了！") == 1) {
+			mes "[塞斯]";
+			mes "好吧好吧...";
+			mes "我需要......";
+			mes "^3131FF1 微笑先生^000000 和";
+			mes "^3131FF1 猩红染料^000000.";
+			mes "然后我可以给你做一个小小的花朵.";
 			next;
-			mes "[DRY-RUN] [Seth]";
-			mes "[DRY-RUN] Seth will wait for you here. Promise me you'll come back?";
+			mes "[塞斯]";
+			mes "塞斯会在这里等你。答应我你会回来吗？";
 			close;
 		}
 		emotion ET_CRY;
-		mes "[DRY-RUN] [Seth]";
-		mes "[DRY-RUN] Wah~~~~~!";
+		mes "[塞斯]";
+		mes "哇~~~~~!";
 		close;
 	}
 }
@@ -1739,162 +1739,162 @@ xmas_in,35,30,3	script	Hat Merchant#zero	797,{
 yuno_in03,20,18,6	script	Nehris#1	726,{
 	disable_items;
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again after -";
-		mes "[DRY-RUN] - you put some items into Kafra Storage. -";
+		mes "- 等一下！ -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请稍后再试 -";
+		mes "- 你把一些物品放入卡普拉仓库后 -";
 		close;
 	}
-	mes "[DRY-RUN] [Nehris]";
-	mes "[DRY-RUN] The Monster Museum has prepared a special event for your support~!";
+	mes "[内里斯]";
+	mes "怪物博物馆为你的支持准备了一个特别活动~！";
 	next;
-	mes "[DRY-RUN] [Nehris]";
-	mes "[DRY-RUN] Accessories typically worn by monsters are now available for adventurers to wear!";
+	mes "[内里斯]";
+	mes "现在冒险者可以佩戴怪物通常穿戴的饰品！";
 	next;
-	mes "[DRY-RUN] [Nehris]";
-	mes "[DRY-RUN] Of course, since we're on a trial period, we can only provide 3 monster accessories to our fans. However, according to your response, we may add more monster accessories in the future.";
+	mes "[内里斯]";
+	mes "当然，由于我们处于试用期，我们只能为我们的粉丝提供3个怪物饰品。然而，根据您的反馈，我们可能会在未来增加更多怪物饰品。";
 	next;
-	mes "[DRY-RUN] [Nehris]";
-	mes "[DRY-RUN] Simply bring the required materials, and pay a small fee, and we will provide you with the monsters accessory of your choice.";
+	mes "[内里斯]";
+	mes "只需带上所需材料，并支付少量费用，我们将为您提供您选择的怪物饰品。";
 	next;
-	mes "[DRY-RUN] [Nehris]";
-	mes "[DRY-RUN] Please choose the";
-	mes "[DRY-RUN] accessory you are";
-	mes "[DRY-RUN] interested in.";
+	mes "[内里斯]";
+	mes "请选择您想要的";
+	mes "饰品。";
+	mes "您感兴趣的。";
 	next;
-	switch(select("[DRY-RUN] Decorative Golden Bell:Crown of Ancient Queen:Crown of Mistress")) {
+	switch(select("装饰性金铃:古代女王的皇冠:女王的皇冠")) {
 	case 1:
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] This Golden Bell is fashioned after the one worn by the 'Sohee' monster. It's a cute accessory I personally recommend for us ladies. A little oversized, but I believe you'll like it a lot.";
+		mes "[内里斯]";
+		mes "这个金铃铛是仿照‘索希’怪物佩戴的样式制作的。它是一个可爱的饰品，我个人推荐给我们女士。虽然有点大，但我相信您会非常喜欢它。";
 		next;
 		if (countitem(10016) > 0 && countitem(714) > 0 && countitem(969) > 2 && Zeny > 19999) {
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Thank you for";
-			mes "[DRY-RUN] bringing everything.";
-			mes "[DRY-RUN] Please wait one moment.";
+			mes "[内里斯]";
+			mes "谢谢你使用我们的服务。";
+			mes "带上所有东西。";
+			mes "请稍等片刻。";
 			next;
-			mes "[DRY-RUN] ^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
+			mes "^3355FF* 铿锵 铿锵！刮刮！叮当！ *^000000";
 			next;
 			delitem 10016,1; //Golden_Bell
 			delitem 714,1; //Emperium
 			delitem 969,3; //Gold
 			set Zeny, Zeny-20000;
 			getitem 5091,1; //Big_Golden_Bell
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Yoohoo~";
-			mes "[DRY-RUN] There you go. Here's your beautiful Golden Bell. I doubt it will jingle if you shake your head, though.";
+			mes "[内里斯]";
+			mes "哟呼~";
+			mes "给你。这是你美丽的金铃铛。不过我怀疑如果你摇头它会不会叮当响。";
 			next;
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Oh, one more thing, don't confuse yourself with Sohee and commit suicide!";
+			mes "[内里斯]";
+			mes "哦，还有一件事，不要把自己和小希搞混了，别自杀！";
 			next;
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] If you'd like me to make another one, please come again. Thank you for visiting the Monster Museum.";
+			mes "[内里斯]";
+			mes "如果你想让我再做一个，请再来。感谢你光临怪物博物馆。";
 			close;
 		}
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] The required materials for the Decorative Golden Bell are...";
-		mes "[DRY-RUN] ^3355FF1 Golden Bell, 1 Emperium, 3 Gold^000000 and";
-		mes "[DRY-RUN] 20,000 zeny.";
+		mes "[内里斯]";
+		mes "制作装饰金铃铛所需的材料是...";
+		mes "^3355FF1 个金铃铛，1 个魔石，3 个金币^000000 和";
+		mes "20,000金币。";
 		next;
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] Just come ask me";
-		mes "[DRY-RUN] when you're ready.";
-		mes "[DRY-RUN] Thank you.";
+		mes "[内里斯]";
+		mes "只需来问我";
+		mes "当你准备好的时候。";
+		mes "谢谢你。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] This crown is inspired by the the one worn by the 'Isis' monster. It has a elegant look fitting for ancient royalty.";
+		mes "[内里斯]";
+		mes "这顶皇冠的灵感来自于'伊西斯'怪物所戴的皇冠。它具有适合古代皇室的优雅外观。";
 		next;
 		if (countitem(10006) > 0 && countitem(714) > 0 && countitem(969) > 2 && Zeny > 19999) {
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Thank you for";
-			mes "[DRY-RUN] bringing everything.";
-			mes "[DRY-RUN] Please wait one moment.";
+			mes "[内里斯]";
+			mes "谢谢你使用我们的服务。";
+			mes "带上所有东西。";
+			mes "请稍等片刻。";
 			next;
-			mes "[DRY-RUN] ^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
+			mes "^3355FF* 铿锵 铿锵！刮刮！叮当！ *^000000";
 			next;
 			delitem 10006,1; //Queen's_Hair_Ornament
 			delitem 714,1; //Emperium
 			delitem 969,3; //Gold
 			set Zeny, Zeny-20000;
 			getitem 5080,1; //Headgear_Of_Queen
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Tah dah!";
-			mes "[DRY-RUN] Here's your Crown of Ancient Queen! I don't know if you can get anyone to bow before you while wearing this, but at least you'll look elegant.";
+			mes "[内里斯]";
+			mes "塔达！";
+			mes "这是你的古代女王皇冠！我不知道你戴上它后是否能让任何人向你鞠躬，但至少你会看起来很优雅。";
 			next;
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] If you'd like me to make another one, please come again. Thank you for visiting the Monster Museum.";
+			mes "[内里斯]";
+			mes "如果你想让我再做一个，请再来。感谢你光临怪物博物馆。";
 			close;
 		}
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] The required materials for the Crown of Ancient Queen are...";
-		mes "[DRY-RUN] ^3355FF1 Queen's Hair Ornament, 1 Emperium, 3 Gold^000000 and";
-		mes "[DRY-RUN] 20,000 zeny.";
+		mes "[内里斯]";
+		mes "古代女王皇冠所需的材料是......";
+		mes "^3355FF1女王的发饰，1个魔石，3个金币^000000和";
+		mes "20,000金币。";
 		next;
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] Just come ask me";
-		mes "[DRY-RUN] when you're ready.";
-		mes "[DRY-RUN] Thank you.";
+		mes "[内里斯]";
+		mes "只需来问我";
+		mes "当你准备好的时候。";
+		mes "谢谢你。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] This crown is an imitation of the one worn by the 'Mistress' monster. Wearing this will give you a look of brusque authority.";
+		mes "[内里斯]";
+		mes "这顶皇冠是模仿'女主人'怪物所戴的。佩戴它会让你看起来威严而粗犷。";
 		next;
 		if (countitem(2249) > 0 && countitem(714) > 0 && countitem(969) > 2 && Zeny > 39999) {
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Thank you for";
-			mes "[DRY-RUN] bringing everything.";
+			mes "[内里斯]";
+			mes "谢谢你使用我们的服务。";
+			mes "带上所有东西。";
 			next;
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] ^FF0000By the way, if you use an upgraded";
-			mes "[DRY-RUN] Coronet for making this item,";
-			mes "[DRY-RUN] the item you create out of the Coronet";
-			mes "[DRY-RUN] will not have its upgraded status.^000000";
+			mes "[内里斯]";
+			mes "^FF0000顺便说一下，如果你使用升级版的";
+			mes "冠冕来制作这个物品，";
+			mes "你用冠冕制作的物品";
+			mes "将不会有升级状态。^000000";
 			next;
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] ^FF0000Also, please only have one Coronet in your inventory to make the Crown of Mistress. We are not responsible for any loss.";
+			mes "[内里斯]";
+			mes "^FF0000另外，请确保你的背包中只有一个王冠，以制作女主人之冠。我们对任何损失不承担责任。";
 			next;
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] Are you sure you want to create the Crown of Mistress?";
+			mes "[内里斯]";
+			mes "你确定要制作女主人之冠吗？";
 			next;
-			if (select("[DRY-RUN] Yes:Wait a minute...!") == 1) {
-				mes "[DRY-RUN] [Nehris]";
-				mes "[DRY-RUN] Please wait one moment.";
+			if (select("是:等一下...！") == 1) {
+				mes "[内里斯]";
+				mes "请稍等片刻。";
 				next;
-				mes "[DRY-RUN] ^3355FF* Clang Clang! Scrape Scrape! Jingle Jingle! *^000000";
+				mes "^3355FF* 铿锵 铿锵！刮刮！叮当！ *^000000";
 				next;
 				delitem 2249,1; //Coronet
 				delitem 714,1; //Emperium
 				delitem 969,3; //Gold
 				set Zeny, Zeny-40000;
 				getitem 5081,1; //Mistress_Crown
-				mes "[DRY-RUN] [Nehris]";
-				mes "[DRY-RUN] Yay! You've got a great looking crown!";
+				mes "[内里斯]";
+				mes "耶！你得到了一个很漂亮的王冠！";
 				next;
-				mes "[DRY-RUN] [Nehris]";
-				mes "[DRY-RUN] I don't know if everyone will obey your commands while wearing this, but at least you can feel beautifully regal.";
+				mes "[内里斯]";
+				mes "我不知道每个人在戴上这个的时候是否会听从你的命令，但至少你可以感受到优雅的王室气息。";
 				next;
-				mes "[DRY-RUN] [Nehris]";
-				mes "[DRY-RUN] Why don't you go take a picture with Mistress? That would be funny to see if she wasn't too busy trying to maul you.";
+				mes "[内里斯]";
+				mes "你为什么不去和女主人拍张照片呢？如果她不忙着想要攻击你，那一定会很好玩。";
 				next;
-				mes "[DRY-RUN] [Nehris]";
-				mes "[DRY-RUN] If you'd like me to make you another one, please come again. Thank you for visiting the Monster Museum.";
+				mes "[内里斯]";
+				mes "如果你想让我再给你做一个，请再来。感谢你光临怪物博物馆。";
 				close;
 			}
-			mes "[DRY-RUN] [Nehris]";
-			mes "[DRY-RUN] No problem, just be sure to understand our precautions well, okay?";
+			mes "[内里斯]";
+			mes "没问题，只要确保你了解我们的预防措施就可以了，好的？";
 			close;
 		}
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] The required materials for the Crown of Mistress are...";
-		mes "[DRY-RUN] ^3355FF1 Coronet, 1 Emperium, 3 Gold^000000 and";
-		mes "[DRY-RUN] 40,000 zeny.";
+		mes "[内里斯]";
+		mes "女王的皇冠所需材料是...";
+		mes "^3355FF1 冠冕，1 魔石，3 黄金^000000 和";
+		mes "40,000金币。";
 		next;
-		mes "[DRY-RUN] [Nehris]";
-		mes "[DRY-RUN] Just come ask me";
-		mes "[DRY-RUN] when you're ready.";
-		mes "[DRY-RUN] Thank you.";
+		mes "[内里斯]";
+		mes "只需来问我";
+		mes "当你准备好的时候。";
+		mes "谢谢你。";
 		close;
 	}
 }

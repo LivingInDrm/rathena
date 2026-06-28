@@ -63,13 +63,13 @@ pvp_y_1-5,145,269,5	script	Starter	733,{
 	if ($@counting != 0) goto L_Started;
 	if ($@racecount == 1) goto L_Started;
 L_Menu:
-	mes "[Race Starter]";
-	mes "Please stay on the Eastern side of me.";
+	mes "[比赛起点]";
+	mes "请待在我东侧。";
 	menu "Start Race",L_Count,"Cancel",-;
 	close;
 L_Count:
 	set $@counting,1;
-	mes "Counting down...";
+	mes "倒计时中...";
 	addtimer 1000, "Starter::OnCount1000";
 	addtimer 2000, "Starter::OnCount2000";
 	addtimer 3000, "Starter::OnCount3000";
@@ -100,8 +100,8 @@ OnCount4000:
 L_Started:
 	if ((getmapusers("pvp_y_1-5") < 3) && ($@position > 0)) goto L_Menu;
 	if ($@position > 2) goto L_Menu;
-	mes "[Starter]";
-	mes "Race in progress";
+	mes "[起点]";
+	mes "比赛进行中";
 	close;
 
 OnInit:

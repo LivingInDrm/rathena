@@ -18,121 +18,121 @@
 
 valkyrie,53,50,3	script	Biochemist#Valkyrie	122,{
 	if (Class == Job_Creator && bioeth == 13 && getskilllv("AM_BIOETHICS") == 0) {
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] Congratulations.";
-		mes "[DRY-RUN] Honor to the warriors!";
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] It's strange that";
-		mes "[DRY-RUN] someone like me is here.";
-		mes "[DRY-RUN] But even someone skilled";
+		mes "[炼金术士]";
+		mes "恭喜你。";
+		mes "荣耀属于战士们！";
+		mes "[炼金术士]";
+		mes "这很奇怪，";
+		mes "像我这样的人居然在这里。";
+		mes "但即使是精通科学的人，";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] in the ways of science";
-			mes "[DRY-RUN] can manage to be a hero.";
-			mes "[DRY-RUN] [Biochemist]";
-			mes "[DRY-RUN] In this instance,";
-			mes "[DRY-RUN] it's not necessarily";
-			mes "[DRY-RUN] the means I've used, but";
-			mes "[DRY-RUN] the ends for which I've";
+		if (select("否:是。") == 1) {
+			mes "也能成为英雄。";
+			mes "在这种情况下，";
+			mes "[炼金术士]";
+			mes "并不一定是我使用的手段，";
+			mes "而是我为之奋斗的目的，";
+			mes "让我在瓦尔哈拉占有一席之地……";
+			mes "是时候了。";
 			next;
-			mes "[DRY-RUN] fought that earned me";
-			mes "[DRY-RUN] a place in Valhalla...";
-			mes "[DRY-RUN] [Biochemist]";
-			mes "[DRY-RUN] Yes...";
-			mes "[DRY-RUN] It's about time.";
-			mes "[DRY-RUN] We need more geniuses";
-			mes "[DRY-RUN] like you on Rune-Midgard.";
+			mes "我们需要更多的天才。";
+			mes "瓦尔哈拉的一个地方...";
+			mes "[炼金术士]";
+			mes "是的...";
+			mes "是时候了。";
+			mes "我们需要更多的天才。";
+			mes "像你一样在卢恩-米德加兹。";
 			next;
 			skill "AM_BIOETHICS",1,SKILL_PERM;
-			mes "[DRY-RUN] [Biochemist]";
-			mes "[DRY-RUN] Would you like to";
-			mes "[DRY-RUN] become a Biochemist?";
-			mes "[DRY-RUN] [Biochemist]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[炼金术士]";
+			mes "你想要";
+			mes "成为生化学家吗？";
+			mes "[炼金术士]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-		mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] As a Biochemist,";
-		mes "[DRY-RUN] I hope you use your";
+		mes "[炼金术士]";
+		mes "你仍然可以学习更多技能。请使用";
+		mes "你所有剩余的技能点再回来找我。";
+		mes "[炼金术士]";
+		mes "恭喜！";
+		mes "作为生化学家，";
+		mes "我希望你能运用你的";
 		close;
 	}
 	else if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] vast knowledge for the";
-			mes "[DRY-RUN] right purposes.";
-			mes "[DRY-RUN] [Biochemist]";
+			mes "广博知识来实现";
+			mes "正确的目的。";
+			mes "[炼金术士]";
 			close;
 		}
-		mes "[DRY-RUN] Ah, have you come to";
-		mes "[DRY-RUN] retrieve the memories";
-		mes "[DRY-RUN] lost to you? Yes, you";
-		mes "[DRY-RUN] must be here for the";
-		mes "[DRY-RUN] secrets of life that";
-		mes "[DRY-RUN] were once yours...";
+		mes "啊，你是来";
+		mes "找回失去的记忆吗？";
+		mes "是的，你一定是为了";
+		mes "那些曾经属于你的";
+		mes "生命的秘密而来...";
+		mes "闭上你的眼睛，";
 		next;
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] Close your eyes and";
-		mes "[DRY-RUN] put your mind at rest.";
-		mes "[DRY-RUN] We will return to your";
-		mes "[DRY-RUN] past to recollect the";
-		mes "[DRY-RUN] fragments of your lost";
-		mes "[DRY-RUN] memories.";
+		mes "[炼金术士]";
+		mes "让你的心灵安静下来。";
+		mes "放松心情。";
+		mes "我们将回到你的";
+		mes "过去以回忆起";
+		mes "你失去的碎片";
+		mes "记忆。";
 		close;
 	}
 	else if (ADVJOB == Job_Creator && Class == Job_Merchant_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] When you open your eyes,";
-		mes "[DRY-RUN] you will clearly remember";
-		mes "[DRY-RUN] the secret of life. You will";
-		mes "[DRY-RUN] also remember the weight of";
+		mes "[炼金术士]";
+		mes "当你睁开眼睛时，";
+		mes "你将清晰地记起";
+		mes "生命的秘密。你将";
+		mes "也会记起使用这些";
 		next;
-		mes "[DRY-RUN] responsibility in using these";
-		mes "[DRY-RUN] secrets for the right ends...";
-		mes "[DRY-RUN] [Biochemist]";
+		mes "秘密所承担的责任";
+		mes "……以正确的方式。";
+		mes "[炼金术士]";
 		next;
-		if (select("[DRY-RUN] Yes:No") == 1) {
-			mes "[DRY-RUN] Open your eyes...";
-			mes "[DRY-RUN] Now that you have";
-			mes "[DRY-RUN] remembered how to";
-			mes "[DRY-RUN] create artificial life, I only";
+		if (select("是:否") == 1) {
+			mes "睁开你的眼睛……";
+			mes "现在你已经";
+			mes "记起如何";
+			mes "创造人工生命，我只";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] ask that you treat all of your";
-			mes "[DRY-RUN] creations with respect.";
-			mes "[DRY-RUN] [Biochemist]";
+			mes "请你尊重所有的";
+			mes "创造物。";
+			mes "[炼金术士]";
 			close;
 		}
 		jobchange Job_Creator;
 		if (bioeth == 13)
 			skill "AM_BIOETHICS",1,SKILL_PERM;
 		set ADVJOB,0;
-		mes "[DRY-RUN] If you wish to";
-		mes "[DRY-RUN] retrieve your lost";
-		mes "[DRY-RUN] memories, please";
-		mes "[DRY-RUN] come back to me.";
-		mes "[DRY-RUN] The secret to creating";
-		mes "[DRY-RUN] life is no trifling thing...";
+		mes "如果你希望";
+		mes "找回失去的";
+		mes "记忆，请";
+		mes "回来找我。";
+		mes "创造生命的秘密";
+		mes "可不是小事...";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] Welcome";
-		mes "[DRY-RUN] to Valhalla,";
-		mes "[DRY-RUN] the Hall of Honor.";
+		mes "[炼金术士]";
+		mes "欢迎";
+		mes "来到瓦尔哈拉，";
+		mes "荣誉殿堂。";
 		next;
-		mes "[DRY-RUN] [Biochemist]";
-		mes "[DRY-RUN] Please make";
-		mes "[DRY-RUN] yourself comfortable";
-		mes "[DRY-RUN] while you are here.";
-		mes "[DRY-RUN] Honor to the warriors!";
+		mes "[炼金术士]";
+		mes "请做出选择。";
+		mes "让自己舒服些";
+		mes "在这里的时候。";
+		mes "荣耀属于战士们！";
 		close;
 	}
 }

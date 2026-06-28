@@ -24,7 +24,7 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[DRY-RUN] Only Acolyte class are applicable to join this mode.";
+		mes "只有服事职业可以加入此模式。";
 		close;
 	}
 }
@@ -1047,30 +1047,30 @@ OnTouch_:
 }
 
 prt_are_in,181,83,3	script	Staff#aco-1	67,{
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] Nice work!";
-	mes "[DRY-RUN] You might have failed";
-	mes "[DRY-RUN] the Time Attack battle,";
-	mes "[DRY-RUN] but you still earned a";
-	mes "[DRY-RUN] small Arena Point reward~";
+	mes "[法杖]";
+	mes "干得不错！";
+	mes "你可能失败了";
+	mes "时间攻击战斗，";
+	mes "但你仍然获得了一个";
+	mes "小型竞技场积分奖励~";
 	next;
 	if (arena_point == 30000) {
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Wait, I'm sorry, but you";
-		mes "[DRY-RUN] have too many Arena Points.";
-		mes "[DRY-RUN] Since you've reached the point";
-		mes "[DRY-RUN] limitation, I can't give you any point rewards until you spend";
-		mes "[DRY-RUN] some of your Arena Points.";
+		mes "[法杖]";
+		mes "等一下，我很抱歉，但你";
+		mes "拥有太多竞技场积分。";
+		mes "由于你已达到积分";
+		mes "限制，我无法给你任何积分奖励，直到你花费";
+		mes "你的一些竞技场积分。";
 		next;
 	}
 	else {
 		set arena_point,arena_point+1;
 	}
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] Well, let me guide";
-	mes "[DRY-RUN] you back outside.";
-	mes "[DRY-RUN] I hope you enjoyed";
-	mes "[DRY-RUN] your battle in the area~";
+	mes "[法杖]";
+	mes "好吧，让我来引导你";
+	mes "你回到外面了。";
+	mes "我希望你享受过了";
+	mes "你在这个区域的战斗~";
 	close2;
 	specialeffect2 EF_EXIT;
 	warp "arena_room",100,75;
@@ -1097,35 +1097,35 @@ prt_are_in,25,31,3	script	Staff#aco-2	67,{
 	set .@record_secaco, .@record_timeaco % 60;
 	if ((.@record_timeaco < 0 ) || (.@record_houraco < 0) || (.@record_minaco < 0 ) || (.@record_secaco < 0)) {
 		emotion ET_HUK;
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] How did you...?";
-		mes "[DRY-RUN] According to these re-";
-		mes "[DRY-RUN] Uh oh. These records";
-		mes "[DRY-RUN] got messed up somehow.";
-		mes "[DRY-RUN] Th-This isn't good at all!";
-		mes "[DRY-RUN] Now what am I gonna do?";
+		mes "[法杖]";
+		mes "你是怎么...的？";
+		mes "根据这些记录-";
+		mes "哦哦。这些记录";
+		mes "不知怎么搞乱了。";
+		mes "这可不好！";
+		mes "我该怎么办？";
 		next;
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Well, I'll give you the";
-		mes "[DRY-RUN] benefit of the doubt and";
-		mes "[DRY-RUN] assume you completed the";
-		mes "[DRY-RUN] arena battle under the time";
-		mes "[DRY-RUN] limit. So, let me give you the";
-		mes "[DRY-RUN] standard Arena Point reward.";
+		mes "[法杖]";
+		mes "好吧，我会给你一个";
+		mes "怀疑的好处，";
+		mes "假设你在时间内完成了";
+		mes "竞技场战斗，";
+		mes "所以，让我给你";
+		mes "标准竞技场积分奖励。";
 		next;
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] I'm really sorry about";
-		mes "[DRY-RUN] this, especially if you";
-		mes "[DRY-RUN] broke some record, but";
-		mes "[DRY-RUN] all I can do is restore your";
+		mes "[法杖]";
+		mes "我真的很抱歉关于这个，";
+		mes "特别是如果你";
+		mes "打破了一些记录，但";
+		mes "我能做的就是恢复你的";
 		mes "HP and SP for you, "+strcharinfo(0)+".";
 		percentheal 100,100;
 		next;
-		mes "[DRY-RUN] [Staff]";
+		mes "[法杖]";
 		emotion ET_FLAG;
-		mes "[DRY-RUN] Thank you.";
-		mes "[DRY-RUN] I hope you enjoy";
-		mes "[DRY-RUN] your time in the Arena~";
+		mes "谢谢你。";
+		mes "我希望你喜欢";
+		mes "你在竞技场的时间~";
 		close2;
 		if (arena_point < 29981) {
 			set arena_point,arena_point+20;
@@ -1166,37 +1166,37 @@ prt_are_in,25,31,3	script	Staff#aco-2	67,{
 		set .@topbunaco, ((.@acotop_t % 3600) / 60);
 		set .@topchoaco, .@acotop_t % 60;
 		set .@gapaco, .@acotop_t - .@record_timeaco;
-		mes "[DRY-RUN] [Staff]";
+		mes "[法杖]";
 		mes "^3131FF"+strcharinfo(0)+"^000000, right?";
-		mes "[DRY-RUN] Hey, you did great! You";
-		mes "[DRY-RUN] completed this Arena Battle";
+		mes "嘿，你做得很好！你";
+		mes "完成了这场竞技场战斗，";
 		mes "in "+.@record_minaco+" min and "+.@record_secaco+" seconds!";
 		next;
-		mes "[DRY-RUN] [Staff]";
+		mes "[法杖]";
 		mes "Currently, ^3131FF"+.@acotop_n$+"^000000";
-		mes "[DRY-RUN] is the top player, with a record";
+		mes "是顶尖玩家，记录为";
 		mes "of ^3131FF"+.@topbunaco+"^000000 minutes, ^3131FF"+.@topchoaco+"^000000 seconds, of the Acolyte Class Time Force Battle.";
 		next;
 		if ((.@acotop_t < 0) || (.@topbunaco < 0 ) || (.@topchoaco < 0)) {
 			emotion ET_HUK;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Wait a second...";
-			mes "[DRY-RUN] Your time is better";
-			mes "[DRY-RUN] than that. Well now.";
-			mes "[DRY-RUN] It's time I made a little";
-			mes "[DRY-RUN] correction to the records.";
+			mes "[法杖]";
+			mes "等一下……";
+			mes "你的时间更好";
+			mes "比那个好。好吧，现在。";
+			mes "是时候对记录做一点";
+			mes "修正了。";
 			next;
 			emotion ET_BEST;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Wow! A new record!";
-			mes "[DRY-RUN] Excellent!";
+			mes "[法杖]";
+			mes "哇！新纪录！";
+			mes "太棒了！";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] ^333333*Ahem*^000000 Oh wow!";
-			mes "[DRY-RUN] A new record! Your";
-			mes "[DRY-RUN] name will now be listed";
-			mes "[DRY-RUN] under the Time Force Battle";
-			mes "[DRY-RUN] Arena - Acolyte Class Record!";
+			mes "[法杖]";
+			mes "^333333*咳咳*^000000 哇哦！";
+			mes "新纪录！你的";
+			mes "名字将被列入";
+			mes "时间力量战斗";
+			mes "竞技场 - 服事职业记录！";
 			if (BaseJob == Job_Acolyte) {
 				set $arn_acotop,.@record_timeaco;
 				set $arn_acotopn$, strcharinfo(0);
@@ -1223,52 +1223,52 @@ prt_are_in,25,31,3	script	Staff#aco-2	67,{
 			}
 			next;
 			if (arena_point == 30000) {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Alright, let me reward you";
-				mes "[DRY-RUN] with some Arena Poi--Wait.";
-				mes "[DRY-RUN] I can't. Your Arena Points are";
-				mes "[DRY-RUN] already maxed out. I'm sorry,";
-				mes "[DRY-RUN] but you'll have to spend some before you can receive more points.";
+				mes "[法杖]";
+				mes "好的，让我奖励你";
+				mes "一些竞技场积分——等等。";
+				mes "我不能。你的竞技场积分已经";
+				mes "达到上限了。抱歉，";
+				mes "但你必须先消费一些才能获得更多积分。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Anyway, you can check";
-				mes "[DRY-RUN] your current Arena Point";
-				mes "[DRY-RUN] total in the Arena Lobby";
-				mes "[DRY-RUN] with Vendigos. Well, I hope";
-				mes "[DRY-RUN] you enjoyed your battle. Now, let me guide you back outside...";
+				mes "[法杖]";
+				mes "无论如何，你可以查看";
+				mes "您当前的竞技场积分";
+				mes "竞技场大厅的总积分";
+				mes "与Vendigos一起。希望";
+				mes "您享受了这场战斗。现在，让我带您回到外面...";
 				close2;
 			}
 			else if (arena_point > 29950) {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Let me reward you with some";
-				mes "[DRY-RUN] Arena Points. This time, you'll";
-				mes "[DRY-RUN] be getting more points since";
-				mes "[DRY-RUN] you set a new record. Please";
-				mes "[DRY-RUN] talk with ^3131FFVendigos^000000 in the lobby";
-				mes "[DRY-RUN] to check your new point total.";
+				mes "[法杖]";
+				mes "让我奖励您一些";
+				mes "竞技场积分。这次，您将";
+				mes "获得更多积分，因为";
+				mes "您创造了新的记录。请";
+				mes "与^3131FFVendigos^000000在大厅交谈";
+				mes "以查看您的新积分总数。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Well, I hope you";
-				mes "[DRY-RUN] enjoyed your battle.";
-				mes "[DRY-RUN] Now let me guide you";
-				mes "[DRY-RUN] back to the Arena Lobby...";
+				mes "[法杖]";
+				mes "希望您";
+				mes "享受了这场战斗。";
+				mes "现在让我带你回去";
+				mes "竞技场大厅...";
 				close2;
 				set arena_point,30000;
 			}
 			else {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Let me reward you with some";
-				mes "[DRY-RUN] Arena Points. This time, you'll";
-				mes "[DRY-RUN] be getting more points since";
-				mes "[DRY-RUN] you set a new record. Please";
-				mes "[DRY-RUN] talk with ^3131FFVendigos^000000 in the lobby";
-				mes "[DRY-RUN] to check your new point total.";
+				mes "[法杖]";
+				mes "让我奖励您一些";
+				mes "竞技场积分。这次，您将";
+				mes "获得更多积分，因为";
+				mes "您创造了新的记录。请";
+				mes "与^3131FFVendigos^000000在大厅交谈";
+				mes "以查看您的新积分总数。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Well, I hope you";
-				mes "[DRY-RUN] enjoyed your battle.";
-				mes "[DRY-RUN] Now let me guide you";
-				mes "[DRY-RUN] back to the Arena Lobby...";
+				mes "[法杖]";
+				mes "希望您";
+				mes "享受了这场战斗。";
+				mes "现在让我带你回去";
+				mes "竞技场大厅...";
 				close2;
 				set arena_point,arena_point+50;
 			}
@@ -1280,59 +1280,59 @@ prt_are_in,25,31,3	script	Staff#aco-2	67,{
 			end;
 		}
 		if (gapaco < 0) {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] You didn't break the";
-			mes "[DRY-RUN] current record this time,";
-			mes "[DRY-RUN] but you still gave an awesome";
-			mes "[DRY-RUN] performance. Excellent work!";
+			mes "[法杖]";
+			mes "这次你没有打破";
+			mes "当前的记录，";
+			mes "但你仍然表现得很出色";
+			mes "。干得好！";
 			next;
 			if (arena_point == 30000) {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Alright, let me reward you";
-				mes "[DRY-RUN] with some Arena Poi--Wait.";
-				mes "[DRY-RUN] I can't. Your Arena Points are";
-				mes "[DRY-RUN] already maxed out. I'm sorry,";
-				mes "[DRY-RUN] but you'll have to spend some before you can receive more points.";
+				mes "[法杖]";
+				mes "好的，让我奖励你";
+				mes "一些竞技场积分——等等。";
+				mes "我不能。你的竞技场积分已经";
+				mes "达到上限了。抱歉，";
+				mes "但你必须先消费一些才能获得更多积分。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Anyway, you can check";
-				mes "[DRY-RUN] your current Arena Point";
-				mes "[DRY-RUN] total in the Arena Lobby";
-				mes "[DRY-RUN] with Vendigos. Well, I hope";
-				mes "[DRY-RUN] you enjoyed your battle. Now, let me guide you back outside...";
+				mes "[法杖]";
+				mes "无论如何，你可以查看";
+				mes "您当前的竞技场积分";
+				mes "竞技场大厅的总积分";
+				mes "与Vendigos一起。希望";
+				mes "您享受了这场战斗。现在，让我带您回到外面...";
 				close2;
 			}
 			else if (arena_point > 29980) {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Let me reward you";
-				mes "[DRY-RUN] with some Arena Points.";
-				mes "[DRY-RUN] Please check your new";
-				mes "[DRY-RUN] Arena Point total in the";
-				mes "[DRY-RUN] Arena Lobby by speaking";
-				mes "[DRY-RUN] to the friendly ^3131FFVendigos.^000000";
+				mes "[法杖]";
+				mes "让我奖励你";
+				mes "一些竞技场积分。";
+				mes "请检查你的新";
+				mes "竞技场积分总数在";
+				mes "竞技场大厅，和";
+				mes "友好的 ^3131FFVendigos.^000000 交谈。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Well, I hope you";
-				mes "[DRY-RUN] enjoyed your battle.";
-				mes "[DRY-RUN] Now let me guide you";
-				mes "[DRY-RUN] back to the Arena Lobby...";
+				mes "[法杖]";
+				mes "希望您";
+				mes "享受了这场战斗。";
+				mes "现在让我带你回去";
+				mes "竞技场大厅...";
 				close2;
 				set arena_point,30000;
 			}
 			else {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Let me reward you";
-				mes "[DRY-RUN] with some Arena Points.";
-				mes "[DRY-RUN] Please check your new";
-				mes "[DRY-RUN] Arena Point total in the";
-				mes "[DRY-RUN] Arena Lobby by speaking";
-				mes "[DRY-RUN] to the friendly ^3131FFVendigos.^000000";
+				mes "[法杖]";
+				mes "让我奖励你";
+				mes "一些竞技场积分。";
+				mes "请检查你的新";
+				mes "竞技场积分总数在";
+				mes "竞技场大厅，和";
+				mes "友好的 ^3131FFVendigos.^000000 交谈。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Well, I hope you";
-				mes "[DRY-RUN] enjoyed your battle.";
-				mes "[DRY-RUN] Now let me guide you";
-				mes "[DRY-RUN] back to the Arena Lobby...";
+				mes "[法杖]";
+				mes "希望您";
+				mes "享受了这场战斗。";
+				mes "现在让我带你回去";
+				mes "竞技场大厅...";
 				close2;
 				set arena_point,arena_point+20;
 			}
@@ -1345,17 +1345,17 @@ prt_are_in,25,31,3	script	Staff#aco-2	67,{
 		}
 		else {
 			emotion ET_HUK;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Wow! A new record!";
-			mes "[DRY-RUN] This is awsome!";
+			mes "[法杖]";
+			mes "哇！新纪录！";
+			mes "太棒了！";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Oooh... A brand new";
+			mes "[法杖]";
+			mes "哦... 一个全新的";
 			mes "record. ^3131FF"+ strcharinfo(0)+"^000000, your";
-			mes "[DRY-RUN] name will now be listed in";
-			mes "[DRY-RUN] the Time Force Battle Arena";
-			mes "[DRY-RUN] Acolyte Class Records.";
-			mes "[DRY-RUN] Congratulations~";
+			mes "名字现在将被列入";
+			mes "时间力量战斗竞技场";
+			mes "服事职业记录.";
+			mes "恭喜~";
 			if (BaseJob == Job_Acolyte) {
 				set $arn_acotop,.@record_timeaco;
 				set $arn_acotopn$, strcharinfo(0);
@@ -1385,52 +1385,52 @@ prt_are_in,25,31,3	script	Staff#aco-2	67,{
 			}
 			next;
 			if (arena_point == 30000) {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Alright, let me reward you";
-				mes "[DRY-RUN] with some Arena Poi--Wait.";
-				mes "[DRY-RUN] I can't. Your Arena Points are";
-				mes "[DRY-RUN] already maxed out. I'm sorry,";
-				mes "[DRY-RUN] but you'll have to spend some before you can receive more points.";
+				mes "[法杖]";
+				mes "好的，让我奖励你";
+				mes "一些竞技场积分——等等。";
+				mes "我不能。你的竞技场积分已经";
+				mes "达到上限了。抱歉，";
+				mes "但你必须先消费一些才能获得更多积分。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Anyway, you can check";
-				mes "[DRY-RUN] your current Arena Point";
-				mes "[DRY-RUN] total in the Arena Lobby";
-				mes "[DRY-RUN] with Vendigos. Well, I hope";
-				mes "[DRY-RUN] you enjoyed your battle. Now, let me guide you back outside...";
+				mes "[法杖]";
+				mes "无论如何，你可以查看";
+				mes "您当前的竞技场积分";
+				mes "竞技场大厅的总积分";
+				mes "与Vendigos一起。希望";
+				mes "您享受了这场战斗。现在，让我带您回到外面...";
 				close2;
 			}
 			else if (arena_point > 29980) {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Let me reward you with some";
-				mes "[DRY-RUN] Arena Points. This time, you'll";
-				mes "[DRY-RUN] be getting more points since";
-				mes "[DRY-RUN] you set a new record. Please";
-				mes "[DRY-RUN] talk with ^3131FFVendigos^000000 in the lobby";
-				mes "[DRY-RUN] to check your new point total.";
+				mes "[法杖]";
+				mes "让我奖励您一些";
+				mes "竞技场积分。这次，您将";
+				mes "获得更多积分，因为";
+				mes "您创造了新的记录。请";
+				mes "与^3131FFVendigos^000000在大厅交谈";
+				mes "以查看您的新积分总数。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Well, I hope you";
-				mes "[DRY-RUN] enjoyed your battle.";
-				mes "[DRY-RUN] Now let me guide you";
-				mes "[DRY-RUN] back to the Arena Lobby...";
+				mes "[法杖]";
+				mes "希望您";
+				mes "享受了这场战斗。";
+				mes "现在让我带你回去";
+				mes "竞技场大厅...";
 				close2;
 				set arena_point,30000;
 			}
 			else {
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Let me reward you with some";
-				mes "[DRY-RUN] Arena Points. This time, you'll";
-				mes "[DRY-RUN] be getting more points since";
-				mes "[DRY-RUN] you set a new record. Please";
-				mes "[DRY-RUN] talk with ^3131FFVendigos^000000 in the lobby";
-				mes "[DRY-RUN] to check your new point total.";
+				mes "[法杖]";
+				mes "让我奖励您一些";
+				mes "竞技场积分。这次，您将";
+				mes "获得更多积分，因为";
+				mes "您创造了新的记录。请";
+				mes "与^3131FFVendigos^000000在大厅交谈";
+				mes "以查看您的新积分总数。";
 				next;
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Well, I hope you";
-				mes "[DRY-RUN] enjoyed your battle.";
-				mes "[DRY-RUN] Now let me guide you";
-				mes "[DRY-RUN] back to the Arena Lobby...";
+				mes "[法杖]";
+				mes "希望您";
+				mes "享受了这场战斗。";
+				mes "现在让我带你回去";
+				mes "竞技场大厅...";
 				close2;
 				set arena_point,arena_point+20;
 			}
@@ -1713,21 +1713,21 @@ arena_room,140,136,3	script	Guide Alias	729,{
 arena_room,195,5,3	script	log-on-aco#arena	802,{
 	set .@i, callfunc("F_GM_NPC",1357,0);
 	if (.@i == -1) {
-		mes "[DRY-RUN] ^3355FFIncorrect Password.^000000";
+		mes "^3355FF密码错误.^000000";
 		close;
 	} else if (.@i == 0) {
 		end;
 	} else {
-		mes "[DRY-RUN] [!!CAUTION!!]";
-		mes "[DRY-RUN] ^3355FFThe following menu";
-		mes "[DRY-RUN] the record for that";
-		mes "[DRY-RUN] particular mode in the";
-		mes "[DRY-RUN] Arena Acolyte Class Mode.^000000";
+		mes "[!!注意!!]";
+		mes "^3355FF以下菜单";
+		mes "该记录为该";
+		mes "特定模式在";
+		mes "竞技场服事职业模式.^000000";
 		next;
-		switch(select("[DRY-RUN] Cancel:Acolyte:~level 70:~level 80:~level 90:~level "+(checkre(0)?"160":"99"))) {
+		switch(select("取消:服事:~等级 70:~等级 80:~等级 90:~等级 "+(checkre(0)?"160":"99"))) {
 		case 1:
-			mes "[DRY-RUN] ^3355FFCommand has";
-			mes "[DRY-RUN] been canceled.^000000";
+			mes "^3355FF命令已";
+			mes "被取消.^000000";
 			close;
 		case 2:
 			set $arn_acotop, 480;
@@ -1757,32 +1757,32 @@ arena_room,195,5,3	script	log-on-aco#arena	802,{
 arena_room,195,10,3	script	acolink#arena	802,{
 	set .@i, callfunc("F_GM_NPC",1357,0);
 	if (.@i == -1) {
-		mes "[DRY-RUN] Command has";
-		mes "[DRY-RUN] been canceled.";
+		mes "命令已被";
+		mes "取消.";
 		close;
 	} else if (.@i == 0) {
 		end;
 	} else {
-		mes "[DRY-RUN] This NPC opens and";
-		mes "[DRY-RUN] closes the Warp Portal";
-		mes "[DRY-RUN] to the Arena's Acolyte";
-		mes "[DRY-RUN] Class Mode. Choose";
-		mes "[DRY-RUN] an option from the menu.";
+		mes "这个NPC打开并";
+		mes "关闭传送之阵";
+		mes "到竞技场的服事";
+		mes "职业模式。选择";
+		mes "菜单中的一个选项.";
 		next;
-		switch(select("[DRY-RUN] Cancel:Warp ON:Warp OFF")) {
+		switch(select("取消:传送开启:传送关闭")) {
 		case 1:
-			mes "[DRY-RUN] Command has";
-			mes "[DRY-RUN] been canceled.";
+			mes "命令已被";
+			mes "取消.";
 			close;
 		case 2:
 			enablenpc "onlyaco#arena";
-			mes "[DRY-RUN] The Warp Portal";
-			mes "[DRY-RUN] will be opened shortly.";
+			mes "传送之阵";
+			mes "将很快打开.";
 			close;
 		case 3:
 			disablenpc "onlyaco#arena";
-			mes "[DRY-RUN] The Warp Portal";
-			mes "[DRY-RUN] will be closed shortly.";
+			mes "传送之阵";
+			mes "将很快关闭.";
 			close;
 		}
 	}

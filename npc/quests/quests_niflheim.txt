@@ -33,26 +33,26 @@
 //============================================================
 niflheim,224,243,3	script	Alreg#nif	795,{
 	if (nif_piano) set nif_piano,0;
-	mes "[DRY-RUN] [Alreg]";
-	mes "[DRY-RUN] Me like meat, muheh.";
-	mes "[DRY-RUN] You! Look tempting.";
+	mes "[阿尔雷格]";
+	mes "我喜欢肉，哈哈。";
+	mes "你！看起来很诱人。";
 	next;
-	mes "[DRY-RUN] [Alreg]";
-	mes "[DRY-RUN] Me want to taste you.";
+	mes "[阿尔雷格]";
+	mes "我想尝尝你。";
 	next;
-	mes "[DRY-RUN] ^FF3355*Crunch* Crunch*^000000";
+	mes "^FF3355*咔嚓* 咔嚓*^000000";
 	if (nif_esc == 0 && (MISC_QUEST & 32) == 0) {
 		percentheal -60,0;
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "[DRY-RUN] NooOOoOOoOoO~!";
+		mes "不不不不不~！";
 		next;
-		mes "[DRY-RUN] [Alreg]";
-		mes "[DRY-RUN] It long time since I had meat";
-		mes "[DRY-RUN] so... so good. You taste";
-		mes "[DRY-RUN] good. Alreg give you this";
-		mes "[DRY-RUN] for payback. Present!";
-		mes "[DRY-RUN] *Burrrp*";
+		mes "[阿尔雷格]";
+		mes "我很久没吃肉了。";
+		mes "太...太好吃了。你尝起来";
+		mes "很好。阿尔雷格给你这个";
+		mes "作为报答。礼物！";
+		mes "*呲~*";
 		set nif_esc,rand(1,2);
 		getitem 7184,1; //Piano_Keyboard
 		close;
@@ -60,118 +60,118 @@ niflheim,224,243,3	script	Alreg#nif	795,{
 	percentheal -30,0;
 	next;
 	mes "["+ strcharinfo(0) +"]";
-	mes "[DRY-RUN] Ow~! What are you";
-	mes "[DRY-RUN] trying to do, kill me?!";
+	mes "哎~！你在做什么";
+	mes "想要杀了我吗？";
 	next;
-	mes "[DRY-RUN] [Alreg]";
-	mes "[DRY-RUN] Hm? Oh, no no no.";
-	mes "[DRY-RUN] Me am trying to eat you.";
+	mes "[阿尔雷格]";
+	mes "嗯？哦，不不不。";
+	mes "我想吃掉你。";
 	close;
 }
 
 nif_in,105,81,3	script	Crayu#nif	794,{
-	mes "[DRY-RUN] [Crayu]";
-	mes "[DRY-RUN] Living one...";
-	mes "[DRY-RUN] Listen to this song...";
-	mes "[DRY-RUN] It's been sung by many for a";
-	mes "[DRY-RUN] long time, but nobody knows";
-	mes "[DRY-RUN] when it was made or who wrote it.";
+	mes "[克雷尤]";
+	mes "活着的...";
+	mes "听这首歌...";
+	mes "这首歌已经被很多人唱过很长时间了，";
+	mes "但没有人知道它是什么时候创作的，也不知道是谁写的。";
+	mes "它是何时制作的或是谁写的。";
 	next;
-	mes "[DRY-RUN] [Crayu]";
-	mes "[DRY-RUN] ^FF00001. Mountain sunset to the west";
-	mes "[DRY-RUN] ^FF00002. Where the purple dusk falls ";
-	mes "[DRY-RUN] ^FF00003. Surrounded by beautiful melody";
-	mes "[DRY-RUN] ^FF00004. You become the key that ignores its master^000000";
+	mes "[克雷尤]";
+	mes "^FF00001. 西边的山脉日落";
+	mes "^FF00002. 紫色黄昏降临的地方";
+	mes "^FF00003. 被美丽旋律环绕";
+	mes "^FF00004. 你成为忽视其主人的钥匙^000000";
 	next;
 	if (nif_esc == 1 || nif_esc == 4) {
-		mes "[DRY-RUN] [Crayu]";
-		mes "[DRY-RUN] Okay, wait! Here's a test for you!";
+		mes "[克雷尤]";
+		mes "好的，等一下！给你一个测试！";
 		switch(rand(1,4)) {
 		case 1:
 			set .@songline$,"Mountain sunset to the west";
-			mes "[DRY-RUN] Write down the first line of the song.";
+			mes "写下这首歌的第一句。";
 			break;
 		case 2:
 			set .@songline$,"Where the purple dusk falls";
-			mes "[DRY-RUN] Write down the second line of the song.";
+			mes "写下这首歌的第二句。";
 			break;
 		case 3:
 			set .@songline$,"Surrounded by beautiful melody";
-			mes "[DRY-RUN] Write down the third line of the song.";
+			mes "写下这首歌的第三句。";
 			break;
 		case 4:
 			set .@songline$,"You become the key that ignores its master";
-			mes "[DRY-RUN] Write down the fourth line of the song.";
+			mes "写下这首歌的第四句。";
 			break;
 		}
 		next;
 		input .@input$;
 		if (.@input$ == .@songline$) {
-			mes "[DRY-RUN] [Crayu]";
-			mes "[DRY-RUN] Excellent...!";
-			mes "[DRY-RUN] So you've been listening~!";
-			mes "[DRY-RUN] That makes you one of my";
-			mes "[DRY-RUN] favorite guests. Here's a";
-			mes "[DRY-RUN] little reward for you.";
+			mes "[克雷尤]";
+			mes "太棒了...！";
+			mes "所以你一直在听~！";
+			mes "这使你成为我的";
+			mes "最喜欢的客人之一。给你一个";
+			mes "小奖励。";
 			next;
 			if (nif_esc == 1) set nif_esc,3;
 			else set nif_esc,6;
 			getitem 7184,1; //Piano_Keyboard
-			mes "[DRY-RUN] [Crayu]";
-			mes "[DRY-RUN] Lastly, I hope you will show your";
-			mes "[DRY-RUN] respect to other Bards, just as";
-			mes "[DRY-RUN] you have done for me.";
+			mes "[克雷尤]";
+			mes "最后，我希望你能对其他诗人表示";
+			mes "尊重，就像你对我所做的那样。";
+			mes "你已经为我做的。";
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Crayu]";
-			mes "[DRY-RUN] *Sigh*... If you had only";
-			mes "[DRY-RUN] listened to me, it would";
-			mes "[DRY-RUN] have been easy to answer.";
-			mes "[DRY-RUN] Try to remember the line";
-			mes "[DRY-RUN] and try again!";
+			mes "[克雷尤]";
+			mes "*叹气*... 如果你能只";
+			mes "如果你听我的话，应该会";
+			mes "很容易就能回答了。";
+			mes "试着记住这句歌词";
+			mes "再试一次！";
 			close;
 		}
 	}
 	next;
-	mes "[DRY-RUN] [Crayu]";
-	mes "[DRY-RUN] I wonder what the lyrics mean...";
-	mes "[DRY-RUN] They seem quite profound...";
-	mes "[DRY-RUN] I have the feeling that this song";
-	mes "[DRY-RUN] carries some secret.";
+	mes "[克雷尤]";
+	mes "我想知道这歌词是什么意思...";
+	mes "它们似乎很深奥...";
+	mes "我有种感觉，这首歌";
+	mes "隐藏着某种秘密。";
 	close;
 }
 
 nif_in,31,20,3	script	Kuzkahina#nif	794,{
 	if (nif_esc == 2 || nif_esc == 3) {
-		mes "[DRY-RUN] [Kuzkahina]";
-		mes "[DRY-RUN] I don't understand";
-		mes "[DRY-RUN] why I can't make any";
-		mes "[DRY-RUN] money with this store...";
-		mes "[DRY-RUN] Even when I was alive";
-		mes "[DRY-RUN] I could never make any";
-		mes "[DRY-RUN] money with my businesses...";
+		mes "[库兹卡希娜]";
+		mes "我不明白";
+		mes "为什么我无法在这个";
+		mes "商店里赚到任何钱...";
+		mes "即使在我活着的时候";
+		mes "我也从来没有赚到过任何钱";
+		mes "用我的生意赚的钱...";
 		next;
-		mes "[DRY-RUN] [Kuzkahina]";
-		mes "[DRY-RUN] Hey you! Make yourself useful";
-		mes "[DRY-RUN] and throw this away when you leave.";
+		mes "[库兹卡希娜]";
+		mes "嘿，你！给我点用处";
+		mes "离开时把这个扔掉。";
 		set nif_esc,nif_esc+2;
 		getitem 7184,1; //Piano_Keyboard
 		next;
-		mes "[DRY-RUN] [Kuzkahina]";
-		mes "[DRY-RUN] Gosh, what's with this store?";
-		mes "[DRY-RUN] How did I end up hiring such useless employees...?";
-		mes "[DRY-RUN] *mumble mumble*";
-		mes "[DRY-RUN] *mumble mumble*";
+		mes "[库兹卡希娜]";
+		mes "天哪，这家店怎么了？";
+		mes "我怎么会雇到这么无用的员工...？";
+		mes "*嘟囔嘟囔*";
+		mes "*嘟囔嘟囔*";
 		close;
 	}
-	mes "[DRY-RUN] [Kuzkahina]";
-	mes "[DRY-RUN] I don't understand";
-	mes "[DRY-RUN] why I can't make any";
-	mes "[DRY-RUN] money with this store...";
-	mes "[DRY-RUN] Even when I was alive";
-	mes "[DRY-RUN] I could never make any";
-	mes "[DRY-RUN] money with my businesses...";
+	mes "[库兹卡希娜]";
+	mes "我不明白";
+	mes "为什么我无法在这个";
+	mes "商店里赚到任何钱...";
+	mes "即使在我活着的时候";
+	mes "我也从来没有赚到过任何钱";
+	mes "用我的生意赚的钱...";
 	close;
 }
 
@@ -180,12 +180,12 @@ niflheim,208,103,1	script	#Graveyard1	111,1,1,{
 
 OnTouch_:
 	if (nif_esc == 5 || nif_esc == 7 || nif_esc == 8 || nif_esc == 10) {
-		mes "[DRY-RUN] ^3355FFYou found something";
-		mes "[DRY-RUN] half-buried near a grave.";
-		mes "[DRY-RUN] It looks very well-shaped.^000000";
+		mes "^3355FF你发现了一些东西";
+		mes "半埋在坟墓附近。";
+		mes "看起来形状很好。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFWould you like to pick it up?^000000";
-		if (select("[DRY-RUN] Yes:No") == 1) {
+		mes "^3355FF你想捡起来吗？^000000";
+		if (select("是:否") == 1) {
 			if (nif_esc < 10)
 				set nif_esc,nif_esc+2;
 			else if (nif_esc == 10)
@@ -202,12 +202,12 @@ niflheim,169,71,1	script	#Graveyard2	111,1,1,{
 
 OnTouch_:
 	if (nif_esc == 6 || nif_esc == 9) {
-		mes "[DRY-RUN] ^3355FFYou found something";
-		mes "[DRY-RUN] half-buried near a grave.";
-		mes "[DRY-RUN] It looks very well-shaped.^000000";
+		mes "^3355FF你发现了一些东西";
+		mes "半埋在坟墓附近。";
+		mes "看起来形状很好。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFWould you like to pick it up?^000000";
-		if (select("[DRY-RUN] Yes:No") == 1) {
+		mes "^3355FF你想捡起来吗？^000000";
+		if (select("是:否") == 1) {
 			set nif_esc,nif_esc+2;
 			getitem 7184,1; //Piano_Keyboard
 		}
@@ -221,29 +221,29 @@ nif_in,115,181,0	script	#Piano	111,1,1,{
 
 OnTouch_:
 	if (nif_esc == 0 && (MISC_QUEST & 32) == 0) {
-		mes "[DRY-RUN] ^3355FFYou see a big, heavy piano.";
-		mes "[DRY-RUN] You get the feeling that";
-		mes "[DRY-RUN] its music would sound magnificient.^000000";
+		mes "^3355FF你看到一个又大又重的钢琴。";
+		mes "你有种感觉";
+		mes "它的音乐会听起来宏伟。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFAs you examine the piano,";
-		mes "[DRY-RUN] you find that 7 keys";
-		mes "[DRY-RUN] are missing in the";
-		mes "[DRY-RUN] middle of the keyboard.";
-		mes "[DRY-RUN] If you had all the keys,";
-		mes "[DRY-RUN] you could play music...^000000";
+		mes "^3355FF当你检查钢琴时，";
+		mes "你发现有7个琴键";
+		mes "缺失在";
+		mes "键盘的中间。";
+		mes "如果你有所有的琴键，";
+		mes "你就可以演奏音乐...^000000";
 		close;
 	}
 	if (nif_esc == 11 && countitem(7184) > 5) {
 		set nif_esc,12;
 		delitem 7184,6; //Piano_Keyboard
-		mes "[DRY-RUN] ^3355FFYou took the keys you've found";
-		mes "[DRY-RUN] and inserted them into";
-		mes "[DRY-RUN] each empty space.^000000";
+		mes "^3355FF你拿起了找到的琴键";
+		mes "并将它们插入";
+		mes "每个空位。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFBut then you realize";
-		mes "[DRY-RUN] that you're missing the last";
-		mes "[DRY-RUN] key for the space on the far";
-		mes "[DRY-RUN] left of the keyboard...^000000";
+		mes "^3355FF但随后你意识到";
+		mes "你缺少最后一个";
+		mes "在最远处空位的琴键";
+		mes "键盘的左侧...^000000";
 		close;
 	}
 	end;
@@ -276,20 +276,20 @@ OnTouch_:
 }
 
 nif_in,188,168,3	script	Witch#nif	792,{
-	mes "[DRY-RUN] ^3355FFAs you bend towards";
-	mes "[DRY-RUN] the final empty key space";
-	mes "[DRY-RUN] to take a better look at it...^000000";
-	mes "[DRY-RUN] ^3355FFYou begin to feel dizzy and";
-	mes "[DRY-RUN] your body feels as if it were";
-	mes "[DRY-RUN] floating in air. Then, your";
-	mes "[DRY-RUN] vision starts to blur...^000000";
+	mes "^3355FF当你向前弯腰时";
+	mes "最后一个空键位";
+	mes "仔细看它...^000000";
+	mes "^3355FF你开始感到头晕，";
+	mes "你的身体感觉像是";
+	mes "漂浮在空中。然后，你的";
+	mes "视线开始模糊...^000000";
 	next;
-	mes "[DRY-RUN] [Kirkena]";
-	mes "[DRY-RUN] I am sending you back";
-	mes "[DRY-RUN] outside of this town.";
-	mes "[DRY-RUN] If you can help it, you";
-	mes "[DRY-RUN] better not come back to";
-	mes "[DRY-RUN] this place.";
+	mes "[基尔克纳]";
+	mes "我将把你送回去";
+	mes "这个城镇之外。";
+	mes "如果可以的话，你";
+	mes "最好不要再回来";
+	mes "这个地方。";
 	close2;
 	warp "umbala",138,208;
 	end;
@@ -299,139 +299,139 @@ nif_in,188,168,3	script	Witch#nif	792,{
 //============================================================
 prt_in,161,20,3	script	Erious#nif	92,{
 	if (MISC_QUEST & 16384) {
-		mes "[DRY-RUN] [Kirkena]";
-		mes "[DRY-RUN] Huh? ...You're alive, aren't you?";
-		mes "[DRY-RUN] I'm not sure how more of you are";
+		mes "[基尔克纳]";
+		mes "嗯？...你还活着，对吧？";
+		mes "我不确定你们还有多少人";
 		close;
 	}
 	if (nif_revive == 0) {
-		mes "[DRY-RUN] able to get here and I don't";
-		mes "[DRY-RUN] know your reasons for coming,";
-		mes "[DRY-RUN] but this place is dangerous for";
-		mes "[DRY-RUN] the living.";
-		mes "[DRY-RUN] [Kirkena]";
+		mes "能够来到这里，我不知道";
+		mes "你们来的理由是什么，";
+		mes "但这个地方对活人来说很危险。";
+		mes "活着的人。";
+		mes "[基尔克纳]";
 		emotion ET_CRY;
 		next;
-		if (select("[DRY-RUN] Comfort him.:Neglect him.") == 1) {
-			mes "[DRY-RUN] I am sending you back";
-			mes "[DRY-RUN] outside of this town.";
-			mes "[DRY-RUN] If you can help it, you";
-			mes "[DRY-RUN] better not come back to";
-			mes "[DRY-RUN] this place.";
-			mes "[DRY-RUN] the end came...";
+		if (select("安慰他。:忽视他。") == 1) {
+			mes "我将把你送回去";
+			mes "这个城镇之外。";
+			mes "如果可以的话，你";
+			mes "最好不要再回来";
+			mes "这个地方。";
+			mes "末日来临时...";
 			next;
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I wish I could talk to my Elly,";
-			mes "[DRY-RUN] although I know it's too late now.";
-			mes "[DRY-RUN] *Cries* But... there is one last";
-			mes "[DRY-RUN] hope that I have. My absolute";
-			mes "[DRY-RUN] final chance...";
+			mes "[艾里乌斯]";
+			mes "我希望我能和我的艾莉说话，";
+			mes "虽然我知道现在已经太晚了。";
+			mes "*哭泣* 但是...我还有最后一";
+			mes "个希望。我的绝对希望。";
+			mes "最后的机会...";
 			next;
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I was told that somewhere";
-			mes "[DRY-RUN] in this world, there exists a town";
-			mes "[DRY-RUN] where the dead reside. I might be";
-			mes "[DRY-RUN] able to meet my wife there, but";
-			mes "[DRY-RUN] I cannot leave my children here";
-			mes "[DRY-RUN] without me. *Cries*";
+			mes "[艾里乌斯]";
+			mes "我被告知在某个地方";
+			mes "这个世界上存在一个城镇";
+			mes "死者居住的地方。我可能会";
+			mes "在那里见到我的妻子，但";
+			mes "我不能把我的孩子留在这里";
+			mes "没有我。*哭泣*";
 			next;
-			if (select("[DRY-RUN] I can deliver your message to her.:I am so sorry to hear that.") == 1) {
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Oh, can you?";
-				mes "[DRY-RUN] Thank you so much for your";
-				mes "[DRY-RUN] generosity. If you can do";
-				mes "[DRY-RUN] this for me, I would be";
-				mes "[DRY-RUN] greatly indebted to you.";
+			if (select("我可以把你的消息传达给她。:我很抱歉听到这个。") == 1) {
+				mes "[艾里乌斯]";
+				mes "哦，你能吗？";
+				mes "非常感谢你的";
+				mes "慷慨。如果你能为我做";
+				mes "这件事，我将会";
+				mes "非常感激你。";
 				next;
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] You're an adventurer, aren't you?";
-				mes "[DRY-RUN] If your journeys take you to that";
-				mes "[DRY-RUN] town of the dead, and if you";
-				mes "[DRY-RUN] happen to meet her by chance...";
+				mes "[艾里乌斯]";
+				mes "你是冒险者，对吧？";
+				mes "如果你的旅程带你去那个地方";
+				mes "死者之城，如果你";
+				mes "碰巧见到她…";
 				next;
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Please send Elly a message for me,";
-				mes "[DRY-RUN] let her know that what happened";
-				mes "[DRY-RUN] a month ago was all my fault.";
-				mes "[DRY-RUN] Thank you for your help,";
-				mes "[DRY-RUN] and please take care.";
+				mes "[艾里乌斯]";
+				mes "请替我给艾莉发个消息，";
+				mes "让她知道发生的事情";
+				mes "一个月前都是我的错。";
+				mes "谢谢你的帮助，";
+				mes "请多保重。";
 				set nif_revive,1;
 				setquest 11038;
 				close;
 			}
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] *Cries* Is there no way that I";
-			mes "[DRY-RUN] can see her again? If I could";
-			mes "[DRY-RUN] talk to her at least once more,";
-			mes "[DRY-RUN] even if it's the last time,";
-			mes "[DRY-RUN] I would do anything...";
+			mes "[艾里乌斯]";
+			mes "*哭泣*难道就没有办法让我";
+			mes "再见到她吗？如果我能";
+			mes "再和她说一次话，";
+			mes "即使是最后一次，";
+			mes "我愿意付出任何代价…";
 			close;
 		}
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] *Cries* Eeeeelllllyyyy~~~~!";
-		mes "[DRY-RUN] I never thought that would be";
-		mes "[DRY-RUN] the last time we would see";
-		mes "[DRY-RUN] each other...";
-		mes "[DRY-RUN] *Sob*...";
+		mes "[艾里乌斯]";
+		mes "*哭泣*艾莉~~~~！";
+		mes "我从未想过那会是";
+		mes "我们最后一次见面的";
+		mes "时刻...";
+		mes "*呜*...";
 		close;
 	}
 	else if (nif_revive == 1) {
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] This place I was told about...";
-		mes "[DRY-RUN] The town of the dead...";
-		mes "[DRY-RUN] From what I remember, it was";
-		mes "[DRY-RUN] located near some rest area.";
+		mes "[艾里乌斯]";
+		mes "我听说过的这个地方...";
+		mes "死者之城...";
+		mes "根据我的记忆，它位于";
+		mes "某个休息区附近.";
 		next;
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] All day and night, it's filled";
-		mes "[DRY-RUN] with never ending screams of";
-		mes "[DRY-RUN] agony and despair. I hope that";
-		mes "[DRY-RUN] this will be helpful in your search.";
+		mes "[艾里乌斯]";
+		mes "白天和黑夜，它充满了";
+		mes "无尽的痛苦和绝望的尖叫.";
+		mes "我希望这对你的搜索有帮助.";
+		mes "哦，我的天！你真的找到了那个城镇，";
 		close;
 	}
 	else if (nif_revive == 5 || nif_revive == 6) {
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] Oh my! You really found the town,";
-		mes "[DRY-RUN] have you? I really appreciate that";
-		mes "[DRY-RUN] you've endured all this hardship";
-		mes "[DRY-RUN] for me... Um...So in the end...";
-		mes "[DRY-RUN] Were you able to meet my Elly?";
+		mes "[艾里乌斯]";
+		mes "是吗？我真的很感激你这样做.";
+		mes "你找到它了，真是太好了！";
+		mes "你经历了所有这些艰辛";
+		mes "为了我……嗯……所以最后……";
+		mes "你能见到我的艾莉吗？";
 		next;
-		if (select("[DRY-RUN] Yes.:Sorry, I couldn't.") == 1) {
+		if (select("是。:对不起，我做不到。") == 1) {
 			if (nif_revive == 6 && countitem(934) > 0) {
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Are you serious? What did she say?";
-				mes "[DRY-RUN] Did she say she will forgive me?";
+				mes "[艾里乌斯]";
+				mes "你是认真的吗？她说了什么？";
+				mes "她说她会原谅我吗？";
 				next;
-				select("[DRY-RUN] Yes. And she gave me...this.");
+				select("是的。她给了我……这个。");
 				delitem 934,1; //Mementos
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Ah...In this box were the gifts";
-				mes "[DRY-RUN] I gave her when we started";
-				mes "[DRY-RUN] seeing each other. She had a";
-				mes "[DRY-RUN] serious illness even before we";
-				mes "[DRY-RUN] met, so I promised her that I";
-				mes "[DRY-RUN] would cure her illness...";
+				mes "[艾里乌斯]";
+				mes "啊……这个盒子里是礼物";
+				mes "我在我们开始时给了她";
+				mes "见面时。她有一个";
+				mes "严重的疾病，甚至在我们";
+				mes "见面之前，所以我向她承诺我";
+				mes "会治愈她的疾病...";
 				next;
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] That's why I went on that trip...";
-				mes "[DRY-RUN] to find a cure or medicine";
-				mes "[DRY-RUN] for her... But my efforts turned";
-				mes "[DRY-RUN] out to be a good for nothing.";
-				mes "[DRY-RUN] ...................";
-				mes "[DRY-RUN] .........";
+				mes "[艾里乌斯]";
+				mes "这就是我去那次旅行的原因...";
+				mes "寻找治疗或药物";
+				mes "为了她……但我的努力变得";
+				mes "毫无用处。";
+				mes "...................";
+				mes ".........";
 				next;
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Anyway, I appreciate your";
-				mes "[DRY-RUN] generousity. I want to pay";
-				mes "[DRY-RUN] you back for all the trouble";
-				mes "[DRY-RUN] I caused you, but I only have";
-				mes "[DRY-RUN] the medicine I found for her";
-				mes "[DRY-RUN] illness during this trip.";
+				mes "[艾里乌斯]";
+				mes "无论如何，我感谢你的";
+				mes "慷慨。我想要回报你";
+				mes "给你带来的麻烦，但我只有";
+				mes "我在这次旅行中为她找到的";
+				mes "药物。";
+				mes "我希望你能接受这份药物";
 				next;
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] I hope you will take this medicine";
-				mes "[DRY-RUN] as a token of my gratitute.";
+				mes "[艾里乌斯]";
+				mes "谢谢你所做的一切。";
+				mes "作为我感激的象征。";
 				next;
 				if (checkweight(610,26)) {
 					set MISC_QUEST,MISC_QUEST | 16384;
@@ -440,68 +440,68 @@ prt_in,161,20,3	script	Erious#nif	92,{
 					getitem 607,2; //Yggdrasilberry
 					getitem 608,2; //Seed_Of_Yggdrasil
 					getitem 610,10; //Leaf_Of_Yggdrasil
-					mes "[DRY-RUN] [Erious]";
-					mes "[DRY-RUN] Thank you for everything.";
-					mes "[DRY-RUN] I wish you luck and safety";
-					mes "[DRY-RUN] in your adventures.";
+					mes "[艾里乌斯]";
+					mes "祝你好运和安全";
+					mes "在你的冒险中。";
+					mes "在你的冒险中。";
 					close;
 				}
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] I have something to give you,";
-				mes "[DRY-RUN] but you're carrying too much";
-				mes "[DRY-RUN] stuff for me to give it to";
-				mes "[DRY-RUN] right now. Why don't you";
-				mes "[DRY-RUN] store your items somewhere?";
+				mes "[艾里乌斯]";
+				mes "我有东西要给你，";
+				mes "但你携带的东西太多了";
+				mes "我无法给你。";
+				mes "现在。你为什么不";
+				mes "把你的物品存放在某个地方呢？";
 				close;
 			}
 			else if (nif_revive == 6 && countitem(934) < 1) {
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Hmm...this is odd. I'm sure she would give you something as a token of meeting her. By any chance, is there anything that you've forgetten to bring me?";
+				mes "[艾里乌斯]";
+				mes "嗯……这很奇怪。我确定她会给你一些作为见面的纪念。难道你忘记带什么东西给我了吗？";
 				close;
 			}
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I guess you misunderstood";
-			mes "[DRY-RUN] something or you're trying";
-			mes "[DRY-RUN] to scam a man in grief.";
+			mes "[艾里乌斯]";
+			mes "我想你误解了";
+			mes "什么，或者你是在试图";
+			mes "欺骗一个悲伤的人。";
 			close;
 		}
 		if (nif_revive == 5) {
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I see...you have failed to find";
-			mes "[DRY-RUN] her... However, I also understand";
-			mes "[DRY-RUN] that fulfilling my request may";
-			mes "[DRY-RUN] be impossible...";
+			mes "[艾里乌斯]";
+			mes "我明白了……你没有找到";
+			mes "她……然而，我也明白";
+			mes "满足我的请求可能会";
+			mes "是不可能的...";
 			next;
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] You've really gone out of your way";
-			mes "[DRY-RUN] to help me, so I want to give you";
-			mes "[DRY-RUN] something as a token of my";
-			mes "[DRY-RUN] gratitute.";
+			mes "[艾里乌斯]";
+			mes "你真的费了很大劲";
+			mes "来帮助我，所以我想给你";
+			mes "一些作为我";
+			mes "感激的象征。";
 			next;
 			if (checkweight(610,10)) {
 				set MISC_QUEST,MISC_QUEST | 16384;
 				set nif_revive,0;
 				completequest 11042;
 				getitem 610,10; //Leaf_Of_Yggdrasil
-				mes "[DRY-RUN] [Erious]";
-				mes "[DRY-RUN] Thank you for everything.";
-				mes "[DRY-RUN] I wish you luck and safety";
-				mes "[DRY-RUN] from harm in your journeys.";
+				mes "[艾里乌斯]";
+				mes "祝你好运和安全";
+				mes "在你的冒险中。";
+				mes "在你们的旅途中免受伤害。";
 				close;
 			}
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I have something to give you,";
-			mes "[DRY-RUN] but you're carrying too much";
-			mes "[DRY-RUN] stuff for me to give it to";
-			mes "[DRY-RUN] right now. Why don't you";
-			mes "[DRY-RUN] store your items somewhere?";
+			mes "[艾里乌斯]";
+			mes "我有东西要给你，";
+			mes "但你携带的东西太多了";
+			mes "我无法给你。";
+			mes "现在。你为什么不";
+			mes "把你的物品存放在某个地方呢？";
 			close;
 		}
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] I see...";
-		mes "[DRY-RUN] ...Wait! Doesn't that belong";
-		mes "[DRY-RUN] to my wife, Elly? Why are you";
-		mes "[DRY-RUN] trying to cheat a grieving man...?";
+		mes "[艾里乌斯]";
+		mes "我明白了……";
+		mes "...等一下！那不是属于";
+		mes "我妻子艾莉的吗？你为什么要";
+		mes "欺骗一个悲伤的男人...？";
 		close;
 	}
 	end;
@@ -509,177 +509,177 @@ prt_in,161,20,3	script	Erious#nif	92,{
 
 umbala,215,181,3	script	Billik	733,{
 	if (nif_revive > 1 || (MISC_QUEST & 16384)) {
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] I wish you safety from harm";
-		mes "[DRY-RUN] in your journeys, adventurer.";
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] *Sob*Sob*";
-		mes "[DRY-RUN] *Cries* Wahhh...!";
+		mes "[艾里乌斯]";
+		mes "我希望你在旅途中平安无事，";
+		mes "冒险者。";
+		mes "[艾里乌斯]";
+		mes "*呜*呜*";
+		mes "*哭* 哇啊……！";
 		emotion ET_BEST;
 		close;
 	}
 	if (nif_revive == 1) {
-		mes "[DRY-RUN] Elly, how could you";
-		mes "[DRY-RUN] leave me this way...";
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] Ah, thank you for your kindness.";
+		mes "艾莉，你怎么能";
+		mes "这样离开我……";
+		mes "[艾里乌斯]";
+		mes "啊，谢谢你的好意。";
 		next;
-		if (select("[DRY-RUN] Comfort him.:Neglect him.") == 1) {
-			mes "[DRY-RUN] *Sob* My wife died while I was on";
-			mes "[DRY-RUN] a trip. I'm so sorry that I";
-			mes "[DRY-RUN] couldn't be with her when";
-			mes "[DRY-RUN] the end came...";
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I wish I could talk to my Elly,";
+		if (select("安慰他。:忽视他。") == 1) {
+			mes "*呜* 我的妻子在我出";
+			mes "去旅行时去世了。我很抱歉我";
+			mes "无法陪在她身边，当时";
+			mes "末日来临时...";
+			mes "[艾里乌斯]";
+			mes "我希望我能和我的艾莉说话，";
 			next;
-			mes "[DRY-RUN] although I know it's too late now.";
-			mes "[DRY-RUN] *Cries* But... there is one last";
-			mes "[DRY-RUN] hope that I have. My absolute";
-			mes "[DRY-RUN] final chance...";
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] I was told that somewhere";
+			mes "虽然我知道现在已经太晚了。";
+			mes "*哭泣* 但是...我还有最后一";
+			mes "个希望。我的绝对希望。";
+			mes "最后的机会...";
+			mes "[艾里乌斯]";
+			mes "我被告知在某个地方";
 			next;
-			mes "[DRY-RUN] in this world, there exists a town";
-			mes "[DRY-RUN] where the dead reside. I might be";
-			mes "[DRY-RUN] able to meet my wife there, but";
-			mes "[DRY-RUN] I cannot leave my children here";
-			mes "[DRY-RUN] without me. *Cries*";
+			mes "这个世界上存在一个城镇";
+			mes "死者居住的地方。我可能会";
+			mes "在那里见到我的妻子，但";
+			mes "我不能把我的孩子留在这里";
+			mes "没有我。*哭泣*";
 			set nif_revive,2;
 			changequest 11038,11039;
 			next;
-			mes "[DRY-RUN] [Erious]";
-			mes "[DRY-RUN] Oh, can you?";
-			mes "[DRY-RUN] Thank you so much for your";
-			mes "[DRY-RUN] generosity. If you can do";
-			mes "[DRY-RUN] this for me, I would be";
-			mes "[DRY-RUN] greatly indebted to you.";
-			mes "[DRY-RUN] [Erious]";
+			mes "[艾里乌斯]";
+			mes "哦，你能吗？";
+			mes "非常感谢你的";
+			mes "慷慨。如果你能为我做";
+			mes "这件事，我将会";
+			mes "非常感激你。";
+			mes "[艾里乌斯]";
 			close;
 		}
-		mes "[DRY-RUN] You're an adventurer, aren't you?";
-		mes "[DRY-RUN] If your journeys take you to that";
-		mes "[DRY-RUN] town of the dead, and if you";
-		mes "[DRY-RUN] happen to meet her by chance...";
-		mes "[DRY-RUN] [Erious]";
-		mes "[DRY-RUN] Please send Elly a message for me,";
+		mes "你是冒险者，对吧？";
+		mes "如果你的旅程带你去那个地方";
+		mes "死者之城，如果你";
+		mes "碰巧见到她…";
+		mes "[艾里乌斯]";
+		mes "请替我给艾莉发个消息，";
 		close;
 	}
 	else if (nif_revive == 0) {
-		mes "[DRY-RUN] let her know that what happened";
-		mes "[DRY-RUN] a month ago was all my fault.";
-		mes "[DRY-RUN] Thank you for your help,";
+		mes "让她知道发生的事情";
+		mes "一个月前都是我的错。";
+		mes "谢谢你的帮助，";
 		close;
 	}
 }
 
 niflheim,153,215,3	script	Feylin	794,{
 	if (nif_revive == 2) {
-		mes "[DRY-RUN] [Billik]";
+		mes "[比利克]";
 		mes "Poor "+((Sex == SEX_MALE)?"guy":"girl")+"...";
-		mes "[DRY-RUN] Well, long time no see.";
-		mes "[DRY-RUN] If you have a chance in the";
-		mes "[DRY-RUN] future, let's meet in the";
+		mes "嗯，好久不见。";
+		mes "如果你有机会在未来，";
+		mes "我们在";
 		next;
-		mes "[DRY-RUN] town of the dead later.";
-		mes "[DRY-RUN] Hahahaha~";
-		mes "[DRY-RUN] [Billik]";
-		mes "[DRY-RUN] The Town of the dead...";
-		mes "[DRY-RUN] It's a very dangerous place.";
-		mes "[DRY-RUN] Why would you want to go there?";
+		mes "死者之城再见面。";
+		mes "哈哈哈哈~";
+		mes "[比利克]";
+		mes "死者之城...";
+		mes "这是一个非常危险的地方。";
+		mes "你为什么想去那里？";
 		next;
-		mes "[DRY-RUN] [Billik]";
-		mes "[DRY-RUN] Someone you have to meet there...";
-		mes "[DRY-RUN] Hmm... I suppose you wish to";
-		mes "[DRY-RUN] contact the dead...";
-		mes "[DRY-RUN] I can also see that you're";
-		mes "[DRY-RUN] determined to go.";
+		mes "[比利克]";
+		mes "那里有你必须见的人...";
+		mes "嗯...我想你是想要";
+		mes "联系死者...";
+		mes "我也能看出你很";
+		mes "决心去。";
 		next;
-		mes "[DRY-RUN] [Billik]";
-		mes "[DRY-RUN] *Sigh* Okay, if you really want to";
-		mes "[DRY-RUN] go, you must find a man named";
+		mes "[比利克]";
+		mes "*叹气* 好吧，如果你真的想去，";
+		mes "你必须找到一个叫做的男人";
 		next;
-		mes "[DRY-RUN] 'Feylin.' It's very important to";
-		mes "[DRY-RUN] let him know that I introduced";
-		mes "[DRY-RUN] him to you.";
-		mes "[DRY-RUN] [Billik]";
-		mes "[DRY-RUN] He's not very trusting, but he";
-		mes "[DRY-RUN] likes roses a lot, so bring a rose";
+		mes "‘费林。’这非常重要，";
+		mes "让他知道我介绍过你给他。";
+		mes "他会知道你是我介绍的。";
+		mes "[比利克]";
+		mes "他不是很信任人，但他很喜欢玫瑰，";
+		mes "所以带一朵玫瑰给他。";
 		set nif_revive,3;
 		changequest 11039,11040;
 		close;
 	}
 	else if (nif_revive == 3) {
-		mes "[DRY-RUN] for him. That way, he'll know for";
-		mes "[DRY-RUN] sure that I've sent you.";
-		mes "[DRY-RUN] [Billik]";
-		mes "[DRY-RUN] The town of the dead is located";
-		mes "[DRY-RUN] north of this place. Remember, it";
+		mes "这样，他就会知道我派你来的。";
+		mes "亡者之城位于这个地方的北边。记住，";
+		mes "[比利克]";
+		mes "去那里是非常危险的，";
+		mes "即使是经验丰富的冒险者也不例外，";
 		emotion ET_FRET;
 		next;
-		if (select("[DRY-RUN] I have to meet somebody there.:It's a part of my adventure.") == 1) {
-			mes "[DRY-RUN] is very dangerous to go there,";
-			mes "[DRY-RUN] even for well experienced";
-			mes "[DRY-RUN] adventurers, so...";
-			mes "[DRY-RUN] Be careful.";
-			mes "[DRY-RUN] [Billik]";
-			mes "[DRY-RUN] Hahaha~ I guess you like adventure";
+		if (select("我必须在那里见某人。:这是我冒险的一部分。") == 1) {
+			mes "所以……";
+			mes "哈哈哈~ 我想你喜欢冒险。";
+			mes "冒险者，所以...";
+			mes "小心点。";
+			mes "[比利克]";
+			mes "哈哈哈~ 我想你喜欢冒险";
 			next;
-			mes "[DRY-RUN] as much as I do. Although it's a";
-			mes "[DRY-RUN] very dangrous place, you will be";
-			mes "[DRY-RUN] paid back for your effort after";
-			mes "[DRY-RUN] you get there. But be careful.";
+			mes "和我一样多。虽然这是一个";
+			mes "非常危险的地方，你会";
+			mes "在你到达后得到回报。";
+			mes "但要小心。";
 			set nif_revive,4;
 			changequest 11040,11041;
 			close;
 		}
-		mes "[DRY-RUN] [Billik]";
-		mes "[DRY-RUN] What brings you here? I'm busy,";
-		mes "[DRY-RUN] leave if you don't have any business.";
-		mes "[DRY-RUN] Nobody should stay in";
-		mes "[DRY-RUN] Niflheim for too long.";
+		mes "[比利克]";
+		mes "你来这里有什么事？我很忙，";
+		mes "如果你没有事就离开。";
+		mes "没有人应该在";
+		mes "尼芙菲姆待太久。";
 		close;
 	}
 	else if (nif_revive == 4) {
 		if (countitem(748) > 0) {
-			mes "[DRY-RUN] [Feylin]";
-			mes "[DRY-RUN] Huh, Billik must have sent you.";
-			mes "[DRY-RUN] Since I'm indebted to him, I";
-			mes "[DRY-RUN] suppose I will help you.";
-			mes "[DRY-RUN] But let me warn you.";
-			mes "[DRY-RUN] The price that I demand may be";
-			mes "[DRY-RUN] more that you expect...";
+			mes "[费林]";
+			mes "嗯，比利克一定是派你来的。";
+			mes "既然我欠他的人情，我";
+			mes "想我会帮助你。";
+			mes "但让我警告你。";
+			mes "我所要求的价格可能是";
+			mes "超出你的预期……";
 			next;
-			if (select("[DRY-RUN] I'm willing to do this.:I don't think I can do this.") == 1) {
+			if (select("我愿意这样做。:我觉得我做不到。") == 1) {
 				if (BaseLevel > 79) {
-					mes "[DRY-RUN] [Feylin]";
-					mes "[DRY-RUN] Alright, but you must promise";
-					mes "[DRY-RUN] me that you will not let other";
-					mes "[DRY-RUN] people know what I am about";
-					mes "[DRY-RUN] to tell you.";
+					mes "[费林]";
+					mes "好的，但你必须承诺";
+					mes "我不会让其他人知道";
+					mes "我即将告诉你的事。";
+					mes "。";
 					next;
-					mes "[DRY-RUN] [Feylin]";
-					mes "[DRY-RUN] This sorcery requires great";
-					mes "[DRY-RUN] sacrifice. Needless to say, there";
-					mes "[DRY-RUN] is a chance that this spell may";
-					mes "[DRY-RUN] fail. I must also have";
-					mes "[DRY-RUN] 10 Yggdrasil Leaf to cast this";
-					mes "[DRY-RUN] spell. Do you wish to continue?";
+					mes "[费林]";
+					mes "这个法术需要巨大的";
+					mes "牺牲。无需多言，这";
+					mes "个咒语有可能会";
+					mes "失败。我还必须拥有";
+					mes "10片世界树叶才能施展这个";
+					mes "咒语。你想继续吗？";
 					next;
-					if (select("[DRY-RUN] Yes:No") == 1) {
+					if (select("是:否") == 1) {
 						if (countitem(610) > 9) {
-							mes "[DRY-RUN] [Feylin]";
-							mes "[DRY-RUN] I see. Then we shall begin.";
-							mes "[DRY-RUN] Woombahsokasabahah!";
-							mes "[DRY-RUN] Woombah woombah hoombabah!";
-							mes "[DRY-RUN] Yeeeeep!";
+							mes "[费林]";
+							mes "我明白了。那么我们就开始吧。";
+							mes "乌姆巴哈索卡萨巴哈！";
+							mes "乌姆巴哈 乌姆巴哈 霍姆巴哈！";
+							mes "耶！";
 							next;
 							set .@nif_revive1,rand(1,100);
 							if (.@nif_revive1 > 0) && (.@nif_revive1 < 88) {
-								mes "[DRY-RUN] [Feylin]";
-								mes "[DRY-RUN] ...I am sorry.";
-								mes "[DRY-RUN] I have failed to summon";
-								mes "[DRY-RUN] who you wish to see. I am";
-								mes "[DRY-RUN] really sorry for this result.";
+								mes "[费林]";
+								mes "……我很抱歉。";
+								mes "我未能召唤到你想见的人。";
+								mes "我很抱歉。";
+								mes "对此结果我真的很抱歉。";
 								emotion ET_HUK;
 								delitem 748,1; //Witherless_Rose
 								delitem 610,10; //Leaf_Of_Yggdrasil
@@ -687,112 +687,112 @@ niflheim,153,215,3	script	Feylin	794,{
 								changequest 11041,11042;
 								percentheal -99,0;
 								next;
-								mes "[DRY-RUN] [Feylin]";
-								mes "[DRY-RUN] Unfortunately, it may be";
-								mes "[DRY-RUN] impossible to summon the";
-								mes "[DRY-RUN] spirit of the person with";
-								mes "[DRY-RUN] whom you wished to speak...";
+								mes "[费林]";
+								mes "不幸的是，这可能是";
+								mes "不可能召唤到你想要的人的";
+								mes "灵魂。";
+								mes "你想要交谈的人……";
 								close;
 							}
 							else if (.@nif_revive1 > 87) && (.@nif_revive1 < 101) {
 								delitem 748,1; //Witherless_Rose
 								delitem 610,10; //Leaf_Of_Yggdrasil
 								percentheal -50,0;
-								mes "[DRY-RUN] [Feylin]";
-								mes "[DRY-RUN] ..........";
-								mes "[DRY-RUN] ..........";
+								mes "[费林]";
+								mes "..........";
+								mes "..........";
 								next;
-								mes "[DRY-RUN] [Elly]";
-								mes "[DRY-RUN] ..........";
-								mes "[DRY-RUN] .....Umm...";
-								mes "[DRY-RUN] ...Wasn't I just dead?";
-								mes "[DRY-RUN] Um, do I know you?";
+								mes "[艾莉]";
+								mes "..........";
+								mes "……嗯……";
+								mes "……我不是刚死吗？";
+								mes "嗯，我认识你吗？";
 								next;
-								select("[DRY-RUN] I brought a message from your husband.");
-								mes "[DRY-RUN] [Elly]";
-								mes "[DRY-RUN] Oh...I see...I'm sorry that I could not meet him before I died...";
-								mes "[DRY-RUN] So what is his message for me?";
+								select("我带来了你丈夫的消息。");
+								mes "[艾莉]";
+								mes "哦……我明白了……我很抱歉在我死之前没有见到他……";
+								mes "那么他给我的信息是什么？";
 								next;
-								select("[DRY-RUN] Forgive him for what happened a month ago.");
-								mes "[DRY-RUN] [Elly]";
-								mes "[DRY-RUN] *Sigh* He's such a nice husband...";
-								mes "[DRY-RUN] He pays such attention, even to";
-								mes "[DRY-RUN] the little things. Though, I";
-								mes "[DRY-RUN] should be the one apologizing";
-								mes "[DRY-RUN] to him...";
+								select("原谅他一个月前发生的事。");
+								mes "[艾莉]";
+								mes "*叹气* 他真是个好丈夫……";
+								mes "他对每件事都很上心，甚至是";
+								mes "那些小事。不过，我";
+								mes "应该是我来道歉";
+								mes "给他...";
 								next;
-								mes "[DRY-RUN] [Elly]";
-								mes "[DRY-RUN] Please give him this box, and tell";
-								mes "[DRY-RUN] him to forget about me. He should";
-								mes "[DRY-RUN] live the rest of his life happily";
-								mes "[DRY-RUN] with someone else. Oh, also let";
-								mes "[DRY-RUN] him know that I forgive him.";
+								mes "[艾莉]";
+								mes "请把这个盒子给他，并告诉";
+								mes "他忘记我。他应该";
+								mes "幸福地度过余生";
+								mes "和其他人在一起。哦，还要让";
+								mes "他知道我原谅他。";
 								set nif_revive,6;
 								changequest 11040,11043;
 								getitem 934,1; //Mementos
 								next;
-								mes "[DRY-RUN] [Elly]";
-								mes "[DRY-RUN] I am glad to hear from my";
-								mes "[DRY-RUN] husband one more time. But I";
-								mes "[DRY-RUN] think I have to go now.";
-								mes "[DRY-RUN] Thank you for your trouble.";
-								mes "[DRY-RUN] Farewell...";
+								mes "[艾莉]";
+								mes "我很高兴再次听到我的";
+								mes "丈夫的消息。但我";
+								mes "想我现在得走了。";
+								mes "谢谢你的辛苦。";
+								mes "再见...";
 								next;
-								mes "[DRY-RUN] [Elly]";
-								mes "[DRY-RUN] .....................";
-								mes "[DRY-RUN] ....................";
+								mes "[艾莉]";
+								mes ".....................";
+								mes "....................";
 								next;
-								mes "[DRY-RUN] [Feylin]";
-								mes "[DRY-RUN] I guess you have accomplished what";
-								mes "[DRY-RUN] you wanted. Well then, be careful";
-								mes "[DRY-RUN] when you go back...";
+								mes "[费林]";
+								mes "我想你已经完成了你";
+								mes "想要的事情。那么，回去时";
+								mes "要小心...";
 								close;
 							}
 						}
 						else {
-							mes "[DRY-RUN] [Feylin]";
-							mes "[DRY-RUN] If you don't have the";
-							mes "[DRY-RUN] items, we cannot proceed.";
-							mes "[DRY-RUN] Remember, I need 10 Yggdrasil";
-							mes "[DRY-RUN] Leaves to perform this spell.";
-							mes "[DRY-RUN] Please bring them as soon";
-							mes "[DRY-RUN] as possible.";
+							mes "[费林]";
+							mes "如果你没有";
+							mes "物品，我们无法继续。";
+							mes "记住，我需要10片世界树";
+							mes "叶子来施展这个法术。";
+							mes "请尽快带来它们。";
+							mes "尽快。";
 							close;
 						}
 					}
-					mes "[DRY-RUN] [Feylin]";
-					mes "[DRY-RUN] I hope you will bring the items";
-					mes "[DRY-RUN] first. But... I don't have the";
-					mes "[DRY-RUN] confidence to promise that";
-					mes "[DRY-RUN] this spell will cast successfully.";
+					mes "[费林]";
+					mes "我希望你能带来这些物品";
+					mes "首先。但是……我没有";
+					mes "信心来保证这个";
+					mes "法术会成功施放。";
 					close;
 				}
-				mes "[DRY-RUN] [Feylin]";
-				mes "[DRY-RUN] Hmm... You don't seem to have";
-				mes "[DRY-RUN] the strength to endure the";
-				mes "[DRY-RUN] casting of this spell. At";
-				mes "[DRY-RUN] your current strength, this";
-				mes "[DRY-RUN] spell will kill you.";
-				mes "[DRY-RUN] I cannot take that risk.";
+				mes "[费林]";
+				mes "嗯……你似乎没有";
+				mes "承受这个的力量";
+				mes "施放这个法术。在";
+				mes "以你目前的力量，这个";
+				mes "法术会杀了你。";
+				mes "我不能冒这个险。";
 				close;
 			}
-			mes "[DRY-RUN] [Feylin]";
-			mes "[DRY-RUN] You made a good decision.";
-			mes "[DRY-RUN] It's not a good idea to perform";
-			mes "[DRY-RUN] this kind of sorcery in the";
-			mes "[DRY-RUN] first place because of the";
-			mes "[DRY-RUN] risks involved...";
+			mes "[费林]";
+			mes "你做了一个好决定。";
+			mes "执行这种魔法并不是个好主意";
+			mes "因为在一开始就不应该这样做，";
+			mes "因为这个原因。";
+			mes "涉及的风险...";
 			close;
 		}
-		mes "[DRY-RUN] [Feylin]";
-		mes "[DRY-RUN] No matter how many times you ask";
-		mes "[DRY-RUN] me, I cannot help you. Please";
-		mes "[DRY-RUN] leave this place as soon as you can.";
+		mes "[费林]";
+		mes "无论你问多少次";
+		mes "我都无法帮助你。请";
+		mes "尽快离开这个地方。";
 		close;
 	}
-	mes "[DRY-RUN] [Feylin]";
-	mes "[DRY-RUN] What makes you to come to such";
-	mes "[DRY-RUN] a dangerous town? Please leave";
-	mes "[DRY-RUN] this place as soon as you can.";
+	mes "[费林]";
+	mes "是什么让你来到这样一个";
+	mes "危险的城镇？请离开";
+	mes "这个地方尽快。";
 	close;
 }

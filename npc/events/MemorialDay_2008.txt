@@ -18,76 +18,76 @@
 //============================================================
 prontera,182,214,4	script	Lauds#Memorial	58,{
 	if (Memorial08 < 1) {
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Hey, yo!";
-		mes "[DRY-RUN] What are you doing there!?";
+		mes "[疯狂的萨戈]";
+		mes "嘿，喂！";
+		mes "你在那干什么！?";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Do you know what day it is!?";
-		mes "[DRY-RUN] It's a very important date!";
-		mes "[DRY-RUN] A very important date to remember!";
+		mes "[疯狂的萨戈]";
+		mes "你知道今天是什么日子吗！?";
+		mes "这是一个非常重要的日子！";
+		mes "一个值得铭记的重要日子！";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] What is this!?";
+		mes "[疯狂的萨戈]";
+		mes "这是什么！?";
 		emotion ET_SURPRISE;
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Where is your towel!?";
+		mes "[疯狂的萨戈]";
+		mes "你的毛巾在哪里！?";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] My what?";
+		mes "我的什么？";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] How are you supposed to go on your trip without your towel!?";
+		mes "[疯狂的萨戈]";
+		mes "没有毛巾你怎么去旅行！?";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] If you think this is just another holiday, I'm not going to waste my breath.";
-		mes "[DRY-RUN] But if you like to pay a tribute to great soldiers, I will help you ready yourself.";
+		mes "[疯狂的萨戈]";
+		mes "如果你认为这只是另一个假期，我就不想浪费口舌了。";
+		mes "但如果你想向伟大的士兵致敬，我会帮助你准备好自己。";
 		next;
-		if (select("[DRY-RUN] I guess so...:Are you crazy or something?") == 2) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] Fine, be unprepared!";
+		if (select("我想是这样……:你是疯了吗？") == 2) {
+			mes "[疯狂的萨戈]";
+			mes "好吧，随便你不准备！";
 			next;
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] ^FF0000YOU WILL RUE THE DAY!^000000";
+			mes "[疯狂的萨戈]";
+			mes "";
 			close;
 		}
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Great!";
-		mes "[DRY-RUN] Then listen to me carefully.";
+		mes "^FF0000你会后悔的！^000000";
+		mes "[疯狂的萨戈]";
+		mes "太好了！";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Now before you can pay tribute to the fallen soldiers you must be properly equipped.";
-		mes "[DRY-RUN] Without your towel you will be lost!";
-		mes "[DRY-RUN] If you bring me the materials, I can make you a towel.";
+		mes "那么仔细听我说。";
+		mes "[疯狂的萨戈]";
+		mes "在你向阵亡士兵致敬之前，你必须装备好。";
+		mes "没有毛巾你会迷路！";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Listen closely.";
-		mes "[DRY-RUN] Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
+		mes "如果你给我材料，我可以给你做一条毛巾。";
+		mes "[疯狂的萨戈]";
+		mes "仔细听。";
 		set Memorial08,1;
 		close;
 	}
 
 	else if (Memorial08 == 1) {
 		if (countitem(1059) < 30 || countitem(914) < 20) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] What are these? They aren't enough?!";
-			mes "[DRY-RUN] *Sigh* Do I really have to tell you again?!";
-			mes "[DRY-RUN] Bring me ^FF000030 Fabric and 20 Fluffs^000000.";
+			mes "给我^FF000030块布和20个绒毛^000000。";
+			mes "[疯狂的萨戈]";
+			mes "这些是什么？不够吗？！";
+			mes "*叹气* 我真的要再告诉你一次吗？！";
 			close;
 		} else {
-			mes "[DRY-RUN] ***Mad Sago Lauds appears to be muttering to himself***";
+			mes "给我^FF000030块布和20个绒毛^000000。";
 			next;
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] So, did you bring the towel materials?";
+			mes "***疯狂的萨戈似乎在自言自语***";
+			mes "[疯狂的萨戈]";
 			next;
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] Excellent; you've brought them all.";
-			mes "[DRY-RUN] Then I shall make you a Towel of Memory as I promised.";
-			mes "[DRY-RUN] Give me a moment.";
+			mes "那么，你带来毛巾材料了吗？";
+			mes "[疯狂的萨戈]";
+			mes "很好；你把它们都带来了。";
+			mes "那么我就按照承诺给你做一条记忆毛巾。";
 			next;
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] There you go!";
+			mes "给我一点时间。";
+			mes "[疯狂的萨戈]";
 			delitem 1059,30;
 			delitem 914,20;
 			getitem 6025,1;
@@ -98,96 +98,96 @@ prontera,182,214,4	script	Lauds#Memorial	58,{
 	}
 	
 	else if (Memorial08 == 2) {
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Ah, you have fluffy new towel now I even put your name on it";
+		mes "给你！";
+		mes "[疯狂的萨戈]";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Say, how do you like to go on a journey to pay a tribute to Memorial Day?";
+		mes "啊，你有了一条新的毛巾，我甚至在上面写了你的名字。";
+		mes "[疯狂的萨戈]";
 		next;
-		if (select("[DRY-RUN] Sure.:No, I'm Busy.") == 2) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] Don't come crying to me if someone decides to build a highway through your home!";
+		if (select("当然。:不，我很忙。") == 2) {
+			mes "说吧，你想去纪念日致敬的旅程吗？";
+			mes "[疯狂的萨戈]";
 			close;
 		}
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Good. By the way, do you even know what the towel is for?";
+		mes "如果有人决定在你家附近修建高速公路，别来找我哭！";
+		mes "[疯狂的萨戈]";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] It seems you're just carrying it without understanding its meaning.";
-		mes "[DRY-RUN] What a shame! You should go speak to ^FF0000Grast in Prontera^000000.";
+		mes "很好。顺便问一下，你知道毛巾是干什么用的吗？";
+		mes "[疯狂的萨戈]";
+		mes "看来你只是带着它而不理解它的意义。";
 		set Memorial08,3;
 		close;
 	}
 
 	else if (Memorial08 == 3) {
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] What are you still doing here?";
-		mes "[DRY-RUN] I told you to go speak to Grast in Prontera!";
+		mes "真可惜！你应该去找^FF0000普隆德拉的格拉斯^000000。";
+		mes "[疯狂的萨戈]";
+		mes "你还在这里干什么？";
 		close;
 	}
 
 	else if (Memorial08 == 4 || Memorial08 == 5 || Memorial08 == 6) {
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Go help Grast, and then come back.";
+		mes "我告诉过你去找普隆德拉的格拉斯！";
+		mes "[疯狂的萨戈]";
 		close;
 	}
 
 	else if (Memorial08 == 7) {
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Oh, you've brought them all.";
-		mes "[DRY-RUN] Hahaha!";
-		mes "[DRY-RUN] HAHAHAHAHAHA!!!! cough cough";
+		mes "去帮助格拉斯，然后再回来。";
+		mes "[疯狂的萨戈]";
+		mes "哦，你把它们都带来了。";
+		mes "哈哈哈！";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Please give them to me. Thank you for your hard work, by the way.";
-		mes "[DRY-RUN] Say, have you learned anything from the journey?";
-		mes "[DRY-RUN] Now is to go visit the plaque at 12 o'clock direction in Prontera.";
+		mes "哈哈哈哈哈哈！！咳咳";
+		mes "[疯狂的萨戈]";
+		mes "请把它们给我。顺便说一下，谢谢你的辛苦工作。";
+		mes "说吧，你从这次旅程中学到了什么吗？";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] What do you mean you were just there?";
+		mes "现在去普隆德拉12点方向的纪念碑看看。";
+		mes "[疯狂的萨戈]";
 		next;
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] What? Why are you giving me your garbage!";
-		mes "[DRY-RUN] Those items are not useful to me at all.";
-		mes "[DRY-RUN] You should be going to the plaque!";
+		mes "你说你刚去过那里？";
+		mes "[疯狂的萨戈]";
+		mes "什么？你为什么要给我你的垃圾！";
+		mes "那些物品对我一点用处都没有。";
 		set Memorial08,8;
 		close;
 	}
 
 	else if (Memorial08 == 8) {
-		mes "[DRY-RUN] [Mad Sago Lauds]";
-		mes "[DRY-RUN] Stop trying to give me your garbage!";
-		mes "[DRY-RUN] Go to the plaque at 12 o'clock direction in Prontera for your journey!";
+		mes "你应该去纪念碑！";
+		mes "[疯狂的萨戈]";
+		mes "别试图把你的垃圾给我！";
 		close;
 	}
 	
 	else if (Memorial08 >= 9) {
 		set .@RandomMsg, rand(1,5);
 		if (.@RandomMsg == 1) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] Don't panic!";
+			mes "去普隆德拉12点方向的纪念碑进行你的旅程！";
+			mes "[疯狂的萨戈]";
 			emotion ET_SURPRISE;
 			close;
 		}
 		else if (.@RandomMsg == 2) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] Life... is like a grapefruit.";
-			mes "[DRY-RUN] It's orange and squishy, and has a few pips in it, and some folks have half a one for breakfast.";
+			mes "别慌！";
+			mes "[疯狂的萨戈]";
+			mes "生活……就像一个葡萄柚。";
 			close;
 		}
 		else if (.@RandomMsg == 3) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] There was a point to this story, but it has temporarily escaped the chronicler's mind.";
+			mes "它是橙色的，软绵绵的，里面有几个籽，有些人早餐吃半个。";
+			mes "[疯狂的萨戈]";
 			close;
 		}
 		else if (.@RandomMsg == 4) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[DRY-RUN] 42!";
+			mes "这个故事是有意义的，但它暂时逃出了编年史者的脑海。";
+			mes "[疯狂的萨戈]";
 			close;
 		}
 		else if (.@RandomMsg == 5) {
-			mes "[DRY-RUN] [Mad Sago Lauds]";
-			mes "[Mad Sago Lauds]";
+			mes "42!";
+			mes "[疯狂的萨戈]";
 			close;
 		}
 	}
@@ -254,56 +254,56 @@ prontera,153,286,4	script	Memorial Plaque#Memorial	857,{
 //============================================================
 prontera,150,270,4	script	Grast#Memorial	900,{
 	if (Memorial08 < 3) {
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] Memorial Day is a sad and yet glorious day.";
-		mes "[DRY-RUN] I wonder how many people remember them...";
+		mes "[格拉斯]";
+		mes "纪念日是一个悲伤而又光辉的日子。";
+		mes "我想知道有多少人记得他们……";
 		close;
 	}
 	
 	else if (Memorial08 == 3) {
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] Oh, isn't that a Towel of Memory?";
-		mes "[DRY-RUN] I'm so glad to meet someone who understands the meaning of Memorial Day.";
+		mes "[格拉斯]";
+		mes "哦，那不是一条记忆毛巾吗？";
+		mes "我很高兴见到理解纪念日意义的人。";
 		next;
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] It is very important to know what we're celebrating today, don't you think?";
+		mes "[格拉斯]";
+		mes "知道我们今天在庆祝什么是非常重要的，你不觉得吗？";
 		next;
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] If you like to go on a journey to pay a tribute to Memorial Day, you should bring me some materials I ask.";
+		mes "[格拉斯]";
+		mes "如果你想去旅行以向纪念日致敬，你应该给我一些我要求的材料。";
 		next;
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] Please bring me ^FF0000one of each Red Potion, Green Potion, Awakening Potion, and Butterfly Wing^000000.";
-		mes "[DRY-RUN] I'll be waiting for your return.";
+		mes "[格拉斯]";
+		mes "请给我^FF0000一份红色药水、绿色药水、觉醒药水和蝴蝶翅膀^000000。";
+		mes "我会等你回来。";
 		set Memorial08,4;
 		close;
 	}
 
 	else if (Memorial08 == 4) {
 		if (countitem(501) < 1 || countitem(506) < 1 || countitem(656) < 1 || countitem(602) < 1) {
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Oops, you haven't brought all materials.";
-			mes "[DRY-RUN] Please make sure you need to bring me";
-			mes "[DRY-RUN] ^FF0000one of each Red Potion, Green Potion, Awakening Potion, and Butteryfly Wing^000000.";
+			mes "[格拉斯]";
+			mes "哎呀，你还没有带齐所有材料。";
+			mes "请确保你需要带给我";
+			mes "^FF0000一份红色药水、绿色药水、觉醒药水和蝴蝶翅膀^000000。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] You'll have to bring me more materials afterwards.";
-			mes "[DRY-RUN] If you feel too burdened to gather them all,";
-			mes "[DRY-RUN] I can provide you all the materials.";
+			mes "[格拉斯]";
+			mes "你之后还得给我带更多材料。";
+			mes "如果你觉得收集它们太累了，";
+			mes "我可以提供你所有的材料。";
 			next;
-			if (select("[DRY-RUN] I'll gather the rest.:Give me the materials.") == 2) {
+			if (select("我会收集其余的。:给我材料。") == 2) {
 				goto L_GiveUp;
 			}
 			goto L_Continue;
 		} else {
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Oh, you've brought the materials I asked.";
+			mes "[格拉斯]";
+			mes "哦，你带来了我要求的材料。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Hmm, you will need some more things still...";
+			mes "[格拉斯]";
+			mes "嗯，你还需要一些东西……";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Please bring me ^FF0000one of each Trap, Yggdrasil Leaf, Blue Gemstone, Crystal Mirror, Meat, and Carrot.^000000";
-			mes "[DRY-RUN] I'll be waiting for your return.";
+			mes "[格拉斯]";
+			mes "请给我^FF0000一份陷阱、世界树叶、蓝色魔力矿石、水晶镜、肉和胡萝卜^000000。";
+			mes "我会等你回来。";
 			set Memorial08,5;
 			close;
 		}
@@ -311,26 +311,26 @@ prontera,150,270,4	script	Grast#Memorial	900,{
 	
 	else if (Memorial08 == 5) {
 		if (countitem(1065) < 1 || countitem(610) < 1 || countitem(717) < 1 || countitem(747) < 1 || countitem(517) < 1 || countitem(515) < 1) {
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Oops, you haven't brought all materials.";
-			mes "[DRY-RUN] Please make sure you'll have to bring me";
-			mes "[DRY-RUN] ^FF0000one of each Trap, Yggdrasil Leaf, Blue Gemstone, Crystal Mirror, Meat, and Carrot^000000.";
+			mes "[格拉斯]";
+			mes "哎呀，你还没有带齐所有材料。";
+			mes "请确保你要给我带";
+			mes "^FF0000一份陷阱、世界树叶、蓝色魔力矿石、水晶镜、肉和胡萝卜^000000。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] You'll have to bring me more materials afterwards.";
-			mes "[DRY-RUN] If you feel too burdened to gather them all, I can provide you all the materials.";
+			mes "[格拉斯]";
+			mes "你之后还得给我带更多材料。";
+			mes "如果你觉得收集它们太累了，我可以提供你所有的材料。";
 			next;
-			if (select("[DRY-RUN] I'll gather the rest.:Give me the materials.") == 2) {
+			if (select("我会收集其余的。:给我材料。") == 2) {
 				goto L_GiveUp;
 			}
 			goto L_Continue;
 		} else {
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Oh, you've brought everything I asked.";
-			mes "[DRY-RUN] Hmm, I think you need just a little bit more.";
+			mes "[格拉斯]";
+			mes "哦，你把我要求的所有东西都带来了。";
+			mes "嗯，我想你只需要再多一点。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Please bring me ^FF0000one of each Pet Incubator, Firecracker, Poring Doll, and Bouquet^000000.";
+			mes "[格拉斯]";
+			mes "请给我^FF0000一份宠物孵化器、烟花、波利玩偶和花束^000000。";
 			set Memorial08,6;
 			close;
 		}
@@ -338,53 +338,53 @@ prontera,150,270,4	script	Grast#Memorial	900,{
 	
 	else if (Memorial08 == 6) {
 		if (countitem(643) < 1 || countitem(12018) < 1 || countitem(741) < 1 || countitem(745) < 1) {
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Oops, you haven't brought all materials.";
-			mes "[DRY-RUN] Please make sure you need to bring me";
-			mes "[DRY-RUN] ^FF0000one of each Pet Incubator, Firecracker, Poring Doll and Bouquet";
+			mes "[格拉斯]";
+			mes "哎呀，你还没有带齐所有材料。";
+			mes "请确保你需要带给我";
+			mes "^FF0000一份宠物孵化器、烟花、波利玩偶和花束";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] They are the last batch of materials.";
-			mes "[DRY-RUN] If you feel too burdened to gather them all, I can provide you all the materials.";
+			mes "[格拉斯]";
+			mes "它们是最后一批材料。";
+			mes "如果你觉得收集它们太累了，我可以提供你所有的材料。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] If I provide you all materials, however, I won't have to thank you for your service.";
+			mes "[格拉斯]";
+			mes "如果我提供你所有材料，我就不需要感谢你的服务了。";
 			mes "It's your call, " + strcharinfo(0) + ".";
 			next;
-			if (select("[DRY-RUN] I'll gather the rest.:Give me the materials.") == 2) {
+			if (select("我会收集其余的。:给我材料。") == 2) {
 				goto L_GiveUp;
 			}
 			goto L_Continue;
 		} else {
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Have you brought the materials I asked?";
-			mes "[DRY-RUN] Ah, thank you for your hard work you've brought all of them.";
+			mes "[格拉斯]";
+			mes "你带来了我要求的材料吗？";
+			mes "啊，谢谢你辛苦工作带来了所有这些。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] I hope you'll learn a valuable lesson while gathering these materials.";
-			mes "[DRY-RUN] I like to give you a small gift for your service.";
+			mes "[格拉斯]";
+			mes "我希望你在收集这些材料时能学到宝贵的教训。";
+			mes "我想给你一个小礼物以表感谢。";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] You see, I have two different gifts in my each hand.";
-			mes "[DRY-RUN] A best thing would be giving you both of them, but...";
+			mes "[格拉斯]";
+			mes "你看，我每只手里都有两个不同的礼物。";
+			mes "最好的办法是把两个都给你，但……";
 			mes "How do you like to test your luck, " + strcharinfo(0) + "?";
 			next;
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] Okay, which hand would you like to pick?";
+			mes "[格拉斯]";
+			mes "好的，你想选择哪只手？";
 			next;
-			if (select("[DRY-RUN] Left hand.:Right hand.") == 2) {
-				mes "[DRY-RUN] [Grast]";
-				mes "[DRY-RUN] You've selected my right hand.";
-				mes "[DRY-RUN] Here's the gift for you.";
-				mes "[DRY-RUN] Now, please bring all these materials to Lauds.";
+			if (select("左手。:右手。") == 2) {
+				mes "[格拉斯]";
+				mes "你选择了我的右手。";
+				mes "这是给你的礼物。";
+				mes "现在，请把所有这些材料带给劳德斯。";
 				set Memorial08, 7;
 				getitem 617,1;
 				close;
 			}
-			mes "[DRY-RUN] [Grast]";
-			mes "[DRY-RUN] You've selected my left hand.";
-			mes "[DRY-RUN] Here's the gift for you.";
-			mes "[DRY-RUN] Now, please bring all these materials to Lauds.";
+			mes "[格拉斯]";
+			mes "你选择了我的左手。";
+			mes "这是给你的礼物。";
+			mes "现在，请把所有这些材料带给劳德斯。";
 			set Memorial08, 7;
 			getitem 12109,1;
 			close;
@@ -392,39 +392,39 @@ prontera,150,270,4	script	Grast#Memorial	900,{
 	}
 	
 	else if (Memorial08 == 7) {
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] Have you met Lauds?";
-		mes "[DRY-RUN] I hope you'll remember your freedom and happiness are built on thousands of lives sacrificed in war.";
+		mes "[格拉斯]";
+		mes "你见过劳德斯吗？";
+		mes "我希望你能记住，你的自由和幸福是建立在无数在战争中牺牲的生命之上的。";
 		close;
 	}
 
 	else if (Memorial08 >= 8) {
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] A towel is about the most massively useful thing an adventurer can have.";
+		mes "[格拉斯]";
+		mes "毛巾是冒险者最有用的东西之一。";
 		close;
 	}
 
 	L_GiveUp:
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] Oh, I see. I guess you're quite busy nowadays, huh?";
-		mes "[DRY-RUN] No problem; I'll give you all the supplies...";
+		mes "[格拉斯]";
+		mes "哦，我明白了。我想你最近很忙，是吧？";
+		mes "没问题；我会给你所有的补给……";
 		next;
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] There you go.";
-		mes "[DRY-RUN] I crushed all the items together into a more compact form for you.";
-		mes "[DRY-RUN] You can thank me later for that extra service.";
-		mes "[DRY-RUN] Please bring them to Lauds.";
+		mes "[格拉斯]";
+		mes "给你。";
+		mes "我把所有物品压缩成更紧凑的形式给你。";
+		mes "你可以稍后感谢我这额外的服务。";
+		mes "请把它们带给劳德斯。";
 		set Memorial08,7;
 		getitem 7126,1;
 		next;
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] By the way, he had an unfortunate accident, and has kind of lost his mind.";
-		mes "[DRY-RUN] Please don't be alarmed even if he starts babbling.";
+		mes "[格拉斯]";
+		mes "顺便说一下，他发生了一场不幸的事故，似乎失去了理智。";
+		mes "即使他开始喃喃自语，请不要惊慌。";
 		close;
 	
 	L_Continue:
-		mes "[DRY-RUN] [Grast]";
-		mes "[DRY-RUN] That's a good idea.";
-		mes "[DRY-RUN] Then I'll be waiting for your return.";
+		mes "[格拉斯]";
+		mes "这是个好主意。";
+		mes "那么我会等着你回来。";
 		close;
 }

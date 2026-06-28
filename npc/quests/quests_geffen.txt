@@ -20,65 +20,65 @@
 // Blacksmith: 'Welding Mask' Quest
 //============================================================
 geffen_in,144,166,4	script	Blacksmith	63,{
-	mes "[DRY-RUN] [Blacksmith]";
-	mes "[DRY-RUN] You've never heard of me? Why, I'm the Veteran Blacksmith of this land. I've spent 30 years in this hot and bloody hellfire, bending steel to my iron will!";
+	mes "[铁匠]";
+	mes "你从未听说过我？我可是这片土地上的资深铁匠。我在这炎热而血腥的地狱中度过了30年，屈服于我的铁意志！";
 	next;
-	mes "[DRY-RUN] [Blacksmith]";
-	mes "[DRY-RUN] But...";
-	mes "[DRY-RUN] I am growing older and my prowess begins to fade with age. So I've invented something for young, hot, upcoming Blacksmiths, in hopes that they too will master my craft...";
+	mes "[铁匠]";
+	mes "但是……";
+	mes "我正在变老，我的技艺随着年龄的增长而开始衰退。因此，我为年轻、热情、充满潜力的铁匠们发明了一些东西，希望他们也能掌握我的技艺……";
 	next;
-	switch(select("[DRY-RUN] What is it?:...")) {
+	switch(select("有什么事吗?:...")) {
 	case 1:
-		mes "[DRY-RUN] [Blacksmith]";
-		mes "[DRY-RUN] We Blacksmiths must always manipulate steel under extreme heat, and the hot air and melted metals are more than most people can stand.";
+		mes "[铁匠]";
+		mes "我们铁匠必须在极端的高温下操作钢铁，而炽热的空气和熔化的金属是大多数人无法忍受的。";
 		next;
-		mes "[DRY-RUN] [Blacksmith]";
-		mes "[DRY-RUN] For the sake of our craft, our beautiful, yet masculine faces are put at risk...";
+		mes "[铁匠]";
+		mes "为了我们的工艺，我们美丽而又阳刚的面孔面临着风险……";
 		next;
-		mes "[DRY-RUN] [Blacksmith]";
-		mes "[DRY-RUN] But with this wonder of technology, there's no need to worry! Behold, the ^3355FFWelding Mask^000000 !!";
+		mes "[铁匠]";
+		mes "但有了这项科技的奇迹，就不必担心了！看啊，^3355FF焊接面具^000000 !!";
 		next;
-		mes "[DRY-RUN] [Blacksmith]";
-		mes "[DRY-RUN] It works by covering your face with a fat metal plate. Truly, it's an item that everyone should want! If not yourself, it'd be a good idea to give this to a friend who is studying smithing.";
+		mes "[铁匠]";
+		mes "这是一种用厚重金属板遮住你脸部的物品。确实，这是每个人都应该想要的物品！如果你自己不需要，把它送给一个正在学习锻造的朋友也是个好主意。";
 		next;
-		mes "[DRY-RUN] [Blacksmith]";
-		mes "[DRY-RUN] So how about it ? If you give me ^2244FF50 Steel^000000 and ^4422FFonly 2000 Zeny^000000, I will make it for you right away~!!";
+		mes "[铁匠]";
+		mes "那么怎么样呢？如果你给我 ^2244FF50 钢铁^000000 和 ^4422FF仅仅 2000金币^000000，我会立刻为你制作！~！！";
 		next;
-		switch(select("[DRY-RUN] Hm... Not bad. Alright.:How does it work again?")) {
+		switch(select("嗯...不错。好吧.:它是怎么工作的？")) {
 		case 1:
 			if ((countitem(999) > 49) && (Zeny > 1999)){
-				mes "[DRY-RUN] [Blacksmith]";
-				mes "[DRY-RUN] Ah, I see that you appreciate a Blacksmith's work! Alright, I'll do it right away !!";
+				mes "[铁匠]";
+				mes "啊，我看到你欣赏铁匠的工作！好的，我马上就做！！";
 				next;
 				delitem 999,50;  //Steel
 				set Zeny,Zeny-2000;
 				getitem 2292,1; // Welding_Mask
-				mes "[DRY-RUN] [Blacksmith]";
-				mes "[DRY-RUN] Hahaha~! Make good use of that!";
+				mes "[铁匠]";
+				mes "哈哈哈~！好好利用它！";
 				close;
 			}
 			else {
-				mes "[DRY-RUN] [Blacksmith]";
-				mes "[DRY-RUN] Hmmm...";
-				mes "[DRY-RUN] You do not have the items I require.";
+				mes "[铁匠]";
+				mes "嗯……";
+				mes "你没有我所需的物品。";
 				next;
-				mes "[DRY-RUN] [Blacksmith]";
-				mes "[DRY-RUN] A common Blacksmith would interpret this as a sign of disrepect, but I will forgive you. Just don't forget what I need if you want me to make you this mask.";
+				mes "[铁匠]";
+				mes "一个普通的铁匠会将此视为不尊重的标志，但我会原谅你。只要你不忘记我需要什么，如果你想让我为你制作这个面具。";
 				close;
 			}
 		case 2:
-			mes "[DRY-RUN] [Blacksmith]";
-			mes "[DRY-RUN] The ^3355FFWelding Mask^000000 protects your face by covering it with a fat metal plate. This invention is the result of 30 years of endless toil at the hammer and anvil.";
+			mes "[铁匠]";
+			mes "^3355FF焊接面具^000000通过用厚重的金属板覆盖你的脸来保护你。这项发明是经过30年在锤子和铁砧上不懈努力的结果。";
 			close;
 		}
 	case 2:
-		mes "[DRY-RUN] [Blacksmith]";
-		mes "[DRY-RUN] Ah...!";
-		mes "[DRY-RUN] I guess this is the first time you've met a Blacksmith as great as me, and you're just speechless with awe. Please, take your time and speak up when you are ready.";
+		mes "[铁匠]";
+		mes "啊...！";
+		mes "我想这是你第一次见到像我这样伟大的铁匠，你简直惊呆了。请慢慢来，准备好时再说话。";
 		next;
-		mes "[DRY-RUN] ^3355FFThis guy seems";
-		mes "[DRY-RUN] a little full";
-		mes "[DRY-RUN] of himself.^000000";
+		mes "^3355FF这个家伙似乎";
+		mes "有点自满";
+		mes "他自己的。^000000";
 		close;
 	}
 }
@@ -86,50 +86,50 @@ geffen_in,144,166,4	script	Blacksmith	63,{
 // Eric: 'Headset' Quest
 //============================================================
 geffen_in,30,71,4	script	Eric	83,{
-	mes "[DRY-RUN] [Eric]";
-	mes "[DRY-RUN] Please listen";
-	mes "[DRY-RUN] to my story";
-	mes "[DRY-RUN] of my blessed";
-	mes "[DRY-RUN] grandfather.";
+	mes "[埃里克]";
+	mes "请听我讲";
+	mes "我的故事";
+	mes "我祝福的";
+	mes "祖父。";
 	next;
-	switch(select("[DRY-RUN] Talk:Ask about Items needed:Manufacture:Quit")) {
+	switch(select("对话:询问所需物品:制造:退出")) {
 	case 1:
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] My Grandfather, who passed away a few years ago, was special to me. He always stayed with me, and took care of me. He was much better than my old man, who was always busy working.";
+		mes "[埃里克]";
+		mes "我的祖父在几年前去世，对我来说非常特别。他总是陪伴着我，照顾我。他比我那个总是忙于工作的老爸要好得多。";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] To me, Grandfather's library was always like a fantasy land where I could escape. I spent most of my time there.";
+		mes "[埃里克]";
+		mes "对我来说，祖父的图书馆就像一个幻想的世界，我可以在这里逃避现实。我在那里度过了大部分时间。";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] I learned a lot of things from his books in the Library. Grandfather was interested in Alchemy and Music, and his Library was filled with many mysterious old books.";
+		mes "[埃里克]";
+		mes "我从图书馆的书籍中学到了很多东西。祖父对炼金术和音乐很感兴趣，他的图书馆里充满了许多神秘的古老书籍。";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] One day...";
-		mes "[DRY-RUN] As usual, I went to the Library and discovered an interesting schematic.";
+		mes "[埃里克]";
+		mes "有一天...";
+		mes "和往常一样，我去了图书馆，发现了一份有趣的图纸。";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] It showed some instrument which looked like Ear Muffs that, when worn on the head, could transmit music or whispers to the ears through a thin wire.";
+		mes "[埃里克]";
+		mes "它展示了一种看起来像耳罩的仪器，当戴在头上时，可以通过一根细线将音乐或耳语传送到耳朵里。";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] I guess...";
-		mes "[DRY-RUN] It is my grand father's unfinished work. I met a few Alchemists and asked them to produce it, but they rejected my offer...";
+		mes "[埃里克]";
+		mes "我想...";
+		mes "这是我祖父未完成的作品。我遇到了一些炼金术士，问他们能否制作它，但他们拒绝了我的提议……";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] In the end, I thought 'I've gotta make it myself.' So I researched for a few years, and now I fully understand how to make that thing. But, I could never gather the materials to make it!";
+		mes "[埃里克]";
+		mes "最后，我想‘我得自己做。’所以我研究了几年，现在我完全理解如何制作那个东西。但是，我从来没有收集到制作它的材料！";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] If I can get those articles, I would build it right away. If you are interested in my idea, would you bring them for me?";
+		mes "[埃里克]";
+		mes "如果我能得到那些物品，我会立刻建造它。如果你对我的想法感兴趣，能帮我带来它们吗？";
 		next;
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] All I wanna do is build this thing in honor of my grandfather and finish the work he started. If you ask me to keep it, I wouldn't mind.";
+		mes "[埃里克]";
+		mes "我只想建造这个东西来纪念我的祖父，完成他开始的工作。如果你让我保留它，我也不介意。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] 40 ^3355FFSteel^000000";
-		mes "[DRY-RUN] 1 ^3355FFOridecon^000000";
-		mes "[DRY-RUN] 1 ^3355FFAlcohol^000000";
-		mes "[DRY-RUN] 1 ^3355FFCoal^000000";
-		mes "[DRY-RUN] These are the things I need for Grandfather's masterpiece.";
+		mes "[埃里克]";
+		mes "40 ^3355FF钢铁^000000";
+		mes "1 ^3355FF奥利德康^000000";
+		mes "1 ^3355FF酒精^000000";
+		mes "1 ^3355FF煤炭^000000";
+		mes "这些是我为祖父的杰作所需要的东西。";
 		close;
 	case 3:
 		if ((countitem(999) > 39) && (countitem(984) > 0) && (countitem(970) > 0) && (countitem(1003) > 0)) {
@@ -138,28 +138,28 @@ geffen_in,30,71,4	script	Eric	83,{
 			delitem 970,1; //Alchol
 			delitem 1003,1; //Coal
 			getitem 5001,1; //Headset
-			mes "[DRY-RUN] *Tap! Tap! Tap!*";
+			mes "*敲！敲！敲！*";
 			next;
-			mes "[DRY-RUN] [Eric]";
-			mes "[DRY-RUN] Thank you.";
-			mes "[DRY-RUN] Because of you, I could accomplish my grandfather's wish. He would be happy if he looked down on me from Heaven.";
+			mes "[埃里克]";
+			mes "谢谢你。";
+			mes "因为你，我能够实现我祖父的愿望。如果他从天堂俯视我，他会很高兴。";
 			next;
-			mes "[DRY-RUN] [Eric]";
-			mes "[DRY-RUN] As I said, please take this. I am just proud that I can make this by myself.";
+			mes "[埃里克]";
+			mes "如我所说，请收下这个。我为自己能够独立完成这个感到自豪。";
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Eric]";
-			mes "[DRY-RUN] Thank you for trying to help me, but you didn't bring all the items I need. I think you will find them all soon though.";
+			mes "[埃里克]";
+			mes "谢谢你试图帮助我，但你没有带齐我需要的所有物品。不过我想你很快就会找到它们。";
 			close;
 		}
 	case 4:
-		mes "[DRY-RUN] [Eric]";
-		mes "[DRY-RUN] N-no?";
-		mes "[DRY-RUN] Well...";
-		mes "[DRY-RUN] You have your own";
-		mes "[DRY-RUN] worries, I suppose.";
-		mes "[DRY-RUN] Farewell.";
+		mes "[埃里克]";
+		mes "不，不是吗？";
+		mes "嗯……";
+		mes "你有自己的";
+		mes "烦恼，我想。";
+		mes "再见。";
 		close;
 	}
 }
@@ -167,81 +167,81 @@ geffen_in,30,71,4	script	Eric	83,{
 // Number Match Game :: gef_yagu
 //============================================================
 geffen,122,77,4	script	Nia#yagu	700,{
-	mes "[DRY-RUN] [Nia]";
-	mes "[DRY-RUN] Hello, I'm Nia, the fifth";
-	mes "[DRY-RUN] disciple of Mawong, the";
-	mes "[DRY-RUN] gaming mastermind. Now,";
-	mes "[DRY-RUN] how would you like to play a";
-	mes "[DRY-RUN] Number Match game with me?";
+	mes "[尼亚]";
+	mes "你好，我是尼亚，第五位";
+	mes "毛翁的弟子，";
+	mes "游戏大师。现在，";
+	mes "你想和我玩一个";
+	mes "数字匹配游戏吗？";
 	next;
-	switch(select("[DRY-RUN] Number Match Game?:Practice Number Match:Play Number Match:Record Holder:Cancel")) {
+	switch(select("数字匹配游戏?:练习数字匹配:玩数字匹配:记录保持者:取消")) {
 	case 1:
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] Ah, well, the objective of";
-		mes "[DRY-RUN] the Number Match game is to";
-		mes "[DRY-RUN] guess the number I'm thinking";
-		mes "[DRY-RUN] of. Of course, there are a few";
-		mes "[DRY-RUN] rules that limit the numbers";
-		mes "[DRY-RUN] that I can choose from.";
+		mes "[尼亚]";
+		mes "啊，目标是";
+		mes "数字匹配游戏的目的是";
+		mes "猜测我在想的数字";
+		mes "当然，还有一些";
+		mes "限制数字的规则";
+		mes "我可以选择的数字。";
 		next;
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] All the numbers that I make";
-		mes "[DRY-RUN] up must be 3 digits, I can't";
-		mes "[DRY-RUN] use 0 for any of the digits,";
-		mes "[DRY-RUN] and I can't use the same";
-		mes "[DRY-RUN] number for any of the digits";
-		mes "[DRY-RUN] more than once.";
+		mes "[尼亚]";
+		mes "我生成的所有数字";
+		mes "必须是三位数，我不能";
+		mes "在任何数字中使用0，";
+		mes "而且我不能使用相同的";
+		mes "数字作为任何数字的";
+		mes "超过一次。";
 		next;
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] So, for example, I can't";
-		mes "[DRY-RUN] use the numbers 103, 112,";
-		mes "[DRY-RUN] 252, or 701. Those numbers";
-		mes "[DRY-RUN] either have a 0, or they use";
-		mes "[DRY-RUN] the same number in the digits";
-		mes "[DRY-RUN] more than once. Got it now?";
+		mes "[尼亚]";
+		mes "所以，例如，我不能";
+		mes "使用数字103、112，";
+		mes "252或701。这些数字";
+		mes "要么有一个0，要么它们使用";
+		mes "相同的数字在数字中";
+		mes "不止一次。明白了吗？";
 		next;
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] Now, you only get 5 guesses,";
-		mes "[DRY-RUN] and after each guess, I'll tell";
-		mes "[DRY-RUN] you how many digits you guessed";
-		mes "[DRY-RUN] correctly, followed by the number of correctly guessed digits in";
-		mes "[DRY-RUN] the correct digit place.";
+		mes "[尼亚]";
+		mes "现在，你只有5次猜测，";
+		mes "每次猜测后，我会告诉你";
+		mes "你猜对了多少位数字";
+		mes "正确，接着是正确猜测的数字数量在";
+		mes "正确的位置上。";
 		next;
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] For example, let's say the";
-		mes "[DRY-RUN] number I come up with is 168.";
-		mes "[DRY-RUN] If your first guess is 678, then you guessed two of the digits,";
-		mes "[DRY-RUN] 6 and 8, correctly. However,";
-		mes "[DRY-RUN] only 8 is in the correct place.";
+		mes "[尼亚]";
+		mes "例如，假设我想到的数字是";
+		mes "我得到的数字是 168。";
+		mes "如果你第一次猜的是678，那么你猜对了两个数字，";
+		mes "6和8，都是正确的。然而，";
+		mes "只有8在正确的位置。";
 		next;
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] You know, it'd be a good idea";
-		mes "[DRY-RUN] if you try the Practice Mode";
-		mes "[DRY-RUN] first. Then, when you're more";
-		mes "[DRY-RUN] comfortable, play the actual";
-		mes "[DRY-RUN] Number Match game. Don't forget that speed counts for your score!";
+		mes "[尼亚]";
+		mes "你知道，想想这个主意是个好主意。";
+		mes "如果你尝试练习模式";
+		mes "首先。然后，当你更";
+		mes "熟悉时，玩实际的";
+		mes "数字匹配游戏。别忘了速度对你的得分很重要！";
 		next;
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] Ah, if you happen to";
-		mes "[DRY-RUN] make a new record in the";
-		mes "[DRY-RUN] Number Match game, you'll";
-		mes "[DRY-RUN] have your name recorded,";
-		mes "[DRY-RUN] so don't miss this chance for";
-		mes "[DRY-RUN] fame and maybe even fortune~";
+		mes "[尼亚]";
+		mes "啊，如果你恰好";
+		mes "在数字匹配游戏中";
+		mes "创造新纪录，你将";
+		mes "你的名字将被记录，";
+		mes "所以不要错过这个机会";
+		mes "获得名声，甚至可能获得财富~";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] Great, let's do a practice";
-		mes "[DRY-RUN] Number Match game. Please";
-		mes "[DRY-RUN] try to guess my number, okay?";
-		mes "[DRY-RUN] If you want to cancel, then please enter a number greater than 1,000.";
+		mes "[尼亚]";
+		mes "太好了，让我们进行一次练习";
+		mes "数字匹配游戏。请";
+		mes "试着猜我的数字，好吗？";
+		mes "如果你想取消，请输入一个大于1000的数字。";
 		set .@practice,1;
 		break;
 	case 3:
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] Great, let's play Number Match!";
-		mes "[DRY-RUN] You will have 5 chances to guess the number that I'm thinking of.";
-		mes "[DRY-RUN] If you want to cancel, then please enter a number greater than 1,000.";
+		mes "[尼亚]";
+		mes "太好了，我们来玩数字匹配游戏！";
+		mes "你将有5次机会来猜我想到的数字。";
+		mes "如果你想取消，请输入一个大于1000的数字。";
 		set .@practice,0;
 		break;
 	case 4:
@@ -251,19 +251,19 @@ geffen,122,77,4	script	Nia#yagu	700,{
 		set .@score_record, $050908_minus1_yagu;
 		set .@score_min, .@score_record / 60;
 		set .@score_sec, .@score_record % 60;
-		mes "[DRY-RUN] [Nia]";
+		mes "[尼亚]";
 		mes "^ff0000" + .@name_record$ + "^000000 is the";
-		mes "[DRY-RUN] record holder for the Number";
-		mes "[DRY-RUN] Match game with a time of";
+		mes "数字的记录保持者";
+		mes "匹配游戏的时间为";
 		mes "^ff0000" + .@score_min + " minutes, " + .@score_sec + " seconds^000000.";
 		close;
 	case 5:
-		mes "[DRY-RUN] [Nia]";
-		mes "[DRY-RUN] Take care of yourself,";
-		mes "[DRY-RUN] adventurer. If you ever";
-		mes "[DRY-RUN] feel like playing a Number";
-		mes "[DRY-RUN] Match game, come and talk";
-		mes "[DRY-RUN] to me, alright? See you~";
+		mes "[尼亚]";
+		mes "照顾好自己，";
+		mes "冒险者。如果你有兴趣";
+		mes "玩数字匹配游戏，";
+		mes "来找我对话，好吗？再见~";
+		mes "你已取消了";
 		close;
 	}
 	next;
@@ -290,9 +290,9 @@ geffen,122,77,4	script	Nia#yagu	700,{
 		// Guess a number that meets all conditions.
 		while(1) {
 			if (input(.@input,100,999) != 0) {
-				mes "[DRY-RUN] [Nia]";
-				mes "[DRY-RUN] You've canceled the";
-				mes "[DRY-RUN] Number Match game.";
+				mes "[尼亚]";
+				mes "数字匹配游戏。";
+				mes "数字匹配游戏。";
 				close;
 			}
 			set .@input100, .@input / 100;
@@ -302,21 +302,21 @@ geffen,122,77,4	script	Nia#yagu	700,{
 				if ((.@input100 != .@input10) && (.@input100 != .@input1) && (.@input10 != .@input1))
 					break;
 			}
-			mes "[DRY-RUN] [Nia]";
-			mes "[DRY-RUN] You entered one of the";
-			mes "[DRY-RUN] digits as 0, or input the";
-			mes "[DRY-RUN] same numerical value in";
-			mes "[DRY-RUN] the digits more than once.";
-			mes "[DRY-RUN] Please enter another guess.";
+			mes "[尼亚]";
+			mes "你进入了其中一个";
+			mes "数字为0，或者输入";
+			mes "相同的数值在";
+			mes "数字中出现多次。";
+			mes "请再输入一个猜测。";
 			next;
 		}
 
 		set .@retry, .@retry+1;
-		mes "[DRY-RUN] [Nia]";
+		mes "[尼亚]";
 		mes "^ff0000"+strcharinfo(0)+"^000000,";
 		mes "your guess is ^0000ff"+.@input+"^000000.";
-		mes "[DRY-RUN] Give me a moment to";
-		mes "[DRY-RUN] come up with your results.";
+		mes "给我一点时间来";
+		mes "得出你的结果。";
 		next;
 
 		// Correct digits in correct locations.
@@ -339,13 +339,13 @@ geffen,122,77,4	script	Nia#yagu	700,{
 
 		if (.@strike == 3) {
 			if (.@practice) {
-				mes "[DRY-RUN] [Nia]";
-				mes "[DRY-RUN] Yes, the number that";
+				mes "[尼亚]";
+				mes "是的，你猜的数字是";
 				mes "I guessed was ^ff0000"+.@yagu+"^000000!";
-				mes "[DRY-RUN] Congratulations, you";
-				mes "[DRY-RUN] just won this practice";
-				mes "[DRY-RUN] game! Now you should be";
-				mes "[DRY-RUN] ready for the real thing~";
+				mes "恭喜你，";
+				mes "你刚赢得了这个练习";
+				mes "游戏！现在你应该准备好";
+				mes "迎接真正的挑战~";
 				close;
 			} else {
 
@@ -366,56 +366,56 @@ geffen,122,77,4	script	Nia#yagu	700,{
 				if (.@score_record >= .@total_time || !.@score_record) { //custom (second condition)
 					set $050908_minus1_yagu$, strcharinfo(0);
 					set $050908_minus1_yagu, .@total_time;
-					mes "[DRY-RUN] [Nia]";
-					mes "[DRY-RUN] Great! You guessed";
-					mes "[DRY-RUN] my number, which was";
+					mes "[尼亚]";
+					mes "太好了！你猜到了";
+					mes "我的数字是";
 					mes "^ff0000" + .@yagu + "^000000. You finished in";
 					mes "^ff0000" + .@total_min + " minutes, " + .@total_sec + " seconds^000000,";
-					mes "[DRY-RUN] breaking the previous record";
+					mes "打破之前的记录";
 					mes "of ^ff0000" + .@score_min + " minutes, " + .@score_sec + " seconds^000000.";
 					next;
-					mes "[DRY-RUN] [Nia]";
+					mes "[尼亚]";
 					mes "^ff0000" + .@name_record$ + "^000000";
-					mes "[DRY-RUN] set that old record,";
-					mes "[DRY-RUN] but now you are the";
-					mes "[DRY-RUN] new person to beat in the";
-					mes "[DRY-RUN] Match Game. Congratulations";
-					mes "[DRY-RUN] for setting a new record!";
+					mes "创造那个旧记录，";
+					mes "但现在你是";
+					mes "在比赛中需要超越的新对手";
+					mes "比赛游戏。恭喜你";
+					mes "创造了新的记录！";
 					close;
 				}
-				mes "[DRY-RUN] [Nia]";
-				mes "[DRY-RUN] Nice work, you guessed";
-				mes "[DRY-RUN] my number! The answer, of";
+				mes "[尼亚]";
+				mes "干得不错，你猜对了";
+				mes "我的数字！答案是，";
 				mes "course, was ^ff0000" + .@yagu + "^000000. You managed";
-				mes "[DRY-RUN] to guess this number correctly";
+				mes "正确猜出这个数字";
 				mes "in ^ff0000" + .@total_min + " minutes, " + .@total_sec + " seconds^000000.";
 				next;
-				mes "[DRY-RUN] [Nia]";
+				mes "[尼亚]";
 				mes "^ff0000" + .@name_record$ + "^000000 is";
-				mes "[DRY-RUN] the current Number Match";
-				mes "[DRY-RUN] record holder with a time";
+				mes "当前数字比赛的";
+				mes "记录保持者，时间为";
 				mes "of ^ff0000" + .@score_min + " minutes, " + .@score_sec + " seconds^000000.";
-				mes "[DRY-RUN] Good luck, and hopefully you";
-				mes "[DRY-RUN] can break this record someday~";
+				mes "祝你好运，希望你";
+				mes "有一天能打破这个记录~";
 				close;
 			}
 		} else {
 			if (.@practice) {
-				mes "[DRY-RUN] [Nia]";
+				mes "[尼亚]";
 				mes "Your guess has ^ff0000" + .@ball + "^000000 of the";
 				mes "correct numbers. ^ff0000" + .@strike + "^000000 of the";
-				mes "[DRY-RUN] digits in your guess have";
-				mes "[DRY-RUN] the correct number in the";
-				mes "[DRY-RUN] correct digit placement.";
-				mes "[DRY-RUN] Alright, try it again~";
+				mes "你猜测中的数字有";
+				mes "正确的数字在";
+				mes "正确的数字位置上。";
+				mes "好的，再试一次~";
 				next;
 			} else {
-				mes "[DRY-RUN] [Nia]";
+				mes "[尼亚]";
 				mes "Your last guess had ^ff0000" + .@ball + "^000000";
-				mes "[DRY-RUN] of the correct numbers,";
+				mes "正确数字的数量，";
 				mes "and ^ff0000" + .@strike + "^000000 digits in your guess";
-				mes "[DRY-RUN] had the correct number in";
-				mes "[DRY-RUN] the correct digit placement.";
+				mes "在其中有正确的数字";
+				mes "正确的数字位置上。";
 				switch(.@retry) {
 					case 1: mes "You have four guesses left."; break;
 					case 2: mes "You have three guesses left."; break;

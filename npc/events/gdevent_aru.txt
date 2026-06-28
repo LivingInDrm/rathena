@@ -61,8 +61,8 @@ OnMyMobDead:
 
 arug_dun01,199,195,5	script	Dwarf#aru_gd	826,{
 	if (getcharid(2) == 0) {
-		mes "[DRY-RUN] [Dwarf]";
-		mes "[DRY-RUN] Hey did you see an ugly Goblin come by? He stole something from me!";
+		mes "[矮人]";
+		mes "嘿，你看到一个丑陋的哥布林经过吗？他偷了我的东西！";
 		close;
 	}
 	set .@chk_urquest,checkquest(2143,PLAYTIME);
@@ -71,88 +71,88 @@ arug_dun01,199,195,5	script	Dwarf#aru_gd	826,{
 		if ($@gdevents_a$ == "") {
 			set $@gdeventv_a1,1;
 			set $@gdevents_a$,.@chk_yourgdname$;
-			mes "[DRY-RUN] [Dwarf]";
-			mes "[DRY-RUN] Help me!";
-			mes "[DRY-RUN] Please, help me!";
+			mes "[矮人]";
+			mes "帮帮我！";
+			mes "请，帮帮我！";
 			next;
-			switch(select("[DRY-RUN] What happened?:Nevermind.")) {
+			switch(select("发生了什么事？:没事。")) {
 			case 1:
-				mes "[DRY-RUN] [Dwarf]";
-				mes "[DRY-RUN] I am Morestone and I collect rare gems.";
+				mes "[矮人]";
+				mes "我是莫尔斯通，我收集稀有宝石。";
 				next;
-				mes "[DRY-RUN] [Morestone]";
-				mes "[DRY-RUN] In my travels, I was told that there were a lot of gems in Valfreyja and Nidhoggur, so I came down here.";
-				mes "[DRY-RUN] But here, the soil is very hard to dig into. Fortunately, my ^3131FFPickaxe^000000 never lets me down!";
+				mes "[莫尔斯通]";
+				mes "在我的旅行中，我听说瓦尔弗雷亚和尼德霍古尔有很多宝石，所以我来到了这里。";
+				mes "但是这里的土壤非常难以挖掘。幸运的是，我的^3131FF镐^000000从未让我失望！";
 				next;
-				select("[DRY-RUN] Pickaxe!");
-				mes "[DRY-RUN] [Morestone]";
-				mes "[DRY-RUN] Yes, my beloved pickaxe!";
-				mes "[DRY-RUN] I always carry it with me, you know?";
+				select("镐！");
+				mes "[莫尔斯通]";
+				mes "是的，我心爱的镐！";
+				mes "我总是随身携带它，你知道吗？";
 				next;
-				mes "[DRY-RUN] [Morestone]";
-				mes "[DRY-RUN] We started working here together.";
-				mes "[DRY-RUN] After a few days, we finally found something!";
+				mes "[莫尔斯通]";
+				mes "我们开始在这里一起工作。";
+				mes "几天后，我们终于找到了一些东西！";
 				next;
-				select("[DRY-RUN] Something strange??");
-				mes "[DRY-RUN] [Morestone]";
-				mes "[DRY-RUN] No, but it was worth quite a lot.";
-				mes "[DRY-RUN] But we did not have much time to celebrate. Suddenly, a monster appeared that stole my pickaxe.";
-				mes "[DRY-RUN] His name was^3131FFKublin^000000!";
+				select("有什么奇怪的事情？？");
+				mes "[莫尔斯通]";
+				mes "不，但它值很多钱。";
+				mes "但是我们没有太多时间庆祝。突然，一个怪物出现，偷走了我的镐。";
+				mes "他的名字是^3131FF库布林^000000！";
 				next;
-				mes "[DRY-RUN] [Morestone]";
-				mes "[DRY-RUN] He stole my Pickaxe!";
-				mes "[DRY-RUN] I can't live without it...";
+				mes "[莫尔斯通]";
+				mes "他偷了我的镐！";
+				mes "我无法没有它生活...";
 				next;
 				if (countitem(6010) > 0) {
 					mes "[" + strcharinfo(0) + "]";
-					mes "[DRY-RUN] Is this the pickaxe that you've been looking for?";
+					mes "这是你一直在寻找的镐吗？";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] You found my Pickaxe?";
-					mes "[DRY-RUN] Show me, please!";
+					mes "[莫尔斯通]";
+					mes "你找到了我的镐？";
+					mes "请给我看看！";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] Oh, my! You've returned it to me!";
-					mes "[DRY-RUN] My precious pickaxe, I thought I lost you forever.";
+					mes "[莫尔斯通]";
+					mes "哦，我的！你把它还给我了！";
+					mes "我珍贵的镐，我以为我永远失去了你。";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] You are great! What guild are you from?";
-					mes "[DRY-RUN] Could it be Gravity or Mercury?";
+					mes "[莫尔斯通]";
+					mes "你真棒！你来自哪个公会？";
+					mes "难道是重力公会还是水星公会？";
 					next;
 					mes "[" + strcharinfo(0) + "]";
 					mes "I am a member of the ^3131FF"+.@chk_yourgdname$+"^.";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] Oh... That guild will receive my greatest respect.";
+					mes "[莫尔斯通]";
+					mes "哦...那个公会将获得我最大的尊重。";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] Oh! My friend, I am very grateful for your help.";
-					mes "[DRY-RUN] As a reward, I will tell you about a mysterious area I have discovered recently.";
+					mes "[莫尔斯通]";
+					mes "哦！我的朋友，我非常感谢你的帮助。";
+					mes "作为奖励，我会告诉你我最近发现的一个神秘区域。";
 					next;
-					select("[DRY-RUN] A mysterious area?");
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] That's right. I found it when I was digging around here.";
-					mes "[DRY-RUN] It looks like it was made for some special purpose, but since there are no gems around there, I have no interest in it.";
+					select("一个神秘的区域？");
+					mes "[莫尔斯通]";
+					mes "没错。我是在这里挖掘时发现的。";
+					mes "看起来它是为某种特殊目的而建造的，但由于那里没有宝石，我对它没有兴趣。";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] Instead of going there alone, I think it would be more fun to go with your friends...";
+					mes "[莫尔斯通]";
+					mes "与其一个人去那里，我觉得和你的朋友们一起去会更有趣...";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] If you want, I can take ^3131FFyou and your guild members^000000 to explore that area.";
-					mes "[DRY-RUN] Do you want to go there now?";
+					mes "[莫尔斯通]";
+					mes "如果你愿意，我可以带^3131FF你和你的公会成员^000000去探索那个区域。";
+					mes "你想现在去那里吗？";
 					next;
-					switch(select("[DRY-RUN] Wait! I'm not ready yet.:Let's go!")) {
+					switch(select("等一下！我还没有准备好。:我们走吧！")) {
 					case 1:
 						set $@gdeventv_a1,0;
 						set $@gdevents_a$,"";
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Take your time, and find a place to gather your friends.";
+						mes "[莫尔斯通]";
+						mes "慢慢来，找个地方召集你的朋友。";
 						close;
 					case 2:
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Alright! Let's go.";
-						mes "[DRY-RUN] If your friends visit me again later, I will guide them to that area again.";
-						mes "[DRY-RUN] Don't forget, dwarves are grateful beings! Hahaha!";
+						mes "[莫尔斯通]";
+						mes "好的！我们走吧。";
+						mes "如果你的朋友们稍后再来找我，我会再次带他们去那个区域。";
+						mes "别忘了，矮人是感恩的生物！哈哈哈！";
 						delitem 6010,1; //Pickaxe
 						set $@gdeventv_a1,1;
 						set $@gdevents_a$,.@chk_yourgdname$;
@@ -165,127 +165,127 @@ arug_dun01,199,195,5	script	Dwarf#aru_gd	826,{
 				else {
 					set $@gdeventv_a1,0;
 					set $@gdevents_a$,"";
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] I will tell you how to find him.";
-					mes "[DRY-RUN] Kublin wears a ridiculous golden hat, It should be easy to recognise him by that.";
+					mes "[莫尔斯通]";
+					mes "我会告诉你如何找到他。";
+					mes "库布林戴着一顶可笑的金色帽子，应该很容易通过这个识别他。";
 					close;
 				}
 			case 2:
 				set $@gdeventv_a1,0;
 				set $@gdevents_a$,"";
 				emotion ET_CRY;
-				mes "[DRY-RUN] [Dwarf]";
-				mes "[DRY-RUN] Ahhh...";
+				mes "[矮人]";
+				mes "啊...";
 				close;
 			}
 		}
 		else if ($@gdevents_a$ == .@chk_yourgdname$) {
 			set .@chk_urquest1,checkquest(2144);
 			if ((.@chk_urquest1 == 0) || (.@chk_urquest1 == 1)) {
-				mes "[DRY-RUN] [Morestone]";
+				mes "[莫尔斯通]";
 				mes "I, Morestone, have made an alliance with the "+$@gdevents_a$+" guild.";
-				mes "[DRY-RUN] Oh, you are a member.";
-				mes "[DRY-RUN] Would you like to go to the mysterious area?";
+				mes "哦，你是一个成员。";
+				mes "你想去神秘区域吗？";
 				next;
-				switch(select("[DRY-RUN] Let's go.:No, thanks.")) {
+				switch(select("我们走吧。:不，谢谢。")) {
 				case 1:
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] I hope you enjoy yourself, my friend.";
+					mes "[莫尔斯通]";
+					mes "我希望你玩得开心，我的朋友。";
 					close2;
 					warp "arug_que01",103,133;
 					end;
 				case 2:
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] If you need my assistance, just ask.";
-					mes "[DRY-RUN] Ah! Dont forget, I hate monsters! So I don't want to see them. It will be better if you ask for another favour.";
+					mes "[莫尔斯通]";
+					mes "如果你需要我的帮助，尽管问。";
+					mes "啊！别忘了，我讨厌怪物！所以我不想看到它们。如果你能请求其他的帮助会更好。";
 					close;
 				}
 			}
 			else {
 				set $@gdeventv_a1,1;
 				set $@gdevents_a$,.@chk_yourgdname$;
-				mes "[DRY-RUN] [Dwarf]";
-				mes "[DRY-RUN] Help me!";
-				mes "[DRY-RUN] Please, help me!";
+				mes "[矮人]";
+				mes "帮帮我！";
+				mes "请，帮帮我！";
 				next;
-				switch(select("[DRY-RUN] What happened?:Nevermind.")) {
+				switch(select("发生了什么事？:没事。")) {
 				case 1:
-					mes "[DRY-RUN] [Dwarf]";
-					mes "[DRY-RUN] I am Morestone and I collect rare gems.";
+					mes "[矮人]";
+					mes "我是莫尔斯通，我收集稀有宝石。";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] In my travels, I was told that there were a lot of gems in Valfreyja and Nidhoggur, so I came down here.";
-					mes "[DRY-RUN] But here, the soil is very hard to dig into. Fortunately, my ^3131FFPickaxe^000000 never lets me down!";
+					mes "[莫尔斯通]";
+					mes "在我的旅行中，我听说瓦尔弗雷亚和尼德霍古尔有很多宝石，所以我来到了这里。";
+					mes "但是这里的土壤非常难以挖掘。幸运的是，我的^3131FF镐^000000从未让我失望！";
 					next;
-					select("[DRY-RUN] Pickaxe!");
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] Yes, my beloved pickaxe!";
-					mes "[DRY-RUN] I always carry it with me, you know?";
+					select("镐！");
+					mes "[莫尔斯通]";
+					mes "是的，我心爱的镐！";
+					mes "我总是随身携带它，你知道吗？";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] We started working here together.";
-					mes "[DRY-RUN] After a few days, we finally found something!";
+					mes "[莫尔斯通]";
+					mes "我们开始在这里一起工作。";
+					mes "几天后，我们终于找到了一些东西！";
 					next;
-					select("[DRY-RUN] Something strange??");
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] No, but it was worth quite a lot.";
-					mes "[DRY-RUN] But we did not have much time to celebrate. Suddenly, a monster appeared that stole my pickaxe.";
-					mes "[DRY-RUN] His name was^3131FFKublin^000000!";
+					select("有什么奇怪的事情？？");
+					mes "[莫尔斯通]";
+					mes "不，但它值很多钱。";
+					mes "但是我们没有太多时间庆祝。突然，一个怪物出现，偷走了我的镐。";
+					mes "他的名字是^3131FF库布林^000000！";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] He stole my Pickaxe!";
-					mes "[DRY-RUN] I can't live without it...";
+					mes "[莫尔斯通]";
+					mes "他偷了我的镐！";
+					mes "我无法没有它生活...";
 					next;
 					if (countitem(6010) > 0) {
 						mes "[" + strcharinfo(0) + "]";
-						mes "[DRY-RUN] Is this the pickaxe that you've been looking for?";
+						mes "这是你一直在寻找的镐吗？";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] You found my Pickaxe?";
-						mes "[DRY-RUN] Show me, please!";
+						mes "[莫尔斯通]";
+						mes "你找到了我的镐？";
+						mes "请给我看看！";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Oh, my! You've returned it to me!";
-						mes "[DRY-RUN] My precious pickaxe, I thought I lost you forever.";
+						mes "[莫尔斯通]";
+						mes "哦，我的！你把它还给我了！";
+						mes "我珍贵的镐，我以为我永远失去了你。";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] You are great! What guild are you from?";
-						mes "[DRY-RUN] Could it be Gravity or Mercury?";
+						mes "[莫尔斯通]";
+						mes "你真棒！你来自哪个公会？";
+						mes "难道是重力公会还是水星公会？";
 						next;
 						mes "[" + strcharinfo(0) + "]";
 						mes "I am a member of the ^3131FF"+.@chk_yourgdname$+"^.";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Oh... That guild will receive my greatest respect.";
+						mes "[莫尔斯通]";
+						mes "哦...那个公会将获得我最大的尊重。";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Oh! My friend, I am very grateful for your help.";
-						mes "[DRY-RUN] As a reward, I will tell you about a mysterious area I have discovered recently.";
+						mes "[莫尔斯通]";
+						mes "哦！我的朋友，我非常感谢你的帮助。";
+						mes "作为奖励，我会告诉你我最近发现的一个神秘区域。";
 						next;
-						select("[DRY-RUN] A mysterious area?");
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] That's right. I found it when I was digging around here.";
-						mes "[DRY-RUN] It looks like it was made for some special purpose, but since there are no gems around there, I have no interest in it.";
+						select("一个神秘的区域？");
+						mes "[莫尔斯通]";
+						mes "没错。我是在这里挖掘时发现的。";
+						mes "看起来它是为某种特殊目的而建造的，但由于那里没有宝石，我对它没有兴趣。";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Instead of going there alone, I think it would be more fun to go with your friends...";
+						mes "[莫尔斯通]";
+						mes "与其一个人去那里，我觉得和你的朋友们一起去会更有趣...";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] If you want, I can take ^3131FFyou and your guild members^000000 to explore that area.";
-						mes "[DRY-RUN] Do you want to go there now?";
+						mes "[莫尔斯通]";
+						mes "如果你愿意，我可以带^3131FF你和你的公会成员^000000去探索那个区域。";
+						mes "你想现在去那里吗？";
 						next;
-						switch(select("[DRY-RUN] Wait! I'm not ready yet.:Let's go!")) {
+						switch(select("等一下！我还没有准备好。:我们走吧！")) {
 						case 1:
 							set $@gdeventv_a1,0;
 							set $@gdevents_a$,"";
-							mes "[DRY-RUN] [Morestone]";
-							mes "[DRY-RUN] Take your time, and find a place to gather your friends.";
+							mes "[莫尔斯通]";
+							mes "慢慢来，找个地方召集你的朋友。";
 							close;
 						case 2:
-							mes "[DRY-RUN] [Morestone]";
-							mes "[DRY-RUN] Alright! Let's go.";
-							mes "[DRY-RUN] If your friends visit me again later, I will guide them to that area again.";
-							mes "[DRY-RUN] Don't forget, dwarves are grateful beings! Hahaha!";
+							mes "[莫尔斯通]";
+							mes "好的！我们走吧。";
+							mes "如果你的朋友们稍后再来找我，我会再次带他们去那个区域。";
+							mes "别忘了，矮人是感恩的生物！哈哈哈！";
 							delitem 6010,1; //Pickaxe
 							set $@gdeventv_a1,1;
 							set $@gdevents_a$,.@chk_yourgdname$;
@@ -298,26 +298,26 @@ arug_dun01,199,195,5	script	Dwarf#aru_gd	826,{
 					else {
 						set $@gdeventv_a1,0;
 						set $@gdevents_a$,"";
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] I will tell you how to find him.";
-						mes "[DRY-RUN] Kublin wears a ridiculous golden hat, It should be easy to recognise him by that.";
+						mes "[莫尔斯通]";
+						mes "我会告诉你如何找到他。";
+						mes "库布林戴着一顶可笑的金色帽子，应该很容易通过这个识别他。";
 						close;
 					}
 				case 2:
 					set $@gdeventv_a1,0;
 					set $@gdevents_a$,"";
 					emotion ET_CRY;
-					mes "[DRY-RUN] [Dwarf]";
-					mes "[DRY-RUN] Ah....";
+					mes "[矮人]";
+					mes "啊....";
 					close;
 				}
 			}
 		}
 		else {
-			mes "[DRY-RUN] [Morestone]";
+			mes "[莫尔斯通]";
 			mes "I, Morestone, have made an alliance with the "+$@gdevents_a$+" guild.";
-			mes "[DRY-RUN] Hm, you're not a member.";
-			mes "[DRY-RUN] Could you please give them my greetings?";
+			mes "嗯，你不是成员。";
+			mes "你能给他们我问候吗？";
 			close;
 		}
 	}
@@ -325,111 +325,111 @@ arug_dun01,199,195,5	script	Dwarf#aru_gd	826,{
 		if ($@gdevents_a$ == .@chk_yourgdname$) {
 			set .@chk_urquest1,checkquest(2144);
 			if ((.@chk_urquest1 == 0) || (.@chk_urquest1 == 1)) {
-				mes "[DRY-RUN] [Morestone]";
-				mes "[DRY-RUN] [Morestone]";
+				mes "[莫尔斯通]";
+				mes "[莫尔斯通]";
 				mes "I, Morestone, have made an alliance with the "+$@gdevents_a$+" guild.";
-				mes "[DRY-RUN] Oh, you are a member.";
-				mes "[DRY-RUN] Would you like to go to the mysterious area?";
+				mes "哦，你是一个成员。";
+				mes "你想去神秘区域吗？";
 				next;
-				switch(select("[DRY-RUN] Let's go.:No, thanks.")) {
+				switch(select("我们走吧。:不，谢谢。")) {
 				case 1:
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] I hope you enjoy yourself, my friend.";
+					mes "[莫尔斯通]";
+					mes "我希望你玩得开心，我的朋友。";
 					close2;
 					warp "arug_que01",103,133;
 					end;
 				case 2:
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] If you need my assistance, just ask.";
-					mes "[DRY-RUN] Ah! Dont forget, I hate monsters! So I don't want to see them. It will be better if you ask for another favour.";
+					mes "[莫尔斯通]";
+					mes "如果你需要我的帮助，尽管问。";
+					mes "啊！别忘了，我讨厌怪物！所以我不想看到它们。如果你能请求其他的帮助会更好。";
 					close;
 				}
 			}
 			else {
 				set $@gdeventv_a1,1;
 				set $@gdevents_a$,.@chk_yourgdname$;
-				mes "[DRY-RUN] [Dwarf]";
-				mes "[DRY-RUN] Help me!";
-				mes "[DRY-RUN] Please, help me!";
+				mes "[矮人]";
+				mes "帮帮我！";
+				mes "请，帮帮我！";
 				next;
-				switch(select("[DRY-RUN] What happened?:Nevermind.")) {
+				switch(select("发生了什么事？:没事。")) {
 				case 1:
-					mes "[DRY-RUN] [Dwarf]";
-					mes "[DRY-RUN] I am Morestone and I collect rare gems.";
+					mes "[矮人]";
+					mes "我是莫尔斯通，我收集稀有宝石。";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] In my travels, I was told that there were a lot of gems in Valfreyja and Nidhoggur, so I came down here.";
-					mes "[DRY-RUN] But here, the soil is very hard to dig into. Fortunately, my ^3131FFPickaxe^000000 never lets me down!";
+					mes "[莫尔斯通]";
+					mes "在我的旅行中，我听说瓦尔弗雷亚和尼德霍古尔有很多宝石，所以我来到了这里。";
+					mes "但是这里的土壤非常难以挖掘。幸运的是，我的^3131FF镐^000000从未让我失望！";
 					next;
-					select("[DRY-RUN] Pickaxe!");
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] Yes, my beloved pickaxe!";
-					mes "[DRY-RUN] I always carry it with me, you know?";
+					select("镐！");
+					mes "[莫尔斯通]";
+					mes "是的，我心爱的镐！";
+					mes "我总是随身携带它，你知道吗？";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] We started working here together.";
-					mes "[DRY-RUN] After a few days, we finally found something!";
+					mes "[莫尔斯通]";
+					mes "我们开始在这里一起工作。";
+					mes "几天后，我们终于找到了一些东西！";
 					next;
-					select("[DRY-RUN] Something strange??");
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] No, but it was worth quite a lot.";
-					mes "[DRY-RUN] But we did not have much time to celebrate. Suddenly, a monster appeared that stole my pickaxe.";
-					mes "[DRY-RUN] His name was^3131FFKublin^000000!";
+					select("有什么奇怪的事情？？");
+					mes "[莫尔斯通]";
+					mes "不，但它值很多钱。";
+					mes "但是我们没有太多时间庆祝。突然，一个怪物出现，偷走了我的镐。";
+					mes "他的名字是^3131FF库布林^000000！";
 					next;
-					mes "[DRY-RUN] [Morestone]";
-					mes "[DRY-RUN] He stole my Pickaxe!";
-					mes "[DRY-RUN] I can't live without it...";
+					mes "[莫尔斯通]";
+					mes "他偷了我的镐！";
+					mes "我无法没有它生活...";
 					next;
 					if (countitem(6010) > 0) {
 						mes "[" + strcharinfo(0) + "]";
-						mes "[DRY-RUN] Is this the pickaxe that you've been looking for?";
+						mes "这是你一直在寻找的镐吗？";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] You found my Pickaxe?";
-						mes "[DRY-RUN] Show me, please!";
+						mes "[莫尔斯通]";
+						mes "你找到了我的镐？";
+						mes "请给我看看！";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Oh, my! You've returned it to me!";
-						mes "[DRY-RUN] My precious pickaxe, I thought I lost you forever.";
+						mes "[莫尔斯通]";
+						mes "哦，我的！你把它还给我了！";
+						mes "我珍贵的镐，我以为我永远失去了你。";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] You are great! What guild are you from?";
-						mes "[DRY-RUN] Could it be Gravity or Mercury?";
+						mes "[莫尔斯通]";
+						mes "你真棒！你来自哪个公会？";
+						mes "难道是重力公会还是水星公会？";
 						next;
 						mes "[" + strcharinfo(0) + "]";
 						mes "I am a member of the ^3131FF"+.@chk_yourgdname$+"^.";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Oh... That guild will receive my greatest respect.";
+						mes "[莫尔斯通]";
+						mes "哦...那个公会将获得我最大的尊重。";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Oh! My friend, I am very grateful for your help.";
-						mes "[DRY-RUN] As a reward, I will tell you about a mysterious area I have discovered recently.";
+						mes "[莫尔斯通]";
+						mes "哦！我的朋友，我非常感谢你的帮助。";
+						mes "作为奖励，我会告诉你我最近发现的一个神秘区域。";
 						next;
-						select("[DRY-RUN] A mysterious area?");
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] That's right. I found it when I was digging around here.";
-						mes "[DRY-RUN] It looks like it was made for some special purpose, but since there are no gems around there, I have no interest in it.";
+						select("一个神秘的区域？");
+						mes "[莫尔斯通]";
+						mes "没错。我是在这里挖掘时发现的。";
+						mes "看起来它是为某种特殊目的而建造的，但由于那里没有宝石，我对它没有兴趣。";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] Instead of going there alone, I think it would be more fun to go with your friends...";
+						mes "[莫尔斯通]";
+						mes "与其一个人去那里，我觉得和你的朋友们一起去会更有趣...";
 						next;
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] If you want, I can take ^3131FFyou and your guild members^000000 to explore that area.";
-						mes "[DRY-RUN] Do you want to go there now?";
+						mes "[莫尔斯通]";
+						mes "如果你愿意，我可以带^3131FF你和你的公会成员^000000去探索那个区域。";
+						mes "你想现在去那里吗？";
 						next;
-						switch(select("[DRY-RUN] Wait! I'm not ready yet.:Let's go!")) {
+						switch(select("等一下！我还没有准备好。:我们走吧！")) {
 						case 1:
 							set $@gdeventv_a1,0;
 							set $@gdevents_a$,"";
-							mes "[DRY-RUN] [Morestone]";
-							mes "[DRY-RUN] Take your time, and find a place to gather you friends.";
+							mes "[莫尔斯通]";
+							mes "慢慢来，找个地方召集你的朋友。";
 							close;
 						case 2:
-							mes "[DRY-RUN] [Morestone]";
-							mes "[DRY-RUN] Alright! Let's go.";
-							mes "[DRY-RUN] If your friends visit me again later, I will guide them to that area again.";
-							mes "[DRY-RUN] Don't forget, dwarves are grateful beings! Hahaha!";
+							mes "[莫尔斯通]";
+							mes "好的！我们走吧。";
+							mes "如果你的朋友们稍后再来找我，我会再次带他们去那个区域。";
+							mes "别忘了，矮人是感恩的生物！哈哈哈！";
 							delitem 6010,1; //Pickaxe
 							set $@gdeventv_a1,1;
 							set $@gdevents_a$,.@chk_yourgdname$;
@@ -442,26 +442,26 @@ arug_dun01,199,195,5	script	Dwarf#aru_gd	826,{
 					else {
 						set $@gdeventv_a1,0;
 						set $@gdevents_a$,"";
-						mes "[DRY-RUN] [Morestone]";
-						mes "[DRY-RUN] I will tell you how to find him.";
-						mes "[DRY-RUN] Kublin wears a ridiculous golden hat, It should be easy to recognise him by that.";
+						mes "[莫尔斯通]";
+						mes "我会告诉你如何找到他。";
+						mes "库布林戴着一顶可笑的金色帽子，应该很容易通过这个识别他。";
 						close;
 					}
 				case 2:
 					set $@gdeventv_a1,0;
 					set $@gdevents_a$,"";
 					emotion ET_CRY;
-					mes "[DRY-RUN] [Dwarf]";
-					mes "[DRY-RUN] Ah....";
+					mes "[矮人]";
+					mes "啊....";
 					close;
 				}
 			}
 		}
 		else {
-			mes "[DRY-RUN] [Morestone]";
+			mes "[莫尔斯通]";
 			mes "I, Morestone, have made an alliance with the "+$@gdevents_a$+" guild.";
-			mes "[DRY-RUN] Hm, you're not a member.";
-			mes "[DRY-RUN] Could you please give them my greetings?";
+			mes "嗯，你不是成员。";
+			mes "你能给他们我问候吗？";
 			close;
 		}
 	}

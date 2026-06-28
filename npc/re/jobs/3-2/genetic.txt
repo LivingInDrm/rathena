@@ -94,310 +94,310 @@ alde_alche,35,186,5	script	Alchemist Union Member	805,{
 
 job3_gen01,25,58,3	script	Devries#gen	865,{
 	if (SkillPoint != 0) {
-		mes "[DRY-RUN] - You still have some unused skill points. -";
+		mes "- 你还有一些未使用的技能点。 -";
 		close;
 	}
 	if (job_gen == 1) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Oh! The bloodsucking plant sample C is withering again.";
-		mes "[DRY-RUN] Should I change the ingredient of the growth care?";
-		mes "[DRY-RUN] Hey please cheer up soon!";
+		mes "[德弗里斯]";
+		mes "哦！吸血植物样本C又在枯萎了。";
+		mes "我应该更换生长护理的材料吗？";
+		mes "嘿，请快点振作起来！";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Oh? A stranger?";
-		mes "[DRY-RUN] Your look tells me that you are doing Alchemy as well right?";
+		mes "[德弗里斯]";
+		mes "哦？一个陌生人？";
+		mes "你的样子告诉我你也是在做炼金术，对吧？";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] People say the number of alchemists is increasing nowadays though there aren't may who study this field properly!";
+		mes "[德弗里斯]";
+		mes "人们说现在炼金术士的数量在增加，尽管真正认真研究这个领域的人并不多！";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] They're all too worried about saying things like, ''Look at my bomb damage!'' or ''isn?t my homunculus prettier?''";
+		mes "[德弗里斯]";
+		mes "他们都太担心说一些像“看看我的炸弹伤害！”或“我的小人造物不是更漂亮吗？”这样的话了。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] The Alchemist Union was saying they'd support the researchers but actually what you get from the studying is just 'Spores Which Can Be Easily Raised'!";
+		mes "[德弗里斯]";
+		mes "炼金术士公会说他们会支持研究人员，但实际上你从研究中得到的只是“容易培养的孢子”！";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Thanks to that, there are spores everywhere in my lab! There are spores everywhere!";
+		mes "[德弗里斯]";
+		mes "多亏了这个，我的实验室里到处都是孢子！到处都是孢子！";
 		next;
-		select("[DRY-RUN] Why do you talk like that?");
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] 'Cause I'm from Rune-Midgart!";
-		mes "[DRY-RUN] Have you ever been to Rune-Midgart? Everyone in Rune-Midgart speaks like this.";
+		select("你为什么这样说话？");
+		mes "[德弗里斯]";
+		mes "因为我来自卢恩-米德加兹！";
+		mes "你去过卢恩-米德加兹吗？卢恩-米德加兹的每个人都这样说话。";
 		next;
-		switch(select("[DRY-RUN] Impossible?!:I'm also from Rune-Midgart.")) {
+		switch(select("不可能？！:我也是来自卢恩-米德加兹。")) {
 		case 1:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Impossible?";
-			mes "[DRY-RUN] Do you come from a Rune-Midgart village?";
-			mes "[DRY-RUN] My village is very big, everyone there speaks like this.";
+			mes "[德弗里斯]";
+			mes "不可能？";
+			mes "你来自卢恩-米德加兹的村庄吗？";
+			mes "我的村庄很大，那里每个人都这样说话。";
 			break;
 		case 2:
 			emotion ET_THROB;
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Really! That's why I felt some kind of familiar atmosphere around you.";
-			mes "[DRY-RUN] Meeting a hometown person in Schwaltzvalt, it's my pleasure to meet you!";
+			mes "[德弗里斯]";
+			mes "真的！这就是为什么我觉得你身上有一种熟悉的气氛。";
+			mes "在施瓦兹瓦尔特遇到家乡的人，见到你真高兴！";
 			break;
 		}
 		next;
-		mes "[DRY-RUN] - Thump!! -";
+		mes "- 砰！！ -";
 		next;
 		emotion ET_ANGER;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Ughhhhh! That woman started again!";
+		mes "[德弗里斯]";
+		mes "呃呃呃！那个女人又开始了！";
 		next;
-		select("[DRY-RUN] What's that sound?");
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] That's the sound of an experiment being carried out by my roommate, Demi Calberine..";
-		mes "[DRY-RUN] Demi's a fire shell technician so she's always noisy like that.";
+		select("那是什么声音？");
+		mes "[德弗里斯]";
+		mes "那是我室友德米·卡尔贝琳进行实验时发出的声音..";
+		mes "德米是个火焰炮弹技术员，所以她总是那么吵。";
 		next;
 		emotion ET_CRY;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Look at that!";
-		mes "[DRY-RUN] My spores and plants are all freaked out!";
-		mes "[DRY-RUN] I can't do my work with those noisy sounds. It gives me so much stress!!";
+		mes "[德弗里斯]";
+		mes "看看那个！";
+		mes "我的孢子和植物都吓坏了！";
+		mes "那些吵闹的声音让我无法工作。压力太大了！！";
 		next;
-		mes "[DRY-RUN] - Munch Crunch -";
+		mes "- 嚼嚼 -";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] When I don't feel good, I savor Mr. Orlean's handmade cookies little by little.";
+		mes "[德弗里斯]";
+		mes "当我感觉不好的时候，我就一点一点地享用奥尔连先生亲手做的饼干。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] It's a high-quality cookie that I got from Prontera. When I get one bite, it seems like I'm floating to Asgard.";
-		mes "[DRY-RUN] The softness of the sweet cookie drowns out the clashing sounds from Demi Calberine.";
+		mes "[德弗里斯]";
+		mes "这是我从普隆德拉得到的高品质饼干。咬一口的时候，感觉像是飘到了阿斯加德。";
+		mes "甜饼干的柔软感淹没了来自德米·卡尔贝琳的冲突声。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Wanna try one?";
-		mes "[DRY-RUN] Ah, I've eaten all of it.";
+		mes "[德弗里斯]";
+		mes "想试试吗？";
+		mes "啊，我已经吃光了。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] But it's okay! On the 2nd floor of my room, there are boxes of those!";
-		mes "[DRY-RUN] I couldn't stop buying it all in bulk. Ho ho ho.";
+		mes "[德弗里斯]";
+		mes "但没关系！在我房间的二楼，有很多这样的盒子！";
+		mes "我忍不住大量购买。哈哈哈。";
 		next;
-		mes "[DRY-RUN] - Zooooooooooooooooing -";
+		mes "- 呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜 -";
 		specialeffect EF_ENDURE;
 		next;
 		specialeffect EF_REPAIRWEAPON,AREA,"#from1to2gen";
-		mes "[DRY-RUN] - (Screeching Sounds)!!! -";
-		mes "[DRY-RUN] - (Screeching)!!! -";
+		mes "- （尖叫声）！！！ -";
+		mes "- （尖叫）！！！ -";
 		next;
 		specialeffect EF_CRASHEARTH,AREA,"#from1to2gen";
-		mes "[DRY-RUN] - Bump! Bump! Bump! -";
+		mes "- 碰！碰！碰！ -";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] ..................";
+		mes "[德弗里斯]";
+		mes "..................";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Yoooooooooooow";
-		mes "[DRY-RUN] Yipeeeeeeeeee!!!";
+		mes "[德弗里斯]";
+		mes "哇哦";
+		mes "哇啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!!!";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Demiiiiiiiiiiiiiiiiiiiiiiii!!!";
-		mes "[DRY-RUN] Demiiiiiiiiiiiiiiiiiiiii!!!";
+		mes "[德弗里斯]";
+		mes "德米啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!!!";
+		mes "德米啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!!!";
 		next;
-		mes "[DRY-RUN] - For now it seems that I -";
-		mes "[DRY-RUN] - need to calm down Devries. -";
+		mes "- 现在看来我 -";
+		mes "- 需要让德弗里斯冷静下来。 -";
 		set job_gen,2;
 		close;
 	} else if (job_gen == 2) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Yipeeeeeeeeee!!!";
-		mes "[DRY-RUN] Demiiiiii!!!";
-		mes "[DRY-RUN] Demiiiiiiiii!!!";
+		mes "[德弗里斯]";
+		mes "哇啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!!!";
+		mes "德米啊啊啊啊啊啊!!!";
+		mes "德米啊啊啊啊啊啊啊!!!";
 		next;
-		mes "[DRY-RUN] - Hmm. -";
-		mes "[DRY-RUN] - What'll make her calm? -";
+		mes "- 嗯。 -";
+		mes "- 什么能让她冷静下来呢？ -";
 		close;
 	} else if (job_gen == 3) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Yipeeeeeeeeee!!!";
-		mes "[DRY-RUN] Demiiiiii!!!";
-		mes "[DRY-RUN] Demiiiiiiiii!!!";
+		mes "[德弗里斯]";
+		mes "哇啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!!!";
+		mes "德米啊啊啊啊啊啊!!!";
+		mes "德米啊啊啊啊啊啊啊!!!";
 		next;
-		select("[DRY-RUN] Hand Devries a cookie.");
-		mes "[DRY-RUN] - Devries quickly snatches -";
-		mes "[DRY-RUN] - away the cookie and stuffs -";
-		mes "[DRY-RUN] - it all in her mouth. -";
+		select("给德弗里斯一个饼干。");
+		mes "- 德弗里斯迅速抢走 -";
+		mes "- 饼干并塞进 -";
+		mes "- 她的嘴里。 -";
 		next;
-		mes "[DRY-RUN] - Crunch Crunch Crunch -";
-		mes "[DRY-RUN] - Crunch Crunch Crunch -";
-		mes "[DRY-RUN] - Crunch Crunch Crunch -";
+		mes "- 啃啃啃 -";
+		mes "- 啃啃啃 -";
+		mes "- 啃啃啃 -";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Ah, The sweet buttery taste remains at the end of my tongue.";
-		mes "[DRY-RUN] This really gives me peace of mind.";
+		mes "[德弗里斯]";
+		mes "啊，甜美的黄油味在我舌尖上回荡。";
+		mes "这真的让我感到安心。";
 		next;
 		emotion ET_HNG;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Demi is studying hard today as well";
-		mes "[DRY-RUN] Huhuhu. She's really a hard worker.";
+		mes "[德弗里斯]";
+		mes "德米今天也在努力学习。";
+		mes "呵呵，她真是个勤奋的工作者。";
 		next;
-		mes "[DRY-RUN] - That cookie changed her mood quick. -";
+		mes "- 那块饼干让她的心情迅速改变。 -";
 		emotion ET_BEST, playerattached();
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] You came here with a love for Alchemy?";
+		mes "[德弗里斯]";
+		mes "你是带着对炼金术的热爱来到这里的吗？";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Oh wait, We haven't introduced ourselves yet.";
-		mes "[DRY-RUN] My name is Devries.";
-		mes "[DRY-RUN] I'm very interested in making living things that show new and peculiar growth.";
+		mes "[德弗里斯]";
+		mes "哦等等，我们还没有自我介绍呢。";
+		mes "我叫德弗里斯。";
+		mes "我对创造展现新奇生长的生物非常感兴趣。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] What's your name, young alchemist?";
+		mes "[德弗里斯]";
+		mes "你叫什么名字，年轻的炼金术士？";
 		next;
-		select("[DRY-RUN] I'm "+strcharinfo(0)+".");
-		mes "[DRY-RUN] [Devries]";
+		select("I'm "+strcharinfo(0)+".");
+		mes "[德弗里斯]";
 		mes "Oh, "+strcharinfo(0)+"!";
-		mes "[DRY-RUN] That's a very unusual name. Pleased to meet you.";
+		mes "这是个非常不寻常的名字。很高兴见到你。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] But I can't memorize the name well.";
-		mes "[DRY-RUN] So I'll just call you <Popo>. Would that be ok?";
+		mes "[德弗里斯]";
+		mes "但是我记不住名字。";
+		mes "所以我就叫你<波波>。这样可以吗？";
 		next;
-		select("[DRY-RUN] I uhh...");
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Great...";
-		mes "[DRY-RUN] Popo, have you heard of my research?";
-		mes "[DRY-RUN] You came here because of that, am I right?";
+		select("我呃……");
+		mes "[德弗里斯]";
+		mes "太好了...";
+		mes "波波，你听说过我的研究吗？";
+		mes "你是因为这个而来的，对吧？";
 		next;
-		switch(select("[DRY-RUN] No.:Yes.")) {
+		switch(select("否:是。")) {
 		case 1:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Well, it's all over your face.";
-			mes "[DRY-RUN] You don't have to be shy.";
+			mes "[德弗里斯]";
+			mes "嗯，这一切都写在你的脸上。";
+			mes "你不必害羞。";
 			break;
 		case 2:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] That's right huh?";
-			mes "[DRY-RUN] Well, as I expected, there really is something that makes homeland people get each other";
+			mes "[德弗里斯]";
+			mes "没错吧？";
+			mes "嗯，果然有让家乡人彼此理解的东西。";
 			break;
 		}
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] When you saw me in that feverish state, you remembered what I said before and that calmed me down.";
+		mes "[德弗里斯]";
+		mes "当你看到我那种发热的状态时，你想起了我之前说的话，这让我平静下来。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] I like the way you manage yourself and take care to remember small details.";
-		mes "[DRY-RUN] You have the talent to become a Geneticist.";
+		mes "[德弗里斯]";
+		mes "我喜欢你管理自己的方式，并且注意记住小细节。";
+		mes "你有成为基因学家的天赋。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] ^FF0000If you become a Geneticist, you can't take the Alchemist's or Biochemist study course that you haven't investigated before.^000000";
-		mes "[DRY-RUN] If that's all right for you, how about giving it a shot right now?.";
+		mes "[德弗里斯]";
+		mes "^FF0000如果你成为基因学家，你不能选择之前没有调查过的炼金术士或生化学家的学习课程。^000000";
+		mes "如果这对你来说没问题，那现在就试试吧？";
 		next;
-		switch(select("[DRY-RUN] I'll try later.:I want to become a Geneticist!")) {
+		switch(select("我稍后再试。:我想成为一名遗传学家！")) {
 		case 1:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Alright.";
-			mes "[DRY-RUN] Even though your knowledge is not that great as that of Geneticists, a fundamental knowledge is also important.";
-			mes "[DRY-RUN] Popo, come back to me once you've finished your studies.";
+			mes "[德弗里斯]";
+			mes "好的。";
+			mes "尽管你的知识不如基因学家那样丰富，但基础知识同样重要。";
+			mes "波波，完成学业后再来找我。";
 			set job_gen,4;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Good!";
-			mes "[DRY-RUN] Let's do it!";
+			mes "[德弗里斯]";
+			mes "很好！";
+			mes "我们开始吧！";
 			set job_gen,5;
 			close;
 		}
 	} else if (job_gen == 4) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Popo!";
-		mes "[DRY-RUN] Are you ready to give it a shot?";
+		mes "[德弗里斯]";
+		mes "波波！";
+		mes "你准备好尝试了吗？";
 		next;
-		switch(select("[DRY-RUN] No.:Yes!")) {
+		switch(select("否。:是！")) {
 		case 1:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] You have to do your best! There is no easy way when looking for knowledge!";
+			mes "[德弗里斯]";
+			mes "你必须努力！寻找知识没有捷径！";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Very good!";
-			mes "[DRY-RUN] Let's do it!";
+			mes "[德弗里斯]";
+			mes "非常好！";
+			mes "我们开始吧！";
 			set job_gen,5;
 			close;
 		}
 	} else if (job_gen == 5) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] What do you think of plants, Popo";
-		mes "[DRY-RUN] Do you like plants? What kind of plants are you interested in?";
+		mes "[德弗里斯]";
+		mes "你觉得植物怎么样，波波？";
+		mes "你喜欢植物吗？你对什么样的植物感兴趣？";
 		next;
-		mes "[DRY-RUN] - Boom, Boom, Boom -";
+		mes "- 轰，轰，轰 -";
 		next;
 		emotion ET_SWEAT;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Ah, please tell me Demi Calberine is not starting again?";
-		mes "[DRY-RUN] Please let my expectation be wrong ... Please... Demi, please...";
+		mes "[德弗里斯]";
+		mes "啊，请告诉我德米·卡尔贝琳不会再开始了吧？";
+		mes "请让我错得离谱……请……德米，拜托……";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Where did I stop talking";
-		mes "[DRY-RUN] Oh, right. Plants are very important in Alchemy.";
+		mes "[德弗里斯]";
+		mes "我停在哪里了？";
+		mes "哦，对了。植物在炼金术中非常重要。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Alchemy can make Flora's and Geographers grow immensely fast, so they can help in battle, like those Alchemists...";
+		mes "[德弗里斯]";
+		mes "炼金术可以让植物和地理学家的生长速度极快，因此它们可以在战斗中提供帮助，就像那些炼金术士一样……";
 		next;
-		mes "[DRY-RUN] - Boom!! Boom!! Boom!! Boom!! -";
-		next;
-		emotion ET_THINK;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] .......................";
+		mes "- 轰！！轰！！轰！！轰！！ -";
 		next;
 		emotion ET_THINK;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Techniques, plants are relatively easy to...";
-		next;
-		mes "[DRY-RUN] - Boom!!!!!! -";
+		mes "[德弗里斯]";
+		mes ".......................";
 		next;
 		emotion ET_THINK;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Crossbreed...";
+		mes "[德弗里斯]";
+		mes "技术上来说，植物相对容易……";
 		next;
-		mes "[DRY-RUN] - Pop!!!!!! -";
-		mes "[DRY-RUN] - Keeeeeeeeeeeeeh!!!! -";
-		mes "[DRY-RUN] - Boooooooooooooom!!!! -";
-		mes "[DRY-RUN] - Boom!! Boom!! Boom!! -";
+		mes "- 轰!!!!!! -";
 		next;
 		emotion ET_THINK;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] .......................";
+		mes "[德弗里斯]";
+		mes "杂交...";
+		next;
+		mes "- 啪!!!!!! -";
+		mes "- 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!!!! -";
+		mes "- 轰轰轰轰轰轰轰轰轰!!!! -";
+		mes "- 轰!! 轰!! 轰!! -";
 		next;
 		emotion ET_THINK;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Popo.";
+		mes "[德弗里斯]";
+		mes ".......................";
 		next;
 		emotion ET_THINK;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] I'll give you the test to become a Geneticist.";
+		mes "[德弗里斯]";
+		mes "啪啪。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] The subject is <The Perfect Soundproof System>!";
-		mes "[DRY-RUN] Please think of a way to save me from Demi Calberine's noise, using plants and experimental equipment that are here on the 1st floor of the lab.";
+		emotion ET_THINK;
+		mes "[德弗里斯]";
+		mes "我将给你一个成为基因学家的测试。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Well, you better get started!";
+		mes "[德弗里斯]";
+		mes "主题是<完美的隔音系统>!";
+		mes "请想办法用植物和实验设备来拯救我，设备就在实验室一楼。";
+		next;
+		mes "[德弗里斯]";
+		mes "那么，你最好开始了!";
 		set job_gen,6;
 		close;
 	} else if (job_gen == 6) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] The subject is <The Perfect Soundproof System>!";
-		mes "[DRY-RUN] Please think of a way to save me from Demi Calbereine's noise, using plants and experimental equipment that are here on the 1st floor of the lab.";
+		mes "[德弗里斯]";
+		mes "主题是<完美的隔音系统>!";
+		mes "请想办法用实验室一楼的植物和实验设备来拯救我脱离德米·卡尔贝琳的噪音。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] There are some guides in the cabinet that you may use.";
-		mes "[DRY-RUN] Well, you better get started!";
+		mes "[德弗里斯]";
+		mes "柜子里有一些你可以使用的指南。";
+		mes "那么，你最好开始了!";
 		close;
 	} else if (job_gen > 6 && job_gen < 60) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Is there a problem?";
+		mes "[德弗里斯]";
+		mes "有什么问题吗？";
 		next;
-		switch(select("[DRY-RUN] Nothing.:The experiment failed.")) {
+		switch(select("没什么。:实验失败了。")) {
 		case 1:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Better get started, or I'll start to scream!!!";
+			mes "[德弗里斯]";
+			mes "最好赶快开始，不然我就要尖叫了！！！";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] You can start from the beginning then?";
-			mes "[DRY-RUN] Why are you asking me such things?";
+			mes "[德弗里斯]";
+			mes "那你可以从头开始吗？";
+			mes "你为什么问我这些事？";
 			set job_gen,7;
 			if (checkquest(2209) == 1) erasequest 2209;
 			if (checkquest(2210) == 1) erasequest 2210;
@@ -408,76 +408,76 @@ job3_gen01,25,58,3	script	Devries#gen	865,{
 			close;
 		}
 	} else if (job_gen == 60 || job_gen == 61) {
-		mes "[DRY-RUN] - Zing Zing Zigi Zigi -";
+		mes "- 嘶嘶嘶嘶 -";
 		next;
-		mes "[DRY-RUN] - Zing Zing Zigi Zigi -";
+		mes "- 嘶嘶嘶嘶 -";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] What the hell is Demi Calberine doing?";
-		mes "[DRY-RUN] That's really a noisy one.";
+		mes "[德弗里斯]";
+		mes "德米·卡尔贝琳到底在干什么？";
+		mes "真是个吵闹的家伙。";
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Your study is done, Popo?";
-		mes "[DRY-RUN] Give me those seeds.";
+		mes "[德弗里斯]";
+		mes "你的研究完成了吗，波波？";
+		mes "把那些种子给我。";
 		next;
 		if (countitem(6273) == 0 && countitem(6272) == 0) {
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] What happened?";
-			mes "[DRY-RUN] How could you say the study is completed without any result?";
-			mes "[DRY-RUN] Start again.";
+			mes "[德弗里斯]";
+			mes "发生了什么？";
+			mes "你怎么能说研究完成了却没有任何结果？";
+			mes "重新开始。";
 			set job_gen,7;
 		} else {
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Well, I'll take a look at the seeds Popo made.";
-			mes "[DRY-RUN] What's the result?";
+			mes "[德弗里斯]";
+			mes "好吧，我来看看波波做的种子。";
+			mes "结果是什么？";
 			next;
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] When you put a seed in a Super Cultivator, and adjust the temperature...";
+			mes "[德弗里斯]";
+			mes "当你把种子放进超级栽培器，并调整温度时...";
 			next;
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Damn!";
+			mes "[德弗里斯]";
+			mes "该死！";
 			next;
 			if (job_gen == 60) {
 				specialeffect EF_FLASHER,AREA,"Super Cultivator#gen";
 				specialeffect EF_PHARMACY_OK,AREA,"Super Cultivator#gen";
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] Popo, look at that!";
-				mes "[DRY-RUN] That's really a mysterious plant!";
+				mes "[德弗里斯]";
+				mes "波波，快看那个！";
+				mes "那真是一种神秘的植物！";
 				next;
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] The inside of the Cultivator is now full of thorny stems!";
-				mes "[DRY-RUN] It's as if the stems are making a wall and growing very sturdily and those are getting tangled!";
+				mes "[德弗里斯]";
+				mes "栽培器内部现在满是带刺的茎！";
+				mes "就好像这些茎在形成一堵墙，生长得非常坚固，而且它们还纠缠在一起！";
 				next;
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] This is it, Popo!";
-				mes "[DRY-RUN] This plant's properties can be used for many applications!";
+				mes "[德弗里斯]";
+				mes "就是这个，波波！";
+				mes "这种植物的特性可以用于许多应用！";
 				next;
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] This is really great, Popo.";
-				mes "[DRY-RUN] I knew that you were knowledgeable but your ability is more than that!";
+				mes "[德弗里斯]";
+				mes "这真是太好了，波波。";
+				mes "我知道你很有知识，但你的能力远不止于此！";
 				next;
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] I will tell the outcome to the Alchemist Union.";
-				mes "[DRY-RUN] I will send a recommendation letter saying that your ability is really great and that you could be a brilliant member.";
+				mes "[德弗里斯]";
+				mes "我会把结果告诉炼金术士公会。";
+				mes "我会发一封推荐信，说明你的能力真的很出色，你可以成为一名优秀的成员。";
 				next;
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] Getting an answer from the Union will take some time, so could you wait a moment?";
-				mes "[DRY-RUN] Why don't you go up to Demi Calberine?";
+				mes "[德弗里斯]";
+				mes "从公会得到答复需要一些时间，所以你能等一下吗？";
+				mes "你为什么不去找德米·卡尔贝琳呢？";
 				next;
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] She is a fellow Geneticist, specializing in mini cannons.";
-				mes "[DRY-RUN] Go take a look at her experiment results.";
-				mes "[DRY-RUN] Could you give this message to her? Tell her to conduct her experiments quietly.";
+				mes "[德弗里斯]";
+				mes "她是一位同样的基因学家，专门研究迷你火炮。";
+				mes "去看看她的实验结果吧。";
+				mes "你能把这个消息告诉她吗？告诉她要安静地进行实验。";
 				delitem 6273,1; //Altered_Seed
 				set job_gen,62;
 				changequest 2215,2216;
 			} else {
 				specialeffect EF_SPELLBREAKER,AREA,"Super Cultivator#gen";
 				specialeffect EF_PHARMACY_FAIL,AREA,"Super Cultivator#gen";
-				mes "[DRY-RUN] [Devries]";
-				mes "[DRY-RUN] Uh oh! You failed, Popo.";
-				mes "[DRY-RUN] It didn't grow at all, it's withered already.";
-				mes "[DRY-RUN] Go and start over!";
+				mes "[德弗里斯]";
+				mes "哦哦！你失败了，波波。";
+				mes "它根本没有生长，已经枯萎了。";
+				mes "去重新开始吧！";
 				delitem 6272,1; //Experiment_Seed
 				set job_gen,7;
 			}
@@ -491,94 +491,94 @@ job3_gen01,25,58,3	script	Devries#gen	865,{
 		close;
 	} else if (job_gen > 61 && job_gen < 76) {
 		if (checkquest(2223,HUNTING) == 2) {
-			mes "[DRY-RUN] [Devries]";
-			mes "[DRY-RUN] Oh, wait a second.";
-			mes "[DRY-RUN] It seems that the mail's has arrived.";
+			mes "[德弗里斯]";
+			mes "哦，等一下。";
+			mes "似乎邮件到了。";
 			set job_gen,76;
 			completequest 2223;
 			close;
 		}
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] You can take a look at the Demi Calberine's work place while we get an answer from the Union.";
+		mes "[德弗里斯]";
+		mes "在我们从公会得到回复的时候，你可以看看德米·卡尔贝琳的工作地方。";
 		close;
 	} else if (job_gen == 76) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Popo!";
-		mes "[DRY-RUN] I've got good news for you!";
+		mes "[德弗里斯]";
+		mes "波波！";
+		mes "我有好消息要告诉你！";
 		next;
 		if (checkweight(1201,2) == 0 || MaxWeight - Weight < 2000) {
-			mes "[DRY-RUN] - Wait a minute !! -";
-			mes "[DRY-RUN] - Currently you're carrying -";
-			mes "[DRY-RUN] - too many items with you. -";
-			mes "[DRY-RUN] - Please try again -";
-			mes "[DRY-RUN] - after you lose some weight. -";
+			mes "- 等一下 !! -";
+			mes "- 你目前携带了 -";
+			mes "- 太多物品。 -";
+			mes "- 请再试一次 -";
+			mes "- 在你减掉一些体重之后。 -";
 			close;
 		}
-		mes "[DRY-RUN] [Devries]";
+		mes "[德弗里斯]";
 		if (BaseJob != Job_Alchemist || BaseLevel < 99 || JobLevel < 50) {
-			mes "[DRY-RUN] Oh, it looks like you're not ready to hear it.";
+			mes "哦，看起来你还没准备好听这个消息。";
 			close;
 		}
 		if (checkcart()){
-			mes "[DRY-RUN] First take off that heavy and dirty cart, that doesn't suit you on this happy moment.";
+			mes "首先把那个沉重又脏的手推车拿掉，这在这个快乐的时刻不适合你。";
 			close;
 		}
 		if (SkillPoint != 0) {
-			mes "[DRY-RUN] But you look like you have a lingering desire for previous studies.";
+			mes "但你看起来对以前的研究仍有留恋。";
 			close;
 		}
-		mes "[DRY-RUN] A letter has arrived from the Alchemist Union.";
-		mes "[DRY-RUN] I'll read it to you, Popo!";
+		mes "来自炼金术士公会的信件已到达。";
+		mes "我来给你读，波波！";
 		next;
-		mes "[DRY-RUN] <Dearest Miss Devries,>";
-		mes "[DRY-RUN] <We are very aware of the brilliant activities you've shown lately.>";
+		mes "<亲爱的德弗里斯小姐，>";
+		mes "<我们非常清楚你最近展现出的卓越活动。>";
 		next;
-		mes "[DRY-RUN] <Miss. Devries>";
-		mes "[DRY-RUN] This guy is also from my hometown.";
+		mes "<德弗里斯小姐>";
+		mes "这个家伙也是我家乡的人。";
 		next;
-		mes "[DRY-RUN] <I heard very good news that your research results are taking the step of commercial use.>";
-		mes "[DRY-RUN] <I'm sure it will be a great inspiration for other Alchemists.>";
+		mes "<我听到了一个好消息，你的研究成果正在迈向商业化。>";
+		mes "<我相信这将会对其他炼金术士产生很大的启发。>";
 		next;
-		mes "[DRY-RUN] <Come to think of it, you've attached a paper?>";
+		mes "<想起来了，你附上了一篇论文吗？>";
 		mes "<It was a new plant which makes plants grow super-fast, discovered by an Alchemist named, "+strcharinfo(0)+">";
 		next;
-		mes "[DRY-RUN] <Myself and many other Alchemists from the Alchemist union are taking great interest in this.>";
+		mes "<我和许多来自炼金术士公会的炼金术士对此非常感兴趣。>";
 		next;
-		mes "[DRY-RUN] <We are looking forward to more volumes of study papers and outcomes, especially from other Geneticists who?ve heard this news.>";
+		mes "<我们期待更多的研究论文和成果，特别是来自听到这个消息的其他基因学家。>";
 		next;
-		mes "[DRY-RUN] <Miss. Devries>";
+		mes "<德弗里斯小姐>";
 		mes "<I think that "+strcharinfo(0)+" has enough ability and talent to be a Geneticist.>";
 		next;
 		mes "<Please tell "+strcharinfo(0)+" as soon as possible that we are expecting remarkable activities as a Geneticist from now on.>";
 		next;
 		mes "<The Alchemist Union is very proud of Miss Devries, Miss Demi Calberine and "+strcharinfo(0)+" who are excellent talented people.>";
-		mes "[DRY-RUN] <We hope that you yield good fruits in the future as well.>";
+		mes "<我们希望你们未来也能结出丰硕的果实。>";
 		next;
-		mes "[DRY-RUN] [Devries]";
+		mes "[德弗里斯]";
 		if (ismounting()) {
-			mes "[DRY-RUN] You are on a riding pet,";
-			mes "[DRY-RUN] so you cannot change your job.";
-			mes "[DRY-RUN] Please unequip your riding pet and try again!";
+			mes "你正在骑乘宠物，";
+			mes "所以你无法更改你的职业。";
+			mes "请卸下您的骑乘宠物，然后再试一次！";
 			close;
 		}
-		mes "[DRY-RUN] Congratulations, Popo!";
-		mes "[DRY-RUN] You are a Geneticist from now on!!";
+		mes "恭喜你，波波！";
+		mes "从现在开始你就是一名基因学家了！！";
 		jobchange roclass(eaclass()|EAJL_THIRD);
 		set job_gen,77;
 		getitem 5752,1; //Midas_Whisper
 		getitem 2795,1; //Green_Apple_Ring
 		next;
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Just like the word from the Union, I'm also looking forward to your awesome activities.";
-		mes "[DRY-RUN] Let's try hard together! To become the best Geneticist!";
+		mes "[德弗里斯]";
+		mes "就像公会所说的，我也期待你精彩的活动。";
+		mes "让我们一起努力！成为最棒的基因学家！";
 		close;
 	} else if (job_gen == 77) {
-		mes "[DRY-RUN] [Devries]";
-		mes "[DRY-RUN] Popo, do you want to join my Love Orleans club? It's a club for those that love cookies. Of course, we don't think of doing weird things with Charles Orleans.";
+		mes "[德弗里斯]";
+		mes "波波，你想加入我的爱奥尔良俱乐部吗？这是一个爱吃饼干的人的俱乐部。当然，我们不想和查尔斯·奥尔良做奇怪的事情。";
 		close;
 	}
-	mes "[DRY-RUN] [Devries]";
-	mes "[DRY-RUN] Am I that pretty to you? Why are you staring at me like that?";
+	mes "[德弗里斯]";
+	mes "我在你眼里这么漂亮吗？你为什么这样盯着我？";
 	close;
 }
 
@@ -985,18 +985,18 @@ job3_gen01,83,27,3	duplicate(Scattered Stuff#gen)	Scattered Stuff#gen6	111
 job3_gen01,74,45,3	duplicate(Scattered Stuff#gen)	Scattered Stuff#gen7	111
 
 job3_gen01,18,39,3	script	Warning#gen	837,{
-	mes "[DRY-RUN] = Warning =";
-	mes "[DRY-RUN] If you bully my spores, I'll scream!!!";
+	mes "= 警告 =";
+	mes "如果你欺负我的孢子，我会尖叫！！！";
 	if (job_gen < 75) close;
 	next;
-	switch(select("[DRY-RUN] Get out of the pen.:Stay still.")) {
+	switch(select("离开围栏.:保持静止.")) {
 	case 1:
-		mes "[DRY-RUN] - I'd better get out before I get caught by Miss Devries. -";
+		mes "- 我最好在德弗里斯小姐抓到我之前离开。 -";
 		close2;
 		warp "job3_gen01",21,38;
 		end;
 	case 2:
-		mes "[DRY-RUN] - I decide to stay still. -";
+		mes "- 我决定保持静止。 -";
 		close;
 	}
 }
@@ -1007,7 +1007,7 @@ job3_gen01,80,12,1	script	Stacked Magazines#gen	111,{
 }
 
 job3_gen01,83,20,1	script	Bed#gen	111,{
-	mes "[DRY-RUN] - A checker patterned blanket set which looks like it was picked carefully is too good for this dirty bed. -";
+	mes "- 一套看起来被小心挑选的格子图案毯子对这个肮脏的床来说太好了。 -";
 	close;
 }
 
@@ -1020,7 +1020,7 @@ job3_gen01,85,25,1	script	Opened Book#gen	111,{
 
 job3_gen01,81,81,0	script	#dbroom	139,2,2,{
 OnTouch_:
-	mes "[DRY-RUN] - It's a room that looks like a storehouse, thanks to so many parcels piled up in the room. -";
+	mes "- 这是一个看起来像仓库的房间，因为房间里堆满了许多包裹。 -";
 	close;
 }
 

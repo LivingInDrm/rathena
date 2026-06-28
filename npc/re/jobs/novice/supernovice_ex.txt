@@ -591,33 +591,33 @@ beach_dun2,119,92,4	script	Fishing Novice#sp2	567,{
 
 airplane,33,47,5	script	Nudor#sp2	729,{
 	if (checkquest(5099) >= 0) {
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] Ahhh~ I have no money to buy any food.";
-		mes "[DRY-RUN] I'm hungry, but I have no idea when Brother is coming...";
+		mes "[努多]";
+		mes "啊啊啊~ 我没有钱买食物。";
+		mes "我饿了，但不知道哥哥什么时候回来...";
 		next;
-		select("[DRY-RUN] Hey, are you... Mr. Nudor?");
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] Eeeeeh?! Who wants to know?";
-		mes "[DRY-RUN] Do I know you?";
+		select("嘿，你是……诺多先生吗？");
+		mes "[努多]";
+		mes "哎？！你想知道什么？";
+		mes "我认识你吗？";
 		next;
-		mes "[DRY-RUN] - You explain to Nudor why you have come to see him. -";
+		mes "- 你向努多解释你来见他的原因。 -";
 		next;
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] Aha! You've come to give me some pocket money in place of my bro~";
+		mes "[努多]";
+		mes "啊哈！你是来替我哥哥给我零花钱的~";
 		next;
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] Wowowow~~ How much did he give you?";
+		mes "[努多]";
+		mes "哇哇哇~~ 他给了你多少钱？";
 		next;
-		mes "[DRY-RUN] - Nudor stares with twinkling -";
-		mes "[DRY-RUN] - eyes, holding out his hands. -";
-		mes "[DRY-RUN] - How much do you want to give? -";
+		mes "- 努多眼睛闪闪发光地盯着你 -";
+		mes "- 伸出手来。 -";
+		mes "- 你想给多少？ -";
 		next;
-		set .@i, select("[DRY-RUN] I have no money:Give 100,000 Zeny:Give 300,000 Zeny:Give 1,000,000 Zeny:Give all the money you have");
-		mes "[DRY-RUN] [Nudor]";
+		set .@i, select("我没有钱:给我 100,000 金币:给我 300,000 金币:给我 1,000,000 金币:给你所有的钱");
+		mes "[努多]";
 		if (.@i == 1) {
-			mes "[DRY-RUN] - crying -";
-			mes "[DRY-RUN] I hate Nodor --- !";
-			mes "[DRY-RUN] I hate you too --- !";
+			mes "- 哭泣 -";
+			mes "我讨厌诺多尔---！";
+			mes "我也讨厌你---！";
 			close2;
 			warp "airplane",70,93;
 			end;
@@ -631,29 +631,29 @@ airplane,33,47,5	script	Nudor#sp2	729,{
 			mes "Lovely~~ Did he give you "+callfunc("F_InsertComma",.@n)+" Zeny? That's pretty much!";
 			next;
 			if (Zeny < .@n) {
-				mes "[DRY-RUN] [Nudor]";
+				mes "[努多]";
 				mes "What? But where is "+callfunc("F_InsertComma",.@n)+" Zeny?";
 				close;
 			}
 		}
 		else {
-			mes "[DRY-RUN] Oh... oh my gosh, are you really giving me all the Zeny you have? Really?";
+			mes "哦……天哪，你真的要给我你所有的金币吗？真的？";
 			next;
-			if(select("[DRY-RUN] No, not really...:Give it all") == 1) {
-				mes "[DRY-RUN] [Nudor]";
-				mes "[DRY-RUN] Pshaw! How disappointing!";
+			if(select("不，实际上没有...:给我全部") == 1) {
+				mes "[努多]";
+				mes "呸！真让人失望！";
 				close;
 			}
 			if (!Zeny) {
-				mes "[DRY-RUN] [Nudor]";
-				mes "[DRY-RUN] Eh? But you don't have any money. You're so poor, huh?";
+				mes "[努多]";
+				mes "嗯？但你没有钱。你真穷，哈？";
 				close;
 			}
 			set .@n,Zeny;
 		}
-		mes "[DRY-RUN] [Nudor]";
+		mes "[努多]";
 		mes "Woa~!! "+.@n+" Zeny! This helped me so much~ Tehee~";
-		mes "[DRY-RUN] I can't believe it...";
+		mes "我简直不敢相信……";
 		changequest 5099,5100;
 		set Zeny, Zeny - .@n;
 		if (.@i < 5) set EXSUPNOV_Q_, .@i;
@@ -663,29 +663,29 @@ airplane,33,47,5	script	Nudor#sp2	729,{
 			else set EXSUPNOV_Q_,2;
 		}
 		next;
-		mes "[DRY-RUN] [Nudor]";
+		mes "[努多]";
 		if (Sex == SEX_MALE) mes "Did you know? You're really handsome~";
 		else mes "I need to tell you, you are really... really~ beautiful.";
 		next;
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] - You feel like you're being -";
-		mes "[DRY-RUN] - tricked, so go back to Nodor. -";
+		mes "[努多]";
+		mes "- 你感觉自己被 -";
+		mes "- 欺骗了，所以回去诺多尔吧。 -";
 		close;
 	}
 	else if (checkquest(5100) >= 0) {
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] I cannot believe that my bro sent me money... I love it~";
+		mes "[努多]";
+		mes "我无法相信我哥哥给我寄了钱……我太喜欢了~";
 		next;
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] Ooooops!";
+		mes "[努多]";
+		mes "哎呀！";
 		mes strcharinfo(0)+", hush --- !!";
 		next;
-		mes "[DRY-RUN] [Nudor]";
-		mes "[DRY-RUN] Don't tell Nodor about this~~";
+		mes "[努多]";
+		mes "别告诉诺多尔这件事~~";
 		close;
 	}
-	mes "[DRY-RUN] [Nudor]";
-	mes "[DRY-RUN] Ahhh~ I have no money to buy any food.";
-	mes "[DRY-RUN] I'm hungry, but I have no idea when Brother is coming...";
+	mes "[努多]";
+	mes "啊啊啊~ 我没有钱买食物。";
+	mes "我饿了，但不知道哥哥什么时候回来...";
 	close;
 }

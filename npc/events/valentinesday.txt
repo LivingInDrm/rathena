@@ -18,68 +18,68 @@
 // Stephen - Valentine Event Chocolate seller
 //============================================================
 alberta,26,243,4	script	Stephen	58,{
-	mes "[DRY-RUN] [Stephen]";
-	mes "[DRY-RUN] Guess what I've got?";
-	mes "[DRY-RUN] A tasty treat not easily found in Rune-Midgard....";
+	mes "[斯蒂芬]";
+	mes "你猜我有什么？";
+	mes "一种在米德加尔特不容易找到的美味佳肴....";
 	next;
-	mes "[DRY-RUN] [Stephen]";
-	mes "[DRY-RUN] Chocolate!";
-	mes "[DRY-RUN] That's right, don't you love chocolate.... I do.";
-	mes "[DRY-RUN] And you are in luck, because I'm selling them for only 5,000 zeny a piece!";
+	mes "[斯蒂芬]";
+	mes "巧克力！";
+	mes "没错，你不喜欢巧克力吗.... 我喜欢。";
+	mes "而且你运气不错，因为我只卖每块5,000金币！";
 	next;
-	if(select("[DRY-RUN] I want some chocolate!:No thanks.")==2) {
-		mes "[DRY-RUN] [Stephen]";
-		mes "[DRY-RUN] You don't want any chocolate?";
-		mes "[DRY-RUN] I'm telling you! You'll regret it!";
-		mes "[DRY-RUN] You better get some now... you won't come across Chocolate like this ever again!";
-		mes "[DRY-RUN] Think it over and visit me again sometime.";
+	if(select("我想要一些巧克力！:不，谢谢。")==2) {
+		mes "[斯蒂芬]";
+		mes "你不想要巧克力吗？";
+		mes "我告诉你！你会后悔的！";
+		mes "你最好现在就买... 你再也不会遇到这样的巧克力了！";
+		mes "考虑一下，过段时间再来找我。";
 		close; }
-	mes "[DRY-RUN] [Stephen]";
-	mes "[DRY-RUN] Hah!";
-	mes "[DRY-RUN] I knew it!";
-	mes "[DRY-RUN] But I can't sell you more then 5 at once... but, if you really need more....";
-	mes "[DRY-RUN] you can come back again.";
-	mes "[DRY-RUN] So how many do you want?";
+	mes "[斯蒂芬]";
+	mes "哈！";
+	mes "我就知道！";
+	mes "但我一次最多只能卖给你5块... 不过，如果你真的需要更多....";
+	mes "你可以再回来。";
+	mes "那么你想要多少？";
 	next;
 	input .@i;
 	if (.@i <= 0) close;
-	mes "[DRY-RUN] [Stephen]";
+	mes "[斯蒂芬]";
 	if (.@i > 5)  {
-		mes "[DRY-RUN] I'm sorry, but I can't give you that many.";
+		mes "对不起，我不能给你那么多。";
 		close; }
 	if (Zeny < .@i*5000) {
-		mes "[DRY-RUN] I'm sorry, but it seems you can't afford to buy these off me.";
+		mes "对不起，但看起来你买不起这些。";
 		close; }
 	set Zeny, Zeny - .@i*5000;
 	getitem 558,.@i;
-	mes "[DRY-RUN] There you go!";
-	mes "[DRY-RUN] You can give that to someone as a gift, or enjoy it yourself!";
-	mes "[DRY-RUN] Mmm... sweet chocolate...";
-	mes "[DRY-RUN] Visit me anytime...!";
+	mes "给你！";
+	mes "你可以把它送给别人作为礼物，或者自己享用！";
+	mes "嗯... 甜蜜的巧克力...";
+	mes "随时欢迎你来找我...！";
 	close;
 }
 
 // Jainie -- Gives information about Valentine Event
 //============================================================
 alberta,29,243,4	script	Jainie	53,{
-	mes "[DRY-RUN] [Jainie]";
-	mes "[DRY-RUN] You know what? The chocolate that my boyfriend sells are from me!";
-	mes "[DRY-RUN] I made them by myself.";
+	mes "[贾妮]";
+	mes "你知道吗？我男朋友卖的巧克力是我做的！";
+	mes "是我自己做的。";
 	next;
-	mes "[DRY-RUN] [Jainie]";
-	mes "[DRY-RUN] You know ... In cetain countries, there's a tradition of presenting chocolates to a person that you love...";
-	mes "[DRY-RUN] They call it, ^3355FFValentine's Day^000000.";
+	mes "[贾妮]";
+	mes "你知道吗... 在某些国家，有一种传统是给你爱的人送巧克力...";
+	mes "他们称之为，^3355FF情人节^000000。";
 	next;
-	mes "[DRY-RUN] [Jainie]";
-	mes "[DRY-RUN] So I gave him my delicious chocolate...";
-	mes "[DRY-RUN] And then he made me cook a lot more...";
-	mes "[DRY-RUN] And now he is selling them to everyone.";
-	mes "[DRY-RUN] I guess he really enjoyed it.";
-	mes "[DRY-RUN] But, I do feel good when people buy something I have made.";
+	mes "[贾妮]";
+	mes "所以我给了他我美味的巧克力...";
+	mes "然后他让我再做很多...";
+	mes "现在他把它们卖给每个人。";
+	mes "我想他真的很喜欢。";
+	mes "但是，当人们买我做的东西时，我确实感到很开心。";
 	next;
-	mes "[DRY-RUN] [Jainie]";
-	mes "[DRY-RUN] It would be great if you bought some too...";
-	mes "[DRY-RUN] I will be making chocolates for a while so...";
+	mes "[贾妮]";
+	mes "如果你也买一些就好了...";
+	mes "我会做巧克力一段时间，所以...";
 	close;
 }
 

@@ -15,34 +15,34 @@
 
 //Entrance Flags
 yuno,48,101,6	script	Notice	722,{
-	mes "^FF0000[ Treasure Hunter Guild House ]^000000";
+	mes "^FF0000[ 宝藏猎人公会之家 ]^000000";
 	mes " ";
-	mes "Welcome to the Treasure Hunter's Guild House.";
-	mes "Feel free to drop in and look around";
-	mes "and feel free to become a memeber if you wish.";
+	mes "欢迎来到宝藏猎人公会之家。";
+	mes "欢迎随意进来参观。";
+	mes "如果你愿意，也可以成为会员。";
 	mes " ";
-	mes "For membership applications please talk to Keegan";
-	mes "up the stairs and down the hall.";
+	mes "有关会员申请，请与基根交谈。";
+	mes "在楼梯上，走过走廊。";
 	close;
 }
 //Saver Girl;
 yuno_in01,32,178,3	script	Ahlma	94,{
-	mes "[Ahlma]";
+	mes "[阿尔玛]";
 	if (Event_THQS == 0) goto N_Member;
-	mes "Welcome to The Treasure Hunter Guild.";
-	mes "How may I help you?";
+	mes "欢迎来到宝藏猎人公会。";
+	mes "我能帮你什么？";
 	next;
 	menu "Save",-,"Quit",N_Quit;
-	mes "[Ahlma]";
-	mes "Ok, saved. Thank you ~ See you soon~";
+	mes "[阿尔玛]";
+	mes "好的，已保存。谢谢 ~ 再见~";
 	savepoint "yuno_in01",34,176;
 	close;
 N_Quit:
-	mes "[Ahlma]";
-	mes "Well if you think you are safe, good on you.";
+	mes "[阿尔玛]";
+	mes "如果你觉得安全，那就好。";
 	close;
 N_Member:
-	mes "Sorry, members only.";
+	mes "抱歉，仅限会员。";
 	close;
 }
 //Retired Smile mask girl;

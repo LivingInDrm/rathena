@@ -202,79 +202,79 @@ alberta,88,52,5	duplicate(EggGeezer)	Cantankerous Geezer#alb	709
 
 // Create Holy Eggs
 prontera,230,312,3	script	Nerlen#es07	79,{
-	mes "[DRY-RUN] [Nerlen]";
-	mes "[DRY-RUN] Hello! If you'd like,";
-	mes "[DRY-RUN] I can take your Chicken";
-	mes "[DRY-RUN] Eggs and transform them";
-	mes "[DRY-RUN] into Holy Eggs. It's something";
-	mes "[DRY-RUN] I do for others in celebration";
-	mes "[DRY-RUN] of this holy season.";
+	mes "[尼尔伦]";
+	mes "你好！如果你愿意，";
+	mes "我可以把你的鸡";
+	mes "蛋拿来，转化成";
+	mes "神圣的蛋。这是我";
+	mes "为他人庆祝这个";
+	mes "神圣季节所做的事情。";
 	next;
-	mes "[DRY-RUN] [Nerlen]";
-	mes "[DRY-RUN] Holy Eggs represent";
-	mes "[DRY-RUN] rebirth and, fittingly,";
-	mes "[DRY-RUN] can be used to restore";
-	mes "[DRY-RUN] life to your friends.";
-	mes "[DRY-RUN] Would you like me to";
-	mes "[DRY-RUN] make some for you?";
+	mes "[尼尔伦]";
+	mes "圣蛋代表";
+	mes "重生，恰如其分地，";
+	mes "可以用来恢复";
+	mes "你朋友的生命。";
+	mes "你想让我为你";
+	mes "制作一些吗？";
 	next;
-	switch(select("[DRY-RUN] What do I need to make Holy Eggs?:I want to make Holy Eggs.:Maybe next time.")) {
+	switch(select("我需要什么来制作圣蛋？:我想制作圣蛋。:也许下次。")) {
 	case 1:
-		mes "[DRY-RUN] [Nerlen]";
-		mes "[DRY-RUN] For each Holy Egg";
-		mes "[DRY-RUN] that you want me to";
-		mes "[DRY-RUN] make, you will need";
-		mes "[DRY-RUN] to bring me...";
+		mes "[尼尔伦]";
+		mes "每个圣蛋";
+		mes "你想让我";
+		mes "制作，你需要";
+		mes "带给我...";
 		next;
-		mes "[DRY-RUN] [Nerlen]";
-		mes "[DRY-RUN] ^4D4DFF1 White Herb^000000,";
-		mes "[DRY-RUN] ^4D4DFF1 Green Herb^000000,";
-		mes "[DRY-RUN] ^4D4DFF1 Yellow Herb^000000,";
-		mes "[DRY-RUN] ^4D4DFF1 Holy Water^000000, and";
-		mes "[DRY-RUN] ^4D4DFF1 Chicken Egg^000000.";
+		mes "[尼尔伦]";
+		mes "^4D4DFF1 白色草^000000,";
+		mes "^4D4DFF1 绿色草^000000,";
+		mes "^4D4DFF1 黄色草^000000,";
+		mes "^4D4DFF1 圣水^000000，和";
+		mes "^4D4DFF1 鸡蛋^000000.";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Nerlen]";
-		mes "[DRY-RUN] Alright, how many";
-		mes "[DRY-RUN] Holy Eggs would you";
-		mes "[DRY-RUN] like me to make you?";
-		mes "[DRY-RUN] I can only make up to";
-		mes "[DRY-RUN] 10 Holy Eggs at a time.";
-		mes "[DRY-RUN] Enter ''0'' to cancel.";
+		mes "[尼尔伦]";
+		mes "好的，你想要多少";
+		mes "圣蛋呢？";
+		mes "你想让我为你制作多少？";
+		mes "我一次最多只能制作";
+		mes "10 个圣蛋.";
+		mes "输入 ''0'' 以取消.";
 		next;
 		while(1) {
 			input .@input;
 			if (.@input == 0) {
-				mes "[DRY-RUN] [Nerlen]";
-				mes "[DRY-RUN] Oh, you changed your";
-				mes "[DRY-RUN] mind? Feel free to visit me";
-				mes "[DRY-RUN] whenever you want me to";
-				mes "[DRY-RUN] make you some Holy Eggs~";
+				mes "[尼尔伦]";
+				mes "哦，你改变主意了？";
+				mes "随时欢迎来找我";
+				mes "只要你想让我";
+				mes "为你制作一些圣蛋~";
 				close;
 			}
 			else if (.@input < 0 || .@input > 10) {
-				mes "[DRY-RUN] [Nerlen]";
-				mes "[DRY-RUN] I'm sorry, but I can only";
-				mes "[DRY-RUN] make up to 10 Holy Eggs";
-				mes "[DRY-RUN] at a time. If you wanted to";
-				mes "[DRY-RUN] cancel, then just enter ''0.''";
+				mes "[尼尔伦]";
+				mes "抱歉，我最多只能";
+				mes "制作10个圣蛋";
+				mes "一次。如果你想要";
+				mes "取消，那就输入''0.''";
 				next;
 			}
 			else {
 				if ((countitem(509) < .@input) || (countitem(511) < .@input) || (countitem(508) < .@input) || (countitem(523) < .@input) || (countitem(7605) < .@input)) {
-					mes "[DRY-RUN] [Nerlen]";
-					mes "[DRY-RUN] I'm sorry, but you don't";
-					mes "[DRY-RUN] have enough items to make";
-					mes "[DRY-RUN] Holy Eggs. You need the";
-					mes "[DRY-RUN] following for me to create";
-					mes "[DRY-RUN] each Holy Egg for you.";
+					mes "[尼尔伦]";
+					mes "对不起，但你没有";
+					mes "有足够的材料来制作";
+					mes "圣蛋。你需要以下材料";
+					mes "让我为你制作每个";
+					mes "圣蛋。";
 					next;
-					mes "[DRY-RUN] [Nerlen]";
-					mes "[DRY-RUN] ^4D4DFF1 White Herb^000000,";
-					mes "[DRY-RUN] ^4D4DFF1 Green Herb^000000,";
-					mes "[DRY-RUN] ^4D4DFF1 Yellow Herb^000000,";
-					mes "[DRY-RUN] ^4D4DFF1 Holy Water^000000, and";
-					mes "[DRY-RUN] ^4D4DFF1 Chicken Egg^000000.";
+					mes "[尼尔伦]";
+					mes "^4D4DFF1 白色草^000000,";
+					mes "^4D4DFF1 绿色草^000000,";
+					mes "^4D4DFF1 黄色草^000000,";
+					mes "^4D4DFF1 圣水^000000，和";
+					mes "^4D4DFF1 鸡蛋^000000.";
 					close;
 				}
 				else {
@@ -283,12 +283,12 @@ prontera,230,312,3	script	Nerlen#es07	79,{
 			}
 		}
 		if (checkweight(12019,.@input) == 0) {
-			mes "[DRY-RUN] [Nerlen]";
-			mes "[DRY-RUN] I'm sorry, but you";
-			mes "[DRY-RUN] won't be able to carry";
-			mes "[DRY-RUN] that many Holy Eggs now...";
-			mes "[DRY-RUN] You'd better free up more";
-			mes "[DRY-RUN] space in your Inventory first.";
+			mes "[尼尔伦]";
+			mes "对不起，但你";
+			mes "你将无法携带";
+			mes "现在有这么多圣蛋...";
+			mes "你最好腾出更多的";
+			mes "空间在你的背包里。";
 			close;
 		}
 		else {
@@ -298,17 +298,17 @@ prontera,230,312,3	script	Nerlen#es07	79,{
 			delitem 523,.@input; //Holy_Water
 			delitem 7605,.@input; //Egg
 			getitem 12019,.@input; //Holy_Egg
-			mes "[DRY-RUN] [Nerlen]";
-			mes "[DRY-RUN] Thank you!";
-			mes "[DRY-RUN] I hope you enjoy";
-			mes "[DRY-RUN] these Holy Eggs~";
-			mes "[DRY-RUN] Hope you to be with God's love.";
+			mes "[尼尔伦]";
+			mes "谢谢你！";
+			mes "我希望你喜欢";
+			mes "这些圣蛋~";
+			mes "希望你能感受到上帝的爱。";
 			close;
 		}
 	case 3:
-		mes "[DRY-RUN] [Nerlen]";
-		mes "[DRY-RUN] Alright, I understand.";
-		mes "[DRY-RUN] May God bless you.";
+		mes "[尼尔伦]";
+		mes "好的，我明白了。";
+		mes "愿上帝保佑你。";
 		close;
 	}
 }
@@ -631,33 +631,33 @@ morocc,131,26,5	script	Secret Corps#egg	880,{
 pay_dun00,22,127,0	script	Trace#egg1	844,{
 	if (easter2008 == 5) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Well...";
-		mes "[DRY-RUN] This is the place";
-		mes "[DRY-RUN] the Corps Member";
-		mes "[DRY-RUN] wanted me to find...";
-		mes "[DRY-RUN] Time to use all of";
-		mes "[DRY-RUN] these Holy Eggs.";
+		mes "嗯……";
+		mes "这里就是";
+		mes "军团成员";
+		mes "让我来找的...";
+		mes "是时候使用所有的";
+		mes "这些神圣的蛋了。";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Here we go...";
-			mes "[DRY-RUN] Will this really bring";
-			mes "[DRY-RUN] this ancient hero";
-			mes "[DRY-RUN] back to life? I'm...";
-			mes "[DRY-RUN] I'm kind of scared!";
+			mes "我们开始吧...";
+			mes "这真的能让";
+			mes "这位古老的英雄";
+			mes "复活吗？我...";
+			mes "我有点害怕！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
-			mes "[DRY-RUN] I guess I better go back to";
-			mes "[DRY-RUN] that Corps Member and let";
-			mes "[DRY-RUN] him know that it didn't work.";
+			mes "^333333*呼！*^000000 什么都没发生！";
+			mes "我想我最好回去找";
+			mes "那个军团成员，让";
+			mes "他知道这没成功。";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -665,17 +665,17 @@ pay_dun00,22,127,0	script	Trace#egg1	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Huh? Where did I put";
-			mes "[DRY-RUN] those 33 Holy Eggs";
-			mes "[DRY-RUN] that I needed for this?";
+			mes "嗯？我把";
+			mes "那33个神圣的蛋放在哪里了";
+			mes "我需要这些来做这个？";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] There was something";
-		mes "[DRY-RUN] here, but I can't tell";
-		mes "[DRY-RUN] for sure what it was...";
+		mes "这里有一些东西";
+		mes "但是我不能确定";
+		mes "那是什么...";
 		close;
 	}
 }
@@ -683,33 +683,33 @@ pay_dun00,22,127,0	script	Trace#egg1	844,{
 iz_dun02,340,346,0	script	Trace#egg	844,{
 	if (easter2008 == 6) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Well...";
-		mes "[DRY-RUN] This is the place";
-		mes "[DRY-RUN] the Corps Member";
-		mes "[DRY-RUN] wanted me to find...";
-		mes "[DRY-RUN] Time to use all of";
-		mes "[DRY-RUN] these Holy Eggs.";
+		mes "嗯……";
+		mes "这里就是";
+		mes "军团成员";
+		mes "让我来找的...";
+		mes "是时候使用所有的";
+		mes "这些神圣的蛋了。";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Here we go...";
-			mes "[DRY-RUN] Will this really bring";
-			mes "[DRY-RUN] this ancient hero";
-			mes "[DRY-RUN] back to life? I'm...";
-			mes "[DRY-RUN] I'm kind of scared!";
+			mes "我们开始吧...";
+			mes "这真的能让";
+			mes "这位古老的英雄";
+			mes "复活吗？我...";
+			mes "我有点害怕！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
-			mes "[DRY-RUN] I guess I better go back to";
-			mes "[DRY-RUN] that Corps Member and let";
-			mes "[DRY-RUN] him know that it didn't work.";
+			mes "^333333*呼！*^000000 什么都没发生！";
+			mes "我想我最好回去找";
+			mes "那个军团成员，让";
+			mes "他知道这没成功。";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -717,17 +717,17 @@ iz_dun02,340,346,0	script	Trace#egg	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Huh? Where did I put";
-			mes "[DRY-RUN] those 33 Holy Eggs";
-			mes "[DRY-RUN] that I needed for this?";
+			mes "嗯？我把";
+			mes "那33个神圣的蛋放在哪里了";
+			mes "我需要这些来做这个？";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] There was something";
-		mes "[DRY-RUN] here, but I can't tell";
-		mes "[DRY-RUN] for sure what it was...";
+		mes "这里有一些东西";
+		mes "但是我不能确定";
+		mes "那是什么...";
 		close;
 	}
 }
@@ -735,33 +735,33 @@ iz_dun02,340,346,0	script	Trace#egg	844,{
 mjo_dun03,308,256,0	script	Trace#egg2	844,{
 	if (easter2008 == 7) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Well...";
-		mes "[DRY-RUN] This is the place";
-		mes "[DRY-RUN] the Corps Member";
-		mes "[DRY-RUN] wanted me to find...";
-		mes "[DRY-RUN] Time to use all of";
-		mes "[DRY-RUN] these Holy Eggs.";
+		mes "嗯……";
+		mes "这里就是";
+		mes "军团成员";
+		mes "让我来找的...";
+		mes "是时候使用所有的";
+		mes "这些神圣的蛋了。";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Here we go...";
-			mes "[DRY-RUN] Will this really bring";
-			mes "[DRY-RUN] this ancient hero";
-			mes "[DRY-RUN] back to life? I'm...";
-			mes "[DRY-RUN] I'm kind of scared!";
+			mes "我们开始吧...";
+			mes "这真的能让";
+			mes "这位古老的英雄";
+			mes "复活吗？我...";
+			mes "我有点害怕！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
-			mes "[DRY-RUN] I guess I better go back to";
-			mes "[DRY-RUN] that Corps Member and let";
-			mes "[DRY-RUN] him know that it didn't work.";
+			mes "^333333*呼！*^000000 什么都没发生！";
+			mes "我想我最好回去找";
+			mes "那个军团成员，让";
+			mes "他知道这没成功。";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -769,17 +769,17 @@ mjo_dun03,308,256,0	script	Trace#egg2	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Huh? Where did I put";
-			mes "[DRY-RUN] those 33 Holy Eggs";
-			mes "[DRY-RUN] that I needed for this?";
+			mes "嗯？我把";
+			mes "那33个神圣的蛋放在哪里了";
+			mes "我需要这些来做这个？";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] There was something";
-		mes "[DRY-RUN] here, but I can't tell";
-		mes "[DRY-RUN] for sure what it was...";
+		mes "这里有一些东西";
+		mes "但是我不能确定";
+		mes "那是什么...";
 		close;
 	}
 }
@@ -787,33 +787,33 @@ mjo_dun03,308,256,0	script	Trace#egg2	844,{
 gl_prison,157,176,0	script	Trace#egg3	844,{
 	if (easter2008 == 8) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Well...";
-		mes "[DRY-RUN] This is the place";
-		mes "[DRY-RUN] the Corps Member";
-		mes "[DRY-RUN] wanted me to find...";
-		mes "[DRY-RUN] Time to use all of";
-		mes "[DRY-RUN] these Holy Eggs.";
+		mes "嗯……";
+		mes "这里就是";
+		mes "军团成员";
+		mes "让我来找的...";
+		mes "是时候使用所有的";
+		mes "这些神圣的蛋了。";
 		next;
 		if (countitem(12019) > 32) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Here we go...";
-			mes "[DRY-RUN] Will this really bring";
-			mes "[DRY-RUN] this ancient hero";
-			mes "[DRY-RUN] back to life? I'm...";
-			mes "[DRY-RUN] I'm kind of scared!";
+			mes "我们开始吧...";
+			mes "这真的能让";
+			mes "这位古老的英雄";
+			mes "复活吗？我...";
+			mes "我有点害怕！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
-			mes "[DRY-RUN] ...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
+			mes "...............................";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ^333333*Whew!*^000000 Nothing happened!";
-			mes "[DRY-RUN] I guess I better go back to";
-			mes "[DRY-RUN] that Corps Member and let";
-			mes "[DRY-RUN] him know that it didn't work.";
+			mes "^333333*呼！*^000000 什么都没发生！";
+			mes "我想我最好回去找";
+			mes "那个军团成员，让";
+			mes "他知道这没成功。";
 			close2;
 			delitem 12019,33; //Holy_Egg
 			set easter2008,9;
@@ -821,17 +821,17 @@ gl_prison,157,176,0	script	Trace#egg3	844,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Huh? Where did I put";
-			mes "[DRY-RUN] those 33 Holy Eggs";
-			mes "[DRY-RUN] that I needed for this?";
+			mes "嗯？我把";
+			mes "那33个神圣的蛋放在哪里了";
+			mes "我需要这些来做这个？";
 			close;
 		}
 	}
 	else {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] There was something";
-		mes "[DRY-RUN] here, but I can't tell";
-		mes "[DRY-RUN] for sure what it was...";
+		mes "这里有一些东西";
+		mes "但是我不能确定";
+		mes "那是什么...";
 		close;
 	}
 }

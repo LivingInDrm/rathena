@@ -273,53 +273,53 @@ ma_scene01,167,112,6	duplicate(Unidentified Creature#j)	Unidentified Creature#11
 
 malaya,227,311,4	script	Grandma#ma01	575,{
 	if (malaya_hi < 10) {
-		mes "[DRY-RUN] [Grandma]";
-		mes "[DRY-RUN] You're not from around here? Take care of yourself.";
+		mes "[奶奶]";
+		mes "你不是这里的人吗？请照顾好自己。";
 		next;
-		mes "[DRY-RUN] [Grandma]";
-		mes "[DRY-RUN] I'm worried because my daughter-in-law is pregnant. I hope nothing goes wrong.";
+		mes "[奶奶]";
+		mes "我很担心我的儿媳妇怀孕了。希望不会出什么问题。";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[DRY-RUN] [Grandma]";
-		mes "[DRY-RUN] I heard there is an outsider that is helping the village.";
+		mes "[奶奶]";
+		mes "我听说有个外来者在帮助这个村庄。";
 		next;
-		mes "[DRY-RUN] [Grandma]";
-		mes "[DRY-RUN] Then my daughter-in-law will be safe.";
+		mes "[奶奶]";
+		mes "那么我的儿媳妇就安全了。";
 		close;
 	}
 	if (rand(1,3) == 2) {
-		mes "[DRY-RUN] [Grandma]";
+		mes "[奶奶]";
 		mes "Heard there is this "+getd("$ma_name0"+rand(1,6)+"$")+" that follows Meoneonuncle around.";
 		next;
-		mes "[DRY-RUN] [Grandma]";
-		mes "[DRY-RUN] I will cheer for their forbidden love.";
+		mes "[奶奶]";
+		mes "我会为他们的禁忌之爱加油。";
 		close;
 	}
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] I'm worried about my pregnant daughter-in-law. Hope Meoneonuncle won't bother her.";
+	mes "[奶奶]";
+	mes "我很担心我怀孕的儿媳妇。希望梅奥农叔不会打扰她。";
 	next;
-	select("[DRY-RUN] Meoneonuncle?");
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] Not from around here? Let me tell you why even a foreigner like you should be careful.";
+	select("梅奥诺恩克尔？");
+	mes "[奶奶]";
+	mes "不是这里的人吗？让我告诉你为什么像你这样的外来者也应该小心。";
 	next;
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] Meoneonuncle was a woman who lived in Port Malaya long ago. She married a decent man and also had a baby.";
+	mes "[奶奶]";
+	mes "梅奥农叔是很久以前住在马来港的一个女人。她嫁给了一个体面的男人，还生了一个孩子。";
 	next;
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] But happiness never lasts forever, right? The baby was miscarried from an accident...";
+	mes "[奶奶]";
+	mes "但幸福总是不会永恒，对吧？那个婴儿因意外流产了...";
 	next;
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] She eventually passed away after grieving over her lost baby for days.";
+	mes "[奶奶]";
+	mes "她最终在为失去的婴儿悲伤了几天后去世了。";
 	next;
-	select("[DRY-RUN] That is a sad story.");
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] Meoneonuncle then started to appear in spirit and take away babies from pregnant women in the village.";
+	select("这是一个悲伤的故事。");
+	mes "[奶奶]";
+	mes "梅奥诺恩克尔随后开始以灵魂的形式出现，带走村里怀孕妇女的婴儿。";
 	next;
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] If you ever walk around Port Malaya at night...";
+	mes "[奶奶]";
+	mes "如果你在夜晚走在马来亚港周围...";
 	next;
-	mes "[DRY-RUN] [Grandma]";
-	mes "[DRY-RUN] And hear either tik-tik or wak-wak, be cautious because that is the sound of Meoneonuncle's wings flapping.";
+	mes "[奶奶]";
+	mes "并且听到 tik-tik 或 wak-wak 的声音，要小心，因为那是梅奥诺恩克尔翅膀拍打的声音。";
 	close;
 }
 
@@ -501,64 +501,64 @@ malaya,219,92,6	script	Little Kid#ma05	577,{
 
 malaya,363,283,4	script	Local#ma06	582,{
 	if (malaya_hi < 10) {
-		mes "[DRY-RUN] [Local]";
-		mes "[DRY-RUN] Hmm... is it time to be careful of the witches' curse?";
+		mes "[当地人]";
+		mes "嗯... 是时候小心女巫的诅咒了吗？";
 		next;
-		mes "[DRY-RUN] [Local]";
-		mes "[DRY-RUN] Beware of Mongkukurums needle, foreigner.";
+		mes "[当地人]";
+		mes "小心蒙古库鲁姆的针，外国人。";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[DRY-RUN] [Local]";
-		mes "[DRY-RUN] Welcome to Port Malaya, foreigner..";
+		mes "[当地人]";
+		mes "欢迎来到马来亚港，外国人..";
 		next;
-		mes "[DRY-RUN] [Local]";
-		mes "[DRY-RUN] The village is chaotic these days. If you see someone with red eyes, try not to stare at their eyes.";
+		mes "[当地人]";
+		mes "最近村子很混乱。如果你看到有人有红眼睛，尽量不要盯着他们的眼睛看。";
 		close;
 	}
 	set .@name$, getd("$ma_name0"+rand(1,6)+"$");
 	switch(rand(1,6)) {
 	case 1:
-		mes "[DRY-RUN] [Local]";
+		mes "[当地人]";
 		mes "Be careful walking around the village at night. "+.@name$+" was taken down by Wokwok.";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Local]";
+		mes "[当地人]";
 		mes .@name$+" is said to have successfully tamed a Tikbalang. This person must be courageous. Wonder if I'll get to see this tamed Tikbalang?";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Local]";
+		mes "[当地人]";
 		mes "Have you ever seen Bongisungisu? I heard "+.@name$+" is hunting down Bongisungisus.";
 		close;
 	case 4:
-		mes "[DRY-RUN] [Local]";
+		mes "[当地人]";
 		mes "If you plan to go out of the village, be careful of Tiucknuc. "+.@name$+" is said to be tricked by Tiucknuc and had to go to the hospital.";
 		close;
 	case 5:
 	case 6:
 		break;
 	}
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] The village is chaotic these days. Looks like Mongkukurum is back in the village.";
+	mes "[当地人]";
+	mes "最近村子很混乱。看起来蒙古库鲁姆又回到村子里了。";
 	next;
-	select("[DRY-RUN] Mongkukurum?");
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] A monster that is also called witch. Looks like a person and also wears clothes.";
+	select("蒙古库鲁姆？");
+	mes "[当地人]";
+	mes "一种也被称为女巫的怪物。看起来像人，还穿着衣服。";
 	next;
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] Mongkukurum makes a doll out of the people it sees and curses it with needles.";
+	mes "[当地人]";
+	mes "蒙古库鲁姆用它看到的人做成娃娃，并用针诅咒它。";
 	next;
-	select("[DRY-RUN] Is there a way to recognize this monster?");
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] There is one way. All Mongkukurum have red eyes.";
+	select("有没有办法识别这个怪物？");
+	mes "[当地人]";
+	mes "有一个方法。所有蒙古库鲁姆都有红眼睛。";
 	next;
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] You can recognize them by their eyes but! You must remember one thing.";
+	mes "[当地人]";
+	mes "你可以通过他们的眼睛来识别他们，但！你必须记住一件事。";
 	next;
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] You will be captivated by Mongkukurum if you stare at their eyes too long.";
+	mes "[当地人]";
+	mes "如果你盯着蒙古库鲁姆的眼睛太久，你会被吸引住。";
 	next;
-	mes "[DRY-RUN] [Local]";
-	mes "[DRY-RUN] Never ever stare into their eyes for too long.";
+	mes "[当地人]";
+	mes "绝不要盯着他们的眼睛太久。";
 	close;
 }
 
@@ -604,84 +604,84 @@ malaya,41,127,6	script	Old Man #ma07	574,{
 
 malaya,63,185,4	script	Woman#ma08	583,{
 	if (malaya_hi < 10) {
-		mes "[DRY-RUN] [Woman]";
-		mes "[DRY-RUN] I don't have anything to share with you.";
+		mes "[女人]";
+		mes "我没有什么可以和你分享的。";
 		close;
 	} else if (malaya_hi < 20) {
-		mes "[DRY-RUN] [Woman]";
-		mes "[DRY-RUN] Im worried about the children. I hope they aren't terrified from whats going on in the village.";
+		mes "[女人]";
+		mes "我担心孩子们。我希望他们不会因为村子里发生的事情而感到恐惧。";
 		close;
 	}
 	if (rand(1,3) == 2) {
 		set .@name$, getd("$ma_name0"+rand(1,6)+"$");
 		set .@rand, rand(1,10);
 		if (.@rand < 5) {
-			mes "[DRY-RUN] [Woman]";
+			mes "[女人]";
 			mes "I like fun stories. Not so long ago, "+.@name$+" came and told me a funny story.";
 			next;
 		}
 		switch(.@rand) {
 		case 1:
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] 'My aunt stepped on an ant.'";
+			mes "[女人]";
+			mes "'我姑姑踩到了一只蚂蚁。'";
 			next;
 			break;
 		case 2:
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] 'You eat chili on a chilly day.'";
+			mes "[女人]";
+			mes "'你在寒冷的日子里吃辣椒。'";
 			next;
 			break;
 		case 3:
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] 'Why are you putting flour on that flower?'";
+			mes "[女人]";
+			mes "'你为什么要把面粉放在那朵花上？'";
 			next;
 			break;
 		case 4:
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] At the Tool Store, 'Ill buy the needle and thread! You buy the hay to lose the needle in.'";
+			mes "[女人]";
+			mes "在工具商店，'我会买针和线！你买干草来让针掉进去。'";
 			next;
-			mes "[DRY-RUN] [Woman]";
+			mes "[女人]";
 			mes .@name$+" said that and was kicked out of the Tool Store.";
 			next;
 			break;
 		case 5:
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] A Kafra Employee I'm friends with told me a story about a customer.";
+			mes "[女人]";
+			mes "我一个朋友的卡普拉职员告诉我一个关于顾客的故事。";
 			next;
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] 'Kafra, the wise never marry and when they marry, they become otherwise.'";
+			mes "[女人]";
+			mes "‘卡普拉，聪明的人从不结婚，结婚后就变得不一样。’";
 			next;
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] He he... I do like funny stories but a bit difficult for my taste.";
+			mes "[女人]";
+			mes "嘿嘿……我确实喜欢有趣的故事，但对我来说有点难。";
 			close;
 		default:
-			mes "[DRY-RUN] [Woman]";
+			mes "[女人]";
 			mes "I like fun stories. Oh by the way! "+.@name$+", love is photogenic. Don't you agree?";
 			next;
-			mes "[DRY-RUN] [Woman]";
-			mes "[DRY-RUN] It needs darkness to develop.";
+			mes "[女人]";
+			mes "它需要黑暗来发展。";
 			next;
 		}
-		mes "[DRY-RUN] [Woman]";
-		mes "[DRY-RUN] He he. Isn't it fun?";
+		mes "[女人]";
+		mes "嘿嘿。难道这不是很有趣吗？";
 		close;
 	}
-	mes "[DRY-RUN] [Woman]";
-	mes "[DRY-RUN] If you hear a baby crying from the forest outside of the village, never go near it.";
+	mes "[女人]";
+	mes "如果你听到村外森林里有婴儿哭声，绝不要靠近它。";
 	next;
-	select("[DRY-RUN] Why?");
-	mes "[DRY-RUN] [Woman]";
-	mes "[DRY-RUN] There is a monster named Tiucknuc that roams around outside of the village and cries after transforming himself into a baby.";
+	select("为什么？");
+	mes "[女人]";
+	mes "有一个名叫Tiucknuc的怪物在村外游荡，变成婴儿后会哭。";
 	next;
-	mes "[DRY-RUN] [Woman]";
-	mes "[DRY-RUN] But when kind travelers pick up the baby, it turns back into its original form and attacks.";
+	mes "[女人]";
+	mes "但是当善良的旅行者抱起这个婴儿时，它会变回原形并攻击。";
 	next;
-	select("[DRY-RUN] Sounds like a sneaky monster.");
-	mes "[DRY-RUN] [Woman]";
-	mes "[DRY-RUN] Yes, this monster is bad to trick the kindness of travelers but...";
+	select("听起来像是个狡猾的怪物。");
+	mes "[女人]";
+	mes "是的，这个怪物很坏，欺骗旅行者的善良，但是...";
 	next;
-	mes "[DRY-RUN] [Woman]";
-	mes "[DRY-RUN] There is rumor that the monster came from the soul of a baby that never been born. So sad.";
+	mes "[女人]";
+	mes "有传言说这个怪物来自一个从未出生的婴儿的灵魂。真悲伤。";
 	close;
 }
 

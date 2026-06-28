@@ -89,23 +89,23 @@ OnGo:
 }
 
 -	script	Puppy#bra	-1,{
-	mes "[DRY-RUN] [Puppy]";
-	mes "[DRY-RUN] bow! wow wow!";
+	mes "[小狗]";
+	mes "汪！汪汪！";
 	if (checkquest(9030) == 1) {
 		if (brazil_kid < 3) {
 			next;
 			brazil_kid++;
 			mes "[" + strcharinfo(0) + "]";
 			if (brazil_kid == 3) {
-				mes "[DRY-RUN] Good. I found all 3 puppies.";
-				mes "[DRY-RUN] Now I need to go tell Angelo.";
+				mes "很好。我找到了所有3只小狗。";
+				mes "现在我需要去告诉安杰洛。";
 				brazil_kid = 0;
 				erasequest 9030;
 				setquest 9031;
 			}
 			else {
-				mes "[DRY-RUN] Ah... who's a good puppy?";
-				mes "[DRY-RUN] Ok, where are the others?";
+				mes "啊...谁是好小狗？";
+				mes "好的，其他的在哪里？";
 			}
 			if (compare(strnpcinfo(2),"1")) setarray .@i[0],2,3;
 			else if (compare(strnpcinfo(2),"2")) setarray .@i[0],1,3;
@@ -809,48 +809,48 @@ brasilis,59,226,3	script	Poring#bra	4_PORING,{}
 bra_fild01,75,83,5	script	Toucan#bra	2073,2,2,{
 OnTouch:
 	if (brazil_gua == 6) {
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] Baaeecc!";
-		mes "[DRY-RUN] I've never seen you before.";
-		mes "[DRY-RUN] Baaeec!";
+		mes "[巨嘴鸟]";
+		mes "咩咩咩！";
+		mes "我以前从未见过你。";
+		mes "咩咩！";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] It's the middle of the new and old continent... I know I've never seen you before but you seem familiar, like a woman dancing a samba. ";
+		mes "[巨嘴鸟]";
+		mes "这是新旧大陆的中间...我知道我以前从未见过你，但你看起来很熟悉，就像一个跳桑巴舞的女人。";
 		next;
-		select("[DRY-RUN] What are you talking about?");
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] I can feel some similar power like guarana kid. bbaaaeeeccc!";
+		select("你在说什么?");
+		mes "[巨嘴鸟]";
+		mes "我能感受到一些类似于瓜拉那小孩的力量。咩咩咩！";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] That kid has had a really lonely time, baaecc! Perhaps you are a friend of him? Baaeec!!";
+		mes "[巨嘴鸟]";
+		mes "那个孩子过得很孤独，巴艾克！也许你是他的朋友？巴艾克！！";
 		next;
-		select("[DRY-RUN] Not yet... but I want to be a friend.");
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] The kid who received care from guarana woman is also a friend of animals. Bbaaeecc!";
+		select("还没有……但我想成为朋友。");
+		mes "[巨嘴鸟]";
+		mes "那个接受过瓜拉那女人照顾的孩子也是动物的朋友。巴艾克！";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] I'd like to give the symbol of a toucan representative for the kid. Bbaaeecc!";
+		mes "[巨嘴鸟]";
+		mes "我想给那个孩子一个巨嘴鸟代表的象征。巴艾克！";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] If you want to relieve his loneliness, can you help me?";
+		mes "[巨嘴鸟]";
+		mes "如果你想缓解他的孤独，你能帮我吗？";
 		next;
-		select("[DRY-RUN] Absolutely!");
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] It's my feather.";
-		mes "[DRY-RUN] Send it to the kid.";
-		mes "[DRY-RUN] We will keep our promise of friendship between guarana kid and Toucan forever. Bbaaeecc!";
+		select("当然可以！");
+		mes "[巨嘴鸟]";
+		mes "这是我的羽毛。";
+		mes "把它送给那个孩子。";
+		mes "我们将永远保持瓜拉那孩子和巨嘴鸟之间的友谊承诺。巴艾克！";
 		next;
-		mes "[DRY-RUN] - You take a feather from Toucan. - ";
+		mes "- 你从巨嘴鸟那里拿到了一根羽毛。 -";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] There have to be others around here like me.";
-		mes "[DRY-RUN] Why don't you find a jaguar Bbaaeecc!";
+		mes "[巨嘴鸟]";
+		mes "这里一定还有其他像我一样的存在。";
+		mes "你为什么不去找一只美洲虎Bbaaeecc！";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] I will give a blessing from Toucan to you.";
+		mes "[巨嘴鸟]";
+		mes "我会给你来自巨嘴鸟的祝福。";
 		next;
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] Fly fly far away. bbaaaeeeccckkk--!";
+		mes "[巨嘴鸟]";
+		mes "飞走，飞得远远的。bbaaaeeeccckkk--！";
 		brazil_gua = 7;
 		changequest 2196,2197;
 		specialeffect2 EF_SEISMICWEAPON;
@@ -859,8 +859,8 @@ OnTouch:
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [Toucan]";
-		mes "[DRY-RUN] Bbbaaeec~! Baaeec~!";
+		mes "[巨嘴鸟]";
+		mes "Bbbaaeec~！Baaeec~！";
 		close;
 	}
 	end;
@@ -869,51 +869,51 @@ OnTouch:
 bra_fild01,34,184,5	script	Jaguar#bra	2072,2,2,{
 OnTouch_:
 	if (brazil_gua == 7) {
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Hhooww..hhooww.....";
+		mes "[美洲虎]";
+		mes "Hhooww..hhooww.....";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Smelling! This smell is from a human!";
-		mes "[DRY-RUN] Somewhere, a human!";
-		mes "[DRY-RUN] I got it. You are!!!";
+		mes "[美洲虎]";
+		mes "闻到了！这个味道来自一个人类！";
+		mes "某个地方，有一个人类！";
+		mes "我明白了。你就是！！！";
 		specialeffect EF_HIT1,AREA,"Jaguar#bra";
 		emotion ET_HUK, playerattached();
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Don't be afraid human.";
-		mes "[DRY-RUN] I don't have enough power to hunt humans, just waiting time to end my lifetime in this jungle.";
+		mes "[美洲虎]";
+		mes "不要害怕，人类。";
+		mes "我没有足够的力量去猎杀人类，只是在等待时间结束我在这丛林中的一生。";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Anyway you can talk with me, are you a guarana kid?";
+		mes "[美洲虎]";
+		mes "无论如何，你可以和我说话，你是个瓜拉那小孩吗？";
 		next;
-		select("[DRY-RUN] Yes? N...o......actually....");
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] The son of guarana woman became our friend also.";
-		mes "[DRY-RUN] They treated all life preciously.";
-		mes "[DRY-RUN] I hope you are same the as her.";
+		select("是吗？不……其实……");
+		mes "[美洲虎]";
+		mes "瓜拉那女人的儿子也成了我们的朋友。";
+		mes "他们珍惜所有生命。";
+		mes "我希望你和她一样。";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Bird's chirpings informed me.";
-		mes "[DRY-RUN] The son of guarana woman has a diseased heart.";
-		mes "[DRY-RUN] Her brothers made him lonely, don't you think?";
+		mes "[美洲虎]";
+		mes "鸟儿的鸣叫告诉了我。";
+		mes "瓜拉那女人的儿子有一颗病态的心。";
+		mes "她的兄弟们让他感到孤独，你不觉得吗？";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Here is fresh meat that I hunted just a few days ago.";
-		mes "[DRY-RUN] Take it and give it to the poor kid.";
+		mes "[美洲虎]";
+		mes "这里是我几天前猎到的新鲜肉。";
+		mes "拿去给那个可怜的小孩。";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] I can give this tiny thing to you so, don't forget it.";
-		mes "[DRY-RUN] The jungle will welcome you whenever!";
+		mes "[美洲虎]";
+		mes "我可以把这个小东西给你，所以不要忘记它。";
+		mes "丛林随时欢迎你！";
 		next;
-		mes "[DRY-RUN] - You get fresh meat from Jaguar. -";
+		mes "- 你可以从美洲虎那里获得新鲜的肉。 -";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] Monkey, who's always meddling with others, wants to meet you.";
+		mes "[美洲虎]";
+		mes "总是喜欢插手他人的猴子想见你。";
 		next;
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] I will give you a Jaguar's high blessing.";
-		mes "[DRY-RUN] Go to monkey by flowing through the wind like a bee.";
-		mes "[DRY-RUN] Let's meet again my friend!";
+		mes "[美洲虎]";
+		mes "我将给你美洲虎的高尚祝福。";
+		mes "像蜜蜂一样随风而行去找猴子。";
+		mes "再见了，我的朋友！";
 		brazil_gua = 8;
 		changequest 2197,2198;
 		close2;
@@ -921,8 +921,8 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [Jaguar]";
-		mes "[DRY-RUN] krrrrrr....";
+		mes "[美洲虎]";
+		mes "krrrrrr....";
 		close;
 	}
 	end;

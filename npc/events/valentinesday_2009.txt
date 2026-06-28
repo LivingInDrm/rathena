@@ -26,117 +26,117 @@
 // Marco Bassinio (Chocolate/Chocolate Box maker)
 //============================================================
 prontera,164,174,4	script	Trader#Val09	58,{
-	mes "[DRY-RUN] [Marco Bassinio]";
-	mes "[DRY-RUN] Hey, folks! Here's something you don't see everyday!";
-	mes "[DRY-RUN] Something you can never find in Rune-Midgarts!";
-	mes "[DRY-RUN] Something that makes you happy with just one bite!";
+	mes "[马尔科·巴西尼奥]";
+	mes "嘿，大家好！这是你们每天见不到的东西！";
+	mes "在卢恩-米德加兹你永远找不到的东西！";
+	mes "只需一口就能让你快乐的东西！";
 	next;
-	mes "[DRY-RUN] [Marco Bassinio]";
-	mes "[DRY-RUN] It's the perfect dessert and the perfect gift for loved ones.";
-	mes "[DRY-RUN] High-quality, traditional homemade chocolate only 5000z each!";
+	mes "[马尔科·巴西尼奥]";
+	mes "这是完美的甜点，也是送给爱人的完美礼物。";
+	mes "高品质的传统自制巧克力，每个只要5000金币！";
 	next;
-	switch(select("[DRY-RUN] I'll take it, please!:I want to wrap the chocolate!:End trading.")) {
+	switch(select("我想要这个，请！:我想包装巧克力！:结束交易。")) {
 		case 1:
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] Ahaha, my dear.";
-			mes "[DRY-RUN] This chocolate is nothing like others.";
-			mes "[DRY-RUN] Every piece bears the devotion of the person who made it!";
+			mes "[马尔科·巴西尼奥]";
+			mes "哈哈，我亲爱的。";
+			mes "这巧克力与其他的完全不同。";
+			mes "每一块都承载着制作它的人的心意！";
 			next;
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] So, that's why I can't sell more than 5 of them at a time.";
-			mes "[DRY-RUN] If you really really want more, then talk to me again.";
-			mes "[DRY-RUN] How many do you want anyway?";
+			mes "[马尔科·巴西尼奥]";
+			mes "所以，我一次最多只能卖5块。";
+			mes "如果你真的想要更多，那就再来找我。";
+			mes "你到底想要多少？";
 			next;
 			while(.@input <= 0 || .@input > 5) {
 				input .@input;
 				if (.@input < 1) {
-					mes "[DRY-RUN] [Marco Bassinio]";
-					mes "[DRY-RUN] Oh, it's such a shame!";
-					mes "[DRY-RUN] I'm sure you'll miss this opportunity and regret you didn't buy it.";
+					mes "[马尔科·巴西尼奥]";
+					mes "哦，真可惜！";
+					mes "我敢肯定你会错过这个机会，后悔没有买。";
 					next;
-					mes "[DRY-RUN] [Marco Bassinio]";
-					mes "[DRY-RUN] Remember, you can never find this anywhere else!";
-					mes "[DRY-RUN] Come back anytime, when you change your mind.";
+					mes "[马尔科·巴西尼奥]";
+					mes "记住，你在其他地方永远找不到这个！";
+					mes "随时欢迎你回来，当你改变主意的时候。";
 					close;
 				}
 				if (.@input > 5) {
-					mes "[DRY-RUN] [Marco Bassinio]";
-					mes "[DRY-RUN] Ugh.. Didn't I tell you?";
-					mes "[DRY-RUN] 5 is the maximum!";
-					mes "[DRY-RUN] I can't sell more than that to the same person.";
+					mes "[马尔科·巴西尼奥]";
+					mes "呃..我不是告诉过你吗？";
+					mes "最多只能买5个！";
+					mes "我不能卖超过这个数量给同一个人。";
 					next;
-					mes "[DRY-RUN] [Marco Bassinio]";
-					mes "[DRY-RUN] And you know it's not like an everyday meal.";
-					mes "[DRY-RUN] Eating too much is not really good for you.";
+					mes "[马尔科·巴西尼奥]";
+					mes "而且你知道这可不是日常餐食。";
+					mes "吃太多对你并不好。";
 					next;
 				}
 			}
 			if (!checkweight(558, .@input)) {
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] You're carrying too many items.";
-				mes "[DRY-RUN] Please use the Kafra Services.";
+				mes "[马尔科·巴西尼奥]";
+				mes "你携带的物品太多了。";
+				mes "请使用卡普拉服务。";
 				close;
 			}
 			set .@price, .@input * 5000;
 			if (Zeny < .@price) {
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] Looks like you don't have enough zeny with ya.";
-				mes "[DRY-RUN] Maybe you should borrow some zeny from a friend.";
-				mes "[DRY-RUN] Cuz, I'm not gonna be here everyday.";
+				mes "[马尔科·巴西尼奥]";
+				mes "看起来你身上没有足够的金币。";
+				mes "也许你应该向朋友借一些金币。";
+				mes "因为，我不会每天都在这里。";
 				close;
 			} else {
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] Good for you!";
-				mes "[DRY-RUN] It's also perfect as a gift!";
-				mes "[DRY-RUN] You know you can't get this kind of chocolate normally.";
+				mes "[马尔科·巴西尼奥]";
+				mes "对你来说真是太好了！";
+				mes "这也是作为礼物的完美选择！";
+				mes "你知道你通常无法得到这种巧克力。";
 				next;
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] If you want more, you should come back.";
-				mes "[DRY-RUN] Might be a good idea to buy some more while you have a chance...!";
+				mes "[马尔科·巴西尼奥]";
+				mes "如果你想要更多，应该回来找我。";
+				mes "在你有机会的时候，买一些可能是个好主意...！";
 				set Zeny,Zeny - .@price;
 				getitem 558,.@input;
 				close;
 			}
 		case 2:
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] If you want to gift-wrap the chocolate, of course, you need chocolate, plus, wrapping paper, wrapping strap and a box.";
+			mes "[马尔科·巴西尼奥]";
+			mes "如果你想要礼品包装巧克力，当然，你需要巧克力，还有包装纸、包装带和一个盒子。";
 			next;
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] You also need to pay 500 zeny to carve your name on the box.";
-			mes "[DRY-RUN] Are you all prepared...?";
+			mes "[马尔科·巴西尼奥]";
+			mes "你还需要支付500金币来在盒子上刻上你的名字。";
+			mes "你准备好了吗...？";
 			next;
 			if (countitem(7175) < 1 || countitem(7174) < 1 || countitem(7948) < 1 || Zeny < 500) {
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] Hmm.. Looks like you don't have enough materials to decorate the gift box..";
-				mes "[DRY-RUN] You can't just put your gift into some plain looking box..";
-				mes "[DRY-RUN] Don't you think?";
+				mes "[马尔科·巴西尼奥]";
+				mes "嗯.. 看起来你没有足够的材料来装饰礼品盒..";
+				mes "你不能把礼物放进一个普通的盒子里..";
+				mes "你不觉得吗？";
 				next;
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] You need to bring some wrapping paper, wrapping strap, and a box.";
-				mes "[DRY-RUN] Oh, also bring 500 zeny, and don't forget to bring your true loving heart with you!!";
+				mes "[马尔科·巴西尼奥]";
+				mes "你需要带一些包装纸、包装带和一个盒子。";
+				mes "哦，还要带500金币，别忘了带上你真诚的爱心！！";
 				close;
 			}
 			if (countitem(558) < 1) {
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] Hey, look, adventurer!";
-				mes "[DRY-RUN] I can't create something right away!";
-				mes "[DRY-RUN] You know I'm not an alchemist or anything.";
+				mes "[马尔科·巴西尼奥]";
+				mes "嘿，看看，冒险者！";
+				mes "我不能立刻创造出东西！";
+				mes "你知道我不是炼金术士或其他什么。";
 				next;
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] You're not saying that you want an empty chocolate box without any chocolate in it, am I right?";
+				mes "[马尔科·巴西尼奥]";
+				mes "你不是在说你想要一个空的巧克力盒子，没有巧克力在里面吧，对吧？";
 				close;
 			}
 			if (!checkweight(12744,1)) {
-				mes "[DRY-RUN] [Marco Bassinio]";
-				mes "[DRY-RUN] You're carrying too many items.";
-				mes "[DRY-RUN] Please use the Kafra Services.";
+				mes "[马尔科·巴西尼奥]";
+				mes "你携带的物品太多了。";
+				mes "请使用卡普拉服务。";
 				close;
 			}
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] Here, look!";
-			mes "[DRY-RUN] It's your chocolate box with your name on it.";
-			mes "[DRY-RUN] Isn't it fabulous?";
-			mes "[DRY-RUN] See, your name looks great on the box!";
+			mes "[马尔科·巴西尼奥]";
+			mes "看，这里！";
+			mes "这是你的巧克力盒，上面有你的名字。";
+			mes "是不是很棒？";
+			mes "看，你的名字在盒子上看起来很不错！";
 			next;
 			delitem 558,1;
 			delitem 7175,1;
@@ -144,18 +144,18 @@ prontera,164,174,4	script	Trader#Val09	58,{
 			delitem 7948,1;
 			set Zeny,Zeny-500;
 			getnameditem 12744,strcharinfo(0);
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] Happy Valentine's Day!";
-			mes "[DRY-RUN] Valentine's the reason I came back.";
+			mes "[马尔科·巴西尼奥]";
+			mes "情人节快乐！";
+			mes "情人节是我回来的理由。";
 			close;
 		case 3:
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] Oh, it's such a shame!";
-			mes "[DRY-RUN] I'm sure you'll miss this opportunity and regret you didn't buy it.";
+			mes "[马尔科·巴西尼奥]";
+			mes "哦，真可惜！";
+			mes "我敢肯定你会错过这个机会，后悔没有买。";
 			next;
-			mes "[DRY-RUN] [Marco Bassinio]";
-			mes "[DRY-RUN] Remember, you can never find this anywhere else!";
-			mes "[DRY-RUN] Come back anytime, when you change your mind.";
+			mes "[马尔科·巴西尼奥]";
+			mes "记住，你在其他地方永远找不到这个！";
+			mes "随时欢迎你回来，当你改变主意的时候。";
 			close;
 	}
 }

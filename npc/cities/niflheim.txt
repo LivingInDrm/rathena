@@ -38,33 +38,33 @@ niflheim,52,147,3	script	Keedz#nif	796,{
 niflheim,195,211,6	script	Gigantia#nif	796,3,3,{
 	if (isequipped(5038) || isequipped(2257) || isequipped(2256)) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "What's up?";
+		mes "怎么了？";
 		next;
 		mes "[其甘提阿]";
-		mes "Just...";
-		mes "Come over here.";
-		mes "I have something";
-		mes "I must do for you.";
+		mes "只是...";
+		mes "过来这里。";
+		mes "我有事情要为你做。";
+		mes "我必须为你做一些事情。";
 		next;
 		mes "[其甘提阿]";
-		mes "Your horn is crooked.";
-		mes "Always make sure your horn";
-		mes "is worn straight and neat.";
-		mes "The Lord of Death is always";
-		mes "looking at you.";
+		mes "你的角歪了。";
+		mes "一定要确保你的角";
+		mes "是笔直且整齐的。";
+		mes "死亡之主总是在";
+		mes "看着你。";
 		close;
 	}
 	mes "[其甘提阿]";
 	mes "死灵骑士总是看的一清二楚";
 	mes "[其甘提阿]";
-	mes "Hey, wait!";
-	mes "Death's sweet embrace.";
+	mes "嘿，等一下！";
+	mes "死亡的甜蜜拥抱。";
 	close;
 
 OnTouch_:
 	if (isequipped(5038) || isequipped(2257) || isequipped(2256)) {
-		mes "[Gigantia]";
-		mes "Hey, wait!";
+		mes "[吉甘提亚]";
+		mes "嘿，等一下！";
 		close;
 	}
 	end;
@@ -114,53 +114,53 @@ nif_in,156,93,5	script	Child#niflheim	793,{
 	mes "活着的时候被人们吃掉了，";
 	mes "现在换我来吃你了，咕咕咕，";
 	mes "啊啊，没想到死了后还会有这种世界，咕咕咕";
-	mes "Mommy, have you seen my mommy?";
-	mes "I wanna go home...*Sob*";
+	mes "妈妈，你见过我的妈妈吗？";
+	mes "我想回家... *呜呜*";
 	next;
-	switch(select("About the witch:About the curse:Cancel.")) {
+	switch(select("关于女巫:关于诅咒:取消。")) {
 	case 1:
-		mes "[Alakina Ann]";
-		mes "Witch...? I've never seen a witch, but I've read about them in books. I'm not sure if they exist or not, but it would be so horrifying if they did...";
+		mes "[阿拉基娜·安]";
+		mes "女巫...? 我从未见过女巫，但我在书中读过她们。我不确定她们是否存在，但如果存在的话，那会是多么可怕...";
 		next;
-		mes "[Alakina Ann]";
-		mes "Why is it so cold in here...?";
-		mes "A-aren't you cold, or even scared? I wanna go home... It's warm over there. Could you help me get back... Please...? H-help me...";
+		mes "[阿拉基娜·安]";
+		mes "这里怎么这么冷...? ";
+		mes "你不冷，甚至不害怕吗？我想回家... 那里很温暖。你能帮我回去吗... 请...? 帮帮我...";
 		close;
 	case 2:
-		mes "[Alakina Ann]";
-		mes "A c-curse...?";
-		mes "My grandma says that there are lots of curses in the world. Some of them, you can tell it's a curse. But there are other curses that follow you throughout life...";
+		mes "[阿拉基娜·安]";
+		mes "一个...诅咒...? ";
+		mes "我奶奶说这个世界上有很多诅咒。有些你可以看出来是诅咒。但还有其他的诅咒会伴随你一生...";
 		next;
-		mes "[Alakina Ann]";
-		mes "Grandma says curses can take other forms... Like if someone's always mad at you, and won't forgive you, you can see that as a curse too.";
+		mes "[阿拉基娜·安]";
+		mes "奶奶说诅咒可以有其他形式... 比如如果有人总是对你生气，不愿意原谅你，你也可以把它看作是诅咒。";
 		next;
-		mes "[Alakina Ann]";
-		mes "My grandma told me there's only one spell that can break a strong curse that you can't lift with Blessings...";
+		mes "[阿拉基娜·安]";
+		mes "我奶奶告诉我，只有一个咒语可以解除强大的诅咒，而这个诅咒是无法用祝福解除的... ";
 		next;
-		mes "[Alakina Ann]";
-		mes "Klaatu...";
-		mes "Verata.....";
-		mes "Ne...ni...umm...?";
-		mes "What was the last part?";
-		mes "I-I can't remember";
-		mes "the last part of the spell!";
+		mes "[阿拉基娜·安]";
+		mes "克拉图... ";
+		mes "维拉塔.....";
+		mes "呃...呃...嗯...？";
+		mes "最后一部分是什么？";
+		mes "我...我记不起来了";
+		mes "咒语的最后一部分！";
 		next;
-		mes "[Alakina Ann]";
-		mes "If you repeat the spell in that order, it will release you from someone's anger and hate. And if you do it near a bad spirit, they might get the curse instead.";
+		mes "[阿拉基娜·安]";
+		mes "如果你按这个顺序重复咒语，它将使你摆脱某人的愤怒和仇恨。如果你在一个坏灵魂附近这样做，他们可能会得到诅咒。";
 		next;
-		mes "[Alakina Ann]";
-		mes "Why are you asking me about these scary kind of things...? I just wanna go home...";
+		mes "[阿拉基娜·安]";
+		mes "你为什么要问我这些可怕的事情...? 我只想回家... ";
 		close;
 	case 3:
-		mes "[Alakina Ann]";
-		mes "It's so cold in here...";
-		mes "I'm freezing...";
-		mes "And I wanna go home and";
-		mes "get away from this scary place...";
+		mes "[阿拉基娜·安]";
+		mes "这里好冷... ";
+		mes "我快冻僵了... ";
+		mes "我想回家，";
+		mes "远离这个可怕的地方... ";
 		next;
-		mes "[Alakina Ann]";
-		mes "Please... help me.";
-		mes "Could you take me with you...?";
+		mes "[阿拉基娜·安]";
+		mes "请... 帮帮我。";
+		mes "你能带我一起走吗...? ";
 		close;
 	}
 }

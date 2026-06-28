@@ -19,32 +19,32 @@
 // Warpers :: acolyte_warp
 //============================================================
 prontera,98,121,4	script	Acolyte#Prtclear	90,{
-	mes "[DRY-RUN] [Keiki]";
-	mes "[DRY-RUN] Hello there, adventurer.";
-	mes "[DRY-RUN] I've been studying magic from all over Rune-Midgard to upgrade what I believe to be one of the greatest skills available to the acolyte class.";
+	mes "[凯基]";
+	mes "你好，冒险者。";
+	mes "我一直在研究来自整个米德加尔特的魔法，以提升我认为是服事职业最伟大的技能之一。";
 	next;
 
 	if (is_function("VIP_iRO_Acolyte"))
 		callfunc "VIP_iRO_Acolyte","[Keiki]","Juno";
 
-	mes "[DRY-RUN] [Keiki]";
-	mes "[DRY-RUN] I am the one and only Acolyte that has attained the Level 10 Warp Portal skill!";
+	mes "[凯基]";
+	mes "我是唯一一个达到了10级传送阵技能的服事！";
 	emotion ET_THINK, playerattached();
 	next;
-	mes "[DRY-RUN] [Keiki]";
-	mes "[DRY-RUN] That's right! And...";
-	mes "[DRY-RUN] I promise you that I don't forget locations that I have already memorized.";
-	mes "[DRY-RUN] One day I will level up my skills to warp to wherever I please~";
+	mes "[凯基]";
+	mes "没错！而且……";
+	mes "我向你保证，我不会忘记我已经记住的位置。";
+	mes "有一天我会提升我的技能，传送到我想去的任何地方~";
 	next;
-	mes "[DRY-RUN] [Keiki]";
-	mes "[DRY-RUN] I am willing to warp you to the many locations that I have memorized for a small fee.";
-	mes "[DRY-RUN] Would you like to use this service?";
+	mes "[凯基]";
+	mes "我愿意以少量费用将你传送到我记住的许多地点。";
+	mes "你想使用这个服务吗？";
 	next;
-	switch(select("[DRY-RUN] Yes:No")) {
+	switch(select("是:否")) {
 	case 1:
-		mes "[DRY-RUN] [Keiki]";
-		mes "[DRY-RUN] Where would you like to go to?";
-		mes "[DRY-RUN] I wish you goodluck on your journey.";
+		mes "[凯基]";
+		mes "你想去哪里？";
+		mes "祝你旅途顺利。";
 		next;
 
 		setarray .@towns$[0], "Izlude", "Geffen", "Payon", "Morocc", "Alberta", "Al De Baran", "Comodo", "Umbala", "Juno";
@@ -57,10 +57,10 @@ prontera,98,121,4	script	Acolyte#Prtclear	90,{
 		if (.@i == .@size)
 			close;
 		if (Zeny < .@cost[.@i]) {
-			mes "[DRY-RUN] [Keiki]";
-			mes "[DRY-RUN] I'm sorry, but you don't have";
-			mes "[DRY-RUN] enough zeny for the Teleport";
-			mes "[DRY-RUN] Service. The fee to teleport";
+			mes "[凯基]";
+			mes "抱歉，但你没有";
+			mes "足够的金币进行传送服务。";
+			mes "传送的费用是";
 			mes "to "+.@towns$[.@i]+" is "+.@cost[.@i]+" zeny.";
 			close;
 		}
@@ -87,30 +87,30 @@ prontera,98,121,4	script	Acolyte#Prtclear	90,{
 }
 
 yuno,142,184,6	script	Acolyte#Junoclear	90,{
-	mes "[DRY-RUN] [Isalei]";
-	mes "[DRY-RUN] Hello, adventurer.";
-	mes "[DRY-RUN] My companion Keiki and I have discovered a way to increase our warp portal abilities.";
+	mes "[伊萨蕾]";
+	mes "你好，冒险者。";
+	mes "我的伙伴凯基和我发现了一种提高我们传送阵能力的方法。";
 	next;
 
 	if (is_function("VIP_iRO_Acolyte"))
 		callfunc "VIP_iRO_Acolyte","[Isalei]","Prontera";
 
-	mes "[DRY-RUN] [Isalei]";
-	mes "[DRY-RUN] Though I have not mastered up to the level that she has, I have been able to attain Level 5.";
+	mes "[伊萨蕾]";
+	mes "虽然我还没有掌握到她的水平，但我已经达到了5级。";
 	emotion ET_THINK, playerattached();
 	next;
-	mes "[DRY-RUN] [Isalei]";
-	mes "[DRY-RUN] Maybe one day I can level up my skills enough so that I can use Warp portal to more saved locations.";
+	mes "[伊萨蕾]";
+	mes "也许有一天我可以提升我的技能，以便我可以使用传送阵到更多保存的位置。";
 	next;
-	mes "[DRY-RUN] [Isalei]";
-	mes "[DRY-RUN] I am willing to warp you to the many locations that I have memorized for a small fee.";
-	mes "[DRY-RUN] Would you like to use this service?";
+	mes "[伊萨蕾]";
+	mes "我愿意以少量费用将你传送到我记住的许多地点。";
+	mes "你想使用这个服务吗？";
 	next;
-	switch(select("[DRY-RUN] Yes:No")) {
+	switch(select("是:否")) {
 	case 1:
-		mes "[DRY-RUN] [Isalei]";
-		mes "[DRY-RUN] Where would you like to go to?";
-		mes "[DRY-RUN] I wish you goodluck on your journey.";
+		mes "[伊萨蕾]";
+		mes "你想去哪里？";
+		mes "祝你旅途顺利。";
 		next;
 
 		setarray .@towns$[0], "Einbroch", "Lighthalzen", "Hugel", "Rachel", "Prontera";
@@ -123,10 +123,10 @@ yuno,142,184,6	script	Acolyte#Junoclear	90,{
 		if (.@i == .@size)
 			close;
 		if (Zeny < .@cost[.@i]) {
-			mes "[DRY-RUN] [Isalei]";
-			mes "[DRY-RUN] I'm sorry, but you don't have";
-			mes "[DRY-RUN] enough zeny for the Teleport";
-			mes "[DRY-RUN] Service. The fee to teleport";
+			mes "[伊萨蕾]";
+			mes "抱歉，但你没有";
+			mes "足够的金币进行传送服务。";
+			mes "传送的费用是";
 			mes "to "+.@towns$[.@i]+" is "+.@cost[.@i]+" zeny.";
 			close;
 		}

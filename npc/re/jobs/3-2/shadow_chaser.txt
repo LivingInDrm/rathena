@@ -18,59 +18,59 @@
 //============================================================
 
 morocc,156,70,3	script	Girl#sc00	93,3,3,{
-	mes "[DRY-RUN] [Girl]";
+	mes "[少女]";
 	if (BaseJob == Job_Rogue) {
 		if (job_sha == 0) {
 			if (BaseLevel < 99 || JobLevel < 50) {
-				mes "[DRY-RUN] You're not ready.";
+				mes "你还没有准备好。";
 				close;
 			}
-			mes "[DRY-RUN] Hey? Stop!";
-			mes "[DRY-RUN] Aren't you interested in hearing a funny story?";
+			mes "嘿？停下！";
+			mes "你不想听个有趣的故事吗？";
 			next;
-			select("[DRY-RUN] What story?");
-			mes "[DRY-RUN] [Girl]";
-			mes "[DRY-RUN] Have you been to the guild recently?";
-			mes "[DRY-RUN] Some interesting things have happened lately.";
-			mes "[DRY-RUN] Maybe new guests...";
+			select("什么故事？");
+			mes "[少女]";
+			mes "你最近去公会了吗？";
+			mes "最近发生了一些有趣的事情。";
+			mes "也许会有新客人...";
 			next;
-			mes "[DRY-RUN] [Girl]";
-			mes "[DRY-RUN] I heard it has to do with something called a Shadow Chaser.";
-			mes "[DRY-RUN] You should go and check it out.";
+			mes "[少女]";
+			mes "我听说这与一个叫做影之追踪者的东西有关。";
+			mes "你应该去看看。";
 			next;
-			mes "[DRY-RUN] [Girl]";
-			mes "[DRY-RUN] Every time they visit us, they are on new missions.";
-			mes "[DRY-RUN] What missions are they doing I wonder?";
+			mes "[少女]";
+			mes "每次他们来访时，他们都有新的任务。";
+			mes "他们在做什么任务呢，我想知道？";
 			set job_sha,1;
 			close;
 		} else if (job_sha == 1) {
-			mes "[DRY-RUN] If you have any interest... just go!";
-			mes "[DRY-RUN] Do you know where the guild is?";
+			mes "如果你有兴趣……就去吧！";
+			mes "你知道公会在哪里吗？";
 			next;
-			mes "[DRY-RUN] [Girl]";
-			mes "[DRY-RUN] It is in a fortress under Pharos lighthouse.";
-			mes "[DRY-RUN] Sigh....";
-			mes "[DRY-RUN] You must visit there!";
+			mes "[少女]";
+			mes "它在法罗斯灯塔下的一个堡垒里。";
+			mes "唉....";
+			mes "你必须去那里！";
 			close;
 		} else {
-			mes "[DRY-RUN] Wow, you look busy.";
-			mes "[DRY-RUN] Have you heard that there are visiters?";
-			mes "[DRY-RUN] They're on a treasure hunt!";
+			mes "哇，你看起来很忙。";
+			mes "你听说过有访客吗？";
+			mes "他们在寻宝！";
 			next;
-			mes "[DRY-RUN] [Girl]";
-			mes "[DRY-RUN] It must be fun.";
-			mes "[DRY-RUN] I wanna try!";
+			mes "[少女]";
+			mes "这一定很有趣。";
+			mes "我想试试！";
 			close;
 		}
 	}
-	mes "[DRY-RUN] Eh?";
-	mes "[DRY-RUN] I don't have anything for you...";
+	mes "嗯？";
+	mes "我没有什么给你...";
 	close;
 OnTouch_:
 	if (BaseJob == Job_Rogue && BaseLevel > 98 && JobLevel > 49 && job_sha == 0) {
-		mes "[DRY-RUN] [Girl]";
-		mes "[DRY-RUN] Hey? Stop!";
-		mes "[DRY-RUN] Aren't you interested in hearing a funny story?";
+		mes "[少女]";
+		mes "嘿？停下！";
+		mes "你不想听个有趣的故事吗？";
 		close;
 	}
 	end;
@@ -303,280 +303,280 @@ L_Code:
 
 s_atelier,65,123,5	script	Manager#sc04_prt	903,{
 	if (job_sha == 2) {
-		mes "[DRY-RUN] [Manager]";
-		mes "[DRY-RUN] Where's Max!?";
-		mes "[DRY-RUN] Damn, there're so many strangers around.";
-		mes "[DRY-RUN] Hey...";
+		mes "[经理]";
+		mes "马克斯在哪里！？";
+		mes "该死，这里有这么多陌生人。";
+		mes "嘿……";
 		next;
-		switch(select("[DRY-RUN] Show the deciphered code!:...")) {
+		switch(select("展示解码后的代码！:...")) {
 		case 1:
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Wow, you deciphered it?";
-			mes "[DRY-RUN] So, what's the right answer?";
+			mes "[经理]";
+			mes "哇，你解读出来了？";
+			mes "那么，正确答案是什么？";
 			next;
 			input .@inputstr$;
 			if (.@inputstr$ == "shadows atelier in prontera" || .@inputstr$ == "SHADOWS ATELIER IN PRONTERA") {
-				mes "[DRY-RUN] [Manager]";
-				mes "[DRY-RUN] Good.";
-				mes "[DRY-RUN] You just got it.";
-				mes "[DRY-RUN] Then why have you come over here?";
+				mes "[经理]";
+				mes "很好。";
+				mes "你刚刚答对了。";
+				mes "那你为什么过来这里？";
 				next;
-				select("[DRY-RUN] The code says here's the one...");
-				mes "[DRY-RUN] [Manager]";
-				mes "[DRY-RUN] So you are the one.";
-				mes "[DRY-RUN] Could you wait for a sec'?";
+				select("代码说这里是那个...");
+				mes "[经理]";
+				mes "所以你就是那个人。";
+				mes "你能等一下吗？";
 				set job_sha,3;
 				close;
 			}
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Remember to put the code exactly as it should be deciphered.";
-			mes "[DRY-RUN] Maybe you should try again...";
+			mes "[经理]";
+			mes "记得把代码准确地放入应该解码的地方。";
+			mes "也许你应该再试一次...";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Only allowed for people involved....";
-			mes "[DRY-RUN] Could you ask the clerk at the shop?";
+			mes "[经理]";
+			mes "只允许相关人员进入....";
+			mes "你能问问店里的职员吗？";
 			close;
 		}
 	} else if (job_sha == 3) {
-		mes "[DRY-RUN] [Manager]";
-		mes "[DRY-RUN] Now let me introduce myself to you!";
-		mes "[DRY-RUN] I am Graham, the manager of this shadow gallery...";
+		mes "[经理]";
+		mes "现在让我来介绍一下自己！";
+		mes "我是格雷厄姆，这个影子画廊的经理...";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] You may have already guessed.";
-		mes "[DRY-RUN] This is an additional facility for rogues.";
-		mes "[DRY-RUN] We adopt things like art and other historical stuff.";
+		mes "[格雷厄姆]";
+		mes "你可能已经猜到了。";
+		mes "这是为盗贼提供的额外设施。";
+		mes "我们采用艺术和其他历史相关的东西。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] These things are illegal.";
-		mes "[DRY-RUN] Such things you guys bring us from historical places...";
-		mes "[DRY-RUN] Ok.";
+		mes "[格雷厄姆]";
+		mes "这些东西是非法的。";
+		mes "你们从历史遗址带来的这些东西……";
+		mes "好的。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] So we've got to know things like...";
-		mes "[DRY-RUN] special codes and information where the treasures are.";
+		mes "[格雷厄姆]";
+		mes "所以我们必须了解一些……";
+		mes "特殊代码和宝藏所在的信息。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] We need you guys...";
-		mes "[DRY-RUN] So we've asked assistance from the Rogue guild.";
+		mes "[格雷厄姆]";
+		mes "我们需要你们……";
+		mes "所以我们向盗贼公会寻求了帮助。";
 		next;
-		select("[DRY-RUN] Any other places you guys work?");
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Ah, yes...";
-		mes "[DRY-RUN] We are in Prontera, Juno, Rachel, and Lighthalzen.";
-		mes "[DRY-RUN] Ok?";
+		select("你们还有其他地方工作吗？");
+		mes "[格雷厄姆]";
+		mes "啊，是的……";
+		mes "我们在普隆德拉、朱诺、拉赫尔和利希塔恩。";
+		mes "好吗?";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Anyway....";
-		mes "[DRY-RUN] We all really want to know where the treasures are.";
-		mes "[DRY-RUN] So the code is to break into each of those places.";
+		mes "[格雷厄姆]";
+		mes "不过....";
+		mes "我们都很想知道宝藏在哪里。";
+		mes "所以这个密码是要潜入每一个地方。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] You seem like the right one.";
-		mes "[DRY-RUN] So I will give you the code.";
-		mes "[DRY-RUN] Please find the treasure!";
+		mes "[格雷厄姆]";
+		mes "你看起来是合适的人选。";
+		mes "所以我会把密码给你。";
+		mes "请找到宝藏！";
 		next;
-		switch(select("[DRY-RUN] No way!:I'll give it a try!")) {
+		switch(select("不可能！:我试试看！")) {
 		case 1:
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] What the hell?";
-			mes "[DRY-RUN] If you are not going to help then I'll just find someone else.";
+			mes "[格雷厄姆]";
+			mes "这到底是什么？";
+			mes "如果你不打算帮忙，那我就去找别人。";
 			set job_sha,4;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] You are so powerful!";
-			mes "[DRY-RUN] So here...";
+			mes "[格雷厄姆]";
+			mes "你真是太强大了！";
+			mes "那么这里...";
 			next;
 			callsub L_Code,0;
 			close;
 		}
 	} else if (job_sha == 4) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Are you interested in it now?";
+		mes "[格雷厄姆]";
+		mes "你现在对它感兴趣吗？";
 		next;
-		switch(select("[DRY-RUN] Not at all.:Hmm, I'll take it.")) {
+		switch(select("一点也不。:嗯，我接受了。")) {
 		case 1:
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] Damn it.";
+			mes "[格雷厄姆]";
+			mes "该死。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] You are just so picky...";
-			mes "[DRY-RUN] Here...";
+			mes "[格雷厄姆]";
+			mes "你真是太挑剔了...";
+			mes "这里...";
 			next;
 			callsub L_Code,0;
 			close;
 		}
 	} else if (job_sha == 5) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Did you find something?";
+		mes "[格雷厄姆]";
+		mes "你找到什么了吗？";
 		next;
-		switch(select("[DRY-RUN] I need an explanation.:What's the code again?")) {
+		switch(select("我需要解释。:代码是什么来着？")) {
 		case 1:
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] You are so powerful!";
+			mes "[格雷厄姆]";
+			mes "你真是太强大了！";
 			next;
 			callsub L_Code,1;
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] Got it?";
+			mes "[格雷厄姆]";
+			mes "明白了吗？";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Graham]";
-			mes "[DRY-RUN] I've given you the code.";
-			mes "[DRY-RUN] So crazy...";
-			mes "[DRY-RUN] Don't you have a memo of it?";
+			mes "[格雷厄姆]";
+			mes "我已经给了你代码。";
+			mes "真疯狂...";
+			mes "你没有备忘录吗？";
 			close;
 		}
 	} else if (job_sha == 6 || job_sha == 7) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Nothing special...?";
-		mes "[DRY-RUN] You've been to places...?";
-		mes "[DRY-RUN] There's definetely something.";
+		mes "[格雷厄姆]";
+		mes "没什么特别的...? ";
+		mes "你去过一些地方...? ";
+		mes "肯定有什么东西。";
 		next;
-		mes "[DRY-RUN] Graham seems to know something.";
-		mes "[DRY-RUN] I'd better go there again.";
+		mes "格雷厄姆似乎知道些什么。";
+		mes "我最好再去一次那里。";
 		close;
 	} else if (job_sha == 8) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] So, any improvements?";
+		mes "[格雷厄姆]";
+		mes "那么，有什么进展吗？";
 		next;
-		select("[DRY-RUN] Show him the key.");
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Deception!";
-		mes "[DRY-RUN] You are deceiving me!";
+		select("给他看钥匙。");
+		mes "[格雷厄姆]";
+		mes "欺骗！";
+		mes "你在欺骗我！";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] This is all?";
-		mes "[DRY-RUN] Only one key.";
-		mes "[DRY-RUN] How deceptive!";
-		mes "[DRY-RUN] Just as I thought, it's a kind of treasure.";
+		mes "[格雷厄姆]";
+		mes "就这些吗？";
+		mes "只有一把钥匙。";
+		mes "真是欺骗！";
+		mes "果然是种宝藏。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] You just gave me a shock.";
-		mes "[DRY-RUN] Ok...";
-		mes "[DRY-RUN] The code is kept in galleries.";
+		mes "[格雷厄姆]";
+		mes "你让我大吃一惊。";
+		mes "好的……";
+		mes "代码保存在画廊里。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Ok there's more galleries than this one...";
-		mes "[DRY-RUN] Juno and Rachel have the codes...";
+		mes "[格雷厄姆]";
+		mes "好的，这里有比这更多的画廊……";
+		mes "朱诺和拉赫尔有这些代码……";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] This is just what I was guessing.";
-		mes "[DRY-RUN] The codes kept by other galleries aren't treasures at all...";
+		mes "[格雷厄姆]";
+		mes "这正是我猜测的。";
+		mes "其他画廊保留的代码根本不是宝藏……";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Go to Rachel...";
+		mes "[格雷厄姆]";
+		mes "去拉赫尔……";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Find the gallery in Rachel...";
-		mes "[DRY-RUN] Tell 'em that you just came from Graham and ask for the code.";
+		mes "[格雷厄姆]";
+		mes "找到拉赫尔的画廊……";
+		mes "告诉他们你刚从格雷厄姆那里来，问一下代码。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Ok?";
-		mes "[DRY-RUN] Then go there!";
+		mes "[格雷厄姆]";
+		mes "好吗?";
+		mes "然后去那里！";
 		set job_sha,9;
 		changequest 7165,7166;
 		close;
 	} else if (job_sha == 9) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] There're four galleries...";
-		mes "[DRY-RUN] Prontera, Rachel, Juno, and Lighthalzen.";
+		mes "[格雷厄姆]";
+		mes "有四个画廊...";
+		mes "普隆德拉、拉赫尔、朱诺和利希塔恩。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] One of the codes kept by the galleries is already deciphered.";
-		mes "[DRY-RUN] It's just one key....";
+		mes "[格雷厄姆]";
+		mes "其中一个画廊保存的密码已经被解密。";
+		mes "这只是一个钥匙....";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] But here's what I am guessing.";
-		mes "[DRY-RUN] The codes are linked to each other.";
-		mes "[DRY-RUN] And the purpose is different for each one.";
+		mes "[格雷厄姆]";
+		mes "但这是我的猜测。";
+		mes "这些密码是相互关联的。";
+		mes "而且每个密码的目的不同。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] For example...";
-		mes "[DRY-RUN] If one is just a key then the others are things requiring the key.";
+		mes "[格雷厄姆]";
+		mes "例如...";
+		mes "如果一个只是钥匙，那么其他的就是需要钥匙的东西。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] The key must be for opening the box.";
-		mes "[DRY-RUN] Can you guess what's inside?";
+		mes "[格雷厄姆]";
+		mes "这个钥匙必须是用来打开箱子的。";
+		mes "你能猜到里面有什么吗？";
 		next;
-		select("[DRY-RUN] Umm, treasure?");
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] YES.";
-		mes "[DRY-RUN] That's why we're here!";
+		select("嗯，宝藏？");
+		mes "[格雷厄姆]";
+		mes "是的。";
+		mes "这就是我们在这里的原因！";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] People think that we are just trading the stuff...";
-		mes "[DRY-RUN] But we are here for very special things.";
+		mes "[格雷厄姆]";
+		mes "人们认为我们只是交易这些东西……";
+		mes "但我们在这里是为了非常特别的东西。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Go to ^4d4dffRachel Gallery^000000 and get the code...";
-		mes "[DRY-RUN] They will support you if you explain everything.";
-		mes "[DRY-RUN] Ok?";
+		mes "[格雷厄姆]";
+		mes "去^4d4dff拉赫尔画廊^000000获取代码……";
+		mes "如果你解释一切，他们会支持你。";
+		mes "好吗?";
 		close;
 	} else if (job_sha > 9 && job_sha < 30) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] How about everything?";
-		mes "[DRY-RUN] We are dying to know about the key.";
-		mes "[DRY-RUN] So you got support from the other galleries.";
+		mes "[格雷厄姆]";
+		mes "那一切都怎么样？";
+		mes "我们急切想知道关于钥匙的事。";
+		mes "所以你得到了其他画廊的支持。";
 		close;
 	} else if (job_sha > 29) {
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Shadow Chaser!!";
-		mes "[DRY-RUN] Ah!";
+		mes "[格雷厄姆]";
+		mes "影子追踪者！！";
+		mes "啊！";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] It's not intentionally decieving...";
-		mes "[DRY-RUN] Hahaha!!";
+		mes "[格雷厄姆]";
+		mes "这并不是故意欺骗……";
+		mes "哈哈哈！！";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] Isn't it interesting?";
-		mes "[DRY-RUN] It's more than just taking exams.";
-		mes "[DRY-RUN] We got to know about you and figured out who you are.";
+		mes "[格雷厄姆]";
+		mes "这不是很有趣吗？";
+		mes "这不仅仅是参加考试。";
+		mes "我们了解了你，并弄清楚你是谁。";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] How's my acting?";
-		mes "[DRY-RUN] It worked?";
+		mes "[格雷厄姆]";
+		mes "我的表演怎么样？";
+		mes "成功了吗？";
 		next;
-		mes "[DRY-RUN] [Graham]";
-		mes "[DRY-RUN] If you need anything just ask them what you want.";
+		mes "[格雷厄姆]";
+		mes "如果你需要什么，只需问他们你想要的。";
 		close;
 	}
-	mes "[DRY-RUN] [Manager]";
-	mes "[DRY-RUN] Only allowed for people involved...";
-	mes "[DRY-RUN] Could you ask the clerk at the shop?";
+	mes "[经理]";
+	mes "仅限相关人员...";
+	mes "你能问问店里的职员吗？";
 	close;
 L_Code:
-	mes "[DRY-RUN] -note.";
-	mes "[DRY-RUN] ^4d4dff 13 15 18 15 3 3 18 21 9 14^000000";
-	mes "[DRY-RUN] key : 0 -";
+	mes "-备注。";
+	mes "^4d4dff 13 15 18 15 3 3 18 21 9 14^000000";
+	mes "键 : 0 -";
 	next;
-	select("[DRY-RUN] These are just numbers...");
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] The only difference from the one from the Rogue Guild is that you don't need to match them in pairs.";
+	select("这些只是数字...");
+	mes "[格雷厄姆]";
+	mes "与盗贼公会的那个唯一的区别是你不需要成对匹配它们。";
 	next;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Also here's the keyword...";
-	mes "[DRY-RUN] This case is key 0.";
+	mes "[格雷厄姆]";
+	mes "这也是关键词...";
+	mes "这个案例是键 0.";
 	next;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Let's see. For example.";
-	mes "[DRY-RUN] 13 15 18 15 3 3 18 21 9 14 =";
-	mes "[DRY-RUN] M O R O C C R U I N";
+	mes "[格雷厄姆]";
+	mes "我们来看看。例如。";
+	mes "13 15 18 15 3 3 18 21 9 14 =";
+	mes "M O R O C C R U I N";
 	next;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Look at this... C = 3.";
-	mes "[DRY-RUN] C is the third letter right?";
+	mes "[格雷厄姆]";
+	mes "看看这个... C = 3。";
+	mes "C是第三个字母，对吧？";
 	next;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Do you get it?";
-	mes "[DRY-RUN] But this won't be given with keyword 0. When I give you the keyword you can figure it out for yourself.";
+	mes "[格雷厄姆]";
+	mes "你明白了吗？";
+	mes "但这不会通过关键字0给出。当我给你关键字时，你就可以自己弄明白。";
 	next;
 	if (getarg(0)) return;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Now let's move on to the mission.";
-	mes "[DRY-RUN] Here's the cipher...";
+	mes "[格雷厄姆]";
+	mes "现在我们继续进行任务。";
+	mes "这是密码...";
 	next;
 	set .@key01, rand(3,5);
 	set .@a, 1 + .@key01;
@@ -607,520 +607,520 @@ L_Code:
 	else if (.@key01 == 4) setquest 7162;
 	else if (.@key01 == 5) setquest 7163;
 	next;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Just take it.";
-	mes "[DRY-RUN] I have a bad memory.";
-	mes "[DRY-RUN] You have all the information so you are on your own now.";
+	mes "[格雷厄姆]";
+	mes "拿着它。";
+	mes "我记性不好。";
+	mes "你有所有的信息，所以现在你得靠自己了。";
 	next;
-	mes "[DRY-RUN] [Graham]";
-	mes "[DRY-RUN] Once you get something come over here.";
+	mes "[格雷厄姆]";
+	mes "一旦你得到什么，过来这里。";
 	next;
-	mes "[DRY-RUN] - You take the memo from Graham.";
-	mes "[DRY-RUN] Don't forget it! -";
+	mes "- 你从格雷厄姆那里拿到备忘录。";
+	mes "别忘了！ -";
 	close;
 }
 
 s_atelier,168,65,5	script	Manager#sc08_ra	923,{
 	if (job_sha < 10) {
-		mes "[DRY-RUN] [Manager]";
-		mes "[DRY-RUN] Who are you?";
-		mes "[DRY-RUN] This place isn't for you.";
+		mes "[经理]";
+		mes "你是谁？";
+		mes "这个地方不适合你。";
 		next;
 		if (job_sha < 9) {
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] What are they doing up there?";
-			mes "[DRY-RUN] Bleh...";
+			mes "[经理]";
+			mes "他们在上面干什么？";
+			mes "呃...";
 			close;
 		}
-		switch(select("[DRY-RUN] Give me your password!:I was sent by Graham.")) {
+		switch(select("告诉我你的密码！:我是格雷厄姆派来的。")) {
 		case 1:
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] You need my password?";
-			mes "[DRY-RUN] How much would you pay me?";
+			mes "[经理]";
+			mes "你需要我的密码吗？";
+			mes "你愿意给我多少钱？";
 			next;
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] 10 million zeny?";
-			mes "[DRY-RUN] Ok I'll take that then!";
+			mes "[经理]";
+			mes "1000万金币？";
+			mes "好吧，那我就接受这个！";
 			next;
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Yeah right!";
-			mes "[DRY-RUN] Who the hell are you?";
-			mes "[DRY-RUN] How dare you just ask for my password?";
+			mes "[经理]";
+			mes "是啊，没错！";
+			mes "你到底是谁？";
+			mes "你怎么敢直接问我的密码？";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Graham?";
-			mes "[DRY-RUN] Why?";
+			mes "[经理]";
+			mes "格雷厄姆？";
+			mes "为什么？";
 			next;
 			if (countitem(6266) == 0) {
-				mes "[DRY-RUN] You don't seem to have brought it here.";
+				mes "你似乎没有把它带到这里。";
 				next;
-				mes "[DRY-RUN] [Manager]";
-				mes "[DRY-RUN] Are you mute?";
-				mes "[DRY-RUN] I don't know why Graham sent you here.";
-				mes "[DRY-RUN] Just go if you don't have any business here!";
+				mes "[经理]";
+				mes "你是哑巴吗？";
+				mes "我不知道格雷厄姆为什么把你送到这里。";
+				mes "如果你在这里没有任何事情，就走吧！";
 				close;
 			}
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] So this key was sent by him.";
+			mes "[经理]";
+			mes "所以这个钥匙是他送来的。";
 			next;
-			select("[DRY-RUN] No, I found it as the clue.");
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Ah?";
-			mes "[DRY-RUN] So doesn't that mean that one code could be exchanged as a treasure...?";
+			select("不，我把它当作线索找到了。");
+			mes "[经理]";
+			mes "啊？";
+			mes "那么这是不是意味着一个代码可以作为宝藏交换...？";
 			next;
-			select("[DRY-RUN] Maybe.");
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] ...........";
-			mes "[DRY-RUN] Hmm....";
+			select("也许。");
+			mes "[经理]";
+			mes "...........";
+			mes "嗯....";
 			next;
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Hmm...";
+			mes "[经理]";
+			mes "嗯...";
 			next;
-			mes "[DRY-RUN] - The manager seems -";
-			mes "[DRY-RUN] - to be thinking about -";
-			mes "[DRY-RUN] - something. Then he-";
-			mes "[DRY-RUN] - hands over a paper. -";
+			mes "- 经理似乎 -";
+			mes "- 在考虑 -";
+			mes "- 某件事。然后他 -";
+			mes "- 递过来一张纸。 -";
 			next;
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] No way.";
-			mes "[DRY-RUN] Here's the clue.";
-			mes "[DRY-RUN] Try to find it.";
+			mes "[经理]";
+			mes "不可能。";
+			mes "这是线索。";
+			mes "试着找到它。";
 			next;
-			mes "[DRY-RUN] [Manager]";
-			mes "[DRY-RUN] Anyway my name is Paul.";
-			mes "[DRY-RUN] ...........";
+			mes "[经理]";
+			mes "无论如何，我的名字是保罗。";
+			mes "...........";
 			next;
-			mes "[DRY-RUN] [Paul]";
-			mes "[DRY-RUN] Naturally...";
-			mes "[DRY-RUN] I've already solved the clue.";
+			mes "[保罗]";
+			mes "当然...";
+			mes "我已经解开了线索。";
 			next;
-			mes "[DRY-RUN] - Here's the paper that -";
-			mes "[DRY-RUN] - Paul handed over. -";
+			mes "- 这是保罗递过来的纸。 -";
+			mes "- 保罗递过来的纸。 - ";
 			next;
-			mes "[DRY-RUN] R-E-N-N-N-D";
-			mes "[DRY-RUN] L-N-N-W-W-N-D";
+			mes "R-E-N-N-N-D";
+			mes "L-N-N-W-W-N-D";
 			next;
-			mes "[DRY-RUN] [Paul]";
-			mes "[DRY-RUN] Isn't it so simple?";
-			mes "[DRY-RUN] What do you think?";
-			mes "[DRY-RUN] RENNND / LNNWWND means one thing.";
+			mes "[保罗]";
+			mes "这不是很简单吗？";
+			mes "你觉得怎么样？";
+			mes "RENNND / LNNWWND 只意味着一件事。";
 			next;
-			switch(select("[DRY-RUN] I think I got it.:I have no clue.")) {
+			switch(select("我想我明白了。:我没有线索。")) {
 			case 1:
 				callsub L_Code,7166;
 				close;
 			case 2:
-				mes "[DRY-RUN] [Paul]";
-				mes "[DRY-RUN] What? You don't know it?";
-				mes "[DRY-RUN] Then you'd better think about it more.";
-				mes "[DRY-RUN] It's so easy.";
+				mes "[保罗]";
+				mes "什么？你不知道吗？";
+				mes "那你最好多想想。";
+				mes "这太简单了。";
 				set job_sha,10;
 				changequest 7166,7167;
 				close;
 			}
 		}
 	} else if (job_sha == 10) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] So did you get what it means?";
+		mes "[保罗]";
+		mes "那么你明白它的意思了吗？";
 		next;
-		switch(select("[DRY-RUN] Yes!:No, I don't think so.")) {
+		switch(select("是的！:不，我不这么认为。")) {
 		case 1:
 			callsub L_Code,7167;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Paul]";
-			mes "[DRY-RUN] Is it that hard?";
+			mes "[保罗]";
+			mes "这么难吗？";
 			next;
-			select("[DRY-RUN] I can't do it...");
-			mes "[DRY-RUN] [Paul]";
-			mes "[DRY-RUN] No way.";
-			mes "[DRY-RUN] Can I give you a hint?";
-			mes "[DRY-RUN] Compass!";
+			select("我做不到...");
+			mes "[保罗]";
+			mes "不可能。";
+			mes "我可以给你一个提示吗？";
+			mes "指南针！";
 			close;
 		}
 	} else if (job_sha > 10 && job_sha < 14) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] I've already given you all the info you need.";
+		mes "[保罗]";
+		mes "我已经给了你所有需要的信息。";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] I've given you one more clue.";
-		mes "[DRY-RUN] Isn't it enough?";
+		mes "[保罗]";
+		mes "我又给了你一个线索。";
+		mes "这还不够吗？";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] As you and Graham mentioned.";
-		mes "[DRY-RUN] Go and find it out.";
+		mes "[保罗]";
+		mes "正如你和格雷厄姆提到的。";
+		mes "去找出来吧。";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] If you find real things like treasure,";
-		mes "[DRY-RUN] come back here.";
+		mes "[保罗]";
+		mes "如果你找到真正的东西，比如宝藏，";
+		mes "就回来这里。";
 		close;
 	} else if (job_sha > 13 && job_sha < 17) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] You must find the right place.";
-		mes "[DRY-RUN] The word is RENNND";
-		mes "[DRY-RUN] It's refering the cave East - North - North - North from this Rachel.";
+		mes "[保罗]";
+		mes "你必须找到正确的地方。";
+		mes "这个词是RENNND";
+		mes "它指的是从这个拉赫尔向东-北-北-北的洞穴。";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] L-N-N-W-W-N-D is also same.";
-		mes "[DRY-RUN] L is for Lighthalzen.";
-		mes "[DRY-RUN] Lighthalzen - North- North - West - West.";
-		mes "[DRY-RUN] That's the ice cave.";
+		mes "[保罗]";
+		mes "L-N-N-W-W-N-D也是一样的。";
+		mes "L代表利希塔恩。";
+		mes "利希塔恩 - 北-北 - 西 - 西。";
+		mes "那是冰洞。";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] Is there any improvement!?";
+		mes "[保罗]";
+		mes "有没有什么进展！？";
 		next;
-		select("[DRY-RUN] You need to investigate more?");
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] Really? Ok...";
-		mes "[DRY-RUN] No way....";
-		mes "[DRY-RUN] We will expect a good result.";
+		select("你需要再调查一下吗？");
+		mes "[保罗]";
+		mes "真的？好的...";
+		mes "不可能....";
+		mes "我们期待一个好的结果。";
 		close;
 	} else if (job_sha == 17) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] I am dying to wait for you.";
-		mes "[DRY-RUN] So what did you find out?";
+		mes "[保罗]";
+		mes "我迫不及待想等你。";
+		mes "那么你发现了什么？";
 		next;
-		select("[DRY-RUN] I found the key.:Hmm...");
-		mes "[DRY-RUN] - You hand over the 'Illusion Key' that you found in the ice cave. -";
+		select("我找到了钥匙。:嗯...");
+		mes "- 你交出在冰洞中找到的'幻影钥匙'。 -";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] Illusion! Haha!";
-		mes "[DRY-RUN] After deception is illusion!";
-		mes "[DRY-RUN] So are you lying to me?";
+		mes "[保罗]";
+		mes "幻影！哈哈！";
+		mes "欺骗之后是幻影！";
+		mes "所以你在骗我吗？";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] I can feel how Graham felt it...";
-		mes "[DRY-RUN] We don't dare to get that tiny key...";
+		mes "[保罗]";
+		mes "我能感受到格雷厄姆的感觉...";
+		mes "我们不敢去拿那把小钥匙...";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] The young guy in Lighthalzen is quite challenging to deal with...";
-		mes "[DRY-RUN] So we'd better request assistance from Haled...";
+		mes "[保罗]";
+		mes "在利希塔恩的年轻人相当难对付...";
+		mes "所以我们最好向哈雷德请求帮助...";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] Hey...";
-		mes "[DRY-RUN] If you go to Juno...";
-		mes "[DRY-RUN] There's a gallery...";
+		mes "[保罗]";
+		mes "嘿……";
+		mes "如果你去朱诺...";
+		mes "这里有一个画廊...";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] So could you ask him to get the password?";
-		mes "[DRY-RUN] Hmm...";
+		mes "[保罗]";
+		mes "所以你能让他去问密码吗？";
+		mes "嗯...";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] I feel like the red hair guy in the main gallery is teasing me...";
-		mes "[DRY-RUN] Anyway...";
-		mes "[DRY-RUN] So I really like to know the password and the identity of the key...";
+		mes "[保罗]";
+		mes "我感觉主画廊里的红发家伙在嘲笑我...";
+		mes "不过……";
+		mes "所以我真的想知道密码和钥匙的身份...";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] If Haled isn't supportive...";
-		mes "[DRY-RUN] Tell him ^4d4dffI know what you did last summer!^000000";
-		mes "[DRY-RUN] You shouldn't be wrong...!?";
+		mes "[保罗]";
+		mes "如果哈雷德不支持的话...";
+		mes "告诉他 ^4d4dff我知道你去年夏天做了什么！^000000";
+		mes "你不应该错的...！?";
 		set job_sha,18;
 		changequest 7172,7173;
 		close;
 	} else if (job_sha == 18) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] You could ask him to get the key...";
-		mes "[DRY-RUN] He will help you if you tell him something...";
+		mes "[保罗]";
+		mes "你可以让他去拿钥匙...";
+		mes "如果你告诉他一些事情，他会帮助你...";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] If Haled isn't supportive...";
-		mes "[DRY-RUN] Tell him ^4d4dffI know what you did last summer!^000000";
+		mes "[保罗]";
+		mes "如果哈雷德不支持的话...";
+		mes "告诉他 ^4d4dff我知道你去年夏天做了什么！^000000";
 		close;
 	} else if (job_sha > 18 && job_sha < 30) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] So you are still looking for the treasure... right?";
-		mes "[DRY-RUN] I would look for it...";
+		mes "[保罗]";
+		mes "所以你还在寻找宝藏...对吗？";
+		mes "我会去找它...";
 		close;
 	} else if (job_sha == 30) {
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] Now I almost guessed what would happen later...";
-		mes "[DRY-RUN] It can't have happened!";
+		mes "[保罗]";
+		mes "现在我几乎猜到了接下来会发生什么……";
+		mes "这不可能发生！";
 		next;
-		mes "[DRY-RUN] [Paul]";
-		mes "[DRY-RUN] Are you shocked?";
-		mes "[DRY-RUN] Don't think worse.";
-		mes "[DRY-RUN] You could get a good person.";
-		mes "[DRY-RUN] Hahaha...";
+		mes "[保罗]";
+		mes "你震惊了吗？";
+		mes "别想得太糟糕。";
+		mes "你可能会遇到好人。";
+		mes "哈哈哈...";
 		close;
 	}
-	mes "[DRY-RUN] [Paul]";
-	mes "[DRY-RUN] Do you need a painting tool?";
-	mes "[DRY-RUN] Then you can request that to the assistant.";
-	mes "[DRY-RUN] We always have it just in case.";
+	mes "[保罗]";
+	mes "你需要绘画工具吗？";
+	mes "那么你可以向助手请求。";
+	mes "我们总是准备着以防万一。";
 	close;
 L_Code:
-	mes "[DRY-RUN] [Paul]";
-	mes "[DRY-RUN] Really? Then I don't need to give you the answer.";
-	mes "[DRY-RUN] Could you interpret the meaning of each letter.";
+	mes "[保罗]";
+	mes "真的？那我就不需要给你答案了。";
+	mes "你能解释每个字母的意思吗？";
 	next;
-	select("[DRY-RUN] It's kinda the combination of places.");
-	mes "[DRY-RUN] [Paul]";
-	mes "[DRY-RUN] So?";
+	select("这有点像地方的组合。");
+	mes "[保罗]";
+	mes "那又怎样？";
 	next;
-	select("[DRY-RUN] E-N meaning East - North");
-	mes "[DRY-RUN] [Paul]";
-	mes "[DRY-RUN] Ok that's good enough.";
-	mes "[DRY-RUN] Then go and find out.";
+	select("E-N 意思是 东 - 北");
+	mes "[保罗]";
+	mes "好的，这样就足够了。";
+	mes "那就去找答案吧。";
 	next;
-	mes "[DRY-RUN] [Paul]";
-	mes "[DRY-RUN] Memorize this.";
-	mes "[DRY-RUN] You might need it. It could be a clue for you.";
+	mes "[保罗]";
+	mes "记住这个。";
+	mes "你可能需要它。这可能是你的线索。";
 	next;
-	mes "[DRY-RUN] [Paul]";
+	mes "[保罗]";
 	switch(rand(3)) {
 	case 0:
-		mes "[DRY-RUN] [ S E E D ]";
-		mes "[DRY-RUN] S E E D?";
+		mes "[ S E E D ]";
+		mes "S E E D?";
 		set job_sha,11;
 		changequest getarg(0),7168;
 		break;
 	case 1:
-		mes "[DRY-RUN] [ F O O T ]";
-		mes "[DRY-RUN] F O O T?";
+		mes "[ F O O T ]";
+		mes "F O O T?";
 		set job_sha,12;
 		changequest getarg(0),7169;
 		break;
 	case 2:
-		mes "[DRY-RUN] [ C O L D ]";
-		mes "[DRY-RUN] C O L D?";
+		mes "[ C O L D ]";
+		mes "C O L D?";
 		set job_sha,13;
 		changequest getarg(0),7170;
 		break;
 	}
-	mes "[DRY-RUN] I don't know what it really means, but it would be helpful to you to figure it out.";
+	mes "我不知道它真正的意思，但对你弄清楚它会有帮助。";
 	close;
 }
 
 s_atelier,167,129,3	script	Manager#sc06_yuno	806,{
 	if (job_sha < 19) {
-		mes "[DRY-RUN] [Manager]";
-		mes "[DRY-RUN] What?";
-		mes "[DRY-RUN] If you've come here for some money, you are wrong.";
-		mes "[DRY-RUN] This isn't a pawnshop.";
+		mes "[经理]";
+		mes "什么？";
+		mes "如果你是为了钱而来的，那你就错了。";
+		mes "这里不是当铺。";
 		if (job_sha < 18) close;
 		next;
-		select("[DRY-RUN] You are... Haled?");
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Hmm? I'm the manager of this workplace in Juno. What's the matter?";
+		select("你是... 哈雷德？");
+		mes "[哈雷德]";
+		mes "嗯？我是朱诺这家工作的经理。有什么事吗？";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Hmm. You were sent by Graham and Paul?";
-		mes "[DRY-RUN] I thought that you just came here to beg for money with fossil pieces.";
+		mes "[哈雷德]";
+		mes "嗯。你是由格雷厄姆和保罗派来的？";
+		mes "我以为你只是来这里乞讨钱的，带着化石碎片。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] It's a classic way that poor scholars use.";
-		mes "[DRY-RUN] Sometimes I buy good stuff so some people know that this is a pawnshop.";
+		mes "[哈雷德]";
+		mes "这是贫穷学者常用的经典方式。";
+		mes "有时候我会买一些好东西，所以有些人知道这里是当铺。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Let me hear your story.";
+		mes "[哈雷德]";
+		mes "让我听听你的故事。";
 		next;
-		mes "[DRY-RUN] - You explain everything so far and show the key of arrogance. -";
+		mes "- 你到目前为止解释了一切，并展示了傲慢的钥匙。 -";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] So...";
-		mes "[DRY-RUN] I totally understand.";
-		mes "[DRY-RUN] It's this key's location that";
-		mes "[DRY-RUN] shared the informaton!";
+		mes "[哈雷德]";
+		mes "所以……";
+		mes "我完全理解。";
+		mes "这是钥匙的位置";
+		mes "分享了信息！";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Anyway. Two are keys and the treasure that I have to open with this key, what can I do?";
+		mes "[哈雷德]";
+		mes "总之。这两个是钥匙，而我必须用这把钥匙打开的宝藏，我该怎么办？";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] We will investigate Juno's workplace, so give it to me?";
+		mes "[哈雷德]";
+		mes "我们将调查朱诺的工作场所，所以把它给我好吗？";
 		next;
-		mes "[DRY-RUN] - Haled doesn't want to cooperate with you.";
-		mes "[DRY-RUN] Remember what Paul said. -";
+		mes "- 哈雷德不想和你合作。";
+		mes "记住保罗说的话。-";
 		next;
 		callsub L_Code;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] So what?";
-		mes "[DRY-RUN] He's a wild-eyed person.";
-		mes "[DRY-RUN] Did you just speak to me in a threatening tone?";
+		mes "[哈雷德]";
+		mes "那又怎么样？";
+		mes "他是个目光狂野的人。";
+		mes "你刚才用威胁的语气跟我说话吗？";
 		set job_sha,19;
 		close;
 	} else if (job_sha == 19) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] What?";
-		mes "[DRY-RUN] You want to talk with me?";
-		mes "[DRY-RUN] How about you just hand over that key to me?";
+		mes "[哈雷德]";
+		mes "什么？";
+		mes "你想和我谈谈吗？";
+		mes "你干脆把那把钥匙交给我怎么样？";
 		next;
 		callsub L_Code;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] What's wrong with you?";
-		mes "[DRY-RUN] Are you ok?";
-		mes "[DRY-RUN] Paul? What do you want to say?";
+		mes "[哈雷德]";
+		mes "你怎么了？";
+		mes "你还好吗？";
+		mes "保罗？你想说什么？";
 		set job_sha,19;
 		close;
 	} else if (job_sha == 20) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Got it.";
-		mes "[DRY-RUN] Ok.";
-		mes "[DRY-RUN] You need to know where the place with the code is?";
+		mes "[哈雷德]";
+		mes "明白了。";
+		mes "好的。";
+		mes "你需要知道代码所在的地方吗？";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] I don't have a choice.";
-		mes "[DRY-RUN] Listen carefully to this poem.";
+		mes "[哈雷德]";
+		mes "我没有选择。";
+		mes "仔细听这首诗。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] ^4d4dffThe end of thin root of life-giving water.";
-		mes "[DRY-RUN] It's all of tears and signs of living people.";
-		mes "[DRY-RUN] They are us but also not us.";
-		mes "[DRY-RUN] Residents of forgotten night";
-		mes "[DRY-RUN] play the waltz of despair^000000.";
+		mes "[哈雷德]";
+		mes "^4d4dff生命之水的细根尽头。";
+		mes "它是泪水和活人迹象的集合。";
+		mes "他们是我们，但又不是我们。";
+		mes "被遗忘的夜的居民";
+		mes "演奏绝望的华尔兹^000000。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Do you know where it is?";
-		mes "[DRY-RUN] You know where it is right?";
-		mes "[DRY-RUN] It's only my opinion, but...";
-		mes "[DRY-RUN] It can't be possible...";
+		mes "[哈雷德]";
+		mes "你知道它在哪里吗？";
+		mes "你知道它在哪里，对吧？";
+		mes "这只是我的看法，但...";
+		mes "这不可能...";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Anyway, if you want to do it, go ahead.";
-		mes "[DRY-RUN] If you know what this poem means.";
+		mes "[哈雷德]";
+		mes "无论如何，如果你想做，就去吧。";
+		mes "如果你知道这首诗的意思。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Of course, if you find something, you have to come back.";
-		mes "[DRY-RUN] Got it?";
-		mes "[DRY-RUN] I'm going to write it down so that you won't forget.";
+		mes "[哈雷德]";
+		mes "当然，如果你找到什么东西，你必须回来。";
+		mes "明白了吗？";
+		mes "我会把它写下来，以免你忘记。";
 		set job_sha,21;
 		changequest 7173,7174;
 		close;
 	} else if (job_sha == 21) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] I won't be surprised with whatever you find.";
-		mes "[DRY-RUN] You have to find the place that the poem speaks of.";
+		mes "[哈雷德]";
+		mes "无论你找到什么，我都不会感到惊讶。";
+		mes "你必须找到诗中所说的地方。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] ^4d4dffThe end of thin root of life-giving water.";
-		mes "[DRY-RUN] It's all of tears and signs of living people.";
-		mes "[DRY-RUN] They are us but also not us.";
-		mes "[DRY-RUN] Residents of forgotten night";
-		mes "[DRY-RUN] play the waltz of despair^000000.";
+		mes "[哈雷德]";
+		mes "^4d4dff生命之水的细根尽头。";
+		mes "它是泪水和活人迹象的集合。";
+		mes "他们是我们，但又不是我们。";
+		mes "被遗忘的夜的居民";
+		mes "演奏绝望的华尔兹^000000。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Of course, if you find something, you have to come back.";
-		mes "[DRY-RUN] Got it?";
+		mes "[哈雷德]";
+		mes "当然，如果你找到什么东西，你必须回来。";
+		mes "明白了吗？";
 		close;
 	} else if (job_sha > 21 && job_sha < 25) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] How's it going?";
-		mes "[DRY-RUN] If you find something, you have to come back.";
-		mes "[DRY-RUN] Don't go to Graham or Paul.";
+		mes "[哈雷德]";
+		mes "最近怎么样？";
+		mes "如果你找到什么东西，你必须回来。";
+		mes "不要去找格雷厄姆或保罗。";
 		close;
 	} else if (job_sha == 25) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Did you find something?";
+		mes "[哈雷德]";
+		mes "你找到什么了吗？";
 		next;
-		select("[DRY-RUN] Show the key of pleasure.");
+		select("展示快乐的钥匙。");
 		if (countitem(6268)) {
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] Ha..........akkk.";
-			mes "[DRY-RUN] Another key?";
-			mes "[DRY-RUN] Is it the only key?!";
+			mes "[哈雷德]";
+			mes "哈..........啊克。";
+			mes "又一个钥匙？";
+			mes "这是唯一的钥匙吗？！";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] Then... do I have to ask help from the young man from Lighthalzen?";
-			mes "[DRY-RUN] ...........";
-			mes "[DRY-RUN] Ah...";
+			mes "[哈雷德]";
+			mes "那么……我必须向来自利希塔恩的年轻人寻求帮助吗？";
+			mes "...........";
+			mes "啊……";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] I have no choice.";
-			mes "[DRY-RUN] Go to Lighthalzen with the three keys.";
-			mes "[DRY-RUN] Meet Vicente who is master of the store in Lighthalzen and tell him everything.";
+			mes "[哈雷德]";
+			mes "我别无选择。";
+			mes "带着三把钥匙去利希塔恩。";
+			mes "去找利希塔恩商店的老板文森特，告诉他一切。";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] I told you that the old man is persistant and he ruins everything.";
+			mes "[哈雷德]";
+			mes "我告诉过你那个老人很固执，他把一切都搞砸了。";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] You have to have all your facts straight to send information to the guild.";
-			mes "[DRY-RUN] First you have to work together in one accord.";
+			mes "[哈雷德]";
+			mes "你必须把所有事实搞清楚，才能向公会发送信息。";
+			mes "首先你们必须齐心协力。";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] The thing you find can belong to the workplace.";
-			mes "[DRY-RUN] It can be shared.";
+			mes "[哈雷德]";
+			mes "你找到的东西可能属于工作场所。";
+			mes "它可以被共享。";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] I thought that it was a very simple thing.";
-			mes "[DRY-RUN] We couldn't share that stuff together.";
+			mes "[哈雷德]";
+			mes "我以为这是一件非常简单的事情。";
+			mes "我们无法一起分享那些东西。";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] All of the information that I got from workplace are key.";
-			mes "[DRY-RUN] There must be something to use three key with.";
+			mes "[哈雷德]";
+			mes "我从工作场所获得的所有信息都是关键。";
+			mes "一定有什么东西需要用到这三把钥匙。";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] Anyway it has to do with deceit and pleasure...";
-			mes "[DRY-RUN] Is it teasing me...";
+			mes "[哈雷德]";
+			mes "无论如何，这与欺骗和快乐有关……";
+			mes "是在挑逗我吗……";
 			next;
-			mes "[DRY-RUN] [Haled]";
-			mes "[DRY-RUN] Ok. Let me finish.";
-			mes "[DRY-RUN] Go to Vicente in Lighthalzen.";
+			mes "[哈雷德]";
+			mes "好的，让我完成。";
+			mes "去利希塔恩找文森特。";
 			set job_sha,26;
 			changequest 7176,7177;
 			close;
 		}
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I'm sorry.";
-		mes "[DRY-RUN] I found one more key but I didn't bring it.";
-		mes "[DRY-RUN] I'll bring it soon.";
+		mes "对不起。";
+		mes "我找到了一把钥匙，但我没有带它。";
+		mes "我会尽快带来。";
 		close;
 	} else if (job_sha == 26) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Shadow workplace in Lighthalzen.";
-		mes "[DRY-RUN] The manager's name is Vicente.";
-		mes "[DRY-RUN] Tell him everything and get one last information.";
+		mes "[哈雷德]";
+		mes "利希塔恩的影子工作场所。";
+		mes "经理的名字是文森特。";
+		mes "告诉他一切，并获取最后一个信息。";
 		close;
 	} else if (job_sha > 26 && job_sha < 30) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Hey, you!";
-		mes "[DRY-RUN] Was Vicente helpful to you?";
-		mes "[DRY-RUN] You have something important...";
-		mes "[DRY-RUN] So you have to find out what is it.";
+		mes "[哈雷德]";
+		mes "嘿，你！";
+		mes "文森特对你有帮助吗？";
+		mes "你有一些重要的事情...";
+		mes "所以你必须找出那是什么。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Keep trying.";
+		mes "[哈雷德]";
+		mes "继续努力。";
 		close;
 	} else if (job_sha == 30) {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Hey, you!";
-		mes "[DRY-RUN] What's going on?";
-		mes "[DRY-RUN] What? Shadow Chaser?";
+		mes "[哈雷德]";
+		mes "嘿，你！";
+		mes "发生了什么事？";
+		mes "什么？影之追踪者？";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Did I know that fact?";
-		mes "[DRY-RUN] Sure. I heard a little bit before";
-		mes "[DRY-RUN] I used to do work like this.";
+		mes "[哈雷德]";
+		mes "我知道那个事实吗？";
+		mes "当然。我之前听说过一点。";
+		mes "我以前做过这样的工作。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] It's an honor for me to pick a person who belongs to us.";
-		mes "[DRY-RUN] Just accept that. You are going to be a good Shadow Chaser.";
+		mes "[哈雷德]";
+		mes "能挑选一个属于我们的人对我来说是荣幸。";
+		mes "接受吧。你将成为一个优秀的影之追踪者。";
 		close;
 	}
-	mes "[DRY-RUN] [Haled]";
-	mes "[DRY-RUN] I like your face.";
-	mes "[DRY-RUN] We don't have any special thing.";
-	mes "[DRY-RUN] An assistant sells some paint and tool.";
+	mes "[哈雷德]";
+	mes "我喜欢你的脸。";
+	mes "我们没有任何特别的东西。";
+	mes "一个助手出售一些油漆和工具。";
 	close;
 L_Code:
 	mes "["+strcharinfo(0)+"]";
-	mes "[DRY-RUN] Paul said...";
+	mes "保罗说过...";
 	next;
 	input .@inputstr$;
 	mes "["+strcharinfo(0)+"]";
-	mes "[DRY-RUN] Paul said...";
+	mes "保罗说过...";
 	mes "'"+.@inputstr$+"' .";
 	next;
 	if (.@inputstr$ == "I know what you did last summer!") {
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] Ekk... He...";
-		mes "[DRY-RUN] Knew everything...";
-		mes "[DRY-RUN] Hmm...";
-		mes "[DRY-RUN] I can help.";
-		mes "[DRY-RUN] I will cooperate.";
+		mes "[哈雷德]";
+		mes "呃... 他...";
+		mes "知道一切...";
+		mes "嗯...";
+		mes "我可以帮忙。";
+		mes "我会合作。";
 		next;
-		mes "[DRY-RUN] [Haled]";
-		mes "[DRY-RUN] I need some time to collect my thoughts.";
-		mes "[DRY-RUN] Wait for me a bit.";
+		mes "[哈雷德]";
+		mes "我需要一些时间来整理我的思绪。";
+		mes "等我一下。";
 		set job_sha,20;
 		close;
 	}
@@ -1129,477 +1129,477 @@ L_Code:
 
 s_atelier,25,75,3	script	Manager#sc10_lgt	899,{
 	if (job_sha < 26) {
-		mes "[DRY-RUN] [Manager]";
-		mes "[DRY-RUN] You are?";
-		mes "[DRY-RUN] Sorry, but we don't trade old art goods.";
-		mes "[DRY-RUN] If you neeed something, then ask an assistant.";
+		mes "[经理]";
+		mes "你是？";
+		mes "抱歉，但我们不交易旧艺术品。";
+		mes "如果你需要什么，就问助手。";
 		close;
 	} else if (job_sha == 26) {
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] Welcome.";
-		mes "[DRY-RUN] I've been waiting for you.";
+		mes "[文森特]";
+		mes "欢迎。";
+		mes "我一直在等你。";
 		next;
-		select("[DRY-RUN] For me?");
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] I wondered when you would visit.";
-		mes "[DRY-RUN] I've been waiting a long time for you.";
-		mes "[DRY-RUN] Huhu...";
+		select("是给我的吗？");
+		mes "[文森特]";
+		mes "我在想你什么时候会来。";
+		mes "我等了很久你了。";
+		mes "呼呼...";
 		next;
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] How were Graham,Paul and Haled?";
-		mes "[DRY-RUN] They are not easy people to deal with huh?";
+		mes "[文森特]";
+		mes "格雷厄姆、保罗和哈雷德怎么样？";
+		mes "他们可不好对付吧？";
 		next;
-		select("[DRY-RUN] You know everything?");
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] Sure.";
-		mes "[DRY-RUN] They ignore me because they think that I'm too young.";
-		mes "[DRY-RUN] As if they were all perfect. HahahaHah...";
+		select("你知道一切吗？");
+		mes "[文森特]";
+		mes "当然。";
+		mes "他们忽视我，因为他们认为我太年轻。";
+		mes "就好像他们都是完美的一样。哈哈哈...";
 		next;
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] Did you bring all of the keys?";
-		mes "[DRY-RUN] There should be three.";
-		mes "[DRY-RUN] You came here to find out how to use them I assume, right?";
+		mes "[文森特]";
+		mes "你带来所有的钥匙了吗？";
+		mes "应该有三把。";
+		mes "我想你是来这里了解如何使用它们的，对吧？";
 		next;
-		select("[DRY-RUN] Yeah, you're right!");
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] You don't have to be surprised.";
-		mes "[DRY-RUN] I can't find how long it took for those three men to investigate before.";
-		mes "[DRY-RUN] I already finished my work.";
+		select("是的，你说得对！");
+		mes "[文森特]";
+		mes "你不必感到惊讶。";
+		mes "我找不到那三个人调查之前花了多长时间。";
+		mes "我已经完成了我的工作。";
 		next;
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] When I went to the final location I found a stone statue.";
-		mes "[DRY-RUN] But it needs to have key.";
+		mes "[文森特]";
+		mes "当我到达最终地点时，我发现了一座石像。";
+		mes "但它需要有钥匙。";
 		next;
-		mes "[DRY-RUN] [Vicente]";
-		mes "[DRY-RUN] Even Three.";
-		mes "[DRY-RUN] (Vicente smiles)";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "甚至需要三把。";
+		mes " ";
+		mes "（维森特微笑）";
 		next;
-		mes "[DRY-RUN] At first, the information that was given from the guild means only one thing.";
-		mes "[DRY-RUN] Because of the saying that they respect the right of our possessions,";
-		mes "[DRY-RUN] we shared our information.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "起初，公会提供的信息只意味着一件事。";
+		mes "因为他们尊重我们财产的权利，";
+		mes "我们分享了我们的信息。";
 		next;
-		mes "[DRY-RUN] So we had to wait for it.";
-		mes "[DRY-RUN] I thought the last man would never give it to me...";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "所以我们不得不等它。";
+		mes "我以为最后那个人永远不会把它给我……";
 		next;
-		mes "[DRY-RUN] They thought I wanted to have the treasure for myself.";
-		mes "[DRY-RUN] So that's why I've just been waiting for you.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "他们以为我想独占宝藏。";
+		mes "所以这就是我一直在等你的原因。";
 		next;
-		mes "[DRY-RUN] Then let's make a point!";
-		mes "[DRY-RUN] Do you know thanatos tower?";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "那么让我们明确一下！";
+		mes "你知道塔纳托斯之塔吗？";
 		next;
-		switch(select("[DRY-RUN] Sure.:The tower of death?")) {
+		switch(select("当然。:死亡之塔？")) {
 		case 1:
-			mes "[DRY-RUN] You know that.";
-			mes "[DRY-RUN] Then you can understand easily.";
-			mes "[DRY-RUN] [Vicente]";
+			mes "[文森特]";
+			mes "你知道的。";
+			mes "那么你可以很容易理解。";
 			next;
 			break;
 		case 2:
-			mes "[DRY-RUN] Yes, that tower in northen Juno.";
-			mes "[DRY-RUN] There are huge monsters there.";
-			mes "[DRY-RUN] [Vicente]";
+			mes "[文森特]";
+			mes "是的，那个在北方朱诺的塔。";
+			mes "那里有巨大的怪物。";
 			next;
 			break;
 		}
-		mes "[DRY-RUN] You told me that you went to the final place with the information?";
-		mes "[DRY-RUN] That's the Thanatos Tower.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "你告诉我你带着信息去了最后的地方？";
+		mes "那就是塔纳托斯之塔。";
 		next;
-		mes "[DRY-RUN] Fortunately, the location is the 1st floor of that tower.";
-		mes "[DRY-RUN] So I'm going to tell what you have to do.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "幸运的是，位置在那座塔的第一层。";
+		mes "所以我将告诉你该做什么。";
 		next;
-		mes "[DRY-RUN] At the 1st floor of thanatos tower, there are members from the Rekenber Corporation.";
-		mes "[DRY-RUN] Go north from their desk...";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "在塔纳托斯之塔的第一层，有来自雷肯贝尔公司的成员。";
+		mes "从他们的桌子向北走...";
 		next;
-		mes "[DRY-RUN] And you can find stairs and a location where light comes out of.";
-		mes "[DRY-RUN] That's the location of the information that I have.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "你可以找到楼梯和一个光线照射出来的地方。";
+		mes "那就是我所知道的信息的位置。";
 		next;
-		mes "[DRY-RUN] Now you know the location you have to go to with the three keys.";
-		mes "[DRY-RUN] Find out the secret of the stone statue.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "现在你知道了你必须带着三把钥匙去的地方。";
+		mes "找出石像的秘密。";
 		next;
-		mes "[DRY-RUN] You can't imagine what kind of things you might find.";
-		mes "[DRY-RUN] That's the final destination of all of the keys.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "你无法想象你可能会发现什么样的东西。";
+		mes "这是所有钥匙的最终目的地。";
 		set job_sha,27;
 		changequest 7177,7178;
 		next;
-		mes "[DRY-RUN] Good luck.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "祝你好运。";
 		close;
 	} else if (job_sha == 27) {
-		mes "[DRY-RUN] Listen carefully.";
-		mes "[DRY-RUN] The location you need to find is";
-		mes "[DRY-RUN] north from middle of thanatos 1st floor.";
-		mes "[DRY-RUN] You can find stairs and a location where light comes out.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "仔细听。";
+		mes "你需要找到的位置是";
+		mes "在塔纳托斯一层的中间向北。";
+		mes "你可以找到楼梯和光线出现的地方。";
 		next;
-		mes "[DRY-RUN] If you find something, come back here.";
-		mes "[DRY-RUN] Actually, I want to get the key from you, but...";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "如果你找到什么，回来这里。";
+		mes "其实，我想从你这里得到钥匙，但是...";
 		next;
-		mes "[DRY-RUN] I just respect your opinion.";
-		mes "[DRY-RUN] If you find something, come back here. Got it?";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "我只是尊重你的意见。";
+		mes "如果你找到什么，回来这里。明白了吗？";
 		close;
 	} else if (job_sha == 28) {
-		mes "[DRY-RUN] You are back?";
-		mes "[DRY-RUN] Find anything?";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "你回来了？";
+		mes "找到什么了吗？";
 		next;
-		switch(select("[DRY-RUN] Throw the brush.:Grab him by the collar.:Drop the brush.")) {
+		switch(select("扔掉刷子。:抓住他的领子。:放下刷子。")) {
 		case 1:
-			mes "[DRY-RUN] Hey, what are you doing?";
-			mes "[DRY-RUN] This brush...";
-			mes "[DRY-RUN] Is this the treasure hidden in the Thanatos Tower?";
-			mes "[DRY-RUN] Vicente looks surprised after taking a look at it.";
+			mes "[文森特]";
+			mes "嘿，你在做什么？";
+			mes "这个刷子...";
+			mes "这是隐藏在塔纳托斯之塔的宝藏吗？";
 			next;
-			mes "[DRY-RUN] [Vicente]";
+			mes "维森特看起来很惊讶，仔细看了一下它。";
 			next;
 			break;
 		case 2:
-			mes "[DRY-RUN] What's wrong with you?";
-			mes "[DRY-RUN] You can tell me more details?";
-			mes "[DRY-RUN] Vincente looks surpised after taking a look at it.";
+			mes "[文森特]";
+			mes "你怎么了？";
+			mes "你能告诉我更多细节吗？";
 			next;
-			mes "[DRY-RUN] [Vicente]";
+			mes "维森特看起来很惊讶，仔细看了一下它。";
 			next;
-			mes "[DRY-RUN] Is this the treasure hidden in the Thanatos Tower?";
-			mes "[DRY-RUN] [Vicente]";
+			mes "[文森特]";
+			mes "这是隐藏在塔纳托斯之塔的宝藏吗？";
 			next;
 			break;
 		case 3:
-			mes "[DRY-RUN] What the matter?";
-			mes "[DRY-RUN] Are you ok?";
-			mes "[DRY-RUN] Vicente looks at me with a surprised face.";
+			mes "[文森特]";
+			mes "怎么了？";
+			mes "你还好吗？";
 			next;
-			mes "[DRY-RUN] [Vicente]";
+			mes "维森特用惊讶的表情看着我。";
 			next;
-			select("[DRY-RUN] Point at the brush.");
-			mes "[DRY-RUN] Is this the treasure hidden in the Thanatos Tower?";
-			mes "[DRY-RUN] Vincente looks surpised after taking a look at it.";
+			select("指着刷子。");
+			mes "[文森特]";
+			mes "这是隐藏在塔纳托斯之塔的宝藏吗？";
 			next;
-			mes "[DRY-RUN] [Vicente]";
+			mes "维森特看起来很惊讶，仔细看了一下它。";
 			next;
 			break;
 		}
-		mes "[DRY-RUN] Haha!!";
-		mes "[DRY-RUN] Ahahahaha!!!!!";
-		mes "[DRY-RUN] I got it now!";
-		mes "[DRY-RUN] Congratulations.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "哈哈！！";
+		mes "啊哈哈哈哈!!!!!";
+		mes "我明白了！";
+		mes "恭喜你。";
 		next;
-		mes "[DRY-RUN] It's treasure.";
-		mes "[DRY-RUN] You found a big treasure!";
-		mes "[DRY-RUN] Talk to me for bit, won't you?";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "这是宝藏。";
+		mes "你发现了一个大宝藏！";
+		mes "和我聊聊，好吗？";
 		next;
-		mes "[DRY-RUN] There is someone who has been waiting for you.";
-		mes "[DRY-RUN] He's been waiting for someone to bring this brush back.";
-		mes "[DRY-RUN] Let's go inside.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "有人在等你。";
+		mes "他一直在等人把这把刷子带回来。";
+		mes "我们进去吧。";
 		set job_sha,29;
 		erasequest 7179;
 		close;
 	} else if (job_sha == 29 || job_sha == 30) {
-		mes "[DRY-RUN] I'm going to listen to your story.";
-		mes "[DRY-RUN] [Vicente]";
+		mes "[文森特]";
+		mes "我会听你的故事。";
 		close;
 	}
-	mes "[DRY-RUN] I'm expecting your work from now on.";
-	mes "[DRY-RUN] You must be a good Shadow Chaser.";
-	mes "[DRY-RUN] I'm sure of it.";
-	mes "I'm sure of it.";
+	mes "[文森特]";
+	mes "我期待你接下来的工作。";
+	mes "你一定是个优秀的影子追踪者。";
+	mes "我相信这一点。";
 	close;
 }
 
 s_atelier,73,65,3	script	Vicente#sc12_lgt	899,{
-	mes "[DRY-RUN] [Vicente]";
+	mes "[文森特]";
 	if (job_sha < 29) {
-		mes "[DRY-RUN] If you don't have anything special to do here, you'd better leave.";
-		mes "[DRY-RUN] No trespassing.";
+		mes "如果你在这里没有特别的事情，最好离开。";
+		mes "禁止进入。";
 		close;
 	} else if (job_sha == 29) {
-		mes "[DRY-RUN] This way.";
-		mes "[DRY-RUN] He's been waiting for you a while.";
-		mes "[DRY-RUN] Not me, Dumk.";
+		mes "这边。";
+		mes "他等你有一段时间了。";
+		mes "不是我，杜姆克。";
 		close;
 	} else if (job_sha == 30) {
-		mes "[DRY-RUN] Dumk wants to have you as a Shadow Chaser.";
-		mes "[DRY-RUN] Big news right?";
+		mes "杜姆克想要你成为一个影子追踪者。";
+		mes "大新闻，对吧？";
 		close;
 	} else if (job_sha == 31) {
-		mes "[DRY-RUN] I'm expecting your work from now on.";
-		mes "[DRY-RUN] You must be a good Shadow Chaser.";
-		mes "[DRY-RUN] I'm sure of it.";
+		mes "我期待你接下来的工作。";
+		mes "你一定是个优秀的影子追踪者。";
+		mes "我相信这一点。";
 		close;
 	}
-	mes "[DRY-RUN] I don't have any special reason to visit here.";
-	mes "[DRY-RUN] An assistant sells tools and paint.";
+	mes "我没有特别的理由来这里。";
+	mes "一个助手出售工具和油漆。";
 	close;
 }
 
 s_atelier,70,66,4	script	Dumk#sc13_lgh	481,{
 	if (Class == Job_Shadow_Chaser || Class == Job_Shadow_Chaser_T || Class == Job_Baby_Shadow_Chaser) {
-		mes "[DRY-RUN] [Dumk]";
-		mes "[DRY-RUN] What is it?";
-		mes "[DRY-RUN] Have you been enjoying your new skills?";
+		mes "[杜姆克]";
+		mes "怎么了?";
+		mes "你享受你新的技能吗？";
 		next;
-		mes "[DRY-RUN] [Dumk]";
-		mes "[DRY-RUN] If you want to improve your skills, you have to seek out new uses for paint.";
+		mes "[杜姆克]";
+		mes "如果你想提高你的技能，你必须寻找油漆的新用途。";
 		next;
-		mes "[DRY-RUN] [Dumk]";
-		mes "[DRY-RUN] Don't forget.";
-		mes "[DRY-RUN] We are Shadow Chasers.";
-		mes "[DRY-RUN] Huhu...";
-		mes "[DRY-RUN] HuhuHuhu...";
+		mes "[杜姆克]";
+		mes "别忘了。";
+		mes "我们是影子追踪者。";
+		mes "呼呼...";
+		mes "呼呼呼...";
 		close;
 	}
 	if (checkweight(1201,4) == 0) {
-		mes "[DRY-RUN] - You can't continue on in this quest because you are overweight. -";
+		mes "- 你无法继续这个任务，因为你的负重过重。 -";
 		close;
 	}
 	if (ismounting()) {
-		mes "[DRY-RUN] [Dumk]";
-		mes "[DRY-RUN] Who is this guy? Why should he sit in front of me so high?";
-		mes "[DRY-RUN] Although I do not know why you riding on it, but here is in door,";
-		mes "[DRY-RUN] That is no danger to rely on animals to escape, so you please get down!";
+		mes "[杜姆克]";
+		mes "这个家伙是谁？他为什么要坐在我面前这么高？";
+		mes "虽然我不知道你为什么骑在上面，但这里是门口，";
+		mes "依靠动物逃跑并没有危险，所以请你下来！";
 		close;
 	}
 	if (BaseJob == Job_Rogue) {
 		if (job_sha < 29) {
-			mes "[DRY-RUN] [Dumk]";
-			mes "[DRY-RUN] Vicente. No Soliciting.";
+			mes "[杜姆克]";
+			mes "文森特。禁止推销。";
 			next;
-			mes "[DRY-RUN] [Vicente]";
-			mes "[DRY-RUN] A solicitor?";
-			mes "[DRY-RUN] I don't think so. He's our colleage.";
+			mes "[文森特]";
+			mes "推销员？";
+			mes "我不这么认为。他是我们的同事。";
 			next;
-			mes "[DRY-RUN] [Dumk]";
-			mes "[DRY-RUN] ...Ah?";
+			mes "[杜姆克]";
+			mes "...啊？";
 			close;
 		}
 		if (BaseLevel < 99 || JobLevel < 50 || SkillPoint != 0) {
-			mes "[DRY-RUN] [Dumk]";
-			mes "[DRY-RUN] You are still green!";
-			mes "[DRY-RUN] Did you expect that you can learn the dark arts with your ability?";
-			mes "[DRY-RUN] You are wrong!";
+			mes "[杜姆克]";
+			mes "你还是个新手！";
+			mes "你以为凭你的能力就能学会黑暗魔法吗？";
+			mes "你错了！";
 			next;
-			mes "[DRY-RUN] [Vicente]";
-			mes "[DRY-RUN] Haha...";
-			mes "[DRY-RUN] Please, understand. Dumk has very bad communication skills.";
-			mes "[DRY-RUN] Even doesn't talk to anyone who isn't a high enough level.";
+			mes "[文森特]";
+			mes "哈哈...";
+			mes "请理解。杜姆克的沟通能力非常差。";
+			mes "甚至不和任何不够高等级的人交谈。";
 			next;
-			mes "[DRY-RUN] [Vicente]";
-			mes "[DRY-RUN] And as person who isn't not ready.";
-			mes "[DRY-RUN] ^4d4dffYou maybe are not ready for him^000000.";
+			mes "[文森特]";
+			mes "而且作为一个还没有准备好的人。";
+			mes "^4d4dff你可能还没有准备好面对他^000000。";
 			next;
-			mes "[DRY-RUN] [Dumk]";
-			mes "[DRY-RUN] You talk too much.";
-			mes "[DRY-RUN] Heh.";
+			mes "[杜姆克]";
+			mes "你说得太多了。";
+			mes "嘿。";
 			next;
-			mes "[DRY-RUN] [Vicente]";
-			mes "[DRY-RUN] - He is pleased. -";
-			mes "[DRY-RUN] Hey.";
-			mes "[DRY-RUN] He could be ashamed.";
+			mes "[文森特]";
+			mes "- 他很满意。 -";
+			mes "嘿。";
+			mes "他可能感到羞愧。";
 			close;
 		}
 		if (job_sha == 29) {
-			mes "[DRY-RUN] [Dumk]";
-			mes "[DRY-RUN] It's you? You are the one who found the brush?";
+			mes "[杜姆克]";
+			mes "是你吗？你是找到那把刷子的人吗？";
 			next;
-			select("[DRY-RUN] Show the brush to him.");
+			select("把刷子给他看。");
 			if (countitem(6269)) {
-				mes "[DRY-RUN] [Dumk]";
-				mes "[DRY-RUN] That's it.";
-				mes "[DRY-RUN] Did you find it by yourself?";
+				mes "[杜姆克]";
+				mes "就是这样。";
+				mes "你是自己找到的吗？";
 				next;
-				switch(select("[DRY-RUN] Yes.:With my friends")) {
+				switch(select("是的.:和我的朋友们一起")) {
 				case 1:
-					mes "[DRY-RUN] [Dumk]";
-					mes "[DRY-RUN] Hmm...";
-					mes "[DRY-RUN] You have a high ability.";
-					mes "[DRY-RUN] Breaking the codes should have been tough.";
-					mes "[DRY-RUN] But it wasn't for you.";
+					mes "[杜姆克]";
+					mes "嗯...";
+					mes "你有很高的能力。";
+					mes "破解代码应该很困难。";
+					mes "但对你来说并不是。";
 					next;
 					break;
 				case 2:
-					mes "[DRY-RUN] [Dumk]";
-					mes "[DRY-RUN] Hmm...";
-					mes "[DRY-RUN] That's your other skill.";
-					mes "[DRY-RUN] People who have no friends must be lonely.";
+					mes "[杜姆克]";
+					mes "嗯...";
+					mes "那是你的另一个技能。";
+					mes "没有朋友的人一定很孤独。";
 					next;
-					mes "[DRY-RUN] [Dumk]";
-					mes "[DRY-RUN] To us, relationships are very important.";
-					mes "[DRY-RUN] You get more people, you get more help.";
+					mes "[杜姆克]";
+					mes "对我们来说，关系非常重要。";
+					mes "你拥有更多的人，就会得到更多的帮助。";
 					next;
 					break;
 				}
-				mes "[DRY-RUN] [Dumk]";
-				mes "[DRY-RUN] It's time to introduce myself.";
-				mes "[DRY-RUN] I'm Dumk.";
+				mes "[杜姆克]";
+				mes "是时候自我介绍了。";
+				mes "我叫杜姆克。";
 				next;
-				select("[DRY-RUN] You are...");
-				mes "[DRY-RUN] [Vicente]";
-				mes "[DRY-RUN] Chicken! How about the chicken for this supper?";
+				select("你是…");
+				mes "[文森特]";
+				mes "鸡肉！今晚的晚餐要鸡肉吗？";
 				next;
-				mes "[DRY-RUN] [Dumk]";
-				mes "[DRY-RUN] Why chicken?";
-				mes "[DRY-RUN] Why are you interrupting?";
-				mes "[DRY-RUN] You wanna be fired?";
+				mes "[杜姆克]";
+				mes "为什么是鸡肉？";
+				mes "你为什么打断？";
+				mes "你想被解雇吗？";
 				next;
-				mes "[DRY-RUN] [Vicente]";
-				mes "[DRY-RUN] Sorry...";
-				mes "[DRY-RUN] (He turns to you and says it's taboo to talk about chicken.)";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[文森特]";
+				mes "对不起...";
+				mes " ";
+				mes "（他转向你，说谈论鸡是禁忌。）";
 				next;
-				mes "[DRY-RUN] Anyway, let's make a point.";
-				mes "[DRY-RUN] You.";
-				mes "[DRY-RUN] Will you yield to the will of the brush?";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "无论如何，让我们明确一下。";
+				mes "你。";
+				mes "你会屈服于画笔的意志吗？";
 				next;
-				select("[DRY-RUN] Yield to? What?");
-				mes "[DRY-RUN] This brush was used by the master.";
-				mes "[DRY-RUN] Paintings by him have mysterious power.";
-				mes "[DRY-RUN] [Dumk]";
+				select("屈服于？什么？");
+				mes "[杜姆克]";
+				mes "这支画笔是大师使用过的。";
+				mes "他的画作具有神秘的力量。";
 				next;
-				mes "[DRY-RUN] I can't tell you the root of the power.";
-				mes "[DRY-RUN] Someday you will find out.";
-				mes "[DRY-RUN] He sublimates power through the medium of his paintings.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "我不能告诉你力量的根源。";
+				mes "总有一天你会发现。";
+				mes "他通过他的画作升华力量。";
 				next;
-				select("[DRY-RUN] I don't get it...?");
-				mes "[DRY-RUN] We walk in darkness without moonlight.";
-				mes "[DRY-RUN] And find out our shining days are over.";
-				mes "[DRY-RUN] [Dumk]";
+				select("我不明白...? ");
+				mes "[杜姆克]";
+				mes "我们在没有月光的黑暗中行走。";
+				mes "并发现我们的辉煌岁月已经结束。";
 				next;
-				mes "[DRY-RUN] We follow to other shadows";
-				mes "[DRY-RUN] and we can be real";
-				mes "[DRY-RUN] Shadow Chasers!";
-				mes "[DRY-RUN] [Vicente]";
+				mes "[杜姆克]";
+				mes "我们追随其他影子";
+				mes "我们可以变得真实";
+				mes "影子追逐者！";
 				next;
-				select("[DRY-RUN] What are you talking about?");
-				mes "[DRY-RUN] He suggests that you become a Shadow Chaser.";
-				mes "[DRY-RUN] [Vicente]";
+				select("你在说什么?");
+				mes "[文森特]";
+				mes "他建议你成为一名影子追逐者。";
 				next;
-				mes "[DRY-RUN] In our guild, there is a special group that have unique skills.";
-				mes "[DRY-RUN] They are Shadow Chasers.";
-				mes "[DRY-RUN] They usually hide ther figure and they think they are different from others.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[文森特]";
+				mes "在我们的公会里，有一个特殊的团体，他们拥有独特的技能。";
+				mes "他们是影子追逐者。";
+				mes "他们通常隐藏自己的身影，认为自己与众不同。";
 				next;
-				mes "[DRY-RUN] Don't be so sarcastic, Vicente!";
-				mes "[DRY-RUN] I told you.";
-				mes "[DRY-RUN] You are qualified to be a Shadow Chaser!";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "别这么讽刺，文森特！";
+				mes "我告诉过你。";
+				mes "你有资格成为一名影子追逐者！";
 				next;
-				mes "[DRY-RUN] Give that brush to me.";
-				mes "[DRY-RUN] I need it again.";
-				mes "[DRY-RUN] I'm so thirsty.";
-				mes "[DRY-RUN] Wait a minute.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "把那把刷子给我。";
+				mes "我需要它。";
+				mes "我好渴。";
+				mes "等一下。";
 				delitem 6269,1; //Master_Brush
 				set job_sha,30;
 				close;
 			}
-			mes "[DRY-RUN] Let me see...";
-			mes "[DRY-RUN] Did you bring the brush?";
-			mes "[DRY-RUN] [Dumk]";
+			mes "[杜姆克]";
+			mes "让我看看...";
+			mes "你带来刷子了吗？";
 			next;
-			mes "[DRY-RUN] What are you doing?";
-			mes "[DRY-RUN] Show me the brush?";
-			mes "[DRY-RUN] You didn't bring it?";
-			mes "[DRY-RUN] You are not very careful...";
-			mes "[DRY-RUN] [Dumk]";
+			mes "[杜姆克]";
+			mes "你在做什么？";
+			mes "给我看看刷子？";
+			mes "你没带来吗？";
+			mes "你真不小心……";
 			close;
 		} else if (job_sha == 30) {
-			mes "[DRY-RUN] So, do you want me to keep talking about Shadow Chasers?";
-			mes "[DRY-RUN] [Dumk]";
+			mes "[杜姆克]";
+			mes "那么，你想让我继续讲关于影之追踪者的事吗？";
 			next;
-			switch(select("[DRY-RUN] What is a Shadow Chaser?:Change me to Shadow Chaser.:I'll come back later.")) {
+			switch(select("什么是影之追踪者？:把我变成影之追踪者。:我稍后再回来。")) {
 			case 1:
-				mes "[DRY-RUN] Most spells are exclusively for Wizards and their kind.";
-				mes "[DRY-RUN] But Knight has since been able to use a kind of magic with things called Runes.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "大多数法术是专门为巫师及其同类准备的。";
+				mes "但骑士自那时起能够使用一种叫做符文的东西的魔法。";
 				next;
-				mes "[DRY-RUN] So we tried finding a medium for spells that suit our characteristics.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "所以我们尝试寻找适合我们特性的法术媒介。";
 				next;
-				mes "[DRY-RUN] So finally...";
-				mes "[DRY-RUN] We found paint!";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "所以最后……";
+				mes "我们找到了颜料！";
 				next;
-				mes "[DRY-RUN] Paint gives us lots of feelings.";
-				mes "[DRY-RUN] We can feel peaceful and happy or it can give us feelings of sorrow and fear.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "绘画给我们带来了很多感受。";
+				mes "我们可以感到平静和快乐，或者它可以给我们带来悲伤和恐惧的感觉。";
 				next;
-				mes "[DRY-RUN] We use that to harness the different emotions of people and exploit them when they're most vulnerable.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "我们利用这些来掌控人们的不同情感，并在他们最脆弱的时候加以利用。";
 				next;
-				mes "[DRY-RUN] The effects on our enemies are similar to that of magic spells.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "对我们的敌人的影响类似于魔法咒语的效果。";
 				next;
-				mes "[DRY-RUN] For instance, this power could be used to create blackholes to make your enemies vanish.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "例如，这种力量可以用来创造黑洞，让你的敌人消失。";
 				next;
-				mes "[DRY-RUN] So if you want to have that power then you must have artistry.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "所以如果你想拥有这种力量，你必须具备艺术才能。";
 				next;
-				mes "[DRY-RUN] You have to be a trendsetter when it comes to fashion!";
-				mes "[DRY-RUN] The ability to understand art!";
-				mes "[DRY-RUN] You should have everything.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "在时尚方面，你必须成为潮流引领者！";
+				mes "理解艺术的能力！";
+				mes "你应该拥有一切。";
 				next;
-				select("[DRY-RUN] Then what is the Master Brush?");
-				mes "[DRY-RUN] Ah?";
-				mes "[DRY-RUN] That was a brush who was a master of dark arts.";
-				mes "[DRY-RUN] Now we are looking for someone who can be a Shadow Chaser.";
-				mes "[DRY-RUN] [Dumk]";
+				select("那么，什么是大师刷子？");
+				mes "[杜姆克]";
+				mes "啊？";
+				mes "那是一位精通黑暗艺术的画家。";
+				mes "现在我们在寻找能够成为影子追逐者的人。";
 				next;
-				mes "[DRY-RUN] This is a kind of game.";
-				mes "[DRY-RUN] If there is someone who wants to become a Shadow Chaser,";
-				mes "[DRY-RUN] we just start the process to find this brush.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "这是一种游戏。";
+				mes "如果有人想成为影子追逐者，";
+				mes "我们就开始寻找这位画家的过程。";
 				next;
-				mes "[DRY-RUN] We put the codes to make sure that you can think outside of the box.";
-				mes "[DRY-RUN] Did you have fun?";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "我们设置了代码，以确保你能跳出框框思考。";
+				mes "你玩得开心吗？";
 				close;
 			case 2:
-				mes "[DRY-RUN] You decided!";
-				mes "[DRY-RUN] As your case, you can master the art of psychological warfare using paint!";
-				mes "[DRY-RUN] The art created is beautiful but dangerous.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "你决定了！";
+				mes "在你的案例中，你可以使用绘画掌握心理战的艺术！";
+				mes "所创造的艺术既美丽又危险。";
 				next;
-				mes "[DRY-RUN] We use paint as a medium for spells.";
-				mes "[DRY-RUN] We use that to harness the different emotions of people and exploit them when they're most vulnerable.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "我们使用颜料作为施法的媒介。";
+				mes "我们利用这些来掌控人们的不同情感，并在他们最脆弱的时候加以利用。";
 				next;
-				mes "[DRY-RUN] For instance, this power could be used to create black holes to make your enemies vanish.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "例如，这种力量可以用来创造黑洞，让你的敌人消失。";
 				next;
-				mes "[DRY-RUN] So if you want to have that power then you must have artistry.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "所以如果你想拥有这种力量，你必须具备艺术才能。";
 				next;
-				mes "[DRY-RUN] You have to be a trendsetter when it comes to fashion!";
-				mes "[DRY-RUN] The ability to understand art!";
-				mes "[DRY-RUN] You should have everything.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "在时尚方面，你必须成为潮流引领者！";
+				mes "理解艺术的能力！";
+				mes "你应该拥有一切。";
 				next;
-				mes "[DRY-RUN] You performed your duties diligently and found the brush.";
-				mes "[DRY-RUN] So you are qualified to be a Shadow Chaser.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "你认真履行了职责，找到了画笔。";
+				mes "所以你有资格成为影子追踪者。";
 				next;
-				mes "[DRY-RUN] Congratulations.";
-				mes "[DRY-RUN] Welcome to your new life.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "恭喜你。";
+				mes "欢迎来到你的新生活。";
 				jobchange roclass(eaclass()|EAJL_THIRD);
 				getitem 6121,1; //Makeover_Brush
 				getitem 6122,1; //Paint_Brush
@@ -1607,71 +1607,71 @@ s_atelier,70,66,4	script	Dumk#sc13_lgh	481,{
 				getitem 2795,1; //Green_Apple_Ring
 				getitem 5750,1; //Shadow_Handicraft
 				next;
-				mes "[DRY-RUN] It's a fashionable uniform.";
-				mes "[DRY-RUN] It uses patterns of leopard and feathers";
-				mes "[DRY-RUN] The fashion world will be shocked.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "这是一套时尚的制服。";
+				mes "它使用了豹纹和羽毛的图案。";
+				mes "时尚界将会感到震惊。";
 				next;
-				mes "[DRY-RUN] This shadow peacock I designed myself.";
-				mes "[DRY-RUN] It's too hard to create something that absorbs my art sense.";
-				mes "[DRY-RUN] Then about this part...";
-				mes "[DRY-RUN] Dumk keeps talking about fashion, art sense, paint and feeling.";
+				mes "[杜姆克]";
+				mes "这只我自己设计的影子孔雀。";
+				mes "创造出能吸收我的艺术感的东西太难了。";
+				mes "那么关于这一部分...";
 				next;
-				mes "[DRY-RUN] He's obviously in his own world.";
-				mes "[DRY-RUN] [Vicente]";
+				mes "杜姆克一直在谈论时尚、艺术感、绘画和感觉。";
+				mes "他显然在自己的世界里。";
 				next;
-				select("[DRY-RUN] About this brush...");
-				mes "[DRY-RUN] Ah, I'll expain.";
-				mes "[DRY-RUN] We need tools for painting.";
-				mes "[DRY-RUN] [Vicente]";
+				select("关于这把刷子...");
+				mes "[文森特]";
+				mes "啊，我来解释一下。";
+				mes "我们需要绘画工具。";
 				next;
-				mes "[DRY-RUN] The make-up brush is used for face painting.";
-				mes "[DRY-RUN] You can get paint from the workplace.";
-				mes "[DRY-RUN] [Vicente]";
+				mes "[文森特]";
+				mes "化妆刷用于面部绘画。";
+				mes "你可以从工作场所获取颜料。";
 				next;
-				mes "[DRY-RUN] The paint brush is used for painting big spaces.";
-				mes "[DRY-RUN] You can get paint from the workplace too.";
-				mes "[DRY-RUN] [Vicente]";
+				mes "[文森特]";
+				mes "画刷用于绘制大面积。";
+				mes "你也可以从工作场所获取颜料。";
 				next;
-				mes "[DRY-RUN] Don't you remember the location of the workplace?";
-				mes "[DRY-RUN] Juno, Prontera, Rachel and Lighthalzen.";
-				mes "[DRY-RUN] [Vicente]";
+				mes "[文森特]";
+				mes "你不记得工作场所的位置吗？";
+				mes "朱诺、普隆德拉、拉赫尔和利希塔恩。";
 				next;
-				mes "[DRY-RUN] If you need paint, go to an assistant.";
-				mes "[DRY-RUN] ^4d4dffIf you don't have any tools, you can use skill needed paints.^000000";
-				mes "[DRY-RUN] [Vicente]";
+				mes "[文森特]";
+				mes "如果你需要颜料，去找助手。";
+				mes "^4d4dff如果你没有任何工具，你可以使用所需的技能涂料。^000000";
 				next;
-				mes "[DRY-RUN] Congratulations to be our person.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[文森特]";
+				mes "恭喜你成为我们的人。";
 				close;
 			case 3:
-				mes "[DRY-RUN] What?";
-				mes "[DRY-RUN] Why not?";
-				mes "[DRY-RUN] You don't want to be a Shadow Chaser?";
-				mes "[DRY-RUN] I can teach you so much about painting.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "什么？";
+				mes "为什么不呢？";
+				mes "你不想成为影子追逐者吗？";
+				mes "我可以教你很多关于绘画的知识。";
 				next;
-				mes "[DRY-RUN] You really won't understand until you become one.";
-				mes "[DRY-RUN] [Dumk]";
+				mes "[杜姆克]";
+				mes "你真的不会理解，直到你成为其中一员。";
 				next;
-				mes "[DRY-RUN] Don't you want to learn how to harness a power stronger than what you know?";
-				mes "[DRY-RUN] ....";
-				mes "[DRY-RUN] Dumk seemed to be dissapointed because I didn't answer him.";
+				mes "[杜姆克]";
+				mes "难道你不想学习如何掌握比你所知道的更强大的力量吗？";
+				mes "....";
 				next;
-				mes "[DRY-RUN] [Dumk]";
+				mes "杜姆克似乎对我没有回答感到失望。";
 				close;
 			}
 		}
 	}
-	mes "[DRY-RUN] ..........";
-	mes "[DRY-RUN] Heh.";
-	mes "[DRY-RUN] [Vicente]";
+	mes "[杜姆克]";
+	mes "..........";
+	mes "嘿。";
 	next;
-	mes "[DRY-RUN] I'm sorry.";
-	mes "[DRY-RUN] He is not interested in other people.";
-	mes "[DRY-RUN] But you can't enter this space.";
-	mes "[DRY-RUN] You can get tools at the store.";
-	mes "You can get tools at the store.";
+	mes "[文森特]";
+	mes "对不起。";
+	mes "他对其他人不感兴趣。";
+	mes "但是你无法进入这个空间。";
+	mes "你可以在商店里获得工具。";
 	close;
 }
 
@@ -1931,146 +1931,146 @@ niflheim,230,276,1	script	Red Flame#sc_f03	802,{
 //============================================================
 job3_sha01,22,78,0	script	????#keybox01	844,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - You can't continue on in this quest because you are overweight. -";
+		mes "- 你无法继续这个任务，因为你的负重过重。 -";
 		close;
 	}
 	if (job_sha == 7) {
-		mes "[DRY-RUN] It's a small box made of a hard turtle's shell.";
-		mes "[DRY-RUN] The middle of it...";
+		mes "它是一个由坚硬的乌龟壳制成的小盒子。";
+		mes "它的中间...";
 		next;
-		select("[DRY-RUN] Touch the middle.:Push the middle.");
-		mes "[DRY-RUN] When you touch it, something comes out!";
+		select("触摸中间。:推中间。");
+		mes "当你触碰它时，会有什么东西出来！";
 		next;
 		setarray .@Codes1$[1],"EFDFJWF","FGEGKXG","GHFHLYH","HIGIMZI","IJHJNAJ","JKIKOBK","KLJLPCL","LMKMQDM";
 		setarray .@Codes2$[1],"IPOFTUZ","JQPGUVA","KRQHVWB","LSRIWXC","MTSJXYD","NUTKYZE","OVULZAF","PWVMABG";
 		set .@i, rand(1,8);
-		mes "[DRY-RUN]  DECEIVE";
-		mes "[DRY-RUN] It shows some letters and numbers.";
-		mes "[DRY-RUN] Deceive.";
+		mes " ";
+		mes " ";
+		mes "欺骗";
 		next;
-		mes "[DRY-RUN] Is it also code.";
-		mes "[DRY-RUN] It must be!";
+		mes " ";
+		mes " ";
 		mes " "+.@i;
 		next;
 		mes " "+.@Codes1$[.@i];
 		next;
-		mes "[DRY-RUN] Ah, something is showing up again...?";
-		mes "[DRY-RUN] - You can see some letters on the turtle's shell. -";
-		mes "[DRY-RUN] HONESTY";
+		mes "";
+		mes "";
+		mes "它显示一些字母和数字。";
 		mes "Then "+.@i+".";
 		mes "And "+.@Codes1$[.@i]+".";
 		next;
-		select("[DRY-RUN] What does it mean?");
+		select("这是什么意思？");
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] And also letters. They are blinking as if waiting for a code to be input.";
-		mes "[DRY-RUN] When you put the correct answer in there,";
-		mes "[DRY-RUN] the box is opened.";
+		mes " ";
+		mes "欺骗。";
+		mes "这也是代码吗？";
 		next;
-		mes "[DRY-RUN] There is a small and fabulous key.";
+		mes "一定是的！";
 		next;
-		mes "[DRY-RUN] - You get the Key of Deception. -";
-		mes "[DRY-RUN] - You put the answer -";
-		mes "[DRY-RUN] - but it doesn't work. -";
-		mes "HONESTY";
+		mes "啊，又有什么东西出现了吗...？";
+		mes "- 你可以在乌龟的壳上看到一些字母。 -";
+		mes " ";
+		mes "诚实";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ == .@Codes2$[.@i] || .@inputstr$ == strtolower(.@Codes2$[.@i])) {
 			mes " ";
-			mes "And also letters. They are blinking as if waiting for a code to be input.";
-			mes "When you put the correct answer in there,";
+			mes "还有字母。它们在闪烁，仿佛在等待输入代码。";
+			mes "当你把正确的答案放进去时，";
 			next;
-			mes "the box is opened.";
+			mes "盒子就会打开。";
 			set job_sha,8;
 			getitem 6266,1; //Cheat_Key
 			setquest 7165;
 			close;
 		}
-		mes "There is a small and fabulous key.";
-		mes "- You get the Key of Deception. -";
-		mes "- You put the answer -";
+		mes "里面有一把小而华丽的钥匙。";
+		mes "- 你得到了欺骗之钥。 -";
+		mes "- 你输入了答案 -";
 		close;
 	}
-	mes "- but it doesn't work. -";
+	mes "- 但它没有用。 -";
 	next;
-	if(select("[DRY-RUN] Go outside.:Stay here.") == 1)
+	if(select("出去。:留在这里。") == 1)
 		warp "tur_dun03",40,201;
 	close;
 }
 
 job3_sha01,25,28,0	script	????#keybox02	844,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - You can't continue on in this quest because you are overweight. -";
+		mes "- 你无法继续这个任务，因为你的负重过重。 -";
 		close;
 	}
 	setarray .@Words$[0],"SEED","FOOT","COLD";
 	setarray .@Numbers[0],24,25,20;
 	set .@i,job_sha-14;
 	if (job_sha > 13 && job_sha < 17) {
-		mes "[DRY-RUN] There are lots of boxes.";
-		mes "[DRY-RUN] with sort of numbers.";
+		mes "有很多箱子。";
+		mes "带有一些数字。";
 		next;
-		mes "[DRY-RUN]  1 2 3 4 5";
-		mes "[DRY-RUN]  6 7 8 9 0";
-		mes "[DRY-RUN]  [ ][ ] ";
-		mes "[DRY-RUN] When you touched that number, then it moved.";
+		mes " 1 2 3 4 5";
+		mes " 6 7 8 9 0";
+		mes " ";
+		mes " [ ][ ] ";
 		next;
-		mes "[DRY-RUN] You find the empty space.";
-		mes "[DRY-RUN] I guess I have to put the number in the empty space...";
+		mes "当你触摸那个数字时，它就移动了。";
+		mes "你找到空位。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I have two empty squares to put two numbers.";
-		mes "[DRY-RUN] What will it be good for?";
-		mes "[DRY-RUN] Now I have to convert it into a number...";
+		mes "我想我得把数字放在空位里...";
+		mes "我有两个空格可以放两个数字。";
+		mes "这有什么用？";
 		next;
-		select("[DRY-RUN] I think it's related with the word given by Paul.");
+		select("我认为这与保罗给出的词有关.");
 		mes "["+strcharinfo(0)+"]";
 		mes "I got "+.@Words$[.@i]+".";
-		mes "[DRY-RUN] The box opens and you get one key.";
+		mes "现在我得把它转换成一个数字...";
 		next;
-		switch(select("[DRY-RUN] Input the answer.:I can't get it.")) {
+		switch(select("输入答案.:我想不出来.")) {
 		case 1:
 			input .@input;
 			if (.@input == .@Numbers[.@i]) {
 				mes "You put 2 and "+(.@Numbers[.@i]-20)+".";
-				mes "[DRY-RUN] You got the Key of Illusion.";
+				mes "箱子打开了，你得到了一把钥匙。";
 				next;
-				mes "[DRY-RUN] It's not a treasure.";
-				next;
-				mes "["+strcharinfo(0)+"]";
-				mes "[DRY-RUN] The Key of Illusion? Is it related with the Shadow of Illusion?";
-				mes "[DRY-RUN] I got the Key of Deception after I handled Deception...";
-				mes "[DRY-RUN] Anyway, Paul will be disappointed.";
+				mes "你得到了幻影之钥。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "[DRY-RUN] Key again...";
-				mes "[DRY-RUN] How can I escape from here...?";
-				mes "[DRY-RUN] When I push the box, it shows the door to go outside.";
+				mes "这不是宝藏。";
+				mes "幻影之钥？它和幻影的阴影有关吗？";
+				mes "我在处理欺骗后得到了欺骗之钥……";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "无论如何，保罗会失望的。";
+				mes "又是钥匙……";
+				mes "我该如何逃出这里……？";
 				set job_sha,17;
 				getitem 6267,1; //Virtual_Key
 				erasequest 7171;
 				changequest 7168+.@i,7172;
 				next;
-				mes "[DRY-RUN] When you enter the number, it goes back to the first.";
+				mes "当我推箱子时，它显示出通往外面的门。";
 				close2;
 				warp "ice_dun02",209,219;
 				end;
 			}
-			mes "[DRY-RUN] Hmm.";
+			mes "当你输入数字时，它会回到最开始。";
 			close;
 		case 2:
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] I can't get it...";
-			mes "[DRY-RUN] Is it the same code as the Prontera workplace...?";
-			mes "[DRY-RUN] According to that method...";
+			mes "嗯。";
+			mes "我搞不懂……";
+			mes "这和普隆德拉的工作场所是同一个代码吗……？";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] A means 11 and B means 12.";
-			mes "[DRY-RUN] It's a myterious box.";
+			mes "根据那个方法...";
+			mes "A代表11，B代表12.";
 			close;
 		}
 	}
-	mes "[DRY-RUN] When I push the box, it shows the door to go outside.";
-	mes "When I push the box, it shows the door to go outside.";
+	mes "这是一个神秘的盒子.";
+	mes "当我推箱子时，它显示出通往外面的门。";
 	close2;
 	warp "ice_dun02",209,219;
 	end;
@@ -2078,108 +2078,108 @@ job3_sha01,25,28,0	script	????#keybox02	844,{
 
 job3_sha01,73,80,0	script	????#keybox03	844,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - You can't continue on in this quest because you are overweight. -";
+		mes "- 你无法继续这个任务，因为你的负重过重。 -";
 		close;
 	}
 	if (job_sha == 23 || job_sha == 24) {
 		if (job_sha == 23) {
-			mes "[DRY-RUN] There is a box that looks like a house.";
-			mes "[DRY-RUN] There's a small paper in the chimney.";
+			mes "有一个看起来像房子的盒子.";
+			mes "烟囱里有一张小纸条.";
 			next;
-			mes "[DRY-RUN] It says...";
-			mes "[DRY-RUN] -----------------";
-			mes "[DRY-RUN]  20 21 18 14";
-			mes "[DRY-RUN]  1 14 4";
-			mes "[DRY-RUN]  19 8 1 11 5";
-			mes "[DRY-RUN] -----------------";
+			mes "上面写着...";
+			mes "-----------------";
+			mes " 20 21 18 14";
+			mes " 1 14 4";
+			mes " 19 8 1 11 5";
+			mes "-----------------";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] I think it's another code.";
+			mes "我认为这是另一个代码.";
 		} else {
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] Let me think again...";
-			mes "[DRY-RUN] 20 21 18 14";
-			mes "[DRY-RUN] 1 14 4 ";
-			mes "[DRY-RUN] 19 8 1 11 5";
-			mes "[DRY-RUN] ...";
+			mes "让我再想想...";
+			mes "20 21 18 14";
+			mes "1 14 4 ";
+			mes "19 8 1 11 5";
+			mes "...";
 		}
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] It's the same as before.";
-		mes "[DRY-RUN] There's no code, so 1 should be A.";
-		mes "[DRY-RUN] And the answer is...";
+		mes "和之前一样.";
+		mes "没有代码，所以1应该是A.";
+		mes "答案是...";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ == "turn and shake" || .@inputstr$ == "TURN AND SHAKE") {
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] Turn... Turn... and";
-			mes "[DRY-RUN] Shake? Shake?";
-			mes "[DRY-RUN] For what?";
+			mes "转... 转... 然后";
+			mes "摇动？ 摇动？";
+			mes "为了什么？";
 			next;
 			while(1) {
-				switch(select("[DRY-RUN] Turn the roof.:Turn the house.:Turn the handle.")) {
+				switch(select("转动屋顶。:转动房子。:转动把手。")) {
 				case 1:
-					mes "[DRY-RUN] You turn the roof.";
+					mes "你转动屋顶。";
 					next;
-					switch(select("[DRY-RUN] Shake the roof.:Shake the house.")) {
+					switch(select("摇动屋顶。:摇动房子。")) {
 					case 1:
-						mes "[DRY-RUN] Even though you shake the roof but";
-						mes "[DRY-RUN] nothing happens.";
+						mes "即使你摇动屋顶，但";
+						mes "什么也没有发生。";
 						next;
 						mes "["+strcharinfo(0)+"]";
-						mes "[DRY-RUN] That's not it.";
-						mes "[DRY-RUN] Hmm...";
+						mes "不是这样。";
+						mes "嗯...";
 						next;
 						break;
 					case 2:
-						mes "[DRY-RUN] You tried to shake the house but";
-						mes "[DRY-RUN] it doesn't do anything.";
+						mes "你试着摇动房子，但";
+						mes "它没有任何反应。";
 						next;
 						mes "["+strcharinfo(0)+"]";
-						mes "[DRY-RUN] It's wrong.";
-						mes "[DRY-RUN] Put it back";
-						mes "[DRY-RUN] and try it again.";
+						mes "这是错误的。";
+						mes "放回去";
+						mes "再试一次。";
 						next;
 						break;
 					}
 					break;
 				case 2:
-					mes "[DRY-RUN] You grab the whole house and turn it.";
+					mes "你抓住整个房子并转动它。";
 					next;
-					switch(select("[DRY-RUN] Shake up and down.:Shake back and forth.:Turn 'round and 'round and shake.:Roll it upside down.")) {
+					switch(select("上下摇动。:来回摇动。:转圈摇动。:把它翻过来。")) {
 					case 1:
 					case 2:
-						mes "[DRY-RUN] Nothing happens.";
-						mes "[DRY-RUN] You think there is something inside, but it won't come out.";
+						mes "什么也没有发生。";
+						mes "你觉得里面有什么东西，但它不会出来。";
 						next;
 						mes "["+strcharinfo(0)+"]";
-						mes "[DRY-RUN] That's not it.";
-						mes "[DRY-RUN] Hmm...";
+						mes "不是这样。";
+						mes "嗯...";
 						next;
 						break;
 					case 3:
-						mes "[DRY-RUN] You shake it slowly.";
-						mes "[DRY-RUN] You can hear a noise,";
-						mes "[DRY-RUN] but nothing's coming out.";
+						mes "你慢慢摇晃它。";
+						mes "你能听到声音，";
+						mes "但什么都没有出来。";
 						next;
 						mes "["+strcharinfo(0)+"]";
-						mes "[DRY-RUN] That's not it.";
-						mes "[DRY-RUN] Hmm...";
+						mes "不是这样。";
+						mes "嗯...";
 						next;
 						break;
 					case 4:
-						mes "[DRY-RUN] Rolling it upside down causes something inside to move.";
+						mes "倒过来滚动会让里面的东西移动。";
 						next;
-						mes "[DRY-RUN] You shake it slowly.";
-						mes "[DRY-RUN] You can hear some noise.";
-						mes "[DRY-RUN] Something's coming out.";
+						mes "你慢慢摇晃它。";
+						mes "你能听到一些声音。";
+						mes "有什么东西要出来了。";
 						next;
-						mes "[DRY-RUN] - You got the Key of Pleasure. -";
+						mes "- 你得到了快乐之钥。 -";
 						next;
 						mes "["+strcharinfo(0)+"]";
-						mes "[DRY-RUN] What? A key again!";
-						mes "[DRY-RUN] Haled will be disappointed.";
-						mes "[DRY-RUN] I better go back.";
+						mes "什么？又是一把钥匙！";
+						mes "哈雷德会失望的。";
+						mes "我最好回去。";
 						set job_sha,25;
 						setquest 7176;
 						getitem 6268,1; //Mirth_Key
@@ -2187,11 +2187,11 @@ job3_sha01,73,80,0	script	????#keybox03	844,{
 					}
 					break;
 				case 3:
-					mes "[DRY-RUN] You tried to turn the small handle";
-					mes "[DRY-RUN] but it doesn't work.";
+					mes "你试着转动小把手，";
+					mes "但它不起作用。";
 					next;
 					mes "["+strcharinfo(0)+"]";
-					mes "[DRY-RUN] What should I do now?";
+					mes "我现在该怎么办？";
 					next;
 					break;
 				}
@@ -2200,14 +2200,14 @@ job3_sha01,73,80,0	script	????#keybox03	844,{
 		mes "["+strcharinfo(0)+"]";
 		mes "..."+.@inputstr$+"...?";
 		if (job_sha == 23) {
-			mes "[DRY-RUN] What does that mean?";
+			mes "那是什么意思？";
 			set job_sha,24;
 		} else
-			mes "[DRY-RUN] Again? I don't get it.";
+			mes "又来了？我不明白。";
 		close;
 	}
-	mes "[DRY-RUN] You don't have to stay in here.";
-	mes "[DRY-RUN] You put the box down and see that there is a door to go outside.";
+	mes "你不必待在这里。";
+	mes "你把箱子放下，看到有一扇门可以出去。";
 	close2;
 	warp "niflheim",230,270;
 	end;
@@ -2215,31 +2215,31 @@ job3_sha01,73,80,0	script	????#keybox03	844,{
 
 job3_sha01,71,27,0	script	????#keybox04	844,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - You can't continue on in this quest because you are overweight. -";
+		mes "- 你无法继续这个任务，因为你的负重过重。 -";
 		close;
 	}
 	if (job_sha == 27) {
-		mes "[DRY-RUN] There is a stone statue that looks";
-		mes "[DRY-RUN] like a small casket with a fabulous pattern around it.";
+		mes "有一个看起来像石像的雕像，";
+		mes "像一个小棺材，周围有华丽的图案。";
 		next;
-		mes "[DRY-RUN] But you can't feel any power from it.";
-		mes "[DRY-RUN] You find three holes in there.";
+		mes "但你感觉不到任何力量。";
+		mes "你发现里面有三个洞。";
 		next;
-		mes "[DRY-RUN] Inscribed next to the holes is written";
-		mes "[DRY-RUN] deception, illusion and pleasure.";
+		mes "在洞旁边刻着";
+		mes "欺骗、幻觉和快乐。";
 		next;
-		select("[DRY-RUN] Place the key in the holes.");
+		select("把钥匙放进孔里。");
 		if (countitem(6266) && countitem(6267) && countitem(6268)) {
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] At first, Deception...";
-			mes "[DRY-RUN] then Illusion...";
-			mes "[DRY-RUN] and Pleasure...";
-			mes "[DRY-RUN] Let me see.";
+			mes "首先，欺骗...";
+			mes "然后是幻觉...";
+			mes "还有快乐...";
+			mes "让我看看。";
 			next;
-			mes "[DRY-RUN] When you put the keys in";
-			mes "[DRY-RUN] something comes out.";
+			mes "当你把钥匙放进去时";
+			mes "有什么东西出来了。";
 			next;
-			mes "[DRY-RUN] - You got a brush with a fabulous pattern on it. -";
+			mes "- 你得到了一个图案华丽的刷子。 -";
 			delitem 6266,1; //Cheat_Key
 			delitem 6267,1; //Virtual_Key
 			delitem 6268,1; //Mirth_Key
@@ -2248,170 +2248,170 @@ job3_sha01,71,27,0	script	????#keybox04	844,{
 			changequest 7178,7179;
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] What???";
-			mes "[DRY-RUN] A brush!!!!";
-			mes "[DRY-RUN] This isn't treasure!!!";
+			mes "什么？？？";
+			mes "一个刷子！！！！";
+			mes "这不是宝藏！！！";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] Ahahhah!!!!";
-			mes "[DRY-RUN] *sniff*";
-			mes "[DRY-RUN] It's not treasure!";
+			mes "啊哈哈哈！！！！";
+			mes "*嗅嗅*";
+			mes "这不是宝藏！";
 			next;
-			select("[DRY-RUN] Now I'm pissed off.");
+			select("现在我很生气。");
 			mes "["+strcharinfo(0)+"]";
-			mes "[DRY-RUN] *Sigh*";
-			mes "[DRY-RUN] Guess I should bring this to ^4d4dffVicente^000000!";
+			mes "*叹气*";
+			mes "我想我应该把这个带给^4d4dffVicente^000000！";
 			close;
 		}
 		mes "["+strcharinfo(0)+"]";
-		mes "[DRY-RUN] I didn't bring all of the keys.";
-		mes "[DRY-RUN] How could I be so stupid?";
+		mes "我没有带齐所有的钥匙。";
+		mes "我怎么会这么愚蠢？";
 		close;
 	}
-	mes "[DRY-RUN] It's an empty stone statue.";
+	mes "这是一个空的石像。";
 	close;
 }
 
 // Brush Shops
 //============================================================
 s_atelier,29,119,3	script	Max#sc05_prt	97,{
-	mes "[DRY-RUN] [Max]";
-	mes "[DRY-RUN] Welcome~";
+	mes "[马克斯]";
+	mes "欢迎~";
 	if (Class == Job_Shadow_Chaser || Class == Job_Shadow_Chaser_T || Class == Job_Baby_Shadow_Chaser) {
-		mes "[DRY-RUN] You are a member of the Rogue guild!";
-		mes "[DRY-RUN] What can I help you with?";
+		mes "你是盗贼公会的成员！";
+		mes "我能帮你什么？";
 		next;
-		set .@i, select("[DRY-RUN] I need a make-up brush.:I need a paint brush.:Nothing.");
-		mes "[DRY-RUN] [Max]";
+		set .@i, select("我需要一个化妆刷。:我需要一个画笔。:没什么。");
+		mes "[马克斯]";
 		if (.@i == 1) setarray .@i[1],6121,1,10,100000;
 		else if (.@i == 2) setarray .@i[1],6122,2,30,200000;
 		else {
-			mes "[DRY-RUN] If you need more";
-			mes "[DRY-RUN] just visit me!";
+			mes "如果你需要更多";
+			mes "就来找我吧！";
 			close;
 		}
 		if (countitem(.@i[1])) {
-			mes "[DRY-RUN] Are you kidding me?";
-			mes "[DRY-RUN] You already have it?";
-			mes "[DRY-RUN] You don't need anything else.";
+			mes "你在开玩笑吗？";
+			mes "你已经有了吗？";
+			mes "你不需要其他东西了。";
 			next;
-			mes "[DRY-RUN] [Max]";
-			mes "[DRY-RUN] Visit later and use what you have!";
+			mes "[马克斯]";
+			mes "稍后再来，使用你拥有的东西！";
 			close;
 		}
 		if (countitem(7150) >= .@i[2] && countitem(949) >= .@i[3] && Zeny >= .@i[4]) {
-			mes "[DRY-RUN] Oh you brought all the things required.";
-			mes "[DRY-RUN] Hold on a bit.";
+			mes "哦，你带来了所有需要的东西。";
+			mes "等一下。";
 			next;
-			mes "[DRY-RUN] [Max]";
-			mes "[DRY-RUN] Here's what you need.";
+			mes "[马克斯]";
+			mes "这是你需要的。";
 			next;
-			mes "[DRY-RUN] [Max]";
-			mes "[DRY-RUN] Take it.";
-			mes "[DRY-RUN] Good luck!";
+			mes "[马克斯]";
+			mes "拿去吧。";
+			mes "祝你好运！";
 			delitem 7150,.@i[2]; //Bamboo_Cut
 			delitem 949,.@i[3]; //Feather
 			set Zeny, Zeny - .@i[4];
 			getitem .@i[1],1; //Makeover_Brush,Paint_Brush
 			close;
 		}
-		mes "[DRY-RUN] Here's what you need to get a make-up brush.";
+		mes "这是你需要的化妆刷。";
 		mes .@i[2]+" Bamboo Cut,";
 		mes .@i[3]+" Feather,";
 		mes "and "+.@i[0]+"00,000 zeny.";
 		close;
 	}
-	mes "[DRY-RUN] We sell all art related things here~";
+	mes "我们这里出售所有与艺术相关的东西~";
 	next;
-	switch(select("[DRY-RUN] Paint!?:Where's the manager?")) {
+	switch(select("画画！？:经理在哪里？")) {
 	case 1:
-		mes "[DRY-RUN] [Max]";
-		mes "[DRY-RUN] You are asking for paint?";
-		mes "[DRY-RUN] Could you just ask them to get the paint?~";
+		mes "[马克斯]";
+		mes "你在问颜料吗？";
+		mes "你能让他们去拿颜料吗？~";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Max]";
-		mes "[DRY-RUN] There's our manager.";
-		mes "[DRY-RUN] Right over there.";
-		mes "[DRY-RUN] **points**";
-		mes "[DRY-RUN] Are you blind?";
+		mes "[马克斯]";
+		mes "那是我们的经理。";
+		mes "就在那边。";
+		mes "**指着**";
+		mes "你瞎了吗？";
 		close;
 	}
 }
 
 s_atelier,136,70,3	script	Titika#sc09_ra	914,{
-	mes "[DRY-RUN] [Titika]";
-	mes "[DRY-RUN] Welcome.";
+	mes "[蒂蒂卡]";
+	mes "欢迎。";
 	if (Class == Job_Shadow_Chaser || Class == Job_Shadow_Chaser_T || Class == Job_Baby_Shadow_Chaser) {
-		mes "[DRY-RUN] You are in a guild.";
-		mes "[DRY-RUN] What can I help you with?";
+		mes "你在一个公会里。";
+		mes "我能帮你什么？";
 		next;
-		set .@i, select("[DRY-RUN] Make a new make-up brush.:Make a new paint brush.:Nothing.");
-		mes "[DRY-RUN] [Titika]";
+		set .@i, select("制作一个新的化妆刷。:制作一个新的绘画刷。:什么都不做。");
+		mes "[蒂蒂卡]";
 		if (.@i == 1) setarray .@i[1],6121,1,10,100000;
 		else if (.@i == 2) setarray .@i[1],6122,2,30,200000;
 		else {
-			mes "[DRY-RUN] Visit me again.";
+			mes "再来找我。";
 			close;
 		}
 		if (countitem(.@i[1])) {
-			mes "[DRY-RUN] You already have a paint brush?";
-			mes "[DRY-RUN] I think it's enough...";
+			mes "你已经有画笔了吗？";
+			mes "我觉得够了……";
 			close;
 		}
 		if (countitem(7150) >= .@i[2] && countitem(949) >= .@i[3] && Zeny >= .@i[4]) {
-			mes "[DRY-RUN] You brought all the materials.";
-			mes "[DRY-RUN] I'll exchange it with the goods that I made.";
+			mes "你带来了所有材料。";
+			mes "我会用我做的商品来交换。";
 			delitem 7150,.@i[2]; //Bamboo_Cut
 			delitem 949,.@i[3]; //Feather
 			set Zeny, Zeny - .@i[4];
 			getitem .@i[1],1; //Makeover_Brush,Paint_Brush
 			close;
 		}
-		mes "[DRY-RUN] To make a paint brush,";
+		mes "要制作一个画笔，";
 		mes "you need "+.@i[2]+" Bamboo Cut,";
 		mes .@i[3]+" Feathers,";
 		mes "and "+.@i[0]+"00,000 zeny.";
 		close;
 	}
-	mes "[DRY-RUN] This is the Shadow Chaser workplace~";
+	mes "这里是影子追踪者的工作场所~";
 	next;
-	switch(select("[DRY-RUN] Where is the paint?:Where is the manager?")) {
+	switch(select("颜料在哪里？:经理在哪里？")) {
 	case 1:
-		mes "[DRY-RUN] [Titika]";
-		mes "[DRY-RUN] You mean paint?";
-		mes "[DRY-RUN] Talk to the assistant and ask about the paint tool.";
+		mes "[蒂蒂卡]";
+		mes "你是说画画吗？";
+		mes "与助手对话并询问关于绘画工具的事宜。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Titika]";
-		mes "[DRY-RUN] My manager is inside of the workplace.";
-		mes "[DRY-RUN] If you visit him without a special reason, he will ignore you.";
+		mes "[蒂蒂卡]";
+		mes "我的经理在工作场所里面。";
+		mes "如果你没有特别的理由去拜访他，他会忽视你。";
 		close;
 	}
 }
 
 s_atelier,124,128,3	script	RimiGX#sc07_yuno	862,{
-	mes "[DRY-RUN] [RimiGX]";
-	mes "[DRY-RUN] Welcome.";
+	mes "[RimiGX]";
+	mes "欢迎。";
 	if (Class == Job_Shadow_Chaser || Class == Job_Shadow_Chaser_T || Class == Job_Baby_Shadow_Chaser) {
-		mes "[DRY-RUN] What are you looking for?";
+		mes "你在寻找什么？";
 		next;
-		set .@i, select("[DRY-RUN] Make a new blush for make-up.:Make a new blush for painting.:Nothing.");
-		mes "[DRY-RUN] [RimiGX]";
+		set .@i, select("制作一个新的腮红用于化妆。:制作一个新的腮红用于绘画。:什么都不做。");
+		mes "[RimiGX]";
 		if (.@i == 1) setarray .@i[1],6121,1,10,100000;
 		else if (.@i == 2) setarray .@i[1],6122,2,30,200000;
 		else {
-			mes "[DRY-RUN] Visit me again.";
+			mes "再来找我。";
 			close;
 		}
 		if (countitem(.@i[1])) {
-			mes "[DRY-RUN] I can't offer extra stuff.";
-			mes "[DRY-RUN] Visit here when you lost stuff.";
+			mes "我不能提供额外的东西。";
+			mes "当你丢失物品时请来这里。";
 			close;
 		}
 		if (countitem(7150) >= .@i[2] && countitem(949) >= .@i[3] && Zeny >= .@i[4]) {
-			mes "[DRY-RUN] You brought stuff you need.";
-			mes "[DRY-RUN] It will be fast when I exchange the stuff made?";
+			mes "你带来了你需要的东西。";
+			mes "当我交换制作的东西时会很快吗？";
 			delitem 7150,.@i[2]; //Bamboo_Cut
 			delitem 949,.@i[3]; //Feather
 			set Zeny, Zeny - .@i[4];
@@ -2423,45 +2423,45 @@ s_atelier,124,128,3	script	RimiGX#sc07_yuno	862,{
 		mes .@i[3]+" Feather, and "+.@i[0]+"00,000 zeny.";
 		close;
 	}
-	mes "[DRY-RUN] It's the shadow workplace~";
+	mes "这是影子工作场所~";
 	next;
-	switch(select("[DRY-RUN] Where is the paint?:Where is the manager?")) {
+	switch(select("颜料在哪里？:经理在哪里？")) {
 	case 1:
-		mes "[DRY-RUN] [RimiGX]";
-		mes "[DRY-RUN] Paint?";
-		mes "[DRY-RUN] Ask an assistant who works over there.";
+		mes "[RimiGX]";
+		mes "画吗？";
+		mes "问一下在那边工作的助手吧。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [RimiGX]";
-		mes "[DRY-RUN] Manager? He's in inside of the workplace.";
-		mes "[DRY-RUN] But when you visit him, you should have something to tell him....";
+		mes "[RimiGX]";
+		mes "经理？他在工作场所里面。";
+		mes "但是当你去找他时，你应该有话要告诉他....";
 		close;
 	}
 }
 
 s_atelier,26,68,3	script	Vito#sc11_lgt	904,{
-	mes "[DRY-RUN] [Vito]";
-	mes "[DRY-RUN] Welcome.";
+	mes "[维托]";
+	mes "欢迎。";
 	if (Class == Job_Shadow_Chaser || Class == Job_Shadow_Chaser_T || Class == Job_Baby_Shadow_Chaser) {
-		mes "[DRY-RUN] What are you looking for?";
+		mes "你在寻找什么？";
 		next;
-		set .@i, select("[DRY-RUN] Make a new blush for make-up.:Make a new blush for painting.:Nothing.");
-		mes "[DRY-RUN] [Vito]";
+		set .@i, select("制作一个新的腮红用于化妆。:制作一个新的腮红用于绘画。:什么都不做。");
+		mes "[维托]";
 		if (.@i == 1) setarray .@i[1],6121,1,10,100000;
 		else if (.@i == 2) setarray .@i[1],6122,2,30,200000;
 		else {
-			mes "[DRY-RUN] Whenever you need a blush, visit me.";
-			mes "[DRY-RUN] See you!";
+			mes "每当你需要腮红时，来找我。";
+			mes "再见！";
 			close;
 		}
 		if (countitem(.@i[1])) {
-			mes "[DRY-RUN] We offer only one blush to each person.";
-			mes "[DRY-RUN] We can't offer extra blushes.";
+			mes "我们只提供一个腮红给每个人。";
+			mes "我们不能提供额外的腮红。";
 			close;
 		}
 		if (countitem(7150) >= .@i[2] && countitem(949) >= .@i[3] && Zeny >= .@i[4]) {
-			mes "[DRY-RUN] You brought all what you need.";
-			mes "[DRY-RUN] I'm going to exchange the blush I made before.";
+			mes "你带来了所有你需要的东西。";
+			mes "我打算兑换我之前制作的腮红。";
 			delitem 7150,.@i[2]; //Bamboo_Cut
 			delitem 949,.@i[3]; //Feather
 			set Zeny, Zeny - .@i[4];
@@ -2473,17 +2473,17 @@ s_atelier,26,68,3	script	Vito#sc11_lgt	904,{
 		mes .@i[3]+" Feather, and "+.@i[0]+"00,000 zeny.";
 		close;
 	}
-	mes "[DRY-RUN] It's the shadow workplace.";
+	mes "这里是影子工作室。";
 	next;
-	switch(select("[DRY-RUN] Where is the paint?:Where is the manager?")) {
+	switch(select("颜料在哪里？:经理在哪里？")) {
 	case 1:
-		mes "[DRY-RUN] [Vito]";
-		mes "[DRY-RUN] Paint?";
-		mes "[DRY-RUN] Ask the assistant standing over there.";
+		mes "[维托]";
+		mes "画吗？";
+		mes "问站在那边的助手。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Vito]";
-		mes "[DRY-RUN] The man standing in front of the counter is the manager.";
+		mes "[维托]";
+		mes "站在柜台前的男人是经理。";
 		close;
 	}
 }
@@ -2493,14 +2493,14 @@ s_atelier,26,68,3	script	Vito#sc11_lgt	904,{
 tha_t01,149,228,0	script	#shadowc02	45,2,2,{
 	end;
 OnTouch:
-	mes "[DRY-RUN] You can feel weird power.";
+	mes "你能感受到奇怪的力量。";
 	if (BaseJob == Job_Rogue && job_sha == 27) {
-		mes "[DRY-RUN] You are getting dizzy.";
+		mes "你感到头晕。";
 		close2;
 		warp "job3_sha01",71,36;
 		end;
 	}
-	mes "[DRY-RUN] You don't know what it is.";
+	mes "你不知道这是什么。";
 	close;
 }
 

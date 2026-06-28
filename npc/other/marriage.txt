@@ -591,11 +591,11 @@ OnEnable:
 prt_church,100,128,4	script	Bishop#w	60,{
 	cutin "wedding_bomars01",2;
 	if (Upper == 2) {
-		mes "[DRY-RUN] [Vomars]";
-		mes "[DRY-RUN] Greetings, child.";
-		mes "[DRY-RUN] Are you lost? Hmmm.";
-		mes "[DRY-RUN] Do you know where your";
-		mes "[DRY-RUN] mommy and daddy are?";
+		mes "[沃马斯]";
+		mes "你好，孩子。";
+		mes "你迷路了吗？嗯。";
+		mes "你知道你的";
+		mes "爸爸妈妈在哪里吗？";
 		close2;
 		cutin "wedding_bomars01",255;
 		end;
@@ -610,67 +610,67 @@ prt_church,100,128,4	script	Bishop#w	60,{
 					if (Sex == SEX_MALE) {
 						set $@wedding,1;
 						initnpctimer;
-						mes "[DRY-RUN] [Vomars]";
-						mes "[DRY-RUN] Young lovers, please";
-						mes "[DRY-RUN] remember this moment for";
-						mes "[DRY-RUN] the rest of your lives. May your future be blessed with peace";
-						mes "[DRY-RUN] and joy. May the love you share";
-						mes "[DRY-RUN] grow with each passing day.";
+						mes "[沃马斯]";
+						mes "年轻的恋人们，请";
+						mes "记住这一刻，";
+						mes "愿你们的未来充满平静";
+						mes "和快乐。愿你们分享的爱";
+						mes "随着每一天的流逝而成长。";
 						next;
 						mapannounce "prt_church","It's the marriage proposal from the groom, Mr. " + strcharinfo(0) + "...",bc_map;
-						mes "[DRY-RUN] [Vomars]";
-						mes "[DRY-RUN] Until the end of the";
-						mes "[DRY-RUN] world, may you stand";
-						mes "[DRY-RUN] by the side of the one";
-						mes "[DRY-RUN] whom you love, to support";
-						mes "[DRY-RUN] her and protect her. Now, may";
-						mes "[DRY-RUN] I know the name of your bride?";
+						mes "[沃马斯]";
+						mes "直到世界的尽头，愿你们";
+						mes "站在彼此的身边。";
+						mes "你们的爱。";
+						mes "你所爱的，支持";
+						mes "她并保护她。现在，愿";
+						mes "我知道你新娘的名字吗？";
 						next;
 						input $@wed_bride$;
-						mes "[DRY-RUN] [Vomars]";
+						mes "[沃马斯]";
 						mes "Mr. " + strcharinfo(0) + "...";
-						mes "[DRY-RUN] Do you swear on your life";
-						mes "[DRY-RUN] that you will forever cherish";
-						mes "[DRY-RUN] and care for your bride,";
+						mes "你是否发誓以你的生命";
+						mes "你将永远珍惜";
+						mes "并关心你的新娘，";
 						mes "Miss " + $@wed_bride$ + "?";
 						next;
-						select("[DRY-RUN] I do.");
+						select("我愿意。");
 						set $@wed_groom$,strcharinfo(0);
-						mes "[DRY-RUN] [Vomars]";
-						mes "[DRY-RUN] Now, it is time for";
-						mes "[DRY-RUN] your bride to make";
-						mes "[DRY-RUN] her wedding vows.";
-						mes "[DRY-RUN] If she will come forward...";
+						mes "[沃马斯]";
+						mes "现在，是时候让";
+						mes "你的新娘做出";
+						mes "她的婚礼誓言。";
+						mes "如果她愿意走上前来...";
 						close2;
 						mapannounce "prt_church","The groom, Mr. " + strcharinfo(0) + ", has made his vows to Miss " + $@wed_bride$ + "...",bc_map;
 						cutin "",255;
 						end;
 					}
-					mes "[DRY-RUN] [Vomars]";
-					mes "[DRY-RUN] I'm sorry, but the groom";
-					mes "[DRY-RUN] must speak to me first in";
-					mes "[DRY-RUN] order to begin the wedding.";
-					mes "[DRY-RUN] It's old fashioned protocol,";
-					mes "[DRY-RUN] but I'll admit that it does";
-					mes "[DRY-RUN] keep things running smoothly.";
+					mes "[沃马斯]";
+					mes "对不起，但新郎";
+					mes "必须先跟我说话，";
+					mes "以便开始婚礼。";
+					mes "这是老式的礼节，";
+					mes "但我承认它确实";
+					mes "让事情顺利进行。";
 					goto L_End;
 				}
-				mes "[DRY-RUN] [Vomars]";
-				mes "[DRY-RUN] Before you can be";
-				mes "[DRY-RUN] married, you must";
-				mes "[DRY-RUN] first form a party of";
-				mes "[DRY-RUN] two with your partner.";
-				mes "[DRY-RUN] Then, we can proceed";
-				mes "[DRY-RUN] with the ceremony.";
+				mes "[沃马斯]";
+				mes "在你可以";
+				mes "结婚之前，你必须";
+				mes "首先与你的伴侣组成一个";
+				mes "二人小队。";
+				mes "然后，我们可以继续";
+				mes "进行仪式。";
 				goto L_End;
 			}
-			mes "[DRY-RUN] [Vomars]";
-			mes "[DRY-RUN] You must apply for";
-			mes "[DRY-RUN] marriage with Happy Marry";
-			mes "[DRY-RUN] before you can get married.";
-			mes "[DRY-RUN] Happy Marry will let you know";
-			mes "[DRY-RUN] what else you'll need to do";
-			mes "[DRY-RUN] to prepare for marriage.";
+			mes "[沃马斯]";
+			mes "你必须申请";
+			mes "与快乐婚姻的婚姻申请，";
+			mes "在你可以结婚之前。";
+			mes "快乐婚姻会告诉你";
+			mes "你还需要做什么。";
+			mes "为婚姻做准备。";
 			goto L_End;
 		}
 		else if ($@wedding == 1) {
@@ -680,42 +680,42 @@ prt_church,100,128,4	script	Bishop#w	60,{
 				if (.@partymembercount == 2) {
 					if (Sex == SEX_FEMALE) {
 						if (strcharinfo(0) == $@wed_bride$) {
-							mes "[DRY-RUN] [Vomars]";
-							mes "[DRY-RUN] Young lovers, please";
-							mes "[DRY-RUN] remember this moment for";
-							mes "[DRY-RUN] the rest of your lives. May your future be blessed with peace";
-							mes "[DRY-RUN] and joy. May the love you share";
-							mes "[DRY-RUN] grow with each passing day.";
+							mes "[沃马斯]";
+							mes "年轻的恋人们，请";
+							mes "记住这一刻，";
+							mes "愿你们的未来充满平静";
+							mes "和快乐。愿你们分享的爱";
+							mes "随着每一天的流逝而成长。";
 							next;
 							mapannounce "prt_church","Let's hear what the bride, Miss "+$@wed_bride$+", has to say...",bc_map;
-							mes "[DRY-RUN] [Vomars]";
+							mes "[沃马斯]";
 							mes "Miss "+$@wed_bride$+"...";
-							mes "[DRY-RUN] Do you swear to stay";
+							mes "你是否发誓要永远留在";
 							mes "true to "+$@wed_groom$+",";
-							mes "[DRY-RUN] to be by his side, no matter";
-							mes "[DRY-RUN] what the dangers may be?";
+							mes "他的身边，无论";
+							mes "面临什么危险？";
 							next;
-							if (select("[DRY-RUN] ^FF0000No.^000000:I do.") == 1) {
+							if (select("是的，我愿意。:^FF0000否。^000000") == 1) {
 								cutin "wedding_bomars03",2;
 								mapannounce "prt_church","Next couple, please proceed...",bc_map;
-								mes "[DRY-RUN] [Vomars]";
+								mes "[沃马斯]";
 								mes "So "+$@wed_groom$;
-								mes "[DRY-RUN] isn't the one you";
-								mes "[DRY-RUN] want to marry? Hmm.";
-								mes "[DRY-RUN] I'm truly sorry for this";
-								mes "[DRY-RUN] misunderstanding...";
+								mes "不是你想要的";
+								mes "结婚的人吗？嗯。";
+								mes "我对此感到非常抱歉";
+								mes "的误会...";
 								set $@wedding,0;
 								close2;
 								stopnpctimer;
 								cutin "",255;
 								end;
 							}
-							mes "[DRY-RUN] [Vomars]";
-							mes "[DRY-RUN] Do you truly swear";
-							mes "[DRY-RUN] fidelity and patience?";
+							mes "[沃马斯]";
+							mes "你真的发誓";
+							mes "忠诚和耐心吗？";
 							mes "Will you marry "+$@wed_groom$+"?";
 							next;
-							if (select("[DRY-RUN] Yes, I do.:^FF0000No.^000000") == 1) {
+							if (select("是的，我愿意。:^FF0000否。^000000") == 1) {
 								if (isloggedin(getcharid(3,$@wed_groom$))) {
 									if (marriage($@wed_groom$)) {
 										//Call Wedding effect
@@ -732,17 +732,17 @@ prt_church,100,128,4	script	Bishop#w	60,{
 										attachrid(getcharid(3,$@wed_bride$));
 										cutin "wedding_bomars02",2;
 										mapannounce "prt_church","I now pronounce you, "+$@wed_groom$+" and "+$@wed_bride$+", husband and wife.",bc_map;
-										mes "[DRY-RUN] [Vomars]";
-										mes "[DRY-RUN] By the power invested";
-										mes "[DRY-RUN] in me as Royal Bishop of";
-										mes "[DRY-RUN] the Rune-Midgarts Kingdom,";
-										mes "[DRY-RUN] I now pronounce you husband";
-										mes "[DRY-RUN] and wife. May your future be";
-										mes "[DRY-RUN] blessed with many great joys.";
+										mes "[沃马斯]";
+										mes "凭借我作为";
+										mes "鲁恩-米德加兹王国的皇家主教";
+										mes "的权力，";
+										mes "我现在宣布你们为夫妻。";
+										mes "和妻子。愿你们的未来";
+										mes "充满许多美好的快乐。";
 										next;
-										mes "[DRY-RUN] [Vomars]";
-										mes "[DRY-RUN] And lastly...";
-										mes "[DRY-RUN] Always be happy,";
+										mes "[沃马斯]";
+										mes "最后...";
+										mes "永远快乐，";
 										mes "dear "+$@wed_bride$+"...";
 										set $@wed_groom$,"";
 										set $@wed_bride$,"";
@@ -755,24 +755,24 @@ prt_church,100,128,4	script	Bishop#w	60,{
 									}
 								}
 								cutin "wedding_bomars03",2;
-								mes "[DRY-RUN] [Vomars]";
-								mes "[DRY-RUN] Hm. It seems that";
-								mes "[DRY-RUN] your groom left before";
-								mes "[DRY-RUN] the ceremony has finished";
-								mes "[DRY-RUN] Please try again once he's";
-								mes "[DRY-RUN] returned.";
+								mes "[沃马斯]";
+								mes "嗯。看起来";
+								mes "你的新郎在";
+								mes "仪式结束之前离开了。";
+								mes "请在他";
+								mes "回来后再试一次。";
 								goto L_End;
 							}
 							else {
 								cutin "wedding_bomars03",2;
 								mapannounce "prt_church","Alas! "+$@wed_bride$+" has rejected "+$@wed_groom$+"'s marriage proposal!",bc_map;
-								mes "[DRY-RUN] [Vomars]";
-								mes "[DRY-RUN] Hm. It seems that";
-								mes "[DRY-RUN] you've changed your";
-								mes "[DRY-RUN] mind. Although I feel";
-								mes "[DRY-RUN] sorry for the groom, you";
-								mes "[DRY-RUN] must do what your heart";
-								mes "[DRY-RUN] tells you is right. Now, run!";
+								mes "[沃马斯]";
+								mes "嗯。看起来";
+								mes "你已经改变了你的";
+								mes "主意。虽然我为新郎感到";
+								mes "抱歉，但你";
+								mes "必须听从你内心的";
+								mes "声音。现在，快跑！";
 							}
 							set $@wed_groom$,"";
 							set $@wed_bride$,"";
@@ -789,26 +789,26 @@ prt_church,100,128,4	script	Bishop#w	60,{
 				callsub S_Busy;
 			}
 			if (strcharinfo(0) == $@wed_bride$) {
-				mes "[DRY-RUN] [Vomars]";
-				mes "[DRY-RUN] Hm? It appears that";
-				mes "[DRY-RUN] Happy Marry still hasn't";
-				mes "[DRY-RUN] received your marriage";
-				mes "[DRY-RUN] application. Please speak";
-				mes "[DRY-RUN] to her so that we can begin";
-				mes "[DRY-RUN] the wedding ceremony.";
+				mes "[沃马斯]";
+				mes "嗯？看来";
+				mes "快乐的婚姻还没有";
+				mes "收到你的婚姻";
+				mes "申请。请与她交谈";
+				mes "以便我们可以开始";
+				mes "婚礼仪式。";
 				goto L_End;
 			}
 			callsub S_Busy;
 		}
 		callsub S_Busy;
 	}
-	mes "[DRY-RUN] [Vomars]";
-	mes "[DRY-RUN] I wish you eternal";
-	mes "[DRY-RUN] happiness. No matter";
-	mes "[DRY-RUN] how dark the present may";
-	mes "[DRY-RUN] be, always stand by your";
-	mes "[DRY-RUN] loved one's side and look";
-	mes "[DRY-RUN] to the future with hope.";
+	mes "[沃马斯]";
+	mes "我祝你们永恒的";
+	mes "幸福。无论";
+	mes "现在多么黑暗，";
+	mes "始终站在你";
+	mes "所爱之人身边，";
+	mes "怀着希望展望未来。";
 
 L_End:
 	close2;
@@ -817,19 +817,19 @@ L_End:
 
 S_Busy:
 	if ($@wed_groom$ != "" && $@wed_bride$ != "") {
-		mes "[DRY-RUN] [Vomars]";
-		mes "[DRY-RUN] The wedding of";
+		mes "[沃马斯]";
+		mes "婚礼正在进行中，";
 		mes "Miss "+ $@wed_bride$ +" and";
 		mes "Mister "+ $@wed_groom$;
-		mes "[DRY-RUN] is currently in progress.";
-		mes "[DRY-RUN] Please keep your voice down.";
+		mes "请稍等。";
+		mes "请小声点。";
 		goto L_End;
 	}
-	mes "[DRY-RUN] [Vomars]";
-	mes "[DRY-RUN] I'm conducting a wedding";
-	mes "[DRY-RUN] for another couple now, so";
-	mes "[DRY-RUN] please wait patiently for your";
-	mes "[DRY-RUN] turn. Thanks for understanding...";
+	mes "[沃马斯]";
+	mes "我正在为另一对新人举行婚礼。";
+	mes "请耐心等待你的轮到。谢谢你的理解...";
+	mes "我愿意。";
+	mes "转身。谢谢你的理解...";
 	goto L_End;
 
 OnStop:

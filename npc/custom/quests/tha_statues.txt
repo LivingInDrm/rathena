@@ -16,12 +16,12 @@
 //Statue (NPC)(U: UP, D: DOWN, R: RIGHT, L: LEFT) :
 // Explain Npc
 tha_t08,69,106,4	script	Statue	111,{
-	mes "You can read on the back of the statue:";
-	mes "'By the spirit of olds, the walls are closed";
-	mes "Upper floors or foreign taboo";
-	mes "By the order of the Statues you will find the way";
-	mes "Which perhaps a day will bring you to me.";
-	mes ".....Thanatos '";
+	mes "你可以在雕像的背面阅读:";
+	mes "‘古老的灵魂，墙壁关闭’";
+	mes "上层或外来的禁忌";
+	mes "根据雕像的命令，你将找到道路";
+	mes "也许有一天会把你带到我这里。";
+	mes ".....塔纳托斯 '";
 	close;
 }
 
@@ -32,28 +32,28 @@ tha_t08,69,106,4	script	Statue	111,{
 
 tha_t09,17,158,4	script	Thalos	111,{
 	if(TSQ_CHK == 1) goto done;
-	mes "[Thalos]";
-	mes "You must find the 2nd Statue now.";
+	mes "[塔洛斯]";
+	mes "你现在必须找到第二个雕像。";
 	set TSQ_CHK,1;
 	close;
 done:
-	mes "[Thalos]";
-	mes "Go search the 2nd Statue!";
+	mes "[塔洛斯]";
+	mes "去寻找第二个雕像吧!";
 	close;
 	
 }
 
 tha_t09,84,99,4	script	Mediane	111,{
 	if(TSQ_CHK != 1) goto nook;
-	mes "[Mediane]";
-	mes "Okay, i am warping you to the next floor now.";
+	mes "[梅迪安]";
+	mes "好的，我现在要把你传送到下一层。";
 	next;
 	set TSQ_CHK,0;
 	warp "tha_t10",	165,	138; 
 	close;
 nook:
-	mes "[Mediane]";
-	mes "You must talk with the Spirit in the 1st Statue.";
+	mes "[梅迪安]";
+	mes "你必须与第一个雕像中的灵魂对话。";
 	close;
 }
 
@@ -65,26 +65,26 @@ nook:
 
 tha_t10,130,159,4	script	Melkor	111,{
 	if(TSQ_CHK == 1) goto done;
-	mes "[Melkor]";
-	mes "You must find the other Spirits now.";
-	mes "We are 3.";
+	mes "[梅尔科尔]";
+	mes "你必须找到其他的灵魂。";
+	mes "我们有三个。";
 	set TSQ_CHK,1;
 	close;
 done:
-	mes "[Melkor]";
-	mes "Go Search, They are in this floor.";
+	mes "[梅尔科尔]";
+	mes "去搜索，它们在这一层。";
 	close;
 }
 
 tha_t10,160,98,4	script	Zebrus	111,{
 	if(TSQ_CHK != 1) goto nook;
-	mes "[Zebrus]";
-	mes "Keep on this way, There is one Spirit left";
+	mes "[泽布鲁斯]";
+	mes "继续往前走，还有一个灵魂剩下。";
 	set TSQ_CHK,2;
 	close;
 nook:
-	mes "[Zebrus]";
-	mes "You seems to be lost, Go back and talk to Melkor.";
+	mes "[泽布鲁斯]";
+	mes "你似乎迷路了，回去和梅尔科尔谈谈。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -92,15 +92,15 @@ nook:
 
 tha_t10,99,97,4	script	Veriaelle	111,{
 	if(TSQ_CHK != 2) goto nook;
-	mes "[Veriaelle]";
-	mes "Okay, i am warping you to the next floor.";
+	mes "[维里艾尔]";
+	mes "好的，我将传送你到下一层。";
 	next;
 	set TSQ_CHK,0;
 	warp "tha_t11",	86,	38;
 	close;
 nook:
-	mes "[Veriaelle]";
-	mes "You seems to be lost, Go back and talk to Melkor.";
+	mes "[维里艾尔]";
+	mes "你似乎迷路了，回去和梅尔科尔谈谈。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -115,27 +115,27 @@ nook:
 
 tha_t11,16,85,4	script	Throtre	111,{
 	if(TSQ_CHK == 1) goto done;
-	mes "[Throtre]";
-	mes "You got my authorization for the next floor";
-	mes "However, you must show how strong you are to the other Spirits";
+	mes "[索特雷]";
+	mes "你获得了进入下一层的授权。";
+	mes "不过，你必须向其他灵魂展示你的实力。";
 	set TSQ_CHK,1;
 	close;
 done:
-	mes "[Throtre]";
-	mes "Go search, They Can't leave this floor.";
+	mes "[索特雷]";
+	mes "去搜索，他们不能离开这一层。";
 	close;
 }
 
 tha_t11,85,16,4	script	Klermaz	111,{
 	if(TSQ_CHK != 1) goto nook;
-	mes "[Klermaz]";
-	mes "Hmm it seems that Throtre allowed you to pass.";
-	mes "Well then you have my blessing, 2 Spirits remaining.";
+	mes "[克莱尔马兹]";
+	mes "嗯，看起来托罗特允许你通过。";
+	mes "那么你得到了我的祝福，还有2个灵魂剩下。";
 	set TSQ_CHK,2;
 	close;
 nook:
-	mes "[Klermaz]";
-	mes "You seems to be lost, Go back and talk to Throtre.";
+	mes "[克莱尔马兹]";
+	mes "你似乎迷路了，回去和托罗特谈谈。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -143,13 +143,13 @@ nook:
 
 tha_t11,16,16,4	script	Mihane	111,{
 	if(TSQ_CHK != 2) goto nook;
-	mes "[Mihane]";
-	mes "Keep on this way, Only 1 Left.";
+	mes "[米哈内]";
+	mes "继续往前走，只剩下1个了。";
 	set TSQ_CHK,3;
 	close;
 nook:
-	mes "[Mihane]";
-	mes "Sorry, You must start over from the begining.";
+	mes "[米哈内]";
+	mes "抱歉，你必须从头开始。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -157,16 +157,16 @@ nook:
 
 tha_t11,85,85,4	script	Seranes	111,{
 	if(TSQ_CHK != 3 ) goto nook;
-	mes "[Seranes]";
-	mes "Perfect, it seems that the other spirits grants you the access.";
-	mes "I am warping you to the next floor.";
+	mes "[塞拉尼斯]";
+	mes "完美，似乎其他灵魂授予你通行权限。";
+	mes "我将把你传送到下一层。";
 	next;
 	set TSQ_CHK,0;
 	warp "tha_t12",	129,	58;
 	close;
 nook:
-	mes "[Seranes]";
-	mes "You did not follow the good order, starts again from the begining.";
+	mes "[塞拉尼斯]";
+	mes "你没有遵循正确的顺序，从头开始。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -182,25 +182,25 @@ nook:
 
 tha_t12,103,18,4	script	Nox	111,{
 	if(TSQ_CHK == 1 ) goto done;
-	mes "[Nox]";
-	mes "Fine, 4 Spirits left.";
+	mes "[诺克斯]";
+	mes "很好，剩下4个灵魂。";
 	set TSQ_CHK,1;
 	close;
 done:
-	mes "[Nox]";
-	mes "Go search, They can't leave this floor.";
+	mes "[诺克斯]";
+	mes "去寻找，他们不能离开这一层。";
 	close;
 }
 
 tha_t12,162,58,4	script	Vox	111,{
 	if(TSQ_CHK != 1 ) goto nook;
-	mes "[Vox]";
-	mes "Keep on this way, 3 Spirits remaining !";
+	mes "[沃克斯]";
+	mes "继续这个方向，剩下3个灵魂！";
 	set TSQ_CHK,2;
 	close;
 nook:
-	mes "[Vox]";
-	mes "Sorry, Go back and talk to Nox.";
+	mes "[沃克斯]";
+	mes "抱歉，返回去和诺克斯谈话。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -208,13 +208,13 @@ nook:
 
 tha_t12,96,57,4	script	Hox	111,{
 	if(TSQ_CHK != 2 ) goto nook;
-	mes "[Hox]";
-	mes "You are on the good way, 2 Spirits remaining !";
+	mes "[霍克斯]";
+	mes "你走在正确的路上，剩下2个灵魂！";
 	set TSQ_CHK,3;
 	close;
 nook:
-	mes "[Hox]";
-	mes "Sorry, Go back and talk to Vox.";
+	mes "[霍克斯]";
+	mes "抱歉，返回去和沃克斯谈话。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -222,13 +222,13 @@ nook:
 
 tha_t12,153,17,4	script	Dox	111,{
 	if(TSQ_CHK != 3 ) goto nook;
-	mes "[Dox]";
-	mes "Perfect, 1 Spirit left.";
+	mes "[多克斯]";
+	mes "完美，剩下1个灵魂。";
 	set TSQ_CHK,4;
 	close;
 nook:
-	mes "[Dox]";
-	mes "Sorry, Go back and talk to Hox.";
+	mes "[多克斯]";
+	mes "抱歉，返回去和霍克斯谈话。";
 	next;
 	set TSQ_CHK,0;
 	close;
@@ -236,33 +236,33 @@ nook:
 
 tha_t12,128,88,4	script	Sox	111,{
 	if(TSQ_CHK != 4 ) goto nook;
-	mes "[Sox]";
-	mes "You have just passed the test successfully.";
+	mes "[索克斯]";
+	mes "你刚刚成功通过了测试。";
 	next;
-	mes "[Sox]";
-	mes "You have to give me Red Magic Stone, Yellow Magic Stone, Blue Magic Stone & Green Magic Stone.";
+	mes "[索克斯]";
+	mes "你需要给我红色魔法石、黄色魔法石、蓝色魔法石和绿色魔法石。";
 	next;
 	if(countitem(7426) < 1 || countitem(7427) < 1 || countitem(7428) < 1 || countitem(7429) < 1) goto nostone;
 	delitem 7426,1;
 	delitem 7427,1;
 	delitem 7428,1;
 	delitem 7429,1;
-	mes "[Sox]";
-	mes "I will now warp you to steps of Fate.";
-	mes "Good-bye.";
+	mes "[索克斯]";
+	mes "我现在将传送你到命运之阶。";
+	mes "再见。";
 	next;
 	set TSQ_CHK,0;
 	warp "thana_step", 186, 223;
 	close;
 
 nostone:
-	mes "[Sox]";
-	mes "Oh well, seems you don't have enough stones.";
+	mes "[索克斯]";
+	mes "哦，看起来你没有足够的魔法石。";
 	close;
 
 nook:
-	mes "[Sox]";
-	mes "Sorry, Go back and talk to Dox.";
+	mes "[索克斯]";
+	mes "抱歉，返回去和多克斯对话。";
 	next;
 	set TSQ_CHK,0;
 	close;

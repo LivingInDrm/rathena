@@ -12,19 +12,19 @@
 	.@storage_ticket = 7059;	// Cargo_Free_Ticket
 	.@storage_ticket_name$ = getitemname(.@storage_ticket);
 
-	mes "[DRY-RUN] Vending Machine for Novices.";
-	mes "[DRY-RUN] There are many buttons.";
+	mes "新手自动售货机。";
+	mes "有很多按钮。";
 	next;
-	switch( select( "[DRY-RUN] Manual", "Trade " + .@storage_ticket_name$, "Trade Novice equipments" ) ) {
+	switch( select( "手动", "Trade " + .@storage_ticket_name$, "Trade Novice equipments" ) ) {
 	case 1:
 		mes "[Exchange " + .@storage_ticket_name$ + "]";
 		mes "4 " + .@storage_ticket_name$ + " can be exchanged into 1 Free Ticket for Warp, Airship or the Cart Service, or 1 Free Ticket for Peco Ride, 15 Novice Fly Wing, 5 Novice Butterfly Wing, 30 Novice Potion.";
 		next;
-		mes "[DRY-RUN] [Trade Novice Gears]";
+		mes "[交易新手装备]";
 		mes "Armor, Hood, Sandals, Main Gauche and Guard for Novice from Criatura Academy can be exchanged into 4 " + .@storage_ticket_name$ + ".";
 		next;
-		mes "[DRY-RUN] [Trade Novice Gears]";
-		mes "[DRY-RUN] Novice Eggshell can be exchanged into Criatura Hair Coupon for changing your hairstyle.";
+		mes "[交易新手装备]";
+		mes "新手蛋壳可以兑换为变发券，用于更改你的发型。";
 		close;
 	case 2:
 		setarray .@exchange[0],
@@ -54,14 +54,14 @@
 		getitem .@exchange[.@s],.@exchange[.@s+1];
 		close;
 	case 3:
-		mes "[DRY-RUN] Exchange all Novice equipments into coupons.";
-		mes "[DRY-RUN] Select continue to proceed.";
+		mes "将所有新手装备兑换成券。";
+		mes "选择继续以进行下一步。";
 		next;
-		if (select( "[DRY-RUN] Continue", "Cancel." ) == 2) {
-			mes "[DRY-RUN] The trade was interrupted.";
+		if (select( "继续", "Cancel." ) == 2) {
+			mes "交易被中断。";
 			close;
 		}
-		mes "[DRY-RUN] Exchanging all equipment into coupons.";
+		mes "将所有装备兑换成券。";
 		setarray .@list[0],2352,2510,2414,1243,2112,5055;
 		.@size = getarraysize(.@list);
 		

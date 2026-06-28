@@ -79,20 +79,20 @@
 			mes "[姑娘]";
 			mes "哦...";
 			mes "再会咯!";
-			mes "to have 10,000 Zeny...";
-			mes "Go get some money first!";
+			mes "要有10,000金币...";
+			mes "先去赚点钱吧!";
 			close;
 		}
-		mes "[Girl]";
-		mes "Oh...";
-		mes "It's so disappointing";
-		mes "to hear you say that.";
-		mes "Well, have a good day!";
+		mes "[少女]";
+		mes "哦...";
+		mes "真让人失望";
+		mes "听你这么说。";
+		mes "那么，祝你有个愉快的一天!";
 		close;
 	case 3:
-		mes "[Girl]";
-		mes "Oh...";
-		mes "Have a good day!";
+		mes "[少女]";
+		mes "哦...";
+		mes "祝你有个愉快的一天!";
 		close;
 	}
 }
@@ -122,15 +122,15 @@ lou_fild01,190,100,7	script	Girl#1lou	815,{
 	mes "这里的帅锅不少喔~";
 	next;
 	if (Sex == SEX_MALE) {
-		mes "[Girl]";
-		mes "And by sights...";
-		mes "I mean girls!";
-		mes "Tee hee~";
+		mes "[少女]";
+		mes "还有那些景点...";
+		mes "我是指女孩们!";
+		mes "嘻嘻~";
 	}
 	else {
-		mes "[Girl]";
-		mes "And the boys here";
-		mes "aren't bad looking~";
+		mes "[少女]";
+		mes "这里的男孩们";
+		mes "也不错看~";
 	}
 	close;
 }
@@ -250,7 +250,7 @@ louyang,274,129,0	script	Trainee#6lou	819,{
 	mes "[训练者]";
 	mes "兮哈!";
 	mes "啊呀!!";
-	mes "Hooo~";
+	mes "好哦~";
 	close;
 }
 
@@ -311,7 +311,7 @@ louyang,84,254,0	script	Exit#lou	111,{
 	mes "呔啊!";
 	mes "呔啊!";
 	next;
-	if (select("Yes.:No.") == 1) {
+	if (select("是。:否。") == 1) {
 		if (rand(1,100) == 34) {
 			percentheal -99,0;
 			warp "louyang",86,269;

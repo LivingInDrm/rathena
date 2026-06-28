@@ -20,129 +20,129 @@
 -	script	::KnightDeThomas	98,4,4,{
 	if ((BaseClass == Job_Swordman) && (JobLevel >= 35 || (BaseJob == Job_Knight || BaseJob == Job_Crusader))) {
 		if (getskilllv("SM_MOVINGRECOVERY") == 1) {
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Oh, it's you?";
-			mes "[DRY-RUN] Long time no see!";
-			mes "[DRY-RUN] You seem healthier than before.";
-			mes "[DRY-RUN] Hahahaha!";
-			mes "[DRY-RUN] Take care! See you again!";
+			mes "[德·托马斯]";
+			mes "哦，是你吗？";
+			mes "好久不见！";
+			mes "你看起来比以前健康多了。";
+			mes "哈哈哈哈！";
+			mes "保重！再见！";
 			close;
 		} else if (countitem(713) >= 200 && countitem(1058) >= 1) {
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Welcome back...";
-			mes "[DRY-RUN] Are you ready to learn Body Movin'?";
+			mes "[德·托马斯]";
+			mes "欢迎回来……";
+			mes "你准备好学习身体移动技能了吗？";
 			next;
-			switch (select("[DRY-RUN] Yes.:No, I'm not ready yet.")) {
+			switch (select("是的。:不，我还没有准备好。")) {
 			case 1:
-				mes "[DRY-RUN] [De Thomas]";
-				mes "[DRY-RUN] Let's see.....";
+				mes "[德·托马斯]";
+				mes "让我看看…..";
 				next;
-				mes "[DRY-RUN] [De Thomas]";
-				mes "[DRY-RUN] Ok! I shall now teach you...";
-				mes "[DRY-RUN] ...The Body Movin' skill!";
+				mes "[德·托马斯]";
+				mes "好的！我现在要教你……";
+				mes "……身体移动技能！";
 				next;
 				delitem 713,200; //Empty_Bottle
 				delitem 1058,1; //Wing_Of_Moth
 				skill "SM_MOVINGRECOVERY",1,SKILL_PERM;
-				mes "[DRY-RUN] [De Thomas]";
-				mes "[DRY-RUN] There you go!";
-				mes "[DRY-RUN] Try it yourself.";
-				mes "[DRY-RUN] But don't overdo it.";
+				mes "[德·托马斯]";
+				mes "给你！";
+				mes "自己试试吧。";
+				mes "但不要过度哦。";
 				next;
-				mes "[DRY-RUN] [De Thomas]";
-				mes "[DRY-RUN] Oh yeah, I won't be needing your";
-				mes "[DRY-RUN] armor so you can keep it.";
-				mes "[DRY-RUN] Good luck now!";
+				mes "[德·托马斯]";
+				mes "哦，对了，我不需要你的";
+				mes "盔甲，所以你可以留着它。";
+				mes "祝你好运！";
 				close;
 			case 2:
-				mes "[DRY-RUN] [De Thomas]";
-				mes "[DRY-RUN] Is that so?";
-				mes "[DRY-RUN] Then come when you are prepared.";
+				mes "[德·托马斯]";
+				mes "是吗？";
+				mes "那么当你准备好时再来吧。";
 				close;
 			}
 		} else {
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Hmmm... He's a swordsman...";
-			mes "[DRY-RUN] You know that I am De Thomas Carlos, right?";
-			mes "[DRY-RUN] Knight of Prontera's 3rd Calvary.";
-			mes "[DRY-RUN] De Thomas Carlos!";
+			mes "[德·托马斯]";
+			mes "嗯……他是个剑士……";
+			mes "你知道我叫德·托马斯·卡洛斯，对吧？";
+			mes "普隆德拉第三骑兵的骑士。";
+			mes "德·托马斯·卡洛斯！";
 			next;
-			mes "[DRY-RUN] [De Thomas]";
+			mes "[德·托马斯]";
 
 			// bug: official script always states that job level is too low
 			//mes "Wait a second, your Job level isn't above ^00880035^000000!";
 			//mes "Come back when it is.";
 
 			// custom: old dialog
-			mes "[DRY-RUN] You do not have all the items I asked for.";
+			mes "你没有我要求的所有物品。";
 			next;
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Remember, I need ^008800200 empty bottles^000000, your armor, and a ^008800Moth Wing^000000. Come back when you have it all.";
+			mes "[德·托马斯]";
+			mes "记住，我需要^008800200个空瓶子^000000，你的盔甲，还有一个^008800蛾翅膀^000000。等你都准备好再回来。";
 			close;
 		}
 	} else {
-		mes "[DRY-RUN] [De Thomas]";
-		mes "[DRY-RUN] My name is De Thomas Carlos.";
-		mes "[DRY-RUN] Knight of Prontera's 3rd Calvary.";
-		mes "[DRY-RUN] I have a certain duty these days.";
-		mes "[DRY-RUN] Ehem! Need I say more.";
+		mes "[德·托马斯]";
+		mes "我叫德·托马斯·卡洛斯。";
+		mes "普隆德拉第三骑兵的骑士。";
+		mes "这段时间我有一项特殊的任务。";
+		mes "咳！我还需要多说吗。";
 		close;
 	}
 	end;
 
 OnTouch:
 	if ((BaseClass == Job_Swordman) && (JobLevel >= 35 || (BaseJob == Job_Knight || BaseJob == Job_Crusader))) {
-		mes "[DRY-RUN] [De Thomas]";
-		mes "[DRY-RUN] Oh, no! You must have been hurt! Are you ok?";
-		mes "[DRY-RUN] You must have fought hard to get such serious injuries..";
-		mes "[DRY-RUN] Being a swordsman must come with a lot of responsibility and sacrifice.";
+		mes "[德·托马斯]";
+		mes "哦，不！你一定受伤了！你还好吗？";
+		mes "你一定为了得到如此严重的伤势而拼搏过..";
+		mes "作为一名剑士，肩负着许多责任和牺牲。";
 		next;
-		mes "[DRY-RUN] [De Thomas]";
+		mes "[德·托马斯]";
 		if (Sex == SEX_MALE)
-			mes "[DRY-RUN] For these swordsmen and knights, there is a wonderful skill.";
+			mes "对于这些剑士和骑士来说，有一个很棒的技能。";
 		else
-			mes "[DRY-RUN] For these swordswomen and knights, there is a wonderful skill young lady.";
-		mes "[DRY-RUN] I present to you - HP Recovery While Moving!";
-		mes "[DRY-RUN] Body moving is a splendid skill";
-		mes "[DRY-RUN] that allows you to regain strength(HP)";
-		mes "[DRY-RUN] while you are moving!";
+			mes "对于这些女剑士和骑士来说，有一个很棒的技能，年轻女士。";
+		mes "我向你介绍 - 移动时恢复HP！";
+		mes "身体移动是一个绝妙的技能，";
+		mes "它可以让你在移动时恢复力量（HP）";
+		mes "！";
 		next;
-		mes "[DRY-RUN] [De Thomas]";
-		mes "[DRY-RUN] It is currently under development";
-		mes "[DRY-RUN] so it may not recover that much,";
-		mes "[DRY-RUN] but it will help a little.";
-		mes "[DRY-RUN] What do you think? Would you like to learn this skill?";
+		mes "[德·托马斯]";
+		mes "它目前正在开发中，";
+		mes "所以可能恢复的量不多，";
+		mes "但这会有一点帮助。";
+		mes "你觉得怎么样？你想学习这个技能吗？";
 		next;
-		switch (select("[DRY-RUN] What a nice skill! I want to learn it!:No, thank you.")) {
+		switch (select("真是个不错的技能！我想学这个！:否，谢谢。")) {
 		case 1:
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Very well. I will tell you what you need to learn this skill.";
-			mes "[DRY-RUN] First, your job level must be higher than ^00880035^000000.";
-			mes "[DRY-RUN] You will also need ^008800200 empty bottles^000000.";
-			mes "[DRY-RUN] Why? Because it is proof that you fought fiercely to have used that many potions.";
+			mes "[德·托马斯]";
+			mes "很好。我会告诉你学习这个技能所需的条件。";
+			mes "首先，你的职业等级必须高于 ^00880035^000000。";
+			mes "你还需要 ^008800200 个空瓶子^000000。";
+			mes "为什么？因为这证明你在战斗中拼尽全力，使用了那么多药水。";
 			next;
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Also, the armor you used in battle.";
-			mes "[DRY-RUN] This is also proof of an experienced fighter.";
-			mes "[DRY-RUN] For the armor... your armor is perfect!";
-			mes "[DRY-RUN] Bring your armor!";
-			mes "[DRY-RUN] Last but not least... bring me one ^008800Moth Wing^000000.";
+			mes "[德·托马斯]";
+			mes "还有，你在战斗中使用的盔甲。";
+			mes "这也是一个经验丰富的战士的证明。";
+			mes "至于盔甲……你的盔甲非常完美！";
+			mes "带上你的盔甲！";
+			mes "最后但并非最不重要的是...给我带来一只 ^008800蛾翅膀^000000.";
 			next;
-			select("[DRY-RUN] Eh? You need that, too?");
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Not really.. I don't really NEED it.";
-			mes "[DRY-RUN] It's just that my niece has gotten a bug hunting as a holiday task during the summer vacation.";
-			mes "[DRY-RUN] Of course! It would be much easier for me to get it myself.";
-			mes "[DRY-RUN] but I must work here all the time so I don't exactly have the time to go out and get it.";
+			select("嗯？你也需要那个吗？");
+			mes "[德·托马斯]";
+			mes "其实...我并不真的需要它.";
+			mes "只是我的侄女在暑假期间作为假期任务去捕虫.";
+			mes "当然！我自己去拿会容易得多.";
+			mes "但我必须一直在这里工作，所以我没有时间出去拿它。";
 			next;
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] Don't you think it is pitiful that I have to stay in once place everyday, not being able to go outside?";
-			mes "[DRY-RUN] Please, find me one...*sniffsniff*";
-			mes "[DRY-RUN] If you don't...";
+			mes "[德·托马斯]";
+			mes "难道你不觉得我每天都必须待在一个地方，无法出去，这很可怜吗？";
+			mes "请，帮我找一个...*抽泣*";
+			mes "如果你不这样做...";
 			close;
 		case 2:
-			mes "[DRY-RUN] [De Thomas]";
-			mes "[DRY-RUN] ...";
+			mes "[德·托马斯]";
+			mes "...";
 			close;
 		}
 	}
@@ -305,170 +305,170 @@ OnTouch_:
 prt_in,94,57,3	script	Juan	85,4,4,{
 	if (BaseClass == Job_Swordman) {
 		if (getskilllv("SM_AUTOBERSERK") == 1) {
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] Mmm? Long time no see!";
-			mes "[DRY-RUN] How are you?";
-			mes "[DRY-RUN] You got stronger than before.";
-			mes "[DRY-RUN] Many expect great things from you.";
-			mes "[DRY-RUN] You can do it.";
+			mes "[胡安]";
+			mes "嗯？好久不见！";
+			mes "你好吗？";
+			mes "你比以前更强了。";
+			mes "很多人对你寄予厚望。";
+			mes "你可以做到的。";
 			close;
 		}
 		else if (JobLevel < 10 && (BaseJob != Job_Knight && BaseJob != Job_Crusader)) {
-			mes "[DRY-RUN] [?]";
-			mes "[DRY-RUN] What are you?";
-			mes "[DRY-RUN] Eh, still a beginner.";
-			mes "[DRY-RUN] I'm busy, so go train a little more";
-			mes "[DRY-RUN] before coming back.";
+			mes "[?]";
+			mes "你是什么职业？";
+			mes "嗯，还是个初心者。";
+			mes "我很忙，去多训练一会儿吧";
+			mes "再回来。";
 			close;
 		}
 		else if (JobLevel < 30 && (BaseJob != Job_Knight && BaseJob != Job_Crusader)) {
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] Oh, nice to meet you.";
-			mes "[DRY-RUN] You can be on your way. (smiley~)";
+			mes "[胡安]";
+			mes "哦，很高兴见到你。";
+			mes "你可以继续前行了。（微笑~）";
 			close;
 		}
 		else if ((countitem(924) > 34) && (countitem(958) > 9) && (countitem(957) > 9) && (countitem(518) > 9)) {
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] Ooh. Young swordsman!";
-			mes "[DRY-RUN] You are ready to learn the";
-			mes "[DRY-RUN] newest skill, Auto Berserk?!";
+			mes "[胡安]";
+			mes "哦。年轻的剑士！";
+			mes "你准备好学习";
+			mes "最新技能，自动狂暴？！";
 			next;
-			switch (select("[DRY-RUN] Hoho, I would like to learn it now.:What is that?")) {
+			switch (select("呵呵，我现在想学习这个。:那是什么？")) {
 			case 1:
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] Ok. Then...";
+				mes "[胡安]";
+				mes "好的。那么……";
 				next;
 				delitem 924,35; //Powder_Of_Butterfly
 				delitem 958,10; //Horrendous_Mouth
 				delitem 957,10; //Decayed_Nail
 				delitem 518,10; //Honey
 				skill "SM_AUTOBERSERK",1,SKILL_PERM;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] You have just become a swordsman";
-				mes "[DRY-RUN] that can use Auto Berserk.";
-				mes "[DRY-RUN] You can go about ";
-				mes "[DRY-RUN] and achieve great things!";
+				mes "[胡安]";
+				mes "你刚刚成为一名剑士";
+				mes "可以使用自动狂暴。";
+				mes "你可以去";
+				mes "实现伟大的成就！";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] Good luck!";
+				mes "[胡安]";
+				mes "祝你好运！";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] ....................................oh yeah.";
-				mes "[DRY-RUN] I forgot to say something.";
-				mes "[DRY-RUN] There are some things you must keep in mind.";
+				mes "[胡安]";
+				mes "....................................哦，对了。";
+				mes "我忘了说些什么。";
+				mes "有一些事情你必须记住。";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] Once you regain health,";
-				mes "[DRY-RUN] this skill will subside.";
-				mes "[DRY-RUN] Also, there isn't really a time limit";
-				mes "[DRY-RUN] but it can still disappear when";
-				mes "[DRY-RUN] it is attacked with a skill that can";
-				mes "[DRY-RUN] nullify provoke.";
+				mes "[胡安]";
+				mes "一旦你恢复生命值，";
+				mes "这个技能将会消失。";
+				mes "而且，实际上没有时间限制";
+				mes "但它仍然可能在被攻击时消失";
+				mes "当它被可以";
+				mes "无效化挑衅的技能攻击时。";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] If you don't remember these characteristics,";
-				mes "[DRY-RUN] you may run into some problems on the battlefield";
-				mes "[DRY-RUN] when the skill disappears all of a sudden.";
+				mes "[胡安]";
+				mes "如果你不记得这些特性，";
+				mes "你可能会在战场上遇到一些问题";
+				mes "当技能突然消失时。";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] Then... bye for real~";
+				mes "[胡安]";
+				mes "那么……真的再见~";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] Auto Berserk?";
-				mes "[DRY-RUN] It's a skill crucial on the battlefield.";
-				mes "[DRY-RUN] When your health is in red,";
-				mes "[DRY-RUN] your hidden potential provokes yourself";
-				mes "[DRY-RUN] to help you in battle.";
+				mes "[胡安]";
+				mes "自动狂暴？";
+				mes "这是在战场上至关重要的技能。";
+				mes "当你的生命值变为红色时，";
+				mes "你潜藏的潜力会激发自己";
+				mes "帮助你在战斗中。";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] It is perfect for those that";
-				mes "[DRY-RUN] fight on the battlefield like fire!";
-				mes "[DRY-RUN] With your ability, you can learn";
-				mes "[DRY-RUN] this skill right now.";
-				mes "[DRY-RUN] Then, I shall tell you the necessary materials.";
+				mes "[胡安]";
+				mes "这对那些";
+				mes "在战场上如火般战斗的人来说是完美的！";
+				mes "凭借你的能力，你可以学习";
+				mes "这个技能。";
+				mes "那么，我将告诉你所需的材料。";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] You need 35 Powder of Butterfly.";
-				mes "[DRY-RUN] The energy from the magnificent";
-				mes "[DRY-RUN] wings of a butterfly will";
-				mes "[DRY-RUN] help you gather your strength!";
-				mes "[DRY-RUN] And 10 Horrendous Mouth.";
-				mes "[DRY-RUN] 10 Decayed Nail.";
-				mes "[DRY-RUN] and last but not least...";
-				mes "[DRY-RUN] 10 Honey!";
+				mes "[胡安]";
+				mes "你需要35个蝴蝶粉。";
+				mes "来自宏伟的";
+				mes "蝴蝶翅膀的能量将";
+				mes "帮助你聚集力量！";
+				mes "还有10个可怕的嘴巴。";
+				mes "10个腐烂的指甲。";
+				mes "最后但同样重要的是...";
+				mes "10 蜂蜜！";
 				next;
-				mes "[DRY-RUN] [Juan]";
-				mes "[DRY-RUN] Did you get all that down?";
-				mes "[DRY-RUN] As always, please come back";
-				mes "[DRY-RUN] when you are ready.";
-				mes "[DRY-RUN] I look forward to seeing you again.";
+				mes "[胡安]";
+				mes "你把这些都记下了吗？";
+				mes "和往常一样，请回来找我";
+				mes "再来找我。";
+				mes "我期待再次见到你。";
 				close;
 			}
 		}
-		mes "[DRY-RUN] [Juan]";
-		mes "[DRY-RUN] Oh no, you have more injuries";
-		mes "[DRY-RUN] since the last time I saw you.";
-		mes "[DRY-RUN] You went into battle like this?";
-		mes "[DRY-RUN] Seems like you are straining yourself.";
+		mes "[胡安]";
+		mes "哦不，你又受伤了";
+		mes "自从我上次见到你以来。";
+		mes "你就这样去战斗了吗？";
+		mes "看来你在勉强自己。";
 		next;
-		mes "[DRY-RUN] [Juan]";
-		mes "[DRY-RUN] Even though you may have a lot of strength";
-		mes "[DRY-RUN] you can't do much when you reach your limits so";
-		mes "[DRY-RUN] don't overestimate your powers.";
-		mes "[DRY-RUN] Of course you could always use the";
-		mes "[DRY-RUN] skill we developed to overcome these limits.";
+		mes "[胡安]";
+		mes "即使你可能有很多力量";
+		mes "当你达到极限时也无能为力，所以";
+		mes "不要高估自己的能力。";
+		mes "当然你总是可以使用";
+		mes "我们开发的技能来克服这些限制。";
 		next;
-		switch (select("[DRY-RUN] Eh! What are you talking about?:Haha, there can't be such a thing.:Keuuuuuuuh!")) {
+		switch (select("呃！你在说什么？:哈哈，怎么可能有这样的事情。:呃呃呃呃呃！")) {
 		case 1:
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] The skill is called Berserk.";
-			mes "[DRY-RUN] It is deemed the flower of a battlefield.";
-			mes "[DRY-RUN] When your health is red,";
-			mes "[DRY-RUN] your hidden potential is provokes yourself";
-			mes "[DRY-RUN] to help you in battle.";
+			mes "[胡安]";
+			mes "这个技能叫做狂暴。";
+			mes "它被认为是战场的花朵。";
+			mes "当你的生命值变红时，";
+			mes "你隐藏的潜力会被激发。";
+			mes "帮助你在战斗中。";
 			next;
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] It is perfect for those that";
-			mes "[DRY-RUN] fight on the battlefield like fire!";
-			mes "[DRY-RUN] With your ability, you can learn";
-			mes "[DRY-RUN] this skill right now.";
-			mes "[DRY-RUN] Then, I shall tell you the necessary materials.";
+			mes "[胡安]";
+			mes "这对那些";
+			mes "在战场上如火般战斗的人来说是完美的！";
+			mes "凭借你的能力，你可以学习";
+			mes "这个技能。";
+			mes "那么，我将告诉你所需的材料。";
 			next;
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] You need 35 Powder of Butterfly.";
-			mes "[DRY-RUN] The energy from the magnificent";
-			mes "[DRY-RUN] wings of a butterfly will";
-			mes "[DRY-RUN] help you gather your strength!";
-			mes "[DRY-RUN] And 10 Horrendous Mouth.";
-			mes "[DRY-RUN] 10 Decayed Nail.";
-			mes "[DRY-RUN] and last but not least...";
-			mes "[DRY-RUN] 10 Honeys!";
+			mes "[胡安]";
+			mes "你需要35个蝴蝶粉。";
+			mes "来自宏伟的";
+			mes "蝴蝶翅膀的能量将";
+			mes "帮助你聚集力量！";
+			mes "还有10个可怕的嘴巴。";
+			mes "10个腐烂的指甲。";
+			mes "最后但同样重要的是...";
+			mes "10个蜂蜜！";
 			next;
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] Did you get all that down?";
-			mes "[DRY-RUN] As always, please come back";
-			mes "[DRY-RUN] when you are ready.";
-			mes "[DRY-RUN] I look forward to seeing you again.";
+			mes "[胡安]";
+			mes "你把这些都记下了吗？";
+			mes "和往常一样，请回来找我";
+			mes "再来找我。";
+			mes "我期待再次见到你。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] Bleh, were you fooled all your life.";
-			mes "[DRY-RUN] I don't know. Don't talk to me.";
+			mes "[胡安]";
+			mes "呸，你一辈子都被愚弄了。";
+			mes "我不知道。别跟我说话。";
 			close;
 		case 3:
-			mes "[DRY-RUN] [Juan]";
-			mes "[DRY-RUN] Keuuuuuuuuuuuuuh!";
-			mes "[DRY-RUN] Ooowwwwwuuuuuuuuuuuuuhhh!";
-			mes "[DRY-RUN] Keuaaaaaaaaaaah!";
+			mes "[胡安]";
+			mes "呃呃呃呃呃呃呃呃！";
+			mes "呜呜呜呜呜呜呜呜呜！";
+			mes "呜啊啊啊啊啊啊！";
 			close;
 		}
 	}
-	mes "[DRY-RUN] [Juan]";
-	mes "[DRY-RUN] Are you enjoying your trip?";
-	mes "[DRY-RUN] I hope you have nice days ahead of you.";
-	mes "[DRY-RUN] Ah, I am just a kind knight Juan.";
-	mes "[DRY-RUN] Don't worry about me too much. Hahaha...";
+	mes "[胡安]";
+	mes "你在享受你的旅行吗？";
+	mes "我希望你们未来的日子过得愉快。";
+	mes "啊，我只是一个善良的骑士胡安。";
+	mes "别太担心我。哈哈哈…";
 	close;
 }
 

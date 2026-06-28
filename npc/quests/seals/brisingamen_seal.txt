@@ -26,558 +26,558 @@ prt_fild08,175,374,3	script	Bard#brising	51,{
 	cutin "god_nelluad01",2;
 	if ($God2 >= $@god_check1 && $God3 < $@god_check2) {
 		if (god_brising > 49) {
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] Oh, I guess all is going well for you. So how has everything else been?";
+			mes "[奈利奥德]";
+			mes "哦，我想你一切都很好。那么其他的事情怎么样？";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] I may be being overly sensitive, but it feels like something might happen soon. Aaah, don't mind me. It's no big deal. Maybe I'm just being weird.";
+			mes "[奈利奥德]";
+			mes "我可能有些敏感，但感觉好像很快会发生什么。啊，不用在意我。这没什么大不了的。也许我只是有点奇怪。";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] Right, right, let me play a song for you. Would you care to listen?";
+			mes "[奈利奥德]";
+			mes "对了对了，让我为你演奏一首歌。你想听吗？";
 			next;
-			switch(select("[DRY-RUN] Sure, why not~:How about some news?:No thanks.")) {
+			switch(select("当然，为什么不呢~:你想听一些新闻吗?:不，谢谢。")) {
 			case 1:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] So, which song";
-				mes "[DRY-RUN] would you like to hear?";
-				mes "[DRY-RUN] Go ahead, pick one~";
+				mes "[奈利奥德]";
+				mes "那么，哪首歌";
+				mes "你想听呢？";
+				mes "来吧，选一首~";
 				next;
-				switch(select("[DRY-RUN] Bragi's Poem:Eternal Chaos:Assassin in the Sunset:Der Ring des Nibelungen")) {
+				switch(select("布拉基的诗:永恒的混沌:落日中的刺客:尼伯龙根之歌")) {
 				case 1:
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Bragi's Poem!";
-					mes "[DRY-RUN] What a good choice!";
-					mes "[DRY-RUN] I must say this song";
-					mes "[DRY-RUN] represents the";
-					mes "[DRY-RUN] heart of a poet!";
+					mes "[奈利奥德]";
+					mes "布拉基的诗！";
+					mes "真是个好选择！";
+					mes "我必须说这首歌";
+					mes "代表了";
+					mes "诗人的心！";
 					soundeffect "bragis_poem.wav",1;
 					close2;
 					break;
 				case 2:
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Eternal Chaos...";
-					mes "[DRY-RUN] Sounds too chaotic.";
-					mes "[DRY-RUN] By the way, I wonder";
-					mes "[DRY-RUN] what the title really";
-					mes "[DRY-RUN] means. Is it the chaos";
-					mes "[DRY-RUN] of hell or our own reality?";
+					mes "[奈利奥德]";
+					mes "永恒的混沌...";
+					mes "听起来太混乱了。";
+					mes "对了，我想知道";
+					mes "这个标题到底";
+					mes "是什么意思。是地狱的混沌";
+					mes "还是我们自己的现实？";
 					soundeffect "chaos_of_eternity.wav",1;
 					close2;
 					break;
 				case 3:
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Assassin in the Sunset!";
-					mes "[DRY-RUN] Yes, no one looks cooler than an Assassin, the bringer of death, standing alone in the sunset! Heh heh~";
+					mes "[奈利奥德]";
+					mes "黄昏中的刺客！";
+					mes "是的，没有人比刺客更酷，他是死亡的使者，孤独地站在黄昏中！嘿嘿~";
 					soundeffect "assassin_of_sunset.wav",1;
 					close2;
 					break;
 				case 4:
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Der Ring des Nibelungen.....";
-					mes "[DRY-RUN] Okay, are you ready to listen?";
-					mes "[DRY-RUN] Hum hum hum....";
+					mes "[奈利奥德]";
+					mes "尼伯龙根之歌.....";
+					mes "好吧，你准备好听了吗？";
+					mes "哼哼哼....";
 					next;
 					soundeffect "ring_of_nibelungen.wav",1;
-					mes "[DRY-RUN] ^4D4DFFRheingold...";
-					mes "[DRY-RUN] Hidden in the Rhein river.";
-					mes "[DRY-RUN] If made into a ring,";
-					mes "[DRY-RUN] Could rule the world~^000000";
+					mes "^4D4DFF莱因金...";
+					mes "隐藏在莱茵河中。";
+					mes "如果制成戒指，";
+					mes "可以统治世界~^000000";
 					next;
-					mes "[DRY-RUN] ^4D4DFFProtected by a spell";
-					mes "[DRY-RUN] Cursing its thief";
-					mes "[DRY-RUN] To never find love.";
-					mes "[DRY-RUN] Alberich had known";
-					mes "[DRY-RUN] Nonetheless stole it.";
-					mes "[DRY-RUN] Love was forsaken for power.^000000";
+					mes "^4D4DFF被魔法保护着";
+					mes "诅咒它的窃贼";
+					mes "永远无法找到爱情。";
+					mes "阿尔贝里希曾经知道";
+					mes "然而却偷走了它。";
+					mes "爱被权力所抛弃。^000000";
 					next;
-					mes "[DRY-RUN] ^4D4DFFGiants built beautiful Valhalla";
-					mes "[DRY-RUN] Matrimony with Freya";
-					mes "[DRY-RUN] Goddess of beauty";
-					mes "[DRY-RUN] Their supposed payment.";
-					mes "[DRY-RUN] In not receiving it";
-					mes "[DRY-RUN] They forcefully took her.^000000";
+					mes "^4D4DFF巨人们建造了美丽的瓦尔哈拉";
+					mes "与弗蕾雅的婚姻";
+					mes "美丽女神";
+					mes "他们所谓的报酬。";
+					mes "在没有收到它的情况下";
+					mes "她被强行带走了。^000000";
 					next;
-					mes "[DRY-RUN] ^4D4DFFThe gods would";
-					mes "[DRY-RUN] give Alberich's treasure";
-					mes "[DRY-RUN] To the Giants for Freya's return.";
-					mes "[DRY-RUN] Loki tricked Alberich,";
-					mes "[DRY-RUN] Stealing his ring or power.^000000";
+					mes "^4D4DFF众神会";
+					mes "给予阿尔伯里希的宝藏";
+					mes "给巨人以换取弗蕾雅的归来。";
+					mes "洛基欺骗了阿尔伯里希，";
+					mes "偷走了他的戒指或力量。^000000";
 					next;
-					mes "[DRY-RUN] ^4D4DFFBut Alberich cursed his ring";
-					mes "[DRY-RUN] Before it was returned to him,";
-					mes "[DRY-RUN] Envy and death would";
-					mes "[DRY-RUN] befall its wearers.^000000";
+					mes "^4D4DFF但阿尔伯里希诅咒了他的戒指";
+					mes "在它被归还给他之前，";
+					mes "嫉妒和死亡将会";
+					mes "降临到佩戴者身上。^000000";
 					next;
-					mes "[DRY-RUN] ^4D4DFFThe ring was given to the giants";
-					mes "[DRY-RUN] Freya was returned to the gods";
-					mes "[DRY-RUN] The giants killed themselves";
-					mes "[DRY-RUN] Fighting over the rheingold,";
-					mes "[DRY-RUN] Victims of Alberich's curse~^000000";
+					mes "^4D4DFF戒指被赠予了巨人们";
+					mes "弗蕾雅被归还给了众神";
+					mes "巨人们自相残杀，";
+					mes "为了争夺雷因金，";
+					mes "阿尔伯里希诅咒的受害者~^000000";
 					close2;
 					break;
 				}
 				break;
 			case 2:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Some news you say..";
-				mes "[DRY-RUN] What kind of news do";
-				mes "[DRY-RUN] you wish to hear about?";
+				mes "[奈利奥德]";
+				mes "你说有些消息..";
+				mes "你想听什么样的消息？";
+				mes "你想听什么样的消息？";
 				next;
-				switch(select("[DRY-RUN] About Prontera!:About coastal areas.:Is the desert still hot?:How about the borderlands?")) {
+				switch(select("关于普隆德拉!:关于沿海地区.:沙漠还热吗?:边境地区怎么样?")) {
 				case 1:
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] What?! Prontera?!";
-					mes "[DRY-RUN] Can you not see that the front";
-					mes "[DRY-RUN] gate of Prontera is right before you? You should at least know where you are, adventurer.";
+					mes "[奈利奥德]";
+					mes "什么？！普隆德拉？！”";
+					mes "难道你看不见普隆德拉的正门就在你面前吗？你至少应该知道你在哪里，冒险者。";
+					mes "普隆德拉的正门就在你面前。你至少应该知道你在哪里，冒险者。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Anyways, I have one interesting news about Prontera. But, it's a secret. Shh! Are you... Single?";
+					mes "[奈利奥德]";
+					mes "不过，我有一个关于普隆德拉的有趣消息。但这是个秘密。嘘！你是……单身吗？";
 					next;
 					cutin "god_nelluad04",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] If so, go visit the tavern. I met a guy there who took to me a nice place. Oh yes. He took me to 'the place' where singles are forbidden~!";
+					mes "[奈利奥德]";
+					mes "如果是的话，去酒馆看看。我在那里遇到一个人，他带我去一个不错的地方。哦，是的。他带我去一个单身者禁止入内的地方~！";
 					close2;
 					break;
 				case 2:
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Coastal areas?";
-					mes "[DRY-RUN] That's a funny question. I mean, there's Alberta and a few other places where you can see the sea.";
+					mes "[奈利奥德]";
+					mes "沿海地区？";
+					mes "这是个有趣的问题。我的意思是，有艾尔贝塔和其他几个地方可以看到海。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] To the southwest there's";
-					mes "[DRY-RUN] Kokomo Beach. But, I suppose it's too dangerous just to go there to take a stroll.";
+					mes "[奈利奥德]";
+					mes "西南方向有";
+					mes "可可莫海滩。但是，我想去那里散步太危险了。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
+					mes "[奈利奥德]";
 					cutin "god_nelluad03",2;
-					mes "[DRY-RUN] Kokomo Beach is a large";
-					mes "[DRY-RUN] expanse of sand. The nearby water is filled with sea animals, so you can enjoy catching Shellfishes.";
+					mes "可可莫海滩是一个很大的";
+					mes "沙滩。附近的水域充满了海洋生物，所以你可以享受捕捉贝类的乐趣。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] However, there are always bullies in that kind of place. Once, I met a threatening looking hoodlum with red spiky hair.";
+					mes "[奈利奥德]";
+					mes "然而，在那种地方总是有欺负人的家伙。曾经，我遇到一个看起来很威胁的流氓，他有着红色的刺头发。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
+					mes "[奈利奥德]";
 					cutin "god_nelluad04",2;
-					mes "[DRY-RUN] He was chewing on something and spat it on the ground. The big buffoon managed to intimidate me into giving him all of my Zeny!";
+					mes "他正在嚼着什么，然后把它吐在地上。这个大傻瓜成功地威胁我，让我把所有的金币都给了他！";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] ^333333*Sigh...*^000000";
-					mes "[DRY-RUN] This world is too";
-					mes "[DRY-RUN] dangerous for a young";
-					mes "[DRY-RUN] and fragile Bard.";
+					mes "[奈利奥德]";
+					mes "^333333*唉...*^000000";
+					mes "这个世界对一个年轻的";
+					mes "而脆弱的";
+					mes "诗人来说太危险了。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] By the way, Alberta doesn't seem to have changed. The Sunken Ship looks the same as well, with all of its Skeleton Pirates and whatnot. You know how it is.";
+					mes "[奈利奥德]";
+					mes "顺便说一下，艾尔贝塔似乎没有变化。沉船看起来也一样，里面全是骷髅海盗等等。你知道的。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
+					mes "[奈利奥德]";
 					cutin "god_nelluad01",2;
-					mes "[DRY-RUN] The event agency in charge of expeditions into the Sunken Ship is still making tons of money. If you have nothing to do, why don't you hunt for monsters down there?";
+					mes "负责探险沉船的活动公司仍然赚了很多钱。如果你没事做，为什么不去那里打怪呢？";
 					close2;
 					break;
 				case 3:
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Oh, hell yes!";
-					mes "[DRY-RUN] When is it not?";
-					mes "[DRY-RUN] The desert is hot, has";
-					mes "[DRY-RUN] been hot and probably";
-					mes "[DRY-RUN] always will be...!";
+					mes "[奈利奥德]";
+					mes "哦，太好了！";
+					mes "什么时候不是呢？";
+					mes "沙漠很热，";
+					mes "一直很热，可能";
+					mes "永远都会是...！";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Giant worms still jump out of nowhere, freaking out innocent travellers like myself, and the Sandmen still kick people in the, well... You know where.";
+					mes "[奈利奥德]";
+					mes "巨型虫子仍然会突然跳出来，吓到像我这样的无辜旅行者，而沙人仍然会踢人，嗯... 你知道的地方。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Even if the desert is filled with hideous monsters, the view of the ocean there is so magnificent. Hah, it makes me want to play a song.";
+					mes "[奈利奥德]";
+					mes "即使沙漠里充满了可怕的怪物，那里的海洋景色依然壮丽。哈，这让我想要唱首歌。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I must say there is";
-					mes "[DRY-RUN] one place you may wish";
-					mes "[DRY-RUN] to see in the desert.";
+					mes "[奈利奥德]";
+					mes "我必须说，有";
+					mes "一个地方你可能想";
+					mes "在沙漠中看看。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
+					mes "[奈利奥德]";
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] I'm talking about the Assassin Guild. Supposedly, it's hidden behind a sandstorm in the Morroc Desert!";
+					mes "我说的是刺客公会。听说它隐藏在梦罗克沙漠的沙尘暴后面！";
 					if (Class == Job_Assassin || Class == Job_Assassin_Cross) {
-						mes "[DRY-RUN] But you should know what I am talking about! So when are you gonna take me to the guild, eh?";
+						mes "但你应该知道我在说什么！那么你什么时候带我去公会呢，嗯？";
 					}
 					else {
-						mes "[DRY-RUN] Have you ever been there before?";
+						mes "你以前去过那里吗？";
 					}
 					close2;
 					break;
 				case 4:
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Well, to the north is the Schwaltzwald Republic.";
-					mes "[DRY-RUN] There, you'll find Juno,";
-					mes "[DRY-RUN] the 'City of Sages.'";
+					mes "[奈利奥德]";
+					mes "嗯，北边是斯瓦尔特海姆共和国。";
+					mes "在那里，你会找到朱诺，";
+					mes "被称为“贤者之城”。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
+					mes "[奈利奥德]";
 					cutin "god_nelluad03",2;
-					mes "[DRY-RUN] The people there say that there is one major nuisance, a man known as";
-					mes "[DRY-RUN] the 'Mad Scientist.' He's antisocial and creates a lot of public disturbances with his experiments.";
+					mes "那里的人民说有一个主要的麻烦，一个被称为";
+					mes "“疯狂科学家”的人。他性格孤僻，因实验造成了很多公共骚扰。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] It seems everyone in Juno";
-					mes "[DRY-RUN] hates him with a passion. Even one of the Tool Shop owners begged a passing adventurer to stop this Mad Scientist's research!";
+					mes "[奈利奥德]";
+					mes "似乎朱诺的每个人都知道他。";
+					mes "对他充满了仇恨。甚至有一个道具商的老板恳求路过的冒险者停止这个疯狂科学家的研究！";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] But I have a different opinion about him. I believe it's not a good idea to interrupt the work of any scientist.";
+					mes "[奈利奥德]";
+					mes "但我对他有不同的看法。我认为打断任何科学家的工作都不是一个好主意。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] After all, he might just discover something important, even if his experiments are a little hazardous.";
+					mes "[奈利奥德]";
+					mes "毕竟，他可能会发现一些重要的东西，即使他的实验有点危险。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Speaking of discoveries, you know how Juno floats in the air, right?";
+					mes "[奈利奥德]";
+					mes "说到发现，你知道朱诺是如何漂浮在空中的，对吧？";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
+					mes "[奈利奥德]";
 					cutin "god_nelluad01",2;
-					mes "[DRY-RUN] It's said that a piece of Ymir's Heart generates enough power";
-					mes "[DRY-RUN] to keep the entire city aloft in the sky. Isn't that amazing?";
+					mes "据说一块伊米尔之心产生足够的能量，";
+					mes "使整个城市悬浮在空中。难道这不是很惊人吗？";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Even more recent is the news about the discovery of Ymir's Book. You can read it in Juno's Sage Castle. I hear that it contains the secret to meeting Valkyrie...";
+					mes "[奈利奥德]";
+					mes "最近的消息是关于发现了耶米尔的书。你可以在朱诺的贤者城堡阅读它。我听说里面包含了与女武神相遇的秘密...";
 					close2;
 					break;
 				}
 				break;
 			case 3:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Huh? Okay then, talk to you later. May Bragi bless you on your journeys.";
+				mes "[奈利奥德]";
+				mes "嗯？好的，那我稍后再和你聊。愿布拉基在你的旅途中保佑你。";
 				close2;
 				break;
 			}
 		}
 		else if ((god_brising > 0) && (god_brising < 50)){
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] So, have you";
-			mes "[DRY-RUN] met Mr. Kaili?";
-			mes "[DRY-RUN] Please do your best.";
-			mes "[DRY-RUN] After all, I especially";
-			mes "[DRY-RUN] recommended you~";
+			mes "[奈利奥德]";
+			mes "那么，你";
+			mes "见过凯利先生吗？";
+			mes "请你加油。";
+			mes "毕竟，我特别";
+			mes "推荐了你~";
 			next;
-			switch(select("[DRY-RUN] Tell me a story.:Sing a song for me.")) {
+			switch(select("告诉我一个故事.:给我唱首歌.")) {
 			case 1:
 				cutin "god_nelluad02",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Hmm. What would";
-				mes "[DRY-RUN] be a good story for";
-				mes "[DRY-RUN] you this time...? Ah yes, I've got it. Let me tell you about one of my own adventures. It was a pretty amazing experience.";
+				mes "[奈利奥德]";
+				mes "嗯。什么会是";
+				mes "一个好的故事给";
+				mes "你这次...? 啊对，我想到了。让我告诉你一个我自己的冒险故事。这是一次相当惊人的经历。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I went to Morroc, the city of the desert. On my way there, I became exhausted from the heat. Luckily, I found a hole beneath the shadows and climbed in to rest.";
+				mes "[奈利奥德]";
+				mes "我去了梦罗克，这座沙漠之城。在去那里的路上，我因炎热而感到疲惫。幸运的是，我在阴影下发现了一个洞，爬进去休息。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Oh my God...";
-				mes "[DRY-RUN] If I had known";
-				mes "[DRY-RUN] better, I would have";
-				mes "[DRY-RUN] never gone inside that place...";
+				mes "[奈利奥德]";
+				mes "哦，我的天...";
+				mes "如果我早知道";
+				mes "更好，我就会";
+				mes "从未进入那个地方...";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I actually crawled into the infamous ^FF0000Ant Hell^000000! I don't sound like a coward to you, do I?";
+				mes "[奈利奥德]";
+				mes "我居然爬进了臭名昭著的 ^FF0000蚂蚁地狱^000000！我听起来不像个懦夫，对吧？";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Well, the ants aren't the only ones living there. I wasn't afraid of them at all. Except, of course, when they attacked in groups.";
+				mes "[奈利奥德]";
+				mes "好吧，那里不仅仅是蚂蚁在生活。我根本不怕它们。除了，当然，当它们成群攻击的时候。";
 				next;
 				cutin "god_nelluad03",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] What I was really afraid of was this type of strawberry colored... tongue thing. Phreeoni!";
+				mes "[奈利奥德]";
+				mes "我真正害怕的是这种草莓色的... 舌头东西。普瑞奥尼！";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Fortunately, I survived the whole incident, although I still have nightmares of that man-sized tongue.";
+				mes "[奈利奥德]";
+				mes "幸运的是，我活过了整个事件，尽管我仍然梦到那个男人般大小的舌头。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Once I got out of there, I craved human companionship to restore my sense of normalcy. The closest place that I knew was Paros Lighthouse.";
+				mes "[奈利奥德]";
+				mes "一旦我走出那里，我渴望人类的陪伴以恢复我的正常感。我知道的最近的地方是帕罗斯灯塔。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Yet again, I decided to traverse the desert, despite the fact that the Kafra Ladies provide a very convenient teleport service there.";
+				mes "[奈利奥德]";
+				mes "尽管卡夫拉女士们在那提供非常方便的传送服务，我还是决定再次穿越沙漠。";
 				next;
 				cutin "god_nelluad01",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Anyway, the fortress of Sandaruman is on the way to Paros Lighthouse. I remember Serutero, a guy I met in south Morroc, telling me about its scenic beauty.";
+				mes "[奈利奥德]";
+				mes "无论如何，桑达鲁曼的堡垒在前往帕罗斯灯塔的路上。我记得在梦罗克南部遇到的塞鲁特罗告诉我它的风景之美。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I was so excited";
-				mes "[DRY-RUN] about seeing it";
-				mes "[DRY-RUN] for myself. After all, doesn't 'Sandaruman' sound like the";
-				mes "[DRY-RUN] name of a beautiful place?";
+				mes "[奈利奥德]";
+				mes "我非常兴奋";
+				mes "想亲自去看看";
+				mes "毕竟，'桑达鲁曼'听起来像是";
+				mes "美丽的地方的名字？";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] But I immediately regretted my decision once I arrived. Of course, the view was breathtaking: the sandy hills near the ocean, as";
-				mes "[DRY-RUN] well as the ruins.";
+				mes "[奈利奥德]";
+				mes "但我一到那里就后悔了。当然，景色令人叹为观止：海边的沙丘，以及";
+				mes "遗迹。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] And of course I forgot Serutero's warning about all the monsters. Argh! It was a nightmare! Instead of enjoying the scenary, I ended up running for my life.";
+				mes "[奈利奥德]";
+				mes "当然，我忘记了塞鲁特罗关于所有怪物的警告。啊！这真是个噩梦！我没有享受风景，反而是拼命逃命。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I was still trying to escape those monsters when I stumbled upon";
-				mes "[DRY-RUN] an old house, West of Sandaruman, that seemed to be in a state of decay.";
+				mes "[奈利奥德]";
+				mes "当我试图逃离那些怪物时，我偶然发现了";
+				mes "一座位于桑达鲁曼西部的老房子，似乎处于衰败状态。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I recalled that Serutero said that no one was living in that area, so I began to worry a bit. Still, I was desperate and needed refuge.";
+				mes "[奈利奥德]";
+				mes "我记得塞鲁特罗说那一带没有人居住，所以我开始有些担心。不过，我很绝望，需要一个避难所。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] In my panic, I violently knocked on the door and screamed for someone to let me inside. Then do you know what I heard?";
+				mes "[奈利奥德]";
+				mes "在我的恐慌中，我猛力敲门并大喊让人让我进去。然后你知道我听到了什么吗？";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
+				mes "[奈利奥德]";
 				cutin "god_nelluad03",2;
-				mes "[DRY-RUN] ^FF0000Who's there?!";
-				mes "[DRY-RUN] Who would dare to intrude";
-				mes "[DRY-RUN] upon my territory?^000000";
-				mes "[DRY-RUN] I was freaked out! Whoever owned that house must have been some";
-				mes "[DRY-RUN] kind of lunatic!";
+				mes "^FF0000谁在那里？!";
+				mes "谁敢闯入";
+				mes "我的领地？^000000";
+				mes "我吓坏了！那个房子的主人一定是某种";
+				mes "疯子！";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Th-then, with the specter of Death nipping at my heels, he told me to get lost! Luckily, I was saved by a mysterious, wandering SuperNovice, but that's another story.";
+				mes "[奈利奥德]";
+				mes "然、然后，在死亡的幽灵紧追不舍之下，他叫我滚开！幸运的是，我被一个神秘的流浪超级初心者救了，但那是另一个故事。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] In any case, I finally arrived at Paros Lighthouse. There, I learned that the old house was a secret camp for the Rogue Guild. ";
+				mes "[奈利奥德]";
+				mes "无论如何，我终于到达了帕罗斯灯塔。在那里，我得知那座老房子是盗贼公会的秘密营地。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] It's amazing, how they can live in such dangerous areas. Only Rogues would be able to survive there, you know?";
+				mes "[奈利奥德]";
+				mes "真令人惊讶，他们居然能生活在如此危险的地方。只有盗贼才能在那儿生存，你知道吗？";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
+				mes "[奈利奥德]";
 				cutin "god_nelluad01",2;
-				mes "[DRY-RUN] Ah...";
-				mes "[DRY-RUN] I'm so tired from talking so much. But if I happen to have another adventure, I shall share that tale with you.";
+				mes "啊……";
+				mes "我说了这么多，真是累坏了。不过如果我有另一次冒险，我会把那个故事分享给你。";
 				close2;
 				break;
 			case 2:
 				cutin "god_nelluad02",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Ah, you wish";
-				mes "[DRY-RUN] to hear a song?";
-				mes "[DRY-RUN] Okay! I shall then";
-				mes "[DRY-RUN] perform my favorite.";
+				mes "[奈利奥德]";
+				mes "啊，你想";
+				mes "听一首歌吗？";
+				mes "好的！那我就";
+				mes "演唱我最喜欢的。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I chased after fame.";
-				mes "[DRY-RUN] It eluded me.";
-				mes "[DRY-RUN] I ran after happiness";
-				mes "[DRY-RUN] But never caught it.";
+				mes "[奈利奥德]";
+				mes "我追逐名声。";
+				mes "它却总是躲避我。";
+				mes "我追逐幸福，";
+				mes "但从未抓住它。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] But tomorrow will still";
-				mes "[DRY-RUN] Be there, I'm sure.";
-				mes "[DRY-RUN] Like the Water Mill";
-				mes "[DRY-RUN] In Al De Baran";
-				mes "[DRY-RUN] Which turns as";
-				mes "[DRY-RUN] Life goes on.";
+				mes "[奈利奥德]";
+				mes "但明天仍然会";
+				mes "在那儿，我相信。";
+				mes "像水车一样";
+				mes "在艾尔帕兰";
+				mes "转动时";
+				mes "生活继续。";
 				next;
 				cutin "god_nelluad04",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Cheer up! Life goes on.";
-				mes "[DRY-RUN] As surely as the Water";
-				mes "[DRY-RUN] Mill turns, tomorrow";
-				mes "[DRY-RUN] Will come.";
+				mes "[奈利奥德]";
+				mes "振作起来！生活继续。";
+				mes "就像水车一样";
+				mes "明天会到来";
+				mes "会来。";
 				close2;
 				break;
 			}
 		}
 		else {
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] Say...";
-			mes "[DRY-RUN] Have we met before?";
-			mes "[DRY-RUN] Hmm? Never? Well...";
-			mes "[DRY-RUN] That's rather odd.";
+			mes "[奈利奥德]";
+			mes "说...";
+			mes "我们以前见过吗？";
+			mes "嗯？从未见过？好吧...";
+			mes "这真奇怪。";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] I seem to recall that you've asked me to give you some information if I ever have any. Well, now I have and shall share it with you~";
+			mes "[奈利奥德]";
+			mes "我似乎记得你曾让我在有信息时告诉你。好吧，现在我有了，并且会与你分享~";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] The usefulness of this information all depends on you. Now, have you heard of the ^3333CCMonster Research Organization^000000?";
+			mes "[奈利奥德]";
+			mes "这些信息的有用性全在于你。现在，你听说过^3333CC怪物研究组织^000000吗？";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] I happened to get this information from its headquarters in Juno. So how does that sound?";
+			mes "[奈利奥德]";
+			mes "我正好从它在朱诺的总部获得了这些信息。那么听起来怎么样？";
 			next;
-			switch(select("[DRY-RUN] Wee~ I want to hear!:Booooring~")) {
+			switch(select("哇~我想听!:无聊~")) {
 			case 1:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Well...!";
-				mes "[DRY-RUN] You seem to be";
-				mes "[DRY-RUN] very excited about";
-				mes "[DRY-RUN] this new tidbit of";
-				mes "[DRY-RUN] knowledge I have~";
+				mes "[奈利奥德]";
+				mes "嗯...！";
+				mes "你似乎是";
+				mes "对此感到非常兴奋";
+				mes "这个新发现的";
+				mes "知识我有~";
 				next;
 				if (BaseLevel < 70) {
 					cutin "god_nelluad03",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Alas, this information doesn't seem to be very valuable to someone such as yourself.";
+					mes "[奈利奥德]";
+					mes "可惜，这些信息似乎对你这样的人并没有太大价值。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I'm so very sorry to have excited you, but only people that are strong enough to handle grueling work can benefit from this.";
+					mes "[奈利奥德]";
+					mes "我非常抱歉让你感到兴奋，但只有足够强大，能够应对艰苦工作的人员才能从中受益。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Why don't you travel around and gain more experiences? I will let you know when you're ready, you know~";
+					mes "[奈利奥德]";
+					mes "你为什么不四处旅行，获得更多的经验呢？我会在你准备好时告诉你哦~";
 					close2;
 				}
 				else {
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Ooh...";
-					mes "[DRY-RUN] And you look";
-					mes "[DRY-RUN] like you can handle";
-					mes "[DRY-RUN] this kind of information.";
-					mes "[DRY-RUN] I'll share everything I know!";
+					mes "[奈利奥德]";
+					mes "哦……";
+					mes "而你看起来";
+					mes "像是能够处理";
+					mes "这种信息。";
+					mes "我会分享我所知道的一切！";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] One day, an adventurer discovered a strange, mysterious object. Unable to figure out what it could do, he visited the Monster Organization.";
+					mes "[奈利奥德]";
+					mes "有一天，一位冒险者发现了一个奇怪而神秘的物体。由于无法弄清楚它的用途，他拜访了怪物组织。";
 					next;
 					cutin "god_nelluad01",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] There, it was entrusted to a scholar by the name of Mr. Kaili. He still hasn't uncovered the truth about that item and wishes for assistance in his investigation.";
+					mes "[奈利奥德]";
+					mes "在那里，它被委托给了一位名叫凯利先生的学者。他仍然没有揭开那个物品的真相，并希望在他的调查中获得帮助。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Mr. Kaili suspects that the item might be part of an undiscovered ancient relic. Fortunately, he is also researching ancient relics as a project assigned by the royal court.";
+					mes "[奈利奥德]";
+					mes "凯利先生怀疑这个物品可能是一个未被发现的古代遗物的一部分。幸运的是，他也在研究古代遗物，这是王室分配给他的项目。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] So what do you think? Isn't that interesting? Of course, you'd better speak to Mr. Kaili if you wish to learn more. If you'd like, I shall write you a letter or recommendation.";
+					mes "[奈利奥德]";
+					mes "那么你觉得怎么样？这不是很有趣吗？当然，如果你想了解更多，最好还是去找凯利先生。如果你愿意，我可以为你写一封推荐信。";
 					next;
-					switch(select("[DRY-RUN] Sure! Sounds good.:Sorry, I am not that interested.")) {
+					switch(select("当然!听起来不错.:抱歉，我不太感兴趣.")) {
 					case 1:
-						mes "[DRY-RUN] [Nelliorde]";
-						mes "[DRY-RUN] Excellent...!";
-						mes "[DRY-RUN] So your name is...";
+						mes "[奈利奥德]";
+						mes "太棒了...！";
+						mes "那么你的名字是...";
 						mes "" + strcharinfo(0) + "?";
 						next;
-						mes "[DRY-RUN] [Nelliorde]";
-						mes "[DRY-RUN] Alright, I shall contact him right away! Oh, and you can find the Monster Organization west of Juno's central plaza. It shouldn't be hard to find. Good luck!";
+						mes "[奈利奥德]";
+						mes "好的，我马上联系他！哦，你可以在朱诺中央广场西侧找到怪物组织。应该不难找到。祝你好运！";
 						set god_brising,1;
 						close2;
 						break;
 					case 2:
 						cutin "god_nelluad02",2;
-						mes "[DRY-RUN] [Nelliorde]";
-						mes "[DRY-RUN] Ah, it's disappointing to hear that. I thought that you'd be perfect to help out Mr. Kaili. Oh well, talk to you later~";
+						mes "[奈利奥德]";
+						mes "啊，听到这个我很失望。我本以为你会很适合帮助凯利先生。好吧，稍后再聊~";
 						close2;
 						break;
 					}
 				}
 				break;
 			case 2:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Boring, you say?";
-				mes "[DRY-RUN] Perhaps, but not as";
-				mes "[DRY-RUN] boring as an adventurer";
-				mes "[DRY-RUN] that passes up a chance";
-				mes "[DRY-RUN] for an adventure, yes?";
+				mes "[奈利奥德]";
+				mes "无聊，你这么说？";
+				mes "也许，但没有";
+				mes "作为一个冒险者那么无聊";
+				mes "错过冒险的机会";
+				mes "是的？";
 				next;
-				switch(select("[DRY-RUN] Tell me a story.:Sing a song for me.")) {
+				switch(select("告诉我一个故事.:给我唱首歌.")) {
 				case 1:
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Hmm. What would";
-					mes "[DRY-RUN] be a good story for";
-					mes "[DRY-RUN] you this time...? Ah yes, I've got it. Let me tell you about one of my own adventures. It was a pretty amazing experience.";
+					mes "[奈利奥德]";
+					mes "嗯。什么会是";
+					mes "一个好的故事给";
+					mes "你这次...? 啊对，我想到了。让我告诉你一个我自己的冒险故事。这是一次相当惊人的经历。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I went to Morroc, the city of the desert. On my way there, I became exhausted from the heat. Luckily, I found a hole beneath the shadows and climbed in to rest.";
+					mes "[奈利奥德]";
+					mes "我去了梦罗克，这座沙漠之城。在去那里的路上，我因炎热而感到疲惫。幸运的是，我在阴影下发现了一个洞，爬进去休息。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Oh my God...";
-					mes "[DRY-RUN] If I had known";
-					mes "[DRY-RUN] better, I never";
-					mes "[DRY-RUN] would have gone";
-					mes "[DRY-RUN] inside that place...";
+					mes "[奈利奥德]";
+					mes "哦，我的天...";
+					mes "如果我早知道";
+					mes "更好，我从来没有";
+					mes "会去过";
+					mes "那个地方...";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I actually crawled into the infamous ^FF0000Ant Hell^000000! I don't sound like a coward to you, do I?";
+					mes "[奈利奥德]";
+					mes "我居然爬进了臭名昭著的 ^FF0000蚂蚁地狱^000000！我听起来不像个懦夫，对吧？";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Well, the ants aren't the only ones living there. I wasn't afraid of them at all. Except, of course, when they attacked in groups.";
+					mes "[奈利奥德]";
+					mes "好吧，那里不仅仅是蚂蚁在生活。我根本不怕它们。除了，当然，当它们成群攻击的时候。";
 					next;
 					cutin "god_nelluad03",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] What I was really afraid of was this type of strawberry colored... tongue thing. Phreeoni!";
+					mes "[奈利奥德]";
+					mes "我真正害怕的是这种草莓色的... 舌头东西。普瑞奥尼！";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Fortunately, I survived the whole incident, although I still have nightmares of that man-sized tongue.";
+					mes "[奈利奥德]";
+					mes "幸运的是，我活过了整个事件，尽管我仍然梦到那个男人般大小的舌头。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Once I got out of there, I craved human companionship to restore my sense of normalcy. The closest place that I knew was Paros Lighthouse.";
+					mes "[奈利奥德]";
+					mes "一旦我走出那里，我渴望人类的陪伴以恢复我的正常感。我知道的最近的地方是帕罗斯灯塔。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Yet again, I decided to traverse the desert, despite the fact that the Kafra Ladies provide a very convenient teleport service there.";
+					mes "[奈利奥德]";
+					mes "尽管卡夫拉女士们在那提供非常方便的传送服务，我还是决定再次穿越沙漠。";
 					next;
 					cutin "god_nelluad01",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Anyway, the fortress of Sandaruman is on the way to Paros Lighthouse. I remember Serutero, a guy I met in south Morroc, telling me about its scenic beauty.";
+					mes "[奈利奥德]";
+					mes "无论如何，桑达鲁曼的堡垒在前往帕罗斯灯塔的路上。我记得在梦罗克南部遇到的塞鲁特罗告诉我它的风景之美。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I was so excited";
-					mes "[DRY-RUN] about seeing it";
-					mes "[DRY-RUN] for myself. After all, doesn't 'Sandaruman' sound like the";
-					mes "[DRY-RUN] name of a beautiful place?";
+					mes "[奈利奥德]";
+					mes "我非常兴奋";
+					mes "想亲自去看看";
+					mes "毕竟，'桑达鲁曼'听起来像是";
+					mes "美丽的地方的名字？";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] But I immediately regretted my decision once I arrived. Of course, the view was breathtaking: the sandy hills near the ocean, as";
-					mes "[DRY-RUN] well as the ruins.";
+					mes "[奈利奥德]";
+					mes "但我一到那里就后悔了。当然，景色令人叹为观止：海边的沙丘，以及";
+					mes "遗迹。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] And of course I forgot Serutero's warning about all the monsters. Argh! It was a nightmare! Instead of enjoying the scenary, I ended up running for my life.";
+					mes "[奈利奥德]";
+					mes "当然，我忘记了塞鲁特罗关于所有怪物的警告。啊！这真是个噩梦！我没有享受风景，反而是拼命逃命。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I was still trying to escape those monsters when I stumbled upon";
-					mes "[DRY-RUN] an old house, West of Sandaruman, that seemed to be in a state of decay.";
+					mes "[奈利奥德]";
+					mes "当我试图逃离那些怪物时，我偶然发现了";
+					mes "一座位于桑达鲁曼西部的老房子，似乎处于衰败状态。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I recalled that Serutero said that no one was living in that area, so I began to worry a bit. Still, I was desperate and needed refuge.";
+					mes "[奈利奥德]";
+					mes "我记得塞鲁特罗说那一带没有人居住，所以我开始有些担心。不过，我很绝望，需要一个避难所。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] In my panic, I violently knocked on the door and screamed for someone to let me inside. Then do you know what I heard?";
+					mes "[奈利奥德]";
+					mes "在我的恐慌中，我猛力敲门并大喊让人让我进去。然后你知道我听到了什么吗？";
 					next;
 					cutin "god_nelluad04",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] ^FF0000Who's there?!";
-					mes "[DRY-RUN] Who would dare to intrude";
-					mes "[DRY-RUN] upon my territory?^000000";
-					mes "[DRY-RUN] I was freaked out! Whoever owned that house must have been some";
-					mes "[DRY-RUN] kind of lunatic!";
+					mes "[奈利奥德]";
+					mes "^FF0000谁在那里？!";
+					mes "谁敢闯入";
+					mes "我的领地？^000000";
+					mes "我吓坏了！那个房子的主人一定是某种";
+					mes "疯子！";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Th-then, with the specter of Death nipping at my heels, he told me to get lost! Luckily, I was saved by a mysterious, wandering SuperNovice, but that's another story.";
+					mes "[奈利奥德]";
+					mes "然、然后，在死亡的幽灵紧追不舍之下，他叫我滚开！幸运的是，我被一个神秘的流浪超级初心者救了，但那是另一个故事。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] In any case, I finally arrived at Paros Lighthouse. There, I learned that the old house was a secret camp for the Rogue Guild. ";
+					mes "[奈利奥德]";
+					mes "无论如何，我终于到达了帕罗斯灯塔。在那里，我得知那座老房子是盗贼公会的秘密营地。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] It's amazing, how they can live in such dangerous areas. Only Rogues would be able to survive there, you know?";
+					mes "[奈利奥德]";
+					mes "真令人惊讶，他们居然能生活在如此危险的地方。只有盗贼才能在那儿生存，你知道吗？";
 					next;
 					cutin "god_nelluad01",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Ah...";
-					mes "[DRY-RUN] I'm so tired from talking so much. But if I happen to have another adventure, I shall share that tale with you.";
+					mes "[奈利奥德]";
+					mes "啊……";
+					mes "我说了这么多，真是累坏了。不过如果我有另一次冒险，我会把那个故事分享给你。";
 					close2;
 					break;
 				case 2:
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Ah, you wish";
-					mes "[DRY-RUN] to hear a song?";
-					mes "[DRY-RUN] Okay! I shall then";
-					mes "[DRY-RUN] perform my favorite.";
+					mes "[奈利奥德]";
+					mes "啊，你想";
+					mes "听一首歌吗？";
+					mes "好的！那我就";
+					mes "演唱我最喜欢的。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] I chased after fame.";
-					mes "[DRY-RUN] It eluded me.";
-					mes "[DRY-RUN] I ran after happiness";
-					mes "[DRY-RUN] But never caught it.";
+					mes "[奈利奥德]";
+					mes "我追逐名声。";
+					mes "它却总是躲避我。";
+					mes "我追逐幸福，";
+					mes "但从未抓住它。";
 					next;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] But tomorrow will still";
-					mes "[DRY-RUN] Be there, I'm sure.";
-					mes "[DRY-RUN] Like the Water Mill";
-					mes "[DRY-RUN] In Al De Baran";
-					mes "[DRY-RUN] Which turns as";
-					mes "[DRY-RUN] Life goes on.";
+					mes "[奈利奥德]";
+					mes "但明天仍然会";
+					mes "在那儿，我相信。";
+					mes "像水车一样";
+					mes "在艾尔帕兰";
+					mes "转动时";
+					mes "生活继续。";
 					next;
 					cutin "god_nelluad04",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Cheer up! Life goes on.";
-					mes "[DRY-RUN] As surely as the Water";
-					mes "[DRY-RUN] Mill turns, tomorrow";
-					mes "[DRY-RUN] Will come.";
+					mes "[奈利奥德]";
+					mes "振作起来！生活继续。";
+					mes "就像水车一样";
+					mes "明天会到来";
+					mes "会来。";
 					close2;
 					break;
 				}
@@ -586,252 +586,252 @@ prt_fild08,175,374,3	script	Bard#brising	51,{
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Nelliorde]";
-		mes "[DRY-RUN] Hello there!";
-		mes "[DRY-RUN] Isn't it such";
-		mes "[DRY-RUN] a glorious day?";
-		mes "[DRY-RUN] You know of me,";
-		mes "[DRY-RUN] do you not?";
+		mes "[奈利奥德]";
+		mes "你好！";
+		mes "今天真是个";
+		mes "辉煌的日子？";
+		mes "你知道我，";
+		mes "对吧？";
 		next;
-		mes "[DRY-RUN] [Nelliorde]";
+		mes "[奈利奥德]";
 		if (Sex == SEX_MALE) {
-			mes "[DRY-RUN] Hahahaha, forgive my rudeness,";
-			mes "[DRY-RUN] but I fail to remember your name, although your face does seem rather familiar.";
+			mes "哈哈哈哈，原谅我的失礼，";
+			mes "但我记不起你的名字，尽管你的脸看起来很熟悉。";
 		}
 		else {
-			mes "[DRY-RUN] Oh well well...";
-			mes "[DRY-RUN] How could I ever";
-			mes "[DRY-RUN] forget the lovely";
+			mes "哦，好吧...";
+			mes "我怎么可能";
+			mes "忘记那美丽的";
 			mes ""+ strcharinfo(0) +"?";
 		}
 		next;
 		cutin "god_nelluad01",2;
-		mes "[DRY-RUN] [Nelliorde]";
-		mes "[DRY-RUN] So, aren't you curious about me? Feel free to ask me whatever you like! I'm the vagabond that will wander the earth till the end of his days, your friend who loves to sing under the moonlight~";
+		mes "[奈利奥德]";
+		mes "那么，你对我不感到好奇吗？随便问我任何你想问的！我是那个将游荡于世直到生命尽头的流浪者，你的朋友，喜欢在月光下歌唱~";
 		next;
-		switch(select("[DRY-RUN] Who are you?:What's new?:Can you sing?")) {
+		switch(select("你是谁?:有什么新鲜事?:你会唱歌吗?")) {
 		case 1:
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] Why, I am Nelliorde, the Bard.";
-			mes "[DRY-RUN] In truth, my real name is Elliorde.";
+			mes "[奈利奥德]";
+			mes "我就是奈利奥德，诗人。";
+			mes "其实，我的真名是埃利奥德。";
 			next;
 			cutin "god_nelluad03",2;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] However, while I was singing at a Tavern, as per usual, a man with long blonde hair angrily demanded that I change my name!";
+			mes "[奈利奥德]";
+			mes "然而，当我像往常一样在酒馆唱歌时，一个长着金色头发的男人愤怒地要求我改名！";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] Never before have I seen such a flailing and a fuss over someone coincidentally sharing the same name!";
+			mes "[奈利奥德]";
+			mes "我从未见过如此激烈的争吵，仅仅因为有人偶然与我同名！";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] And so, that little altercation";
-			mes "[DRY-RUN] was settled with me being named Nelliorde.";
+			mes "[奈利奥德]";
+			mes "于是，那场小争执";
+			mes "我被称为奈利奥德。";
 			next;
 			cutin "god_nelluad04",2;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] I don't sound like a coward to you, do I? Do you believe I should have fought for the right to keep my original name?";
+			mes "[奈利奥德]";
+			mes "我听起来像个懦夫吗？你认为我应该为保留我的原名而战斗吗？";
 			next;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] If so, you're wrong! I just don't believe that violence can solve anything, as the romantic Bard";
-			mes "[DRY-RUN] that cherishes peace...";
+			mes "[奈利奥德]";
+			mes "如果是这样，你就错了！我只是不相信暴力能解决任何问题，正如那位浪漫的诗人所说，";
+			mes "珍视和平的...";
 			next;
-			mes "[DRY-RUN] ^3355FFSeeing as it's not worth";
-			mes "[DRY-RUN] listening to Nelliorde's lies, you decide to simply tune him out.^000000";
+			mes "^3355FF既然这不值得";
+			mes "听奈利奥德的谎言，你决定干脆不理他。^000000";
 			next;
-			mes "[DRY-RUN] ^3355FF...";
-			mes "[DRY-RUN] ......^000000";
+			mes "^3355FF...";
+			mes "......^000000";
 			next;
-			mes "[DRY-RUN] ^3355FF...";
-			mes "[DRY-RUN] ......";
-			mes "[DRY-RUN] .........^000000";
+			mes "^3355FF...";
+			mes "......";
+			mes ".........^000000";
 			next;
 			cutin "god_nelluad03",2;
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] And that's how I convinced wise";
-			mes "[DRY-RUN] and benevolent King Tristram III to build a paradise where married lovers could enjo--Hm? Are you even listening?!";
+			mes "[奈利奥德]";
+			mes "这就是我如何说服聪明的";
+			mes "仁慈的特里斯特拉姆三世国王建立一个让已婚恋人享受的乐园的...嗯？你在听吗？";
 			close2;
 			break;
 		case 2:
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] You wish to";
-			mes "[DRY-RUN] hear of some news?";
-			mes "[DRY-RUN] What kind of news do";
-			mes "[DRY-RUN] you wish to know about?";
+			mes "[奈利奥德]";
+			mes "你想要";
+			mes "听到一些消息吗？";
+			mes "你想听什么样的消息？";
+			mes "你想知道关于什么？";
 			next;
-			switch(select("[DRY-RUN] About Prontera!:About seaside areas.:Is the desert still hot?:How about the borderlands?")) {
+			switch(select("关于普隆德拉!:关于海滨地区.:沙漠还热吗?:边境地区怎么样?")) {
 			case 1:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] What?! Prontera?!";
-				mes "[DRY-RUN] Can you not see that the front";
-				mes "[DRY-RUN] gate of Prontera is right before you? You should at least know where you are, adventurer.";
+				mes "[奈利奥德]";
+				mes "什么？！普隆德拉？！”";
+				mes "难道你看不见普隆德拉的正门就在你面前吗？你至少应该知道你在哪里，冒险者。";
+				mes "普隆德拉的正门就在你面前。你至少应该知道你在哪里，冒险者。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Anyways, I know one interesting bit of news about Prontera. But it's a secret. Shh! Are you... Single?";
+				mes "[奈利奥德]";
+				mes "不过，我知道一个关于普隆德拉的有趣消息。但这是个秘密。嘘！你是……单身吗？";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] If so, go visit the tavern. I met a guy there who took me a nice place. Oh yes. He took me the place where singles are forbidden~!";
+				mes "[奈利奥德]";
+				mes "如果是的话，去酒馆看看。我在那里遇到一个家伙，他带我去一个不错的地方。哦，是的。他带我去一个禁止单身人士的地方~！";
 				close2;
 				break;
 			case 2:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Seaside areas?";
-				mes "[DRY-RUN] That's a funny question. I mean, there's Alberta and a few other places where you can see the sea.";
+				mes "[奈利奥德]";
+				mes "海边地区？";
+				mes "这是个有趣的问题。我的意思是，有艾尔贝塔和其他几个地方可以看到海。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] To the southwest there's";
-				mes "[DRY-RUN] Kokomo Beach. But, I suppose it's too dangerous just to go there to take a stroll.";
+				mes "[奈利奥德]";
+				mes "西南方向有";
+				mes "可可莫海滩。但是，我想去那里散步太危险了。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Kokomo Beach is a large";
-				mes "[DRY-RUN] expanse of sand. The nearby water is filled with sea animals, so you can enjoy catching Shellfishes.";
+				mes "[奈利奥德]";
+				mes "可可莫海滩是一个很大的";
+				mes "沙滩。附近的水域充满了海洋生物，所以你可以享受捕捉贝类的乐趣。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] However, there are always bullies in that kind of place. Once, I met a threatening looking hoodlum with red spiky hair.";
+				mes "[奈利奥德]";
+				mes "然而，在那种地方总是有欺负人的家伙。曾经，我遇到一个看起来很威胁的流氓，他有着红色的刺头发。";
 				next;
 				cutin "god_nelluad04",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] He was chewing on something and spat on the ground. The big buffoon managed to intimidate me into giving him all of my Zeny!";
+				mes "[奈利奥德]";
+				mes "他正在嚼着什么东西，然后吐在地上。那个大傻瓜居然吓唬我，让我把所有的金币都给了他！";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] ^333333*Sigh...*^000000";
-				mes "[DRY-RUN] This world is too";
-				mes "[DRY-RUN] dangerous for a young";
-				mes "[DRY-RUN] and fragile Bard.";
+				mes "[奈利奥德]";
+				mes "^333333*唉...*^000000";
+				mes "这个世界对一个年轻的";
+				mes "而脆弱的";
+				mes "诗人来说太危险了。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] By the way, Alberta doesn't seem to have changed. The Sunken Ship looks the same as well, with all of its Skeleton Pirates and whatnot. You know how it is.";
+				mes "[奈利奥德]";
+				mes "顺便说一下，艾尔贝塔似乎没有变化。沉船看起来也一样，里面全是骷髅海盗等等。你知道的。";
 				next;
 				cutin "god_nelluad01",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] The event agency in charge of expeditions into the Sunken Ship is still making tons of money. If you have nothing to do, why don't you hunt for monsters down there?";
+				mes "[奈利奥德]";
+				mes "负责探险沉船的活动公司仍然赚了很多钱。如果你没事做，为什么不去那里打怪呢？";
 				close2;
 				break;
 			case 3:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Oh yes!";
-				mes "[DRY-RUN] When is it not?";
-				mes "[DRY-RUN] The desert is hot, has";
-				mes "[DRY-RUN] been hot and probably";
-				mes "[DRY-RUN] always will be...!";
+				mes "[奈利奥德]";
+				mes "哦，是的！";
+				mes "什么时候不是呢？";
+				mes "沙漠很热，";
+				mes "一直很热，可能";
+				mes "永远都会是...！";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Giant worms still jump out of nowhere, freaking out innocent travellers like myself, and the Sandmen still kick people in the, well... You know where.";
+				mes "[奈利奥德]";
+				mes "巨型虫子仍然会突然跳出来，吓到像我这样的无辜旅行者，而沙人仍然会踢人，嗯... 你知道的地方。";
 				next;
 				cutin "god_nelluad02",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Even if the desert is filled with hideous monsters, the view of the ocean there is so magnificent. Hah, it makes me want to play a song.";
+				mes "[奈利奥德]";
+				mes "即使沙漠里充满了可怕的怪物，那里的海洋景色依然壮丽。哈，这让我想要唱首歌。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I must say there is";
-				mes "[DRY-RUN] one place you may wish";
-				mes "[DRY-RUN] to see in the desert.";
+				mes "[奈利奥德]";
+				mes "我必须说，有";
+				mes "一个地方你可能想";
+				mes "在沙漠中看看。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] I'm talking about the Assassin Guild. Supposedly, it's hidden behind a sandstorm in the Morroc";
+				mes "[奈利奥德]";
+				mes "我说的是刺客公会。听说它隐藏在梦罗克的沙尘暴后面。";
 				if ((Class == Job_Assassin) || (Class == Job_Assassin_Cross)) {
-					mes "[DRY-RUN] Desert! But you should know what I am talking about! So when are you gonna take me to the guild, eh?";
+					mes "沙漠！但你应该知道我在说什么！那么你什么时候带我去公会呢，嗯？";
 				}
 				else {
-					mes "[DRY-RUN] Desert! Have you ever been there before?";
+					mes "沙漠！你以前去过那里吗？";
 				}
 				close2;
 				break;
 			case 4:
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Well, to the north is the Schwaltzwald Republic.";
-				mes "[DRY-RUN] There, you'll find Juno,";
-				mes "[DRY-RUN] the 'City of Sages.'";
+				mes "[奈利奥德]";
+				mes "嗯，北边是斯瓦尔特海姆共和国。";
+				mes "在那里，你会找到朱诺，";
+				mes "被称为“贤者之城”。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] The people there say that there is one major nuisance, a man known";
-				mes "[DRY-RUN] as the 'Mad Scientist.' He's antisocial and creates a lot of public disturbances with his experiments.";
+				mes "[奈利奥德]";
+				mes "那里的人民说有一个主要的麻烦，一个被称为";
+				mes "‘疯狂科学家’的人。他性格孤僻，因实验造成了很多公共骚扰。";
 				next;
 				cutin "god_nelluad03",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] It seems everyone in Juno hates";
-				mes "[DRY-RUN] him with a passion. Even one of the Tool Shop owners begged a passing adventurer to stop this Mad Scientist's research!";
+				mes "[奈利奥德]";
+				mes "似乎朱诺的每个人都讨厌他";
+				mes "他是如此令人厌恶。甚至有一个道具店的老板恳求路过的冒险者停止这个疯狂科学家的研究！";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] But I have a different opinion about him. I believe it's not a good idea to interrupt the work of any scientist.";
+				mes "[奈利奥德]";
+				mes "但我对他有不同的看法。我认为打断任何科学家的工作都不是一个好主意。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] After all, he might just discover something important, even if his experiments are a little hazardous.";
+				mes "[奈利奥德]";
+				mes "毕竟，他可能会发现一些重要的东西，即使他的实验有点危险。";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Speaking of discoveries, you know how Juno floats in the air, right?";
+				mes "[奈利奥德]";
+				mes "说到发现，你知道朱诺是如何漂浮在空中的，对吧？";
 				next;
 				cutin "god_nelluad01",2;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] It's said that a piece of Ymir's Heart generates enough power";
-				mes "[DRY-RUN] to keep the entire city aloft in the sky. Isn't that amazing?";
+				mes "[奈利奥德]";
+				mes "据说一块伊米尔之心产生足够的能量，";
+				mes "使整个城市悬浮在空中。难道这不是很惊人吗？";
 				next;
-				mes "[DRY-RUN] [Nelliorde]";
-				mes "[DRY-RUN] Even more recent is the news about the discovery of Ymir's Book. You can read it in Juno's Sage Castle. I hear that it contains the secret to meeting Valkyrie...";
+				mes "[奈利奥德]";
+				mes "最近的消息是关于发现了耶米尔的书。你可以在朱诺的贤者城堡阅读它。我听说里面包含了与女武神相遇的秘密...";
 				close2;
 				break;
 			}
 			break;
 		case 3:
-			mes "[DRY-RUN] [Nelliorde]";
-			mes "[DRY-RUN] Can I sing, you ask?";
-			mes "[DRY-RUN] Certainly, and if I may say so, pleasureably. Which song would";
-			mes "[DRY-RUN] you care to hear?";
+			mes "[奈利奥德]";
+			mes "你问我能唱歌吗？";
+			mes "当然可以，如果我可以这么说，唱得很愉快。你想听哪首歌？";
+			mes "你想听哪首歌？";
 			next;
-			switch(select("[DRY-RUN] Bragi's Poem:Eternal Chaos:Assassin in the Sunset")) {
+			switch(select("布拉基的诗:永恒的混沌:夕阳下的刺客")) {
 			case 1:
 				if (Zeny > 499) {
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Bragi's Poem!";
-					mes "[DRY-RUN] What a good choice!";
-					mes "[DRY-RUN] I must say this song";
-					mes "[DRY-RUN] represents the";
-					mes "[DRY-RUN] heart of a poet!";
+					mes "[奈利奥德]";
+					mes "布拉基的诗！";
+					mes "真是个好选择！";
+					mes "我必须说这首歌";
+					mes "代表了";
+					mes "诗人的心！";
 					soundeffect "bragis_poem.wav",1;
 					set Zeny,Zeny-500;
 					close2;
 				}
 				else {
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
-					mes "[DRY-RUN] to survive~";
+					mes "[奈利奥德]";
+					mes "请原谅我，但我不能免费演奏歌曲。这个世界很残酷，像我这样的脆弱诗人必须有一些生存手段";
+					mes "来生存~";
 					close2;
 				}
 				break;
 			case 2:
 				if (Zeny > 499) {
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] You must like robust";
-					mes "[DRY-RUN] and energetic music, eh?";
-					mes "[DRY-RUN] As you wish~";
+					mes "[奈利奥德]";
+					mes "你一定喜欢强劲的";
+					mes "和充满活力的音乐，对吧？";
+					mes "随你所愿~";
 					soundeffect "chaos_of_eternity.wav",1;
 					set Zeny,Zeny-500;
 					close2;
 				}
 				else {
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
-					mes "[DRY-RUN] to survive~";
+					mes "[奈利奥德]";
+					mes "请原谅我，但我不能免费演奏歌曲。这个世界很残酷，像我这样的脆弱诗人必须有一些生存手段";
+					mes "来生存~";
 					close2;
 				}
 				break;
 			case 3:
 				if (Zeny > 499) {
 					cutin "god_nelluad02",2;
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Excellent choice!";
-					mes "[DRY-RUN] Somehow, the image of";
-					mes "[DRY-RUN] the setting sun fits";
-					mes "[DRY-RUN] well with Assassins.";
-					mes "[DRY-RUN] Don't you agree?";
+					mes "[奈利奥德]";
+					mes "绝佳的选择！";
+					mes "不知为何，";
+					mes "落日的景象与";
+					mes "刺客很相配。";
+					mes "你同意吗？";
 					soundeffect "assassin_of_sunset.wav",1;
 					set Zeny,Zeny-500;
 					close2;
 				}
 				else {
-					mes "[DRY-RUN] [Nelliorde]";
-					mes "[DRY-RUN] Please forgive me, but I cannot play a song for free. The world is harsh, and a frail Bard such as myself must have some means";
-					mes "[DRY-RUN] to survive~";
+					mes "[奈利奥德]";
+					mes "请原谅我，但我不能免费演奏歌曲。这个世界很残酷，像我这样的脆弱诗人必须有一些生存手段";
+					mes "来生存~";
 					close2;
 				}
 				break;
@@ -2086,173 +2086,173 @@ prt_church,113,103,1	script	Praying Man	798,{
 //-----------librarian----------------------------------------------------------
 -	script	Librarian#2_	-1,{
 	if ($God2 < $@god_check1) {
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] What are you doing here?";
-		mes "[DRY-RUN] Don't touch anything!";
+		mes "请确保归还。";
+		mes "你在这里做什么？";
+		mes "不要碰任何东西!";
 		close;
 	}
  	if ($God3 >= $@god_check2) {
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] What are you doing here?";
-		mes "[DRY-RUN] Don't touch anything!";
+		mes "请确保归还。";
+		mes "你在这里做什么？";
+		mes "不要碰任何东西!";
 		close;
 	}
  	if (god_brising > 24 && god_brising < 27) {
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] Zzzzz...";
-		mes "[DRY-RUN] ...Zzzzz...";
-		mes "[DRY-RUN] ......Zzzzzz...";
+		mes "请确保归还。";
+		mes "Zzzzz...";
+		mes "...呼呼...";
+		mes "......呼呼...";
 		next;
-		mes "[DRY-RUN] ^3355FFThis librarian seems to be deeply asleep. It'd be smarter not to wake him if you want to check the Crusader Personnel Records.^000000";
+		mes "^3355FF这个图书管理员似乎睡得很沉。如果你想查看十字军人事记录，最好不要叫醒他。^000000";
 		close;
 	}
  	else if (god_brising == 10) {
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] All confidential personnel records are kept here in the royal library. However, you need authorization";
-		mes "[DRY-RUN] for full access.";
+		mes "请确保归还。";
+		mes "所有机密人事记录都保存在皇家图书馆里。不过，你需要授权";
+		mes "才能完全访问。";
 		next;
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] Did you say that you";
-		mes "[DRY-RUN] need to find a person?";
-		mes "[DRY-RUN] Please give me that";
-		mes "[DRY-RUN] person's name, as well";
-		mes "[DRY-RUN] as your relationship.";
+		mes "请确保归还。";
+		mes "你是说你";
+		mes "需要找一个人？";
+		mes "请告诉我那位";
+		mes "人的名字，以及";
+		mes "你们的关系。";
 		next;
-		switch(select("[DRY-RUN] Lowen, Sibling:Lowen, Spouse:Lowen, Enemy:Lowen, a Friend")) {
+		switch(select("Lowen, 兄弟:Lowen, 配偶:Lowen, 敌人:Lowen, 朋友")) {
 		case 1:
 			if (Sex == SEX_MALE) {
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] How dare you";
-				mes "[DRY-RUN] lie to the royal";
-				mes "[DRY-RUN] librarian!";
+				mes "请确保归还。";
+				mes "你竟敢";
+				mes "不要对皇家";
+				mes "图书管理员撒谎！";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] It says here";
-				mes "[DRY-RUN] in the records";
-				mes "[DRY-RUN] that Lowen did not";
-				mes "[DRY-RUN] have any male siblings!";
+				mes "请确保归还。";
+				mes "这里写着";
+				mes "在记录中";
+				mes "洛文没有";
+				mes "有任何兄弟吗！";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] ^333333(Crap...!";
-				mes "[DRY-RUN] I just disclosed";
-				mes "[DRY-RUN] ^666666classified^000000 ^333333info!)^000000";
+				mes "请确保归还。";
+				mes "^333333(糟糕...！";
+				mes "我刚刚透露了";
+				mes "^666666机密^000000 ^333333信息！)^000000";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] The Royal Library won't";
-				mes "[DRY-RUN] tolerate identity fraud!";
-				mes "[DRY-RUN] Please leave!";
+				mes "请确保归还。";
+				mes "皇家图书馆不会";
+				mes "容忍身份欺诈！";
+				mes "请离开！";
 				close;
 			}
 			else {
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] You're related to Miss Lowen? How have you not received any news about her before?";
+				mes "请确保归还。";
+				mes "你是洛温小姐的亲属？你怎么之前没有收到关于她的任何消息？";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] I see...";
-				mes "[DRY-RUN] Separated at birth,";
-				mes "[DRY-RUN] that's truly tragic.";
-				mes "[DRY-RUN] Okay, let me check.";
+				mes "请确保归还。";
+				mes "我明白了……";
+				mes "分开出生，";
+				mes "这真是悲剧。";
+				mes "好的，让我检查一下。";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] I feel terrible telling you this, but it's too late to find Lowen Ellenen, according to the records.";
+				mes "请确保归还。";
+				mes "我告诉你这个真是太糟糕了，但根据记录，找洛温·艾伦宁已经太晚了。";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] During the monster subjugation mission in Geffen dungeon she reportedly disappeared and... was later pronounced dead.";
+				mes "请确保归还。";
+				mes "在吉芬地下城的怪物征讨任务中，她 reportedly 消失了，后来被宣布死亡。";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] I'm sorry, but";
-				mes "[DRY-RUN] that's all I know.";
-				mes "[DRY-RUN] Thank you...";
+				mes "请确保归还。";
+				mes "抱歉，但是";
+				mes "这就是我所知道的全部。";
+				mes "谢谢你...";
 				set god_brising,11;
 				close;
 			}
 		case 2:
 			if (Sex == SEX_MALE) {
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] Spouse...?";
-				mes "[DRY-RUN] Well, I guess you look like a husband. Heh, I've got a girlfriend myself. Well, at least I think so. Anyway...";
+				mes "请确保归还。";
+				mes "配偶……？";
+				mes "嗯，我想你看起来像个丈夫。呵，我自己有个女朋友。好吧，至少我认为是这样。无论如何……";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] Lowen Ellenen";
-				mes "[DRY-RUN] the Crusader, right?";
-				mes "[DRY-RUN] I'm so... sorry.";
-				mes "[DRY-RUN] You might want";
-				mes "[DRY-RUN] to have a seat.";
+				mes "请确保归还。";
+				mes "洛温·艾伦恩";
+				mes "是十字军，对吧？";
+				mes "我很……抱歉。";
+				mes "你可能想";
+				mes "坐一下。";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] During the monster";
-				mes "[DRY-RUN] subjugation in Geffen";
-				mes "[DRY-RUN] Dungeon, she reportedly";
-				mes "[DRY-RUN] disappeared. And later,";
-				mes "[DRY-RUN] she was pronounced dead.";
+				mes "请确保归还。";
+				mes "在怪物";
+				mes "征讨中在吉芬";
+				mes "地下城，她 reportedly";
+				mes "消失了。后来，";
+				mes "她被宣布死亡。";
 				next;
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] That's all the";
-				mes "[DRY-RUN] information I have,";
-				mes "[DRY-RUN] sir. I'm truly sorry";
-				mes "[DRY-RUN] for your loss.";
+				mes "请确保归还。";
+				mes "这就是我所拥有的";
+				mes "信息，";
+				mes "先生。我真的很抱歉";
+				mes "你的损失。";
 				set god_brising,11;
 				close;
 			}
 			else {
-				mes "[DRY-RUN] [Librarian]";
-				mes "[DRY-RUN] Hmmm...?";
-				mes "[DRY-RUN] Spouse?";
-				mes "[DRY-RUN] Or ^333333*Ahem*^000000";
-				mes "[DRY-RUN] cohabitational partners?";
+				mes "请确保归还。";
+				mes "嗯...?";
+				mes "配偶？";
+				mes "或者 ^333333*咳咳*^000000";
+				mes "同居伴侣？";
 				next;
-				mes "[DRY-RUN] ^3355FFThe librarian";
-				mes "[DRY-RUN] now seems awfully";
-				mes "[DRY-RUN] distracted, as if";
-				mes "[DRY-RUN] he were lost in";
-				mes "[DRY-RUN] vivid daydream...^000000";
+				mes "^3355FF图书管理员";
+				mes "现在似乎非常";
+				mes "分心，仿佛";
+				mes "他沉浸在";
+				mes "生动的白日梦中...^000000";
 				close;
 			}
 		case 3:
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] I'm looking";
-			mes "[DRY-RUN] for Ellenen.";
-			mes "[DRY-RUN] Lowen Ellenen.";
-			mes "[DRY-RUN] My sworn arch-enemy.";
+			mes "我在寻找";
+			mes "为了艾伦恩。";
+			mes "洛文·艾伦恩。";
+			mes "我发誓的死敌。";
 			next;
-			mes "[DRY-RUN] [Librarian]";
-			mes "[DRY-RUN] Arch-enemy...?";
-			mes "[DRY-RUN] Um, uh ^666666*Ahem!*^000000";
-			mes "[DRY-RUN] All I can tell you is that there was a Crusader by that name.";
+			mes "请确保归还。";
+			mes "死敌……？";
+			mes "呃，呃 ^666666*咳咳!*^000000";
+			mes "我能告诉你的是，有一个名叫他的十字军。";
 			next;
-			mes "[DRY-RUN] [Librarian]";
-			mes "[DRY-RUN] I'm sorry, but";
-			mes "[DRY-RUN] I can't tell you";
-			mes "[DRY-RUN] more than that.";
+			mes "请确保归还。";
+			mes "抱歉，但是";
+			mes "我不能告诉你";
+			mes "更多的事情。";
 			next;
-			mes "[DRY-RUN] [Librarian]";
-			mes "[DRY-RUN] ^333333*Cough*^000000";
-			mes "[DRY-RUN] ^666666Nutcase!^000000";
+			mes "请确保归还。";
+			mes "^333333*咳嗽*^000000";
+			mes "^666666疯子！^000000";
 			close;
 		case 4:
-			mes "[DRY-RUN] [Librarian]";
-			mes "[DRY-RUN] A friend...?";
-			mes "[DRY-RUN] Well, we have a";
-			mes "[DRY-RUN] record of someone";
-			mes "[DRY-RUN] named Lohen Phelica.";
+			mes "请确保归还。";
+			mes "一个朋友……？";
+			mes "嗯，我们有一个";
+			mes "关于某人的记录";
+			mes "名叫洛亨·菲利卡。";
 			next;
-			mes "[DRY-RUN] [Librarian]";
-			mes "[DRY-RUN] He retired from the service a few years ago. I'd like to give you his address, but we don't have any of that information.";
+			mes "请确保归还。";
+			mes "他几年前已经退役。我想给你他的地址，但我们没有任何相关信息。";
 			set god_brising,12;
 			close;
 		}
 	}
 	else if (god_brising > 10 && god_brising < 13) {
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] Now, may";
-		mes "[DRY-RUN] I excuse myself?";
-		mes "[DRY-RUN] Thank you!";
+		mes "请确保归还。";
+		mes "现在，可以";
+		mes "我可以告辞吗？";
+		mes "谢谢你！";
 		close;
 	}
 	else  {
-		mes "[DRY-RUN] [Librarian]";
-		mes "[DRY-RUN] All confidential personnel records are kept here in the royal library. However, you need authorization";
-		mes "[DRY-RUN] for full access.";
+		mes "请确保归还。";
+		mes "所有机密人事记录都保存在皇家图书馆里。不过，你需要授权";
+		mes "才能完全访问。";
 		close;
 	}
 
@@ -2387,86 +2387,86 @@ prontera,260,354,4	script	Woman#Rosa Ellenen	101,{
 prontera,262,353,0	script	Gravestone	111,{
 	if ($God2 > $@god_check1) {
 		if (god_brising > 33) {
-			mes "[DRY-RUN] Lowen Ellenen";
-			mes "[DRY-RUN]  XXXX. XX. XX.";
-			mes "[DRY-RUN] Her noble spirit";
-			mes "[DRY-RUN] was sent to the holy";
-			mes "[DRY-RUN] place by Valkyrie's will.";
-			mes "[DRY-RUN] ^3355FFYou couldn't read the rest of the epitaph since the tombstone has been eroded with time.^000000";
+			mes "洛温·艾伦恩";
+			mes " ";
+			mes " XXXX. XX. XX.";
+			mes "她高贵的灵魂";
+			mes "被送往神圣的";
+			mes "地方，遵循女武神的意志。";
 			close;
 		}
 		else {
-			mes "[DRY-RUN] ^3355FFIt's just an";
+			mes "^3355FF你无法阅读碑文的其余部分，因为墓碑随着时间的推移而被侵蚀。^000000";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] ordinary gravestone.^000000";
-		mes "[DRY-RUN] ^3355FFNothing really";
+		mes "^3355FF这只是一个";
+		mes "普通的墓碑。^000000";
 		next;
-		mes "[DRY-RUN] sets it apart from the rest of the tombstones here in the Prontera cemetary.^000000";
-		mes "sets it apart from the rest of the tombstones here in the Prontera cemetary.^000000";
+		mes "^3355FF没什么特别的";
+		mes "与普隆德拉墓地其他墓碑没有什么不同。^000000";
 		close;
 	}
 }
  
 gef_dun01,89,192,0	script	#lowentrace	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "[DRY-RUN] ^3355FFIt's just an old,";
-		mes "[DRY-RUN] dry piece of wood.^000000";
+		mes "^3355FF这只是一块旧的，";
+		mes "干枯的木头。^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "[DRY-RUN] ^3355FFIt's just an old,";
-		mes "[DRY-RUN] dry piece of wood.^000000";
+		mes "^3355FF这只是一块旧的，";
+		mes "干枯的木头。^000000";
 		close;
 	}
 	if ((god_brising > 20) && (god_brising < 34)) {
-		mes "[DRY-RUN] ^3355FFWill you";
-		mes "[DRY-RUN] summon her?^000000";
+		mes "^3355FF你会";
+		mes "召唤她吗？^000000";
 		next;
-		switch(select("[DRY-RUN] Yes:No")) {
+		switch(select("是:否")) {
 		case 1:
 			input @lowenstring$;
 			if (@lowenstring$ == "Lowen") {
 				if (god_brising == 30) {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8B...Y-you're...";
-					mes "[DRY-RUN] I-I can't stay long,";
-					mes "[DRY-RUN] I'm feeling too weak.";
-					mes "[DRY-RUN] Come closer, I want";
-					mes "[DRY-RUN] to show you something...^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B…你是…";
+					mes "我…我不能待太久，";
+					mes "我感觉太虚弱了。";
+					mes "靠近一点，我想";
+					mes "给你看点东西…^000000";
 					next;
-					mes "[DRY-RUN] ^3355FFHer voice grew";
-					mes "[DRY-RUN] softer and softer";
-					mes "[DRY-RUN] until you could no";
-					mes "[DRY-RUN] longer hear her.^000000";
+					mes "^3355FF她的声音变得";
+					mes "越来越柔和";
+					mes "直到你不能再";
+					mes "再也听不见她的声音。^000000";
 					close;
 				}
 				else if (god_brising == 21) {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BPlease tell Rosa";
-					mes "[DRY-RUN] not to worry about me anymore. You might be able to find her beside my grave. I don't want her to suffer anymore...^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B请告诉罗莎";
+					mes "不要再担心我了。你可能会在我的墓旁找到她。我不想让她再受苦……^000000";
 					close;
 				}
 				else if (god_brising == 25) {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BYou've come back.";
-					mes "[DRY-RUN] Have you met Rosa?";
-					mes "[DRY-RUN] Hm, yes, it sounds like she'd say that. But thank you for sending her my message.^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B你回来了。";
+					mes "你见过罗莎吗？";
+					mes "嗯，是的，她听起来会这么说。但谢谢你把我的消息传给她。^000000";
 					next;
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BAh, it's too dangero--";
-					mes "[DRY-RUN] This place is too dangerous for you. I hate myself for not being able to help protect you from";
-					mes "[DRY-RUN] these evil creatures. Be careful...^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B啊，这里太危险了——";
+					mes "这个地方对你来说太危险了。我恨自己无法保护你。";
+					mes "这些邪恶生物。小心...^000000";
 					close;
 				}
 				else {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BMy spirit is";
-					mes "[DRY-RUN] growing weaker...";
-					mes "[DRY-RUN] Please be careful...";
-					mes "[DRY-RUN] This place is too dangerous.^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B我的灵魂正在";
+					mes "变得越来越虚弱...";
+					mes "请小心...";
+					mes "这个地方太危险了。^000000";
 					close;
 				}
 			} 
@@ -2478,51 +2478,51 @@ gef_dun01,89,192,0	script	#lowentrace	111,3,3,{
 		}
 	}
 	else if (god_brising == 20) {
-		mes "[DRY-RUN] [The voice of a female]";
-		mes "[DRY-RUN] ^6E7B8BI-It's dangerous...";
-		mes "[DRY-RUN] Be careful...^000000";
+		mes "[女性的声音]";
+		mes "^6E7B8B我-这很危险...";
+		mes "小心...^000000";
 		next;
-		switch(select("[DRY-RUN] Ignore it.:What are you talking about?")) {
+		switch(select("无视它.:你在说什么？")) {
 		case 1:
 			close;
 		case 2:
-			mes "[DRY-RUN] [The voice of a female]";
-			mes "[DRY-RUN] ^6E7B8B...No way...";
-			mes "[DRY-RUN] You can hear me?";
-			mes "[DRY-RUN] I can't believe this.";
-			mes "[DRY-RUN] It's impossible...";
-			mes "[DRY-RUN] But if you don't mind,";
-			mes "[DRY-RUN] may I talk to you...?^000000";
+			mes "[女性的声音]";
+			mes "^6E7B8B...不可能...";
+			mes "你能听到我吗？";
+			mes "我简直不敢相信。";
+			mes "这不可能...";
+			mes "但如果你不介意，";
+			mes "我可以和你谈谈吗...?^000000";
 			next;
-			switch(select("[DRY-RUN] Holy...! Run!:What are you?!")) {
+			switch(select("天哪...！快跑！:你是什么？")) {
 			case 1:
 				close;
 			case 2:
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BI...";
-				mes "[DRY-RUN] I don't have my body anymore, so... I think I'm a ghost. Yes, I've been wandering in this place ever since I got here.^000000";
+				mes "[女性的声音]";
+				mes "^6E7B8BI...";
+				mes "我已经没有身体了，所以……我想我是一只鬼。是的，自从我来到这里后，我一直在这个地方徘徊。^000000";
 				next;
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BI'm still not sure why I'm";
-				mes "[DRY-RUN] bound to this realm. If you";
-				mes "[DRY-RUN] don't mind, would you visit";
-				mes "[DRY-RUN] my sister for me?";
+				mes "[女性的声音]";
+				mes "^6E7B8B我仍然不确定为什么我";
+				mes "被束缚在这个领域。如果你";
+				mes "不介意的话，能否替我去";
+				mes "看望我的妹妹？";
 				next;
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BPlease tell her...";
-				mes "[DRY-RUN] Please tell her that her";
-				mes "[DRY-RUN] little sister Lowen is fine.^000000";
+				mes "[女性的声音]";
+				mes "^6E7B8B请告诉她……";
+				mes "请告诉她，她的";
+				mes "小妹妹洛温很好。^000000";
 				next;
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BUm...";
-				mes "[DRY-RUN] If you want to meet me again, just say my name out loud. '^000000Lowen^6E7B8B.'^000000";
+				mes "[女性的声音]";
+				mes "^6E7B8B嗯……";
+				mes "如果你想再见到我，只需大声说出我的名字。'^000000洛温^6E7B8B.'^000000";
 				set god_brising,21;
 				close;
 			}
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFYou find a piece of twisted, dry wood. Looking at it seems to bring out a feeling of sadness within you for some reason.^000000";
+		mes "^3355FF你发现了一块扭曲的干木头。看着它似乎让你心中不知为何涌起一阵悲伤。^000000";
 		close;
 	}
 
@@ -2535,70 +2535,70 @@ OnTouch_:
 
 gef_dun01,203,48,0	script	#lowentrace1	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "[DRY-RUN] ^3355FFIt's just an old,";
-		mes "[DRY-RUN] dry piece of wood.^000000";
+		mes "^3355FF这只是一块旧的，";
+		mes "干枯的木头。^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "[DRY-RUN] ^3355FFIt's just an old,";
-		mes "[DRY-RUN] dry piece of wood.^000000";
+		mes "^3355FF这只是一块旧的，";
+		mes "干枯的木头。^000000";
 		close;
 	}
 	if ((god_brising > 20) && (god_brising < 34)) {
-		mes "[DRY-RUN] Would you";
-		mes "[DRY-RUN] like to summon her? ";
+		mes "你能否";
+		mes "想要召唤她吗？";
 		next;
-		switch(select("[DRY-RUN] Yes:No")) {
+		switch(select("是:否")) {
 		case 1:
 			input @lowenstring$;
 				if (@lowenstring$ == "Lowen") {
 					if (god_brising == 31) {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BYou came back!";
-					mes "[DRY-RUN] You'll be with me";
-					mes "[DRY-RUN] ...Won't you?^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B你回来了！";
+					mes "你会和我在一起";
+					mes "...不会吗？^000000";
 					next;
-					switch(select("[DRY-RUN] Of course.:Sorry, I don't think I can...")) {
+					switch(select("当然。:抱歉，我想我不能...")) {
 					case 1:
-						mes "[DRY-RUN] [Lowen Ellenen]";
-						mes "[DRY-RUN] ^6E7B8BThank you,";
-						mes "[DRY-RUN] thank you so much...^000000";
+						mes "[洛温·艾伦宁]";
+						mes "^6E7B8B谢谢你，";
+						mes "非常感谢你...^000000";
 						close2;
 						warp "que_god02",47,53;
 						end;
 					case 2:
-						mes "[DRY-RUN] [Lowen Ellenen]";
-						mes "[DRY-RUN] ^6E7B8BI understand.";
-						mes "[DRY-RUN] Please take";
-						mes "[DRY-RUN] care of yourself...^000000";
+						mes "[洛温·艾伦宁]";
+						mes "^6E7B8B我明白了。";
+						mes "请收下";
+						mes "照顾好自己...^000000";
 						close;
 					}
 				} else if (god_brising == 30) {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BAh yes. This is it.";
-					mes "[DRY-RUN] You look very curious about me, yet I am amazed that you can hear my voice. Please let me tell you an old story.^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B啊，是的。这就是。";
+					mes "你看起来对我很感兴趣，但我很惊讶你能听到我的声音。请让我告诉你一个古老的故事。^000000";
 					close2;
 					warp "que_god02",47,53;
 					end;
 				}
 				else if (god_brising == 25) {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BYou've come back.";
-					mes "[DRY-RUN] Have you met Rosa?";
-					mes "[DRY-RUN] Hm, yes, it sounds like she'd say that. But thank you for sending her my message.^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B你回来了。";
+					mes "你见过罗莎吗？";
+					mes "嗯，是的，她听起来会这么说。但谢谢你把我的消息传给她。^000000";
 					next;
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BAh, it's too dangero--";
-					mes "[DRY-RUN] This place is too dangerous for you. I hate myself for not being able to help protect you from";
-					mes "[DRY-RUN] these evil creatures. Be careful...^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B啊，这里太危险了——";
+					mes "这个地方对你来说太危险了。我恨自己无法保护你。";
+					mes "这些邪恶生物。小心...^000000";
 					close;
 				}
 				else {
-					mes "[DRY-RUN] [Lowen Ellenen]";
-					mes "[DRY-RUN] ^6E7B8BMy spirit is";
-					mes "[DRY-RUN] growing weaker...";
-					mes "[DRY-RUN] Please be careful...";
-					mes "[DRY-RUN] This place is too dangerous.^000000";
+					mes "[洛温·艾伦宁]";
+					mes "^6E7B8B我的灵魂正在";
+					mes "变得越来越虚弱...";
+					mes "请小心...";
+					mes "这个地方太危险了。^000000";
 					close;
 				}
 			}
@@ -2610,51 +2610,51 @@ gef_dun01,203,48,0	script	#lowentrace1	111,3,3,{
 		}
 	}
 	else if (god_brising == 20) {
-		mes "[DRY-RUN] [The voice of a female]";
-		mes "[DRY-RUN] ^6E7B8BI-It's dangerous...";
-		mes "[DRY-RUN] Be careful...^000000";
+		mes "[女性的声音]";
+		mes "^6E7B8B我-这很危险...";
+		mes "小心...^000000";
 		next;
-		switch(select("[DRY-RUN] Ignore it.:What are you talking about?")) {
+		switch(select("无视它.:你在说什么？")) {
 		case 1:
 			close;
 		case 2:
-			mes "[DRY-RUN] [The voice of a female]";
-			mes "[DRY-RUN] ^6E7B8B...No way...";
-			mes "[DRY-RUN] You can hear me?";
-			mes "[DRY-RUN] I can't believe this.";
-			mes "[DRY-RUN] It's impossible...";
-			mes "[DRY-RUN] But if you don't mind,";
-			mes "[DRY-RUN] may I talk to you...?^000000";
+			mes "[女性的声音]";
+			mes "^6E7B8B...不可能...";
+			mes "你能听到我吗？";
+			mes "我简直不敢相信。";
+			mes "这不可能...";
+			mes "但如果你不介意，";
+			mes "我可以和你谈谈吗...?^000000";
 			next;
-			switch(select("[DRY-RUN] Holy...! Run!:What are you?!")) {
+			switch(select("天哪...！快跑！:你是什么？")) {
 			case 1:
 				close;
 			case 2:
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BI...";
-				mes "[DRY-RUN] I don't have my body anymore, so... I think I'm a ghost. Yes, I've been wandering in this place ever since I got here.^000000";
+				mes "[女性的声音]";
+				mes "^6E7B8BI...";
+				mes "我已经没有身体了，所以……我想我是一只鬼。是的，自从我来到这里后，我一直在这个地方徘徊。^000000";
 				next;
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BI'm still not sure why I'm";
-				mes "[DRY-RUN] bound to this realm. If you";
-				mes "[DRY-RUN] don't mind, would you visit";
-				mes "[DRY-RUN] my sister for me?";
+				mes "[女性的声音]";
+				mes "^6E7B8B我仍然不确定为什么我";
+				mes "被束缚在这个领域。如果你";
+				mes "不介意的话，能否替我去";
+				mes "看望我的妹妹？";
 				next;
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BPlease tell her...";
-				mes "[DRY-RUN] Please tell her that her";
-				mes "[DRY-RUN] little sister Lowen is fine.^000000";
+				mes "[女性的声音]";
+				mes "^6E7B8B请告诉她……";
+				mes "请告诉她，她的";
+				mes "小妹妹洛温很好。^000000";
 				next;
-				mes "[DRY-RUN] [The voice of a female]";
-				mes "[DRY-RUN] ^6E7B8BUm...";
-				mes "[DRY-RUN] If you want to meet me again, just say my name out loud. '^000000Lowen^6E7B8B.'^000000";
+				mes "[女性的声音]";
+				mes "^6E7B8B嗯……";
+				mes "如果你想再见到我，只需大声说出我的名字。'^000000洛温^6E7B8B.'^000000";
 				set god_brising,21;
 				close;
 			}
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFYou find a piece of twisted, dry wood. Looking at it seems to bring out a feeling of sadness within you for some reason.^000000";
+		mes "^3355FF你发现了一块扭曲的干木头。看着它似乎让你心中不知为何涌起一阵悲伤。^000000";
 		close;
 	}
 
@@ -2775,27 +2775,27 @@ que_god02,48,55,3	script	Lowen Ellenen	745,{
 
 que_god02,54,64,4	script	Soldier#1_brising	105,1,1,{
  	if (god_brising == 31) {
-		mes "[DRY-RUN] [Soldier]";
-		mes "[DRY-RUN] Have you volunteered for monster subjugation? Would you like to start the mission now?";
+		mes "[士兵]";
+		mes "你是否自愿参加怪物讨伐？你想现在开始任务吗？";
 		next;
-		switch(select("[DRY-RUN] Yes.:I need more time.")) {
+		switch(select("是的。:我需要更多时间。")) {
 		case 1:
-			mes "[DRY-RUN] [Soldier]";
-			mes "[DRY-RUN] We're you're ready,";
-			mes "[DRY-RUN] come and stand in";
-			mes "[DRY-RUN] front of me.";
+			mes "[士兵]";
+			mes "我们准备好了，";
+			mes "请站在";
+			mes "我面前。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Soldier]";
-			mes "[DRY-RUN] No problem, just come back when your preparations are completed.";
+			mes "[士兵]";
+			mes "没问题，准备好后再回来。";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Soldier]";
-		mes "[DRY-RUN] Please back away.";
-		mes "[DRY-RUN] You are not permitted";
-		mes "[DRY-RUN] to enter!";
+		mes "[士兵]";
+		mes "请后退。";
+		mes "你不被允许";
+		mes "进入！";
 		close;
 	}
 
@@ -2807,10 +2807,10 @@ OnTouch_:
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [Soldier]";
-		mes "[DRY-RUN] Please back away.";
-		mes "[DRY-RUN] You are not permitted";
-		mes "[DRY-RUN] to enter!";
+		mes "[士兵]";
+		mes "请后退。";
+		mes "你不被允许";
+		mes "进入！";
 		close2;
 		warp "que_god02",51,59;
 		end;
@@ -2819,10 +2819,10 @@ OnTouch_:
 }
 
 que_god02,55,64,4	script	Soldier#2_brising	105,1,1,{
-	mes "[DRY-RUN] [Soldier]";
-	mes "[DRY-RUN] Please back away.";
-	mes "[DRY-RUN] You are not permitted";
-	mes "[DRY-RUN] to enter!";
+	mes "[士兵]";
+	mes "请后退。";
+	mes "你不被允许";
+	mes "进入！";
 	close;
 }
 
@@ -2980,26 +2980,26 @@ que_god02,174,49,0	script	#lowenone	139,0,0,{
 OnTouch_:
 	donpcevent "brisinsold2::OnSold2On";
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] Where am I?";
-	mes "[DRY-RUN] Isn't this...?!";
+	mes "我在哪里?";
+	mes "这不是……?!";
 	next;
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] Ah, I see.";
-	mes "[DRY-RUN] This must be the place where everything happened two years ago. Good, good...";
+	mes "啊，我明白了。";
+	mes "这一定是两年前一切发生的地方。很好，很好...";
 	next;
-	mes "[DRY-RUN] [Lowen Ellenen]";
-	mes "[DRY-RUN] Shshh...";
-	mes "[DRY-RUN] This is just a reflection of the past. Here, you'll see what happened at the time for yourself.";
+	mes "[洛温·艾伦宁]";
+	mes "嘘...";
+	mes "这只是过去的反映。在这里，你将亲眼看到当时发生的事情.";
 	next;
-	mes "[DRY-RUN] [Lowen Ellenen]";
-	mes "[DRY-RUN] It wasn't any trouble";
-	mes "[DRY-RUN] getting down here. But...";
-	mes "[DRY-RUN] We've got problems now.";
+	mes "[洛温·艾伦宁]";
+	mes "这并不麻烦";
+	mes "来到这里并不困难。但是...";
+	mes "我们现在有麻烦了.";
 	next;
 	mapannounce "que_god02","D...Doppelganger!!!",0,0x9CFF00;
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] What...?!";
-	mes "[DRY-RUN] Doppelganger?!";
+	mes "什么...？!";
+	mes "双胞胎怪？!";
 	next;
 	donpcevent "#brisinsummon::OnDoppel1On";
 	donpcevent "#brisinsummon::OnKnight1On";
@@ -3007,31 +3007,31 @@ OnTouch_:
 	donpcevent "#brisinsummon::OnKnight3On";
 	donpcevent "#brisinsummon::OnLowenOn";
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] What's going on?";
-	mes "[DRY-RUN] Did you really fight with that creature? H-hey! Answer me!";
+	mes "发生了什么事？";
+	mes "你真的和那个生物战斗过吗？嘿！回答我！";
 	next;
-	mes "[DRY-RUN] [Lowen Ellenen]";
-	mes "[DRY-RUN] Yes, this was the place...";
-	mes "[DRY-RUN] The commander gave orders";
-	mes "[DRY-RUN] and then... What happened?";
+	mes "[洛温·艾伦宁]";
+	mes "是的，这就是地方...";
+	mes "指挥官下达了命令";
+	mes "然后...发生了什么？";
 	next;
 	mapannounce "que_god02","Everyone, stay calm! Get into your positions!",0,0x9CFF00;
-	mes "[DRY-RUN] ^4E2F2F[Crusader Commander]";
-	mes "[DRY-RUN] Everyone, get into your positions! Front line, block its movement! Rear line, support the defense!^000000";
+	mes "^4E2F2F[十字军指挥官]";
+	mes "大家，准备就位！前线，阻止它的行动！后线，支援防御！^000000";
 	emotion ET_GO, getnpcid(0, "#knight1");
 	emotion ET_GO, getnpcid(0, "#knight2");
 	emotion ET_GO, getnpcid(0, "#knight3");
 	emotion ET_SURPRISE, getnpcid(0, "#doppelganger1");
 	next;
-	mes "[DRY-RUN] [Lowen Ellenen]";
-	mes "[DRY-RUN] N-no!";
-	mes "[DRY-RUN] I'm not running away!";
+	mes "[洛温·艾伦宁]";
+	mes "不，不！";
+	mes "我不是在逃跑！";
 	next;
-	mes "[DRY-RUN] ^3355FFYou're filled with a great anxiety, and you experience for yourself the fear and pressure Lowen felt during those very moments.^000000";
+	mes "^3355FF你感到一种巨大的焦虑，亲身体验到洛温在那一刻所感受到的恐惧和压力。^000000";
 	next;
-	mes "[DRY-RUN] ^4E2F2F[Crusader Commander]";
-	mes "[DRY-RUN] Go, Lowen!";
-	mes "[DRY-RUN] Cast Grand Cross, now!^000000";
+	mes "^4E2F2F[十字军指挥官]";
+	mes "去吧，洛温！";
+	mes "现在施展大十字！^000000";
 	next;
 	specialeffect EF_BEGINSPELL7,AREA,"#lowen";
 	mapannounce "que_god02","Mwahaha! Mortals are such fools...",0,0xA8A8A8;
@@ -3042,12 +3042,12 @@ OnTouch_:
 	emotion ET_SURPRISE, getnpcid(0, "#knight3");
 	emotion ET_SURPRISE, getnpcid(0, "#lowen");
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN]  ??!!!";
+	mes " ??!!!";
 	next;
 	specialeffect EF_BEGINSPELL7,AREA,"#doppelganger2";
-	mes "[DRY-RUN] [Male Voice]";
-	mes "[DRY-RUN] Lowen!";
-	mes "[DRY-RUN] Noooooooooo!!!";
+	mes "[男性声音]";
+	mes "洛温！";
+	mes "不！！！！！！";
 	close2;
 	warp "que_god02",120,52;
 	donpcevent "#brisinsummon::OnDoppel2Off";
@@ -3064,40 +3064,40 @@ que_god02,120,52,0	script	#monologue	139,0,0,{
 
 OnTouch_:
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] Where am I?";
-	mes "[DRY-RUN] Isn't that...";
-	mes "[DRY-RUN] What's Hermite";
-	mes "[DRY-RUN] doing here?!";
+	mes "我在哪里?";
+	mes "那不是...";
+	mes "赫尔米特在这里做什么？";
+	mes "！";
 	next;
-	mes "[DRY-RUN] [Hermite Charles]";
-	mes "[DRY-RUN] No, no, no!";
-	mes "[DRY-RUN] Lowen don't...!";
-	mes "[DRY-RUN] He's gonna kill you!";
+	mes "[隐士查尔斯]";
+	mes "不，不，不！";
+	mes "洛温不要...！";
+	mes "他要杀了你！";
 	next;
-	mes "[DRY-RUN] [Hermite Charles]";
-	mes "[DRY-RUN] Grand Cross?!";
-	mes "[DRY-RUN] Using that's";
-	mes "[DRY-RUN] committing suicide!";
-	mes "[DRY-RUN] Lowen, don't do it!";
-	mes "[DRY-RUN] Don't do that, Lowen!";
+	mes "[隐士查尔斯]";
+	mes "大十字架？！";
+	mes "使用那个是";
+	mes "自杀！";
+	mes "洛温，别这样！";
+	mes "不要那样做，洛温！";
 	next;
 	mapannounce "que_god02","Mwahaha! Mortals are such fools...",0,0xA8A8A8;
-	mes "[DRY-RUN] [Hermite Charles]";
-	mes "[DRY-RUN] Lowen!";
-	mes "[DRY-RUN] Noooooooooo!!!";
+	mes "[隐士查尔斯]";
+	mes "洛温！";
+	mes "不！！！！！！";
 	next;
 	donpcevent "#brisinsummon::OnHermiteOff";
 	mes "[" + strcharinfo(0) + "]";
-	mes "[DRY-RUN] Where did he go?";
-	mes "[DRY-RUN] Was... Was that";
-	mes "[DRY-RUN] from his mind?";
+	mes "他去哪了？";
+	mes "是... 是那个吗";
+	mes "来自他的内心？";
 	mapannounce "que_god02","What happened?! L-Lowen's gone!!",0,0xA8A8A8;
 	next;
-	mes "[DRY-RUN] [Lowen Ellenen]";
-	mes "[DRY-RUN] ...";
-	mes "[DRY-RUN] I see now.";
-	mes "[DRY-RUN] I know...";
-	mes "[DRY-RUN] What happened...";
+	mes "[洛温·艾伦宁]";
+	mes "...";
+	mes "我明白了。";
+	mes "我知道...";
+	mes "发生了什么...";
 	close2;
 	warp "que_god02",18,127;
 	end;
@@ -3158,74 +3158,74 @@ que_god02,21,127,3	script	Lowen Ellenen#2	745,{
 que_god02,178,127,3	script	Valkyrie#1	811,{
 
 	if (god_brising == 31) {
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] You have passed";
-		mes "[DRY-RUN] the test, Lowen.";
-		mes "[DRY-RUN] I don't have much";
-		mes "[DRY-RUN] time to speak.";
+		mes "[女武神]";
+		mes "你通过了";
+		mes "测试，洛温。";
+		mes "我没有太多";
+		mes "时间来交谈。";
 		next;
-		mes "[DRY-RUN] [Valkyrie]";
-		mes "[DRY-RUN] Have you found the strength to release yourself from the guilt and the pain? I have been waiting for you. Will you accept my invitation to Valhalla?";
+		mes "[女武神]";
+		mes "你是否找到了力量来摆脱内心的愧疚和痛苦？我一直在等你。你愿意接受我对瓦尔哈拉的邀请吗？";
 		next;
-		switch(select("[DRY-RUN] Yes, I will follow you.:Um... I'm not Lowen.")) {
+		switch(select("是的，我会跟随你。:嗯……我不是洛温。")) {
 		case 1:
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Lowen Ellenen, misunderstood hero. I will now promote you";
-			mes "[DRY-RUN] to Einherjar with";
-			mes "[DRY-RUN] the will of God.";
+			mes "[女武神]";
+			mes "洛温·埃伦宁，被误解的英雄。我现在将提升你";
+			mes "为艾因赫雅尔，";
+			mes "以神的意志。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Your soul and spirit will be reborn in Valhalla as a holy warrior preparing for the holy war.";
+			mes "[女武神]";
+			mes "你的灵魂和精神将在瓦尔哈拉重生，成为准备参与圣战的圣战士。";
 			specialeffect2 EF_BLESSING;
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] And...";
+			mes "[女武神]";
+			mes "还有...";
 			mes ""+ strcharinfo(0) +",";
-			mes "[DRY-RUN] Your exploits are known to me. But I am curious as to what has brought you here?";
+			mes "你的事迹我已知晓。但我很好奇是什么让你来到这里？";
 			next;
-			mes "[DRY-RUN] ^3355FFYou explained what happened to the Valkyrie, starting from the Snow Crystal which never melts.^000000";
+			mes "^3355FF你向女武神解释了发生的事情，从永不融化的雪晶开始。^000000";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] I understand.";
-			mes "[DRY-RUN] The story begins a long, long time ago with Freya, the patron goddess of beauty and love.";
+			mes "[女武神]";
+			mes "我明白了。";
+			mes "故事开始于很久很久以前，女神弗蕾雅，她是美与爱的守护女神。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Her teardrop became a beautiful jewel. The snow on which Freya's teardrops have fallen will always retain its crystalline beauty.";
+			mes "[女武神]";
+			mes "她的泪滴变成了一颗美丽的宝石。弗蕾雅的泪滴落下的雪将永远保持其晶莹剔透的美丽。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] You seek traces of the goddess? Perhaps this is a sign of the end of the thousand year peace. When the time comes, I hope humans will not abandon their faith.";
+			mes "[女武神]";
+			mes "你在寻找女神的痕迹？也许这是千年和平结束的征兆。当时刻来临时，我希望人类不会放弃他们的信仰。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Perhaps, I was also sent to meet you. I wish that humans will use the power derived from the traces of the gods to protect justice.";
+			mes "[女武神]";
+			mes "也许，我也是被派来见你的。我希望人类能利用来自神明痕迹的力量来保护正义。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
+			mes "[女武神]";
 			mes ""+ strcharinfo(0) +"...";
-			mes "[DRY-RUN] Listen. This is";
-			mes "[DRY-RUN] what you must find.";
+			mes "听着。这是";
+			mes "你必须找到的东西。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] A cold snowy path on";
-			mes "[DRY-RUN] which the goddess tread.";
-			mes "[DRY-RUN] A blue river the goddess crossed.";
-			mes "[DRY-RUN] A narrow path the goddess passed.";
-			mes "[DRY-RUN] Four dwarves that the goddess met...";
+			mes "[女武神]";
+			mes "一条寒冷的雪路在";
+			mes "女神走过的地方。";
+			mes "一条女神跨越的蓝色河流。";
+			mes "一条女神经过的狭窄小路。";
+			mes "四个女神遇到的矮人...";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] ^4d4dffThe beauty of the stars";
-			mes "[DRY-RUN] Wanes in comparison.";
-			mes "[DRY-RUN] We lost our hearts";
-			mes "[DRY-RUN] To that golden hair";
-			mes "[DRY-RUN] And those dazzling eyes.^000000";
+			mes "[女武神]";
+			mes "^4d4dff星星的美丽";
+			mes "与之相比显得黯然失色。";
+			mes "我们失去了心";
+			mes "给那金色的头发";
+			mes "和那耀眼的眼睛。^000000";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Remember this.";
-			mes "[DRY-RUN] I shall send you";
-			mes "[DRY-RUN] back to where you";
-			mes "[DRY-RUN] belong.";
+			mes "[女武神]";
+			mes "记住这一点。";
+			mes "我将送你回到";
+			mes "你所属于的地方。";
+			mes "。";
 			set god_brising,34;
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] For Odin's honor...";
+			mes "[女武神]";
+			mes "为了奥丁的荣耀...";
 			close2;
 			hideonnpc "#doppelganger1";
 			hideonnpc "#doppelganger2";
@@ -3241,75 +3241,75 @@ que_god02,178,127,3	script	Valkyrie#1	811,{
 			warp "geffen",120,101;
 			end;
 		case 2:
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Hahahaha...";
-			mes "[DRY-RUN] It has been";
-			mes "[DRY-RUN] a while since";
-			mes "[DRY-RUN] a mortal has";
-			mes "[DRY-RUN] made me laugh.";
+			mes "[女武神]";
+			mes "哈哈哈哈...";
+			mes "已经有一段时间了";
+			mes "自从";
+			mes "一个凡人";
+			mes "让我笑过。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
+			mes "[女武神]";
 			mes ""+ strcharinfo(0) +",";
-			mes "[DRY-RUN] I am speaking to the";
-			mes "[DRY-RUN] spirit that rests within you, the girl to whom you lent your body so that she may learn the truth of the past.";
+			mes "我在与你交谈，";
+			mes "那个在你体内安息的灵魂，那个你借给她身体以便她能了解过去真相的女孩。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Lowen Ellenen,";
-			mes "[DRY-RUN] misunderstood hero.";
-			mes "[DRY-RUN] I will now promote you to Einherjar with the will of God.";
+			mes "[女武神]";
+			mes "洛温·艾伦恩，";
+			mes "被误解的英雄。";
+			mes "我将以神的意志提升你为英灵。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Your soul and";
-			mes "[DRY-RUN] spirit will be reborn in Valhalla as a holy warrior preparing for the holy war.";
+			mes "[女武神]";
+			mes "你的灵魂和";
+			mes "灵魂将在瓦尔哈拉重生为准备圣战的圣战士。";
 			specialeffect2 EF_BLESSING;
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] And...";
+			mes "[女武神]";
+			mes "还有...";
 			mes ""+ strcharinfo(0) +",";
-			mes "[DRY-RUN] Your exploits are known to me. But I am curious as to what has brought you here?";
+			mes "你的事迹我已知晓。但我很好奇是什么让你来到这里？";
 			next;
-			mes "[DRY-RUN] ^3355FFYou explained what happened to the Valkyrie, starting from the Snow Crystal which never melts.^000000";
+			mes "^3355FF你向女武神解释了发生的事情，从永不融化的雪晶开始。^000000";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] I understand.";
-			mes "[DRY-RUN] The story begins a long, long time ago with Freya, the patron goddess of beauty and love.";
+			mes "[女武神]";
+			mes "我明白了。";
+			mes "故事开始于很久很久以前，女神弗蕾雅，她是美与爱的守护女神。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Her teardrop became a beautiful jewel. The snow on which Freya's teardrops have fallen will always retain its crystalline beauty.";
+			mes "[女武神]";
+			mes "她的泪滴变成了一颗美丽的宝石。弗蕾雅的泪滴落下的雪将永远保持其晶莹剔透的美丽。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] You seek traces of the goddess? Perhaps this is a sign of the end of the thousand year peace. When the time comes, I hope humans will not abandon their faith.";
+			mes "[女武神]";
+			mes "你在寻找女神的痕迹？也许这是千年和平结束的征兆。当时刻来临时，我希望人类不会放弃他们的信仰。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Perhaps, I was also sent to meet you. I wish that humans will use the power derived from the traces of the gods to protect justice.";
+			mes "[女武神]";
+			mes "也许，我也是被派来见你的。我希望人类能利用来自神明痕迹的力量来保护正义。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
+			mes "[女武神]";
 			mes ""+ strcharinfo(0) +"...";
-			mes "[DRY-RUN] Listen. This is";
-			mes "[DRY-RUN] what you must find.";
+			mes "听着。这是";
+			mes "你必须找到的东西。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] A cold snowy path on";
-			mes "[DRY-RUN] which the goddess tread.";
-			mes "[DRY-RUN] A blue river the goddess crossed.";
-			mes "[DRY-RUN] A narrow path the goddess passed.";
+			mes "[女武神]";
+			mes "一条寒冷的雪路在";
+			mes "女神走过的地方。";
+			mes "一条女神跨越的蓝色河流。";
+			mes "一条女神经过的狭窄小路。";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] ^4d4dffThe beauty of the stars";
-			mes "[DRY-RUN] Wanes in comparison.";
-			mes "[DRY-RUN] We lost our hearts";
-			mes "[DRY-RUN] To that golden hair";
-			mes "[DRY-RUN] And those dazzling eyes.^000000";
+			mes "[女武神]";
+			mes "^4d4dff星星的美丽";
+			mes "与之相比显得黯然失色。";
+			mes "我们失去了心";
+			mes "给那金色的头发";
+			mes "和那耀眼的眼睛。^000000";
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] Remember this.";
-			mes "[DRY-RUN] I shall send you";
-			mes "[DRY-RUN] back to where you";
-			mes "[DRY-RUN] belong.";
+			mes "[女武神]";
+			mes "记住这一点。";
+			mes "我将送你回到";
+			mes "你所属于的地方。";
+			mes "。";
 			set god_brising,34;
 			next;
-			mes "[DRY-RUN] [Valkyrie]";
-			mes "[DRY-RUN] For Odin's honor...";
+			mes "[女武神]";
+			mes "为了奥丁的荣耀...";
 			close2;
 			hideonnpc "#doppelganger1";
 			hideonnpc "#doppelganger2";
@@ -3330,157 +3330,157 @@ que_god02,178,127,3	script	Valkyrie#1	811,{
 
 xmas,38,105,0	script	#brisindwarf1	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "[DRY-RUN] ^3355FFA lot of snow";
-		mes "[DRY-RUN] is heavily piled";
-		mes "[DRY-RUN] here on the ground.^000000";
+		mes "^3355FF很多雪";
+		mes "堆积得很厚";
+		mes "这里的地面上。^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "[DRY-RUN] ^3355FFA lot of snow";
-		mes "[DRY-RUN] is heavily piled";
-		mes "[DRY-RUN] here on the ground.^000000";
+		mes "^3355FF很多雪";
+		mes "堆积得很厚";
+		mes "这里的地面上。^000000";
 		close;
 	}
 	if ((god_brising > 39) && (god_brising < 50)) {
-		mes "[DRY-RUN] ^3355FFA lot of snow";
-		mes "[DRY-RUN] is heavily piled";
-		mes "[DRY-RUN] here on the ground.^000000";
+		mes "^3355FF很多雪";
+		mes "堆积得很厚";
+		mes "这里的地面上。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFHowever, this particular mound strikes you as curious for some reason.^000000";
+		mes "^3355FF然而，这个特定的雪堆出于某种原因让你感到好奇。^000000";
 		next;
-		switch(select("[DRY-RUN] Sweep the snow away with your hand.:Poke the snow with your finger.:Cancel.")) {
+		switch(select("用手把雪扫开。:用手指戳雪。:取消。")) {
 		case 1:
-			mes "[DRY-RUN] ^3355FFAs you sweep the snow with the palm of your hand, some of the snow melts, revealing a strange puzzle cube. It's multi-faceted, but you can read that each facet is inscribed with a lyric.";
+			mes "^3355FF当你用手掌扫开雪时，一些雪融化了，露出一个奇怪的拼图立方体。它是多面体的，但你可以看到每个面上都刻有歌词。";
 			next;
-			switch(select("[DRY-RUN] Adjust the puzzle.:Quit.")) {
+			switch(select("调整拼图。:退出。")) {
 			case 1:
 				mes "[" + strcharinfo(0) + "]";
-				mes "[DRY-RUN] Okay, um...";
-				mes "[DRY-RUN] I guess I should";
-				mes "[DRY-RUN] choose a lyric...";
+				mes "好的，嗯……";
+				mes "我想我应该";
+				mes "选择一段歌词…";
 				next;
-				switch(select("[DRY-RUN] Wanes in comparison:To that beautiful hair:All of our hearts:The beauty of the stars:To those dazzling eyes")) {
+				switch(select("与之相比的月亮:那美丽的头发:我们所有人的心:星星的美丽:那耀眼的眼睛")) {
 				case 1:
 					mes "[" + strcharinfo(0) + "]";
-					mes "[DRY-RUN] we gave...";
+					mes "我们给予了...";
 					break;
 				case 2:
 					mes "[" + strcharinfo(0) + "]";
-					mes "[DRY-RUN] To that beautiful hair";
+					mes "那美丽的头发";
 					break;
 				case 3:
 					mes "[" + strcharinfo(0) + "]";
-					mes "[DRY-RUN] All of our hearts in";
+					mes "我们所有的心都在";
 					break;
 				case 4:
 					mes "[" + strcharinfo(0) + "]";
-					mes "[DRY-RUN] The beauty of the stars";
+					mes "星星的美丽";
 					set .@point,.@point + 10;
 					break;
 				case 5:
 					mes "[" + strcharinfo(0) + "]";
-					mes "[DRY-RUN] To those dazzling eyes";
+					mes "那耀眼的眼睛";
 					break;
 				}
-				switch(select("[DRY-RUN] We gave:Wanes in comparison.:All of our hearts in:To the steps in:To those dazzling eyes")) {
+				switch(select("我们给予:与那美丽的头发相比。:我们所有的心在:在那些耀眼的眼睛中:")) {
 				case 1:
-					mes "[DRY-RUN] we gave..";
+					mes "我们给予了..";
 					break;
 				case 2:
-					mes "[DRY-RUN] Wanes in comparison.";
+					mes "与之相比显得黯然失色。";
 					set .@point,.@point + 10;
 					break;
 				case 3:
-					mes "[DRY-RUN] All of our hearts in";
+					mes "我们所有的心都在";
 					break;
 				case 4:
-					mes "[DRY-RUN] To the steps in";
+					mes "在那步伐中";
 					break;
 				case 5:
-					mes "[DRY-RUN] To those dazzling eyes";
+					mes "那耀眼的眼睛";
 					break;
 				}
-				switch(select("[DRY-RUN] We gave:To that beautiful hair:All of our hearts in:To the steps in:We lost our hearts")) {
+				switch(select("我们献出了:那美丽的头发:我们所有的心:在那步伐中:我们失去了心")) {
 				case 1:
-					mes "[DRY-RUN] We gave";
+					mes "我们给予了";
 					break;
 				case 2:
-					mes "[DRY-RUN] To that beautiful hair";
+					mes "那美丽的头发";
 					break;
 				case 3:
-					mes "[DRY-RUN] All of our hearts in";
+					mes "我们所有的心都在";
 					break;
 				case 4:
-					mes "[DRY-RUN] To the steps in";
+					mes "在那步伐中";
 					break;
 				case 5:
-					mes "[DRY-RUN] We lost our hearts";
+					mes "我们失去了心";
 					set .@point,.@point + 10;
 					break;
 				}
-				switch(select("[DRY-RUN] To that golden hair:To that beautiful hair:All of our hearts in:To the steps in:To those dazzling eyes")) {
+				switch(select("那金色的头发:那美丽的头发:我们所有的心:在那步伐中:在那耀眼的眼睛中")) {
 				case 1:
-					mes "[DRY-RUN] To that golden hair";
+					mes "给那金色的头发";
 					set .@point,.@point + 10;
 					break;
 				case 2:
-					mes "[DRY-RUN] To that beautiful hair";
+					mes "那美丽的头发";
 					break;
 				case 3:
-					mes "[DRY-RUN] All of our hearts in";
+					mes "我们所有的心都在";
 					break;
 				case 4:
-					mes "[DRY-RUN] To the steps in";
+					mes "在那步伐中";
 					break;
 				case 5:
-					mes "[DRY-RUN] To those dazzling eyes";
+					mes "那耀眼的眼睛";
 					break;
 				}
-				switch(select("[DRY-RUN] We gave:To that beautiful hair:And those dazzling eyes.:To the steps in:To those dazzling eyes")) {
+				switch(select("我们献出了:那美丽的头发:和那耀眼的眼睛。:在那步伐中:在那耀眼的眼睛中")) {
 				case 1:
-					mes "[DRY-RUN] We gave";
+					mes "我们给予了";
 					break;
 				case 2:
-					mes "[DRY-RUN] To that beautiful hair";
+					mes "那美丽的头发";
 					break;
 				case 3:
-					mes "[DRY-RUN] And those dazzling eyes.";
+					mes "还有那些耀眼的眼睛。";
 					set .@point,.@point + 10;
 					break;
 				case 4:
-					mes "[DRY-RUN] To the steps in";
+					mes "在那步伐中";
 					break;
 				case 5:
-					mes "[DRY-RUN] To those dazzling eyes";
+					mes "那耀眼的眼睛";
 					break;
 				}
 				next;
 				if (.@point > 40) {
 					hideoffnpc "Alfrik#1";
-					mes "[DRY-RUN] [Old dwarf]";
-					mes "[DRY-RUN] Who are you?!";
-					mes "[DRY-RUN] And why the hell";
-					mes "[DRY-RUN] did you wake me up?";
+					mes "[老矮人]";
+					mes "你是谁?!";
+					mes "你到底为什么";
+					mes "把我叫醒？";
 					close;
 				}
 				close;
 			case 2:
 				mes "["+ strcharinfo(0) +"]";
-				mes "[DRY-RUN] Huh...?";
-				mes "[DRY-RUN] Nothing happened.";
-				mes "[DRY-RUN] Did I do something wrong, or is this just a completely ordinary puzzle cube?";
+				mes "哈……？";
+				mes "什么都没有发生.";
+				mes "我做错了什么，还是这只是一个完全普通的谜题立方体？";
 				close;
 			}
 		case 2:
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] This...";
-			mes "[DRY-RUN] This better not";
-			mes "[DRY-RUN] be just some regular";
-			mes "[DRY-RUN] puzzle cube that someone";
-			mes "[DRY-RUN] just dropped in the snow!";
+			mes "这...";
+			mes "这最好不是";
+			mes "一些普通的";
+			mes "拼图块，某人";
+			mes "随便扔在雪里！";
 			close;
 		case 3:
-			mes "[DRY-RUN] ^3355FFYou use your finger to poke the pile of snow. However, you hurt your finger a little bit after hitting something really solid.^000000";
+			mes "^3355FF你用手指戳了戳雪堆。然而，在碰到什么坚硬的东西后，你的手指有点受伤。^000000";
 			emotion ET_ANGER, playerattached();
 			percentheal -20,0;
 			close;
@@ -3489,9 +3489,9 @@ xmas,38,105,0	script	#brisindwarf1	111,3,3,{
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFA lot of snow";
-		mes "[DRY-RUN] is heavily piled";
-		mes "[DRY-RUN] here on the ground.^000000";
+		mes "^3355FF很多雪";
+		mes "堆积得很厚";
+		mes "这里的地面上。^000000";
 		close;
 	}
 
@@ -3504,60 +3504,60 @@ OnTouch_:
 
 xmas,36,103,4	script	Alfrik#1	826,{
 	if (god_brising == 49) {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] I've got nothing";
-		mes "[DRY-RUN] more to say! Now";
-		mes "[DRY-RUN] get out of here!";
-		mes "[DRY-RUN] I don't want to";
-		mes "[DRY-RUN] be found!";
+		mes "[阿尔弗里克]";
+		mes "我没有什么";
+		mes "还有更多要说的！现在";
+		mes "滚出去！";
+		mes "我不想";
+		mes "被找到！";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
 	}
 	else if (god_brising == 48) {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] What's up, human?";
-		mes "[DRY-RUN] All of us have awakened.";
+		mes "[阿尔弗里克]";
+		mes "怎么了，人类？";
+		mes "我们所有人都已经觉醒。";
 		next;
-		switch(select("[DRY-RUN] I just wanted to say hello.:What are Brisingamen's materials?")) {
+		switch(select("没有人，这是一个意外！:是女武神。")) {
 		case 1:
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Your gesture is appreciated, but I'd rather hide than socialize. I don't want to be found by the crows of Odin!";
+			mes "[阿尔弗里克]";
+			mes "你的姿态我很感激，但我宁愿躲起来而不是社交。我不想被奥丁的乌鸦找到！";
 			close2;
 			hideonnpc "Alfrik#1";
 			end;
 		case 2:
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Materials for Brisingamen? For the human imitation, the materials are pretty easy to gather...";
+			mes "[阿尔弗里克]";
+			mes "布里辛加门的材料？对于人类的模仿，材料相对容易收集……";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] The power of weapons used by gods, when they battled demons a thousand years ago, and everything detached from Brisingamen. That's basically what you need.";
+			mes "[阿尔弗里克]";
+			mes "神明在一千年前与恶魔战斗时使用的武器的力量，以及与布里辛加门脱离的一切。这基本上就是你需要的。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] If you want to";
-			mes "[DRY-RUN] create a Brisingamen,";
-			mes "[DRY-RUN] you will need.....";
+			mes "[阿尔弗里克]";
+			mes "如果你想要";
+			mes "创造一个布里辛加门，";
+			mes "你将需要…..";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] ^4d4dffFreya's Jewel";
-			mes "[DRY-RUN] Silver Ornament";
-			mes "[DRY-RUN] Snow Crystal";
-			mes "[DRY-RUN] Ripple";
-			mes "[DRY-RUN] Drifting Air^000000";
+			mes "[阿尔弗里克]";
+			mes "^4d4dff弗蕾雅的宝石";
+			mes "银饰品";
+			mes "雪晶";
+			mes "涟漪";
+			mes "漂浮的空气^000000";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] You might need some gems, like Saphire, Peal, Opal, Curse Ruby, and maybe even some Gold to decorate the necklace.";
+			mes "[阿尔弗里克]";
+			mes "你可能需要一些宝石，比如蓝宝石、珍珠、欧泊、诅咒红宝石，甚至可能还需要一些黄金来装饰项链。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Although I give freely of my advice, we four Dwarves will no longer do smithing work unless it be Freya's command.";
+			mes "[阿尔弗里克]";
+			mes "虽然我乐意提供建议，但我们四个矮人将不再进行锻造工作，除非是弗蕾雅的命令。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] But I can promise you one thing. Since the four of us have awakened, humans will obtain the Brisingamen for sure.";
+			mes "[阿尔弗里克]";
+			mes "但我可以向你保证一件事。自从我们四个觉醒以来，人类一定会获得布林辛甘。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Now...";
-			mes "[DRY-RUN] Leave me";
-			mes "[DRY-RUN] in peace.";
+			mes "[阿尔弗里克]";
+			mes "现在...";
+			mes "离开我";
+			mes "安静点。";
 			set god_brising,49;
 			close2;
 			hideonnpc "Alfrik#1";
@@ -3565,118 +3565,118 @@ xmas,36,103,4	script	Alfrik#1	826,{
 		}
 	}
 	else if (god_brising == 40) {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] ^333333*Yawn...*^000000";
-		mes "[DRY-RUN] It's been a long time since I've been outside! W-wait! You're not...";
+		mes "[阿尔弗里克]";
+		mes "^333333*哈欠...*^000000";
+		mes "我已经很久没出去了！等一下！你不是...";
 		next;
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] Who sent you?!";
-		mes "[DRY-RUN] Loki? Heimdall?";
-		mes "[DRY-RUN] Or was it Freya?";
+		mes "[阿尔弗里克]";
+		mes "是谁派你来的？!";
+		mes "洛基？海姆达尔？";
+		mes "还是说是弗蕾雅？";
 		next;
-		switch(select("[DRY-RUN] No one, it was an accident!:It was Valkyrie.")) {
+		switch(select("女武神告诉我的。:这是一个巧合！")) {
 		case 1:
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Don't even think of lying to me, human! There's no way you could have awoken me without knowing";
-			mes "[DRY-RUN] the password! Now, speak!";
+			mes "[阿尔弗里克]";
+			mes "别想对我撒谎，人类！你绝对不可能在不知道密码的情况下唤醒我";
+			mes "！现在，快说！";
 			next;
-			switch(select("[DRY-RUN] Valkyrie told me.:It was a coincidence!")) {
+			switch(select("他在哪里？:告诉我更多关于布林辛甘的事。")) {
 			case 1:
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] Valkyrie...?";
-				mes "[DRY-RUN] Odin's warmonger?";
-				mes "[DRY-RUN] What could Odin want,";
-				mes "[DRY-RUN] I haven't done anything wrong!";
+				mes "[阿尔弗里克]";
+				mes "女武神……？";
+				mes "奥丁的战争狂人？";
+				mes "奥丁想要什么，";
+				mes "我没有做错任何事！";
 				next;
-				mes "[DRY-RUN] ^3355FFYou explained everything to Alfrik, who seems to worry about being targeted by Odin.^000000";
+				mes "^3355FF你向阿尔弗里克解释了一切，他似乎担心会被奥丁盯上。^000000";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] So that's it.";
-				mes "[DRY-RUN] Seeking out our";
-				mes "[DRY-RUN] masterpiece? You";
-				mes "[DRY-RUN] humans must desire";
-				mes "[DRY-RUN] the power of the gods.";
-				mes "[DRY-RUN] Interesting.";
+				mes "[阿尔弗里克]";
+				mes "所以就是这样。";
+				mes "寻找我们的";
+				mes "杰作？你们";
+				mes "人类一定渴望";
+				mes "神的力量。";
+				mes "有趣。";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] The time for us to revive may actually have come! Alright then,";
-				mes "[DRY-RUN] I, Alfrik shall cooperate with you humans.";
+				mes "[阿尔弗里克]";
+				mes "我们复活的时机可能真的来了！那么，";
+				mes "我，阿尔弗里克将与你们人类合作。";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] After all, getting on Odin's good side like this is much better than being tortured by Loki.";
+				mes "[阿尔弗里克]";
+				mes "毕竟，像这样获得奥丁的欢心比被洛基折磨要好得多。";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] Now...";
-				mes "[DRY-RUN] Understand that";
-				mes "[DRY-RUN] there can only be";
-				mes "[DRY-RUN] one true Brisingamen.";
-				mes "[DRY-RUN] After all, it's our";
-				mes "[DRY-RUN] masterpiece.";
+				mes "[阿尔弗里克]";
+				mes "现在...";
+				mes "要明白，";
+				mes "只能有";
+				mes "一个真正的布林辛甘。";
+				mes "毕竟，这是我们的";
+				mes "杰作。";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] However, that doesn't mean an imitation, with the same power as that godly item, can't be made. Isn't it tempting, the power of a god?";
+				mes "[阿尔弗里克]";
+				mes "然而，这并不意味着不能制造出一个与那个神圣物品具有相同力量的仿制品。神的力量不是很诱人吗？";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] First things first. If you want to make the necklace, you must";
-				mes "[DRY-RUN] awaken all four of us. Because of Loki's threat, we all hid ourselves in different places.";
+				mes "[阿尔弗里克]";
+				mes "首先，如果你想制作项链，你必须";
+				mes "唤醒我们四个。由于洛基的威胁，我们都藏在不同的地方。";
 				next;
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] Go wake all my brothers!";
-				mes "[DRY-RUN] Let's see if the Brisingamen can be made once again! First, go and wake Dvalin before the gods and giants find out!";
+				mes "[阿尔弗里克]";
+				mes "去唤醒我所有的兄弟！";
+				mes "让我们看看布里辛甘能否再次被制作出来！首先，去唤醒德瓦林，在众神和巨人发现之前！";
 				set god_brising,41;
 				close2;
 				hideonnpc "Alfrik#1";
 				end;
 			case 2:
-				mes "[DRY-RUN] [Alfrik]";
-				mes "[DRY-RUN] Coincidence?";
-				mes "[DRY-RUN] Impossible! How dare you lie! Don't ever come back, or the gods will find me!";
+				mes "[阿尔弗里克]";
+				mes "巧合吗？";
+				mes "不可能！你竟敢撒谎！不要再回来，否则神明会找到我的！";
 				close2;
 				hideonnpc "Alfrik#1";
 				end;
 			}
 		case 2:
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Valkyrie...?";
-			mes "[DRY-RUN] Odin's warmonger?";
-			mes "[DRY-RUN] What could Odin want,";
-			mes "[DRY-RUN] I haven't done anything wrong!";
+			mes "[阿尔弗里克]";
+			mes "女武神……？";
+			mes "奥丁的战争狂人？";
+			mes "奥丁想要什么，";
+			mes "我没有做错任何事！";
 			next;
-			mes "[DRY-RUN] ^3355FFYou explained everything to Alfrik, who seems to worry about being targeted by Odin.^000000";
+			mes "^3355FF你向阿尔弗里克解释了一切，他似乎担心会被奥丁盯上。^000000";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] So that's it.";
-			mes "[DRY-RUN] Seeking out our";
-			mes "[DRY-RUN] masterpiece? You";
-			mes "[DRY-RUN] humans must desire";
-			mes "[DRY-RUN] the power of the gods.";
-			mes "[DRY-RUN] Interesting.";
+			mes "[阿尔弗里克]";
+			mes "所以就是这样。";
+			mes "寻找我们的";
+			mes "杰作？你们";
+			mes "人类一定渴望";
+			mes "神的力量。";
+			mes "有趣。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] The time for us to revive may actually have come! Alright then,";
-			mes "[DRY-RUN] I, Alfrik shall cooperate with you humans.";
+			mes "[阿尔弗里克]";
+			mes "我们复活的时机可能真的来了！那么，";
+			mes "我，阿尔弗里克将与你们人类合作。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] After all, getting on Odin's good side like this is much better than being tortured by Loki.";
+			mes "[阿尔弗里克]";
+			mes "毕竟，像这样获得奥丁的欢心比被洛基折磨要好得多。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Now...";
-			mes "[DRY-RUN] Understand that";
-			mes "[DRY-RUN] there can only be";
-			mes "[DRY-RUN] one true Brisingamen.";
-			mes "[DRY-RUN] After all, it's our";
-			mes "[DRY-RUN] masterpiece.";
+			mes "[阿尔弗里克]";
+			mes "现在...";
+			mes "要明白，";
+			mes "只能有";
+			mes "一个真正的布林辛甘。";
+			mes "毕竟，这是我们的";
+			mes "杰作。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] However, that doesn't mean an imitation, with the same power as that godly item, can't be made. Isn't it tempting, the power of a god?";
+			mes "[阿尔弗里克]";
+			mes "然而，这并不意味着不能制造出一个与那个神圣物品具有相同力量的仿制品。神的力量不是很诱人吗？";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] First things first. If you want to make the necklace, you must";
-			mes "[DRY-RUN] awaken all four of us. Because of Loki's threat, we all hid ourselves in different places.";
+			mes "[阿尔弗里克]";
+			mes "首先，如果你想制作项链，你必须";
+			mes "唤醒我们四个。由于洛基的威胁，我们都藏在不同的地方。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Go wake all my brothers!";
-			mes "[DRY-RUN] Let's see if the Brisingamen can be made once again! First, go and wake Dvalin before the gods and giants find out!";
+			mes "[阿尔弗里克]";
+			mes "去唤醒我所有的兄弟！";
+			mes "让我们看看布里辛甘能否再次被制作出来！首先，去唤醒德瓦林，在众神和巨人发现之前！";
 			set god_brising,41;
 			close2;
 			hideonnpc "Alfrik#1";
@@ -3684,75 +3684,75 @@ xmas,36,103,4	script	Alfrik#1	826,{
 		}
 	}
 	else if (god_brising == 41) {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] Why are you still here?";
-		mes "[DRY-RUN] I told you go wake Dvalin!";
+		mes "[阿尔弗里克]";
+		mes "你为什么还在这里？";
+		mes "我告诉过你去叫达瓦林！";
 		next;
-		switch(select("[DRY-RUN] Where is he?:Tell me more about Brisingamen.")) {
+		switch(select("他在哪里？:告诉我更多关于布里辛加门的事。")) {
 		case 1:
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Ah. Right.";
-			mes "[DRY-RUN] I forgot to tell";
-			mes "[DRY-RUN] you. Poor Dvalin.";
-			mes "[DRY-RUN] Now, where was it?";
+			mes "[阿尔弗里克]";
+			mes "啊，对了。";
+			mes "我忘了告诉你。";
+			mes "可怜的达瓦林。";
+			mes "现在，在哪里呢？";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] We were afraid that Odin and Heimdall would punish us because, well, in their eyes we disgraced the goddess.";
+			mes "[阿尔弗里克]";
+			mes "我们担心奥丁和海姆达尔会惩罚我们，因为在他们看来，我们玷污了女神。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Oh course, they never would have been angered if it weren't for Loki's trickery.";
+			mes "[阿尔弗里克]";
+			mes "哦，当然，如果不是洛基的诡计，他们是不会生气的。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] We loved Freya so much that we decided to hide ourselves beneath the path that she walked. To be as close to any trace of her as we could.";
+			mes "[阿尔弗里克]";
+			mes "我们如此爱弗蕾雅，以至于决定藏身于她走过的道路下。尽可能靠近她的任何痕迹。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Poor Dvalin is sleeping";
-			mes "[DRY-RUN] under the path in the East. Once there, you'll feel the scent the goddess. I can't remember where the others are sleeping, but you cannot forget these words...";
+			mes "[阿尔弗里克]";
+			mes "可怜的德瓦林正在沉睡。";
+			mes "在东边的道路下。一旦到达那里，你会感受到女神的气息。我记不清其他人在哪里沉睡，但你不能忘记这些话......";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] ^4d4dffHer lovely scent";
-			mes "[DRY-RUN] Still lingers in the wind.";
-			mes "[DRY-RUN] We surrendered our hearts";
-			mes "[DRY-RUN] To those tender teardrops";
-			mes "[DRY-RUN] Those seductive red lips.^000000";
+			mes "[阿尔弗里克]";
+			mes "^4d4dff她迷人的气息";
+			mes "依然在风中萦绕。";
+			mes "我们交出了我们的心。";
+			mes "献给那些温柔的泪滴";
+			mes "那诱人的红唇.^000000";
 			set god_brising,42;
 			close2;
 			hideonnpc "Alfrik#1";
 			end;
 		case 2:
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Brisingamen is our masterpiece, a necklace we forged for Freya. Even if we tried making it again, I doubt it would be as good.";
+			mes "[阿尔弗里克]";
+			mes "布里辛加门是我们的杰作，一条我们为弗蕾雅打造的项链。即使我们再试着制作一次，我怀疑它会有如此的好。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] It looked perfect on Freya. Very difficult to create jewelry that actually enhances the attractiveness of the goddess of beauty.";
+			mes "[阿尔弗里克]";
+			mes "它在弗蕾雅身上看起来完美无瑕。制作能够真正提升女神美丽的珠宝非常困难。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Perhaps our greatest reward was that beautiful smile of satisfaction she gave us when that we gave her that necklace. We loved her so.";
+			mes "[阿尔弗里克]";
+			mes "也许我们最大的回报就是她在我们把那条项链送给她时，给予我们的那美丽满意的微笑。我们是多么爱她啊。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Is it that wrong for dwarves to love a goddess? Perhaps we were punished because the gods, even Odin, loved her as well.";
+			mes "[阿尔弗里克]";
+			mes "矮人爱女神难道错了吗？也许我们是因为众神，包括奥丁，也爱她而受到惩罚。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] In any case, we've never seen the true Brisingamen again. But something very similar to it can be created...";
+			mes "[阿尔弗里克]";
+			mes "无论如何，我们再也没有见过真正的布里辛加门。但可以创造出非常相似的东西……";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] You'll need materials that have been graced by the goddess' presense. Traces of the goddess in the earth, water and the wind.";
+			mes "[阿尔弗里克]";
+			mes "你需要一些受到女神恩惠的材料。大地、水和风中女神的痕迹。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] And if the Brisingamen is recreated, the power of a god will be in the hands of a human. That human could be you!";
+			mes "[阿尔弗里克]";
+			mes "如果布里辛加门被重新创造，神的力量将掌握在人类手中。那个人可能就是你！";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] Poor Dvalin is sleeping under the path in the East. Once there, you'll feel the scent the goddess.";
+			mes "[阿尔弗里克]";
+			mes "可怜的德瓦林在东边的道路下沉睡。一旦到达那里，你会感受到女神的气息。";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] I can't remember where the others are sleeping, but you cannot forget these words...";
+			mes "[阿尔弗里克]";
+			mes "我记不清其他人在哪里沉睡，但你不能忘记这些话……";
 			next;
-			mes "[DRY-RUN] [Alfrik]";
-			mes "[DRY-RUN] ^4d4dffHer lovely scent";
-			mes "[DRY-RUN] Still lingers in the wind.";
-			mes "[DRY-RUN] We surrendered our hearts";
-			mes "[DRY-RUN] To those tender teardrops";
-			mes "[DRY-RUN] Those seductive red lips.^000000";
+			mes "[阿尔弗里克]";
+			mes "^4d4dff她迷人的气息";
+			mes "依然在风中萦绕。";
+			mes "我们交出了我们的心。";
+			mes "献给那些温柔的泪滴";
+			mes "那诱人的红唇.^000000";
 			set god_brising,42;
 			close2;
 			hideonnpc "Alfrik#1";
@@ -3760,31 +3760,31 @@ xmas,36,103,4	script	Alfrik#1	826,{
 		}
 	}
 	else if (god_brising == 42) {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] Will you please!";
-		mes "[DRY-RUN] Get lost before Loki and Heimdall find out I've awakened! Now hurry, find Dvalin, and wake him up!";
+		mes "[阿尔弗里克]";
+		mes "请你一定要！";
+		mes "在洛基和海姆达尔发现我已经醒来之前快走！现在快去找德瓦林，把他叫醒！";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
 	}
 	else if ((god_brising > 42) && (god_brising < 48)) {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] Oh, finally all of us have awakened! Now, the power of the goddess can be retrieved from the earth, water and the wind!";
+		mes "[阿尔弗里克]";
+		mes "哦，终于我们都醒来了！现在，女神的力量可以从大地、水和风中恢复！";
 		next;
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] Hahahahaha!";
-		mes "[DRY-RUN] This should be";
-		mes "[DRY-RUN] interesting!";
+		mes "[阿尔弗里克]";
+		mes "哈哈哈哈哈！";
+		mes "这应该是";
+		mes "有趣的！";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [Alfrik]";
-		mes "[DRY-RUN] Mmm...?";
-		mes "[DRY-RUN] I've got";
-		mes "[DRY-RUN] no business";
-		mes "[DRY-RUN] with you.";
+		mes "[阿尔弗里克]";
+		mes "嗯……？";
+		mes "我没有";
+		mes "与你的生意。";
+		mes "我只是想打个招呼。：布林辛甘的材料是什么？";
 		close2;
 		hideonnpc "Alfrik#1";
 		end;
@@ -3797,168 +3797,168 @@ OnInit:
 
 prt_fild02,185,269,0	script	#brisindwarf2	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "[DRY-RUN] ^3355FFIt's just an";
-		mes "[DRY-RUN] ordinary rock.^000000";
+		mes "^3355FF这只是一个";
+		mes "普通的岩石。^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "[DRY-RUN] ^3355FFIt's just an";
-		mes "[DRY-RUN] ordinary rock.^000000";
+		mes "^3355FF这只是一个";
+		mes "普通的岩石。^000000";
 		close;
 	}
 	if (god_brising > 41) {
-		mes "[DRY-RUN] ^3355FFIt's just an ordinary rock underneath the shadow of";
-		mes "[DRY-RUN] a tree. But on closer inspection, you notice that the moss on top of the rock looks perfectly flat.^000000";
+		mes "^3355FF这只是一块普通的石头，位于树的阴影下";
+		mes "在仔细观察后，你注意到石头上面的苔藓看起来非常平坦。^000000";
 		next;
-		switch(select("[DRY-RUN] Step on it.:Sweep the surface.:Scratch the surface.:Kick it.")) {
+		switch(select("踩上去。:扫一下表面。:刮一下表面。:踢它。")) {
 		case 1:
-			mes "[DRY-RUN] ^3355FFYou gingerly place your foot on the top of the stone. The entire rock suddenly swings downward";
-			mes "[DRY-RUN] into the ground, and you fall helplessly...^000000";
+			mes "^3355FF你小心翼翼地把脚放在石头上。整个石头突然向下摆动";
+			mes "进入地面，你无助地摔了下去...^000000";
 			close2;
 			warp "prt_fild02",165,224;
 			end;
 		case 2:
-			mes "[DRY-RUN] ^3355FFAs you sweep away the moss with your hand, you scratch your palm from the sharp edges of the rock.^000000";
+			mes "^3355FF当你用手扫去苔藓时，石头的锋利边缘划伤了你的手掌。^000000";
 			emotion ET_SURPRISE, playerattached();
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Damn...!";
-			mes "[DRY-RUN] I'm bleeding!";
-			mes "[DRY-RUN] But why didn't";
-			mes "[DRY-RUN] anything else";
-			mes "[DRY-RUN] happen?!";
+			mes "该死...！";
+			mes "我在流血！";
+			mes "但为什么没有";
+			mes "其他事情";
+			mes "发生？！";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] This rock had";
-			mes "[DRY-RUN] better be one of";
-			mes "[DRY-RUN] those secret rocks!";
-			mes "[DRY-RUN] Or else...!";
+			mes "这块石头有";
+			mes "最好是其中之一";
+			mes "那些秘密的岩石！";
+			mes "否则...！";
 			close;
 		case 3:
-			mes "[DRY-RUN] ^3355FFYou scratch away";
-			mes "[DRY-RUN] at the moss, and feel that the surface of the rock has even recesses.";
+			mes "^3355FF你刮掉苔藓，";
+			mes "感觉岩石表面有凹陷。";
 			next;
-			mes "[DRY-RUN] ^3355FFAfter peeling off the moss, a series of tiles, etched with faint words, are revealed on top of the rock. These tiles could be moved around, like in a puzzle.^000000";
+			mes "^3355FF剥去苔藓后，岩石上显露出一系列刻有微弱文字的瓷砖。这些瓷砖可以像拼图一样移动。^000000";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Another puzzle?";
-			mes "[DRY-RUN] This was just like when I had to give Alfrik's password. Okay, let me see...";
+			mes "又是一个谜题？";
+			mes "这就像我必须给阿尔弗里克的密码时一样。好吧，让我看看...";
 			set .@point,0;
 			next;
-			switch(select("[DRY-RUN] To the tear drops dripping on the way:Her lovely scent:We gave:To the seducing red lips:Our hearts in")) {
+			switch(select("朝着滴落的泪水:她迷人的香气:我们给予:朝那诱人的红唇:我们的心在")) {
 			case 1:
 				mes "["+ strcharinfo(0) +"]";
-				mes "[DRY-RUN] To the tear drops dripping on the way";
+				mes "滴落在路上的泪滴";
 			break;
 			case 2:
 				mes "["+ strcharinfo(0) +"]";
-				mes "[DRY-RUN] Her lovely scent";
+				mes "她迷人的香气";
 				set .@point,.@point + 10;
 			break;
 			case 3:
 				mes "["+ strcharinfo(0) +"]";
-				mes "[DRY-RUN] We gave";
+				mes "我们给予了";
 			break;
 			case 4:
 				mes "["+ strcharinfo(0) +"]";
-				mes "[DRY-RUN] To the seducing red lips";
+				mes "朝那诱人的红唇";
 				break;
 			case 5:
 				mes "["+ strcharinfo(0) +"]";
-				mes "[DRY-RUN] Our hearts in";
+				mes "我们的心在";
 				break;
 			}
-			switch(select("[DRY-RUN] Still lingers in the wind.:To the scent drifted in the wind:We gave:To the seducing red lips:Our hearts in")) {
+			switch(select("仍然在风中徘徊。:飘散在风中的香气:我们给予了:对那诱人的红唇:我们的心")) {
 			case 1:
-				mes "[DRY-RUN] Still lingers in the wind.";
+				mes "依然在风中萦绕。";
 				set .@point,.@point + 10;
 				break;
 			case 2:
-				mes "[DRY-RUN] To the scent drifted in the wind";
+				mes "朝着随风飘散的香气";
 				break;
 			case 3:
-				mes "[DRY-RUN] We gave";
+				mes "我们给予了";
 				break;
 			case 4:
-				mes "[DRY-RUN] To the seducing red lips";
+				mes "朝那诱人的红唇";
 			case 5:
-				mes "[DRY-RUN] Our hearts in";
+				mes "我们的心在";
 				break;
 			}
-			switch(select("[DRY-RUN] To the tear drops dripping on the way:To the scent drifted in the wind:We gave:We surrendered our hearts:Our hearts in")) {
+			switch(select("对那滴落在路上的泪滴:飘散在风中的香气:我们给予了:我们投降了我们的心:我们的心")) {
 			case 1:
-				mes "[DRY-RUN] To the tear drops dripping on the way";
+				mes "滴落在路上的泪滴";
 				break;
 			case 2:
-				mes "[DRY-RUN] To the scent drifted in the wind";
+				mes "朝着随风飘散的香气";
 				break;
 			case 3:
-				mes "[DRY-RUN] We gave";
+				mes "我们给予了";
 				break;
 			case 4:
-				mes "[DRY-RUN] We surrendered our hearts";
+				mes "我们交出了我们的心。";
 				set .@point,.@point + 10;
 			case 5:
-				mes "[DRY-RUN] Our hearts in";
+				mes "我们的心在";
 				break;
 			}
-			switch(select("[DRY-RUN] To the tear drops dripping on the way:To the scent drifted in the wind:To those tender teardrops:To the seducing red lips:Our hearts in")) {
+			switch(select("对那滴落在路上的泪滴:飘散在风中的香气:对那些温柔的泪滴:对那诱人的红唇:我们的心")) {
 			case 1:
-				mes "[DRY-RUN] To the tear drops dripping on the way";
+				mes "滴落在路上的泪滴";
 				break;
 			case 2:
-				mes "[DRY-RUN] To the scent drifted in the wind";
+				mes "朝着随风飘散的香气";
 				break;
 			case 3:
-				mes "[DRY-RUN] To those tender teardrops";
+				mes "献给那些温柔的泪滴";
 				set .@point,.@point + 10;
 				break;
 			case 4:
-				mes "[DRY-RUN] To the seducing red lips";
+				mes "朝那诱人的红唇";
 				break;
 			case 5:
-				mes "[DRY-RUN] Our hearts in";
+				mes "我们的心在";
 				break;
 			}
-			switch(select("[DRY-RUN] To the tear drops dripping on the way:To the scent drifted in the wind:We gave:To the seducing red lips:Those seductive red lips")) {
+			switch(select("对那滴落在路上的泪滴:飘散在风中的香气:我们给予了:对那诱人的红唇:那些诱人的红唇")) {
 			case 1:
-				mes "[DRY-RUN] To the tear drops dripping on the way";
+				mes "滴落在路上的泪滴";
 				break;
 			case 2:
-				mes "[DRY-RUN] To the scent drifted in the wind";
+				mes "朝着随风飘散的香气";
 				break;
 			case 3:
-				mes "[DRY-RUN] We gave";
+				mes "我们给予了";
 				break;
 			case 4:
-				mes "[DRY-RUN] To the seducing red lips";
+				mes "朝那诱人的红唇";
 				break;
 			case 5:
-				mes "[DRY-RUN] Those seductive red lips";
+				mes "那些诱人的红唇";
 				set .@point,.@point + 10;
 				break;
 			}
 			next;
 			if (.@point > 40) {
 				hideoffnpc "Dvalin#1";
-				mes "[DRY-RUN] [Dvalin]";
-				mes "[DRY-RUN] ...?";
-				mes "[DRY-RUN] Alfrik?";
-				mes "[DRY-RUN] Is that you?";
+				mes "[德瓦林]";
+				mes "...?";
+				mes "阿尔弗里克？";
+				mes "是你吗？";
 				close;
 			}
 			close;
 		case 4:
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] ^333333*Cough cough!*";
-			mes "[DRY-RUN] Aaaack!";
-			mes "[DRY-RUN] It's so dusty!";
+			mes "^333333*咳咳!*";
+			mes "啊啊啊！";
+			mes "太尘土飞扬了！";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFJust a normal";
-		mes "[DRY-RUN] rock, covered in moss.^000000";
+		mes "^3355FF只是一个普通的";
+		mes "石头，上面覆盖着苔藓。^000000";
 		close;
 	}
 
@@ -3971,102 +3971,102 @@ OnTouch_:
 
 prt_fild02,185,270,3	script	Dvalin#1	826,{
 	if (god_brising > 43) {
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] A human?";
-		mes "[DRY-RUN] You woke me up?";
+		mes "[德瓦林]";
+		mes "一个人类？";
+		mes "你把我叫醒了？";
 		next;
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] Hmm...";
-		mes "[DRY-RUN] And you'd be acting pretty pushy right about now if you were acting on behalf of a god. What could you want...?";
+		mes "[德瓦林]";
+		mes "嗯...";
+		mes "如果你是代表某个神明行动的话，你现在的表现可真是太强势了。你想要什么...？";
 		next;
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] It makes sense that you want a replica of Brisingamen for its power. But remember, we originally made Brisingamen as a necklace fit for a goddess.";
+		mes "[德瓦林]";
+		mes "你想要布里辛甘门的复制品是有道理的，因为它的力量。但请记住，我们最初制作布里辛甘门是为了一个女神而设计的项链。";
 		next;
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] Some might say that we seduced Freya with the necklace, but we really loved her with all of our hearts.";
+		mes "[德瓦林]";
+		mes "有人可能会说我们用项链诱惑了弗蕾雅，但我们真的全心全意地爱着她。";
 		close2;
 		hideonnpc "Dvalin#1";
 		end;
 	}
 	else if (god_brising == 42) {
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] Wah, it's not Alfrik?";
-		mes "[DRY-RUN] Who are you to wake Dvalin?";
-		mes "[DRY-RUN] Tell me right now, or I'll...";
-		mes "[DRY-RUN] I'll kick your ass!";
+		mes "[德瓦林]";
+		mes "哇，不是阿尔弗里克吗？";
+		mes "你是谁，竟敢唤醒德瓦林？";
+		mes "现在就告诉我，否则我会...";
+		mes "我会揍你的！";
 		next;
-		switch(select("[DRY-RUN] Help!:Alfrik sent me to wake you up!")) {
+		switch(select("救命！:阿尔弗里克让我来叫醒你！")) {
 		case 1:
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] I don't know";
-			mes "[DRY-RUN] what the hell";
-			mes "[DRY-RUN] you're doing here,";
-			mes "[DRY-RUN] but leave!";
+			mes "[德瓦林]";
+			mes "我不知道";
+			mes "到底是什么鬼";
+			mes "你在这里做什么，";
+			mes "但请离开！";
 			close2;
 			hideonnpc "Dvalin#1";
 			end;
 		case 2:
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Did you just say Alfrik sent you? How do you know my brother?!";
+			mes "[德瓦林]";
+			mes "你刚才说阿尔弗里克派你来的？你怎么知道我兄弟的？！";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Brisingamen?!";
-			mes "[DRY-RUN] Then, that means";
-			mes "[DRY-RUN] we can meet Freya again?!";
+			mes "[德瓦林]";
+			mes "布里辛甘门？！";
+			mes "那么，这意味着";
+			mes "我们可以再次见到弗蕾雅吗？";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Umm...";
-			mes "[DRY-RUN] I'm afraid not.";
-			mes "[DRY-RUN] Or, at least, that's";
-			mes "[DRY-RUN] not why I'm here.";
+			mes "嗯...";
+			mes "恐怕不行。";
+			mes "或者，至少，这不是";
+			mes "我来这里的原因。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Okay...";
-			mes "[DRY-RUN] I understand.";
-			mes "[DRY-RUN] Sorry, I was just";
-			mes "[DRY-RUN] hoping you were a";
-			mes "[DRY-RUN] herald of Freya.";
+			mes "[德瓦林]";
+			mes "好的...";
+			mes "我明白了。";
+			mes "抱歉，我只是";
+			mes "希望你是个";
+			mes "弗蕾雅的使者。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] So, an imitation";
-			mes "[DRY-RUN] of Brisingamen...";
-			mes "[DRY-RUN] Even if it's not the original, I'm sure it can possess power comparable to the real thing. Yes...";
+			mes "[德瓦林]";
+			mes "所以，是一个仿制品";
+			mes "布里辛戈门...";
+			mes "即使不是原版，我相信它也能拥有与真品相媲美的力量。是的...";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] It's no use trying to predict the future, but I can't help but wonder what would mankind do with the power of the gods?";
+			mes "[德瓦林]";
+			mes "预测未来是没有用的，但我忍不住想，人类会用神的力量做什么？";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] If my brother Alfrik already approved of you, then I'll help you out. I'll tell you how to wake my brother Berling.";
+			mes "[德瓦林]";
+			mes "如果我哥哥阿尔弗里克已经认可你，那么我会帮助你。我会告诉你如何唤醒我哥哥贝尔林。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] We hid ourselves near traces of Freya. The path where I am staying is one that my goddess has walked through.";
+			mes "[德瓦林]";
+			mes "我们藏身于弗蕾雅的痕迹附近。我现在待的地方是我的女神曾走过的道路。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] The air that quietly drifts here holds her fragrant scent. You can use this wind to borrow her power.";
+			mes "[德瓦林]";
+			mes "这里静静飘荡的空气中弥漫着她的芳香。你可以利用这股风来借用她的力量。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Aside from Freya, I have";
-			mes "[DRY-RUN] no special love for the gods or giants. But I am intrigued by you humans. Your race is one of both love and hatred, life and destruction.";
+			mes "[德瓦林]";
+			mes "除了弗蕾雅，我对神明和巨人没有特别的爱。";
+			mes "但我对你们人类很感兴趣。你们的种族充满了爱与仇恨，生命与毁灭。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Go now and seek Berling. He is sleeping near a river linked to Mount Mjolnir. Travel West to find the river were Freya's Teardrops have fallen.";
+			mes "[德瓦林]";
+			mes "现在去寻找贝尔林。他在一条与米约尔尼尔山相连的河边睡觉。向西旅行，找到弗蕾雅的泪滴落下的河流。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] If the phantom of water gives you a question, answer it. The answer is the punishment that Odin gave to our goddess.";
+			mes "[德瓦林]";
+			mes "如果水的幻影问你一个问题，回答它。答案是奥丁给予我们女神的惩罚。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Until thousands of Valkyries filled up Valhala, they had to repeatedly live, die, then be reborn the next day only to die again.";
+			mes "[德瓦林]";
+			mes "直到成千上万的女武神填满瓦尔哈拉，她们不得不反复经历生死，第二天重生后又再死去。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Think about";
-			mes "[DRY-RUN] who they were.";
-			mes "[DRY-RUN] That's all I can tell you.";
+			mes "[德瓦林]";
+			mes "想一想";
+			mes "她们是谁。";
+			mes "这就是我能告诉你的全部。";
 			next;
-			mes "[DRY-RUN] [Dvalin]";
-			mes "[DRY-RUN] Somehow, I know";
-			mes "[DRY-RUN] you are the one who";
-			mes "[DRY-RUN] can answer the question.";
-			mes "[DRY-RUN] Hahahaha!";
+			mes "[德瓦林]";
+			mes "不知为何，我知道";
+			mes "你就是那个";
+			mes "能回答这个问题的人。";
+			mes "哈哈哈哈！";
 			set god_brising,43;
 			close2;
 			hideonnpc "Dvalin#1";
@@ -4074,13 +4074,13 @@ prt_fild02,185,270,3	script	Dvalin#1	826,{
 		}
 	}
 	else if (god_brising == 43) {
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] Why do you keep calling me? I did everything I can do for you. I even gave you the key to the question.";
+		mes "[德瓦林]";
+		mes "你为什么一直叫我？我为你做了一切。我甚至把问题的钥匙给了你。";
 		next;
-		mes "[DRY-RUN] [Dvalin]";
-		mes "[DRY-RUN] From now on,";
-		mes "[DRY-RUN] it's all up to you.";
-		mes "[DRY-RUN] Now, go wake Berling...";
+		mes "[德瓦林]";
+		mes "从现在开始，";
+		mes "这全靠你了。";
+		mes "现在，去叫醒贝尔林……";
 		close2;
 		hideonnpc "Dvalin#1";
 		end;
@@ -4094,65 +4094,65 @@ OnInit:
 
 mjolnir_09,85,129,0	script	#brisindwarf3	111,3,3,{
 	if ($God2 < $@god_check1) {
-		mes "[DRY-RUN] ^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
+		mes "^3355FF这条冒泡的小溪光看着就让你感到清新。^000000";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
-		mes "[DRY-RUN] ^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
+		mes "^3355FF这条冒泡的小溪光看着就让你感到清新。^000000";
 		close;
 	}
 	if ((god_brising > 42) && (god_brising < 50)) {
 		specialeffect EF_BUBBLE;
-		mes "[DRY-RUN] [Echoing Voice]";
-		mes "[DRY-RUN] Alfrik: confirmed.";
-		mes "[DRY-RUN] Dvalin: confirmed.";
+		mes "[回声]";
+		mes "阿尔弗里克：确认。";
+		mes "德瓦林：确认。";
 		next;
-		mes "[DRY-RUN] [Echoing Voice]";
-		mes "[DRY-RUN] Please answer me.";
-		mes "[DRY-RUN] Odin punished beautiful";
-		mes "[DRY-RUN] Freya, and made her curse";
-		mes "[DRY-RUN] some humans with her power.";
+		mes "[回声]";
+		mes "请回答我。";
+		mes "奥丁惩罚了美丽的";
+		mes "弗蕾雅，并让她诅咒";
+		mes "一些人类，赋予她的力量。";
 		next;
-		mes "[DRY-RUN] [Echoing Voice]";
-		mes "[DRY-RUN] Freya caused an eternal battle, where the combatants were all killed and brought back to life everyday. How many humans were cursed to participate?";
+		mes "[回声]";
+		mes "弗蕾雅引发了一场永恒的战斗，战斗者每天都被杀死又复活。多少人类被诅咒参与？";
 		next;
-		switch(select("[DRY-RUN] 20!","How should I know?!","40!","42!" )) {
+		switch(select("20!","How should I know?!","40!","42!" )) {
 		case 1:
 			specialeffect EF_BUBBLE;
-			mes "[DRY-RUN] [Echoing Voice]";
-			mes "[DRY-RUN] Failed.";
-			mes "[DRY-RUN] Failed...";
+			mes "[回声]";
+			mes "失败。";
+			mes "失败...";
 			close;
 		case 2:
 			specialeffect EF_BUBBLE;
-			mes "[DRY-RUN] [Echoing Voice]";
-			mes "[DRY-RUN] Failed.";
-			mes "[DRY-RUN] Failed...";
+			mes "[回声]";
+			mes "失败。";
+			mes "失败...";
 			close;
 		case 3:
 			specialeffect EF_BUBBLE;
-			mes "[DRY-RUN] [Echoing Voice]";
-			mes "[DRY-RUN] Failed.";
-			mes "[DRY-RUN] Failed...";
+			mes "[回声]";
+			mes "失败。";
+			mes "失败...";
 			close;
 		case 4:
 			specialeffect EF_BUBBLE;
-			mes "[DRY-RUN] [Echoing Voice]";
-			mes "[DRY-RUN] ...Confirmed.";
-			mes "[DRY-RUN] Shutting down barrier.";
-			mes "[DRY-RUN] Initiating summoning.";
+			mes "[回声]";
+			mes "...确认。";
+			mes "关闭屏障。";
+			mes "启动召唤。";
 			next;
 			hideoffnpc "Berling#1";
-			mes "[DRY-RUN] [Berling]";
-			mes "[DRY-RUN] ^333333*Gasp--!*^000000";
-			mes "[DRY-RUN] Thought I was";
-			mes "[DRY-RUN] gonna drown to death!";
-			mes "[DRY-RUN] Who woke me up?";
+			mes "[贝尔林]";
+			mes "^333333*咕咕--!*^000000";
+			mes "我以为我会";
+			mes "淹死！";
+			mes "是谁把我叫醒的？";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFThe sight of this bubbling stream refreshes you just by looking at it.^000000";
+		mes "^3355FF这条冒泡的小溪光看着就让你感到清新。^000000";
 		close;
 	}
 
@@ -4165,91 +4165,91 @@ OnTouch_:
 
 mjolnir_09,87,129,3	script	Berling#1	826,{
 	if (god_brising > 44) {
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] You're the one that's awakened us? Hahaha, perhaps that's a sign we may see Freya again! Hahahaha!";
+		mes "[贝尔林]";
+		mes "你是唤醒我们的人？哈哈哈，也许这是我们能再次见到弗蕾雅的征兆！哈哈哈哈！";
 		next;
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] We are indebted to you for reviving us. Okay, I know what you want, and will help you obtain the power of the gods.";
+		mes "[贝尔林]";
+		mes "我们欠你一个人情，复活了我们。好吧，我知道你想要什么，会帮助你获得神的力量。";
 		close2;
 		hideonnpc "OnBerling#1";
 		end;
 	}
 	else if (god_brising == 43) {
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] What the...?";
-		mes "[DRY-RUN] It's a human?!";
-		mes "[DRY-RUN] What do you want?";
-		mes "[DRY-RUN] Wh-who are you?";
+		mes "[贝尔林]";
+		mes "这是什么...?";
+		mes "这是人类吗？!";
+		mes "你想要什么？";
+		mes "你是谁？";
 		next;
-		switch(select("[DRY-RUN] Dvalin wants you to wake up!:Tell me who you are first!")) {
+		switch(select("德瓦林想让你醒来!:先告诉我你是谁!")) {
 		case 1:
-			mes "[DRY-RUN] [Berling]";
-			mes "[DRY-RUN] Dvalin?!";
-			mes "[DRY-RUN] You mean my brother!";
-			mes "[DRY-RUN] But he can only be revived if Alfrik is revived. What happened?";
+			mes "[贝尔林]";
+			mes "德瓦林?!";
+			mes "你是说我兄弟!";
+			mes "但他只有在阿尔弗里克复活后才能复活。发生了什么事?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Umm...";
-			mes "[DRY-RUN] Let me explain...";
+			mes "嗯...";
+			mes "让我来解释...";
 			next;
-			mes "[DRY-RUN] ...";
-			mes "[DRY-RUN] ......";
-			mes "[DRY-RUN] .........";
+			mes "...";
+			mes "......";
+			mes ".........";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "[DRY-RUN] ...So I guess I need to wake up all four of you dwarves so that Brisingamen, which holds Freya's power, can be made again.";
+			mes "...所以我想我需要唤醒你们四个矮人，这样才能重新制作拥有弗蕾雅力量的布林辛甘。";
 			next;
-			mes "[DRY-RUN] [Berling]";
-			mes "[DRY-RUN] Oh! Say that name once again! Freya, the goddess who took my body and soul! Did you just say you want to make her necklace?";
+			mes "[贝尔林]";
+			mes "哦！再说一次那个名字！弗蕾雅，夺走我身体和灵魂的女神！你刚才说你想制作她的项链?";
 			next;
-			mes "[DRY-RUN] [Berling]";
-			mes "[DRY-RUN] Hahahaha!";
-			mes "[DRY-RUN] Stop joking around.";
-			mes "[DRY-RUN] The Brisingamen is";
-			mes "[DRY-RUN] a one of a kind";
-			mes "[DRY-RUN] masterpiece!";
+			mes "[贝尔林]";
+			mes "哈哈哈哈！";
+			mes "别开玩笑了。";
+			mes "布林辛甘是";
+			mes "独一无二的";
+			mes "杰作!";
 			next;
-			switch(select("[DRY-RUN] I don't mean the original one, but...")) {
+			switch(select("我不是说原来的那个，而是...")) {
 			case 1:
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] Ah, now I see! You want a replica that has roughly the same power.";
-				mes "[DRY-RUN] A Brisingamen used by humans!";
-				mes "[DRY-RUN] Very clever!";
+				mes "[贝尔林]";
+				mes "啊，我明白了！你想要一个大致相同力量的复制品。";
+				mes "人类使用的布林辛甘！";
+				mes "真聪明！";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] I, on the other hand, do not desire power. I would be happy to own but a strand of my goddess' hair.";
+				mes "[贝尔林]";
+				mes "而我并不渴望力量。我只希望拥有一缕我女神的头发。";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] Oh Freya...";
-				mes "[DRY-RUN] The more of her beauty exists in this world, the happier I'll be. I'm more than willing to help you recreate this memento of Freya.";
+				mes "[贝尔林]";
+				mes "哦，弗蕾雅……";
+				mes "她的美丽在这个世界上越多，我就越快乐。我非常愿意帮助你重现这个弗蕾雅的纪念品。";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] Now, please go and find the last one of my brothers! Poor Grer, perhaps he is still digging silver in that mine for her...";
+				mes "[贝尔林]";
+				mes "现在，请去找我的最后一个兄弟！可怜的格雷尔，也许他还在那矿里为她挖银子……";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] Go and find Grer. I will give you Freya's golden teardrop, but he might have revived on his own...";
+				mes "[贝尔林]";
+				mes "去找格雷尔。我会给你弗蕾雅的金色泪滴，但他可能已经自己复活了……";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] If he doesn't trust you, sing this song. You must remember each";
-				mes "[DRY-RUN] and every word...";
+				mes "[贝尔林]";
+				mes "如果他不信任你，就唱这首歌。你必须记住每一个";
+				mes "字...";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] ^4d4dffNo jewel in the world can compare.^000000";
+				mes "[贝尔林]";
+				mes "^4d4dff世上没有任何珠宝可以相比。^000000";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] ^4d4dffOur masterpiece made from love.^000000";
+				mes "[贝尔林]";
+				mes "^4d4dff我们的杰作是由爱所造。^000000";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] ^4d4dffShe wanted the dazzling necklace.^000000";
+				mes "[贝尔林]";
+				mes "^4d4dff她想要那条耀眼的项链。^000000";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] ^4d4dffWe wanted the goddess of beauty.^000000";
+				mes "[贝尔林]";
+				mes "^4d4dff我们想要的是美丽女神。^000000";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] ^4d4dffOur happiest times were with her.^000000";
+				mes "[贝尔林]";
+				mes "^4d4dff我们最快乐的时光与她同在。^000000";
 				next;
-				mes "[DRY-RUN] [Berling]";
-				mes "[DRY-RUN] Memorize all five lines of this song exactly. Now take this golden teardrop and please seek out Grer.";
+				mes "[贝尔林]";
+				mes "准确记住这首歌的五行歌词。现在拿着这颗金色泪珠，请去找格雷尔。";
 				specialeffect2 EF_IMPOSITIO;
 				set god_brising,44;
 				close2;
@@ -4257,46 +4257,46 @@ mjolnir_09,87,129,3	script	Berling#1	826,{
 				end;
 			}
 		case 2:
-			mes "[DRY-RUN] [Berling]";
-			mes "[DRY-RUN] Where the hell";
-			mes "[DRY-RUN] did you come from?";
-			mes "[DRY-RUN] I, Berling, refuse to";
-			mes "[DRY-RUN] give my name to a rude,";
-			mes "[DRY-RUN] ill-bred human like yourself!";
+			mes "[贝尔林]";
+			mes "你到底来自哪里？";
+			mes "你从哪里来的？";
+			mes "我，贝尔林，拒绝";
+			mes "把我的名字给一个粗鲁的,";
+			mes "没教养的人像你自己!";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Wait...";
-			mes "[DRY-RUN] Your name";
-			mes "[DRY-RUN] is Berling?";
+			mes "等一下……";
+			mes "你的名字";
+			mes "是贝尔林?";
 			next;
-			mes "[DRY-RUN] [Berling]";
-			mes "[DRY-RUN] Baaaaahhh!";
-			mes "[DRY-RUN] Quiet you!";
-			mes "[DRY-RUN] Mind your own";
-			mes "[DRY-RUN] business!";
+			mes "[贝尔林]";
+			mes "咩咩咩!";
+			mes "安静!";
+			mes "管好你自己的";
+			mes "事!";
 			close2;
 			hideonnpc "Berling#1";
 			end;
 		}
 	}
 	else if (god_brising == 44) {
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] Did you already forget the lyrics? Let me tell them to you again, so don't forget this time.";
+		mes "[贝尔林]";
+		mes "你已经忘记歌词了吗?让我再告诉你一次，这次可别忘了.";
 		next;
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] ^4d4dffNo jewel in the world can compare.^000000";
+		mes "[贝尔林]";
+		mes "^4d4dff世上没有任何珠宝可以相比。^000000";
 		next;
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] ^4d4dffOur masterpiece made from love.^000000";
+		mes "[贝尔林]";
+		mes "^4d4dff我们的杰作是由爱所造。^000000";
 		next;
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] ^4d4dffShe wanted the dazzling necklace.^000000";
+		mes "[贝尔林]";
+		mes "^4d4dff她想要那条耀眼的项链。^000000";
 		next;
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] ^4d4dffWe wanted the goddess of beauty.^000000";
+		mes "[贝尔林]";
+		mes "^4d4dff我们想要的是美丽女神。^000000";
 		next;
-		mes "[DRY-RUN] [Berling]";
-		mes "[DRY-RUN] ^4d4dffOur happiest times were with her.^000000";
+		mes "[贝尔林]";
+		mes "^4d4dff我们最快乐的时光与她同在。^000000";
 		close2;
 		hideonnpc "Berling#1";
 		end;
@@ -4310,59 +4310,59 @@ OnInit:
 mjo_dun02,126,36,0	script	#brisindwarf4	111,3,3,{
 	if ($God2 < $@god_check1) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Bah, no way out.";
+		mes "哼，没办法逃.";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Bah, no way out.";
+		mes "哼，没办法逃.";
 		close;
 	}
 	if ((god_brising > 45) && (god_brising < 50)) {
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] What!";
+		mes "[格雷尔]";
+		mes "什么!";
 		hideoffnpc "Grer#1";
 		close;
 	}
 	else if (god_brising == 45) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Let's see.";
-		mes "[DRY-RUN] Um, that song.";
-		mes "[DRY-RUN] What was the first line...?";
+		mes "让我看看.";
+		mes "嗯，那首歌。";
+		mes "第一句是什么来着...？";
 		next;
 		input @dwarfsong1$;
 		if (@dwarfsong1$ == "No jewel in the world can compare.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong1$ + "";
-		mes "[DRY-RUN] Then...ummm..";
-		mes "[DRY-RUN] The second line?";
+		mes "然后...嗯...";
+		mes "第二句呢？";
 		next;
 		input @dwarfsong2$;
 		if (@dwarfsong2$ == "Our masterpiece made from love.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong2$ + "";
-		mes "[DRY-RUN] Now, what was";
-		mes "[DRY-RUN] the third line...?";
+		mes "现在，是什么";
+		mes "第三句...？";
 		next;
 		input @dwarfsong3$;
 		if (@dwarfsong3$ == "She wanted the dazzling necklace.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong3$ + "";
-		mes "[DRY-RUN] Now, the fourth";
-		mes "[DRY-RUN] line after that...";
+		mes "现在，第四句";
+		mes "之后的那一句...";
 		next;
 		input @dwarfsong4$;
 		if (@dwarfsong4$ == "We wanted the goddess of beauty.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong4$ + "";
-		mes "[DRY-RUN] Alright, now";
-		mes "[DRY-RUN] for the last line...";
+		mes "好的，现在";
+		mes "最后一句...";
 		next;
 		input @dwarfsong5$;
 		if (@dwarfsong5$ == "Our happiest times were with her.") set @point,@point +1;
 		mes "[" + strcharinfo(0) + "]";
 		mes " " + @dwarfsong5$ + "";
-		mes "[DRY-RUN] Alright, let's give it a try.";
+		mes "好的，我们试试看。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "" + @dwarfsong1$ + "";
@@ -4373,67 +4373,67 @@ mjo_dun02,126,36,0	script	#brisindwarf4	111,3,3,{
 		next;
 		if (@point > 4) {
 			hideoffnpc "Grer#1";
-			mes "[DRY-RUN] [Grer]";
-			mes "[DRY-RUN] Wha--?";
-			mes "[DRY-RUN] Berling";
-			mes "[DRY-RUN] did send you!";
+			mes "[格雷尔]";
+			mes "什么--？";
+			mes "贝尔林";
+			mes "确实是你派来的！";
 			set god_brising,46;
 			stopnpctimer;
 			close;
 		}
 		else {
-			mes "[DRY-RUN] [Grer]";
-			mes "[DRY-RUN] Bah!";
-			mes "[DRY-RUN] I knew it!";
-			mes "[DRY-RUN] I can't trust you!";
+			mes "[格雷尔]";
+			mes "呸!";
+			mes "我就知道！";
+			mes "我不能信任你！";
 			close2;
 			warp "mjo_dun02",118,56;
 			end;
 		}
 	}
 	else {
-		mes "[DRY-RUN] ^3355FFYou found a hole filled with some clod and a lump of coal.^000000";
+		mes "^3355FF你发现了一个填满泥土和一块煤的洞。^000000";
 		close;
 	}
 
 OnTouch_:
 	if ($God2 < $@god_check1) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Beh, no way out.";
+		mes "哼，没办法逃出去。";
 		close;
 	}
 	if ($God3 >= $@god_check2) {
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Beh, no way out.";
+		mes "哼，没办法逃出去。";
 		close;
 	}
 	if (god_brising == 44) {
 		emotion ET_SURPRISE, playerattached();
-		mes "[DRY-RUN] [Male Voice]";
-		mes "[DRY-RUN] Don't come any closer!";
-		mes "[DRY-RUN] How the hell do I feel";
-		mes "[DRY-RUN] Freya's presense on you?";
-		mes "[DRY-RUN] Tell me who you are!";
+		mes "[男性声音]";
+		mes "不要靠近！";
+		mes "我到底感觉到了什么？";
+		mes "你身上有弗蕾雅的气息？";
+		mes "告诉我你是谁！";
 		next;
-		switch(select("[DRY-RUN] I am sent by Berling.:Wah, you freaked me out!")) {
+		switch(select("我是由贝尔林派来的。:哇，你吓到我了！")) {
 		case 1:
-			mes "[DRY-RUN] [Male Voice]";
-			mes "[DRY-RUN] Lies! Lies!";
-			mes "[DRY-RUN] Prove it!";
-			mes "[DRY-RUN] Prove yourself!";
+			mes "[男性声音]";
+			mes "谎言！谎言！";
+			mes "证明一下！";
+			mes "证明你自己！";
 			set god_brising,45;
 			initnpctimer;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Male Voice]";
-			mes "[DRY-RUN] Get out of here!";
+			mes "[男性声音]";
+			mes "滚出这里！";
 			close;
 		}
 	}
 	else if (god_brising == 45) {
-		mes "[DRY-RUN] [Male Voice]";
-		mes "[DRY-RUN] Prove it!";
-		mes "[DRY-RUN] Otherwise, leave me alone and let me mine silver. Silver...! Heh heh heh...";
+		mes "[男性声音]";
+		mes "证明一下！";
+		mes "否则，别打扰我，让我去挖银矿。银矿…！呵呵呵…";
 		stopnpctimer;
 		startnpctimer;
 		close;
@@ -4467,72 +4467,72 @@ OnTimer301000:
 
 mjo_dun02,126,34,1	script	Grer#1	826,{
 	if (god_brising > 47) {
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] As we promised,";
-		mes "[DRY-RUN] Brisingamen will appear in front of human's eyes. But until then, I shall make jewelry of silver. Mwahahaha~";
+		mes "[格雷尔]";
+		mes "正如我们所承诺的，";
+		mes "布里辛加门将出现在人类面前。但在那之前，我将用银制作珠宝。哈哈哈~";
 		close2;
 		hideonnpc "Grer#1";
 		end;
 	}
 	else if (god_brising == 46) {
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] My name is Grer.";
-		mes "[DRY-RUN] I should have been";
-		mes "[DRY-RUN] the last one to be awakened. Now I see that I haven't mined as much silver as I may need.";
+		mes "[格雷尔]";
+		mes "我的名字是格雷尔。";
+		mes "我本该是最后一个被唤醒的。";
+		mes "现在我看到我挖掘的银子并不够多。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] You might think gold would better suit a goddess, but no. Silver is what makes her golden hair more beautiful.";
+		mes "[格雷尔]";
+		mes "你可能认为黄金更适合女神，但不是的。银子使她的金发更加美丽。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Now that we're revived, there's a good chance that we may see her again. I don't really mind anything else.";
+		mes "[格雷尔]";
+		mes "既然我们复活了，就有很大机会再次见到她。我对其他事情并不在意。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] I want her spirit and scent to fill this world. I don't want Odin or Heimdall to know our plan.";
+		mes "[格雷尔]";
+		mes "我希望她的灵魂和气息充满这个世界。我不想让奥丁或海姆达尔知道我们的计划。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Now, this doesn't mean";
-		mes "[DRY-RUN] that I prefer humans over";
-		mes "[DRY-RUN] gods or giants, but if it's for Freya, I'll do anything.";
+		mes "[格雷尔]";
+		mes "现在，这并不意味着";
+		mes "我更喜欢人类而不是";
+		mes "神或巨人，但如果是为了弗蕾雅，我愿意付出一切。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Anyway, now my brothers";
-		mes "[DRY-RUN] have been revived. For that, I give you my thanks. Someday, you will have the power to challenge the gods.";
+		mes "[格雷尔]";
+		mes "无论如何，我的兄弟们";
+		mes "已经复活了。为此，我感谢你。总有一天，你将拥有挑战神明的力量。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Now, I need to";
-		mes "[DRY-RUN] get back to my work.";
-		mes "[DRY-RUN] You'll need a silver ornament for the necklace, so I'll continue to mine silver.";
+		mes "[格雷尔]";
+		mes "现在，我需要";
+		mes "回去工作。";
+		mes "你需要一个银色饰品作为项链，所以我会继续挖银。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] I will be working";
-		mes "[DRY-RUN] hard to make the most";
-		mes "[DRY-RUN] beautiful ornament";
-		mes "[DRY-RUN] in the world.";
+		mes "[格雷尔]";
+		mes "我会努力工作";
+		mes "尽力制作最";
+		mes "美丽的饰品";
+		mes "在这个世界上。";
 		next;
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Okay, you";
-		mes "[DRY-RUN] may go back now!";
-		mes "[DRY-RUN] Farewell.";
+		mes "[格雷尔]";
+		mes "好的，你";
+		mes "可以回去了！";
+		mes "再见。";
 		set god_brising,47;
 		close2;
 		hideonnpc "Grer#1";
 		end;
 	}
 	else if (god_brising == 47) {
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Heh heh...";
-		mes "[DRY-RUN] Why are you still";
-		mes "[DRY-RUN] here? Your job is done.";
-		mes "[DRY-RUN] Now, go back to where";
-		mes "[DRY-RUN] you came from!";
+		mes "[格雷尔]";
+		mes "嘿嘿...";
+		mes "你为什么还在这里";
+		mes "在这里？你的工作完成了。";
+		mes "现在，回到你来的地方";
+		mes "去吧！";
 		close2;
 		hideonnpc "Grer#1";
 		end;
 	}
 	else {
-		mes "[DRY-RUN] [Grer]";
-		mes "[DRY-RUN] Who the";
-		mes "[DRY-RUN] hell are you?!";
+		mes "[格雷尔]";
+		mes "你是谁？";
+		mes "你到底是谁？！";
 		close2;
 		hideonnpc "Grer#1";
 		end;

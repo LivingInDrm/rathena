@@ -34,97 +34,97 @@ geffen,132,38,3	script	Bard#2	51,{
 	set @name$,strcharinfo(0);
 	if (gef_bard_q > 29) {
 		cutin "bard_eland02",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Why, hello there~";
-		mes "[DRY-RUN] Isn't the weather";
-		mes "[DRY-RUN] especially pleasant today?";
+		mes "[埃伦德]";
+		mes "你好呀~";
+		mes "今天天气不错吧";
+		mes "特别宜人呢？";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Ah~ There are only two things that can make this picturesque moment even more beautiful: story and song. Now then, which would you like to hear?";
+		mes "[埃伦德]";
+		mes "啊~ 只有两件事能让这个如画的时刻更加美丽：故事和歌曲。那么，你想听哪个呢？";
 		callsub S_StorySong,1;
 
 	} else if (gef_bard_q == 14 || gef_bard_q == 15) {
 		if (gef_bard_q == 14) {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Hmmm?";
-			mes "[DRY-RUN] Is that the seal of black...? Huh. Kino Kitty removed the one he gave me without a trace, so I surmise that he likes you a lot. Otherwise...";
+			mes "[埃伦德]";
+			mes "嗯？";
+			mes "那是黑色的印章...? 哼。基诺小猫把他给我的那个毫无痕迹地拿走了，所以我推测他很喜欢你。否则...";
 			next;
-			mes "[DRY-RUN] ^3355FFYou give Errende the letter";
-			mes "[DRY-RUN] you have received from Kino Kitty.^000000";
+			mes "^3355FF你把信交给了埃伦德";
+			mes "你从基诺小猫那里收到的。^000000";
 			next;
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Er, he knows everything already? From this spot of blood, I think he still has health problems. He should stop torturing himself...";
+			mes "[埃伦德]";
+			mes "呃，他已经知道一切了吗？从这点血迹来看，我觉得他仍然有健康问题。他应该停止折磨自己...";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Thank you, I really appreciate what you've done for me. But, what would be an appropriate way to express my gratitude for an adventurer like yourself?";
+			mes "[埃伦德]";
+			mes "谢谢你，我真的很感激你为我所做的一切。但是，像你这样的冒险者，我该如何恰当地表达我的感激呢？";
 		} else {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ah, so how did it go?";
-			mes "[DRY-RUN] Wait, you already found it?";
-			mes "[DRY-RUN] Yes, this is it! Great!";
-			mes "[DRY-RUN] This is so amazing!!";
-			mes "[DRY-RUN] Ah, yes, right.";
-			mes "[DRY-RUN] Right.";
+			mes "[埃伦德]";
+			mes "啊，情况怎么样？";
+			mes "等等，你已经找到了吗？";
+			mes "是的，就是这个！太好了！";
+			mes "这太神奇了！！";
+			mes "啊，是的，对的。";
+			mes "对的。";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] I would like to express my gratitute. But, what would be appropriate for an adventurer";
-			mes "[DRY-RUN] like yourself?";
+			mes "[埃伦德]";
+			mes "我想表达我的感激。但是，像冒险者这样的我该如何做才合适呢？";
+			mes "像你这样的？";
 		}
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Oh~! I have just the thing. Alright, please make yourself comfortable, and listen to my song.";
+		mes "[埃伦德]";
+		mes "哦~！我正好有这个。好的，请让自己放松，听我唱歌。";
 		next;
 		cutin "bard_eland03",2;
-		mes "[DRY-RUN] ^483D8BEvery god never grows old";
-		mes "[DRY-RUN] Because of beautiful";
-		mes "[DRY-RUN] Goddess, Idun.";
-		mes "[DRY-RUN] Keeper of the apples of youth";
-		mes "[DRY-RUN] Goddess of immortality.^000000";
+		mes "^483D8B每个神都不会变老";
+		mes "因为美丽的";
+		mes "女神，伊登。";
+		mes "青春的苹果守护者";
+		mes "不朽的女神。^000000";
 		specialeffect2 EF_STEAL;
 		next;
-		mes "[DRY-RUN] ^483D8BEvery god never grows old.";
-		mes "[DRY-RUN] Idun, the wife of Bragi,";
-		mes "[DRY-RUN] Idun, Odin's daughter in law~";
-		mes "[DRY-RUN] The apples she keeps";
-		mes "[DRY-RUN] In her basket.^000000";
+		mes "^483D8B每个神都不会变老。";
+		mes "伊登，布拉吉的妻子，";
+		mes "伊登，奥丁的儿媳~";
+		mes "她所保管的苹果";
+		mes "在她的篮子里。^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BWithout Idun,";
-		mes "[DRY-RUN] Every god would";
-		mes "[DRY-RUN] have succumbed to age.";
-		mes "[DRY-RUN] Even Thor, the strongest of gods,";
-		mes "[DRY-RUN] would grow frail, Megingjard would";
-		mes "[DRY-RUN] slip from his waist, and Mjolnir";
-		mes "[DRY-RUN] would never fly again.^000000";
+		mes "^483D8B没有伊登，";
+		mes "每个神都会";
+		mes "屈服于岁月。";
+		mes "即使是最强大的神托尔，";
+		mes "也会变得虚弱，梅金贾德会";
+		mes "从他的腰间滑落，而雷神之锤";
+		mes "将再也无法飞起。^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BWithout Idun,";
-		mes "[DRY-RUN] Every god would";
-		mes "[DRY-RUN] have succumbed to age.";
-		mes "[DRY-RUN] Loki was careless once,";
-		mes "[DRY-RUN] and made her lost to the gods.";
-		mes "[DRY-RUN] He was forced to get her back.^000000";
+		mes "^483D8B没有伊登，";
+		mes "每个神都会";
+		mes "屈服于岁月。";
+		mes "洛基曾经粗心大意，";
+		mes "让她失落于众神之中。";
+		mes "他被迫去找回她。^000000";
 		specialeffect2 EF_STEAL;
 		next;
-		mes "[DRY-RUN] ^483D8BMy goddess stands";
-		mes "[DRY-RUN] In the field of Asgard";
-		mes "[DRY-RUN] She hands me fruit from heaven.";
-		mes "[DRY-RUN] You will be loved by every god...";
-		mes "[DRY-RUN] You will be blessed";
-		mes "[DRY-RUN] By every god...^000000";
+		mes "^483D8B我的女神站立着";
+		mes "在阿斯加德的田野中";
+		mes "她把来自天堂的果实递给我。";
+		mes "你将被每个神所爱...";
+		mes "你将受到祝福";
+		mes "由每一位神灵...^000000";
 		next;
 		specialeffect EF_BEGINSPELL6;
-		mes "[DRY-RUN] ^483D8BIf you share the";
-		mes "[DRY-RUN] Apple of youth with me";
-		mes "[DRY-RUN] Even a bite of it with";
-		mes "[DRY-RUN] This poor poet.";
-		mes "[DRY-RUN] You will be loved by every god...";
-		mes "[DRY-RUN] You will be blessed";
-		mes "[DRY-RUN] By every god...^000000";
+		mes "^483D8B如果你与我分享";
+		mes "青春之苹果";
+		mes "哪怕只是一口";
+		mes "这位可怜的诗人。";
+		mes "你将被每个神所爱...";
+		mes "你将受到祝福";
+		mes "由每一位神灵...^000000";
 		next;
 		specialeffect2 EF_RESURRECTION;
-		mes "[DRY-RUN] ^3355FFWhile listening to his song, you feel at ease, and your thoughts become clearer. You believe that you see the vision of an angel, and you gain some experience points.^000000";
+		mes "^3355FF在听他的歌时，你感到轻松，思绪变得清晰。你相信你看到了天使的幻影，并获得了一些经验值。^000000";
 		set gef_bard_q, gef_bard_q + 16; //30,31
 		if (checkre(3)) {
 			if (BaseLevel < 56) getexp 450,0;
@@ -149,847 +149,847 @@ geffen,132,38,3	script	Bard#2	51,{
 		}
 		next;
 		cutin "bard_eland02",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] So, how do you feel now? I hope my song has refreshed you. I'm afraid it may not be enough to repay you, but please understand that this is the best way for me to express my gratitude.";
+		mes "[埃伦德]";
+		mes "那么，你现在感觉如何？我希望我的歌能让你焕然一新。我担心这可能不足以回报你，但请理解这是我表达感激之情的最好方式。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Besides, I've been thinking of you now as my friend, with whom I may candidly speak without any worry. And I think you have a beautiful smile. Am I wrong~? Hahaha~";
+		mes "[埃伦德]";
+		mes "此外，我现在把你当作我的朋友，可以毫无顾虑地和你坦诚交谈。我觉得你有一个美丽的微笑。我错了吗~？哈哈哈~";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] I hope that you'll always remain honest and respectful towards other people, and that you continue to ignore greed for fortune or power.";
+		mes "[埃伦德]";
+		mes "我希望你始终对他人保持诚实和尊重，并继续忽视对财富或权力的贪婪。";
 		close3;
 
 	} else if (gef_bard_q > 11 && gef_bard_q < 14) {
 		cutin "bard_eland02",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] It seems you haven't found it yet. Well, take your time, I can wait as long as you want. It doesn't really bore me, since waiting seems to be a part of my profession.";
+		mes "[埃伦德]";
+		mes "看来你还没有找到。好吧，慢慢来，我可以等你想要的时间。等候对我来说并不无聊，因为等待似乎是我职业的一部分。";
 		close3;
 
 	} else if (gef_bard_q == 11) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Mr. Skezti has a small book store on the book street at the right side of Mineta in Juno. If you show him the seal, he'll help you out.";
+		mes "[埃伦德]";
+		mes "斯克兹提先生在朱诺的米内塔右侧的书街上有一家小书店。如果你给他看印章，他会帮助你。";
 		close3;
 
 	} else if (gef_bard_q == 10) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] So, have you met Mr. Kitty?";
-		mes "[DRY-RUN] Ah, in Morroc? He has a chronic disease, but obviously doesn't";
-		mes "[DRY-RUN] seem to care about it.";
-		mes "[DRY-RUN] So what did he say?";
+		mes "[埃伦德]";
+		mes "那么，你见过基蒂先生吗？";
+		mes "啊，在梦罗克？他有一种慢性病，但显然并没有";
+		mes "似乎对此并不在意。";
+		mes "那么他说了什么？";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Hm? In Juno?";
-		mes "[DRY-RUN] Then that must be it.";
-		mes "[DRY-RUN] It won't be easy if you want to go visit Mr. Sketzi's book store. Here, let me mark you with";
-		mes "[DRY-RUN] ^483D8BThe Seal of Friendship^000000.";
+		mes "[埃伦德]";
+		mes "嗯？在朱诺？";
+		mes "那一定是了。";
+		mes "如果你想去拜访斯凯齐先生的书店，那可不容易。来，让我给你标记上";
+		mes "^483D8B友谊之印^000000。";
 		next;
 		cutin "bard_eland03",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Give me your left hand.";
-		mes "[DRY-RUN] Now, let me cast a spell...";
-		mes "[DRY-RUN] *Mumble mumble...*";
+		mes "[埃伦德]";
+		mes "把你的左手给我。";
+		mes "现在，让我施个法...";
+		mes "*嘟囔嘟囔...*";
 		next;
 		specialeffect2 EF_CONE;
-		mes "[DRY-RUN] ^3355FFOn your left wrist, a crescent shaped mark glowing with a silver light appeared. It's only noticeable when you concentrate on finding it, but it might clearly appear under the moonlight.^000000";
+		mes "^3355FF在你的左手腕上，出现了一个发出银光的弯月形印记。只有在你集中注意力寻找时才能注意到，但在月光下可能会清晰可见。^000000";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] There you go. Now, you may go to Mr. Sketzi. Remember, you must";
-		mes "[DRY-RUN] show him the Seal of Friendship.";
-		mes "[DRY-RUN] Good luck, now~";
+		mes "[埃伦德]";
+		mes "给你。现在，你可以去找斯凯齐先生。记住，你必须";
+		mes "给他看友谊的印章。";
+		mes "祝你好运，现在~";
 		set gef_bard_q,11;
 		close3;
 
 	} else if (gef_bard_q == 20) {
 		cutin "bard_eland03",2;
-		mes "[DRY-RUN] [Bard]";
-		mes "[DRY-RUN] ^483D8BWhat day is";
-		mes "[DRY-RUN] best for drinking?";
-		mes "[DRY-RUN] La la la~";
-		mes "[DRY-RUN] It's the day of";
-		mes "[DRY-RUN] the earth, the sun";
-		mes "[DRY-RUN] And the moon~";
-		mes "[DRY-RUN] La la la~^000000";
+		mes "[诗人]";
+		mes "^483D8B喝酒的最佳日子是";
+		mes "哪一天？";
+		mes "啦啦啦~";
+		mes "就是";
+		mes "大地、太阳";
+		mes "和月亮的日子~";
+		mes "啦啦啦~^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BLa la la~";
-		mes "[DRY-RUN] I'll only";
-		mes "[DRY-RUN] drink on one day~";
-		mes "[DRY-RUN] So if you'll tell me";
-		mes "[DRY-RUN] when you'll drink";
-		mes "[DRY-RUN] I'll tell you when";
-		mes "[DRY-RUN] I'll drink with you~^000000";
+		mes "^483D8B啦啦啦~";
+		mes "我只会";
+		mes "在这一天喝酒~";
+		mes "所以如果你告诉我";
+		mes "你什么时候喝";
+		mes "我会告诉你什么时候";
+		mes "我会和你一起喝~^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BLet's get together";
-		mes "[DRY-RUN] Yea yea ye-^000000 Hmmmmm...?";
+		mes "^483D8B让我们聚在一起";
+		mes "是啊是啊-^000000 嗯嗯嗯...?";
 		next;
-		mes "[DRY-RUN] [Bard]";
-		mes "[DRY-RUN] Why, hello there. Oh, have you come to listen to my song and forget your worries?";
+		mes "[诗人]";
+		mes "你好啊。哦，你是来听我的歌，忘却烦恼的吗？";
 		next;
 
-		if(select("[DRY-RUN] Who are you?:Ignore him.")==1) {
+		if(select("你是谁？:忽略他。")==1) {
 			cutin "bard_eland04",2;
 			mes "[" + @name$ + "]";
-			mes "[DRY-RUN] You seem to be";
-			mes "[DRY-RUN] new around here...";
-			mes "[DRY-RUN] Who are you?";
+			mes "你似乎是";
+			mes "新来的...";
+			mes "你是谁？";
 			next;
 			cutin "bard_eland02",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Mm? Ah yes. I am merely another wandering poet who goes where the wind takes him. Please call me ^483D8BErrende^000000, the Bard who wishes to please you.";
+			mes "[埃伦德]";
+			mes "嗯？啊，是的。我只是一个随风而行的流浪诗人。请叫我^483D8B埃伦德^000000，那个希望取悦你的吟游诗人。";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] If you will let me, I will tell you of my travels. By your leave,";
-			mes "[DRY-RUN] I will play a song that will help you forget your troubles.";
+			mes "[埃伦德]";
+			mes "如果你愿意，我会告诉你我的旅行。请允许我，";
+			mes "我将演奏一首能帮助你忘记烦恼的歌曲。";
 			set gef_bard_q,21;
 			callsub S_StorySong,2;
 
 		} else {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Waaah, wah~";
-			mes "[DRY-RUN] You can't just ignore me like that! Where's your sense of merriment, your sense of romance?";
+			mes "[埃伦德]";
+			mes "哇啊，哇~";
+			mes "你不能就这样忽视我！你哪里去了，快乐的感觉，浪漫的感觉？";
 			close3;
 		}
 
 	} else if (gef_bard_q == 27) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] How could I forget the song?";
-		mes "[DRY-RUN] I'm worthless as a Bard~!";
-		mes "[DRY-RUN] Please... Just...";
-		mes "[DRY-RUN] Please just leave";
-		mes "[DRY-RUN] me alone.";
+		mes "[埃伦德]";
+		mes "我怎么能忘记那首歌？";
+		mes "作为一个诗人，我毫无价值~！";
+		mes "请... 只是...";
+		mes "请你离开";
+		mes "我一个人待着。";
 		next;
 
-		if(select("[DRY-RUN] No problem~:Is there any way I can help you?")==1) {
+		if(select("没问题~:有什么我可以帮你的吗？")==1) {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Waaaah~! You're so mean!";
-			mes "[DRY-RUN] You're supposed to say, 'Errende, what's wrong? Maybe I can help?'";
+			mes "[埃伦德]";
+			mes "哇啊~！你太过分了！";
+			mes "你应该说，‘埃伦德，怎么了？也许我可以帮忙？’";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] I mean, we're supposed";
-			mes "[DRY-RUN] to know each other better";
-			mes "[DRY-RUN] than that. But...";
-			mes "[DRY-RUN] Maybe I was wrong!";
+			mes "[埃伦德]";
+			mes "我的意思是，我们应该";
+			mes "更好地了解彼此";
+			mes "比这更深。但...";
+			mes "也许我错了！";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] *Sob...*";
-			mes "[DRY-RUN] Who made this poor Bard cry by neglecting him? *Sniff* I do believe it was you!";
+			mes "[埃伦德]";
+			mes "*呜...*";
+			mes "是谁让这个可怜的诗人因被忽视而哭泣的？*抽泣*我相信是你！";
 		} else {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Help me?";
-			mes "[DRY-RUN] Hmmm...";
-			mes "[DRY-RUN] That's it!";
-			mes "[DRY-RUN] Gunther!";
+			mes "[埃伦德]";
+			mes "帮我吗？";
+			mes "嗯……";
+			mes "就是这样！";
+			mes "冈瑟！";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Let me ask you a favor.";
-			mes "[DRY-RUN] If perchance you happen to meet ^483D8BGunther Doubleharmony^000000, please inform him of my dilemna.";
+			mes "[埃伦德]";
+			mes "让我请你帮个忙。";
+			mes "如果你碰巧遇到^483D8B冈瑟·双和谐^000000，请告诉他我的困境。";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Tell him that ^483D8BMinty Errende^000000 happened to forget a line of the song, ^483D8BAt One, I Fall in Love^000000. The line is called ^483D8B8th love^000000.";
+			mes "[埃伦德]";
+			mes "告诉他 ^483D8BMinty Errende^000000 忘记了歌曲的一句， ^483D8BAt One, I Fall in Love^000000。这句歌词叫做 ^483D8B8th love^000000.";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] I beseech you, if you meet him, please ask him of the 8th love and inform me of that lyric immediately~";
+			mes "[埃伦德]";
+			mes "我恳求你，如果你见到他，请问他关于第8爱的事情，并立即告诉我那句歌词~";
 			set gef_bard_q,22;
 		}
 		close3;
 
 	} else if (gef_bard_q == 26) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Argh...!";
-		mes "[DRY-RUN] Who changed the words of this song anyway? It's really difficult to understand. I wish I could ask the person who changed the words.";
+		mes "[埃伦德]";
+		mes "啊...!";
+		mes "到底是谁改了这首歌的歌词？真是难以理解。我希望能问问那个改歌词的人。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] This is so frustrating!";
-		mes "[DRY-RUN] Now, I've lost the passion";
-		mes "[DRY-RUN] to sing or play...";
+		mes "[埃伦德]";
+		mes "这真让人沮丧！";
+		mes "现在，我失去了热情";
+		mes "去唱歌或演奏...";
 		next;
 		mes "[" + @name$ + "]";
-		mes "[DRY-RUN] Don't you think...";
-		mes "[DRY-RUN] The person would be...";
+		mes "你不觉得...";
+		mes "那个人会是...";
 		input .@inputstr$;
 		mes .@inputstr$ + "?";
 		next;
 
 		if (.@inputstr$ == "Kino Kitty") {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ah! Of course!";
-			mes "[DRY-RUN] I think you're right!";
-			mes "[DRY-RUN] How could I not think of that?";
+			mes "[埃伦德]";
+			mes "啊！当然！";
+			mes "我觉得你说得对！";
+			mes "我怎么会没想到呢？";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] It all makes sense now. After all, he used to be a member of the Invincible Single Army. His changes might have been a little mean, since this song used to be about a happy couple...";
+			mes "[埃伦德]";
+			mes "现在一切都明白了。毕竟，他曾经是无敌单身军的一员。他的变化可能有点刻薄，因为这首歌曾经是关于一对快乐的情侣……";
 			next;
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ummm...";
-			mes "[DRY-RUN] I'm sorry to ask a favor of you again, but in your travels, do you think you could find the original lyrics for this song? I can wait for it...";
+			mes "[埃伦德]";
+			mes "嗯……";
+			mes "我很抱歉再次请求你帮忙，但在你的旅行中，你能找到这首歌的原歌词吗？我可以等……";
 			next;
 
-			if(select("[DRY-RUN] No, thanks.:I can, so stop crying.")==1) {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Ah, I guess it was too much to ask of you. My apologies. Don't worry about it, I'll find out some other way.";
+			if(select("不，谢谢。:我可以，所以别哭了。")==1) {
+				mes "[埃伦德]";
+				mes "啊，我想这对你来说要求太高了。很抱歉。别担心，我会想其他办法的。";
 				set gef_bard_q,25;
 
 			} else {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Are you serious?";
-				mes "[DRY-RUN] Oh, thank you so much!";
-				mes "[DRY-RUN] You must be an angel!";
-				mes "[DRY-RUN] An angel that truly understands the heart of a poet!";
+				mes "[埃伦德]";
+				mes "你是认真的吗？";
+				mes "哦，非常感谢你！";
+				mes "你一定是个天使！";
+				mes "一个真正理解诗人心灵的天使！";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I'll pay you back somehow!";
-				mes "[DRY-RUN] Thank you for your trouble";
-				mes "[DRY-RUN] in advance~";
+				mes "[埃伦德]";
+				mes "我会以某种方式报答你！";
+				mes "谢谢你的辛苦";
+				mes "提前~";
 				set gef_bard_q,24;
 			}
 			close3;
 
 		} else if (.@inputstr$ == "Gunther") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			close3;
 
 		} else if (.@inputstr$ == "Gunther Doubleharmony") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			close3;
 
 		} else if (.@inputstr$ == "Errende") {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Surely you jest!";
-			mes "[DRY-RUN] If I did, why would";
-			mes "[DRY-RUN] I not know what";
-			mes "[DRY-RUN] this song is about?";
+			mes "[埃伦德]";
+			mes "你一定是在开玩笑！";
+			mes "如果我知道，那我为什么会";
+			mes "我怎么会不知道";
+			mes "这首歌是关于什么的？";
 			close3;
 
 		} else {
-			mes "[DRY-RUN] [Errende]";
+			mes "[埃伦德]";
 			mes "" + .@inputstr$ +"...?";
-			mes "[DRY-RUN] I don't think I know that person. Maybe you misunderstood";
-			mes "[DRY-RUN] something? *Sigh...*";
+			mes "我觉得我不认识那个人。也许你误解了";
+			mes "什么？*唉...*";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] What was the line...?";
-			mes "[DRY-RUN] How could I forget";
-			mes "[DRY-RUN] the 8th love?";
+			mes "[埃伦德]";
+			mes "那句歌词是什么...？";
+			mes "我怎么会忘记";
+			mes "第八次爱情？";
 			set gef_bard_q,26;
 			close3;
 		}
 
 	} else if (gef_bard_q == 25) {
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Oh...!";
-		mes "[DRY-RUN] These tears just won't stop!";
-		mes "[DRY-RUN] Wh-why must people always treat Bards like this?";
+		mes "[埃伦德]";
+		mes "哦……！";
+		mes "这些眼泪就是止不住！";
+		mes "为-为什么人们总是这样对待诗人？";
 		next;
-		mes "[DRY-RUN] ^483D8BWho made";
-		mes "[DRY-RUN] this poor Bard cry?";
-		mes "[DRY-RUN] Who broke his";
-		mes "[DRY-RUN] tender heart of glass?";
-		mes "[DRY-RUN] Shattering his dreams...^000000";
+		mes "^483D8B是谁让";
+		mes "这个可怜的诗人哭泣？";
+		mes "是谁打破了他的";
+		mes "脆弱的玻璃心？";
+		mes "粉碎了他的梦想...^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BNo dreams,";
-		mes "[DRY-RUN] No heart,";
-		mes "[DRY-RUN] No love,";
-		mes "[DRY-RUN] No hope";
-		mes "[DRY-RUN] No....^000000";
+		mes "^483D8B没有梦想，";
+		mes "没有心，";
+		mes "没有爱，";
+		mes "没有希望";
+		mes "没有....^000000";
 		set .@random,rand(1,50);
 		next;
 
 		if (.@random > 27  && .@random < 37 ) {
-			mes "[DRY-RUN] ^3355FFErrende continues to sing about his personal despair. He seems to be disappointed in your refusal to help him. Of course, you begin to feel sorry for him.^000000";
+			mes "^3355FF埃伦德继续唱着他个人的绝望。他似乎对你拒绝帮助他感到失望。当然，你开始为他感到难过。^000000";
 			next;
 
-			if(select("[DRY-RUN] Well, I should help him then...:Ignore him anyway.")==1) {
+			if(select("好吧，我应该帮助他...:无论如何都忽略他。")==1) {
 				mes "[" + @name$ + "]";
-				mes "[DRY-RUN] Hey. Hey, Errende. Stop singing this song. It's embarassing, okay? Alright, I'll go find the original song for you.";
+				mes "嘿。嘿，埃伦德。别唱这首歌了。太尴尬了，好吗？好吧，我去帮你找原版歌曲。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] *Gasp!* Really! Are you sure? Thank you! Thank you so much!";
-				mes "[DRY-RUN] You really do care about";
-				mes "[DRY-RUN] the sadness of a Bard!";
+				mes "[埃伦德]";
+				mes "*喘气!* 真的！你确定吗？谢谢你！非常感谢！";
+				mes "你真的关心";
+				mes "一个诗人的悲伤！";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I promise to pay you back as best as I can! I'll wait for you here until you return!";
+				mes "[埃伦德]";
+				mes "我保证会尽力报答你！我会在这里等你回来！";
 				set gef_bard_q,24;
 			} else {
 				cutin "bard_eland04",2;
-				mes "[DRY-RUN] ^3355FFYou ignore his";
-				mes "[DRY-RUN] heart wrenching song.";
-				mes "[DRY-RUN] But at what cost to your soul?^000000";
+				mes "^3355FF你无视了他的";
+				mes "撕心裂肺的歌曲。";
+				mes "但这对你的灵魂代价是什么呢？^000000";
 			}
 			close3;
 
 		} else {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] You don't have anything you want to ask me, do you? If not, would you like to listen to my song...?";
+			mes "[埃伦德]";
+			mes "你没有什么想问我的，对吧？如果没有的话，你想听我的歌吗...？";
 			next;
-			mes "[DRY-RUN] ^483D8BMiiiiserable...";
-			mes "[DRY-RUN] Noboooody looooves meee";
-			mes "[DRY-RUN] Friends foooooor never...";
-			mes "[DRY-RUN] Ooooooooh wah!^000000";
+			mes "^483D8B我真是可怜...";
+			mes "没人爱我";
+			mes "朋友永远...";
+			mes "哦哦哦哦哇！^000000";
 			close3;
 		}
 
 	} else if (gef_bard_q == 24) {
 		cutin "bard_eland02",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Umm...";
-		mes "[DRY-RUN] I am not sure exactly where Mr. Kitty is. Maybe you might be able to find out at the Monster Museum in Juno? I think he's a member of the Monster Research Organization.";
+		mes "[埃伦德]";
+		mes "嗯...";
+		mes "我不太确定小猫先生在哪里。也许你可以在朱诺的怪物博物馆找到线索？我想他是怪物研究组织的成员。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] If you're experienced in exploration, you'd know the Monster Research Organization. Recently, many scholars have been wounded as a result of researching monsters.";
+		mes "[埃伦德]";
+		mes "如果你在探索方面有经验，你应该知道怪物研究组织。最近，许多学者在研究怪物时受了伤。";
 		next;
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Because of the dangers of monster research, adventurers are needed to gather the information for the researchers.";
+		mes "[埃伦德]";
+		mes "由于怪物研究的危险，需要冒险者为研究人员收集信息。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] For wanderers like myself, it's a great way to earn money. We give them the information they need, and they give us financial support to live the way we please.";
+		mes "[埃伦德]";
+		mes "对于像我这样的流浪者来说，这是一个赚取金钱的好方法。我们提供他们所需的信息，他们则给予我们生活所需的经济支持。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Anyway, you should visit the Monster Museum in Juno to find out about Mr. Kitty. It's pretty far from here, but when you get to Juno, the Museum is West of the central plaza.";
+		mes "[埃伦德]";
+		mes "无论如何，你应该去朱诺的怪物博物馆了解一下小猫先生。离这里有点远，但当你到达朱诺时，博物馆在中央广场的西侧。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Once again,";
-		mes "[DRY-RUN] thank you so much";
-		mes "[DRY-RUN] for your help.";
+		mes "[埃伦德]";
+		mes "再一次，";
+		mes "非常感谢你";
+		mes "的帮助。";
 		close3;
 
 	} else if (gef_bard_q == 22) {
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] *Sigh...*";
-		mes "[DRY-RUN] Where can";
-		mes "[DRY-RUN] I find the 8th love...?";
-		mes "[DRY-RUN] Have you met Gunther?";
-		mes "[DRY-RUN] Ah, perhaps not yet.";
+		mes "[埃伦德]";
+		mes "*叹气...*";
+		mes "我可以在哪里找到";
+		mes "第八个爱...?";
+		mes "你见过冈瑟吗？";
+		mes "啊，也许还不行。";
 		next;
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] *Sigh* I've lost the heart to sing ever since I've forgotten that line to the song. I just... can't. My spirit is unmoved. There's no inspiration.";
+		mes "[埃伦德]";
+		mes "*叹气* 自从我忘记了那句歌词，我就失去了唱歌的心情。我就是……做不到。我的灵魂没有被打动。没有灵感。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Please ask ^483D8BGunther^000000 about the ^483D8B8th love^000000 in ^483D8BAt One, I Fall in Love^000000. Thank you in advance.";
+		mes "[埃伦德]";
+		mes "请问^483D8BGunther^000000关于^483D8B8th love^000000在^483D8BAt One, I Fall in Love^000000的事。提前谢谢你。";
 		close3;
 
 	} else if (gef_bard_q == 23) {
 		cutin "bard_eland02",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] So...";
-		mes "[DRY-RUN] Have you";
-		mes "[DRY-RUN] seen Gunther?";
+		mes "[埃伦德]";
+		mes "所以……";
+		mes "你完成了";
+		mes "见过Gunther吗？";
 		next;
-		mes "[DRY-RUN] ^3355FFYou turn around";
-		mes "[DRY-RUN] to show him your back.^000000";
+		mes "^3355FF你转过身来";
+		mes "给他看你的背部。^000000";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Huh...?!";
-		mes "[DRY-RUN] Isn't that?!";
-		mes "[DRY-RUN] Is that the line of the song written on your back? Wait, don't move! The 8th love is...";
-		mes "[DRY-RUN] Now I see!";
+		mes "[埃伦德]";
+		mes "哈...?!";
+		mes "那不是吗？！";
+		mes "那是写在你背上的歌词吗？等一下，别动！第八爱是……";
+		mes "现在我明白了！";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] At One, I fall in love.";
-		mes "[DRY-RUN] At Two, you give me your smile.";
-		mes "[DRY-RUN] At Three, I adore your touch.";
-		mes "[DRY-RUN] At Four, a tender kiss.";
+		mes "[埃伦德]";
+		mes "在一起，我坠入爱河。";
+		mes "在二时，你给我你的微笑。";
+		mes "在三时，我崇拜你的触碰。";
+		mes "在四时，一个温柔的吻。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] At Five, we change our minds.";
-		mes "[DRY-RUN] A petal scatters through the air.";
-		mes "[DRY-RUN] At Six, I fall in love~";
-		mes "[DRY-RUN] At Seven, you fall in love~";
+		mes "[埃伦德]";
+		mes "在五时，我们改变主意。";
+		mes "一片花瓣在空中飘散。";
+		mes "在六时，我坠入爱河~";
+		mes "在七时，你坠入爱河~";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] At Eight we turn away...";
-		mes "[DRY-RUN] At Nine, love is reborn.";
-		mes "[DRY-RUN] At Ten, my Love is gone.";
-		mes "[DRY-RUN] At Eleven I find out why.";
+		mes "[埃伦德]";
+		mes "在八时我们转身离去...";
+		mes "在九时，爱情重生。";
+		mes "在十时，我的爱已离去。";
+		mes "在十一时我发现了原因。";
 		if (Sex == SEX_MALE)
-			mes "[DRY-RUN] At Twelve I see his new girlfriend?";
+			mes "在十二时我看到他的女朋友？";
 		else
-			mes "[DRY-RUN] At Twelve I see her new boyfriend?";
+			mes "在十二时我看到她的男朋友？";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] ...";
+		mes "[埃伦德]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[埃伦德]";
+		mes "...";
+		mes "......";
 		next;
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] This...";
-		mes "[DRY-RUN] This cannot be.";
-		mes "[DRY-RUN] This song is supposed to be about love, not a romantic travesty!";
+		mes "[埃伦德]";
+		mes "这...";
+		mes "这不可能。";
+		mes "这首歌应该是关于爱的，而不是一场浪漫的悲剧！";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] The lyrics. They must have been changed. Did Gunther say anything about this?! Hmmm, but who would change the lyrics...?";
+		mes "[埃伦德]";
+		mes "歌词。它们一定被改过。冈瑟说过什么吗？！嗯，但谁会改歌词呢...？";
 		next;
 		cutin "bard_eland01",2;
 		input .@inputstr$;
 
 		if (.@inputstr$ == "Kino Kitty") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ah! Of course!";
-			mes "[DRY-RUN] I think you're right!";
-			mes "[DRY-RUN] How could I not think of that?";
+			mes "[埃伦德]";
+			mes "啊！当然！";
+			mes "我觉得你说得对！";
+			mes "我怎么会没想到呢？";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] It all makes sense now. After all, he used to be a member of the Invincible Single Army. His changes might have been a little mean, since this song used to be about a happy couple...";
+			mes "[埃伦德]";
+			mes "现在一切都明白了。毕竟，他曾经是无敌单身军的一员。他的变化可能有点刻薄，因为这首歌曾经是关于一对快乐的情侣……";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ummm...";
-			mes "[DRY-RUN] I'm sorry to ask a favor of you again, but in your travels, do you think you could find the original lyrics for this song? I can wait for it...";
+			mes "[埃伦德]";
+			mes "嗯……";
+			mes "我很抱歉再次请求你帮忙，但在你的旅行中，你能找到这首歌的原歌词吗？我可以等……";
 			next;
 
-			if(select("[DRY-RUN] No, thanks.:I can, so stop crying.")==1) {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Ah, I guess it was too much to ask of you. My apologies. Don't worry about it, I'll find out some other way.";
+			if(select("不，谢谢。:我可以，所以别哭了。")==1) {
+				mes "[埃伦德]";
+				mes "啊，我想这对你来说要求太高了。很抱歉。别担心，我会想其他办法的。";
 				set gef_bard_q,25;
 			} else {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Are you serious?";
-				mes "[DRY-RUN] Oh, thank you so much!";
-				mes "[DRY-RUN] You must be an angel!";
-				mes "[DRY-RUN] An angel that truly understands the heart of a poet!";
+				mes "[埃伦德]";
+				mes "你是认真的吗？";
+				mes "哦，非常感谢你！";
+				mes "你一定是个天使！";
+				mes "一个真正理解诗人心灵的天使！";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I'll pay you back somehow!";
-				mes "[DRY-RUN] Thank you for your trouble";
-				mes "[DRY-RUN] in advance~";
+				mes "[埃伦德]";
+				mes "我会以某种方式报答你！";
+				mes "谢谢你的辛苦";
+				mes "提前~";
 				set gef_bard_q,24;
 			}
 			close3;
 
 		} else if (.@inputstr$ == "Gunther") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			set gef_bard_q,26;
 			close3;
 
 		} else if (.@inputstr$ == "Gunther Doubleharmony") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			set gef_bard_q,26;
 			close3;
 
 		} else if (.@inputstr$ == "Errende") {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Surely you jest!";
-			mes "[DRY-RUN] If I did, why would";
-			mes "[DRY-RUN] I not know what this";
-			mes "[DRY-RUN] song is about?";
+			mes "[埃伦德]";
+			mes "你一定是在开玩笑！";
+			mes "如果我知道，那我为什么会";
+			mes "我不知道这是什么";
+			mes "这首歌是关于什么？";
 			set gef_bard_q,26;
 			close3;
 
 		} else {
-			mes "[DRY-RUN] [Errende]";
+			mes "[埃伦德]";
 			mes "" + .@inputstr$ +"...?";
-			mes "[DRY-RUN] I don't think I know that person. Maybe you misunderstood";
-			mes "[DRY-RUN] something? *Sigh...*";
+			mes "我觉得我不认识那个人。也许你误解了";
+			mes "什么？*唉...*";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] What was the line...?";
-			mes "[DRY-RUN] How could I forget";
-			mes "[DRY-RUN] the 8th love?";
+			mes "[埃伦德]";
+			mes "那句歌词是什么...？";
+			mes "我怎么会忘记";
+			mes "第八次爱情？";
 			set gef_bard_q,26;
 			close3;
 		}
 
 	} else if (gef_bard_q == 21) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Welcome back,";
+		mes "[埃伦德]";
+		mes "欢迎回来，";
 		mes "" + @name$ + "~";
-		mes "[DRY-RUN] What would you like";
-		mes "[DRY-RUN] me to do for you?";
-		mes "[DRY-RUN] Would you like to hear";
-		mes "[DRY-RUN] a tale or listen to a song?";
+		mes "你想要什么";
+		mes "我为你做什么？";
+		mes "你想听";
+		mes "一个故事还是听一首歌？";
 		callsub S_StorySong,3;
 
 	} else if (gef_bard_q == 7) {
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] How could I forget the song?";
-		mes "[DRY-RUN] I'm worthless as a Bard~! Please... Just... Please just leave me alone.";
+		mes "[埃伦德]";
+		mes "我怎么能忘记那首歌？";
+		mes "我作为一个诗人毫无价值~！请...只要...请让我一个人待着。";
 		next;
 
-		if(select("[DRY-RUN] No problem.:Is there any way I can help you?")==1){
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Waaaah~! You're so mean!";
-			mes "[DRY-RUN] You're supposed to say, 'Errende, what's wrong? Maybe I can help?'";
+		if(select("没问题。:有什么我可以帮你的吗？")==1){
+			mes "[埃伦德]";
+			mes "哇啊~！你太过分了！";
+			mes "你应该说，‘埃伦德，怎么了？也许我可以帮忙？’";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] I mean, we're supposed to know each other better than that. But, but maybe I was wrong!";
+			mes "[埃伦德]";
+			mes "我的意思是，我们应该比这更了解彼此。但是，也许我错了！";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] *Sob...*";
-			mes "[DRY-RUN] Who made this poor Bard cry by neglecting him? *Sniff* I do believe it was you!";
+			mes "[埃伦德]";
+			mes "*呜...*";
+			mes "是谁让这个可怜的诗人因被忽视而哭泣的？*抽泣*我相信是你！";
 		} else {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Help me?";
-			mes "[DRY-RUN] Hmmmmmmm...";
-			mes "[DRY-RUN] That's it!";
-			mes "[DRY-RUN] Gunther!";
+			mes "[埃伦德]";
+			mes "帮我吗？";
+			mes "嗯嗯嗯嗯嗯……";
+			mes "就是这样！";
+			mes "冈瑟！";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Let me ask you a favor. If perchance you happen to meet ^3355FFGunther Doubleharmony^000000, please inform him of my dilemna.";
+			mes "[埃伦德]";
+			mes "请让我请你一个忙。如果你碰巧遇到 ^3355FFGunther Doubleharmony^000000， 请告诉他我的困境。";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Tell him that ^483D8BMinty Errende^000000 happened to forget a line of the song, ^483D8BAt One, I Fall in Love^000000. The line is called ^483D8B8th love^000000.";
+			mes "[埃伦德]";
+			mes "告诉他 ^483D8BMinty Errende^000000 忘记了歌曲的一句， ^483D8BAt One, I Fall in Love^000000。这句歌词叫做 ^483D8B8th love^000000.";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] I beseech you, if you meet him, please ask him of the 8th love and inform me of that lyric immediately~";
+			mes "[埃伦德]";
+			mes "我恳求你，如果你见到他，请问他关于第8爱的事情，并立即告诉我那句歌词~";
 			set gef_bard_q,2;
 		}
 		close3;
 
 	} else if (gef_bard_q == 6) {
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Who could have changed the lyrics to the song? I can't understand why such a thing would happen. I really wish I could ask the person who changed the words...";
+		mes "[埃伦德]";
+		mes "谁会改变这首歌的歌词呢？我无法理解为什么会发生这样的事情。我真的希望我能问问那个改变歌词的人……";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] *Sigh* I'm so frustrated I can't even sing. I just... can't. My spirit is unmoved. There's no inspiration.";
+		mes "[埃伦德]";
+		mes "*叹气* 我太沮丧了，连歌都唱不出来。我就是……做不到。我的灵魂没有被触动。没有灵感。";
 		next;
 		mes "[" + @name$ + "]";
-		mes "[DRY-RUN] Could it be that";
-		mes "[DRY-RUN] the person who";
-		mes "[DRY-RUN] changed the song is...";
+		mes "难道是";
+		mes "改变歌曲的人是……";
+		mes "……";
 		input .@inputstr$;
 		mes "" + .@inputstr$ + "?";
 		next;
 
 		if (.@inputstr$ == "Kino Kitty") {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ah! Of course!";
-			mes "[DRY-RUN] I think you're right!";
-			mes "[DRY-RUN] How could I not think of that?";
+			mes "[埃伦德]";
+			mes "啊！当然！";
+			mes "我觉得你说得对！";
+			mes "我怎么会没想到呢？";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] It all makes sense now. After all, he used to be a member of the Invincible Single Army. His changes might have been a little mean, since this song used to be about a happy couple...";
+			mes "[埃伦德]";
+			mes "现在一切都明白了。毕竟，他曾经是无敌单身军的一员。他的变化可能有点刻薄，因为这首歌曾经是关于一对快乐的情侣……";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ummm...";
-			mes "[DRY-RUN] I'm sorry to ask a favor of you again, but in your travels, do you think you could find the original lyrics for this song? I can wait for it...";
+			mes "[埃伦德]";
+			mes "嗯……";
+			mes "我很抱歉再次请求你帮忙，但在你的旅行中，你能找到这首歌的原歌词吗？我可以等……";
 			next;
-			if(select("[DRY-RUN] No, thanks.:I can, so stop crying.")==1) {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Ah, I guess it was too much to ask of you. My apologies. Don't worry about it, I'll find out some other way.";
+			if(select("不，谢谢。:我可以，所以别哭了。")==1) {
+				mes "[埃伦德]";
+				mes "啊，我想这对你来说要求太高了。很抱歉。别担心，我会想其他办法的。";
 				set gef_bard_q,5;
 			} else {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Are you serious? Oh, thank you so much! You must be an angel! An angel that truly understands the heart of a poet!";
+				mes "[埃伦德]";
+				mes "你是认真的吗？哦，非常感谢你！你一定是个天使！一个真正理解诗人心灵的天使！";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I'll pay you back somehow! Thank you for your trouble in advance~";
+				mes "[埃伦德]";
+				mes "我会以某种方式报答你的！提前感谢你的辛苦~";
 				set gef_bard_q,4;
 			}
 			close3;
 
 		} else if (.@inputstr$ == "Gunther") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			close3;
 
 		} else if (.@inputstr$ == "Gunther Doubleharmony") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			close3;
 
 		} else if (.@inputstr$ == "Errende") {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Surely you jest! If I did, why would I not know what this song is about?";
+			mes "[埃伦德]";
+			mes "你一定是在开玩笑！如果我知道，那我为什么不知道这首歌是关于什么的？";
 			close3;
 
 		} else {
-			mes "[DRY-RUN] [Errende]";
+			mes "[埃伦德]";
 			mes "" + .@inputstr$ +"...?";
-			mes "[DRY-RUN] I don't think I know that person. Maybe you misunderstood something? *Sigh...*";
+			mes "我觉得我不认识那个人。也许你误解了什么？*叹气...*";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] What was the line...?";
-			mes "[DRY-RUN] How could I forget";
-			mes "[DRY-RUN] the 8th love?";
+			mes "[埃伦德]";
+			mes "那句歌词是什么...？";
+			mes "我怎么会忘记";
+			mes "第八次爱情？";
 			set gef_bard_q,6;
 			close3;
 		}
 
 	} else if (gef_bard_q == 5) {
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Oh...!";
-		mes "[DRY-RUN] These tears just won't stop!";
-		mes "[DRY-RUN] Wh-why must people always treat Bards like this?";
+		mes "[埃伦德]";
+		mes "哦……！";
+		mes "这些眼泪就是止不住！";
+		mes "为-为什么人们总是这样对待诗人？";
 		next;
-		mes "[DRY-RUN] ^483D8BWho made this poor Bard cry?";
-		mes "[DRY-RUN] Who broke his tender heart of glass?";
-		mes "[DRY-RUN] Shattering his dreams...";
-		mes "[DRY-RUN] No dreams, no heart, no love, no hope, no...^000000";
+		mes "^483D8B是谁让这个可怜的吟游诗人哭了？";
+		mes "是谁打破了他那脆弱的玻璃心？";
+		mes "粉碎了他的梦想...";
+		mes "没有梦想，没有心，没有爱，没有希望，没有...^000000";
 		next;
 		set .@random,rand(1,50);
 
 		if (.@random > 27 && .@random < 37) {
-			mes "[DRY-RUN] ^3355FFErrende continues to sing about his personal despair. He seems to be disappointed in your refusal to help him. Of course, you begin to feel sorry for him.^000000";
+			mes "^3355FF埃伦德继续唱着他个人的绝望。他似乎对你拒绝帮助他感到失望。当然，你开始为他感到难过。^000000";
 			next;
 
-			if(select("[DRY-RUN] Well, I should help him then...:Ignore him anyway.")==1) {
+			if(select("好吧，我应该帮助他...:无论如何都忽略他。")==1) {
 				mes "[" + @name$ + "]";
-				mes "[DRY-RUN] Hey. Hey, Errende. Stop singing this song. It's embarassing, okay? Alright, I'll go find the original song for you.";
+				mes "嘿。嘿，埃伦德。别唱这首歌了。太尴尬了，好吗？好吧，我去帮你找原版歌曲。";
 				next;
 				cutin "bard_eland01",2;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] *Gasp!* Really! Are you sure? Thank you! Thank you so much! You really do care about the sadness of a Bard!";
+				mes "[埃伦德]";
+				mes "*喘气!* 真的！你确定吗？谢谢你！非常感谢！你真的关心一个诗人的悲伤！";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I promise to pay you back as best as I can! I'll wait for you here until you return!";
+				mes "[埃伦德]";
+				mes "我保证会尽力报答你！我会在这里等你回来！";
 				set gef_bard_q,4;
 			} else {
-				mes "[DRY-RUN] ^3355FFYou ignore his";
-				mes "[DRY-RUN] heart wrenching song.";
-				mes "[DRY-RUN] But at what cost to your soul?^000000";
+				mes "^3355FF你无视了他的";
+				mes "撕心裂肺的歌曲。";
+				mes "但这对你的灵魂代价是什么呢？^000000";
 			}
 			close3;
 
 		} else {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] You don't have anything you want to ask me, do you? If not, would you like to listen to my song...?";
+			mes "[埃伦德]";
+			mes "你没有什么想问我的，对吧？如果没有的话，你想听我的歌吗...？";
 			next;
-			mes "[DRY-RUN] ^483D8BMiiiiserable...";
-			mes "[DRY-RUN] Noboooody looooves meee";
-			mes "[DRY-RUN] Friends foooooor never...";
-			mes "[DRY-RUN] Ooooooooooh wah!^000000";
+			mes "^483D8B我真是可怜...";
+			mes "没人爱我";
+			mes "朋友永远...";
+			mes "哦哦哦哦哦！^000000";
 			close3;
 		}
 
 	} else if (gef_bard_q == 4) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Umm...";
-		mes "[DRY-RUN] I am not sure exactly where Mr. Kitty is. Maybe you might be able to find out at the Monster Museum in Juno? I think he's a member of the Monster Research Organization.";
+		mes "[埃伦德]";
+		mes "嗯...";
+		mes "我不太确定小猫先生在哪里。也许你可以在朱诺的怪物博物馆找到线索？我想他是怪物研究组织的成员。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] If you're experienced in exploration, you'd know the Monster Research Organization. Recently, many scholars have been wounded as a result of researching monsters.";
+		mes "[埃伦德]";
+		mes "如果你在探索方面有经验，你应该知道怪物研究组织。最近，许多学者在研究怪物时受了伤。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Because of the dangers of monster research, adventurers are needed to gather the information for the researchers.";
+		mes "[埃伦德]";
+		mes "由于怪物研究的危险，需要冒险者为研究人员收集信息。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] For wanderers like myself, it's a great way to earn money. We give them the information they need, and they give us financial support to live the way we please.";
+		mes "[埃伦德]";
+		mes "对于像我这样的流浪者来说，这是一个赚取金钱的好方法。我们提供他们所需的信息，他们则给予我们生活所需的经济支持。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Anyway, you should visit the Monster Museum in Juno to find out about Mr. Kitty. It's pretty far from here, but when you get to Juno, the Museum is West of the central plaza.";
+		mes "[埃伦德]";
+		mes "无论如何，你应该去朱诺的怪物博物馆了解一下小猫先生。离这里有点远，但当你到达朱诺时，博物馆在中央广场的西侧。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Once again,";
-		mes "[DRY-RUN] thank you so much";
-		mes "[DRY-RUN] for your help.";
+		mes "[埃伦德]";
+		mes "再一次，";
+		mes "非常感谢你";
+		mes "的帮助。";
 		close3;
 
 	} else if (gef_bard_q == 2) {
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] *Sigh...* Where can I find the 8th love...? Have you met Gunther?";
-		mes "[DRY-RUN] Ah, perhaps not yet.";
+		mes "[埃伦德]";
+		mes "*叹气...* 我在哪里可以找到第八个爱呢...? 你见过冈瑟吗？";
+		mes "啊，也许还不行。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] *Sigh* I've lost the heart to sing ever since I forgotten that line to the song. I just... can't. My spirit is unmoved. There's no inspiration.";
+		mes "[埃伦德]";
+		mes "*叹气* 自从我忘记那句歌词后，我就失去了唱歌的心情。我就是... 不能。我的灵魂没有被触动。没有灵感。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Please ask ^483D8BGunther^000000 about the ^483D8B8th love^000000 in ^483D8BAt One, I Fall in Love^000000. Thank you in advance.";
+		mes "[埃伦德]";
+		mes "请问^483D8BGunther^000000关于^483D8B8th love^000000在^483D8BAt One, I Fall in Love^000000的事。提前谢谢你。";
 		close3;
 
 	} else if (gef_bard_q == 3) {
 		cutin "bard_eland02",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] So...";
-		mes "[DRY-RUN] Have you";
-		mes "[DRY-RUN] seen Gunther?";
+		mes "[埃伦德]";
+		mes "所以……";
+		mes "你完成了";
+		mes "见过Gunther吗？";
 		next;
-		mes "[DRY-RUN] ^3355FFYou turn around";
-		mes "[DRY-RUN] to show him your back.^000000";
+		mes "^3355FF你转过身来";
+		mes "给他看你的背部。^000000";
 		next;
 		cutin "bard_eland03",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Huh...?!";
-		mes "[DRY-RUN] Isn't that?!";
-		mes "[DRY-RUN] Is that the line of the song written on your back? Wait, don't move! The 8th love is...";
-		mes "[DRY-RUN] Now I see!";
+		mes "[埃伦德]";
+		mes "哈...?!";
+		mes "那不是吗？！";
+		mes "那是写在你背上的歌词吗？等一下，别动！第八爱是……";
+		mes "现在我明白了！";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] At One, I fall in love.";
-		mes "[DRY-RUN] At Two, you give me your smile.";
-		mes "[DRY-RUN] At Three, I adore your touch.";
-		mes "[DRY-RUN] At Four, a tender kiss.";
+		mes "[埃伦德]";
+		mes "在一起，我坠入爱河。";
+		mes "在二时，你给我你的微笑。";
+		mes "在三时，我崇拜你的触碰。";
+		mes "在四时，一个温柔的吻。";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] At Five, we change our minds.";
-		mes "[DRY-RUN] A petal scatters through the air.";
-		mes "[DRY-RUN] At Six, I fall in love~";
-		mes "[DRY-RUN] At Seven, you fall in love~";
+		mes "[埃伦德]";
+		mes "在五时，我们改变主意。";
+		mes "一片花瓣在空中飘散。";
+		mes "在六时，我坠入爱河~";
+		mes "在七时，你坠入爱河~";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] At Eight we turn away...";
-		mes "[DRY-RUN] At Nine, love is reborn.";
-		mes "[DRY-RUN] At Ten, my Love is gone.";
-		mes "[DRY-RUN] At Eleven I find out why.";
+		mes "[埃伦德]";
+		mes "在八时我们转身离去...";
+		mes "在九时，爱情重生。";
+		mes "在十时，我的爱已离去。";
+		mes "在十一时我发现了原因。";
 		if (Sex == SEX_MALE)
-			mes "[DRY-RUN] At Twelve I see her new boyfriend?";
+			mes "在十二时我看到她的男朋友？";
 		else
-			mes "[DRY-RUN] At Twelve I see his new girlfriend?";
+			mes "在十二时我看到他的女朋友？";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] ...";
+		mes "[埃伦德]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[埃伦德]";
+		mes "...";
+		mes "......";
 		next;
 		cutin "bard_eland04",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] This...";
-		mes "[DRY-RUN] This cannot be.";
-		mes "[DRY-RUN] This song is supposed to be about love, not a romantic travesty!";
+		mes "[埃伦德]";
+		mes "这...";
+		mes "这不可能。";
+		mes "这首歌应该是关于爱的，而不是一场浪漫的悲剧！";
 		next;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] The lyrics. They must have been changed. Did Gunther say anything about this?! Hmmm, but who would change the lyrics...?";
+		mes "[埃伦德]";
+		mes "歌词。它们一定被改过。冈瑟说过什么吗？！嗯，但谁会改歌词呢...？";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ == "Kino Kitty") {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ah! Of course!";
-			mes "[DRY-RUN] I think you're right!";
-			mes "[DRY-RUN] How could I not think of that?";
+			mes "[埃伦德]";
+			mes "啊！当然！";
+			mes "我觉得你说得对！";
+			mes "我怎么会没想到呢？";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] It all makes sense now. After all, he used to be a member of the Invincible Single Army. His changes might have been a little mean, since this song used to be about a happy couple...";
+			mes "[埃伦德]";
+			mes "现在一切都明白了。毕竟，他曾经是无敌单身军的一员。他的变化可能有点刻薄，因为这首歌曾经是关于一对快乐的情侣……";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Ummm...";
-			mes "[DRY-RUN] I'm sorry to ask a favor of you again, but in your travels, do you think you could find the original lyrics for this song? I can wait for it...";
+			mes "[埃伦德]";
+			mes "嗯……";
+			mes "我很抱歉再次请求你帮忙，但在你的旅行中，你能找到这首歌的原歌词吗？我可以等……";
 			next;
 
-			if(select("[DRY-RUN] No, thanks.:I can, so stop crying.")==1) {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Ah, I guess it was too much to ask of you. My apologies. Don't worry about it, I'll find out some other way.";
+			if(select("不，谢谢。:我可以，所以别哭了。")==1) {
+				mes "[埃伦德]";
+				mes "啊，我想这对你来说要求太高了。很抱歉。别担心，我会想其他办法的。";
 				set gef_bard_q,5;
 			} else {
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Are you serious? Oh, thank you so much! You must be an angel! An angel that truly understands the heart of a poet!";
+				mes "[埃伦德]";
+				mes "你是认真的吗？哦，非常感谢你！你一定是个天使！一个真正理解诗人心灵的天使！";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I'll pay you back somehow! Thank you for your trouble in advance~";
+				mes "[埃伦德]";
+				mes "我会以某种方式报答你的！提前感谢你的辛苦~";
 				set gef_bard_q,4;
 			}
 			close3;
 
 		} else if (.@inputstr$ == "Gunther") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			set gef_bard_q,6;
 			close3;
 		}
 
 		else if (.@inputstr$ == "Gunther Doubleharmony") {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Gunther? I don't think he would do this. He always puts lines in his songs like 'doubleharmony for you.' Plus, he's too silly for that.";
+			mes "[埃伦德]";
+			mes "冈瑟？我觉得他不会这样做。他总是在他的歌曲中加上像‘为你双重和声’这样的歌词。而且，他太傻了。";
 			set gef_bard_q,6;
 			close3;
 
 		} else if (.@inputstr$ == "Errende") {
 			cutin "bard_eland04",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Surely you jest! If I did, why would I not know what this song is about?";
+			mes "[埃伦德]";
+			mes "你一定是在开玩笑！如果我知道，那我为什么不知道这首歌是关于什么的？";
 			set gef_bard_q,6;
 			close3;
 
 		} else {
-			mes "[DRY-RUN] [Errende]";
+			mes "[埃伦德]";
 			mes "" + .@inputstr$ +"...?";
-			mes "[DRY-RUN] I don't think I know that person. Maybe you misunderstood something? *Sigh...*";
+			mes "我觉得我不认识那个人。也许你误解了什么？*叹气...*";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] What was the line...?";
-			mes "[DRY-RUN] How could I forget";
-			mes "[DRY-RUN] the 8th love?";
+			mes "[埃伦德]";
+			mes "那句歌词是什么...？";
+			mes "我怎么会忘记";
+			mes "第八次爱情？";
 			set gef_bard_q,6;
 			close3;
 		}
 
 	} else if (gef_bard_q == 1) {
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Welcome back,";
+		mes "[埃伦德]";
+		mes "欢迎回来，";
 		mes "" + @name$ + "~";
-		mes "[DRY-RUN] What would you like";
-		mes "[DRY-RUN] me to do for you?";
-		mes "[DRY-RUN] Would you like to hear";
-		mes "[DRY-RUN] a tale or listen to a song?";
+		mes "你想要什么";
+		mes "我为你做什么？";
+		mes "你想听";
+		mes "一个故事还是听一首歌？";
 		callsub S_StorySong,4;
 
 	} else {
 		cutin "bard_eland03",2;
-		mes "[DRY-RUN] ^483D8BWhat day is";
-		mes "[DRY-RUN] best for drinking?";
-		mes "[DRY-RUN] La la la~";
-		mes "[DRY-RUN] It's the day of";
-		mes "[DRY-RUN] the earth, the sun";
-		mes "[DRY-RUN] And the moon~";
-		mes "[DRY-RUN] La la la~^000000";
+		mes "^483D8B喝酒的最佳日子是";
+		mes "哪一天？";
+		mes "啦啦啦~";
+		mes "就是";
+		mes "大地、太阳";
+		mes "和月亮的日子~";
+		mes "啦啦啦~^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BLa la la~";
-		mes "[DRY-RUN] I'll only";
-		mes "[DRY-RUN] drink on one day~";
-		mes "[DRY-RUN] So if you'll tell me";
-		mes "[DRY-RUN] when you'll drink";
-		mes "[DRY-RUN] I'll tell you when";
-		mes "[DRY-RUN] I'll drink with you~^000000";
+		mes "^483D8B啦啦啦~";
+		mes "我只会";
+		mes "在这一天喝酒~";
+		mes "所以如果你告诉我";
+		mes "你什么时候喝";
+		mes "我会告诉你什么时候";
+		mes "我会和你一起喝~^000000";
 		next;
-		mes "[DRY-RUN] ^483D8BLet's get together";
-		mes "[DRY-RUN] Yea yea ye-^000000 Hmmmmm...?";
+		mes "^483D8B让我们聚在一起";
+		mes "是啊是啊-^000000 嗯嗯嗯...?";
 		next;
-		mes "[DRY-RUN] [Bard]";
-		mes "[DRY-RUN] Why, hello there. Oh, have you come to listen to my song and forget your worries?";
+		mes "[诗人]";
+		mes "你好啊。哦，你是来听我的歌，忘却烦恼的吗？";
 		next;
 
-		if(select("[DRY-RUN] Who are you?:Ignore him.")==1) {
+		if(select("你是谁？:忽略他。")==1) {
 			cutin "bard_eland04",2;
 			mes "[" + @name$ + "]";
-			mes "[DRY-RUN] You seem to be";
-			mes "[DRY-RUN] new around here...";
-			mes "[DRY-RUN] Who are you?";
+			mes "你似乎是";
+			mes "新来的...";
+			mes "你是谁？";
 			next;
 			cutin "bard_eland02",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Mm? Ah yes. I am merely another wandering poet who goes where the wind takes him. Please call me ^483D8BErrende^000000, the Bard who wishes to please you.";
+			mes "[埃伦德]";
+			mes "嗯？啊，是的。我只是一个随风而行的流浪诗人。请叫我^483D8B埃伦德^000000，那个希望取悦你的吟游诗人。";
 			next;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] If you will let me, I will tell you of my travels. By your leave,";
-			mes "[DRY-RUN] I will play a song that will help you forget your troubles.";
+			mes "[埃伦德]";
+			mes "如果你愿意，我会告诉你我的旅行。请允许我，";
+			mes "我将演奏一首能帮助你忘记烦恼的歌曲。";
 			set gef_bard_q,1;
 			callsub S_StorySong,5;
 
 		} else {
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Waaah, wah~";
-			mes "[DRY-RUN] You can't just ignore me like that! Where's your sense of merriment, your sense of romance?";
+			mes "[埃伦德]";
+			mes "哇啊，哇~";
+			mes "你不能就这样忽视我！你哪里去了，快乐的感觉，浪漫的感觉？";
 		}
 
 	}
@@ -999,137 +999,137 @@ geffen,132,38,3	script	Bard#2	51,{
 
 S_StorySong:
 	next;
-	switch(select("[DRY-RUN] Tell me a story.:Would you play a song?:Eh, maybe later.")) {
+	switch(select("告诉我一个故事.:你会演奏一首歌吗?:嗯，也许稍后再说.")) {
 	case 1:
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] You like stories, huh? What kind of story would you like me to tell? I'll you whatever I know... Just for you, of course. *Grins*";
+		mes "[埃伦德]";
+		mes "你喜欢故事，对吧？你想让我讲什么样的故事？我会告诉你我所知道的一切... 当然是为了你。*微笑*";
 		next;
 
-		if(select("[DRY-RUN] News and rumors~:Cancel.")==1) {
+		if(select("新闻和传闻~:取消.")==1) {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
+			mes "[埃伦德]";
 			set .@random,rand(1,3);
 			if (.@random == 1) {
-				mes "[DRY-RUN] Hmmm. Then shall we talk about this town, Geffen? Have you ever been to the Pub or the Inn here?";
+				mes "嗯。那么我们来谈谈这个城镇，吉芬？你来过这里的酒吧或旅馆吗？";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I'd be lying if I didn't say that the sisters that work the Pub and Inn are... ^FF6699sensuously captivating^000000.";
+				mes "[埃伦德]";
+				mes "如果我说在酒吧和旅馆工作的姐妹们是... ^FF6699性感迷人^000000，那我就是在说谎。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] The elder one is gorgeous, graceful and carries with her an air of refinement. And the younger one is so cheerful, energetic and so... ^FF6699nubile^000000.";
+				mes "[埃伦德]";
+				mes "姐姐美丽优雅，身上散发着一种高贵的气质。而妹妹则如此开朗、充满活力，真是... ^FF6699青春靓丽^000000。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] But I digress.";
-				mes "[DRY-RUN] Sometimes though,";
-				mes "[DRY-RUN] just sometimes mind you,";
-				mes "[DRY-RUN] they're not as sexy as usual.";
+				mes "[埃伦德]";
+				mes "不过我扯远了。";
+				mes "不过有时候，";
+				mes "有时候你要注意，";
+				mes "她们并不像平时那么性感。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] It seems the spirit of their late father, God bless his soul for siring such hot women, possesses them from time to time.";
+				mes "[埃伦德]";
+				mes "似乎她们已故父亲的灵魂，有时会附身在她们身上，愿上天保佑他能生下如此美丽的女人。";
 				next;
 				cutin "bard_eland02",2;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I guess when someone acts even";
-				mes "[DRY-RUN] a little flirtacious towards those girls, their father's spirit takes over. I should know.";
+				mes "[埃伦德]";
+				mes "我想当某人表现得甚至";
+				mes "对那些女孩有点调情，他们父亲的灵魂接管了。我应该知道。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I guess a father's love endures forever, even into the afterlife. Of course, I wouldn't know.";
+				mes "[埃伦德]";
+				mes "我想父爱的存在是永恒的，甚至延续到来世。当然，我不会知道。";
 				next;
-				mes "[DRY-RUN] [Errende]";
+				mes "[埃伦德]";
 				cutin "bard_eland01",2;
-				mes "[DRY-RUN] Let's see...";
-				mes "[DRY-RUN] Look out for this really shady Merchant that hangs out behind";
-				mes "[DRY-RUN] the Pub in Geffen.";
+				mes "让我看看……";
+				mes "留意这个在吉芬酒吧后面晃悠的可疑商人";
+				mes "。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Judging from his clothes, he must be from Morroc, which is a lot warmer. That's why he's got a Hood, even though it has no drawstrings, for the cooler weather over here.";
+				mes "[埃伦德]";
+				mes "从他的衣服来看，他一定是来自梦罗克，那里的气候要暖和得多。这就是为什么他会戴着一顶帽子，即使没有抽绳，以应对这里较凉的天气。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I must warn you, don't let him talk you into buying that Hood of his since he's selling it for an outrageous price. He's definitely not trustworthy.";
+				mes "[埃伦德]";
+				mes "我必须警告你，不要让他说服你买他的帽子，因为他卖的价格离谱。他绝对不值得信任。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Lastly, I want to mention the lost city of Geffenia, hidden under the Geffen Tower. I hear some kind of condition is required to enter Geffenia, but I'm not sure.";
+				mes "[埃伦德]";
+				mes "最后，我想提到失落的吉芬尼亚城，隐藏在吉芬塔下。我听说进入吉芬尼亚需要某种条件，但我不太确定。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Geffenia is related to the two attractive ladies I mentioned earlier. It seems their father, William, entered Geffen Tower with a party to exterminate monsters, but he never returned.";
+				mes "[埃伦德]";
+				mes "吉芬尼亚与我之前提到的两位迷人女士有关。似乎她们的父亲威廉与一队人进入吉芬塔消灭怪物，但他从未返回。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] It's tragic that he left his family behind in that way. But perhaps, it is more tragic that his spirit scares away anyone interested in those girls.";
+				mes "[埃伦德]";
+				mes "他以那种方式留下了家人，真是悲惨。但或许更悲惨的是，他的灵魂吓跑了任何对那些女孩感兴趣的人。";
 
 			} else if (.@random == 2) {
-				mes "[DRY-RUN] Okay, let me tell you a story about Morroc, city of the desert. Adventurers worth their salt are expected to have explored the city and its surrounding desert.";
+				mes "好吧，让我给你讲一个关于梦罗克的故事，沙漠之城。值得一提的冒险者都应该探索过这座城市及其周边的沙漠。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] The Sphinx and the Pyramids are especially popular areas of exploration for adventurers. Have you been there before? I haven't yet, but perhaps someday I'll go.";
+				mes "[埃伦德]";
+				mes "斯芬克斯和金字塔尤其是冒险者探索的热门区域。你去过那里吗？我还没有，但也许有一天我会去。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] While I was in Morroc, I found a Merchant that sells Sword Maces to Priests and Priestess. Aside from those, Priests are prohibited from using any kind of weapon with blades.";
+				mes "[埃伦德]";
+				mes "当我在梦罗克时，我发现一个商人向牧师和女牧师出售剑锤。除此之外，牧师禁止使用任何带刀刃的武器。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I also saw an energetic little boy who kept begging his father to tame a Munak for him. I heard the father speak a bit, and it seems that one of his friends from Morroc is lost in Alberta.";
+				mes "[埃伦德]";
+				mes "我还看到一个精力充沛的小男孩一直在乞求他的父亲为他驯服一只穆纳克。我听到父亲说了一点，似乎他在梦罗克的一个朋友在艾尔贝塔失踪了。";
 				next;
 				cutin "bard_eland02",2;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] In any case, I helped the father with an errand, and he gave me a mysterious box in return. When I opened that box, I found a strange feather. I'm unaware of how it works, though...";
+				mes "[埃伦德]";
+				mes "无论如何，我帮父亲跑了一趟腿，他回报我一个神秘的盒子。当我打开那个盒子时，发现了一根奇怪的羽毛。不过，我不知道它有什么用……";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] I wonder if that man's friend, Pandger Mayer, ever found";
-				mes "[DRY-RUN] his way back home...";
+				mes "[埃伦德]";
+				mes "我想知道那个男人的朋友潘杰·梅耶是否找到了";
+				mes "回家的路……";
 
 			} else if (.@random == 3) {
-				mes "[DRY-RUN] Why don't we talk about Alberta? There is a sunken ship developed by an event agency as a place where adventurers may go on expeditions. It seems they're making a lot of money.";
+				mes "我们来谈谈艾尔贝塔吧？那里有一艘沉船，是由一个活动机构开发的，作为冒险者进行探险的地方。似乎他们赚了很多钱。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] When the sunken ship first drifted near Alberta, it was immediately found by one of the Alberta Security Knights.";
+				mes "[埃伦德]";
+				mes "当沉船第一次漂到艾尔贝塔附近时，立刻被一位艾尔贝塔安全骑士发现。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] That Security Knight ventured inside and found an infant deep inside one of the rooms. Next to the baby was a music box.";
+				mes "[埃伦德]";
+				mes "那位安全骑士冒险进入，发现一个婴儿深藏在其中一个房间里。婴儿旁边有一个音乐盒。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] This baby was the one and only survivor from the sunken ship. He was brought up in Alberta, although he was treated with contempt when he was a child. He's fine now, but I digress.";
+				mes "[埃伦德]";
+				mes "这个婴儿是沉船上唯一的幸存者。他在艾尔贝塔长大，尽管小时候受到轻视。现在他没事了，但我扯远了。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] As for the sunken ship, I'm unsure of whether or not it was a pirate ship. It is said that skeleton monsters wearing pirate costumes roam its remains.";
+				mes "[埃伦德]";
+				mes "至于沉船，我不确定它是否是一艘海盗船。据说穿着海盗服装的骷髅怪物在其残骸中游荡。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] One of Alberta's other mysteries is the elusive Turtle Island. It seems that one seafarer has found a dependable route to that place and is giving passage to adventurers.";
+				mes "[埃伦德]";
+				mes "艾尔贝塔的另一个谜团是难以捉摸的海龟岛。似乎有一位海员找到了通往那个地方的可靠路线，并为冒险者提供通行。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Still, it seems Turtle Island is not quite safe. Two squads of Alberta Security Knights have already traveled there, but have not yet returned. Verily, this is cause for concern.";
+				mes "[埃伦德]";
+				mes "不过，海龟岛似乎并不太安全。两队艾尔贝塔安全骑士已经前往那里，但尚未返回。确实，这是一个令人担忧的事情。";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Still, that didn't stop me from visiting that place. By sheer accident, I found the journal of an adventurer who had already been there. It seems he's a famous scholar now.";
+				mes "[埃伦德]";
+				mes "不过，这并没有阻止我去那个地方。偶然间，我发现了一位已经去过那里的冒险者的日记。似乎他现在是一位著名的学者。";
 				next;
 				cutin "bard_eland02",2;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] In that journal are details about an ultimate swordsman, and the exploration of Turtle Island. I'm sure that anyone seeking treasure in that place will find exciting adventure.";
+				mes "[埃伦德]";
+				mes "在那本日记中有关于终极剑士和海龟岛探索的细节。我相信任何在那个地方寻宝的人都会找到令人兴奋的冒险。";
 			}
 
 		} else {
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] Oh, how disappointing. But promise me that you will drop by later, so that we can share stories and merriment.";
+			mes "[埃伦德]";
+			mes "哦，真令人失望。但答应我你稍后会过来，这样我们就可以分享故事和欢乐。";
 		}
 		close3;
 
 	case 2:
 		.@num = getarg(0);
-		mes "[DRY-RUN] [Errende]";
+		mes "[埃伦德]";
 		if (.@num < 3)
-			mes "[DRY-RUN] You recognize my talent, so you deserve to listen to my songs! Now, what would you like to hear? I can play anything you want, you know.";
+			mes "你认可我的才华，所以你值得听我的歌！那么，你想听什么？我可以演奏你想要的任何曲子。";
 		else
-			mes "[DRY-RUN] At last, I've met someone who recognizes my talent! You deserve to listen to my songs! Now, what would you like to hear? I can play anything you want, you know.";
+			mes "终于，我遇到了一个认可我才华的人！你值得听我的歌！那么，你想听什么？我可以演奏你想要的任何曲子。";
 		next;
 
-		switch(select("[DRY-RUN] Hmm, any song will do.:Play an upbeat song~!:Never mind...")) {
+		switch(select("嗯，任何歌曲都可以.:演奏一首欢快的歌曲~!:没关系...")) {
 
 		case 1:
-			mes "[DRY-RUN] [Errende]";
+			mes "[埃伦德]";
 			if (Zeny > 499) {
 				set Zeny, Zeny-500;
 				cutin "bard_eland03",2;
-				mes "[DRY-RUN] Alright.";
-				mes "[DRY-RUN] Here we go~";
+				mes "好的。";
+				mes "我们开始吧~";
 
 				set .@random,rand(1,3);
 				if (.@random == 1)
@@ -1141,20 +1141,20 @@ S_StorySong:
 
 			} else {
 				cutin "bard_eland04",2;
-				mes "[DRY-RUN] Ahahaha~";
-				mes "[DRY-RUN] My apologies,";
-				mes "[DRY-RUN] But I cannot offer my services for free. Even a Bard needs zeny to live, wouldn't you agree?";
+				mes "啊哈哈哈~";
+				mes "抱歉，";
+				mes "但我不能免费提供我的服务。即使是一个吟游诗人也需要金币生活，你不觉得吗？";
 			}
 			close3;
 
 		case 2:
 			cutin "bard_eland03",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] An upbeat song...?";
-			mes "[DRY-RUN] Hmmm... Let's see.";
-			mes "[DRY-RUN] An upbeat song,";
-			mes "[DRY-RUN] An upbeat song...";
-			mes "[DRY-RUN] Okay, here we go~";
+			mes "[埃伦德]";
+			mes "一首欢快的歌曲……？";
+			mes "嗯……让我想想。";
+			mes "一首欢快的歌曲，";
+			mes "一首欢快的歌曲……";
+			mes "好吧，我们开始吧~";
 			next;
 			//for 3 and 4 variants, we need higher chance
 			if (.@num == 3 || .@num == 4)
@@ -1162,204 +1162,204 @@ S_StorySong:
 			else
 				set .@random,rand(1,3);
 			if (.@random == 1) {
-				mes "[DRY-RUN] ^483D8BValhalla dazzles in gold";
-				mes "[DRY-RUN] The fifth as we know";
-				mes "[DRY-RUN] Is old Glast Heim!";
-				mes "[DRY-RUN] Glorious warriors answer";
-				mes "[DRY-RUN] The summons of Odin.^000000";
+				mes "^483D8B瓦尔哈拉闪耀着金光";
+				mes "我们所知的第五个";
+				mes "是古城！";
+				mes "荣耀的战士们回应";
+				mes "奥丁的召唤。^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BPalace of the dead";
-				mes "[DRY-RUN] With a silver roof~";
-				mes "[DRY-RUN] The third as we know...";
-				mes "[DRY-RUN] Valaskjalf!";
-				mes "[DRY-RUN] Glorious warriors answer";
-				mes "[DRY-RUN] The summons of Odin.^000000";
+				mes "^483D8B死者的宫殿";
+				mes "有着银色屋顶~";
+				mes "我们所知的第三个……";
+				mes "瓦拉斯基尔夫！";
+				mes "荣耀的战士们回应";
+				mes "奥丁的召唤。^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BFive hundred forty doors";
-				mes "[DRY-RUN] In the grand halls of Valhalla";
-				mes "[DRY-RUN] Fling open to the heart of a hero.";
-				mes "[DRY-RUN] Eight hundred warriors gather";
-				mes "[DRY-RUN] Under the will of God, and";
-				mes "[DRY-RUN] Charge as one out through";
-				mes "[DRY-RUN] Those doors.^000000";
+				mes "^483D8B五百四十扇门";
+				mes "在瓦尔哈拉的宏伟大厅中";
+				mes "向英雄的心扉敞开。";
+				mes "八百名战士聚集";
+				mes "在神的意志下，";
+				mes "齐心协力冲出";
+				mes "那些门。^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BGodly warriors";
-				mes "[DRY-RUN] Step into Yggdrassil";
-				mes "[DRY-RUN] Towards their fate.";
-				mes "[DRY-RUN] With pride and honor,";
-				mes "[DRY-RUN] They accept Valyrie's";
-				mes "[DRY-RUN] Welcome.^000000";
+				mes "^483D8B神圣的战士们";
+				mes "走进尤格德拉希尔";
+				mes "走向他们的命运。";
+				mes "带着骄傲和荣耀，";
+				mes "他们接受女武神的";
+				mes "欢迎。^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BWarriors fallen in battle";
-				mes "[DRY-RUN] In glorious clashes of red";
-				mes "[DRY-RUN] Death may have come,";
-				mes "[DRY-RUN] But your fame lives on";
-				mes "[DRY-RUN] and your spirit will be";
-				mes "[DRY-RUN] led to Valhalla.^000000";
+				mes "^483D8B在战斗中陨落的战士们";
+				mes "在辉煌的红色冲突中";
+				mes "死亡可能降临，";
+				mes "但你的名声依然存在";
+				mes "而你的灵魂将被";
+				mes "引导到瓦尔哈拉。^000000";
 				//Expanded version for 2nd variant
 				if (.@num == 2){
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] ...";
+					mes "[埃伦德]";
+					mes "...";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] ...";
-					mes "[DRY-RUN] ......";
+					mes "[埃伦德]";
+					mes "...";
+					mes "......";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] You know this song is about a legend regarding Valhalla don't you? Supposedly, more than one place was used as the sacred Hall of Honor.";
+					mes "[埃伦德]";
+					mes "你知道这首歌是关于瓦尔哈拉的一个传说，对吧？据说，曾经有多个地方被用作神圣的荣誉大厅。";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] But only the gods will know if this was true or not. Was a place like Glast Heim really the fifth Valhalla? We humans";
-					mes "[DRY-RUN] may never know";
-					mes "[DRY-RUN] with certainty.";
+					mes "[埃伦德]";
+					mes "但只有神明才会知道这是否真实。像古城这样的地方真的曾是第五个瓦尔哈拉吗？我们人类";
+					mes "可能永远不会知道";
+					mes "确切地说。";
 				}
 				close3;
 
 			} else if (.@random == 2) {
 
-				mes "[DRY-RUN] ^483D8BThe sounds of galloping";
-				mes "[DRY-RUN] Echo in the distance.";
-				mes "[DRY-RUN] A cloud of hazy dust";
-				mes "[DRY-RUN] Fills the setting sun.";
-				mes "[DRY-RUN] Thousands of eyes open";
-				mes "[DRY-RUN] Torches on the castle";
-				mes "[DRY-RUN] Flare like thousands of Ifrits.";
+				mes "^483D8B奔腾的声音";
+				mes "在远处回响。";
+				mes "一团朦胧的尘土";
+				mes "填满了落日。";
+				mes "成千上万的眼睛睁开";
+				mes "城堡上的火把";
+				mes "像成千上万的伊弗利特一样闪耀。";
 				next;
-				mes "[DRY-RUN] ^483D8BHear the throbbing of my heart,";
-				mes "[DRY-RUN] The blood flowing in my veins.";
-				mes "[DRY-RUN] Feeling the heaviness of my armor.";
-				mes "[DRY-RUN] The enemy has appeared before us.^000000";
+				mes "^483D8B听到我心跳的声音，";
+				mes "流淌在我血液中的力量。";
+				mes "感受到盔甲的沉重。";
+				mes "敌人出现在我们面前。^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BBeat the drums hard, harder!";
-				mes "[DRY-RUN] Courage, soldiers, march forward!";
-				mes "[DRY-RUN] Shout loud, soldiers, louder!";
-				mes "[DRY-RUN] Today will never come back!^000000";
+				mes "^483D8B用力敲打鼓声，更加用力！";
+				mes "勇敢点，士兵们，向前进发！";
+				mes "大声呐喊，士兵们，更加响亮！";
+				mes "今天将永远不会再来！^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BStun the sky";
-				mes "[DRY-RUN] Provoke the earth.";
-				mes "[DRY-RUN] I feel my heartbeat again.";
-				mes "[DRY-RUN] Blow the bugle to";
-				mes "[DRY-RUN] Sway the fortress.";
-				mes "[DRY-RUN] Today will never come back!^000000";
+				mes "^483D8B震撼天空";
+				mes "挑衅大地。";
+				mes "我再次感受到我的心跳。";
+				mes "吹响号角去";
+				mes "摇动堡垒。";
+				mes "今天将永远不会再来！^000000";
 				next;
-				mes "[DRY-RUN] [Errende]";
-				mes "[DRY-RUN] Ah, this is called 'Drumming in the Battlefield,' which was written by Mr. Iolo. Yes, I rather like this song.";
+				mes "[埃伦德]";
+				mes "啊，这首歌叫做《战场上的鼓声》，是由伊欧洛先生创作的。是的，我非常喜欢这首歌。";
 
 			} else {
 				// For 3 and 4 cases we set more chance earlier on .@random
 				if (.@num == 3 || .@num == 4){
-					mes "[DRY-RUN] [Errende]";
+					mes "[埃伦德]";
 					if (Sex == SEX_MALE)
-						mes "[DRY-RUN] Heroic warrior,";
+						mes "英雄的战士，";
 					else
-						mes "[DRY-RUN] My fair lady,";
-					mes "[DRY-RUN] Please listen to my song. If you have a flower in hand and are in love, let's count the flower petals as we go along.";
+						mes "我的美丽女士，";
+					mes "请听我的歌。如果你手中有一朵花并且恋爱了，让我们在过程中数花瓣。";
 					next;
-					mes "[DRY-RUN] ^483D8BAt One, I fall in love.";
-					mes "[DRY-RUN] At Two, you give me your smile.";
-					mes "[DRY-RUN] At Three, I adore your touch.";
-					mes "[DRY-RUN] At Four, a tender kiss.";
-					mes "[DRY-RUN] At Five, we change our minds.";
-					mes "[DRY-RUN] A petal scatters through the air.^000000";
+					mes "^483D8B在一朵时，我坠入爱河。";
+					mes "在二时，你给我你的微笑。";
+					mes "在三时，我崇拜你的触碰。";
+					mes "在四时，一个温柔的吻。";
+					mes "在五时，我们改变主意。";
+					mes "一片花瓣在空中飘散。^000000";
 					next;
 					cutin "bard_eland04",2;
-					mes "[DRY-RUN] ^483D8BAt Six, I fall in love~";
-					mes "[DRY-RUN] At Seven, you fall in love~";
-					mes "[DRY-RUN] At Eight~^000000";
+					mes "^483D8B在六朵时，我坠入爱河~";
+					mes "在七时，你坠入爱河~";
+					mes "在八朵时~^000000";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] At eight~";
-					mes "[DRY-RUN] At... Eight...";
-					mes "[DRY-RUN] What was next...?";
+					mes "[埃伦德]";
+					mes "在八朵时~";
+					mes "在……八朵……";
+					mes "接下来是什么……？";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] Oh my...!";
-					mes "[DRY-RUN] What was the next part?!";
-					mes "[DRY-RUN] What was the 8th love?!";
-					mes "[DRY-RUN] How shameful for a Bard";
-					mes "[DRY-RUN] to forget the words";
-					mes "[DRY-RUN] to a song!";
+					mes "[埃伦德]";
+					mes "哦，我的天...！";
+					mes "接下来是什么部分？!";
+					mes "第八个爱是什么？!";
+					mes "作为一个诗人真是太丢脸了";
+					mes "忘记了歌词";
+					mes "一首歌的！";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] I...";
-					mes "[DRY-RUN] I can't bear the humiliation!";
-					mes "[DRY-RUN] Or the suspense of what";
-					mes "[DRY-RUN] happens next...!";
+					mes "[埃伦德]";
+					mes "I...";
+					mes "我无法忍受这种羞辱！";
+					mes "或者接下来会发生什么的悬念";
+					mes "接下来会发生什么…！";
 					next;
-					mes "[DRY-RUN] [Errende]";
-					mes "[DRY-RUN] You're an adventurer, aren't you? So you must travel quite a bit? It's embarassing for me to ask,";
-					mes "[DRY-RUN] but I have a favor to ask...!";
+					mes "[埃伦德]";
+					mes "你是冒险者，对吧？所以你一定旅行很多？我问这个真是太尴尬了，";
+					mes "但我有个请求...！";
 					next;
 
-					if(select("[DRY-RUN] Sure, no problem.:I ain't gonna help you.")==1) {
+					if(select("当然，没问题.:我才不想帮你.")==1) {
 						cutin "bard_eland01",2;
-						mes "[DRY-RUN] [Errende]";
-						mes "[DRY-RUN] Thank you, so much!";
-						mes "[DRY-RUN] Let's see, who would know?";
-						mes "[DRY-RUN] I've got it! Gunther!";
+						mes "[埃伦德]";
+						mes "非常感谢你！";
+						mes "让我想想，谁会知道呢？";
+						mes "我知道了！冈瑟！";
 						next;
-						mes "[DRY-RUN] [Errende]";
-						mes "[DRY-RUN] If perchance you happen to meet ^483D8BGunther Doubleharmony^000000, please inform him of my dilemna.";
+						mes "[埃伦德]";
+						mes "如果你碰巧遇到^483D8B冈瑟·双和谐^000000，请告诉他我的困境。";
 						next;
-						mes "[DRY-RUN] [Errende]";
-						mes "[DRY-RUN] Tell him that ^483D8BMinty Errende^000000 happened to forget a line of the song, ^483D8BAt One, I Fall in Love^000000. The line is called ^483D8B8th love^000000.";
+						mes "[埃伦德]";
+						mes "告诉他 ^483D8BMinty Errende^000000 忘记了歌曲的一句， ^483D8BAt One, I Fall in Love^000000。这句歌词叫做 ^483D8B8th love^000000.";
 						next;
-						mes "[DRY-RUN] [Errende]";
-						mes "[DRY-RUN] I beseech you, if you meet him, please ask him of the 8th love and inform me of that lyric immediately~";
+						mes "[埃伦德]";
+						mes "我恳求你，如果你见到他，请问他关于第8爱的事情，并立即告诉我那句歌词~";
 						if(gef_bard_q==1) set gef_bard_q,2;
 						if(gef_bard_q==21) set gef_bard_q,22;
 
 					} else {
-						mes "[DRY-RUN] [Errende]";
-						mes "[DRY-RUN] *Sigh...*";
-						mes "[DRY-RUN] I can't remember the 8th part of this song if my life depended on it. And it does~! *Wahhhh~*";
+						mes "[埃伦德]";
+						mes "*叹气...*";
+						mes "如果我的生命依赖于此，我也记不住这首歌的第八部分。而它确实依赖于此~！*哇啊~*";
 						if(gef_bard_q==1) set gef_bard_q,7;
 						if(gef_bard_q==21) set gef_bard_q,27;
 					}
 					close3;
 
 				}
-				mes "[DRY-RUN] ^483D8BA good Bard sings";
-				mes "[DRY-RUN] To please his listener.";
-				mes "[DRY-RUN] So do not expect a sad song";
-				mes "[DRY-RUN] That deepens your anguish.^000000";
+				mes "^483D8BA 好的诗人唱歌";
+				mes "为了取悦他的听众。";
+				mes "所以不要期待悲伤的歌曲";
+				mes "加深你的痛苦。^000000";
 				next;
-				mes "[DRY-RUN] ^483D8BA good Dancer dances";
-				mes "[DRY-RUN] To please her audience.";
-				mes "[DRY-RUN] Shall we dance together?";
-				mes "[DRY-RUN] Just hold my hands.";
-				mes "[DRY-RUN] La la la~ La la la~^000000";
+				mes "^483D8BA 好的舞娘跳舞";
+				mes "为了取悦她的观众。";
+				mes "我们一起跳舞吗？";
+				mes "只需握住我的手。";
+				mes "啦啦啦~ 啦啦啦~^000000";
 				next;
 				mes "[" + @name$ + "]";
-				mes "[DRY-RUN] By the way...";
-				mes "[DRY-RUN] Why do you guys play";
-				mes "[DRY-RUN] discords sometimes?";
-				mes "[DRY-RUN] It sounds weird";
-				mes "[DRY-RUN] when you do that.";
+				mes "顺便问一下...";
+				mes "你们为什么有时会演奏";
+				mes "不和谐的音符？";
+				mes "听起来很奇怪。";
+				mes "当你这样做时。";
 				next;
-				mes "[DRY-RUN] [Errende]";
+				mes "[埃伦德]";
 				mes "H-how can you say such a thing, "+ @name$ +"? Have you ever been a Bard before? It's difficult to come up with fresh, original melodies!";
 			}
 			close3;
 
 		case 3:
 			cutin "bard_eland01",2;
-			mes "[DRY-RUN] [Errende]";
-			mes "[DRY-RUN] But of course.";
-			mes "[DRY-RUN] Merriment is best";
-			mes "[DRY-RUN] enjoyed when you";
-			mes "[DRY-RUN] are in the mood for it.";
-			mes "[DRY-RUN] Please come again.";
+			mes "[埃伦德]";
+			mes "当然可以。";
+			mes "欢乐最好";
+			mes "在你";
+			mes "有心情的时候享受。";
+			mes "请再来。";
 			close3;
 
 		}
 
 	case 3:
 		cutin "bard_eland01",2;
-		mes "[DRY-RUN] [Errende]";
-		mes "[DRY-RUN] Hmm~?";
-		mes "[DRY-RUN] Well, alright. Though, listening to a good story or cheerful song can really do you some good. Alright then, see you later.";
+		mes "[埃伦德]";
+		mes "嗯~？";
+		mes "好吧。不过，听一个好故事或愉快的歌曲真的会让你感觉好一些。那么，回见。";
 		close3;
 	}
 }
@@ -1367,694 +1367,694 @@ S_StorySong:
 morocc,134,111,3	script	Bard#3	741,{
 	set @name$,strcharinfo(0);
 	if (gef_bard_q == 31) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Everything will be";
-		mes "[DRY-RUN] fine in the end, right?";
-		mes "[DRY-RUN] I'll be okay, Jorti will be okay, and she'll be... Oh.";
+		mes "[基诺小猫]";
+		mes "一切都会是";
+		mes "最后会好的，对吧?";
+		mes "我会没事的，乔尔提也会没事，她会...哦.";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] I'm sorry, I was just";
-		mes "[DRY-RUN] muttering to myself.";
-		mes "[DRY-RUN] Is there anything";
-		mes "[DRY-RUN] you want from me?";
+		mes "[基诺小猫]";
+		mes "对不起，我只是";
+		mes "自言自语.";
+		mes "还有什么我可以帮助您的吗？";
+		mes "你想让我做什么?";
 		next;
 
-		switch(select("[DRY-RUN] Tell me a story...:Your voice is...:No thanks, I appreciate it though.")) {
+		switch(select("给我讲个故事...:您的声音是...:不，谢谢，我很感激。")) {
 		case 1:
 			set .@random,rand(1,3);
 			if (.@random == 1) {
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Many legends have been passed down as songs. Stories of Gods and tales of brave warriors have all been written as songs.";
+				mes "[基诺小猫]";
+				mes "许多传说以歌曲的形式流传下来。关于神灵的故事和勇敢战士的传说都被写成了歌曲。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Many people love to listen to those songs because they dream of the romantic past. To sing these kinds of songs is the reason people like me exist.";
+				mes "[基诺小猫]";
+				mes "许多人喜欢听这些歌曲，因为他们梦想着浪漫的过去。唱这些歌曲是像我这样的人存在的理由。";
 				next;
-				mes "[DRY-RUN] ^3355FFKino Kitty adjusted the strings on his guitar, and began to sing in a low voice.^000000";
+				mes "^3355FF基诺·基蒂调整了吉他的弦，开始低声唱歌。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ARheingold...";
-				mes "[DRY-RUN] Hidden in the Rhein river.";
-				mes "[DRY-RUN] If made into a ring,";
-				mes "[DRY-RUN] Could rule the world~^000000";
+				mes "^D43D1A莱因金...";
+				mes "隐藏在莱茵河中。";
+				mes "如果制成戒指，";
+				mes "可以统治世界~^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AProtected by a spell";
-				mes "[DRY-RUN] Cursing its thief";
-				mes "[DRY-RUN] To never find love.";
-				mes "[DRY-RUN] Alberich had known";
-				mes "[DRY-RUN] Nonetheless stole it.";
-				mes "[DRY-RUN] Love was forsaken for power.^000000";
+				mes "^D43D1A受到魔法的保护";
+				mes "诅咒它的窃贼";
+				mes "永远无法找到爱情。";
+				mes "阿尔贝里希曾经知道";
+				mes "然而却偷走了它。";
+				mes "爱被权力所抛弃。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AGiants built beautiful Valhalla";
-				mes "[DRY-RUN] Matrimony with Freya";
-				mes "[DRY-RUN] Goddess of beauty";
-				mes "[DRY-RUN] Their supposed payment.";
-				mes "[DRY-RUN] In not receiving it";
-				mes "[DRY-RUN] They forcefully took her.^000000";
+				mes "^D43D1A巨人们建造了美丽的瓦尔哈拉";
+				mes "与弗蕾雅的婚姻";
+				mes "美丽女神";
+				mes "他们所谓的报酬。";
+				mes "在没有收到它的情况下";
+				mes "她被强行带走了。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AThe gods would";
-				mes "[DRY-RUN] give Alberich's treasure";
-				mes "[DRY-RUN] To the Giants for Freya's return.";
-				mes "[DRY-RUN] Loki tricked Alberich,";
-				mes "[DRY-RUN] Stealing his ring or power.^000000";
+				mes "^D43D1A众神会";
+				mes "给予阿尔伯里希的宝藏";
+				mes "给巨人以换取弗蕾雅的归来。";
+				mes "洛基欺骗了阿尔伯里希，";
+				mes "偷走了他的戒指或力量。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ABut Alberich cursed his ring";
-				mes "[DRY-RUN] Before it was returned to him,";
-				mes "[DRY-RUN] Envy and death would";
-				mes "[DRY-RUN] befall its wearers.^000000";
+				mes "^D43D1A但阿尔伯里希诅咒了他的戒指";
+				mes "在它被归还给他之前，";
+				mes "嫉妒和死亡将会";
+				mes "降临到佩戴者身上。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AThe ring was given to the giants";
-				mes "[DRY-RUN] Freya was returned to the gods";
-				mes "[DRY-RUN] The giants killed themselves";
-				mes "[DRY-RUN] Fighting over the rheingold,";
-				mes "[DRY-RUN] Victims of";
-				mes "[DRY-RUN] Alberich's curse~^000000";
+				mes "^D43D1A戒指被给予了巨人";
+				mes "弗蕾雅被归还给了众神";
+				mes "巨人们自相残杀，";
+				mes "为了争夺雷因金，";
+				mes "成为了";
+				mes "阿尔伯里希的诅咒的受害者~^000000";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Hmm...";
-				mes "[DRY-RUN] ^333333*Cough Cough*^000000";
-				mes "[DRY-RUN] This old song";
-				mes "[DRY-RUN] is about the ring";
-				mes "[DRY-RUN] of the Nibelungs.";
+				mes "[基诺小猫]";
+				mes "嗯...";
+				mes "^333333*咳咳*^000000";
+				mes "这首老歌";
+				mes "是关于戒指的";
+				mes "尼伯龙根的。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] ^333333*Cough Cough*^000000";
-				mes "[DRY-RUN] Hah... I can't sing more than one song nowadays. But did you like it? ^333333*Cough Cough*^000000";
+				mes "[基诺小猫]";
+				mes "^333333*咳咳*^000000";
+				mes "哈……我现在只能唱一首歌。但你喜欢吗？ ^333333*咳咳*^000000";
 				close;
 
 			} else if (.@random == 2) {
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Ah...";
-				mes "[DRY-RUN] I do feel like singing a song. You know, every song has its own story. ^333333*Cough Cough*^000000";
+				mes "[基诺小猫]";
+				mes "啊……";
+				mes "我确实想唱一首歌。你知道，每首歌都有自己的故事。 ^333333*咳咳*^000000";
 				next;
-				mes "[DRY-RUN] ^3355FFKino Kitty coughed a few times, wiping his mouth with his sleeve. As he adjusts the guitar strings, you notice small stains of blood on his sleeve. Then, he began to sing.^000000";
+				mes "^3355FF基诺小猫咳了几声，用袖子擦了擦嘴。调整吉他弦时，你注意到他袖子上有小小的血迹。然后，他开始唱歌。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ABrave hero Siegfried ";
-				mes "[DRY-RUN] Vanquished a mighty dragon	";
-				mes "[DRY-RUN] Its blood coated his skin";
-				mes "[DRY-RUN] Making it impenetrable";
-				mes "[DRY-RUN] Save for one tender spot";
-				mes "[DRY-RUN] Blocked by a single leaf";
-				mes "[DRY-RUN] From a linden tree.^000000";
+				mes "^D43D1A勇敢的英雄西格弗里德";
+				mes "击败了一只强大的龙	";
+				mes "它的血涂满了他的皮肤";
+				mes "使其坚不可摧";
+				mes "除了一个柔软的地方";
+				mes "被一片树叶挡住";
+				mes "来自一棵菩提树。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ASiegfried was powerful";
-				mes "[DRY-RUN] Clearly invincible, save for";
-				mes "[DRY-RUN] those who knew of his secret.";
-				mes "[DRY-RUN] In the end he was killed, by";
-				mes "[DRY-RUN] A spear flung into his back";
-				mes "[DRY-RUN] set into motion by the wrath";
-				mes "[DRY-RUN] And jealousy of a woman.^000000";
+				mes "^D43D1A西格弗里德是强大的";
+				mes "显然是无敌的，除了";
+				mes "那些知道他秘密的人。";
+				mes "最后他被杀，";
+				mes "一支飞向他背部的矛";
+				mes "是由一个女人的愤怒";
+				mes "和嫉妒引发的。^000000";
 				next;
-				mes "[DRY-RUN] [Jorti]";
-				mes "[DRY-RUN] Bravo, Bravo~!";
-				mes "[DRY-RUN] Uncle Kino is the best Bard in the world~! Jorti likes Uncle Kino's singing!";
+				mes "[乔尔提]";
+				mes "好极了，好极了~！";
+				mes "基诺叔叔是世界上最棒的吟游诗人~！乔尔提喜欢基诺叔叔的歌！";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Thank you, Jorti.";
-				mes "[DRY-RUN] Anytime for my";
-				mes "[DRY-RUN] little princess.";
+				mes "[基诺小猫]";
+				mes "谢谢你，乔尔提。";
+				mes "随时为我的";
+				mes "小公主服务。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] This song is about Sigfried, who was invincible, except for a single spot on his back. Just singing this reminds me of the influence women have over the world.";
+				mes "[基诺小猫]";
+				mes "这首歌是关于西格弗里德的，他是无敌的，除了他背上的一个地方。仅仅唱这首歌就让我想起了女人对世界的影响。";
 				close;
 
 			} else {
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] You want to";
-				mes "[DRY-RUN] listen to a story?";
-				mes "[DRY-RUN] Mmm, let me think...";
+				mes "[基诺小猫]";
+				mes "你想要";
+				mes "想听个故事吗？";
+				mes "嗯，让我想想……";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] When you go venture Southwest from Morroc, you will arrive at Fortress Sandarman. Did you know that the fortress is built on a sand hill, which serves as a natural defense?";
+				mes "[基诺小猫]";
+				mes "当你向西南方冒险从梦罗克出发时，你会到达沙丹曼堡垒。你知道这个堡垒建在沙丘上，作为自然防御吗？";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] When you go South of Sandarman, you will see Paros Lighthouse. East from the Lighthouse, you will see Kokomo Beach. North of the beach is Papuchica Forest.";
+				mes "[基诺小猫]";
+				mes "当你向南走到沙丹曼，你会看到帕罗斯灯塔。从灯塔向东，你会看到科科莫海滩。海滩的北边是帕普奇卡森林。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] I'm not boring you, am I? I just wanted to tell you about the village of Umbala, which is above that last place I was telling you about. Have you ever been there?";
+				mes "[基诺小猫]";
+				mes "我没有让你觉得无聊吧？我只是想告诉你关于乌姆巴拉村的事，它在我刚才告诉你的地方的上方。你去过那里吗？";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Umbala itself is a pretty interesting place. But I'm really interested in this giant tree in Umbala. I've heard that it leads to Niffheim...";
+				mes "[基诺小猫]";
+				mes "乌姆巴拉本身是个很有趣的地方。但我对乌姆巴拉的那棵巨树很感兴趣。我听说它通向尼芙菲姆……";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] I wonder...";
-				mes "[DRY-RUN] Could that tree be Yggdrasil? Is it possible that I could meet her in the Niffheim, realm of the dead?";
+				mes "[基诺小猫]";
+				mes "我在想...";
+				mes "那棵树会是世界树吗？我有可能在尼芙菲姆，死者的领域见到她吗？";
 				close;
 			}
 		
 		case 2:
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Oh... Well, I have a chronic disease so I can't speak out loud. I, um, even cough up a little blood. But aside from that, I'm perfectly healthy.";
+			mes "[基诺小猫]";
+			mes "哦……好吧，我有一种慢性病，所以我不能大声说话。我，呃，甚至咳出一点血。但除此之外，我身体完全健康。";
 			next;
-			mes "[DRY-RUN] ^3355FFA look of bitterness momentarily flashed across Kino Kitty's face. He then adjusted his guitar strings and began to play, humming a low tune.^000000";
+			mes "^3355FF基诺小猫的脸上瞬间闪过一丝苦涩的神情。然后他调整了吉他弦，开始弹奏，低声哼唱。^000000";
 			soundeffect "humming.wav",0;
 			close;
 		
 		case 3:
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Hmm...?";
-			mes "[DRY-RUN] I wish everyone in the world were as kind and honest as you. If that were the case, there'd be no selfish fights. Hahahahaha~";
+			mes "[基诺小猫]";
+			mes "嗯……？";
+			mes "我希望世界上每个人都像你一样善良和诚实。如果是这样，就不会有自私的争斗。哈哈哈哈~";
 			close;
 		}
 
 	} else if (gef_bard_q == 30) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Everything will be";
-		mes "[DRY-RUN] fine in the end, right?";
-		mes "[DRY-RUN] I'll be okay, Jorti will be okay, and she'll be... Oh.";
+		mes "[基诺小猫]";
+		mes "一切都会是";
+		mes "最后会好的，对吧?";
+		mes "我会没事的，乔尔提也会没事，她会...哦.";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] I'm sorry, I was just";
-		mes "[DRY-RUN] muttering to myself.";
-		mes "[DRY-RUN] Is there anything";
-		mes "[DRY-RUN] you want from me?";
+		mes "[基诺小猫]";
+		mes "对不起，我只是";
+		mes "自言自语.";
+		mes "还有什么我可以帮助您的吗？";
+		mes "你想让我做什么?";
 		next;
 
-		switch(select("[DRY-RUN] Tell me a story, or sing something~:Your voice is...:No thanks. I appreciate it, though.")) {
+		switch(select("给我讲个故事，或者唱首歌~:您的声音是...:不，谢谢，我很感激。")) {
 		case 1:
 			set .@random,rand(1,3);
 			if (.@random == 1) {
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Ah...";
-				mes "[DRY-RUN] I do feel like singing a song. You know, every song has its own story. ^333333*Cough Cough*^000000";
+				mes "[基诺小猫]";
+				mes "啊……";
+				mes "我确实想唱一首歌。你知道，每首歌都有自己的故事。 ^333333*咳咳*^000000";
 				next;
-				mes "[DRY-RUN] ^3355FFKino Kitty coughed a few times, wiping his mouth with his sleeve. As he adjusts the guitar strings, you notice small stains of blood on his sleeve. Then, he began to sing.^000000";
+				mes "^3355FF基诺小猫咳了几声，用袖子擦了擦嘴。调整吉他弦时，你注意到他袖子上有小小的血迹。然后，他开始唱歌。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ABrave hero Siegfried ";
-				mes "[DRY-RUN] Vanquished a mighty dragon";
-				mes "[DRY-RUN] Its blood coated his skin";
-				mes "[DRY-RUN] Making it impenetrable";
-				mes "[DRY-RUN] Save for one tender spot";
-				mes "[DRY-RUN] Blocked by a single leaf";
-				mes "[DRY-RUN] From a linden tree.^000000";
+				mes "^D43D1A勇敢的英雄西格弗里德";
+				mes "击败了一只强大的龙";
+				mes "它的血涂满了他的皮肤";
+				mes "使其坚不可摧";
+				mes "除了一个柔软的地方";
+				mes "被一片树叶挡住";
+				mes "来自一棵菩提树。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ASiegfried was powerful";
-				mes "[DRY-RUN] Clearly invincible, save for";
-				mes "[DRY-RUN] those who knew of his secret.";
-				mes "[DRY-RUN] In the end he was killed, by";
-				mes "[DRY-RUN] A spear flung into his back";
-				mes "[DRY-RUN] set into motion by the wrath";
-				mes "[DRY-RUN] And jealousy of a woman.^000000";
+				mes "^D43D1A西格弗里德是强大的";
+				mes "显然是无敌的，除了";
+				mes "那些知道他秘密的人。";
+				mes "最后他被杀，";
+				mes "一支飞向他背部的矛";
+				mes "是由一个女人的愤怒";
+				mes "和嫉妒引发的。^000000";
 				next;
-				mes "[DRY-RUN] [Jorti]";
-				mes "[DRY-RUN] Bravo, Bravo~!";
-				mes "[DRY-RUN] Uncle Kino is the best Bard in the world~! Jorti likes Uncle Kino's singing!";
+				mes "[乔尔提]";
+				mes "好极了，好极了~！";
+				mes "基诺叔叔是世界上最棒的吟游诗人~！乔尔提喜欢基诺叔叔的歌！";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Thank you, Jorti.";
-				mes "[DRY-RUN] Anytime for my";
-				mes "[DRY-RUN] little princess.";
+				mes "[基诺小猫]";
+				mes "谢谢你，乔尔提。";
+				mes "随时为我的";
+				mes "小公主服务。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] This song is about Sigfried, who was invincible, except for a single spot on his back. Just singing this reminds me of the influence women have over the world.";
+				mes "[基诺小猫]";
+				mes "这首歌是关于西格弗里德的，他是无敌的，除了他背上的一个地方。仅仅唱这首歌就让我想起了女人对世界的影响。";
 				close;
 
 			} else if (.@random == 2) {
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Ah...";
-				mes "[DRY-RUN] I do feel like singing a song. You know, every song has its own story. ^333333*Cough Cough*^000000";
+				mes "[基诺小猫]";
+				mes "啊……";
+				mes "我确实想唱一首歌。你知道，每首歌都有自己的故事。 ^333333*咳咳*^000000";
 				next;
-				mes "[DRY-RUN] ^3355FFKino Kitty coughed a few times, wiping his mouth with his sleeve. As he adjusts the guitar strings, you notice small stains of blood on his sleeve. Then, he began to sing.^000000";
+				mes "^3355FF基诺小猫咳了几声，用袖子擦了擦嘴。调整吉他弦时，你注意到他袖子上有小小的血迹。然后，他开始唱歌。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AI still remember feeling";
-				mes "[DRY-RUN] Your shoulder's warmth";
-				mes "[DRY-RUN] As I leaned on it.";
-				mes "[DRY-RUN] You held my hands";
-				mes "[DRY-RUN] until the final moment.^000000";
+				mes "^D43D1A我仍然记得那种感觉";
+				mes "你肩膀的温暖";
+				mes "当我依偎在上面时。";
+				mes "你握着我的手";
+				mes "直到最后一刻。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1ACrying on the inside,";
-				mes "[DRY-RUN] I saw you off with a smile.";
-				mes "[DRY-RUN] Things would never be the same,";
-				mes "[DRY-RUN] But I'd remember every single";
-				mes "[DRY-RUN] Moment we shared.^000000";
+				mes "^D43D1A内心哭泣，";
+				mes "我带着微笑送你离开。";
+				mes "事情再也不会一样了，";
+				mes "但我会记住我们分享的每一个";
+				mes "瞬间。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AI still remember the clear chimes";
-				mes "[DRY-RUN] Of the Prontera Church Bells";
-				mes "[DRY-RUN] The ice cream we shared in Morroc,";
-				mes "[DRY-RUN] Being chased by bats";
-				mes "[DRY-RUN] In Payon dungeon.^000000";
+				mes "^D43D1A我仍然记得清脆的钟声";
+				mes "普隆德拉教堂的钟声";
+				mes "我们在梦罗克分享的冰淇淋，";
+				mes "被蝙蝠追逐";
+				mes "在斐扬地下城。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AGazing together at";
-				mes "[DRY-RUN] Comodo's fireworks";
-				mes "[DRY-RUN] Snuggles under the";
-				mes "[DRY-RUN] Gently falling Lutie";
-				mes "[DRY-RUN] Snowflakes...^000000";
+				mes "^D43D1A一起凝视着";
+				mes "科莫多的烟花";
+				mes "依偎在";
+				mes "轻轻飘落的鲁提耶";
+				mes "雪花……^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AYour beautiful soul";
-				mes "[DRY-RUN] Will be with Odin.";
-				mes "[DRY-RUN] When the day";
-				mes "[DRY-RUN] Of the dusk comes,";
-				mes "[DRY-RUN] A brand new place";
-				mes "[DRY-RUN] Will be before your eyes.^000000";
+				mes "^D43D1A你美丽的灵魂";
+				mes "将与奥丁同在。";
+				mes "当那一天";
+				mes "黄昏来临时，";
+				mes "一个全新的地方";
+				mes "将展现在你面前。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AI will remember you forever.";
-				mes "[DRY-RUN] Forget me not, call my name.";
-				mes "[DRY-RUN] I'll hear you, and look to the skies.^000000";
+				mes "^D43D1A我会永远记住你。";
+				mes "不要忘记我，叫我的名字。";
+				mes "我会听到你，并仰望天空。^000000";
 				next;
-				mes "[DRY-RUN] [Jorti]";
-				mes "[DRY-RUN] Ah, Uncle Kino, isn't this the song my mom always sang? Sing more songs, please! Please~!";
+				mes "[乔尔提]";
+				mes "啊，基诺叔叔，这不是我妈妈总是唱的歌吗？请再唱几首歌！求求你~！";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] You're right...";
-				mes "[DRY-RUN] She always used to sing this song... ^333333*Cough*^000000 There are always people waiting for their beloved to return...";
+				mes "[基诺小猫]";
+				mes "你说得对……";
+				mes "她总是唱这首歌…… ^333333*咳*^000000 总是有人在等待他们心爱的人归来……";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] If you have someone who you've left behind, someone that is waiting for you, make sure you come back to that person. You'll regret it if you don't.";
+				mes "[基诺小猫]";
+				mes "如果你有一个被你遗留在身后的人，某个在等着你的人，确保你回到那个人身边。如果不这样做，你会后悔的。";
 				close;
 
 			} else {
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] You want to";
-				mes "[DRY-RUN] listen to a story?";
-				mes "[DRY-RUN] Mmm, let me think...";
+				mes "[基诺小猫]";
+				mes "你想要";
+				mes "想听个故事吗？";
+				mes "嗯，让我想想……";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] When you go venture Southwest from Morroc, you will arrive at Fortress Sandarman. Did you know that the fortress is built on a sand hill, which serves as a natural defense?";
+				mes "[基诺小猫]";
+				mes "当你向西南方冒险从梦罗克出发时，你会到达沙丹曼堡垒。你知道这个堡垒建在沙丘上，作为自然防御吗？";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] When you go South of Sandarman, you will see Paros Lighthouse. East from the Lighthouse, you will see Kokomo Beach. North of the beach is Papuchica Forest.";
+				mes "[基诺小猫]";
+				mes "当你向南走到沙丹曼，你会看到帕罗斯灯塔。从灯塔向东，你会看到科科莫海滩。海滩的北边是帕普奇卡森林。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] I'm not boring you, am I? I just wanted to tell you about the village of Umbala, which is above that last place I was telling you about. Have you ever been there?";
+				mes "[基诺小猫]";
+				mes "我没有让你觉得无聊吧？我只是想告诉你关于乌姆巴拉村的事，它在我刚才告诉你的地方的上方。你去过那里吗？";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Umbala itself is a pretty interesting place. But I'm really interested in this giant tree in Umbala. I've heard that it leads to Niffheim...";
+				mes "[基诺小猫]";
+				mes "乌姆巴拉本身是个很有趣的地方。但我对乌姆巴拉的那棵巨树很感兴趣。我听说它通向尼芙菲姆……";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] I wonder...";
-				mes "[DRY-RUN] Could that tree be Yggdrasil? Is it possible that I could meet her in the Niffheim, realm of the dead?";
+				mes "[基诺小猫]";
+				mes "我在想...";
+				mes "那棵树会是世界树吗？我有可能在尼芙菲姆，死者的领域见到她吗？";
 				close;
 			}
 		
 		case 2:
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Oh... Well, I have a chronic disease so I can't speak out loud. I, um, even cough up a little blood. But aside from that, I'm perfectly healthy.";
+			mes "[基诺小猫]";
+			mes "哦……好吧，我有一种慢性病，所以我不能大声说话。我，呃，甚至咳出一点血。但除此之外，我身体完全健康。";
 			next;
-			mes "[DRY-RUN] ^3355FFA look of bitterness momentarily flashed across Kino Kitty's face. He then adjusted his guitar strings and began to play, humming a low tune.^000000";
+			mes "^3355FF基诺小猫的脸上瞬间闪过一丝苦涩的神情。然后他调整了吉他弦，开始弹奏，低声哼唱。^000000";
 			soundeffect "humming.wav",0;
 			close;
 		
 		case 3:
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Hmm...?";
-			mes "[DRY-RUN] I wish everyone in the world were as kind and honest as you. If that were the case, there'd be no selfish fights. Hahahahaha~";
+			mes "[基诺小猫]";
+			mes "嗯……？";
+			mes "我希望世界上每个人都像你一样善良和诚实。如果是这样，就不会有自私的争斗。哈哈哈哈~";
 			close;
 		}
 
 	} else if (gef_bard_q > 12 && gef_bard_q < 16) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Errende must be waiting for you. Although others would be in anguish if they were made to wait, and people like Errende and me wouldn't mind, it's still more polite to hurry when you can.";
+		mes "[基诺小猫]";
+		mes "埃伦德一定在等你。虽然其他人被迫等待会感到痛苦，而像埃伦德和我这样的人并不介意，但能快点还是更礼貌的。";
 		close;
 
 	} else if (gef_bard_q == 12) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] I guess you've met Mr. Sketzi.";
-		mes "[DRY-RUN] By the way, why do you have that look on your face? Didn't find what you were looking for? Haha, would you show me your left hand?";
+		mes "[基诺小猫]";
+		mes "我想你见过斯凯齐先生。";
+		mes "对了，为什么你脸上有那种表情？没找到你想要的东西吗？哈哈，你能给我看看你的左手吗？";
 		next;
 
-		if(select("[DRY-RUN] Here you go.:Um... No!")==1) {
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Well, while you were gone,";
-			mes "[DRY-RUN] I remembered the original lyrics to the song. I guess they really are important.";
+		if(select("给您。:嗯...不！")==1) {
+			mes "[基诺小猫]";
+			mes "好吧，当你不在的时候，";
+			mes "我想起了这首歌的原歌词。我想它们真的很重要。";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Here, let me give you a letter with the lyrics to Errende. I should also give you my seal so that Errende will know it's me. You don't mind, do you?";
+			mes "[基诺小猫]";
+			mes "来，我给你一封信，上面有埃伦德的歌词。我还应该给你我的印章，这样埃伦德就知道是我。你不介意吧？";
 			next;
 
-			switch(select("[DRY-RUN] Yes, I mind!:No, I don't mind.")) {
+			switch(select("是的，我介意！:不，我不介意。")) {
 
 			case 1:
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Ah, right.";
-				mes "[DRY-RUN] You already have a seal marked by Errende. Oh well, if you don't want it, what can I do?";
+				mes "[基诺小猫]";
+				mes "啊，对了。";
+				mes "你已经有了一个由埃伦德标记的印章。唉，如果你不想要，那我能怎么办？";
 				set gef_bard_q,13;
 				close;
 			
 			case 2:
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Now, let's see...";
-				mes "[DRY-RUN] How is it supposed to go?";
-				mes "[DRY-RUN] ...Lu lu lu...";
-				mes "[DRY-RUN] ...La la la...";
+				mes "[基诺小猫]";
+				mes "现在，让我看看……";
+				mes "这应该怎么进行？";
+				mes "……呜呜呜……";
+				mes "……啦啦啦……";
 				next;
-				mes "[DRY-RUN] ^D43D1AAt One, I fall in love.";
-				mes "[DRY-RUN] At Two, you give me your smile.";
-				mes "[DRY-RUN] At Three, I adore your touch.";
-				mes "[DRY-RUN] At Four, a tender kiss.";
-				mes "[DRY-RUN] At Five, we change our minds.";
-				mes "[DRY-RUN] A petal scatters through the air.^000000";
+				mes "^D43D1AA在一的时候，我坠入爱河。";
+				mes "在二时，你给我你的微笑。";
+				mes "在三时，我崇拜你的触碰。";
+				mes "在四时，一个温柔的吻。";
+				mes "在五时，我们改变主意。";
+				mes "一片花瓣在空中飘散。^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AAt Six, I fall in love~";
-				mes "[DRY-RUN] At Seven, you fall in love~";
-				mes "[DRY-RUN] At Eight, we're both in love.";
-				mes "[DRY-RUN] At Nine, you know my heart.";
-				mes "[DRY-RUN] At Ten, I know you've";
-				mes "[DRY-RUN] been waiting for me.^000000";
+				mes "^D43D1AA在六的时候，我坠入爱河~";
+				mes "在七时，你坠入爱河~";
+				mes "在八的时候，我们都坠入爱河。";
+				mes "在九的时候，你知道我的心。";
+				mes "在十的时候，我知道你一直在等我。";
+				mes "^000000";
 				next;
-				mes "[DRY-RUN] ^D43D1AAt Eleven, a precious";
-				mes "[DRY-RUN] Whisper: 'Will you marry me?'";
-				mes "[DRY-RUN] At Twelve, our two hearts";
-				mes "[DRY-RUN] Are one. 12 petals, our";
-				mes "[DRY-RUN] Love finally blossoms.^000000";
+				mes "^D43D1AA在十一的时候，一个珍贵的";
+				mes "低语：'你愿意嫁给我吗？'";
+				mes "在十二岁时，我们的心";
+				mes "合为一体。12片花瓣，我们的";
+				mes "爱终于绽放。^000000";
 				next;
 				specialeffect2 EF_POISONREACT2;
-				mes "[DRY-RUN] ^3355FFAfter the song, Kino smiles at you. You feel a sharp pain on your wrist. On the spot where the silver crescent was, you see a tiny black cross.^000000";
+				mes "^3355FF在歌曲结束后，基诺对你微笑。你感到手腕一阵剧痛。在银色新月的地方，你看到一个微小的黑色十字架。^000000";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] So, how do you like it? Well, I'm certain that Errende will love it for sure. Hahahahaha~ ^333333*Cough Cough*^000000";
+				mes "[基诺小猫]";
+				mes "那么，你觉得怎么样？好吧，我相信埃伦德一定会喜欢的。哈哈哈哈~ ^333333*咳咳*^000000";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] I want to apologize.";
-				mes "[DRY-RUN] I didn't mean to make you wait, but I just remembered the old lyrics to the song. Now, hurry to Errende, I'm sure he's waiting.";
+				mes "[基诺小猫]";
+				mes "我想道歉。";
+				mes "我不是故意让你等的，只是想起了这首歌的旧歌词。现在，快去找埃伦德，我相信他在等你。";
 				next;
-				mes "[DRY-RUN] ^3355FFKino Kitty hands you a letter that is labeled 'Dear Errende'";
-				mes "[DRY-RUN] on the front.^000000";
+				mes "^3355FF基诺小猫递给你一封信，上面写着'亲爱的埃伦德'";
+				mes "在正面。^000000";
 				set gef_bard_q,14;
 				close;
 			}
 		
 		} else {
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Hmmm...?";
-			mes "[DRY-RUN] There's no reason to be scared.";
-			mes "[DRY-RUN] I mean, I won't bite or anything.";
+			mes "[基诺小猫]";
+			mes "嗯...?";
+			mes "没有理由害怕。";
+			mes "我是说，我不会咬你或什么的。";
 			close;
 		}
 
 	} else if (gef_bard_q == 10) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Didn't you leave already?";
-		mes "[DRY-RUN] I'm sure you can find the lyrics in a bookstore in Juno.";
+		mes "[基诺小猫]";
+		mes "你不是已经离开了吗？";
+		mes "我相信你可以在朱诺的书店找到歌词。";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Well, I'm sure Errende knows more about bookstores, so he can probably tell you where to look in Juno. Why don't you ask Errende?";
+		mes "[基诺小猫]";
+		mes "好吧，我相信埃伦德对书店了解更多，所以他可能能告诉你在朱诺哪里找。你为什么不问问埃伦德呢？";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] If you don't mind, please come again and listen to this poor Bard's songs. I'll prepare a song just for you.";
+		mes "[基诺小猫]";
+		mes "如果你不介意，请再来听这位可怜的吟游诗人的歌曲。我会为你准备一首歌。";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Don't worry about my health. I'm a Bard at heart, and I can't help but sing for my audience.";
+		mes "[基诺小猫]";
+		mes "别担心我的健康。我是个内心的吟游诗人，我无法不为我的观众唱歌。";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] Also, I'd like to thank you for helping Errende. He may be a little whiny, but he's a good person.";
+		mes "[基诺小猫]";
+		mes "另外，我想感谢你帮助埃伦德。他可能有点爱抱怨，但他是个好人。";
 		close;
 
 	} else if (gef_bard_q == 11) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] A silver seal...?";
-		mes "[DRY-RUN] Well, welcome to the wanderer's club. I must say, the silver crescent suits you.";
+		mes "[基诺小猫]";
+		mes "一个银色印章……？";
+		mes "欢迎来到流浪者俱乐部。我必须说，银色新月很适合你。";
 		next;
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] If you have that seal, Mr. Sketzi will permit you to read his books full of Norse songs.";
+		mes "[基诺小猫]";
+		mes "如果你有那个印章，斯凯齐先生会允许你阅读他满是北欧歌曲的书籍。";
 		close;
 
 	} else if (gef_bard_q > 19 && gef_bard_q < 28) {
-		mes "[DRY-RUN] [Kino Kitty]";
-		mes "[DRY-RUN] What business";
-		mes "[DRY-RUN] do you have with me,";
-		mes "[DRY-RUN] my friend?";
+		mes "[基诺小猫]";
+		mes "你有什么事";
+		mes "找我，";
+		mes "我的朋友？";
 		next;
 		if (gef_bard_q == 24) {
-			mes "[DRY-RUN] ^3355FFYou gave candy to the crying little girl, and relate the problem with the lyrics to Kino Kitty.^000000";
+			mes "^3355FF你给哭泣的小女孩糖果，并将歌词的问题告诉了基诺小猫。^000000";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Hmm...";
-			mes "[DRY-RUN] I'm insulted that Errende does not like the words I wrote for 'At One, I Fall in Love.' But, I suppose he is a romantic at heart.";
+			mes "[基诺小猫]";
+			mes "嗯...";
+			mes "我很受伤，埃伦德不喜欢我为《一见钟情》写的歌词。不过，我想他内心是个浪漫的人。";
 			next;
 			mes "[" + @name$ + "]";
-			mes "[DRY-RUN] So...";
-			mes "[DRY-RUN] Do you know the";
-			mes "[DRY-RUN] original words";
-			mes "[DRY-RUN] for the song?";
+			mes "所以……";
+			mes "你知道吗";
+			mes "原歌词";
+			mes "吗？";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] The original lyrics were horrible. There's not enough room in my mind to remember so romantic nonsense. ^333333*Cries*...^000000";
+			mes "[基诺小猫]";
+			mes "原歌词太糟糕了。我脑海中没有足够的空间来记住如此浪漫的废话。^333333*哭*...^000000";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Romance is for foolish dreamers!";
-			mes "[DRY-RUN] I refuse to sing or even remember such vapid lyrics!";
+			mes "[基诺小猫]";
+			mes "浪漫是傻瓜梦者的事！";
+			mes "我拒绝唱或者甚至记住这样的无聊歌词！";
 			next;
-			mes "[DRY-RUN] [Jorti]";
-			mes "[DRY-RUN] U-uncle Kino";
-			mes "[DRY-RUN] You're scaring me.";
-			mes "[DRY-RUN] Please don't yell!";
-			mes "[DRY-RUN] It makes me want";
-			mes "[DRY-RUN] to cry...";
+			mes "[乔尔提]";
+			mes "呜—基诺叔叔";
+			mes "你吓到我了。";
+			mes "请不要大喊！";
+			mes "这让我想";
+			mes "哭...";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] Oh...";
-			mes "[DRY-RUN] I'm sorry, princess.";
-			mes "[DRY-RUN] It won't happen again.";
-			mes "[DRY-RUN] Your Unclde Kino will";
-			mes "[DRY-RUN] try to be good";
-			mes "[DRY-RUN] from now on.";
+			mes "[基诺小猫]";
+			mes "哦...";
+			mes "对不起，公主。";
+			mes "不会再发生了。";
+			mes "你的叔叔基诺会";
+			mes "努力变得更好";
+			mes "从现在开始。";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] *Sigh...*";
-			mes "[DRY-RUN] Alright, listen.";
+			mes "[基诺小猫]";
+			mes "*叹气...*";
+			mes "好吧，听着。";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] You'll need an old book of edda lyrics for the original words to the song. All the new books no longer contain the original version.";
+			mes "[基诺小猫]";
+			mes "你需要一本旧的埃达歌词书来获取歌曲的原始歌词。所有的新书都不再包含原版。";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] I wonder...";
-			mes "[DRY-RUN] How did Errende happen to know the original lyrics? In any case, I'm sorry about all this. I suppose I'm a little jaded.";
+			mes "[基诺小猫]";
+			mes "我在想...";
+			mes "埃伦德是怎么知道原歌词的？无论如何，我对这一切感到抱歉。我想我有点厌倦了。";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] You know, maybe you should go to Juno. There's a small book store on the book street, and you can probably find the song in that store.";
+			mes "[基诺小猫]";
+			mes "你知道，也许你应该去朱诺。书街上有一家小书店，你可能能在那家店找到这首歌。";
 			next;
-			mes "[DRY-RUN] [Kino Kitty]";
-			mes "[DRY-RUN] ^333333^333333*Cough Cough*^000000^000000";
-			mes "[DRY-RUN] Wh-why do I have to suffer? Are my final days as a Bard on this earth soon approaching? I feel so pathetic...";
+			mes "[基诺小猫]";
+			mes "^333333^333333*咳咳*^000000^000000";
+			mes "我—我为什么要受苦？我作为一个诗人的最后日子快要来临了吗？我感到如此可怜……";
 			set gef_bard_q,10;
 			close;
 
 		} else {
-			switch(select("[DRY-RUN] Tell me a story.:Sing a song.:Nothing.")) {
+			switch(select("给我讲个故事。:唱首歌。:没什么。")) {
 
 			case 1:
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] A story? Mmmm...";
-				mes "[DRY-RUN] My throat hurts,";
-				mes "[DRY-RUN] but if you listen,";
-				mes "[DRY-RUN] I will do my best";
-				mes "[DRY-RUN] to relate a tale.";
+				mes "[基诺小猫]";
+				mes "一个故事？嗯……";
+				mes "我的喉咙很痛，";
+				mes "但如果你愿意倾听，";
+				mes "我会尽力";
+				mes "讲述一个故事。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Do you know how Baldur, son of Odin, died? There is a story involving his obsessive mother";
-				mes "[DRY-RUN] and the wicked god, Loki.";
+				mes "[基诺小猫]";
+				mes "你知道奥丁的儿子巴尔德是怎么死的吗？这个故事涉及到他痴迷的母亲，";
+				mes "以及邪恶的神洛基。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] One night, Baldur had a nightmare where he was cast into the pit of Hell. Upon hearing of this, Baldur's mother Frigg was stricken with panic.";
+				mes "[基诺小猫]";
+				mes "有一天晚上，巴尔德做了一个噩梦，他被投进了地狱的深渊。听到这个消息后，巴尔德的母亲弗丽嘉感到恐慌。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] To prevent tragedy from befalling her son, she made every single object on earth to agree to an oath where they would not harm Baldur.";
+				mes "[基诺小猫]";
+				mes "为了防止悲剧降临到她的儿子身上，她让地球上的每一个物体都同意一个誓言，誓言不伤害巴尔杜尔。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] ^333333*Cough Cough*^000000 And they all got together to ^333333*Wheeeeze*^000000 celebr--^333333^333333*Cough*^000000^000000...";
+				mes "[基诺小猫]";
+				mes "^333333*咳咳*^000000 然后他们聚在一起 ^333333*喘息*^000000 庆祝--^333333^333333*咳*^000000^000000...";
 				next;
-				mes "[DRY-RUN] [Jorti]";
-				mes "[DRY-RUN] Uncle Kino...?";
-				mes "[DRY-RUN] Are you okay?....?";
+				mes "[乔尔提]";
+				mes "基诺叔叔...?";
+				mes "你还好吗？....?";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] ...Hah...";
-				mes "[DRY-RUN] ...Hah...";
-				mes "[DRY-RUN] I'm sorry, but I don't think I can speak for much longer.";
+				mes "[基诺小猫]";
+				mes "...哈...";
+				mes "...哈...";
+				mes "对不起，我想我不能再说太久了。";
 				close;
 			
 			case 2:
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] Sorry, but I don't feel like singing at the moment. I hope you understand. I want to sing the last song of my life for Jorti...";
+				mes "[基诺小猫]";
+				mes "抱歉，但我现在不想唱歌。希望你能理解。我想为乔提唱我生命中的最后一首歌...";
 				close;
 			
 			case 3:
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] You have no";
-				mes "[DRY-RUN] business with me?";
-				mes "[DRY-RUN] What a shame.";
+				mes "[基诺小猫]";
+				mes "你没有";
+				mes "和我打交道的事吗？";
+				mes "真可惜。";
 				close;
 			}
 		}
 
 	} else {
-		mes "[DRY-RUN] ^D43D1AEven in the sandy wind,";
-		mes "[DRY-RUN] Even in the pouring rain,";
-		mes "[DRY-RUN] Even in the falling snow,";
-		mes "[DRY-RUN] I know it's you~^000000";
+		mes "^D43D1AE即使在沙尘暴中，";
+		mes "即使在倾盆大雨中，";
+		mes "即使在飘落的雪中，";
+		mes "我知道是你~^000000";
 		next;
-		mes "[DRY-RUN] [Mysterious Bard]";
-		mes "[DRY-RUN] ...";
+		mes "[神秘的诗人]";
+		mes "...";
 		next;
-		mes "[DRY-RUN] [Mysterious Bard]";
-		mes "[DRY-RUN] ...";
-		mes "[DRY-RUN] ......";
+		mes "[神秘的诗人]";
+		mes "...";
+		mes "......";
 		next;
-		mes "[DRY-RUN] [Mysterious Bard]";
-		mes "[DRY-RUN] My apologies,";
-		mes "[DRY-RUN] ^333333*Cough*^000000 but this is";
-		mes "[DRY-RUN] a private performance";
-		mes "[DRY-RUN] for my little";
-		mes "[DRY-RUN] princess.";
+		mes "[神秘的诗人]";
+		mes "抱歉，";
+		mes "^333333*咳*^000000 但这是";
+		mes "一场私人演出";
+		mes "给我的小";
+		mes "公主。";
 		next;
 
-		if(select("[DRY-RUN] Um, was that a love song?:I'm sorry for interrupting you.")==1) {
-			mes "[DRY-RUN] [Mysterious Bard]";
-			mes "[DRY-RUN] A...";
-			mes "[DRY-RUN] Love song?!";
+		if(select("嗯，那是一首情歌吗？:抱歉打扰您。")==1) {
+			mes "[神秘的诗人]";
+			mes "A...";
+			mes "情歌？！";
 			next;
-			mes "[DRY-RUN] [Mysterious Bard]";
-			mes "[DRY-RUN] Love songs are for fools who have never known true love, or never had their hearts broken. Happy songs are fine, but I refuse to sing nonsense!";
+			mes "[神秘的诗人]";
+			mes "情歌是给那些从未真正爱过，或从未心碎的傻瓜们唱的。快乐的歌可以，但我拒绝唱无聊的东西！";
 			next;
-			mes "[DRY-RUN] [Jorti]";
-			mes "[DRY-RUN] Waaaah~!";
-			mes "[DRY-RUN] Uncle Kino,";
-			mes "[DRY-RUN] I'm scared!";
-			mes "[DRY-RUN] I wanna see";
-			mes "[DRY-RUN] my mommy...!";
-			mes "[DRY-RUN] *Cries*";
+			mes "[乔尔提]";
+			mes "哇啊~！";
+			mes "基诺叔叔，";
+			mes "我害怕！";
+			mes "我想见";
+			mes "我的妈妈...！";
+			mes "*哭泣*";
 			next;
-			mes "[DRY-RUN] [Mysterious Bard]";
-			mes "[DRY-RUN] There, there,";
-			mes "[DRY-RUN] princess. Don't cry.";
-			mes "[DRY-RUN] Everything's okay.";
+			mes "[神秘的诗人]";
+			mes "没事的，没事的，";
+			mes "公主。不要哭。";
+			mes "一切都好。";
 			next;
-			mes "[DRY-RUN] [Mysterious Bard]";
+			mes "[神秘的诗人]";
 			if (BaseClass == Job_Swordman) {
-				mes "[DRY-RUN] There's no reason to be scared. The scary people with swords only use them on monsters, okay?";
+				mes "没有理由害怕。那些拿剑的可怕人只会对付怪物，好吗？";
 			} else if (BaseClass == Job_Acolyte) {
-				mes "[DRY-RUN] You don't need to be scared, that person is a servant of God, okay?";
+				mes "你不需要害怕，那个人是上帝的仆人，好吗？";
 			} else if (Class == Job_Thief || Class == Job_Rogue) {
-				mes "[DRY-RUN] There's no reason to be afraid of this riffraff, your Uncle Kino is here, okay?";
+				mes "没有理由害怕这些流氓，你的基诺叔叔在这里，好吗？";
 			} else if (BaseClass == Job_Assassin) {
-				mes "[DRY-RUN] There's no reason to be afraid. I know that person looks scary, but you're a good girl, so you'll be okay.";
+				mes "没必要害怕。我知道那个人看起来很可怕，但你是个好女孩，所以你会没事的。";
 			} else if (BaseClass == Job_Blacksmith) {
-				mes "[DRY-RUN] There's no reason to be scared, honey. It's just a Blacksmith.";
+				mes "亲爱的，没必要害怕。这只是一个铁匠。";
 			} else {
-				mes "[DRY-RUN] There's no reason to be scared. See...? That person won't hurt you.";
+				mes "没必要害怕。看...? 那个人不会伤害你的。";
 			}
 			next;
 			mes "[" + @name$ + "]";
-			mes "[DRY-RUN] Um...";
-			mes "[DRY-RUN] ^333333(Wasn't the little girl";
-			mes "[DRY-RUN] scared by your outburst...?)^000000";
+			mes "嗯...";
+			mes "^333333（难道小女孩";
+			mes "被你的爆发吓到了...？）^000000";
 			close;
 		
 		} else {
 			if (gef_bard_q == 2) {
-				mes "[DRY-RUN] [Mysterious Bard]";
-				mes "[DRY-RUN] You're such a kind, young person. I will remember your name. I would much appreciate it if you would also remember mine.";
+				mes "[神秘的诗人]";
+				mes "你真是个善良的年轻人。我会记住你的名字。如果你也能记住我的名字，我会非常感激。";
 				next;
-				mes "[DRY-RUN] [Mysterious Bard]";
-				mes "[DRY-RUN] I am known as Kino Kitty. I am a wandering poet who wishes to rediscover wishes and dreams.";
+				mes "[神秘的诗人]";
+				mes "我叫基诺·喵喵。我是一位流浪的诗人，想要重新发现愿望和梦想。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] When next we meet, I will tell you what I have heard and experienced. That is, I am willing to spend my time with you.";
+				mes "[基诺小猫]";
+				mes "下次见面时，我会告诉你我所听到和经历的事情。也就是说，我愿意花时间陪伴你。";
 				set gef_bard_q,22;
 				close;
 
 			} else if (gef_bard_q == 3) {
-				mes "[DRY-RUN] [Mysterious Bard]";
-				mes "[DRY-RUN] You're such a kind, young person. I will remember your name. I would much appreciate it if you would also remember mine.";
+				mes "[神秘的诗人]";
+				mes "你真是个善良的年轻人。我会记住你的名字。如果你也能记住我的名字，我会非常感激。";
 				next;
-				mes "[DRY-RUN] [Mysterious Bard]";
-				mes "[DRY-RUN] I am known as Kino Kitty. I am a wandering poet who wishes to rediscover wishes and dreams.";
+				mes "[神秘的诗人]";
+				mes "我叫基诺·喵喵。我是一位流浪的诗人，想要重新发现愿望和梦想。";
 				next;
-				mes "[DRY-RUN] [Kino Kitty]";
-				mes "[DRY-RUN] When next we meet, I will tell you what I have heard and experienced. That is, I am willing to spend my time with you.";
+				mes "[基诺小猫]";
+				mes "下次见面时，我会告诉你我所听到和经历的事情。也就是说，我愿意花时间陪伴你。";
 				set gef_bard_q,23;
 				close;
 
 			} else if (gef_bard_q == 4) {
-				mes "[DRY-RUN] [Mysterious Bard]";
-				mes "[DRY-RUN] Oh, you're most admirable. You truly do respect Bards, don't you?";
+				mes "[神秘的诗人]";
+				mes "哦，你真令人钦佩。你确实尊重诗人，对吧？";
 				next;
-				mes "[DRY-RUN] [Mysterious Bard]";
-				mes "[DRY-RUN] Now that I think about it, are you look for anything, or is there a reason you wish to speak to me?";
+				mes "[神秘的诗人]";
+				mes "现在想想，你是在寻找什么，还是说你有理由想和我说话？";
 				next;
 
-				if(select("[DRY-RUN] I'm looking for Kino Kitty...:Nothing, really.")==1) {
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] How do you";
-					mes "[DRY-RUN] know my name?";
-					mes "[DRY-RUN] Ah, I'm flattered";
-					mes "[DRY-RUN] that my reputation";
-					mes "[DRY-RUN] precedes me.";
+				if(select("我在找基诺小猫...:没什么，真的。")==1) {
+					mes "[基诺小猫]";
+					mes "你怎么";
+					mes "知道我的名字吗？";
+					mes "啊，我受宠若惊";
+					mes "我的名声";
+					mes "在我之前。";
 					next;
-					mes "[DRY-RUN] ^3355FFYou give some candy to the crying girl and relate your tale regarding the lyrics for the song 'At One, I Fall in Love.'^000000";
+					mes "^3355FF你给了哭泣的女孩一些糖果，并讲述了你关于歌曲《一见钟情》歌词的故事。^000000";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] Hmm...";
-					mes "[DRY-RUN] I'm insulted that Errende does not like the words I wrote for 'At One, I Fall in Love.' But, I suppose he is a romantic at heart.";
+					mes "[基诺小猫]";
+					mes "嗯...";
+					mes "我很受伤，埃伦德不喜欢我为《一见钟情》写的歌词。不过，我想他内心是个浪漫的人。";
 					next;
 					mes "[" + @name$ + "]";
-					mes "[DRY-RUN] So...";
-					mes "[DRY-RUN] Do you know the";
-					mes "[DRY-RUN] original words";
-					mes "[DRY-RUN] for the song?";
+					mes "所以……";
+					mes "你知道吗";
+					mes "原歌词";
+					mes "吗？";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] The original lyrics were horrible. There's not enough room in my mind to remember so romantic nonsense. ^333333*Cries*...^000000";
+					mes "[基诺小猫]";
+					mes "原歌词太糟糕了。我脑海中没有足够的空间来记住如此浪漫的废话。^333333*哭*...^000000";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] Romance is for foolish dreamers! I refuse to sing or even remember such vapid lyrics!";
+					mes "[基诺小猫]";
+					mes "浪漫是愚蠢梦想者的事！我拒绝唱歌，甚至不想记住这些无聊的歌词！";
 					next;
-					mes "[DRY-RUN] [Jorti]";
-					mes "[DRY-RUN] U-uncle Kino";
-					mes "[DRY-RUN] You're scaring me.";
-					mes "[DRY-RUN] Please don't yell!";
-					mes "[DRY-RUN] It makes me want";
-					mes "[DRY-RUN] to cry...";
+					mes "[乔尔提]";
+					mes "呜—基诺叔叔";
+					mes "你吓到我了。";
+					mes "请不要大喊！";
+					mes "这让我想";
+					mes "哭...";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] Oh...";
-					mes "[DRY-RUN] I'm sorry, princess. It won't happen again. Your Unclde Kino will try to be good from now on.";
+					mes "[基诺小猫]";
+					mes "哦...";
+					mes "对不起，公主。不会再发生了。你的基诺叔叔从现在开始会努力做好。";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] *Sigh...*";
-					mes "[DRY-RUN] Alright, listen.";
+					mes "[基诺小猫]";
+					mes "*叹气...*";
+					mes "好吧，听着。";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] You'll need an old book of edda lyrics for the original words to the song. All the new books no longer contain the original version.";
+					mes "[基诺小猫]";
+					mes "你需要一本旧的埃达歌词书来获取歌曲的原始歌词。所有的新书都不再包含原版。";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] I wonder...";
-					mes "[DRY-RUN] How did Errende happen to know the original lyrics? In any case, I'm sorry about all this. I supposed I'm a little jaded.";
+					mes "[基诺小猫]";
+					mes "我在想...";
+					mes "埃伦德怎么会知道原歌词？无论如何，我对这一切感到抱歉。我想我有点厌倦了。";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] You know, maybe you should go to Juno. There's a small book store on the book street, and you can probably find the song in that store.";
+					mes "[基诺小猫]";
+					mes "你知道，也许你应该去朱诺。书街上有一家小书店，你可能能在那家店找到这首歌。";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] ^333333^333333*Cough Cough*^000000^000000";
-					mes "[DRY-RUN] Wh-why do I have to suffer? Are my final days as a Bard on this earth soon approaching? I feel so pathetic...";
+					mes "[基诺小猫]";
+					mes "^333333^333333*咳咳*^000000^000000";
+					mes "我—我为什么要受苦？我作为一个诗人的最后日子快要来临了吗？我感到如此可怜……";
 					set gef_bard_q,10;
 					close;
 
 				} else {
-					mes "[DRY-RUN] [Mysterious Bard]";
-					mes "[DRY-RUN] Really now?";
-					mes "[DRY-RUN] That's strange.";
-					mes "[DRY-RUN] You adventurers are always one some kind of adventure, aren't you? I mean, that's the very definition of the word.";
+					mes "[神秘的诗人]";
+					mes "真的嘛？";
+					mes "这很奇怪。";
+					mes "你们冒险者总是在进行某种冒险，不是吗？我的意思是，这正是这个词的定义。";
 					close;
 				}
 
 			} else {
 				if (Sex == SEX_MALE) {
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] You're such a nice young man. I will remember your name. I would much appreciate it if you would also remember mine.";
+					mes "[基诺小猫]";
+					mes "你真是个好年轻人。我会记住你的名字。如果你也能记住我的名字，我会非常感激。";
 					next;
-					mes "[DRY-RUN] [Mysterious Bard]";
-					mes "[DRY-RUN] I am known as Kino Kitty. I am a wandering poet who wishes to rediscover wishes and dreams.";
+					mes "[神秘的诗人]";
+					mes "我叫基诺·喵喵。我是一位流浪的诗人，想要重新发现愿望和梦想。";
 					next;
-					mes "[DRY-RUN] [Kino Kitty]";
-					mes "[DRY-RUN] When next we meet, I will tell you what I have heard and experienced. That is, I am willing to spend my time with you.";
+					mes "[基诺小猫]";
+					mes "下次见面时，我会告诉你我所听到和经历的事情。也就是说，我愿意花时间陪伴你。";
 					set gef_bard_q,20;
 					close;
 
 				} else {
-					mes "[DRY-RUN] [Mysterious Bard]";
-					mes "[DRY-RUN] Ah, it is a privilege to meet a noble woman such as yourself. By your leave, I shall give you my name.";
+					mes "[神秘的诗人]";
+					mes "啊，能见到您这样的贵妇真是我的荣幸。请允许我自我介绍。";
 					next;
-					mes "[DRY-RUN] [Mysterious Bard]";
-					mes "[DRY-RUN] My lady, fair as wisteria, whose beauty rivals that of the goddess Freya, let me introduce myself as the poor poet who wanders the earth, Kino Kitty. I hope you remember me.";
+					mes "[神秘的诗人]";
+					mes "我的女士，如同紫藤般美丽，您的容颜可与女神弗蕾雅相媲美，让我自我介绍，我是游荡在世间的可怜诗人，基诺·基蒂。希望您能记住我。";
 					set gef_bard_q,20;
 					close;
 				}
@@ -2467,295 +2467,295 @@ yuno_in01,173,92,0	script	Apple of Idun	111,{
 payon,181,172,3	script	Bard#4	51,{
 	set @name$,strcharinfo(0);
 	if (gef_bard_q == 2 || gef_bard_q == 22) {
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] Hahaha~!";
-		mes "[DRY-RUN] Listen, listen!";
+		mes "[冈瑟·双和谐]";
+		mes "哈哈哈~!";
+		mes "听着，听着!";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] I was told this song from one of my friends about this Merchant who lives in Payon and everyone loves this song, especially because I'm singing it and you know that...";
+		mes "[冈瑟·双和谐]";
+		mes "我从我的一个朋友那里听说这首歌，关于一个住在斐扬的商人，大家都喜欢这首歌，尤其是因为我在唱，你知道的...";
 		next;
 		mes "[" + @name$ + "]";
-		mes "[DRY-RUN] Excuse me.";
-		mes "[DRY-RUN] Are you...";
-		mes "[DRY-RUN] Gunther Doubleharmony?";
+		mes "打扰一下。";
+		mes "你是...";
+		mes "冈瑟·双和谐吗?";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] ...the Merchant was so poor he didn't even have--eh? Oh yeah, right. That's me. What's up?";
+		mes "[冈瑟·双和谐]";
+		mes "...那个商人穷得连--呃? 哦对了，没错。是我。有什么事吗?";
 		next;
-		mes "[DRY-RUN] ^3355FFYou explain that you have come to him, seeking lost song lyrics.^000000";
+		mes "^3355FF你解释说你来找他，寻求失落的歌词。^000000";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] Ahhhhhhh, I see.";
-		mes "[DRY-RUN] Now, what was the";
-		mes "[DRY-RUN] name of the song again?";
+		mes "[冈瑟·双和谐]";
+		mes "啊啊啊啊啊，我明白了。";
+		mes "那么，那首歌的";
+		mes "名字是什么来着？";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ == "At One, I Fall in Love") {
-			mes "[DRY-RUN] [Gunther Doubleharmony]";
-			mes "[DRY-RUN] Ah~ that song...?";
-			mes "[DRY-RUN] By the way, who asked you";
-			mes "[DRY-RUN] to find out about the song?";
+			mes "[冈瑟·双和谐]";
+			mes "啊~ 那首歌…？";
+			mes "对了，谁让你";
+			mes "去找那首歌的？";
 			next;
 			input .@inputstr$;
 			if (.@inputstr$ == "Minty Errende") {
-				mes "[DRY-RUN] [Gunther Doubleharmony]";
-				mes "[DRY-RUN] Yes, that's my friend! Minty Errende! We used to so close to each other, so I'll write every word of the song for my friend Minty Errende, so turn around please!";
+				mes "[冈瑟·双和谐]";
+				mes "是的，那是我的朋友！Minty Errende！我们曾经关系非常亲密，所以我会把这首歌的每一个字都写给我的朋友Minty Errende，所以请你转过身来！";
 				next;
-				mes "[DRY-RUN] ^3355FFGunther furiously scribbled something upon your back.^000000";
+				mes "^3355FF冈瑟在你的背上狂热地写下了什么。^000000";
 				next;
-				mes "[DRY-RUN] [Gunther Doubleharmony]";
-				mes "[DRY-RUN] There you go! Now you can go back to Minty Errende and show him your back and he will see what I wrote and then remember the lyrics!";
+				mes "[冈瑟·双和谐]";
+				mes "好了！现在你可以回去找Minty Errende，给他看看你的背，他会看到我写的内容，然后记住歌词！";
 				if (gef_bard_q == 2) set gef_bard_q,3;
 				if (gef_bard_q == 22) set gef_bard_q,23;
 				close;
 
 			} else {
-				mes "[DRY-RUN] [Gunther Doubleharmony]";
-				mes "[DRY-RUN] No no no, I don't know anyone with that name, so you better go and check the name of the person asking again, okay?";
+				mes "[冈瑟·双和谐]";
+				mes "不不不，我不认识任何叫这个名字的人，所以你最好再去确认一下询问者的名字，好吗？";
 				close;
 			}
 
 		} else {
-			mes "[DRY-RUN] [Gunther Doubleharmony]";
-			mes "[DRY-RUN] No no no no, I don't know any song with that title, it might not even exist, so you should go and check the name of the song again and tell me, okay?";
+			mes "[冈瑟·双和谐]";
+			mes "不不不不，我不知道有任何标题的歌曲，可能根本就不存在，所以你应该再去确认一下歌曲的名字再告诉我，好吗？";
 			close;
 		}
 
 	} else if (gef_bard_q == 6 || gef_bard_q == 26) {
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] You came back again!";
-		mes "[DRY-RUN] Huh, the song I wrote on your back? Hold on, hold on, let me think let me--ah, right, I got it!";
+		mes "[冈瑟·双和谐]";
+		mes "你又回来了！";
+		mes "嗯，我在你背上写的那首歌？等一下，等一下，让我想想——啊，对了，我想起来了！";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] The words I wrote down on your back were written by Mr. Kitty, my idol, my hero! That song is the art of ^228B22Kino Kitty^000000!";
+		mes "[冈瑟·双和谐]";
+		mes "我在你背上写的词是我的偶像，我的英雄，喵喵先生写的！那首歌是^228B22Kino Kitty^000000的艺术！";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] I wish that someday I could be as great a Bard as him!";
+		mes "[冈瑟·双和谐]";
+		mes "我希望有一天我能成为像他一样伟大的诗人！";
 		close;
 
 	} else {
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] Hahaha~!";
-		mes "[DRY-RUN] Listen, listen!";
+		mes "[冈瑟·双和谐]";
+		mes "哈哈哈~!";
+		mes "听着，听着!";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] I was told this song from one of my friends about this Merchant who lives in Payon and everyone loves this song, especially because I'm singing it and you know that...";
+		mes "[冈瑟·双和谐]";
+		mes "我从我的一个朋友那里听说这首歌，关于一个住在斐扬的商人，大家都喜欢这首歌，尤其是因为我在唱，你知道的...";
 		next;
-		mes "[DRY-RUN] [Gunther Doubleharmony]";
-		mes "[DRY-RUN] Oh, right...!";
-		mes "[DRY-RUN] Do you wanna listen";
-		mes "[DRY-RUN] to my song or a story?";
-		mes "[DRY-RUN] I know you want to!";
-		mes "[DRY-RUN] Right, right?";
+		mes "[冈瑟·双和谐]";
+		mes "哦，对了...！";
+		mes "你想听吗";
+		mes "听我的歌还是故事？";
+		mes "我知道你想要！";
+		mes "对吧，对吧？";
 		next;
 
-		if(select("[DRY-RUN] Show some interest.:Ignore him.")==1) {
-			mes "[DRY-RUN] [Gunther Doubleharmony]";
-			mes "[DRY-RUN] Yay~! I knew it!";
-			mes "[DRY-RUN] So you wanna hear";
-			mes "[DRY-RUN] a song or a story?";
+		if(select("表现出一些兴趣。:忽视他。")==1) {
+			mes "[冈瑟·双和谐]";
+			mes "耶~！我就知道！";
+			mes "所以你想听";
+			mes "一首歌还是一个故事？";
 			next;
-			switch(select("[DRY-RUN] A song:A story:Maybe some other time")) {
+			switch(select("一首歌:一个故事:也许下次再说")) {
 			case 1:
 				switch(rand(1,3)) {
 				case 1:
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] Gunther sings!";
-					mes "[DRY-RUN] Gunther dances!";
-					mes "[DRY-RUN] The tile of this song is~";
-					mes "[DRY-RUN] 'The Rich Mr. Kim~!'";
+					mes "[冈瑟·双和谐]";
+					mes "冈瑟唱歌！";
+					mes "冈瑟跳舞！";
+					mes "这首歌的标题是~";
+					mes "'富有的金先生~！'";
 					next;
-					mes "[DRY-RUN] ^228B22Merchant of Payon";
-					mes "[DRY-RUN] So poooooooor~";
-					mes "[DRY-RUN] No money for armor";
-					mes "[DRY-RUN] No money to make.";
+					mes "^228B22斐扬的商人";
+					mes "真是穷得可怜~";
+					mes "没有钱买盔甲";
+					mes "没有钱制作。";
 					next;
-					mes "[DRY-RUN] ^228B22Sold the";
-					mes "[DRY-RUN] Cotton Shirt";
-					mes "[DRY-RUN] Off his back";
-					mes "[DRY-RUN] No pity he'll take.^000000";
+					mes "^228B22卖掉了";
+					mes "棉质衬衫";
+					mes "从他身上";
+					mes "他不会心软。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22First he only sold Red Pots";
-					mes "[DRY-RUN] At first, he only sold red pots.";
-					mes "[DRY-RUN] Then he moved up to Carrots, whoohoo~";
-					mes "[DRY-RUN] He could afford new armor";
-					mes "[DRY-RUN] and even wear it,";
-					mes "[DRY-RUN] whoohoo~^000000";
+					mes "^228B22起初他只卖红色药水";
+					mes "起初，他只卖红色药水。";
+					mes "然后他开始卖胡萝卜，哇哈哈~";
+					mes "他能买得起新盔甲";
+					mes "甚至能穿上它，";
+					mes "哇哈哈~^000000";
 					next;
-					mes "[DRY-RUN] ^228B22But one day, he was scammed";
-					mes "[DRY-RUN] Scammed by a wicked guild.";
-					mes "[DRY-RUN] Made poor once again.";
-					mes "[DRY-RUN] He decided to go to Ant Hell";
-					mes "[DRY-RUN] Right there";
-					mes "[DRY-RUN] And right then.";
+					mes "^228B22但有一天，他被诈骗了";
+					mes "被一个邪恶的公会诈骗。";
+					mes "再次变得贫穷。";
+					mes "他决定去蚂蚁地狱";
+					mes "就在那儿";
+					mes "就在那时。";
 					next;
-					mes "[DRY-RUN] ^228B22Bats, Dwarves, Eggs, Ants!";
-					mes "[DRY-RUN] He battled them all~";
-					mes "[DRY-RUN] Worm Peelings, Jellopy!";
-					mes "[DRY-RUN] He gathered loot great and small.";
+					mes "^228B22蝙蝠、矮人、蛋、蚂蚁！";
+					mes "他与它们战斗~";
+					mes "虫皮、果冻！";
+					mes "他收集了各种战利品。";
 					next;
-					mes "[DRY-RUN] ^228B22Then the glorious day came";
-					mes "[DRY-RUN] When he found a valuable card";
-					mes "[DRY-RUN] That'd bring great wealth to his naaaame~^000000";
+					mes "^228B22辉煌的日子终于来临";
+					mes "当他找到一张珍贵的卡片时";
+					mes "这将为他的名字带来巨大的财富~^000000";
 					next;
-					mes "[DRY-RUN] ^228B22But he kept it dear to him";
-					mes "[DRY-RUN] To remember his times of";
-					mes "[DRY-RUN] working so hard.";
-					mes "[DRY-RUN] He never sold it, never sold";
-					mes "[DRY-RUN] his precious card~^000000";
+					mes "^228B22但他一直珍惜着它";
+					mes "以记住他曾经的时光";
+					mes "努力工作的时光。";
+					mes "他从未出售过它，从未出售过";
+					mes "他珍贵的卡片~^000000";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] That's a very old story about rich Mr. Kim, and his rise from rags to riches to rags to riches. Is it true or is it fiction? Oh, please don't ask me! I've no clue!";
+					mes "[冈瑟·双和谐]";
+					mes "这是一个关于富有的金先生的古老故事，他从贫穷到富有再到贫穷再到富有。是真的吗，还是虚构的？哦，请不要问我！我不知道！";
 					close;
 
 				case 2:
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] *Ahem*";
-					mes "[DRY-RUN] Gunther sings ";
-					mes "[DRY-RUN] of Yggdrasil~";
+					mes "[冈瑟·双和谐]";
+					mes "*咳*";
+					mes "冈瑟唱道 ";
+					mes "关于世界树~";
 					next;
-					mes "[DRY-RUN] ^228B22Evergreen Yggdrasil~";
-					mes "[DRY-RUN] Giant ashen tree";
-					mes "[DRY-RUN] reaching for the sky.";
-					mes "[DRY-RUN] Crystal, morning dew";
-					mes "[DRY-RUN] From its leaves";
-					mes "[DRY-RUN] Formed Urd's Pond.^000000";
+					mes "^228B22常青的世界树~";
+					mes "巨大的灰色树";
+					mes "向天空伸展。";
+					mes "水晶，晨露";
+					mes "从它的叶子";
+					mes "形成了乌尔德的池塘。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22Three wise girls.";
-					mes "[DRY-RUN] Seated beneath its boughs.";
-					mes "[DRY-RUN] Urd of the past,";
-					mes "[DRY-RUN] Belldandy of the present";
-					mes "[DRY-RUN] Skuld the future.^000000";
+					mes "^228B22三个聪明的女孩。";
+					mes "坐在它的树枝下。";
+					mes "过去的乌尔德，";
+					mes "现在的贝尔丹迪";
+					mes "未来的斯库尔德。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22Spinning, weaving";
-					mes "[DRY-RUN] Threads of destiny.";
-					mes "[DRY-RUN] Evergreen Yggdrasil~";
-					mes "[DRY-RUN] Giant ashen tree";
-					mes "[DRY-RUN] reaching for the sky.";
-					mes "[DRY-RUN] Its roots soaked with tears.^000000";
+					mes "^228B22旋转，编织";
+					mes "命运的线索。";
+					mes "常青的世界树~";
+					mes "巨大的灰色树";
+					mes "向天空伸展。";
+					mes "它的根浸透着泪水。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22Death in Hvergelmir.";
-					mes "[DRY-RUN] An evil dragon";
-					mes "[DRY-RUN] Burning its roots";
-					mes "[DRY-RUN] With eternal flame.";
-					mes "[DRY-RUN] The evil dragon Nidhogg";
-					mes "[DRY-RUN] Living between Yggdrasil";
-					mes "[DRY-RUN] and Niffheim.^000000";
+					mes "^228B22赫尔维尔米尔的死亡。";
+					mes "一条邪恶的龙";
+					mes "燃烧着它的根";
+					mes "用永恒的火焰。";
+					mes "邪恶的龙尼德霍格";
+					mes "生活在世界树之间。";
+					mes "和尼芙菲姆。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22Evergreen Yggdrasil~";
-					mes "[DRY-RUN] Giant ashen tree";
-					mes "[DRY-RUN] reaching for the sky.";
-					mes "[DRY-RUN] Wisdom in its roots";
-					mes "[DRY-RUN] Roots reaching";
-					mes "[DRY-RUN] Mimir's pond.^000000";
+					mes "^228B22常青的世界树~";
+					mes "巨大的灰色树";
+					mes "向天空伸展。";
+					mes "智慧的根源";
+					mes "根系延伸";
+					mes "米米尔的池塘。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22Guarded by a wise giant.";
-					mes "[DRY-RUN] Odin sacrificed one";
-					mes "[DRY-RUN] of his eyes for the wisdom.";
-					mes "[DRY-RUN] Heimdall's horn hidden";
-					mes "[DRY-RUN] In Yggdrasil's roots";
-					mes "[DRY-RUN] Will sound one last time";
-					mes "[DRY-RUN] Signaling Ragnarok.^000000";
+					mes "^228B22被一位智慧的巨人守护着。";
+					mes "奥丁为智慧牺牲了一个眼睛。";
+					mes "他为智慧牺牲了他的一个眼睛。";
+					mes "海姆达尔的号角隐藏在";
+					mes "世界树的根部";
+					mes "将最后一次鸣响";
+					mes "预示着诸神黄昏。^000000";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] This is a very old story...";
-					mes "[DRY-RUN] Is it truth or fiction? But please don't ask me, I have no idea~!";
+					mes "[冈瑟·双和谐]";
+					mes "这是一个非常古老的故事...";
+					mes "这是真实还是虚构？但请不要问我，我不知道~！";
 					close;
 
 				case 3:
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] I will sing one of Luke's songs, you know, Luke, one of the greatest Bards of his time? But I changed the words a little bit.";
+					mes "[冈瑟·双和谐]";
+					mes "我将唱一首卢克的歌，你知道的，卢克，他是他那个时代最伟大的诗人之一？但我稍微改动了一下歌词。";
 					next;
-					mes "[DRY-RUN] ^228B22I found it in a drawer.";
-					mes "[DRY-RUN] Old, worn letters";
-					mes "[DRY-RUN] Forming elaborate words.";
-					mes "[DRY-RUN] Sincere reflection";
-					mes "[DRY-RUN] Of a sincere mind.^000000";
+					mes "^228B22我在一个抽屉里找到了它。";
+					mes "旧的，磨损的信件";
+					mes "形成复杂的词语。";
+					mes "真诚的反思";
+					mes "真诚心灵的反映。^000000";
 					next;
-					mes "[DRY-RUN] ^228B22I found it in a drawer.";
-					mes "[DRY-RUN] Was I really like that once?";
-					mes "[DRY-RUN] Was I really that childish?";
-					mes "[DRY-RUN] My memories are tarnished.";
+					mes "^228B22我在一个抽屉里找到了它。";
+					mes "我曾经真的那样吗？";
+					mes "我真的那么幼稚吗？";
+					mes "我的记忆已经被玷污。";
 					next;
-					mes "[DRY-RUN] ^228B22I found it in a drawer.";
-					mes "[DRY-RUN] Love I had forgotten.";
-					mes "[DRY-RUN] She never got this letter.";
-					mes "[DRY-RUN] But both of us were too shy.";
+					mes "^228B22我在一个抽屉里找到了它。";
+					mes "我曾经忘记的爱。";
+					mes "她从未收到这封信。";
+					mes "但我们两个都太害羞了。";
 					next;
-					mes "[DRY-RUN] ^228B22I found it in a drawer.";
-					mes "[DRY-RUN] Love I had forgotten.";
-					mes "[DRY-RUN] I never gave her this letter.";
-					mes "[DRY-RUN] But both of us were too proud.";
+					mes "^228B22我在一个抽屉里找到了它。";
+					mes "我曾经忘记的爱。";
+					mes "我从未给过她这封信。";
+					mes "但我们两个都太骄傲了。";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] Do you have anyone in mind? Do you? If you ever write a love letter, you must send it and express yourself.";
+					mes "[冈瑟·双和谐]";
+					mes "你心里有想的人吗？如果你写情书，一定要寄出去，表达自己的心意。";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] If you've written love letters that you'll never send, throw them away. Throw your goddamn pride away.";
+					mes "[冈瑟·双和谐]";
+					mes "如果你写了情书却从未寄出，就把它们扔掉吧。扔掉你该死的骄傲。";
 					close;
 				}
 
 			case 2:
 				switch(rand(1,3)) {
 				case 1:
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] Um, have you ever";
-					mes "[DRY-RUN] tasted Comodo cheese?";
+					mes "[冈瑟·双和谐]";
+					mes "嗯，你有没有";
+					mes "尝过科莫多奶酪？";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] You can only taste it in Comodo, but you need to have a good strong stomach to digest it. Oh! And the cheese has a secret!";
+					mes "[冈瑟·双和谐]";
+					mes "你只能在科莫多尝到它，但你需要有一个强壮的胃才能消化它。哦！而且这奶酪还有个秘密！";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] You ^228B22might^000000 be invulnerable to the power of the doomed swords, which come from the other world, if you eat it!";
+					mes "[冈瑟·双和谐]";
+					mes "如果你吃了它，你^228B22可能^000000会对来自异世界的注定之剑的力量免疫！";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] Why don't you go taste it if you haven't yet? I tried to taste it once. It was kind of yummy, but then I fainted. Hahahaha~!";
+					mes "[冈瑟·双和谐]";
+					mes "如果你还没尝过，为什么不去试试呢？我曾经尝过一次，味道还不错，但我后来晕倒了。哈哈哈~！";
 					close;
 
 				case 2:
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] I was passing Prontera the other day at the place where it used to be the Swordman training ground.";
+					mes "[冈瑟·双和谐]";
+					mes "前几天我经过普隆德拉，那个地方曾经是剑士训练场。";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] I saw some kid training really really hard and he didn't notice me watching him, so I guess he was really really serious!";
+					mes "[冈瑟·双和谐]";
+					mes "我看到一个小孩非常努力地训练，他没注意到我在看他，所以我想他真的很认真！";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] He looked like he wanted to be a professional Swordman, but he was also giving his gear away to other Novices.";
+					mes "[冈瑟·双和谐]";
+					mes "他看起来想成为一名专业剑士，但他也把装备送给了其他初心者。";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] I got bored watching him do the same thing over and over and over again, but I think the Monster Research Organization would like him if I introduced him.";
+					mes "[冈瑟·双和谐]";
+					mes "我看着他一遍又一遍地做同样的事情感到无聊，但我觉得如果我介绍他，怪物研究组织会喜欢他。";
 					close;
 
 				case 3:
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] Have you ever been in Lutie,";
-					mes "[DRY-RUN] land of year round snow?";
+					mes "[冈瑟·双和谐]";
+					mes "你去过鲁提耶吗，";
+					mes "那是一个四季如冬的地方？";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] There is a snowman named";
-					mes "[DRY-RUN] SnowySnow and if you met him, you'd know all sorts of things about him like he can talk! It's so strange and mysterious~!";
+					mes "[冈瑟·双和谐]";
+					mes "那里有一个叫做";
+					mes "雪雪的人，如果你见到他，你会知道很多关于他的事情，比如他会说话！这太奇怪和神秘了~！";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] He has a mysterious bag where endless gifts come out, and he's got a mysterious past involving some colder town and something about a nasty witch.";
+					mes "[冈瑟·双和谐]";
+					mes "他有一个神秘的袋子，里面不断冒出礼物，他还有一个与某个寒冷小镇和一个讨厌的女巫有关的神秘过去。";
 					next;
-					mes "[DRY-RUN] [Gunther Doubleharmony]";
-					mes "[DRY-RUN] But it's okay because he was rescued by some Alchemist and came back to life, but you should go to Lutie if you wanna know more about him, okay?";
+					mes "[冈瑟·双和谐]";
+					mes "但没关系，因为他被一个炼金术士救了回来，复活了。如果你想了解更多关于他的事情，去鲁提耶吧，好吗？";
 					close;
 				}
 			
 			case 3:
-				mes "[DRY-RUN] [Gunther Doubleharmony]";
-				mes "[DRY-RUN] You're gonna leave right now and not even listen to me a little bit? Okay, I'm cool, but promise you'll come back and listen to just one of my songs, okay?";
+				mes "[冈瑟·双和谐]";
+				mes "你现在就要离开，连听我说话的时间都没有吗？好吧，我不在乎，但答应我你会回来听我唱一首歌，好吗？";
 				close;
 			
 			}
 
 		} else {
 			mes "[" + @name$ + "]";
-			mes "[DRY-RUN] ...";
+			mes "...";
 			next;
-			mes "[DRY-RUN] [Gunther Doubleharmony]";
-			mes "[DRY-RUN] Wow, you're ignoring me, huh? Alright, that's fine by me! Unless you have some kind of problem where you can't talk, then I'm really really sorry.";
+			mes "[冈瑟·双和谐]";
+			mes "哇，你在无视我，是吗？好吧，我没关系！除非你有什么问题不能说话，那我真的很抱歉。";
 			close;
 		}
 
@@ -2765,186 +2765,186 @@ payon,181,172,3	script	Bard#4	51,{
 
 yuno_in04,20,123,7	script	Representative#bq	95,{
 //set @check = GetGlobalVar "040708_god2"
-	mes "[DRY-RUN] [Marlin Putiur]";
+	mes "[马林·普提尔]";
 	if (god_brising == 3) {
-		mes "[DRY-RUN] Welcome to the";
-		mes "[DRY-RUN] Monster Research";
-		mes "[DRY-RUN] Organization.";
+		mes "欢迎来到";
+		mes "怪物研究";
+		mes "组织。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] We are researching monsters based upon information from adventurers in order to efficiently cope with monsters out in the wild.";
+		mes "[马林·普提尔]";
+		mes "我们正在根据冒险者提供的信息研究怪物，以便有效应对野外的怪物。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] We're accepting any kind of information related to monsters,";
-		mes "[DRY-RUN] so if you have any news or info, please don't hesitate to submit it to me.";
+		mes "[马林·普提尔]";
+		mes "我们接受任何与怪物相关的信息，";
+		mes "所以如果你有任何消息或信息，请不要犹豫，提交给我。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] You can use the report documentation form in";
-		mes "[DRY-RUN] this room at your convenience.";
+		mes "[马林·普提尔]";
+		mes "你可以在";
+		mes "这个房间使用报告文档表格。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Eh...?";
-		mes "[DRY-RUN] Did you just say";
-		mes "[DRY-RUN] you're looking for";
-		mes "[DRY-RUN] someone? Well...";
+		mes "[马林·普提尔]";
+		mes "呃...？";
+		mes "你刚才说";
+		mes "你在找";
+		mes "某人？那么...";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Well, if he's a registered";
-		mes "[DRY-RUN] member of this organization,";
-		mes "[DRY-RUN] I can help you.";
+		mes "[马林·普提尔]";
+		mes "如果他是这个组织的注册";
+		mes "成员，";
+		mes "我可以帮你。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] What was the name?";
-		mes "[DRY-RUN] Hermite Charles...?";
+		mes "[马林·普提尔]";
+		mes "名字是什么？";
+		mes "赫尔米特·查尔斯...? ";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Oh, I found him.";
-		mes "[DRY-RUN] Errr, but he didn't submit all of the required information when he applied for membership...";
+		mes "[马林·普提尔]";
+		mes "哦，我找到了他。";
+		mes "呃，但他在申请加入时没有提交所有所需的信息...";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Oh. He's a Rogue.";
-		mes "[DRY-RUN] Well, that explains everything. Anyway, did you want to see all";
-		mes "[DRY-RUN] the information we have?";
+		mes "[马林·普提尔]";
+		mes "哦。他是个流氓。";
+		mes "好吧，这就解释了一切。无论如何，你想看看我们拥有的所有";
+		mes "信息吗？";
 		next;
-		mes "[DRY-RUN] ^3355FFMarlin shows you";
-		mes "[DRY-RUN] the membership";
-		mes "[DRY-RUN] application card.^000000";
+		mes "^3355FF马林向你展示了";
+		mes "会员";
+		mes "申请卡。^000000";
 		next;
-		mes "[DRY-RUN] [Membership Card]";
-		mes "[DRY-RUN] Name: Hermite Charles";
-		mes "[DRY-RUN] Job: Rogue";
-		mes "[DRY-RUN] Sex: Rogue";
-		mes "[DRY-RUN] Address: Yo Mama Street, Prontera";
+		mes "[会员卡]";
+		mes "姓名：赫尔米特·查尔斯";
+		mes "职业：流氓";
+		mes "性别：流氓";
+		mes "地址：普隆德拉，妈妈街";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Unfortunately, we don't have any more information. But I hope this will be helpful to you in some way.";
+		mes "[马林·普提尔]";
+		mes "不幸的是，我们没有更多的信息。但我希望这能对你有所帮助。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Still, it may be a good idea to visit the Rogue Guild. Perhaps";
-		mes "[DRY-RUN] they can help you.";
+		mes "[马林·普提尔]";
+		mes "不过，去流氓公会看看可能是个好主意。也许";
+		mes "他们能帮到你。";
 		close;
 	}
 
-	mes "[DRY-RUN] Welcome to the";
-	mes "[DRY-RUN] Monster Research";
-	mes "[DRY-RUN] Organization.";
+	mes "欢迎来到";
+	mes "怪物研究";
+	mes "组织。";
 	next;
-	mes "[DRY-RUN] [Marlin Putiur]";
-	mes "[DRY-RUN] We are researching monsters based on information from adventurers in order to efficiently cope with monsters out in the wild.";
+	mes "[马林·普提尔]";
+	mes "我们正在根据冒险者提供的信息研究怪物，以便有效应对野外的怪物。";
 	next;
-	mes "[DRY-RUN] [Marlin Putiur]";
-	mes "[DRY-RUN] We're accepting any kind of information related to monsters, so if you have any news or info, please don't hesitate to submit it to me.";
+	mes "[马林·普提尔]";
+	mes "我们接受任何与怪物相关的信息，所以如果你有任何消息或信息，请不要犹豫，提交给我。";
 	next;
-	mes "[DRY-RUN] [Marlin Putiur]";
-	mes "[DRY-RUN] You can use the report documentation form in this room at your convenience.";
+	mes "[马林·普提尔]";
+	mes "你可以在这个房间使用报告文档表格。";
 	if (gef_bard_q == 4 || gef_bard_q == 24) {
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] Hmmm?";
-		mes "[DRY-RUN] Adventurers of this organization? Ah, you say you're looking for a Bard?";
+		mes "[马林·普提尔]";
+		mes "嗯？";
+		mes "这个组织的冒险者？啊，你说你在找一位诗人？";
 		next;
-		mes "[DRY-RUN] [Marlin Putuir]";
-		mes "[DRY-RUN] Yes, we have a few Bard members who regularly send us information related to monsters.";
+		mes "[马林·普提尔]";
+		mes "是的，我们有几位诗人会员定期向我们发送与怪物相关的信息。";
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] I also hear the Bards have been helping scholars instill bulletin boards in fields which indicate the location for new adventurers. Would you let me know the full name of the person you're looking for?";
+		mes "[马林·普提尔]";
+		mes "我还听说诗人们一直在帮助学者在田野上安装公告板，以指示新冒险者的位置。你能告诉我你在找的人的全名吗？";
 		next;
 		input .@inputstr$;
 		if (.@inputstr$ == "Minty Errende") {
-			mes "[DRY-RUN] [Marlin Putiur]";
-			mes "[DRY-RUN] Minty Errende...";
-			mes "[DRY-RUN] Oh yes, I remember him. He told me a while ago that he's heading South, and that he's staying in Geffen now.";
+			mes "[马林·普提尔]";
+			mes "米蒂·埃伦德...";
+			mes "哦，是的，我记得他。他不久前告诉我他要往南走，现在在吉芬待着。";
 			next;
-			mes "[DRY-RUN] [Marlin Putiur]";
-			mes "[DRY-RUN] He's a very kind, friendly person. Errende's always doing his best to provide us with the information we need. When you get a chance, would you please give him my regards?";
+			mes "[马林·普提尔]";
+			mes "他是个非常善良、友好的人。埃伦德总是尽力为我们提供所需的信息。你有机会的话，请向他问好。";
 			close;
 
 		} else if (.@inputstr$ == "Kino Kitty") {
-			mes "[DRY-RUN] [Marlin Putiur]";
-			mes "[DRY-RUN] Kino Kitty, Kino Kitty... Oh, here we are. He sent us a letter that says, 'I will stay in the desert until I find my real self.'";
+			mes "[马林·普提尔]";
+			mes "基诺·基蒂，基诺·基蒂...哦，找到了。他给我们发了一封信，上面写着：‘我会在沙漠中待到找到真正的自己。’";
 			next;
-			mes "[DRY-RUN] [Marlin Putiur]";
-			mes "[DRY-RUN] He doesn't seem healthy, but I guess he's still traveling. Trying seeking him out in Morroc, and give my regards to him if you get the chance.";
+			mes "[马林·普提尔]";
+			mes "他看起来不太健康，但我想他仍在旅行。如果你有机会，试着在梦罗克找找他，并向他问好。";
 			close;
 
 		} else if (.@inputstr$ == "Gunther Doubleharmony") {
-			mes "[DRY-RUN] [Marlin Putiur]";
-			mes "[DRY-RUN] Ah, are you a friend of Gunther's? Haha, he's a very funny guy, if a little excitable. Let's see, Gunther, Gunther...";
+			mes "[马林·普提尔]";
+			mes "啊，你是冈瑟的朋友吗？哈哈，他是个非常有趣的人，虽然有点兴奋。让我看看，冈瑟，冈瑟...";
 			next;
-			mes "[DRY-RUN] [Marlin Putiur]";
-			mes "[DRY-RUN] Ah, it says here that he wanted to look around Payon and Alberta. So he'll be at one of those places. I'm sorry I can't be more specific.";
+			mes "[马林·普提尔]";
+			mes "啊，这里写着他想在斐扬和艾尔贝塔转转。所以他会在这两个地方之一。抱歉我不能更具体。";
 			close;
 
 		} else {
-			mes "[DRY-RUN] [Marlin Putiur]";
+			mes "[马林·普提尔]";
 			mes " " + .@inputstr$ + "...?";
-			mes "[DRY-RUN] Ummm hmm...";
-			mes "[DRY-RUN] I'm sorry, but we don't have any records for that person.";
+			mes "嗯嗯...";
+			mes "对不起，我们没有关于那个人的记录。";
 			close;
 		}
 
 	} else {
 		next;
-		mes "[DRY-RUN] [Marlin Putiur]";
-		mes "[DRY-RUN] We are endeavoring to research monsters in this world with the intent to aid each and every adventurer on their journeys.";
+		mes "[马林·普提尔]";
+		mes "我们正在努力研究这个世界的怪物，以帮助每一位冒险者的旅程。";
 		close;
 	}
 }
 
 yuno_in04,33,119,3	script	Adventurer#1	828,{
-	mes "[DRY-RUN] ...";
+	mes "...";
 	next;
-	mes "[DRY-RUN] ...";
-	mes "[DRY-RUN] .......";
+	mes "...";
+	mes ".......";
 	next;
-	mes "[DRY-RUN] ^3355FF*Scribble Scribble*^000000";
+	mes "^3355FF*涂鸦涂鸦*^000000";
 	next;
-	mes "[DRY-RUN] [Energetic Young Man]";
-	mes "[DRY-RUN] Err...?";
-	mes "[DRY-RUN] What is it?";
+	mes "[充满活力的年轻人]";
+	mes "呃...?";
+	mes "怎么了?";
 	next;
 	if (Sex == SEX_FEMALE) {
 		emotion ET_SMILE;
-		mes "[DRY-RUN] [Energetic Young Man]";
-		mes "[DRY-RUN] Oh...!";
-		mes "[DRY-RUN] A beautiful,";
-		mes "[DRY-RUN] young lady~!";
+		mes "[充满活力的年轻人]";
+		mes "哦……！";
+		mes "一位美丽的,";
+		mes "年轻女士~!";
 		next;
-		mes "[DRY-RUN] [Energetic Young Man]";
-		mes "[DRY-RUN] Hello there~";
-		mes "[DRY-RUN] My name is Pane.";
-		mes "[DRY-RUN] May I ask yours?";
+		mes "[充满活力的年轻人]";
+		mes "你好呀~";
+		mes "我叫Pane.";
+		mes "请问你叫什么名字?";
 		set @name$,strcharinfo(0);
 		input .@inputstr$;
 		next;
-		mes "[DRY-RUN] [Energetic Young Man]";
-		mes "[DRY-RUN] Oh...";
+		mes "[充满活力的年轻人]";
+		mes "哦...";
 		mes "" +.@inputstr$+ "...";
 		if (@name$ == .@inputstr$) {
 			next;
-			mes "[DRY-RUN] [Energetic Young Man]";
+			mes "[充满活力的年轻人]";
 			mes "^FF6699"+.@inputstr$+"!";
-			mes "[DRY-RUN] Such a wonderful name!";
+			mes "真是个美妙的名字!";
 			next;
-			mes "[DRY-RUN] [Energetic Young Man]";
-			mes "[DRY-RUN] I shall remember your name, my lady. Oh, but I'm so sorry. I'm kind of busy right now. Would you come back later? I'll do my best to please you next time.";
+			mes "[充满活力的年轻人]";
+			mes "我会记住你的名字，我的女士。哦，但我很抱歉。我现在有点忙。你能稍后再来吗？下次我会尽力让你满意的。";
 			emotion ET_CHUP;
 			close;
 
 		} else {
-			mes "[DRY-RUN] That's your name?";
+			mes "这就是你的名字？";
 			next;
-			mes "[DRY-RUN] [Energetic Young Man]";
-			mes "[DRY-RUN] Eh, whatever. Oh, but I'm so sorry. I'm kind of busy right now. Would you come back later? I'll do my best to please you next time.";
+			mes "[充满活力的年轻人]";
+			mes "呃，随便吧。哦，但我很抱歉。我现在有点忙。你能稍后再来吗？下次我会尽力让你满意的。";
 			emotion ET_SMILE;
 			close;
 		}
 
 	} else {
-		mes "[DRY-RUN] [Energetic Young Man]";
-		mes "[DRY-RUN] What, man...!";
-		mes "[DRY-RUN] Leave me alone.";
-		mes "[DRY-RUN] Can't you see I'm busy?";
+		mes "[充满活力的年轻人]";
+		mes "什么，老兄...!";
+		mes "别打扰我。";
+		mes "你难道看不出我很忙吗?";
 		close;
 	}
 }

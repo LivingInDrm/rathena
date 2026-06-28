@@ -14,8 +14,8 @@
 //============================================================ 
 
 ecl_in02,96,22,3	script	sign#prison_inn	545,{
-	mes "[DRY-RUN] [North] Prison";
-	mes "[DRY-RUN] [West] Clinic";
+	mes "[北] 监狱";
+	mes "[西] 诊所";
 	close;
 }
 
@@ -26,29 +26,29 @@ ecl_in01,8,71,5	script	Eclage Guard#pri_inn	447,{
 }
 
 ecl_in02,164,56,3	script	Receptionist#Laphine	835,{
-	mes "[DRY-RUN] [Receptionist]";
-	mes "[DRY-RUN] Welcome to Eclage Clinic.";
+	mes "[接待员]";
+	mes "欢迎来到艾克拉主诊所。";
 	next;
-	switch (select("[DRY-RUN] Save Location:Rest:Finish the conversation")) {
+	switch (select("保存位置:休息:结束对话")) {
 	case 1:
-		mes "[DRY-RUN] [Receptionist]";
-		mes "[DRY-RUN] Clinic has been set as your save point. Be careful though~";
+		mes "[接待员]";
+		mes "诊所已设为您的存档点。不过请小心~";
 		savepoint "ecl_in02",162,50,1,1;
 		close;
 	case 2:
-		mes "[DRY-RUN] [Receptionist]";
-		mes "[DRY-RUN] Restore your mind and body at our clinic. It's filled with Eclage's clean energy.";
-		mes "[DRY-RUN] We charge 1 Splendide Coin normally, but we offer a special discount for travelers. Your total is 5,000 zeny. ";
+		mes "[接待员]";
+		mes "在我们的诊所恢复您的身心。这里充满了艾克拉主的清洁能量。";
+		mes "我们通常收取1个斯普兰蒂德币，但我们为旅行者提供特别折扣。您的总费用是5,000金币。";
 		next;
-		switch (select("[DRY-RUN] Pay with Splendide Coin:Pay with Zeny:Forget it")) {
+		switch (select("使用斯普兰蒂德币支付:使用金币支付:算了")) {
 		case 1:
 			if (!countitem(6081)) {
-				mes "[DRY-RUN] [Receptionist]";
-				mes "[DRY-RUN] It seems like you don't have enough coins. Would you check your account again, please?";
+				mes "[接待员]";
+				mes "看起来您没有足够的硬币。请您再检查一下账户好吗？";
 				close;
 			}
-			mes "[DRY-RUN] [Receptionist]";
-			mes "[DRY-RUN] Make yourself at home~";
+			mes "[接待员]";
+			mes "请随意~";
 			close2;
 			delitem 6081,1; //6081
 			percentheal 100,100;
@@ -56,12 +56,12 @@ ecl_in02,164,56,3	script	Receptionist#Laphine	835,{
 			end;
 		case 2:
 			if (Zeny < 5000) {
-				mes "[DRY-RUN] [Receptionist]";
-				mes "[DRY-RUN] Looks like you don't have enough resources to proceed. Do you mind checking your account again?";
+				mes "[接待员]";
+				mes "看起来您没有足够的资源来继续。您介意再检查一下账户吗？";
 				close;
 			}
-			mes "[DRY-RUN] [Receptionist]";
-			mes "[DRY-RUN] Make yourself at home~";
+			mes "[接待员]";
+			mes "请随意~";
 			close2;
 			Zeny = Zeny - 5000;
 			percentheal 100,100;

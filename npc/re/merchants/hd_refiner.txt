@@ -155,35 +155,35 @@
 	}
 
 	mes "相信你绝不会埋怨我把你的精炼值弄掉了1级.";
-	mes "Tac! Tac! Tac!";
+	mes "咔！咔！咔！";
 	if (getequippercentrefinery(.@part, true) > rand(100)) {
 		successrefitem .@part;
 		next;
 		emotion ET_BEST;
-		mes "[Blacksmith Mighty Hammer]";
-		mes "The sound refreshes my mind every time I hear it.";
-		mes "Here, have it. Refine succeeded flawlessly!";
+		mes "[铁匠强力锤]";
+		mes "每次听到这个声音都让我精神焕发。";
+		mes "给你，成功精炼了！";
 		close;
 	}
 	if (.@bless_who == 1) {
 		specialeffect EF_HOLYHIT;
 		next;
 		emotion ET_HUK;
-		mes "[Blacksmith Mighty Hammer]";
-		mes "What?!!";
+		mes "[铁匠强力锤]";
+		mes "什么？！！";
 		next;
-		mes "[Blacksmith Mighty Hammer]";
-		mes "Aiya! I am faceless now. HmHm.";
+		mes "[铁匠强力锤]";
+		mes "哎呀！我现在无脸了。嗯嗯。";
 		close;
 	}
 	downrefitem .@part;
 	next;
 	emotion ET_HUK;
-	mes "[Blacksmith Mighty Hammer]";
-	mes "Oops!!";
+	mes "[铁匠强力锤]";
+	mes "哎呀！！";
 	next;
-	mes "[Blacksmith Mighty Hammer]";
-	mes "I am sure a person like you would never blame me for a decrease in refine level by 1. Hmm.";
+	mes "[铁匠强力锤]";
+	mes "我相信像你这样的人绝不会因为精炼等级下降1级而责怪我。嗯。";
 	close;
 }
 prt_in,59,54,3	duplicate(MightyHammer)	Mighty Hammer#prt	4_M_DWARF
@@ -326,7 +326,7 @@ lhz_in02,280,19,3	duplicate(MightyHammer)	Mighty Hammer#lhz	4_M_DWARF
 		}
 	}
 	if ((.@bless_who && countitem(6635) < .@blacksmith_blessing_count) || countitem(.@material) == 0 || Zeny < .@price) {
-		mes "Pow! Pow! Pow! Pow!";
+		mes "砰！砰！砰！砰！";
 		mes "[巴斯塔]";
 		mes "很好! 干的漂亮!!";
 		close;
@@ -342,7 +342,7 @@ lhz_in02,280,19,3	duplicate(MightyHammer)	Mighty Hammer#lhz	4_M_DWARF
 		mes "我真的是整个世界里最好的铁匠!";
 		emotion ET_FRET;
 		mes "[巴斯塔]";
-		mes "Aaaaaaaaaaak!!!";
+		mes "啊啊啊啊啊啊！！！";
 		mes "[巴斯塔]";
 		close;
 	}
@@ -364,27 +364,27 @@ lhz_in02,280,19,3	duplicate(MightyHammer)	Mighty Hammer#lhz	4_M_DWARF
 		mes "[巴斯塔]";
 		mes "下次我会做的更好的! 别担心!";
 		next;
-		mes "[Basta]";
-		mes "Refining has failed!";
-		mes "The best blacksmith in the world like me...";
-		mes "doesn't guarantee 100% success~";
+		mes "[巴斯塔]";
+		mes "精炼失败！";
+		mes "像我这样的世界最佳铁匠...";
+		mes "并不保证100%成功~";
 	}
 	else {
 		downrefitem .@part;
 		next;
 		emotion (!rand(5))?ET_MONEY:ET_HUK;
-		mes "[Basta]";
-		mes "Aaaaaaaaaaak!!!";
+		mes "[巴斯塔]";
+		mes "啊啊啊啊啊啊！！！";
 		next;
-		mes "[Basta]";
-		mes "Damn it!";
-		mes "Refining has failed and refine level has decreased!";
-		mes "Even the best blacksmith in the world doesn't guarantee 100% success!";
+		mes "[巴斯塔]";
+		mes "该死！";
+		mes "精炼失败，精炼等级降低了!";
+		mes "即使是世界上最好的铁匠也不保证100%成功!";
 	}
-	mes "Too bad.";
+	mes "太可惜了.";
 	next;
-	mes "[Basta]";
-	mes "I'll do better next time! Don't worry!";
+	mes "[巴斯塔]";
+	mes "下次我会做得更好! 不用担心!";
 	close;
 }
 

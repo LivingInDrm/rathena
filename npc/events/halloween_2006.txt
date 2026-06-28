@@ -239,94 +239,94 @@ prontera,164,69,3	script	Cool Devi#06_hw	738,{
 
 geffen,145,132,3	script	Hoirin#06_hw	729,{
 	if (MaxWeight - Weight < 2000 || checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a second!";
-		mes "[DRY-RUN] Right now, you're carrying";
-		mes "[DRY-RUN] too many things with you.";
-		mes "[DRY-RUN] Please come back after";
-		mes "[DRY-RUN] using the Kafra Service";
-		mes "[DRY-RUN] to store some of your items.^000000";
+		mes "^3355FF等一下！";
+		mes "现在，你身上携带了";
+		mes "太多的东西。";
+		mes "请在使用完";
+		mes "卡普拉服务后再回来";
+		mes "存放一些你的物品。^000000";
 		close;
 	}
 	if (halloween < 100) {
-		mes "[DRY-RUN] [Hoirin]";
-		mes "[DRY-RUN] Pumpkin is the gift that God had sent us.";
-		mes "[DRY-RUN] It provides good nutrition and helps you to stay healthy!";
-		mes "[DRY-RUN] Bravo~bravo~!";
+		mes "[霍伊林]";
+		mes "南瓜是上帝赐予我们的礼物。";
+		mes "它提供良好的营养，帮助你保持健康！";
+		mes "太棒了~太棒了~！";
 		next;
-		mes "[DRY-RUN] [Hoirin]";
-		mes "[DRY-RUN] I, Hoirin have always thought about a ";
-		mes "[DRY-RUN] way to eat pumpkin more deliciously.";
-		mes "[DRY-RUN] But all of a sudden, I realized.";
+		mes "[霍伊林]";
+		mes "我，霍伊林，一直在思考如何更美味地吃南瓜。";
+		mes "我想到了一个更美味的吃南瓜的方法。";
+		mes "但突然间，我意识到了。";
 		next;
-		mes "[DRY-RUN] [Hoirin]";
-		mes "[DRY-RUN] If I have that! I can make best the Pumpkin pie!!!!!";
+		mes "[霍伊林]";
+		mes "如果我有那个！我可以做出最好的南瓜派!!!!!";
 		next;
-		if (select( "[DRY-RUN] What's that?:Ignore.") == 1) {
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] What's the first image you see when you think of pumpkin?";
-			mes "[DRY-RUN] I see Jack! I think Jack is the most evolved form of pumpkin!";
-			mes "[DRY-RUN] I wonder what does Jack have something special? Can you imagine?";
+		if (select( "那是什么？:忽略。") == 1) {
+			mes "[霍伊林]";
+			mes "当你想到南瓜时，你首先看到的是什么形象？";
+			mes "我看到杰克！我觉得杰克是南瓜最进化的形态！";
+			mes "我想知道杰克有什么特别之处？你能想象吗？";
 			next;
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] I always prefer unique pumpkin dish! Recently, I found out that there are many kinds of Jack in the world ";
-			mes "[DRY-RUN] and the extreme class Jack has blue aura around his body!";
+			mes "[霍伊林]";
+			mes "我总是喜欢独特的南瓜菜肴！最近，我发现世界上有很多种杰克，";
+			mes "而极端级别的杰克身上有蓝色光环！";
 			next;
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] Guess what?! it was Halloween Jack!";
-			mes "[DRY-RUN] Halloween Jack has somthing that is concentrated with pumpkin.";
-			mes "[DRY-RUN] It is called ^4d4dffPumpkin Mojo^000000. Only if i have it, i can finish making my special pie.";
+			mes "[霍伊林]";
+			mes "猜猜看？！那是万圣节杰克！";
+			mes "万圣节杰克有一些浓缩的南瓜成分。";
+			mes "它被称为^4d4dff南瓜魔力^000000。只有我拥有它，我才能完成我的特别派。";
 			next;
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] Bring me the ingredients!";
-			mes "[DRY-RUN] I'll make you a very special pie right away!";
-			mes "[DRY-RUN] You'll get addicted to it.";
-			mes "[DRY-RUN] Don't be surprised after trying it.";
+			mes "[霍伊林]";
+			mes "把材料带给我！";
+			mes "我会立刻给你做一个非常特别的派！";
+			mes "你会对它上瘾的。";
+			mes "尝试后不要感到惊讶。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] ......................";
-			mes "[DRY-RUN] You seem to be such a passionate person.";
-			mes "[DRY-RUN] So, what's the ingredient anyway.?";
+			mes "......................";
+			mes "你看起来真是个热情的人。";
+			mes "那么，材料到底是什么呢？";
 			next;
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] Good question!";
-			mes "[DRY-RUN] To make my special Pumpkin pie, I need";
-			mes "[DRY-RUN] ^4d4dff 1 Pumpkin Mojo";
-			mes "[DRY-RUN] 2 Pumpkin";
-			mes "[DRY-RUN] 2 Egg^000000";
+			mes "[霍伊林]";
+			mes "好问题！";
+			mes "要做我的特别南瓜派，我需要";
+			mes "^4d4dff 1 南瓜魔力";
+			mes "2 个南瓜";
+			mes "2 个鸡蛋^000000";
 			next;
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] Just Bring Pumpkin Mojo, Pumpkin, and a Egg.";
-			mes "[DRY-RUN] Leave the rest for me..You'll get to try the best pumkin pie!";
+			mes "";
+			mes "[霍伊林]";
+			mes "只需带上南瓜魔力、南瓜和一个鸡蛋。";
 			set halloween, 100;
 			close;
 		}
-		mes "[DRY-RUN] [Hoirin]";
-		mes "[DRY-RUN] Hm..You'll regret it!";
-		mes "[DRY-RUN] Hoirin's pumpkin pie is just so delicious.";
+		mes "剩下的交给我..你将尝到最好的南瓜派！";
+		mes "[霍伊林]";
+		mes "嗯..你会后悔的！";
 		close;
 	}
 	else {
-		mes "[DRY-RUN] [Hoirin]";
-		mes "[DRY-RUN] So, did you bring all materials?";
-		mes "[DRY-RUN] Were there anything hard to find?";
+		mes "霍伊林的南瓜派实在太好吃了。";
+		mes "[霍伊林]";
+		mes "那么，你带来所有材料了吗？";
 		next;
-		switch(select( "[DRY-RUN] I brought all ingredients.:How can I get eggs?:No,I'm just passing by.")) {
+		switch(select( "我带来了所有材料。:我该如何得到鸡蛋？:不，我只是路过。")) {
 		case 1:
 			if ((countitem(7609) > 0) && (countitem(535) > 1) && (countitem(574) > 1)) {
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] You are right!";
-				mes "[DRY-RUN] You brought all things right. Give it to me!!";
+				mes "有没有什么难找的东西？";
+				mes "[霍伊林]";
+				mes "你说得对！";
 				specialeffect2 EF_HIT1;
 				next;
 				specialeffect EF_PIERCESELF;
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] Abracadabra~~";
-				mes "[DRY-RUN] Abracadabra~~!";
+				mes "你带来了所有的东西。给我！！";
+				mes "[霍伊林]";
+				mes "变变变~~";
 				next;
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] Ta-da(h)!";
-				mes "[DRY-RUN] Here it is~ help yourself.";
-				mes "[DRY-RUN] It'll be good for your health. I added extra nutrient in it.";
+				mes "变变变~~！";
+				mes "[霍伊林]";
+				mes "看！";
+				mes "给你~请自便。";
 				delitem 7609,1; //Pumpkin_Mojo
 				delitem 535,2; //Pumpkin
 				delitem 574,2; //Egg
@@ -334,48 +334,48 @@ geffen,145,132,3	script	Hoirin#06_hw	729,{
 				close;
 			}
 			else {
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] No!! This is not enough. I need";
-				mes "[DRY-RUN] ^4d4dff 1 Pumpkin Mojo";
-				mes "[DRY-RUN] 2 Pumpkin";
-				mes "[DRY-RUN] 2 Egg^000000";
-				mes "[DRY-RUN]  at least.";
+				mes "这对你的健康有好处。我在里面添加了额外的营养。";
+				mes "[霍伊林]";
+				mes "不！！这还不够。我需要";
+				mes "^4d4dff 1 南瓜魔力";
+				mes "2 个南瓜";
+				mes "2 个鸡蛋^000000";
 				close;
 			}
 		case 2:
 			if (halloween == 100) {
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] Egg?";
-				mes "[DRY-RUN] Well, actually I know someone who can help you.";
-				mes "[DRY-RUN] There's a man who raise many chickens.";
+				mes "至少。";
+				mes "[霍伊林]";
+				mes "鸡蛋？";
+				mes "嗯，实际上我知道一个可以帮助你的人。";
 				next;
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] I can send you to where he is if you want.";
-				mes "[DRY-RUN] ^4d4dffBut only for once^000000.";
+				mes "有一个人养了很多鸡。";
+				mes "[霍伊林]";
+				mes "如果你想，我可以送你去他那里。";
 				next;
-				if (select("[DRY-RUN] Send me.:It's ok.") == 1) {
-					mes "[DRY-RUN] [Hoirin]";
-					mes "[DRY-RUN] Ok, go get the eggs.";
+				if (select("送我。:没关系。") == 1) {
+					mes "^4d4dff但仅此一次^000000。";
+					mes "[霍伊林]";
 					set halloween, 101;
 					close2;
 					warp "nif_fild01", 162, 113;
 					end;
 				}
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] Do you think you can go without my help?!";
-				mes "[DRY-RUN] Ok! go ahead.";
-				mes "[DRY-RUN] Do you know where it is?";
+				mes "好的，去拿鸡蛋。";
+				mes "[霍伊林]";
+				mes "你觉得你能在没有我帮助的情况下去吗？！";
+				mes "好的！继续。";
 				close;
 			}
 			else {
-				mes "[DRY-RUN] [Hoirin]";
-				mes "[DRY-RUN] if you go to ^4d4dfffarm of Skelington Town at Neiflheim^000000, you'll meet Chicken Masta. He raises chickens.";
+				mes "你知道它在哪里吗？";
+				mes "[霍伊林]";
 				close;
 			}
 		case 3:
-			mes "[DRY-RUN] [Hoirin]";
-			mes "[DRY-RUN] Next time, don't forget to bring ";
-			mes "Next time, don't forget to bring ";
+			mes "如果你去^4d4dfffarm of Skelington Town at Neiflheim^000000，你会遇到鸡大师。他养鸡。";
+			mes "[霍伊林]";
+			mes "下次，别忘了带上";
 			close;
 		}
 	}
@@ -393,47 +393,47 @@ OnTouch:
 
 nif_in,19,32,3	script	Deviruchi#06_hw	738,{
 	if (MaxWeight - Weight < 2000 || checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a second!";
-		mes "[DRY-RUN] Right now, you're carrying";
-		mes "[DRY-RUN] too many things with you.";
-		mes "[DRY-RUN] Please come back after";
-		mes "[DRY-RUN] using the Kafra Service";
-		mes "[DRY-RUN] to store some of your items.^000000";
+		mes "^3355FF等一下！";
+		mes "现在，你身上携带了";
+		mes "太多的东西。";
+		mes "请在使用完";
+		mes "卡普拉服务后再回来";
+		mes "存放一些你的物品。^000000";
 		close;
 	}
-	mes "[DRY-RUN] [Loli Ruri]";
-	mes "[DRY-RUN] Devi~Where's the pumpkin pie?";
-	mes "[DRY-RUN] Humans make them, don't they?";
-	mes "[DRY-RUN] Do you have it then?";
-	mes "[DRY-RUN] [Deviruchi]";
-	mes "[DRY-RUN] Says she.";
-	mes "[DRY-RUN] [Deviruchi]";
+	mes "[萝莉露莉]";
+	mes "德维~南瓜派在哪里？";
+	mes "人类制作的，不是吗？";
+	mes "那么你有吗？";
+	mes " ";
+	mes "[德维鲁奇]";
+	mes "她这么说。";
 	next;
-	mes "[DRY-RUN] If you have a pumpinkin pie, can I have one?";
-	mes "[DRY-RUN] Cause we are the victim if Loli Ruri gets mad.";
-	mes "[DRY-RUN] [Deviruchi]";
+	mes "[德维鲁奇]";
+	mes "如果你有南瓜派，我可以要一个吗？";
+	mes "因为如果萝莉露莉生气，我们就是受害者。";
 	next;
-	mes "[DRY-RUN] Well I'm not saying that I want it for free.";
-	mes "[DRY-RUN] Don't worry, I won't let you down.";
-	mes "[DRY-RUN] [Loli Ruri]";
+	mes "[德维鲁奇]";
+	mes "我并不是说我想要免费的。";
+	mes "别担心，我不会让你失望的。";
 	next;
-	switch(select( "[DRY-RUN] Give him the pumpkin pie.:Do not give him the pumpkin pie.:Huh? What pumkin pie?")) {
+	switch(select( "给他南瓜派。:不要给他南瓜派。:哈？什么南瓜派？")) {
 	case 1:
 		if (countitem(12192) > 0) {
-			mes "[DRY-RUN] Thanks for the pumkin pie!";
-			mes "[DRY-RUN] Here, take this.";
-			mes "[DRY-RUN] [Deviruchi]";
-			mes "[DRY-RUN] Says she.";
-			mes "[DRY-RUN] [Deviruchi]";
-			mes "[DRY-RUN] As I promised, I'll give you something worth the pie.";
+			mes "[萝莉露莉]";
+			mes "谢谢你的南瓜派！";
+			mes "给你，拿着这个。";
+			mes " ";
+			mes "[德维鲁奇]";
+			mes "她这么说。";
 			next;
-			mes "[DRY-RUN] Hang on....";
-			mes "[DRY-RUN] [Deviruchi]";
-			mes "[DRY-RUN] Hmm...This would be good.";
+			mes "[德维鲁奇]";
+			mes "正如我承诺的，我会给你一些值得南瓜派的东西。";
+			mes "稍等....";
 			next;
-			mes "[DRY-RUN] Here take this, and thanks again~";
-			mes "[DRY-RUN] [Loli Ruri]";
-			mes "[DRY-RUN] Are you kidding me?";
+			mes "[德维鲁奇]";
+			mes "嗯...这个应该不错。";
+			mes "给你这个，再次感谢~";
 			delitem 12192, 1;//Pumpkin_Pie
 			set @hw_temp,rand(1,3);
 			if (@hw_temp == 2) getitem 12130,1; //Cookie_Bag
@@ -441,42 +441,42 @@ nif_in,19,32,3	script	Deviruchi#06_hw	738,{
 			close;
 		}
 		else {
-			mes "[DRY-RUN] Where's the pumpkin pie! Don't try to lie to me!";
-			mes "[DRY-RUN] [Deviruchi]";
-			mes "[DRY-RUN] Say she..Seems like she's very angry...You are in trouble.";
-			mes "[DRY-RUN] [Loli Ruri]";
-			mes "[DRY-RUN] Devi!!!!!You are the one who told me that I can get the pumpkin pie if I stand here and wait.";
-			mes "[DRY-RUN] Watch your back!";
+			mes "[萝莉露莉]";
+			mes "你在开玩笑吗？";
+			mes "南瓜派在哪里！别试图骗我！";
+			mes " ";
+			mes "[德维鲁奇]";
+			mes "她这么说..看起来她非常生气...你有麻烦了。";
 			next;
-			mes "[DRY-RUN] [Deviruchi]";
-			mes "[DRY-RUN] Says she..Huh?!!Me?!!";
-			mes "[DRY-RUN] Poor Devi~";
-			mes "[DRY-RUN] You shouldn't have lied~";
-			mes "[DRY-RUN] Wish you a luck.";
-			mes "[DRY-RUN] [Loli Ruri]";
+			mes "[萝莉露莉]";
+			mes "德维!!!!!你告诉我如果我在这里等着就能得到南瓜派。";
+			mes "小心点！";
+			mes " ";
+			mes "[德维鲁奇]";
+			mes "她这么说..哈？！！我？！！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] I want to eat pumpkin pie. Can I have one?Please~~~~";
-			mes "[DRY-RUN] [Deviruchi]";
-			mes "[DRY-RUN] Says he.....Give me if you have one.";
+			mes "可怜的德维~";
+			mes "你不该撒谎~";
+			mes "祝你好运。";
 			close;
 		}
 	case 2:
-		mes "[DRY-RUN] [Deviruchi]";
-		mes "[DRY-RUN] There's a man who makes a very special pumpkin pie.";
-		mes "[DRY-RUN] No one can forget what it taste like.";
-		mes "[DRY-RUN] [Deviruchi]";
-		mes "[DRY-RUN] Lori Ruri is waiting here for someone who will get the pie for him.";
+		mes "[萝莉露莉]";
+		mes "我想吃南瓜派。我可以要一个吗？请~~~~";
+		mes " ";
+		mes "[德维鲁奇]";
+		mes "他说.....如果你有一个就给我。";
 		close;
 	case 3:
-		mes "[DRY-RUN] Can you get her one?";
-		mes "[DRY-RUN] I'll treat you back.";
-		mes "No one can forget what it taste like.";
+		mes "[德维鲁奇]";
+		mes "有一个人做了非常特别的南瓜派。";
+		mes "没有人能忘记它的味道。";
 		next;
-		mes "[Deviruchi]";
-		mes "Lori Ruri is waiting here for someone who will get the pie for him.";
-		mes "Can you get her one?";
-		mes "I'll treat you back.";
+		mes "[德维鲁奇]";
+		mes "洛莉露莉在这里等着有人给她拿派。";
+		mes "你能给她拿一个吗？";
+		mes "我会回报你的。";
 		close;
 	}
 }
@@ -649,14 +649,14 @@ nif_fild01,167,113,3	script	Masta's chicken#06_hw01	800,{
 
 -	script	HwChicken::HwChicken	-1,{
 	if ((halloween == 102) || (halloween == 103)) {
-		mes "[DRY-RUN] Oh, this must be Chicken Masta's chicken.";
-		mes "[DRY-RUN] I should insert the magic word.";
+		mes "哦，这一定是鸡大师的鸡。";
+		mes "我应该插入魔法词。";
 		next;
 		input .@inputstr$;
 		if( .@inputstr$ == "Return" ) {
 			emotion ET_HUK;
 			specialeffect EF_TELEPORTATION;
-			mes "[DRY-RUN] The magic spell has been casted.";
+			mes "魔法咒语已经施展。";
 			set halloween, 103;
 			disablenpc "Masta's chicken#"+strnpcinfo(1);
 			close2;
@@ -666,12 +666,12 @@ nif_fild01,167,113,3	script	Masta's chicken#06_hw01	800,{
 		}
 		else {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Hm...I must have misspelled.";
+			mes "嗯...我一定是拼错了。";
 			close;
 		}
 	}
 	else {
-		mes "[DRY-RUN] Drowsing chicken.";
+		mes "打盹的鸡。";
 		close;
 	}
 }
@@ -679,14 +679,14 @@ nif_fild01,167,113,3	script	Masta's chicken#06_hw01	800,{
 -	script	HwChicken2::HwChicken2	-1,{
 	set @egg_temp,rand(1,4);
 	if( @egg_temp == 3) {
-		mes "[DRY-RUN] As soon as you got close to the chicken and touched it, it disappeared completely.";
-		mes "[DRY-RUN] You got an 'egg' in the place where the chicken disappeared.";
+		mes "当你靠近鸡并触摸它时，它完全消失了。";
+		mes "你在鸡消失的地方得到了一个'蛋'。";
 		disablenpc "Chicken#"+strnpcinfo(1);
 		getitem 574,1; //Egg
 		close;
 	}
 	else {
-		mes "[DRY-RUN] As soon as you got close to the chicken and touched it, it disappeared completely.";
+		mes "当你靠近鸡并触摸它时，它完全消失了。";
 		disablenpc "Chicken#"+strnpcinfo(1);
 		close;
 	}
@@ -695,14 +695,14 @@ nif_fild01,167,113,3	script	Masta's chicken#06_hw01	800,{
 -	script	HwChicken3::HwChicken3	-1,{
 	set @egg_temp,rand(1,4);
 	if( @egg_temp == 3) {
-		mes "[DRY-RUN] As soon as you got close to the chicken and touched it, it disappeared completely.";
-		mes "[DRY-RUN] You got an 'egg' in the place where the chicken disappeared.";
+		mes "当你靠近鸡并触摸它时，它完全消失了。";
+		mes "你在鸡消失的地方得到了一个'蛋'。";
 		disablenpc "Chicken#"+strnpcinfo(1);
 		getitem 574,1; //Egg
 		close;
 	}
 	else {
-		mes "[DRY-RUN] As soon as you got close to the chicken and touched it, it disappeared completely.";
+		mes "当你靠近鸡并触摸它时，它完全消失了。";
 		disablenpc "Chicken#"+strnpcinfo(1);
 		close;
 	}
@@ -1031,46 +1031,46 @@ pay_fild08,155,356,3	duplicate(HwChicken2)	Chicken#06_hw_pf26	800
 pay_fild08,155,358,3	duplicate(HwChicken3)	Chicken#06_hw_pf27	800
 
 prontera,155,285,3	script	Familiar#06_hw01::HWFamiDup	799,{
-	mes "[DRY-RUN] [Familiar]";
-	mes "[DRY-RUN] Hello.";
-	mes "[DRY-RUN] I'm Loli Ruri's faithful and cute Familiar.";
-	mes "[DRY-RUN] Do you have an invitation from Loli Ruri?";
-	mes "[DRY-RUN] That's a kind of^4d4dffa special ticket to Nifflheim^000000..";
+	mes "[熟悉的]";
+	mes "你好。";
+	mes "我是萝莉露莉忠诚又可爱的熟悉者。";
+	mes "你有萝莉露莉的邀请函吗？";
+	mes "那是一种^4d4dffa前往尼芙菲姆^000000的特别票。";
 	next;
-	if (select( "[DRY-RUN] Yes, I do.:No, I don't.") == 1) {
-		mes "[DRY-RUN] [Familiar]";
-		mes "[DRY-RUN] Do you want to go to Nifflheim?";
-		mes "[DRY-RUN] It's available during Halloween.";
+	if (select( "是的，我喜欢。:不，我不喜欢。") == 1) {
+		mes "[熟悉的]";
+		mes "你想去尼芙菲姆吗？";
+		mes "它在万圣节期间有效。";
 		next;
-		if (select( "[DRY-RUN] Yes, I do:No, I don't.") == 1) {
+		if (select( "是的，我喜欢:不，我不喜欢。") == 1) {
 			if (countitem(7460) > 0) {
-				mes "[DRY-RUN] [Familiar]";
-				mes "[DRY-RUN] I checked your ticket.";
-				mes "[DRY-RUN] You can go there now";
+				mes "[熟悉的]";
+				mes "我检查了你的票。";
+				mes "你现在可以去那里。";
 				delitem 7460,1; //Nifl_Express_Ticket
 				close2;
 				warp "nif_in", 18, 20;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Familiar]";
-				mes "[DRY-RUN] You're a liar.";
-				mes "[DRY-RUN] You don't have the ticket!";
-				mes "[DRY-RUN] I'll suck up all your blood, you liar!";
+				mes "[熟悉的]";
+				mes "你是个骗子。";
+				mes "你没有票！";
+				mes "我会吸干你所有的血，骗子！";
 				percentheal -20,0;
 				emotion ET_HUK, playerattached();
 				close;
 			}
 		}
-		mes "[DRY-RUN] [Familiar]";
-		mes "[DRY-RUN] Ok.";
-		mes "[DRY-RUN] Actually, it's useless to have a special ticket to Nifflheim.";
+		mes "[熟悉的]";
+		mes "好的。";
+		mes "其实，拥有前往尼芙菲姆的特别票是没用的。";
 		close;
 	}
-	mes "[DRY-RUN] [Familiar]";
-	mes "[DRY-RUN] Ok.";
-	mes "[DRY-RUN] If you want to ask something, give a piece of pumpkin pie to Loli Ruri.";
-	mes "[DRY-RUN] He likes it.";
+	mes "[熟悉的]";
+	mes "好的。";
+	mes "如果你想问什么，给萝莉露莉一块南瓜派。";
+	mes "他喜欢这个。";
 	close;
 }
 payon,156,231,3	duplicate(HWFamiDup)	Familiar#06_hw02	799

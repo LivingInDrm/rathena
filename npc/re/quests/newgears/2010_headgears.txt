@@ -21,51 +21,51 @@
 // Main Quest :: 2010_hat_0405
 //============================================================
 gonryun,149,189,0	script	Yotang#Flower_Of_Fairy	50,{
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] There lives a fairy on the 3rd floor of Kunlun.";
-	mes "[DRY-RUN] She is so famous for her beauty";
-	mes "[DRY-RUN] that she even got a fan club.";
+	mes "[尤唐]";
+	mes "在昆仑的三楼住着一位仙女。";
+	mes "她因美貌而闻名。";
+	mes "甚至还成立了一个粉丝俱乐部。";
 	next;
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] Of course, I am the master of the fan club.";
-	mes "[DRY-RUN] How about joining the fairy fan club?";
+	mes "[尤唐]";
+	mes "当然，我是粉丝俱乐部的会长。";
+	mes "要不要加入仙女粉丝俱乐部？";
 	next;
-	if(select("[DRY-RUN] I'm not that interested!!:I'll join it right away!!") == 1) {
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] What! I'm going to tell on you!";
+	if(select("我没那么感兴趣！！:我马上就加入！！") == 1) {
+		mes "[尤唐]";
+		mes "什么！我要告发你！";
 		close;
 	}
 	if (countitem(7165) > 99 && countitem(7166) > 99 && countitem(745) > 0 && countitem(981) > 0 && countitem(2211) > 0) {
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] Oh, aren't those....!";
-		mes "[DRY-RUN] the materials for the Flower of Fairy?";
-		mes "[DRY-RUN] Have we met before? You already know everything...";
+		mes "[尤唐]";
+		mes "哦，那些不是....！";
+		mes "是仙女之花的材料吗？";
+		mes "我们见过面吗？你已经知道一切了...";
 		next;
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] Anyway, do you want me to make the Flower of Fairy?";
+		mes "[尤唐]";
+		mes "无论如何，你想让我制作仙女之花吗？";
 		next;
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] ^FF0000Please be aware that";
-		mes "[DRY-RUN] the refinement on the materials will all disappear";
-		mes "[DRY-RUN] if you once combine those.^000000";
+		mes "[尤唐]";
+		mes "^FF0000请注意，";
+		mes "材料上的精炼都会消失";
+		mes "如果你曾经合成过那些。^000000";
 		next;
-		if(select("[DRY-RUN] No, next time.:Make it right now!!") == 1) {
-			mes "[DRY-RUN] [Yotang]";
-			mes "[DRY-RUN] You'll regret it!";
+		if(select("不，下次再说。:现在就做！！") == 1) {
+			mes "[尤唐]";
+			mes "你会后悔的！";
 			close;
 		}
 		callsub L_CheckWeight;
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] You're speedy!";
-		mes "[DRY-RUN] You deserve to be a master of the fanclub for the next term.";
+		mes "[尤唐]";
+		mes "你真快！";
+		mes "你值得成为下个学期的粉丝俱乐部会长。";
 		next;
 		emotion ET_SWEAT;
-		mes "[DRY-RUN] Combining... ... ...";
+		mes "合成中... ... ...";
 		next;
 		if (countitem(7165) > 99 && countitem(7166) > 99 && countitem(745) > 0 && countitem(981) > 0 && countitem(2211) > 0) {
 			callsub L_CheckWeight;
-			mes "[DRY-RUN] [Yotang]";
-			mes "[DRY-RUN] Here, the Flower of Fairy.";
+			mes "[尤唐]";
+			mes "这里是仙女之花。";
 			delitem 7165,100; //Limpid_Celestial_Robe
 			delitem 7166,100; //Soft_Silk_Cloth
 			delitem 745,1; //Wedding_Bouquet
@@ -74,83 +74,83 @@ gonryun,149,189,0	script	Yotang#Flower_Of_Fairy	50,{
 			getitem 5437,1; //Flower_Of_Fairy
 			emotion ET_BEST;
 			next;
-			mes "[DRY-RUN] [Yotang]";
-			mes "[DRY-RUN] See you on the fan meeting!";
+			mes "[尤唐]";
+			mes "在粉丝见面会上见！";
 			close;
 		}
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] Huh? You don't have enough";
-		mes "[DRY-RUN] materials for it..";
-		mes "[DRY-RUN] Aren't you wearing Bandana?";
-		mes "[DRY-RUN] Check it out!";
+		mes "[尤唐]";
+		mes "哈？你没有足够的";
+		mes "材料。..";
+		mes "你不是在戴头巾吗？";
+		mes "看看这个！";
 		next;
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] Bring me all the materials,";
-		mes "[DRY-RUN] if you want to get the Flower of Fairy.";
+		mes "[尤唐]";
+		mes "把所有材料都带给我，";
+		mes "如果你想获得仙女之花。";
 		next;
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] If you bring me ^0000FF100 Transparent Celestial Robes, 100 Soft Silk Cloth,";
-		mes "[DRY-RUN] 1 Wedding Bouquet, 1 Violet Dyestuffs";
-		mes "[DRY-RUN] and ^0000FF1 Bandana^000000 which you can find at a store,";
-		mes "[DRY-RUN] I will make you a ^0000FFFlower of Fairy^000000.";
+		mes "[尤唐]";
+		mes "如果你带给我^0000FF100件透明天衣，100块柔软丝绸，";
+		mes "1个婚礼花束，1瓶紫色染料";
+		mes "和^0000FF1条头巾^000000，您可以在商店找到，";
+		mes "我会为你制作^0000FF仙女之花^000000。";
 		close;
 	}
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] You can meet the fairy soon";
-	mes "[DRY-RUN] for there will be a fan meeting";
-	mes "[DRY-RUN] in the near future.";
-	mes "[DRY-RUN] The Flower of Fairy is necessary";
-	mes "[DRY-RUN] for joining the fan meeting. Everyone wears it.";
+	mes "[尤唐]";
+	mes "你很快就能见到仙女";
+	mes "因为将会有一个粉丝见面会，";
+	mes "在不久的将来。";
+	mes "仙女之花是必要的，";
+	mes "用于参加粉丝见面会。每个人都会佩戴它。";
 	next;
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] If you bring me some materials";
-	mes "[DRY-RUN] I'll make it for you.";
+	mes "[尤唐]";
+	mes "如果你带给我一些材料";
+	mes "我会为你制作的。";
 	next;
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] I need ^0000FF100 Transparent Celestial Robes, 100 Soft Silk Cloth,";
-	mes "[DRY-RUN] 1 Wedding Bouquet, 1 Violet Dyestuffs";
-	mes "[DRY-RUN] and ^0000FF1 Bandana^000000 which you can find at a store,";
+	mes "[尤唐]";
+	mes "我需要^0000FF100 透明天界长袍，100 软丝绸，";
+	mes "1个婚礼花束，1瓶紫色染料";
+	mes "和^0000FF1条头巾^000000，您可以在商店找到，";
 	next;
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] If you bring me ^0000FF100 Transparent Celestial Robes, 100 Soft Silk Cloth,";
-	mes "[DRY-RUN] 1 Wedding Bouquet, 1 Violet Dyestuffs";
-	mes "[DRY-RUN] and ^0000FF1 Bandana^000000 which you can find at a store,";
-	mes "[DRY-RUN] I will make you a ^0000FFFlower of Fairy^000000.";
+	mes "[尤唐]";
+	mes "如果你带给我^0000FF100件透明天衣，100块柔软丝绸，";
+	mes "1个婚礼花束，1瓶紫色染料";
+	mes "和^0000FF1条头巾^000000，您可以在商店找到，";
+	mes "我会为你制作^0000FF仙女之花^000000。";
 	next;
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] ^FF0000Please be aware that";
-	mes "[DRY-RUN] the refinement on the materials will all disappear";
-	mes "[DRY-RUN] if you once combine those.^000000";
+	mes "[尤唐]";
+	mes "^FF0000请注意，";
+	mes "材料上的精炼都会消失";
+	mes "如果你曾经合成过那些。^000000";
 	next;
-	if(select("[DRY-RUN] I won't do it.:Here, I have the materials!") == 1) {
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] You'll regret it!";
+	if(select("我不做。:这里，我有材料！") == 1) {
+		mes "[尤唐]";
+		mes "你会后悔的！";
 		close;
 	}
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] Huh? Are you kidding me?";
+	mes "[尤唐]";
+	mes "哈？你在开玩笑吗？";
 	next;
-	mes "[DRY-RUN] [Yotang]";
-	mes "[DRY-RUN] I need ^0000FF100 Transparent Celestial Robes, 100 Soft Silk Cloth,";
-	mes "[DRY-RUN] 1 Wedding Bouquet, 1 Violet Dyestuffs";
-	mes "[DRY-RUN] and ^0000FF1 Bandana^000000 which you can find at a store";
-	mes "[DRY-RUN] to make a ^0000FFFlower of Fairy^000000.";
+	mes "[尤唐]";
+	mes "我需要^0000FF100 透明天界长袍，100 软丝绸，";
+	mes "1个婚礼花束，1瓶紫色染料";
+	mes "和^0000FF1 头巾^000000，您可以在商店找到它";
+	mes "来制作一个^0000FF仙女之花^000000。";
 	close;
 
 L_CheckWeight:
 	if (MaxWeight - Weight < 200) {
-		mes "[DRY-RUN] [Yotang]";
-		mes "[DRY-RUN] Your bag is too heavy, isn't it?";
-		mes "[DRY-RUN] Come to me again";
-		mes "[DRY-RUN] after emptying your bag.";
+		mes "[尤唐]";
+		mes "你的包太重了，不是吗？";
+		mes "再次来找我";
+		mes "在清空你的包之后。";
 		close;
 	}
 	if (checkweight(5437,1) == 0) {
-		mes "[DRY-RUN] - Wait !! -";
-		mes "[DRY-RUN] - You have too many items, so it's -";
-		mes "[DRY-RUN] - impossible to have more. -";
-		mes "[DRY-RUN] - Come to me again -";
-		mes "[DRY-RUN] - after emptying some of it. -";
+		mes "- 等等！！ -";
+		mes "- 你有太多物品，所以这是 -";
+		mes "- 不可能再拥有更多。 -";
+		mes "- 再次来找我 -";
+		mes "- 清空了一些之后。-";
 		close;
 	}
 	return;
@@ -360,50 +360,50 @@ L_CheckWeight:
 alberta,151,78,0	script	Bebete#Baby_Angel	96,{
 	if (isequipped(5074) > 0 || isequipped(2254) > 0 || isequipped(5210) > 0) {
 		if (BaseLevel < 65) {
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] A fake angel? Go away!";
+			mes "[贝贝特]";
+			mes "假天使？滚开！";
 			next;
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] The real angel";
-			mes "[DRY-RUN] is not as weak as you.";
+			mes "[贝贝特]";
+			mes "真正的天使";
+			mes "并不像你这么弱。";
 			close;
 		}
 		if (isequipped(5443) > 0) {
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] Oh, the angel came again.";
-			mes "[DRY-RUN] Are you quite satisfied with ^FF0000Statue Of Baby Angel^000000, aren't you?";
+			mes "[贝贝特]";
+			mes "哦，天使又来了。";
+			mes "你对^FF0000婴儿天使雕像^000000感到满意吧？";
 			close;
 		}
 		if (countitem(523) > 0 && countitem(916) > 499 && countitem(7292) > 9 && countitem(2282) > 0 && countitem(640) > 0) {
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] Ah! Hey, angel~ angel~";
+			mes "[贝贝特]";
+			mes "啊！嘿，天使~天使~";
 			next;
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] Please show me the Statue of Baby Angel!";
-			mes "[DRY-RUN] I heard every angel has it!";
+			mes "[贝贝特]";
+			mes "请给我看看婴儿天使雕像！";
+			mes "我听说每个天使都有它！";
 			next;
-			select("[DRY-RUN] Statue of Baby Angel?");
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] Did you lose it?";
-			mes "[DRY-RUN] Do you want me to make it for you?";
+			select("婴儿天使的雕像？");
+			mes "[贝贝特]";
+			mes "你丢了它吗？";
+			mes "你想让我为你制作吗？";
 			next;
-			if(select("[DRY-RUN] No, thanks.:Yes, I want it now.") == 1) {
-				mes "[DRY-RUN] [Bebete]";
-				mes "[DRY-RUN] Oh... it's not easy to make a living!";
+			if(select("不，谢谢。:是的，我现在想要它。") == 1) {
+				mes "[贝贝特]";
+				mes "哦……生活可不容易！";
 				close;
 			}
 			callsub L_CheckWeight;
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] Wow, you already know all the materials, angel.";
+			mes "[贝贝特]";
+			mes "哇，你已经知道所有材料了，天使。";
 			emotion ET_BIGTHROB;
 			next;
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] You're lucky. I have one statue on going.";
-			mes "[DRY-RUN] So you don't need to wait for long.";
+			mes "[贝贝特]";
+			mes "你真幸运。我正在制作一个雕像。";
+			mes "所以你不需要等太久。";
 			next;
 			if (countitem(523) > 0 && countitem(916) > 499 && countitem(7292) > 9 && countitem(2282) > 0 && countitem(640) > 0) {
 				callsub L_CheckWeight;
-				mes "[DRY-RUN] I got the ^FF0000Statue of Baby Angel^000000.";
+				mes "我得到了^FF0000婴儿天使雕像^000000。";
 				delitem 916,500; //Feather_Of_Birds
 				delitem 523,1; //Holy_Water
 				delitem 7292,10; //Muscovite
@@ -411,96 +411,96 @@ alberta,151,78,0	script	Bebete#Baby_Angel	96,{
 				delitem 640,1; //Shining_Stone
 				getitem 5443,1; //Status_Of_Baby_Angel
 				next;
-				mes "[DRY-RUN] [Bebete]";
-				mes "[DRY-RUN] See you again, my angel~!";
+				mes "[贝贝特]";
+				mes "再见了，我的天使~！";
 				emotion ET_THANKS;
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "[DRY-RUN] ... ...";
+				mes "... ...";
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "[DRY-RUN] Hmm... I guess I was fooled by that little kid.";
+				mes "嗯……我想我被那个小孩骗了。";
 				close;
 			}
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] Hey, I don't see";
-			mes "[DRY-RUN] any materials in your bag..";
+			mes "[贝贝特]";
+			mes "嘿，我没看到";
+			mes "你包里没有任何材料..";
 			emotion ET_CRY;
 			close;
 		}
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] Hey, angel...";
+		mes "[贝贝特]";
+		mes "嘿，天使...";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] Wow, the angel!";
+		mes "[贝贝特]";
+		mes "哇，天使！";
 		emotion ET_HUK;
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] Are you a real angel? Have you been to heaven?";
+		mes "[贝贝特]";
+		mes "你是真正的天使吗？你去过天堂吗？";
 		next;
-		if(select("[DRY-RUN] What bullshit!:Let's keep the childhood innocence!") == 1) {
+		if(select("什么胡说八道！:让我们保持童年的纯真！") == 1) {
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] Angel and heaven? It's all made up! ";
+			mes "天使和天堂？这都是虚构的！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "[DRY-RUN] There's nothing. Everything is lie!";
+			mes "什么都没有。一切都是谎言！";
 			emotion ET_KIK, playerattached();
 			next;
-			mes "[DRY-RUN] [Bebete]";
-			mes "[DRY-RUN] You're a devil! a monster! an idiot!";
+			mes "[贝贝特]";
+			mes "你是个恶魔！一个怪物！一个白痴！";
 			emotion ET_OHNO;
 			close;
 		}
 		mes "[" + strcharinfo(0) + "]";
-		mes "[DRY-RUN] Of course. I used to dance with the dragon and zebra";
-		mes "[DRY-RUN] on the vanilla-taste clouds.";
+		mes "当然。我曾经和龙和斑马一起跳舞";
+		mes "在香草味的云彩上。";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] That's just what I've been imagining!";
+		mes "[贝贝特]";
+		mes "这正是我想象的！";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] Please show me the Statue of Baby Angel!";
-		mes "[DRY-RUN] I heard every angel has it!";
+		mes "[贝贝特]";
+		mes "请给我看看婴儿天使雕像！";
+		mes "我听说每个天使都有它！";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] Oops, did you lose it?";
-		mes "[DRY-RUN] Do you want me to make one for you?";
+		mes "[贝贝特]";
+		mes "哎呀，你丢了它吗？";
+		mes "你想让我为你做一个吗？";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] I made it several times before";
-		mes "[DRY-RUN] for the angels like you.";
+		mes "[贝贝特]";
+		mes "我以前做过好几次。";
+		mes "像你这样的天使。";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] I can make it with ^FF0000500 Feather Of Birds, 1 Holy Water, 10 Muscovite, 1 Heaven Ring and 1 Shining Stone^000000.";
+		mes "[贝贝特]";
+		mes "我可以用^FF0000500鸟的羽毛、1瓶圣水、10个莫斯科石、1个天堂戒指和1个闪耀石^000000制作它。";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] Okay, hurry!";
+		mes "[贝贝特]";
+		mes "好的，快点！";
 		close;
 	} else {
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] A fake angel? Go away!!";
+		mes "[贝贝特]";
+		mes "假天使？滚开！！";
 		next;
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] The real angel has";
-		mes "[DRY-RUN] the wings on the head!";
+		mes "[贝贝特]";
+		mes "真正的天使有";
+		mes "头上的翅膀！";
 		close;
 	}
 	end;
 
 L_CheckWeight:
 	if (MaxWeight - Weight < 600) {
-		mes "[DRY-RUN] [Bebete]";
-		mes "[DRY-RUN] What are you carrying that much, angel?";
-		mes "[DRY-RUN] I can't give you the item";
-		mes "[DRY-RUN] because your bag is too full.";
+		mes "[贝贝特]";
+		mes "你背着那么多东西，天使？";
+		mes "我不能给你这个物品";
+		mes "因为你的包太满了。";
 		close;
 	}
 	if (checkweight(5443,1) == 0) {
-		mes "[DRY-RUN] - Wait !! -";
-		mes "[DRY-RUN] - You have too many items, so it's -";
-		mes "[DRY-RUN] - impossible to have more. -";
-		mes "[DRY-RUN] - Come to me again -";
-		mes "[DRY-RUN] - after emptying some of it. -";
+		mes "- 等等！！ -";
+		mes "- 你有太多物品，所以这是 -";
+		mes "- 不可能再拥有更多。 -";
+		mes "- 再次来找我 -";
+		mes "- 清空了一些之后。-";
 		close;
 	}
 	return;
@@ -837,46 +837,46 @@ OnTouch:
 
 alberta,120,206,3	script	Alonie#Solo_Play_Box	787,{
 	if (hat_1_2009 == 0) {
-		mes "[DRY-RUN] [Alonie]";
-		mes "[DRY-RUN] I am an expert at playing alone.";
-		mes "[DRY-RUN] I'm trying my best to play alone!";
+		mes "[阿洛妮]";
+		mes "我擅长独自玩耍。";
+		mes "我正在努力独自玩耍！";
 		next;
-		mes "[DRY-RUN] [Alonie]";
-		mes "[DRY-RUN] HuHu, Yapyap!";
-		mes "[DRY-RUN] I can feel your admiration for me.";
-		mes "[DRY-RUN] Wanna be my student?";
+		mes "[阿洛妮]";
+		mes "呼呼，呀扑呀扑！";
+		mes "我能感受到你对我的钦佩。";
+		mes "想成为我的学生吗？";
 		next;
-		switch(select("[DRY-RUN] You're out of your mind!:Please let me be your disciple!")) {
+		switch(select("你疯了吗！:请让我做你的弟子！")) {
 		case 1:
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Yes, I'm out of my mind.";
-			mes "[DRY-RUN] Huhu, Yapyap!";
+			mes "[阿洛妮]";
+			mes "是的，我失去理智了。";
+			mes "呼呼，呀扑呀扑！";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] I can feel you are lack of affection. Okay!";
-			mes "[DRY-RUN] Now, let's start the training!";
+			mes "[阿洛妮]";
+			mes "我能感受到你缺乏关爱。好的！";
+			mes "现在，让我们开始训练吧！";
 			next;
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] The special training, to play alone in Sphinx Dungeon!";
-			mes "[DRY-RUN] For make it";
-			mes "[DRY-RUN] the fruitful training,";
-			mes "[DRY-RUN] Get around and kill";
-			mes "[DRY-RUN] ^FF000020 Zeroms, 20 Requiems^000000!";
-			mes "[DRY-RUN] Hurry!";
+			mes "[阿洛妮]";
+			mes "特别训练，在斯芬克斯地下城独自玩耍！";
+			mes "为了实现这个";
+			mes "丰硕的训练，";
+			mes "四处走动并击杀";
+			mes "^FF000020 20个泽罗姆，20个安魂曲^000000!";
+			mes "快点!";
 			next;
-			switch(select("[DRY-RUN] What bullshit!:Let's go!")) {
+			switch(select("什么鬼！:走吧！")) {
 			case 1:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Of course, I don't care.";
-				mes "[DRY-RUN] Huhu, Yapyap!";
+				mes "[阿洛妮]";
+				mes "当然，我不在乎。";
+				mes "呼呼，呀扑呀扑！";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Hurry up, my student.";
-				mes "[DRY-RUN] I am so capricious";
-				mes "[DRY-RUN] so I don't know what I will";
-				mes "[DRY-RUN] give you as a reward!";
+				mes "[阿洛妮]";
+				mes "快点，我的学生。";
+				mes "我真是善变";
+				mes "所以我不知道我会";
+				mes "给你什么作为奖励!";
 				setquest 1100;
 				setquest 1101;
 				set hat_1_2009,1;
@@ -885,152 +885,152 @@ alberta,120,206,3	script	Alonie#Solo_Play_Box	787,{
 		}
 	} else if (hat_1_2009 == 1) {
 		if (checkquest(1100,HUNTING) == 2 && checkquest(1101,HUNTING) == 2) {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Already finished?";
-			mes "[DRY-RUN] Good, here is the next training";
-			mes "[DRY-RUN] to be a playing-alone expert!";
+			mes "[阿洛妮]";
+			mes "已经完成了吗?";
+			mes "很好，这里是下一个训练";
+			mes "成为独自一人专家!";
 			next;
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] The special training, to play alone at Clock Tower!";
-			mes "[DRY-RUN] For make it";
-			mes "[DRY-RUN] the fruitful training,";
-			mes "[DRY-RUN] Get around and kill";
-			mes "[DRY-RUN] ^FF000040 Arclouses and 30 High Orcs^000000!";
+			mes "[阿洛妮]";
+			mes "特别训练，独自在时钟塔玩!";
+			mes "为了实现这个";
+			mes "丰硕的训练，";
+			mes "四处走动并击杀";
+			mes "^FF000040 40个阿克鲁斯和30个高级兽人^000000!";
 			next;
-			switch(select("[DRY-RUN] What Bullshit!:Let's go!")) {
+			switch(select("什么鬼！:走吧！")) {
 			case 1:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Of course, I don't care.";
-				mes "[DRY-RUN] Huhu, Yapyap!";
+				mes "[阿洛妮]";
+				mes "当然，我不在乎。";
+				mes "呼呼，呀扑呀扑！";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Hurry up, my student.";
-				mes "[DRY-RUN] I am so capricious";
-				mes "[DRY-RUN] so I don't know what I will";
-				mes "[DRY-RUN] give you as a reward!";
+				mes "[阿洛妮]";
+				mes "快点，我的学生。";
+				mes "我真是善变";
+				mes "所以我不知道我会";
+				mes "给你什么作为奖励!";
 				changequest 1100,1102;
 				changequest 1101,1103;
 				set hat_1_2009,2;
 				close;
 			}
 		} else {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Hmm, it's not enough.";
-			mes "[DRY-RUN] Playing alone is not that easy!";
-			mes "[DRY-RUN] Go and kill";
-			mes "[DRY-RUN] ^FF000020 Zeroms, 20 Requiems^000000!";
+			mes "[阿洛妮]";
+			mes "嗯，这还不够。";
+			mes "一个人玩可不容易！";
+			mes "去杀掉";
+			mes "^FF000020 20个泽罗姆，20个安魂曲^000000!";
 			close;
 		}
 	} else if (hat_1_2009 == 2) {
 		if (checkquest(1102,HUNTING) == 2 && checkquest(1103,HUNTING) == 2) {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] You're really good at playing alone...!";
-			mes "[DRY-RUN] Are you lonely?";
-			mes "[DRY-RUN] Well, here is the next training";
-			mes "[DRY-RUN] to be a playing-alone expert!";
+			mes "[阿洛妮]";
+			mes "你一个人玩得真不错...！";
+			mes "你感到孤独吗？";
+			mes "好吧，接下来是训练";
+			mes "成为独自一人专家!";
 			next;
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] The special training, to play alone in Louyang!";
-			mes "[DRY-RUN] For make it";
-			mes "[DRY-RUN] the fruitful training,";
-			mes "[DRY-RUN] Get around and kill";
-			mes "[DRY-RUN] ^FF000020 Green Maidens and 50 Mao Guais^000000!";
+			mes "[阿洛妮]";
+			mes "特别训练，独自在洛阳玩！";
+			mes "为了实现这个";
+			mes "丰硕的训练，";
+			mes "四处走动并击杀";
+			mes "^FF000020 绿色少女和50只毛怪^000000！";
 			next;
-			switch(select("[DRY-RUN] What Bullshit!:Let's go!")) {
+			switch(select("什么鬼！:走吧！")) {
 			case 1:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Of course, I don't care.";
-				mes "[DRY-RUN] Huhu, Yapyap!";
+				mes "[阿洛妮]";
+				mes "当然，我不在乎。";
+				mes "呼呼，呀扑呀扑！";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Hurry up, my student.";
-				mes "[DRY-RUN] I am so capricious";
-				mes "[DRY-RUN] so I don't know what I will";
-				mes "[DRY-RUN] give you as a reward!";
+				mes "[阿洛妮]";
+				mes "快点，我的学生。";
+				mes "我真是善变";
+				mes "所以我不知道我会";
+				mes "给你什么作为奖励!";
 				changequest 1102,1108;
 				changequest 1103,1105;
 				set hat_1_2009,3;
 				close;
 			}
 		} else {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Hmm, It's not enough.";
-			mes "[DRY-RUN] Playing alone is not that easy!";
-			mes "[DRY-RUN] Go and kill";
-			mes "[DRY-RUN] ^FF000040 Arclouses and 30 High Orcs^000000!";
+			mes "[阿洛妮]";
+			mes "嗯，这还不够。";
+			mes "一个人玩可不容易！";
+			mes "去杀掉";
+			mes "^FF000040 40个阿克鲁斯和30个高级兽人^000000!";
 			close;
 		}
 	} else if (hat_1_2009 == 3) {
 		if (checkquest(1108,HUNTING) == 2 && checkquest(1105,HUNTING) == 2) {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Great job.";
-			mes "[DRY-RUN] How lonely you are!";
-			mes "[DRY-RUN] Okay, here is the last training";
-			mes "[DRY-RUN] to be a real playing-alone expert!";
+			mes "[阿洛妮]";
+			mes "干得好。";
+			mes "你真孤独！";
+			mes "好吧，这是最后的训练";
+			mes "成为真正的独自玩耍专家！";
 			next;
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] The special training, to play alone in Amatsu Dungeon!";
-			mes "[DRY-RUN] For make it";
-			mes "[DRY-RUN] the fruitful training,";
-			mes "[DRY-RUN] Get around and kill";
-			mes "[DRY-RUN] ^FF000020 The Papers and 40 Firelock Soldiers^000000!";
+			mes "[阿洛妮]";
+			mes "特别训练，单独在天津地下城玩！";
+			mes "为了实现这个";
+			mes "丰硕的训练，";
+			mes "四处走动并击杀";
+			mes "^FF000020 文件和40个火锁士兵^000000！";
 			next;
-			switch(select("[DRY-RUN] What Bullshit!:Let's go!")) {
+			switch(select("什么鬼！:走吧！")) {
 			case 1:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Of course, I don't care.";
-				mes "[DRY-RUN] huhu, Yapyap!";
+				mes "[阿洛妮]";
+				mes "当然，我不在乎。";
+				mes "呼呼，雅皮雅！";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Hurry up, my student!";
-				mes "[DRY-RUN] I am so capricious";
-				mes "[DRY-RUN] so I don't know what I will";
-				mes "[DRY-RUN] give you as a reward!";
+				mes "[阿洛妮]";
+				mes "快点，我的学生！";
+				mes "我真是善变";
+				mes "所以我不知道我会";
+				mes "给你什么作为奖励!";
 				changequest 1108,1106;
 				changequest 1105,1107;
 				set hat_1_2009,4;
 				close;
 			}
 		} else if (checkquest(1104,HUNTING) == 2 && checkquest(1105,HUNTING) == 2) {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Great job.";
-			mes "[DRY-RUN] How lonely you are!";
-			mes "[DRY-RUN] Okay, here is the last training";
-			mes "[DRY-RUN] to be a real playing-alone expert!";
+			mes "[阿洛妮]";
+			mes "干得好。";
+			mes "你真孤独！";
+			mes "好吧，这是最后的训练";
+			mes "成为真正的独自玩耍专家！";
 			next;
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] The special training, to play alone in Amatsu Dungeon!";
-			mes "[DRY-RUN] For make it";
-			mes "[DRY-RUN] the fruitful training,";
-			mes "[DRY-RUN] Get around and kill";
-			mes "[DRY-RUN] ^FF000020 The Papers and 40 Firelock Soldiers^000000!";
+			mes "[阿洛妮]";
+			mes "特别训练，单独在天津地下城玩！";
+			mes "为了实现这个";
+			mes "丰硕的训练，";
+			mes "四处走动并击杀";
+			mes "^FF000020 文件和40个火锁士兵^000000！";
 			next;
-			switch(select("[DRY-RUN] What Bullshit!:Let's go!")) {
+			switch(select("什么鬼！:走吧！")) {
 			case 1:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Of course, I don't care.";
-				mes "[DRY-RUN] huhu, Yapyap!";
+				mes "[阿洛妮]";
+				mes "当然，我不在乎。";
+				mes "呼呼，雅皮雅！";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Hurry up, my student!";
-				mes "[DRY-RUN] I am so capricious";
-				mes "[DRY-RUN] so I don't know what I will";
-				mes "[DRY-RUN] give you as a reward!";
+				mes "[阿洛妮]";
+				mes "快点，我的学生！";
+				mes "我真是善变";
+				mes "所以我不知道我会";
+				mes "给你什么作为奖励!";
 				changequest 1104,1106;
 				changequest 1105,1107;
 				set hat_1_2009,4;
 				close;
 			}
 		} else {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Hmm, It's not enough.";
-			mes "[DRY-RUN] Playing alone is not that easy!";
-			mes "[DRY-RUN] Go and kill";
-			mes "[DRY-RUN] ^FF000020 Green Maidens and 50 Mao Guais^000000!";
+			mes "[阿洛妮]";
+			mes "嗯，这还不够。";
+			mes "一个人玩可不容易！";
+			mes "去杀掉";
+			mes "^FF000020 绿色少女和50只毛怪^000000！";
 			if (checkquest(1104,HUNTING) == 1) {
 				erasequest 1104;
 				setquest 1108;
@@ -1039,20 +1039,20 @@ alberta,120,206,3	script	Alonie#Solo_Play_Box	787,{
 		}
 	} else if (hat_1_2009 == 4) {
 		if (MaxWeight - Weight < 300) {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Playing outside with this heavy bag?";
-			mes "[DRY-RUN] You are the real";
-			mes "[DRY-RUN] expert to play alone!";
+			mes "[阿洛妮]";
+			mes "背着这么重的包在外面玩？";
+			mes "你才是真正的";
+			mes "单独玩耍的专家！";
 			next;
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] If you want the reward, empty your bag, first!";
+			mes "[阿洛妮]";
+			mes "如果你想要奖励，先把包清空！";
 			close;
 		}
 		if (checkquest(1106,HUNTING) == 2 && checkquest(1107,HUNTING) == 2) {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Finally you did it.";
-			mes "[DRY-RUN] My affection-lacked student!";
-			mes "[DRY-RUN] This is the end of your training!";
+			mes "[阿洛妮]";
+			mes "终于你做到了。";
+			mes "我这个缺乏感情的学生！";
+			mes "这就是你训练的结束！";
 			next;
 			if (gettime(DT_HOUR) < 12) {
 				set .@item,5448; //Solo_Play_Box1
@@ -1062,45 +1062,45 @@ alberta,120,206,3	script	Alonie#Solo_Play_Box	787,{
 				set .@time$,"PM";
 			}
 			if (checkweight(.@item,1) == 0) {
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] Playing outside with this heavy bag?";
-				mes "[DRY-RUN] You are the real";
-				mes "[DRY-RUN] expert to play alone!";
+				mes "[阿洛妮]";
+				mes "背着这么重的包在外面玩？";
+				mes "你才是真正的";
+				mes "单独玩耍的专家！";
 				next;
-				mes "[DRY-RUN] [Alonie]";
-				mes "[DRY-RUN] If you want the reward, empty your bag, first!";
+				mes "[阿洛妮]";
+				mes "如果你想要奖励，先把包清空！";
 				close;
 			}
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Here! The solo play box";
+			mes "[阿洛妮]";
+			mes "来！单人游戏箱";
 			mes "the most effective at " + .@time$ + "!";
-			mes "[DRY-RUN] After putting on this box,";
-			mes "[DRY-RUN] you're the best lonely being!";
+			mes "戴上这个盒子后，";
+			mes "你是最棒的孤独存在！";
 			next;
-			mes "[DRY-RUN] [Alonie]";
+			mes "[阿洛妮]";
 			emotion ET_BEST;
-			mes "[DRY-RUN] Fight back your tears!";
-			mes "[DRY-RUN] Huhu, Yapyap!";
+			mes "忍住你的眼泪！";
+			mes "呼呼，呀扑呀扑！";
 			completequest 1106;
 			completequest 1107;
 			set hat_1_2009,5;
 			getitem .@item,1;
 			close;
 		} else {
-			mes "[DRY-RUN] [Alonie]";
-			mes "[DRY-RUN] Hmmm, It's not enough.";
-			mes "[DRY-RUN] Playing alone is not that easy thing!";
-			mes "[DRY-RUN] Go and kill";
-			mes "[DRY-RUN] ^FF000020 The Papers and 40 Firelock Soldiers^000000!";
+			mes "[阿洛妮]";
+			mes "嗯，这还不够。";
+			mes "一个人玩并不是那么简单的事！";
+			mes "去杀掉";
+			mes "^FF000020 文件和40个火锁士兵^000000！";
 			close;
 		}
 	} else if (hat_1_2009 == 5) {
-		mes "[DRY-RUN] [Alonie]";
-		mes "[DRY-RUN] I am the playing-alone expert.";
-		mes "[DRY-RUN] Always trying my best to play alone!";
+		mes "[阿洛妮]";
+		mes "我是独自游戏的专家。";
+		mes "总是尽力独自游戏！";
 		next;
-		mes "[DRY-RUN] [Alonie]";
-		mes "[DRY-RUN] Huhu, Yapyap!";
+		mes "[阿洛妮]";
+		mes "呼呼，呀扑呀扑！";
 		close;
 	}
 	end;

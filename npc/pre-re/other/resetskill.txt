@@ -16,128 +16,128 @@
 //============================================================
 
 prontera,146,232,4	script	Hypnotist#2	124,{
-	mes "[DRY-RUN] [Hypnotist]";
-	mes "[DRY-RUN] Greetings, adventurer.";
-	mes "[DRY-RUN] I'm a member of the Hypnotist";
-	mes "[DRY-RUN] Academy sent here to Prontera";
-	mes "[DRY-RUN] to provide Skill Reset services";
-	mes "[DRY-RUN] to certain First Class characters for a really good price: free!";
+	mes "[催眠师]";
+	mes "你好，冒险者。";
+	mes "我是催眠师的一员";
+	mes "学院派遣到普隆德拉";
+	mes "提供技能重置服务";
+	mes "给某些一转职业角色，价格非常优惠：免费！";
 	next;
-	mes "[DRY-RUN] [Hypnotist]";
-	mes "[DRY-RUN] Although I offer unlimited";
-	mes "[DRY-RUN] skill resets for now, I have";
-	mes "[DRY-RUN] two conditions that must be";
-	mes "[DRY-RUN] fulfilled. First, you must be";
-	mes "[DRY-RUN] lower than ^FF0000Base Level 40^000000.";
+	mes "[催眠师]";
+	mes "虽然我现在提供无限次";
+	mes "技能重置，但我有";
+	mes "两个必须满足的条件。";
+	mes "首先，你的等级必须低于";
+	mes "^FF0000基本等级 40^000000。";
 	next;
-	mes "[DRY-RUN] [Hypnotist]";
-	mes "[DRY-RUN] Second, you must be a";
-	mes "[DRY-RUN] ^FF0000Swordman, Acolyte, Mage,";
-	mes "[DRY-RUN] Thief, Archer, Merchant,";
-	mes "[DRY-RUN] Taekwon Boy, Taekwon Girl, Gunslinger and Ninja^000000";
-	mes "[DRY-RUN] Job character to qualify.";
-	mes "[DRY-RUN] Now, do you have any questions?";
+	mes "[催眠师]";
+	mes "其次，你必须是";
+	mes "^FF0000剑士, 服事, 魔法师,";
+	mes "盗贼, 弓箭手, 商人,";
+	mes "跆拳少年, 跆拳少女, 枪手和忍者^000000";
+	mes "符合资格的职业角色.";
+	mes "现在，你有什么问题吗？";
 	next;
-	switch(select("[DRY-RUN] Skill Reset?:I want a Skill Reset:Nothing")) {
+	switch(select("技能重置?:我想要技能重置:无")) {
 
 	case 1:
-		mes "[DRY-RUN] [Hypnotist]";
-		mes "[DRY-RUN] Skill Resets allow adventuers";
-		mes "[DRY-RUN] to redistribute their Skill";
-		mes "[DRY-RUN] Points if they are unhappy";
-		mes "[DRY-RUN] with their current skills.";
+		mes "[催眠师]";
+		mes "技能重置允许冒险者";
+		mes "重新分配他们的技能";
+		mes "点数，如果他们对";
+		mes "当前技能不满意.";
 		next;
-		mes "[DRY-RUN] [Hypnotist]";
-		mes "[DRY-RUN] Before proceeding with";
-		mes "[DRY-RUN] a Skill Reset, you must";
-		mes "[DRY-RUN] reduce all of the weight";
-		mes "[DRY-RUN] of all carried items on your";
-		mes "[DRY-RUN] character to 0. You can put";
-		mes "[DRY-RUN] extra items in Kafra Storage.";
+		mes "[催眠师]";
+		mes "在进行";
+		mes "技能重置之前，你必须";
+		mes "减少你所携带的所有物品的";
+		mes "重量.";
+		mes "角色的等级降到0。你可以放置";
+		mes "额外物品在卡普拉仓库中。";
 		next;
-		mes "[DRY-RUN] [Hypnotist]";
-		mes "[DRY-RUN] Ah, it's also important";
-		mes "[DRY-RUN] to remove your ^FF0000Pushcart^000000";
-		mes "[DRY-RUN] if you have one equipped.";
-		mes "[DRY-RUN] Otherwise, hypnosis won't";
-		mes "[DRY-RUN] work, or will backfire...";
+		mes "[催眠师]";
+		mes "啊，这也很重要";
+		mes "要移除你的^FF0000推车^000000";
+		mes "如果你装备了的话。";
+		mes "否则，催眠将无效，";
+		mes "或者会适得其反...";
 		close;
 
 	case 2:
-		mes "[DRY-RUN] [Hypnotist]";
-		mes "[DRY-RUN] Are you sure that you";
-		mes "[DRY-RUN] want to proceed with";
-		mes "[DRY-RUN] my ^FF0000Skill Reset^000000 service?";
+		mes "[催眠师]";
+		mes "你确定你";
+		mes "你想继续进行";
+		mes "我的^FF0000技能重置^000000服务吗？";
 		next;
-		if (select("[DRY-RUN] Yes:Cancel") == 1) {
+		if (select("是:取消") == 1) {
 			if (BaseLevel > 40) {
-				mes "[DRY-RUN] [Hypnotist]";
-				mes "[DRY-RUN] I'm sorry, but characters";
-				mes "[DRY-RUN] with Base Levels higher";
-				mes "[DRY-RUN] than 40 are ineligible for the";
-				mes "[DRY-RUN] Skill Reset service I provide.";
+				mes "[催眠师]";
+				mes "抱歉，但角色的";
+				mes "基本等级高于";
+				mes "40的角色不符合";
+				mes "我提供的技能重置服务。";
 				close;
 			}
 			if ((Class > 0 && Class < 7 && Upper == 0) || (Class == Job_Gunslinger) || (Class == Job_Ninja) || (Class == Job_Taekwon)) {
 				if (checkcart()) {
-					mes "[DRY-RUN] [Hypnotist]";
-					mes "[DRY-RUN] Oh! Please remove your";
-					mes "[DRY-RUN] Pushcart before proceeding";
-					mes "[DRY-RUN] with the Skill Reset service.";
-					mes "[DRY-RUN] Thanks for cooperating~";
+					mes "[催眠师]";
+					mes "哦！请移除你的";
+					mes "推车再继续";
+					mes "进行技能重置服务。";
+					mes "谢谢你的配合~";
 					close;
 				}
 				if (Weight) {
-					mes "[DRY-RUN] [Hypnotist]";
-					mes "[DRY-RUN] If you're here for my Skill";
-					mes "[DRY-RUN] Reset service, please";
-					mes "[DRY-RUN] remember that you can't";
-					mes "[DRY-RUN] reset your skills until the";
-					mes "[DRY-RUN] ^FF0000weight of your carried items in";
-					mes "[DRY-RUN] your Inventory is reduced to 0^000000.";
+					mes "[催眠师]";
+					mes "如果你是来找我的技能";
+					mes "重置服务，请";
+					mes "记住你不能";
+					mes "在你的";
+					mes "^FF0000背包中的物品重量";
+					mes "减少到0^000000之前重置技能。";
 					next;
-					mes "[DRY-RUN] [Hypnotist]";
-					mes "[DRY-RUN] Why don't you place your";
-					mes "[DRY-RUN] things into the Kafra Storage";
-					mes "[DRY-RUN] for now? That way, you can";
-					mes "[DRY-RUN] safely keep all of your goods.";
+					mes "[催眠师]";
+					mes "为什么不把你的";
+					mes "东西放进卡普拉仓库";
+					mes "呢？这样你就可以";
+					mes "安全地保管您的所有物品。";
 					close;
 				}
-				mes "[DRY-RUN] [Hypnotist]";
-				mes "[DRY-RUN] Thank you for using";
-				mes "[DRY-RUN] my Skill Redistribution";
-				mes "[DRY-RUN] services. Oh, and best";
-				mes "[DRY-RUN] of luck to you on your";
-				mes "[DRY-RUN] travels, adventurer.";
+				mes "[催眠师]";
+				mes "感谢您使用";
+				mes "我的技能重置服务。";
+				mes "哦，祝您在接下来的";
+				mes "好运。";
+				mes "旅行中，冒险者。";
 				ResetSkill;
 				close;
 			}
-			mes "[DRY-RUN] [Hypnotist]";
-			mes "[DRY-RUN] I'm sorry, but your";
-			mes "[DRY-RUN] Job Class doesn't qualify";
-			mes "[DRY-RUN] for the Skill Reset service";
-			mes "[DRY-RUN] that I provide. I can only";
-			mes "[DRY-RUN] offer Skill Resets to the";
-			mes "[DRY-RUN] following Jobs...";
+			mes "[催眠师]";
+			mes "抱歉，但您的";
+			mes "职业不符合";
+			mes "技能重置服务的资格。";
+			mes "我只能";
+			mes "提供技能重置给以下职业...";
+			mes "以下职业...";
 			next;
-			mes "[DRY-RUN] [Hypnotist]";
-			mes "[DRY-RUN] ^FF0000Swordman, Acolyte,";
-			mes "[DRY-RUN] Mage, Thief, Archer,";
-			mes "[DRY-RUN] Merchant, Taekwon";
-			mes "[DRY-RUN] Boy, Taekwon Girl, Gunslinger and Ninja^000000.";
+			mes "[催眠师]";
+			mes "^FF0000剑士, 服事,";
+			mes "魔法师, 盗贼, 弓箭手,";
+			mes "商人, 跆拳少年";
+			mes "少年, 跆拳少女, 枪手和忍者^000000.";
 			close;
 		}
-		mes "[DRY-RUN] [Hypnotist]";
-		mes "[DRY-RUN] Thank you, and good";
-		mes "[DRY-RUN] luck on your adventures.";
-		mes "[DRY-RUN] Please travel in safety~";
+		mes "[催眠师]";
+		mes "谢谢，祝你";
+		mes "在冒险中好运.";
+		mes "请安全旅行~";
 		close;
 
 	case 3:
-		mes "[DRY-RUN] [Hypnotist]";
-		mes "[DRY-RUN] Thank you, and good";
-		mes "[DRY-RUN] luck on your adventures.";
-		mes "[DRY-RUN] Please travel in safety~";
+		mes "[催眠师]";
+		mes "谢谢，祝你";
+		mes "在冒险中好运.";
+		mes "请安全旅行~";
 		close;
 	}
 

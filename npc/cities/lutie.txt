@@ -139,9 +139,9 @@ xmas_in,167,173,4	script	Duffle	711,{
 		close;
 	}
 	else {
-		mes "[Duffle]";
-		mes "Oh...!";
-		mes "While you're here, don't forget to visit the original Santa Claus here in Lutie.";
+		mes "[达夫尔]";
+		mes "哦……！";
+		mes "在这里时，别忘了去拜访普隆德拉的原版圣诞老人。";
 		close;
 	}
 }
@@ -291,26 +291,26 @@ xmas,117,304,4	script	Poze	713,{
 		mes "Ho Ho Ho~ 圣诞快乐！！";
 		mes "圣诞快乐！！";
 		next;
-		mes "[Poze]";
-		mes "But that's pretty much all I know. For the actual details, you should ask ^3355FFUncle Hairy Cantata^000000.";
+		mes "[雪雪]";
+		mes "但这几乎就是我所知道的。至于具体细节，你应该去问^3355FF毛茸茸的叔叔^000000。";
 		set xmas_npc,4;
 		close;
 	} else {
-		mes "[Poze]";
-		mes "Welcome to Lutie,";
-		mes "the town which blesses";
-		mes "all of its visitors with";
-		mes "the spirit of Christmas!";
-		mes "Merry Christmas !";
+		mes "[雪雪]";
+		mes "欢迎来到鲁提耶，";
+		mes "这个祝福着";
+		mes "所有游客的城镇，";
+		mes "充满了圣诞的气息！";
+		mes "圣诞快乐！";
 		next;
-		mes "[Poze]";
-		mes "Here in this magical land of fun and fancy, you can enjoy the spirit of Christmas all year round~! Isn't that wonderful?";
+		mes "[雪雪]";
+		mes "在这个充满乐趣和幻想的神奇土地上，你可以全年享受圣诞的气息~！这不是很美好吗？";
 		next;
-		mes "[Poze]";
-		mes "Lutie isn't merely just a simple attraction. We have convenient facilities like the other towns, but in a festive environment.";
+		mes "[雪雪]";
+		mes "鲁提耶不仅仅是一个简单的景点。我们有像其他城镇一样便利的设施，但在一个节日的环境中。";
 		next;
-		mes "[Poze]";
-		mes "So if you decide to stay here for a while, you should have all the comforts that you need. Merry Christmas~";
+		mes "[雪雪]";
+		mes "所以如果你决定在这里待一段时间，你应该拥有你所需要的所有舒适。圣诞快乐~";
 		close;
 	}
 }
@@ -470,7 +470,7 @@ xmas,134,112,4	script	Snowman	710,{
 	mes "那就是 ^3355FF'雪人'^000000";
 	mes "它是个.. 听的懂人话";
 	next;
-	switch(select("^3355FFSnowysnow?^000000:Info about the Christmas dungeon:Quit this conversation")) {
+	switch(select("^3355FF雪雪？^000000:关于圣诞地下城的信息:退出对话")) {
 	case 1:
 		if (xmas_npc < 2) {
 			cutin "rutie_snownow01.bmp",2;
@@ -601,138 +601,138 @@ xmas,134,112,4	script	Snowman	710,{
 				mes "那么再见啰";
 				next;
 				mes "祝你耶诞快乐!!";
-				mes "I like her cooking because it's soooo delicious! Sometimes, she gives me grape syrup on snow flakes. Anyway, please deliver that salt for me, buddy~!";
+				mes "我喜欢她的烹饪，因为实在是太美味了！有时，她会给我在雪花上浇葡萄糖浆。无论如何，请帮我送那盐，朋友~！";
 				close2;
 				cutin "",255;
 				end;
 			case 7:
 				cutin "rutie_snownow01.bmp",2;
-				mes "[Snowysnow]";
-				mes "'^3355FFThe roughest";
-				mes "salt in the world^000000...'";
-				mes "Wow. Now, that's rough! Aunt Tachentze is always making pickles, so she sure could use it soon!";
+				mes "[雪雪]";
+				mes "'^3355FF世界上最粗糙的";
+				mes "盐^000000...'";
+				mes "哇。现在，这可真粗糙！塔琴茨阿姨总是在做腌菜，所以她肯定很快就会需要它！";
 				close2;
 				cutin "",255;
 				end;
 			case 8:
 				cutin "rutie_snownow01.bmp",2;
-				mes "[Snowysnow]";
-				mes "Hashokii, the boring clown? At first, he seems kind of dumb and not really that funny. But deep inside, he cares a lot about other people.";
+				mes "[雪雪]";
+				mes "哈肖基，那个无聊的小丑？起初，他看起来有点傻，并不是特别有趣。但在内心深处，他非常关心其他人。";
 				next;
-				mes "[Snowysnow]";
-				mes "He's always trying his best to make those two orphans laugh and forget their troubles...";
+				mes "[雪雪]";
+				mes "他总是尽力让那两个孤儿笑，忘记他们的烦恼...";
 				close2;
 				cutin "",255;
 				end;
 			case 9:
 				cutin "rutie_snownow01.bmp",2;
-				mes "[Snowysnow]";
-				mes "Ah...";
-				mes "So you've met Charu Charu? That boy is so full of optimism and always looking forward. When he grows up, he's going to be a big shot!";
+				mes "[雪雪]";
+				mes "啊……";
+				mes "所以你见过查鲁查鲁？那个男孩充满了乐观，总是向前看。当他长大后，他会成为一个大人物！";
 				next;
-				mes "[Snowysnow]";
-				mes "I'm sure of it!";
-				mes "Hee hee hee~!";
+				mes "[雪雪]";
+				mes "我相信这一点！";
+				mes "嘿嘿嘿~！";
 				close2;
 				cutin "",255;
 				end;
 			case 10:
 				cutin "rutie_snownow01.bmp",2;
-				mes "[Snowysnow]";
-				mes "Thank you for listening to me so far. I really appreciate that you try to understand me, even though you're a stranger here.";
+				mes "[雪雪]";
+				mes "谢谢你到目前为止听我说话。我真的很感激你试图理解我，即使你在这里是个陌生人。";
 				next;
-				mes "[Snowysnow]";
-				mes "Now, you know me better than anyone else in this town. So, in return, I want to give you a small present.";
+				mes "[雪雪]";
+				mes "现在，你比这个城镇里的任何人都更了解我。所以，作为回报，我想给你一个小礼物。";
 				next;
-				mes "[Snowysnow]";
-				mes "Tah dah!";
-				mes "Pick anything";
-				mes "you want in here~";
+				mes "[雪雪]";
+				mes "塔达！";
+				mes "随便挑选任何东西";
+				mes "你想要的东西~";
 				next;
-				mes "^3355FFYou gingerly stir";
-				mes "your hand around in";
-				mes "Snowysnow's magical gift bag^000000.";
+				mes "^3355FF你小心翼翼地搅动";
+				mes "你的手在";
+				mes "雪雪的魔法礼物袋^000000。";
 				next;
 				switch(rand(1,8)) {
 				case 1:
 					set xmas_npc,11;
 					getitem 529,5;// Candy
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Wow~!";
-					mes "^3355FF5 Candy^000000!";
-					mes "Congratulations!";
+					mes "[雪雪]";
+					mes "哇~！";
+					mes "^3355FF5 颗糖果^000000！";
+					mes "恭喜！";
 					break;
 				case 2:
 					set xmas_npc,11;
 					getitem 529,10;// Candy
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Ooh~!";
-					mes "^3355FF10 Candy^000000!";
+					mes "[雪雪]";
+					mes "哦~！";
+					mes "^3355FF10 颗糖果^000000！";
 					break;
 				case 3:
 					set xmas_npc,11;
 					getitem 530,5;// Candy_Striper
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Hoooraaaay~!";
-					mes "^3355FF5 Candy Cane^000000!";
+					mes "[雪雪]";
+					mes "哇哦~！";
+					mes "^3355FF5 根糖果棒^000000！";
 					break;
 				case 4:
 					set xmas_npc,11;
 					getitem 530,10;// Candy_Striper
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Wow, that's so great!";
-					mes "^3355FF10 Candy Cane^000000!";
+					mes "[雪雪]";
+					mes "哇，太棒了！";
+					mes "^3355FF10 根糖果棒^000000！";
 					break;
 				case 5:
 					set xmas_npc,11;
 					getitem 539,1;// Piece_Of_Cake
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Aren't you lucky!";
-					mes "^3355FF1 Piece Of Cake^000000!";
+					mes "[雪雪]";
+					mes "你真幸运！";
+					mes "^3355FF1 块蛋糕^000000！";
 					break;
 				case 6:
 					set xmas_npc,11;
 					getitem 539,2;// Piece_Of_Cake
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Now, isn't that nice?";
-					mes "^3355FF2 Piece Of Cake^000000!";
+					mes "[雪雪]";
+					mes "现在，这不是很好吗？";
+					mes "^3355FF2 块蛋糕^000000！";
 					break;
 				case 7:
 					set xmas_npc,11;
 					getitem 538,5;// Well_Baked_Cookie
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "Oh woooooow~!";
-					mes "^3355FF5 Cookie^000000!";
+					mes "[雪雪]";
+					mes "哦哇哦~！";
+					mes "^3355FF5 块饼干^000000！";
 					break;
 				case 8:
 					set xmas_npc,11;
 					getitem 538,10;// Well_Baked_Cookie
 					cutin "rutie_snownow02.bmp",2;
-					mes "[Snowysnow]";
-					mes "*Gasp!* Ooh~";
-					mes "^3355FF10 Cookie^000000!";
+					mes "[雪雪]";
+					mes "*喘气!* 哦~";
+					mes "^3355FF10 块饼干^000000！";
 					break;
 				}
 				next;
-				mes "[Snowysnow]";
-				mes "My dear friend, please visit me from time to time, so that we can chitchat, okay? See you soon! And Merry Christmas!";
+				mes "[雪雪]";
+				mes "我亲爱的朋友，请不时来拜访我，这样我们就可以聊天，好吗？再见！圣诞快乐！";
 				close2;
 				cutin "",255;
 				end;
 			case 11:
 				cutin "rutie_snownow02.bmp",2;
-				mes "[Snowysnow]";
-				mes "Hello hello!";
+				mes "[雪雪]";
+				mes "你好你好！";
 				next;
-				mes "[Snowysnow]";
-				mes "You're always welcome in Lutie, especially by me, Snowysnow! Happy Kwanza, Happy Hannukah and Merry Christmas~!";
+				mes "[雪雪]";
+				mes "你在鲁提耶总是受欢迎，尤其是我，雪雪！祝你宽扎节快乐，哈努卡快乐，圣诞快乐~！";
 				close2;
 				cutin "",255;
 				end;
@@ -740,24 +740,24 @@ xmas,134,112,4	script	Snowman	710,{
 		}
 		case 2:
 			cutin "rutie_snownow01.bmp",2;
-			mes "[Snowysnow]";
-			mes "Around this wonderful town, eternally blessed with Christmas, there is a horrible dungeon, eternally cursed with Christmas.";
+			mes "[雪雪]";
+			mes "在这个永远被圣诞祝福的美妙城镇周围，有一个可怕的地下城，永远被圣诞诅咒。";
 			next;
-			mes "[Snowysnow]";
-			mes "I've heard that it's well decorated and looks just like a Toy Factory inside, where everything is so cute and pretty. They are Toy Soldiers and Gift Boxes as far as the eye can see!";
+			mes "[雪雪]";
+			mes "我听说那里装饰得很好，里面看起来就像一个玩具工厂，所有东西都那么可爱和漂亮。到处都是玩具士兵和礼物盒！";
 			next;
 			cutin "rutie_snownow01.bmp",2;
-			mes "[Snowysnow]";
-			mes "Isn't that soooo exciting?! *Sigh* Even if it is a dungeon, I would like to go inside just to look. If only I was a real boy, or even had legs...";
+			mes "[雪雪]";
+			mes "这不是太令人兴奋了吗？！*叹气* 即使它是一个地下城，我也想进去看看。如果我真的是个男孩，或者至少有腿就好了...";
 			close2;
 			cutin "",255;
 			end;
 		case 3:
 			cutin "rutie_snownow03.bmp",2;
-			mes "[Snowysnow]";
-			mes "Bye bye, friend~!";
-			mes "Thank you for listening to me~";
-			mes "I'll see you again, someday! You'll always be in my heart~";
+			mes "[雪雪]";
+			mes "再见，朋友~！";
+			mes "谢谢你听我说话~";
+			mes "我会再见到你的，某天！你将永远在我心中~";
 			close2;
 			cutin "",255;
 			end;
@@ -770,7 +770,7 @@ xmas,146,136,4	script	Hashokii	715,{
 	mes "让我开心的话，然后想要我拿一些给他是吧？早知道他没安好心！呵..呵呵.不过啊";
 	mes "[塔心纪]";
 	next;
-	switch(select("Yo Clown boy, what's up?:About Snowysnow:Quit conversation")) {
+	switch(select("嘿，小丑男孩，怎么样？:关于雪雪:退出对话")) {
 	case 1:
 		mes "我可是个心地善良的老太太 – 不会连一些泡菜都舍不得给他，跟他计较的";
 		mes "很好很好.. 我做的泡菜可是有口皆碑的呢！什么 ？^3355FF'雪人'^000000 的故事？啊啊，嗯，我是知道，不过呢";

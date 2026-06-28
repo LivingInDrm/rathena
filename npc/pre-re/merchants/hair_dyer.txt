@@ -19,48 +19,48 @@
 //============================================================ 
 
 prt_in,243,168,4	script	Jovovich	91,{
-	mes "[DRY-RUN] [Hairdresser Jovovich]";
-	mes "[DRY-RUN] Welcome~!";
-	mes "[DRY-RUN] How may I help you?";
+	mes "[发型师乔沃维奇]";
+	mes "欢迎~！";
+	mes "我能帮你什么？";
 	next;
-	mes "[DRY-RUN] [Hairdresser Jovovich]";
+	mes "[发型师乔沃维奇]";
 	if (Sex == SEX_MALE) mes "Oh, no! Your hair is damaged. It seems as if you may need professional treatment. Come sit over here, please. Come.";
 	else {
 		if (rand(20) > 11) {
-			mes "[DRY-RUN] Eh!? Oh my! Oh no no no no! Your hair is sooo damaged! It's not good if you leave your hair like this.";
+			mes "哎！？哦我的天！不不不不！你的头发太受损了！这样放着可不好。";
 			next;
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] Would you let me treat your hair? Please?";
+			mes "[发型师乔沃维奇]";
+			mes "你愿意让我帮你护理头发吗？拜托？";
 		}
 		else mes "Wow! Your hair would be perfect once it's dyed~ How about dying your hair for a change?";
 	}
 	next;
 	while(1) {
-		switch(select("[DRY-RUN] Dye Hair:Tips and Information:Cancel")) {
+		switch(select("染发:提示和信息:取消")) {
 		case 1:
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] Yes yes, good choice~";
-			mes "[DRY-RUN] Well then, this is your chance for a make-over, your chance to blossom in beauty! Choose the color you would like.";
+			mes "[发型师乔沃维奇]";
+			mes "是的是的，选择得很好~";
+			mes "那么，这是你变美的机会，绽放美丽的机会！选择你想要的颜色。";
 			next;
 			while(1) {
 				if (.@choose_success == 1) {
-					mes "[DRY-RUN] [Hairdresser Jovovich]";
-					mes "[DRY-RUN] What do you think? Did you want a different color?";
+					mes "[发型师乔沃维奇]";
+					mes "你觉得怎么样？想要换个颜色吗？";
 					next;
-					if (select("[DRY-RUN] Yes:No") == 1) {
-						mes "[DRY-RUN] [Hairdresser Jovovich]";
-						mes "[DRY-RUN] Okay! Choose the color that you would like.";
+					if (select("是:否") == 1) {
+						mes "[发型师乔沃维奇]";
+						mes "好的！选择你想要的颜色。";
 						next;
 					}
 					else  {
-						mes "[DRY-RUN] [Hairdresser Jovovich]";
-						mes "[DRY-RUN] Hmm, I'm sort of disappointed. I wanted to do a better job. But I promise I'll do it better next time. Please come again~";
+						mes "[发型师乔沃维奇]";
+						mes "嗯，我有点失望。我想做得更好。但我保证下次会做得更好。请再来哦~";
 						close;
 					}
 				}
 
 				while(1) {
-					switch(select("[DRY-RUN] Red, please.:Yellow, please.:Violet, please.:Orange, please.:Green, please.:Blue, please.:White, please.:Black, please.:Actually, I like my hair as it is.")) {
+					switch(select("红色，请。:黄色，请。:紫色，请。:橙色，请。:绿色，请。:蓝色，请。:白色，请。:黑色，请。:其实，我喜欢我现在的头发。")) {
 					case 1: set .@headpalette,8; break;
 					case 2: set .@headpalette,1; break;
 					case 3: set .@headpalette,2; break;
@@ -71,18 +71,18 @@ prt_in,243,168,4	script	Jovovich	91,{
 					case 8: set .@headpalette,7; break;
 					case 9:
 						if (.@choose_success != 0) {
-							mes "[DRY-RUN] [Hairdresser Jovovich]";
-							mes "[DRY-RUN] You must like your hair color~";
+							mes "[发型师乔沃维奇]";
+							mes "你一定喜欢你的发色~";
 							close;
 						}
-						mes "[DRY-RUN] [Hairdresser Jovovich]";
-						mes "[DRY-RUN] Eehh~? You're not going to dye your hair? I'm a little sad...";
+						mes "[发型师乔沃维奇]";
+						mes "嗯~？你不打算染头发吗？我有点伤心...";
 						close;
 					}
 
 					if (.@headpalette == getlook(VAR_HEADPALETTE)) {
-						mes "[DRY-RUN] [Hairdresser Jovovich]";
-						mes "[DRY-RUN] Eh? But that's the hair color you already have. Please choose a different color.";
+						mes "[发型师乔沃维奇]";
+						mes "嗯？但那是你现在的发色。请选一个不同的颜色。";
 						next;
 					}
 					else {
@@ -97,8 +97,8 @@ prt_in,243,168,4	script	Jovovich	91,{
 						case 8: callsub S_NoDye,975,"red"; break;
 						}
 						if (Zeny < 1000) {
-							mes "[DRY-RUN] [Hairdresser Jovovich]";
-							mes "[DRY-RUN] The fee is 1000 zeny. Do you not have enough...?";
+							mes "[发型师乔沃维奇]";
+							mes "费用是1000金币。你没有足够的钱吗...？";
 							close;
 						}
 
@@ -123,25 +123,25 @@ prt_in,243,168,4	script	Jovovich	91,{
 			}
 
 		case 2:
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] When you're feeling down , when you get dumped, when you want to impress someone, or even when you just want to stand out...";
+			mes "[发型师乔沃维奇]";
+			mes "当你感到沮丧时，当你被甩时，当你想给某人留下深刻印象，或者当你只是想引人注目时...";
 			next;
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] For that special place and time, wouldn't you want a hairstyle of your very own? As long as you have the appropriate dyestuffs, I will make your hair look wonderful.";
+			mes "[发型师乔沃维奇]";
+			mes "在那个特别的地方和时刻，你不想要一个属于你自己的发型吗？只要你有合适的染料，我就能让你的头发看起来很棒。";
 			next;
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] And try not to worry too much about the fee. Acquiring beauty is the same as acquiring everything. Hehe~";
+			mes "[发型师乔沃维奇]";
+			mes "而且尽量不要太担心费用。获得美丽就像获得一切一样。嘿嘿~";
 			next;
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] * Fees and Information *";
-			mes "[DRY-RUN] - 1 Dyestuffs item of the color of hair you want.";
-			mes "[DRY-RUN] - 1000 zeny fee.";
+			mes "[发型师乔沃维奇]";
+			mes "* 费用与信息 *";
+			mes "- 1 个您想要的头发颜色的染料。";
+			mes "- 1000金币的费用。";
 			close;
 
 		case 3:
-			mes "[DRY-RUN] [Hairdresser Jovovich]";
-			mes "[DRY-RUN] Men or Women...";
-			mes "[DRY-RUN] Everyone has the right and obligation to be beautiful.";
+			mes "[发型师乔沃维奇]";
+			mes "男士或女士...";
+			mes "每个人都有权利和义务变得美丽。";
 			close;
 		}
 
@@ -149,7 +149,7 @@ prt_in,243,168,4	script	Jovovich	91,{
 
 S_NoDye:
 	if (countitem(getarg(0)) == 0) {
-		mes "[DRY-RUN] [Hairdresser Jovovich]";
+		mes "[发型师乔沃维奇]";
 		mes "Eh?! But you need the item '"+getitemname(getarg(0))+"' to dye your hair "+getarg(1)+"...";
 		close;
 	}

@@ -26,57 +26,57 @@
 //============================================================
 -	script	Sprakki#newbe01::NvSprakkiA	-1,{
 	if (job_novice_q == 0) {
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Hello there! Welcome to the World of Ragnarok Online. My name is Sprakki and I'm in charge of giving you basic gameplay tips.";
-		mes "[DRY-RUN] Click on the [Next] button or press [Enter] to continue.";
+		mes "[斯普拉基]";
+		mes "你好！欢迎来到《 Ragnarok Online》的世界。我叫斯普拉基，我负责给你基本的游戏提示。";
+		mes "点击[下一步]按钮或按[回车]继续。";
 		next;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] First you need to learn the very basics of controlling your character.";
-		mes "[DRY-RUN] All the basic ^4d4dffmoves, selection of items, and attacks^000000 use the ^4d4dff left click of the mouse^000000.";
+		mes "[斯普拉基]";
+		mes "首先，你需要学习控制角色的基本知识。";
+		mes "所有基本的^4d4dff移动、物品选择和攻击^000000都使用^4d4dff鼠标的左键点击^000000。";
 		next;
 		cutin "tutorial01",3;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] Click on the ground to move the character.";
-		mes "[DRY-RUN] Attacking monsters and conversations with the people of this world can be done by simply clicking on them.";
+		mes "-! 信息 !-";
+		mes "点击地面以移动角色。";
+		mes "攻击怪物和与这个世界的人交谈可以通过简单地点击他们来完成。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] First off, try moving around.";
-		mes "[DRY-RUN] Do you see that wooden bridge to the right?";
+		mes "[斯普拉基]";
+		mes "首先，试着四处移动。";
+		mes "你看到右边那座木桥了吗？";
 		next;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Walk over that bridge and there's a castle used as the Training Center.";
-		mes "[DRY-RUN] I will be waiting for you inside of that Castle. Please come to the castle by yourself.";
+		mes "[斯普拉基]";
+		mes "走过那座桥，就会看到一个作为训练中心的城堡。";
+		mes "我会在那个城堡里等你。请你自己来城堡。";
 		set job_novice_q,1;
 		setquest 7117;
 		next;
 		cutin "tutorial02",3;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] You've received a quest from Sprakki.";
-		mes "[DRY-RUN] You can check the contents of the quest in the Quest Info Window.";
+		mes "-! 信息 !-";
+		mes "你从斯普拉基那里接到了一个任务。";
+		mes "你可以在任务信息窗口查看任务内容。";
 		next;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] I will wait inside the Training Center across the bridge.";
+		mes "[斯普拉基]";
+		mes "我会在桥对面的训练中心等你。";
 		next;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] You can open the Quest Info Window by pressing the ^4d4dffAlt + U^000000 keys at the same time.";
+		mes "-! 信息 !-";
+		mes "你可以同时按下 ^4d4dffAlt + U^000000 键打开任务信息窗口。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Have you checked the Quest Info Window?";
-		mes "[DRY-RUN] I'll be waiting in the castle across the bridge.";
+		mes "[斯普拉基]";
+		mes "你检查过任务信息窗口了吗？";
+		mes "我会在桥对面的城堡里等你。";
 		close2;
 		cutin "",255;
 		end;
 	} else if (job_novice_q == 1) {
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] I will be waiting for you across the Bridge to the east.";
+		mes "[斯普拉基]";
+		mes "我会在东边的桥对面等你。";
 		close;
 	} else {
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Are you lost?";
-		mes "[DRY-RUN] Have you gone beyond the bridge to the east?";
-		mes "[DRY-RUN] I will guide you further after we meet in the Training Center.";
+		mes "[斯普拉基]";
+		mes "你迷路了吗？";
+		mes "你已经越过东边的桥了吗？";
+		mes "在训练中心见面后，我会进一步指导你。";
 		close;
 	}
 }
@@ -88,68 +88,68 @@ new_5-1,53,114,3	duplicate(NvSprakkiA)	Sprakki#nv5a	90
 
 -	script	Sprakki#newbe05::NvSprakkiB	-1,{
 	if (job_novice_q == 0) {
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Hello there! Welcome to the World of Ragnarok Online.";
-		mes "[DRY-RUN] My name is Sprakki and I'm in charge of giving you basic gameplay tips.";
-		mes "[DRY-RUN] Click on the [Next] button or press [Enter] key to continue.";
+		mes "[斯普拉基]";
+		mes "你好！欢迎来到《 Ragnarok Online》的世界。";
+		mes "我叫斯普拉基，我负责给你基本的游戏玩法提示。";
+		mes "点击[下一步]按钮或按[回车]键继续。";
 		next;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] First you need to learn the very basics of controlling your character.";
-		mes "[DRY-RUN] All the basic ^4d4dffmoves, selection of items, and attacks^000000 use the ^4d4dff left click of the mouse^000000.";
+		mes "[斯普拉基]";
+		mes "首先，你需要学习控制角色的基本知识。";
+		mes "所有基本的^4d4dff移动、物品选择和攻击^000000都使用^4d4dff鼠标的左键点击^000000。";
 		next;
 		cutin "tutorial01",3;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] Click on the ground to move the character.";
-		mes "[DRY-RUN] Attacking monsters and conversations with the people of this world can be done by simply clicking on them.";
+		mes "-! 信息 !-";
+		mes "点击地面以移动角色。";
+		mes "攻击怪物和与这个世界的人交谈可以通过简单地点击他们来完成。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Well then, I will give you a quest to talk to me.";
-		mes "[DRY-RUN] After the conversation is over, talk to me again by left-clicking on me.";
+		mes "[斯普拉基]";
+		mes "那么，我会给你一个任务，让你和我对话。";
+		mes "对话结束后，左键点击我再次和我对话。";
 		set job_novice_q,1;
 		setquest 7117;
 		next;
 		cutin "tutorial02",3;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] You've received a quest from Sprakki.";
-		mes "[DRY-RUN] You can check the contents of the quest in the Quest Info Window by pressing the ^4d4dffAlt + U^000000 keys at the same time.";
+		mes "-! 信息 !-";
+		mes "你从斯普拉基那里接到了一个任务。";
+		mes "你可以通过同时按下 ^4d4dffAlt + U^000000 键来查看任务内容。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Have you checked the Quest Info Window?";
-		mes "[DRY-RUN] Well, talk to me again.";
+		mes "[斯普拉基]";
+		mes "你检查过任务信息窗口了吗？";
+		mes "好吧，再和我说话。";
 		close;
 	} else if (job_novice_q < 3) {
 		if (job_novice_q == 1) {
-			mes "[DRY-RUN] [Sprakki]";
-			mes "[DRY-RUN] Great!";
-			mes "[DRY-RUN] Now you know how to move and talk to others, right?";
+			mes "[斯普拉基]";
+			mes "太好了！";
+			mes "现在你知道如何移动和与他人交谈了，对吧？";
 			set job_novice_q,2;
 			getexp 600,5;
 			completequest 7117;
 			next;
 		}
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] The Training Center is prepared for novices just like you.";
-		mes "[DRY-RUN] You are going to be trained to get used to the basics of the Game.";
+		mes "[斯普拉基]";
+		mes "训练中心为像你这样的初学者准备好了。";
+		mes "你将接受训练以熟悉游戏的基础。";
 		next;
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] Of course, this Training Process is optional, if you want to go straight to town, that's also fine.";
-		mes "[DRY-RUN] But, you will miss all the advantages you can get in the Training Center.";
+		mes "[斯普拉基]";
+		mes "当然，这个训练过程是可选的，如果你想直接去城镇，那也没问题。";
+		mes "但是，你将错过在训练中心可以获得的所有优势。";
 		next;
-		switch(select("[DRY-RUN] Begin Training.:Start the game right away.")) {
+		switch(select("开始训练.:立刻开始游戏。")) {
 		case 1:
-			mes "[DRY-RUN] [Sprakki]";
-			mes "[DRY-RUN] I will guide you to the Novice Training Center.";
-			mes "[DRY-RUN] Inside, Instructor 'Brade' will be waiting to speak to you.";
+			mes "[斯普拉基]";
+			mes "我将带你去初学者训练中心。";
+			mes "里面，指导员 '布雷德' 将等着与你对话。";
 			next;
-			mes "[DRY-RUN] [Sprakki]";
-			mes "[DRY-RUN] Instructor 'Brade' will help you afterwards.";
-			mes "[DRY-RUN] Please, Go see him.";
+			mes "[斯普拉基]";
+			mes "指导员 '布雷德' 会在之后帮助你。";
+			mes "请，去见他。";
 			setquest 7118;
 			next;
-			mes "[DRY-RUN] ^4d4dff- You received a quest 'Novice Training Ground -1' from Sprakki.";
-			mes "[DRY-RUN] Please check the Quest Info Window. -^000000";
+			mes "^4d4dff- 你从斯普拉基那里接到了任务 '初心者训练场 -1'。";
+			mes "请查看任务信息窗口。 -^000000";
 			close2;
 			savepoint strnpcinfo(4),100,100,1,1;
 			warp strnpcinfo(4),100,100;
@@ -163,14 +163,14 @@ new_5-1,53,114,3	duplicate(NvSprakkiA)	Sprakki#nv5a	90
 			set nov_3_magician,0;
 			set nov_3_acolyte,0;
 			set nov_3_merchant,0;
-			mes "[DRY-RUN] [Sprakki]";
-			mes "[DRY-RUN] Ok, You want to start right away.";
-			mes "[DRY-RUN] Which Town do you want to start at?";
+			mes "[斯普拉基]";
+			mes "好的，你想立刻开始。";
+			mes "你想在哪个城镇开始？";
 			next;
-			set .@select, select("[DRY-RUN] Prontera:Morroc:Geffen:Payon:Alberta:Izlude");
-			mes "[DRY-RUN] [Sprakki]";
-			mes "[DRY-RUN] I see.";
-			mes "[DRY-RUN] Go ahead and grow stronger! Look toward a brighter future ahead of you.";
+			set .@select, select("普隆德拉:梦罗克:吉芬:斐扬:艾尔贝塔:依斯鲁得");
+			mes "[斯普拉基]";
+			mes "我明白了。";
+			mes "继续努力变得更强！展望你前方更光明的未来。";
 			callfunc "F_NvErase";
 			close2;
 			switch(.@select) {
@@ -202,9 +202,9 @@ new_5-1,53,114,3	duplicate(NvSprakkiA)	Sprakki#nv5a	90
 			end;
 		}
 	} else {
-		mes "[DRY-RUN] [Sprakki]";
-		mes "[DRY-RUN] These are the Novice Training Grounds.";
-		mes "[DRY-RUN] I will guide you to the Novice Training Center.";
+		mes "[斯普拉基]";
+		mes "这里是初心者训练场。";
+		mes "我将带你去初学者训练中心。";
 		close2;
 		savepoint strnpcinfo(4),100,100,1,1;
 		warp strnpcinfo(4),100,100;
@@ -219,32 +219,32 @@ new_5-2,100,29,4	duplicate(NvSprakkiB)	Sprakki#nv5b	90
 
 -	script	Brade#newbe02::NvBradeA	-1,{
 	if (job_novice_q < 2) {
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Hello there! Welcome to the World of Ragnarok Online.";
-		mes "[DRY-RUN] You have participated on the previous Training Grounds.";
-		mes "[DRY-RUN] The Training Grounds have now come under new management.";
+		mes "[教官布雷德]";
+		mes "你好！欢迎来到《 Ragnarok Online》的世界。";
+		mes "你已经参加过之前的训练场。";
+		mes "训练场现在已经换了管理。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] I guess we will just have to start your training all over again.";
+		mes "[教官布雷德]";
+		mes "我想我们只能重新开始你的训练了。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] My name is Instructor Brade and I'm in charge of giving you basic gameplay tips.";
-		mes "[DRY-RUN] Click on the [Next] button or press [Enter] to continue.";
+		mes "[教官布雷德]";
+		mes "我叫教官布雷德，负责给你基本的游戏提示。";
+		mes "点击[下一步]按钮或按[回车]继续。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] First you need to learn the very basics of controlling your character.";
-		mes "[DRY-RUN] All the basic ^4d4dff moves, selection of items, and attacks^000000 use the ^4d4dff left click of the mouse^000000.";
+		mes "[教官布雷德]";
+		mes "首先，你需要学习控制角色的基本知识。";
+		mes "所有基本的 ^4d4dff 动作、物品选择和攻击^000000 都使用 ^4d4dff 鼠标的左键点击^000000。";
 		next;
 		cutin "tutorial01",3;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] Click on the ground to move the character.";
-		mes "[DRY-RUN] Attacking monsters and conversations with the people of this world can be done by simply clicking on them.";
+		mes "-! 信息 !-";
+		mes "点击地面以移动角色。";
+		mes "攻击怪物和与这个世界的人交谈可以通过简单地点击他们来完成。";
 		next;
 		cutin "",255;
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] First off, try moving around.";
-		mes "[DRY-RUN] After moving around, talk to me again.";
+		mes "[教官布雷德]";
+		mes "首先，试着四处移动。";
+		mes "在四处移动后，再次和我对话。";
 		set nov_1st_cos,0;
 		set nov_2nd_cos,0;
 		set nov_3_swordman,0;
@@ -258,50 +258,50 @@ new_5-2,100,29,4	duplicate(NvSprakkiB)	Sprakki#nv5b	90
 		setquest 7118;
 		next;
 		cutin "tutorial02",3;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] You've received a quest from Instructor Brade.";
-		mes "[DRY-RUN] You can check the contents of the quest in the Quest Info Window.";
+		mes "-! 信息 !-";
+		mes "你已经从教官布雷德那里接到了一个任务。";
+		mes "你可以在任务信息窗口查看任务内容。";
 		next;
-		mes "[DRY-RUN] -! Info !-";
-		mes "[DRY-RUN] You can open the Quest Info Window by pressing the ^4d4dffAlt + U^000000keys at the same time.";
+		mes "-! 信息 !-";
+		mes "您可以通过同时按下 ^4d4dffAlt + U^000000 键打开任务信息窗口。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Have you checked the Quest Info Window?";
-		mes "[DRY-RUN] Well, talk to me again.";
+		mes "[教官布雷德]";
+		mes "你检查过任务信息窗口了吗？";
+		mes "好吧，再和我说话。";
 		close;
 	} else if (job_novice_q < 4) {
 		if (job_novice_q == 2) {
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Great.";
-			mes "[DRY-RUN] You've completed the given quest successfully, so I will reward you with experience points.";
+			mes "[教官布雷德]";
+			mes "很好。";
+			mes "您已成功完成指定任务，因此我将奖励您经验值。";
 			set job_novice_q,3;
 			getexp 900,10;
 			completequest 7118;
 			next;
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Experience Points you've earned from hunting or finishing quests can be checked by tracking the EXP Bar, located at upper-left side of the display.";
+			mes "[教官布雷德]";
+			mes "您通过狩猎或完成任务获得的经验值可以通过跟踪显示屏左上角的经验条来查看。";
 			next;
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Sigh... I will just talk roughly.";
-			mes "[DRY-RUN] ...I just can't get used to 'politeness' you know.";
-			mes "[DRY-RUN] Don't look at me like that!";
+			mes "[教官布雷德]";
+			mes "唉……我就随便说说吧。";
+			mes "……我就是无法习惯‘礼貌’你知道的。";
+			mes "别那样看着我！";
 			next;
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Ok look alive you maggot.";
-			mes "[DRY-RUN] Next up is items and equipment.";
+			mes "[教官布雷德]";
+			mes "好吧，振作点，你这个虫子。";
+			mes "接下来是物品和装备。";
 			next;
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] First, take these.";
-			mes "[DRY-RUN] These are very basic equipments and recovery potions.";
+			mes "[教官布雷德]";
+			mes "首先，拿这些。";
+			mes "这些是非常基础的装备和恢复药水。";
 		} else {
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Uh... Where were we? Oh right, let's continue.";
-			mes "[DRY-RUN] It's about items and equipments.";
+			mes "[教官布雷德]";
+			mes "呃……我们说到哪里了？哦，对了，继续。";
+			mes "这是关于物品和装备的。";
 			next;
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Take these.";
-			mes "[DRY-RUN] Basic equipments and recovery potions.";
+			mes "[教官布雷德]";
+			mes "拿这些。";
+			mes "基础装备和恢复药水。";
 		}
 		set job_novice_q,4;
 		getitem 2352,1; //Novice_Plate
@@ -313,168 +313,168 @@ new_5-2,100,29,4	duplicate(NvSprakkiB)	Sprakki#nv5b	90
 		getitem 569,300; //Novice_Potion
 		setquest 7119;
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] In the upper left Basic Info. Window, press the 'Item' icon to open the Item Window.";
-		mes "[DRY-RUN] The item window is divided into...";
+		mes "[教官布雷德]";
+		mes "在左上角的基础信息窗口中，点击'物品'图标打开物品窗口。";
+		mes "物品窗口分为……";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] 3 sections: consumable items, equipment and other items.";
-		mes "[DRY-RUN] If you want to use or equip items, just double-click on the item or drag them into the Equipment Window.";
+		mes "[教官布雷德]";
+		mes "3个部分：消耗品、装备和其他物品。";
+		mes "如果你想使用或装备物品，只需双击物品或将其拖入装备窗口。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] You can see detailed info. of each item by right-clicking on the item.";
-		mes "[DRY-RUN] Detailed information of the item will pop up.";
+		mes "[教官布雷德]";
+		mes "你可以通过右键点击物品查看每个物品的详细信息。";
+		mes "物品的详细信息将弹出。";
 		next;
 		cutin "tutorial04",3;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] Right-click on an item to see detailed information about it.";
+		mes "!- 信息 -!";
+		mes "右键点击物品以查看其详细信息。";
 		next;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] Right-click on other players to show the Community Menu and you can join a party, or request trade with a player etc.";
+		mes "!- 信息 -!";
+		mes "右键点击其他玩家以显示社区菜单，您可以加入队伍或请求与玩家交易等。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Why don't you equip the items I gave you earlier?";
-		mes "[DRY-RUN] ^4d4dffDouble-Click^000000 on the item you want to equip. Let us continue after you are done gearing up.";
+		mes "[教官布雷德]";
+		mes "你为什么不装备我之前给你的物品？";
+		mes "^4d4dff双击^000000您想装备的物品。等您装备好后我们继续。";
 		next;
 		cutin "tutorial03",3;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] Items can be easily equipped or used by simply double-clicking on them.";
-		mes "[DRY-RUN] The Hot Key to open the Inventory Window is ALT + E.";
+		mes "!- 信息 -!";
+		mes "物品可以通过双击轻松装备或使用。";
+		mes "打开背包窗口的快捷键是 ALT + E.";
 		next;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] To check on the items that are currently equipped, use the Hot Key ALT + Q.";
-		mes "[DRY-RUN] Or, drag the item on to the item slot you want the item to be equipped.";
+		mes "!- 信息 -!";
+		mes "要查看当前装备的物品，请使用热键 ALT + Q.";
+		mes "或者，将物品拖到您想要装备的物品槽上.";
 		next;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] Equip all of the equipment given by Instructor Brade.";
+		mes "!- 信息 -!";
+		mes "装备所有由布雷德教官给的装备.";
 		close2;
 		cutin "",255;
 		end;
 	} else if (job_novice_q == 4) {
 		if (isequipped(2414) + isequipped(2352) + isequipped(2510) + isequipped(2112) + isequipped(1243) < 4) {
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Try to put on at least 4 of the equipments I gave you.";
-			mes "[DRY-RUN] Put those shoes on, wear those clothes, and arm yourself with that weapon you maggot.";
+			mes "[教官布雷德]";
+			mes "尝试穿上我给你的至少 4 件装备.";
+			mes "把那些鞋子穿上，穿上那些衣服，拿起你这小虫子的武器.";
 			close;
 		}
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] You are all set.";
-		mes "[DRY-RUN] You are coming along just fine.";
+		mes "[教官布雷德]";
+		mes "你准备好了.";
+		mes "你进展得很好.";
 		set job_novice_q,5;
 		getexp 1200,15;
 		getitem 12323,50; //N_Fly_Wing
 		getitem 12324,20; //N_Butterfly_Wing
 		completequest 7119;
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Here's some Fly Wings and Butterfly Wings as a reward.";
-		mes "[DRY-RUN] You don't need these in the Training Ground, but they will come in handy later.";
+		mes "[教官布雷德]";
+		mes "这是一些苍蝇翅膀和蝴蝶翅膀作为奖励.";
+		mes "你在训练场不需要这些，但它们以后会派上用场.";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Next, are Hot Keys.";
-		mes "[DRY-RUN] Press the ^4d4dffF12 key^000000 on your keyboard.";
-		mes "[DRY-RUN] A box with 9 slots will pop up.";
+		mes "[教官布雷德]";
+		mes "接下来是快捷键。";
+		mes "按下键盘上的 ^4d4dffF12 键^000000。";
+		mes "一个包含9个插槽的窗口将弹出。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Drag on the right corner of the Hot Key Window and you will be able to see the other pages of the Hot Key.";
+		mes "[教官布雷德]";
+		mes "在快捷键窗口的右上角拖动，你将能够看到快捷键的其他页面。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] The F1 to F9 keys are the designated hotkeys.";
-		mes "[DRY-RUN] Just drag a skill or an item onto the Hot Key Window and press a corresponding key to use them right away.";
+		mes "[教官布雷德]";
+		mes "F1到F9键是指定的快捷键。";
+		mes "只需将技能或物品拖到快捷键窗口，并按下相应的键即可立即使用它们。";
 		next;
 		cutin "tutorial05",3;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] You can register a skill or an item to the Hot Key Window by just dragging them onto the Hot Key Slot.";
+		mes "!- 信息 -!";
+		mes "你可以通过将技能或物品拖到快捷键槽中来注册它们到快捷键窗口。";
 		next;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] Registered Skills or Items can be used/equipped by just pressing the corresponding key.";
+		mes "!- 信息 -!";
+		mes "注册的技能或物品可以通过按下相应的键来使用/装备。";
 		next;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] You can customize the Hot Key to use any keys you please as the Hot Key by changing the Shortcut configuration in the options menu.";
+		mes "!- 信息 -!";
+		mes "您可以通过更改选项菜单中的快捷方式配置来自定义热键，以使用您喜欢的任何键作为热键。";
 		next;
-		mes "[DRY-RUN] !- Info -!";
-		mes "[DRY-RUN] Register skills and items that you use often so that you can use them easily.";
+		mes "!- 信息 -!";
+		mes "注册您经常使用的技能和物品，以便您可以轻松使用它们。";
 		next;
 		cutin "",255;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] The last part is how to use Skills.";
-		mes "[DRY-RUN] But before that, you need to learn something first.";
+		mes "[教官布雷德]";
+		mes "最后一部分是如何使用技能。";
+		mes "但在此之前，您需要先学习一些东西。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Somewhere in this room, there's someone named ^4d4dffJinha^000000.";
-		mes "[DRY-RUN] Find Jinha and learn the ^4d4dff[First Aid]^000000 skill from him.";
+		mes "[教官布雷德]";
+		mes "在这个房间的某个地方，有一个名叫 ^4d4dffJinha^000000 的人。";
+		mes "找到 Jinha 并向他学习 ^4d4dff[急救]^000000 技能。";
 		setquest 7120;
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Your lesson is after that.";
-		mes "[DRY-RUN] Go find Jinha and learn the [First Aid] Skill. Then come back to me.";
+		mes "[教官布雷德]";
+		mes "您的课程在那之后。";
+		mes "去找 Jinha 学习 [急救] 技能。然后回来找我。";
 		close;
 	} else if (job_novice_q == 5) {
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Somewhere in this room, there's someone named ^4d4dffJinha^000000.";
-		mes "[DRY-RUN] Find Jinha and learn the ^4d4dff[First Aid]^000000 skill from him.";
+		mes "[教官布雷德]";
+		mes "在这个房间的某个地方，有一个名叫 ^4d4dffJinha^000000 的人。";
+		mes "找到 Jinha 并向他学习 ^4d4dff[急救]^000000 技能。";
 		close;
 	} else if (job_novice_q == 6) {
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Now you've learned the [First Aid] Skill.";
-		mes "[DRY-RUN] Just as I told you before, by registering the First Aid Skill onto the Hot Key Window, you can use the skill fast and easy.";
+		mes "[教官布雷德]";
+		mes "现在您已经学习了 [急救] 技能。";
+		mes "就像我之前告诉你的，通过将急救技能注册到快捷键窗口，你可以快速轻松地使用这个技能。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] And that's it, that's all I can teach you.";
-		mes "[DRY-RUN] You see that exit to the west?";
-		mes "[DRY-RUN] Move on to the next room and there will be another instructor waiting for you.";
+		mes "[教官布雷德]";
+		mes "就这样，这就是我能教你的全部。";
+		mes "你看到西边的出口了吗？";
+		mes "继续前往下一个房间，会有另一位指导员在等你。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] We will be seeing each other soon enough.";
-		mes "[DRY-RUN] But for now, go to the room to the west and get more information.";
+		mes "[教官布雷德]";
+		mes "我们很快就会再见面的。";
+		mes "但现在，去西边的房间获取更多信息。";
 		next;
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] You've come along fine this far.";
-		mes "[DRY-RUN] This is not much, but take this as a reward.";
+		mes "[教官布雷德]";
+		mes "到目前为止，你做得很好。";
+		mes "这不算多，但请把它当作奖励。";
 		set job_novice_q,7;
 		getitem 2393,1; //N_Adventurer's_Suit
 		completequest 7120;
 		close;
 	} else if (job_novice_q == 7) {
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Next step of the Training is done in the room west of here.";
-		mes "[DRY-RUN] If you are lost, I can send you there.";
+		mes "[教官布雷德]";
+		mes "训练的下一步将在这里西边的房间进行。";
+		mes "如果你迷路了，我可以送你去那里。";
 		next;
-		switch(select("[DRY-RUN] I can get there by myself.:Please, send me to the next room.")) {
+		switch(select("我可以自己去那里。:请把我送到下一个房间。")) {
 		case 1:
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Good. That's the attitude you must have.";
-			mes "[DRY-RUN] You can't just lean on others to help you.";
-			mes "[DRY-RUN] Now, go ahead.";
+			mes "[教官布雷德]";
+			mes "很好。这就是你必须要有的态度。";
+			mes "你不能只依赖别人来帮助你。";
+			mes "现在，继续吧。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Oh well.";
-			mes "[DRY-RUN] I think it's better than seeing you lost and wandering about.";
-			mes "[DRY-RUN] Hahahaha...";
+			mes "[教官布雷德]";
+			mes "哦，好吧。";
+			mes "我觉得这比看到你迷路到处游荡要好。";
+			mes "哈哈哈哈...";
 			close2;
 			warp strnpcinfo(4),41,172;
 			end;
 		}
 	} else {
-		mes "[DRY-RUN] [Instructor Brade]";
-		mes "[DRY-RUN] Aren't you done with the courses here?";
-		mes "[DRY-RUN] Or are you just lost?";
+		mes "[教官布雷德]";
+		mes "你在这里的课程还没结束吗？";
+		mes "还是你只是迷路了？";
 		next;
-		switch(select("[DRY-RUN] Send me to the Combat Training Ground.:I want to go to town.")) {
+		switch(select("把我送到战斗训练场。:我想去城镇。")) {
 		case 1:
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Sure.";
-			mes "[DRY-RUN] Be careful not to be lost again.";
+			mes "[教官布雷德]";
+			mes "当然。";
+			mes "小心不要再迷路了。";
 			close2;
 			warp "new_"+charat(strnpcinfo(4),4)+"-3",96,21;
 			end;
 		case 2:
-			mes "[DRY-RUN] [Instructor Brade]";
-			mes "[DRY-RUN] Town... Eh?";
-			mes "[DRY-RUN] In that case, I will send you to where the Kafra Employee is at.";
-			mes "[DRY-RUN] Use ^4d4dffKafra's Warp Service^000000 to go to town.";
+			mes "[教官布雷德]";
+			mes "城镇……嗯？";
+			mes "那样的话，我会送你去卡普拉职员所在的地方。";
+			mes "使用^4d4dff卡普拉的传送服务^000000前往城镇。";
 			close2;
 			warp strnpcinfo(4),41,172;
 			end;
@@ -489,90 +489,90 @@ new_5-2,100,105,3	duplicate(NvBradeA)	Brade#nv5a	733
 
 -	script	Jinha#newbe03::NvJinha	-1,{
 	if (job_novice_q < 5) {
-		mes "[DRY-RUN] [Jinha]";
-		mes "[DRY-RUN] What can I help you with?";
-		mes "[DRY-RUN] Hmm? You haven't followed the curriculum correctly.";
+		mes "[金哈]";
+		mes "我能帮你什么？";
+		mes "嗯？你没有正确遵循课程。";
 		next;
-		mes "[DRY-RUN] [Jinha]";
-		mes "[DRY-RUN] You have to see Instructor Brade first before me. I will send you to Instructor Brade.";
+		mes "[金哈]";
+		mes "你必须先去见布雷德教官。我会把你送去布雷德教官那里。";
 		close2;
 		warp strnpcinfo(4),100,100;
 		end;
 	} else if (job_novice_q == 5) {
 		if (getskilllv("NV_FIRSTAID") > 0) {
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Hello!";
-			mes "[DRY-RUN] I am responsible for teaching you the [First Aid] skill.";
-			mes "[DRY-RUN] Instructor Brade asked you to learn it right?.";
+			mes "[金哈]";
+			mes "你好！";
+			mes "我负责教你[急救]技能。";
+			mes "布雷德教官让你学这个，对吧？";
 			next;
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Wow... ...it's amazing!";
-			mes "[DRY-RUN] You already know the First Aid Skill.";
-			mes "[DRY-RUN] There doesn't seem to be anything for me to teach you.";
+			mes "[金哈]";
+			mes "哇……太棒了！";
+			mes "你已经知道急救技能了。";
+			mes "似乎没有什么我可以教你的。";
 			next;
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Great. Was your instructor from the previous management Cecil?";
-			mes "[DRY-RUN] Well, you have learned First Aid, I can confirm that.";
+			mes "[金哈]";
+			mes "很好。你的指导员是之前管理的塞西尔吗？";
+			mes "嗯，你已经学会了急救，我可以确认这一点。";
 			next;
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Well, you can directly go to the next step of the course.";
-			mes "[DRY-RUN] Go back to Instructor Brade.";
+			mes "[金哈]";
+			mes "那么，你可以直接进入课程的下一步。";
+			mes "回去找布雷德指导员。";
 			set job_novice_q,6;
 			close;
 		} else {
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Hello!";
-			mes "[DRY-RUN] How can I help you?";
+			mes "[金哈]";
+			mes "你好！";
+			mes "我能帮你什么吗？";
 			next;
-			select("[DRY-RUN] I want to learn to use the [First Aid] Skill.");
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] That's right.";
-			mes "[DRY-RUN] First Aid is the skill used to convert SP into HP when you are in danger.";
+			select("我想学习使用[急救]技能。");
+			mes "[金哈]";
+			mes "没错。";
+			mes "急救是用来在危险时将SP转化为HP的技能。";
 			next;
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] It's recovery amount is small.";
-			mes "[DRY-RUN] Still, it will help you not to faint from a critical hit.";
+			mes "[金哈]";
+			mes "它的恢复量很小。";
+			mes "不过，它可以帮助你不因暴击而晕倒。";
 			specialeffect2 EF_BEGINSPELL6;
 			specialeffect2 EF_SPELLBREAKER;
 			next;
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] You can open the Skill Window by pressing the ^4d4dffskill^000000 button in the Basic Window.";
-			mes "[DRY-RUN] Hot Key is ^4d4dffALT + S^000000.";
-			mes "[DRY-RUN] Why don't you try the skill?";
+			mes "[金哈]";
+			mes "你可以通过在基本窗口中按下 ^4d4dff技能^000000 按钮来打开技能窗口。";
+			mes "快捷键是 ^4d4dffALT + S^000000。";
+			mes "你为什么不试试这个技能？";
 			skill "NV_FIRSTAID",1,SKILL_PERM;
 			set skill_nov,3; // Has future uses - do not remove! [Euphy]
 			set job_novice_q,6;
 			next;
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Good, now you know how to use the First Aid Skill, you have to move on to the next step.";
-			mes "[DRY-RUN] Go back to Instructor Brade and show him what you've learned here.";
+			mes "[金哈]";
+			mes "很好，现在你知道如何使用急救技能了，你必须继续进行下一步。";
+			mes "回去找布雷德教官，向他展示你在这里学到的东西。";
 			close;
 		}
 	} else if (job_novice_q == 6) {
-		mes "[DRY-RUN] [Jinha]";
-		mes "[DRY-RUN] Didn't you learn the First Aid Skill already?";
-		mes "[DRY-RUN] Have it checked by Instructor Brade.";
-		mes "[DRY-RUN] If you don't know how to get to him, I will send you to him.";
+		mes "[金哈]";
+		mes "你不是已经学会急救技能了吗？";
+		mes "让布雷德教官检查一下。";
+		mes "如果你不知道怎么去找他，我会送你去找他。";
 		next;
-		switch(select("[DRY-RUN] I'm good by myself.:Please, send me to him.")) {
+		switch(select("我自己可以应付。:请把我送到他那里。")) {
 		case 1:
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] Very Good!";
-			mes "[DRY-RUN] That's the right attitude!";
-			mes "[DRY-RUN] You will be a great adventurer in the future.";
+			mes "[金哈]";
+			mes "非常好！";
+			mes "这就是正确的态度！";
+			mes "你将来会成为一名伟大的冒险者。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Jinha]";
-			mes "[DRY-RUN] I will send you to Instructor Brade.";
+			mes "[金哈]";
+			mes "我会送你去布雷德教官那里。";
 			close2;
 			warp strnpcinfo(4),100,100;
 			end;
 		}
 	} else {
-		mes "[DRY-RUN] [Jinha]";
-		mes "[DRY-RUN] What can I do for you?";
-		mes "[DRY-RUN] Next course will be continued in the West Room.";
-		mes "[DRY-RUN] Go on into the west room.";
+		mes "[金哈]";
+		mes "我能为您做些什么？";
+		mes "下一门课程将在西侧房间继续。";
+		mes "继续进入西边的房间。";
 		close;
 	}
 }
@@ -586,172 +586,172 @@ new_5-2,115,120,3	duplicate(NvJinha)	Jinha#nv5	59
 //============================================================
 -	script	Chocolat#newbe06::NvChocolat	-1,{
 	if (job_novice_q < 7) {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Hmm? Strange.";
-		mes "[DRY-RUN] Let me see that Trainee ID for a sec.";
+		mes "[巧克力]";
+		mes "嗯？奇怪。";
+		mes "让我看看那个实习生ID。";
 		next;
 		if (job_novice_q < 2) {
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] Oh, really...";
-			mes "[DRY-RUN] You have participated on the previous Training Grounds.";
-			mes "[DRY-RUN] The Training Grounds have now come under new management.";
+			mes "[巧克力]";
+			mes "哦，真的吗……";
+			mes "你已经参加过之前的训练场。";
+			mes "训练场现在已经换了管理。";
 			next;
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] If you want to do the basic course,";
-			mes "[DRY-RUN] you should go back to Instructor Brade.";
+			mes "[巧克力]";
+			mes "如果你想参加基础课程，";
+			mes "你应该回去找布雷德教官。";
 			next;
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] Or you can go ahead and start with theory training.";
-			mes "[DRY-RUN] What would you like to do?";
+			mes "[巧克力]";
+			mes "或者你可以直接开始理论训练。";
+			mes "你想做什么？";
 			next;
-			switch(select("[DRY-RUN] Send me to Basic Training.:Start Theory Training.")) {
+			switch(select("送我去基础训练。:开始理论训练。")) {
 			case 1:
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] Sure.";
-				mes "[DRY-RUN] I will send you to Instructor Brade.";
-				mes "[DRY-RUN] Instructor Brade will start your basic training.";
+				mes "[巧克力]";
+				mes "当然。";
+				mes "我会送你去布雷德教官那里。";
+				mes "布雷德教官将开始你的基础训练。";
 				close2;
 				warp strnpcinfo(4),100,100;
 				end;
 			case 2:
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] I will tell you about the people you will be seeing in Town.";
-				mes "[DRY-RUN] There are many kinds of people in town and some of them will be helpful to know.";
+				mes "[巧克力]";
+				mes "我将告诉你在城镇中会见到的人们。";
+				mes "城镇中有许多种类的人，其中一些人会对你有所帮助。";
 				next;
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] There are a lot of people in town, but among them, these people are the most important to know.";
+				mes "[巧克力]";
+				mes "城镇中有很多人，但在他们之中，这些人是最重要的。";
 				next;
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] They are [Kafra] Employee's standing right behind me and their rival company the [Cool Event Corp].";
-				mes "[DRY-RUN] When you visit a town for the first time, you should talk to the Information [Guide]";
+				mes "[巧克力]";
+				mes "他们是站在我身后的人，来自[Kafra]的职员和他们的竞争对手[Cool Event Corp]。";
+				mes "当你第一次访问一个城镇时，你应该和信息[向导]对话。";
 				next;
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] Well then, let's hear from each of them.";
-				mes "[DRY-RUN] Start by talking to the [Kafra] Employee.";
+				mes "[巧克力]";
+				mes "那么，接下来让我们听听他们每个人的介绍。";
+				mes "首先和[Kafra]职员对话。";
 				set job_novice_q,8;
 				setquest 7121;
 				next;
-				mes "[DRY-RUN] ^4d4dff- You've received a quest from Chocolat.";
-				mes "[DRY-RUN] Please check the quest information window. -^000000";
+				mes "^4d4dff- 你已从Chocolat那里接到一个任务。";
+				mes "请查看任务信息窗口。 -^000000";
 				close;
 			}
 		} else {
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] You were still on the basic course.";
-			mes "[DRY-RUN] You should go back to Instructor Brade or Jinha.";
+			mes "[巧克力]";
+			mes "你还在基础课程中。";
+			mes "你应该回去找布雷德教官或金哈。";
 			next;
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] If you don't know how to find them, I can send you to Instructor Brade, How about it?";
+			mes "[巧克力]";
+			mes "如果你不知道怎么找到他们，我可以送你去布雷德教官那里，怎么样？";
 			next;
-			switch(select("[DRY-RUN] I will go myself.:Will you do that for me?")) {
+			switch(select("我自己去。:你能为我做这个吗？")) {
 			case 1:
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] Sure. Go out to the door to the right.";
+				mes "[巧克力]";
+				mes "好的。走到右边的门口。";
 				close;
 			case 2:
-				mes "[DRY-RUN] [Chocolat]";
-				mes "[DRY-RUN] Sure.";
-				mes "[DRY-RUN] I will see you later.";
+				mes "[巧克力]";
+				mes "当然。";
+				mes "我稍后再见。";
 				close2;
 				warp strnpcinfo(4),100,100;
 				end;
 			}
 		}
 	} else if (job_novice_q == 7) {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] I will tell you about the people you will be seeing in Town.";
-		mes "[DRY-RUN] There are many kinds of people in town and some of them will be helpful to know.";
+		mes "[巧克力]";
+		mes "我将告诉你在城镇中会见到的人们。";
+		mes "城镇中有许多种类的人，其中一些人会对你有所帮助。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] There are a lot of people in town, but among them, these people are the most important to know.";
+		mes "[巧克力]";
+		mes "城镇中有很多人，但在他们之中，这些人是最重要的。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] They are [Kafra] Employee's standing right behind me and their rival company the [Cool Event Corp].";
-		mes "[DRY-RUN] When you visit a town for the first time, you should talk to Information [Guide]";
+		mes "[巧克力]";
+		mes "他们是站在我身后的人，来自[Kafra]的职员和他们的竞争对手[Cool Event Corp]。";
+		mes "当你第一次访问一个城镇时，你应该和信息[向导]对话。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Well then, let's hear from each of them.";
-		mes "[DRY-RUN] Start by talking to the [Kafra] Employee.";
+		mes "[巧克力]";
+		mes "那么，接下来让我们听听他们每个人的介绍。";
+		mes "首先和[Kafra]职员对话。";
 		set job_novice_q,8;
 		setquest 7121;
 		close;
 	} else if (job_novice_q == 8) {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Here, talk to these guys standing behind me.";
-		mes "[DRY-RUN] Start with the [Kafra] Employee behind me.";
+		mes "[巧克力]";
+		mes "这里，和站在我身后的人们对话。";
+		mes "从我身后的[Kafra]职员开始。";
 		close;
 	} else if (job_novice_q == 9) {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] You've learned a lot about Kafra service huh?";
-		mes "[DRY-RUN] From now on, you can use the Kafra Service.";
+		mes "[巧克力]";
+		mes "你对卡普拉服务了解很多了吧？";
+		mes "从现在开始，你可以使用卡普拉服务。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] During the Training Process, if you want to go straight to the town, you can use the Kafra Service to go there.";
-		mes "[DRY-RUN] But, once you leave the Training Center, you can never come back here.";
+		mes "[巧克力]";
+		mes "在训练过程中，如果你想直接去城镇，可以使用卡普拉服务前往那里。";
+		mes "但是，一旦你离开训练中心，就再也无法回来了。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Next is the Kafra's rival, [Cool Event Corp.] Staff!";
-		mes "[DRY-RUN] [Cool Event Corp.] Staff specialize in events.";
-		mes "[DRY-RUN] Well, why don't you talk to him yourself?";
+		mes "[巧克力]";
+		mes "接下来是卡普拉的竞争对手，[酷活动公司]的员工！";
+		mes "[酷活动公司]的员工专注于活动。";
+		mes "那么，为什么不自己去和他对话呢？";
 		close;
 	} else if (job_novice_q == 10) {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] After [Kafra] and [Cool Event Corp.], are the Information [Guide]'s.";
-		mes "[DRY-RUN] They can seem insignificant but they can help you greatly when the time comes.";
+		mes "[巧克力]";
+		mes "在[卡普拉]和[酷活动公司]之后，是信息[指南]。";
+		mes "他们看似微不足道，但在关键时刻可以大大帮助你。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] I've brought the Information Guide from the City of Prontera.";
-		mes "[DRY-RUN] Ask him what he actually does in town.";
+		mes "[巧克力]";
+		mes "我带来了来自普隆德拉的资讯指南。";
+		mes "问问他在城里到底做什么。";
 		close;
 	} else if (job_novice_q == 11) {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] How was the explanation of the Information [Guide]?";
-		mes "[DRY-RUN] Last is about using [Inn]s.";
-		mes "[DRY-RUN] There's an Inn located in each town.";
+		mes "[巧克力]";
+		mes "资讯[指南]的解释怎么样？";
+		mes "最后是关于使用[旅馆]的。";
+		mes "每个城镇都有一家旅馆。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] You can rest at Inns or Hotels for a small fee.";
-		mes "[DRY-RUN] Your HP and SP will be recovered completely by resting there.";
-		mes "[DRY-RUN] Can't hurt to use one, eh?";
+		mes "[巧克力]";
+		mes "你可以在旅馆或酒店小额收费休息。";
+		mes "在那里休息可以完全恢复你的HP和SP。";
+		mes "使用一下也没坏处，对吧？";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Besides these guys, there's many merchants selling various kind of items, so go check them out.";
+		mes "[巧克力]";
+		mes "除了这些家伙，还有许多商人在出售各种物品，去看看吧。";
 		set job_novice_q,12;
 		completequest 7121;
 		getexp 1800,20;
 		getitem 7059,20; //Cargo_Free_Ticket
 		getitem 7060,30; //Warp_Free_Ticket
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] You've completed all the quests I gave you.";
-		mes "[DRY-RUN] As the reward, I will give you Free Tickets for Kafra Storage and Teleport Service.";
-		mes "[DRY-RUN] They will come in handy.";
+		mes "[巧克力]";
+		mes "你已经完成了我给你的所有任务。";
+		mes "作为奖励，我将给你免费的卡普拉仓库和传送服务票。";
+		mes "它们会派上用场的。";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] That's all for me.";
-		mes "[DRY-RUN] Now, it's time for real combat!";
+		mes "[巧克力]";
+		mes "我就说到这里。";
+		mes "现在，是时候进行真正的战斗了！";
 		next;
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Real Combat Training will be given by Instructor Brade. You met him earlier.";
-		mes "[DRY-RUN] I will send you to the Real Combat Training Field.";
+		mes "[巧克力]";
+		mes "真正的战斗训练将由布雷德教官进行。你之前见过他。";
+		mes "我将送你去真正的战斗训练场。";
 		close2;
 		set .@map$, "new_"+charat(strnpcinfo(4),4)+"-3";
 		savepoint .@map$,96,21,1,1;
 		warp .@map$,96,21;
 		end;
 	} else {
-		mes "[DRY-RUN] [Chocolat]";
-		mes "[DRY-RUN] Are you lost?";
+		mes "[巧克力]";
+		mes "你迷路了吗？";
 		next;
-		switch(select("[DRY-RUN] No, just looking around:Yes, send me to the Combat Training Field")) {
+		switch(select("不，我只是四处看看:是，带我去战斗训练场")) {
 		case 1:
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] Okay, come back to me if";
-			mes "[DRY-RUN] you need me to redirect you.";
+			mes "[巧克力]";
+			mes "好的，如果";
+			mes "你需要我重新引导你，回来找我。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Chocolat]";
-			mes "[DRY-RUN] I will send you to the Real Combat Training Field.";
+			mes "[巧克力]";
+			mes "我将送你去真正的战斗训练场。";
 			close2;
 			set .@map$, "new_"+charat(strnpcinfo(4),4)+"-3";
 			savepoint .@map$,96,21,1,1;
@@ -1053,48 +1053,48 @@ new_5-2,33,176,4	duplicate(NvCool)	Cool Event Corp. Staff::NvCool5	874
 
 -	script	Guide::NvGuide	-1,{
 	if (job_novice_q < 10) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] It ain't my turn yet.";
-		mes "[DRY-RUN] Listen to Chocolat.";
+		mes "[指南]";
+		mes "还轮不到我。";
+		mes "听从巧克力的建议。";
 		close;
 	} else if (job_novice_q == 10) {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] Guides are in each town to guide you to useful places.";
-		mes "[DRY-RUN] Ask us where you want to go and we'll mark your mini maps with a ^4d4dff+^000000.";
-		mes "[DRY-RUN] Don't hesitate to ask us questions.";
+		mes "[指南]";
+		mes "每个城镇都有向导，帮助你找到有用的地方。";
+		mes "问我们你想去哪里，我们会在你的迷你地图上标记一个^4d4dff+^000000。";
+		mes "不要犹豫，问我们问题。";
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] We all don't look the same in every town but our roles are the same.";
-		mes "[DRY-RUN] Take note of this whenever you go to a new town.";
+		mes "[指南]";
+		mes "我们在每个城镇的样子可能不同，但我们的角色是一样的。";
+		mes "每当你去一个新城镇时，请记住这一点。";
 		next;
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] If you want to go to your first town, you can ask the Kafra Employee to the left.";
-		mes "[DRY-RUN] You can move there with the Teleport Service.";
+		mes "[指南]";
+		mes "如果你想去你的第一个城镇，可以问左边的卡普拉职员。";
+		mes "你可以通过传送服务到达那里。";
 		set job_novice_q,11;
 		close;
 	} else {
-		mes "[DRY-RUN] [Guide]";
-		mes "[DRY-RUN] What can I help you with?";
-		mes "[DRY-RUN] Need me to explain what I do again?";
+		mes "[指南]";
+		mes "我能帮你什么？";
+		mes "需要我再解释一次我做的事情吗？";
 		next;
-		switch(select("[DRY-RUN] Yes, I need an explanation.:Nope.")) {
+		switch(select("是的，我需要解释。:不需要。")) {
 		case 1:
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Guides are in each town to guide you to useful places in each town.";
-			mes "[DRY-RUN] Ask us where you want to go and we'll mark your mini maps with a ^4d4dff+^000000.";
-			mes "[DRY-RUN] Don't hesitate to ask us questions.";
+			mes "[指南]";
+			mes "每个城镇都有向导，帮助你找到有用的地方。";
+			mes "问我们你想去哪里，我们会在你的迷你地图上标记一个^4d4dff+^000000。";
+			mes "不要犹豫，问我们问题。";
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] We all don't look the same in every town but our roles are the same.";
-			mes "[DRY-RUN] Take note of this whenever you go to a new town.";
+			mes "[指南]";
+			mes "我们在每个城镇的样子可能不同，但我们的角色是一样的。";
+			mes "每当你去一个新城镇时，请记住这一点。";
 			next;
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] If you want to go to your first town, you can ask the Kafra Employee to the left.";
-			mes "[DRY-RUN] You can move there with the Teleport Service.";
+			mes "[指南]";
+			mes "如果你想去你的第一个城镇，可以问左边的卡普拉职员。";
+			mes "你可以通过传送服务到达那里。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Guide]";
-			mes "[DRY-RUN] Ok well talk to Chocolat if you're done talking with us.";
+			mes "[指南]";
+			mes "好吧，如果你和我们谈完了，就去找巧克力吧。";
 			close;
 		}
 	}
@@ -1110,204 +1110,204 @@ new_5-2,36,176,4	duplicate(NvGuide)	Guide#nv5	105
 -	script	Brade#newbe04::NvBradeB	-1,{
 	if (job_novice_q < 12) {
 		if (job_novice_q < 2) {
-			mes "[DRY-RUN] [Brade]";
-			mes "[DRY-RUN] You have participated on the previous Training Grounds.";
-			mes "[DRY-RUN] The Training Grounds have now come under new management.";
+			mes "[布雷德]";
+			mes "你已经参加过之前的训练场。";
+			mes "训练场现在已经换了管理。";
 			next;
-			mes "[DRY-RUN] [Brade]";
-			mes "[DRY-RUN] Do you want to do the basic course,";
-			mes "[DRY-RUN] or do you just want to go through from here?";
+			mes "[布雷德]";
+			mes "你想参加基础课程吗，";
+			mes "还是你只想从这里开始？";
 			next;
-			switch(select("[DRY-RUN] Send me to Basic Training.:I'll start from here.")) {
+			switch(select("送我去基础训练。:我从这里开始。")) {
 			case 1:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Ok. I'll send you to the basic course.";
+				mes "[布雷德]";
+				mes "好的。我会把你送到基础课程。";
 				close2;
 				warp "new_"+charat(strnpcinfo(4),4)+"-2",100,100;
 				end;
 			case 2:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Then we will start your training.";
-				mes "[DRY-RUN] I'll write down the registration form.";
+				mes "[布雷德]";
+				mes "然后我们将开始你的训练。";
+				mes "我会填写注册表。";
 				set job_novice_q,12;
 				close;
 			}
 		} else {
-			mes "[DRY-RUN] [Brade]";
-			mes "[DRY-RUN] I think you came back from theory training course,";
-			mes "[DRY-RUN] can I send you back to there or do you just want to go through from here?";
+			mes "[布雷德]";
+			mes "我想你是从理论培训课程回来的吗，";
+			mes "我可以把你送回去，还是你想从这里通过？";
 			next;
-			switch(select("[DRY-RUN] Send me back to Chocolat.:I'll start from here.")) {
+			switch(select("送我回巧克力。:我从这里开始。")) {
 			case 1:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Ok. I'll send you to Chocolat.";
+				mes "[布雷德]";
+				mes "好的。我会把你送到巧克力。";
 				close2;
 				warp "new_"+charat(strnpcinfo(4),4)+"-2",41,172;
 				end;
 			case 2:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Then we will start your training.";
-				mes "[DRY-RUN] I'll write down the registration form.";
+				mes "[布雷德]";
+				mes "然后我们将开始你的训练。";
+				mes "我会填写注册表。";
 				set job_novice_q,12;
 				close;
 			}
 		}
 	} else if (job_novice_q == 12) {
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Welcome.";
-		mes "[DRY-RUN] Now this is real practice.";
-		mes "[DRY-RUN] We can practice real battle here.";
+		mes "[布雷德]";
+		mes "欢迎。";
+		mes "现在这是真正的练习。";
+		mes "我们可以在这里进行真实的战斗练习。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] As I explained the first time, we can click on the monsters.";
-		mes "[DRY-RUN] One attack per click.";
+		mes "[布雷德]";
+		mes "正如我第一次解释的，我们可以点击怪物。";
+		mes "每次点击一次攻击。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] For convenience,";
-		mes "[DRY-RUN] ^4d4dffIf you hold down the Ctrl key,^000000 while attacking, you will automatically attack.";
+		mes "[布雷德]";
+		mes "为了方便，";
+		mes "^4d4dff如果你在攻击时按住 Ctrl 键，^000000你将自动攻击。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] You can also set this mode before battle by typing ^4d4dff[ /nc ]^000000.";
+		mes "[布雷德]";
+		mes "你也可以通过输入 ^4d4dff[ /nc ]^000000 在战斗前设置此模式。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Then, let's go Poring hunting.";
-		mes "[DRY-RUN] Please hunt 'Poring's on Level 1 of the training grounds.";
+		mes "[布雷德]";
+		mes "那么，让我们去打波利吧。";
+		mes "????? 1 ??????";
 		set job_novice_q,13;
 		setquest 7122;
 		getitem 569,100; //Novice_Potion
 		savepoint strnpcinfo(4),96,21,1,1;
 		next;
-		mes "[DRY-RUN] ^4d4dff- You've received a quest from Instructor Brade.";
-		mes "[DRY-RUN] Please check the quest information window. -^000000";
+		mes "^4d4dff- 你已从布雷德教官处接到一个任务。";
+		mes "请查看任务信息窗口。 -^000000";
 		close2;
 	} else if (job_novice_q < 15) {
 		if (job_novice_q == 13) {
 			if (checkquest(7122,HUNTING) == 2) {
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] You can see it is not so hard, huh?";
-				mes "[DRY-RUN] Nice job.";
+				mes "[布雷德]";
+				mes "?????????????";
+				mes "????";
 				set job_novice_q,14;
 				getitem 13040,1; //N_Cutter
 				getexp 3000,30;
 				completequest 7122;
 				next;
 			} else {
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Kill enough Porings.";
-				mes "[DRY-RUN] Porings are easy to deal with, so cheer up.";
-				mes "[DRY-RUN] Try again.";
+				mes "[布雷德]";
+				mes "??????????";
+				mes "??????????????";
+				mes "?????";
 				npcskill "AL_HEAL",11,99,60;
 				close;
 			}
 		}
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Now all of the courses are almost done.";
-		mes "[DRY-RUN] You are a Novice, and you can't get any jobs yet.";
+		mes "[布雷德]";
+		mes "?????????????";
+		mes "???????????????";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] If you acquire all of basic skills with JOB Level 10, you can change your job.";
+		mes "[布雷德]";
+		mes "当 JOB 等级达到 10 并学会所有基础技能后，你就可以转职。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] The first Job classes are defined into 6 classes.";
+		mes "[布雷德]";
+		mes "?????? 6 ????";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] The 6 basic jobs are";
-		mes "[DRY-RUN] Swordman, Thief,";
-		mes "[DRY-RUN] Acolyte, Mage,";
-		mes "[DRY-RUN] Archer and Merchant.";
+		mes "[布雷德]";
+		mes "六个基本职业是";
+		mes "剑士，盗贼，";
+		mes "服事，魔法师，";
+		mes "弓箭手和商人。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Let's experience the basic 6 jobs, Swordman, Thief, Acolyte, Mage, Archer and Merchant and see what those jobs can do.";
+		mes "[布雷德]";
+		mes "让我们体验这六个基本职业：剑士、盗贼、服事、魔法师、弓箭手和商人，看看这些职业能做些什么。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Behind me, there are people dispatched from each of the basic Job Guilds.";
-		mes "[DRY-RUN] These people will give you instruction manuals that allow you to experience some limited skills of each job.";
+		mes "[布雷德]";
+		mes "在我身后，有来自每个基本职业公会的人。";
+		mes "这些人会给你提供说明手册，让你体验每个职业的一些有限技能。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Equip a manual of the job which you want to experience, and you will be able to use some basic skills of that corresponding job.";
-		mes "[DRY-RUN] Try those skills and decide which job to choose.";
+		mes "[布雷德]";
+		mes "装备你想体验的职业手册，你将能够使用该职业的一些基本技能。";
+		mes "尝试这些技能并决定选择哪个职业。";
 		set job_novice_q,15;
 		close;
 	} else {
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] Have you tried the skills in the Manuals?";
-		mes "[DRY-RUN] If you want to hear information about each job, talk to the people dispatched by the Job Guilds.";
+		mes "[布雷德]";
+		mes "你尝试过手册中的技能吗？";
+		mes "如果你想听关于每个职业的信息，和公会派来的人员对话。";
 		next;
-		mes "[DRY-RUN] [Brade]";
-		mes "[DRY-RUN] I think you've learned enough, do you want to quit and go to your first town?";
+		mes "[布雷德]";
+		mes "我想你已经学得差不多了，想要退出并去你的第一个城镇吗？";
 		next;
-		switch(select("[DRY-RUN] I will stay little longer.:I want to quit and go to the town.")) {
+		switch(select("我会再待一会儿。:我想退出并去城镇。")) {
 		case 1:
-			mes "[DRY-RUN] [Brade]";
-			mes "[DRY-RUN] It's ok to stay here and practice until you think you are ready.";
+			mes "[布雷德]";
+			mes "在你觉得准备好之前，留在这里练习是可以的。";
 			next;
-			mes "[DRY-RUN] [Brade]";
-			mes "[DRY-RUN] Try using the job manuals to find out the characteristics of each job's skills.";
-			mes "[DRY-RUN] I will restore your HP and SP... Keep it up.";
+			mes "[布雷德]";
+			mes "尝试使用职业手册来了解每个职业技能的特点。";
+			mes "我将恢复你的HP和SP……继续加油。";
 			npcskill "AL_HEAL",11,99,60;
 			percentheal 0,100;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Brade]";
-			mes "[DRY-RUN] Looks like you are ready.";
-			mes "[DRY-RUN] I guess you have made up your mind, huh?";
-			mes "[DRY-RUN] Well, where do you want to go?";
+			mes "[布雷德]";
+			mes "看起来你准备好了。";
+			mes "我想你已经下定决心了，是吧？";
+			mes "那么，你想去哪里？";
 			next;
-			switch(select("[DRY-RUN] Prontera:Morroc:Payon:Alberta:Geffen:Cancel")) {
+			switch(select("普隆德拉:梦罗克:斐扬:艾尔贝塔:吉芬:取消")) {
 			case 1:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Prontera, the Capital city of the Rune-Midgarts Kingdom.";
-				mes "[DRY-RUN] Take care and god bless you on your journey.";
+				mes "[布雷德]";
+				mes "普隆德拉，鲁恩-米德加兹王国的首都。";
+				mes "祝你一路平安，愿上帝保佑你。";
 				callfunc "F_NvErase";
 				close2;
 				savepoint "prontera",117,72,1,1;
 				warp "prontera",150,50;
 				end;
 			case 2:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] The Desert Town, Morroc...";
-				mes "[DRY-RUN] There's lots of hidden stories within that town.";
-				mes "[DRY-RUN] Take care.";
+				mes "[布雷德]";
+				mes "沙漠小镇，梦罗克...";
+				mes "那个小镇里隐藏着许多故事。";
+				mes "保重。";
 				callfunc "F_NvErase";
 				close2;
 				savepoint "morocc",150,99,1,1;
 				warp "morocc",155,110;
 				end;
 			case 3:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] You've selected Payon.";
-				mes "[DRY-RUN] God bless you.";
+				mes "[布雷德]";
+				mes "你已选择斐扬。";
+				mes "愿上帝保佑你。";
 				callfunc "F_NvErase";
 				close2;
 				savepoint "payon",70,100,1,1;
 				warp "payon",166,67;
 				end;
 			case 4:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Alberta, the Port City.";
-				mes "[DRY-RUN] It's the main hub of all trades.";
-				mes "[DRY-RUN] If you want to meet with other civilizations, you have to go to Alberta first.";
-				mes "[DRY-RUN] Well then, god bless you on your soul.";
+				mes "[布雷德]";
+				mes "艾尔贝塔，港口城市。";
+				mes "这是所有贸易的主要中心。";
+				mes "如果你想与其他文明接触，首先必须去艾尔贝塔。";
+				mes "那么，愿上帝保佑你的灵魂。";
 				callfunc "F_NvErase";
 				close2;
 				savepoint "alberta",30,232,1,1;
 				warp "alberta",114,58;
 				end;
 			case 5:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Geffen, the City of Magic.";
-				mes "[DRY-RUN] Geffen Tower in the middle of the city is nice.";
-				mes "[DRY-RUN] I will send you near the Geffen fountain.";
-				mes "[DRY-RUN] May Goddess Freya bless you.";
+				mes "[布雷德]";
+				mes "吉芬，魔法之城。";
+				mes "城市中央的吉芬塔真不错。";
+				mes "我会把你送到吉芬喷泉附近。";
+				mes "愿女神弗蕾雅保佑你。";
 				callfunc "F_NvErase";
 				close2;
 				savepoint "geffen",119,37,1,1;
 				warp "geffen",122,65;
 				end;
 			case 6:
-				mes "[DRY-RUN] [Brade]";
-				mes "[DRY-RUN] Yeah... Think with prudence.";
-				mes "[DRY-RUN] ...Meet up with the people from each guild.";
+				mes "[布雷德]";
+				mes "嗯……要谨慎思考。";
+				mes "……与各个公会的人会合。";
 				close;
 			}
 		}
@@ -2110,58 +2110,58 @@ new_4-3,117,41,3	duplicate(NvMage)	Mage Guide#nv4	123
 new_5-3,117,41,3	duplicate(NvMage)	Mage Guide#nv5	123
 
 -	script	Bruce#nv::NvBruce	-1,{
-	mes "[DRY-RUN] [Bruce]";
-	mes "[DRY-RUN] Hello?";
-	mes "[DRY-RUN] I'm here to guide you about extra jobs and special classes.";
+	mes "[布鲁斯]";
+	mes "你好？";
+	mes "我在这里指导你关于额外职业和特殊职业。";
 	next;
-	mes "[DRY-RUN] [Bruce]";
-	mes "[DRY-RUN] For special classes, there are Taekwon Boy, Taekwon Girl, Ninja, Supernovice, Gunslinger.";
-	mes "[DRY-RUN] Which job description do you want to hear?";
+	mes "[布鲁斯]";
+	mes "特殊职业有跆拳少年、跆拳少女、忍者、超级初心者和枪手。";
+	mes "你想听哪个职业的描述？";
 	next;
 	while(1) {
-		switch(select("[DRY-RUN] Taekwon:Ninja:Super Novice:Gunslinger:End the conversation.")) {
+		switch(select("跆拳少年:忍者:超级初心者:枪手:结束对话。")) {
 		case 1:
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] It's a job that usually uses a lot of kicking skills.";
-			mes "[DRY-RUN] It belongs to special class and later you can change your job into Taekwon Master which has much stronger attack skills.";
+			mes "[布鲁斯]";
+			mes "这是一个通常使用大量踢技的职业。";
+			mes "它属于特殊职业，之后你可以转职为跆拳大师，拥有更强的攻击技能。";
 			next;
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] There is a secondary class to choose from called Soul Linker which also has strong attacks.";
-			mes "[DRY-RUN] You can decide that later when you get stronger.";
+			mes "[布鲁斯]";
+			mes "还有一个可以选择的副职业叫灵媒，也有强大的攻击能力。";
+			mes "你可以在变强后再决定。";
 			next;
 			break;
 		case 2:
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] Ninja's specialty is rapid movement.";
-			mes "[DRY-RUN] They specialize in using throwing weapons.";
+			mes "[布鲁斯]";
+			mes "忍者的特长是快速移动。";
+			mes "他们专精于使用投掷武器。";
 			next;
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] Ninjas are kind of a hybrid class that can use various dodge skills with the capability of both physical and magical attacks depending on their preference.";
+			mes "[布鲁斯]";
+			mes "忍者是一种混合职业，可以根据个人喜好使用各种闪避技能，具备物理和魔法攻击的能力。";
 			next;
 			break;
 		case 3:
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] The biggest attraction of the stronger Novice, called Super Novice, is their pull to mediocrity.";
-			mes "[DRY-RUN] They are the proverbial Jack-of-all-Trades but Master of none.";
+			mes "[布鲁斯]";
+			mes "更强大的初心者被称为超级初心者，他们最大的吸引力在于对平庸的追求。";
+			mes "他们是典型的万事通，但无所精通。";
 			next;
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] Super Novices can learn most of the 1st job class skills.";
-			mes "[DRY-RUN] If you become a Super Novice, you cannot change your job, which is too bad, but you can grow as a very individual character.";
+			mes "[布鲁斯]";
+			mes "超级初心者可以学习大多数第一职业的技能。";
+			mes "如果你成为超级初心者，你将无法更换职业，这太可惜了，但你可以成长为一个非常独特的角色。";
 			next;
 			break;
 		case 4:
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] You can job change directly from Novice to a special class which is optimized for a long-distance attack with guns.";
+			mes "[布鲁斯]";
+			mes "你可以直接从初心者转职为一种专门优化远程攻击的特殊职业，使用枪械。";
 			next;
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] Gunslingers use all kinds of guns made in 'Einbroch', the city of steel.";
-			mes "[DRY-RUN] I recommend this for those who want to become powerful sharpshooters.";
+			mes "[布鲁斯]";
+			mes "枪手使用在'艾因布罗克'这座钢铁之城制造的各种枪械。";
+			mes "我推荐这个给那些想要成为强大神射手的人。";
 			next;
 			break;
 		case 5:
-			mes "[DRY-RUN] [Bruce]";
-			mes "[DRY-RUN] If you need more information,";
-			mes "[DRY-RUN] you can always go to ^2F4F4F'www.ragnarok.co.kr'^000000";
+			mes "[布鲁斯]";
+			mes "如果你需要更多信息，";
+			mes "你可以随时访问 ^2F4F4F'www.ragnarok.co.kr'^000000";
 			close;
 		}
 	}
@@ -2286,19 +2286,19 @@ new_5-3,97,50,4	duplicate(NvEden)	Eden Group Officer#nv5	729,5,5
 // Trainer
 //============================================================
 -	script	::NvBrutus	-1,{
-	mes "[DRY-RUN] [Trainer Brutus]";
-	mes "[DRY-RUN] These monsters are all weak and easy to kill. But be careful, a lot of them are aggressive and out for blood!";
+	mes "[训练师布鲁图斯]";
+	mes "这些怪物都很弱，容易击杀。但要小心，它们中很多都是攻击性强的，渴望鲜血！";
 	next;
-	mes "[DRY-RUN] [Trainer Brutus]";
-	mes "[DRY-RUN] If you think monsters here are too weak for you, I can send you to another training ground where the monsters are stronger than the ones over here.";
+	mes "[训练师布鲁图斯]";
+	mes "如果你觉得这里的怪物对你来说太弱，我可以送你去另一个训练场，那里的怪物比这里的强。";
 	next;
-	mes "[DRY-RUN] [Trainer Brutus]";
-	mes "[DRY-RUN] So would you like to try?";
+	mes "[训练师布鲁图斯]";
+	mes "那么你想尝试一下吗？";
 	next;
-	switch(select("[DRY-RUN] Send me to another Level:What monsters are there?:Cancel")) {
+	switch(select("送我去另一个等级:那里有什么怪物？:取消")) {
 	case 1:
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] I see, then let me guide you to another level. Which level do you want to go to?";
+		mes "[训练师布鲁图斯]";
+		mes "我明白了，那么让我带你去另一个等级。你想去哪个等级？";
 		next;
 		for(set .@i,1; .@i<6; set .@i,.@i+1) {
 			if (!compare(strnpcinfo(2),"nv"+.@i))
@@ -2310,34 +2310,34 @@ new_5-3,97,50,4	duplicate(NvEden)	Eden Group Officer#nv5	729,5,5
 			warp "new_"+.@i+"-3",96,21;
 		close;
 	case 2:
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] You seem eager to fight.";
-		mes "[DRY-RUN] The monster levels increase with each level of the training grounds.";
+		mes "[训练师布鲁图斯]";
+		mes "你似乎很渴望战斗。";
+		mes "训练场的怪物等级会随着每个等级的提升而增加。";
 		next;
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] Level 1 has the weakest monsters.";
-		mes "[DRY-RUN] There you'll find Porings, Drops, and Lunatics.";
+		mes "[训练师布鲁图斯]";
+		mes "等级1有最弱的怪物。";
+		mes "那里你会找到波利、掉落和疯狂者。";
 		next;
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] Level 2 is more challenging.";
-		mes "[DRY-RUN] There you'll find Porings, Lunatics, Willows, and Chonchons.";
+		mes "[训练师布鲁图斯]";
+		mes "等级2更具挑战性。";
+		mes "那里你会找到波利、疯狂者、柳树和小鸟。";
 		next;
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] Level 3 is the same as Level 2.";
-		mes "[DRY-RUN] There you'll find Porings, Lunatics, Willows, and Chonchons.";
+		mes "[训练师布鲁图斯]";
+		mes "等级3与等级2相同。";
+		mes "那里你会找到波利、疯狂者、柳树和小鸟。";
 		next;
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] Level 4 has stronger monsters.";
-		mes "[DRY-RUN] There you'll find Willows, Hornets, Pickys, and Fabres.";
+		mes "[训练师布鲁图斯]";
+		mes "等级4有更强的怪物。";
+		mes "那里你会找到柳树、黄蜂、皮基和法布雷。";
 		next;
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] Level 5 is the same as Level 4.";
-		mes "[DRY-RUN] There you'll find Willows, Hornets, Pickys, and Fabres.";
+		mes "[训练师布鲁图斯]";
+		mes "等级5与等级4相同。";
+		mes "那里你会找到柳树、黄蜂、皮基和法布雷。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Trainer Brutus]";
-		mes "[DRY-RUN] Hmm...?";
-		mes "[DRY-RUN] Are you worried about going to more challenging places? That's understandable, since you're still a new adventurer. Good luck~";
+		mes "[训练师布鲁图斯]";
+		mes "嗯……？";
+		mes "你担心去更具挑战性的地方吗？这很正常，因为你还是个新冒险者。祝你好运~";
 		close;
 	}
 }
@@ -2398,9 +2398,9 @@ new_4-1,66,114,4	duplicate(NvBulletin)	Bulletin Board#nv4	111
 new_5-1,66,114,4	duplicate(NvBulletin)	Bulletin Board#nv5	111
 
 -	script	Guard::NvGuardA	-1,{
-	mes "[DRY-RUN] [Training Grounds Guard]";
-	mes "[DRY-RUN] Welcome to the Training Grounds.";
-	mes "[DRY-RUN] You are now in the outer court yard. Please go inside the castle to begin your training.";
+	mes "[训练场卫兵]";
+	mes "欢迎来到训练场。";
+	mes "你现在在外院。请进入城堡开始你的训练。";
 	close;
 }
 new_1-1,144,116,2	duplicate(NvGuardA)	Guard#nv1a	105
@@ -2410,13 +2410,13 @@ new_4-1,144,116,2	duplicate(NvGuardA)	Guard#nv4a	105
 new_5-1,144,116,2	duplicate(NvGuardA)	Guard#nv5a	105
 
 -	script	Guard::NvGuardB	-1,{
-	mes "[DRY-RUN] [Training Grounds Guard]";
+	mes "[训练场卫兵]";
 	if (rand(2)) {
-		mes "[DRY-RUN] Come in! I would like to welcome you to the Training Grounds!";
-		mes "[DRY-RUN] In here, you can prepare yourself for your future adventures throughout the Ragnarok world!";
+		mes "欢迎光临！我想欢迎你来到训练场！";
+		mes "在这里，你可以为你未来在《 Ragnarok 》世界中的冒险做好准备！";
 	} else {
-		mes "[DRY-RUN] Go, Novice, go!";
-		mes "[DRY-RUN] Fight, and grow stronger! Look towards a brighter tomorrow!";
+		mes "去吧，初心者，去吧！";
+		mes "战斗，变得更强！展望更光明的明天！";
 	}
 	close;
 }
@@ -2427,13 +2427,13 @@ new_4-1,144,107,2	duplicate(NvGuardB)	Guard#nv4b	105
 new_5-1,144,107,2	duplicate(NvGuardB)	Guard#nv5b	105
 
 -	script	Instructor#Edwin::NvEdwin	-1,{
-	mes "[DRY-RUN] [Edwin]";
-	mes "[DRY-RUN] Eh? Why are you still here?";
-	mes "[DRY-RUN] There are no more courses that you need to take.";
+	mes "[埃德温]";
+	mes "哎？你怎么还在这里？";
+	mes "你不需要再参加其他课程了。";
 	next;
-	mes "[DRY-RUN] [Edwin]";
-	mes "[DRY-RUN] Well, I will let you out of here.";
-	mes "[DRY-RUN] Go find the instructor, Brade.";
+	mes "[埃德温]";
+	mes "好吧，我会让你离开这里。";
+	mes "去找教练，布雷德。";
 	close2;
 	savepoint strnpcinfo(4),100,100,1,1;
 	warp strnpcinfo(4),100,100;

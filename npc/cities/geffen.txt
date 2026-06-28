@@ -427,7 +427,7 @@ OnTouch_:
 
 geffen_in,22,125,1	script	Crumpler	52,{
 	mes "[?]";
-	mes "^333333*Psssst!*";
+	mes "^333333*嘘!*";
 	mes "嘿，你!";
 	mes "你想得到一些伟大的东西吗？ 来吧！^000000";
 	next;
@@ -529,7 +529,7 @@ geffen_in,59,61,1	script	Skyler	61,{
 	mes "你的裙子真好看呀~";
 	mes "法师！";
 	next;
-	if (select("Actually, I'm a Wizard.") == 1) {
+	if (select("其实，我是个巫师。") == 1) {
 		mes "^3355FF总有一天，你发誓！你将用你的鲜血来报复这个好战的法师！总会有一天的.....^000000";
 		mes "[克鲁帕]";
 		next;
@@ -568,50 +568,50 @@ geffen_in,27,134,5	script	Waitress#elen	91,{
 		mes "[斯盖乐]";
 		next;
 		mes "我很高兴听到你是这样过来的，年轻的小伙子。";
-		mes "Still, people manage to get drunk off the imitation drinks that we serve here. I guess it's all psychological.";
+		mes "不过，人们还是能从我们这里提供的仿制饮料中喝醉。我想这都是心理作用。";
 		next;
-		mes "[Elenore]";
-		mes "I reeeeally want to be able to visit that place where they serve real drinks. I hear it's just like paradise!";
+		mes "[艾伦诺尔]";
+		mes "我真的很想去那个提供真正饮料的地方。我听说那里就像天堂一样！";
 		close;
 	}
 	switch(rand(1,4)) {
 	case 1:
-		mes "[Elenore]";
-		mes "Gossip...?";
-		mes "Well, I've heard that they're opening a new Airship Service";
-		mes "in Juno!";
+		mes "[艾伦诺尔]";
+		mes "八卦...?";
+		mes "嗯，我听说他们要开通新的飞空艇服务";
+		mes "在朱诺！";
 		next;
-		mes "[Elenore]";
-		mes "Or at least, they're planning to. The airship isn't really ready to take off just yet. In the meantime, there's some weird customer representative over there who's offering a teleport service.";
+		mes "[艾伦诺尔]";
+		mes "或者至少，他们在计划中。飞空艇还没有准备好起飞。与此同时，那边有个奇怪的客户代表正在提供传送服务。";
 		next;
-		mes "[Elenore]";
-		mes "It seems like Kafra Corporation may finally have a competitor! Then again, I don't think many girls are as attractive as the Kafra Employees...";
+		mes "[艾伦诺尔]";
+		mes "看起来卡普拉公司终于有了竞争对手！不过，我觉得没有多少女孩能像卡普拉职员那样吸引人……";
 		break;
 	case 2:
-		mes "[Elenore]";
-		mes "Have you heard?";
-		mes "There are some new fashions floating around the Rune-Midgarts Kingdom!";
+		mes "[艾伦诺尔]";
+		mes "你听说了吗？";
+		mes "在卢恩-米德加兹王国里出现了一些新的时尚！";
 		next;
-		mes "[Elenore]";
-		mes "People have been coming in, wearing some cute new hats. There was this cute Teddy Bear Hat I've never seen before, and a girl came in wearing these black Kitty Ears...";
+		mes "[艾伦诺尔]";
+		mes "人们穿着一些可爱的新品帽子进来。有一顶我从未见过的可爱泰迪熊帽子，还有一个女孩戴着黑色的小猫耳朵……";
 		next;
-		mes "[Elenore]";
-		mes "Of course, not every popular style suits my taste. I mean, I saw someone walking around with a Mushroom on their head. And I hear someone has been making hats made out of Fish?";
+		mes "[艾伦诺尔]";
+		mes "当然，并不是每一种流行风格都适合我的口味。我的意思是，我看到有人头上戴着蘑菇。而且我听说有人在做鱼做的帽子？";
 		next;
-		mes "[Elenore]";
-		mes "I guess those";
-		mes "kinds of hats are too";
-		mes "artistic for my taste.";
+		mes "[艾伦诺尔]";
+		mes "我想那些";
+		mes "种类的帽子太";
+		mes "这对我的口味来说太艺术了。";
 		break;
 	case 3:
-		mes "[Elenore]";
-		mes "Gossip, eh?";
+		mes "[艾伦诺尔]";
+		mes "八卦，是吗？";
 		next;
-		mes "[Elenore]";
-		mes "Well...";
-		mes "I hear there's this person somewhere in Rune-Midgarts...";
+		mes "[艾伦诺尔]";
+		mes "嗯……";
+		mes "我听说在卢恩-米德加兹的某个地方有这样一个人……";
 		next;
-		mes "[Elenore]";
+		mes "[艾伦诺尔]";
 		if (Sex == SEX_MALE)
 			mes "Tell me, have you ever heard of "+strcharinfo(0)+"? He's supposed to be the suavest hero around!";
 		else
@@ -620,65 +620,65 @@ geffen_in,27,134,5	script	Waitress#elen	91,{
 	case 4:
 		switch(rand(1,2)) {
 		case 1:
-			mes "[Elenore]";
-			mes "Gossip, eh?";
-			mes "W-wait...";
+			mes "[艾伦诺尔]";
+			mes "八卦，是吗？";
+			mes "等、等一下……";
 			next;
-			mes "[Elenore]";
-			mes "Ugh...";
-			mes "Ooooh...";
-			mes "My he-head...";
-			mes "It huuurts...";
+			mes "[艾伦诺尔]";
+			mes "呃……";
+			mes "哦哦哦……";
+			mes "我、我头……";
+			mes "好痛……";
 			next;
-			mes "[William's Spirit]";
-			mes "^990000You get the hell away from my daughter, low-life, before I sell your organs for zeny!";
-			mes "You hear me?!^000000";
+			mes "[威廉的灵魂]";
+			mes "^990000你离我女儿远点，低贱的家伙，否则我就把你的器官卖了换金币！";
+			mes "你听见了吗？！^000000";
 			next;
-			mes "[Elenore]";
-			mes "*Cough*";
-			mes "Oh...!";
-			mes "Sorry about that!";
-			mes "I must be coming";
-			mes "down with the flu!";
-			mes "...Or something.";
+			mes "[艾伦诺尔]";
+			mes "*咳*";
+			mes "哦……！";
+			mes "抱歉！";
+			mes "我一定是要感冒了";
+			mes "！";
+			mes "……或者别的什么。";
 			next;
-			mes "^3355FFWeird...";
-			mes "Her voice was";
-			mes "really deep for";
-			mes "a minute there...";
+			mes "^3355FF奇怪……";
+			mes "她的声音";
+			mes "真的很低沉";
+			mes "有那么一瞬间……";
 			break;
 		case 2:
-			mes "[William's Spirit]";
-			mes "^990000Hey you sex crazed bastard!! Stop looking at my daughter like that before I rip out your eyes, and eat them with pasta!^000000";
+			mes "[威廉的灵魂]";
+			mes "^990000嘿，你这个性欲狂的混蛋！！别那样看我的女儿，否则我会挖掉你的眼睛，和意大利面一起吃！^000000";
 			next;
 			mes "["+strcharinfo(0)+"]";
 			if (Sex == SEX_MALE) {
-				mes "Huh...?";
-				mes "C-come again?";
+				mes "哈……？";
+				mes "再说一遍？";
 				next;
-				mes "[Elenore]";
-				mes "Huh...?";
-				mes "Oh, Dad must have possessed me again. It happens to me and my sister all the time.";
+				mes "[艾伦诺尔]";
+				mes "哈……？";
+				mes "哦，爸爸又附身到我身上了。这种事我和我姐姐经常发生。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "No kidding?";
-				mes "Huh. Total bummer.";
+				mes "不是吧？";
+				mes "唔。真糟糕。";
 				next;
-				mes "[Elenore]";
-				mes "Yeah...";
-				mes "Tell me about it.";
+				mes "[艾伦诺尔]";
+				mes "是啊...";
+				mes "告诉我吧。";
 				break;
 			}
 			else {
-				mes "W-waaaaait~";
-				mes "But, But I'm a girl!";
+				mes "等、等一下~";
+				mes "但是，但是我是女孩！";
 				next;
-				mes "[William's Spirit]";
-				mes "^990000What part of ^FF0000I will whup you where you stand^000000 ^990000do you not understand?! Now, quit it you pervert!^000000";
+				mes "[威廉的灵魂]";
+				mes "^990000你不明白^FF0000我会在你面前揍你^000000 ^990000的哪一部分？！现在，住手，你这个变态！^000000";
 				next;
-				mes "^3355FFWaaah~!";
-				mes "How did she";
-				mes "get all scary?!^000000";
+				mes "^3355FF哇啊~！";
+				mes "她怎么会";
+				mes "变得这么可怕？！^000000";
 				break;
 			}
 		}
@@ -783,7 +783,7 @@ geffen_in,70,67,3	script	Waitress#elise	90,{
 				mes "感冒了！";
 				next;
 				mes "或者其他！";
-				mes "^3355FFWeird...";
+				mes "^3355FF奇怪……";
 			}
 			break;
 		case 2:

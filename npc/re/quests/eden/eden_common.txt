@@ -319,25 +319,25 @@ OnTouch:
 
 moc_para01,47,39,3	script	#warp_2_pass	111,{
 	if (callfunc("F_HasEdenGroupMark")) {
-		mes "[DRY-RUN] [Lime Evenor]";
-		mes "[DRY-RUN] Oh, it is an exclusive place only for Eden's members.";
-		mes "[DRY-RUN] If you are a member, you can come whenever you want!";
+		mes "[莱姆·伊维诺]";
+		mes "哦，这里是仅限伊甸成员的专属场所。";
+		mes "如果你是成员，你可以随时来！";
 		next;
-		switch (select("[DRY-RUN] Enter.:Don't Enter.")) {
+		switch (select("进入.:不进入.")) {
 		case 1:
-			mes "[DRY-RUN] This door is beautifully decorated but seems a little bit too heavy.";
+			mes "这扇门装饰得很漂亮，但似乎有点重。";
 			close2;
 			warp "moc_para01",106,14;
 			end;
 		case 2:
-			mes "[DRY-RUN] [Lime Evenor]";
-			mes "[DRY-RUN] Well, if you are not interested.";
+			mes "[莱姆·伊维诺]";
+			mes "好吧，如果你不感兴趣的话。";
 			close;
 		}
 	}
-	mes "[DRY-RUN] [Lime Evenor]";
-	mes "[DRY-RUN] Oh, this is an exclusive place for Eden's members only.";
-	mes "[DRY-RUN] If you want to go inside, you have to join the Eden Group.";
+	mes "[莱姆·伊维诺]";
+	mes "哦，这里是仅限伊甸成员的专属场所。";
+	mes "如果你想进去，你必须加入伊甸集团。";
 	close;
 }
 

@@ -19,67 +19,67 @@ valkyrie,53,39,3	script	Paladin#Valkyrie	752,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Paladin]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[圣骑士]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Paladin]";
-		mes "[DRY-RUN] Do not forget";
-		mes "[DRY-RUN] that the Holy War";
-		mes "[DRY-RUN] is fast approaching!";
-		mes "[DRY-RUN] We must ready ourselves!";
-		mes "[DRY-RUN] May the light of justice";
-		mes "[DRY-RUN] always brighten our path!";
+		mes "[圣骑士]";
+		mes "不要忘记";
+		mes "神圣的战争";
+		mes "即将来临！";
+		mes "我们必须做好准备！";
+		mes "愿正义的光辉";
+		mes "永远照亮我们的道路！";
 		close;
 	}
 	else if (ADVJOB == Job_Paladin && Class == Job_Swordman_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Paladin]";
-		mes "[DRY-RUN] The Holy War will";
-		mes "[DRY-RUN] be upon us before we";
-		mes "[DRY-RUN] know it. More than ever,";
-		mes "[DRY-RUN] we have need of strong men";
-		mes "[DRY-RUN] and women to fight for what";
-		mes "[DRY-RUN] is good and right.";
+		mes "[圣骑士]";
+		mes "神圣的战争将";
+		mes "在我们意识到之前";
+		mes "降临于我们。比以往任何时候，";
+		mes "我们需要强壮的男人";
+		mes "和女人为正义而战。";
+		mes "你愿意站在";
 		next;
-		mes "[DRY-RUN] [Paladin]";
-		mes "[DRY-RUN] Will you fight on";
-		mes "[DRY-RUN] the side of righteousness";
-		mes "[DRY-RUN] as a Paladin?";
+		mes "[圣骑士]";
+		mes "正义的一方";
+		mes "作为一名圣骑士吗？";
+		mes "作为一名圣骑士，我希望";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [Paladin]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[圣骑士]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Paladin]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[圣骑士]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Paladin;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [Paladin]";
-		mes "[DRY-RUN] Congratulations.";
-		mes "[DRY-RUN] As a Paladin, I hope";
-		mes "[DRY-RUN] you will protect those";
-		mes "[DRY-RUN] weaker than you, and bring";
-		mes "[DRY-RUN] us victory in the upcoming";
-		mes "[DRY-RUN] war between good and evil.";
+		mes "[圣骑士]";
+		mes "恭喜你。";
+		mes "你能保护那些";
+		mes "比你弱小的人，并带来";
+		mes "我们在即将到来的";
+		mes "善与恶之间的战争中的胜利。";
+		mes "善与恶之间的战争。";
 		close;
 	}
-	mes "[DRY-RUN] [Paladin]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[圣骑士]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [Paladin]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[圣骑士]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

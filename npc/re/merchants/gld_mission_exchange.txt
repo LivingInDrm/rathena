@@ -13,82 +13,82 @@
 // Templates
 -	script	#GldDungeonReward	-1,{
 	if (checkweight(1304,3) == 0) {
-		mes "[DRY-RUN] You have too many items to proceed with the quest.";
-		mes "[DRY-RUN] Please lighten your load and try again.";
+		mes "你的物品太多，无法继续进行任务。";
+		mes "请减轻负担后再试。";
 		close;
 	}
 
-	mes "[DRY-RUN] It's a machine that exchanges Commemorative Siege Guild Coins for special items.";
-	mes "[DRY-RUN] Select the desired item and insert as many coins as necessary.";
+	mes "这是一台将纪念攻城公会币兑换为特殊物品的机器。";
+	mes "选择所需物品并插入所需数量的币。";
 	next;
 	while(1) {
-		switch(select("[DRY-RUN] View exchangeable items","Trade for Investment Certificates","Trade for Good Medicines","Trade for Gifts","Kvasir's Ring","Leave")) {
+		switch(select("查看可兑换物品","Trade for Investment Certificates","Trade for Good Medicines","Trade for Gifts","Kvasir's Ring","Leave")) {
 			case 1:
-				mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-				mes "[DRY-RUN] Thank you for choosing ClickClick MeowMeow!";
-				mes "[DRY-RUN] Here is a list of items you can purchase with Commemorative Siege Guild Coins.";
+				mes "[点击点击喵喵-GX]";
+				mes "感谢您选择点击点击喵喵！";
+				mes "这是您可以用纪念攻城公会币购买的物品列表。";
 				next;
-				mes "[DRY-RUN] = Blood of Frost Giant =";
-				mes "[DRY-RUN] New medicine developed by the joint effort of Alchemy Union of 3 countries. Gives the user supernatural powers for a short period of time.";
-				mes "[DRY-RUN] ^4d4dffDrains 3000 HP, but increases physical and magical damage to the user's counterpart players by 100% for 10 seconds.";
-				mes "[DRY-RUN] Required Level: 80 or higher^000000";
+				mes "= 冰巨人的血液 =";
+				mes "由三国炼金术联盟共同研发的新药。短时间内赋予使用者超自然的力量。";
+				mes "^4d4dff消耗3000 HP，但在10秒内将用户对手玩家的物理和魔法伤害提高100%。";
+				mes "所需等级：80级或以上^000000";
 				next;
-				mes "[DRY-RUN] = Core of Golem =";
-				mes "[DRY-RUN] New medicine developed by the joint effort of Alchemy Union of 3 countries. Gives the user supernatural powers for a short period of time.";
-				mes "[DRY-RUN] ^4d4dffDrains 300 SP, but decreases the damage taken from the user's counterpart players by 50% for 10 seconds.";
-				mes "[DRY-RUN] Required Level: 80 or higher^000000";
+				mes "= 石像鬼核心 =";
+				mes "由三国炼金术联盟共同研发的新药。短时间内赋予使用者超自然的力量。";
+				mes "^4d4dff消耗300点SP，但在10秒内减少用户对等玩家所受的伤害50%。";
+				mes "所需等级：80级或以上^000000";
 				next;
 				setarray .@status$, "Stun", "Petrify", "Frozen", "Sleep", "Curse", "Silence", "Blind";
 				.@size = getarraysize(.@status$);
 				for(.@i = 0; .@i < .@size; ++.@i) {
 					mes "= Fairy's Tear (" + .@status$[.@i] + ") =";
-					mes "[DRY-RUN] A potion developed by Vicent, a pharmaceutical genius. Gives the user supernatural powers for a short period of time.";
+					mes "由制药天才维森特开发的药水。短时间内赋予使用者超自然的力量。";
 					mes "^4d4dffDrains 3000 HP, but allows the user to become immune to " + (.@i == 1 ? "Petrification" : .@status$[.@i]) + " status for 10 seconds.^000000";
 					next;
 				}
-				mes "[DRY-RUN] = Feather Beret[1] =";
-				mes "[DRY-RUN] A comfortable, sky blue-colored hat decorated with feathers.";
-				mes "[DRY-RUN] ^4d4dffMDEF + 1, Decreases the damage taken from the user's counterpart players by 10%.";
-				mes "[DRY-RUN] Card Slot [1], available to all job classes except for Novices.";
+				mes "= 羽毛贝雷帽[1] =";
+				mes "一顶舒适的天蓝色帽子，装饰有羽毛。";
+				mes "^4d4dff魔法防御 + 1，减少用户对等玩家所受的伤害10%。";
+				mes "卡片槽 [1]，所有职业均可使用，除了初心者。";
 				next;
-				mes "[DRY-RUN] = Feather Beret Costume =";
-				mes "[DRY-RUN] A comfortable, sky blue-colored hat decorated with feathers.";
-				mes "[DRY-RUN] ^4d4dffCostume Equipment, available to all job classes.^000000";
+				mes "= 羽毛贝雷帽服装 =";
+				mes "一顶舒适的天蓝色帽子，装饰有羽毛。";
+				mes "^4d4dff所有职业均可使用的服装装备.^000000";
 				next;
-				mes "[DRY-RUN] This is the end of the list.";
+				mes "这是列表的结束。";
 				break;
 
 			case 2:
-				mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-				mes "[DRY-RUN] We exchange the ^4d4dff1Investment Certificate^000000 of Cat's Paw Merchant Group for ^4d4dff10Commemorative Coins!^000000";
-				mes "[DRY-RUN] Do you want to exchange?";
+				mes "[点击点击喵喵-GX]";
+				mes "我们将^4d4dff1投资证书^000000兑换为^4d4dff10纪念币！^000000";
+				mes "你想要兑换吗？";
 				next;
-				switch(select("[DRY-RUN] Yes.","View other items.")) {
+				switch(select("是的。","View other items.")) {
 					case 1:
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+						mes "[点击点击喵喵-GX]";
 						if (countitem(6615) > 9) {
-							mes "[DRY-RUN] Thank you for using our service, meow!";
+							mes "感谢您使用我们的服务，喵！";
 							delitem 6615,10; // Siege_Guild_Coin
 							getitem 6489,1; // Cats_Invest_Certif
 						} else {
-							mes "[DRY-RUN] You don't have enough coins for Investment Certificates.";
-							mes "[DRY-RUN] 1 Investment Certificate is worth 10 coins.";
+							mes "你没有足够的硬币来兑换投资证书。";
+							mes "1个投资证书价值10个硬币。";
 						}
 						break;
 
 					case 2:
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] You've decided to view other items.";
+						mes "[点击点击喵喵-GX]";
+						mes "你决定查看其他物品。";
 						break;
 				}
 				break;
 
 			case 3:
-				mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-				mes "[DRY-RUN] You have selected a list of good medicines!";
-				mes "[DRY-RUN] All items listed below are worth ^4d4dff300 coins each^000000, meow!";
+				mes "[点击点击喵喵-GX]";
+				mes "你选择了一份良药清单！";
+				mes "以下列出的所有物品每个价值^4d4dff300个硬币^000000，喵！";
 				next;
-				switch(select("[DRY-RUN] Blood of Frost Giants", "Core of Golem", "Fairy's Tear (Stun)", "Fairy's Tear (Frozen)", "Fairy's Tear (Sleep)", "Fairy's Tear (Curse)", "Fairy's Tear (Petrify)", "Fairy's Tear (Silence)", "Fairy's Tear (Blind)", "View other items.")) {
+				switch(select("冰霜巨人的血液", "Core of Golem", "Fairy's Tear (Stun)", "Fairy's Tear (Frozen)", "Fairy's Tear (Sleep)", "Fairy's Tear (Curse)", "Fairy's Tear (Petrify)", "Fairy's Tear (Silence)", "Fairy's Tear (Blind)", "View other items.")) {
 					case 1:
 						callsub S_PurchaseMedicine, "Blood of Frost Giant", 12874;
 						break;
@@ -117,17 +117,17 @@
 						callsub S_PurchaseMedicine, "Fairy's Tear(Blind)", 12882;
 						break;
 					case 10:
-						mes "[DRY-RUN] You've decided to view other items.";
+						mes "你决定查看其他物品。";
 						break;
 				}
 				break;
 
 			case 4:
-				mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-				mes "[DRY-RUN] You have selected a list of good gifts!";
-				mes "[DRY-RUN] The price for each item is listed separately, meow!";
+				mes "[点击点击喵喵-GX]";
+				mes "您选择了一份很好的礼物清单！";
+				mes "每件物品的价格单独列出，喵！";
 				next;
-				switch(select("[DRY-RUN] Old Card Album -500 Coins", "Old Purple Box -300 Coins", "Old Blue Box -100 Coins", "Jewelry Box -500 Coins", "Wrapped Mask -500 Coins", "Feather Beret","Leave")) {
+				switch(select("旧卡片册 -500币", "Old Purple Box -300 Coins", "Old Blue Box -100 Coins", "Jewelry Box -500 Coins", "Wrapped Mask -500 Coins", "Feather Beret","Leave")) {
 					case 1:
 						callsub S_PurchaseGift, "Old Card Album", 616, 500;
 						break;
@@ -144,110 +144,110 @@
 						callsub S_PurchaseGift, "Wrapped Mask", 12107, 500;
 						break;
 					case 6:
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] You have selected a nice beret decorated with feathers!";
-						mes "[DRY-RUN] We have Feather Berets and Feather Beret Costumes to which you can install cards, meow!";
+						mes "[点击点击喵喵-GX]";
+						mes "您选择了一顶装饰有羽毛的漂亮贝雷帽！";
+						mes "我们有羽毛贝雷帽和可以安装卡片的羽毛贝雷帽服装，喵！";
 						next;
-						switch(select("[DRY-RUN] Feather Beret[1] -1500 Coins","Feather Beret Costume -800 Coins","Purchase a Beret","View other items.")) {
+						switch(select("羽毛贝雷帽[1] -1500币","Feather Beret Costume -800 Coins","Purchase a Beret","View other items.")) {
 							case 1:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] It's a feather beret to which you can install cards!";
-								mes "[DRY-RUN] It is worth 1500 Commemorative Coins. Do you want to purchase it?";
+								mes "[点击点击喵喵-GX]";
+								mes "这是一顶可以安装卡片的羽毛贝雷帽！";
+								mes "它的价值是1500枚纪念币。您想购买吗？";
 								next;
-								switch(select("[DRY-RUN] Yes!","No!")) {
+								switch(select("是的！","No!")) {
 									case 1:
-										mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+										mes "[点击点击喵喵-GX]";
 										if (countitem(6615) > 1499) {
-											mes "[DRY-RUN] Thank you for using our service, meow!";
+											mes "感谢您使用我们的服务，喵！";
 											delitem 6615,1500; // Siege_Guild_Coin
 											getitem 18755,1; // Feather_Beret_
 										} else {
-											mes "[DRY-RUN] You need 1500 Commemorative Coins in order to purchase the selected item.";
-											mes "[DRY-RUN] You've decided to view other items.";
+											mes "您需要1500枚纪念币才能购买所选物品。";
+											mes "你决定查看其他物品。";
 										}
 										break;
 
 									case 2:
-										mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-										mes "[DRY-RUN] You've decided to view other items.";
+										mes "[点击点击喵喵-GX]";
+										mes "你决定查看其他物品。";
 										break;
 								}
 								break;
 
 							case 2:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] It's a feather beret costume!";
-								mes "[DRY-RUN] It is worth 800 Commemorative Coins. Do you want to purchase it?";
+								mes "[点击点击喵喵-GX]";
+								mes "这是一件羽毛贝雷帽服装！";
+								mes "它的价值是800枚纪念币。您想购买吗？";
 								next;
-								switch(select("[DRY-RUN] Yes!","No!")) {
+								switch(select("是的！","No!")) {
 									case 1:
-										mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+										mes "[点击点击喵喵-GX]";
 										if (countitem(6615) > 799) {
-											mes "[DRY-RUN] Thank you for using our service, meow!";
+											mes "感谢您使用我们的服务，喵！";
 											delitem 6615,800; // Siege_Guild_Coin
 											getitem 19585,1; // C_Feather_Beret
 										} else {
-											mes "[DRY-RUN] You need 800 Commemorative Coins in order to purchase the selected item.";
-											mes "[DRY-RUN] You've decided to view other items.";
+											mes "您需要800个纪念币才能购买所选物品。";
+											mes "你决定查看其他物品。";
 										}
 										break;
 
 									case 2:
-										mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-										mes "[DRY-RUN] You've decided to view other items.";
+										mes "[点击点击喵喵-GX]";
+										mes "你决定查看其他物品。";
 										break;
 								}
 								break;
 
 							case 3:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] The preparations for changing the color of feather beret costumes are under way.";
-								mes "[DRY-RUN] Please come back later!";
-								mes "[DRY-RUN] Let me show you other items!";
+								mes "[点击点击喵喵-GX]";
+								mes "更换羽毛贝雷帽服装颜色的准备工作正在进行中。";
+								mes "请稍后再来！";
+								mes "让我给您展示其他物品！";
 								break;
 
 							case 4:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] You've decided to view other items.";
+								mes "[点击点击喵喵-GX]";
+								mes "你决定查看其他物品。";
 								break;
 						}
 						break;
 
 					case 7:
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] Do not use the exchange machine.";
+						mes "[点击点击喵喵-GX]";
+						mes "请不要使用兑换机。";
 						break;
 				}
 				break;
 
 			case 5:
-				mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-				mes "[DRY-RUN] This is the category of Kvasir's Rings.";
-				mes "[DRY-RUN] You can view the description for each ring and purchase one here.";
+				mes "[点击点击喵喵-GX]";
+				mes "这是克瓦西尔之戒的类别。";
+				mes "您可以在这里查看每个戒指的描述并购买一个。";
 				next;
-				switch(select("[DRY-RUN] Trade for Kvasir's Ring (Blue)", "Trade for Kvasir's Ring (Red)", "Trade for Kvasir's Ring (Green)", "Trade for Kvasir's Ring (Brown)", "Leave")) {
+				switch(select("兑换克瓦西尔之戒（蓝色）", "Trade for Kvasir's Ring (Red)", "Trade for Kvasir's Ring (Green)", "Trade for Kvasir's Ring (Brown)", "Leave")) {
 					case 1:
-						mes "[DRY-RUN] = Kvasir's Ring (Blue) =";
-						mes "[DRY-RUN] A ring that is rumored to be filled with the power of Kvasir, a sage god. ";
-						mes "[DRY-RUN] ^4d4dffMSP + 30. 'Snow Flip' 1Lv available^000000";
-						mes "[DRY-RUN] Accessory. Available to all job classes. Required Level: 1";
+						mes "= 克瓦西尔之戒（蓝色） =";
+						mes "传闻这是一个充满了克瓦西尔，智者之神力量的戒指。";
+						mes "^4d4dffMSP + 30. '雪花翻转' 1Lv 可用^000000";
+						mes "饰品。适用于所有职业。所需等级：1";
 						next;
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] Kvasir's Ring (Blue) can be purchased with ^4d4dff20Blood of Frost Giant and 20 Core of Golem^000000";
-						mes "[DRY-RUN] or ^4d4dff1Kvasir's Ring in different color and 10 Commemorative Coins!^000000";
-						mes "[DRY-RUN] Do you want to purchase it?";
+						mes "[点击点击喵喵-GX]";
+						mes "克瓦西尔之戒（蓝色）可以用^4d4dff20冰霜巨人的血和20个魔像核心^000000购买";
+						mes "或者用^4d4dff1克瓦西尔之戒的其他颜色和10个纪念币！^000000";
+						mes "你想购买它吗？";
 						next;
-						switch(select("[DRY-RUN] Pay with Blood and Core","Pay with Kvasir's Ring (Red)","Pay with Kvasir's Ring (Green)","Pay with Kvasir's Ring (Brown)","Leave")) {
+						switch(select("用血液和核心支付","Pay with Kvasir's Ring (Red)","Pay with Kvasir's Ring (Green)","Pay with Kvasir's Ring (Brown)","Leave")) {
 							case 1:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+								mes "[点击点击喵喵-GX]";
 								if ((countitem(12874) > 19) & (countitem(12875) > 19)) {
-									mes "[DRY-RUN] Kvasir's Ring (Blue) has been purchased.";
+									mes "克瓦西尔之戒（蓝色）已被购买。";
 									delitem 12874,20; // Frost_Giant_Blood
 									delitem 12875,20; // Golem_Stone
 									getitem 2951,1; // Kvasir_Ring_Blue
 								} else {
-									mes "[DRY-RUN] Looks like Kvasir's Ring (Blue) can be purchased with ^4d4dff20Blood of Frost Giant and 20 Core of Golem.^000000";
-									mes "[DRY-RUN] You don't have enough items to complete the purchase. View other items.";
+									mes "看起来克瓦西尔之戒（蓝色）可以用^4d4dff20冰霜巨人的血和20个魔像核心购买。^000000";
+									mes "你没有足够的物品来完成购买。查看其他物品。";
 								}
 								break;
 
@@ -264,23 +264,23 @@
 								break;
 
 							case 5:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] You've decided to view other items.";
+								mes "[点击点击喵喵-GX]";
+								mes "你决定查看其他物品。";
 								break;
 						}
 					break;
 
 					case 2:
-						mes "[DRY-RUN] = Kvasir's Ring (Red) =";
-						mes "[DRY-RUN] A ring that is rumored to be filled with the power of Kvasir, a sage god. ";
-						mes "[DRY-RUN] ^4d4dffMSP + 30. 'Peony Mamy' 1Lv available^000000";
-						mes "[DRY-RUN] Accessory. Available to all job classes. Required Level: 1";
+						mes "= 克瓦西尔之戒（红色） =";
+						mes "传闻这是一个充满了克瓦西尔，智者之神力量的戒指。";
+						mes "^4d4dff魔法值 + 30。'芍药妈妈' 1级可用^000000";
+						mes "饰品。适用于所有职业。所需等级：1";
 						next;
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] Kvasir's Ring (Red) can be purchased with ^4d4dff1Kvasir's Ring and 10 Commemorative Coins.^000000";
-						mes "[DRY-RUN] Which of the followings do you want to trade for Kvasir's Ring (Red)?";
+						mes "[点击点击喵喵-GX]";
+						mes "Kvasir的戒指（红色）可以用^4d4dff1Kvasir的戒指和10个纪念币购买。^000000";
+						mes "你想用什么交易Kvasir的戒指（红色）？";
 						next;
-						switch(select("[DRY-RUN] Kvasir's Ring (Blue)","Kvasir's Ring (Green)","Kvasir's Ring (Brown)","Leave")) {
+						switch(select("克瓦西尔之戒（蓝色）","Kvasir's Ring (Green)","Kvasir's Ring (Brown)","Leave")) {
 							case 1:
 								callsub S_Kvasir, "Kvasir's Ring (Blue)", 2951, "Kvasir's Ring (Red)", 2952;
 								break;
@@ -294,23 +294,23 @@
 								break;
 
 							case 4:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] You've decided to view other items.";
+								mes "[点击点击喵喵-GX]";
+								mes "你决定查看其他物品。";
 								break;
 						}
 						break;
 
 					case 3:
-						mes "[DRY-RUN] = Kvasir's Ring (Green) =";
-						mes "[DRY-RUN] A ring that is rumored to be filled with the power of Kvasir, a sage god. ";
-						mes "[DRY-RUN] ^4d4dffMSP + 100. 'Sada Ear' 1Lv available^000000";
-						mes "[DRY-RUN] Accessory. Available to all job classes. Required Level: 1";
+						mes "= Kvasir的戒指（绿色） =";
+						mes "传闻这是一个充满了克瓦西尔，智者之神力量的戒指。";
+						mes "^4d4dffMSP + 100。'萨达耳' 1Lv可用^000000";
+						mes "饰品。适用于所有职业。所需等级：1";
 						next;
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] Kvasir's Ring (Green) can be purchased with ^4d4dff1Kvasir's Ring and 10 Commemorative Coins.^000000";
-						mes "[DRY-RUN] Which of the followings do you want to trade for Kvasir's Ring (Red)?";
+						mes "[点击点击喵喵-GX]";
+						mes "Kvasir的戒指（绿色）可以用^4d4dff1Kvasir的戒指和10个纪念币购买。^000000";
+						mes "你想用什么交易Kvasir的戒指（红色）？";
 						next;
-						switch(select("[DRY-RUN] Kvasir's Ring (Blue)","Kvasir's Ring (Red)","Kvasir's Ring (Brown)","Leave")) {
+						switch(select("克瓦西尔之戒（蓝色）","Kvasir's Ring (Red)","Kvasir's Ring (Brown)","Leave")) {
 							case 1:
 								callsub S_Kvasir, "Kvasir's Ring (Blue)", 2951, "Kvasir's Ring (Green)", 2953;
 								break;
@@ -324,23 +324,23 @@
 								break;
 
 							case 4:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] You've decided to view other items.";
+								mes "[点击点击喵喵-GX]";
+								mes "你决定查看其他物品。";
 								break;
 						}
 						break;
 
 					case 4:
-						mes "[DRY-RUN] = Kvasir Ring Brown =";
-						mes "[DRY-RUN] A ring that is rumored to be filled with the power of Kvasir, a sage god. ";
-						mes "[DRY-RUN] ^4d4dffMSP + 100. 'Dust of Galaxy' 1Lv available^000000";
-						mes "[DRY-RUN] Accessory. Available to all job classes. Required Level: 1";
+						mes "= Kvasir戒指（棕色） =";
+						mes "传闻这是一个充满了克瓦西尔，智者之神力量的戒指。";
+						mes "^4d4dffMSP + 100。'星系之尘' 1Lv可用^000000";
+						mes "饰品。适用于所有职业。所需等级：1";
 						next;
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] Kvasir's Ring (Brown) can be purchased with ^4d4dff1Kvasir's Ring and 10 Commemorative Coins.^000000";
-						mes "[DRY-RUN] Which of the followings do you want to trade for Kvasir's Ring (Red)?";
+						mes "[点击点击喵喵-GX]";
+						mes "Kvasir的戒指（棕色）可以用^4d4dff1Kvasir的戒指和10个纪念币购买。^000000";
+						mes "你想用什么交易Kvasir的戒指（红色）？";
 						next;
-						switch(select("[DRY-RUN] Kvasir's Ring (Blue)","Kvasir's Ring (Red)","Kvasir's Ring (Green)","Leave")) {
+						switch(select("克瓦西尔之戒（蓝色）","Kvasir's Ring (Red)","Kvasir's Ring (Green)","Leave")) {
 							case 1:
 								callsub S_Kvasir, "Kvasir's Ring (Blue)", 2951, "Kvasir's Ring (Brown)", 2954;
 								break;
@@ -354,46 +354,46 @@
 								break;
 
 							case 4:
-								mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-								mes "[DRY-RUN] You've decided to view other items.";
+								mes "[点击点击喵喵-GX]";
+								mes "你决定查看其他物品。";
 								break;
 						}
 						break;
 
 					case 5:
-						mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-						mes "[DRY-RUN] You've decided to view other items.";
+						mes "[点击点击喵喵-GX]";
+						mes "你决定查看其他物品。";
 						break;
 				}
 				break;
 
 			case 6:
-				mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-				mes "[DRY-RUN] Do not use the exchange machine.";
+				mes "[点击点击喵喵-GX]";
+				mes "请不要使用兑换机。";
 				break;
 		}
 	}
 	close;
 
 S_PurchaseMedicine:
-	mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+	mes "[点击点击喵喵-GX]";
 	mes "You're purchasing 1 " + getarg(0) + ", meow!";
-	mes "[DRY-RUN] Are you sure?";
+	mes "你确定吗？";
 	next;
-	switch(select("[DRY-RUN] Yes!","No!")) {
+	switch(select("是的！","No!")) {
 		case 1:
-			mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+			mes "[点击点击喵喵-GX]";
 			if (countitem(6615) > 299) {
-				mes "[DRY-RUN] Thank you for using our service, meow!";
+				mes "感谢您使用我们的服务，喵！";
 				delitem 6615,300; // Siege_Guild_Coin
 				getitem getarg(1),1;
 			} else
-				mes "[DRY-RUN] One good medicine is worth 300 commemorative coins that you've raked and scraped...";
+				mes "一剂好药值300个你辛辛苦苦攒来的纪念币...";
 			break;
 
 		case 2:
-			mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-			mes "[DRY-RUN] You've decided to view other items.";
+			mes "[点击点击喵喵-GX]";
+			mes "你决定查看其他物品。";
 			break;
 	}
 	return;
@@ -401,26 +401,26 @@ S_PurchaseMedicine:
 S_PurchaseGift:
 	.@itemid = getarg(1);
 	.@price = getarg(2);
-	mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+	mes "[点击点击喵喵-GX]";
 	mes "You're purchasing 1 " + getarg(0) + ", meow!";
-	mes "[DRY-RUN] Are you sure?";
+	mes "你确定吗？";
 	next;
-	switch(select("[DRY-RUN] Yes!","No!")) {
+	switch(select("是的！","No!")) {
 		case 1:
-			mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+			mes "[点击点击喵喵-GX]";
 			if (countitem(6615) >= .@price) {
-				mes "[DRY-RUN] Thank you for using our service, meow!";
+				mes "感谢您使用我们的服务，喵！";
 				delitem 6615,.@price; // Siege_Guild_Coin
 				getitem .@itemid,1;
 			} else {
 				mes "You need " + .@price + " Commemorative Coins in order to purchase the selected item.";
-				mes "[DRY-RUN] You've decided to view other items.";
+				mes "你决定查看其他物品。";
 			}
 			break;
 
 		case 2:
-			mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-			mes "[DRY-RUN] You've decided to view other items.";
+			mes "[点击点击喵喵-GX]";
+			mes "你决定查看其他物品。";
 			break;
 	}
 	return;
@@ -431,14 +431,14 @@ S_Kvasir:
 	.@toid = getarg(3);
 	.@toname$ = getarg(4);
 	
-	mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
+	mes "[点击点击喵喵-GX]";
 	// One of Kvasir's Rings and 10 Siege_Guild_Coin
 	if( countitem( .@fromid ) > 0 && countitem( 6615 ) > 9 ){
 		mes "You have " + .@fromname$ + ".";
 		mes "Do you want to trade this in for " + .@toname$ + "?";
 		next;
-		mes "[DRY-RUN] [ClickClick MeowMeow-GX]";
-		switch( select( "[DRY-RUN] Yes!:Leave" ) ){
+		mes "[点击点击喵喵-GX]";
+		switch( select( "是!:离开" ) ){
 			case 1:
 				// Recheck the items once more
 				if( countitem( .@fromid ) > 0 && countitem( 6615 ) > 9 ){
@@ -450,7 +450,7 @@ S_Kvasir:
 				}
 				break;
 			case 2:
-				mes "[DRY-RUN] You've decided to view other items.";
+				mes "你决定查看其他物品。";
 				return;
 		}
 	}

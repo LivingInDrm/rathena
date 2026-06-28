@@ -221,132 +221,132 @@ OnTouch:
 }
 
 dewata,159,81,4	script	Tourist#dew-1	881,{
-	mes "[DRY-RUN] [Nasolo]";
-	mes "[DRY-RUN] Wow~ Pure ocean, a warm beach...";
-	mes "[DRY-RUN] Perfect for a date with a girlfriend...";
+	mes "[纳索洛]";
+	mes "哇~ 纯净的海洋，温暖的沙滩...";
+	mes "非常适合和女朋友约会...";
 	next;
-	mes "[DRY-RUN] [Nasolo]";
-	mes "[DRY-RUN] If only I had one...";
+	mes "[纳索洛]";
+	mes "要是我有一个就好了...";
 	emotion ET_CRY;
 	next;
-	mes "[DRY-RUN] [Nasolo]";
-	mes "[DRY-RUN] I wonder when my princess will come...";
+	mes "[纳索洛]";
+	mes "我在想我的公主什么时候会来...";
 	emotion ET_OHNO;
 	close;
 }
 
 dewata,146,109,5	script	Restauranteur#dew	886,{
 	if (checkweight(11532,1) == 0 || checkweight(11533,1) == 0 || MaxWeight - Weight < 500) {
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] You came to taste my dish? It is always good to eat with an empty stomach.";
+		mes "[餐厅老板]";
+		mes "你来品尝我的菜吗？空腹吃东西总是好的。";
 		close;
 	}
-	mes "[DRY-RUN] [Restauranteur]";
-	mes "[DRY-RUN] Welcome to the island of Dewata.";
-	mes "[DRY-RUN] I hope you behave like a noble";
-	mes "[DRY-RUN] traveler, unlike some of these";
-	mes "[DRY-RUN] teenage punks...";
+	mes "[餐厅老板]";
+	mes "欢迎来到德瓦塔岛。";
+	mes "我希望你能像个贵族一样举止得体，";
+	mes "而不是像这些";
+	mes "青少年混混...";
 	next;
-	switch(select("[DRY-RUN] About Dewata dishes:Today's menu?:I'm okay.")) {
+	switch(select("关于德瓦塔的菜肴:今天的菜单？:我没问题。")) {
 	case 1:
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] Need info about our foods? Well... I don't have much to talk about, but feel free to listen if you want.";
+		mes "[餐厅老板]";
+		mes "需要关于我们食物的信息吗？嗯……我没有太多可说的，但如果你想的话，随时可以听听。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] So much to cover, let me begin.";
+		mes "[餐厅老板]";
+		mes "要讲的内容太多了，让我开始吧。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] First, Dewata dishes have special names based on each cooking recipe,";
+		mes "[餐厅老板]";
+		mes "首先，德瓦塔的菜肴有根据每种烹饪食谱命名的特殊名称，";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] If dish name has 'Goreng' in it, then it is either stir or deep fried food.";
+		mes "[餐厅老板]";
+		mes "如果菜名中有'Goreng'，那么它就是炒或油炸的食物。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] If it is a type of 'Bakar', then it is a grilled food.";
+		mes "[餐厅老板]";
+		mes "如果是'Bakar'类型，那么就是烤制的食物。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] And if it's 'Satay', then you are eating a skewered dish.";
+		mes "[餐厅老板]";
+		mes "如果是'Satay'，那么你正在吃的是串烧菜肴。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] Second, we have dishes named after basic ingredients,";
+		mes "[餐厅老板]";
+		mes "其次，我们有以基本食材命名的菜肴，";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] In Dewata island, we call rice as Nasi, noodle as Mie, bread as Roti, chicken as Ayam, fish as Ikan, and corn as Jagung.";
+		mes "[餐厅老板]";
+		mes "在德瓦塔岛，我们把米饭称为Nasi，面条称为Mie，面包称为Roti，鸡肉称为Ayam，鱼称为Ikan，玉米称为Jagung。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] So, if rice is fried we call it 'Nasi Goreng', and fried noodle is 'Mie Goreng'.";
+		mes "[餐厅老板]";
+		mes "所以，如果米饭被炒了，我们称之为'炒饭'，而炒面则是'炒面'。";
 		next;
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] Well... This is enough to enjoy our foods in Dewata!! If you are hungry, we have our special set menu for only ^0000FF5000^000000 Zeny.";
+		mes "[餐厅老板]";
+		mes "好吧……在德瓦塔享受美食就够了！！如果你饿了，我们有特别套餐，仅需 ^0000FF5000^000000 金币。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] We have 2 items 'Nasi Goreng' and 'Satay'. Which one do you want?";
+		mes "[餐厅老板]";
+		mes "我们有两样菜品'炒饭'和'沙爹'。你想要哪一个？";
 		next;
-		switch(select("[DRY-RUN] Nasi Goreng:Satay")) {
+		switch(select("炒饭:沙爹")) {
 		case 1:
-			mes "[DRY-RUN] [Restauranteur]";
-			mes "[DRY-RUN] This is Nasi Goreng fried with my special sauce plus egg fry on the top. It only costs ^0000FF5000^000000 Zeny.";
+			mes "[餐厅老板]";
+			mes "这是用我的特制酱炒的炒饭，上面还有煎蛋。仅需 ^0000FF5000^000000 金币。";
 			set .@food,11532;
 			break;
 		case 2:
-			mes "[DRY-RUN] [Restauranteur]";
-			mes "[DRY-RUN] This is the Satay, a slice of meat skewered and grilled over Palm fruit charcoal. It costs only ^0000FF5000^000000 Zeny.";
+			mes "[餐厅老板]";
+			mes "这是沙爹，肉片串在一起，用棕榈果木炭烤制。仅需 ^0000FF5000^000000 金币。";
 			set .@food,11533;
 			break;
 		}
 		next;
-		switch(select("[DRY-RUN] Taste:Walk away")) {
+		switch(select("味道:走开")) {
 		case 1:
 			if (Zeny < 5000) {
-				mes "[DRY-RUN] [Restauranteur]";
-				mes "[DRY-RUN] Where's the money kid? Sheesh! No free food here! Ok?";
+				mes "[餐厅老板]";
+				mes "小子，钱在哪儿？哎呀！这里没有免费食物！明白了吗？";
 				close;
 			}
-			mes "[DRY-RUN] [Restauranteur]";
+			mes "[餐厅老板]";
 			mes "Here's your "+getitemname(.@food)+", you won't regret it!";
 			set Zeny, Zeny - 5000;
 			getitem .@food,1;
 			close;
 		case 2:
-			mes "[DRY-RUN] [Restauranteur]";
-			mes "[DRY-RUN] It's a shame you won't taste this great dish...";
+			mes "[餐厅老板]";
+			mes "真遗憾你无法品尝这道美味的菜肴...";
 			close;
 		}
 	case 3:
-		mes "[DRY-RUN] [Restauranteur]";
-		mes "[DRY-RUN] Are you serious? This is not even funny.";
+		mes "[餐厅老板]";
+		mes "你是认真的吗？这一点都不好笑。";
 		close;
 	}
 }
 
 dewata,147,107,6	script	Gourmet#dew	85,{
-	mes "[DRY-RUN] [Gourmet]";
-	mes "[DRY-RUN] Oh... it's like a party in my";
-	mes "[DRY-RUN] mouth... and everyone's invited!";
+	mes "[美食家]";
+	mes "哦……就像我的嘴里开了个派对，";
+	mes "而且每个人都被邀请！";
 	emotion ET_CRY;
 	next;
-	mes "[DRY-RUN] [Gourmet]";
-	mes "[DRY-RUN] Master~ One more please~";
+	mes "[美食家]";
+	mes "师傅~ 再来一份~";
 	emotion ET_BEST;
 	emotion ET_OK, getnpcid(0, "Restauranteur#dew");
 	next;
-	mes "[DRY-RUN] [Gourmet]";
-	mes "[DRY-RUN] You must try this! The Food here is succulent~";
+	mes "[美食家]";
+	mes "你一定要尝试这个！这里的食物美味无比~";
 	close;
 }
 
 dewata,154,107,4	script	Sightseer#dew	86,{
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Wow...";
-	mes "[DRY-RUN] How many has he already eaten?";
+	mes "[游客]";
+	mes "哇...";
+	mes "他已经吃了多少了？";
 	emotion ET_SCRATCH;
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] He must be big eater, not the gourmet...";
+	mes "[游客]";
+	mes "他一定是个大胃王，而不是美食家……";
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Have you been to Prontera yet? I think I've seen him somewhere..";
+	mes "[游客]";
+	mes "你去过普隆德拉吗？我觉得我在某个地方见过他……";
 	close;
 }
 
@@ -376,96 +376,96 @@ dewata,95,203,6	script	Travel Guide#dew	536,{
 }
 
 dewata,97,207,4	script	Tourist#dew1	803,{
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Oh, dag-nabbit... I've gone and";
-	mes "[DRY-RUN] picked the wrong tour guide...";
+	mes "[游客]";
+	mes "哦，真是该死……我搞砸了";
+	mes "选错了导游……";
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] This hombre is a real snooze...";
-	mes "[DRY-RUN] Why make it longer..";
+	mes "[游客]";
+	mes "这个家伙真无聊……";
+	mes "何必拖延……";
 	emotion ET_CONFUSE;
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] I need to change my travel agent...";
+	mes "[游客]";
+	mes "我需要换个旅行社……";
 	emotion ET_OHNO;
 	close;
 }
 
 dewata,100,206,4	script	Tourist#dew2	59,{
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Hey, let's go there! Hurry up,";
-	mes "[DRY-RUN] while the tour guide is explaining~";
+	mes "[游客]";
+	mes "嘿，快去那里！快点，";
+	mes "导游正在解释的时候~";
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Come on... It doesn't sound like";
-	mes "[DRY-RUN] he's going to stop talking anytime soon.";
+	mes "[游客]";
+	mes "来吧... 听起来不像是";
+	mes "他会很快停止说话。";
 	close;
 }
 
 dewata,101,206,4	script	Tourist#dew3	90,{
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Aren't we going to get lost without the guide?";
+	mes "[游客]";
+	mes "没有导游我们不会迷路吗？";
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] We got lost already last time...";
+	mes "[游客]";
+	mes "上次我们已经迷路了...";
 	close;
 }
 
 dewata,99,203,4	script	Tourist#dew4	755,{
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] Oh~ This is very interesting. A";
-	mes "[DRY-RUN] temple that worships the Buddha...";
+	mes "[游客]";
+	mes "哦~ 这真有趣。一个";
+	mes "供奉佛陀的寺庙...";
 	emotion ET_OK;
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] But I don't really get all the";
-	mes "[DRY-RUN] symbology here.";
+	mes "[游客]";
+	mes "但我并不完全理解这里的所有";
+	mes "象征意义。";
 	next;
-	mes "[DRY-RUN] [Tourist]";
-	mes "[DRY-RUN] So beautiful... I wonder who built";
-	mes "[DRY-RUN] this place?";
+	mes "[游客]";
+	mes "真美... 我想知道是谁建造了";
+	mes "这个地方？";
 	close;
 }
 
 dewata,67,186,8	script	Monk#dew1	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] I am a monk, content to spend my days in religious study.";
+	mes "[武僧]";
+	mes "我是一名和尚，乐于在宗教学习中度过我的日子。";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] I've just returned from a pilgrimage to Borobudur temple with my fellow monks...";
+	mes "[武僧]";
+	mes "我刚刚和我的同伴和尚们一起从博罗布杜尔寺的朝圣归来...";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] Borobudur temple has many pilgrims visiting, since it is one of few temples left for worshipping the Great Buddha.";
+	mes "[武僧]";
+	mes "博罗布杜尔寺有许多朝圣者前来参观，因为它是为供奉伟大的佛陀而剩下的少数寺庙之一。";
 	close;
 }
 
 dewata,65,188,8	script	Monk#dew2	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] Borobudur temple is one of few temples left for worshiping the Great Buddha.";
+	mes "[武僧]";
+	mes "博罗布杜尔寺是为供奉伟大的佛陀而剩下的少数寺庙之一。";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] I don't understand why there are only few temples left that follow our ways...";
+	mes "[武僧]";
+	mes "我不明白为什么只剩下少数几座寺庙遵循我们的方式...";
 	close;
 }
 
 dewata,63,190,8	script	Monk#dew3	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] Are you a Tourist? You can make an offering and a wish to one of the shrines.";
+	mes "[武僧]";
+	mes "你是游客吗？你可以向其中一个神社献上供品并许下愿望。";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] Our great Buddha may grant your wish..";
+	mes "[武僧]";
+	mes "我们的伟大佛陀可能会实现你的愿望...";
 	close;
 }
 
 dewata,62,192,8	script	Monk#dew4	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] Our great Buddha is the king of souls and the leader of all good Gods.";
+	mes "[武僧]";
+	mes "我们的伟大佛陀是灵魂之王和所有善良神明的领袖。";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] The Dewata tribes believes in Buddha, the strange thing is they all describe Buddha as different creatures.";
+	mes "[武僧]";
+	mes "德瓦塔部落信仰佛陀，奇怪的是，他们都将佛陀描述为不同的生物。";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] I'm not really sure about the reason for that. Maybe because there are many different tribes in Dewata with different characteristics.";
+	mes "[武僧]";
+	mes "我不太确定原因。也许是因为德瓦塔有许多不同特征的部落。";
 	close;
 }
 
@@ -573,62 +573,62 @@ dewata,68,212,6	duplicate(Small Shrine#dew1)	Small Shrine#dew3	844
 dewata,68,191,6	duplicate(Small Shrine#dew1)	Small Shrine#dew4	844
 
 dewata,75,122,6	script	Monk#dewt1	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] You are a stranger here. What brings here to this quiet place?";
+	mes "[武僧]";
+	mes "你在这里是个陌生人。是什么把你带到这个宁静的地方？";
 	next;
-	switch(select("[DRY-RUN] I'm sightseeing.:No reason.")) {
+	switch(select("我在观光。:没有理由。")) {
 	case 1:
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Oh, you are a tourist. This is the '^0000FFPagoda^000000' worshiping the great Buddha. Please be respectful of the monks praying here.";
+		mes "[武僧]";
+		mes "哦，你是游客。这是供奉伟大佛陀的'^0000FF宝塔^000000'。请尊重在这里祈祷的僧侣们。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Good day to you...";
+		mes "[武僧]";
+		mes "祝你有个好日子……";
 		close;
 	}
 }
 
 dewata,69,101,6	script	Monk#dewt2	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] We have a pagoda for the worship of Buddhas. Each temple has one of these towers, though not many people come here besides other monks.";
+	mes "[武僧]";
+	mes "我们有一座供奉佛陀的宝塔。每座寺庙都有这样一座塔，然而除了其他僧侣，来这里的人并不多。";
 	next;
-	switch(select("[DRY-RUN] I see...:Explain about Buddhas:Ah, okay.")) {
+	switch(select("我明白了...:解释关于佛陀:啊，好的。")) {
 	case 1:
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] You must feel the compassion of our Buddha!";
+		mes "[武僧]";
+		mes "你一定能感受到我们佛陀的慈悲！";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Buddha is our God from Dewata myth, he is the king of souls and also the leader of good Gods.";
+		mes "[武僧]";
+		mes "佛陀是来自德瓦塔神话的我们的神，他是灵魂之王，也是善神的领袖。";
 		next;
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Buddha is the guardian of souls whom often described in traditional dance as fighting against the magician Rangda.";
+		mes "[武僧]";
+		mes "佛陀是灵魂的守护者，常在传统舞蹈中被描述为与魔法师朗达作斗争。";
 		next;
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] In Dewata we belive there are many deities protecting each island and tribal locale,";
+		mes "[武僧]";
+		mes "在德瓦塔，我们相信有许多神灵保护着每个岛屿和部落地区，";
 		next;
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] so we do have different manifestations of the Buddha, usually described as a bear, tiger, dragon, snake, or lion";
+		mes "[武僧]";
+		mes "所以我们确实有不同形式的佛陀，通常被描述为熊、老虎、龙、蛇或狮子";
 		next;
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Great Lion is one of famous Buddhas worshipped in Dewata.";
+		mes "[武僧]";
+		mes "大狮子是德瓦塔著名的佛陀之一。";
 		next;
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Hope this was good explanation for you. Let me know if you have anything else you want to know.";
+		mes "[武僧]";
+		mes "希望这对你是个好的解释。如果你还有其他想知道的，请告诉我。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Monk]";
-		mes "[DRY-RUN] Good day to you...";
+		mes "[武僧]";
+		mes "祝你有个好日子……";
 		close;
 	}
 }
 
 dewata,71,79,6	script	Monk#dewt3	834,{
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] This tower is built on the edge of coastal cliff. You can pray with a cool ocean breeze in your hair.";
+	mes "[武僧]";
+	mes "这座塔建在海岸悬崖的边缘。你可以在海风拂面的情况下祈祷。";
 	next;
-	mes "[DRY-RUN] [Monk]";
-	mes "[DRY-RUN] Come, you should feel the compassion of our Buddha in this pleasant weather.";
+	mes "[武僧]";
+	mes "来吧，你应该在这宜人的天气中感受到我们佛陀的慈悲。";
 	close;
 }
 
@@ -719,18 +719,18 @@ OnTouch:
 
 dewata,279,213,4	script	Tourist#dew-2	887,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Reclining Tourist]";
-	mes "[DRY-RUN] Wow~ This is really comfy~";
+	mes "[躺着的游客]";
+	mes "哇~ 这里真舒服~";
 	next;
-	mes "[DRY-RUN] [Reclining Tourist]";
-	mes "[DRY-RUN] I'm having a great time just relaxing.";
+	mes "[躺着的游客]";
+	mes "我只是放松一下，过得很愉快。";
 	next;
-	mes "[DRY-RUN] [Reclining Tourist]";
-	mes "[DRY-RUN] You should lie down here too.";
-	mes "[DRY-RUN] Once you do, you'll never want to get up.";
+	mes "[躺着的游客]";
+	mes "你也应该躺在这里。";
+	mes "一旦你躺下，就再也不想起来了。";
 	next;
-	mes "[DRY-RUN] [Reclining Tourist]";
-	mes "[DRY-RUN] That's why I haven't moved in a whole week! Hahahaha~";
+	mes "[躺着的游客]";
+	mes "这就是我一整周都没动的原因！哈哈哈哈~";
 	emotion ET_SMILE;
 	close;
 }
@@ -754,73 +754,73 @@ OnTouch:
 
 dewata,227,129,4	script	Sarr#dew	538,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] They're hiding so I should seek.";
-	mes "[DRY-RUN] I'll find them for sure!-";
+	mes "[萨尔]";
+	mes "他们在藏起来，所以我应该去找。";
+	mes "我一定会找到他们的！-";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] One~";
+	mes "[萨尔]";
+	mes "一~";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] Two~ Three~";
+	mes "[萨尔]";
+	mes "二~ 三~";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] Four~ Five~ Six~";
+	mes "[萨尔]";
+	mes "四~ 五~ 六~";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] ... ... ... ...";
+	mes "[萨尔]";
+	mes "... ... ... ...";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] Ninty nine~ One hundred!!! Now I'm coming~";
+	mes "[萨尔]";
+	mes "九十九~ 一百！！！我来了~";
 	close;
 }
 
 dewata,239,140,4	script	Siyak#dew	539,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Siyak]";
-	mes "[DRY-RUN] Hey come on, move over~ He's gonna find me~~";
+	mes "[西亚克]";
+	mes "嘿，快过来~ 他要找到我了~~";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] I found Siyak!! Come out, come out!!";
+	mes "[萨尔]";
+	mes "我找到了西亚克！！快出来，快出来！！";
 	emotion ET_KIK, getnpcid(0, "Sarr#dew");
 	emotion ET_HUK;
 	emotion ET_KIK, getnpcid(0, "Sipo#dew");
 	emotion ET_HUK, playerattached();
 	next;
-	mes "[DRY-RUN] [Siyak]";
-	mes "[DRY-RUN] Arrgg!! This is all your fault~!!";
+	mes "[西亚克]";
+	mes "啊啊！！这一切都是你的错~！！";
 	emotion ET_FRET;
 	close;
 }
 
 dewata,193,145,4	script	Sipo#dew	538,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Sipo]";
-	mes "[DRY-RUN] Sarr won't find me here, right?";
+	mes "[西波]";
+	mes "萨尔不会在这里找到我，对吧？";
 	next;
-	mes "[DRY-RUN] [Sarr]";
-	mes "[DRY-RUN] I found Siyak!! Come out come out!!";
+	mes "[萨尔]";
+	mes "我找到了西亚克！！快出来，快出来！！";
 	emotion ET_KIK, getnpcid(0, "Sarr#dew");
 	emotion ET_HUK, getnpcid(0, "Siyak#dew");
 	emotion ET_KIK;
 	emotion ET_HUK, playerattached();
 	next;
-	mes "[DRY-RUN] [Sipo]";
-	mes "[DRY-RUN] Hehe~ Now Siyak is IT~ I'll just keep hiding in here.";
+	mes "[西波]";
+	mes "嘿嘿~ 现在西亚克是鬼~ 我就躲在这里。";
 	close;
 }
 
 dewata,228,177,4	script	Majya#dew	538,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Majya]";
-	mes "[DRY-RUN] I was playing hide-and-seek with my friends...";
+	mes "[玛贾]";
+	mes "我在和我的朋友们玩捉迷藏...";
 	next;
-	mes "[DRY-RUN] [Majya]";
-	mes "[DRY-RUN] I've been just standing here, and they haven't found me for 3 hours...";
+	mes "[玛贾]";
+	mes "我就站在这里，他们已经找了我3个小时...";
 	emotion ET_SCRATCH;
 	next;
-	mes "[DRY-RUN] [Majya]";
-	mes "[DRY-RUN] What should I do? Come out? I don't want to be IT...";
+	mes "[玛贾]";
+	mes "我该怎么办？出来吗？我不想当鬼...";
 	close;
 }
 
@@ -851,36 +851,36 @@ OnTouch:
 
 dewata,249,87,4	script	Mum#dew	101,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Mum]";
-	mes "[DRY-RUN] Ukki~ Ukki~ Where did she go?";
+	mes "[妈妈]";
+	mes "乌基~ 乌基~ 她去哪儿了？";
 	emotion ET_KEK;
 	next;
-	mes "[DRY-RUN] [Mum]";
-	mes "[DRY-RUN] I can't take my eyes of her for a second...";
+	mes "[妈妈]";
+	mes "我一秒钟都无法把目光从她身上移开...";
 	next;
-	mes "[DRY-RUN] [Mum]";
-	mes "[DRY-RUN] Ukki~";
+	mes "[妈妈]";
+	mes "乌基~";
 	emotion ET_KEK;
 	close;
 }
 
 dewata,251,85,6	script	Poppa#dew	97,2,3,{
 OnTouch:
-	mes "[DRY-RUN] [Poppa]";
-	mes "[DRY-RUN] Honey, is Ukki lost again?";
+	mes "[爸爸]";
+	mes "亲爱的，乌基又迷路了吗？";
 	emotion ET_QUESTION;
 	next;
-	mes "[DRY-RUN] [Poppa]";
-	mes "[DRY-RUN] Arrgg... I can't go anywhere with her... How many times already?";
+	mes "[爸爸]";
+	mes "唉... 我带着她根本无法去任何地方... 这已经多少次了？";
 	emotion ET_PROFUSELY_SWEAT;
 	next;
-	mes "[DRY-RUN] [Daddy]";
-	mes "[DRY-RUN] She's gotten lost in Luoyang, Amatsu, Moscovia, Brasilis, Kunlun,";
-	mes "[DRY-RUN] and in Ayothaya...";
+	mes "[爸爸]";
+	mes "她在洛阳、天津、莫斯科比亚、巴西利斯、昆仑迷路过，";
+	mes "还有在阿尤塔亚...";
 	emotion ET_PROFUSELY_SWEAT;
 	next;
-	mes "[DRY-RUN] [Daddy]";
-	mes "[DRY-RUN] What!! It's already been 7 times including this time in Dewata... 7 times!!!!!!";
+	mes "[爸爸]";
+	mes "什么！！这已经是包括这次在德瓦塔的第7次了... 7次！！！！";
 	emotion ET_OTL;
 	close;
 }
@@ -1026,22 +1026,22 @@ dewata,179,204,4	script	Young Lady#dew	537,{
 }
 
 dewata,280,236,4	script	Settler#dew	726,{
-	mes "[DRY-RUN] [Settler]";
-	mes "[DRY-RUN] I'm not really from ^8B4513Dewata^000000.";
-	mes "[DRY-RUN] But while traveling,";
-	mes "[DRY-RUN] I found this place...";
-	mes "[DRY-RUN] And made my decision";
-	mes "[DRY-RUN] to live in this beautiful town.";
+	mes "[定居者]";
+	mes "我其实并不来自^8B4513德瓦塔^000000。";
+	mes "但是在旅行时，";
+	mes "我发现了这个地方...";
+	mes "并做出了我的决定";
+	mes "要在这个美丽的小镇生活。";
 	next;
-	mes "[DRY-RUN] [Settler]";
-	mes "[DRY-RUN] I've been happy to live here";
-	mes "[DRY-RUN] and to find and experience";
-	mes "[DRY-RUN] all these beautiful sights.";
-	mes "[DRY-RUN] It's a dream come true.";
+	mes "[定居者]";
+	mes "我在这里生活得很快乐";
+	mes "并找到和体验";
+	mes "所有这些美丽的景色。";
+	mes "这真是一个梦想成真。";
 	next;
-	mes "[DRY-RUN] [Settler]";
-	mes "[DRY-RUN] Would you ever think of";
-	mes "[DRY-RUN] settling here too?";
+	mes "[定居者]";
+	mes "你会考虑";
+	mes "也在这里定居吗？";
 	close;
 }
 

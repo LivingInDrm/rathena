@@ -667,9 +667,9 @@ OnInstanceInit:
 	disablenpc();
 	end;
 OnTouch:
-	mes "Do you want to go out from the octopus dungeon?";
+	mes "你想从章鱼地下城出去吗？";
 	next;
-	if(select("No!:Yes!") == 2)
+	if(select("否!:是!") == 2)
 		warp "mal_dun01",153,233;
 	close;
 }

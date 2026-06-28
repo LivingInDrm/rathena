@@ -345,7 +345,7 @@ airport,141,43,5	script	Itinerary Schedule	837,{
 
 airplane,102,68,5	script	Docker	852,{
 	if($destination == 250) goto Nowhere;
-	mes "^FF0000[Airplane Attendant]^000000";
+	mes "^FF0000[空乘]^000000";
 	if($destination == 250)goto Notime;
 	set @dockky, $destination;
 	if($destination != 250)mes "We are currently docked at "+$locationsname$[$destination]+".  Would you like to exit?";
@@ -359,19 +359,19 @@ Lyes:
 	specialeffect2 EF_CASTSPIN;
 
 Lnope:
-	mes "^FF0000[Airplane Attendant]^000000";
-	mes "Have a good day.  Thank you for traveling with us.";
+	mes "^FF0000[空乘]^000000";
+	mes "祝你有美好的一天。感谢您与我们同行。";
 	close;
 
 Notime:
-	mes "^FF0000[Airplane Attendant]^000000";
+	mes "^FF0000[空乘]^000000";
 	if(Sex==SEX_FEMALE) mes "Sorry, ma'am, but the plane currently isn't docked.  Please wait.";
 	else mes "Sorry, sir, but the plane currently isn't docked.  Please wait.";
 	close;
 
 Nowhere:
-	mes "^FF0000[Airplane Attendant]^000000";
-	mes "We're currently in air. Please wait until the pilot has announced that we have safely landed.";
+	mes "^FF0000[空乘]^000000";
+	mes "我们目前在空中。请等到飞行员宣布我们安全着陆。";
 	close;
 }
 

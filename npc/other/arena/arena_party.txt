@@ -44,26 +44,26 @@ prt_are_in,76,87,3	script	Helper#party	67,4,4,{
 	if($arn_partywait == 0) {
 		set $arn_partywait,1;
 		emotion ET_SURPRISE;
-		mes "[DRY-RUN] [Helper Iriff]";
-		mes "[DRY-RUN] Good day, challengers!";
-		mes "[DRY-RUN] You are in the party arena waiting room.";
+		mes "[助手伊里夫]";
+		mes "挑战者们，您好！";
+		mes "您在队伍竞技场的等待室中。";
 		next;
-		mes "[DRY-RUN] [Helper Iriff]";
-		mes "[DRY-RUN] Only one person at a time is allowed to stay in this waiting room.";
-		mes "[DRY-RUN] Would you like to start a battle now?";
+		mes "[助手伊里夫]";
+		mes "此等待室一次只允许一人停留。";
+		mes "您想现在开始战斗吗？";
 		next;
-		switch( select( "[DRY-RUN] No","Yes" ) ) {
+		switch( select( "否","Yes" ) ) {
 		case 1:
 			set $arn_partywait,0;
-			mes "[DRY-RUN] [Helper Iriff]";
-			mes "[DRY-RUN] I see.";
-			mes "[DRY-RUN] However, please remember you have only a limited amount of time.";
+			mes "[助手伊里夫]";
+			mes "我明白了。";
+			mes "不过，请记住您只有有限的时间。";
 			close;
 		case 2:
-			mes "[DRY-RUN] [Helper Iriff]";
-			mes "[DRY-RUN] Thank you, let me start a battle.";
-			mes "[DRY-RUN] A warp portal leading to the arena room will be open.";
-			mes "[DRY-RUN] I hope you will survive until the end of the battle and engrave your name on the list of honor...";
+			mes "[助手伊里夫]";
+			mes "谢谢，让我开始战斗。";
+			mes "通往竞技场房间的传送之阵将会开启。";
+			mes "我希望您能在战斗结束前存活下来，并将您的名字铭刻在荣誉榜上...";
 			close2;
 			donpcevent "toarena#party::OnEnter";
 			donpcevent "Helper#party::OnStop";
@@ -952,20 +952,20 @@ OnMyMobDead:
 }
 
 prt_are_in,181,135,3	script	Staff#party-1	67,{
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] You did a good job.";
-	mes "[DRY-RUN] Even if you have failed to clear a time attack battle, I will reward you with a small amount of arena points.";
+	mes "[法杖]";
+	mes "你做得很好。";
+	mes "即使你未能完成时间攻击战斗，我也会奖励你一些竞技场积分。";
 	next;
 	if (arena_point == 30000) {
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Uh huh!";
-		mes "[DRY-RUN] You already have enough arena points.";
-		mes "[DRY-RUN] Please spend some arena points later. When I see you next time, I will make sure to give you some reward.";
+		mes "[法杖]";
+		mes "嗯哼！";
+		mes "你已经拥有足够的竞技场积分。";
+		mes "请稍后花费一些竞技场积分。下次见到你时，我会确保给你一些奖励。";
 		next;
 	}
 	else set arena_point, arena_point + 1;
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] Let me guide you outside. I hope you had a good time.";
+	mes "[法杖]";
+	mes "让我带你出去。我希望你玩得愉快。";
 	close2;
 	specialeffect2 EF_HIT5;
 	warp "arena_room",100,75;
@@ -991,46 +991,46 @@ prt_are_in,77,135,3	script	Staff#party-2	67,{
 		}
 	}
 	set @gappt,(60 * $top_ptmin + $top_ptsec) - (60 * @record_minpt + @record_secpt);
-	mes "[DRY-RUN] [Staff]";
-	mes "[DRY-RUN] Wow, you did a good job~ ";
+	mes "[法杖]";
+	mes "哇，你做得很好~";
 	mes "Your name is...^3131FF" + strcharinfo(0) +"^000000, isn't it?";
 	mes "^3131FF"+ strcharinfo(0) +"^000000, total time you spent to pass the battle..";
 	next;
-	mes "[DRY-RUN] [Staff]";
+	mes "[法杖]";
 	mes "is "+@record_minpt+"minutes "+@record_secpt+"seconds.";
-	mes "[DRY-RUN] Congratulations!";
+	mes "恭喜！";
 	next;
-	mes "[DRY-RUN] [Staff]";
+	mes "[法杖]";
 	mes "The fastest party among people who cleared party arena time force battle is ^3131FF"+$arena_pttopn$+"^000000.";
 	next;
-	mes "[DRY-RUN] [Staff]";
+	mes "[法杖]";
 	mes "^3131FF"+$arena_pttopn$+"^000000's running time was ^3131FF"+$top_ptmin+"^000000minutes ^3131FF"+$top_ptsec+"^000000seconds.";
 	next;
 	if (@gappt < 0) {
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Although you failed to make a new record, I hope you will succeed next time.";
+		mes "[法杖]";
+		mes "虽然你未能创造新纪录，但我希望你下次能成功。";
 		next;
 		if (arena_point > 29980) {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Then let me reward you with some arena points....eh?";
-			mes "[DRY-RUN] Your arena points have exceeded the maximum amount. I cannot give you more points until you spend some points.";
+			mes "[法杖]";
+			mes "那么让我奖励你一些竞技场积分……呃？";
+			mes "你的竞技场积分已超过最大值。在你花费一些积分之前，我无法再给你更多积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] You can check the amount of arena points you have in the arena waiting room.";
+			mes "[法杖]";
+			mes "你可以在竞技场候机室查看你的竞技场积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] I hope you had a good time and let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] Thank you.";
+			mes "[法杖]";
+			mes "我希望你玩得愉快，让我带你去竞技场的入口。";
+			mes "谢谢你。";
 			close2;
 		} else {
 			set arena_point, arena_point + 40;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me reward you some arena points.";
-			mes "[DRY-RUN] If you wish to check the amount of arena points you have, please go talk to ^3131FFVendigos^000000 at the arena entrance.";
+			mes "[法杖]";
+			mes "让我奖励你一些竞技场积分。";
+			mes "如果你想查看你的竞技场积分，请去竞技场入口找^3131FFVendigos^000000谈谈。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] See you later~";
+			mes "[法杖]";
+			mes "让我带你去竞技场的入口。";
+			mes "再见~";
 			close2;
 		}
 		if (is_party_leader() == true) {
@@ -1044,71 +1044,71 @@ prt_are_in,77,135,3	script	Staff#party-2	67,{
 		end;
 	} else {
 		emotion ET_HUK;
-		mes "[DRY-RUN] [Staff]";
-		mes "[DRY-RUN] Wow! You have renewed the record!";
-		mes "[DRY-RUN] What a great job!";
+		mes "[法杖]";
+		mes "哇！你刷新了纪录！";
+		mes "真是太棒了！";
 		next;
 		if (is_party_leader() == true) {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] You can record you and your party members on ^FF0000the hall of Arena Time Force Battle party ^000000.";
-			mes "[DRY-RUN] When you enter a name, the name will be remained on the top unless someone make a new record.";
+			mes "[法杖]";
+			mes "您可以将您和您的队伍成员记录在^FF0000竞技场时间强制战斗队伍的大厅^000000中。";
+			mes "当您输入一个名字时，除非有人创造新的记录，否则该名字将保留在顶部。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Please enter a name within 10 letters which can represent you and your party members.";
+			mes "[法杖]";
+			mes "请输入一个可以代表您和您的队伍成员的10个字母以内的名字。";
 			next;
-			switch( select( "[DRY-RUN] Ok.","Let me think." ) )  {
+			switch( select( "好的。","Let me think." ) )  {
 			case 1:
 				input .@arnparty$;
-				mes "[DRY-RUN] [Staff]";
+				mes "[法杖]";
 				mes "You have entered ^3131FF"+.@arnparty$+"^000000. Is it correct?";
 				next;
-				switch( select( "[DRY-RUN] Yes","No" ) ) {
+				switch( select( "是","No" ) ) {
 				case 1:
 					set $top_ptmin, @record_minpt;
 					set $top_ptsec, @record_secpt;
 					set $arena_pttopn$,.@arnparty$;
 					donpcevent "Vendigos::OnLineRec_pt";
-					mes "[DRY-RUN] [Staff]";
-					mes "[DRY-RUN] Your record has been entered.";
+					mes "[法杖]";
+					mes "您的记录已被输入。";
 					next;
 					break;
 				case 2:
-					mes "[DRY-RUN] [Staff]";
-					mes "[DRY-RUN] Please take your time and think up a nice name.";
+					mes "[法杖]";
+					mes "请慢慢考虑一个好名字。";
 					close;
 				}
 				break;
 			case 2:
-				mes "[DRY-RUN] [Staff]";
-				mes "[DRY-RUN] Please take your time and think up a nice name.";
+				mes "[法杖]";
+				mes "请慢慢考虑一个好名字。";
 				close;
 			}
 		}
 		if (arena_point > 29900) {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Then let me reward you with some arena points....eh?";
-			mes "[DRY-RUN] Your arena points have exceeded the maximum amount. I cannot give you more points until you spend some points.";
+			mes "[法杖]";
+			mes "那么让我奖励你一些竞技场积分……呃？";
+			mes "你的竞技场积分已超过最大值。在你花费一些积分之前，我无法再给你更多积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] You can check the amount of arena points you have in the arena waiting room.";
+			mes "[法杖]";
+			mes "你可以在竞技场候机室查看你的竞技场积分。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] I hope you had a good time and let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] Thank you.";
+			mes "[法杖]";
+			mes "我希望你玩得愉快，让我带你去竞技场的入口。";
+			mes "谢谢你。";
 			close2;
 		} else {
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me reward you with some arena points.";
-			mes "[DRY-RUN] At the same time, since you have renewed the record you will receive an extra amount of the points this time.";
+			mes "[法杖]";
+			mes "让我奖励你一些竞技场积分。";
+			mes "同时，由于你刷新了纪录，这次你将额外获得一些积分。";
 			next;
 			set arena_point, arena_point + 100;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me reward you some arena points.";
-			mes "[DRY-RUN] If you wish to check the amount of arena points you have, please go talk to ^3131FFVendigos^000000 at the arena entrance.";
+			mes "[法杖]";
+			mes "让我奖励你一些竞技场积分。";
+			mes "如果你想查看你的竞技场积分，请去竞技场入口找^3131FFVendigos^000000谈谈。";
 			next;
-			mes "[DRY-RUN] [Staff]";
-			mes "[DRY-RUN] Let me guide you to the entrance of arena.";
-			mes "[DRY-RUN] See you later~";
+			mes "[法杖]";
+			mes "让我带你去竞技场的入口。";
+			mes "再见~";
 			close2;
 		}
 		if (is_party_leader() == true) {

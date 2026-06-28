@@ -26,7 +26,7 @@
 -	script	#distorted_space_	-1,{
 OnTouch_:
 	if (job_wl > 1) {
-		mes "[DRY-RUN]  - There is a strange distortion here - ";
+		mes " - 这里有一种奇怪的扭曲 - ";
 		if (strnpcinfo(0) == "#distorted_space_1" && (Class == Job_Warlock || Class == Job_Warlock_T || Class == Job_Baby_Warlock)) {
 			close2;
 			if (countitem(6153) > 0)
@@ -34,36 +34,36 @@ OnTouch_:
 			end;
 		}
 		next;
-		switch(select("[DRY-RUN] Extend your hand.:Ignore it.")) {
+		switch(select("伸出手.:忽略它.")) {
 		case 1:
-			mes "[DRY-RUN]  - I extend my arm as a fierce sound resonates in my ear and a cool wave surrounds me - ";
+			mes " - 我伸出手臂，耳边响起猛烈的声音，凉爽的波浪包围着我 - ";
 			close2;
 			warp "spl_in02",79,102;
 			end;
 		case 2:
-			mes "[DRY-RUN]  - You ignore the distortion. - ";
+			mes " - 你忽略了扭曲。 - ";
 			close;
 		}
 	}
 	if (BaseLevel > 94 && (strnpcinfo(0) == "#distorted_space_2" || BaseJob == Job_Wizard)) {
-		mes "[DRY-RUN]  - There is a strange distortion here - ";
+		mes " - 这里有一种奇怪的扭曲 - ";
 		next;
-		switch(select("[DRY-RUN] Search the area.:Ignore it.")) {
+		switch(select("搜索区域.:忽略它.")) {
 		case 1:
-			mes "[DRY-RUN]  - There appears to be nothing here. But I can definitely feel something around here... - ";
+			mes " - 这里似乎什么都没有。但我确实能感觉到周围有些什么... - ";
 			next;
-			switch(select("[DRY-RUN] Extend arm.:Leave it alone.")) {
+			switch(select("伸出手臂.:离开它.")) {
 			case 1:
-				mes "[DRY-RUN]  - I extend my arm as a fierce sound resonates in my ear and a cool wave surrounds me - ";
+				mes " - 我伸出手臂，耳边响起猛烈的声音，凉爽的波浪包围着我 - ";
 				close2;
 				warp "spl_in02",79,102;
 				end;
 			case 2:
-				mes "[DRY-RUN]  - You decide to leave it alone. - ";
+				mes " - 你决定不去碰它。 - ";
 				close;
 			}
 		case 2:
-			mes "[DRY-RUN]  - You ignore it. - ";
+			mes " - 你忽略它。 - ";
 			close;
 		}
 	}
@@ -217,60 +217,60 @@ spl_in02,77,107,5	script	Assistant#Warlock1	446,{
 		callfunc "F_Warlock";
 		end;
 	} else if (job_wl == 1) {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] You're... we've met before.";
-		mes "[DRY-RUN] Can you imagine how severely I was scolded by my master?!";
-		mes "[DRY-RUN] If you have any business with me, just go away!";
+		mes "[尤普]";
+		mes "你...我们以前见过。";
+		mes "你能想象我被我的师父骂得有多惨吗？";
+		mes "如果你有事找我，就请离开！";
 		next;
-		switch(select("[DRY-RUN] Leave.:Stay.")) {
+		switch(select("离开.:留下.")) {
 		case 1:
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] Leave me alone...!";
+			mes "[尤普]";
+			mes "别打扰我...！";
 			close2;
 			warp "splendide",200,100;
 			end;
 		case 2:
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] What?!";
-			mes "[DRY-RUN] Just do whatever you want...";
-			mes "[DRY-RUN] My master will deal with you then.";
+			mes "[尤普]";
+			mes "什么？！";
+			mes "随便你怎么做...";
+			mes "我的师父会处理你的。";
 			close;
 		}
 	} else if (job_wl == 2 || job_wl == 3) {
-		mes "[DRY-RUN] [Yoop]";
+		mes "[尤普]";
 		if (job_wl == 2) {
-			mes "[DRY-RUN] Dear, master! My pony-tail is funny looking?!";
-			mes "[DRY-RUN] Oh, but I spent a lot time on it!";
+			mes "亲爱的，师父！我的马尾看起来好笑吗？！";
+			mes "哦，但我花了很多时间在上面！";
 			next;
-			mes "[DRY-RUN] [Master Egnoloria]";
-			mes "[DRY-RUN] It's noisy.";
-			mes "[DRY-RUN] I need to meditate";
-			mes "[DRY-RUN] so do as I said.";
+			mes "[埃格诺洛里亚大师]";
+			mes "太吵了。";
+			mes "我需要冥想，";
+			mes "所以请照我说的做。";
 			next;
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] Huh..";
-			mes "[DRY-RUN] Oh, yeah!";
+			mes "[尤普]";
+			mes "嗯..";
+			mes "哦，对了！";
 			next;
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] Hey, human!";
-			mes "[DRY-RUN] Would you like to";
-			mes "[DRY-RUN] become a Warlock?";
+			mes "[尤普]";
+			mes "嘿，人类！";
+			mes "你想要";
+			mes "成为一个巫师吗？";
 			next;
 		}
 		if (SkillPoint != 0) {
-			mes "[DRY-RUN] First, use all of your remaining job skill points before continuing.";
+			mes "首先，在继续之前，请使用你所有剩余的职业技能点。";
 			set job_wl,3;
 			close;
 		}
-		mes "[DRY-RUN] This is the Master's";
-		mes "[DRY-RUN] decision so let me know.";
+		mes "这是大师的";
+		mes "决定，所以请告诉我。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] We need to test if your body can withstand being a Warlock.";
-		mes "[DRY-RUN] So you need to gather materials to prove yourself.";
+		mes "[尤普]";
+		mes "我们需要测试你的身体是否能承受成为巫师。";
+		mes "所以你需要收集材料来证明自己。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] Please gather ^000077Glittering Crystal^000000s and ^000077Giant Bradium Fragment^000000s.";
+		mes "[尤普]";
+		mes "请收集 ^000077闪光水晶^000000 和 ^000077巨型铂金碎片^000000。";
 		next;
 		callsub L_Quest,1;
 		close;
@@ -278,106 +278,106 @@ spl_in02,77,107,5	script	Assistant#Warlock1	446,{
 		if (countitem(6152) == 0 || countitem(6151) == 0)
 			callsub L_Quest,0;
 		else {
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] I can't conduct the task here. I need to go to my lab.";
-			mes "[DRY-RUN] My lab is located on the north western part of Splendide.";
+			mes "[尤普]";
+			mes "我无法在这里进行任务。我需要去我的实验室。";
+			mes "我的实验室位于斯普兰蒂德的西北部。";
 		}
 		close;
 	} else if (job_wl == 5) {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] This stone is well made.";
-		mes "[DRY-RUN] Please go to my Master.";
+		mes "[尤普]";
+		mes "这块石头做得很好。";
+		mes "请去找我的师傅。";
 		close;
 	} else {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] A Magic Chamber is created from magic materials.";
+		mes "[尤普]";
+		mes "魔法室是由魔法材料构成的。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] This combined stone is formed differently according to the raw materials and the way of treating it.";
+		mes "[尤普]";
+		mes "这个合成石的形成方式因原材料和处理方式的不同而有所不同。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] But most of stones are quite similar!";
-		mes "[DRY-RUN] We can't differentiate them easily.";
+		mes "[尤普]";
+		mes "但大多数石头都是相似的！";
+		mes "我们无法轻易区分它们。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] Even I don't know how it all works.";
+		mes "[尤普]";
+		mes "连我都不知道这一切是如何运作的。";
 		close;
 	}
 
 L_Quest:
-	mes "[DRY-RUN] [Yoop]";
-	mes "[DRY-RUN] You must be wearing these Magical Stone Rings to get these items while hunting.";
-	mes "[DRY-RUN] You need to hunt Naga and Bradium Golems while wearing these rings.";
+	mes "[尤普]";
+	mes "你必须佩戴这些魔法石戒指才能在狩猎时获得这些物品。";
+	mes "你需要在佩戴这些戒指的情况下猎杀娜迦和布拉迪姆傀儡。";
 	next;
 	if (getarg(0)) {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] Show us how strong you are. And don't forget to wear this.";
+		mes "[尤普]";
+		mes "展示你的实力吧。别忘了佩戴这个。";
 		set job_wl,4;
 		getitem 2796,1; //Magical_Stone
 		getitem 2797,1; //Magical_Stone_
 		changequest 11106,11107;
 		next;
 	}
-	mes "[DRY-RUN] [Yoop]";
-	mes "[DRY-RUN] Bring these stones with you or else you won't be able to return!";
-	mes "[DRY-RUN] Be careful!";
+	mes "[尤普]";
+	mes "带上这些石头，否则你将无法返回！";
+	mes "小心！";
 	next;
-	mes "[DRY-RUN] [Yoop]";
-	mes "[DRY-RUN] The person next to my Master will let you out if you talk to him.";
+	mes "[尤普]";
+	mes "我主人身边的人会让你出去，如果你和他说话的话。";
 	next;
-	mes "[DRY-RUN] [Yoop]";
-	mes "[DRY-RUN] My lab is located on the north western part of Splendide. Bring these to me when you've gathered them.";
+	mes "[尤普]";
+	mes "我的实验室位于斯普兰蒂德的西北部。当你收集完这些后，带给我。";
 	return;
 }
 
 spl_in02,60,231,5	script	Yoop#Warlock	446,{
-	mes "[DRY-RUN] [Yoop]";
+	mes "[尤普]";
 	if (job_wl < 4) {
-		mes "[DRY-RUN] Who are you?";
-		mes "[DRY-RUN] Get out of here!";
+		mes "你是谁？";
+		mes "滚出这里！";
 		close;
 	} else if (job_wl == 4) {
-		mes "[DRY-RUN] You're back?";
+		mes "你回来了？";
 		next;
-		switch(select("[DRY-RUN] I brought the materials.:I've lost the Magical Stones.:Nothing.")) {
+		switch(select("我带来了材料。:我丢失了魔法石。:没什么。")) {
 		case 1:
-			mes "[DRY-RUN] [Yoop]";
+			mes "[尤普]";
 			if (countitem(6152) == 0 || countitem(6151) == 0) {
-				mes "[DRY-RUN] ......";
-				mes "[DRY-RUN] ......Where?";
-				mes "[DRY-RUN] Don't bother me!";
+				mes "......";
+				mes "......哪里？";
+				mes "别打扰我！";
 				next;
-				mes "[DRY-RUN] [Yoop]";
-				mes "[DRY-RUN] We need to test if your body can withstand being a Warlock.";
-				mes "[DRY-RUN] So you need to gather materials to prove yourself.";
+				mes "[尤普]";
+				mes "我们需要测试你的身体是否能承受成为巫师。";
+				mes "所以你需要收集材料来证明自己。";
 				next;
-				mes "[DRY-RUN] [Yoop]";
-				mes "[DRY-RUN] Please gather ^000077Glittering Crystal^000000s and ^000077Giant Bradium Fragment^000000s.";
+				mes "[尤普]";
+				mes "请收集 ^000077闪光水晶^000000 和 ^000077巨型铂金碎片^000000。";
 				next;
-				mes "[DRY-RUN] [Yoop]";
-				mes "[DRY-RUN] You must be wearing these Magical Stone Rings to get these items while hunting.";
-				mes "[DRY-RUN] You need to hunt Naga and Bradium Golems while wearing these rings.";
+				mes "[尤普]";
+				mes "你必须佩戴这些魔法石戒指才能在狩猎时获得这些物品。";
+				mes "你需要在佩戴这些戒指的情况下猎杀娜迦和布拉迪姆傀儡。";
 				next;
-				mes "[DRY-RUN] [Yoop]";
-				mes "[DRY-RUN] Bring these stones with you or else you won't be able to return!";
-				mes "[DRY-RUN] Be careful!";
+				mes "[尤普]";
+				mes "带上这些石头，否则你将无法返回！";
+				mes "小心！";
 				close;
 			} else if (countitem(6152) && countitem(6151)) {
 				if (isequipped(2796) || isequipped(2797)) {
-					mes "[DRY-RUN] Bring me back the magical stones.";
+					mes "把魔法石带回来给我。";
 					close;
 				}
 				if (countitem(2796) == 0 || countitem(2797) == 0) {
-					mes "[DRY-RUN] It seems that you don't have it?";
-					mes "[DRY-RUN] You lost it?";
+					mes "看来你没有带吗？";
+					mes "你丢了它？";
 					next;
-					mes "[DRY-RUN] [Yoop]";
-					mes "[DRY-RUN] Please find that stone and come back to me.";
+					mes "[尤普]";
+					mes "请找到那块石头，回来找我。";
 					close;
 				}
-				mes "[DRY-RUN] Alright! All the materials are ready!";
-				mes "[DRY-RUN] While I am concentrating on working on this stone. Can you go back to my master?";
-				mes "[DRY-RUN] I will follow up once it's done.";
+				mes "好的！所有材料都准备好了！";
+				mes "在我专心处理这块石头的时候，你能回去找我的师父吗？";
+				mes "一旦完成，我会跟进的。";
 				delitem 2796,countitem(2796); //Magical_Stone
 				delitem 2797,countitem(2797); //Magical_Stone_
 				delitem 6152,countitem(6152); //Glittering_Crystal
@@ -387,27 +387,27 @@ spl_in02,60,231,5	script	Yoop#Warlock	446,{
 				close;
 			}
 		case 2:
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] What?!";
-			mes "[DRY-RUN] I asked you to double check it and make sure you wore it!";
+			mes "[尤普]";
+			mes "什么？！";
+			mes "我让你仔细检查一下，确保你穿上了它！";
 			next;
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] Please check whether you misplaced it or if you already have it equipped.";
+			mes "[尤普]";
+			mes "请检查一下你是否放错了地方，或者你已经装备上了。";
 			next;
-			switch(select("[DRY-RUN] I found it.:Nah.")) {
+			switch(select("我找到了。:不。")) {
 			case 1:
-				mes "[DRY-RUN] [Yoop]";
-				mes "[DRY-RUN] Don't tease me!";
-				mes "[DRY-RUN] It's not hard to tell if you have it or not!";
+				mes "[尤普]";
+				mes "别逗我！";
+				mes "你是否有它并不难判断！";
 				close;
 			case 2:
 				if ((isequipped(2796) == 0 && countitem(2796) == 0) || (isequipped(2797) == 0 && countitem(2797) == 0)) {
 					if (countitem(732) > 0) {
-						switch(select("[DRY-RUN] Give 3 carat diamond.:Just quit it.")) {
+						switch(select("给我3克拉的钻石。:别再说了。")) {
 						case 1:
-							mes "[DRY-RUN] [Yoop]";
-							mes "[DRY-RUN] I will overlook your fault.";
-							mes "[DRY-RUN] Please be careful with it.";
+							mes "[尤普]";
+							mes "我会宽恕你的错误。";
+							mes "请小心使用它。";
 							delitem 732,1; //Crystal_Jewel__
 							if (isequipped(2796) == 0 && countitem(2796) == 0)
 								getitem 2796,1; //Magical_Stone
@@ -415,46 +415,46 @@ spl_in02,60,231,5	script	Yoop#Warlock	446,{
 								getitem 2797,1; //Magical_Stone_
 							close;
 						case 2:
-							mes "[DRY-RUN] [Yoop]";
-							mes "[DRY-RUN] Just show me your good faith!";
+							mes "[尤普]";
+							mes "只要给我展现你的诚意！";
 							close;
 						}
 					}
-					mes "[DRY-RUN] [Yoop]";
-					mes "[DRY-RUN] How can you can say that?";
-					mes "[DRY-RUN] ^000077Just apologize^000000!";
-					mes "[DRY-RUN] I guess I could give you more stones if you give me say a 3 carat diamond...";
+					mes "[尤普]";
+					mes "你怎么能这么说？";
+					mes "^000077只要道歉就好^000000!";
+					mes "如果你给我一颗3克拉的钻石，我想我可以给你更多的宝石...";
 					close;
 				}
-				mes "[DRY-RUN] [Yoop]";
+				mes "[尤普]";
 				if (isequipped(2796) || isequipped(2797)) {
-					mes "[DRY-RUN] Please check your equipment window...";
-					mes "[DRY-RUN] You sure you don't have it?";
+					mes "请检查你的装备窗口...";
+					mes "你确定你没有吗？";
 					close;
 				}
-				mes "[DRY-RUN] Then what's that you are holding now...?";
+				mes "那你现在手里拿的是什么...?";
 				close;
 			}
 		case 3:
-			mes "[DRY-RUN] [Yoop]";
-			mes "[DRY-RUN] What...?";
-			mes "[DRY-RUN] Don't bother me, I am quite busy.";
+			mes "[尤普]";
+			mes "什么...?";
+			mes "别打扰我，我很忙。";
 			close;
 		}
 	} else {
-		mes "[DRY-RUN] I am focusing on meditating.";
-		mes "[DRY-RUN] So I can create magic.";
+		mes "我正在专注于冥想。";
+		mes "这样我才能创造魔法。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] And... you seem to have more talent on this than regular mages.";
-		mes "[DRY-RUN] Maybe if I become an alchemist, I might be better than I am now don't you think?";
+		mes "[尤普]";
+		mes "而且... 你似乎在这方面比普通的魔法师更有天赋。";
+		mes "也许如果我成为一个炼金术士，我可能会比现在更好，你觉得呢？";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] I'm studying to better myself.";
+		mes "[尤普]";
+		mes "我在学习以提升自己。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] If am inside of 'the room of time and magic', I will catch up with your power!";
-		mes "[DRY-RUN] Hahahaha...";
+		mes "[尤普]";
+		mes "如果我在‘时间与魔法之室’里面，我将赶上你的力量！";
+		mes "哈哈哈哈...";
 		close;
 	}
 }
@@ -464,30 +464,30 @@ spl_in02,84,103,3	script	Assistant#Warlock2	439,{
 		callfunc "F_Warlock";
 		end;
 	} else if (job_wl == 1) {
-		mes "[DRY-RUN] [Assistant]";
-		mes "[DRY-RUN] Human! What do you want?";
+		mes "[助手]";
+		mes "人类！你想要什么？";
 		close;
 	} else if (job_wl < 6) {
-		mes "[DRY-RUN] [Assistant]";
-		mes "[DRY-RUN] It's not me you are looking for currently.";
+		mes "[助手]";
+		mes "你现在找的不是我。";
 		close;
 	} else if (job_wl == 6) {
 		if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
-			mes "[DRY-RUN] You're carring out too many items.";
-			mes "[DRY-RUN] You'd better minimize your weight.";
+			mes "你携带的物品太多了。";
+			mes "你最好减少你的重量。";
 			close;
 		}
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] The test isn't that hard.";
-		mes "[DRY-RUN] We can create the magic stone in the magic room.";
+		mes "[尤普]";
+		mes "测试并没有那么难。";
+		mes "我们可以在魔法室里创造魔法石。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] Be careful of the monsters in the test room.";
-		mes "[DRY-RUN] These are rainbow Rubies sealed with a Warlock's magic.";
-		mes "[DRY-RUN] Use these during the test.";
+		mes "[尤普]";
+		mes "小心测试室里的怪物。";
+		mes "这些是被魔法师的魔法封印的彩虹红宝石。";
+		mes "在测试期间使用这些。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] I will guide you into the magic room.";
+		mes "[尤普]";
+		mes "我将引导你进入魔法室。";
 		set job_wl,7;
 		changequest 11109,11110;
 		getitem 12384,5; //Rainbow_Ruby_Water
@@ -499,13 +499,13 @@ spl_in02,84,103,3	script	Assistant#Warlock2	439,{
 		end;
 	} else if (job_wl == 7) {
 		if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
-			mes "[DRY-RUN] You're carring out too many items.";
-			mes "[DRY-RUN] You'd better minimize your weight.";
+			mes "你携带的物品太多了。";
+			mes "你最好减少你的重量。";
 			close;
 		}
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] Would you like to try it again?";
-		mes "[DRY-RUN] Let me give you more rubies.";
+		mes "[尤普]";
+		mes "你想再试一次吗？";
+		mes "让我给你更多的红宝石。";
 		next;
 		if (countitem(12384)) delitem 12384,countitem(12384); //Rainbow_Ruby_Water
 		if (countitem(12386)) delitem 12386,countitem(12386); //Rainbow_Ruby_Wind
@@ -519,33 +519,33 @@ spl_in02,84,103,3	script	Assistant#Warlock2	439,{
 		warp "job3_war01",23,20;
 		end;
 	} else if (job_wl == 8) {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] You have successfully crystallized the Hollow Stone.";
-		mes "[DRY-RUN] I'm sorry that I've doubted you.";
+		mes "[尤普]";
+		mes "你成功地结晶了空心石。";
+		mes "对不起，我曾怀疑过你。";
 		if (countitem(12384)) delitem 12384,countitem(12384); //Rainbow_Ruby_Water
 		if (countitem(12386)) delitem 12386,countitem(12386); //Rainbow_Ruby_Wind
 		if (countitem(12387)) delitem 12387,countitem(12387); //Rainbow_Ruby_Earth
 		if (countitem(12385)) delitem 12385,countitem(12385); //Rainbow_Ruby_Fire
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] All of the tests are done. Now talk to Master Engoloria.";
-		mes "[DRY-RUN] I'm so happy that you have succeeded.";
+		mes "[尤普]";
+		mes "所有测试都完成了。现在去找恩戈洛里亚大师。";
+		mes "我很高兴你成功了。";
 		set job_wl,9;
 		changequest 11111,11112;
 		close;
 	} else if (job_wl == 9) {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] All of the tests are done. Now talk to Master Engoloria.";
-		mes "[DRY-RUN] I'm so happy that you have succeeded.";
+		mes "[尤普]";
+		mes "所有测试都完成了。现在去找恩戈洛里亚大师。";
+		mes "我很高兴你成功了。";
 		close;
 	} else {
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] I can feel that you have strong magic.";
-		mes "[DRY-RUN] I envy you.";
+		mes "[尤普]";
+		mes "我能感觉到你有强大的魔法。";
+		mes "我羡慕你。";
 		next;
-		mes "[DRY-RUN] [Yoop]";
-		mes "[DRY-RUN] It deserves something special.";
-		mes "[DRY-RUN] Don't abuse it.";
+		mes "[尤普]";
+		mes "这值得一些特别的东西。";
+		mes "不要滥用它。";
 		close;
 	}
 }
@@ -555,24 +555,24 @@ spl_in02,78,110,5	script	Assistant#Warlock3	437,{
 		callfunc "F_Warlock";
 		end;
 	}
-	mes "[DRY-RUN] [Assistant]";
-	mes "[DRY-RUN] ......";
+	mes "[助手]";
+	mes "......";
 	switch(job_wl) {
 		case 1: mes "If you don't have anything to say to me, would you just leave?"; break;
 		case 2: mes "I don't have a pony-tail..."; break;
 		default: mes "Please be quiet while my master is meditating."; break;
 	}
 	next;
-	switch(select("[DRY-RUN] Leave:Stay")) {
+	switch(select("离开:留下")) {
 	case 1:
-		mes "[DRY-RUN] [Assistant]";
-		mes "[DRY-RUN] Then be careful.";
+		mes "[助手]";
+		mes "那就小心点。";
 		close2;
 		warp "splendide",200,100;
 		end;
 	case 2:
-		mes "[DRY-RUN] [Assistant]";
-		mes "[DRY-RUN] ......";
+		mes "[助手]";
+		mes "......";
 		close;
 	}
 }
@@ -726,31 +726,31 @@ spl_in02,80,108,5	script	Guild Master#Warlock	465,{
 }
 
 job3_war01,22,22,7	script	Yoop#WRR	439,{
-	mes "[DRY-RUN] [Yoop]";
-	mes "[DRY-RUN] If you ask Ebein to be sent to the magical room, he would send you there.";
-	mes "[DRY-RUN] Wait in the queue to enter the Chamber of Magic.";
+	mes "[尤普]";
+	mes "如果你请求艾贝因送你去魔法室，他会送你去。";
+	mes "在魔法室入口排队等候。";
 	close;
 }
 
 job3_war01,29,25,0	script	Ebein#WRR	437,{
-	mes "[DRY-RUN] [Ebein]";
-	mes "[DRY-RUN] Would you like to take a test?";
-	mes "[DRY-RUN] If you stand by in the waiting room, you'll be able to go into the Chamber of Magic.";
+	mes "[艾贝因]";
+	mes "你想参加测试吗？";
+	mes "如果你在候诊室等候，你就能进入魔法室。";
 	next;
-	mes "[DRY-RUN] [Ebein]";
-	mes "[DRY-RUN] If there're others inside the room, you just need to wait for a while.";
+	mes "[艾贝因]";
+	mes "如果房间里有其他人，你只需等一会儿。";
 	next;
-	switch(select("[DRY-RUN] Go to the waiting room.:Go outside.")) {
+	switch(select("去候诊室.:出去。")) {
 	case 1:
-		mes "[DRY-RUN] [Ebein]";
-		mes "[DRY-RUN] Then please enter the room yourself.";
-		mes "[DRY-RUN] Make sure you have enough potions to survive the test as the monsters are very powerful in the Chamber.";
+		mes "[艾贝因]";
+		mes "那么请你自己进入房间。";
+		mes "确保你有足够的药水来在考验中生存，因为房间里的怪物非常强大。";
 		close;
 	case 2:
-		mes "[DRY-RUN] [Ebein]";
-		mes "[DRY-RUN] ......";
-		mes "[DRY-RUN] Then I will send you outside.";
-		mes "[DRY-RUN] Bye...";
+		mes "[艾贝因]";
+		mes "......";
+		mes "然后我会把你送出去。";
+		mes "再见...";
 		close2;
 		warp "spl_in02",79,102;
 		end;

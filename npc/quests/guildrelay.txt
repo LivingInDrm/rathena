@@ -47,25 +47,25 @@
 		set .@GID, GetCastleData("prtg_cas"+strnpcinfo(2),1);
 	}
 	if (checkweight(908,630) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a minute! You're";
-		mes "[DRY-RUN] carrying too many items";
-		mes "[DRY-RUN] right now: store some of";
-		mes "[DRY-RUN] your extra things in Kafra";
-		mes "[DRY-RUN] Storage, and then come back.^000000";
+		mes "^3355FF等一下！你";
+		mes "携带的物品太多了";
+		mes "现在：把一些";
+		mes "多余的东西存放在卡普拉";
+		mes "仓库，然后再回来。^000000";
 		close;
 	}
 	if (.@GID == 0) {
-		mes "[DRY-RUN] ^3355FFYou're not sure why, but";
-		mes "[DRY-RUN] this guy seems to be pretty";
-		mes "[DRY-RUN] depressed. He briefly makes";
-		mes "[DRY-RUN] eye contact with you, but then";
-		mes "[DRY-RUN] breaks it off. Apparently,";
-		mes "[DRY-RUN] he wants to be left alone.^000000";
+		mes "^3355FF你不知道为什么，但";
+		mes "这个家伙似乎很";
+		mes "沮丧。他短暂地与你";
+		mes "目光接触，但随后";
+		mes "又移开了。显然，";
+		mes "他想一个人待着。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFThere's no reason for you";
-		mes "[DRY-RUN] to stick around an ownerless";
-		mes "[DRY-RUN] stronghold. You may as well";
-		mes "[DRY-RUN] head on your way.^000000";
+		mes "^3355FF你没有理由待在一个没有主人的";
+		mes "停留在无人拥有的";
+		mes "据点。你可以继续前进了。";
+		mes "继续你的旅程。^000000";
 		close;
 	}
 	if (getcharid(2) == .@GID) {
@@ -75,234 +75,234 @@
 				if (guildtime > 2299) {
 					if (.@time > 0101 && .@time < guildtime) {
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Oh, you're back. So did you";
-						mes "[DRY-RUN] rest up enough? I'm sure the";
-						mes "[DRY-RUN] other guild members are";
-						mes "[DRY-RUN] feeling refreshed by now.";
-						mes "[DRY-RUN] From the looks of it, you're";
-						mes "[DRY-RUN] ready for your next mission.";
+						mes "哦，你回来了。那么你";
+						mes "休息得够吗？我相信其余的";
+						mes "公会成员现在应该";
+						mes "感觉焕然一新。";
+						mes "从你的样子来看，你";
+						mes "准备好进行下一个任务了。";
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] The next step for";
-						mes "[DRY-RUN] you is to take this, the";
-						mes "[DRY-RUN] ''Spirit of Trust.'' If this";
-						mes "[DRY-RUN] guild is going to be solid,";
-						mes "[DRY-RUN] you need to think how much";
-						mes "[DRY-RUN] trust there is in the guild.";
+						mes "你接下来的步骤是";
+						mes "接受这个，";
+						mes "''信任之灵''。如果这个";
+						mes "公会要稳固，";
+						mes "你需要考虑一下有多少";
+						mes "公会中的信任。";
 						set guildrelay_q,8;
 						getitem 7240,1; //Soul_Of_Confidence
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Your second test will be";
-						mes "[DRY-RUN] to give that ^4D4DFFSpirit of Trust^000000";
-						mes "[DRY-RUN] to a sage that can manipulate";
-						mes "[DRY-RUN] nature's attributes. In other";
-						mes "[DRY-RUN] words, a Sage or Scholar";
-						mes "[DRY-RUN] must carry out this task.";
+						mes "你的第二个测试将是";
+						mes "将那个 ^4D4DFF信任之灵^000000";
+						mes "交给一个能够操控";
+						mes "自然属性的贤者。换句话说，";
+						mes "一个贤者或学者";
+						mes "必须完成这个任务。";
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] The Spirit of Trust must";
+						mes "信任之灵必须";
 						mes "be delivered to ^4D4DFF" + .@name3$ + "^000000,";
-						mes "[DRY-RUN] so don't forget to relay";
-						mes "[DRY-RUN] that information to your";
-						mes "[DRY-RUN] Sage or Scholar. Very well,";
-						mes "[DRY-RUN] good luck on your journey.";
+						mes "所以不要忘记传达";
+						mes "这些信息给你的";
+						mes "贤者或学者。很好，";
+						mes "祝你旅途顺利。";
 						close;
 					}
 					else {
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Ah, did you rest we-- Oh.";
-						mes "[DRY-RUN] Why do you look so pale?";
-						mes "[DRY-RUN] You can't accomplish great";
-						mes "[DRY-RUN] deeds when you're overworked!";
-						mes "[DRY-RUN] Rest. Your guild must be able";
-						mes "[DRY-RUN] to depend on your strength.";
+						mes "啊，你休息了吗——哦。";
+						mes "你为什么看起来这么苍白？";
+						mes "你无法完成伟大的";
+						mes "事业当你过度劳累时！";
+						mes "休息一下。你的公会必须能够";
+						mes "依靠你的力量。";
 						emotion ET_SURPRISE;
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Your determination and";
-						mes "[DRY-RUN] spirit is commendable, but";
-						mes "[DRY-RUN] have the patience to recollect";
-						mes "[DRY-RUN] yourself when you must. I will";
-						mes "[DRY-RUN] be waiting here, so please";
-						mes "[DRY-RUN] come back to me later.";
+						mes "你的决心和";
+						mes "你的精神值得赞扬，但";
+						mes "要有耐心去回忆";
+						mes "在必要时重新审视自己。我会";
+						mes "在这里等你，所以请";
+						mes "稍后再来找我。";
 						close;
 					}
 				}
 				else if (guildtime > 2200) {
 					if (.@time > 0001 && .@time < guildtime) {
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Oh, you're back. So did you";
-						mes "[DRY-RUN] rest up enough? I'm sure the";
-						mes "[DRY-RUN] other guild members are";
-						mes "[DRY-RUN] feeling refreshed by now.";
-						mes "[DRY-RUN] From the looks of it, you're";
-						mes "[DRY-RUN] ready for your next mission.";
+						mes "哦，你回来了。那么你";
+						mes "休息得够吗？我相信其余的";
+						mes "公会成员现在应该";
+						mes "感觉焕然一新。";
+						mes "从你的样子来看，你";
+						mes "准备好进行下一个任务了。";
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] The next step for";
-						mes "[DRY-RUN] you is to take this, the";
-						mes "[DRY-RUN] ''Spirit of Trust.'' If this";
-						mes "[DRY-RUN] guild is going to be solid,";
-						mes "[DRY-RUN] you need to think how much";
-						mes "[DRY-RUN] trust there is in the guild.";
+						mes "你接下来的步骤是";
+						mes "接受这个，";
+						mes "''信任之灵''。如果这个";
+						mes "公会要稳固，";
+						mes "你需要考虑一下有多少";
+						mes "公会中的信任。";
 						set guildrelay_q,8;
 						getitem 7240,1; //Soul_Of_Confidence
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Your second test will be";
-						mes "[DRY-RUN] to give that ^4D4DFFSpirit of Trust^000000";
-						mes "[DRY-RUN] to a sage that can manipulate";
-						mes "[DRY-RUN] nature's attributes. In other";
-						mes "[DRY-RUN] words, a Sage or Scholar";
-						mes "[DRY-RUN] must carry out this task.";
+						mes "你的第二个测试将是";
+						mes "将那个 ^4D4DFF信任之灵^000000";
+						mes "交给一个能够操控";
+						mes "自然属性的贤者。换句话说，";
+						mes "一个贤者或学者";
+						mes "必须完成这个任务。";
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] The Spirit of Trust must";
+						mes "信任之灵必须";
 						mes "be delivered to ^4D4DFF" + .@name3$ + "^000000,";
-						mes "[DRY-RUN] so don't forget to relay";
-						mes "[DRY-RUN] that information to your";
-						mes "[DRY-RUN] Sage or Scholar. Very well,";
-						mes "[DRY-RUN] good luck on your journey.";
+						mes "所以不要忘记传达";
+						mes "这些信息给你的";
+						mes "贤者或学者。很好，";
+						mes "祝你旅途顺利。";
 						close;
 					}
 					else {
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Ah, did you rest we-- Oh.";
-						mes "[DRY-RUN] Why do you look so pale?";
-						mes "[DRY-RUN] You can't accomplish great";
-						mes "[DRY-RUN] deeds when you're overworked!";
-						mes "[DRY-RUN] Rest. Your guild must be able";
-						mes "[DRY-RUN] to depend on your strength.";
+						mes "啊，你休息了吗——哦。";
+						mes "你为什么看起来这么苍白？";
+						mes "你无法完成伟大的";
+						mes "事业当你过度劳累时！";
+						mes "休息一下。你的公会必须能够";
+						mes "依靠你的力量。";
 						emotion ET_SURPRISE;
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Your determination and";
-						mes "[DRY-RUN] spirit is commendable, but";
-						mes "[DRY-RUN] have the patience to recollect";
-						mes "[DRY-RUN] yourself when you must. I will";
-						mes "[DRY-RUN] be waiting here, so please";
-						mes "[DRY-RUN] come back to me later.";
+						mes "你的决心和";
+						mes "你的精神值得赞扬，但";
+						mes "要有耐心去回忆";
+						mes "在必要时重新审视自己。我会";
+						mes "在这里等你，所以请";
+						mes "稍后再来找我。";
 						close;
 					}
 				}
 				else if ((.@time - guildtime) > 0200) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Oh, you're back. So did you";
-					mes "[DRY-RUN] rest up enough? I'm sure the";
-					mes "[DRY-RUN] other guild members are";
-					mes "[DRY-RUN] feeling refreshed by now.";
-					mes "[DRY-RUN] From the looks of it, you're";
-					mes "[DRY-RUN] ready for your next mission.";
+					mes "哦，你回来了。那么你";
+					mes "休息得够吗？我相信其余的";
+					mes "公会成员现在应该";
+					mes "感觉焕然一新。";
+					mes "从你的样子来看，你";
+					mes "准备好进行下一个任务了。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] The next step for";
-					mes "[DRY-RUN] you is to take this, the";
-					mes "[DRY-RUN] ''Spirit of Trust.'' If this";
-					mes "[DRY-RUN] guild is going to be solid,";
-					mes "[DRY-RUN] you need to think how much";
-					mes "[DRY-RUN] trust there is in the guild.";
+					mes "你接下来的步骤是";
+					mes "接受这个，";
+					mes "''信任之灵''。如果这个";
+					mes "公会要稳固，";
+					mes "你需要考虑一下有多少";
+					mes "公会中的信任。";
 					set guildrelay_q,8;
 					getitem 7240,1; //Soul_Of_Confidence
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Your second test will be";
-					mes "[DRY-RUN] to give that ^4D4DFFSpirit of Trust^000000";
-					mes "[DRY-RUN] to a sage that can manipulate";
-					mes "[DRY-RUN] nature's attributes. In other";
-					mes "[DRY-RUN] words, a Sage or Scholar";
-					mes "[DRY-RUN] must carry out this task.";
+					mes "你的第二个测试将是";
+					mes "将那个 ^4D4DFF信任之灵^000000";
+					mes "交给一个能够操控";
+					mes "自然属性的贤者。换句话说，";
+					mes "一个贤者或学者";
+					mes "必须完成这个任务。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] The Spirit of Trust must";
+					mes "信任之灵必须";
 					mes "be delivered to ^4D4DFFY" + .@name3$ + "^000000,";
-					mes "[DRY-RUN] so don't forget to relay";
-					mes "[DRY-RUN] that information to your";
-					mes "[DRY-RUN] Sage or Scholar. Very well,";
-					mes "[DRY-RUN] good luck on your journey.";
+					mes "所以不要忘记传达";
+					mes "这些信息给你的";
+					mes "贤者或学者。很好，";
+					mes "祝你旅途顺利。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Ah, did you rest we-- Oh.";
-					mes "[DRY-RUN] Why do you look so pale?";
-					mes "[DRY-RUN] You can't accomplish great";
-					mes "[DRY-RUN] deeds when you're overworked!";
-					mes "[DRY-RUN] Rest. Your guild must be able";
-					mes "[DRY-RUN] to depend on your strength.";
+					mes "啊，你休息了吗——哦。";
+					mes "你为什么看起来这么苍白？";
+					mes "你无法完成伟大的";
+					mes "事业当你过度劳累时！";
+					mes "休息一下。你的公会必须能够";
+					mes "依靠你的力量。";
 					emotion ET_SURPRISE;
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Your determination and";
-					mes "[DRY-RUN] spirit is commendable, but";
-					mes "[DRY-RUN] have the patience to recollect";
-					mes "[DRY-RUN] yourself when you must. I will";
-					mes "[DRY-RUN] be waiting here, so please";
-					mes "[DRY-RUN] come back to me later.";
+					mes "你的决心和";
+					mes "你的精神值得赞扬，但";
+					mes "要有耐心去回忆";
+					mes "在必要时重新审视自己。我会";
+					mes "在这里等你，所以请";
+					mes "稍后再来找我。";
 					close;
 				}
 			}
 			else if (guildrelay_q == 150) {
 				if ((guildtime > 2299 && .@time > 0101 && .@time < guildtime) || (guildtime > 2199 && .@time > 0001 && .@time < guildtime) || ((.@time - guildtime) > 0200)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Ah, you look well rested,";
-					mes "[DRY-RUN] master. It is now time for";
-					mes "[DRY-RUN] you to proceed with the third";
-					mes "[DRY-RUN] test. Let me remind you that";
-					mes "[DRY-RUN] these spirits are incredibly";
-					mes "[DRY-RUN] precious. Do not lose them.";
+					mes "啊，你看起来休息得很好，";
+					mes "大师。现在是时候";
+					mes "你继续进行第三个";
+					mes "测试。让我提醒你，";
+					mes "这些灵魂是非常";
+					mes "珍贵的。不要丢失它们。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Like all the other spirits,";
-					mes "[DRY-RUN] please keep this one safely.";
-					mes "[DRY-RUN] This is the ^4D4DFFSpirit of Peace^000000.";
-					mes "[DRY-RUN] It seems contradictive that";
-					mes "[DRY-RUN] strongholds and might can";
-					mes "[DRY-RUN] bring peace, but it's true.";
+					mes "像所有其他灵魂一样，";
+					mes "请安全地保管这个。";
+					mes "这是^4D4DFF和平之灵^000000。";
+					mes "似乎矛盾的是，";
+					mes "据点和力量可以";
+					mes "带来和平，但这是真的。";
 					set guildrelay_q,15;
 					getitem 7246,1; //Soul_Of_Peace
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If power isn't used to";
-					mes "[DRY-RUN] protect the weak, then";
-					mes "[DRY-RUN] some bully, in one form or";
-					mes "[DRY-RUN] another, will always come";
-					mes "[DRY-RUN] to exploit them. That is why";
-					mes "[DRY-RUN] Tristan III built the strongholds.";
+					mes "如果力量不用于";
+					mes "保护弱者，那么";
+					mes "某种形式的欺凌者就会出现。";
+					mes "另一个，总会到来";
+					mes "来利用他们。这就是为什么";
+					mes "特里斯坦三世建立了据点。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Please dispatch a Rogue";
-					mes "[DRY-RUN] or Stalker to bring this";
+					mes "请派遣一名盗贼";
+					mes "或追踪者来带回这个";
 					mes "Spirit of Peace to ^4D4DFF" + .@name4$ + "^000000.";
-					mes "[DRY-RUN] If you don't know any Rogues";
-					mes "[DRY-RUN] or Stalkers, then it would be";
-					mes "[DRY-RUN] prudent for you to meet one.";
+					mes "如果你不认识任何盗贼";
+					mes "或追踪者，那么你最好";
+					mes "去见一个。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Yes, there's no substitute";
-					mes "[DRY-RUN] for the subterfuge and intel";
-					mes "[DRY-RUN] gathering that a Rogue can";
+					mes "是的，没有任何替代品";
+					mes "可以替代盗贼所能提供的";
+					mes "潜伏和情报收集。";
 					mes "provide. Anyway, " + .@name4$ + " will";
-					mes "[DRY-RUN] guide you on your third test.";
+					mes "他可以指导你完成第三次测试。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Ah, did you rest we-- Oh.";
-					mes "[DRY-RUN] Why do you look so pale?";
-					mes "[DRY-RUN] You can't accomplish great";
-					mes "[DRY-RUN] deeds when you're overworked!";
-					mes "[DRY-RUN] Rest. Your guild must be able";
-					mes "[DRY-RUN] to depend on your strength.";
+					mes "啊，你休息了吗——哦。";
+					mes "你为什么看起来这么苍白？";
+					mes "你无法完成伟大的";
+					mes "事业当你过度劳累时！";
+					mes "休息一下。你的公会必须能够";
+					mes "依靠你的力量。";
 					emotion ET_SURPRISE;
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Your determination and";
-					mes "[DRY-RUN] spirit is commendable, but";
-					mes "[DRY-RUN] have the patience to recollect";
-					mes "[DRY-RUN] yourself when you must. I will";
-					mes "[DRY-RUN] be waiting here, so please";
-					mes "[DRY-RUN] come back to me later.";
+					mes "你的决心和";
+					mes "你的精神值得赞扬，但";
+					mes "要有耐心去回忆";
+					mes "在必要时重新审视自己。我会";
+					mes "在这里等你，所以请";
+					mes "稍后再来找我。";
 					close;
 				}
 			}
@@ -314,107 +314,107 @@
 				|| (guildtime > 1899 && .@time > 0001 && .@time < guildtime)
 				|| ((.@time - guildtime) > 0500)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Ah, have you rested well,";
-					mes "[DRY-RUN] master? Please excuse my";
-					mes "[DRY-RUN] manners a while ago. I had";
-					mes "[DRY-RUN] to report your trial results,";
-					mes "[DRY-RUN] and lost my composure for a";
-					mes "[DRY-RUN] moment. It won't happen again.";
+					mes "啊，你休息得好吗，";
+					mes "大师？请原谅我的";
+					mes "失礼。刚才我有些";
+					mes "要报告你的试炼结果，";
+					mes "一时失态了。";
+					mes "这种事不会再发生了。";
 					set guildrelay_q,999;
 					close;
 				}
 				else {
-					mes "[DRY-RUN] ...............................";
-					mes "[DRY-RUN] ...............................";
+					mes "...............................";
+					mes "...............................";
 					next;
-					mes "[DRY-RUN] ...............................";
-					mes "[DRY-RUN] ...............................";
-					mes "[DRY-RUN] ...............................";
+					mes "...............................";
+					mes "...............................";
+					mes "...............................";
 					next;
 					mes "[" + .@name$ + "]";
 					emotion ET_HUK;
-					mes "[DRY-RUN] Oh! M-master? Wh-when";
-					mes "[DRY-RUN] did you...? I'm so sorry.";
-					mes "[DRY-RUN] I was busy working.";
+					mes "哦！大、大师？你、你什么时候";
+					mes "来了...? 我非常抱歉。";
+					mes "我一直在忙工作。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] It's only been a few days";
-					mes "[DRY-RUN] since you finished the trials.";
-					mes "[DRY-RUN] For now, you should rest and";
-					mes "[DRY-RUN] take care of your guild, okay?";
-					mes "[DRY-RUN] Please come back later.";
-					mes "[DRY-RUN] I've got much to attend to...";
+					mes "距离你完成试炼才过了几天。";
+					mes "现在，你应该休息一下，";
+					mes "照顾好你的公会，好吗？";
+					mes "请稍后再回来。";
+					mes "请稍后再来。";
+					mes "我有很多事情要处理...";
 					close;
 				}
 			}
 			else if (guildrelay_q == 999) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Good day, master.";
-				mes "[DRY-RUN] Is something wrong?";
-				mes "[DRY-RUN] You look as though";
-				mes "[DRY-RUN] something is on your mind.";
+				mes "您好，主人。";
+				mes "有什么问题吗？";
+				mes "你看起来好像";
+				mes "心里有事。";
 				next;
-				switch(select("[DRY-RUN] N-no, nothing.:I want to take a lesson.")) {
+				switch(select("不，没有，什么都没有。:我想上课。")) {
 				case 1:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Hm? That's strange.";
+					mes "嗯？这很奇怪。";
 					emotion ET_SWEAT;
-					mes "[DRY-RUN] You didn't want to take";
-					mes "[DRY-RUN] the trials again, did you?";
+					mes "你不想再接受";
+					mes "这些考验，对吧？";
 					close;
 				case 2:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I see. You know it won't";
-					mes "[DRY-RUN] be easy, but I suppose you";
-					mes "[DRY-RUN] are prepared. Here, take";
-					mes "[DRY-RUN] the ^4D4DFFSpirit of Guild^000000, and";
-					mes "[DRY-RUN] give it to your most trusted";
-					mes "[DRY-RUN] Knight or Lord Knight.";
+					mes "我明白了。你知道这不会";
+					mes "很容易，但我想你";
+					mes "是有准备的。来，拿着";
+					mes "^4D4DFF公会之灵^000000，";
+					mes "把它交给你最信任的";
+					mes "骑士或骑士领主。";
 					set guildrelay_q,1;
 					getitem 7234,1; //Soul_Of_Guild
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] This Knight should take";
-					mes "[DRY-RUN] the Spirit of Guild over";
+					mes "这位骑士应该接受";
+					mes "公会的精神。";
 					mes "to ^4D4DFF" + .@name2$ + "^000000. Good luck, and";
-					mes "[DRY-RUN] may the gods be with you.";
+					mes "愿众神与你同在。";
 					close;
 				}
 			}
 			else if (guildrelay_q == 1) {
 				if (countitem(7234) > 0) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You still have the Spirit of";
-					mes "[DRY-RUN] Guild I gave you? I suppose";
-					mes "[DRY-RUN] you haven't found a Knight or";
-					mes "[DRY-RUN] Lord Knight to which it can";
-					mes "[DRY-RUN] be entrusted. It is imperative";
-					mes "[DRY-RUN] that you find someone soon.";
+					mes "你还保留着我给你的";
+					mes "公会精神吗？我想";
+					mes "你还没有找到骑士或";
+					mes "骑士领主来接收它。";
+					mes "找到合适的人是至关重要的。";
+					mes "你必须尽快找到某人。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] For the sake of the guild, it";
-					mes "[DRY-RUN] will be advantageous to have";
-					mes "[DRY-RUN] a Knight or Lord Knight on";
-					mes "[DRY-RUN] your side: their combat skills";
-					mes "[DRY-RUN] can turn the tide of battles.";
+					mes "为了公会的利益，";
+					mes "拥有一位骑士或骑士领主将是有利的。";
+					mes "在你身边。";
+					mes "你方：他们的战斗技能";
+					mes "可以扭转战局。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] When you do find a Knight,";
-					mes "[DRY-RUN] give him the Spirit of Guild";
+					mes "当你找到一位骑士时，";
+					mes "把公会之灵交给他";
 					mes "and ask him to find " + .@name2$ + "";
-					mes "[DRY-RUN] since he will conducting";
-					mes "[DRY-RUN] the trial. Good luck";
-					mes "[DRY-RUN] to you, master.";
+					mes "因为他将进行";
+					mes "试炼。祝你好运";
+					mes "，大师。";
 					close;
 				}
 				else if (countitem(7239) > 0) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Ah, is this the Spirit";
-					mes "[DRY-RUN] of Advance? This must mean";
-					mes "[DRY-RUN] that you completed the first";
-					mes "[DRY-RUN] test. Keep up the good work.";
-					mes "[DRY-RUN] Hand me the spirit, and allow";
-					mes "[DRY-RUN] me to give you your guild's reward.";
+					mes "啊，这是公会之灵吗？";
+					mes "这一定意味着";
+					mes "你完成了第一次";
+					mes "测试。继续保持良好的工作。";
+					mes "把灵魂交给我，让我";
+					mes "给你公会的奖励。";
 					delitem 7239,1; //Soul_Of_Proceeding
 					set guildtime,.@time;
 					set guildrelay_q,100;
@@ -437,52 +437,52 @@
 					}
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You've done well, but";
-					mes "[DRY-RUN] there are more trials";
-					mes "[DRY-RUN] ahead of you. For now,";
-					mes "[DRY-RUN] you should rest before";
-					mes "[DRY-RUN] undertaking the second test.";
-					mes "[DRY-RUN] Please come when you are ready.";
+					mes "你做得很好，但";
+					mes "还有更多的考验";
+					mes "在你面前。现在，";
+					mes "你应该休息一下再";
+					mes "进行第二次测试。";
+					mes "请在你准备好时来。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you're not busy, then";
-					mes "[DRY-RUN] why don't you spend your";
-					mes "[DRY-RUN] time increasing morale";
-					mes "[DRY-RUN] among your guild members?";
-					mes "[DRY-RUN] Perhaps some team building";
-					mes "[DRY-RUN] exercise can be of help.";
+					mes "如果你不忙的话，";
+					mes "那为什么不花点时间";
+					mes "来提升你们的士气";
+					mes "在你的公会成员之间呢？";
+					mes "也许一些团队建设的";
+					mes "活动会有所帮助。";
 					close;
 				}
 			}
 			else if (guildrelay_q == 8) {
 				if (countitem(7240) > 0) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You must be having";
+					mes "你一定有很多事情要做。";
 					mes "trouble finding " + .@name3$ + ".";
-					mes "[DRY-RUN] Make sure that you have";
-					mes "[DRY-RUN] a Sage or Scholar friend";
-					mes "[DRY-RUN] give that Spirit of Trust to";
-					mes "[DRY-RUN] him once you locate him.";
+					mes "确保你拥有";
+					mes "一个贤者或学者朋友";
+					mes "把那信任之灵交给";
+					mes "他，一旦你找到他。";
 					close;
 				}
 				else if (countitem(7245) > 0) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Ah, so you already completed";
-					mes "[DRY-RUN] the test and earned the Spirit";
-					mes "[DRY-RUN] of Friendship? Good work.";
-					mes "[DRY-RUN] You must now recognize the";
-					mes "[DRY-RUN] value of teamwork. Please give";
-					mes "[DRY-RUN] the Spirit of Friendship to me.";
+					mes "啊，你已经完成了";
+					mes "测试并获得了友情之灵？";
+					mes "干得好。";
+					mes "你现在必须认识到";
+					mes "团队合作的价值。请把";
+					mes "友情之灵交给我。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Now, please take this";
-					mes "[DRY-RUN] reward and share it with";
-					mes "[DRY-RUN] your guild members. This";
-					mes "[DRY-RUN] may come in handy in future";
-					mes "[DRY-RUN] challenges that you will all";
-					mes "[DRY-RUN] face together. Good work!";
+					mes "现在，请接受这个";
+					mes "奖励，并与";
+					mes "你的公会成员分享。这";
+					mes "将来可能会派上用场";
+					mes "你们将要面对的挑战";
+					mes "一起面对。干得好！";
 					delitem 7245,1; //Soul_Of_Friendship
 					set guildtime, atoi( gettimestr("%H%M",5) );
 					set guildrelay_q,150;
@@ -525,57 +525,57 @@
 					}
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You should rest and";
-					mes "[DRY-RUN] recuperate before you";
-					mes "[DRY-RUN] undertake the third test.";
-					mes "[DRY-RUN] I too would benefit from";
-					mes "[DRY-RUN] a brief respite. Please come";
-					mes "[DRY-RUN] back to me when you are ready.";
+					mes "你应该休息一下，";
+					mes "在你";
+					mes "进行第三次测试之前恢复精力。";
+					mes "我也需要";
+					mes "短暂的休息。请在你准备好时";
+					mes "回来找我。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you're not busy, then";
-					mes "[DRY-RUN] why don't you spend your";
-					mes "[DRY-RUN] time increasing morale";
-					mes "[DRY-RUN] among your guild members?";
-					mes "[DRY-RUN] Perhaps some team building";
-					mes "[DRY-RUN] exercise can be of help.";
+					mes "如果你不忙的话，";
+					mes "那为什么不花点时间";
+					mes "来提升你们的士气";
+					mes "在你的公会成员之间呢？";
+					mes "也许一些团队建设的";
+					mes "活动会有所帮助。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If it suits your fancy,";
-					mes "[DRY-RUN] you may simply come here";
-					mes "[DRY-RUN] and join me for a cup of tea.";
+					mes "如果你愿意，";
+					mes "你可以直接来这里";
+					mes "和我一起喝杯茶。";
 					close;
 				}
 			}
 			else if (guildrelay_q == 15) {
 				if (countitem(7246) > 0) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You still have the";
-					mes "[DRY-RUN] Spirit of Peace? If you";
-					mes "[DRY-RUN] don't have any Rogues or";
-					mes "[DRY-RUN] Stalkers in your guild, now";
-					mes "[DRY-RUN] would be the time to recruit";
-					mes "[DRY-RUN] them. Heed my advice...";
+					mes "你仍然拥有这个";
+					mes "和平之灵？如果你";
+					mes "没有任何流氓或";
+					mes "追踪者在你的公会中，现在";
+					mes "正是招募他们的时机";
+					mes "听从我的建议……";
 					close;
 				}
 				else if (countitem(7251) > 0) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I see that you've completed";
-					mes "[DRY-RUN] the last test and received";
-					mes "[DRY-RUN] the Spirit of Victory. Heh.";
-					mes "[DRY-RUN] Victory is the natural result";
-					mes "[DRY-RUN] when your guild works together";
-					mes "[DRY-RUN] in harmony as a united team.";
+					mes "我看到你已经完成了";
+					mes "最后的测试并获得了";
+					mes "胜利之灵。呵呵。";
+					mes "胜利是你公会齐心协力";
+					mes "合作的自然结果，";
+					mes "作为一个团结的团队。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Congratulations on";
-					mes "[DRY-RUN] completing all the trials.";
-					mes "[DRY-RUN] Please accept this reward,";
-					mes "[DRY-RUN] given on the behalf of King";
-					mes "[DRY-RUN] Tristan III, and share it with";
-					mes "[DRY-RUN] guild. Once again, good work.";
+					mes "恭喜你";
+					mes "完成所有的试炼。";
+					mes "请接受这个奖励，";
+					mes "这是国王代表所给予的";
+					mes "特里斯坦三世，并与";
+					mes "公会分享。再一次，干得好。";
 					delitem 7251,1; //Soul_Of_Victory
 					set guildtime, atoi( gettimestr("%H%M",5) );
 					set guildrelay_q,25;
@@ -606,107 +606,107 @@
 					}
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You and your guild must be";
-					mes "[DRY-RUN] quite tired now. Your rooms";
-					mes "[DRY-RUN] are ready for you if you decide";
-					mes "[DRY-RUN] to rest. Please visit me again";
-					mes "[DRY-RUN] if you wish to take the trials";
-					mes "[DRY-RUN] again. I'll see you later.";
+					mes "你和你的公会一定很";
+					mes "累吧。你的房间";
+					mes "如果你决定休息，已经为你准备好了。";
+					mes "请再次来找我";
+					mes "如果你希望再次接受考验。";
+					mes "我稍后再见你。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you aren't particularly";
-					mes "[DRY-RUN] busy, then why don't you";
-					mes "[DRY-RUN] spend some time with your";
-					mes "[DRY-RUN] guild members? Building";
-					mes "[DRY-RUN] strong camaraderie never";
-					mes "[DRY-RUN] fails to pay off. Never.";
+					mes "如果你不是特别";
+					mes "忙的话，为什么不";
+					mes "花点时间和你的";
+					mes "公会成员？建设";
+					mes "强大的友谊从未";
+					mes "失效。绝不会。";
 					close;
 				}
 			}
 			else {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Greetings, master.";
+				mes "您好，主人。";
 				mes "I am " + .@name$ + ", one of the four";
-				mes "[DRY-RUN] Great Sages, and I am here";
-				mes "[DRY-RUN] to serve you under the orders";
-				mes "[DRY-RUN] of wise and benevolent";
-				mes "[DRY-RUN] King Tristan III.";
+				mes "伟大的贤者，我在这里";
+				mes "在明智而仁慈的";
+				mes "特里斯坦三世国王的命令下";
+				mes "为您服务。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] We test guilds that own";
-				mes "[DRY-RUN] strongholds, and see if they";
-				mes "[DRY-RUN] are qualified to be considered";
-				mes "[DRY-RUN] elite guilds. Our goal is to";
-				mes "[DRY-RUN] train guilds to strengthen";
-				mes "[DRY-RUN] our military forces.";
+				mes "我们测试拥有";
+				mes "据点的公会，看看他们";
+				mes "是否有资格被认为是";
+				mes "精英公会。我们的目标是";
+				mes "训练公会以增强";
+				mes "我们的军事力量。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Although your guild has the";
-				mes "[DRY-RUN] strength and courage to conquer";
-				mes "[DRY-RUN] a stronghold, we want you to";
-				mes "[DRY-RUN] prove that your guild has";
-				mes "[DRY-RUN] a strong sense of justice,";
-				mes "[DRY-RUN] honor, and compassion.";
+				mes "虽然你的公会拥有";
+				mes "征服的力量和勇气，";
+				mes "我们希望你们";
+				mes "证明你的公会拥有";
+				mes "强烈的正义感，";
+				mes "荣誉与同情。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] It is up to you. Will";
-				mes "[DRY-RUN] you take the test I have";
-				mes "[DRY-RUN] for you? I will do my best to";
-				mes "[DRY-RUN] help your guild grow stronger";
-				mes "[DRY-RUN] so that you will be better";
-				mes "[DRY-RUN] able to protect the weak.";
+				mes "这取决于你。你会";
+				mes "参加我给你的测试吗？";
+				mes "为了你？我会尽力去";
+				mes "帮助你的公会变得更强大";
+				mes "以便你能更好地";
+				mes "保护弱者。";
 				next;
-				switch(select("[DRY-RUN] I want to take the test.:Let me think about it.")) {
+				switch(select("我想参加测试。:让我考虑一下。")) {
 				case 1:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Is that so? In this test,";
-					mes "[DRY-RUN] you will be given orders";
-					mes "[DRY-RUN] and special spirits. These";
-					mes "[DRY-RUN] spirits will only be given";
-					mes "[DRY-RUN] once: you must not lose them.";
+					mes "是吗？在这个测试中，";
+					mes "你将会接到命令";
+					mes "和特殊的灵魂。这些";
+					mes "灵魂只会被给予一次：";
+					mes "你必须不能失去它们。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you lose the spirit,";
-					mes "[DRY-RUN] you will be judged as";
-					mes "[DRY-RUN] irresponsible, and will be";
-					mes "[DRY-RUN] unable to complete the tests.";
-					mes "[DRY-RUN] You must find any lost spirit to";
-					mes "[DRY-RUN] proceed. There's no second chance.";
+					mes "如果你失去了灵魂，";
+					mes "你将被判定为";
+					mes "不负责任，并将无法";
+					mes "完成测试。";
+					mes "你必须找到任何丢失的灵魂才能";
+					mes "继续。没有第二次机会。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] There are a few things you";
-					mes "[DRY-RUN] should know. Firstly, you can";
-					mes "[DRY-RUN] only take care of one spirit";
-					mes "[DRY-RUN] at a time. Secondly, you need";
-					mes "[DRY-RUN] to do the tests in order and";
-					mes "[DRY-RUN] follow the guide's instructions.";
+					mes "有几件事情你";
+					mes "应该知道。首先，你可以";
+					mes "只照顾一个灵魂";
+					mes "一次。其次，你需要";
+					mes "按顺序进行测试，并";
+					mes "遵循指导者的指示。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Thirdly, the spirit should";
-					mes "[DRY-RUN] be given to the type of person";
-					mes "[DRY-RUN] specified in the test. Those";
-					mes "[DRY-RUN] are the rules. Remember them.";
+					mes "第三，灵魂应该";
+					mes "交给测试中指定的类型的人。";
+					mes "这些就是规则。记住它们。";
+					mes "好的，这是第一个";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Okay, this is the first";
-					mes "[DRY-RUN] spirit that will be entrusted";
-					mes "[DRY-RUN] to you. Make sure to give this";
-					mes "[DRY-RUN] to a Knight or Lord Knight.";
-					mes "[DRY-RUN] The test has now officially";
-					mes "[DRY-RUN] begun. Good luck to you.";
+					mes "将被委托给你的灵魂。";
+					mes "确保将其交给骑士或骑士领主。";
+					mes "测试现在正式开始。";
+					mes "给骑士或骑士领主。";
+					mes "测试现在正式开始了";
+					mes "开始了。祝你好运。";
 					set guildrelay_q,1;
 					getitem 7234,1; //Soul_Of_Guild
 					close;
 				case 2:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I suppose it would be";
-					mes "[DRY-RUN] a good idea to discuss";
-					mes "[DRY-RUN] this with your guild before";
-					mes "[DRY-RUN] you decide to commit to";
-					mes "[DRY-RUN] taking the test. Feel free";
-					mes "[DRY-RUN] free to visit me again later.";
+					mes "我想这可能是";
+					mes "一个好主意来讨论";
+					mes "在你决定之前和你的公会";
+					mes "你决定投入到";
+					mes "参加测试。随时欢迎你";
+					mes "再来找我。";
 					close;
 				}
 			}
@@ -716,19 +716,19 @@
 				if (BaseJob == Job_Knight) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] So you were the one chosen";
-					mes "[DRY-RUN] by your guild master? I see.";
-					mes "[DRY-RUN] You should deliver that Spirit";
+					mes "所以你是被选中的人";
+					mes "由你的公会长？我明白了。";
+					mes "你应该把那个灵魂交给";
 					mes "of Guild over to " + .@name2$ + ".";
-					mes "[DRY-RUN] He'll instruct you further.";
+					mes "他会进一步指导你。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] The Spirit of Guild is";
-					mes "[DRY-RUN] useless unless it is in the";
-					mes "[DRY-RUN] hands of a Knight or Lord";
-					mes "[DRY-RUN] Knight. You should speak";
+					mes "公会之灵是";
+					mes "没有它是无用的";
+					mes "骑士或骑士领主的手";
+					mes "骑士。你应该和他交谈";
 					mes "to " + .@name2$ + " to learn more.";
 					close;
 				}
@@ -737,37 +737,37 @@
 				if ((guildrelay_q == 88) && (BaseJob == Job_Knight)) {
 					mes "[" + .@name$ + "]";
 					mes "Ah," + strcharinfo(0) + "";
-					mes "[DRY-RUN] Congratulations. It looks";
-					mes "[DRY-RUN] like you did a good job.";
-					mes "[DRY-RUN] Please give the Spirit of";
-					mes "[DRY-RUN] Charge to the next person";
-					mes "[DRY-RUN] to continue the testing.";
+					mes "恭喜你。看起来";
+					mes "你做得很好。";
+					mes "请将充能之灵交给";
+					mes "下一个人以继续测试。";
+					mes "我已经解释了一切，但";
 					next;
 					mes "[" + .@name$ + "]";
 					mes "" + .@name2$ + " should have";
-					mes "[DRY-RUN] explained everything, but";
-					mes "[DRY-RUN] if you forgot, then please";
-					mes "[DRY-RUN] go and ask him again.";
+					mes "如果你忘记了，请";
+					mes "去再问他一次。";
+					mes "啊，我看到你有";
 					close;
 				}
 				else if (BaseJob == Job_Blacksmith) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] Ah, I see that you have";
-					mes "[DRY-RUN] the Spirit of Charge.";
-					mes "[DRY-RUN] Heh heh, it's always exciting";
-					mes "[DRY-RUN] to charge into battle, isn't";
-					mes "[DRY-RUN] it? Well then, do your best.";
+					mes "充能之灵。";
+					mes "嘿嘿，总是令人兴奋的";
+					mes "嘿嘿，总是令人兴奋";
+					mes "冲锋陷阵，不是吗？";
+					mes "那么，加油吧。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name2$ + " knows more about the";
-					mes "[DRY-RUN] Spirit of Charge, so you should";
-					mes "[DRY-RUN] ask him more about that spirit.";
+					mes "冲锋的精神，所以你应该";
+					mes "问他更多关于那个灵魂的事。";
 					close;
 				}
 			}
@@ -775,34 +775,34 @@
 				if ((guildrelay_q == 87) && (BaseJob == Job_Blacksmith)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
 					mes "" + .@name2$ + " should have";
-					mes "[DRY-RUN] explained everything, but";
-					mes "[DRY-RUN] if you forgot, then please";
-					mes "[DRY-RUN] go and ask him again.";
+					mes "如果你忘记了，请";
+					mes "去再问他一次。";
+					mes "啊，我看到你有";
 					close;
 				}
 				else if (BaseJob == Job_Alchemist) {
 					mes "[" + .@name$ + "]";
 					mes "Hello, " + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I see that you posess";
-					mes "[DRY-RUN] the Spirit of Association.";
-					mes "[DRY-RUN] Good luck with your test.";
+					mes "我看到你拥有";
+					mes "协会的灵魂。";
+					mes "祝你考试顺利。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "Talk to " + .@name2$ + " if you want";
-					mes "[DRY-RUN] to know more about the";
-					mes "[DRY-RUN] Spirit of Association.";
+					mes "了解更多关于这个";
+					mes "协会之灵。";
 					close;
 				}
 			}
@@ -810,34 +810,34 @@
 				if ((guildrelay_q == 86) && (BaseJob == Job_Alchemist)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
 					mes "" + .@name2$ + " should have";
-					mes "[DRY-RUN] explained everything, but";
-					mes "[DRY-RUN] if you forgot, then please";
-					mes "[DRY-RUN] go and ask him again.";
+					mes "如果你忘记了，请";
+					mes "去再问他一次。";
+					mes "啊，我看到你有";
 					close;
 				}
 				else if (BaseJob == Job_Hunter) {
 					mes "[" + .@name$ + "]";
 					mes "Hello, " + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I see that you posess";
-					mes "[DRY-RUN] the Spirit of Coordination.";
-					mes "[DRY-RUN] Good luck on your test.";
+					mes "我看到你拥有";
+					mes "协调之灵。";
+					mes "祝你考试顺利。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name2$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Coordination";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "协调之灵";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -845,20 +845,20 @@
 				if ((guildrelay_q == 85) && (BaseJob == Job_Hunter)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello, " + strcharinfo(0) + ".";
-					mes "[DRY-RUN] Congratulations, it looks";
-					mes "[DRY-RUN] like you finished the test.";
-					mes "[DRY-RUN] You may now give the Spirit of";
-					mes "[DRY-RUN] Advance to your guild master.";
+					mes "恭喜你，看起来";
+					mes "你完成了测试。";
+					mes "你现在可以给";
+					mes "你的公会长晋升。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name2$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Advance so";
-					mes "[DRY-RUN] you should consult him.";
+					mes "进阶之灵，所以";
+					mes "你应该咨询他。";
 					close;
 				}
 			}
@@ -866,21 +866,21 @@
 				if (BaseJob == Job_Sage) {
 					mes "[" + .@name$ + "]";
 					mes "Hello, " + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I see that you possess";
-					mes "[DRY-RUN] the Spirit of Trust.";
-					mes "[DRY-RUN] Good luck, and do not";
-					mes "[DRY-RUN] fail the trust placed in";
-					mes "[DRY-RUN] you by your guild.";
+					mes "我看到你拥有";
+					mes "信任之灵。";
+					mes "祝你好运，不要";
+					mes "辜负你所在公会的信任。";
+					mes "关于信任之灵";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name3$ + " will know more";
-					mes "[DRY-RUN] about the Spirit of Trust";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "如果你不记得";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -888,37 +888,37 @@
 				if ((guildrelay_q == 71) && (BaseJob == Job_Sage)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you don't remember";
+					mes "那么你可能想要";
 					mes "" + .@name3$ + "'s explanation,";
-					mes "[DRY-RUN] then you might want to";
-					mes "[DRY-RUN] go back to him and ask";
-					mes "[DRY-RUN] him to tell you again.";
+					mes "回去问问他";
+					mes "让他再告诉你一次。";
+					mes "我看到你拥有";
 					close;
 				}
 				else if ((BaseJob == Job_Bard) || (BaseJob == Job_Dancer)) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] I see that you have the";
-					mes "[DRY-RUN] Spirit of Union. Always keep";
-					mes "[DRY-RUN] in mind that the strength of";
-					mes "[DRY-RUN] your guild is directly";
-					mes "[DRY-RUN] related to its unity.";
+					mes "联合之灵。时刻记住";
+					mes "你公会的力量是直接";
+					mes "相关的。";
+					mes "你的公会直接";
+					mes "与其团结相关。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name3$ + " will know more";
-					mes "[DRY-RUN] about the Spirit of Union";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "关于团结之灵";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -926,37 +926,37 @@
 				if ((guildrelay_q == 72) && ((BaseJob == Job_Bard) || (BaseJob == Job_Dancer))) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you don't remember";
+					mes "那么你可能想要";
 					mes "" + .@name3$ + "'s explanation,";
-					mes "[DRY-RUN] then you might want to";
-					mes "[DRY-RUN] go back to him and ask";
-					mes "[DRY-RUN] him to tell you again.";
+					mes "回去问问他";
+					mes "让他再告诉你一次。";
+					mes "我看到你拥有";
 					close;
 				}
 				else if (BaseJob == Job_Assassin) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] I see that you have the Spirit";
-					mes "[DRY-RUN] of Combination. Remember that";
-					mes "[DRY-RUN] working in tandem, combining";
-					mes "[DRY-RUN] your guild's skills and talents,";
-					mes "[DRY-RUN] will realize your true potential.";
+					mes "我看到你拥有灵魂";
+					mes "的结合。记住";
+					mes "协同工作，结合";
+					mes "你公会的技能和才能，";
+					mes "将实现你们的真正潜力。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name3$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Combination so";
-					mes "[DRY-RUN] you should consult him.";
+					mes "结合之灵，所以";
+					mes "你应该咨询他。";
 					close;
 				}
 			}
@@ -964,37 +964,37 @@
 				if ((guildrelay_q == 74) && (BaseJob == Job_Assassin)) {
 					mes "[" + .@name$ + "]";
 					mes "Greetings, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] did you rest well? Please";
-					mes "[DRY-RUN] give that spirit to the next";
-					mes "[DRY-RUN] person so that the testing";
-					mes "[DRY-RUN] of your guild may continue.";
+					mes "你休息得好吗？请";
+					mes "把那个灵魂交给下一个";
+					mes "人，以便测试";
+					mes "你公会的过程可以继续。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you don't remember";
+					mes "那么你可能想要";
 					mes "" + .@name3$ + "'s explanation,";
-					mes "[DRY-RUN] then you might want to";
-					mes "[DRY-RUN] go back to him and ask";
-					mes "[DRY-RUN] him to tell you again.";
+					mes "回去问问他";
+					mes "让他再告诉你一次。";
+					mes "我看到你拥有";
 					close;
 				}
 				else if (BaseJob == Job_Wizard) {
 					mes "[" + .@name$ + "]";
 					mes "Hello, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] I see that you've been";
-					mes "[DRY-RUN] entrusted with the Spirit";
-					mes "[DRY-RUN] of Solidarity. Do your best";
-					mes "[DRY-RUN] on this test for the sake";
-					mes "[DRY-RUN] of your guild, alright?";
+					mes "我看到你一直在";
+					mes "委托给精神";
+					mes "团结之精神。请尽力而为";
+					mes "为了你们的公会，做好这次测试";
+					mes "好吗？";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name3$ + " will know more";
-					mes "[DRY-RUN] about the Spirit of Solidarity";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "关于团结之精神";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -1002,21 +1002,21 @@
 				if ((guildrelay_q == 75) && (BaseJob == Job_Wizard)) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] congratulations on a job";
-					mes "[DRY-RUN] well done. Please give the";
-					mes "[DRY-RUN] Spirit of Friendship to your";
-					mes "[DRY-RUN] guild master to continue";
-					mes "[DRY-RUN] the guild testing.";
+					mes "恭喜你完成了一项工作";
+					mes "做得很好。请将";
+					mes "友谊之精神交给你的";
+					mes "公会长以继续";
+					mes "公会测试。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name3$ + " will know more";
-					mes "[DRY-RUN] about the Spirit of Friendship";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "关于友谊之精神";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -1024,21 +1024,21 @@
 				if (BaseJob == Job_Rogue) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] I see that you have the";
-					mes "[DRY-RUN] Spirit of Peace. Please";
-					mes "[DRY-RUN] do your best for the sake";
-					mes "[DRY-RUN] of the guild, though I do not";
-					mes "[DRY-RUN] doubt you'll pass this test.";
+					mes "联合之灵。时刻记住";
+					mes "和平之精神。请";
+					mes "为了你们的利益尽力而为";
+					mes "公会的，虽然我不";
+					mes "怀疑你能通过这个测试。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name4$ + " will know more";
-					mes "[DRY-RUN] about the Spirit of Peace";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "关于和平之灵";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -1046,34 +1046,34 @@
 				if ((guildrelay_q == 95) && (BaseJob == Job_Priest)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you don't remember";
+					mes "那么你可能想要";
 					mes "" + .@name4$ + "'s explanation,";
-					mes "[DRY-RUN] then you might want to";
-					mes "[DRY-RUN] go back to him and ask";
-					mes "[DRY-RUN] him to tell you again.";
+					mes "回去问问他";
+					mes "让他再告诉你一次。";
+					mes "我看到你拥有";
 					close;
 				}
 				else if (BaseJob == Job_Priest) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] please take good care of";
-					mes "[DRY-RUN] that Spirit of Determination.";
+					mes "请好好照顾";
+					mes "那个决心之灵。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name4$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Determination";
-					mes "[DRY-RUN] so you should consult him.";
+					mes "决心之灵";
+					mes "所以你应该咨询他。";
 					close;
 				}
 			}
@@ -1081,34 +1081,34 @@
 				if ((guildrelay_q == 98) && (BaseJob == Job_Priest)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you don't remember";
+					mes "那么你可能想要";
 					mes "" + .@name4$ + "'s explanation,";
-					mes "[DRY-RUN] then you might want to";
-					mes "[DRY-RUN] go back to him and ask";
-					mes "[DRY-RUN] him to tell you again.";
+					mes "回去问问他";
+					mes "让他再告诉你一次。";
+					mes "我看到你拥有";
 					close;
 				}
 				else if (BaseJob == Job_Crusader) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] please take good care";
-					mes "[DRY-RUN] of that Spirit of Service.";
+					mes "请好好照顾";
+					mes "那个服务之灵。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name4$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Service so";
-					mes "[DRY-RUN] you should consult him.";
+					mes "服务之灵，以便";
+					mes "你应该咨询他。";
 					close;
 				}
 			}
@@ -1116,34 +1116,34 @@
 				if ((guildrelay_q == 96) && (BaseJob == Job_Crusader)) {
 					mes "[" + .@name$ + "]";
 					mes "Hello," + strcharinfo(0) + ".";
-					mes "[DRY-RUN] I commend you on your work.";
-					mes "[DRY-RUN] Please give that spirit to";
-					mes "[DRY-RUN] the next person so that the";
-					mes "[DRY-RUN] testing can continue.";
+					mes "我赞扬你的工作。";
+					mes "请把那个灵魂交给";
+					mes "下一个人，这样";
+					mes "测试才能继续。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] If you don't remember";
+					mes "那么你可能想要";
 					mes "" + .@name4$ + "'s explanation,";
-					mes "[DRY-RUN] then you might want to";
-					mes "[DRY-RUN] go back to him and ask";
-					mes "[DRY-RUN] him to tell you again.";
+					mes "回去问问他";
+					mes "让他再告诉你一次。";
+					mes "我看到你拥有";
 					close;
 				}
 				else if (BaseJob == Job_Monk) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] please take good care";
-					mes "[DRY-RUN] of that Spirit of Glory.";
+					mes "请好好照顾";
+					mes "那个荣耀之灵。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name4$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Glory so you";
-					mes "[DRY-RUN] should consult him.";
+					mes "荣耀之灵，以便你";
+					mes "应该咨询他。";
 					close;
 				}
 			}
@@ -1151,30 +1151,30 @@
 				if ((guildrelay_q == 97) && (Class == Job_Monk)) {
 					mes "[" + .@name$ + "]";
 					mes "Ah, " + strcharinfo(0) + ",";
-					mes "[DRY-RUN] congratulations on a job";
-					mes "[DRY-RUN] well done. Please give";
-					mes "[DRY-RUN] the Spirit of Victory to your";
-					mes "[DRY-RUN] guild master. That's it for now.";
-					mes "[DRY-RUN] Good luck to you in the future.";
+					mes "恭喜你完成了一项工作";
+					mes "做得很好。请给";
+					mes "胜利之灵给你的";
+					mes "公会长。现在就这些了。";
+					mes "祝你未来好运。";
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] That spirit won't be very";
-					mes "[DRY-RUN] useful if it's not in the";
-					mes "[DRY-RUN] hands of the right person.";
+					mes "这种精神不会太有用的，";
+					mes "如果不在正确的人的手中。";
+					mes "交到合适的人手中。";
 					mes "" + .@name4$ + " will know more about";
-					mes "[DRY-RUN] the Spirit of Victory so you";
-					mes "[DRY-RUN] should consult him.";
+					mes "胜利之灵，所以你";
+					mes "应该咨询他。";
 					close;
 				}
 			}
 			else {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I'm sorry, but I'm too";
-				mes "[DRY-RUN] busy with my work to offer";
-				mes "[DRY-RUN] you any help right now.";
-				mes "[DRY-RUN] You'll have to forgive me.";
+				mes "抱歉，我太";
+				mes "忙于我的工作，无法提供";
+				mes "任何帮助。";
+				mes "你得原谅我。";
 				close;
 			}
 		}
@@ -1182,39 +1182,39 @@
 	else {
 		if (getcharid(2) == 0) {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] You haven't joined";
-			mes "[DRY-RUN] a guild yet? Why don't";
-			mes "[DRY-RUN] you think about joining";
-			mes "[DRY-RUN] one? Well, it's your decision,";
-			mes "[DRY-RUN] but I don't think you'd regret";
-			mes "[DRY-RUN] being part of a strong guild.";
+			mes "你还没有加入";
+			mes "公会吗？为什么不";
+			mes "考虑加入";
+			mes "一个呢？好吧，这是你的决定，";
+			mes "但我认为你不会后悔";
+			mes "成为一个强大公会的一部分。";
 			close;
 		}
 		else {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Ah, I see that you are";
-			mes "[DRY-RUN] affiliated with a guild.";
-			mes "[DRY-RUN] Have you come here";
-			mes "[DRY-RUN] as an invited guest?";
+			mes "啊，我看到你是";
+			mes "与一个公会有关联。";
+			mes "你是来这里的";
+			mes "作为受邀嘉宾吗？";
 			next;
-			switch(select("[DRY-RUN] No, not really...:I was invited by the guild master.")) {
+			switch(select("不，没什么...:我是被公会长邀请的。")) {
 			case 1:
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Oh, really?";
-				mes "[DRY-RUN] That's too bad...";
-				mes "[DRY-RUN] My apologies, but";
-				mes "[DRY-RUN] I can't allow strangers";
-				mes "[DRY-RUN] to simply come and go";
-				mes "[DRY-RUN] around here. Farewell, then.";
+				mes "哦，真的吗？";
+				mes "那太可惜了...";
+				mes "抱歉，但";
+				mes "我不能允许陌生人";
+				mes "随便进出";
+				mes "这里。再见了。";
 				next;
 				warp "alde_gld",186,157;
 				close;
 			case 2:
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Oh, really? Ah, now";
+				mes "哦，真的吗？啊，现在";
 				mes "I recognize you, ^4d4dff" + strcharinfo(0) + "^000000.";
-				mes "[DRY-RUN] Please come in, and make";
-				mes "[DRY-RUN] yourself comfortable.";
+				mes "请进，随便";
+				mes "坐。";
 				close;
 			}
 		}
@@ -1226,88 +1226,88 @@
 	getmapxy(.@m$,.@x,.@x,BL_NPC);
 	set .@GID, GetCastleData(.@m$,1);
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a minute! You're";
-		mes "[DRY-RUN] carrying too many items";
-		mes "[DRY-RUN] right now: store some of";
-		mes "[DRY-RUN] your extra things in Kafra";
-		mes "[DRY-RUN] Storage, and then come back.^000000";
+		mes "^3355FF等一下！你";
+		mes "携带的物品太多了";
+		mes "现在：把一些";
+		mes "多余的东西存放在卡普拉";
+		mes "仓库，然后再回来。^000000";
 		close;
 	}
 	if (.@GID == 0) {
-		mes "[DRY-RUN] ^3355FFYou're not sure why, but";
-		mes "[DRY-RUN] this guy seems to be pretty";
-		mes "[DRY-RUN] depressed. He briefly makes";
-		mes "[DRY-RUN] eye contact with you, but then";
-		mes "[DRY-RUN] breaks it off. Apparently,";
-		mes "[DRY-RUN] he wants to be left alone.^000000";
+		mes "^3355FF你不知道为什么，但";
+		mes "这个家伙似乎很";
+		mes "沮丧。他短暂地与你";
+		mes "目光接触，但随后";
+		mes "又移开了。显然，";
+		mes "他想一个人待着。^000000";
 		next;
-		mes "[DRY-RUN] ^3355FFThere's no reason for you";
-		mes "[DRY-RUN] to stick around an ownerless";
-		mes "[DRY-RUN] stronghold. You may as well";
-		mes "[DRY-RUN] head on your way.^000000";
+		mes "^3355FF你没有理由待在一个没有主人的";
+		mes "停留在无人拥有的";
+		mes "据点。你可以继续前进了。";
+		mes "继续你的旅程。^000000";
 		close;
 	}
 	if (getcharid(2) == .@GID) {
 		if (is_guild_leader() == true) {
 			if (countitem(7234) > 0) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm. You can't just keep";
-				mes "[DRY-RUN] that spirit to yourself.";
-				mes "[DRY-RUN] Give it to a ^FF0000Knight^000000 or";
-				mes "[DRY-RUN] a ^FF0000Lord Knight^000000. Hurry it up!";
-				mes "[DRY-RUN] You need to work fast to";
-				mes "[DRY-RUN] expand your guild.";
+				mes "嗯。你不能就这样保持";
+				mes "那个灵魂给自己。";
+				mes "把它给一个^FF0000骑士^000000或者";
+				mes "一个^FF0000骑士领主^000000。快点！";
+				mes "你需要快点工作才能";
+				mes "扩展你的公会。";
 				close;
 			}
 			else {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm. You seem awfully";
-				mes "[DRY-RUN] busy. Why don't you just";
-				mes "[DRY-RUN] take a break, and relax?";
-				mes "[DRY-RUN] It's alright to have fun";
-				mes "[DRY-RUN] if you're feeling a lot of";
-				mes "[DRY-RUN] pressure. Heh heh heh~";
+				mes "嗯。你看起来很忙";
+				mes "为什么不休息一下，放松一下呢？";
+				mes "休息一下是可以的";
+				mes "享受乐趣。";
+				mes "如果你感到很大压力，";
+				mes "呵呵呵~";
 				close;
 			}
 		}
 		else {
 			if ((BaseJob == Job_Knight) && (countitem(7234) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] For your first test,";
-				mes "[DRY-RUN] I'll start you off with";
-				mes "[DRY-RUN] something pretty simple.";
-				mes "[DRY-RUN] Just collect some items,";
-				mes "[DRY-RUN] and bring them to me. Ah, and";
-				mes "[DRY-RUN] your guild can help you too.";
+				mes "作为你的第一次测试，";
+				mes "我会让你从";
+				mes "一些相当简单的事情开始。";
+				mes "只需收集一些物品，";
+				mes "然后带给我。啊，还有";
+				mes "你的公会也可以帮助你。";
 				next;
 				switch(rand(1,3)) {
 				case 1:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] ^FF000030 Tongues^000000,";
-					mes "[DRY-RUN] ^FF000030 Dark Masks^000000, and";
-					mes "[DRY-RUN] ^FF000030 Shoulder Protectors^000000.";
-					mes "[DRY-RUN] That shouldn't be too";
-					mes "[DRY-RUN] hard now, right?";
+					mes "^FF000030 舌头^000000，";
+					mes "^FF000030 黑色面具^000000，以及";
+					mes "^FF000030 肩部保护器^000000。";
+					mes "这应该不会太难吧？";
+					mes "对吧？";
 					delitem 7234,1; //Soul_Of_Guild
 					set guildrelay_q,2;
 					close;
 				case 2:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] ^FF000030 Worn Out Pages^000000,";
-					mes "[DRY-RUN] ^FF000030 Round Shells^000000, and";
-					mes "[DRY-RUN] ^FF000030 Mole Whiskers^000000.";
-					mes "[DRY-RUN] That shouldn't be too";
-					mes "[DRY-RUN] hard now, right?";
+					mes "^FF000030 破旧的页面^000000,";
+					mes "^FF000030 圆壳^000000, 和";
+					mes "^FF000030 鼹鼠胡须^000000.";
+					mes "这应该不会太难吧？";
+					mes "对吧？";
 					delitem 7234,1; //Soul_Of_Guild
 					set guildrelay_q,3;
 					close;
 				case 3:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] ^FF000030 Frills^000000,";
-					mes "[DRY-RUN] ^FF000030 Sharp Papers^000000, and";
-					mes "[DRY-RUN] ^FF000030 Elder Pixie's Moustaches^000000.";
-					mes "[DRY-RUN] That shouldn't be too";
-					mes "[DRY-RUN] hard now, right?";
+					mes "^FF000030 装饰边^000000,";
+					mes "^FF000030 锋利的纸张^000000, 和";
+					mes "^FF000030 老年精灵的胡须^000000.";
+					mes "这应该不会太难吧？";
+					mes "对吧？";
 					delitem 7234,1; //Soul_Of_Guild
 					set guildrelay_q,89;
 					close;
@@ -1315,12 +1315,12 @@
 			}
 			if ((countitem(1015) > 29) && (countitem(7196) > 29) && (countitem(7157) > 29) && (guildrelay_q == 2)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Huh. I didn't actually";
-				mes "[DRY-RUN] expect that you'd collect";
-				mes "[DRY-RUN] all these items. Good job.";
-				mes "[DRY-RUN] Now, take this and give it to";
-				mes "[DRY-RUN] a Blacksmith or Mastersmith.";
-				mes "[DRY-RUN] Your guild's pretty good...";
+				mes "嗯。我其实没有";
+				mes "预料到你会收集";
+				mes "所有这些物品。干得好。";
+				mes "现在，把这个给";
+				mes "一个铁匠或大师铁匠。";
+				mes "你们公会还不错...";
 				delitem 1015,30; //Thin_N'_Long_Tongue
 				delitem 7196,30; //Shoulder_Protection
 				delitem 7157,30; //Black_Mask
@@ -1330,22 +1330,22 @@
 			}
 			if ((BaseJob == Job_Knight) && (guildrelay_q == 2)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Did you forget what";
-				mes "[DRY-RUN] to bring me? I wanted";
-				mes "[DRY-RUN] ^FF000030 Tongues^000000,";
-				mes "[DRY-RUN] ^FF000030 Dark Masks^000000, and";
-				mes "[DRY-RUN] ^FF000030 Shoulder Protectors^000000.";
-				mes "[DRY-RUN] Don't forget this time.";
+				mes "你忘了我";
+				mes "要带给我什么？我想要";
+				mes "^FF000030 舌头^000000，";
+				mes "^FF000030 黑色面具^000000，以及";
+				mes "^FF000030 肩部保护器^000000。";
+				mes "这次别忘了。";
 				close;
 			}
 			if ((countitem(1097) > 29) && (countitem(1017) > 29) && (countitem(1096) > 29) && (guildrelay_q == 3)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Huh. I didn't actually";
-				mes "[DRY-RUN] expect that you'd collect";
-				mes "[DRY-RUN] all these items. Good job.";
-				mes "[DRY-RUN] Now, take this and give it to";
-				mes "[DRY-RUN] a Blacksmith or Mastersmith.";
-				mes "[DRY-RUN] Your guild's pretty good...";
+				mes "嗯。我其实没有";
+				mes "预料到你会收集";
+				mes "所有这些物品。干得好。";
+				mes "现在，把这个给";
+				mes "一个铁匠或大师铁匠。";
+				mes "你们公会还不错...";
 				delitem 1097,30; //Worn_Out_Page
 				delitem 1017,30; //Moustache_Of_Mole
 				delitem 1096,30; //Round_Shell
@@ -1355,22 +1355,22 @@
 			}
 			if ((BaseJob == Job_Knight) && (guildrelay_q == 3)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Did you forget what";
-				mes "[DRY-RUN] to bring me? I wanted";
-				mes "[DRY-RUN] ^FF000030 Worn Out Pages^000000,";
-				mes "[DRY-RUN] ^FF000030 Round Shells^000000, and";
-				mes "[DRY-RUN] ^FF000030 Mole Whiskers^000000.";
-				mes "[DRY-RUN] Don't forget this time.";
+				mes "你忘了我";
+				mes "要带给我什么？我想要";
+				mes "^FF000030 破旧的页面^000000,";
+				mes "^FF000030 圆壳^000000, 和";
+				mes "^FF000030 鼹鼠胡须^000000.";
+				mes "这次别忘了。";
 				close;
 			}
 			if ((countitem(7112) > 29) && (countitem(1012) > 29) && (countitem(1040) > 29) && (guildrelay_q == 89)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Huh. I didn't actually";
-				mes "[DRY-RUN] expect that you'd collect";
-				mes "[DRY-RUN] all these items. Good job.";
-				mes "[DRY-RUN] Now, take this and give it to";
-				mes "[DRY-RUN] a Blacksmith or Mastersmith.";
-				mes "[DRY-RUN] Your guild's pretty good...";
+				mes "嗯。我其实没有";
+				mes "预料到你会收集";
+				mes "所有这些物品。干得好。";
+				mes "现在，把这个给";
+				mes "一个铁匠或大师铁匠。";
+				mes "你们公会还不错...";
 				delitem 7112,30; //Fright_Paper_Blade
 				delitem 1012,30; //Lizard_Scruff
 				delitem 1040,30; //Elder_Pixie's_Beard
@@ -1380,36 +1380,36 @@
 			}
 			if ((BaseJob == Job_Knight) && (guildrelay_q == 89)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Did you forget what";
-				mes "[DRY-RUN] to bring me? I wanted";
-				mes "[DRY-RUN] ^FF000030 Frills^000000,";
-				mes "[DRY-RUN] ^FF000030 Sharp Papers^000000, and";
-				mes "[DRY-RUN] ^FF000030 Elder Pixie's Moustaches^000000.";
-				mes "[DRY-RUN] Don't forget this time.";
+				mes "你忘了我";
+				mes "要带给我什么？我想要";
+				mes "^FF000030 装饰边^000000,";
+				mes "^FF000030 锋利的纸张^000000, 和";
+				mes "^FF000030 老年精灵的胡须^000000.";
+				mes "这次别忘了。";
 				close;
 			}
 			if ((BaseJob == Job_Blacksmith) && (countitem(7235) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Wow, you brought the";
-				mes "[DRY-RUN] items sooner than I had";
-				mes "[DRY-RUN] expected. Great! Well then,";
-				mes "[DRY-RUN] your next task for me will";
-				mes "[DRY-RUN] be to... Wait. Wait and";
-				mes "[DRY-RUN] kill some time. Easy, huh?";
+				mes "哇，你带来了";
+				mes "比我预期的更早的物品。";
+				mes "太好了！那么，";
+				mes "你接下来的任务是";
+				mes "……等等。等着";
+				mes "打发时间。简单吧？";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] ^FF0000just waiting.^000000";
-				mes "[DRY-RUN] Justing wait and kill";
-				mes "[DRY-RUN] some time. You can do";
-				mes "[DRY-RUN] whatever you want to";
-				mes "[DRY-RUN] do during that time.";
+				mes "^FF0000就只是等待。^000000";
+				mes "就只是等待和打发";
+				mes "一些时间。你可以做";
+				mes "你想做的任何事情。";
+				mes "在这段时间内。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Come back after you've";
-				mes "[DRY-RUN] relaxed and enjoyed yourself.";
-				mes "[DRY-RUN] We can continue the testing";
-				mes "[DRY-RUN] when the time is right so";
-				mes "[DRY-RUN] don't you worry about it.";
+				mes "放松一下，享受一下后再回来。";
+				mes "你放松并享受过后再回来。";
+				mes "我们可以继续测试";
+				mes "当时机合适时";
+				mes "所以你不用担心。";
 				delitem 7235,1; //Soul_Of_Courage
 				set guildrelay_q,4;
 				set guildtime, atoi( gettimestr("%H%M",5) );
@@ -1419,12 +1419,12 @@
 			if ((guildtime > 2259) && (guildrelay_q == 4) && (BaseJob == Job_Blacksmith)) {
 				if ((.@time > 0201) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I guess enough time";
-					mes "[DRY-RUN] has passed. You ready";
-					mes "[DRY-RUN] to resume the testing?";
-					mes "[DRY-RUN] Please give this to an";
-					mes "[DRY-RUN] Alchemist or Biochemist.";
-					mes "[DRY-RUN] Your work here is done.";
+					mes "我想已经过了足够的时间";
+					mes "你准备好";
+					mes "恢复测试了吗？";
+					mes "请把这个给一位";
+					mes "炼金术士或生化学家。";
+					mes "你在这里的工作完成了。";
 					set guildrelay_q,87;
 					getitem 7237,1; //Soul_Of_Partnership
 					close;
@@ -1433,12 +1433,12 @@
 			if ((guildtime > 2159) && (guildrelay_q == 4) && (BaseJob == Job_Blacksmith)) {
 				if ((.@time > 0101) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I guess enough time";
-					mes "[DRY-RUN] has passed. You ready";
-					mes "[DRY-RUN] to resume the testing?";
-					mes "[DRY-RUN] Please give this to an";
-					mes "[DRY-RUN] Alchemist or Biochemist.";
-					mes "[DRY-RUN] Your work here is done.";
+					mes "我想已经过了足够的时间";
+					mes "你准备好";
+					mes "恢复测试了吗？";
+					mes "请把这个给一位";
+					mes "炼金术士或生化学家。";
+					mes "你在这里的工作完成了。";
 					set guildrelay_q,87;
 					getitem 7237,1; //Soul_Of_Partnership
 					close;
@@ -1447,12 +1447,12 @@
 			if ((guildtime > 2059) && (guildrelay_q == 4) && (BaseJob == Job_Blacksmith)) {
 				if ((.@time > 0001) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I guess enough time";
-					mes "[DRY-RUN] has passed. You ready";
-					mes "[DRY-RUN] to resume the testing?";
-					mes "[DRY-RUN] Please give this to an";
-					mes "[DRY-RUN] Alchemist or Biochemist.";
-					mes "[DRY-RUN] Your work here is done.";
+					mes "我想已经过了足够的时间";
+					mes "你准备好";
+					mes "恢复测试了吗？";
+					mes "请把这个给一位";
+					mes "炼金术士或生化学家。";
+					mes "你在这里的工作完成了。";
 					set guildrelay_q,87;
 					getitem 7237,1; //Soul_Of_Partnership
 					close;
@@ -1460,75 +1460,75 @@
 			}
 			if ((.@time - guildtime > 0300) && (guildrelay_q == 4) && (BaseJob == Job_Blacksmith)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I guess enough time";
-				mes "[DRY-RUN] has passed. You ready";
-				mes "[DRY-RUN] to resume the testing?";
-				mes "[DRY-RUN] Please give this to an";
-				mes "[DRY-RUN] Alchemist or Biochemist.";
-				mes "[DRY-RUN] Your work here is done.";
+				mes "我想已经过了足够的时间";
+				mes "你准备好";
+				mes "恢复测试了吗？";
+				mes "请把这个给一位";
+				mes "炼金术士或生化学家。";
+				mes "你在这里的工作完成了。";
 				set guildrelay_q,87;
 				getitem 7237,1; //Soul_Of_Partnership
 				close;
 			}
 			if ((guildrelay_q == 4) && (BaseJob == Job_Blacksmith)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You must be rarin'";
-				mes "[DRY-RUN] to take on the next";
-				mes "[DRY-RUN] test. Please be patient,";
-				mes "[DRY-RUN] kill some time, and just";
-				mes "[DRY-RUN] come back to me later.";
+				mes "你一定很想";
+				mes "接受下一个";
+				mes "测试。请耐心等待，";
+				mes "打发一下时间，";
+				mes "稍后再来找我。";
 				close;
 			}
 			if ((BaseJob == Job_Alchemist) && (countitem(7237) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Oh, you got it, eh?";
-				mes "[DRY-RUN] You might not think this";
-				mes "[DRY-RUN] will be so hard, but I'm";
-				mes "[DRY-RUN] going to give you a much";
-				mes "[DRY-RUN] different challenge now.";
-				mes "[DRY-RUN] Are you ready for it?";
+				mes "哦，你明白了，是吗？";
+				mes "你可能不会觉得这";
+				mes "会这么难，但我";
+				mes "要给你一个更";
+				mes "不同的挑战了。";
+				mes "你准备好了吗？";
 				next;
 				if ((BaseLevel > 1) && (BaseLevel < 58)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Your test will be to";
-					mes "[DRY-RUN] grow a little stronger!";
-					mes "[DRY-RUN] You'll pass once you";
-					mes "[DRY-RUN] gain 3 more levels.";
-					mes "[DRY-RUN] How about that, eh?";
+					mes "你的测试将是";
+					mes "变得更强一点！";
+					mes "一旦你";
+					mes "再升3级，你就通过了。";
+					mes "怎么样，嗯？";
 					delitem 7237,1; //Soul_Of_Partnership
 					set guildrelay_q,5;
 					close;
 				}
 				if ((BaseLevel > 57) && (BaseLevel < 76)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Your test will be to";
-					mes "[DRY-RUN] grow a little stronger!";
-					mes "[DRY-RUN] You'll pass once you";
-					mes "[DRY-RUN] gain 2 more levels.";
-					mes "[DRY-RUN] How about that, eh?";
+					mes "你的测试将是";
+					mes "变得更强一点！";
+					mes "一旦你";
+					mes "再升2级。";
+					mes "怎么样，嗯？";
 					delitem 7237,1; //Soul_Of_Partnership
 					set guildrelay_q,6;
 					close;
 				}
 				if ((BaseLevel > 75) && (BaseLevel < 94)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Your test will be to";
-					mes "[DRY-RUN] grow a little stronger!";
-					mes "[DRY-RUN] You'll pass once you";
-					mes "[DRY-RUN] gain 1 more level.";
-					mes "[DRY-RUN] How about that, eh?";
+					mes "你的测试将是";
+					mes "变得更强一点！";
+					mes "一旦你";
+					mes "再升1级。";
+					mes "怎么样，嗯？";
 					delitem 7237,1; //Soul_Of_Partnership
 					set guildrelay_q,7;
 					close;
 				}
 				if (BaseLevel > 93) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Wait a minute. Forget it!";
-					mes "[DRY-RUN] I was going to ask you to";
-					mes "[DRY-RUN] raise your Base Level, but";
-					mes "[DRY-RUN] you're tough enough as it is.";
-					mes "[DRY-RUN] Fine, fine. You pass! Give this";
-					mes "[DRY-RUN] to a ^FF0000Hunter^000000 or ^FF0000Sniper^000000 now~";
+					mes "等一下。算了！";
+					mes "我本来想问你要";
+					mes "提升你的基本等级，但";
+					mes "你现在已经够强了。";
+					mes "好吧，好吧。你通过了！给这个";
+					mes "给一个 ^FF0000猎人^000000 或 ^FF0000神射手^000000吧~";
 					delitem 7237,1; //Soul_Of_Partnership
 					set guildrelay_q,86;
 					getitem 7238,1; //Soul_Of_Correspondence
@@ -1537,73 +1537,73 @@
 			}
 			if (((BaseLevel + 2) < (BaseLevel)) && (guildrelay_q == 5)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You got a little stronger,";
-				mes "[DRY-RUN] eh? Fine, fine. You pass.";
-				mes "[DRY-RUN] Here, now take this and";
-				mes "[DRY-RUN] give it to a ^FF0000Hunter^000000 or ^FF0000Sniper^000000";
-				mes "[DRY-RUN] in your guild. Nice work,";
-				mes "[DRY-RUN] and I'll see you around.";
+				mes "你变得更强了一点，";
+				mes "嗯？好吧，好吧。你通过了。";
+				mes "来，拿着这个，";
+				mes "把它给你公会里的 ^FF0000猎人^000000 或 ^FF0000神射手^000000";
+				mes "。干得不错，";
+				mes "我会再见到你的。";
 				set guildrelay_q,86;
 				getitem 7238,1; //Soul_Of_Correspondence
 				close;
 			}
 			if (((BaseLevel + 1) < (BaseLevel)) && (guildrelay_q == 6)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You got a little stronger,";
-				mes "[DRY-RUN] eh? Fine, fine. You pass.";
-				mes "[DRY-RUN] Here, now take this and";
-				mes "[DRY-RUN] give it to a ^FF0000Hunter^000000 or ^FF0000Sniper^000000";
-				mes "[DRY-RUN] in your guild. Nice work,";
-				mes "[DRY-RUN] and I'll see you around.";
+				mes "你变得更强了一点，";
+				mes "嗯？好吧，好吧。你通过了。";
+				mes "来，拿着这个，";
+				mes "把它给你公会里的 ^FF0000猎人^000000 或 ^FF0000神射手^000000";
+				mes "。干得不错，";
+				mes "我会再见到你的。";
 				set guildrelay_q,86;
 				getitem 7238,1; //Soul_Of_Correspondence
 				close;
 			}
 			if ((BaseLevel < (BaseLevel)) && (guildrelay_q == 7)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You got a little stronger,";
-				mes "[DRY-RUN] eh? Fine, fine. You pass.";
-				mes "[DRY-RUN] Here, now take this and";
-				mes "[DRY-RUN] give it to a ^FF0000Hunter^000000 or ^FF0000Sniper^000000";
-				mes "[DRY-RUN] in your guild. Nice work,";
-				mes "[DRY-RUN] and I'll see you around.";
+				mes "你变得更强了一点，";
+				mes "嗯？好吧，好吧。你通过了。";
+				mes "来，拿着这个，";
+				mes "把它给你公会里的 ^FF0000猎人^000000 或 ^FF0000神射手^000000";
+				mes "。干得不错，";
+				mes "我会再见到你的。";
 				set guildrelay_q,86;
 				getitem 7238,1; //Soul_Of_Correspondence
 				close;
 			}
 			if ((guildrelay_q == 5) || (guildrelay_q == 6) || (guildrelay_q == 7)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You're still not strong";
-				mes "[DRY-RUN] enough to pass this test.";
-				mes "[DRY-RUN] Hurry up, kill some monsters,";
-				mes "[DRY-RUN] and gain some ^FF0000Base Levels^000000.";
-				mes "[DRY-RUN] You have to become stronger!";
+				mes "你还是不够强，";
+				mes "无法通过这个测试。";
+				mes "快点，杀一些怪物，";
+				mes "并获得一些 ^FF0000基本等级^000000.";
+				mes "你必须变得更强！";
 				close;
 			}
 			if ((BaseJob == Job_Hunter) && (countitem(7238) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Ah, good, you're here.";
-				mes "[DRY-RUN] Now, my request for you";
-				mes "[DRY-RUN] is this: please donate";
-				mes "[DRY-RUN] your Falcon for the";
-				mes "[DRY-RUN] sake of your guild.";
+				mes "啊，好极了，你来了。";
+				mes "现在，我对你的请求是：";
+				mes "请捐赠";
+				mes "你的猎鹰将用于";
+				mes "为了你的公会.";
 				next;
-				switch(select("[DRY-RUN] Donate Falcon:No way!")) {
+				switch(select("捐赠猎鹰:没门！")) {
 				case 1:
 					if (checkfalcon()) {
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Great! Don't worry,";
-						mes "[DRY-RUN] your Falcon will be safe";
-						mes "[DRY-RUN] under our care, and will";
-						mes "[DRY-RUN] be use to scout areas and";
-						mes "[DRY-RUN] deliver mail. That's why";
-						mes "[DRY-RUN] I asked you for it.";
+						mes "太好了! 不用担心,";
+						mes "你的猎鹰会安全";
+						mes "在我们的照顾下，并且会";
+						mes "用于侦察区域和";
+						mes "递送邮件。这就是为什么";
+						mes "我问你要这个。";
 						next;
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] Now, please take this";
-						mes "[DRY-RUN] spirit, and give it to";
-						mes "[DRY-RUN] your guild master as";
-						mes "[DRY-RUN] soon as you can, alright?";
+						mes "现在，请接受这个";
+						mes "灵魂，然后交给";
+						mes "你的公会长，尽快交给他，好吗？";
+						mes "尽快交给他，好吗？";
 						setfalcon;
 						delitem 7238,1; //Soul_Of_Correspondence
 						set guildrelay_q,85;
@@ -1612,120 +1612,120 @@
 					}
 					else {
 						mes "[" + .@name$ + "]";
-						mes "[DRY-RUN] I'm glad that you're";
-						mes "[DRY-RUN] willing to part with your";
-						mes "[DRY-RUN] Falcon, but it doesn't seem";
-						mes "[DRY-RUN] to be with you right now.";
-						mes "[DRY-RUN] Go get one, and come back.";
+						mes "我很高兴你愿意放弃你的";
+						mes "猎鹰，但现在似乎没有在你身边。";
+						mes "猎鹰，但现在似乎没有在你身边。";
+						mes "去找一只，然后回来。";
+						mes "去找一只，然后回来。";
 						close;
 					}
 				case 2:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Well, I can't help it if you";
-					mes "[DRY-RUN] really want to keep your";
-					mes "[DRY-RUN] Falcon, but please come";
-					mes "[DRY-RUN] back if you change your mind.";
-					mes "[DRY-RUN] I can't do anything for you";
-					mes "[DRY-RUN] unless you cooperate.";
+					mes "好吧，如果你真的想留着你的";
+					mes "猎鹰，我也无能为力，但如果你改变主意，请回来。";
+					mes "猎鹰，我也无能为力，但如果你改变主意，请回来。";
+					mes "请回来，如果你改变主意。";
+					mes "我帮不了你";
+					mes "除非你合作。";
 					close;
 				}
 			}
 			if ((guildrelay_q == 88) && (countitem(7235) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Charge to";
-				mes "[DRY-RUN] a ^FF0000Blacksmith^000000 or ^FF0000Mastersmith^000000.";
-				mes "[DRY-RUN] It won't do any good in the";
-				mes "[DRY-RUN] hands of anybody else.";
+				mes "请把";
+				mes "充能之灵交给";
+				mes "一个 ^FF0000铁匠^000000 或 ^FF0000大师铁匠^000000。";
+				mes "这样做没有任何好处。";
+				mes "其他人的手中。";
 				close;
 			}
 			if (guildrelay_q == 88) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You don't have";
-				mes "[DRY-RUN] anything to do?";
-				mes "[DRY-RUN] Why don't you help";
-				mes "[DRY-RUN] your guild hunt monsters?";
-				mes "[DRY-RUN] It'll be a good chance to";
-				mes "[DRY-RUN] show them your skills~";
+				mes "你没有";
+				mes "有什么可以做的吗？";
+				mes "你为什么不帮忙";
+				mes "你的公会去狩猎怪物呢？";
+				mes "这将是一个很好的机会";
+				mes "向他们展示你的技能~";
 				close;
 			}
 			if ((guildrelay_q == 87) && (countitem(7237) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Association to";
-				mes "[DRY-RUN] an ^FF0000Alchemist^000000 or ^FF0000Biochemist^000000.";
-				mes "[DRY-RUN] It won't do any good in the";
-				mes "[DRY-RUN] hands of anybody else.";
+				mes "请把";
+				mes "协会的精神去";
+				mes "一个 ^FF0000炼金术士^000000 或 ^FF0000生物化学家^000000。";
+				mes "这样做没有任何好处。";
+				mes "其他人的手中。";
 				close;
 			}
 			if (guildrelay_q == 87) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm. Don't you have";
-				mes "[DRY-RUN] anything to do? I suppose";
-				mes "[DRY-RUN] it's better to be bored";
-				mes "[DRY-RUN] than to be overwhelmed.";
-				mes "[DRY-RUN] Oh well, you'll figure";
-				mes "[DRY-RUN] something out.";
+				mes "嗯。你没有";
+				mes "任何事情要做吗？我想";
+				mes "无聊总比被压倒要好。";
+				mes "比被压倒要好。";
+				mes "哦，好吧，你会想出";
+				mes "一些办法的。";
 				close;
 			}
 			if ((guildrelay_q == 86) && (countitem(7238) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Coordination";
-				mes "[DRY-RUN] to a ^FF0000Hunter^000000 or ^FF0000Sniper^000000.";
-				mes "[DRY-RUN] It won't do any good in the";
-				mes "[DRY-RUN] hands of anybody else.";
+				mes "请把";
+				mes "协调之灵";
+				mes "给一个 ^FF0000猎人^000000 或 ^FF0000神射手^000000。";
+				mes "这样做没有任何好处。";
+				mes "其他人的手中。";
 				close;
 			}
 			if (guildrelay_q == 86) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Good work. Please";
-				mes "[DRY-RUN] go ahead and take a rest,";
-				mes "[DRY-RUN] and then come back to me";
-				mes "[DRY-RUN] later. I'll have something";
-				mes "[DRY-RUN] to give you by then.";
+				mes "干得好。请";
+				mes "去休息一下，";
+				mes "然后再回来找我";
+				mes "稍后。我会有一些";
+				mes "到时候给你。";
 				close;
 			}
 			if ((guildrelay_q == 85) && (countitem(7239) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Advance";
-				mes "[DRY-RUN] to your ^FF0000guild master^000000.";
-				mes "[DRY-RUN] It won't do any good in the";
-				mes "[DRY-RUN] hands of anybody else.";
+				mes "请把";
+				mes "进步之灵";
+				mes "给你的 ^FF0000公会长^000000.";
+				mes "这样做没有任何好处。";
+				mes "其他人的手中。";
 				close;
 			}
 			if (guildrelay_q == 85) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Your falcon's been";
-				mes "[DRY-RUN] a great help in the";
-				mes "[DRY-RUN] guild. Hm? You already";
-				mes "[DRY-RUN] miss it? Hahahaha!";
+				mes "你的猎鹰已经";
+				mes "在这方面提供了很大帮助，";
+				mes "公会。嗯？你已经";
+				mes "想念它了吗？哈哈哈哈！";
 				close;
 			}
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Hm? What brings you";
-			mes "[DRY-RUN] here? I don't think we";
-			mes "[DRY-RUN] have any business to";
-			mes "[DRY-RUN] conduct. Am I mistaken?";
+			mes "嗯？你来这里是为了什么？";
+			mes "我想我们没有任何事情要";
+			mes "进行。难道我错了吗？";
+			mes "在这里？请随意";
 			close;
 		}
 	}
 	else {
 		if (is_guild_leader(.@GID) == true) {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Hm? What brings you";
-			mes "[DRY-RUN] here? Feel free to take";
-			mes "[DRY-RUN] your time and look around";
-			mes "[DRY-RUN] if that's what pleases you.";
+			mes "嗯？你来这里是为了什么？";
+			mes "花时间四处看看，";
+			mes "如果这让你开心的话。";
+			mes "如果这让你满意的话。";
 			close;
 		}
 		else {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] There isn't much to see";
-			mes "[DRY-RUN] around here, but you're";
-			mes "[DRY-RUN] welcome to stay and look";
-			mes "[DRY-RUN] around here if you wish.";
+			mes "这里没什么好看的";
+			mes "不过你可以";
+			mes "在这里待着看看";
+			mes "如果你愿意的话。";
 			close;
 		}
 	}
@@ -1736,67 +1736,67 @@
 	getmapxy(.@m$,.@x,.@x,BL_NPC);
 	set .@GID, GetCastleData(.@m$,1);
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a minute! You're";
-		mes "[DRY-RUN] carrying too many items";
-		mes "[DRY-RUN] right now: store some of";
-		mes "[DRY-RUN] your extra things in Kafra";
-		mes "[DRY-RUN] Storage, and then come back.^000000";
+		mes "^3355FF等一下！你";
+		mes "携带的物品太多了";
+		mes "现在：把一些";
+		mes "多余的东西存放在卡普拉";
+		mes "仓库，然后再回来。^000000";
 		close;
 	}
 	if (.@GID == 0) {
-		mes "[DRY-RUN] ^3355FFThis exhausted man";
-		mes "[DRY-RUN] notices you staring at";
-		mes "[DRY-RUN] him, but chooses to leave";
-		mes "[DRY-RUN] you alone. There's no one";
-		mes "[DRY-RUN] else in this stronghold so";
-		mes "[DRY-RUN] there's no reason to be here.^000000";
+		mes "^3355FF这个疲惫的男人";
+		mes "注意到你在盯着";
+		mes "他，但选择离开";
+		mes "你一个人。这里没有人";
+		mes "在这个据点里，所以";
+		mes "没有理由待在这里。^000000";
 		close;
 	}
 	if (getcharid(2) == .@GID) {
 		if (is_guild_leader() == true) {
 			if (countitem(7240) > 0) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm? What are you doing?";
-				mes "[DRY-RUN] You're not supposed to";
-				mes "[DRY-RUN] be the one holding onto";
-				mes "[DRY-RUN] this soul. A Sage or a";
-				mes "[DRY-RUN] Professor was supposed";
-				mes "[DRY-RUN] to come here with it.";
+				mes "嗯？你在做什么？";
+				mes "你不应该是";
+				mes "是你在握着的";
+				mes "这个灵魂。一个贤者或者";
+				mes "教授应该";
+				mes "带着它来这里。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Make sure you give";
-				mes "[DRY-RUN] that soul you're holding";
-				mes "[DRY-RUN] to a ^FF0000Sage^000000 or ^FF0000Professor^000000, and";
-				mes "[DRY-RUN] then have him bring it to me.";
+				mes "确保你把";
+				mes "你手中的灵魂";
+				mes "交给一个^FF0000贤者^000000或^FF0000教授^000000，然后";
+				mes "让他把它带给我。";
 				close;
 			}
 			else {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Our business together";
-				mes "[DRY-RUN] has concluded. If you're";
-				mes "[DRY-RUN] not busy, why don't you try";
-				mes "[DRY-RUN] helping out your guild? Yes,";
-				mes "[DRY-RUN] I'm sure they'd appreciate it.";
+				mes "我们之间的交易";
+				mes "已经结束。如果你";
+				mes "不忙的话，为什么不试试";
+				mes "帮助你的公会呢？是的，";
+				mes "我相信他们会很感激的。";
 				close;
 			}
 		}
 		else {
 			if ((BaseJob == Job_Sage) && (countitem(7240) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I see that you've brought";
-				mes "[DRY-RUN] the ^42426FSpirit of Trust^000000. Now, the";
-				mes "[DRY-RUN] first thing I want you to do is";
-				mes "[DRY-RUN] to build the trust between you";
-				mes "[DRY-RUN] and your guild members.";
-				mes "[DRY-RUN] Spend time with them.";
+				mes "我看到你带来了";
+				mes "信任之^42426F灵^000000。现在，";
+				mes "我希望你做的第一件事是";
+				mes "建立你与";
+				mes "你的公会成员之间的信任。";
+				mes "花时间和他们在一起。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I want you to build";
-				mes "[DRY-RUN] up some friendly bonds";
-				mes "[DRY-RUN] within your guild before";
-				mes "[DRY-RUN] coming back to me. Your";
-				mes "[DRY-RUN] guild must have solidarity";
-				mes "[DRY-RUN] in order to be successful.";
+				mes "我希望你建立";
+				mes "一些友好的联系";
+				mes "在你的公会内部，";
+				mes "然后再回来找我。你的";
+				mes "公会必须有团结";
+				mes "才能取得成功。";
 				delitem 7240,1; //Soul_Of_Confidence
 				set guildrelay_q,9;
 				set guildtime, atoi( gettimestr("%H%M",5) );
@@ -1806,193 +1806,193 @@
 			if ((guildtime > 2259) && (guildrelay_q == 9) && (BaseJob == Job_Sage)) {
 				if ((.@time > 0201) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] So did you spend some";
-					mes "[DRY-RUN] quality time with your";
-					mes "[DRY-RUN] guild members, and get";
-					mes "[DRY-RUN] a chance to really learn";
-					mes "[DRY-RUN] who they are? You must";
-					mes "[DRY-RUN] love your comrades.";
+					mes "那么你有没有和你的";
+					mes "公会成员共度一些美好时光？";
+					mes "公会成员，去获取";
+					mes "一个真正学习的机会";
+					mes "他们是谁？你必须";
+					mes "爱你的同伴。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Now you know how";
-					mes "[DRY-RUN] important bonding truly";
-					mes "[DRY-RUN] is. Please give this spirit";
-					mes "[DRY-RUN] to a ^42426FBard^000000, ^42426FMinstrel^000000, ^42426FDancer^000000,";
-					mes "[DRY-RUN] or ^42426FGypsy^000000. Good luck to you.";
+					mes "现在你知道了如何";
+					mes "重要的联系究竟是";
+					mes "多么重要。请把这个精神";
+					mes "交给一个 ^42426FBard^000000, ^42426FMinstrel^000000, ^42426FDancer^000000，";
+					mes "或者 ^42426FGypsy^000000。祝你好运。";
 					set guildrelay_q,81;
 					getitem 7241,1; //Soul_Of_Agreement
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Hm? Back so soon?";
-					mes "[DRY-RUN] That hasn't been enough";
-					mes "[DRY-RUN] time for you to really bond";
-					mes "[DRY-RUN] with your guild members.";
-					mes "[DRY-RUN] Go back, ask them about their";
-					mes "[DRY-RUN] dreams, passions, and goals!";
+					mes "嗯？这么快就回来了吗？";
+					mes "这还不够";
+					mes "你真正与公会成员建立联系的时间";
+					mes "还不够。";
+					mes "回去，问他们关于他们的";
+					mes "梦想、激情和目标！";
 					close;
 				}
 			}
 			else if ((guildtime > 2159) && (guildrelay_q == 9) && (BaseJob == Job_Sage)) {
 				if ((.@time > 0101) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] So did you spend some";
-					mes "[DRY-RUN] quality time with your";
-					mes "[DRY-RUN] guild members, and get";
-					mes "[DRY-RUN] a chance to really learn";
-					mes "[DRY-RUN] who they are? You must";
-					mes "[DRY-RUN] love your comrades.";
+					mes "那么你有没有和你的";
+					mes "公会成员共度一些美好时光？";
+					mes "公会成员，去获取";
+					mes "一个真正学习的机会";
+					mes "他们是谁？你必须";
+					mes "爱你的同伴。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Now you know how";
-					mes "[DRY-RUN] important bonding truly";
-					mes "[DRY-RUN] is. Please give this spirit";
-					mes "[DRY-RUN] to a ^42426FBard^000000, ^42426FMinstrel^000000, ^42426FDancer^000000,";
-					mes "[DRY-RUN] or ^42426FGypsy^000000. Good luck to you.";
+					mes "现在你知道了如何";
+					mes "重要的联系究竟是";
+					mes "多么重要。请把这个精神";
+					mes "交给一个 ^42426FBard^000000, ^42426FMinstrel^000000, ^42426FDancer^000000，";
+					mes "或者 ^42426FGypsy^000000。祝你好运。";
 					set guildrelay_q,71;
 					getitem 7241,1; //Soul_Of_Agreement
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Hm? Back so soon?";
-					mes "[DRY-RUN] That hasn't been enough";
-					mes "[DRY-RUN] time for you to really bond";
-					mes "[DRY-RUN] with your guild members.";
-					mes "[DRY-RUN] Go back, ask them about their";
-					mes "[DRY-RUN] dreams, passions, and goals!";
+					mes "嗯？这么快就回来了吗？";
+					mes "这还不够";
+					mes "你真正与公会成员建立联系的时间";
+					mes "还不够。";
+					mes "回去，问他们关于他们的";
+					mes "梦想、激情和目标！";
 					close;
 				}
 			}
 			else if ((guildtime > 2059) && (guildrelay_q == 9) && (BaseJob == Job_Sage)) {
 				if ((.@time > 0001) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] So did you spend some";
-					mes "[DRY-RUN] quality time with your";
-					mes "[DRY-RUN] guild members, and get";
-					mes "[DRY-RUN] a chance to really learn";
-					mes "[DRY-RUN] who they are? You must";
-					mes "[DRY-RUN] love your comrades.";
+					mes "那么你有没有和你的";
+					mes "公会成员共度一些美好时光？";
+					mes "公会成员，去获取";
+					mes "一个真正学习的机会";
+					mes "他们是谁？你必须";
+					mes "爱你的同伴。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Now you know how";
-					mes "[DRY-RUN] important bonding truly";
-					mes "[DRY-RUN] is. Please give this spirit";
-					mes "[DRY-RUN] to a ^42426FBard^000000, ^42426FMinstrel^000000, ^42426FDancer^000000,";
-					mes "[DRY-RUN] or ^42426FGypsy^000000. Good luck to you.";
+					mes "现在你知道了如何";
+					mes "重要的联系究竟是";
+					mes "多么重要。请把这个精神";
+					mes "交给一个 ^42426FBard^000000, ^42426FMinstrel^000000, ^42426FDancer^000000，";
+					mes "或者 ^42426FGypsy^000000。祝你好运。";
 					set guildrelay_q,71;
 					getitem 7241,1; //Soul_Of_Agreement
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Hm? Back so soon?";
-					mes "[DRY-RUN] That hasn't been enough";
-					mes "[DRY-RUN] time for you to really bond";
-					mes "[DRY-RUN] with your guild members.";
-					mes "[DRY-RUN] Go back, ask them about their";
-					mes "[DRY-RUN] dreams, passions, and goals!";
+					mes "嗯？这么快就回来了吗？";
+					mes "这还不够";
+					mes "你真正与公会成员建立联系的时间";
+					mes "还不够。";
+					mes "回去，问他们关于他们的";
+					mes "梦想、激情和目标！";
 					close;
 				}
 			}
 			else if ((.@time - guildtime > 0300) && (guildrelay_q == 9) && (BaseJob == Job_Sage)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] So did you spend some";
-				mes "[DRY-RUN] quality time with your";
-				mes "[DRY-RUN] guild members, and get";
-				mes "[DRY-RUN] a chance to really learn";
-				mes "[DRY-RUN] who they are? You must";
-				mes "[DRY-RUN] love your comrades.";
+				mes "那么你有没有和你的";
+				mes "公会成员共度一些美好时光？";
+				mes "公会成员，去获取";
+				mes "一个真正学习的机会";
+				mes "他们是谁？你必须";
+				mes "爱你的同伴。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You have done";
-				mes "[DRY-RUN] what you had to do for now.";
-				mes "[DRY-RUN] Please give it to a ^42426FBard^000000 or ^42426FClown^000000";
-				mes "[DRY-RUN] You can also give it to ^42426FDancer^000000 or ^42426FGypsy^000000";
-				mes "[DRY-RUN] Good luck.";
+				mes "你已经做了";
+				mes "你现在必须做的事情。";
+				mes "请把它交给一位 ^42426FBard^000000 或 ^42426FClown^000000";
+				mes "你也可以把它交给 ^42426FDancer^000000 或 ^42426FGypsy^000000";
+				mes "祝你好运。";
 				set guildrelay_q,71;
 				getitem 7241,1; //Soul_Of_Agreement
 				close;
 			}
 			else if ((BaseJob == Job_Sage) && (guildrelay_q == 9)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm? Back so soon?";
-				mes "[DRY-RUN] That hasn't been enough";
-				mes "[DRY-RUN] time for you to really bond";
-				mes "[DRY-RUN] with your guild members.";
-				mes "[DRY-RUN] Go back, ask them about their";
-				mes "[DRY-RUN] dreams, passions, and goals!";
+				mes "嗯？这么快就回来了吗？";
+				mes "这还不够";
+				mes "你真正与公会成员建立联系的时间";
+				mes "还不够。";
+				mes "回去，问他们关于他们的";
+				mes "梦想、激情和目标！";
 				close;
 			}
 			if (((BaseJob == Job_Bard) || (BaseJob == Job_Dancer)) && (countitem(7241) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] For the sake of promoting";
-				mes "[DRY-RUN] teamwork amongst your guild,";
-				mes "[DRY-RUN] my test will be for you to";
-				mes "[DRY-RUN] gather specific items for me.";
+				mes "为了促进";
+				mes "你公会之间的团队合作，";
+				mes "我的测试将是让你";
+				mes "为我收集特定的物品。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] This is a difficult task";
-				mes "[DRY-RUN] to complete alone, but it";
-				mes "[DRY-RUN] will be much easier if you";
-				mes "[DRY-RUN] and your guild cooperate to";
-				mes "[DRY-RUN] get all the items. Now listen,";
-				mes "[DRY-RUN] this is what I want you to get.";
+				mes "这是一项困难的任务";
+				mes "单独完成，但它";
+				mes "如果你这样做会容易得多，";
+				mes "和你的公会合作来";
+				mes "获取所有物品。现在听着，";
+				mes "这就是我想让你获取的。";
 				next;
 				switch(rand(1,3)) {
 				case 1:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] ^8C171730 Burning Hearts^000000,";
-					mes "[DRY-RUN] ^8C171730 Wolf Claws^000000, and";
-					mes "[DRY-RUN] ^8C171730 Leopard Claws^000000.";
-					mes "[DRY-RUN] You might want to write";
-					mes "[DRY-RUN] these down so you don't";
-					mes "[DRY-RUN] forget. Good luck to you.";
+					mes "^8C171730 燃烧的心^000000，";
+					mes "^8C171730 狼爪^000000，以及";
+					mes "^8C171730 豹爪^000000。";
+					mes "你可能想把这些写下来，";
+					mes "以免你忘记。祝你好运。";
+					mes "忘记吧。祝你好运。";
 					delitem 7241,1; //Soul_Of_Agreement
 					set guildrelay_q,10;
 					break;
 				case 2:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] ^8C171730 Soft Blades of Grass^000000,";
-					mes "[DRY-RUN] ^8C171730 Wooden Hearts^000000, and";
-					mes "[DRY-RUN] ^8C171730 Poisonous Toad Skins^000000.";
-					mes "[DRY-RUN] You might want to write";
-					mes "[DRY-RUN] these down so you don't";
-					mes "[DRY-RUN] forget. Good luck to you.";
+					mes "^8C171730 软草刀^000000，";
+					mes "^8C171730 木心^000000，以及";
+					mes "^8C171730 有毒的蟾蜍皮^000000.";
+					mes "你可能想把这些写下来，";
+					mes "以免你忘记。祝你好运。";
+					mes "忘记吧。祝你好运。";
 					delitem 7241,1; //Soul_Of_Agreement
 					set guildrelay_q,11;
 					break;
 				case 3:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] ^8C171730 Antelope Horns^000000,";
-					mes "[DRY-RUN] ^8C171730 Honey Pots^000000, and";
-					mes "[DRY-RUN] ^8C171730 Porcupine Quills^000000.";
-					mes "[DRY-RUN] You might want to write";
-					mes "[DRY-RUN] these down so you don't";
-					mes "[DRY-RUN] forget. Good luck to you.";
+					mes "^8C171730 羚羊角^000000,";
+					mes "^8C171730 蜂蜜罐^000000, 和";
+					mes "^8C171730 刺猬刺^000000.";
+					mes "你可能想把这些写下来，";
+					mes "以免你忘记。祝你好运。";
+					mes "忘记吧。祝你好运。";
 					delitem 7241,1; //Soul_Of_Agreement
 					set guildrelay_q,80;
 					break;
 				}
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You should be bonding";
-				mes "[DRY-RUN] with your guild while you";
-				mes "[DRY-RUN] gather those items I asked";
-				mes "[DRY-RUN] you to bring. I know enough";
-				mes "[DRY-RUN] time hasn't passed for your";
-				mes "[DRY-RUN] guild to work together on this.";
+				mes "你应该和你的公会建立联系";
+				mes "当你";
+				mes "收集我要求的那些物品时";
+				mes "我知道你们的公会还有足够的时间";
+				mes "一起合作完成这个任务.";
+				mes "公会一起合作完成这个。";
 				close;
 			}
 			if ((countitem(7097) > 29) && (countitem(7172) > 29) && (countitem(920) > 29) && (guildrelay_q == 10)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Oh, perfect! You brought";
-				mes "[DRY-RUN] all the items. Well then,";
-				mes "[DRY-RUN] I guess you're ready to";
-				mes "[DRY-RUN] take this spirit now. Please";
-				mes "[DRY-RUN] give it to an ^42426FAssassin^000000 or an";
-				mes "[DRY-RUN] ^42426FAssassin Cross^000000. Thank you.";
+				mes "哦，太好了！你带来了";
+				mes "所有的物品。那么，";
+				mes "我想你准备好了";
+				mes "现在请拿着这个灵魂。";
+				mes "把它交给一个 ^42426FAssassin^000000 或者一个";
+				mes "^42426FAssassin Cross^000000。谢谢你。";
 				delitem 7097,30; //Burning_Heart
 				delitem 7172,30; //Leopard_Talon
 				delitem 920,30; //Claw_Of_Wolves
@@ -2007,12 +2007,12 @@
 			}
 			else if ((countitem(7189) > 29) && (countitem(7194) > 29) && (countitem(7155) > 29) && (guildrelay_q == 11)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Oh, perfect! You brought";
-				mes "[DRY-RUN] all the items. Well then,";
-				mes "[DRY-RUN] I guess you're ready to";
-				mes "[DRY-RUN] take this spirit now. Please";
-				mes "[DRY-RUN] give it to an ^42426FAssassin^000000 or an";
-				mes "[DRY-RUN] ^42426FAssassin Cross^000000. Thank you.";
+				mes "哦，太好了！你带来了";
+				mes "所有的物品。那么，";
+				mes "我想你准备好了";
+				mes "现在请拿着这个灵魂。";
+				mes "把它交给一个 ^42426FAssassin^000000 或者一个";
+				mes "^42426FAssassin Cross^000000。谢谢你。";
 				delitem 7189,30; //Heart_Of_Tree
 				delitem 7194,30; //Soft_Leaf
 				delitem 7155,30; //Poison_Toad's_Skin
@@ -2027,12 +2027,12 @@
 			}
 			else if ((countitem(7106) > 29) && (countitem(7121) > 29) && (countitem(1027) > 29) && (guildrelay_q == 80)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Oh, perfect! You brought";
-				mes "[DRY-RUN] all the items. Well then,";
-				mes "[DRY-RUN] I guess you're ready to";
-				mes "[DRY-RUN] take this spirit now. Please";
-				mes "[DRY-RUN] give it to an ^42426FAssassin^000000 or an";
-				mes "[DRY-RUN] ^42426FAssassin Cross^000000. Thank you.";
+				mes "哦，太好了！你带来了";
+				mes "所有的物品。那么，";
+				mes "我想你准备好了";
+				mes "现在请拿着这个灵魂。";
+				mes "把它交给一个 ^42426FAssassin^000000 或者一个";
+				mes "^42426FAssassin Cross^000000。谢谢你。";
 				delitem 7106,30; //Goat's_Horn
 				delitem 7121,30; //Honey_Jar
 				delitem 1027,30; //Porcupine_Spike
@@ -2047,62 +2047,62 @@
 			}
 			else if (guildrelay_q == 10) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm? You still haven't";
-				mes "[DRY-RUN] gathered all the items";
-				mes "[DRY-RUN] with your guild yet?";
-				mes "[DRY-RUN] Let me remind you what";
-				mes "[DRY-RUN] you need to bring me.";
+				mes "嗯？你还没有";
+				mes "收集齐所有物品";
+				mes "和你的公会吗？";
+				mes "让我提醒你需要";
+				mes "带给我的东西。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] ^8C171730 Burning Hearts^000000,";
-				mes "[DRY-RUN] ^8C171730 Wolf Claws^000000, and";
-				mes "[DRY-RUN] ^8C171730 Leopard Claws^000000.";
-				mes "[DRY-RUN] You might want to write";
-				mes "[DRY-RUN] these down so you don't";
-				mes "[DRY-RUN] forget. Good luck to you.";
+				mes "^8C171730 燃烧的心^000000，";
+				mes "^8C171730 狼爪^000000，以及";
+				mes "^8C171730 豹爪^000000。";
+				mes "你可能想把这些写下来，";
+				mes "以免你忘记。祝你好运。";
+				mes "忘记吧。祝你好运。";
 				close;
 			}
 			else if (guildrelay_q == 11) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm? You still haven't";
-				mes "[DRY-RUN] gathered all the items";
-				mes "[DRY-RUN] with your guild yet?";
-				mes "[DRY-RUN] Let me remind you what";
-				mes "[DRY-RUN] you need to bring me.";
+				mes "嗯？你还没有";
+				mes "收集齐所有物品";
+				mes "和你的公会吗？";
+				mes "让我提醒你需要";
+				mes "带给我的东西。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] ^8C171730 Soft Blades of Grass^000000,";
-				mes "[DRY-RUN] ^8C171730 Wooden Hearts^000000, and";
-				mes "[DRY-RUN] ^8C171730 Poisonous Toad Skins^000000.";
-				mes "[DRY-RUN] You might want to write";
-				mes "[DRY-RUN] these down so you don't";
-				mes "[DRY-RUN] forget. Good luck to you.";
+				mes "^8C171730 软草刀^000000，";
+				mes "^8C171730 木心^000000，以及";
+				mes "^8C171730 有毒的蟾蜍皮^000000.";
+				mes "你可能想把这些写下来，";
+				mes "以免你忘记。祝你好运。";
+				mes "忘记吧。祝你好运。";
 				close;
 			}
 			else if (guildrelay_q == 80) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm? You still haven't";
-				mes "[DRY-RUN] gathered all the items";
-				mes "[DRY-RUN] with your guild yet?";
-				mes "[DRY-RUN] Let me remind you what";
-				mes "[DRY-RUN] you need to bring me.";
+				mes "嗯？你还没有";
+				mes "收集齐所有物品";
+				mes "和你的公会吗？";
+				mes "让我提醒你需要";
+				mes "带给我的东西。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] ^8C171730 Antelope Horns^000000,";
-				mes "[DRY-RUN] ^8C171730 Honey Pots^000000, and";
-				mes "[DRY-RUN] ^8C171730 Porcupine Quills^000000.";
-				mes "[DRY-RUN] You might want to write";
-				mes "[DRY-RUN] these down so you don't";
-				mes "[DRY-RUN] forget. Good luck to you.";
+				mes "^8C171730 羚羊角^000000,";
+				mes "^8C171730 蜂蜜罐^000000, 和";
+				mes "^8C171730 刺猬刺^000000.";
+				mes "你可能想把这些写下来，";
+				mes "以免你忘记。祝你好运。";
+				mes "忘记吧。祝你好运。";
 				close;
 			}
 			if ((BaseJob == Job_Assassin) && (countitem(7242) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You brought the";
-				mes "[DRY-RUN] Spirit of Combination?";
-				mes "[DRY-RUN] Make sure that you give";
-				mes "[DRY-RUN] that to a ^2F4F2FWizard^000000 or";
-				mes "[DRY-RUN] a ^2F4F2FHigh Wizard^000000.";
+				mes "你带来了";
+				mes "组合之灵吗？";
+				mes "确保把它交给";
+				mes "一个 ^2F4F2FWizard^000000 或者";
+				mes "一个 ^2F4F2FHigh Wizard^000000。";
 				delitem 7242,1; //Soul_Of_Harmony
 				set guildrelay_q,74;
 				getitem 7244,1; //Soul_Of_Unity
@@ -2110,79 +2110,79 @@
 			}
 			if ((BaseJob == Job_Wizard) && (countitem(7244) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] For the sake of your";
-				mes "[DRY-RUN] guild, you must become";
-				mes "[DRY-RUN] stronger. Sometimes";
-				mes "[DRY-RUN] your spells will make the";
-				mes "[DRY-RUN] difference between victory";
-				mes "[DRY-RUN] and defeat. Remember that.";
+				mes "为了你的";
+				mes "公会，你必须变得";
+				mes "更强。有时候";
+				mes "你的法术将决定";
+				mes "胜利与失败之间";
+				mes "。记住这一点。";
 				next;
 				mes "[" + .@name$ + "]";
 				mes "Hey," + strcharinfo(0) + ",";
-				mes "[DRY-RUN] if you really want to become";
-				mes "[DRY-RUN] strong enough to protect your";
-				mes "[DRY-RUN] guild, then you must level up.";
-				mes "[DRY-RUN] Come back to me once you've";
-				mes "[DRY-RUN] raised your Base Level.";
+				mes "如果你真的想变得";
+				mes "足够强大以保护你的";
+				mes "公会，那么你必须升级。";
+				mes "等你提升了你的";
+				mes "基本等级后再来找我。";
 				next;
 				if ((BaseLevel > 0) && (BaseLevel < 61)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You will be ready";
-					mes "[DRY-RUN] for your task after you";
-					mes "[DRY-RUN] gain ^FF00003 Base Levels^000000.";
-					mes "[DRY-RUN] Don't despair: I know";
-					mes "[DRY-RUN] you'll be able to reach";
-					mes "[DRY-RUN] this goal. Good luck to you.";
+					mes "你将为你的任务做好";
+					mes "准备。";
+					mes "获得 ^FF00003 基本等级^000000。";
+					mes "不要绝望：我知道";
+					mes "你能够达到";
+					mes "这个目标。祝你好运。";
 					delitem 7244,1; //Soul_Of_Unity
 					set guildrelay_q,12;
 					close;
 				}
 				else if ((BaseLevel > 60) && (BaseLevel < 76)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You will be ready";
-					mes "[DRY-RUN] for your task after you";
-					mes "[DRY-RUN] gain ^FF00002 Base Levels^000000.";
-					mes "[DRY-RUN] Don't despair: I know";
-					mes "[DRY-RUN] you'll be able to reach";
-					mes "[DRY-RUN] this goal. Good luck to you.";
+					mes "你将为你的任务做好";
+					mes "准备。";
+					mes "获得 ^FF00002 基本等级^000000。";
+					mes "不要绝望：我知道";
+					mes "你能够达到";
+					mes "这个目标。祝你好运。";
 					delitem 7244,1; //Soul_Of_Unity
 					set guildrelay_q,13;
 					close;
 				}
 				else if ((BaseLevel > 75) && (BaseLevel < 97)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You will be ready";
-					mes "[DRY-RUN] for your task after you";
-					mes "[DRY-RUN] gain ^FF00001 Base Level^000000.";
-					mes "[DRY-RUN] Don't despair: I know";
-					mes "[DRY-RUN] you'll be able to reach";
-					mes "[DRY-RUN] this goal. Good luck to you.";
+					mes "你将为你的任务做好";
+					mes "准备。";
+					mes "获得 ^FF00001 基本等级^000000。";
+					mes "不要绝望：我知道";
+					mes "你能够达到";
+					mes "这个目标。祝你好运。";
 					delitem 7244,1; //Soul_Of_Unity
 					set guildrelay_q,14;
 					close;
 				}
 				else if (BaseLevel > 96) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Hm. You're much stronger";
-					mes "[DRY-RUN] that I expected. There's no";
-					mes "[DRY-RUN] need for me to encourage";
-					mes "[DRY-RUN] you to develop your strength.";
-					mes "[DRY-RUN] I admit that you are strong.";
+					mes "嗯。你比我预期的要强得多";
+					mes "没有";
+					mes "我不需要鼓励你";
+					mes "去发展你的力量。";
+					mes "我承认你很强。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Acknowledge the extent and";
-					mes "[DRY-RUN] limits of your strength, but";
-					mes "[DRY-RUN] never allow conceit to pollute";
-					mes "[DRY-RUN] your heart. Pride will always";
-					mes "[DRY-RUN] shackle your power if you";
-					mes "[DRY-RUN] let it. Remember humility.";
+					mes "承认你力量的程度和";
+					mes "限制，但";
+					mes "永远不要让自负污染";
+					mes "你的心。骄傲总是会";
+					mes "束缚你的力量，如果你";
+					mes "让它。记住谦逊。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] You qualified enough";
-					mes "[DRY-RUN] for me to trust you.";
-					mes "[DRY-RUN] Please give this spirit";
-					mes "[DRY-RUN] to your ^FF0000Guild Master^000000.";
-					mes "[DRY-RUN] You're done for now.";
+					mes "你已经足够合格";
+					mes "让我信任你。";
+					mes "请把这个灵魂";
+					mes "交给你的 ^FF0000公会长^000000。";
+					mes "你现在完成了。";
 					delitem 7244,1; //Soul_Of_Unity
 					set guildrelay_q,75;
 					getitem 7245,1; //Soul_Of_Friendship
@@ -2191,79 +2191,79 @@
 			}
 			if ((BaseLevel + 2) < (BaseLevel) && (guildrelay_q == 12)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I see that you've";
-				mes "[DRY-RUN] completed the task";
-				mes "[DRY-RUN] I have given you. It may";
-				mes "[DRY-RUN] have been difficult, but";
-				mes "[DRY-RUN] you'll see that I had your";
-				mes "[DRY-RUN] guild's best interests in mind.";
+				mes "我看到你已经";
+				mes "完成了我给你的任务。";
+				mes "这可能很困难，但";
+				mes "这可能很困难，但";
+				mes "你会看到我为你考虑了";
+				mes "公会的最佳利益。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You've earned my trust.";
-				mes "[DRY-RUN] Please give this spirit";
-				mes "[DRY-RUN] to your ^FF0000Guild Master^000000.";
-				mes "[DRY-RUN] You've done well.";
+				mes "你赢得了我的信任。";
+				mes "请把这个灵魂";
+				mes "交给你的 ^FF0000公会长^000000。";
+				mes "你做得很好。";
 				set guildrelay_q,75;
 				getitem 7245,1; //Soul_Of_Friendship
 				close;
 			}
 			else if ((BaseLevel + 1) < (BaseLevel) && (guildrelay_q == 13)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I see that you've";
-				mes "[DRY-RUN] completed the task";
-				mes "[DRY-RUN] I have given you. It may";
-				mes "[DRY-RUN] have been difficult, but";
-				mes "[DRY-RUN] you'll see that I had your";
-				mes "[DRY-RUN] guild's best interests in mind.";
+				mes "我看到你已经";
+				mes "完成了我给你的任务。";
+				mes "这可能很困难，但";
+				mes "这可能很困难，但";
+				mes "你会看到我为你考虑了";
+				mes "公会的最佳利益。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You've earned my trust.";
-				mes "[DRY-RUN] Please give this spirit";
-				mes "[DRY-RUN] to your ^FF0000Guild Master^000000.";
-				mes "[DRY-RUN] You've done well.";
+				mes "你赢得了我的信任。";
+				mes "请把这个灵魂";
+				mes "交给你的 ^FF0000公会长^000000。";
+				mes "你做得很好。";
 				set guildrelay_q,75;
 				getitem 7245,1; //Soul_Of_Friendship
 				close;
 			}
 			else if ((BaseLevel < BaseLevel) && (guildrelay_q == 14)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I see that you've";
-				mes "[DRY-RUN] completed the task";
-				mes "[DRY-RUN] I have given you. It may";
-				mes "[DRY-RUN] have been difficult, but";
-				mes "[DRY-RUN] you'll see that I had your";
-				mes "[DRY-RUN] guild's best interests in mind.";
+				mes "我看到你已经";
+				mes "完成了我给你的任务。";
+				mes "这可能很困难，但";
+				mes "这可能很困难，但";
+				mes "你会看到我为你考虑了";
+				mes "公会的最佳利益。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You've earned my trust.";
-				mes "[DRY-RUN] Please give this spirit";
-				mes "[DRY-RUN] to your ^FF0000Guild Master^000000.";
-				mes "[DRY-RUN] You've done well.";
+				mes "你赢得了我的信任。";
+				mes "请把这个灵魂";
+				mes "交给你的 ^FF0000公会长^000000。";
+				mes "你做得很好。";
 				set guildrelay_q,75;
 				getitem 7245,1; //Soul_Of_Friendship
 				close;
 			}
 			if ((guildrelay_q == 12) && (BaseJob == Job_Wizard)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You're not strong enough";
-				mes "[DRY-RUN] yet for your guild to fully";
-				mes "[DRY-RUN] rely on you in a crisis.";
-				mes "[DRY-RUN] You must level up!";
+				mes "你还不够强大";
+				mes "还不能让你的公会完全";
+				mes "在危机时刻依赖你。";
+				mes "你必须升级！";
 				close;
 			}
 			else if ((guildrelay_q == 13) && (BaseJob == Job_Wizard)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You're not strong enough";
-				mes "[DRY-RUN] yet for your guild to fully";
-				mes "[DRY-RUN] rely on you in a crisis.";
-				mes "[DRY-RUN] You must level up!";
+				mes "你还不够强大";
+				mes "还不能让你的公会完全";
+				mes "在危机时刻依赖你。";
+				mes "你必须升级！";
 				close;
 			}
 			else if ((guildrelay_q == 14) && (BaseJob == Job_Wizard)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hmm... I don't think you've";
-				mes "[DRY-RUN] spent enough time leveling";
-				mes "[DRY-RUN] up yet. Keep working on it.";
+				mes "嗯……我觉得你还没有";
+				mes "花足够的时间来升级";
+				mes "。继续努力吧。";
 				close;
 			}
 		}
@@ -2271,149 +2271,149 @@
 	else {
 		if (is_guild_leader(.@GID) == true) {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Hm. You're the master";
-			mes "[DRY-RUN] of another guild, aren't";
-			mes "[DRY-RUN] you? I have no loyalty";
-			mes "[DRY-RUN] towards you. Please...";
-			mes "[DRY-RUN] Leave this place.";
+			mes "嗯。你是另一个公会的";
+			mes "大师，不是吗？";
+			mes "你？我对你没有忠诚";
+			mes "对你没有忠诚。请……";
+			mes "离开这个地方。";
 			close;
 		}
 		else {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Hm? You have no reason";
-			mes "[DRY-RUN] to linger in this stronghold.";
-			mes "[DRY-RUN] Please leave this place now.";
+			mes "嗯？你没有理由";
+			mes "留在这个据点。";
+			mes "请现在离开这个地方。";
 			close;
 		}
 	}
 	if ((guildrelay_q == 71) && (countitem(7241) > 0)) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] There's no need for you";
-		mes "[DRY-RUN] to hold onto that Spirit";
-		mes "[DRY-RUN] of Union. Please give it to";
-		mes "[DRY-RUN] a Bard, Minstrel, Dancer";
-		mes "[DRY-RUN] or Gypsy in your guild.";
+		mes "你没有必要";
+		mes "执着于那个灵魂";
+		mes "的联合。请把它交给";
+		mes "你公会里的诗人、吟游诗人、舞娘";
+		mes "或舞姬。";
 		close;
 	}
 	else if (guildrelay_q == 71) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] When you improve yourself,";
-		mes "[DRY-RUN] you'll also be strengthening";
-		mes "[DRY-RUN] your guild. Always devote some";
-		mes "[DRY-RUN] time for yourself and for your";
-		mes "[DRY-RUN] team. You cannot have one";
-		mes "[DRY-RUN] without the other.";
+		mes "当你提升自己时，";
+		mes "你也会增强";
+		mes "你的公会。永远要投入一些";
+		mes "时间给自己和你的";
+		mes "团队。你不能只拥有一个";
+		mes "而没有另一个。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] I suppose you really";
-		mes "[DRY-RUN] don't have much use";
-		mes "[DRY-RUN] for me anymore... But I'll";
-		mes "[DRY-RUN] always offer my support.";
+		mes "我想你真的";
+		mes "没有太多用处";
+		mes "再也无法为我... 但我会";
+		mes "永远提供我的支持。";
 		close;
 	}
 	if ((guildrelay_q == 72) && (countitem(7242) > 0)) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] There's no need for you";
-		mes "[DRY-RUN] to hold onto that Spirit of";
-		mes "[DRY-RUN] Combination. Please give";
-		mes "[DRY-RUN] it to an Assassin or Assassin";
-		mes "[DRY-RUN] Cross in your guild.";
+		mes "你没有必要";
+		mes "紧紧抓住那份精神";
+		mes "组合。请给";
+		mes "把它交给你公会里的刺客或十字刺客.";
+		mes ".";
 		close;
 	}
 	else if (guildrelay_q == 72) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] Your songs bolster your";
-		mes "[DRY-RUN] guild's morale, and will";
-		mes "[DRY-RUN] help them stand and fight,";
-		mes "[DRY-RUN] no matter how deseperate";
-		mes "[DRY-RUN] the situation may seem.";
-		mes "[DRY-RUN] Your voice can make miracles.";
+		mes "你的歌曲增强了你的";
+		mes "公会的士气和意志";
+		mes "帮助他们站起来战斗，";
+		mes "无论情况多么绝望";
+		mes "。";
+		mes "你的声音可以创造奇迹。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] I suppose you really";
-		mes "[DRY-RUN] don't have much use";
-		mes "[DRY-RUN] for me anymore... But I'll";
-		mes "[DRY-RUN] always offer my support.";
+		mes "我想你真的";
+		mes "没有太多用处";
+		mes "再也无法为我... 但我会";
+		mes "永远提供我的支持。";
 		close;
 	}
 	if ((guildrelay_q == 73) && (countitem(7242) > 0)) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] There's no need for you";
-		mes "[DRY-RUN] to hold onto that Spirit of";
-		mes "[DRY-RUN] Combination. Please give";
-		mes "[DRY-RUN] it to an Assassin or Assassin";
-		mes "[DRY-RUN] Cross in your guild.";
+		mes "你没有必要";
+		mes "紧紧抓住那份精神";
+		mes "组合。请给";
+		mes "把它交给你公会里的刺客或十字刺客.";
+		mes ".";
 		close;
 	}
 	else if (guildrelay_q == 73) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] Your dances bolster your";
-		mes "[DRY-RUN] guild's morale, and will";
-		mes "[DRY-RUN] help them stand and fight,";
-		mes "[DRY-RUN] no matter how deseperate";
-		mes "[DRY-RUN] the situation may seem.";
-		mes "[DRY-RUN] Your voice can make miracles.";
+		mes "你的舞蹈增强了你的";
+		mes "公会的士气和意志";
+		mes "帮助他们站起来战斗，";
+		mes "无论情况多么绝望";
+		mes "。";
+		mes "你的声音可以创造奇迹。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] I suppose you really";
-		mes "[DRY-RUN] don't have much use";
-		mes "[DRY-RUN] for me anymore... But I'll";
-		mes "[DRY-RUN] always offer my support.";
+		mes "我想你真的";
+		mes "没有太多用处";
+		mes "再也无法为我... 但我会";
+		mes "永远提供我的支持。";
 		close;
 	}
 	if ((guildrelay_q == 74) && (countitem(7244) > 0)) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] There's no need for you";
-		mes "[DRY-RUN] to hold onto that Spirit";
-		mes "[DRY-RUN] of Solidarity. Please give";
-		mes "[DRY-RUN] it to a Wizard or High";
-		mes "[DRY-RUN] Wizard in your guild.";
+		mes "你没有必要";
+		mes "执着于那个灵魂";
+		mes "团结。请把它交给";
+		mes "你公会中的巫师或高";
+		mes "巫师。";
 		close;
 	}
 	else if (guildrelay_q == 74) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] I suppose you really";
-		mes "[DRY-RUN] don't have much use";
-		mes "[DRY-RUN] for me anymore... But I'll";
-		mes "[DRY-RUN] always offer my support.";
+		mes "我想你真的";
+		mes "没有太多用处";
+		mes "再也无法为我... 但我会";
+		mes "永远提供我的支持。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] Know who your enemies are.";
-		mes "[DRY-RUN] If anybody opposes your guild,";
-		mes "[DRY-RUN] you must crush them without";
-		mes "[DRY-RUN] any hesitation. Your justice";
-		mes "[DRY-RUN] must be meted swiftly!";
+		mes "知道你的敌人是谁。";
+		mes "如果有人反对你的公会，";
+		mes "你必须毫不犹豫地粉碎他们。";
+		mes "你的正义";
+		mes "必须迅速处理！";
 		close;
 	}
 	if ((guildrelay_q == 75) && (countitem(7245) > 0)) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] There's no need for you";
-		mes "[DRY-RUN] to hold onto that Spirit of";
-		mes "[DRY-RUN] Friendship. Please give";
-		mes "[DRY-RUN] it to your Guild Master.";
+		mes "你没有必要";
+		mes "紧紧抓住那份精神";
+		mes "友谊。请给";
+		mes "你的公会长。";
 		close;
 	}
 	else if (guildrelay_q == 75) {
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] I can tell that you're";
-		mes "[DRY-RUN] always trying to help all";
-		mes "[DRY-RUN] the members of your guild.";
-		mes "[DRY-RUN] Your loyalty will bring them";
-		mes "[DRY-RUN] to your side in times of";
-		mes "[DRY-RUN] joy and of tribulation.";
+		mes "我能看出你是";
+		mes "总是试图帮助所有";
+		mes "你公会的成员。";
+		mes "你的忠诚将带给他们";
+		mes "在你身边度过的时光";
+		mes "欢乐与苦难之中。";
 		next;
 		mes "[" + .@name$ + "]";
-		mes "[DRY-RUN] I suppose you really";
-		mes "[DRY-RUN] don't have much use";
-		mes "[DRY-RUN] for me anymore... But I'll";
-		mes "[DRY-RUN] always offer my support.";
+		mes "我想你真的";
+		mes "没有太多用处";
+		mes "再也无法为我... 但我会";
+		mes "永远提供我的支持。";
 		close;
 	}
 	mes "[" + .@name$ + "]";
-	mes "[DRY-RUN] We have nothing to";
-	mes "[DRY-RUN] do with each other.";
-	mes "[DRY-RUN] Leave me be, and";
-	mes "[DRY-RUN] just go on your way.";
+	mes "我们之间没有任何关系。";
+	mes "彼此无关。";
+	mes "别打扰我，";
+	mes "就继续你的路吧。";
 	close;
 }
 
@@ -2422,92 +2422,92 @@
 	getmapxy(.@m$,.@x,.@x,BL_NPC);
 	set .@GID, GetCastleData(.@m$,1);
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] ^3355FFWait a minute! You're";
-		mes "[DRY-RUN] carrying too many items";
-		mes "[DRY-RUN] right now: store some of";
-		mes "[DRY-RUN] your extra things in Kafra";
-		mes "[DRY-RUN] Storage, and then come back.^000000";
+		mes "^3355FF等一下！你";
+		mes "携带的物品太多了";
+		mes "现在：把一些";
+		mes "多余的东西存放在卡普拉";
+		mes "仓库，然后再回来。^000000";
 		close;
 	}
 	if (.@GID == 0) {
-		mes "[DRY-RUN] ^3355FFThis exhausted man";
-		mes "[DRY-RUN] notices you staring at";
-		mes "[DRY-RUN] him, but chooses to leave";
-		mes "[DRY-RUN] you alone. There's no one";
-		mes "[DRY-RUN] else in this stronghold so";
-		mes "[DRY-RUN] there's no reason to be here.^000000";
+		mes "^3355FF这个疲惫的男人";
+		mes "注意到你在盯着";
+		mes "他，但选择离开";
+		mes "你一个人。这里没有人";
+		mes "在这个据点里，所以";
+		mes "没有理由待在这里。^000000";
 		close;
 	}
 	if (getcharid(2) == .@GID) {
 		if (is_guild_leader() == true) {
 			if (countitem(7246) > 0) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hm? That spirit that";
-				mes "[DRY-RUN] you've brought with you...";
-				mes "[DRY-RUN] I'm sorry, but it's useless";
-				mes "[DRY-RUN] for you to carry it around.";
+				mes "嗯？那个灵魂是";
+				mes "你带来了...";
+				mes "抱歉，但这没用";
+				mes "你随身携带它是没有意义的。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give that to";
-				mes "[DRY-RUN] a ^FF0000Rogue^000000 or ^FF0000Stalker^000000";
-				mes "[DRY-RUN] in your guild, and then";
-				mes "[DRY-RUN] ask him bring it to me.";
+				mes "请把它交给";
+				mes "你公会里的 ^FF0000盗贼^000000 或 ^FF0000追踪者^000000";
+				mes "然后";
+				mes "请他把它带给我。";
 				close;
 			}
 			else {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Our business together";
-				mes "[DRY-RUN] has concluded. If you're";
-				mes "[DRY-RUN] not busy, why don't you try";
-				mes "[DRY-RUN] helping out your guild? Yes,";
-				mes "[DRY-RUN] I'm sure they'd appreciate it.";
+				mes "我们之间的交易";
+				mes "已经结束。如果你";
+				mes "不忙的话，为什么不试试";
+				mes "帮助你的公会呢？是的，";
+				mes "我相信他们会很感激的。";
 				close;
 			}
 		}
 		else {
 			if ((BaseJob == Job_Rogue) && (countitem(7246) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] So you're the one that's";
-				mes "[DRY-RUN] been entrusted with the";
-				mes "[DRY-RUN] Spirit of Peace? Well then...";
-				mes "[DRY-RUN] My task for you is to ^FF0000form";
+				mes "所以你就是那个被";
+				mes "托付了";
+				mes "和平之灵的人？那么...";
+				mes "我给你的任务是 ^FF0000组建一个";
 				switch(rand(1,3)) {
 				case 1:
-					mes "[DRY-RUN] a party with 6 members^000000.";
-					mes "[DRY-RUN] No more and no less.";
+					mes "6名成员的队伍^000000。";
+					mes "不能多也不能少。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] This is a strange test,";
-					mes "[DRY-RUN] but if you can do this, it";
-					mes "[DRY-RUN] will clearly demonstrate";
-					mes "[DRY-RUN] to me that your people";
-					mes "[DRY-RUN] skills are up to par.";
+					mes "这是一个奇怪的测试，";
+					mes "但如果你能做到这一点，";
+					mes "这将清楚地证明";
+					mes "给我看你们的";
+					mes "技能达到了标准。";
 					delitem 7246,1; //Soul_Of_Peace
 					set guildrelay_q,91;
 					close;
 				case 2:
-					mes "[DRY-RUN] a party with 8 members^000000.";
-					mes "[DRY-RUN] No more and no less.";
+					mes "一个有8个成员的队伍^000000。";
+					mes "不能多也不能少。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] This is a strange test,";
-					mes "[DRY-RUN] but if you can do this, it";
-					mes "[DRY-RUN] will clearly demonstrate";
-					mes "[DRY-RUN] to me that your people";
-					mes "[DRY-RUN] skills are up to par.";
+					mes "这是一个奇怪的测试，";
+					mes "但如果你能做到这一点，";
+					mes "这将清楚地证明";
+					mes "给我看你们的";
+					mes "技能达到了标准。";
 					delitem 7246,1; //Soul_Of_Peace
 					set guildrelay_q,92;
 					close;
 				case 3:
-					mes "[DRY-RUN] a party with 10 members^000000.";
-					mes "[DRY-RUN] No more and no less.";
+					mes "一个有10个成员的队伍^000000。";
+					mes "不能多也不能少。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] This is a strange test,";
-					mes "[DRY-RUN] but if you can do this, it";
-					mes "[DRY-RUN] will clearly demonstrate";
-					mes "[DRY-RUN] to me that your people";
-					mes "[DRY-RUN] skills are up to par.";
+					mes "这是一个奇怪的测试，";
+					mes "但如果你能做到这一点，";
+					mes "这将清楚地证明";
+					mes "给我看你们的";
+					mes "技能达到了标准。";
 					delitem 7246,1; //Soul_Of_Peace
 					set guildrelay_q,93;
 					close;
@@ -2518,167 +2518,167 @@
 			if (guildrelay_q == 91) {
 				if (.@partymembercount == 6) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I see that you've";
-					mes "[DRY-RUN] formed a party with";
-					mes "[DRY-RUN] the exact number of";
-					mes "[DRY-RUN] people that I asked. Hmm.";
-					mes "[DRY-RUN] I guess you can be trusted";
-					mes "[DRY-RUN] to lead when you must.";
+					mes "我看到你已经";
+					mes "组建了一个有";
+					mes "正好数量的";
+					mes "人，正是我要求的。嗯。";
+					mes "我想你可以被信任";
+					mes "在必要时领导。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Here. I want you to take";
-					mes "[DRY-RUN] this spirit, and then give";
-					mes "[DRY-RUN] it to a Priest or High";
-					mes "[DRY-RUN] Priest in your guild.";
+					mes "这里。我想让你拿着这个";
+					mes "这个灵魂，然后交给";
+					mes "你的公会中的牧师或大主教。";
+					mes "在你的公会中。";
 					set guildrelay_q,95;
 					getitem 7247,1; //Soul_Of_Spirit
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I thought I asked you to";
-					mes "[DRY-RUN] ^FF0000form a party of 6 members^000000?";
-					mes "[DRY-RUN] No more and no less. Hmm.";
-					mes "[DRY-RUN] Come back to me after you've";
-					mes "[DRY-RUN] finished this simple task.";
+					mes "我以为我让你去";
+					mes "^FF0000组建一个6人队伍^000000？";
+					mes "不多也不少。嗯。";
+					mes "完成这个简单的任务后再来找我。";
+					mes "完成这个简单的任务。";
 					close;
 				}
 			}
 			if (guildrelay_q == 92) {
 				if (.@partymembercount == 8) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I see that you've";
-					mes "[DRY-RUN] formed a party with";
-					mes "[DRY-RUN] the exact number of";
-					mes "[DRY-RUN] people that I asked. Hmm.";
-					mes "[DRY-RUN] I guess you can be trusted";
-					mes "[DRY-RUN] to lead when you must.";
+					mes "我看到你已经";
+					mes "组建了一个有";
+					mes "正好数量的";
+					mes "人，正是我要求的。嗯。";
+					mes "我想你可以被信任";
+					mes "在必要时领导。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Here. I want you to take";
-					mes "[DRY-RUN] this spirit, and then give";
-					mes "[DRY-RUN] it to a Priest or High";
-					mes "[DRY-RUN] Priest in your guild.";
+					mes "这里。我想让你拿着这个";
+					mes "这个灵魂，然后交给";
+					mes "你的公会中的牧师或大主教。";
+					mes "在你的公会中。";
 					set guildrelay_q,95;
 					getitem 7247,1; //Soul_Of_Spirit
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I thought I asked you to";
-					mes "[DRY-RUN] ^FF0000form a party of 8 members^000000?";
-					mes "[DRY-RUN] No more and no less. Hmm.";
-					mes "[DRY-RUN] Come back to me after you've";
-					mes "[DRY-RUN] finished this simple task.";
+					mes "我以为我让你去";
+					mes "^FF0000组建一个8人队伍^000000？";
+					mes "不多也不少。嗯。";
+					mes "完成这个简单的任务后再来找我。";
+					mes "完成这个简单的任务。";
 					close;				}
 			}
 			if (guildrelay_q == 93) {
 				if (.@partymembercount == 10) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I see that you've";
-					mes "[DRY-RUN] formed a party with";
-					mes "[DRY-RUN] the exact number of";
-					mes "[DRY-RUN] people that I asked. Hmm.";
-					mes "[DRY-RUN] I guess you can be trusted";
-					mes "[DRY-RUN] to lead when you must.";
+					mes "我看到你已经";
+					mes "组建了一个有";
+					mes "正好数量的";
+					mes "人，正是我要求的。嗯。";
+					mes "我想你可以被信任";
+					mes "在必要时领导。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Here. I want you to take";
-					mes "[DRY-RUN] this spirit, and then give";
-					mes "[DRY-RUN] it to a Priest or High";
-					mes "[DRY-RUN] Priest in your guild.";
+					mes "这里。我想让你拿着这个";
+					mes "这个灵魂，然后交给";
+					mes "你的公会中的牧师或大主教。";
+					mes "在你的公会中。";
 					set guildrelay_q,95;
 					getitem 7247,1; //Soul_Of_Spirit
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I thought I asked you to";
-					mes "[DRY-RUN] ^FF0000form a party of 10 members^000000?";
-					mes "[DRY-RUN] No more and no less. Hmm.";
-					mes "[DRY-RUN] Come back to me after you've";
-					mes "[DRY-RUN] finished this simple task.";
+					mes "我以为我让你去";
+					mes "^FF0000组建一个10人队伍^000000？";
+					mes "不多也不少。嗯。";
+					mes "完成这个简单的任务后再来找我。";
+					mes "完成这个简单的任务。";
 					close;
 				}
 			}
 			if ((BaseJob == Job_Priest) && (countitem(7247) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Good work getting the";
-				mes "[DRY-RUN] Spirit of Determination,";
-				mes "[DRY-RUN] but I want you to work on";
-				mes "[DRY-RUN] getting stronger. If you";
-				mes "[DRY-RUN] intend to protect others,";
-				mes "[DRY-RUN] you can't afford to lose.";
+				mes "干得好，获得了";
+				mes "决心之灵，";
+				mes "但我希望你继续努力";
+				mes "变得更强。如果你";
+				mes "打算保护他人，";
+				mes "你不能输。";
 				next;
 				if ((BaseLevel > 1) && (BaseLevel < 61)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I want you to gain";
-					mes "[DRY-RUN] ^FF00003 Base Levels^000000 for the";
-					mes "[DRY-RUN] sake of strengthening";
-					mes "[DRY-RUN] yourself and your guild.";
-					mes "[DRY-RUN] This is my test for you.";
+					mes "我希望你获得";
+					mes "^FF00003 基本等级^000000 为了";
+					mes "增强你自己和";
+					mes "你的公会。";
+					mes "这是我对你的考验。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Try not to worry";
-					mes "[DRY-RUN] over this task so much.";
-					mes "[DRY-RUN] I'm certain you can do";
-					mes "[DRY-RUN] this. Come back to me";
-					mes "[DRY-RUN] when you are ready.";
+					mes "尽量不要太担心";
+					mes "这个任务。";
+					mes "我相信你能做到";
+					mes "这一点。准备好后";
+					mes "再来找我。";
 					delitem 7247,1; //Soul_Of_Spirit
 					set guildrelay_q,18;
 					close;
 				}
 				if ((BaseLevel > 60) && (BaseLevel < 76)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I want you to gain";
-					mes "[DRY-RUN] ^FF00002 Base Levels^000000 for the";
-					mes "[DRY-RUN] sake of strengthening";
-					mes "[DRY-RUN] yourself and your guild.";
-					mes "[DRY-RUN] This is my test for you.";
+					mes "我希望你获得";
+					mes "^FF00002 基本等级^000000 为了";
+					mes "增强你自己和";
+					mes "你的公会。";
+					mes "这是我对你的考验。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Try not to worry";
-					mes "[DRY-RUN] over this task so much.";
-					mes "[DRY-RUN] I'm certain you can do";
-					mes "[DRY-RUN] this. Come back to me";
-					mes "[DRY-RUN] when you are ready.";
+					mes "尽量不要太担心";
+					mes "这个任务。";
+					mes "我相信你能做到";
+					mes "这一点。准备好后";
+					mes "再来找我。";
 					delitem 7247,1; //Soul_Of_Spirit
 					set guildrelay_q,19;
 					close;
 				}
 				if ((BaseLevel > 75) && (BaseLevel < 97)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] I want you to gain";
-					mes "[DRY-RUN] ^FF00001 Base Level^000000 for the";
-					mes "[DRY-RUN] sake of strengthening";
-					mes "[DRY-RUN] yourself and your guild.";
-					mes "[DRY-RUN] This is my test for you.";
+					mes "我希望你获得";
+					mes "^FF00001 基本等级^000000 为了";
+					mes "增强你自己和";
+					mes "你的公会。";
+					mes "这是我对你的考验。";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Try not to worry";
-					mes "[DRY-RUN] over this task so much.";
-					mes "[DRY-RUN] I'm certain you can do";
-					mes "[DRY-RUN] this. Come back to me";
-					mes "[DRY-RUN] when you are ready.";
+					mes "尽量不要太担心";
+					mes "这个任务。";
+					mes "我相信你能做到";
+					mes "这一点。准备好后";
+					mes "再来找我。";
 					delitem 7247,1; //Soul_Of_Spirit
 					set guildrelay_q,20;
 					close;
 				}
 				if (BaseLevel > 96) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Hum, You are stronger than";
-					mes "[DRY-RUN] I was expected.";
-					mes "[DRY-RUN] You don't need any more quests";
-					mes "[DRY-RUN] for becoming stronger.";
-					mes "[DRY-RUN] But, do not be so proud of yourself.";
+					mes "嗯，你比";
+					mes "我预期的要强.";
+					mes "你不需要更多的任务";
+					mes "来变得更强.";
+					mes "但是，不要太自满.";
 					next;
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Alright then...";
-					mes "[DRY-RUN] I entrust you with";
-					mes "[DRY-RUN] this spirit. Please be";
-					mes "[DRY-RUN] sure to give it to a";
-					mes "[DRY-RUN] ^4D4DFFCrusader^000000 or ^4D4DFFPaladin^000000";
-					mes "[DRY-RUN] in your guild.";
+					mes "好的...";
+					mes "我把这个灵魂托付给你.";
+					mes "请务必把它交给一位";
+					mes "在你公会里的";
+					mes "^4D4DFF十字军^000000 或 ^4D4DFF圣骑士^000000";
+					mes ".";
 					delitem 7247,1; //Soul_Of_Spirit
 					set guildrelay_q,98;
 					getitem 7249,1; //Soul_Of_Service
@@ -2687,86 +2687,86 @@
 			}
 			if (((BaseLevel + 2) < (BaseLevel)) && (guildrelay_q == 18)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Huh. I see that you've";
-				mes "[DRY-RUN] become much stronger,";
-				mes "[DRY-RUN] just as I asked. No wonder";
-				mes "[DRY-RUN] your guild mates can rely";
-				mes "[DRY-RUN] on you. Congratulations";
-				mes "[DRY-RUN] on a job well done.";
+				mes "嗯。我看到你已经";
+				mes "变得更强了，";
+				mes "正如我所要求的。难怪";
+				mes "你的公会伙伴可以依赖";
+				mes "你。恭喜你";
+				mes "做得很好。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Alright then...";
-				mes "[DRY-RUN] I entrust you with";
-				mes "[DRY-RUN] this spirit. Please be";
-				mes "[DRY-RUN] sure to give it to a";
-				mes "[DRY-RUN] ^4D4DFFCrusader^000000 or ^4D4DFFPaladin^000000";
-				mes "[DRY-RUN] in your guild.";
+				mes "好的...";
+				mes "我把这个灵魂托付给你.";
+				mes "请务必把它交给一位";
+				mes "在你公会里的";
+				mes "^4D4DFF十字军^000000 或 ^4D4DFF圣骑士^000000";
+				mes ".";
 				set guildrelay_q,98;
 				getitem 7249,1; //Soul_Of_Service
 				close;
 			}
 			if (((BaseLevel + 1) < (BaseLevel)) && (guildrelay_q == 19)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Huh. I see that you've";
-				mes "[DRY-RUN] become much stronger,";
-				mes "[DRY-RUN] just as I asked. No wonder";
-				mes "[DRY-RUN] your guild mates can rely";
-				mes "[DRY-RUN] on you. Congratulations";
-				mes "[DRY-RUN] on a job well done.";
+				mes "嗯。我看到你已经";
+				mes "变得更强了，";
+				mes "正如我所要求的。难怪";
+				mes "你的公会伙伴可以依赖";
+				mes "你。恭喜你";
+				mes "做得很好。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Alright then...";
-				mes "[DRY-RUN] I entrust you with";
-				mes "[DRY-RUN] this spirit. Please be";
-				mes "[DRY-RUN] sure to give it to a";
-				mes "[DRY-RUN] ^4D4DFFCrusader^000000 or ^4D4DFFPaladin^000000";
-				mes "[DRY-RUN] in your guild.";
+				mes "好的...";
+				mes "我把这个灵魂托付给你.";
+				mes "请务必把它交给一位";
+				mes "在你公会里的";
+				mes "^4D4DFF十字军^000000 或 ^4D4DFF圣骑士^000000";
+				mes ".";
 				set guildrelay_q,98;
 				getitem 7249,1; //Soul_Of_Service
 				close;
 			}
 			if ((BaseLevel < BaseLevel) && (guildrelay_q == 20)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Huh. I see that you've";
-				mes "[DRY-RUN] become much stronger,";
-				mes "[DRY-RUN] just as I asked. No wonder";
-				mes "[DRY-RUN] your guild mates can rely";
-				mes "[DRY-RUN] on you. Congratulations";
-				mes "[DRY-RUN] on a job well done.";
+				mes "嗯。我看到你已经";
+				mes "变得更强了，";
+				mes "正如我所要求的。难怪";
+				mes "你的公会伙伴可以依赖";
+				mes "你。恭喜你";
+				mes "做得很好。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Ok, take this and give to";
-				mes "[DRY-RUN] Crusader or Paladin";
-				mes "[DRY-RUN] who is in our guild.";
-				mes "[DRY-RUN] Good luck!";
+				mes "好的，拿着这个给";
+				mes "十字军或圣骑士";
+				mes "他在我们的公会里。";
+				mes "祝你好运！";
 				set guildrelay_q,98;
 				getitem 7249,1; //Soul_Of_Service
 				close;
 			}
 			if ((BaseJob == Job_Crusader) && (countitem(7249) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I see that you possess";
-				mes "[DRY-RUN] the Spirit of Service. Hmm.";
-				mes "[DRY-RUN] Good job. Now, your next";
-				mes "[DRY-RUN] task will test your patience.";
-				mes "[DRY-RUN] All you have to do is ^FF0000wait^000000.";
-				mes "[DRY-RUN] Wait until the time is right.";
+				mes "我看到你拥有";
+				mes "服务精神。嗯。";
+				mes "干得好。现在，你的下一个";
+				mes "任务将考验你的耐心。";
+				mes "你只需要^FF0000等待^000000。";
+				mes "等待时机的到来。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I want you to spend this";
-				mes "[DRY-RUN] time to look into yourself,";
-				mes "[DRY-RUN] and examine your relationship";
-				mes "[DRY-RUN] with your guild members.";
-				mes "[DRY-RUN] When you feel that the time";
-				mes "[DRY-RUN] is right, come talk to me.";
+				mes "我希望你花时间去思考这个";
+				mes "时间去审视自己，";
+				mes "并检查你的人际关系";
+				mes "还不够。";
+				mes "当你觉得时机合适时";
+				mes "来找我谈谈。";
 				next;
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I'm not going to tell you";
-				mes "[DRY-RUN] when you should come back.";
-				mes "[DRY-RUN] I'll merely confirm whether";
-				mes "[DRY-RUN] you've come early or on time.";
-				mes "[DRY-RUN] You'll need to really listen";
-				mes "[DRY-RUN] to your feelings this time...";
+				mes "我不会告诉你";
+				mes "你应该什么时候回来。";
+				mes "我只是会确认";
+				mes "你是提前来了还是准时来了。";
+				mes "这次你需要真正倾听";
+				mes "你的内心感受...";
 				delitem 7249,1; //Soul_Of_Service
 				set guildrelay_q,21;
 				set guildtime, atoi( gettimestr("%H%M",5) );
@@ -2776,128 +2776,128 @@
 			if ((guildtime > 2259) && (guildrelay_q == 21) && (BaseJob == Job_Crusader)) {
 				if ((.@time > 0201) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Yes. You've come at just";
-					mes "[DRY-RUN] the right time. Remember";
-					mes "[DRY-RUN] that feeling in your heart,";
-					mes "[DRY-RUN] and trust it when it comes";
-					mes "[DRY-RUN] again. Now give this spirit to";
-					mes "[DRY-RUN] a ^FF0000Monk^000000 or ^FF0000Champion^000000 for me...";
+					mes "是的。你来得正好";
+					mes "正确的时机。记住";
+					mes "你心中的感觉，";
+					mes "当它再次到来时，相信它";
+					mes "现在把这个灵魂交给";
+					mes "一个^FF0000武僧^000000或^FF0000拳圣^000000为我...";
 					set guildrelay_q,96;
 					getitem 7250,1; //Soul_Of_Glory
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Too early.";
-					mes "[DRY-RUN] Still too early.";
-					mes "[DRY-RUN] Have you been listening";
-					mes "[DRY-RUN] to your heart? Listen harder.";
+					mes "太早了。";
+					mes "仍然太早了。";
+					mes "你有在倾听";
+					mes "你的心吗？再仔细听听。";
 					close;
 				}
 			}
 			if ((guildtime > 2159) && (guildrelay_q == 21) && (BaseJob == Job_Crusader)) {
 				if ((.@time > 0101) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Yes. You've come at just";
-					mes "[DRY-RUN] the right time. Remember";
-					mes "[DRY-RUN] that feeling in your heart,";
-					mes "[DRY-RUN] and trust it when it comes";
-					mes "[DRY-RUN] again. Now give this spirit to";
-					mes "[DRY-RUN] a ^FF0000Monk^000000 or ^FF0000Champion^000000 for me...";
+					mes "是的。你来得正好";
+					mes "正确的时机。记住";
+					mes "你心中的感觉，";
+					mes "当它再次到来时，相信它";
+					mes "现在把这个灵魂交给";
+					mes "一个^FF0000武僧^000000或^FF0000拳圣^000000为我...";
 					set guildrelay_q,96;
 					getitem 7250,1; //Soul_Of_Glory
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Too early.";
-					mes "[DRY-RUN] Still too early.";
-					mes "[DRY-RUN] Have you been listening";
-					mes "[DRY-RUN] to your heart? Listen harder.";
+					mes "太早了。";
+					mes "仍然太早了。";
+					mes "你有在倾听";
+					mes "你的心吗？再仔细听听。";
 					close;
 				}
 			}
 			if ((guildtime > 2059) && (guildrelay_q == 21) && (BaseJob == Job_Crusader)) {
 				if ((.@time > 0001) && (.@time < guildtime)) {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Yes. You've come at just";
-					mes "[DRY-RUN] the right time. Remember";
-					mes "[DRY-RUN] that feeling in your heart,";
-					mes "[DRY-RUN] and trust it when it comes";
-					mes "[DRY-RUN] again. Now give this spirit to";
-					mes "[DRY-RUN] a ^FF0000Monk^000000 or ^FF0000Champion^000000 for me...";
+					mes "是的。你来得正好";
+					mes "正确的时机。记住";
+					mes "你心中的感觉，";
+					mes "当它再次到来时，相信它";
+					mes "现在把这个灵魂交给";
+					mes "一个^FF0000武僧^000000或^FF0000拳圣^000000为我...";
 					set guildrelay_q,96;
 					getitem 7250,1; //Soul_Of_Glory
 					close;
 				}
 				else {
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Too early.";
-					mes "[DRY-RUN] Still too early.";
-					mes "[DRY-RUN] Have you been listening";
-					mes "[DRY-RUN] to your heart? Listen harder.";
+					mes "太早了。";
+					mes "仍然太早了。";
+					mes "你有在倾听";
+					mes "你的心吗？再仔细听听。";
 					close;
 				}
 			}
 			if ((.@time - guildtime > 0300) && (guildrelay_q == 21) && (BaseJob == Job_Crusader)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Yes. You've come at just";
-				mes "[DRY-RUN] the right time. Remember";
-				mes "[DRY-RUN] that feeling in your heart,";
-				mes "[DRY-RUN] and trust it when it comes";
-				mes "[DRY-RUN] again. Now give this spirit to";
-				mes "[DRY-RUN] a ^FF0000Monk^000000 or ^FF0000Champion^000000 for me...";
+				mes "是的。你来得正好";
+				mes "正确的时机。记住";
+				mes "你心中的感觉，";
+				mes "当它再次到来时，相信它";
+				mes "现在把这个灵魂交给";
+				mes "一个^FF0000武僧^000000或^FF0000拳圣^000000为我...";
 				set guildrelay_q,96;
 				getitem 7250,1; //Soul_Of_Glory
 				close;
 			}
 			if ((guildrelay_q == 21) && (BaseJob == Job_Crusader)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Not yet. Just wait";
-				mes "[DRY-RUN] a little longer. Relax,";
-				mes "[DRY-RUN] and come back later.";
+				mes "还没有。再等一下";
+				mes "再久一点。放松，";
+				mes "然后再回来。";
 				close;
 			}
 			if ((BaseJob == Job_Monk) && (countitem(7250) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Most of the souls have";
-				mes "[DRY-RUN] been shared, and there is";
-				mes "[DRY-RUN] but one thing I want to ask";
-				mes "[DRY-RUN] you to do. Please bring me";
-				mes "[DRY-RUN] some items. Having your friends";
-				mes "[DRY-RUN] help you do this is acceptable.";
+				mes "大多数灵魂已经";
+				mes "被分享了，还有";
+				mes "但我想问你一件事";
+				mes "你要做的。请带给我";
+				mes "一些物品。让你的朋友们";
+				mes "帮助你完成这件事是可以的。";
 				next;
 				switch(rand(1,3)) {
 				case 1:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Please bring";
-					mes "[DRY-RUN] ^FF000030 Dokebi Horns^000000,";
-					mes "[DRY-RUN] ^FF000030 Fish Tails^000000, and";
-					mes "[DRY-RUN] ^FF000030 Celestial Robes^000000.";
-					mes "[DRY-RUN] I shall be waiting";
-					mes "[DRY-RUN] for you right here.";
+					mes "请带来";
+					mes "^FF000030 独角兽角^000000，";
+					mes "^FF000030 鱼尾^000000，以及";
+					mes "^FF000030 天使长袍^000000。";
+					mes "我会在这里等你。";
+					mes "我会在这里等你。";
 					delitem 7250,1; //Soul_Of_Glory
 					set guildrelay_q,23;
 					close;
 				case 2:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Please bring";
-					mes "[DRY-RUN] ^FF000030 Rainbow Shells^000000,";
-					mes "[DRY-RUN] ^FF000030 Elastic Bands^000000, and";
-					mes "[DRY-RUN] ^FF000030 Horrendous Hairs^000000.";
-					mes "[DRY-RUN] I shall be waiting";
-					mes "[DRY-RUN] for you right here.";
+					mes "请带来";
+					mes "^FF000030 彩虹贝壳^000000，";
+					mes "^FF000030 弹性带^000000，以及";
+					mes "^FF000030 可怕的头发^000000。";
+					mes "我会在这里等你。";
+					mes "我会在这里等你。";
 					delitem 7250,1; //Soul_Of_Glory
 					set guildrelay_q,24;
 					close;
 				case 3:
 					mes "[" + .@name$ + "]";
-					mes "[DRY-RUN] Please bring";
-					mes "[DRY-RUN] ^FF000030 Worn-out Kimonos^000000,";
-					mes "[DRY-RUN] ^FF000030 Anolian Skins^000000, and";
-					mes "[DRY-RUN] ^FF000030 PecoPeco Feathers^000000.";
-					mes "[DRY-RUN] I shall be waiting";
-					mes "[DRY-RUN] for you right here.";
+					mes "请带来";
+					mes "^FF000030 破旧的和服^000000,";
+					mes "^FF000030 安诺利皮^000000, 和";
+					mes "^FF000030 皮可皮可羽毛^000000.";
+					mes "我会在这里等你。";
+					mes "我会在这里等你。";
 					delitem 7250,1; //Soul_Of_Glory
 					set guildrelay_q,94;
 					close;
@@ -2905,12 +2905,12 @@
 			}
 			if ((countitem(7165) > 29) && (countitem(1021) > 29) && (countitem(1023) > 29) && (guildrelay_q == 23)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Well, well. You've";
-				mes "[DRY-RUN] gathered those items";
-				mes "[DRY-RUN] more quickly that I thought";
-				mes "[DRY-RUN] you would. Good job. Now,";
-				mes "[DRY-RUN] please give this to your ^FF0000Guild";
-				mes "[DRY-RUN] Master^000000 as soon as you can.";
+				mes "好吧，好吧。你";
+				mes "收集了这些物品";
+				mes "比我想的快";
+				mes "你做得很好。现在，";
+				mes "请尽快把这个交给你的 ^FF0000公会";
+				mes "会长^000000.";
 				delitem 7165,30; //Limpid_Celestial_Robe
 				delitem 1021,30; //Dokkaebi_Horn
 				delitem 1023,30; //Fish_Tail
@@ -2920,20 +2920,20 @@
 			}
 			if ((BaseJob == Job_Monk) && (guildrelay_q == 23)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You have to give ^FF0000Transparent Celestial Robe ^00000030ea,";
-				mes "[DRY-RUN] ^FF0000Dokebi Horn ^00000030ea, ^FF0000Fish Tail ^00000030ea.";
-				mes "[DRY-RUN] You know that, right?";
-				mes "[DRY-RUN] Good luck~";
+				mes "你必须交给 ^FF0000透明天衣 ^00000030ea,";
+				mes "^FF0000独角兽角 ^00000030ea, ^FF0000鱼尾 ^00000030ea.";
+				mes "你知道的，对吧？";
+				mes "祝你好运~";
 				close;
 			}
 			if ((countitem(1048) > 29) && (countitem(1013) > 29) && (countitem(7200) > 29) && (guildrelay_q == 24)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Well, well. You've";
-				mes "[DRY-RUN] gathered those items";
-				mes "[DRY-RUN] more quickly that I thought";
-				mes "[DRY-RUN] you would. Good job. Now,";
-				mes "[DRY-RUN] please give this to your ^FF0000Guild";
-				mes "[DRY-RUN] Master^000000 as soon as you can.";
+				mes "好吧，好吧。你";
+				mes "收集了这些物品";
+				mes "比我想的快";
+				mes "你做得很好。现在，";
+				mes "请尽快把这个交给你的 ^FF0000公会";
+				mes "会长^000000.";
 				delitem 1048,30; //Slender_Snake
 				delitem 1013,30; //Colorful_Shell
 				delitem 7200,30; //Flexible_String
@@ -2943,22 +2943,22 @@
 			}
 			if ((BaseJob == Job_Monk) && (guildrelay_q == 24)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please bring";
-				mes "[DRY-RUN] ^FF000030 Rainbow Shells^000000,";
-				mes "[DRY-RUN] ^FF000030 Elastic Bands^000000, and";
-				mes "[DRY-RUN] ^FF000030 Horrendous Hairs^000000.";
-				mes "[DRY-RUN] I shall be waiting";
-				mes "[DRY-RUN] for you right here.";
+				mes "请带来";
+				mes "^FF000030 彩虹贝壳^000000，";
+				mes "^FF000030 弹性带^000000，以及";
+				mes "^FF000030 可怕的头发^000000。";
+				mes "我会在这里等你。";
+				mes "我会在这里等你。";
 				close;
 			}
 			if ((countitem(7003) > 29) && (countitem(7101) > 29) && (countitem(7153) > 29) && (guildrelay_q == 94)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Well, well. You've";
-				mes "[DRY-RUN] gathered those items";
-				mes "[DRY-RUN] more quickly that I thought";
-				mes "[DRY-RUN] you would. Good job. Now,";
-				mes "[DRY-RUN] please give this to your ^FF0000Guild";
-				mes "[DRY-RUN] Master^000000 as soon as you can.";
+				mes "好吧，好吧。你";
+				mes "收集了这些物品";
+				mes "比我想的快";
+				mes "你做得很好。现在，";
+				mes "请尽快把这个交给你的 ^FF0000公会";
+				mes "会长^000000.";
 				delitem 7003,30; //Anolian_Skin
 				delitem 7101,30; //Peco_Wing_Feather
 				delitem 7153,30; //Old_Japaness_Clothes
@@ -2968,126 +2968,126 @@
 			}
 			if ((BaseJob == Job_Monk) && (guildrelay_q == 94)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please bring";
-				mes "[DRY-RUN] ^FF000030 Worn-out Kimonos^000000,";
-				mes "[DRY-RUN] ^FF000030 Anolian Skins^000000, and";
-				mes "[DRY-RUN] ^FF000030 PecoPeco Feathers^000000.";
-				mes "[DRY-RUN] I shall be waiting";
-				mes "[DRY-RUN] for you right here.";
+				mes "请带来";
+				mes "^FF000030 破旧的和服^000000,";
+				mes "^FF000030 安诺利皮^000000, 和";
+				mes "^FF000030 皮可皮可羽毛^000000.";
+				mes "我会在这里等你。";
+				mes "我会在这里等你。";
 				close;
 			}
 			if ((guildrelay_q == 95) && (countitem(7247) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Determination";
-				mes "[DRY-RUN] to a ^FF0000Priest^000000 or ^FF0000High Priest^000000.";
-				mes "[DRY-RUN] You knew that already,";
-				mes "[DRY-RUN] didn't you? Please hurry";
-				mes "[DRY-RUN] and deliver it soon.";
+				mes "请把";
+				mes "决心之灵";
+				mes "给 ^FF0000牧师^000000 或 ^FF0000大主教^000000.";
+				mes "你已经知道了，";
+				mes "对吧？请快点";
+				mes "并尽快送达.";
 				close;
 			}
 			if (guildrelay_q == 95) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] For now, it would be";
-				mes "[DRY-RUN] best for you to rest and";
-				mes "[DRY-RUN] recoup your strength. Your";
-				mes "[DRY-RUN] chance to help your guild";
-				mes "[DRY-RUN] will come soon enough so";
-				mes "[DRY-RUN] there's no need to rush.";
+				mes "现在，最好是";
+				mes "休息一下，";
+				mes "恢复你的力量。你的";
+				mes "帮助公会的机会";
+				mes "很快就会到来，所以";
+				mes "不需要着急.";
 				close;
 			}
 			if ((guildrelay_q == 98) && (countitem(7249) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Service to";
-				mes "[DRY-RUN] a ^FF0000Crusader^000000 or ^FF0000Paladin^000000.";
-				mes "[DRY-RUN] You knew that already,";
-				mes "[DRY-RUN] didn't you? Please hurry";
-				mes "[DRY-RUN] and deliver it soon.";
+				mes "请把";
+				mes "服务之灵给";
+				mes "一个 ^FF0000十字军^000000 或 ^FF0000圣骑士^000000。";
+				mes "你已经知道了，";
+				mes "对吧？请快点";
+				mes "并尽快送达.";
 				close;
 			}
 			if (guildrelay_q == 98) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Hmm. You need to wait";
-				mes "[DRY-RUN] for the right time to act.";
-				mes "[DRY-RUN] Why don't you help out";
-				mes "[DRY-RUN] your guild in the meantime?";
+				mes "嗯。你需要等待";
+				mes "采取行动的正确时机。";
+				mes "为什么不在此期间帮助";
+				mes "你的公会呢？";
 				close;
 			}
 			if ((guildrelay_q == 96) && (countitem(7250) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] Please give the";
-				mes "[DRY-RUN] Spirit of Glory to";
-				mes "[DRY-RUN] a ^FF0000Monk^000000 or ^FF0000Champion^000000.";
-				mes "[DRY-RUN] You knew that already,";
-				mes "[DRY-RUN] didn't you? Please hurry";
-				mes "[DRY-RUN] and deliver it soon.";
+				mes "请把";
+				mes "荣耀之灵去";
+				mes "一个 ^FF0000武僧^000000 或 ^FF0000拳圣^000000。";
+				mes "你已经知道了，";
+				mes "对吧？请快点";
+				mes "并尽快送达.";
 				close;
 			}
 			if (guildrelay_q == 96) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] I see that you have";
-				mes "[DRY-RUN] the potential to become";
-				mes "[DRY-RUN] a great leader. Be sure";
-				mes "[DRY-RUN] not to waste it, and lead";
-				mes "[DRY-RUN] your guild as well as you can.";
+				mes "我看到你有";
+				mes "成为";
+				mes "伟大领袖的潜力。一定要";
+				mes "不要浪费它，尽可能地带领";
+				mes "你的公会。";
 				close;
 			}
 			if ((guildrelay_q == 97) && (countitem(7251) > 0)) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You need to give";
-				mes "[DRY-RUN] the ^FF0000Spirit of Victory^000000";
-				mes "[DRY-RUN] to your Guild Master.";
-				mes "[DRY-RUN] Please make sure that";
-				mes "[DRY-RUN] it gets delivered soon.";
+				mes "你需要给予";
+				mes "胜利之^FF0000灵^000000";
+				mes "交给你的公会长。";
+				mes "请确保";
+				mes "尽快送达。";
 				close;
 			}
 			if (guildrelay_q == 97) {
 				mes "[" + .@name$ + "]";
-				mes "[DRY-RUN] You're a nenown explorer,";
-				mes "[DRY-RUN] and I see in you the potential";
-				mes "[DRY-RUN] to accomplish even more";
-				mes "[DRY-RUN] great things. However,";
-				mes "[DRY-RUN] I doubt there is anything";
-				mes "[DRY-RUN] more that you can do here.";
+				mes "你是一位著名的探险家，";
+				mes "我在你身上看到潜力";
+				mes "去完成更多的";
+				mes "伟大的事情。然而，";
+				mes "我怀疑你在这里能做的事情";
+				mes "还有更多。";
 				close;
 			}
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Hmm. You have no business";
-			mes "[DRY-RUN] being here. Why don't you";
-			mes "[DRY-RUN] find something productive";
-			mes "[DRY-RUN] to do? There is nothing";
-			mes "[DRY-RUN] for you here, I assure you.";
+			mes "嗯。你在这里没有事可做，";
+			mes "为什么不去";
+			mes "找点有意义的事情做呢？";
+			mes "要做什么？这里没有什么";
+			mes "我向你保证，这里没有为你准备的东西。";
 			close;
 		}
 	}
 	else {
 		if (is_guild_leader(.@GID) == true) {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] You might be the master";
-			mes "[DRY-RUN] of a guild, but you and I";
-			mes "[DRY-RUN] have nothing to do with";
-			mes "[DRY-RUN] each other. I'm sorry.";
+			mes "你可能是一个公会的掌门人，";
+			mes "但你和我没有任何关系。";
+			mes "我很抱歉。";
+			mes "不过，我想你是来看看";
 			next;
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] Then again, I suppose";
-			mes "[DRY-RUN] you came here to see";
-			mes "[DRY-RUN] how a real guild operates.";
-			mes "[DRY-RUN] If that's the case, you're";
-			mes "[DRY-RUN] welcome to stay and observe.";
+			mes "一个真正的公会是如何运作的。";
+			mes "如果是这样，你可以";
+			mes "欢迎留下来观察。";
+			mes "我想我以前没见过你。嗯。";
+			mes "我想我以前没见过你。嗯。";
 			close;
 		}
 		else {
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] .........................";
+			mes ".........................";
 			next;
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] .........................";
+			mes ".........................";
 			next;
 			mes "[" + .@name$ + "]";
-			mes "[DRY-RUN] What brings you here?";
-			mes "[DRY-RUN] I don't think I've seen";
-			mes "[DRY-RUN] you around before. Hm.";
+			mes "你来这里有什么事？";
+			mes "我想我以前没见过你。嗯。";
+			mes "我想我以前没见过你。嗯。";
 			close;
 		}
 	}

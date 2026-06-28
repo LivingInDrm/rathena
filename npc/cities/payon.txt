@@ -54,7 +54,7 @@ payon,246,154,0	script	Lady#payon	90,{
 	mes "这些僵尸在斐扬洞穴出没,";
 	mes "这事情好像很诡异, 很恶心,";
 	mes "实际上, 这算是一种悲剧呢...";
-	mes "is also kind of tragic.";
+	mes "也有点悲剧。";
 	close;
 }
 
@@ -153,7 +153,7 @@ payon,249,156,1	script	Woman#payon	66,{
 	mes "...";
 	mes "...";
 	next;
-	switch(select("It sounds dangerous!:I better prepare myself...!:That's a nice dress you're wearing~")) {
+	switch(select("听起来很危险！:我最好准备一下...!:你穿的裙子真好看~")) {
 	case 1:
 		mes "......";
 		mes "[年轻男子]";
@@ -161,19 +161,19 @@ payon,249,156,1	script	Woman#payon	66,{
 		break;
 	case 2:
 		mes "上-上帝...?";
-		mes "Oh don't worry about any preparations. There's a Tool Dealer right in front of the cave, so you can purchase anything you need from my husband, er, that guy~";
+		mes "哦，别担心任何准备。在洞穴正前方就有一个道具商人，所以你可以从我丈夫那里购买任何你需要的东西，呃，就是那个家伙~";
 		break;
 	case 3:
-		mes "[Woman]";
-		mes "Oh hohohoho!";
-		mes "So you've noticed?";
-		mes "I hear this is the";
-		mes "latest trend in Prontera";
-		mes "these days.";
+		mes "[女人]";
+		mes "哦哈哈哈哈！";
+		mes "所以你注意到了？";
+		mes "我听说这是";
+		mes "普隆德拉的最新潮流";
+		mes "这些天。";
 		next;
-		mes "[Woman]";
-		mes "Most of the women in this town don't know anything about fashion! My husband bought this for me as";
-		mes "a present. He makes quite a lot of money, you know. Hohohoho~";
+		mes "[女人]";
+		mes "这个镇上的大多数女人对时尚一无所知！我丈夫给我买了这个作为";
+		mes "礼物。他赚了很多钱，你知道的。哈哈哈哈~";
 		break;
 	}
 	close;
@@ -186,43 +186,43 @@ payon,246,158,5	script	Woman#2payon	66,0,0,{
 	mes "为了保证宫内的安全, 一旦进入了之后我们就会卸下你的装备.";
 	mes "请配合.";
 	next;
-	mes "[Jim's Mother]";
-	mes "Please don't judge the rest";
-	mes "of the people living in Payon by her behavior. She's the only loudmouth. I guess she's just too excited about what the fortune teller told her.";
+	mes "[吉姆的母亲]";
+	mes "请不要以她的行为来评判其他人";
+	mes "在斐扬生活的人。她是唯一一个喧闹的人。我想她只是对算命师告诉她的事情太兴奋了。";
 	next;
-	mes "[Jim's Mother]";
+	mes "[吉姆的母亲]";
 	if (Sex == SEX_MALE) {
-		mes "Ooh...!";
-		mes "You've got";
-		mes "such broad shoulders!";
-		mes "Will you go out with me?";
-		mes "I'll treat you to";
-		mes "a nice dinner~";
+		mes "哦...！";
+		mes "你真有";
+		mes "宽广的肩膀！";
+		mes "你愿意和我约会吗？";
+		mes "我请你吃";
+		mes "一顿美好的晚餐~";
 	}
 	else {
-		mes "My, you're a pretty girl!";
-		mes "I'm sure you're always busy";
-		mes "beating the boys away with a stick...";
-		mes "Or a well timed insult joke.";
+		mes "哎呀，你真是个漂亮的女孩！";
+		mes "我相信你总是很忙";
+		mes "用棍子把男孩们打跑...";
+		mes "或者一个恰到好处的侮辱笑话。";
 	}
 	next;
-	if (select("Fortune Teller...? :Well, see you later~") == 1) {
-		mes "[Jim's Mother]";
-		mes "Oh yes...";
-		mes "There's an extraordinary fortune teller in the Central Palace of Payon. The more Zeny you pay her, the better fortune you'll get!";
+	if (select("算命师...? :那我们下次再见~") == 1) {
+		mes "[吉姆的母亲]";
+		mes "哦，是的...";
+		mes "在斐扬中央宫殿有一位非凡的算命师。你支付的金币越多，得到的运势就越好！";
 		next;
-		mes "[Jim's Mother]";
-		mes "She told me";
-		mes "I would meet";
-		mes "a nice guy this month.";
-		mes "Hohohoho~ ";
+		mes "[吉姆的母亲]";
+		mes "她告诉我";
+		mes "我会遇见";
+		mes "一个好人这个月。";
+		mes "呵呵呵呵~";
 		close;
 	}
-	mes "[Jim's Mother]";
-	mes "Mmmm...?";
-	mes "You don't have";
-	mes "any time to stay";
-	mes "and chit-chat with me?";
+	mes "[吉姆的母亲]";
+	mes "嗯...? ";
+	mes "你没有";
+	mes "时间和我聊聊吗？";
+	mes "和我闲聊吗？";
 	close;
 }
 
@@ -268,31 +268,31 @@ payon,210,110,1	script	Drunkard#payon	120,{
 		mes "大多数住在这里的女人什么潮流都不懂的! 我的哈尼~ 给我买来做礼物噶~";
 		next;
 		mes "他赚很多钱的嘎嘎~";
-		mes "I'm like...";
-		mes "Come on...!";
-		mes "Some faces are";
-		mes "beyond fixing!";
-		mes "Oh? I made a funny!";
-		mes "Bwahahahahahah!";
+		mes "我就像是...";
+		mes "来吧...!";
+		mes "有些脸是";
+		mes "无法修复的!";
+		mes "哦? 我说了个笑话!";
+		mes "哈哈哈哈哈哈!";
 		next;
-		mes "[Drunkard]";
-		mes "^666666*Gulp~ Gulp~*^000000";
-		mes "Man, this is great!";
-		mes "You the maaaaaaan~!";
-		mes "Muhahahahaha!";
+		mes "[酒鬼]";
+		mes "^666666*咕噜~ 咕噜~*^000000";
+		mes "伙计，这太棒了!";
+		mes "你是个大人物~!";
+		mes "哈哈哈哈哈!";
 		break;
 	case 2:
-		mes "[Drunkard]";
-		mes "Bah!";
-		mes "Kids nowadays!";
-		mes "Now respect for";
-		mes "their elders! Fine!";
-		mes "I'm not gonna beg you!";
+		mes "[酒鬼]";
+		mes "呸!";
+		mes "现在的孩子!";
+		mes "现在对";
+		mes "长辈没有尊重! 好吧!";
+		mes "我才不想求你呢！";
 		break;
 	case 3:
-		mes "[Drunkard]";
-		mes "Fine...!";
-		mes "Fine by me!";
+		mes "[酒鬼]";
+		mes "好吧...！";
+		mes "我没问题！";
 		break;
 	}
 	close;
@@ -406,62 +406,62 @@ payon_in01,180,7,2	script	Waitress#payon	90,{
 	mes "嗯...?";
 	next;
 	mes "没有时间陪我闲扯吗?";
-	mes "So...";
-	mes "How may I help you? ";
+	mes "所以……";
+	mes "我能帮你什么？";
 	next;
 	switch(select("算命的...? :再见咯~")) {
 	case 1:
-		mes "[Pub Lady]";
-		mes "Of course I've";
-		mes "heard of Zombies!";
-		mes "This is Payon, after all.";
-		mes "Zombies are the walking";
-		mes "Undead, and you can easily";
-		mes "find them around here.";
+		mes "[酒馆女老板]";
+		mes "当然我听说过";
+		mes "僵尸！";
+		mes "毕竟这里是斐扬。";
+		mes "僵尸是行走的";
+		mes "不死者，你可以很容易地";
+		mes "在这里找到他们。";
 		next;
-		mes "[Pub Lady]";
-		mes "I hear that they fear holiness, so Archers prefer to use arrow made out of silver, a holy metal, against them.";
+		mes "[酒馆女老板]";
+		mes "我听说他们害怕神圣，所以弓箭手喜欢用银制箭矢，这是一种神圣的金属，来对付他们。";
 		next;
-		mes "[Pub Lady]";
-		mes "Legend says that the chief of this town used silver arrows against Zombies that used to be his brethren in order to release their souls so that they may rest in peace.";
+		mes "[酒馆女老板]";
+		mes "传说这个城镇的首领曾用银箭对付曾是他兄弟的僵尸，以释放他们的灵魂，让他们得以安息。";
 		next;
-		mes "[Pub Lady]";
-		mes "We believe that exorcising";
-		mes "Zombies in this way will lead them peacefully to the afterlife. Their souls no longer need to anguish.";
+		mes "[酒馆女老板]";
+		mes "我们相信驱魔";
+		mes "以这种方式对付僵尸将使他们平静地走向来世。他们的灵魂不再需要痛苦。";
 		next;
-		mes "[Pub Lady]";
-		mes "You might not share our beliefs, but my grandfather was one of the Undead. I appreciate that the chief was able to free him from being bound to the world of the living.";
+		mes "[酒馆女老板]";
+		mes "你可能不认同我们的信仰，但我的祖父曾是亡灵。我很感激首领能够让他摆脱对生者世界的束缚。";
 		break;
 	case 2:
-		mes "[Pub Lady]";
-		mes "Oh! Our fortune teller is a really extraordinary person. Well, she doesn't hang around here as";
-		mes "much as she used to do. ";
+		mes "[酒馆女老板]";
+		mes "哦！我们的算命师真是个非凡的人。嗯，她不像以前那样常常待在这里。";
+		mes "就像她以前做的那样。";
 		next;
-		mes "[Pub Lady]";
-		mes "She used to stay here to tell fortunes for our patrons, but ever since the chief recognized her talents, she now stays in the Central Palace. So you'd better go there if you want to see her.";
+		mes "[酒馆女老板]";
+		mes "她以前常在这里为我们的顾客算命，但自从族长认可了她的才能，她现在住在中央宫殿。所以如果你想见她，最好去那里。";
 		break;
 	case 3:
-		mes "[Pub Lady]";
-		mes "You...";
-		mes "needs some";
-		mes "booze, eh?";
-		mes "Don't we all?";
+		mes "[酒馆女老板]";
+		mes "你...";
+		mes "需要一些";
+		mes "酒，嗯？";
+		mes "我们都需要吗？";
 		next;
-		mes "[Pub Lady]";
-		mes "But I'm so sorry, we sold out.";
-		mes "And we can't afford to prepare alcohol anymore because of the hostile creatures out there. But please come again later. I'm sorry for the inconvenience.";
+		mes "[酒馆女老板]";
+		mes "但我很抱歉，我们已经卖完了。";
+		mes "而且由于外面有敌对生物，我们也无法再准备酒了。但请稍后再来。对给您带来的不便，我深感抱歉。";
 		break;
 	}
 	next;
-	mes "[Pub Lady]";
-	mes "Have a nice";
-	mes "day, dearie.";
+	mes "[酒馆女老板]";
+	mes "祝你有个愉快的";
+	mes "一天，亲爱的。";
 	next;
-	mes "[Pub Lady]";
-	mes "^666666*Sob*^000000";
-	mes "When will I be romanced";
-	mes "by my perfectly formed,";
-	mes "yet well read man?";
+	mes "[酒馆女老板]";
+	mes "^666666*呜呜*^000000";
+	mes "我什么时候才能被浪漫对待";
+	mes "由我完美的形态，";
+	mes "却博学的男人？";
 	close;
 }
 
@@ -901,61 +901,61 @@ OnTouch_:
 			mes "这就是我的报应吧!";
 			break;
 		case 3:
-			mes "[Chief]";
-			mes "Ah...";
-			mes "I used to go to the cave";
-			mes "to the North sometimes. But it";
-			mes "is harder now than it was then.";
+			mes "[族长]";
+			mes "啊……";
+			mes "我以前有时会去北边的洞穴。";
+			mes "但现在比以前更难了。";
+			mes "那里不断重生着我从未见过的邪恶生物。今天的斐扬洞穴里的怪物与我们以前战斗过的不同。";
 			next;
-			mes "[Chief]";
-			mes "Evil creatures that I've never seen before endlessly respawn in that place. The monsters in Payon Cave today are different than the ones we used to fight with.";
+			mes "[族长]";
+			mes "你有没有见过那些僵尸...? 有些是进入洞穴保护这个村庄的战士，但他们再也没有回来。";
 			next;
-			mes "[Chief]";
-			mes "Have you ever happened to see";
-			mes "the Zombies...? Some of them are warriors who entered the cave to protect this village, but never came back.";
+			mes "[族长]";
+			mes "你有没有碰巧见过";
+			mes "那些僵尸...? 有些是进入洞穴保护这个村庄的战士，但他们再也没有回来。";
 			next;
-			mes "[Chief]";
-			mes "Although they are a threat, some of those Undead are also victims of that cave. I'm too old to endure that kind of pain...";
+			mes "[族长]";
+			mes "虽然他们是个威胁，但那些不死者中也有一些是那个洞穴的受害者。我太老了，无法忍受那种痛苦...";
 			next;
-			mes "[Chief]";
-			mes "I must do anything I can to stop the Undead, and release their souls from eternal anguish.";
+			mes "[族长]";
+			mes "我必须尽我所能阻止不死者，解放他们的灵魂脱离永恒的痛苦。";
 			break;
 		case 4:
-			mes "[Chief]";
-			mes "Ah, it is fortunate that archery is a specialty here in Payon. Because of the surrounding forest, we have an abundant supply of wood to create Bows.";
+			mes "[族长]";
+			mes "啊，幸好弓箭术在斐扬是我们的特长。由于周围的森林，我们有丰富的木材来制作弓。";
 			next;
-			mes "[Chief]";
-			mes "The forest also is a good training place for Archers to learn how to use their environment to impede the advance of their enemies while attacking from a safe distance.";
+			mes "[族长]";
+			mes "森林也是弓箭手学习如何利用环境来阻碍敌人进攻的好训练场所，同时可以在安全的距离进行攻击。";
 			next;
-			mes "[Chief]";
-			mes "The forest can also be convenient in unexpected ways. When I was young, I ran out of arrows while fighting against monsters in the woods, but arrows dropped by other monsters saved my life! Mwahah!";
+			mes "[族长]";
+			mes "森林在意想不到的方面也很方便。当我年轻时，我在树林里与怪物战斗时箭矢用完了，但其他怪物掉落的箭矢救了我的命！哈哈！";
 			break;
 		case 5:
-			mes "[Chief]";
-			mes "As foreign cultures were introduced to Payon, changes have been brought about to our battle style.";
+			mes "[族长]";
+			mes "随着外来文化被引入斐扬，我们的战斗风格也发生了变化。";
 			next;
-			mes "[Chief]";
-			mes "Technology, especially that of explosives, enabled new methods";
-			mes "of battle. We were no longer limited to the use of just bows and arrows.";
+			mes "[族长]";
+			mes "技术，尤其是爆炸物的技术，使新的战斗方法成为可能。";
+			mes "我们不再仅仅局限于使用弓箭。";
 			next;
-			mes "[Chief]";
-			mes "Trapping skills, which make";
-			mes "hunting monsters much easier, were developed enable here in Payon. Experts in the new skills were dubbed 'Hunters' by our previous Chief.";
+			mes "[族长]";
+			mes "捕猎技能使得";
+			mes "狩猎怪物变得更加容易，这些技能在斐扬得以发展。擅长这些新技能的专家被我们之前的族长称为‘猎人’。";
 			next;
-			mes "[Chief]";
-			mes "Although highly effective, trapping is a really dangerous skill if not used properly. That's why we do not approve of the inexperienced becoming Hunters.";
+			mes "[族长]";
+			mes "尽管非常有效，但捕猎是一项非常危险的技能，如果使用不当会造成严重后果。这就是为什么我们不赞成没有经验的人成为猎人。";
 			next;
-			mes "[Chief]";
-			mes "However, we welcome people";
-			mes "who have proven to be capable to take the challenge of the Hunter class.";
+			mes "[族长]";
+			mes "然而，我们欢迎那些";
+			mes "证明自己有能力接受猎人职业挑战的人。";
 			break;
 		}
 		next;
-		mes "[Chief]";
-		mes "So tired...";
-		mes "I'd better rest.";
-		mes "Please, take care";
-		mes "of yourself.";
+		mes "[族长]";
+		mes "好累……";
+		mes "我最好休息一下。";
+		mes "请照顾好自己。";
+		mes "请照顾好自己。";
 		close;
 
 		//This actually never happens on iRO

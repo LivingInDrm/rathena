@@ -1217,36 +1217,36 @@ OnTimer120000:
 //============================================================
 poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 	if (MaxWeight-Weight < 2000 || checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute !! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again -";
-		mes "[DRY-RUN] - after you lose some weight. -";
+		mes "- 等一下 !! -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请再试一次 -";
+		mes "- 在你减掉一些体重之后。 -";
 		close;
 	}
 	set .@a_point,$@wop_deadcount_a;
 	set .@d_point,$@wop_deadcount_d;
 	if (getcharid(1) == $@wop_team_a) {
 		if (.@a_point < .@d_point) {
-			mes "[DRY-RUN] [Devi]";
-			mes "[DRY-RUN] Good work!";
-			mes "[DRY-RUN] Thanks to you, we increased our chances of victory.";
-			mes "[DRY-RUN] Please, accept these Poring Coins as a sign of our appreciation.";
+			mes "[德维]";
+			mes "干得好！";
+			mes "多亏了你，我们提高了胜利的机会。";
+			mes "请接受这些波利币，作为我们感激的象征。";
 			next;
 			if (wop_team == 1) {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Goodbye, my human friend.";
+				mes "[德维]";
+				mes "再见，我的人类朋友。";
 				close2;
 				getitem 7539,3; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
-				mes "[DRY-RUN] Ah, I got it! You are on the side of the Devilings?!";
-				mes "[DRY-RUN] You are spying on us!";
-				mes "[DRY-RUN] I will never forgive you!";
+				mes "[德维]";
+				mes "等一下，你看起来可疑！！";
+				mes "啊，我明白了！你是魔鬼一方的？！";
+				mes "你在监视我们！";
+				mes "我永远不会原谅你！";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1254,26 +1254,26 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 			}
 		}
 		else if (.@a_point == .@d_point) {
-			mes "[DRY-RUN] [Devi]";
-			mes "[DRY-RUN] You did the best you could.";
-			mes "[DRY-RUN] I' ts a shame the battle was tied...";
-			mes "[DRY-RUN] Even so, thanks for coming to fight for us. Please, accept this Poring Coin.";
+			mes "[德维]";
+			mes "你尽力而为。";
+			mes "真遗憾战斗是平局...";
+			mes "即便如此，感谢你来为我们战斗。请接受这枚波利币。";
 			next;
 			if (wop_team == 1) {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Goodbye, my human friend.";
+				mes "[德维]";
+				mes "再见，我的人类朋友。";
 				close2;
 				getitem 7539,1; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
-				mes "[DRY-RUN] Ah, I got it! You are on the side of the Devilings?!";
-				mes "[DRY-RUN] You are spying on us!";
-				mes "[DRY-RUN] It must have been you that made us tie the battle!!";
-				mes "[DRY-RUN] I will never forgive you!";
+				mes "[德维]";
+				mes "等一下，你看起来可疑！！";
+				mes "啊，我明白了！你是魔鬼一方的？！";
+				mes "你在监视我们！";
+				mes "一定是你让我们战斗平局的！！";
+				mes "我永远不会原谅你！";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1282,24 +1282,24 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 		}
 		else {
 			if (wop_team == 1) {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Well, I guess we had bad luck...";
-				mes "[DRY-RUN] I cant give you anything, since we lost and everything...";
+				mes "[德维]";
+				mes "好吧，我想我们运气不好...";
+				mes "我不能给你任何东西，因为我们输了...";
 				next;
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Goodbye, my human friend.";
+				mes "[德维]";
+				mes "再见，我的人类朋友。";
 				close2;
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Wait a minute... There is a traitor here!";
-				mes "[DRY-RUN] Ah, I got it! You are on the side of the Devilings?!";
-				mes "[DRY-RUN] You are spying on us, Angelings!";
+				mes "[德维]";
+				mes "等一下...这里有一个叛徒！";
+				mes "啊，我明白了！你是魔鬼一方的？！";
+				mes "你在监视我们，天使们！";
 				next;
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] You should be ashamed!";
+				mes "[德维]";
+				mes "你应该感到羞愧！";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1309,25 +1309,25 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 	}
 	else if (getcharid(1) == $@wop_team_d) {
 		if (.@a_point > .@d_point) {
-			mes "[DRY-RUN] [Devi]";
-			mes "[DRY-RUN] Good work!";
-			mes "[DRY-RUN] Thanks to you, we increased our chances of victory.";
-			mes "[DRY-RUN] Please, accept these Poring Coins as a sign of our appreciation.";
+			mes "[德维]";
+			mes "干得好！";
+			mes "多亏了你，我们提高了胜利的机会。";
+			mes "请接受这些波利币，作为我们感激的象征。";
 			next;
 			if (wop_team == 2) {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Goodbye, my human friend.";
+				mes "[德维]";
+				mes "再见，我的人类朋友。";
 				close2;
 				getitem 7539,3; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
-				mes "[DRY-RUN] Ah, I got it! You are on the side of the Angelings?!";
-				mes "[DRY-RUN] You are spying on us!!";
-				mes "[DRY-RUN] I will never forgive you!";
+				mes "[德维]";
+				mes "等一下，你看起来可疑！！";
+				mes "啊，我明白了！你是天使一方的？！";
+				mes "你在监视我们！！";
+				mes "我永远不会原谅你！";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1335,26 +1335,26 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 			}
 		}
 		else if (.@a_point == .@d_point) {
-			mes "[DRY-RUN] [Devi]";
-			mes "[DRY-RUN] You did the best you could.";
-			mes "[DRY-RUN] It's a shame the battle was tied...";
-			mes "[DRY-RUN] Even so, thanks for coming to fight for us. Please, accept this Poring Coin.";
+			mes "[德维]";
+			mes "你尽力而为。";
+			mes "真遗憾战斗是平局...";
+			mes "即便如此，感谢你来为我们战斗。请接受这枚波利币。";
 			next;
 			if (wop_team == 2) {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Goodbye, my human friend.";
+				mes "[德维]";
+				mes "再见，我的人类朋友。";
 				close2;
 				getitem 7539,1; // Poring_Coin
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
-				mes "[DRY-RUN] Ah, I got it! You are on the side of the Angelings?!";
-				mes "[DRY-RUN] You are spying on us!";
-				mes "[DRY-RUN] It must have been you that made us tie the battle!!";
-				mes "[DRY-RUN] I will never forgive you!";
+				mes "[德维]";
+				mes "等一下，你看起来可疑！！";
+				mes "啊，我明白了！你是天使一方的？！";
+				mes "你在监视我们！";
+				mes "一定是你让我们战斗平局的！！";
+				mes "我永远不会原谅你！";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1363,24 +1363,24 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 		}
 		else {
 			if (wop_team == 2) {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Well, I guess we had bad luck...";
-				mes "[DRY-RUN] I cant give you anything, since we lost and everything...";
+				mes "[德维]";
+				mes "好吧，我想我们运气不好...";
+				mes "我不能给你任何东西，因为我们输了...";
 				next;
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] I will allow you to return to your human world.";
+				mes "[德维]";
+				mes "我允许你返回你的人类世界。";
 				close2;
 				warp "prt_fild08",150,370;
 				end;
 			}
 			else {
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] Wait a minute, you look suspicious!!";
-				mes "[DRY-RUN] Ah, I got it! You are on the side of the Angelings?!";
-				mes "[DRY-RUN] You are spying on us, Devilings!";
+				mes "[德维]";
+				mes "等一下，你看起来可疑！！";
+				mes "啊，我明白了！你是天使一方的？！";
+				mes "你在监视我们，魔鬼们！";
 				next;
-				mes "[DRY-RUN] [Devi]";
-				mes "[DRY-RUN] You should be ashamed!";
+				mes "[德维]";
+				mes "你应该感到羞愧！";
 				close2;
 				percentheal 99,0;
 				warp "prt_fild08",150,370;
@@ -1389,9 +1389,9 @@ poring_w02,99,201,3	script	Deviruchi#wop_endmaster	738,{
 		}
 	}
 	else {
-		mes "[DRY-RUN] [Devi]";
-		mes "[DRY-RUN] This is weird...Your party name ain't registered.";
-		mes "[DRY-RUN] Im sorry, but rules are rules. I can't help you if your party ain't registered.";
+		mes "[德维]";
+		mes "这很奇怪...你的队伍名称没有注册。";
+		mes "对不起，但规则就是规则。如果你的队伍没有注册，我无法帮助你。";
 		close;
 	}
 OnInit:
@@ -1670,13 +1670,13 @@ poring_w01,84,108,3	script	#wop_ex_1	139,3,3,{
 	end;
 
 OnTouch:
-	mes "[DRY-RUN] [Porings]";
-	mes "[DRY-RUN] P~ooooooooo -!!!";
-	mes "[DRY-RUN] Let's teach them a lesson, ring!";
-	mes "[DRY-RUN] We are no longer betting our lives for Jellopies, ring!!!";
+	mes "[波利]";
+	mes "P~ooooooooo -!!!";
+	mes "让我们教训他们，波利！";
+	mes "我们不再为果冻而冒生命危险，波利！！！";
 	next;
-	mes "[DRY-RUN] [Porings]";
-	mes "[DRY-RUN] Let's go! Let's fight! Let's win, win, win!!!";
+	mes "[波利]";
+	mes "走吧！让我们战斗！让我们赢，赢，赢！！！";
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa1");
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa2");
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa3");
@@ -1684,17 +1684,17 @@ OnTouch:
 	emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa5");
 	next;
 	if (wop_team == 1) {
-		mes "[DRY-RUN] [Porings]";
-		mes "[DRY-RUN] Ohhhhhh, there he is, the warrior that fought for us!!";
-		mes "[DRY-RUN] Oh my god... Nice, ring!";
-		mes "[DRY-RUN] Poring~ Poring~ Poooooo~";
-		mes "[DRY-RUN] Party of Angeling~ Popopo, Poring!";
+		mes "[波利]";
+		mes "哦哦哦，他就是为我们战斗的勇士！！";
+		mes "哦我的天...太好了，波利！";
+		mes "波利~ 波利~ 波~~~~";
+		mes "天使的队伍~ 波波波，波利！";
 	}
 	else if (wop_team == 2) {
-		mes "[DRY-RUN] [Porings]";
-		mes "[DRY-RUN] Wait, YOU! Aren't you on the side of the Devilings?!";
-		mes "[DRY-RUN] Get out now! Leave!!";
-		mes "[DRY-RUN] Booooo~ Boo~ Boooo~";
+		mes "[波利]";
+		mes "等一下，你！你不是魔鬼一方的吗？！";
+		mes "现在就出去！离开！！";
+		mes "呜呜~ 呜~ 呜呜~";
 		emotion ET_HUK, getnpcid(0, "Angeling Side Poring#wa1");
 		emotion ET_FRET, getnpcid(0, "Angeling Side Poring#wa2");
 		emotion ET_HUK, getnpcid(0, "Angeling Side Poring#wa3");
@@ -1702,8 +1702,8 @@ OnTouch:
 		emotion ET_SURPRISE, getnpcid(0, "Angeling Side Poring#wa5");
 	}
 	else {
-		mes "[DRY-RUN] [Porings]";
-		mes "[DRY-RUN] Hey, human. How about fighting for us Porings on Angeling's side??!";
+		mes "[波利]";
+		mes "嘿，人类。你愿意为我们波利在天使一方战斗吗？？！";
 		emotion ET_HELP, getnpcid(0, "Angeling Side Poring#wa1");
 		emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa2");
 		emotion ET_HELP, getnpcid(0, "Angeling Side Poring#wa3");
@@ -1711,11 +1711,11 @@ OnTouch:
 		emotion ET_GO, getnpcid(0, "Angeling Side Poring#wa5");
 	}
 	next;
-	mes "[DRY-RUN] [Porings]";
-	mes "[DRY-RUN] Party of Angeling~ Popopo, Poring!";
-	mes "[DRY-RUN] Victory~ Victory~ Pooooooo~";
+	mes "[波利]";
+	mes "天使的队伍~ 波波波，波利！";
+	mes "胜利~ 胜利~ 波~~~~";
 	next;
-	mes "[DRY-RUN] - Porings are cheerfully shouting for the victory. -";
+	mes "- 波利们正在欢快地为胜利欢呼。 -";
 	close;
 }
 
@@ -1723,13 +1723,13 @@ poring_w01,119,107,3	script	#wop_ex_2	139,3,3,{
 	end;
 
 OnTouch:
-	mes "[DRY-RUN] [Marins]";
-	mes "[DRY-RUN] Woooooaaaaaaaaaaa!";
-	mes "[DRY-RUN] Finally, it's time for us to teach those stupid pigs a lesson!!";
-	mes "[DRY-RUN] Those Porings with low-grades are all idiots!!";
+	mes "[玛琳]";
+	mes "哇哦哦哦哦哦哦哦哦哦！";
+	mes "终于，是时候让那些愚蠢的猪们见识一下了！！";
+	mes "那些低级的波利都是傻瓜！！";
 	next;
-	mes "[DRY-RUN] [Marins]";
-	mes "[DRY-RUN] Let's go! Let's fight! Fight for Triumph!!!!";
+	mes "[玛琳]";
+	mes "走吧！让我们战斗！为胜利而战！！！！";
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd1");
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd2");
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd3");
@@ -1737,16 +1737,16 @@ OnTouch:
 	emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd5");
 	next;
 	if (wop_team == 2) {
-		mes "[DRY-RUN] [Marins]";
-		mes "[DRY-RUN] Ohhhh... Here is the warrior that fought for us!!";
-		mes "[DRY-RUN] Amazing!";
-		mes "[DRY-RUN] This proves that humans recognize us as true monsters!!";
+		mes "[玛琳]";
+		mes "哦哦哦...这里是为我们战斗的勇士！！";
+		mes "太棒了！";
+		mes "这证明人类将我们视为真正的怪物！！";
 	}
 	else if (wop_team == 1) {
-		mes "[DRY-RUN] [Marins]";
-		mes "[DRY-RUN] Wait, YOU! Aren't you on the side of the Angelings?!";
-		mes "[DRY-RUN] Get out now! Leave!!";
-		mes "[DRY-RUN] Booooo~ Boo~ Boooo~";
+		mes "[玛琳]";
+		mes "等一下，你！你不是天使一方的吗？！";
+		mes "现在就出去！离开！！";
+		mes "呜呜~ 呜~ 呜呜~";
 		emotion ET_HUK, getnpcid(0, "Deviling Side Marin#wd1");
 		emotion ET_FRET, getnpcid(0, "Deviling Side Marin#wd2");
 		emotion ET_HUK, getnpcid(0, "Deviling Side Marin#wd3");
@@ -1754,8 +1754,8 @@ OnTouch:
 		emotion ET_SURPRISE, getnpcid(0, "Deviling Side Marin#wd5");
 	}
 	else {
-		mes "[DRY-RUN] [Marins]";
-		mes "[DRY-RUN] Hey, human. Don't you wanna fight for Deviling, the noble of darkness? What do you say?!";
+		mes "[玛琳]";
+		mes "嘿，人类。你不想为黑暗的高贵者魔鬼战斗吗？你觉得怎么样？！";
 		emotion ET_HELP, getnpcid(0, "Deviling Side Marin#wd1");
 		emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd2");
 		emotion ET_HELP, getnpcid(0, "Deviling Side Marin#wd3");
@@ -1763,9 +1763,9 @@ OnTouch:
 		emotion ET_GO, getnpcid(0, "Deviling Side Marin#wd5");
 	}
 	next;
-	mes "[DRY-RUN] [Marins]";
-	mes "[DRY-RUN] The world's Best Miraculous Poring! Deviling has it all! Go, Deviling, Go-!!";
+	mes "[玛琳]";
+	mes "世界上最棒的奇迹波利！魔鬼拥有一切！走吧，魔鬼，走-！！";
 	next;
-	mes "[DRY-RUN] - Marins are cheerfully shouting for the victory. -";
+	mes "- 玛琳们正在欢快地为胜利欢呼。 -";
 	close;
 }

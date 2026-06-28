@@ -491,95 +491,95 @@ OnMyMobDead:
 		next;
 		specialeffect2 EF_CONE;
 		mes "我在这个墓碑上只能感觉到一股忧郁...";
-		mes "I have waited and waited for a brave adventurer like you who will come back here again...";
+		mes "我一直在等待像你这样勇敢的冒险者再次回到这里...";
 		next;
 		while(1) {
-			switch(select("Who are you?:Waited for me?:Cancel.")) {
+			switch(select("你是谁？:等我吗？:取消.")) {
 			case 1:
-				mes "[Voice of the Gravestone]";
-				mes "I was one of the warriors to stop Baphomet like you. Now, I'm dead and only my soul remains...";
+				mes "[墓碑之声]";
+				mes "我曾是像你一样阻止巴风特的战士。现在，我已经死去，只有我的灵魂还在...";
 				next;
-				mes "[Voice of the Gravestone]";
-				mes "As you know... We don't have much time. You can't stop Baphomet by yourselves. The power of the devil has strengthened over the years.";
+				mes "[墓碑之声]";
+				mes "如你所知... 我们没有太多时间。你们无法单独阻止巴风特。恶魔的力量在这些年里不断增强。";
 				next;
-				mes "[Voice of the Gravestone]";
-				mes "In the past, my companions and I sealed Baphomet at the altar located on the 2nd basement and blocked the entrance.";
+				mes "[墓碑之声]";
+				mes "过去，我和我的同伴们在二层地下的祭坛封印了巴风特，并封锁了入口。";
 				next;
-				mes "[Voice of the Gravestone]";
-				mes "I moved my soul's essence to my pendant, so that I could remain in this world. That's when I became this grave's guardian.";
+				mes "[墓碑之声]";
+				mes "我将我的灵魂精华转移到我的挂坠上，这样我才能留在这个世界。这就是我成为这个墓地守护者的原因。";
 				next;
 				break;
 			case 2:
-				mes "[Voice of the Gravestone]";
-				mes "Baphomet's power is about to break the seal that we made. If you don't reactivate them... Baphomet's revival will only be a matter of time.";
+				mes "[墓碑之声]";
+				mes "巴风特的力量即将打破我们所做的封印。如果你们不重新激活它们... 巴风特的复活只是时间问题。";
 				next;
-				mes "[Voice of the Gravestone]";
-				mes "To open the entrance, you must substantialize my soul. I'll open the entrance and reactivate the weakened seals after I am substantilized.";
+				mes "[墓碑之声]";
+				mes "要打开入口，你必须使我的灵魂实体化。在我实体化后，我会打开入口并重新激活减弱的封印。";
 				next;
-				mes "[Voice of the Gravestone]";
-				mes "To substantialize my soul, you should find my pendant. You can find my body near a grave here.";
+				mes "[墓碑之声]";
+				mes "要使我的灵魂实体化，你应该找到我的挂坠。你可以在这里的一个墓碑附近找到我的尸体。";
 				next;
-				mes "[Voice of the Gravestone]";
-				mes "If your ^0000FFparty leader^000000 brings me the pendant, my soul can be substantialized. So, hurry up.";
+				mes "[墓碑之声]";
+				mes "如果你的 ^0000FF队长^000000 带给我挂坠，我的灵魂就可以实体化。所以，快点。";
 				set 'ins_baphomet,1;
 				close;
 			case 3:
-				mes "I can feel the voice becoming faint.";
+				mes "我能感觉到声音变得微弱。";
 				close;
 			}
 		}
 	}
 	else if ('ins_baphomet == 1) {
-		mes "[Voice of the Gravestone]";
-		mes "To open the entrance, you must substantialize my soul. I'll open the entrance and reactivate the weakened seals after I am substantilized.";
+		mes "[墓碑之声]";
+		mes "要打开入口，你必须使我的灵魂实体化。在我实体化后，我会打开入口并重新激活减弱的封印。";
 		next;
-		mes "[Voice of the Gravestone]";
-		mes "To substantialize my soul, you should find my pendant. You can find my body near a grave here.";
+		mes "[墓碑之声]";
+		mes "要使我的灵魂实体化，你应该找到我的挂坠。你可以在这里的一个墓碑附近找到我的尸体。";
 		next;
-		mes "[Voice of the Gravestone]";
-		mes "If your ^0000FFparty leader^000000 brings me the pendant, my soul can be substantialized. So, hurry up.";
+		mes "[墓碑之声]";
+		mes "如果你的 ^0000FF队长^000000 带给我挂坠，我的灵魂就可以实体化。所以，快点。";
 		close;
 	}
 	else if (('ins_baphomet == 2) && is_party_leader(.@party_id) == true) {
-		mes "[Voice of the Gravestone]";
-		mes "Did you find the pendant?";
+		mes "[墓碑之声]";
+		mes "你找到挂坠了吗？";
 		next;
 		if (countitem(6003) > 0) {
 			specialeffect EF_MAPPILLAR;
-			mes "[Voice of the Gravestone]";
-			mes "Yes... This is... My pendant...";
+			mes "[墓碑之声]";
+			mes "是的... 这是... 我的挂坠...";
 			next;
 			delitem 6003,1; //Soul_Pendant
 			enablenpc instance_npcname("Ancient Hero's Soul#1F");
 			disablenpc instance_npcname("Gravestone#");
-			mes "[Voice of the Gravestone]";
-			mes "Now I can substantialize my soul. I'll wait for you in front of the altar of fire located at the center of this grave. Let's meet there.";
+			mes "[墓碑之声]";
+			mes "现在我可以使我的灵魂实体化。我会在这个墓地中心的火焰祭坛前等你。我们在那里见面。";
 			next;
 			mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : I'll wait for you in front of the altar of fire located at the center",bc_map,"0xFFFF00";
-			mes "I can feel the voice becoming faint.";
+			mes "我能感觉到声音变得微弱。";
 			close;
 		}
 		else {
-			mes "[Voice of the Gravestone]";
-			mes "Are you still there? Bring back my pendant as soon as possible.";
+			mes "[墓碑之声]";
+			mes "你还在吗？尽快把我的挂坠带回来。";
 			next;
-			mes "[Voice of the Gravestone]";
-			mes "You can find my body near a grave here. Go and get my pendant there.";
+			mes "[墓碑之声]";
+			mes "你可以在这里的一个墓碑附近找到我的尸体。去那里拿我的挂坠。";
 			close;
 		}
 	}
 	else {
-		mes "[Voice of the Gravestone]";
-		mes "I want to talk to ^0000FFa representative among your party^000000. Everyone else, wait here.";
+		mes "[墓碑之声]";
+		mes "我想和 ^0000FF你们队伍中的一位代表^000000 交谈。其他人等在这里。";
 		close;
 	}
 	end;
 
 OnTouch:
 	if ('ins_baphomet == 0) {
-		mes "'Krrrr... Krrrr...'";
+		mes "'咕噜... 咕噜...'";
 		next;
-		mes "I can feel something odd at the grave. It's like someone is calling out silently...";
+		mes "我能感觉到墓碑附近有些奇怪的东西。就像有人在默默呼唤...";
 		close;
 	}
 	end;
@@ -821,7 +821,7 @@ OnTouch:
 	}
 	else {
 		mes "我在这个墓碑上只能感觉到一股忧郁...";
-		mes "Where is your Token of Apostle? I said you should carry the Token of Apostle to pass this gate.";
+		mes "你的使徒徽章在哪里？我说过你必须携带使徒徽章才能通过这个门。";
 		close;
 	}
 
@@ -862,7 +862,7 @@ OnInstanceInit:
 1@cata,267,30,0	duplicate(Gravestone#SS1)	Gravestone#1F_13T	844
 
 -	script	Gravestone#SS2	-1,{
-	mes "I can only feel gloom from this Gravestone.";
+	mes "我只感受到这个墓碑的阴郁。";
 	close;
 }
 1@cata,86,214,0	duplicate(Gravestone#SS2)	Gravestone#1F_1F	844

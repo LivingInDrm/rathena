@@ -8259,7 +8259,7 @@ mosk_fild02,157,233,0	script	Shepherdess#rus10	1_F_04,{
 	if (rhea_rus_ring == 6) {
 		if (countitem(7882) < 50) {// Pointed_Branch
 			if (rand(1,3) == 2) {
-				mes "seeewaaaaaaaaaaa";
+				mes "看啊aaaaaaaaaaa";
 				mes "[伊霸诺布]";
 				getitem 7882,1;
 				donpcevent strnpcinfo(0) +"::OnDisable";
@@ -8400,8 +8400,8 @@ moscovia,166,145,1	script	Worried Mother#rus19	4_F_RUSWOMAN3,{
 // Marsh Warning Signs
 //----------------------------------------------------------------------------
 -	script	Caution#07rus::NoSwim	-1,{
-	mes " WARNING !! ";
-	mes "No Swimming";
+	mes " 警告！！ ";
+	mes "禁止游泳";
 	close;
 }
 mosk_fild02,101,204,0	duplicate(NoSwim)	Caution#rus01	2_BULLETIN_BOARD
@@ -8427,67 +8427,67 @@ OnTouch_:
 				donpcevent "Lusalka#rus23::OnEnable";
 				close;
 			}
-			mes "- You hear a splashing as -";
-			mes "- something gleaming -";
-			mes "- seems to stare at you!! -";
+			mes "- 你听到水花声 -";
+			mes "- 有什么闪闪发光的东西 -";
+			mes "- 似乎在盯着你！！ -";
 			next;
 			specialeffect2 EF_FLASHER;
 			percentheal -60,0;
 			close;
 		}
 	} else if (rhea_rus_hair > 2 && rhea_rus_hair < 7) {
-		mes "[Lusalka's Voice]";
-		mes "His name is 'Igor'.. He has gone to the capital of Rune-Midgarts. Give him my golden earrings.";
+		mes "[露萨尔卡的声音]";
+		mes "他的名字是'伊戈尔'.. 他已经去往卢恩-米德加兹的首都。把我的金耳环给他。";
 		next;
-		mes "[Lusalka's Voice]";
-		mes "And please, tell him to stop suffering and to be happy. This is my request.";
+		mes "[露萨尔卡的声音]";
+		mes "而且，请告诉他停止受苦，快乐起来。这是我的请求。";
 		close;
 	} else if (rhea_rus_hair == 7) {
 		if (gettime(DT_HOUR) >= 17 || gettime(DT_HOUR) <= 6) {
-			mes "- Splash !! -";
+			mes "- 溅水声！！ -";
 			next;
 			if (countitem(523) > 0) {
-				mes "-You hear splashing sound and see something gleaming-";
+				mes "- 你听到水花声，看到闪闪发光的东西 -";
 				donpcevent "Lusalka#rus23::OnEnable";
 				close;
 			}
-			mes "-You seem to hear the splash but something gleaming raids on you!!-";
+			mes "- 你似乎听到了水花的声音，但有什么闪闪发光的东西袭向你！！-";
 			specialeffect2 EF_FLASHER;
 			percentheal -60,0;
 			close;
 		}
 	} else if (rhea_rus_hair == 8) {
 		mes "["+ strcharinfo(0) +"]";
-		mes "What was that?!";
-		mes "Why am I here?";
+		mes "那是什么？";
+		mes "我为什么在这里？";
 		next;
-		mes "- After standing up, you see -";
-		mes "- the wet hair in front of you -";
+		mes "- 站起来后，你看到 -";
+		mes "- 你面前湿漉漉的头发 -";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "...This.. is Lusalka's hair?";
-		mes "Ah, right.. I came here to get her hair.";
+		mes "...这.. 是露萨尔卡的头发吗？";
+		mes "啊，对了.. 我是来拿她的头发的。";
 		next;
-		mes "- You pick up the hair -";
+		mes "- 你捡起头发 -";
 		next;
-		mes "- As soon as you touch the -";
-		mes "- cool damp hair, you seem -";
-		mes "- the feel the sadness within -";
+		mes "- 一接触到 -";
+		mes "- 凉爽潮湿的头发，你似乎 -";
+		mes "- 感受到内心的悲伤 -";
 		rhea_rus_hair = 9;
 		getitem 7878,2;
 		// // completequest 8150;
 		// completequest 8153;
 		close;
 	} else if (rhea_rus_hair > 8) {
-		mes "- You feel that someone -";
-		mes "- is watching you -";
+		mes "- 你感觉到有人 -";
+		mes "- 在注视着你 -";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "Who's there? Anybody here?";
+		mes "谁在那里？这里有人吗？";
 		next;
-		mes "- The splashing sound -";
-		mes "- fades away, but you -";
-		mes "- still feel the sadness -";
+		mes "- 溅水声 -";
+		mes "- 渐渐消失，但你 -";
+		mes "- 仍然感受到悲伤 -";
 		close;
 	}
 }
@@ -9065,29 +9065,29 @@ OnTouch_:
 			mes "["+ strcharinfo(0) +"]";
 			mes "我们可以继续航行了";
 			next;
-			mes "[Voice unidentified]";
-			mes "...To make a 'Golden Key'?";
-			mes "Do you think that you are right for this job?";
+			mes "[声音未识别]";
+			mes "...要制作一个'金钥匙'？";
+			mes "你认为你适合这份工作吗？";
 			next;
-			mes "[Voice unidentified]";
-			mes "You must be fighting against 'Koshei' if you are asking about the 'Golden Key' and Maria! Do you think that you are strong enough to fight against him?";
+			mes "[声音未识别]";
+			mes "如果你在询问'金钥匙'和玛丽亚，你一定是在与'科谢伊'作斗争！你认为你有足够的力量与他对抗吗？";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "Of course I'm strong enough!";
+			mes "当然我有足够的力量！";
 			next;
-			mes "[Voice unidentified]";
-			mes "You are very confident.";
-			mes "But, I need to test you to see if you truly are capable.";
+			mes "[声音未识别]";
+			mes "你很自信。";
+			mes "但是，我需要测试你，看看你是否真的有能力。";
 			next;
-			mes "[Voice unidentified]";
-			mes "In this cave, there is a 'Stone Furnace' and an 'Apple Tree'.";
-			mes "You can escape from the cave with ^0000ff100 Well Baked Cookies^000000 from the Stone Furnace and ^0000ff100 Apples^000000 from the Apple Tree.";
+			mes "[声音未识别]";
+			mes "在这个洞穴里，有一个'石炉'和一个'苹果树'。";
+			mes "你可以用从石炉里得到的^0000ff100烤得很好的饼干^000000和从苹果树上得到的^0000ff100苹果^000000逃出洞穴。";
 			next;
-			mes "[Voice unidentified]";
-			mes "It won't be easy. Monsters are wandering around the Stone Furnace and the Apple Tree.";
+			mes "[声音未识别]";
+			mes "这可不容易。怪物在石炉和苹果树周围徘徊。";
 			next;
-			mes "[Voice unidentified]";
-			mes "Show me what you can do.";
+			mes "[声音未识别]";
+			mes "给我看看你能做什么。";
 			rhea_rus_quiz = 1;
 			// setquest 8155;
 			close;

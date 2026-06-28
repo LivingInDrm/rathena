@@ -15,17 +15,17 @@
 //============================================================ 
 
 pay_arche,122,100,0	script	Dollshoi	88,{
-	mes "[DRY-RUN] [Mage Guildsman]";
-	mes "[DRY-RUN] You want a Solution? Hmm, give me 50 Zeny and at least 1 Empty Test Tube.";
+	mes "[魔法公会成员]";
+	mes "你想要解决方案？嗯，给我50金币和至少1个空试管。";
 	next;
-	if (select("[DRY-RUN] Alright, Deal.:Nah, forget it.") == 1) {
-		mes "[DRY-RUN] [Mage Guildsman]";
+	if (select("好的，成交。:不，算了。") == 1) {
+		mes "[魔法公会成员]";
 		if (Zeny < 50) {
-			mes "[DRY-RUN] Hey! You don't have enough money to cover my 50 Zeny charge.";
+			mes "嘿！你没有足够的钱来支付我的50金币费用。";
 			close;
 		}
 		if (countitem(1092) == 0) {
-			mes "[DRY-RUN] You can't carry solutions without a bottle! Bring me an Empty Test Tube.";
+			mes "你不能没有瓶子携带溶液！给我一个空试管。";
 			close;
 		}
 		delitem 1092,1; //Empty_Cylinder
@@ -36,17 +36,17 @@ pay_arche,122,100,0	script	Dollshoi	88,{
 }
 
 moc_ruins,91,150,0	script	Ponka-Hontas	93,{
-	mes "[DRY-RUN] [Mage Guildsman]";
-	mes "[DRY-RUN] Would you like a Solution? Then please give me 50 Zeny and at least 1 Empty Test Tube.";
+	mes "[魔法公会成员]";
+	mes "你想要解决方案吗？那么请给我50金币和至少1个空试管。";
 	next;
-	if (select("[DRY-RUN] Alright, Deal.:Nah, forget it.") == 1) {
-		mes "[DRY-RUN] [Mage Guildsman]";
+	if (select("好的，成交。:不，算了。") == 1) {
+		mes "[魔法公会成员]";
 		if (Zeny < 50) {
-			mes "[DRY-RUN] I'm sorry, but you don't have enough money to cover the 50 Zeny fee.";
+			mes "对不起，但你没有足够的钱来支付50金币的费用。";
 			close;
 		}
 		if (countitem(1092) == 0) {
-			mes "[DRY-RUN] You can't carry liquids without using a bottle. Bring an Empty Test Tube the next time you see me.";
+			mes "你不能在没有使用瓶子的情况下携带液体。下次见到我时带上一个空试管。";
 			close;
 		}
 		delitem 1092,1; //Empty_Cylinder

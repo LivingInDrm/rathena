@@ -66,12 +66,12 @@ jawaii,239,112,7	script	Mariner#toizu	100,{
 		end;
 	}
 	mes "是不是?";
-	mes "Take your time";
-	mes "and look around as";
-	mes "much as you like.";
-	mes "Somehow,  this is not";
-	mes "a place that you can";
-	mes "visit often, you know?";
+	mes "慢慢来";
+	mes "四处看看";
+	mes "尽情享受吧。";
+	mes "不知为何，这里并不是";
+	mes "一个你可以";
+	mes "常常来访的地方，你知道吗？";
 	close;
 }
 
@@ -98,12 +98,12 @@ jawaii,122,263,5	script	Mariner#toalbe	100,{
 		end;
 	}
 	mes "我们再走.";
-	mes "Yeah...";
-	mes "Try to enjoy your";
-	mes "vacation as much";
-	mes "as you can. We'll be";
-	mes "ready to leave when";
-	mes "you are.";
+	mes "是啊...";
+	mes "尽量享受你的";
+	mes "假期吧，尽可能多享受。";
+	mes "我们会在你准备好时";
+	mes "准备离开。";
+	mes "你准备好时。";
 	close;
 }
 
@@ -251,15 +251,15 @@ jawaii,141,200,3	script	Employee#sroom	798,{
 			warp "jawaii_in",116,64;
 			end;
 		}
-		mes "Oh no! Oh no no no no no.";
-		mes "Th-This isn't enough money?";
-		mes "I-I'm ssssorry, but my b-boss w-will beat me if I l-let you";
-		mes "in without paying...";
+		mes "哦不！哦不不不不不。";
+		mes "这-这不够钱吗？";
+		mes "我-我很抱歉，但我的老板会打我，如果我让你";
+		mes "不付钱就进来...";
 		close;
 	}
-	mes "[Alowa]";
-	mes "^666666*Sniff*^000000";
-	mes "B-but I promise th-that this room is the nicest and cl-cleanest room! P-Please! C-come back!";
+	mes "[阿洛瓦]";
+	mes "^666666*嗅嗅*^000000";
+	mes "可、可是我保证这间房间是最漂亮和最干净的房间！请！回来吧！";
 	emotion ET_CRY;
 	close;
 }
@@ -283,32 +283,32 @@ jawaii,108,199,5	script	Employee#antroom	74,{
 	mes "那样你看起来会像一个悲";
 	next;
 	mes "惨的失败者!";
-	mes "Do not hesitate to let me know when you've decided on the Antique Room. Once you've made your choice,";
-	mes "I will guide you there.";
+	mes "当你决定好古董房间时，请不要犹豫告诉我。一旦你做出选择，";
+	mes "我会带你去那里。";
 	next;
-	if (select("Use.:Cancel.") == 1) {
-		mes "[Pine Oran]";
+	if (select("使用:取消。") == 1) {
+		mes "[松橙]";
 		if (Zeny > 999) {
-			mes "Thank you";
-			mes "for using";
-			mes "our services.";
-			mes "Please...";
-			mes "Make yourself";
-			mes "comfortable.";
+			mes "谢谢你";
+			mes "使用我们的";
+			mes "服务。";
+			mes "请...";
+			mes "请你自便";
+			mes "舒适一些。";
 			close2;
 			set Zeny, Zeny-1000;
 			warp "jawaii_in",129,110;
 			end;
 		}
-		mes "I am sorry, but you don't seem to have enough money. If it's alright, why don't you check your current funds and see what you can do";
-		mes "about this situation?";
+		mes "对不起，但你似乎没有足够的金币。如果可以的话，为什么不检查一下你当前的资金，看看你能做些什么呢？";
+		mes "关于这个情况？";
 		close;
 	}
-	mes "[Pine Oran]";
-	mes "Please...";
-	mes "Take your time.";
-	mes "There should be no rush";
-	mes "when it comes to leisure.";
+	mes "[松橙]";
+	mes "请...";
+	mes "慢慢来。";
+	mes "不必着急。";
+	mes "在休闲的时候。";
 	close;
 }
 
@@ -321,25 +321,25 @@ jawaii,107,189,5	script	Employee#horoom	93,{
 	mes "而且不必担心任何打扰. 你都不用为那支臭名昭彰的单身军团费心!";
 	mes "[哇咿 哇咿]";
 	next;
-	if (select("Use.:Cancel.") == 1) {
+	if (select("使用:取消。") == 1) {
 		mes "还有, 这周围有一些魔物, 但是你可别故意攻击它们. 试想一下, 它们也是如此喜爱这座岛, 就把它们当作另一些原住的居民.";
 		if (Zeny > 999) {
-			mes "Eh, alright.";
-			mes "Let's get going.";
+			mes "嗯，好吧。";
+			mes "我们出发吧。";
 			close2;
 			set Zeny, Zeny-1000;
 			warp "jawaii_in",86,117;
 			end;
 		}
-		mes "You...";
-		mes "Don't have";
-		mes "enough money.";
-		mes "C'mon, romance";
-		mes "takes zeny, got it?";
+		mes "你...";
+		mes "没有";
+		mes "足够的金币。";
+		mes "来吧，浪漫";
+		mes "需要金币，明白了吗？";
 		close;
 	}
-	mes "[Sharkie Rania]";
-	mes "No prob.";
+	mes "[鲨鱼拉尼亚]";
+	mes "没问题。";
 	close;
 }
 
@@ -354,37 +354,37 @@ jawaii,112,173,7	script	Employee#villroom	93,{
 	mes "[哇爪 哇爪]";
 	mes "当你想要回去的时候, 西北方向有前";
 	mes "往艾尔贝塔的船只. 如果你是想回去依斯鲁得, 东南方向有一艘船是去那儿的.";
-	mes "a comfortable atmosphere";
-	mes "much like home.";
+	mes "舒适的氛围";
+	mes "就像家一样。";
 	next;
-	mes "[Larks Rania]";
-	mes "Just like all the other rooms,";
-	mes "the lodging charge is 1,000 zeny.";
-	mes "I can guide you to the Villa Room";
-	mes "right now, if you wish. Would you";
-	mes "like to stay?";
+	mes "[百灵拉尼亚]";
+	mes "和其他房间一样，";
+	mes "住宿费用是1,000金币。";
+	mes "如果你愿意，我可以带你去别墅房间，";
+	mes "现在就可以。你想";
+	mes "入住吗？";
 	next;
-	if (select("Use.:Cancel.") == 1) {
-		mes "[Larks Rania]";
+	if (select("使用:取消。") == 1) {
+		mes "[百灵拉尼亚]";
 		if (Zeny > 999) {
-			mes "Thank you~";
-			mes "Enjoy your stay.";
+			mes "谢谢~";
+			mes "祝你入住愉快。";
 			close2;
 			set Zeny, Zeny-1000;
 			warp "jawaii_in",87,75;
 			end;
 		}
-		mes "Oh what a shame!";
-		mes "You don't seem";
-		mes "to have enough money...?";
-		mes "Why don't you ask your";
-		mes "partner to help you";
-		mes "with the charge?";
+		mes "哦，真可惜！";
+		mes "你似乎不想";
+		mes "要有足够的钱...?";
+		mes "为什么不问问你的";
+		mes "伙伴帮你";
+		mes "处理费用呢?";
 		close;
 	}
-	mes "[Larks Rania]";
-	mes "No problem~";
-	mes "If you like, you may wish to check the Honey Room. Although the roomkeeper, Sharkie, is a shy girl, the room is really beautiful.";
+	mes "[百灵拉尼亚]";
+	mes "没问题~";
+	mes "如果你愿意，可以去看看蜜蜂房。虽然房间管理员，沙基，是个害羞的女孩，但房间真的很漂亮。";
 	close;
 }
 
@@ -559,14 +559,14 @@ jawaii_in,25,100,0	script	Employee#jaw4	724,{
 		mes "要钱的, 明白吗?";
 		mes "[沙奇 瑞尼亚]";
 		mes "好吧.";
-		mes "the Invincible Single Army!";
+		mes "无敌单身军团!";
 		next;
-		mes "[Employee Itere]";
-		mes "Well, whatever you do, don't despair, get drunk and then";
-		mes "bother the married couples!";
+		mes "[职员伊特雷]";
+		mes "好吧，无论你做什么，别绝望，喝醉了然后";
+		mes "打扰那些已婚夫妇!";
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "希望你玩得开心。";
 	close;
 
 OnWelcome:
@@ -653,12 +653,12 @@ jawaii_in,30,98,4	script	Employee#jaw7	724,{
 	}
 	else if (!getpartnerid()) {
 		next;
-		mes "[Employee Amy]";
-		mes "Hmm, I don't think this place is for you. But, I see no problem in letting you drink and have a good time, so long as you don't";
-		mes "make a fuss.";
+		mes "[职员艾米]";
+		mes "嗯，我觉得这个地方不适合你。不过，只要你不";
+		mes "制造麻烦，我不介意让你喝酒好好享受。";
 		close;
 	}
-	mes "I hope you will have a good time.";
+	mes "希望你玩得开心。";
 	close;
 
 OnWelcome:
@@ -729,14 +729,14 @@ jawaii_in,15,104,0	script	Waitress#jawaii	80,{
 		mes "你看起来和你";
 		emotion ET_CHUP;
 		next;
-		switch(select("Give me food.:Bring me drink.:Where's the bar?")) {
+		switch(select("给我食物。:给我饮料。:酒吧在哪里？")) {
 		case 1:
 			mes "伴侣在这里很";
 			mes "开心! 多珍贵~";
 			mes "希望你喜欢呆--";
 			mes "等一下...!";
 			next;
-			if (select("Yes.:Wha--! It's too expensive!") == 1) {
+			if (select("是的。:什么--！太贵了！") == 1) {
 				mes "[职员 伊特尔]";
 				if (Zeny > 999) {
 					set Zeny, Zeny-1000;
@@ -752,82 +752,82 @@ jawaii_in,15,104,0	script	Waitress#jawaii	80,{
 			mes "好吧, 不管你做什么, 别乱搞, 喝醉以后";
 			mes "去打扰这里的夫妇们!";
 			mes "祝你玩得愉快.";
-			mes "please let me know.";
+			mes "如果有需要，请告诉我。";
 			close;
 
 		case 2:
-			mes "[Waitress]";
-			mes "You can have";
-			mes "1 Yellow Potion";
-			mes "at 1,000 zeny.";
-			mes "Would you like one?";
+			mes "[女服务员]";
+			mes "你可以购买";
+			mes "1个黄色药水";
+			mes "价格为1,000金币。";
+			mes "你想要一个吗？";
 			next;
-			if (select("Yes.:Wha--! It's too expensive!") == 1) {
-				mes "[Waitress]";
+			if (select("是的。:什么--！太贵了！") == 1) {
+				mes "[女服务员]";
 				if (Zeny > 999) {
 					set Zeny, Zeny-1000;
 					getitem 503,1;// Yellow_Potion
-					mes "There you go~";
-					mes "Enjoy your meal~!";
+					mes "给你~";
+					mes "祝你用餐愉快~！";
 					close;
 				}
-				mes "I am sorry but you don't have enough money?!";
+				mes "对不起，但你没有足够的钱？！";
 				close;
 			}
-			mes "[Waitress]";
-			mes "If you";
-			mes "need anything,";
-			mes "please let me know.";
+			mes "[女服务员]";
+			mes "如果你";
+			mes "需要任何东西，";
+			mes "如果有需要，请告诉我。";
 			close;
 
 		case 3:
-			mes "[Waitress]";
-			mes "Oh, just go toward the center";
-			mes "of the tavern. I hope you have";
-			mes "a good time, but be careful and";
-			mes "don't drink too much! Have fun!";
+			mes "[女服务员]";
+			mes "哦，直接朝中心走去";
+			mes "酒馆的方向。我希望你玩得开心，";
+			mes "但要小心，";
+			mes "不要喝太多！玩得开心！";
 			close;
 		}
 	}
 	emotion ET_HUK;
-	mes "[Waitress]";
-	mes "Hey, hey...!";
-	mes "I have no idea";
-	mes "why you're here...";
+	mes "[女服务员]";
+	mes "嘿，嘿...！";
+	mes "我不知道";
+	mes "你为什么在这里...";
 	next;
-	mes "[Waitress]";
-	mes "But we don't tolerate singles messing around with the happily married couples around here.";
-	mes "Just have your drink";
-	mes "and then leave!";
+	mes "[女服务员]";
+	mes "但是我们不容忍单身者在这里打扰幸福的已婚夫妇。";
+	mes "喝你的酒吧";
+	mes "然后离开！";
 	next;
 	if (Select("I'm a member of Single Army!!:...I just wanted to congratulate them...") == 1) {
-		mes "[Employee]";
-		mes "Yeah, right.";
-		mes "Knock it off already.";
-		mes "Why can't you be happy";
-		mes "for other people?!";
+		mes "[职员]";
+		mes "是啊，没错。";
+		mes "别再这样了。";
+		mes "你为什么不能快乐";
+		mes "为别人呢？!";
 		next;
-		mes "[Employee]";
-		mes "^666666*Sigh*^000000";
-		mes "You will be welcome";
-		mes "here when you visit";
-		mes "with your partner, okay?";
+		mes "[职员]";
+		mes "^666666*唉*^000000";
+		mes "你会受到欢迎";
+		mes "当你来这里时";
+		mes "和你的伴侣一起，好吗？";
 		close;
 	}
-	mes "[Employee]";
-	mes "Huh? Did you just";
-	mes "say you wanted to";
-	mes "congratulate them?";
-	mes "Oh, you must be close";
-	mes "friends with one";
-	mes "of the couples...";
+	mes "[职员]";
+	mes "哈？你刚才是说";
+	mes "你想要";
+	mes "祝贺他们吗？";
+	mes "哦，你们一定很亲近";
+	mes "和其中一个朋友";
+	mes "的情侣...";
 	next;
-	mes "[Employee]";
-	mes "I'm sorry!";
-	mes "Let me apologize";
-	mes "for my rudeness.";
-	mes "I hope you have";
-	mes "a good time.";
+	mes "[职员]";
+	mes "对不起！";
+	mes "让我道歉";
+	mes "因为我的粗鲁。";
+	mes "我希望你们有";
+	mes "过得不错。";
 	close;
 }
 
@@ -852,46 +852,46 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 		mes "["+strcharinfo(0)+"]";
 		mes "停-停止喝酒! 赶快停下来!";
 		mes "祝你玩得愉快.";
-		mes "Gimmie one more.";
+		mes "再来一杯。";
 		next;
-		mes "[Bartender]";
-		mes "Okay...";
-		mes "It's on me.";
-		mes "Have a drink.";
+		mes "[酒保]";
+		mes "好的...";
+		mes "我请客。";
+		mes "喝一杯吧。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Thank you.";
+		mes "谢谢你。";
 		close2;
 		percentheal -100,0;
 		end;
 	}
 	while(1) {
-		switch(select("Follow Bartender's Recommendation.:I want a Gunslinger.:I want a Cobo.:I want a Bomb.:I want a Boogieman.")) {
+		switch(select("跟随酒保的推荐。:我想要一个枪手。:我想要一个可可。:我想要一个炸弹。:我想要一个布吉曼。")) {
 		case 1:
 			set .@roof_jaw,.@roof_jaw+3;
 			if (.@roof_jaw > 9) {
-				mes "[Bartender]";
-				mes "Hmmm...";
-				mes "You seem to have";
-				mes "had enough to drink.";
-				mes "Are you sure you'll be okay?";
+				mes "[酒保]";
+				mes "嗯……";
+				mes "你似乎已经";
+				mes "喝得够多了。";
+				mes "你确定你没事吗？";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Bartender,";
-				mes "I'm so depressed";
-				mes "because of...";
+				mes "酒保，";
+				mes "我很沮丧";
+				mes "因为...";
 				input .@inputstr$;
 				mes .@inputstr$+"...";
 				next;
-				mes "[Bartender]";
-				mes "There you go...";
-				mes "Let me make";
-				mes "a ^0000FF'Special J&Z'^000000 for you.";
-				mes "And this is on me.";
+				mes "[酒保]";
+				mes "给你...";
+				mes "让我来做";
+				mes "一个^0000FF'特别的J&Z'^000000给你。";
+				mes "这我请客。";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Thank you...";
-				mes "So much...";
+				mes "谢谢你...";
+				mes "太感谢了...";
 				close2;
 				percentheal -100,0;
 				end;
@@ -899,100 +899,100 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 			if (Zeny > 99) set Zeny, Zeny-100;
 			switch(rand(4)) {
 			case 1:
-				mes "[Bartender]";
-				mes "Hmm...";
-				mes "How about this cocktail?";
+				mes "[酒保]";
+				mes "嗯...";
+				mes "这个鸡尾酒怎么样？";
 				next;
-				mes "[Bartender]";
-				mes "I recommend";
-				mes "a '^0000FFBarcadie 150^000000.'";
-				mes "It's the drink of pirates!";
+				mes "[酒保]";
+				mes "我推荐";
+				mes "一个'^0000FF巴卡迪150^000000。'";
+				mes "这是海盗的饮料！";
 				next;
-				mes "^3355FFYou examined";
-				mes "the small glass";
-				mes "containing a glossy";
-				mes "brown liquid...^000000";
+				mes "^3355FF你检查了";
+				mes "小玻璃杯";
+				mes "里面装着光滑的";
+				mes "棕色液体...^000000";
 				next;
-				mes "^3355FFAlthough the glass is tiny and only holds a small amount, the liquid inside still smells pretty dangerous...^000000";
+				mes "^3355FF虽然这个杯子很小，只能装少量液体，但里面的液体闻起来仍然相当危险……^000000";
 				next;
-				mes "[Bartender]";
-				mes "It's strong and flammable,";
-				mes "so you might feel like your";
-				mes "throat is burning.";
+				mes "[酒保]";
+				mes "它很强且易燃，";
+				mes "所以你可能会觉得你的";
+				mes "喉咙在烧。";
 				next;
-				mes "^3355FFYou gulped it down.^000000";
+				mes "^3355FF你一口喝下去了。^000000";
 				specialeffect2 EF_VENOMDUST;
 				percentheal -20,0;
 				next;
 				break;
 			case 2:
-				mes "[Bartender]";
-				mes "Hmm...";
-				mes "How about this cocktail?";
+				mes "[酒保]";
+				mes "嗯...";
+				mes "这个鸡尾酒怎么样？";
 				next;
-				mes "[Bartender]";
-				mes "I recommend a '^0000FFBlack Russian Double^000000.' It will make you dream of lying in a vast Russian field...";
+				mes "[酒保]";
+				mes "我推荐一杯'^0000FF黑俄罗斯双倍^000000'。它会让你梦见躺在广阔的俄罗斯田野上……";
 				next;
-				mes "^3355FFYou examined the large glass holding a dark brown liquid chilled with ice cubes. There's a faint sweetness in the aroma, as well";
-				mes "a musk that reminds you of an old, mustached man.^000000";
+				mes "^3355FF你仔细观察了装着深棕色液体并加了冰块的大杯子。香气中还有一丝甜味，";
+				mes "还有一种让你想起一个老胡子男人的麝香。^000000";
 				next;
-				mes "[Bartender]";
-				mes "I suggest you take your time";
-				mes "drinking this since it's very strong. The Black Russian Double is rumored to be the favorite drink of the Russian mafia.";
+				mes "[酒保]";
+				mes "我建议你慢慢来。";
+				mes "喝这个因为它非常强烈。传闻黑俄罗斯双倍是俄罗斯黑手党的最爱饮品。";
 				next;
-				mes "^3355FFYou drank it sip by sip,";
-				mes "savoring its rich,";
-				mes "robust flavor.^000000";
+				mes "^3355FF你一口一口地喝着，";
+				mes "品味着它丰富的，";
+				mes "浓郁的味道。^000000";
 				specialeffect2 EF_FIREIVY;
 				percentheal -20,0;
 				next;
 				break;
 			case 3:
-				mes "[Bartender]";
-				mes "So...";
-				mes "How about this..?";
+				mes "[酒保]";
+				mes "所以……";
+				mes "怎么样..？";
 				next;
-				mes "[Bartender]";
-				mes "Why don't you try";
-				mes "a '^0000FFKiss of Fire";
-				mes "the Spinbird Kick^000000?'";
+				mes "[酒保]";
+				mes "你为什么不试试";
+				mes "一个'^0000FF火之吻";
+				mes "旋转鸟踢^000000？'";
 				next;
-				mes "[Bartender]";
-				mes "Don't be fooled by its sweet scent or beautiful red color. This is one of the strongest drinks around.";
+				mes "[酒保]";
+				mes "不要被它甜美的香气或美丽的红色所迷惑。这是最强烈的饮品之一。";
 				next;
-				mes "^3355FFYou receive a crystal cocktail glass with a little bit of sugar sprinkled around the rim. It has";
-				mes "a sweet fragrance that makes your mouth water. However, you can also feel that it is a dangerously strong cocktail.";
+				mes "^3355FF你收到一个水晶鸡尾酒杯，杯缘撒了一点糖。它有";
+				mes "一种让你垂涎欲滴的甜美香气。然而，你也能感受到这是一种危险的强烈鸡尾酒。";
 				next;
-				mes "[Bartender]";
-				mes "Lick the sugar before taking a sip. That will make it taste a little sweeter and will soften the taste.";
+				mes "[酒保]";
+				mes "在喝一口之前舔舔糖。这会让它的味道更甜，并且会软化口感。";
 				next;
-				mes "^3355FFYou carefully took a sip.^000000";
+				mes "^3355FF你小心翼翼地喝了一口。^000000";
 				specialeffect2 EF_DECAGILITY;
 				percentheal -20,0;
 				next;
 				break;
 			Default:
-				mes "[Bartender]";
-				mes "I see...";
-				mes "Let me think";
-				mes "of something";
-				mes "you might like.";
+				mes "[酒保]";
+				mes "我明白了……";
+				mes "让我想想";
+				mes "一些";
+				mes "你可能会喜欢的。";
 				next;
-				mes "[Bartender]";
-				mes "Okay, how about";
-				mes "a '^0000FFWhite Margarita'^000000?'";
+				mes "[酒保]";
+				mes "好吧，怎么样";
+				mes "来一杯'^0000FF白色玛格丽塔'^000000？";
 				next;
-				mes "[Bartender]";
-				mes "You will smell a sourish lemon scent which makes your mouth water. As you taste it, you will be filled with a pleasant, comforting warmth that spreads throughout your body.";
+				mes "[酒保]";
+				mes "你会闻到一种酸酸的柠檬香气，让你垂涎欲滴。当你品尝它时，会感受到一种愉悦、舒适的温暖在全身蔓延。";
 				next;
-				mes "^3355FFYou receive a fancy cocktail glass with salt and lemon juice sprinkled on the rim. Its sour scent does make your mouth water. How could something so appetizing be dangerous?";
+				mes "^3355FF你收到一只边缘撒有盐和柠檬汁的精美鸡尾酒杯。它的酸香确实让你垂涎欲滴。怎么会有如此美味的东西是危险的呢？";
 				next;
-				mes "[Bartender]";
-				mes "It has a sweet and sour taste so it's favored by female customers";
-				mes "as well. I guarantee that you will enjoy its flavor.";
+				mes "[酒保]";
+				mes "它有一种酸甜的味道，因此受到女性顾客的青睐。";
+				mes "我保证你会喜欢它的味道。";
 				next;
-				mes "^3355FFYou gulp the delicious";
-				mes "Margarita down in one sip.^000000";
+				mes "^3355FF你一口喝下美味的";
+				mes "玛格丽塔。^000000";
 				specialeffect2 EF_MAGNUMBREAK;
 				percentheal -20,0;
 				next;
@@ -1000,20 +1000,20 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 			break;
 		case 2:
 			callsub S_KillChar,2,.@roof_jaw;
-			mes "When you want to look super cool, this will be the best drink for you. It's a strong drink with a particular scent, so people who drink Gunslingers are usually seen as having impressive of taste.";
+			mes "当你想看起来超级酷时，这将是最适合你的饮料。这是一种具有特殊香气的烈酒，所以喝枪手酒的人通常被认为有着令人印象深刻的品味。";
 			next;
-			mes "^3355FFYou received a simple glass containing a gray liquid. Although it smells faintly sweet, it looks like industrial strength liquor. It's time to summon your courage and take a sip~";
+			mes "^3355FF你收到了一杯装有灰色液体的简单玻璃杯。虽然它散发着淡淡的甜味，但看起来像是工业强度的酒。是时候鼓起勇气，来一口~";
 			next;
-			mes "[Bartender]";
-			mes "That drink is bitter and sweet, just like life. Taste it with your tongue, don't drink it all at once.";
+			mes "[酒保]";
+			mes "那饮料苦中带甜，就像生活一样。用舌头品尝，不要一次喝完。";
 			next;
-			mes "^3355FFYou slowly drank some";
-			mes "of your Gunslinger drink.^000000";
+			mes "^3355FF你慢慢喝了一些";
+			mes "你的枪手饮料。^000000";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "Yeeehaw~!";
-			mes "I'm a cowboy hero!";
-			mes "Bang Bang Bang!";
+			mes "耶哈~！";
+			mes "我是牛仔英雄！";
+			mes "砰砰砰！";
 			next;
 			specialeffect2 EF_STEAL;
 			percentheal -10,0;
@@ -1022,23 +1022,23 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 
 		case 3:
 			callsub S_KillChar,2,.@roof_jaw;
-			mes "People say that the more you drink a mixed Cobo, the tastier it will be. It grows on you, kind of like the company of an old friend. This is a nice drink to have with anyone at anytime.";
+			mes "人们说，混合可可饮料喝得越多，味道就越好。就像老朋友的陪伴一样，越喝越有味。这是一种随时随地都适合与任何人分享的美好饮品。";
 			next;
-			mes "^3355FFThe Bartender brought a beautifully engraved glass holding a cobalt blue liquid and placed it in front of you. It smells pleasantly sweet and sour.";
+			mes "^3355FF酒保端来一杯精美雕刻的玻璃杯，里面装着钴蓝色的液体，放在你面前。它散发着令人愉悦的酸甜气味。";
 			next;
-			mes "[Bartender]";
-			mes "Once you taste this once, you almost can't stop drinking. It tastes so smooth and goes";
-			mes "down even smoother.";
+			mes "[酒保]";
+			mes "一旦你尝过一次，就几乎停不下来。它的口感非常顺滑，";
+			mes "下咽时更加顺滑。";
 			next;
-			mes "^3355FFYou finished";
-			mes "your drink in 3 sips.";
-			mes "Your mouth was filled";
-			mes "with a luxurious, sweet and";
-			mes "sour flavor.^000000";
+			mes "^3355FF你喝完了";
+			mes "你的饮料只用了3口。";
+			mes "你的嘴里充满了";
+			mes "奢华、甜美的";
+			mes "酸味。^000000";
 			next;
 			mes "["+strcharinfo(0)+"]";
-			mes "Aaaaaahhhhhh~!";
-			mes "This drink is really good!";
+			mes "啊啊啊啊啊啊啊啊~!";
+			mes "这饮料真好喝!";
 			specialeffect2 EF_SANCTUARY;
 			percentheal -10,0;
 			next;
@@ -1046,19 +1046,19 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 
 		case 4:
 			callsub S_KillChar,2,.@roof_jaw;
-			mes "This is for one who wants to relive wild, youthful days, honor those who have fought for justice and liberty, or just to drink alcohol until they vomit stomach acid.";
-			mes "for one who wants to remember people fighting for liberty...";
+			mes "这是为了那些想要重温狂野青春的人，向那些为正义和自由而战的人致敬，或者只是为了喝酒直到呕吐胃酸的人。";
+			mes "为了那些想要记住为自由而战的人...";
 			next;
-			mes "^3355FFYou receive a tumbler filled with brown liquid. It a has a very thick, machine like smell. It kind of reminds you of gunpowder.^000000";
+			mes "^3355FF你收到了一杯装满棕色液体的杯子。它有一种非常浓厚的机械气味。让你想起火药。^000000";
 			next;
-			mes "[Bartender]";
-			mes "It might look too big to drink at once, but I suggest that you finish it in one gulp. If you drink it slowly, you'll pass out.";
+			mes "[酒保]";
+			mes "它看起来可能太大而无法一次喝完，但我建议你一口气喝下去。如果你慢慢喝，你会昏倒的。";
 			next;
-			mes "^3355FFYou firmly grabbed";
-			mes "the tumbler and";
-			mes "gulped it down.^000000";
+			mes "^3355FF你牢牢地抓住了";
+			mes "杯子并且";
+			mes "一口吞下了它。^000000";
 			next;
-			mes "^3355FFYou feel pretty hammered.^000000";
+			mes "^3355FF你感觉有点醉了。^000000";
 			specialeffect2 EF_BLASTMINEBOMB;
 			percentheal -10,0;
 			next;
@@ -1066,21 +1066,21 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 
 		case 5:
 			callsub S_KillChar,1,.@roof_jaw;
-			mes "There are not many people who like this drink. But the ones that do like this drink, love it.";
+			mes "喜欢这种饮料的人并不多。但喜欢它的人却非常热爱它。";
 			next;
-			mes "[Bartender]";
-			mes "Although it has a beautiful, appetizing color, its appearance can be misleading. Most people feel cold and empty after having some";
-			mes "of this.";
+			mes "[酒保]";
+			mes "尽管它有着美丽、诱人的颜色，但它的外观可能会让人误解。大多数人在喝完后会感到寒冷和空虚。";
+			mes "这种感觉。";
 			next;
-			mes "^3355FFYou receive a crooked glass";
-			mes "filled with purple fluid. Although it smells pleasant, you have a strange feeling of disgust as you draw it closer to your face.";
+			mes "^3355FF你收到了一只歪斜的杯子";
+			mes "里面装满了紫色液体。尽管它的气味令人愉悦，但当你将它靠近脸时，却有一种奇怪的厌恶感。";
 			next;
-			mes "[Bartender]";
-			mes "If you don't want to drink it, tell me now. But it might be good to try it once, just to experience it.";
+			mes "[酒保]";
+			mes "如果你不想喝它，现在就告诉我。但尝试一次也许会很好，毕竟只是为了体验一下。";
 			next;
-			mes "^3355FFYou took a sip of it and sighed.^000000";
+			mes "^3355FF你喝了一口，叹了口气。^000000";
 			next;
-			mes "^3355FFAnd promised yourself that you would never drink it ever again.^000000";
+			mes "^3355FF并向自己保证再也不喝它了。^000000";
 			specialeffect2 EF_HIT6;
 			percentheal -10,0;
 			next;
@@ -1088,8 +1088,8 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 		}
 
 		mes "["+strcharinfo(0)+"]";
-		mes "Master...";
-		mes "One more please...";
+		mes "大师...";
+		mes "再来一杯...";
 		next;
 	}
 	end;
@@ -1097,22 +1097,22 @@ jawaii_in,28,124,0	script	Bartender#jaw	46,{
 S_KillChar:
 	.@roof_jaw = getarg(1);
 	if (.@roof_jaw > 8) {
-		mes "[Bartender]";
-		mes "It's on me.";
+		mes "[酒保]";
+		mes "我请客。";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Thank you...";
-		mes "Mr. Bartender...";
+		mes "谢谢你...";
+		mes "酒保先生...";
 		close2;
 		percentheal -100,0;
 		end;
 	}
 	if (Zeny > 99) set Zeny, Zeny-100;
 	set .@roof_jaw,.@roof_jaw+getarg(0);
-	mes "[Bartender]";
-	mes "There you go.";
+	mes "[酒保]";
+	mes "给你。";
 	next;
-	mes "[Bartender]";
+	mes "[酒保]";
 	return;
 }
 
@@ -1127,44 +1127,44 @@ jawaii_in,43,115,0	script	Customer#jaw_1	97,{
 			next;
 			mes "我能理解你想要放松休息下, 但请你别喝的太多了.";
 			mes "祝你玩得愉快.";
-			mes "You agree, don't you?!";
+			mes "你同意吧？!";
 			next;
-			mes "[Buchi]";
-			mes "Grrrr...";
-			mes "Bartender!";
-			mes "Give me one more!";
+			mes "[布奇]";
+			mes "咕噜...";
+			mes "酒保！";
+			mes "再给我来一杯！";
 			close;
 		}
-		mes "Hey, why aren't you drinking?";
-		mes "I guess you're all out of dough.";
-		mes "But I know how you feel. Disgusted with all the lovey dovey around this place, aren't you?";
+		mes "嘿，为什么你不喝酒？";
+		mes "我想你是没钱了。";
+		mes "但我知道你的感受。对这个地方的甜腻腻感到厌恶，是吧？";
 		next;
-		mes "[Buchi]";
-		mes "Heh.";
-		mes "Lemme buy";
-		mes "you a drink!";
+		mes "[布奇]";
+		mes "嘿。";
+		mes "让我请你喝一杯";
+		mes "！";
 		next;
-		mes "[Buchi]";
-		mes "Drink this at once, and forget about your miserable life! Cheer up, you got the whole future ahead of you and a drink in front of you! Come on, now~!";
+		mes "[布奇]";
+		mes "马上喝下这个，忘掉你悲惨的生活！振作起来，你还有整个未来在等着你，面前还有一杯酒！来吧，快点~！";
 		next;
-		mes "^3355FFHe ordered a JJ special for me.^000000";
+		mes "^3355FF他为我点了一份JJ特饮。^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "Damn...!";
-		mes "Damn! I will be";
-		mes "the one who laughs last!";
+		mes "该死...！";
+		mes "该死！我会是";
+		mes "最后笑的人！";
 		next;
-		mes "^3355FFYou drank to your fill.^000000";
+		mes "^3355FF你喝得很尽兴。^000000";
 		close2;
 		percentheal -100,0;
 		end;
 	}
-	mes "You look happy...";
-	mes "I hope you'll be";
-	mes "able to feel that";
-	mes "way forever...";
+	mes "你看起来很开心...";
+	mes "我希望你能这样";
+	mes "永远感受到那种";
+	mes "感觉...";
 	mes " ";
-	mes "^666666*Hiccup...!*^000000";
+	mes "^666666*呃...!*^000000";
 	close;
 }
 
@@ -1189,29 +1189,29 @@ jawaii_in,41,106,3	script	Customer#Cage	98,{
 			mes "嗯, 我想这地方不适合你. 但是, 我想你在这里喝酒娱乐是没问题, 只要";
 			mes "你别吵吵闹闹的.";
 			mes "祝你玩得愉快.";
-			mes "You hear me?! A FOOL!";
+			mes "你听见我说话了吗？！一个傻瓜！";
 		}
 		next;
-		mes "[Cage]";
-		mes "The single life is";
-		mes "what it's all about!";
-		mes "Women may break my";
-		mes "spirit, but they'll never take...";
-		mes "MY FREEDOM!";
+		mes "[笼子]";
+		mes "单身生活就是";
+		mes "一切的意义！";
+		mes "女人可能会打击我的";
+		mes "精神，但她们永远无法夺走...";
+		mes "我的自由！";
 		close;
 	}
-	mes "Drink, drink...!!";
-	mes "Eat, eat...!!";
-	mes "Join me,";
-	mes "my brother";
-	mes "in singlehood!";
+	mes "喝，喝...！！";
+	mes "吃，吃...!!";
+	mes "加入我，";
+	mes "我兄弟";
+	mes "单身生活！";
 	next;
-	mes "[Cage]";
-	mes "We are free...!";
-	mes "We are free from";
-	mes "the hell of marriage...!";
-	mes "We are the sincere and";
-	mes "competent singles...!";
+	mes "[笼子]";
+	mes "我们是自由的...！";
+	mes "我们摆脱了";
+	mes "婚姻的地狱...！";
+	mes "我们是真诚且";
+	mes "能干的单身...！";
 	close;
 }
 
@@ -1226,121 +1226,121 @@ prt_in,173,13,4	script	Customer#SoloHan	86,{
 		next;
 		mes "你根本不属于这里, 但我希望你某一天能找到你的另一半. 祝你愉快!";
 		mes "祝你玩得愉快.";
-		mes "You understand, don't you?!";
-		mes "Aren't you upset looking at all these happily married couples?!";
-		mes "Yeah~? Me too!";
+		mes "你明白，对吧？！";
+		mes "看到这些幸福的已婚夫妇你不生气吗？！";
+		mes "是吗~？我也是！";
 		next;
-		mes "[SoloHan]";
-		mes "How dare they show off their happiness in front of people like us--!! ^666666*Sniff*^000000 Just because they found everlasting love, they think they're better than we are?!";
+		mes "[单身汉]";
+		mes "他们居然敢在我们面前炫耀他们的幸福--!! ^666666*呜呜*^000000 只是因为他们找到了永恒的爱情，就觉得自己比我们强吗？!";
 		next;
-		mes "[SoloHan]";
-		mes "I remember when couples were polite and were lovey dovey behind closed doors. Nowadays they hold hands, and even cuddle in public. I mean, come on! Get a room!";
+		mes "[单身汉]";
+		mes "我记得以前的情侣都很有礼貌，都是在私下里甜蜜。如今他们在公共场合牵手，甚至拥抱。我是说，拜托！找个房间吧！";
 		next;
-		mes "[SoloHan]";
-		mes "I mean, ^666666*Sniff*^000000, it's not like,";
-		mes "I'm lonely or anything. I don't neeeeeeeed a woman~!";
-		mes "Right, Bachewcca!";
+		mes "[单身汉]";
+		mes "我是说，^666666*呜呜*^000000，难道我就这样，";
+		mes "我并不孤单什么的。我不需要女人~！";
+		mes "对吧，巴丘卡！";
 		next;
-		mes "[Bachewcca]";
+		mes "[巴丘卡]";
 		mes "...!";
 		emotion ET_BEST, getnpcid(0, "Customer#Bachewcca");
 		next;
-		mes "[SoloHan]";
-		mes "It's doesn't really matter whether you're married";
-		mes "or not, right buddy? Right?!";
-		mes "Come on! Drink with me!!";
+		mes "[单身汉]";
+		mes "你结不结婚其实没什么关系";
+		mes "对吧，伙计？对吧？!";
+		mes "来吧！和我一起喝酒！！";
 		next;
-		mes "^3355FFSuddenly he treated me as a close friend. It's a little embarrassing, but it's not a bad idea to accept";
-		mes "a free drink...^000000";
+		mes "^3355FF突然他把我当作亲密朋友。这有点尴尬，但接受也不是个坏主意";
+		mes "一杯免费的饮料...^000000";
 		next;
-		mes "^3355FF* Gulp Gulp Gulp *^000000";
+		mes "^3355FF* 咕噜咕噜咕噜 *^000000";
 		percentheal -10,0;
 		next;
-		mes "[SoloHan]";
-		mes "So, what do you say?";
-		mes "Let's go somewhere";
-		mes "with some real liquor.";
+		mes "[单身汉]";
+		mes "那么，你觉得怎么样？";
+		mes "我们去个地方吧";
+		mes "喝点真正的酒。";
 		while(1) {
 			next;
-			if (select("...One more drink.:...What kind of place is it?") == 1) {
-				mes "[SoloHan]";
-				mes "Yeah~!";
-				mes "That's the spirit!";
-				mes "Hey, Bachewcca...";
-				mes "Let's drink!";
+			if (select("...再来一杯。:...这是什么地方？") == 1) {
+				mes "[单身汉]";
+				mes "好啊~！";
+				mes "这才有精神！";
+				mes "嘿，巴切卡...";
+				mes "我们喝酒吧！";
 				next;
-				mes "[Bachewcca]";
-				mes "^666666*Grunt!*^000000";
+				mes "[巴丘卡]";
+				mes "^666666*哼！*^000000";
 				specialeffect EF_TALK_SCREAM,AREA,"Customer#Bachewcca";
 				next;
-				mes "[SoloHan]";
-				mes "To...";
-				mes "To being single!";
-				mes "F-Forever!!!";
+				mes "[单身汉]";
+				mes "为了...";
+				mes "为了单身！";
+				mes "永远!!!";
 				next;
-				mes "^3355FF* Gulp Gulp Gulp *^000000";
+				mes "^3355FF* 咕噜咕噜咕噜 *^000000";
 				percentheal -10,0;
 				next;
 				set .@jaw_roof,.@jaw_roof+2;
-				mes "[SoloHan]";
+				mes "[单身汉]";
 				if (.@jaw_roof > 8) {
-					mes "Whoa...";
-					mes "You alright?";
-					mes "You seem kind of drunk...";
+					mes "哇...";
+					mes "你还好吗？";
+					mes "你看起来有点醉...";
 					next;
-					mes "[SoloHan]";
-					mes "I guess now's the perfect time to have you sign this! Don't worry, I'll send you straight to paradise!";
+					mes "[单身汉]";
+					mes "我想现在正是让你签这个的完美时机！别担心，我会直接送你去天堂！";
 					next;
-					if (select("Sign:Refuse to Sign") == 1) {
-						mes "[SoloHan]";
-						mes "Alright!";
-						mes "Take care!";
-						mes "Hahaha!";
+					if (select("标志:拒绝签字") == 1) {
+						mes "[单身汉]";
+						mes "好的！";
+						mes "保重！";
+						mes "哈哈哈！";
 						close2;
 						percentheal 100,0;
 						break;
 					}
-					mes "[SoloHan]";
-					mes "Oh...";
-					mes "Man.";
-					mes "So, you spoil parties";
-					mes "like this all the time, eh?";
+					mes "[单身汉]";
+					mes "哦...";
+					mes "伙计。";
+					mes "所以，你总是破坏这样的派对，";
+					mes "对吧？";
 					close;
 				}
 			}
 			if (.@jaw_roof > 6) {
-				mes "[SoloHan]";
-				mes "^666666*Hiccup!*^000000";
-				mes "So you feel like having some";
-				mes "real fun? Okay, then just sign over here. Count on me, I'll send you to paradise.";
+				mes "[单身汉]";
+				mes "^666666*打嗝!*^000000";
+				mes "所以你想要一些";
+				mes "真正的乐趣？好的，那就在这里签名吧。放心，我会送你去天堂。";
 				next;
-				if (select("Sign:Refuse to Sign") == 1) {
-					mes "[SoloHan]";
-					mes "Alright~!";
-					mes "Take care and have fun!";
-					mes "Harass some couples over there for me, will you?";
+				if (select("标志:拒绝签字") == 1) {
+					mes "[单身汉]";
+					mes "好的~！";
+					mes "保重，玩得开心！";
+					mes "帮我去那边骚扰一些情侣，好吗？";
 					close2;
 					percentheal 100,0;
 					break;
 				}
-				mes "[SoloHan]";
-				mes "Oh...";
-				mes "Man.";
-				mes "No wonder you're single. You can't even recognize a good time when it's right in front of you.";
+				mes "[单身汉]";
+				mes "哦...";
+				mes "伙计。";
+				mes "难怪你单身。你连眼前的美好时光都认不出来。";
 				close;
 			}
 			set .@jaw_roof,.@jaw_roof+3;
-			mes "[SoloHan]";
-			mes "Drink, drink!";
-			mes "That's not enough!";
-			mes "Drink more, buddy!";
+			mes "[单身汉]";
+			mes "喝，喝！";
+			mes "这还不够！";
+			mes "多喝点，伙计！";
 			next;
-			mes "[SoloHan]";
-			mes "To...";
-			mes "To being single!";
-			mes "FOR EVER.";
+			mes "[单身汉]";
+			mes "为了...";
+			mes "为了单身！";
+			mes "永远。";
 			next;
-			mes "^3355FF*Gulp Gulp Gulp*^000000";
+			mes "^3355FF*咕噜咕噜咕噜*^000000";
 			percentheal -10,0;
 			next;
 		}
@@ -1348,51 +1348,51 @@ prt_in,173,13,4	script	Customer#SoloHan	86,{
 		end;
 	}
 	else if (getpartnerid()) {
-		mes "Oh man...";
-		mes "I think I'm drunk~";
-		mes "*Hiccup!*";
+		mes "哦，天哪...";
+		mes "我觉得我喝醉了~";
+		mes "*打嗝!*";
 		next;
-		mes "[SoloHan]";
-		mes "...Wha!?";
-		mes "Oh man!";
-		mes "Get outta my face!";
+		mes "[单身汉]";
+		mes "...什么！？";
+		mes "哦，天哪！";
+		mes "别靠近我！";
 		if (Sex == SEX_MALE) {
-			mes "You smell like,";
-			mes "whupped boyfriend";
-			mes "or something!";
+			mes "你闻起来像，";
+			mes "被打败的男朋友";
+			mes "或者别的什么！";
 		}
 		else {
 			next;
-			mes "[SoloHan]";
-			mes "I think I know a naggy wife";
-			mes "when I see one! Go boss your";
-			mes "hubby around or something!";
+			mes "[单身汉]";
+			mes "我想我知道一个唠叨的妻子";
+			mes "当我看到她的时候！去指挥你的";
+			mes "老公或者别的什么！";
 		}
 		next;
-		mes "[SoloHan]";
-		mes "Leave me alone!";
-		mes "I don't want any of your marital bliss to rub off on me. Come on, Bachewcca! Tell 'em their kind ain't welcome here!";
+		mes "[单身汉]";
+		mes "别打扰我！";
+		mes "我不想让你的婚姻幸福沾染到我身上。来吧，巴切卡！告诉他们他们不受欢迎！";
 		next;
-		mes "[Bachewcca]";
-		mes "^666666*Grrr...!*^000000";
+		mes "[巴丘卡]";
+		mes "^666666*咕噜...!*^000000";
 		specialeffect EF_THROWITEM,AREA,"Customer#Bachewcca";
 		close;
 	}
-	mes "Oh man...";
-	mes "I think I'm drunk~";
-	mes "^666666*Hiccup!*^000000";
+	mes "哦，天哪...";
+	mes "我觉得我喝醉了~";
+	mes "^666666*打嗝!*^000000";
 	next;
-	mes "[SoloHan]";
-	mes "What is that...?";
-	mes "Is this the third time this week I've gotten plastered? Bachewcca, help me count!";
+	mes "[单身汉]";
+	mes "那是什么...？";
+	mes "这是我这一周第三次喝醉了吗？巴切卡，帮我数数！";
 	close;
 }
 
 prt_in,170,14,0	script	Customer#Bachewcca	89,{
-	mes "[Bachewcca]";
+	mes "[巴丘卡]";
 	mes "..............";
-	mes "^666666*Gulp....gulp...*^000000";
-	mes "Grrrrr!! That hit the spot!";
+	mes "^666666*咕噜....咕噜...*^000000";
+	mes "咕噜！！这真不错！";
 	emotion ET_CRY;
 	close;
 }
@@ -1446,8 +1446,8 @@ prt_in,170,14,0	script	Customer#Bachewcca	89,{
 		mes "[助手]";
 		mes "在爪哇咿的美好假期将是你给你所爱的人的一份最棒的礼物~";
 		next;
-		mes "[Helper]";
-		mes "A vacation in Jawaii could very well be the greatest gift that you could give to the one you love~";
+		mes "[助手]";
+		mes "在爪哇咿度假可能是你能给爱人最好的礼物~";
 		close;
 	}
 }

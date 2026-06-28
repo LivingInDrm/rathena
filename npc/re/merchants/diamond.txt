@@ -25,30 +25,30 @@
 	set .@npc$, "[Rare Diamond Merchant]";
 
 	mes .@npc$;
-	mes "[DRY-RUN] Ladies and Gentlemen! ! !";
-	mes "[DRY-RUN] You've heard rumors but you've never once seen with your own eyes";
-	mes "[DRY-RUN] the world's rarest diamond!";
-	mes "[DRY-RUN] The ^FF82FF'17 Carat Diamond'^000000 is currently on sale for a cheap price!!";
-	mes "[DRY-RUN] If valuable diamonds interest you then listen up!";
+	mes "女士们，先生们！ ! !";
+	mes "你们听说过传闻，但从未亲眼见过";
+	mes "世界上最稀有的钻石！";
+	mes "^FF82FF'17克拉钻石'^000000目前以便宜的价格出售！！";
+	mes "如果你对珍贵的钻石感兴趣，那就听好了！";
 	next;
 	
 	mes .@npc$;
-	mes "[DRY-RUN] You can give the diamond as a gift to your lover.";
-	mes "[DRY-RUN] The receiver of the ^FF82FF'17 Carat Diamond'^000000 will cherish it";
-	mes "[DRY-RUN] and treasure you in their heart.";
+	mes "你可以把这颗钻石作为礼物送给你的爱人。";
+	mes "收到^FF82FF'17克拉钻石'^000000的人会珍惜它";
+	mes "并在心中珍藏你。";
 	emotion ET_BLABLA;
 	next;
 	
 	mes .@npc$;
-	mes "[DRY-RUN] What? You don't have a lover?";
-	mes "[DRY-RUN] You can still just hang on to it for yourself.";
-	mes "[DRY-RUN] The enchanting aura of the ^FF82FF'17 Carat Diamond'^000000 is likely";
-	mes "[DRY-RUN] to bring love into your life.";
+	mes "什么？你没有爱人？";
+	mes "你仍然可以自己留着它。";
+	mes "^FF82FF'17克拉钻石'^000000的迷人光环很可能";
+	mes "会给你的生活带来爱情。";
 	next;
 	
 	mes .@npc$;
-	mes "[DRY-RUN] Known as the captivating diamond of diamonds...";
-	mes "[DRY-RUN] It is the ^FF82FF'17 Carat Diamond'^000000!";
+	mes "被称为迷人的钻石之钻石...";
+	mes "它就是^FF82FF'17克拉钻石'^000000！";
 	next;
 
 	set .@menu$, "^FF82FF'17 Carat Diamond'^000000?";
@@ -58,65 +58,65 @@
 	switch(select(.@menu$)) {
 	case 1:
 		mes .@npc$;
-		mes "[DRY-RUN] Yes!";
-		mes "[DRY-RUN] Hehe, the ^FF82FF'17 Carat Diamond'^000000 you see right now";
-		mes "[DRY-RUN] is one of the highest quality 17 carat diamonds.";
-		mes "[DRY-RUN] Comparing it to any pea-sized, colorless rock you may have";
-		mes "[DRY-RUN] dug up from Morocc is unspeakable!";
+		mes "是的！";
+		mes "嘿嘿，你现在看到的^FF82FF'17克拉钻石'^000000";
+		mes "是最高品质的17克拉钻石之一。";
+		mes "将它与任何豌豆大小、无色的石头相比，你可能会发现";
+		mes "从梦罗克挖出来的简直无法言喻！";
 		emotion ET_HUK;
 		next;
 		
 		mes .@npc$;
-		mes "[DRY-RUN] Some claim that this is the very same diamond";
-		mes "[DRY-RUN] that was seen by Kachua in Comodo!";
+		mes "有人声称这就是卡丘亚在科莫多看到的那颗钻石！";
+		mes "这是在科莫多被卡丘亚看到的！";
 		next;
 		
-		if (select("[DRY-RUN] End Conversation:How much is it?") == 1) {
+		if (select("结束对话:多少钱？") == 1) {
 			mes .@npc$;
-			mes "[DRY-RUN] It's rather inexpensive!";
-			mes "[DRY-RUN] If you're interested, talk to me any time!";
+			mes "这真是便宜！";
+			mes "如果你有兴趣，随时来找我！";
 			close;
 		}
 		
 		mes .@npc$;
-		mes "[DRY-RUN] Of course! The most important thing is price!";
-		mes "[DRY-RUN] As I've said earlier, the ^FF82FF'17 Carat Diamond'^000000 has been";
-		mes "[DRY-RUN] appraised as a 17 carat diamond.";
-		mes "[DRY-RUN] There aren't many like it in the world.";
+		mes "当然！最重要的是价格！";
+		mes "正如我之前所说，^FF82FF'17克拉钻石'^000000已经";
+		mes "被评估为17克拉的钻石。";
+		mes "世界上没有多少这样的钻石。";
 		next;
 		
 		mes .@npc$;
-		mes "[DRY-RUN] The price is a mere 500 million zeny!";
-		mes "[DRY-RUN] There is also a 1,000,000z service fee.";
-		mes "[DRY-RUN] Compared to the quality of the diamond";
-		mes "[DRY-RUN] this is a small price to pay.";
+		mes "价格仅为5亿金币！";
+		mes "还有100万金币的服务费。";
+		mes "与钻石的质量相比，";
+		mes "这只是一个小价格。";
 		next;
 		
-		if (select("[DRY-RUN] ^828282It's too expensive.^000000:I'll buy it.") == 1) {
+		if (select("^828282太贵了。^000000:我会买的。") == 1) {
 			mes .@npc$;
-			mes "[DRY-RUN] To say that a diamond such as the";
-			mes "[DRY-RUN] ^FF82FF'17 Carat Diamond'^000000 is too expensive, ";
-			mes "[DRY-RUN] you leave me speechless.";
+			mes "可以说，像这样的钻石";
+			mes "^FF82FF'17克拉钻石'^000000太贵了，";
+			mes "你让我无言以对。";
 			close;
 		}
 		
 		mes .@npc$;
-		mes "[DRY-RUN] OOOH! I knew from the moment I saw you that you were the rightful";
-		mes "[DRY-RUN] owner of this wonderful diamond.";
-		mes "[DRY-RUN] I'm glad I wasn't wrong!";
-		mes "[DRY-RUN] I believe this diamond will suit you quite well.";
-		mes "[DRY-RUN] All I need from you is to complete this contract.";
+		mes "哦哦哦！我从看到你的那一刻起就知道你是这颗";
+		mes "美妙钻石的真正主人。";
+		mes "我很高兴我没有错！";
+		mes "我相信这颗钻石会很适合你。";
+		mes "我只需要你完成这份合同。";
 		next;
 		
 		while(1) {
-			if (select("[DRY-RUN] ^B9062FI will sign the contract.^000000:^828282Nevermind, I changed my mind.^000000") == 2) {
+			if (select("^B9062F我会签合同。^000000:^828282算了，我改变主意了。^000000") == 2) {
 				mes .@npc$;
-				mes "[DRY-RUN] I see, that's too bad..";
+				mes "我明白了，真可惜..";
 				close;
 			}
 			
 			mes .@npc$;
-			mes "[DRY-RUN] What is your name?";
+			mes "你叫什么名字？";
 			next;
 			
 			mes "[" + strcharinfo(0) + "]";
@@ -124,75 +124,75 @@
 			next;
 
 			mes .@npc$;
-			mes "[DRY-RUN] Alright then, please sign here.";
+			mes "好的，请在这里签名。";
 			next;
 			
 			input .@charname$;
 			if (.@charname$ == strcharinfo(0)) {
 				mes .@npc$;
-				mes "[DRY-RUN] Okay, good.";
-				mes "[DRY-RUN] All that is left now is payment.";
+				mes "好的，没问题。";
+				mes "现在只剩下付款了。";
 				next;
 				
 				if (Zeny >= 501000000) {
 					mes .@npc$;
-					mes "[DRY-RUN] . . . . . .";
+					mes ". . . . . .";
 					next;
 					
 					mes .@npc$;
-					mes "[DRY-RUN] Calculating the price and service fee..";
-					mes "[DRY-RUN] 501,000,000 zeny.";
-					mes "[DRY-RUN] Amount has been confirmed.";
+					mes "正在计算价格和服务费..";
+					mes "501,000,000金币.";
+					mes "金额已确认.";
 					emotion ET_BLABLA;
 					set Zeny, Zeny - 501000000;
 					getitem 6024, 1;
 					next;
 
 					mes .@npc$;
-					mes "[DRY-RUN] You may exchange the diamond back for zeny at any time.";
-					mes "[DRY-RUN] However, there will be a 1,000,000z service fee.";
-					mes "[DRY-RUN] Thank you for your business.";
+					mes "您可以随时将钻石兑换回金币.";
+					mes "不过，将会收取1,000,000金币的服务费.";
+					mes "感谢您的光临.";
 					emotion ET_THANKS;
 					close;
 				}
 				else {
 					mes .@npc$;
-					mes "[DRY-RUN] Hm?";
-					mes "[DRY-RUN] I'm sorry, but you don't have sufficient funds.";
-					mes "[DRY-RUN] Including the service fee, a total of 501,000,000z is required.";
-					mes "[DRY-RUN] Please check your zeny balance and try again.";
+					mes "嗯?";
+					mes "抱歉，但您的资金不足.";
+					mes "包括服务费，总共需要501,000,000金币.";
+					mes "请检查您的金币余额并重试.";
 					emotion ET_SCRATCH;
 					close;
 				}
 			}
 			else {
 				mes .@npc$;
-				mes "[DRY-RUN] Is this really your signature?";
-				mes "[DRY-RUN] Will sign again to confirm?";
+				mes "这真的是您的签名吗?";
+				mes "您会再次签字确认吗？";
 				next;
 			}
 		}
 	case 2:
 		mes .@npc$;
-		mes "[DRY-RUN] AAH. You would like to exchange your ^FF82FF'17 Carat Diamond'^000000 for zeny?";
+		mes "啊哈。您想用您的 ^FF82FF'17 克拉钻石'^000000 交换金币吗？";
 		emotion ET_SURPRISE;
 		next;
-		if (select("[DRY-RUN] Yes:No") == 2) {
+		if (select("是:否") == 2) {
 			mes .@npc$;
-			mes "[DRY-RUN] Then, what is it you desire?..";
-			mes "[DRY-RUN] . . . . . ....";
+			mes "那么，您想要什么呢？..";
+			mes ". . . . . ....";
 			emotion ET_THINK;
 			close;
 		}
 
 		mes .@npc$;
-		mes "[DRY-RUN] I see. After I receive your signature, ";
-		mes "[DRY-RUN] You must offer your ^FF82FF'17 Carat Diamond'^000000.";
-		mes "[DRY-RUN] Also don't forget there is a 1,000,000z service fee!";
+		mes "我明白了。在我收到您的签名后，";
+		mes "您必须提供您的 ^FF82FF'17 克拉钻石'^000000。";
+		mes "另外，请不要忘记有 1,000,000z 的服务费！";
 		next;
 		
 		mes .@npc$;
-		mes "[DRY-RUN] What is your name?";
+		mes "你叫什么名字？";
 		next;
 		
 		mes "[" + strcharinfo(0) + "]";
@@ -200,28 +200,28 @@
 		next;
 		
 		mes .@npc$;
-		mes "[DRY-RUN] Alright then, please sign here.";
+		mes "好的，请在这里签名。";
 		next;
 		
 		while (1) {
-			if (select("[DRY-RUN] Sign:Don't Sign") == 2) {
+			if (select("签名:不签名") == 2) {
 				mes .@npc$;
-				mes "[DRY-RUN] The trade cannot be completed without your signature.";
+				mes "没有您的签名，交易无法完成。";
 				close;
 			}
 			
 			input .@charname$;
 			if (.@charname$ == strcharinfo(0)) {
 				mes .@npc$;
-				mes "[DRY-RUN] Your signature has been received.";
-				mes "[DRY-RUN] I will now take your ^FF82FF'17 Carat Diamond'^000000..";
-				mes "[DRY-RUN] You will receive ^0000FF499,000,000z^000000 afterwards.";
+				mes "您的签名已被接收。";
+				mes "我现在将收取您的 ^FF82FF'17 克拉钻石'^000000..";
+				mes "您将会收到 ^0000FF499,000,000z^000000。";
 				next;
 				
 				mes .@npc$;
-				mes "[DRY-RUN] Thank you for your business.";
-				mes "[DRY-RUN] Whenever you need a ^FF82FF'17 Carat Diamond'^000000,";
-				mes "[DRY-RUN] come back anytime with 500 million zeny.";
+				mes "感谢您的光临.";
+				mes "每当你需要一个 ^FF82FF'17 克拉钻石'^000000，";
+				mes "随时带着 5 亿金币回来。";
 				emotion ET_THANKS;
 				delitem 6024, 1;
 				set Zeny, Zeny + 499000000;
@@ -229,8 +229,8 @@
 			}
 			else {
 				mes .@npc$;
-				mes "[DRY-RUN] Is this really your signature?";
-				mes "[DRY-RUN] Will sign again to confirm?";
+				mes "这真的是您的签名吗?";
+				mes "您会再次签字确认吗？";
 				next;
 			}
 		}

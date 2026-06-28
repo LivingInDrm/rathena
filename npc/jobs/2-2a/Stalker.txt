@@ -19,75 +19,75 @@ valkyrie,53,58,3	script	Stalker#Valkyrie	747,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [Stalker]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[追踪者]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [Stalker]";
-		mes "[DRY-RUN] Heh...";
-		mes "[DRY-RUN] It's tough";
-		mes "[DRY-RUN] being a hero";
-		mes "[DRY-RUN] and being shady,";
-		mes "[DRY-RUN] untrustworthy,";
-		mes "[DRY-RUN] sneaky...";
+		mes "[追踪者]";
+		mes "嘿...";
+		mes "这很难";
+		mes "成为一个英雄";
+		mes "又要阴险，";
+		mes "不可信，";
+		mes "狡猾...";
 		next;
-		mes "[DRY-RUN] [Stalker]";
-		mes "[DRY-RUN] But when the";
-		mes "[DRY-RUN] going gets rough";
-		mes "[DRY-RUN] my pals know they";
-		mes "[DRY-RUN] can count on me.";
-		mes "[DRY-RUN] I need them and";
-		mes "[DRY-RUN] they need me.";
+		mes "[追踪者]";
+		mes "但是当...";
+		mes "情况变得艰难时";
+		mes "我的伙伴们知道他们";
+		mes "可以依靠我。";
+		mes "我需要他们，而";
+		mes "他们也需要我。";
 		close;
 	}
 	else if (ADVJOB == Job_Stalker && Class == Job_Thief_High && JobLevel > 39) {
-		mes "[DRY-RUN] [Stalker]";
-		mes "[DRY-RUN] This world needs";
-		mes "[DRY-RUN] more heroes who are";
-		mes "[DRY-RUN] willing to walk the line";
-		mes "[DRY-RUN] between order and lawlessness.";
+		mes "[追踪者]";
+		mes "这个世界需要";
+		mes "更多愿意挺身而出的英雄";
+		mes "愿意走在边缘的人。";
+		mes "在秩序与无序之间。";
 		next;
-		mes "[DRY-RUN] [Stalker]";
-		mes "[DRY-RUN] Are you ready";
-		mes "[DRY-RUN] to join the ranks";
-		mes "[DRY-RUN] of the sneakiest of";
-		mes "[DRY-RUN] warriors? Are you ready";
-		mes "[DRY-RUN] to become a Stalker?";
+		mes "[追踪者]";
+		mes "你准备好了吗";
+		mes "加入行列";
+		mes "最狡猾的";
+		mes "战士？你准备好";
+		mes "成为一个潜行者了吗？";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [Stalker]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[追踪者]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [Stalker]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[追踪者]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Stalker;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [Stalker]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] As a Stalker, I hope";
-		mes "[DRY-RUN] you stab the right people";
-		mes "[DRY-RUN] in the back. Banish the";
-		mes "[DRY-RUN] wicked using their own";
-		mes "[DRY-RUN] dastardly methods!";
+		mes "[追踪者]";
+		mes "恭喜！";
+		mes "作为一个潜行者，我希望";
+		mes "你能刺中正确的人";
+		mes "的背部。用他们自己的";
+		mes "卑鄙手段驱逐邪恶！";
+		mes "！";
 		close;
 	}
-	mes "[DRY-RUN] [Stalker]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[追踪者]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [Stalker]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[追踪者]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

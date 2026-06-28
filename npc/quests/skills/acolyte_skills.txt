@@ -16,95 +16,95 @@
 //============================================================
 
 prt_church,173,23,4	script	Cleric	79,{
-	mes "[DRY-RUN] [Acolyte Klift]";
-	mes "[DRY-RUN] Ahh . Brothers ! Does the task of";
-	mes "[DRY-RUN] caring for out lost sheep burden";
-	mes "[DRY-RUN] and tire you ?";
-	mes "[DRY-RUN] I am here to assist you.";
+	mes "[服事 克里夫特]";
+	mes "啊，兄弟们！照顾我们失去的羊群的任务是否让你们感到负担";
+	mes "和疲惫？";
+	mes "我在这里帮助你们。";
+	mes "我们的神职人员自然会随着他们的成长而学习技能。";
 	next;
-	switch (select("[DRY-RUN] ^3355FF' About acolyte's hidden ability '^000000 ..:^3355FF' Holy light '^000000 training:End conversation")) {
+	switch (select("^3355FF' 关于服事的隐藏能力 '^000000 ..:^3355FF' 圣光 '^000000 训练:结束对话")) {
 	case 1:
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] Our members of the clergy";
-		mes "[DRY-RUN] naturally learn a skill as";
-		mes "[DRY-RUN] as they mature. As they approach ";
-		mes "[DRY-RUN] their senior years as an acolyte";
-		mes "[DRY-RUN] this special skill.";
+		mes "[服事 克里夫特]";
+		mes "随着他们作为服事的年纪渐长，";
+		mes "他们会掌握这一特殊技能。";
+		mes "面对巨大的危险和与邪恶的无尽斗争，";
+		mes "我们的兄弟们非常需要帮助。";
+		mes "这个特殊技能。";
 		next;
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] Faced with great danger and";
-		mes "[DRY-RUN] an endless struggle with evil,";
-		mes "[DRY-RUN] our brethren are much in need of assistance.";
-		mes "[DRY-RUN] ^3355FF' Holy Light '^000000 is that skill.";
-		mes "[DRY-RUN] To gain this ability for yourself,";
-		mes "[DRY-RUN] takes some work.";
+		mes "[服事 克里夫特]";
+		mes "面对巨大的危险和";
+		mes "与邪恶的无尽斗争，";
+		mes "我们的兄弟姐妹非常需要帮助。";
+		mes "^3355FF' 神圣之光 '^000000 是那个技能。";
+		mes "要获得这个能力，";
+		mes "需要一些努力。";
 		next;
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] To gain the skill, you must find these items.";
-		mes "[DRY-RUN] ^FF33551 Opal^000000";
-		mes "[DRY-RUN] ^FF33551 Crystal Blue^000000";
-		mes "[DRY-RUN] ^FF33551 Rosary^000000 ";
+		mes "[服事 克里夫特]";
+		mes "要获得这个技能，你必须找到这些物品。";
+		mes "^FF33551 欧泊^000000";
+		mes "^FF33551 水晶蓝^000000";
+		mes "^FF33551 念珠^000000 ";
 		next;
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] In order to be able to even use this skill,";
-		mes "[DRY-RUN] one must be have sufficient experience.";
-		mes "[DRY-RUN] ^FF3355 Job Level 30^000000";
-		mes "[DRY-RUN] is required to learn this skill.";
+		mes "[服事 克里夫特]";
+		mes "为了能够使用这个技能，";
+		mes "一个人必须有足够的经验。";
+		mes "^FF3355 职业等级 30^000000";
+		mes "是学习这个技能所需的。";
 		next;
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] As for a priest, because of their";
-		mes "[DRY-RUN] already vast amount of experience,";
-		mes "[DRY-RUN] they are able to gain this skill at any";
-		mes "[DRY-RUN] job level.";
+		mes "[服事 克里夫特]";
+		mes "至于牧师，因为他们的";
+		mes "已经丰富的经验，";
+		mes "他们能够在任何时候获得这个技能";
+		mes "职业等级。";
 		close;
 	case 2:
 		if (getskilllv("AL_HOLYLIGHT") == 1) {
-			mes "[DRY-RUN] [Acolyte Klift]";
-			mes "[DRY-RUN] Brother, you already possess";
-			mes "[DRY-RUN] the skill of ` Holy Light '.";
-			mes "[DRY-RUN] You cannot gain a skill you";
-			mes "[DRY-RUN] already possess ..";
-			mes "[DRY-RUN] I pray that you are using";
-			mes "[DRY-RUN] this skill for the work of good . .";
+			mes "[服事 克里夫特]";
+			mes "兄弟，你已经拥有";
+			mes "`神圣之光`的技能。";
+			mes "你不能获得你";
+			mes "已经拥有的技能..";
+			mes "我祈祷你正在使用";
+			mes "这个技能来做善事。。";
 			close;
 		}
 		if ((countitem(727) > 0) && (countitem(991) > 0) && (countitem(2608) > 0) && (JobLevel > 29 || (BaseJob == Job_Priest || BaseJob == Job_Monk)) && (BaseClass == Job_Acolyte)) {
-			mes "[DRY-RUN] [Acolyte Klift]";
-			mes "[DRY-RUN] Your faith has proven worthy";
-			mes "[DRY-RUN] for you to gain the ' Holy Light ' skill.";
-			mes "[DRY-RUN] Your skill is adequate";
-			mes "[DRY-RUN] to use this skill.";
-			mes "[DRY-RUN] Use it wisely. . .";
+			mes "[服事 克里夫特]";
+			mes "你的信仰已证明是值得的";
+			mes "让你获得`神圣之光`技能。";
+			mes "你的技能足够";
+			mes "使用这个技能。";
+			mes "明智地使用它……";
 			next;
 			delitem 727,1; //White_Jewel
 			delitem 991,1; //Crystal_Blue
 			delitem 2608,1; //Rosary
 			skill "AL_HOLYLIGHT",1,SKILL_PERM;
-			mes "[DRY-RUN] [Acolyte Klift]";
-			mes "[DRY-RUN] You now know ' Holy Light '";
-			mes "[DRY-RUN] May you use this skill only in the";
-			mes "[DRY-RUN] best conduct . . . . .";
+			mes "[服事 克里夫特]";
+			mes "你现在知道了「神圣之光」";
+			mes "愿你只在最好的情况下使用这个技能……";
+			mes "最好的行为……";
 			close;
 		}
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] Oh, it is clear. . .";
-		mes "[DRY-RUN] You are not yet ready to";
-		mes "[DRY-RUN] receive the ' Holy Light ' skill.";
+		mes "[服事 克里夫特]";
+		mes "哦，明白了……";
+		mes "你还没有准备好";
+		mes "接受「神圣之光」技能。";
 		next;
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] You should listen carefully to what";
-		mes "[DRY-RUN] is necessary for this skill.";
-		mes "[DRY-RUN] If you listen closely,";
-		mes "[DRY-RUN] you may learn what you lack.";
-		mes "[DRY-RUN] So that you may improve upon yourself.";
+		mes "[服事 克里夫特]";
+		mes "你应该仔细听听";
+		mes "这个技能所需的内容。";
+		mes "如果你仔细听，";
+		mes "你可能会学到你所缺乏的。";
+		mes "以便你能提升自己。";
 		close;
 	case 3:
-		mes "[DRY-RUN] [Acolyte Klift]";
-		mes "[DRY-RUN] . . . . .";
-		mes "[DRY-RUN] I understand your zeal.";
-		mes "[DRY-RUN] You have much time yet to";
-		mes "[DRY-RUN] practice and gain experience.";
-		mes "[DRY-RUN] Blessings upon you . . . . .";
+		mes "[服事 克里夫特]";
+		mes ". . . . .";
+		mes "我理解你的热情。";
+		mes "你还有很多时间可以";
+		mes "练习并获得经验。";
+		mes "祝福与你同在 . . . . .";
 		close;
 	}
 }

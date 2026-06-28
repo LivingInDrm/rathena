@@ -19,70 +19,70 @@ valkyrie,44,50,5	script	MasterSmith#Valkyrie	731,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[DRY-RUN] [MasterSmith]";
-			mes "[DRY-RUN] Congratulations.";
-			mes "[DRY-RUN] Honor to the warriors!";
+			mes "[大师铁匠]";
+			mes "恭喜你。";
+			mes "荣耀属于战士们！";
 			close;
 		}
-		mes "[DRY-RUN] [MasterSmith]";
-		mes "[DRY-RUN] Ah...";
-		mes "[DRY-RUN] The pinnacle";
-		mes "[DRY-RUN] of craftsmanship.";
-		mes "[DRY-RUN] That's the work of";
-		mes "[DRY-RUN] a MasterSmith.";
+		mes "[大师铁匠]";
+		mes "啊……";
+		mes "工艺的巅峰";
+		mes ".";
+		mes "这就是";
+		mes "大师铁匠的工作。";
 		next;
-		mes "[DRY-RUN] [MasterSmith]";
-		mes "[DRY-RUN] Once you're the";
-		mes "[DRY-RUN] the best of the best,";
-		mes "[DRY-RUN] you begin forging with";
-		mes "[DRY-RUN] the goal of discovering";
-		mes "[DRY-RUN] new and better ways of";
-		mes "[DRY-RUN] crafting...";
+		mes "[大师铁匠]";
+		mes "一旦你成为";
+		mes "最优秀的最优秀者，";
+		mes "你就开始锻造";
+		mes "以发现";
+		mes "新的更好的";
+		mes "工艺方法...";
 		close;
 	}
 	else if (ADVJOB == Job_WhiteSmith && Class == Job_Merchant_High && JobLevel > 39) {
-		mes "[DRY-RUN] [MasterSmith]";
-		mes "[DRY-RUN] The time has come!";
-		mes "[DRY-RUN] Our world needs brave,";
-		mes "[DRY-RUN] hard-working adventurers";
-		mes "[DRY-RUN] like you...";
+		mes "[大师铁匠]";
+		mes "时机已经到来！";
+		mes "我们的世界需要勇敢的，";
+		mes "勤奋的冒险者";
+		mes "像你...";
 		next;
-		mes "[DRY-RUN] [MasterSmith]";
-		mes "[DRY-RUN] Would you like to";
-		mes "[DRY-RUN] become a MasterSmith?";
+		mes "[大师铁匠]";
+		mes "你想要";
+		mes "成为一名大师铁匠吗？";
 		next;
-		if (select("[DRY-RUN] No.:Yes.") == 1) {
-			mes "[DRY-RUN] [MasterSmith]";
-			mes "[DRY-RUN] When you're ready,";
-			mes "[DRY-RUN] feel free to come back.";
-			mes "[DRY-RUN] Honor to the warriors!";
+		if (select("否:是。") == 1) {
+			mes "[大师铁匠]";
+			mes "当你准备好时，";
+			mes "随时可以回来找我。";
+			mes "荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[DRY-RUN] [MasterSmith]";
-			mes "[DRY-RUN] It is still possible for you to learn more skills. Please use";
-			mes "[DRY-RUN] all of your remaining Skill Points before returning to me.";
+			mes "[大师铁匠]";
+			mes "你仍然可以学习更多技能。请使用";
+			mes "你所有剩余的技能点再回来找我。";
 			close;
 		}
 		jobchange Job_Whitesmith;
 		set ADVJOB,0;
-		mes "[DRY-RUN] [MasterSmith]";
-		mes "[DRY-RUN] Congratulations!";
-		mes "[DRY-RUN] As a MasterSmith,";
-		mes "[DRY-RUN] I hope you will forge";
-		mes "[DRY-RUN] a path towards a brighter";
-		mes "[DRY-RUN] future for Rune-Midgard.";
+		mes "[大师铁匠]";
+		mes "恭喜！";
+		mes "作为一名大师铁匠，";
+		mes "我希望你能锻造出";
+		mes "通往更光明的";
+		mes "未来的道路，为鲁恩-米德加兹。";
 		close;
 	}
-	mes "[DRY-RUN] [MasterSmith]";
-	mes "[DRY-RUN] Welcome";
-	mes "[DRY-RUN] to Valhalla,";
-	mes "[DRY-RUN] the Hall of Honor.";
+	mes "[大师铁匠]";
+	mes "欢迎";
+	mes "来到瓦尔哈拉，";
+	mes "荣誉殿堂。";
 	next;
-	mes "[DRY-RUN] [MasterSmith]";
-	mes "[DRY-RUN] Please make";
-	mes "[DRY-RUN] yourself comfortable";
-	mes "[DRY-RUN] while you are here.";
-	mes "[DRY-RUN] Honor to the warriors!";
+	mes "[大师铁匠]";
+	mes "请做出选择。";
+	mes "让自己舒服些";
+	mes "在这里的时候。";
+	mes "荣耀属于战士们！";
 	close;
 }

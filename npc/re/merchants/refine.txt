@@ -344,21 +344,21 @@ function	script	refinenew	{
 //============================================================
 -	script	Austri#ref	-1,{
 	if (checkweight(1201,1) == 0) {
-		mes "[DRY-RUN] - Wait a minute !! -";
-		mes "[DRY-RUN] - Currently you're carrying -";
-		mes "[DRY-RUN] - too many items with you. -";
-		mes "[DRY-RUN] - Please try again -";
-		mes "[DRY-RUN] - after you lose some weight. -";
+		mes "- 等一下 !! -";
+		mes "- 你目前携带了 -";
+		mes "- 太多物品。 -";
+		mes "- 请再试一次 -";
+		mes "- 在你减掉一些体重之后。 -";
 		close;
 	}
-	mes "[DRY-RUN] [Austri]";
-	mes "[DRY-RUN] If you bring me 3";
-	mes "[DRY-RUN] Oridecon or Elunium";
-	mes "[DRY-RUN] I can exchange them for";
-	mes "[DRY-RUN] Bradium or Carnium.";
-	mes "[DRY-RUN] Just give me 50,000z.";
+	mes "[奥斯特里]";
+	mes "如果你带给我3个";
+	mes "奥利德康或艾露尼姆";
+	mes "我可以把它们换成";
+	mes "布拉迪姆或卡尔尼姆。";
+	mes "只需给我50,000金币。";
 	next;
-	switch(select("[DRY-RUN] Oridecon to Bradium.:Elunium to Carnium.:Purified Bradium to Carnium.:No thanks.")) {
+	switch(select("将奥利德康精炼成布拉迪姆。:将艾露尼姆精炼成卡尔尼姆。:将净化的布拉迪姆精炼成卡尔尼姆。:不，谢谢。")) {
 	case 1:
 		setarray .@i[0],984,3,6224;  //Oridecon -> Bradium
 		break;
@@ -369,28 +369,28 @@ function	script	refinenew	{
 		setarray .@i[0],6090,1,6223; //Purified_Bradium -> Carnium
 		break;
 	case 4:
-		mes "[DRY-RUN] [Austri]";
-		mes "[DRY-RUN] Hmm...";
+		mes "[奥斯特里]";
+		mes "嗯...";
 		close;
 	}
 	if (countitem(.@i[0]) >= .@i[1] && Zeny >= 50000) {
 		delitem .@i[0],.@i[1];
 		Zeny = Zeny - 50000;
 		getitem .@i[2],1;
-		mes "[DRY-RUN] [Austri]";
+		mes "[奥斯特里]";
 		if (.@i[0] == 6090) {
-			mes "[DRY-RUN] Refining with Refined Bradium";
-			mes "[DRY-RUN] can be a little expensive.";
-			mes "[DRY-RUN] I can exchange it for some Carnium.";
+			mes "用精炼布拉迪姆进行精炼";
+			mes "可能会有点贵。";
+			mes "我可以把它换成一些卡尔尼姆。";
 		} else
 			mes "Ok! Here's your "+getitemname(.@i[2])+".";
-		mes "[DRY-RUN] Take it and use it well.";
+		mes "拿着它，好好利用。";
 		close;
 	}
-	mes "[DRY-RUN] [Austri]";
-	mes "[DRY-RUN] You better not be trying";
-	mes "[DRY-RUN] to cheat me because you";
-	mes "[DRY-RUN] don't have enough money";
+	mes "[奥斯特里]";
+	mes "你最好不要试图";
+	mes "欺骗我，因为你";
+	mes "没有足够的钱";
 	mes "or "+getitemname(.@i[0])+".";
 	close;
 }
@@ -402,57 +402,57 @@ morocc_in,60,38,5	duplicate(Austri#ref)	Austri#moc	826
 //============================================================
 malangdo,224,172,6	script	Clink#mal_normal	544,{
 	disable_items;
-	mes "[DRY-RUN] [Clink]";
-	mes "[DRY-RUN] My cool dad Holink said I have the world's greatest refine hammer!!";
-	mes "[DRY-RUN] Meow Meow~";
-	mes "[DRY-RUN] Who do you think I am?";
-	mes "[DRY-RUN] Yes!!! You!! You want to refine?";
+	mes "[叮]";
+	mes "我酷酷的爸爸霍林克说我有世界上最棒的精炼锤！！";
+	mes "喵喵~";
+	mes "你觉得我是谁？";
+	mes "是的！！！你！！你想要精炼吗？";
 	next;
 	setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
 	for(.@i = 1; .@i<=10; set .@i,.@i+1)
 		.@menu$ = .@menu$ + ( getequipisequiped(.@indices[.@i]) ? getequipname(.@indices[.@i]) : F_getpositionname(.@indices[.@i]) +"-[Empty]" ) +":";
 	.@part = .@indices[ select(.@menu$) ];
 	if (!getequipisequiped(.@part)) {
-		mes "[DRY-RUN] [Clink]";
+		mes "[叮]";
 		switch(.@part) {
 		case EQI_HEAD_TOP:
-			mes "[DRY-RUN] Dad said. There's no cure for stupidity...";
+			mes "爸爸说，愚蠢是没有解药的...";
 			break;
 		case EQI_ARMOR:
-			mes "[DRY-RUN] There's nothing to see here!!";
+			mes "这里没什么好看的！！";
 			break;
 		case EQI_HAND_L:
-			mes "[DRY-RUN] What an arrogant left hand this is!";
+			mes "这只左手真是傲慢！";
 			break;
 		case EQI_HAND_R:
-			mes "[DRY-RUN] What an arrogant right hand this is!";
+			mes "这只右手真是傲慢！";
 			break;
 		case EQI_GARMENT:
-			mes "[DRY-RUN] Get that dirty thing off my face!!";
+			mes "把那个脏东西从我脸上拿开！！";
 			break;
 		case EQI_SHOES:
-			mes "[DRY-RUN] Kyaong~! Do not provoke me.";
+			mes "喵呜~！不要惹我。";
 			break;
 		case EQI_ACC_L:
 		case EQI_ACC_R:
-			mes "[DRY-RUN] Where is the accessory?";
+			mes "饰品在哪里？";
 			break;
 		case EQI_HEAD_MID:
 		case EQI_HEAD_LOW:
-			mes "[DRY-RUN] Are you talking about the other head part?";
+			mes "你是在说其他的头部装备吗？";
 			break;
 		}
 		close;
 	}
 	if (!getequipisenableref(.@part)) {
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] This can't be refined!!";
+		mes "[叮]";
+		mes "这个不能被精炼！！";
 		close;
 	}
 	.@refinerycnt = getequiprefinerycnt(.@part); //save refinery count
 	if (.@refinerycnt >= 10) {
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Perfect refining. Did I do this for you?";
+		mes "[叮]";
+		mes "完美精炼。我是为你做的吗？";
 		close;
 	}
 	
@@ -461,12 +461,12 @@ malangdo,224,172,6	script	Clink#mal_normal	544,{
 	.@price = getequiprefinecost(.@part, REFINE_COST_NORMAL, REFINE_ZENY_COST);
 	.@material = getequiprefinecost(.@part, REFINE_COST_NORMAL, REFINE_MATERIAL_ID);
 	.@itemtype = getiteminfo( .@refineitemid, ITEMINFO_TYPE );
-	mes "[DRY-RUN] [Clink]";
+	mes "[叮]";
 	if( .@itemtype == IT_ARMOR ){
 		switch( getequiparmorlv( .@part ) ){
 			case 1: // Armor
 				.@type$ = "armor";
-				mes "[DRY-RUN] Hmm, an armor refine? Someone like you?";
+				mes "嗯，盔甲精炼？像你这样的人？";
 				break;
 			default:
 				// TODO:
@@ -476,20 +476,20 @@ malangdo,224,172,6	script	Clink#mal_normal	544,{
 		switch( getequipweaponlv( .@part ) ){
 			case 1: // Level 1 Weapon
 				.@type$ = "weapon";
-				mes "[DRY-RUN] A level 1 weapon?";
-				mes "[DRY-RUN] Urr... Annoying... Okay, let's try...";
+				mes "一把1级武器？";
+				mes "呃...烦人...好吧，试试吧...";
 				break;
 			case 2: // Level 2 Weapon
 				.@type$ = "weapon";
-				mes "[DRY-RUN] A level 2 weapon?";
+				mes "一把2级武器？";
 				break;
 			case 3: // Level 3 Weapon
 				.@type$ = "weapon";
-				mes "[DRY-RUN] Woot!! A level 3 weapon? Impressive~";
+				mes "哇！！一把3级武器？真厉害~";
 				break;
 			case 4: // Level 4 Weapon
 				.@type$ = "weapon";
-				mes "[DRY-RUN] Wow!... A level 4 weapon~!!";
+				mes "哇！...一把4级武器~！！";
 				break;
 			default:
 				// TODO:
@@ -501,34 +501,34 @@ malangdo,224,172,6	script	Clink#mal_normal	544,{
 	}
 	mes "You need ^ff9999"+getitemname(.@material)+"^000000 and ^ff9999"+.@price+"^000000 Zeny. Do you have them?";
 	next;
-	if(select("[DRY-RUN] Yes, I do!!:Forget about it!!") == 2) {
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] I knew it!!";
-		mes "[DRY-RUN] I knew you were not worth trying my magical refining hammer for.";
+	if(select("是的，我想！！:忘了它！！") == 2) {
+		mes "[叮]";
+		mes "我就知道！！";
+		mes "我就知道你不值得我尝试我的魔法精炼锤。";
 		close;
 	}
 	if (getequippercentrefinery(.@part) < 100) {
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Wow!!";
+		mes "[叮]";
+		mes "哇！！";
 		mes "This "+.@type$+" has been refined quite a bit, huh?";
-		mes "[DRY-RUN] You do know that this might break, right?";
+		mes "你知道这可能会坏掉，对吧？";
 		next;
-		mes "[DRY-RUN] [Clink]";
+		mes "[叮]";
 		mes "If you break the "+.@type$+", you can never use it again.";
-		mes "[DRY-RUN] Cards and enchant effects...";
-		mes "[DRY-RUN] the ^ff0000whole thing will disappear^000000.";
-		mes "[DRY-RUN] You still up for this~?";
+		mes "卡片和附魔效果...";
+		mes "整个 ^ff0000东西会消失^000000.";
+		mes "你还想继续吗~？";
 		next;
-		if(select("[DRY-RUN] Yes, I am!!:Forget about it!!") == 2) {
-			mes "[DRY-RUN] [Clink]";
-			mes "[DRY-RUN] I knew it!!";
-			mes "[DRY-RUN] You can't even take this big step. Don't think about refining...";
+		if(select("是的，我是！！:忘了它！！") == 2) {
+			mes "[叮]";
+			mes "我就知道！！";
+			mes "你连这一步都迈不出去，别想炼制...";
 			close;
 		}
 	}
 	if (countitem(.@material) == 0 || Zeny < .@price) {
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Hey you!! Didn't I tell you";
+		mes "[叮]";
+		mes "嘿你！！我不是告诉过你吗";
 		mes "that you need ^ff9999"+getitemname(.@material)+"^000000 and ^ff9999"+.@price+"^000000 Zeny??!!";
 		close;
 	}
@@ -538,18 +538,18 @@ malangdo,224,172,6	script	Clink#mal_normal	544,{
 	// anti-hack
 	if (callfunc("F_IsEquipIDHack", .@part, .@refineitemid) || callfunc("F_IsEquipCardHack", .@part, .@card[0], .@card[1], .@card[2], .@card[3]) ||
 		callfunc("F_IsEquipRefineHack", .@part, .@refinerycnt)) {
-		mes "[DRY-RUN] [Clink]";
+		mes "[叮]";
 		emotion ET_FRET;
-		mes "[DRY-RUN] Wait a second...";
-		mes "[DRY-RUN] Do you think I'm stupid?!";
-		mes "[DRY-RUN] You switched the item while I wasn't looking! Get out of here!";
+		mes "等一下……";
+		mes "你觉得我傻吗？!";
+		mes "你在我不注意的时候换了物品！滚出去！";
 		close;
 	}
 
 	if (getequippercentrefinery(.@part) <= rand(100)) {
 		failedrefitem .@part;
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Cry Hammer!! Cry!!!";
+		mes "[叮]";
+		mes "哭泣锤！！哭！！！";
 		next;
 		switch(rand(1,5)) {
 			case 1: emotion ET_CRY; break;
@@ -558,29 +558,29 @@ malangdo,224,172,6	script	Clink#mal_normal	544,{
 			case 4: emotion ET_SCRATCH; break;
 			case 5: emotion ET_BIGTHROB; break;
 		}
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Huh?! I failed?!";
+		mes "[叮]";
+		mes "哈？！我失败了？！";
 		next;
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Arrgg~ It's all~ Broken...? What a pity~";
+		mes "[叮]";
+		mes "啊~ 全部~ 坏掉了...? 真可惜~";
 		next;
-		mes "[DRY-RUN] [Clink]";
-		mes "[DRY-RUN] Hey...!! Get me another one.";
-		mes "[DRY-RUN] This is not possible.";
-		mes "[DRY-RUN] How can my hammer fail from refining?";
+		mes "[叮]";
+		mes "嘿...!! 给我再来一个。";
+		mes "这不可能。";
+		mes "我的锤子怎么会在精炼时失败？";
 		close;
 	}
 	successrefitem .@part;
-	mes "[DRY-RUN] [Clink]";
-	mes "[DRY-RUN] Cry Hammer!! Cry!!!";
+	mes "[叮]";
+	mes "哭泣锤！！哭！！！";
 	next;
 	emotion ET_CHUP;
-	mes "[DRY-RUN] [Clink]";
-	mes "[DRY-RUN] Ok!! Perfect!!";
-	mes "[DRY-RUN] There's nothing I can't refine";
-	mes "[DRY-RUN] with this special hammer.";
-	mes "[DRY-RUN] You can praise me!!";
-	mes "[DRY-RUN] What a day!!";
+	mes "[叮]";
+	mes "好的！！完美！！";
+	mes "没有我不能精炼的东西";
+	mes "用这个特殊的锤子。";
+	mes "你可以夸奖我！！";
+	mes "真是一天！！";
 	close;
 }
 

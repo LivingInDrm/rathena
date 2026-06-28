@@ -12,16 +12,16 @@
 //============================================================
 -	script	::ShadowBlacksmith	-1,{
 	if( getbattleflag( "feature.refineui" ) ){
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] Now Basta is in charge of refinement for shadow items.";
-		mes "[DRY-RUN] If you'd like to refine a shadow item, please visit him.";
+		mes "[影子铁匠]";
+		mes "现在巴斯塔负责影子物品的精炼。";
+		mes "如果你想精炼影子物品，请去找他。";
 		close;
 	}
 
 	.@zeny_cost = 200000; // Zeny cost is 200,000 according to official script [Secret]
 	disable_items;
-	mes "[DRY-RUN] [Shadow Blacksmith]";
-	mes "[DRY-RUN] Do you want to refine a shadow item? Pick yer poison!";
+	mes "[影子铁匠]";
+	mes "你想精炼影子物品吗？选择你的毒药！";
 	next;
 	setarray .@indices[1], EQI_SHADOW_ARMOR, EQI_SHADOW_WEAPON, EQI_SHADOW_SHIELD, EQI_SHADOW_SHOES, EQI_SHADOW_ACC_R, EQI_SHADOW_ACC_L;
 	.@indlen = getarraysize(.@indices) - 1;
@@ -30,26 +30,26 @@
 	.@menu$ = .@menu$ + "Refine info";
 	.@choice = select(.@menu$);
 	if (.@choice == .@indlen + 1) { // Refine info
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] When a shadow item is refined, it gains extra bonuses very much like normal items.";
+		mes "[影子铁匠]";
+		mes "当影子物品被精炼时，它会获得额外的奖励，就像普通物品一样。";
 		next;
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] Weapon: ATK, MATK + 1 increase for each +1 refine success.";
-		mes "[DRY-RUN] Etc: HP + 10 increase for each +1 refine success.";
+		mes "[影子铁匠]";
+		mes "武器：每成功精炼+1，攻击力和魔法攻击力增加1。";
+		mes "其他：每成功精炼+1，生命值增加10。";
 		next;
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] All types of Oridecon and Elunium can be used to refine shadow items. Each attempt will also cost 20,000 zeny.";
+		mes "[影子铁匠]";
+		mes "所有类型的奥利德康和艾露尼姆都可以用来精炼影子物品。每次尝试还需花费20,000金币。";
 		next;
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] HD ores can be used for gear that is at least refine level +7 and will prevent breaking as long as you stay talking to me.";
+		mes "[影子铁匠]";
+		mes "HD矿石可以用于至少精炼等级+7的装备，只要你和我保持对话，就能防止破坏。";
 		close;
 	}
 
 	.@part = .@indices[.@choice];
 
 	if (!getequipisequiped(.@part)) {
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] There's nothing here!";
+		mes "[影子铁匠]";
+		mes "这里什么都没有！";
 		close;
 	}
 	.@equip_id = getequipid(.@part);
@@ -57,9 +57,9 @@
 
 	while(1) {
 		.@equip_refine = getequiprefinerycnt(.@part);
-		mes "[DRY-RUN] [Shadow Blacksmith]";
+		mes "[影子铁匠]";
 		mes "I require " + callfunc("F_InsertComma", .@zeny_cost) + " zeny as a fee for EACH refine attempt.";
-		mes "[DRY-RUN] Choose your Ore and start refining.";
+		mes "选择你的矿石并开始精炼。";
 		next;
 
 		.@material[0] = getequiprefinecost(.@part, REFINE_COST_NORMAL, REFINE_MATERIAL_ID);
@@ -90,54 +90,54 @@
 			break;
 		case 3:// HD
 			if (.@equip_refine < 7) {
-				mes "[DRY-RUN] [Shadow Blacksmith]";
-				mes "[DRY-RUN] HD Ore can only used for +7 or higher refine level items.";
+				mes "[影子铁匠]";
+				mes "HD矿石只能用于+7或更高精炼等级的物品。";
 				close;
 			}
 			.@hoihoi = 1;
 			.@choose = .@material[2];
 			break;
 		case 4:
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] You've cancelled refining.";
+			mes "[影子铁匠]";
+			mes "你已取消精炼。";
 			close;
 		}
 		if (!countitem(.@choose)) {
-			mes "[DRY-RUN] [Shadow Blacksmith]";
+			mes "[影子铁匠]";
 			mes "You do not have enough "+ getitemname(.@choose) +".";
 			close;
 		}
 		if (Zeny < .@zeny_cost) {
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] You do not have enough zeny.";
+			mes "[影子铁匠]";
+			mes "你的金币不足。";
 			close;
 		}
 		if (.@equip_refine > 9) {
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] Shadow Equipment can be refined to the maximum of 10...";
+			mes "[影子铁匠]";
+			mes "影子装备的精炼最高可达10...";
 			close;
 		}
 		if (!getequipisenableref(.@part)) {
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] This item cannot be refined.";
+			mes "[影子铁匠]";
+			mes "此物品无法精炼。";
 			close;
 		}
 		if (getequippercentrefinery(.@part) < 100) {
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] The safety refine level for Shadow Equipment is +4.";
+			mes "[影子铁匠]";
+			mes "影子装备的安全精炼等级为+4。";
 			if (!.@hoihoi)
-				mes "[DRY-RUN] Shadow equipment may be destroyed in subsequent refinements. Want to get started?";
+				mes "影子装备在后续精炼中可能会被摧毁。想要开始吗？";
 			else
-				mes "[DRY-RUN] The next refinement, if it fails, will degrade the refinement. Do you want to refine?";
+				mes "下一次精炼，如果失败，将会降低精炼等级。你想要精炼吗？";
 			next;
-			if (select("[DRY-RUN] Proceed","Cancel") == 2) {
-				mes "[DRY-RUN] [Shadow Blacksmith]";
-				mes "[DRY-RUN] Heh, I knew it!";
+			if (select("继续","Cancel") == 2) {
+				mes "[影子铁匠]";
+				mes "哈，我就知道！";
 				close;
 			}
 		}
-		mes "[DRY-RUN] [Shadow Blacksmith]";
-		mes "[DRY-RUN] Well then.. here goes nothing!";
+		mes "[影子铁匠]";
+		mes "那么.. 开始吧！";
 		next;
 		delitem .@choose,1;
 		Zeny -= .@zeny_cost;
@@ -148,16 +148,16 @@
 
 		if (getequippercentrefinery(.@part, .@is_enriched) > rand(100)) {
 			successrefitem .@part;
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] It worked! It worked!";
+			mes "[影子铁匠]";
+			mes "成功了！成功了！";
 			next;
 		} else {
 			if (.@hoihoi)
 				downrefitem .@part;
 			else
 				failedrefitem .@part;
-			mes "[DRY-RUN] [Shadow Blacksmith]";
-			mes "[DRY-RUN] Oh Odin No!";
+			mes "[影子铁匠]";
+			mes "哦，奥丁不！";
 			close;
 		}
 	}
