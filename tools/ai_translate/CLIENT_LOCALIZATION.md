@@ -34,6 +34,12 @@ python tools\ai_translate\check_client_integrity.py --client-dir D:\rag --backup
 python tools\ai_translate\audit_client_pending.py --client-dir D:\rag --output tmp\client_pending_classified_final.json --fail-on-actionable
 ```
 
+To reapply deterministic visible UI polish such as item tooltip labels and skill-tab names:
+
+```powershell
+python tools\ai_translate\polish_client_visible_text.py --client-dir D:\rag --backup-dir D:\rag_cn_backup --output tmp\client_visible_polish.json
+```
+
 ## Runtime Verification
 
 File-level verification is not sufficient to declare the whole localization complete. The client must also be launched manually and checked for error popups or visibly untranslated UI.
@@ -75,7 +81,7 @@ python tools\ai_translate\package_client_patch.py --client-dir D:\rag --backup-d
 
 Expected package result:
 
-- `file_count=135`
+- `file_count=142`
 - `missing_count=0`
 - `tmp\rathena_cn_client_patch.zip` exists
 
