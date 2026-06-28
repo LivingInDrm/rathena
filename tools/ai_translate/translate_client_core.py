@@ -102,6 +102,46 @@ def lua_escape(text: str) -> str:
     return text.replace("\\", "\\\\").replace('"', r"\"")
 
 
+def is_lua_internal_string(rel: str, line: str, segment_index: int) -> bool:
+    rel_lower = rel.lower()
+    stripped = line.strip()
+
+    if rel_lower.endswith("\\itemdbnametbl.lub"):
+        return True
+    if rel_lower.endswith("\\worldviewdata\\worldviewdata_list.lub"):
+        return True
+    if rel_lower.endswith("\\pcjobname.lub") or rel_lower.endswith("\\pcjobnamegender.lub"):
+        return True
+    if rel_lower.endswith("\\accname.lub") or rel_lower.endswith("\\spriterobename.lub"):
+        return True
+
+    if segment_index == 0 and stripped.startswith('["'):
+        return True
+
+    internal_markers = (
+        "ResourceName =",
+        "BaseItem =",
+        "ResultItem =",
+        "Material =",
+        "RandomOptionCode =",
+        "AddTargetItem(",
+        "SetRequire(",
+        "SetReset(",
+        "AddUpgradeEnchant(",
+        "AddPerfectEnchant(",
+    )
+    if any(marker in line for marker in internal_markers):
+        return "SetCaution(" not in line
+
+    if (
+        ("lapine" in rel_lower or "itemreform" in rel_lower or "enchant" in rel_lower)
+        and re.search(r'^\s*\{\s*"[^"]+"\s*,\s*\d+', line)
+    ):
+        return True
+
+    return False
+
+
 def extract_file(client_dir: Path, path: Path) -> list[ClientItem]:
     rel = str(path.relative_to(client_dir)).replace("/", "\\")
     text = read_text(path)
@@ -147,7 +187,8 @@ def extract_file(client_dir: Path, path: Path) -> list[ClientItem]:
             segment_index = 0
             for match in LUA_STRING_RE.finditer(line):
                 value = lua_unescape(match.group(1))
-                add("lua_string", line_index, segment_index, value)
+                if not is_lua_internal_string(rel, line, segment_index):
+                    add("lua_string", line_index, segment_index, value)
                 segment_index += 1
     return items
 
