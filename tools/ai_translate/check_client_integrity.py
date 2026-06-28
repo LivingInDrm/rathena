@@ -49,6 +49,13 @@ ITEMDB_SET_REQUIRE_RE = re.compile(
     rb'"(?P<value>(?:\\.|[^"\\])*)"\s*,'
 )
 ITEMDB_ARRAY_ITEM_RE = re.compile(rb'\{\s*"(?P<value>(?:\\.|[^"\\])*)"\s*,\s*\d+\s*\}')
+MODEL_RESOURCE_RELS = (
+    r"data\luafiles514\lua files\datainfo\jobname.lub",
+)
+JOBNAME_MODEL_RE = re.compile(
+    r'^(\s*\[jobtbl\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]+\.gr2)(",?\s*)$',
+    re.MULTILINE,
+)
 
 
 def read_text_file(path: Path) -> str | None:
@@ -289,6 +296,36 @@ def check_itemdb_key_diffs(client_dir: Path, backups: dict[str, Path]) -> list[d
     return issues
 
 
+def model_resource_map(text: str) -> dict[str, str]:
+    return {match.group("key"): match.group("value") for match in JOBNAME_MODEL_RE.finditer(text)}
+
+
+def check_model_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in MODEL_RESOURCE_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_text = read_text_file(current_path)
+        backup_text = read_text_file(backup_path)
+        if current_text is None or backup_text is None:
+            continue
+        current_resources = model_resource_map(current_text)
+        backup_resources = model_resource_map(backup_text)
+        diffs = []
+        for key, current_value in current_resources.items():
+            backup_value = backup_resources.get(key)
+            if backup_value is not None and current_value != backup_value:
+                line = current_text[: current_text.find(f"[jobtbl.{key}]")].count("\n") + 1
+                diffs.append({"line": line, "key": key, "current": current_value, "backup": backup_value})
+                if len(diffs) >= 50:
+                    break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
 def check_missing_commas(paths: list[Path]) -> list[dict]:
     issues = []
     for path in paths:
@@ -318,6 +355,7 @@ def build_report(client_dir: Path, backup_dir: Path) -> dict:
         "risky_diffs": check_risky_diffs(client_dir, backups),
         "iteminfo_resource_diffs": check_iteminfo_resources(client_dir, backups),
         "itemdb_key_diffs": check_itemdb_key_diffs(client_dir, backups),
+        "model_resource_diffs": check_model_resource_diffs(client_dir, backups),
         "missing_commas": check_missing_commas(paths),
     }
 
@@ -340,6 +378,7 @@ def main() -> int:
         "risky_diffs": len(report["risky_diffs"]),
         "iteminfo_resource_diffs": len(report["iteminfo_resource_diffs"]),
         "itemdb_key_diffs": len(report["itemdb_key_diffs"]),
+        "model_resource_diffs": len(report["model_resource_diffs"]),
         "missing_commas": len(report["missing_commas"]),
         "output": str(output),
     }
@@ -349,6 +388,7 @@ def main() -> int:
         "risky_diffs",
         "iteminfo_resource_diffs",
         "itemdb_key_diffs",
+        "model_resource_diffs",
         "missing_commas",
     )
     return 1 if any(summary[key] for key in issue_keys) else 0

@@ -68,7 +68,14 @@ def chinese_ratio(path: Path) -> dict:
 
 
 def summarize_integrity(report: dict) -> dict:
-    keys = ["odd_quote", "risky_diffs", "iteminfo_resource_diffs", "itemdb_key_diffs", "missing_commas"]
+    keys = [
+        "odd_quote",
+        "risky_diffs",
+        "iteminfo_resource_diffs",
+        "itemdb_key_diffs",
+        "model_resource_diffs",
+        "missing_commas",
+    ]
     return {key: len(report.get(key, [])) for key in keys}
 
 
