@@ -75,7 +75,10 @@ def summarize_integrity(report: dict) -> dict:
         "iteminfo_resource_diffs",
         "itemdb_key_diffs",
         "model_resource_diffs",
+        "jobname_resource_diffs",
+        "petinfo_resource_diffs",
         "map_background_diffs",
+        "tipbox_image_diffs",
         "missing_commas",
     ]
     return {key: len(report.get(key, [])) for key in keys}

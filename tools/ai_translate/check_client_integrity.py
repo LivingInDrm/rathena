@@ -52,15 +52,28 @@ ITEMDB_ARRAY_ITEM_RE = re.compile(rb'\{\s*"(?P<value>(?:\\.|[^"\\])*)"\s*,\s*\d+
 MODEL_RESOURCE_RELS = (
     r"data\luafiles514\lua files\datainfo\jobname.lub",
 )
+PETINFO_RESOURCE_RELS = (
+    r"data\luafiles514\lua files\datainfo\petinfo.lub",
+)
 JOBNAME_MODEL_RE = re.compile(
     r'^(\s*\[jobtbl\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]+\.gr2)(",?\s*)$',
     re.MULTILINE,
 )
+JOBNAME_RESOURCE_RE = re.compile(
+    r'^(\s*\[jobtbl\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]*)(",?\s*)$',
+    re.MULTILINE,
+)
+PETINFO_RESOURCE_RE = re.compile(r'"(?P<value>[^"]*\.(?:act|bmp|spr|wav|str|gr2))"', re.IGNORECASE)
 MAP_BACKGROUND_RELS = (
     r"System\mapInfo_sak.lub",
     r"SystemEN\mapInfo.lub",
 )
 MAP_BACKGROUND_RE = re.compile(r'backgroundBmp\s*=\s*"(?P<value>[^"]*)"')
+TIPBOX_RELS = (
+    r"System\tipbox.lub",
+    r"SystemEN\tipbox.lub",
+)
+TIPBOX_IMAGE_RE = re.compile(rb'Image\s*=\s*"(?P<value>(?:\\.|[^"\\])*)"')
 
 
 def read_text_file(path: Path) -> str | None:
@@ -305,6 +318,16 @@ def model_resource_map(text: str) -> dict[str, str]:
     return {match.group("key"): match.group("value") for match in JOBNAME_MODEL_RE.finditer(text)}
 
 
+def jobname_resource_map(text: str) -> dict[str, dict]:
+    resources = {}
+    for match in JOBNAME_RESOURCE_RE.finditer(text):
+        resources[match.group("key")] = {
+            "line": text.count("\n", 0, match.start()) + 1,
+            "value": match.group("value"),
+        }
+    return resources
+
+
 def check_model_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
     issues = []
     for rel in MODEL_RESOURCE_RELS:
@@ -326,6 +349,83 @@ def check_model_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> li
                 diffs.append({"line": line, "key": key, "current": current_value, "backup": backup_value})
                 if len(diffs) >= 50:
                     break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
+def check_jobname_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in MODEL_RESOURCE_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_text = read_text_file(current_path)
+        backup_text = read_text_file(backup_path)
+        if current_text is None or backup_text is None:
+            continue
+        current_resources = jobname_resource_map(current_text)
+        backup_resources = jobname_resource_map(backup_text)
+        diffs = []
+        if len(current_resources) != len(backup_resources):
+            diffs.append(
+                {
+                    "kind": "value_count",
+                    "current": len(current_resources),
+                    "backup": len(backup_resources),
+                }
+            )
+        for key, current in current_resources.items():
+            backup = backup_resources.get(key)
+            if backup is None or current["value"] == backup["value"]:
+                continue
+            diffs.append({"line": current["line"], "key": key, "current": current["value"], "backup": backup["value"]})
+            if len(diffs) >= 50:
+                break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
+def petinfo_resource_values(text: str) -> list[dict]:
+    return [
+        {
+            "line": text.count("\n", 0, match.start()) + 1,
+            "value": match.group("value"),
+        }
+        for match in PETINFO_RESOURCE_RE.finditer(text)
+    ]
+
+
+def check_petinfo_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in PETINFO_RESOURCE_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_text = read_text_file(current_path)
+        backup_text = read_text_file(backup_path)
+        if current_text is None or backup_text is None:
+            continue
+        current_values = petinfo_resource_values(current_text)
+        backup_values = petinfo_resource_values(backup_text)
+        diffs = []
+        if len(current_values) != len(backup_values):
+            diffs.append(
+                {
+                    "kind": "value_count",
+                    "current": len(current_values),
+                    "backup": len(backup_values),
+                }
+            )
+        for current, backup in zip(current_values, backup_values):
+            if current["value"] == backup["value"]:
+                continue
+            diffs.append({"line": current["line"], "current": current["value"], "backup": backup["value"]})
+            if len(diffs) >= 50:
+                break
         if diffs:
             issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
     return issues
@@ -384,6 +484,55 @@ def check_map_background_diffs(client_dir: Path, backups: dict[str, Path]) -> li
     return issues
 
 
+def tipbox_image_values(data: bytes) -> list[dict]:
+    values = []
+    for match in TIPBOX_IMAGE_RE.finditer(data):
+        values.append(
+            {
+                "line": data.count(b"\n", 0, match.start()) + 1,
+                "value": match.group("value"),
+            }
+        )
+    return values
+
+
+def check_tipbox_image_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in TIPBOX_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_values = tipbox_image_values(current_path.read_bytes())
+        backup_values = tipbox_image_values(backup_path.read_bytes())
+        diffs = []
+        if len(current_values) != len(backup_values):
+            diffs.append(
+                {
+                    "kind": "value_count",
+                    "current": len(current_values),
+                    "backup": len(backup_values),
+                }
+            )
+        for current, backup in zip(current_values, backup_values):
+            if current["value"] == backup["value"]:
+                continue
+            diffs.append(
+                {
+                    "line": current["line"],
+                    "current": preview_bytes(current["value"]),
+                    "backup": preview_bytes(backup["value"]),
+                    "current_hex": current["value"].hex(),
+                    "backup_hex": backup["value"].hex(),
+                }
+            )
+            if len(diffs) >= 50:
+                break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
 def check_missing_commas(paths: list[Path]) -> list[dict]:
     issues = []
     for path in paths:
@@ -414,7 +563,10 @@ def build_report(client_dir: Path, backup_dir: Path) -> dict:
         "iteminfo_resource_diffs": check_iteminfo_resources(client_dir, backups),
         "itemdb_key_diffs": check_itemdb_key_diffs(client_dir, backups),
         "model_resource_diffs": check_model_resource_diffs(client_dir, backups),
+        "jobname_resource_diffs": check_jobname_resource_diffs(client_dir, backups),
+        "petinfo_resource_diffs": check_petinfo_resource_diffs(client_dir, backups),
         "map_background_diffs": check_map_background_diffs(client_dir, backups),
+        "tipbox_image_diffs": check_tipbox_image_diffs(client_dir, backups),
         "missing_commas": check_missing_commas(paths),
     }
 
@@ -438,7 +590,10 @@ def main() -> int:
         "iteminfo_resource_diffs": len(report["iteminfo_resource_diffs"]),
         "itemdb_key_diffs": len(report["itemdb_key_diffs"]),
         "model_resource_diffs": len(report["model_resource_diffs"]),
+        "jobname_resource_diffs": len(report["jobname_resource_diffs"]),
+        "petinfo_resource_diffs": len(report["petinfo_resource_diffs"]),
         "map_background_diffs": len(report["map_background_diffs"]),
+        "tipbox_image_diffs": len(report["tipbox_image_diffs"]),
         "missing_commas": len(report["missing_commas"]),
         "output": str(output),
     }
@@ -449,7 +604,10 @@ def main() -> int:
         "iteminfo_resource_diffs",
         "itemdb_key_diffs",
         "model_resource_diffs",
+        "jobname_resource_diffs",
+        "petinfo_resource_diffs",
         "map_background_diffs",
+        "tipbox_image_diffs",
         "missing_commas",
     )
     return 1 if any(summary[key] for key in issue_keys) else 0
