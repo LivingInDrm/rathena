@@ -50,34 +50,34 @@
 
 //======================== Prontera ===================================
 // West Side Inn -------------------
-prt_in,244,135,2	script	Inn Employee#Sammy	53,{
+prt_in,244,135,2	script	旅馆员工#Sammy	53,{
 
 	callfunc "F_InnMaid","[Employee Sammy]","Nenkaras","prt_in",238,130;
 	warp "prt_in",247,104; end;
 }
 // East Side Inn ------------------
-prt_in,61,141,2	script	Inn Employee#Ahlma	53,{
+prt_in,61,141,2	script	旅馆员工#Ahlma	53,{
 
 	callfunc "F_InnMaid","[Employee Ahlma]","Nenkaras","prt_in",64,136;
 	warp "prt_in",60,166; end;
 }
 
 //======================== Alberta ====================================
-alberta_in,32,142,3	script	Inn Employee#Jennie	53,{
+alberta_in,32,142,3	script	旅馆员工#Jennie	53,{
 
 	callfunc "F_InnMaid","[Employee Jennie]","'Fisherman Inn'!","alberta_in",26,142;
 	warp "alberta_in",18,188; end;
 }
 
 //====================== Geffen ======================================
-geffen_in,70,64,5	script	Inn Employee#Cena	53,{
+geffen_in,70,64,5	script	旅馆员工#Cena	53,{
 
 	callfunc "F_InnMaid","[Employee Cena]","'Ifrit,' the only Inn in the city of Geffen.","geffen_in",70,59;
 	warp "geffen_in",31,31; end;
 }
 
 //======================= Payon ======================================
-payon_in01,132,62,5	script	Inn Employee#Ahee	53,{
+payon_in01,132,62,5	script	旅馆员工#Ahee	53,{
 
 	callfunc "F_InnMaid","[Employee Ahee]","Payon Inn","payon_in01",136,61;
 	warp "payon_in01",132,11; end;
@@ -86,13 +86,13 @@ payon_in01,132,62,5	script	Inn Employee#Ahee	53,{
 //======================== Morocc ====================================
 // North East --------------------------
 /*
-morocc_in,147,141,3	script	Inn Employee#Hasna	53,{
+morocc_in,147,141,3	script	旅馆员工#Hasna	53,{
 
 	callfunc "F_InnMaid","[Employee Hasna]","Morocc Inn","morocc_in",142,140;
 	warp "morocc_in",173,135; end;
 }
 // South --------------------------------
-morocc_in,80,100,5	script	Inn Employee#Manar	53,{
+morocc_in,80,100,5	script	旅馆员工#Manar	53,{
 
 	callfunc "F_InnMaid","[Employee Manar]","Morocc Inn","morocc_in",78,95;
 	warp "morocc_in",79,123; end;
@@ -100,135 +100,116 @@ morocc_in,80,100,5	script	Inn Employee#Manar	53,{
 */
 
 //====================== Aldebaran ===================================
-aldeba_in,92,58,5	script	Inn Maid#Rilim	53,{
+aldeba_in,92,58,5	script	旅馆女仆#Rilim	53,{
 
 	callfunc "F_InnMaid","[Rilim]","Al De Baran Inn","aldeba_in",92,50;
 	warp "aldeba_in",92,112; end;
 }
 
 //======================== Rachel ====================================
-ra_in01,376,69,4	script	Inn Keeper#Annie	931,{
+ra_in01,376,69,4	script	旅馆老板#Annie	931,{
 
 	callfunc "F_InnMaid","[Annie]","Rachel Inn","ra_in01",375,58;
 	warp "ra_in01",384,128; end;
 }
 
 //====================== Lighthalzen =================================
-lhz_in02,230,284,4	script	Hotel Employee#01	86,{
-	mes "[Hotel Employee]";
-	mes "Welcome to";
-	mes "the Royal Dragon,";
-	mes "where you can find the";
-	mes "finest accomodations";
-	mes "and the best service.";
+lhz_in02,230,284,4	script	酒店员工#01	86,{
+	mes "[酒店员工]";
+	mes "欢迎来到皇家龙酒店，这里提供最优质的住宿和最佳服务。";
 	next;
-	switch(select("Save Point:Rest - 5,000 zeny:Cancel")) {
+	switch(select("存档点:休息 - 5000 仙石:取消")) {
 	case 1:
 		savepoint "lhz_in02",209,275,1,1;
-		mes "[Hotel Employee]";
-		mes "Thank you, your";
-		mes "Respawn Point has";
-		mes "been saved here in";
-		mes "the Royal Dragon.";
+		mes "[酒店员工]";
+		mes "谢谢，您的重生点已在皇家龙酒店保存。";
 		close;
 	case 2:
 		if(Zeny < 5000) {
-			mes "[Hotel Employee]";
-			mes "I'm sorry, but";
-			mes "you need 5,000 zeny";
-			mes "in order to check in.";
+			mes "[酒店员工]";
+			mes "抱歉，您需要 5000 仙石才能办理入住。";
 			close;
 		}
 		set Zeny,Zeny - 5000;
-		mes "[Hotel Employee]";
-		mes "Thank you~";
-		mes "I hope you enjoy";
-		mes "your stay in the";
-		mes "Royal Dragon.";
+		mes "[酒店员工]";
+		mes "谢谢~ 希望您在皇家龙酒店度过愉快的时光。";
 		close2;
 		warp "lhz_in02",219,150;
 		percentheal 100,100;
 		npcskill "AL_BLESSING",10,99,99;
 		end;
 	case 3:
-		mes "[Hotel Employee]";
-		mes "Thank you and";
-		mes "have a nice day.";
+		mes "[酒店员工]";
+		mes "谢谢，祝您有美好的一天。";
 		close;
 	}
 }
 
 //======================== Hugel ====================================
-hu_in01,246,107,3	script	Inn Maid#Receptionist	53,{
+hu_in01,246,107,3	script	旅馆女仆#Receptionist	53,{
 
 	callfunc "F_InnMaid","[Receptionist]","Hugel Inn","hu_in01",263,95;
 	warp "hu_in01",267,5; end;
 }
 
 //======================== Veins ====================================
-ve_in,157,219,5	script	Inn Master#Receptionist	709,{
-	mes "[Inn Master]";
-	mes "Good day~";
-	mes "Welcome to the";
-	mes "most comfortable";
-	mes "inn here in Veins~";
+ve_in,157,219,5	script	旅馆主人#Receptionist	709,{
+	mes "[旅馆主人]";
+	mes "您好~ 欢迎来到维恩斯最舒适的旅馆~";
 	next;
-	switch(select("Save:Take a Rest -> 5000 zeny:Quit")) {
+	switch(select("保存:休息 -> 5000 仙石:退出")) {
 	case 1:
-		mes "[Inn Master]";
-		mes "Your Respawn Point";
-		mes "has been saved in Veins.";
-		mes "Enjoy your stay in town~";
+		mes "[旅馆主人]";
+		mes "您的重生点已在维恩斯保存。希望您在城里度过愉快的时光~";
 		savepoint "ve_in",157,209,1,1;
 		close;
 	case 2:
-		mes "[Inn Master]";
+		mes "[旅馆主人]";
 		if(Zeny < 5000){
-			mes "I'm sorry, but I don't";
-			mes "think you have enough";
-			mes "money to check in. The";
-			mes "service charge is 5,000 zeny.";
+			mes "抱歉，我认为您没有足够的钱办理入住。";
+			mes "服务费是 5000 仙石。";
 			close;
 		}
-		mes "Enjoy your stay~";
+		mes "祝您入住愉快~";
 		close2;
 		set Zeny,Zeny - 5000;
 		percentheal 100,100;
 		warp "ve_in",184,228;
 		end;
 	case 3:
-		mes "[Inn Master]";
-		mes "Please come again.";
+		mes "[旅馆主人]";
+		mes "欢迎再次光临。";
 		close;
 	}
 }
 
 //======================== Brasilis =================================
-bra_in01,27,24,3	script	Hotel Keeper#bra1	478,{
-	mes "[Hotel Keeper]";
-	mes "Welcome to the beautiful Brasilis Hotel.";
+bra_in01,27,24,3	script	酒店老板#bra1	478,{
+	mes "[酒店老板]";
+	mes "欢迎来到美丽的巴西利斯酒店。";
 	next;
-	switch(select("Save:Rest -5000 zeny:Cancel")) {
+	switch(select("保存:休息 -5000 仙石:取消")) {
 	case 1:
-		mes "[Hotel Keeper]";
-		mes "Do you want to save here at the Brasilis Hotel?";
+		mes "[酒店老板]";
+		mes "您想在巴西利斯酒店保存吗？";
 		next;
-		switch(select("No thank you.:Absolutely.")) {
+		switch(select("不，谢谢。:当然。")) {
 		case 1:
-			mes "[Hotel Keeper]";
-			mes "Ok then, enjoy your stay.";
+			mes "[酒店老板]";
+			mes "好的，祝您入住愉快。";
 			close;
 		case 2:
-			mes "[Hotel Keeper]";
-			mes "Your respawn has been saved here at the hotel. I hope that you enjoy your stay here in Brasilis.";
+			mes "[酒店老板]";
+			mes "您的重生点已在酒店保存。";
+			mes "希望您在巴西利斯度过愉快的时光。";
 			savepoint "bra_in01",144,69,1,1;
 			close;
 		}
 		end;
 	case 2:
 		if (Zeny > 4999) {
-			mes "[Hotel Keeper]";
-			mes "I will show you a great room.";
+			mes "[酒店老板]";
+			mes "我会为您展示一个很好的房间。";
 			close2;
 			if (Zeny < 5000)
 				end;
@@ -237,56 +218,42 @@ bra_in01,27,24,3	script	Hotel Keeper#bra1	478,{
 			warp "bra_in01",144,69;
 			end;
 		}
-		mes "[Hotel Keeper]";
-		mes "I'm sorry, but the service charge is 5,000 zeny per night.";
+		mes "[酒店老板]";
+		mes "抱歉，服务费是每晚 5000 仙石。";
 	case 3:
 		close;
 	}
 }
 
 //======================== Einbroch =================================
-ein_in01,206,224,3	script	Hotel Employee#ein	855,{
-	mes "[Hotel Employee]";
-	mes "Good day, welcome to the";
-	mes "Einbroch Hotel. The staff is";
-	mes "always striving to accommodate";
-	mes "our guests with the highest";
-	mes "standards in cleanliness,";
-	mes "service and convenience~";
+ein_in01,206,224,3	script	酒店员工#ein	855,{
+	mes "[酒店员工]";
+	mes "您好，欢迎来到艾因布罗赫酒店。";
+	mes "我们的员工始终努力为客人提供最高标准的清";
+	mes "洁、服务和便利~";
 	next;
 	if (kain_ticket == 5) {
-		mes "[Hotel Employee]";
-		mes "Are you looking";
-		mes "for Mr. Defru Ark?";
-		mes "Oh right, he did mention";
-		mes "waiting for some package";
-		mes "from the Airport. Now let";
-		mes "me pull up that information...";
+		mes "[酒店员工]";
+		mes "您是在找德弗鲁·阿克先生吗？对了，";
+		mes "他确实提到过在等从机场寄来的包裹。";
+		mes "让我查一下相关信息……";
 		next;
-		mes "[Hotel Employee]";
-		mes "Ah, here we are.";
-		mes "Mr. Defru Ark is";
-		mes "staying in Room 201.";
+		mes "[酒店员工]";
+		mes "啊，找到了。德弗鲁·阿克先生住在201房间。";
 		next;
 	}
 	else {
-		switch(select("Save:Take Rest - 5,000 zeny:Cancel")) {
+		switch(select("保存:休息 - 5000 仙女币:取消")) {
 		case 1:
-			mes "[Hotel Employee]";
-			mes "Your Respawn Point";
-			mes "has been saved here";
-			mes "in the Einbroch Hotel.";
-			mes "Thank you, and please";
-			mes "come again.";
+			mes "[酒店员工]";
+			mes "您的重生点已在艾因布罗赫酒店保存。谢谢，欢迎再次光临。";
 			close2;
 			savepoint "ein_in01",200,224,1,1;
 			end;
 		case 2:
 			if (Zeny > 4999) {
-				mes "[Hotel Employee]";
-				mes "Thank you.";
-				mes "Please enjoy";
-				mes "your rest~";
+				mes "[酒店员工]";
+				mes "谢谢。祝您休息愉快~";
 				close2;
 				set Zeny, Zeny-5000;
 				percentheal 100,100;
@@ -294,23 +261,19 @@ ein_in01,206,224,3	script	Hotel Employee#ein	855,{
 				end;
 			}
 			else {
-				mes "[Hotel Employee]";
-				mes "I'm sorry, but the";
-				mes "accommodation fee is";
-				mes "5,000 zeny. Next time,";
-				mes "please make sure that you";
-				mes "bring enough zeny, okay?";
+				mes "[酒店员工]";
+				mes "抱歉，住宿费用是5000仙女币。";
+				mes "下次请确保带足够的仙女币，好的？";
 				close;
 			}
 		case 3:
-			mes "[Hotel Employee]";
-			mes "Thank you and";
-			mes "please come again~";
+			mes "[酒店员工]";
+			mes "谢谢，欢迎再次光临~";
 			close;
 		}
 	}
-	mes "[Hotel Employee]";
-	mes "Have a good day.";
+	mes "[酒店员工]";
+	mes "祝您有美好的一天。";
 	close;
 }
 
@@ -319,28 +282,24 @@ function	script	F_InnMaid	{
 	.@npc_name$ = getarg(0);
 
 	mes .@npc_name$;
-	mes "Welcome to";
+	mes "欢迎来到";
 	mes getarg(1) + ".";
-	mes "How may I help you?";
+	mes "请问我能帮您什么？";
 	next;
-	switch(select("Save:Take a Rest -> 5000 zeny:Cancel")) {
+	switch(select("保存:休息 -> 5000 仙女币:取消")) {
 	case 1:
 		mes .@npc_name$;
-		mes "Your respawn point";
-		mes "has been saved.";
-		mes "Thank you,";
-		mes "please come again.";
+		mes "您的重生点已保存。谢谢，欢迎再次光临。";
 		savepoint getarg(2),getarg(3),getarg(4),1,1;
 		close;
 	case 2:
 		mes .@npc_name$;
 		if(Zeny < 5000){
-			mes "I'm sorry, but the service charge is 5,000 zeny. Please make sure that you have enough money to check in next time, okay?";
+			mes "抱歉，服务费是5000仙女币。";
+			mes "下次请确保您有足够的钱办理入住，好的？";
 			close;
 		}
-		mes "Thank you.";
-		mes "I hope you";
-		mes "enjoy your rest~";
+		mes "谢谢。希望您休息愉快~";
 		close2;
 		set Zeny,Zeny - 5000;
 		percentheal 100,100;

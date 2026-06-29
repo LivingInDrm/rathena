@@ -21,52 +21,57 @@
 //= 2.5 Optimized. [Euphy]
 //============================================================
 
-prt_in,284,168,2	script	Dyer Ginedin Rephere	55,{
+prt_in,284,168,2	script	染料吉尼丁·瑞菲尔	55,{
 function Dyes;
 
 	set .@EnableDyes,1;	// Disable (set to 0) if palettes cause errors [see note v2.4]
 
 	set .n$,"[Dyer Ginedin Rephere]";
 	mes .n$;
-	mes "11... 12... Mmm... good. I think I'll be able to finish before tonight's party. Oh! I didn't notice you were here!";
+	mes "11... 12... 嗯... 好的。";
+	mes "我想我能在今晚的聚会上之前完成。哦！";
+	mes "我没注意到你在这里！";
 	while(1) {
 		next;
 		mes .n$;
-		mes "How may I assist you?";
+		mes "我能为你提供什么帮助？";
 		next;
-		switch(select("- Talk:- Dye Clothing:- Price List:- ^777777Cancel^000000")) {
+		switch(select("- 聊天:- 染色衣物:- 价格表:- ^777777取消^000000")) {
 		case 1:
 			mes .n$;
-			mes "Life may have gotten a bit better, but when I look at all of the orders I've received... Whew!";
-			mes "It seems that the young women of Rune-Midgarts must be very well off these days.";
+			mes "生活可能稍微好了一些，";
+			mes "但当我看到我收到的所有订单时……哇！";
+			mes "看来鲁恩-米德加兹的年轻女性最近一定很富裕。";
 			next;
 			mes .n$;
-			mes "Not that I think that they are indulging in anything luxurious, mind you.";
-			mes "I don't think there is anything wrong with the pursuit of beauty and being fashionable.";
+			mes "并不是说我认为她们在奢侈享受什么。追求美和时尚没有错。";
 			next;
 			mes .n$;
-			mes "For us humans, who have no colorful fur or decorative scales, clothes are one of the few ways we have to display our personality, style, and beauty.";
+			mes "对于我们这些没有五彩毛皮或装饰鳞片的人来说，";
+			mes "衣服是展示个性、风格和美丽的少数方式之一。";
 			next;
 			mes .n$;
-			mes "Haha... When I think about it, I really feel that my job is worthwhile.  I believe that I provide a service that the people desire.";
+			mes "哈哈……想想这些，我真的觉得我的工作是有价值的。";
+			mes "我相信我提供了人们所渴望的服务。";
 			next;
 			mes .n$;
-			mes "Can you feel it too? The energy that is released when rough fabric and leather are brought to life with color?.....";
+			mes "你也能感受到吗？";
+			mes "当粗糙的布料和皮革被赋予色彩时释放出的能量？.....";
 			next;
 			mes .n$;
-			mes "Although the process is very tedious and time consuming, the joy and happiness I feel when a dress is finished more than makes up for all of the hard work!!";
+			mes "虽然这个过程非常繁琐且耗时，但当一件衣服完成时，";
+			mes "我感受到的快乐和幸福完全弥补了所有的辛苦工作！";
 			break;
 		case 2:
 			mes .n$;
 			if (!.@EnableDyes) {
-				mes "Sorry, I'm too busy with other jobs to dye your clothes.";
+				mes "抱歉，我太忙了，无法为你染衣服。";
 				break;
 			}
-			mes "Oh... you need my work? Well... okay, sounds good.";
+			mes "哦……你需要我的工作？好吧，听起来不错。";
 			next;
 			mes .n$;
-			mes "Please choose a color";
-			mes "that suits you.";
+			mes "请选择适合你的颜色。";
 			next;
 
 			// Dyes(<color value>,<dye number>{,...});
@@ -108,21 +113,15 @@ function Dyes;
 			case Job_Super_Novice:
 				if (Sex == SEX_MALE) Dyes(2,1,6,2,5,3,4,4); else Dyes(6,1,3,2,5,3,4,4);
 			default: 
-				mes "Wow, I've never seen clothes like that before! I'm sorry, but I don't think I can paint it.";
+				mes "哇，我从未见过这样的衣服！抱歉，我想我无法为它上色。";
 				close;
 			}
 		case 3:
 			mes .n$;
-			mes "Each color costs 10000z and 1 dye:";
-			mes " ";
-			mes " - ^FF4422Red^000000: Scarlet Dyestuffs";
-			mes " - ^D5A500Yellow^000000: Lemon Dyestuffs";
-			mes " - ^AA00AAViolet^000000: Violet Dyestuffs";
-			mes " - ^FF8800Orange^000000: Orange Dyestuffs";
-			mes " - ^4422FFBlue^000000: CobaltBlue Dyestuffs";
-			mes " - ^009500Green^000000: DarkGreen Dyestuffs";
-			mes " - Black: Black Dyestuffs";
-			mes " - White: White Dyestuffs";
+			mes "每种颜色的费用是10000z和1种染料：- ^FF4422红色^000000：";
+			mes "猩红染料 - ^D5A500黄色^000000：柠檬染料 - ^AA00AA紫色^000000：紫罗兰染料 - ^FF8800橙色^000000：";
+			mes "橙色染料 - ^4422FF蓝色^000000：钴蓝染料 - ^009500绿色^000000：深绿色染料 - 黑色：";
+			mes "黑色染料 - 白色：白色染料。";
 			break;
 		case 4:
 			goto L_End;
@@ -131,7 +130,7 @@ function Dyes;
 
 L_End:
 	mes .n$;
-	mes "Make yourself at home. Even though I don't have time for you.";
+	mes "请随意。虽然我没有时间为你服务。";
 	close;
 
 function Dyes {
@@ -145,32 +144,31 @@ function Dyes {
 	if (.@s == (getargcount()/2)+1) goto L_End;
 	mes .n$;
 	if (.@s == 0) {
-		mes "I can change your dye to";
-		mes "the default for free.";
-		mes "Are you sure?";
+		mes "我可以免费将你的染料改为默认颜色。你确定吗？";
 		next;
-		switch(select("Yes:No")) {
+		switch(select("是:否")) {
 		case 1:
 			mes .n$;
 			setlook 7,0;
-			mes "Your clothes have been dyed "+.@DyeName$[0]+".";
+			mes "你的衣服已经染色。";
 			close;
 		case 2:
 			goto L_End;
 		}
 	}
 	if (!countitem(.@DyeItems[getarg((.@s-1)*2)])) {
-		mes "For me to dye your clothes, I'll need the appropriate Dyestuffs. Please check my price list for the information.";
+		mes "为了给你的衣服染色，我需要适当的染料。";
+		mes "请查看我的价格表以获取信息。";
 		close;
 	}
 	if (Zeny < 10000) {
-		mes "I'm sorry, but you don't have enough money.";
+		mes "抱歉，但你的钱不够。";
 		close;
 	}
 	delitem .@DyeItems[getarg((.@s-1)*2)],1;
 	set Zeny, Zeny-10000;
 	setlook 7, ((.@s)?(getarg((.@s-1)*2+1)):0);
-	mes "Your clothes have been dyed "+((.@s)?.@DyeName$[getarg((.@s-1)*2)]:.@DyeName$[0])+".";
+	mes "你的衣服已经染色。";
 	close;
 }
 }

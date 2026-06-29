@@ -25,7 +25,7 @@
 //= 2.0 Bug fixes (bugreport:7928) [DeadlySilence]
 //============================================================
 
-geffen,59,143,0	script	Meera	91,{
+geffen,59,143,0	script	梅拉	91,{
 	mes "[米拉]";
 	mes "欢迎来到吉芬,";
 	mes "魔法之城!";
@@ -48,7 +48,7 @@ geffen,59,143,0	script	Meera	91,{
 	close;
 }
 
-geffen,156,190,0	script	Orwalk	82,{
+geffen,156,190,0	script	奥尔沃克	82,{
 	mes "[欧沃克]";
 	mes "有兴趣...";
 	mes "很有兴趣！";
@@ -66,35 +66,41 @@ geffen,156,190,0	script	Orwalk	82,{
 	close;
 }
 
-geffen_in,164,109,0	script	Wizard Stanza	64,{
-	mes "[Stanza]";
-	mes "I sense the presence of a mighty spirit. Can it be you...?";
+geffen_in,164,109,0	script	巫师斯坦扎	64,{
+	mes "[斯坦扎]";
+	mes "我感受到一股强大的灵魂。难道是你吗……？";
 	next;
-	mes "[Stanza]";
+	mes "[斯坦扎]";
 	if (BaseJob == Job_Mage)
-		mes "It seems that you are trained in the mystic arts. Magic... Its power is governed by the law of cause and effect.";
+		mes "看来你在神秘艺术方面受过训练。";
+		mes "魔法……它的力量受因果法则的支配。";
 	else if (BaseJob == Job_Acolyte) {
-		mes "Ah...";
-		mes "I see that you wield holy power in one way or another. I suppose Holy power may be considered one form of mystical energy.";
+		mes "啊……我看到你以某种方式掌握了神圣的力量。";
+		mes "我想神圣力量可以被视为一种神秘能量。";
 	}
 	else if (Class == Job_Novice)
-		mes "Although you may not be able to use magic or any other kind of powerful skills for now, this knowledge may be helpful in the future, young Novice...";
+		mes "虽然你现在可能无法使用魔法或其他强大的技能，";
+		mes "但这些知识在未来可能会对你有所帮助，年轻的初学者……";
 	else
-		mes "Although you are not formally trained in the use of magic, you use skills which draw upon otherworldly energies, whether you know it or not...";
+		mes "尽管你没有正式的魔法训练，";
+		mes "但你使用的技能无论你是否意识到，都在借用异界的能量……";
 	next;
-	mes "[Stanza]";
-	mes "If you use mystic energy for the purpose of harming others, or to defy the rules set by Mother Nature, that power will naturally be turned against you. Remember, you reap what you sow.";
+	mes "[斯坦扎]";
+	mes "如果你使用神秘能量来伤害他人，或违背大自然的法则，";
+	mes "这种力量自然会反过来对付你。记住，";
+	mes "你种下什么，就会收获什么。";
 	next;
-	mes "[Stanza]";
-	mes "But there is an item that can protect the caster from ill consequence, allowing the safe use of certain magics. These are the shining, mystical stones known as Gemstones.";
+	mes "[斯坦扎]";
+	mes "但有一种物品可以保护施法者免受不良后果，";
+	mes "使某些魔法的安全使用成为可能。";
+	mes "这就是被称为宝石的闪亮神秘石头。";
 	next;
-	mes "[Stanza]";
-	mes "Gemstone...";
-	mes "If you wish to use your powers to the fullest, remember this item.";
+	mes "[斯坦扎]";
+	mes "宝石……如果你希望充分利用你的力量，请记住这个物品。";
 	close;
 }
 
-geffen,147,26,0	script	Ralphie	97,{
+geffen,147,26,0	script	拉尔菲	97,{
 	mes "[拉尔菲]";
 	mes "在这个世界的某处，有一把罕见的魔杖能将精神之力转换为物质之力, 这把杖来自 ^990000毁灭之力^000000...";
 	next;
@@ -124,7 +130,7 @@ geffen,147,26,0	script	Ralphie	97,{
 	close;
 }
 
-geffen,111,48,0	script	Stacey	101,{
+geffen,111,48,0	script	斯泰西	101,{
 	if (getequipid(EQI_HEAD_TOP) == 2299) {
 		mes "[斯坦西]";
 		mes "哦...!";
@@ -184,7 +190,7 @@ geffen,111,48,0	script	Stacey	101,{
 	}
 }
 
-geffen_in,34,170,0	script	Theodore	47,{
+geffen_in,34,170,0	script	西奥多	47,{
 	mes "[西奥多]";
 	mes "你好!";
 	mes "难道不是一种";
@@ -216,61 +222,66 @@ geffen_in,34,170,0	script	Theodore	47,{
 	close;
 }
 
-geffen,146,148,4	script	Suspicious Guy	99,6,6,{
+geffen,146,148,4	script	可疑的家伙	99,6,6,{
 	end;
 
 OnTouch_:
 	mes "[?]";
-	mes "^333333*Psssst!*";
-	mes "H-Hey you!";
-	mes "You wanna get your hands on some great stuff? Come on over!^000000";
+	mes "^333333*嘘!* 嘿，你！想要得到一些好东西吗？快过来！^000000";
 	next;
-	mes "[Suspicious Guy]";
+	mes "[可疑的家伙]";
 	if (Sex == SEX_MALE)
-		mes "Hey there tough guy. You look smart enough to recognize a bargain when it's right in front of your eyes.";
+		mes "嘿，强壮的小子。你看起来聪明，能认出眼前的好交易。";
 	else
-		mes "Well, well, well. Aren't you a pretty girl. Today just happens to be your lucky day!";
+		mes "好吧，好吧。你真是个漂亮女孩。今天正好是你的幸运日！";
 	next;
-	mes "[Suspicious Guy]";
-	mes "So just tell me what you want, and I'll cut you a deal from amongst my valuable, yet affordable, wares.";
+	mes "[可疑的家伙]";
+	mes "所以告诉我你想要什么，我会给你一个优惠，";
+	mes "挑选我那些有价值但又实惠的商品。";
 	next;
-	switch(select("Gimme some potion so I can recover HP.:Um, you got a Knife?:Don't you have a good Manteau?:Don't you have something besides this?")) {
+	switch(select("给我一些药水让我恢复HP。:嗯，你有刀吗？:你没有好的斗篷吗？:你没有别的东西吗？")) {
 	case 1:
-		mes "[Suspicious Guy]";
-		mes "Ah, you into Potions, eh?";
-		mes "Yeah, I got the stuff!";
+		mes "[可疑的家伙]";
+		mes "啊，你对药水感兴趣吗？是的，我有货！";
 		next;
-		mes "[Suspicious Guy]";
-		mes "Here it is! High quality Red Potion! It starts working right away once you take it. Once it hits your lips, you can't stop. This stuff is that good.";
+		mes "[可疑的家伙]";
+		mes "给你！高质量的红药水！一旦你喝下去，它立刻见效。";
+		mes "一旦碰到你的嘴唇，你就停不下来。这东西真不错。";
 		next;
-		mes "[Suspicious Guy]";
-		mes "C'mon dude. This is the latest Red Potion. I got it from a close friend of a friend, you know, a real dependable source, and it's real cheap too. You can't pass this up!";
+		mes "[可疑的家伙]";
+		mes "来吧，伙计。这是最新的红药水。";
+		mes "我是从一个朋友的朋友那里拿到的，真是个可靠的来源，";
+		mes "而且价格也很便宜。你可不能错过！";
 		next;
-		select("Uh, can I buy White Potions instead?");
-		mes "[Suspicious Guy]";
-		mes "White Potions? Oh, those don't exist. But, er, if someone's selling that kind of stuff, bring it to me so I can, um, test the difference. But yeah, I got the real stuff.";
+		select("呃，我可以买白药水吗？");
+		mes "[可疑的家伙]";
+		mes "白药水？哦，那种东西不存在。不过，如果有人在卖那种东西，";
+		mes "带给我，我可以，呃，测试一下区别。不过，是的，";
+		mes "我有真正的东西。";
 		next;
-		mes "[Suspicious Guy]";
-		mes "You can heal all your wounds by drinking Red Potions! And I'll sell you one for just ^FF3333500 zeny^000000!";
+		mes "[可疑的家伙]";
+		mes "你可以通过喝红药水来治愈所有伤口！我只卖给你一个，";
+		mes "价格是^FF3333500 Zeny^000000！";
 		next;
-		mes "[Suspicious Guy]";
-		mes "Now, how cheap is that?! Since they're in such high demand, I can only sell you 100 of";
-		mes "them at a time.";
+		mes "[可疑的家伙]";
+		mes "这也太便宜了吧？！既然需求这么高，我一次只能卖你100个。";
 		next;
 		while(1) {
 			input .@input;
 			if (.@input == 0) {
-				mes "[Suspicious Guy]";
+				mes "[可疑的家伙]";
 				if (Sex == SEX_MALE)
-					mes "Ah duuuuuude~ You're breakin' my heart! I mean, at these prices, I'm practically performing charity!";
+					mes "啊，老兄~ 你让我心碎了！我说，这价格我简直是在做慈善！";
 				else
-					mes "W-waaaait! You didn't let me tell you the part about how Red Potions help you lose and gain weight in all the right places! Waaaaait!";
+					mes "等、等一下！";
+					mes "你还没让我告诉你红药水能让你在合适的地方增减体重";
+					mes "的事呢！等一下！";
 				close;
 			}
 			else if (.@input > 100) {
-				mes "[Suspicious Guy]";
-				mes "Whoa...";
-				mes "I can't let you buy that many. I mean, it's not like, you know, there's a trace impurity in these Potions or anything like that...";
+				mes "[可疑的家伙]";
+				mes "哇... 我不能让你买那么多。我是说，";
+				mes "这些药水可不是说有一点杂质之类的...";
 				next;
 			}
 			else
@@ -278,69 +289,63 @@ OnTouch_:
 		}
 		set .@Red_potion_hap,.@input * 500;
 		if (Zeny < .@Red_potion_hap) {
-			mes "[Suspicious Guy]";
-			mes "Oh maaan~";
-			mes "Are you";
-			mes "short on dough?";
-			mes "That's no good.";
+			mes "[可疑的家伙]";
+			mes "哦，老兄~ 你缺钱吗？那可不好。";
 			next;
-			mes "[Suspicious Guy]";
-			mes "^333333Now I gotta find some other sucker to dump this junk on!^000000 *Ahem* I mean, come again!";
+			mes "[可疑的家伙]";
+			mes "^333333现在我得找其他傻瓜来处理这些垃圾了！";
+			mes "^000000 *咳* 我是说，请再来一次！";
 			close;
 		}
 		set Zeny, Zeny-.@Red_potion_hap;
 		getitem 501,.@input; //Red_Potion
 		break;
 	case 2:
-		mes "[Suspicious Guy]";
+		mes "[可疑的家伙]";
 		if (Sex == SEX_MALE) {
-			mes "What would a strong guy like you want a knife for? Those will just break under the force of your incredibly powerful swings!";
+			mes "像你这样强壮的人要刀干什么？";
+			mes "那些在你强力挥舞下会断掉的！";
 			next;
-			mes "[Suspicious Guy]";
-			mes "Now...";
-			mes "What you really";
-			mes "need is a ^FF3333manly Dagger^000000.";
+			mes "[可疑的家伙]";
+			mes "你真正需要的是一把^FF3333男人味十足的匕首^000000。";
 		}
 		else {
-			mes "A nice lady like you? Come on now, kitchen knives are for old naggy wives and the hired help.";
+			mes "像你这样优雅的女士？来吧，";
+			mes "厨房刀是给那些唠叨的老婆和佣人的。";
 			next;
-			mes "[Suspicious Guy]";
-			mes "Now...";
-			mes "What you really";
-			mes "need is a fine, exquisite";
-			mes "^FF3333French Dagger^000000 to match your beauty and elegance.";
+			mes "[可疑的家伙]";
+			mes "你真正需要的是一把精致的^FF3333法式匕首^000000，";
+			mes "与你的美丽和优雅相匹配。";
 		}
 		next;
-		mes "[Suspicious Guy]";
-		mes "I call it...";
-		mes "The ^FF3333Main Gauche^000000! I invented it myself. And I'm only selling it for 9,400 zeny!";
+		mes "[可疑的家伙]";
+		mes "我称它为... ^FF3333主手刀^000000！这是我自己发明的。我只卖9400仙！";
 		next;
-		select("Aren't you going to give me a sheath too?");
-		mes "[Suspicious Guy]";
-		mes "A sheath?";
-		mes "Whoa, that's almost asking too much! Alright, alright...";
+		select("你不会给我一个刀鞘吗？");
+		mes "[可疑的家伙]";
+		mes "刀鞘？哇，这几乎是要价太高了！好吧，好吧...";
 		next;
-		mes "[Suspicious Guy]";
-		mes "Since I like you so much, I'm giving you a free sheath with your purchase! Now how's that";
-		mes "for a bargain?";
+		mes "[可疑的家伙]";
+		mes "因为我这么喜欢你，";
+		mes "所以我会免费送你一个刀鞘！这算不算划算？";
 		next;
-		mes "[Suspicious Guy]";
-		mes "There's no way you can pass this up! Now, how many do you want?";
+		mes "[可疑的家伙]";
+		mes "你绝对不能错过这个机会！那么，你想要多少个？";
 		next;
 		while(1) {
 			input .@input;
 			if (.@input == 0) {
-				mes "[Suspicious Guy]";
-				mes "Man, how many chances of a lifetime have you passed up? Man, I hope you win the lottery...";
-				mes "You'd probably";
-				mes "pass that up too.";
+				mes "[可疑的家伙]";
+				mes "伙计，你错过了多少次千载难逢的机会？";
+				mes "我希望你能中彩票... 你可能也会错过那个。";
 				close;
 
 			}
 			else if (.@input > 100) {
-				mes "[Suspicious Guy]";
-				mes "Whoa!";
-				mes "I can't sell that many Daggers! That'll attract the Prontera Chiv--I mean, um, I was gonna donate some Daggers to... Hungry children?";
+				mes "[可疑的家伙]";
+				mes "哇！我不能卖那么多匕首！";
+				mes "那会引来普隆德拉的骑士——我是说，";
+				mes "我本来是打算捐一些匕首给... 饥饿的孩子们？";
 				next;
 			}
 			else
@@ -348,51 +353,52 @@ OnTouch_:
 		}
 		set .@Main_gauche_hap,.@input * 9400;
 		if (Zeny < .@Main_gauche_hap) {
-			mes "[Suspicious Guy]";
-			mes "Short on zeny?";
-			mes "When the greatest deal in your life is right before your eyes?! Tragic, truly tragic...";
+			mes "[可疑的家伙]";
+			mes "缺仙吗？当你生命中最好的交易就在你眼前时？";
+			mes "真是悲剧，真是悲剧...";
 			close;
 		}
 		set Zeny, Zeny-.@Main_gauche_hap;
 		getitem 1207,.@input; //Main_Gauche
 		break;
 	case 3:
-		mes "[Suspicious Guy]";
+		mes "[可疑的家伙]";
 		if (Sex == SEX_MALE)
-			mes "A Manteau? That's old news! You know what's the latest in protective armors?";
+			mes "披风？那是过时的消息！";
+			mes "你知道现在什么是最新的防护装备吗？";
 		else
-			mes "Now why would such a beautiful woman wear something out of style? You know what would make you look even better?";
+			mes "那么，为什么这么美丽的女人要穿过时的东西呢？";
+			mes "你知道什么能让你看起来更好吗？";
 		next;
-		mes "[Suspicious Guy]";
-		mes "That's right!";
-		mes "A Hood! Wearing one of those is the quickest way to win respect these days!";
+		mes "[可疑的男人]";
+		mes "没错！一顶帽子！现在穿上它是赢得尊重的最快方式！";
 		next;
-		mes "[Suspicious Guy]";
-		mes "If you've got a Hood on, monsters will fear you and run away in terror! And check out this sturdy fabric. I can pull it all I want and it won't tear!";
+		mes "[可疑的男人]";
+		mes "如果你戴上帽子，怪物会害怕你，惊恐地逃跑！";
+		mes "看看这坚固的面料。我怎么拉都不会撕裂！";
 		next;
-		select("This hood has no drawstrings...? ");
-		mes "[Suspicious Guy]";
-		mes "Haha! What are you saying? You don't need drawstrings! The space age Rayon and Nylon and Krypton fibers keep the Hood secure on your head!";
+		select("这顶帽子没有抽绳...?");
+		mes "[可疑的男人]";
+		mes "哈哈！你在说什么？根本不需要抽绳！太空时代的粘胶纤维、";
+		mes "尼龙和氪纤维能让帽子稳稳地固定在你头上！";
 		next;
-		mes "[Suspicious Guy]";
-		mes "Man...";
-		mes "So much technology was invested into this Hood. Can you believe I'm only selling it for 930 zeny?";
+		mes "[可疑的男人]";
+		mes "天啊...这顶帽子投入了这么多科技。";
+		mes "你能相信我只卖930 Zeny吗？";
 		next;
-		mes "[Suspicious Guy]";
-		mes "Clearly, this is the deal of the century. So how many do you want?";
+		mes "[可疑的男人]";
+		mes "显然，这是世纪交易。你想要多少顶？";
 		next;
 		while(1) {
 			input .@input;
 			if (.@input == 0) {
-				mes "[Suspicious Guy]";
-				mes "Awww...";
-				mes "It wasn't because of the whole drawstrings thing, was it?";
+				mes "[可疑的男人]";
+				mes "哎呀... 不是因为抽绳的事吧？";
 				close;
 			}
 			else if (.@input > 100) {
-				mes "[Suspicious Guy]";
-				mes "Whoa~!";
-				mes "I can't sell you that many! What are you trying to do, take advantage of me?";
+				mes "[可疑的男人]";
+				mes "哇~！我不能卖你那么多！你想干什么，想占我便宜吗？";
 				next;
 			}
 			else
@@ -400,32 +406,32 @@ OnTouch_:
 		}
 		set .@Hood__hap,.@input * 930;
 		if (Zeny < .@Hood__hap) {
-			mes "[Suspicious Guy]";
-			mes "Oh nuts...";
-			mes "Short on zeny, eh?";
+			mes "[可疑的男人]";
+			mes "哦，真糟糕... 钱不够吗？";
 			close;
 		}
 		set Zeny, Zeny-.@Hood__hap;
 		getitem 2501,.@input; //Hood
 		break;
 	case 4:
-		mes "[Suspicious Guy]";
-		mes "Man...";
-		mes "You sure like to ask for the impossible. Well, let me tell you right now. No other Merchant in the world sells the goods only I can offer.";
+		mes "[可疑的男人]";
+		mes "天啊... 你真是要求太高了。让我告诉你，";
+		mes "没有其他商人在世界上能卖出我能提供的商品。";
 		next;
-		mes "[Suspicious Guy]";
-		mes "You just gotta believe me!";
+		mes "[可疑的男人]";
+		mes "你只需要相信我！";
 		close;
 	}
-	mes "[Suspicious Guy]";
-	mes "No need to look anywhere else at all when I clearly have the best items around!";
+	mes "[可疑的男人]";
+	mes "根本不需要去别处，因为我显然有最好的商品！";
 	next;
-	mes "[Suspicious Guy]";
-	mes "Please come back sometime, and buy more of my stuff. I love a customer who knows what they want! Hehe~";
+	mes "[可疑的男人]";
+	mes "请你有空再来，买更多我的东西。";
+	mes "我喜欢知道自己想要的顾客！嘿嘿~";
 	close;
 }
 
-geffen_in,22,125,1	script	Crumpler	52,{
+geffen_in,22,125,1	script	商人	52,{
 	mes "[?]";
 	mes "^333333*嘘!*";
 	mes "嘿，你!";
@@ -450,16 +456,17 @@ geffen_in,22,125,1	script	Crumpler	52,{
 			mes "也！我找到我要的东西啦！";
 			mes "[可疑的男人]";
 			next;
-			mes "这就是！高品质的红药水！! High quality Red Potion! 一旦你喝了它，它便开始起效，当它碰到你的嘴唇那一刻，你将无法停止。这东西真是妙不可言啊！";
-			mes "[可疑的男人]";
+			mes "这就是！高品质的红药水！一旦你喝了它，它便开始起效，";
+			mes "当它碰到你的嘴唇那一刻，你将无法停止。";
+			mes "这东西真是妙不可言啊！";
 			next;
 			mes "来吧，花花公子。这是最后一瓶红药了。我从我朋友的朋友那搞到的。你知道，这是个绝对便宜的好东西，你不要错过啊！";
 			mes "[可疑的男人]";
 			mes "白色药剂？噢，那些根本不存在。但是，呃，如果有人出售这种东西，把它给我，这样我就可以测试他们的区别。但是，是的，我得到了真正的东西。";
 			next;
 			mes "[可疑的男人]";
-			mes "你可以通过喝红药来恢复你的HP。我会卖你，我只收 ^FF3333500 zeny^000000!";
-			mes "[可疑的男人]";
+			mes "你可以通过喝红药来恢复你的HP。";
+			mes "我会卖给你，只收^FF3333500 Zeny^000000！";
 			emotion ET_SURPRISE;
 			next;
 			mes "现在！有多便宜啊！ 由于他们的需求量很大，我可以卖你100个。";
@@ -509,10 +516,8 @@ geffen_in,22,125,1	script	Crumpler	52,{
 		close;
 	}
 	else {
-		mes "^FF3333法式小刀^000000 会符合你的品位";
-		mes "[可疑的男人]";
-		mes "我叫它...";
-		mes "我自己发明了它。我之卖9400 zeny！";
+		mes "^FF3333法式小刀^000000会符合你的品位。我叫它...我自己发明的，";
+		mes "只卖9400 Zeny！";
 		next;
 		mes "[可疑的男人]";
 		mes "刀鞘？";
@@ -523,7 +528,7 @@ geffen_in,22,125,1	script	Crumpler	52,{
 	}
 }
 
-geffen_in,59,61,1	script	Skyler	61,{
+geffen_in,59,61,1	script	斯凯勒	61,{
 	mes "[克鲁帕]";
 	mes "哦~~~!";
 	mes "你的裙子真好看呀~";
@@ -548,7 +553,7 @@ geffen_in,59,61,1	script	Skyler	61,{
 	close;
 }
 
-geffen_in,27,134,5	script	Waitress#elen	91,{
+geffen_in,27,134,5	script	服务员#elen	91,{
 	mes "[斯盖乐]";
 	mes "你好 你好。";
 	mes "你不在看吗？";
@@ -562,7 +567,7 @@ geffen_in,27,134,5	script	Waitress#elen	91,{
 	mes "[斯盖乐]";
 	mes "哦，好吧，在我左边的那见屋子里，你能找到艾瑞克。他会非常高兴知道有人对他想造的建筑感兴趣。";
 	next;
-	if (select("艾瑞克? Who's that?:Yes. Yes, I am.") == 1) {
+	if (select("艾瑞克？那是谁？:是的，我就是。") == 1) {
 		mes "[斯盖乐]";
 		mes "从我有记忆的那刻起，他似乎就已经灰心了。他认为再也无法完成他那梦想中的项目了。";
 		mes "[斯盖乐]";
@@ -613,9 +618,9 @@ geffen_in,27,134,5	script	Waitress#elen	91,{
 		next;
 		mes "[艾伦诺尔]";
 		if (Sex == SEX_MALE)
-			mes "Tell me, have you ever heard of "+strcharinfo(0)+"? He's supposed to be the suavest hero around!";
+			mes "告诉我，你听说过吗";
 		else
-			mes "Have you ever heard of "+strcharinfo(0)+"? People say she's one of the prettiest girls in all of Rune-Midgarts!";
+			mes "你听说过吗";
 		break;
 	case 4:
 		switch(rand(1,2)) {
@@ -687,7 +692,7 @@ geffen_in,27,134,5	script	Waitress#elen	91,{
 	close;
 }
 
-geffen_in,70,67,3	script	Waitress#elise	90,{
+geffen_in,70,67,3	script	服务员#elise	90,{
 	mes "[艾仑奥瑞]";
 	mes "这个地方....";
 	mes "的确有";
@@ -794,11 +799,7 @@ geffen_in,70,67,3	script	Waitress#elise	90,{
 			mes "[威廉的灵魂]";
 			mes "^990000你这个杂种！！在我挖出你眼睛之前，停止在看我的女儿！^000000";
 			next;
-			mes "恩...?";
-			mes "再来一次?";
-			mes "[艾仑奥瑞]";
-			mes "恩...?";
-			mes "哦，爸爸又要OOXX我了，这种事时常发生在我和我妹妹身上！";
+			mes "嗯...? 再来一次？";
 			next;
 			mes "没开玩笑吧！？";
 			mes "诶。";
@@ -808,74 +809,73 @@ geffen_in,70,67,3	script	Waitress#elise	90,{
 	close;
 }
 
-geffen_in,79,76,2	script	Merchant Daven	120,{
-	mes "[Merchant Daven]";
-	mes "I remember Geffen";
-	mes "back when it was boring. ";
+geffen_in,79,76,2	script	商人达文	120,{
+	mes "[商人达文]";
+	mes "我记得吉芬那时候还很无聊。";
 	next;
-	mes "[Merchant Daven]";
-	mes "But now there are Mages and Wizards, and a flourishing";
-	mes "economy in this town!";
+	mes "[商人达文]";
+	mes "但现在这个城镇有了法师和巫师，经济也繁荣起来了！";
 	next;
-	switch(select("Mages...?:Economy?:Who are you?")) {
+	switch(select("法师...？:经济？:你是谁？")) {
 	case 1:
 		if (BaseJob == Job_Mage) {
-			mes "[Merchant Daven]";
-			mes "Mages are wielders of magic. But you would know more about that topic now, wouldn't you?";
+			mes "[商人达文]";
+			mes "法师是魔法的使用者。不过你现在应该对这个话题更了解吧？";
 		}
 		else {
-			mes "[Merchant Daven]";
-			mes "Mages and Wizards are always carrying books and studying magic. That's just the way they are.";
+			mes "[商人达文]";
+			mes "法师和巫师总是带着书本，研究魔法。这就是他们的特性。";
 			next;
-			mes "[Merchant Daven]";
-			mes "There's a Magic School in the NorthWest part of the city for Novices interested in becoming Mages. There, they can learn the basics of magic.";
+			mes "[商人达文]";
+			mes "在城镇的西北部有一所魔法学校，";
+			mes "供想成为法师的新手学习魔法基础。";
 			next;
-			mes "[Merchant Daven]";
-			mes "After becoming well experienced in the use of magic, Mages can become qualified to become Wizards.";
+			mes "[商人达文]";
+			mes "在熟练掌握魔法后，法师可以有资格成为巫师。";
 			next;
-			mes "[Merchant Daven]";
-			mes "Wizards have access to more powerful and destructive magic spells than Mages. Mages can apply to become Wizards at the top of Geffen Tower.";
+			mes "[商人达文]";
+			mes "巫师可以使用比法师更强大和破坏性的魔法。";
+			mes "法师可以在杰芬塔的顶层申请成为巫师。";
 		}
 		break;
 	case 2:
 		if (Class == Job_Blacksmith) {
-			mes "[Merchant Daven]";
-			mes "The economy...?";
-			mes "Why, that's all thanks to Blacksmiths! But you should know that already, shouldn't you?";
+			mes "[商人达文]";
+			mes "经济...? 这全要感谢铁匠！不过你应该已经知道了，对吧？";
 		}
 		else {
-			mes "[Merchant Daven]";
-			mes "Well, I guess you can thank the Blacksmiths for the economy here in Geffen. Sure, they always dirty, sweaty, smelly and talk kind of rudely...";
+			mes "[商人达文]";
+			mes "嗯，我想你可以感谢铁匠们让杰芬的经济繁荣。";
+			mes "虽然他们总是脏兮兮、满身汗臭，讲话也有点粗鲁……";
 			next;
-			mes "[Merchant Daven]";
-			mes "But they're hard working people. Also, the ores they refine and the weapons they create are high in demand.";
+			mes "[商人达文]";
+			mes "但他们是勤劳的人。而且，";
+			mes "他们精炼的矿石和制造的武器需求量很大。";
 			next;
-			mes "[Merchant Daven]";
-			mes "Adventurers pay Blacksmiths lots of their hard earned zeny for the high quality weapons that only they can create.";
+			mes "[商人达文]";
+			mes "冒险者们为铁匠们制造的高质量武器支付了很多辛";
+			mes "苦得来的仙女币。";
 		}
 		break;
 	case 3:
-		mes "[Merchant Daven]";
-		mes "Me? I'm the world's most prettiest street merchant. Heh heh~";
+		mes "[商人达文]";
+		mes "我？我是世界上最漂亮的街头商人。嘿嘿~";
 		next;
-		select("...^EE0000Magnum Break^000000!");
+		select("...^EE0000马格南破坏^000000！");
 		if (Class == Job_Swordman) {
-			mes "[Merchant Daven]";
-			mes "Whoa, whoa!";
-			mes "It was just a joke!";
-			mes "Forgive me!";
+			mes "[商人达文]";
+			mes "哇，哇！这只是个玩笑！原谅我！";
 		}
 		else {
-			mes "[Merchant Daven]";
-			mes "Magnum Break?";
-			mes "But you can't even do that, can you?";
+			mes "[商人达文]";
+			mes "马格南破坏？但你连这个都做不到吧？";
 		}
 		break;
 	}
 	close;
 }
 
-geffen_in,114,73,5	script	Hadenheim	709,{
+geffen_in,114,73,5	script	哈登海姆	709,{
 	mes "[伊丽纱]";
 	mes "你好~";
 	next;
@@ -921,484 +921,539 @@ geffen_in,114,73,5	script	Hadenheim	709,{
 	close;
 }
 
-geffen_in,39,127,2	script	Psychic Advisor	704,{
-	mes "[Psychic Advisor]";
-	mes "Ah...";
-	mes "Don't tell me! You've come to have your fortune told, yes? I know,";
-	mes "I know... I can see the future! So what kind of fortune do you want?";
+geffen_in,39,127,2	script	灵媒顾问	704,{
+	mes "[灵媒顾问]";
+	mes "啊...别告诉我！你是来算命的，对吧？我知道，我知道...";
+	mes "我能看到未来！那么你想要什么样的命运？";
 	next;
-	switch(select("Life!:Love!:Money!:Grades!:Future!:Fashion!")) {
+	switch(select("生活！:爱情！:金钱！:成绩！:未来！:时尚！")) {
 	case 1:
-		mes "[Psychic Advisor]";
+		mes "[灵媒顾问]";
 		switch(rand(1,5)) {
 		case 1:
-			mes "Life...?";
-			mes "Wow, that's a really broad category. But let me contact some spirits of the spirit world and I'll see what I can do.";
+			mes "生活...? 哇，这真是个广泛的类别。";
+			mes "不过让我联系一些灵界的灵魂，看看我能做些什么。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Hmmm...";
-			mes "Alright, I got something. Ummmm, you will live to be very, very old. How old you ask?";
+			mes "[灵媒顾问]";
+			mes "嗯...好吧，我得到了些信息。呃，";
+			mes "你会活得非常非常老。你问多大？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "^333333*cough!*^000000ty-nine years old. Isn't that good news? That's a ripe old age, and you have plenty of blissful years left to enjoy.";
+			mes "[灵媒顾问]";
+			mes "^333333*咳咳！^000000九十九岁。难道这不是好消息吗？这是个高龄，";
+			mes "你还有很多幸福的岁月可以享受。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Also, you'll always be successful. You'll successfully win in life and you'll successfully lose in life!";
+			mes "[灵媒顾问]";
+			mes "你将永远成功。你会在生活中成功，也会在生活中失败！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "You might not understand that little nugget of wisdom now, but as you learn more about this crazy, crazy world, it will make more sense.";
+			mes "[灵媒顾问]";
+			mes "你现在可能不理解这句智慧之言，";
+			mes "但随着你对这个疯狂世界的了解加深，它会变得更有意义。";
 			next;
 			break;
 		case 2:
-			mes "Hmm...";
-			mes "What can I tell you about life? Let me contact the spirit world real quick~";
+			mes "嗯……我能告诉你关于生活的什么呢？让我快速联系一下灵界~";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Alright, I got it!";
-			mes "Your dreams";
-			mes "will come true!";
+			mes "[灵媒顾问]";
+			mes "好的，我明白了！你的梦想会成真！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Of course, I'm not sure exactly which dreams will come true, but hopefully the good dreams that you've had will become reality, rather than any of your weird nightmares.";
+			mes "[灵媒顾问]";
+			mes "当然，我不确定具体哪些梦想会成真，";
+			mes "但希望你美好的梦想能变为现实，而不是那些奇怪的噩梦。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Which dreams exactly? Well, the spirits are awfully reticent today. They're not exactly in the mood to talk. Spirits have lives too, you know. Wait, did that make any sense?";
+			mes "[灵媒顾问]";
+			mes "具体哪些梦想呢？今天的灵魂们显得很沉默，";
+			mes "它们并不想说话。灵魂也有自己的生活，你知道吗？等一下，";
+			mes "这样说有道理吗？";
 			next;
 			break;
 		case 3:
-			mes "I sense that you may be about to make a rash decision that you might regret. I must advise you to slow down and think first.";
+			mes "我感觉你可能要做出一个你会后悔的冲动决定。";
+			mes "我建议你先慢下来思考一下。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Although the pressure may be high, remember that any decision made in excitement is usually a bad decision. Take a deep breath and relax.";
+			mes "[灵媒顾问]";
+			mes "虽然压力可能很大，但请记住，";
+			mes "兴奋中做出的决定通常是错误的。深呼吸，放松一下。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Even if you're running out of time, it's better to slowly plan things out so that you don't waste any of your efforts, or make costly mistakes.";
+			mes "[灵媒顾问]";
+			mes "即使时间不多，慢慢规划事情总是更好，";
+			mes "这样你就不会浪费努力或犯下代价高昂的错误。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Remember that calm,";
-			mes "collected patience";
-			mes "is the key to overcoming crisis.";
+			mes "[灵媒顾问]";
+			mes "请记住，冷静、沉着的耐心是克服危机的关键。";
 			next;
 			break;
 		case 4:
-			mes "Hmmm... I sense that you are experiencing a loss of direction in life. Should you prioritize security or happiness?";
+			mes "嗯……我感觉你在生活中失去了方向。";
+			mes "你应该优先考虑安全还是幸福？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "I suggest that you think fully and carefully before deciding what path is best for you. And remember, you can only learn from your mistakes.";
+			mes "[灵媒顾问]";
+			mes "我建议你在决定最佳道路之前充分而仔细地思考。记住，";
+			mes "你只能从错误中学习。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "If you plan carefully and perform positive, constructive actions with a good attitude, you can";
-			mes "have it all!";
+			mes "[灵媒顾问]";
+			mes "如果你仔细规划并以积极、建设性的态度采取行动，";
+			mes "你可以拥有一切！";
 			next;
 			break;
 		case 5:
-			mes "Hmm...";
-			mes "I sense that you've had a quarrel with someone close to you. Someone for whom you care for dearly.";
+			mes "嗯……我感觉你和一个亲近的人发生了争吵。";
+			mes "那是一个你非常关心的人。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "You must take the initiative! Try and resolve this matter without getting too caught up in your emotions.";
+			mes "[灵媒顾问]";
+			mes "你必须主动出击！";
+			mes "尽量在不被情绪左右的情况下解决这个问题。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Try to make amends, swallow your pride and apologize sincerely if you have to. Isn't friendship worth it? I think so.";
+			mes "[灵媒顾问]";
+			mes "试着和解，吞下你的骄傲，真诚地道歉。如果有必要，";
+			mes "友谊值得这样做，不是吗？我认为是的。";
 			next;
 		}
-		mes "[Psychic Advisor]";
-		mes "Well, I hope I settled any doubts you've had about the future. That is, after all, my job as a professional psychic consultant. Come back anytime~";
+		mes "[灵媒顾问]";
+		mes "希望我能解答你对未来的疑虑。";
+		mes "这毕竟是我作为专业灵媒顾问的工作。随时欢迎回来~";
 		close;
 	case 2:
-		mes "[Psychic Advisor]";
+		mes "[灵媒顾问]";
 		switch(rand(1,4)) {
 		case 1:
-			mes "You want to know your Love fortune? Oh ho~ Then there must be somebody that you like! Come on, you can tell me!";
+			mes "你想知道你的爱情运势吗？哦哦~ 那一定是你喜欢的人！";
+			mes "来吧，你可以告诉我！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Oh right...";
-			mes "Um, I sense a strong love energy emanating from your soul. It's quite intimidating and pushes away the weak and the spineless.";
+			mes "[灵媒顾问]";
+			mes "哦，对了……嗯，我感觉你的灵魂散发出强烈的爱情能量。";
+			mes "这种能量相当强大，能把软弱无力的人推开。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "So basically, I foresee that you'll only be attracting really strong people soon. You know, like professional athletes, bodybuilders, construction workers, that sort of thing.";
+			mes "[灵媒顾问]";
+			mes "基本上，我预见到你很快会吸引到非常强大的人。你知道的，";
+			mes "比如职业运动员、健美运动员、建筑工人之类的。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "So if this is what you want, congratulations! Fortune smiles upon you with joy this day.";
+			mes "[灵媒顾问]";
+			mes "如果这正是你想要的，恭喜你！今天好运降临于你。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "But if this is the opposite of what you want, well, I'm sorry. Fortune smiles upon you with sarcasm this day. But it's not too late to change destiny!";
+			mes "[灵媒顾问]";
+			mes "但如果这正好是你不想要的，那我很抱歉。";
+			mes "今天好运以讽刺的方式降临于你。不过改变命运还不算太晚！";
 			next;
 			break;
 		case 2:
-			mes "Looooove, eh? ";
-			mes "Let me contact";
-			mes "the spirits for a second.";
+			mes "爱，嗯？让我联系一下灵魂。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Ah! An old flame will return! I don't know if they'll fall in love with you again, ask you for money, or if that person's back for revenge...";
+			mes "[灵媒顾问]";
+			mes "啊！旧情人将会回归！我不知道他们是否会再次爱上你，";
+			mes "向你借钱，还是为了复仇而来……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "But an old flame will definitely resurface in your life. Somehow. So if that's good news, congratulations! But, if that's bad news, then be careful!";
+			mes "[灵媒顾问]";
+			mes "但旧情人肯定会在你的生活中重新出现。不管怎样。";
+			mes "如果这是好消息，恭喜你！但如果这是坏消息，那就小心点！";
 			next;
 			break;
 		case 3:
-			mes "Um...";
+			mes "嗯……";
 			if (Sex == SEX_MALE)
-				mes "The girl that you";
+				mes "你喜欢的女孩";
 			else
-				mes "The boy that you";
-			mes "are currently seeing";
-			mes "is perfect for you!";
+				mes "你现在交往的男孩非常适合你！";
 			next;
-			switch(select("How did you know?:You're so wrong!:I'm single!")) {
+			switch(select("你怎么知道的？:你错得离谱！:我还是单身！")) {
 			case 1:
-				mes "[Psychic Advisor]";
-				mes "Well...";
-				mes "We psychics are pretty accurate at this kind of thing. And it's so good to see that you're really happy with your partner!";
+				mes "[灵媒顾问]";
+				mes "嗯……我们灵媒在这方面相当准确。";
+				mes "看到你和伴侣真的很幸福，真是太好了！";
 				close;
 			case 2:
-				mes "[Psychic Advisor]";
-				mes "You didn't let me finish my sentence. What I meant to say was...";
+				mes "[灵媒顾问]";
+				mes "你没让我说完。我的意思是……";
 				next;
-				mes "[Psychic Advisor]";
+				mes "[灵媒顾问]";
 				if (Sex == SEX_MALE)
-					mes "The girl that you";
+					mes "你喜欢的女孩";
 				else
-					mes "The boy that you";
-				mes "are currently seeing is perfect for you if you want to live the rest of your life in utter misery!";
+					mes "你现在交往的男孩如果你想过上完全痛苦的生活，";
+					mes "那他非常适合你！";
 				next;
-				mes "[Psychic Advisor]";
-				mes "But even if you break up, do it as soon as possible and try to be good friends after the matter.";
+				mes "[灵媒顾问]";
+				mes "但即使你们分手，也要尽快分开，尽量在事情结束后做朋友。";
 				next;
-				mes "[Psychic Advisor]";
-				mes "It'll make better people out of both of you. But that's just what I think.";
+				mes "[灵媒顾问]";
+				mes "这会让你们变得更好。但这只是我的看法。";
 				close;
 			case 3:
-				mes "[Psychic Advisor]";
-				mes "Oh...";
-				mes "Um, I'm sorry.";
-				mes "Sometimes, I get the future and the present mixed up. You know, since I'm always looking into the future...?";
+				mes "[灵媒顾问]";
+				mes "哦……嗯，我很抱歉。有时我会把未来和现在搞混。你知道的，";
+				mes "因为我总是在看未来……？";
 				next;
-				mes "[Psychic Advisor]";
+				mes "[灵媒顾问]";
 				if (Sex == SEX_MALE) {
-					mes "What I meant to say was";
-					mes "^3355FFyou and the perfect woman will soon fall in love^000000. Yes, that's what I meant!";
+					mes "我想说的是^3355FF你和完美的女人很快就会坠入爱河^000000。是的，";
+					mes "我就是这个意思！";
 				}
 				else {
-					mes "What I meant to say was";
-					mes "^3355FFyou will soon be swept off your feet by the perfect guy^000000. Yes, that's what I meant!";
+					mes "我想说的是^3355FF你很快会被完美的男人所吸引^000000。是的，";
+					mes "我就是这个意思！";
 				}
 				close;
 			}
 			break;
 		case 4:
-			mes "Looking for romance, eh? Life can always use a little more excitement.";
+			mes "寻找浪漫，嗯？生活总是可以多一点刺激。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "That's strange, I foresee a Love Triangle in your future. No, wait! A Love...";
-			mes "Decagon?";
+			mes "[灵媒顾问]";
+			mes "这很奇怪，我预见到你未来会有一个爱情三角。等等！";
+			mes "是爱情……十边形？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "What's the shape with eleven sides? Now, you can't expect me to know that off the top of my head. I'm a psychic, not a mathematician!";
+			mes "[灵媒顾问]";
+			mes "什么形状有十一条边？你不能指望我立刻就知道。";
+			mes "我是灵媒，不是数学家！";
 			next;
 		}
-		mes "[Psychic Advisor]";
-		mes "Love is always fun! Even in this bleak world, love surrounds us in its inviting glow. Treasure that person who is special to you, and come back for another reading!";
+		mes "[灵媒顾问]";
+		mes "爱总是美好的！即使在这个阴暗的世界里，";
+		mes "爱也以它迷人的光辉环绕着我们。珍惜那个对你特别的人，";
+		mes "回来再找我算命！";
 		close;
 	case 3:
-		mes "[Psychic Advisor]";
+		mes "[灵媒顾问]";
 		switch(rand(1,3)) {
 		case 1:
-			mes "Money? Well, you must be more fortunate in money than I am. After all, I sit here all day and give this service for free!";
+			mes "钱？好吧，你一定比我更富有。毕竟，";
+			mes "我整天坐在这里免费提供服务！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Well...";
-			mes "Um, the spirits tell me that you might not win the lottery, no matter how many tickets you buy. I'm sorry, but it's true.";
+			mes "[灵媒顾问]";
+			mes "嗯……灵魂告诉我，无论你买多少彩票，你可能都不会中奖。";
+			mes "抱歉，但这是真的。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "But I just saved you a lifetime's worth of lottery tickets! That could be quite a hefty sum of money!";
+			mes "[灵媒顾问]";
+			mes "但我刚刚为你省下了一辈子的购买彩票费用！";
+			mes "这可是一笔不小的金额！";
 			next;
 			break;
 		case 2:
-			mes "Ah yes. Let me contact the spirit world. They usually have sound financial advice, despite the fact that don't have any sort of economy over there.";
+			mes "啊，是的。让我联系一下灵界。他们通常有不错的理财建议，";
+			mes "尽管那边没有任何经济体系。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "First off, be accountable for your own money and use a budget that works for you. A good rule of thumb? For every ten zeny you earn, put one zeny aside and either save it or invest it for later.";
+			mes "[灵媒顾问]";
+			mes "首先，要对自己的钱负责，制定适合你的预算。";
+			mes "一个好的经验法则是：每赚十个仙，存一个仙，";
+			mes "或者把它存起来或投资。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "And whatever you do, don't work as a psychic advisor in Rune-Midgarts. The real cash, apparently, is in discovering new countries. Why didn't I do that?!";
+			mes "[灵媒顾问]";
+			mes "无论你做什么，都不要在鲁恩-米德加兹当灵媒顾问。显然，";
+			mes "真正的财富在于发现新国家。我为什么不去做呢？！";
 			next;
 			break;
 		case 3:
-			mes "So you want to know about money, eh? Let me commune with the spirits of the supernatural realm...";
+			mes "所以你想知道关于钱的事，是吗？";
+			mes "让我与超自然领域的灵魂交流一下……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Ah yes. They are telling me that it's best to be moderate in all things. Certainly, you must make sure that your expenditures don't exceed your budget.";
+			mes "[灵媒顾问]";
+			mes "啊，是的。他们告诉我，所有事情都要适度。当然，";
+			mes "你必须确保支出不超过预算。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "However, you should also avoid gambling with your money. By that, I mean you should save and invest carefully. Don't be tempted into risky get-rich-quick schemes!";
+			mes "[灵媒顾问]";
+			mes "然而，你也应该避免用钱赌博。我的意思是，";
+			mes "你应该谨慎地储蓄和投资。不要被快速致富的计划所诱惑！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "On the other hand, get-rich-not-as-quick schemes are okay, so long as you know what you are doing. I'm right, aren't I?";
+			mes "[灵媒顾问]";
+			mes "另一方面，只要你知道自己在做什么，";
+			mes "慢慢致富的计划是可以的。我说得对吧？";
 			next;
 		}
-		mes "[Psychic Advisor]";
-		mes "Well, you need money to live, but having money alone isn't living. Don't forget that there are other important things. And try not to stress out, okay?";
+		mes "[灵媒顾问]";
+		mes "嗯，你需要钱来生活，但仅仅有钱并不是生活。";
+		mes "别忘了还有其他重要的事情。";
+		mes "尽量不要给自己太大压力，好吗？";
 		close;
 	case 4:
-		mes "[Psychic Advisor]";
+		mes "[灵媒顾问]";
 		switch(rand(1,4)) {
 		case 1:
-			mes "Your grades? You're still in school? I'm impressed! Your eyes tell me you are rather mature for your age. Alright, let me contact the spirits...";
+			mes "你的成绩？你还在上学？我很佩服！";
+			mes "你的眼神告诉我你比同龄人成熟。好吧，让我联系一下灵魂……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Hm? All the spirits said was 'Did you study?' Well, I guess I answered your question with yet another question!";
+			mes "[灵媒顾问]";
+			mes "嗯？所有灵魂只说了‘你学习了吗？’好吧，";
+			mes "我想我又用另一个问题回答了你的问题！";
 			next;
 			break;
 		case 2:
-			mes "You're asking me about your grades? That's weird. I mean, they only ask about your report card at school, right?";
+			mes "你问我关于你的成绩？这很奇怪。我是说，";
+			mes "他们只会在学校问你的成绩单，对吧？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "An education is really important, but don't be discouraged if your grades aren't as good as you'd like.";
+			mes "[灵媒顾问]";
+			mes "教育真的很重要，";
+			mes "但如果你的成绩没有达到预期，也不要气馁。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Perhaps your style of learning isn't really supported by your school, or maybe you're not that interested in academics. Understandable.";
+			mes "[灵媒顾问]";
+			mes "也许你的学习方式并不被学校支持，";
+			mes "或者你对学术并不感兴趣。这是可以理解的。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "The spirits tell me that you should experiment with different learning styles, so that you can make sure that you get the grades that you want.";
+			mes "[灵媒顾问]";
+			mes "灵魂告诉我，你应该尝试不同的学习方式，";
+			mes "以确保你能获得想要的成绩。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Yeah...";
-			mes "The spirits are";
-			mes "awfully lazy today.";
+			mes "[灵媒顾问]";
+			mes "是啊……今天的灵魂真懒。";
 			next;
 			break;
 		case 3:
-			mes "^FF0000F MINUS^000000!";
-			mes "Hahahahahahaha~!";
+			mes "^FF0000F 减号^000000！哈哈哈哈哈哈~！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Oh, I'm sorry, I just love doing that. Okay, let me ask the spirits for real this time. Hmmmm...";
+			mes "[灵媒顾问]";
+			mes "哦，抱歉，我就是喜欢这样。好吧，";
+			mes "这次让我认真问问灵魂。嗯……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Hmm. The spirits are being awfully rude today. They're saying, 'If you're so worried about your grades, why don't you ask your teacher?'";
+			mes "[灵媒顾问]";
+			mes "嗯，今天的灵魂真无礼。他们说，‘如果你这么担心你的成绩，";
+			mes "为什么不问问你的老师？’";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Now that I think about it, they do have a point. Why don't you ask your teacher, professor or whatever to see if you have any problems?";
+			mes "[灵媒顾问]";
+			mes "仔细想想，他们确实有道理。你为什么不问问你的老师、";
+			mes "教授或者其他人，看看你是否有问题呢？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "I mean, they're being paid to help you. And well, my service is free. So... Yeah.";
+			mes "[灵媒顾问]";
+			mes "我的意思是，他们是被雇来帮助你的。";
+			mes "而我的服务是免费的。所以……是的。";
 			next;
 			break;
 		case 4:
-			mes "Oh cool!";
-			mes "I sense that you will soon be receiving straight A's...";
-			mes "In Effort!";
+			mes "哦，太酷了！我感觉你很快就会获得全A……在努力方面！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Now, I couldn't tell you what your real grades are. You might be destined to get an A in every class or subject, but if I told you that...";
+			mes "[灵媒顾问]";
+			mes "不过，我不能告诉你你真实的成绩。";
+			mes "你可能注定在每门课上都能拿到A，但如果我告诉你……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "You'd probably get cocky, slack off on studying, fail your classes and cause a time paradox. I mean, I have to actually be in the future to actually see it, you know?";
+			mes "[灵媒顾问]";
+			mes "你可能会变得自满，放松学习，挂科，甚至造成时间悖论。";
+			mes "我的意思是，我必须真的在未来才能看到这一切，你知道吗？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Instead of worrying about time paradoxes, why don't you make your own destiny?";
+			mes "[灵媒顾问]";
+			mes "与其担心时间悖论，为什么不去创造自己的命运呢？";
 			next;
 		}
-		mes "[Psychic Advisor]";
-		mes "Well, in any case, concentrating on your studies is tough, but it can be rewarding. I hope you do well in whatever you choose to do~";
+		mes "[灵媒顾问]";
+		mes "无论如何，专注于学习是困难的，但也会有回报。";
+		mes "希望你在选择的任何事情上都能做得很好~";
 		close;
 	case 5:
-		mes "[Psychic Advisor]";
-		mes "The future? I thought it was implied that any fortune I tell you is about the future in the specific field that you choose.";
+		mes "[灵媒顾问]";
+		mes "未来？我以为任何我告诉你的预言都是关于你选择的";
+		mes "特定领域的未来。";
 		next;
-		mes "[Psychic Advisor]";
-		mes "I guess you want to know about the future in general. Let me commune with the spirits, and we'll see what they have to say, okay?";
+		mes "[灵媒顾问]";
+		mes "我想你想知道的是一般的未来。让我与灵魂交流一下，";
+		mes "看看他们有什么要说的，好吗？";
 		next;
-		mes "[Psychic Advisor]";
+		mes "[灵媒顾问]";
 		switch(rand(1,4)) {
 		case 1:
-			mes "Hmm...";
-			mes "In the future, Sex, Violence, and Rock and Roll are completely abolished. Mankind experiences an era of complete peace and utter boredom.";
+			mes "嗯……在未来，性、暴力和摇滚乐被完全废除。";
+			mes "人类经历了完全和平和无聊的时代。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "I don't know how far in the future that will occur, but it better not happen soon!";
+			mes "[灵媒顾问]";
+			mes "我不知道这会在未来的多久后发生，但最好不要很快发生！";
 			next;
 			break;
 		case 2:
-			mes "In the future, Earth is protected by a single giant robot: Plutonium Overdrive Ignition Negatron G a.k.a POING.";
+			mes "在未来，地球由一个巨大的机器人保护：";
+			mes "铀过载点火消灭者，简称POING。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "POING fights off many Kylorian invasions for years, until it is finally defeated by Dr. Hubris' Mechanical Overlord: Nyxltron 47.";
+			mes "[灵媒顾问]";
+			mes "POING抵御了许多凯洛里安的入侵多年，";
+			mes "直到最终被哈布里斯博士的机械霸主：Nyxltron 47击败。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Luckily, Doctor Pyeus finishes the Gravitron Oblivion Drive for the Plutonium Overdrive Ignition Negatron G system just in time.";
+			mes "[灵媒顾问]";
+			mes "幸运的是，皮尤斯博士及时完成了重力遗忘驱动器，";
+			mes "为钚超驱动点火负能量G系统做好了准备。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "And so, POING rises again, reborn as the Automatic Hero: GOD-POING. Of course, Nyxltron 47 is destroyed.";
+			mes "[灵媒顾问]";
+			mes "因此，POING再次崛起，重生为自动英雄：GOD-POING。当然，";
+			mes "Nyxltron 47被摧毁了。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "That's probably the most important thing you'll ever learn about the future. Trust me, the rest of it's boring.";
+			mes "[灵媒顾问]";
+			mes "这可能是你关于未来能学到的最重要的事情。相信我，";
+			mes "其余的都很无聊。";
 			next;
 			break;
 		case 3:
-			mes "In the future, believe it or not, the internet will be replaced by a giant brain. I don't know how, but trust me, this brain's huge.";
+			mes "在未来，信不信由你，互联网将被一个巨大的大脑所取代。";
+			mes "我不知道怎么回事，但相信我，这个大脑非常庞大。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Thanks to the number of internet web journals, this brain becomes peaceful, and decides not to take over the world as it originally planned.";
+			mes "[灵媒顾问]";
+			mes "多亏了网络日志的数量，这个大脑变得和平，";
+			mes "决定不再像最初计划的那样统治世界。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Yes...";
-			mes "This weird brain thing definitely becomes a source for good, a loving benefactor to the human race, so long as people keep writing personal entries on the internet.";
+			mes "[灵媒顾问]";
+			mes "是的……这个奇怪的大脑确实成为了善的源泉，";
+			mes "成为人类的慈善家，只要人们继续在互联网上写个人日志。";
 			next;
 			break;
 		case 4:
-			mes "In the future, they genetically engineer all sorts of plants.";
-			mes "So many kinds! It's crazy I tell you!";
+			mes "在未来，他们基因工程化了各种植物。种类繁多！";
+			mes "我告诉你，这太疯狂了！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Eventually, they create trees that grow celebrity impersonators. Today, it looks like a miracle of science, and a threat to Hollywood starlets.";
+			mes "[灵媒顾问]";
+			mes "最终，他们创造了能长出名人模仿者的树木。今天，";
+			mes "这看起来像是科学的奇迹，也是对好莱坞明星的威胁。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "However, the people who buy these trees are the same kind who wear those really tacky shirts...";
+			mes "[灵媒顾问]";
+			mes "然而，购买这些树的人正是那些穿着非常俗气衬衫的人……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "You know, the kind with a lame sense of humor where it will have the word 'Cat-o-strophic' and there's this little kitten dressed like a mad scientist or something.";
+			mes "[灵媒顾问]";
+			mes "你知道的，那种幽默感很差的衬衫，";
+			mes "上面写着“Cat-o-strophic”，";
+			mes "还有一只穿着疯狂科学家服装的小猫。";
 			next;
 		}
-		mes "[Psychic Advisor]";
-		mes "Well...";
-		mes "That's my prediction. Can you really argue with the wisdom of the spirit world?";
+		mes "[灵媒顾问]";
+		mes "好吧……这就是我的预测。你真的能和灵界的智慧争辩吗？";
 		close;
 	case 6:
-		mes "[Psychic Advisor]";
-		mes "Fashion...?";
-		mes "What does that have to do with matters of the supernatural? Well, um, let me contact the spirits. Ah! Here we go...";
+		mes "[灵媒顾问]";
+		mes "时尚……？这和超自然的事情有什么关系？嗯，";
+		mes "让我联系一下灵魂。啊！来了……";
 		next;
-		mes "[Psychic Advisor]";
+		mes "[灵媒顾问]";
 		switch(rand(1,5)) {
 		case 1:
 			mes "...";
 			next;
-			mes "[Psychic Advisor]";
-			mes "...";
-			mes "......";
+			mes "[灵媒顾问]";
+			mes "…………";
 			next;
-			mes "[Psychic Advisor]";
-			mes "I'm seeing something...";
-			mes "It looks like, a...";
+			mes "[灵媒顾问]";
+			mes "我看到了一些东西……看起来像是……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "A...";
-			mes "A... Fish?";
-			mes "On someone's head?";
+			mes "[灵媒顾问]";
+			mes "一条……一条……鱼？在某人的头上？";
 			next;
-			mes "[Psychic Advisor]";
-			mes "...";
-			mes "It was the most horrible vision!";
+			mes "[灵媒顾问]";
+			mes "……这是最可怕的预兆！";
 			next;
 			break;
 		case 2:
-			mes "It feels nice to wear expensive headgears! And it's nice to wear fancy clothing too! But remember...";
+			mes "穿上昂贵的头饰感觉真好！穿上华丽的衣服也不错！但记住……";
 			next;
-			mes "[Psychic Advisor]";
-			mes "No matter how much zeny you may put into your wardrobe, you'll look silly unless you match the things you wear.";
+			mes "[灵媒顾问]";
+			mes "无论你在衣橱里花多少仙女，穿得不搭配你看起来都会很傻。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Now, here's a good example of a mismatched outfit. Imagine some Crusader wearing a Crown, Elven ears and an Iron Cain.";
+			mes "[灵媒顾问]";
+			mes "现在，这里有一个不搭配的服装的好例子。";
+			mes "想象一下某个十字军穿着王冠、精灵耳朵和铁制手杖。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Instead of looking cool, they look sort of like an Evil Keebler Prince. Spooky, huh?";
+			mes "[灵媒顾问]";
+			mes "他们看起来并不酷，反而像个邪恶的基布勒王子。可怕吧？";
 			next;
 			break;
 		case 3:
-			mes "I predict...";
-			mes "That Cowboy Hats will be very popular among female";
-			mes "Super Novices";
-			mes "very soon!";
+			mes "我预测……牛仔帽很快会在女性超级新手中变得非常流行！";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Come on, wouldn't you agree? Cowboy Hats look great on Super Novices!";
+			mes "[灵媒顾问]";
+			mes "来吧，你不觉得吗？牛仔帽在超级新手身上看起来很棒！";
 			next;
 			break;
 		case 4:
-			mes "Sometimes, it's a cute idea to follow a theme. Like, if you wear both Angel Wing and Angel Wing Ears at the same time.";
+			mes "有时候，遵循一个主题是个可爱的主意。";
+			mes "比如同时佩戴天使翅膀和天使耳朵。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Of course, that might be too expensive for most people, but you get the idea.";
+			mes "[灵媒顾问]";
+			mes "当然，这对大多数人来说可能太贵了，但你明白我的意思。";
 			next;
 			break;
 		case 5:
-			mes "I now predict that the Sombrero will be come very popular when a mass group of Bards form a guild in which the members only wear Sombreros.";
+			mes "我现在预测，";
+			mes "当一大群吟游诗人组成一个只穿戴草帽的公会时，";
+			mes "草帽会变得非常流行。";
 			next;
-			mes "[Psychic Advisor]";
-			mes "Or was it the Feathered Bonnet that's supposed to skyrocket in popularity? Both of those hats are just sooo stylish, especially on Bards...";
+			mes "[灵媒顾问]";
+			mes "还是说是羽毛帽会迅速流行？这两顶帽子都太时尚了，";
+			mes "尤其是在吟游诗人身上……";
 			next;
 		}
-		mes "[Psychic Advisor]";
-		mes "Well...";
-		mes "We psychic consultants aren't really trained for fashion matters, but I hope I was at least a little bit of help to you.";
+		mes "[灵媒顾问]";
+		mes "嗯……我们这些灵媒顾问并不太擅长时尚问题，";
+		mes "但我希望我至少能对你有所帮助。";
 		close;
 	}
 }
 
-geffen_in,109,72,2	script	Monster Scholar	90,{
-	mes "[Estheres]";
-	mes "Hello, I'm the resident expert of Monsterology here in Geffen. Is there anything in particular that you're curious about?";
+geffen_in,109,72,2	script	怪物学者	90,{
+	mes "[埃斯特雷斯]";
+	mes "你好，我是吉芬的怪物学专家。你有什么特别想了解的吗？";
 	next;
-	switch(select("Monsters in the Area.:Recent Monster News.:Era of Monsters:Jellopy Theory.")) {
+	switch(select("该地区的怪物。:最近的怪物新闻。:怪物时代:果冻理论。")) {
 	case 1:
-		mes "[Estheres]";
-		mes "Well, as you may already know, since Wizards and Mages train in Geffen, monsters tend to stay away from the city. So tired adventurers are welcome to rest here.";
+		mes "[埃斯特雷斯]";
+		mes "如你所知，由于法师和魔法师在吉芬训练，";
+		mes "怪物通常会远离这座城市。";
+		mes "所以疲惫的冒险者可以在这里休息。";
 		next;
-		mes "[Estheres]";
-		mes "Still, if you want to seek out strong monsters, you can cross the bridge to the West and fight Kobolds.";
+		mes "[埃斯特雷斯]";
+		mes "不过，如果你想寻找强大的怪物，";
+		mes "可以过桥去西边与科博尔德战斗。";
 		next;
-		mes "[Estheres]";
+		mes "[埃斯特雷斯]";
 		if (BaseLevel > 40)
-			mes "You look strong enough for that kind of challenge. But if you see anyone more reckless cross the Western bridge, you might want to give them a warning.";
+			mes "你看起来足够强大，可以接受这样的挑战。";
+			mes "但如果你看到更鲁莽的人过西桥，最好给他们一个警告。";
 		else
-			mes "Um, but if you're planning to go there, you better not go alone. I really recommend that you be well prepared if you're gonna fight those kinds of monsters.";
+			mes "嗯，如果你打算去那里，最好不要单独去。";
+			mes "我真的建议你做好准备，如果要与那些怪物战斗。";
 		break;
 	case 2:
-		mes "[Estheres]";
-		mes "Recent news?";
-		mes "Well, the Juno Monster Museum is now open to the public. They have a fascinating exhibit and various monsters are now on display!";
+		mes "[埃斯特雷斯]";
+		mes "最近的消息？嗯，朱诺怪物博物馆现在对公众开放。";
+		mes "他们有一个迷人的展览，各种怪物现在都在展出！";
 		next;
-		mes "[Estheres]";
-		mes "I mean, I've read about all sorts of monsters in the Prontera and Juno Libraries, and encountered a few in the wild, but now I get a chance to see some strong monsters in real life!";
+		mes "[埃斯特雷斯]";
+		mes "我的意思是，我在普隆德拉和朱诺的图书馆里读过各种怪物，";
+		mes "也在野外遇到过一些，";
+		mes "但现在我有机会在现实中看到一些强大的怪物！";
 		next;
-		mes "[Estheres]";
-		mes "What's also exciting is the exploration achieved by you adventurers for the Rune-Midgarts Kingdom.";
+		mes "[埃斯特雷斯]";
+		mes "更令人兴奋的是，";
+		mes "你们冒险者为鲁恩-米德加兹王国所取得的探索成就。";
 		next;
-		mes "[Estheres]";
-		mes "When a new land is discovered, there are usually unique monsters that are indigenous to that area.";
+		mes "[埃斯特雷斯]";
+		mes "当发现新土地时，通常会有一些独特的怪物是该地区特有的。";
 		next;
-		mes "[Estheres]";
-		mes "So new monsters are basically being discovered all the time! The variety of creatures that roam this world is really quite fascinating.";
+		mes "[埃斯特雷斯]";
+		mes "所以新怪物基本上是不断被发现的！";
+		mes "这个世界上游荡的生物种类真是令人着迷。";
 		break;
 	case 3:
-		mes "[Estheres]";
-		mes "The truth is that monsters have existed since ancient times. The Era of Monsters was when the power of the monsters was at its peak.";
+		mes "[埃斯特雷斯]";
+		mes "事实上，怪物自古以来就存在。";
+		mes "怪物时代是怪物力量达到巅峰的时期。";
 		next;
-		mes "[Estheres]";
-		mes "They've plagued humans for a long time, but were completely annihilated in a great war between mankind and the monsters.";
+		mes "[艾斯特瑞斯]";
+		mes "它们长期以来一直困扰着人类，";
+		mes "但在人与怪物之间的大战中被彻底消灭。";
 		next;
-		mes "[Estheres]";
-		mes "However, as the balance of nature has changed, the monsters have inevitably returned. Not too many people know this, but most monsters were gentle creatures at one time. It's sad, really...";
+		mes "[艾斯特瑞斯]";
+		mes "然而，随着自然平衡的改变，怪物们不可避免地回来了。";
+		mes "虽然很多人不知道，但大多数怪物曾经是温和的生物。";
+		mes "真是令人伤心……";
 		break;
 	case 4:
-		mes "[Estheres]";
-		mes "Ah yes, Jellopy.";
-		mes "It seems that almost every monster around is composed of Jellopy. But is it just a crystallization made by some monsters, or is it... More?";
+		mes "[艾斯特瑞斯]";
+		mes "啊，是的，果冻。几乎每个怪物似乎都是由果冻组成的。";
+		mes "但这只是某些怪物制造的结晶，还是……更多？";
 		next;
-		mes "[Estheres]";
-		mes "From our research of ancient monsters and studies of recently discovered monsters, it seems that that traces of Jellopy cannot be found in stronger beasts.";
+		mes "[艾斯特瑞斯]";
+		mes "根据我们对古代怪物的研究和对最近发现的怪物的研究，";
+		mes "似乎在更强大的野兽身上找不到果冻的痕迹。";
 		next;
-		mes "[Estheres]";
-		mes "Still, may of us believe that there might be some relation to Jellopy and monsters, although it may be hard to believe that there is any.";
+		mes "[艾斯特瑞斯]";
+		mes "尽管如此，我们中的许多人仍然相信果冻与怪物之间可能存";
+		mes "在某种关系，尽管很难相信这一点。";
 		next;
-		mes "[Estheres]";
-		mes "It's possible that Jellopy may be linked to a monster's personality and strength. So, if you mixed Jellopy with something, you'd create a stronger monster.";
+		mes "[艾斯特瑞斯]";
+		mes "果冻可能与怪物的个性和力量有关。因此，";
+		mes "如果你将果冻与其他东西混合，你就能创造出更强大的怪物。";
 		next;
-		mes "[Estheres]";
-		mes "Of course, doing that kind of experimentation just seems dangerous. You might be able to unleash some really scary monsters into the world...";
+		mes "[艾斯特瑞斯]";
+		mes "当然，这种实验似乎很危险。";
+		mes "你可能会释放出一些非常可怕的怪物……";
 		break;
 	}
 	close;
@@ -1406,7 +1461,7 @@ geffen_in,109,72,2	script	Monster Scholar	90,{
 
 // Lvl 4 weapon quest related NPC ------------------------------------------------------
 
-geffen,203,146,5	script	Citizen	97,{
+geffen,203,146,5	script	市民	97,{
 	mes "[商人大卫]";
 	mes "我记得在回到";
 	mes "吉芬后有段时间真的很无聊啊！ ";

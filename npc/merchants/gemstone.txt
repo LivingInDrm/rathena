@@ -19,7 +19,7 @@
 //= 1.3 Fixed checks. [Euphy]
 //============================================================ 
 
-payon,173,238,5	script	Jade#pay	754,{
+payon,173,238,5	script	玉#pay	754,{
 	if (checkweight(1201,1) == 0) {
 		mes "你好像携带了非常多的东西. 为何不放一些东西到仓库后再来找我呢?";
 		close;
@@ -54,11 +54,7 @@ S_TradeGems:
 	else {
 		.@gems = countitem(.@item_req) /2;
 		mes "[杰依德]";
-		mes "我想我能制作";
-		mes "a total of "+ .@gems +" "+ getitemname(.@item_id) +"s";
-		mes "using the "+ getitemname(.@item_req) +"s";
-		mes "就是你带来的.";
-		mes "你想要现在就交换吗?";
+		mes "我想我能制作你带来的总共。你想现在就交换吗？";
 		next;
 		switch(select("我要把全部矿石的都换掉.:我想兑换一部分就可以了:忽然,不想兑换了.")) {
 		case 1:

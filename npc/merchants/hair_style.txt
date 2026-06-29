@@ -18,269 +18,181 @@
 
 // Roving Hair Dresser
 // ============================================================
-alberta,33,141,7	script	Roving Hair Dresser	87,{
-	mes "[Rui Vishop]";
-	mes "That Veronica...";
-	mes "Hah! Best hair dresser my ass.";
-	mes "She's not the best hair dresser...";
-	mes "...";
-	mes "I am!";
+alberta,33,141,7	script	流动的美发师	87,{
+	mes "[瑞·维肖普]";
+	mes "那个维罗妮卡……哈！最好的美发师？";
+	mes "她根本不是最好的美发师……我才是！";
 	next;
-	mes "[Rui Vishop]";
-	mes "I, Rui Vishop, the man to whom";
-	mes "all scalps are canvases";
-	mes "waiting to be transformed into";
-	mes "works of magnificent art~!";
+	mes "[瑞·维肖普]";
+	mes "我，瑞·维肖普，";
+	mes "所有头皮都是等待被转变为杰作的画布的艺术家~！";
 	next;
-	switch(select("What are you?:Do my hair, please!:.....")) {
+	switch(select("你是什么？:请给我做发型！:.....")) {
 	case 1:
-		mes "[Rui Vishop]";
-		mes "Do you not know that I, Rui";
-		mes "Vishop, maestro of the shears";
-		mes "and sculptor of hair, am an";
-		mes "artist far ahead of his time?!";
-		mes "Well, I suppose an adventurer";
-		mes "like yourself wouldn't know...";
+		mes "[瑞·维肖普]";
+		mes "你不知道我，瑞·维肖普，剪刀大师和发型雕塑家，";
+		mes "是个远超时代的艺术家吗？！好吧，";
+		mes "我想像你这样的冒险者是不会知道的……";
 		next;
-		mes "[Rui Vishop]";
-		mes "As a hair sculptor, I find joy";
-		mes "in bestowing upon others the";
-		mes "supreme favour of doing their";
-		mes "hairstyle at a reasonable price.";
+		mes "[瑞·维肖普]";
+		mes "作为一名发型雕塑师，";
+		mes "我在以合理的价格为他人设计发型中找到了乐趣。";
 		next;
-		mes "[Rui Vishop]";
-		mes "Recently, however, I happened to";
-		mes "overhear that some tyro has had";
-		mes "the audacity to call herself a";
-		mes "hair dresser.";
+		mes "[瑞·维肖普]";
+		mes "然而，最近我无意中听说有个新手竟然敢自称发型师。";
 		next;
-		mes "[Rui Vishop]";
-		mes "So one day I went there,";
-		mes "pretending to be a customer.";
-		mes "I was apalled to see the boring,";
-		mes "lifeless hairstyles that she was";
-		mes "giving all of her clients...";
+		mes "[瑞·维肖普]";
+		mes "于是有一天我假装顾客去那里，";
+		mes "看到她给客户设计的发型乏味无趣，我感到震惊……";
 		next;
-		mes "[Rui Vishop]";
-		mes "It wasn't hard to notice that her";
-		mes "skills, or lack thereof, are a";
-		mes "joke. She brings shame to the";
-		mes "great and honorable";
-		mes "profession of hair dressing.";
-		mes "A complete and utter disgrace!";
+		mes "[瑞·维肖普]";
+		mes "她的技术，或者说缺乏技术，真是个笑话。";
+		mes "她让伟大而光荣的发型师职业蒙羞，简直是个彻底的耻辱！";
 		next;
-		mes "[Rui Vishop]";
-		mes "But the worst part was...";
-		mes "she forced her customers to";
-		mes "choose a hairstyle before she";
-		mes "styled their hair!";
+		mes "[瑞·维肖普]";
+		mes "但最糟糕的是……她竟然强迫顾客在她设计发";
+		mes "型之前选择发型！";
 		next;
-		mes "[Rui Vishop]";
-		mes "That's not how talented hair";
-		mes "dressers do their job! She";
-		mes "should know what hair style will";
-		mes "fit a customer without ever";
-		mes "asking them!";
+		mes "[瑞·维肖普]";
+		mes "这可不是有才华的发型师该做的！";
+		mes "她应该知道什么发型适合顾客，而不需要询问他们！";
 		next;
-		mes "[Rui Vishop]";
-		mes "If by any chance you decide to";
-		mes "do your hair, don't even think";
-		mes "about giving her patronage.";
-		mes "Instead, you may ask for my";
-		mes "services. I assure you, I am";
-		mes "faaaar better than her.";
+		mes "[瑞·维肖普]";
+		mes "如果你决定做头发，千万别考虑找她。相反，你可以找我。";
+		mes "我保证，我比她好得多。";
 		next;
-		mes "[Rui Vishop]";
-		mes "Do you understand? I mean, don't";
-		mes "let her ruin your hair needlessly!";
-		mes "You could get a Swordman to hack";
-		mes "away at your hair if you want a";
-		mes "hairstyle that horrible~!";
+		mes "[瑞·维肖普]";
+		mes "你明白了吗？我的意思是，别让她无缘无故毁了你的头发！";
+		mes "如果你想要那样糟糕的发型，找个剑士来砍你的头发也好~！";
 		close;
 	case 2:
 		if(BaseLevel < 60) {
-			mes "[Rui Vishop]";
-			mes "Hmm, I must say, your current";
-			mes "style fits you best. Trust me, I know what I am saying.";
+			mes "[瑞·维肖普]";
+			mes "嗯，我必须说，你现在的发型最适合你。相信我，";
+			mes "我知道我在说什么。";
 			close;
 		} else if(Zeny < 199800) {
-			mes "[Rui Vishop]";
-			mes "Ah, I see that that you can";
-			mes "recognize genius when it is";
-			mes "right before you. In light";
-			mes "of your good taste, I will";
-			mes "only require money for my";
-			mes "services.";
+			mes "[瑞·维肖普]";
+			mes "啊，我看到你能识别眼前的天才。鉴于你有如此好的品味，";
+			mes "我只会收取我的服务费。";
 			next;
-			mes "[Rui Vishop]";
-			mes "Simply pay me the small";
-			mes "fee of 199,800 zeny. You must";
-			mes "know that I am doing you a";
-			mes "huge favor by charging you";
-			mes "such a small amount. My";
-			mes "art is priceless, after all.";
+			mes "[瑞·维肖普]";
+			mes "只需支付我199,800仙币的小额费用。你必须知道，";
+			mes "我收取这么少的费用是对你的一大恩惠。我的艺术是无价的。";
 			close;
 		}
-		mes "[Rui Vishop]";
-		mes "Alright, I will be taking my";
-		mes "199,800 zeny service charge now.";
+		mes "[瑞·维肖普]";
+		mes "好的，我现在要收取199,800仙币的服务费。";
 		next;
-		mes "[Rui Vishop]";
-		mes "If you don't wish to do";
-		mes "this right now, though I can't";
-		mes "imagine why, you may ask that";
-		mes "stupid hair dresser to";
-		mes "do her clumsy work on you...";
+		mes "[瑞·维肖普]";
+		mes "如果你现在不想做，虽然我想不出为什么，";
+		mes "你可以让那个愚蠢的发型师给你做她笨拙的工作……";
 		next;
-		if(select("No, please do my hair.:Umm, I changed my mind.") ==1 ) {
-			mes "[Rui Vishop]";
-			mes "O~k~a~y!";
-			mes "Now, let us begin~!";
+		if(select("不，请给我做头发。:嗯，我改变主意了。") ==1 ) {
+			mes "[瑞·维肖普]";
+			mes "好~的~！现在，让我们开始吧~！";
 			next;
-			mes "[Rui Vishop]";
-			mes "Wooooo~oooohhhh!! Toohhhhh~oooohhhh!!";
+			mes "[瑞·维肖普]";
+			mes "哇哦~哦哦哦！！哇哦哦哦！！";
 			next;
-			mes "[Rui Vishop]";
-			mes "Woooooo~aaaaaaahhhhh!!";
+			mes "[瑞·维肖普]";
+			mes "哇哦哦哦~啊啊啊啊！！";
 			next;
-			mes "[Rui Vishop]";
-			mes "Voila!";
+			mes "[瑞·维肖普]";
+			mes "完成！";
 			next;
-			mes "[Rui Vishop]";
-			mes "Oh, great~ it's awesome!";
-			mes "Another Vishop masterpiece~";
-			mes "Once more I've outdone myself.";
-			mes "It's such a unique and talented";
-			mes "style! Yes, I am the best! Wooohahahahahaha!";
+			mes "[瑞·维肖普]";
+			mes "哦，太棒了~真是太棒了！";
+			mes "又一件维肖普的杰作~我再次超越了自己。";
+			mes "这是如此独特而有才华的风格！是的，";
+			mes "我是最棒的！哇哈哈哈哈哈！";
 			set Zeny, Zeny-199800;
 			setlook 1,rand(1,19);
 			setlook 6,rand(1,8);
 			close;
 		}
-		mes "[Rui Vishop]";
-		mes "Bah! Alright! It's your decision.";
-		mes "But don't blame me later!";
-		mes "One day you'll wake up, realize";
-		mes "you're ugly and regret not";
-		mes "having my genius shape every lock";
-		mes "of hair on your head.";
+		mes "[瑞·维肖普]";
+		mes "哼！好吧！这是你的决定。但别到时候怪我！";
+		mes "总有一天你会醒来，意识到自己很丑，";
+		mes "后悔没有让我天才为你每一根头发塑形。";
 		close;
 	case 3:
-		mes "[Rui Vishop]";
-		mes "What? What a shame!";
-		mes "Will you let that...that";
-		mes "charlatan of a hair dresser ruin";
-		mes "your hairstyle!? I'm sure the";
-		mes "heavens are crying tears of";
-		mes "pity at mankind's ignorance...";
+		mes "[瑞·维肖普]";
+		mes "什么？真可惜！你就让那个...";
+		mes "那个骗子理发师毁了你的发型吗！？我敢肯定，";
+		mes "天上都在为人类的无知流泪...";
 		close;
 	}
 }
 
 
-lhz_in02,91,155,5	script	Assistant Beautician#li	862,{
-	mes "[Assistant Beautician]";
-	mes "Wah?! Sweet Jiminy,";
-	mes "you freaked me out!";
-	mes "What are you doing?!";
+lhz_in02,91,155,5	script	美容助理#li	862,{
+	mes "[美容助理]";
+	mes "哇？！天哪，你吓到我了！你在干什么？！";
 	emotion ET_HUK;
 	next;
-	mes "[Assistant Beautician]";
-	mes "Oh! Um, a customer!";
-	mes "H-h-h-h-h-hello! Can";
-	mes "I help you with anything?";
+	mes "[美容助理]";
+	mes "哦！嗯，顾客！你、你、你、你好！有什么我可以帮你的吗？";
 	next;
-	switch(select("What do you do?:Please change my hairstyle.:Who is Prince Shammi?")) {
+	switch(select("你们在做什么？:请帮我换发型。:谁是香米王子？")) {
 	case 1:
-		mes "[Assistant Beautician]";
-		mes "Oh! Me...? I'm";
-		mes "just an assistant";
-		mes "beautician, but I'm";
-		mes "training hard everyday";
-		mes "so that I can become";
-		mes "a real professional!";
+		mes "[美容助理]";
+		mes "哦！我...? 我只是个美容助理，但我每天都在努力训练，";
+		mes "希望能成为真正的专业人士！";
 		next;
-		mes "[Assistant Beautician]";
-		mes "Yeah, I do all sorts of";
-		mes "grunt work for the boss while";
-		mes "I'm in training. Sometimes, he";
-		mes "makes me work pretty hard.";
-		mes "In fact, I better get back to work before he gets angry at me!";
+		mes "[美容助理]";
+		mes "是的，我在训练期间为老板做各种杂活。有时候，";
+		mes "他让我工作得很辛苦。实际上，我最好赶快回去工作，";
+		mes "不然他会生气的！";
 		close;
 	case 2:
 		if (BaseLevel < 60) {
-			mes "[Assistant Beautician]";
-			mes "Me...? Oh no,";
-			mes "no I can't! I mean,";
-			mes "I'd love to but, I'm";
-			mes "still in training and";
-			mes "I can't take responsibility";
-			mes "if I mess up on a little kid!";
+			mes "[美容助理]";
+			mes "我...? 哦不，我不能！我是说，我很想，但我还在训练中，";
+			mes "如果我在小孩身上搞砸了，我可承担不起责任！";
 			close;
 		}
 		else if ((Zeny < 250000)) {
-			mes "[Assistant Beautician]";
-			mes "Well... I'm just an";
-			mes "assistant, but I have been";
-			mes "studying hairstyling after";
-			mes "work. If you want, just bring";
-			mes "me 250,000 zeny and I'll try";
-			mes "my best to change your hair~";
+			mes "[美容助理]";
+			mes "嗯... 我只是个助理，但我下班后一直在学习发型设计。";
+			mes "如果你愿意，给我250,000锭，我会尽力帮你换发型~";
 			next;
-			mes "[Assistant Beautician]";
-			mes "I'd appreciate it if you'd";
-			mes "give me this chance! The";
-			mes "boss doesn't think I'm ready";
-			mes "for styling real people yet, so";
-			mes "I haven't had much practice!";
+			mes "[美容助理]";
+			mes "如果你能给我这个机会，我会很感激！";
+			mes "老板认为我还没准备好给真正的人设计发型，";
+			mes "所以我没有太多练习！";
 			next;
-			mes "[Assistant Beautician]";
-			mes "I just know I could";
-			mes "do a good job on your";
-			mes "hair! Just... Just please";
-			mes "understand if I mess up.";
-			mes "It won't be too bad, I promise~";
+			mes "[美容助理]";
+			mes "我知道我能把你的头发弄得很好！只要...";
+			mes "请理解如果我搞砸了。不会太糟糕的，我保证~";
 			close;
 		}
 		else {
-			mes "[Assistant Beautician]";
-			mes "You're really going to";
-			mes "give me a chance to practice?";
-			mes "Oh, I love you so much! Okay,";
-			mes "I'll need 250,000 zeny to make";
-			mes "up for the material expenses.";
-			mes "Is that okay with you?";
+			mes "[美容助理]";
+			mes "你真的要给我一个练习的机会吗？哦，我太爱你了！好的，";
+			mes "我需要250,000锭来补偿材料费用。你觉得可以吗？";
 			next;
-			switch(select("Of course~:On second thought...")) {
+			switch(select("当然可以~:再想想...")) {
 			case 1:
-				mes "[Assistant Beautician]";
-				mes "Great! Now, please";
-				mes "choose a hairstyle";
-				mes "from ''1'' to ''23.''";
-				mes "Um, if you need to";
-				mes "cancel, just enter ''0.''";
+				mes "[美容助理]";
+				mes "太好了！现在，请从''1''到''23''中选择一个发型。";
+				mes "如果你需要取消，请输入''0''。";
 				next;
 				input .@input;
 				if (.@input == 0) {
-					mes "[Assistant Beautician]";
-					mes "Awwww...";
-					mes "I guess you don't";
-					mes "trust me after all...";
+					mes "[美容助理]";
+					mes "唉... 我想你还是不信任我...";
 					close;
 				}
 				else if ((.@input < 1) || (.@input > 23)) {
-					mes "[Assistant Beautician]";
-					mes "Huh? I thought I asked";
-					mes "you to enter a number from";
-					mes "''1'' to ''23?'' What did I do";
-					mes "wrong this time? Hmmm...";
+					mes "[美容助理]";
+					mes "嗯？我不是让你输入一个从''1''到''23''的数字吗？";
+					mes "这次我做错了什么？嗯...";
 					close;
 				}
 				else {
-					mes "[Assistant Beautician]";
-					mes "So this is the";
-					mes "style you want me";
-					mes "to try to do for you?";
+					mes "[美容助理]";
+					mes "所以这是你想让我尝试的风格吗？";
 					if (Sex == SEX_MALE) {
 						if (.@input < 10)
 							cutin "hair_m_0"+.@input+".BMP",4;
@@ -294,84 +206,62 @@ lhz_in02,91,155,5	script	Assistant Beautician#li	862,{
 							cutin "hair_f_"+.@input+".BMP",4;
 					}
 					next;
-					switch(select("Yes, let's try it~:Cancel.")) {
+					switch(select("是的，让我们试试~:取消。")) {
 					case 1:
 						break;
 					case 2:
-						mes "[Assistant Beautician]";
-						mes "Oooh, there must";
-						mes "be some style that";
-						mes "you like, right? Hmmm...";
+						mes "[美容助理]";
+						mes "哦，肯定有你喜欢的风格，对吧？嗯...";
 						close3;
 					}
 				}
-				mes "[Assistant Beautician]";
-				mes "Great, you finally";
-				mes "picked one! What, which";
-				mes "one did you pick again?";
-				mes "Ah, I found it, I found it!";
-				mes "Haha! No problem here!";
-				mes "Now it's time to style!";
+				mes "[美容助理]";
+				mes "太好了，你终于选了一个！你选的是哪个来着？啊，我找到了，";
+				mes "我找到了！哈哈！没问题！现在是时候开始造型了！";
 				next;
 				nude;
-				mes "[Assistant Beautician]";
-				mes "Bwwwwaaaahhhh!";
+				mes "[美容助理]";
+				mes "呜哇啊啊啊！";
 				next;
-				mes "[Assistant Beautician]";
-				mes "Yap! Pwwwaaattt!";
+				mes "[美容助理]";
+				mes "是的！噗哇！";
 				next;
-				mes "[Assistant Beautician]";
-				mes "Waaaah!";
-				mes "Oh crap!";
-				mes "Wait, I can...";
-				mes "I can fix this!";
+				mes "[美容助理]";
+				mes "哇啊！糟糕！等一下，我可以……我可以修复这个！";
 				next;
 				set .@style_r,rand(1,23);
 				set .@color_r,rand(1,8);
-				mes "[Assistant Beautician]";
-				mes "^333333*Pant Pant Pant*^000000";
+				mes "[美容助理]";
+				mes "^333333*喘喘喘*^000000";
 				next;
 				set Zeny, Zeny-250000;
 				setlook VAR_HEAD,.@style_r;
 				setlook VAR_HEADPALETTE,.@color_r;
-				mes "[Assistant Beautician]";
-				mes "Bwahahaha! Success!";
+				mes "[美容助理]";
+				mes "哈哈哈！成功了！";
 				if (.@input == .@style_r) {
-					mes "So... How do you like";
-					mes "your new style? I love it!";
+					mes "那么……你喜欢你的新造型吗？我爱它！";
 				}
 				else {
-					mes "Wha...? This isn't what";
-					mes "you wanted? Uh oh... Um...";
-					mes "Well, next time I know I can";
-					mes "do a much better job! Right!";
+					mes "什么……？这不是你想要的？";
+					mes "哦不……嗯……下次我知道可以做得更好了！对吧！";
 				}
 				next;
-				mes "[Assistant Beautician]";
-				mes "Oh, you're such a";
-				mes "sweetheart for helping";
-				mes "me! Thank you for using";
-				mes "my service and come again~";
+				mes "[美容助理]";
+				mes "哦，你真是个好心人，谢谢你使用我的服务，欢迎再来~";
 				emotion ET_CHUP;
 				close3;
 			case 2:
-				mes "[Assistant Beautician]";
-				mes "Huh? Oh no, you're";
-				mes "quitting? Well, I guess";
-				mes "I couldn't trust me to";
-				mes "style my hair either...";
-				mes "You're... You're right.";
+				mes "[美容助理]";
+				mes "哈？哦不，你要辞职？好吧，";
+				mes "我想我也不该信任自己来做发型……你……你说得对。";
 				close;
 			}
 		}
 	case 3:
-		mes "[Assistant Beautician]";
-		mes "Prince Shammi?";
-		mes "He's only a genius when";
-		mes "it comes to hairstyling!";
-		mes "I'm just his apprentice, but";
-		mes "maybe someday, I can be a";
-		mes "force in the fashion world too!";
+		mes "[美容助理]";
+		mes "沙米王子？他在发型设计方面真是个天才！我只是他的学徒，";
+		mes "但也许有一天，我也能在时尚界崭露头角！";
 		close;
 	}
 }

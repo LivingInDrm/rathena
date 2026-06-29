@@ -24,55 +24,43 @@
 //callfunc "F_CoolEventCorp","<menu>","<location>","<save map>",<x>,<y>,"<warp map>";
 function	script	F_CoolEventCorp	{
 	cutin "zonda_01",2;
-	mes "[Cool Event Corp. Staff]";
-	mes "Welcome to Cool Event Corp.";
-	mes "Our staff is always working";
-	mes "to surpass your expactations";
-	mes "for quality service. So how";
-	mes "may I assist you today?";
+	mes "[酷活动公司员工]";
+	mes "欢迎来到酷活动公司。";
+	mes "我们的员工始终致力于超越您对优质服务的期望。";
+	mes "请问我今天能为您提供什么帮助？";
 	next;
 	switch(select(getarg(0))) {
 	case 1:
-		mes "[Cool Event Corp. Staff]";
-		mes "Your Respawn Point";
-		mes "has been saved here";
+		mes "[酷活动公司员工]";
+		mes "您的重生点已在这里保存。";
 		mes getarg(1)+".";
-		mes "Thank you for using the";
-		mes "Cool Event Corp. service~";
+		mes "感谢您使用酷活动公司的服务~";
 		savepoint getarg(2),getarg(3),getarg(4),1,1;
 		close2;
 		break;
 	case 2:
-		mes "[Cool Event Corp. Staff]";
+		mes "[酷活动公司员工]";
 		if(!callfunc("F_CanOpenStorage")){
-			mes "I'm sorry, but you";
-			mes "need the Novice's";
-			mes "Basic Skill Level 6 to";
-			mes "use the Storage Service.";
+			mes "抱歉，您需要新手基础技能等级6才能使用存储服务。";
 			close2;
 			break;
 		}
 		if(Zeny < 40){
-			mes "I'm sorry, but you don't";
-			mes "have enough Zeny to use";
-			mes "the Storage Service. Our";
-			mes "Storage access fee is 40 Zeny.";
+			mes "抱歉，您没有足够的仙币使用存储服务。";
+			mes "我们的存储访问费是40仙。";
 			close2;
 			break;
 		}
 		set Zeny, Zeny - 40;
-		mes "Let me open your personal";
-		mes "storage for you right away.";
-		mes "Thanks for supporting Cool";
-		mes "Event Corp. by using our";
-		mes "services. Have a good day~";
+		mes "让我马上为您打开个人存储。";
+		mes "感谢您通过使用我们的服务来支持酷活动公司。";
+		mes "祝您有美好的一天~";
 		callfunc("F_CheckKafCode");	//check your storage password, if set
 		close2;
 		openstorage;
 		break;
 	case 3:
-		mes "Please choose";
-		mes "your destination.";
+		mes "请选择您的目的地。";
 		next;
 		if (VIP_SCRIPT && !vip_status(VIP_STATUS_ACTIVE))
 			set .@cost,4400;
@@ -93,42 +81,32 @@ function	script	F_CoolEventCorp	{
 				end;
 			}
 			else {
-				mes "[Cool Event Corp. Staff]";
-				mes "I'm sorry, but you don't have";
-				mes "enough zeny for the Teleport";
-				mes "Service. The fee to teleport";
-				mes "to "+ .@destination$ +" is "+.@cost+" zeny.";
+				mes "[酷活动公司员工]";
+				mes "抱歉，您的资金不足以使用传送服务。传送到的费用是";
 			}
 		}
 		close2;
 		break;
 	case 4:
-		mes "[Cool Event Corp. Staff]";
+		mes "[酷活动公司员工]";
 		if(BaseClass != Job_Merchant){
-			mes "I'm sorry, but the";
-			mes "Pushcart rental service";
+			mes "抱歉，推车租赁服务";
 			if (checkre(0))
-				mes "is only available to Merchant classes.";
+				mes "仅对商人职业开放。";
 			else {
-				mes "is only available to Merchants,";
-				mes "Blacksmiths, White Smiths,";
-				mes "Alchemists and Creators.";
+				mes "仅对商人、铁匠、白铁匠、炼金术士和创造者开放。";
 			}
 			close2;
 			break;
 		}
 		if(getskilllv("MC_PUSHCART") == 0){
-			mes "You can only rent a cart after";
-			mes "learning the Pushcart Skill.";
+			mes "您必须先学习推车技能才能租用推车。";
 			close2;
 			break;
 		}
 		if(checkcart() == 1){
-			mes "You already have";
-			mes "a Pushcart equipped.";
-			mes "Unfortunately, we can't";
-			mes "rent more than one to";
-			mes "each customer at a time.";
+			mes "您已经装备了推车。很遗憾，";
+			mes "我们不能同时向每位顾客租用超过一个推车。";
 			close2;
 			break;
 		}
@@ -138,17 +116,12 @@ function	script	F_CoolEventCorp	{
 			close2;
 			break;
 		}
-		mes "The Pushcart rental";
-		mes "fee is 800 Zeny. Would";
-		mes "you like to rent a Pushcart?";
+		mes "推车租赁费用为800仙。您想租用推车吗？";
 		next;
-		if(select("Rent a Pushcart:Cancel") == 1){
+		if(select("租用推车:取消") == 1){
 			if(Zeny < 800){
-				mes "[Cool Event Corp. Staff]";
-				mes "I'm sorry, but you";
-				mes "don't have enough";
-				mes "Zeny to pay the Pushcart";
-				mes "rental fee of 800 Zeny.";
+				mes "[酷活动公司员工]";
+				mes "抱歉，您的资金不足以支付800仙的推车租赁费用。";
 			} else {
 				set Zeny, Zeny - 800;
 				setcart;
@@ -161,41 +134,37 @@ function	script	F_CoolEventCorp	{
 		//the function closes msg and removes cutins
 	case 6:
 	default:
-		mes "[Cool Event Corp. Staff]";
-		mes "Cool Event Corp. is always";
-		mes "striving to provide the best";
-		mes "services for our customers.";
-		mes "Help us become the best by";
-		mes "providing us with your opinions";
-		mes "and honest feedback. Thank you.";
+		mes "[酷活动公司员工]";
+		mes "酷活动公司始终致力于为客户提供最佳服务。";
+		mes "请通过您的意见和诚实反馈帮助我们成为最好的公司。谢谢。";
 		close2;
 	}
 	cutin "", 255;
 	end;
 }
 
-lighthalzen,94,248,3	script	Cool Event Corp Staff::CoolEventCorpStaffLighthalzen	4_M_ZONDAMAN,{
+lighthalzen,94,248,3	script	酷活动公司员工::CoolEventCorpStaffLighthalzen	4_M_ZONDAMAN,{
 	callfunc "F_CoolEventCorp",
 		"Save:Use Storage::Rent a Pushcart:Storage Password Service:Cancel",
 		"in the town of Lighthalzen","lighthalzen",95,240;
 	end;
 }
 
-hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	4_M_ZONDAMAN,{
+hugel,88,168,4	script	酷活动公司员工::CoolEventCorpStaffHugel	4_M_ZONDAMAN,{
 	callfunc "F_CoolEventCorp",
 		"Save:Use Storage::Rent a Pushcart:Storage Password Service:Cancel",
 		"in the village of Hugel","hugel",96,155;
 	end;
 }
 
-rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	4_M_ZONDAMAN,{
+rachel,109,138,5	script	酷活动公司员工::CoolEventCorpStaffRachel	4_M_ZONDAMAN,{
 	callfunc "F_CoolEventCorp",
 		"Save:Use Storage:Teleport Service:Rent a Pushcart:Storage Password Service:Cancel",
 		"in the town of Rachel","rachel",113,137,"Veins";
 	end;
 }
 
-veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	4_M_ZONDAMAN,{
+veins,208,128,5	script	酷活动公司员工::CoolEventCorpStaffVeins	4_M_ZONDAMAN,{
 	callfunc "F_CoolEventCorp",
 		"Save:Use Storage:Teleport Service:Rent a Pushcart:Storage Password Service:Cancel",
 		"in the town of Veins","veins",204,103,"Rachel";

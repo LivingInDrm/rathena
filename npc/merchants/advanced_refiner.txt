@@ -18,7 +18,7 @@
 //= 1.7 Removed re-roll behavior. [Secret]
 //============================================================
 
-payon,157,146,6	script	Suhnbi#cash	85,{
+payon,157,146,6	script	苏恩比#cash	85,{
 	disable_items;
 	mes "[龙仙儒]";
 	mes "我是专门精炼武器与防具的铁匠.";
@@ -72,8 +72,7 @@ payon,157,146,6	script	Suhnbi#cash	85,{
 		next;
 		emotion ET_BEST;
 		mes "[龙仙儒]";
-		mes "拿去吧! 已经做好了.";
-		mes "It's been a while since I've made such a fine "+((.@itemtype == IT_WEAPON)?"weapon":"armor")+". You must be happy because it has become stronger!";
+		mes "拿去吧！已经做好了。";
 		close;
 	}
 	failedrefitem .@part;
@@ -140,9 +139,8 @@ S_RefineValidate:
 
 	mes "我...我...";
 	if (.@itemtype == IT_WEAPON)
-		mes "You want to refine a level "+ .@equip_lv +" weapon?";
-	mes "To refine that, you'll need to have one ^ff9999"+ getitemname(.@item_req) +"^000000 and "+ .@price +" zeny.";
-	mes "我早就告诉过你会这样的嘛!";
+		mes "你想要精炼一个等级吗？要精炼这个，你需要一个^ff9999，";
+		mes "我早就告诉过你会这样的嘛！";
 	next;
 	if(select("是的:不要") == 1) {
 		if (getequippercentrefinery(.@part) < 100) {

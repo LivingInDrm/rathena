@@ -24,7 +24,7 @@
 //= 1.4 Updated to match AEGIS script. [Kisuka]
 //============================================================
 
-alberta_in,16,28,4	script	Pharmacist	61,{
+alberta_in,16,28,4	script	药剂师	61,{
 	if (checkweight(1201,1) == 0) {
 		mes "- 等一下！ -";
 		mes "- 你现在携带的物品 -";
@@ -93,7 +93,8 @@ alberta_in,16,28,4	script	Pharmacist	61,{
 					break;
 				case 2:
 					mes "[老人药剂师]";
-					mes "Then pick a number below 100. If you don't want any, just enter '0'. With the materials you have, you can make about "+.@max+" potions.";
+					mes "那么请在100以下选择一个数字。如果你不想要任何东西，";
+					mes "就输入'0'。根据你拥有的材料，你大约可以制作";
 					next;
 					input .@amount,0,101;
 					if (.@amount == 0) {
@@ -216,7 +217,8 @@ L_Making:
 		break;
 	case 2:
 		mes "[老人药剂师]";
-		mes "Then pick a number below 100. If you don't want any, just enter '0'. With the materials you have, you can make about "+.@max+" potions.";
+		mes "那么请在100以下选择一个数字。如果你不想要任何东西，";
+		mes "就输入'0'。根据你拥有的材料，你大约可以制作";
 		next;
 		input .@amount;
 		if (.@amount == 0) {

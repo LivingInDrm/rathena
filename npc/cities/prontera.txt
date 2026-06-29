@@ -18,16 +18,16 @@
 
 // Prontera
 //============================================================
--	script	Guard#pront::prtguard	105,{
+-	script	守卫#pront::prtguard	105,{
 	mes "[普隆德拉 警备兵]";
 	mes "欢迎到普隆德拉.";
 	close;
 }
-prontera,223,99,1	duplicate(prtguard)	Guard#2pront	105
-prontera,229,104,5	duplicate(prtguard)	Guard#3pront	105
-prontera,47,339,5	duplicate(prtguard)	Guard#4pront	105
+prontera,223,99,1	duplicate(prtguard)	守卫#2pront	105
+prontera,229,104,5	duplicate(prtguard)	守卫#3pront	105
+prontera,47,339,5	duplicate(prtguard)	守卫#4pront	105
 
-prontera,101,288,3	script	Shuger#pront	98,{
+prontera,101,288,3	script	舒格#pront	98,{
 	mes "[夏格]";
 	mes "城外的原野有一种粉红色的魔物叫做 '^FF8888波利^000000'.";
 	next;
@@ -42,7 +42,7 @@ prontera,101,288,3	script	Shuger#pront	98,{
 	close;
 }
 
-prontera,54,240,6	script	Tono#pront	97,{
+prontera,54,240,6	script	托诺#pront	97,{
 	mes "[图诺]";
 	mes "你知道吗?";
 	next;
@@ -60,7 +60,7 @@ prontera,54,240,6	script	Tono#pront	97,{
 	close;
 }
 
-prontera,106,116,6	script	Merideth#pront	91,{
+prontera,106,116,6	script	梅里迪斯#pront	91,{
 	mes "[梅丽德丝]";
 	mes "因为休假时天气很好，所以和家人出来郊游。在寻找一些悠闲的地方时，在森林里发现了非常有趣的事——";
 	next;
@@ -72,7 +72,7 @@ prontera,106,116,6	script	Merideth#pront	91,{
 	close;
 }
 
-prontera,160,133,2	script	YuPi#pront	102,{
+prontera,160,133,2	script	尤皮#pront	102,{
 	mes "[佑比]";
 	mes "有很多样子看起来差不多，但是颜色略微有所不同的魔物。碰到这类型的魔物一定要小心，不要被他们的外表蒙蔽！";
 	next;
@@ -84,7 +84,7 @@ prontera,160,133,2	script	YuPi#pront	102,{
 	close;
 }
 
-prontera,149,202,2	script	YuNa#pront	700,{
+prontera,149,202,2	script	尤娜#pront	700,{
 	mes "[佑罗]";
 	mes "奥丁是我们所侍奉的神。他被称之为战争之神，也叫做子息之神。";
 	mes "[佑罗]";
@@ -108,7 +108,7 @@ prontera,149,202,2	script	YuNa#pront	700,{
 	close;
 }
 
-prontera,216,70,2	script	Strife#pront	48,{
+prontera,216,70,2	script	斯特赖夫#pront	48,{
 	if (Class == Job_Novice) {
 		if (event_prt_nov_dreamtalk == 0) {
 			mes "[斯特拉依普]";
@@ -205,7 +205,7 @@ prontera,216,70,2	script	Strife#pront	48,{
 	}
 }
 
-prontera,78,150,3	script	Dairenne#pront	90,{
+prontera,78,150,3	script	达伊伦#pront	90,{
 	mes "[乡村女孩 丹尼尔]";
 	mes "啊...";
 	mes "这里的街道可真是拥挤，. *咳、咳、咳* 噢！沙土、灰尘，这么脏，我觉得现在的首都并不是什么都好. 有什么需要我帮忙的?";
@@ -230,60 +230,68 @@ prontera,78,150,3	script	Dairenne#pront	90,{
 //============================================================
 /*
 //This NPC has been disabled officially.
-prt_in,178,92,0	script	Curator of Library#pront	57,{
-	mes "[Curator Guiss]";
-	mes "Here, in the Western branch of the Prontera Library, ";
-	mes "we keep records of monsters found in various dungeons scattered around the Rune-Midgarts Kingdom.";
+prt_in,178,92,0	script	图书馆管理员#pront	57,{
+	mes "[管理员古伊斯]";
+	mes "在普隆德拉图书馆的西部分馆，";
+	mes "我们记录了散布在鲁恩-米德加兹王国各地地下城中的怪物。";
 	next;
-	mes "[Curator Guiss]";
-	mes "You'll find that these Monster Encyclopedias are of great convenience,";
-	mes "as creatures are organized by the dungeon in which they reside.";
+	mes "[管理员古伊斯]";
+	mes "你会发现这些怪物百科全书非常方便，";
+	mes "因为生物是按它们栖息的地下城分类的。";
 	next;
-	mes "[Curator Guiss]";
-	mes "I must say, this is a most useful reference for you adventurers. When dealing with beasts, it's good to be informed and understand what you're up against.";
-	mes "If you would like to peruse monster records organized by their properties, please visit the Eastern branch of our library.";
+	mes "[管理员古伊斯]";
+	mes "我必须说，这对你们冒险者来说是一个非常有用的参考。";
+	mes "与野兽打交道时，了解你所面对的东西是很重要的。";
+	mes "如果你想查看按属性分类的怪物记录，";
+	mes "请访问我们图书馆的东部分馆。";
 	close;
 }
 */
 
-prt_in,175,50,0	script	Library Girl#pront	71,{
-	mes "[Library Girl Ellen]";
-	mes "Here in the Eastern branch of the Prontera Library, we provide Monster Encyclopedias in which creatures are organized by their properties. We also have books on Merchant and Blacksmith skills.";
-	mes "Ooh~! The other branch of our library also has many interesting things to read! So if you get a chance, you just might want to visit.";
+prt_in,175,50,0	script	图书馆女孩#pront	71,{
+	mes "[图书馆女孩艾伦]";
+	mes "在普隆德拉图书馆的东部分馆，";
+	mes "我们提供按属性分类的怪物百科全书。";
+	mes "我们还有关于商人和铁匠技能的书籍。哦~！";
+	mes "我们图书馆的另一部分也有很多有趣的书籍可以阅读！";
+	mes "所以如果有机会，你可能想去看看。";
 	close;
 }
 
-prt_in,47,141,0	script	An Old Man#pront	56,{
-	mes "[Old Man]";
-	mes "The Prontera Culvert sewers have been left unattended for a long time. Now that place is infested with ^000077Thief Bugs^000000!";
+prt_in,47,141,0	script	老人#pront	56,{
+	mes "[老人]";
+	mes "普隆德拉下水道已经被遗弃很久了。";
+	mes "现在那个地方被^000077盗贼虫^000000侵扰了！";
 	next;
-	mes "[Old Man]";
-	mes "These Thief Bugs seem to quickly grab items dropped on the ground, and then run away with them... They're even more annoying than cockroaches!!";
+	mes "[老人]";
+	mes "这些盗贼虫似乎很快就会抓起掉落在地上的物品，";
+	mes "然后逃跑……它们比蟑螂还要烦人！";
 	close;
 }
 
-prt_in,26,31,0	script	An Old Man#2pront	54,{
-	mes "[Old Man]";
-	mes "I dunno if you'll believe me, but I saw the weirdest thing down in the ^000077Culvert Sewers^000000...";
+prt_in,26,31,0	script	一个老人#2pront	54,{
+	mes "[老人]";
+	mes "我不知道你是否会相信，";
+	mes "但我在^000077下水道^000000看到了一件奇怪的事情……";
 	next;
-	mes "[Old Man]";
-	mes "I've been training in the 3rd level for so long that there isn't anything that I don't know about in that area. But when I finally went to the 4th level...";
+	mes "[老人]";
+	mes "我在第三层训练了很久，那里没有我不知道的事情。";
+	mes "但当我终于去了第四层……";
 	next;
-	mes "[Old Man]";
-	mes "There, I saw a shimmering light. I was completely captivated and went to approach it. It must have been some sort of beautiful fairy...";
+	mes "[老人]";
+	mes "在那里，我看到了一道闪烁的光。我完全被吸引住了，";
+	mes "想要靠近它。那一定是某种美丽的仙女……";
 	next;
-	mes "[Old Man]";
-	mes "But when I got";
-	mes "close enough,";
-	mes "I saw it was";
-	mes "a ^000077Thief Bug^000000!";
+	mes "[老人]";
+	mes "但当我靠近时，我发现那是一只^000077盗贼虫^000000！";
 	next;
-	mes "[Old Man]";
-	mes "I've never seen a Thief Bug shining with light before! Man, just when you think you've seen it all...";
+	mes "[老人]";
+	mes "我从未见过发光的盗贼虫！真是的，";
+	mes "就在你以为自己见过一切的时候……";
 	close;
 }
 
-prt_in,180,20,2	script	Bartender#pront	61,{
+prt_in,180,20,2	script	酒保#pront	61,{
 	mes "[管理员 奇司]";
 	mes "我们图书馆的资料是依照在卢恩 米德加尔特王国各个密穴里的魔物来分类的, ";
 	mes "让你可以一目了然，轻松的获得你所想要的资料.";
@@ -328,7 +336,7 @@ prt_in,180,20,2	script	Bartender#pront	61,{
 
 }
 
-prt_in,173,24,2	script	Shevild#pront	85,{
+prt_in,173,24,2	script	谢维尔德#pront	85,{
 	mes "[工读生 艾伦]";
 	mes "欢迎光临，这座图书馆里的资料是依照魔物属性作为分类的依据，你可以在这里阅读相关的书籍。另外，这里也有部分商人与制铁匠技能说明的相关书籍.";
 	mes "啊！旁边那间图书馆里也有很多值得一看的好书籍，你可以去参观一下．";
@@ -400,7 +408,7 @@ prt_in,173,24,2	script	Shevild#pront	85,{
 	close;
 }
 
-prt_in,177,20,2	script	TenSue#pront	97,{
+prt_in,177,20,2	script	天苏#pront	97,{
 	switch(rand(3)) {
 	case 1:
 		mes "[大叔]";
@@ -457,7 +465,7 @@ prt_in,177,20,2	script	TenSue#pront	97,{
 	}
 }
 
-prt_in,177,18,2	script	Marvin#pront	80,{
+prt_in,177,18,2	script	马文#pront	80,{
 	mes "[大叔]";
 	mes "虽然你不知道该不该相信我的话, 但是我在 ^000077下水道^000000中看过非常惊人的事情...";
 	next;
@@ -481,55 +489,60 @@ prt_in,177,18,2	script	Marvin#pront	80,{
 	close;
 }
 
-prt_in,284,168,3	script	Ginedin Rephere#pront	55,{
-	mes "[Tailor Ginedin Rephere]";
-	mes "11...";
-	mes "12...";
-	mes "Mmm, good. I think I'll be able to finish before tonight's party.";
+prt_in,284,168,3	script	吉尼丁·瑞菲尔#pront	55,{
+	mes "[裁缝吉尼丁·瑞菲尔]";
+	mes "11……12……嗯，好的。我想我能在今晚的聚会之前完成。";
 	next;
-	mes "[Tailor Ginedin Rephere]";
-	mes "Oh! I didn't realize I had a guest. How may I help you?";
+	mes "[裁缝吉尼丁·瑞菲尔]";
+	mes "哦！我没意识到我有客人。请问我能帮您什么？";
 	next;
-	switch(select("Talk:Dye Clothing:Cancel")) {
+	switch(select("谈话:染衣服:取消")) {
 	case 1:
-		mes "[Tailor Ginedin Rephere]";
-		mes "Life may have gotten a little better, but receiving all these orders? *Whew!* Young ladies these days must be very well off, so my services may no longer be a luxury.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "生活可能稍微好了一些，但接到这么多订单？*哎呀！";
+		mes "*这些年轻女士们一定很富有，";
+		mes "所以我的服务可能不再是奢侈品。";
 		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "Well, people like them probably further the pursuit of beauty and fashion. But, of course, that's only my opinion.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "嗯，像他们这样的人可能进一步追求美丽和时尚。不过，";
+		mes "这当然只是我的看法。";
 		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "I believe for us humans, clothes are one of the few ways to show our personality, style, and beauty.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "我相信对于我们人类来说，衣服是展示个性、";
+		mes "风格和美丽的少数方式之一。";
 		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "Considering this, I personally think my job is very helpful and rather fancy. This in itself makes it all worthwhile. Coarse fabric and rough leather burst with energy and life when colored...";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "考虑到这一点，";
+		mes "我个人认为我的工作非常有帮助而且相当华丽。";
+		mes "这本身就让一切都值得。";
+		mes "粗糙的面料和粗糙的皮革在上色时充满了活力和生命……";
 		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "It is a very hard and tedious process, but the happiness and delight you feel when your clothes are done makes up for all the hard work.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "这是一个非常艰难而繁琐的过程，";
+		mes "但当你的衣服完成时所感受到的快乐和喜悦弥";
+		mes "补了所有的辛苦。";
 		close;
 	case 2:
-		mes "[Tailor Ginedin Rephere]";
-		mes "Ah...!";
-		mes "You came to dye";
-		mes "your clothes as well.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "啊……！你也是来染衣服的。";
 		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "But... I'm so sorry.";
-		mes "I don't have enough time to dye your clothes right now. I have so many orders that are still waiting to be done.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "但是……我很抱歉。我现在没有足够的时间来染你的衣服。";
+		mes "我还有很多订单在等待完成。";
 		next;
-		mes "[Tailor Ginedin Rephere]";
-		mes "I'm sorry for the inconvenience, but could you come back again next time?";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "很抱歉给您带来不便，但您能否下次再来？";
 		close;
 	case 3:
-		mes "[Tailor Ginedin Rephere]";
-		mes "Feel free to take your time and relax here. I apologize that I have nothing to serve you, though.";
+		mes "[裁缝吉尼丁·瑞菲尔]";
+		mes "请随意放松，慢慢来。不过很抱歉我没有什么可以招待你的。";
 		close;
 	}
 }
 
 // Prontera Church
 //============================================================
-prt_church,103,76,0	script	Garnet#pront	67,{
+prt_church,103,76,0	script	石榴石#pront	67,{
 	mes "[柏坦得]";
 	mes "哎...普龙德拉的人越来越多了,";
 	mes "生意真是越来越难做了. 如果生意好一点就好了...";
@@ -603,7 +616,8 @@ prt_church,103,76,0	script	Garnet#pront	67,{
 			mes "如果你掌握了传送阵技能，你最多可以拥有4个不同的传送点。但至少有一个传送点被指定为你与卡普拉职员一起创建的存档点。";
 			next;
 			mes "[石榴石]";
-			mes "嗯，这有点麻烦，但如果你想将某个地方设为你的传送点，你需要先亲自到达那里。然后，在命令提示符中输入 ^6666CC/memo^000000。";
+			mes "嗯，这有点麻烦，但如果你想将某个地方设为你的传送点，";
+			mes "你需要先亲自到达那里。然后，在命令提示符中输入^6666CC/memo^000000。";
 			next;
 			mes "[石榴石]";
 			mes "告诉你，你不能在地下城内保存传送点。哦，别忘了，每次你制作传送阵时，必须使用1个 ^6666CC蓝色魔力矿石^000000 作为催化剂。";
@@ -618,7 +632,7 @@ prt_church,103,76,0	script	Garnet#pront	67,{
 	end;
 }
 
-prt_church,103,71,0	script	Henson#pront	120,{
+prt_church,103,71,0	script	亨森#pront	120,{
 	mes "[修毕特]";
 	mes "快来喔快来喔~快来这里喝一杯，还有生动有趣的故事可以听喔!";
 	next;
@@ -667,8 +681,9 @@ prt_church,103,71,0	script	Henson#pront	120,{
 			mes "好吧..你要去的话得要记得处处留意小心喔~";
 			mes "[修毕特]";
 			next;
-			mes "沿着普隆德拉东北方一直走你会看到一座迷人的古代遗迹，这是住在那里的神父告诉我的t.";
-			mes "神父说在进入遗迹之前许有多猴子与青蛙作用中.";
+			mes "沿着普隆德拉东北方一直走，你会看到一座迷人的古代遗迹，";
+			mes "这是住在那里的神父告诉我的。神父说在进入遗迹之前，";
+			mes "可能会有很多猴子和青蛙在活动。";
 			continue;
 		case 5:
 			mes "[修毕特]";
@@ -708,7 +723,7 @@ prt_church,103,71,0	script	Henson#pront	120,{
 
 // Hidden Temple
 //============================================================
-prt_maze02,100,69,0	script	Soldier#pront	105,{
+prt_maze02,100,69,0	script	士兵#pront	105,{
 	mes "[谭修]";
 	mes "什么...?";
 	mes "你已经厌倦在地牢击杀魔物了? 拜托...";
@@ -720,7 +735,7 @@ prt_maze02,100,69,0	script	Soldier#pront	105,{
 	close;
 }
 
-prt_maze02,110,69,0	script	Soldier#2pront	105,{
+prt_maze02,110,69,0	script	士兵#2pront	105,{
 	mes "[马宾]";
 	mes "不管你是结交异性, 或与怪物战斗, 我得说, 这都跟 ^333399技能^000000有息息相关.";
 	next;

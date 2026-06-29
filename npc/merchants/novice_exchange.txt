@@ -17,7 +17,7 @@
 //= 1.4 Added checkweight, and input min/max values. [L0ne_W0lf]
 //============================================================
 
-prontera,123,102,5	script	Merchant#pron	85,{
+prontera,123,102,5	script	商人#pron	85,{
 	if (MaxWeight - Weight < 6301 || checkweight(1201,1) == 0) {
 		mes "[初学者导师]";
 		mes "哈哈!";
@@ -73,7 +73,7 @@ prontera,123,102,5	script	Merchant#pron	85,{
 	}
 }
 
-morocc,180,259,3	script	Merchant#Morocc	85,{
+morocc,180,259,3	script	商人#Morocc	85,{
 	if (MaxWeight - Weight < 6301 || checkweight(1201,1) == 0) {
 		mes "[初学者导师]";
 		mes "哈哈!";
@@ -130,7 +130,7 @@ morocc,180,259,3	script	Merchant#Morocc	85,{
 	}
 }
 
-payon,200,134,5	script	Merchant#pay	85,{
+payon,200,134,5	script	商人#pay	85,{
 	if (MaxWeight - Weight < 6301 || checkweight(1201,1) == 0) {
 		mes "[初学者导师]";
 		mes "哈哈!";
@@ -184,7 +184,7 @@ payon,200,134,5	script	Merchant#pay	85,{
 	}
 }
 
-aldebaran,152,63,5	script	Merchant#alde	85,{
+aldebaran,152,63,5	script	商人#alde	85,{
 	if (MaxWeight - Weight < 6301 || checkweight(1201,1) == 0) {
 		mes "[初学者导师]";
 		mes "哈哈!";
@@ -241,7 +241,7 @@ aldebaran,152,63,5	script	Merchant#alde	85,{
 	}
 }
 
-geffen,173,88,5	script	Merchant#geff	85,{
+geffen,173,88,5	script	商人#geff	85,{
 	if (MaxWeight - Weight < 6301 || checkweight(1201,1) == 0) {
 		mes "[初学者导师]";
 		mes "哈哈!";
@@ -301,59 +301,38 @@ function	script	F_PotExchange	{
 	.@req_amount = getarg(1);
 
 	if (countitem(.@item_req) < .@req_amount) {
-		mes "[Merchant]";
-		mes "Hey, where are";
-		mes "all those "+ getitemname(.@item_req) +"";
-		mes "that you promised?";
-		mes "Give me "+ getitemname(.@item_req) +"!";
+		mes "[商人]";
+		mes "嘿，你承诺的那些东西都在哪里？给我";
 		close;
 	}
 	else {
-		mes "[Merchant]";
-		mes "Okay, let me check";
-		mes "how many "+ getitemname(.@item_req) +" you";
-		mes "have on you. Hmm...";
+		mes "[商人]";
+		mes "好的，让我检查一下你身上有多少。嗯……";
 		next;
-		mes "[Merchant]";
-		mes "You have";
-		mes "a total of "+ countitem(.@item_req) +" "+ getitemname(.@item_req) +".";
-		mes "I can give you a total";
-		mes "of "+ (countitem(.@item_req)/.@req_amount) +" Red Potions for those.";
+		mes "[商人]";
+		mes "你总共有，我可以给你总共";
 		next;
-		mes "[Merchant]";
-		mes "What do you say?";
-		mes "Do we have a deal?";
+		mes "[商人]";
+		mes "你觉得怎么样？我们达成交易吗？";
 		next;
-		if (select("Deal.:No deal.") == 1) {
-			mes "[Merchant]";
-			mes "You know the exact";
-			mes "number of Red Potions";
-			mes "you want to receive for";
-			mes "those "+ getitemname(.@item_req) +", don't you?";
+		if (select("成交。:不成交。") == 1) {
+			mes "[商人]";
+			mes "你知道你想要多少红药水来交换那些东西。";
 			next;
-			mes "[Merchant]";
-			mes "Now, I can trade you";
-			mes "a minimum of 1 Red Potion";
-			mes "and a maximum of 100 Red Potions";
-			mes "at one time. If you change your";
-			mes "mind, just enter '0' to cancel.";
+			mes "[商人]";
+			mes "现在，我一次可以交易至少1瓶红药水，最多100瓶。";
+			mes "如果你改变主意，只需输入'0'取消。";
 			next;
 			while(1) {
 				input .@input,0,101;
 				if (.@input == 0) {
-					mes "[Merchant]";
-					mes "What...?";
-					mes "Why the hell do you";
-					mes "even bother to talk to me?";
-					mes "Pretty indecisive, aren't you?";
+					mes "[商人]";
+					mes "什么……？你为什么还要来找我？真是犹豫不决，不是吗？";
 					close;
 				}
 				else if (.@input > 100) {
-					mes "[Merchant]";
-					mes "I can't give you more";
-					mes "than 100 Red Potions";
-					mes "at once. Let's try";
-					mes "this again.";
+					mes "[商人]";
+					mes "我一次不能给你超过100瓶红药水。我们再试一次。";
 					next;
 				}
 				else {
@@ -362,31 +341,27 @@ function	script	F_PotExchange	{
 			}
 			.@put_out_item = .@input * .@req_amount;
 			if (countitem(.@item_req) < .@put_out_item) {
-				mes "[Merchant]";
-				mes "Uh oh, the number you entered doesn't seem right. You better check the number of Red Potions that you can trade for again.";
+				mes "[商人]";
+				mes "哦哦，你输入的数字似乎不对。";
+				mes "你最好再检查一下可以交易的红药水数量。";
 				close;
 			}
-			mes "[Merchant]";
-			mes "There you go!";
-			mes "Check how many Red Potions";
-			mes "I've given you, it should be good. Thanks, that was a good deal~";
+			mes "[商人]";
+			mes "好了！检查一下我给你的红药水数量，应该没问题。";
+			mes "谢谢，这笔交易不错~";
 			delitem .@item_req,.@put_out_item; //Shell
 			getitem 501,.@input; //Red_Potion
 			close;
 		}
-		mes "[Merchant]";
-		mes "Huh~";
-		mes "Alright.";
-		mes "Though aren't";
-		mes "Red Potions more useful";
-		mes "to an adventurer like you?";
+		mes "[商人]";
+		mes "哈~ 好吧。不过红药水对你这样的冒险者不是更有用吗？";
 		close;
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.1 Made it as a function. U can add your own Merchs [Lupus]
 //= 1.1a Fixed item select [KarLaeda]
-//============================================================ 
+//============================================================

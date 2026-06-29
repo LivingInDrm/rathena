@@ -37,12 +37,9 @@
 		mes "特别是食物很好吃,";
 		mes "用柠檬,虾子,红辣椒做出的传统食物";
 		next;
-		mes "'泰式BBQ'有着不能比较的，";
-		mes "美味和香味，";
-		mes "等你有空请过去试吃看看吧";
-		mes "[哎伊拜婷]";
-		mes "另外，还流传着一个恐怖的故事，";
-		mes "有一只专门躲在遗迹里，";
+		mes "'泰式BBQ'有着无与伦比的美味和香气，";
+		mes "等你有空请过去试试吧[哎伊拜婷] 另外，";
+		mes "还有一个恐怖的故事，传说有只专门躲在遗迹里的...";
 		close;
 	case 2:
 		mes "吃着人肉过活的，";
@@ -77,10 +74,10 @@
 	}
 }
 
-ayothaya,152,68,1	script	Aibakthing#ayo2	843,{
+ayothaya,152,68,1	script	哎伊拜婷#ayo2	843,{
 	mes "[哎伊拜婷]";
-	mes "呵!哈!呵!哈!狂逛了好多地方,";
-	mes "也应该吃了好多泰式BBQ 对吧?";
+	mes "呵!哈!呵!哈!我逛了好多地方，";
+	mes "也应该吃了好多泰式BBQ，对吧？";
 	next;
 	if (select("想要回到艾尔贝塔:取消") == 1) {
 		mes "怎么样要回去了吗?";
@@ -100,23 +97,21 @@ ayothaya,152,68,1	script	Aibakthing#ayo2	843,{
 
 // Generic Ayothaya NPCs
 //============================================================
-ayothaya,189,120,3	script	Young Man#Thang	843,{
-	mes "[Thang]";
-	mes "There's an ancient,";
-	mes "dreadful building in";
-	mes "Ayothaya that no one";
-	mes "here dares approach...";
+ayothaya,189,120,3	script	年轻人#Thang	843,{
+	mes "[唐]";
+	mes "在阿育他耶有一座古老而可怕的建筑，没有人敢靠近...";
 	next;
-	mes "[Thang]";
-	mes "In the past, a few curious people went inside, despite the horror stories, and never returned. What on earth could be going on inside of that place?";
+	mes "[唐]";
+	mes "过去，有几个好奇的人尽管听了恐怖故事还是进去了，";
+	mes "结果再也没有回来。那地方到底发生了什么？";
 	next;
-	mes "[Thang]";
-	mes "However, if you want to prove your courage to others, confronting the danger inside might be a worthy challenge for an adventurer...";
-	mes "I think.";
+	mes "[唐]";
+	mes "不过，如果你想向别人证明你的勇气，";
+	mes "面对里面的危险可能是冒险者值得挑战的事情...我觉得。";
 	close;
 }
 
-ayothaya,171,152,5	script	Girl#Lalitha	838,{
+ayothaya,171,152,5	script	女孩#Lalitha	838,{
 	set .@sit,rand(1,5);
 	if (.@sit > 0 && .@sit < 3) {
 		mes "[尚]";
@@ -187,106 +182,86 @@ ayothaya,171,152,5	script	Girl#Lalitha	838,{
 	close;
 }
 
-ayothaya,143,102,5	script	Old Man#ayothaya	842,{
-	mes "[Villager]";
-	mes "Ummm.";
-	mes "Hmmmmm...";
-	mes "Ummmmm...?";
+ayothaya,143,102,5	script	老人#ayothaya	842,{
+	mes "[村民]";
+	mes "嗯...嗯嗯...嗯...？";
 	next;
-	mes "[Villager]";
-	mes "You must be";
-	mes "an outsider.";
-	mes "Yes. Yes, indeed.";
+	mes "[村民]";
+	mes "你一定是外乡人。是的，没错。";
 	next;
-	mes "[Villager]";
-	mes "Did you just ask";
-	mes "where am I going?";
-	mes "Why, to the Fishing Spot";
-	mes "just ahead. That's what";
-	mes "we old men do: fish.";
+	mes "[村民]";
+	mes "你刚问我去哪里吗？去前面的钓鱼点。";
+	mes "我们这些老头就是来钓鱼的。";
 	next;
-	mes "[Villager]";
-	mes "Hmmm...";
-	mes "Would you like to hear";
-	mes "something interesting? I've heard that someone found a ring inside";
-	mes "a fish he caught in the";
-	mes "Fishing Spot.";
+	mes "[村民]";
+	mes "嗯...你想听点有趣的事吗？";
+	mes "我听说有人在钓鱼时发现了一个戒指。";
 	next;
-	mes "[Villager]";
-	mes "Supposedly, there are lots of stories about people finding valuables inside of the fish they've been catching there.";
+	mes "[村民]";
+	mes "据说，很多人都在那里的鱼里发现了贵重物品。";
 	next;
-	mes "[Villager]";
-	mes "If you're lucky enough,";
-	mes "you might even become";
-	mes "a millionaire.";
-	mes "Heh heh heh~";
+	mes "[村民]";
+	mes "如果你够幸运，甚至可能成为百万富翁。呵呵呵~";
 	next;
-	mes "[Villager]";
-	mes "...!?";
-	mes "Ah, I came into the fish market! ^666666*Sigh*^000000 It seems I went the wrong way. The Fishing Spot is on the opposite side of this village.";
+	mes "[村民]";
+	mes "…！？我走进了鱼市！^666666*唉*^000000看来我走错路了，";
+	mes "钓鱼点在村子的另一边。";
 	next;
-	mes "[Villager]";
-	mes "Since I'm here, it wouldn't be";
-	mes "a bad idea to look around. All of the seafood in this market is fresh and tasty. You'll regret it if you don't try some of this seafood";
-	mes "at least once.";
+	mes "[村民]";
+	mes "既然我来了，四处看看也不错。";
+	mes "这个市场里的海鲜都很新鲜美味。";
+	mes "如果你不至少尝试一次，你会后悔的。";
 	close;
 }
 
-ayothaya,197,189,5	script	Young Man#1ayothaya	841,{
-	mes "[Kwan]";
-	mes "Phew, isn't it";
-	mes "soooo hot today?";
+ayothaya,197,189,5	script	年轻人#1ayothaya	841,{
+	mes "[宽]";
+	mes "呼，今天真热啊！";
 	next;
-	mes "[Kwan]";
-	mes "You must be";
-	mes "from Midgard, huh?";
-	mes "I've seen a lot of tourists";
-	mes "coming from there recently.";
+	mes "[宽]";
+	mes "你一定是来自米德加德吧？我最近看到很多游客从那里来。";
 	next;
-	mes "[Kwan]";
-	mes "You'd better be really careful if you travel outside of the village. Whatever you do, don't go into";
-	mes "the ruins of an old shrine";
-	mes "in the forest.";
+	mes "[宽]";
+	mes "如果你要出村子旅行，最好小心点。无论如何，";
+	mes "千万不要进入森林里的旧神社遗址。";
 	next;
-	mes "[Kwan]";
-	mes "That place is far too";
-	mes "dangerous to visit. Still, I hear that if you had some kind of amulet, you could go there with";
-	mes "a little less worry...";
+	mes "[宽]";
+	mes "那个地方实在太危险了。不过，我听说如果你有某种护身符，";
+	mes "去那里会稍微安心一点……";
 	next;
-	mes "[Kwan]";
-	mes "Well, anyway, it's still a really good idea to stay away from that place. I hope you enjoy visiting Ayothaya, and that you keep safe~";
+	mes "[宽]";
+	mes "不过，无论如何，远离那个地方还是个好主意。";
+	mes "希望你在阿约塔雅玩得开心，注意安全~";
 	close;
 }
 
-ayothaya,214,142,5	script	Young Man#5ayothaya	843,{
-	mes "[Detzi]";
-	mes "In Ayothaya, we have our own traditional martial arts. We, the young men of the village, practice our traditional martial arts in order to become strong.";
+ayothaya,214,142,5	script	年轻人#5ayothaya	843,{
+	mes "[德齐]";
+	mes "在阿约塔雅，我们有自己的传统武术。";
+	mes "我们村里的年轻人练习传统武术以变得强大。";
 	next;
-	mes "[Detzi]";
-	mes "Why don't you learn our martial arts? I guarantee that it will help you greatly in your travels.";
+	mes "[德齐]";
+	mes "你为什么不来学我们的武术呢？";
+	mes "我保证这对你的旅行会大有帮助。";
 	close;
 }
 
-ayothaya,241,264,5	script	Young Man#5ayothaya2	843,{
-	mes "[Eik]";
-	mes "Hey...";
-	mes "You look pretty strong";
-	mes "You wanna challenge";
-	mes "me to a match?";
+ayothaya,241,264,5	script	年轻人#5ayothaya2	843,{
+	mes "[艾克]";
+	mes "嘿……你看起来很强壮，想挑战我吗？";
 	next;
-	if (select("Sure!:Nah~") == 1) {
-		mes "[Eik]";
-		mes "Ow ow ow!";
-		mes "I was just";
-		mes "kidding, man!";
+	if (select("当然！:不~") == 1) {
+		mes "[艾克]";
+		mes "哎哟哟！我只是开玩笑的，兄弟！";
 		next;
-		mes "[Eik]";
-		mes "I'm not so rude as to pick fights with strangers for no reason!";
+		mes "[艾克]";
+		mes "我可不是那种无缘无故就跟陌生人打架的人！";
 		emotion ET_KEK;
 		close;
 	}
-	mes "[Eik]";
-	mes "Real power is developed after having thousands of matches with other people. So, don't be afraid of fighting, okay?";
+	mes "[艾克]";
+	mes "真正的力量是在与他人进行数千场比赛后培养出来的。所以，";
+	mes "不要害怕打架，明白吗？";
 	emotion ET_HNG;
 	close;
 }

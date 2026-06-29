@@ -16,77 +16,71 @@
 
 // Teleport to Lutie
 //============================================================
--	script	Mr. Claus	718,{
-	mes "[Mr. Claus]";
-	mes "Ho Ho Ho~";
-	mes "Merry Christmas!!";
-	mes "I wish all of you joy";
-	mes "and Christmas cheer!";
+-	script	克劳斯先生	718,{
+	mes "[克劳斯先生]";
+	mes "哈哈哈~ 圣诞快乐！！祝大家快乐和圣诞的欢愉！";
 	next;
-	switch(select("Info about Lutie:Move to 'Lutie':Cancel")) {
+	switch(select("关于露蒂的信息:移动到‘露蒂’:取消")) {
 	case 1:
-		mes "[Mr. Claus]";
-		mes "^3355FFLutie^000000, the fantastic Christmas Town! Always filled with the spirit of giving, Lutie is filled with appetizing cakes, tiny toy soldiers, and all sorts of wonderful things~!";
+		mes "[克劳斯先生]";
+		mes "^3355FF露蒂^000000，奇妙的圣诞小镇！总是充满给予的精神，";
+		mes "露蒂里有美味的蛋糕、小玩具士兵和各种奇妙的东西~！";
 		next;
-		mes "[Mr. Claus]";
-		mes "Ho Ho Ho~";
-		mes "It's an amazing land blessed with the beauty of winter, and a year round atmosphere of festivity!";
+		mes "[克劳斯先生]";
+		mes "哈哈哈~ 这是一个被冬季美景祝福的神奇土地，";
+		mes "全年都充满节日气氛！";
 		next;
-		mes "[Mr. Claus]";
-		mes "I'm a Santa that will guide people to Lutie, the Christmas Town. Ask me at any time, and I'll magically send you there~";
+		mes "[克劳斯先生]";
+		mes "我是会引导人们去露蒂的圣诞老人。随时问我，";
+		mes "我会神奇地送你去那里~";
 		close;
 	case 2:
-		mes "[Mr. Claus]";
-		mes "Ho Ho Ho~";
-		mes "The only way to get to Lutie is here in Al de Baran!";
+		mes "[克劳斯先生]";
+		mes "哈哈哈~ 唯一到达露蒂的方式就在阿尔德巴兰！";
 		next;
-		mes "[Mr. Claus]";
-		mes "I keep this place and personally transport people who want to visit Lutie. Please ask Santa Claus over there if you want to leave town. He will let you know the way out of Lutie.";
+		mes "[克劳斯先生]";
+		mes "我负责这个地方，亲自运输想要访问露蒂的人。";
+		mes "如果您想离开城镇，请询问那边的圣诞老人，";
+		mes "他会告诉您离开露蒂的路。";
 		next;
-		mes "[Mr. Claus]";
-		mes "Ho Ho Ho~";
-		mes "Well, are you ready?";
-		mes "Have a nice trip!";
-		mes "Meeeeerry Christmas!";
+		mes "[克劳斯先生]";
+		mes "哈哈哈~ 好吧，准备好了吗？祝您旅途愉快！圣诞快乐！";
 		close2;
 		warp "xmas_fild01",78,68;
 		end;
 	case 3:
-		mes "[Mr. Claus]";
-		mes "Ho Ho Ho~";
-		mes "Whenever you want to visit Lutie, be my guest. Just let me know when you want to leave.";
+		mes "[克劳斯先生]";
+		mes "哈哈哈~ 无论何时想去露蒂，欢迎您。";
+		mes "只需告诉我何时想离开。";
 		next;
-		mes "[Mr. Claus]";
-		mes "Ho ho hooooo!!";
-		mes "Haaaaappy Holidays!";
+		mes "[克劳斯先生]";
+		mes "哈哈哈！！节日快乐！";
 		close;
 	}
 }
 
 // Inside Lutie
 //============================================================
-xmas_in,100,96,4	script	Santa Claus	718,{
-	mes "[Santa Claus]";
-	mes "Ho Ho Ho~";
-	mes "Meeeerry Christmas !!";
+xmas_in,100,96,4	script	圣诞老人	718,{
+	mes "[圣诞老人]";
+	mes "哈哈哈~ 圣诞快乐！！";
 	next;
-	mes "^3355FFIt's...^000000";
-	mes "^3355FFIt's the original Santa Claus!^000000";
+	mes "^3355FF这是...^000000 ^3355FF真正的圣诞老人！^000000";
 	next;
-	mes "[Santa Claus]";
-	mes "Ho Ho Ho~";
-	mes "I'm Santa Claus, and I bring gifts to every good boy and girl on Christmas!";
+	mes "[圣诞老人]";
+	mes "哈哈哈~ 我是圣诞老人，我在圣诞节为每个乖孩子带来礼物！";
 	next;
-	mes "[Santa Claus]";
-	mes "If you want to leave Lutie, go outside town and head south to the first field that you see. You'll be able to find a magical warp that will take you to Al de Baran.";
+	mes "[圣诞老人]";
+	mes "如果您想离开露蒂，请走出城镇，";
+	mes "向南走到您看到的第一个田野。您会找到一个神奇的传送门，";
+	mes "可以带您去阿尔德巴兰。";
 	next;
-	mes "[Santa Claus]";
-	mes "Ho ho ho~";
-	mes "Meeeeeeerry Christmas!";
+	mes "[圣诞老人]";
+	mes "哈哈哈~ 祝你圣诞快乐！";
 	close;
 }
 
-xmas_in,167,173,4	script	Duffle	711,{
+xmas_in,167,173,4	script	达夫尔	711,{
 	if (xmas_npc == 1) {
 		mes "[修沓云]";
 		mes "呵　呵　呵";
@@ -146,132 +140,128 @@ xmas_in,167,173,4	script	Duffle	711,{
 	}
 }
 
-xmas_in,27,103,4	script	Lenient Aunt	701,{
+xmas_in,27,103,4	script	宽容的阿姨	701,{
 	switch (xmas_npc) {
 	case 5:
-		mes "[Thachentze]";
-		mes "Hmm? The Hairy guy";
-		mes "spoke well of me,";
-		mes "did he? Well well...";
+		mes "[塔肯茨]";
+		mes "嗯？那个毛茸茸的家伙夸奖我了吗？真有意思……";
 		next;
-		mes "[Thachentze]";
-		mes "I know what he thinks... Ho ho ho~! He intends to make me feel happy so that I'll give him some free jars of pickles! Oh well~!";
+		mes "[塔肯茨]";
+		mes "我知道他在想什么……哈哈哈~！他想让我高兴，";
+		mes "好让我给他一些免费的腌菜！真是的~！";
 		next;
-		mes "[Thachentze]";
-		mes "He knows me too well. I almost can't stop from giving that man some pickles. Yes, even I know my pickles are the best in town!";
+		mes "[塔肯茨]";
+		mes "他太了解我了。我几乎无法拒绝给那个家伙一些腌菜。是的，";
+		mes "连我都知道我的腌菜是镇上最好的！";
 		next;
-		mes "[Thachentze]";
-		mes "Hmmm~?";
-		mes "You want to know";
-		mes "about ^3355FFSnowysnow^000000?";
-		mes "Oh. Yes, yes, I see...";
+		mes "[塔肯茨]";
+		mes "嗯~？你想知道关于^3355FF雪雪^000000的事吗？哦，好的，我明白了……";
 		next;
-		mes "[Thachentze]";
-		mes "Well, I can't just let anyone know something so important about Snowysnow. Hmmm...";
+		mes "[塔肯茨]";
+		mes "嗯，我可不能让任何人知道关于雪雪这么重要的事情。嗯……";
 		next;
-		mes "[Thachentze]";
-		mes "Snowysnow has been holding something for me as a favor, the ^3355FFroughest salt in the world^000000 which I use to pickle cabbages.";
+		mes "[塔肯茨]";
+		mes "雪雪一直帮我保管着^3355FF世界上最粗的盐^000000，我用它来腌制卷心菜。";
 		next;
-		mes "[Thachentze]";
-		mes "I suppose if you're really Snowysnow's friend, he will trust you enough to give it to you so you can deliver it to me. And in any case, I'll need more of it soon.";
+		mes "[塔肯茨]";
+		mes "我想如果你真的是雪雪的朋友，他会信任你，把它交给你，";
+		mes "让你送给我。无论如何，我很快就需要更多。";
 		next;
-		mes "[Thachentze]";
-		mes "Now be a dear";
-		mes "and hurry up.";
-		mes "Come back quickly~";
+		mes "[塔肯茨]";
+		mes "现在快点，亲爱的，赶快回来~";
 		set xmas_npc,6;
 		close;
 	case 6:
-		mes "[Thachentze]";
-		mes "Hohohoho~";
-		mes "You're back!";
+		mes "[塔肯茨]";
+		mes "哈哈哈哈~ 你回来了！";
 		next;
-		mes "[Thachentze]";
-		mes "Did you bring it?";
-		mes "Oh goodness...!";
-		mes "My cabbages will";
-		mes "get sour soon!";
+		mes "[塔肯茨]";
+		mes "你带来了吗？哦，天哪……！我的卷心菜快要酸掉了！";
 		next;
-		mes "[Thachentze]";
-		mes "You...";
-		mes "Don't have it?";
+		mes "[塔肯茨]";
+		mes "你……没有带来吗？";
 		next;
-		mes "[Thachentze]";
-		mes "*Sigh*";
-		mes "You are really a scatter-brained person, my dear. Now hurry over to Snowysnow and bring me the ^3355FFroughest salt in the world^000000.";
+		mes "[塔肯茨]";
+		mes "*叹气* 你真是个健忘的人，亲爱的。现在快去找雪雪，";
+		mes "给我带回^3355FF世界上最粗的盐^000000。";
 		next;
-		mes "[Thachentze]";
-		mes "Hurry now, dear,";
-		mes "Chop Chop~!";
+		mes "[塔肯茨]";
+		mes "快点，亲爱的，赶紧的~！";
 		close;
 	case 7:
-		mes "[Thachentze]";
-		mes "Hohohohoh hohohohoho !";
-		mes "Let's see, let's see...";
-		mes "Thank you dear,Thank you.";
+		mes "[塔肯茨]";
+		mes "哈哈哈哈哈哈！让我看看，让我看看……谢谢你，亲爱的，谢谢。";
 		next;
 		set xmas_npc,8;
-		mes "^3355FFYou gave her the";
-		mes "roughest salt in the world.^000000";
+		mes "^3355FF你把世界上最粗的盐给了她。^000000";
 		next;
-		mes "[Thachentze]";
-		mes "Now I am able to pickle my cabbages properly. Thank you, my dear. Thank you...";
+		mes "[塔肯茨]";
+		mes "现在我可以好好腌制我的卷心菜了。谢谢你，亲爱的。谢谢……";
 		next;
 		mes "...";
 		next;
 		mes "...";
 		mes "......";
 		next;
-		mes "[Thachentze]";
-		mes "Oh yes, I'm sorry. I almost forgot what I promised you. You asked me about Snowysnow's magical gift bag, didn't you?";
+		mes "[塔肯茨]";
+		mes "哦，是的，我很抱歉。我差点忘了我答应过你的事。";
+		mes "你问我关于雪雪的魔法礼物袋，对吧？";
 		next;
-		mes "[Thachentze]";
-		mes "If you already met Uncle Cantata, you must know by now that Snowysnow has been made out of some mysterious snow that covered a thick field of magical flowers.";
+		mes "[塔肯茨]";
+		mes "如果你已经见过坎塔塔叔叔，";
+		mes "你现在一定知道雪雪是由覆盖着神秘魔法花朵的";
+		mes "厚厚雪层制成的。";
 		next;
-		mes "[Thachentze]";
-		mes "I can't tell you how, but when Snowysnow was revived, there was a reaction between the Alchemist's materials and the energies of Snowysnow's snow.";
+		mes "[塔肯茨]";
+		mes "我不能告诉你具体怎么回事，但当雪雪复活时，";
+		mes "炼金术士的材料和雪雪的雪之间发生了反应。";
 		next;
-		mes "[Thachentze]";
-		mes "For some reason, Snowysnow's gift bag can now create as many presents as Snowysnow wants, just like Santa Claus.";
+		mes "[塔肯茨]";
+		mes "出于某种原因，";
+		mes "雪雪的礼物袋现在可以像圣诞老人一样创造出无数的礼物。";
 		next;
-		mes "[Thachentze]";
-		mes "Of course, if this power were to fall into the hands of evil, we would all be in trouble.";
+		mes "[塔肯策]";
+		mes "当然，如果这种力量落入邪恶之手，我们都会有麻烦。";
 		next;
-		mes "[Thachentze]";
-		mes "However, everyone knows that Snowysnow is kind and loving towards others. So we're never worried about Snowysnow's powers.";
+		mes "[塔肯策]";
+		mes "不过，大家都知道雪雪对他人友善和充满爱心。";
+		mes "所以我们从不担心雪雪的力量。";
 		next;
-		mes "[Thachentze]";
-		mes "Oh, and I've just heard some shocking news from ^3355FFHashokii^000000 the clown. It's quite an interesting story, actually. Why don't you ask him more about it?";
+		mes "[塔肯策]";
+		mes "哦，我刚刚从小丑^3355FF哈肖基^000000那里听到了一些震惊的消息。";
+		mes "其实这是个很有趣的故事，为什么不去问问他呢？";
 		close;
 	default:
-		mes "[Thachentze]";
-		mes "Merry Christmas~";
-		mes "Ho! Ho! Ho!";
+		mes "[塔肯策]";
+		mes "圣诞快乐~ 哈！哈！哈！";
 		next;
-		mes "[Thachentze]";
-		mes "I can feel the Christmas spirit all around me! It's even in the eyes of the young travelers who've come out here all the way to Lutie. Hoho, I wish you a Merry Christmas!";
+		mes "[塔肯策]";
+		mes "我能感受到四周的圣诞气氛！甚至在那些年轻旅行者的眼中，";
+		mes "他们特意来到露蒂。哈哈，祝你圣诞快乐！";
 		next;
-		mes "[Thachentze]";
-		mes "We have a dungeon named";
-		mes "'Christmas dungeon' around here. Well, I guess I don't need to tell you much if you've heard about it already.";
-		mes "Oh well...";
+		mes "[塔肯策]";
+		mes "我们这里有一个叫“圣诞地牢”的地方。好吧，";
+		mes "如果你已经听说过，我想我不需要多说了。唉...";
 		next;
-		mes "[Thachentze]";
-		mes "I figured something out a few days ago. In the Christmas dungeon, you'll run into creatures that are similar to those outside of town.";
+		mes "[塔肯策]";
+		mes "几天前我发现了一些事情。在圣诞地牢，";
+		mes "你会遇到一些和城外相似的生物。";
 		next;
-		mes "[Thachentze]";
-		mes "I'm guessing that monsters wandered here from outside of town, and were changed by the cold weather here. So monsters adapted to live in this environment.";
+		mes "[塔肯策]";
+		mes "我猜这些怪物是从城外游荡过来的，";
+		mes "受到了这里寒冷天气的影响。所以怪物们适应了这种环境。";
 		next;
-		mes "[Thachentze]";
-		mes "...";
-		mes "Okay, now I think I better be ready to pickle some cabbages. If you didn't know already, I make the best pickles around! Why don't you visit me later and try some?";
+		mes "[塔肯策]";
+		mes "...好吧，现在我想我最好准备腌一些卷心菜。";
+		mes "如果你还不知道，我做的泡菜是最好的！";
+		mes "为什么不稍后来找我尝尝呢？";
 		close;
 	}
 }
 
 // Lutie
 //============================================================
-xmas,117,304,4	script	Poze	713,{
+xmas,117,304,4	script	波泽	713,{
 	if (xmas_npc == 3 || xmas_npc == 4) {
 		mes "[圣诞老公公]";
 		mes "哈哈哈~";
@@ -288,8 +278,7 @@ xmas,117,304,4	script	Poze	713,{
 		mes "在南方的尽头，有一个传送点可以回到艾尔帕兰。";
 		mes "[圣诞老公公]";
 		next;
-		mes "Ho Ho Ho~ 圣诞快乐！！";
-		mes "圣诞快乐！！";
+		mes "哈 哈 哈~ 圣诞快乐！！ 圣诞快乐！！";
 		next;
 		mes "[雪雪]";
 		mes "但这几乎就是我所知道的。至于具体细节，你应该去问^3355FF毛茸茸的叔叔^000000。";
@@ -315,140 +304,146 @@ xmas,117,304,4	script	Poze	713,{
 	}
 }
 
-xmas,176,236,4	script	Uncle Hairy	712,{
+xmas,176,236,4	script	毛叔叔	712,{
 	if (xmas_npc == 4) {
 		if (countitem(1024) > 0 && countitem(938) > 0) {
-			mes "[Cantata]";
-			mes "Oh? Y-y-you've got the stuff? Goooooooood. It's been so long since I've been able to have some of this... G-give it to me!";
+			mes "[坎塔塔]";
+			mes "哦？你有东西吗？太好了。这么久没能吃到这个了... 给我吧！";
 			next;
 			delitem 1024,1;// Chinese_Ink
 			delitem 938,1;// Sticky_Mucus
-			mes "^3355FFYou quickly handed him the Squid Ink and Sticky Mucus and watched with a little disgust as he relished the flavor.^000000";
+			mes "^3355FF你迅速把鱿鱼墨和粘稠黏液递给他，";
+			mes "看着他陶醉于味道中，感到有些恶心。^000000";
 			next;
-			mes "[Cantata]";
-			mes "*Burrrrpppp~*";
-			mes "Well, now it's the time for my story. Keep in mind that this is the whole story from what I know. I'm not sure how much you've already heard though...";
+			mes "[坎塔塔]";
+			mes "*呲~* 好吧，现在是我讲故事的时候了。请记住，";
+			mes "这是我所知道的完整故事。我不确定你已经听过多少了...";
 			next;
-			mes "[Cantata]";
-			mes "A long time ago,";
-			mes "there was a great";
-			mes "Alchemist living";
-			mes "in the far north.";
-			mes "His name was";
-			mes "^3355FFPhilip Varsez^000000!";
+			mes "[坎塔塔]";
+			mes "很久以前，有一位伟大的炼金术士住在遥远的北方。";
+			mes "他的名字是^3355FF菲利普·瓦尔塞兹^000000！";
 			next;
-			mes "[Cantata]";
-			mes "He was always foremost in the research of alchemy and needed rare materials to conduct his studies. Because of that, he had to travel the world in search of materials containing magical energies...";
+			mes "[坎塔塔]";
+			mes "他总是走在炼金术研究的最前沿，";
+			mes "需要稀有材料来进行他的研究。因此，";
+			mes "他不得不周游世界寻找含有魔法能量的材料...";
 			next;
-			mes "[Cantata]";
-			mes "One day, his travels brought him to a northern village known for its freezing weather. But when he arrived, he was welcomed by a smouldering town that had recently been destroyed.";
+			mes "[坎塔塔]";
+			mes "有一天，他的旅行带他来到了一个以寒冷天气而闻名的北方";
+			mes "村庄。但当他到达时，";
+			mes "却被一个刚刚被摧毁的燃烧小镇所迎接。";
 			next;
-			mes "[Cantata]";
-			mes "It was a grim sight: People were lying at the roadside, groaning in agony. As Varsez walked by, each villager would beg, 'K-Kill me...' and plead for him to put them out of their misery.";
+			mes "[坎塔塔]";
+			mes "那是一个阴惨的景象：人们躺在路边，痛苦地呻吟。";
+			mes "瓦尔塞兹走过时，每个村民都乞求道：‘杀了我...";
+			mes "’并恳求他让他们解脱。";
 			next;
-			mes "[Cantata]";
-			mes "Amidst the woeful cries of despair, the wails of two infants reached the ears of Philip Varsez. He rushed to investigate and found two babies cushioned in the bosom of a melting snowman.";
+			mes "[坎塔塔]";
+			mes "在绝望的悲鸣中，菲利普·瓦尔塞斯听到了两个婴儿的哭声。";
+			mes "他急忙赶去查看，";
+			mes "发现两个婴儿被一个融化的雪人温柔地包裹着。";
 			next;
-			mes "[Cantata]";
-			mes "That snowman...";
-			mes "was ^3355FFSnowysnow^000000.";
+			mes "[坎塔塔]";
+			mes "那个雪人……就是^3355FF雪雪^000000。";
 			next;
-			mes "[Cantata]";
-			mes "Being the wise Alchemist that he is, Varsez deduced that Snowysnow sacrificed himself to protect those two babies from the great disaster that had destroyed the village.";
+			mes "[坎塔塔]";
+			mes "作为聪明的炼金术士，";
+			mes "瓦尔塞斯推断雪雪为了保护这两个婴儿，牺牲了自己，";
+			mes "以抵御摧毁村庄的巨大灾难。";
 			next;
-			mes "[Cantata]";
-			mes "Varsez was touched, and was determined to save the life of this snowman with his alchemy. He would then transport him here to Lutie, the safest place in the world.";
+			mes "[坎塔塔]";
+			mes "瓦尔塞斯感动不已，决心用他的炼金术拯救这个雪人的生命。";
+			mes "他会把他带到这里，鲁提，世界上最安全的地方。";
 			next;
-			mes "[Cantata]";
-			mes "Of course, there was another rumor that, in addition to the mercy from that Alchemist, Snowysnow was able to survive due to the special properties of his snow.";
+			mes "[坎塔塔]";
+			mes "当然，还有另一个传闻，除了那位炼金术士的仁慈，";
+			mes "雪雪之所以能存活下来，是因为他雪的特殊属性。";
 			next;
-			mes "[Cantata]";
-			mes "It's believed that Snowysnow's snow used to cover a mysterious field that would be filled with the bloom of magical flowers.";
+			mes "[坎塔塔]";
+			mes "人们相信雪雪的雪曾覆盖着一个神秘的领域，";
+			mes "那里盛开着魔法花朵。";
 			next;
-			mes "[Cantata]";
-			mes "Muhahaha~";
-			mes "Well, that's pretty much all I know. I hope you were able to learn what you wanted from my story! Haw haw haw!";
+			mes "[坎塔塔]";
+			mes "哈哈哈~ 好吧，这几乎就是我所知道的一切。";
+			mes "我希望你能从我的故事中学到你想要的东西！哈哈哈！";
 			next;
-			mes "[Cantata]";
-			mes "Well...";
-			mes "Now that I think about it...";
+			mes "[坎塔塔]";
+			mes "嗯……现在想想……";
 			next;
-			mes "[Cantata]";
-			mes "Snowysnow can not only speak, but he also seems to be able to create an endless supply of Christmas presents. Or at least, that's what I hear.";
+			mes "[坎塔塔]";
+			mes "雪雪不仅会说话，似乎还能够创造无尽的圣诞礼物。";
+			mes "或者至少，我是这么听说的。";
 			next;
-			mes "[Cantata]";
-			mes "^3355FFThachentze^000000, that lovely pickle maker, knows more about it. So if you're curious, you should go talk to her. Alrighty then, Merry Christmas!";
+			mes "[坎塔塔]";
+			mes "^3355FF塔琴茨^000000，那位可爱的腌菜制造者，知道更多的事情。";
+			mes "所以如果你感兴趣，应该去找她聊聊。好的，圣诞快乐！";
 			set xmas_npc,5;
 			close;
 		} else {
-			mes "[Cantata]";
-			mes "Oh yeah? Heard about me from Poze, did you? Haw haw haw! Yeah, I know a little bit about Snowysnow. In fact, I may even be his weak point, since...";
+			mes "[坎塔塔]";
+			mes "哦，是吗？听说我从波兹那里得知的？哈哈哈！是的，";
+			mes "我对雪雪了解一点。事实上，我甚至可能是他的弱点，因为……";
 			next;
-			mes "[Cantata]";
-			mes "I know";
-			mes "the secret of";
-			mes "^3355FFSnowysnow's birth^000000!!";
+			mes "[坎塔塔]";
+			mes "我知道^3355FF雪雪的诞生秘密^000000！！";
 			next;
-			mes "[Cantata]";
-			mes "Are you curious?";
-			mes "Heh heh heh~ Well, don't think I'll let you know unless you give me something in return!";
+			mes "[坎塔塔]";
+			mes "你想知道吗？嘿嘿嘿~ 好吧，别想我会告诉你，";
+			mes "除非你给我点什么回报！";
 			next;
-			mes "[Cantata]";
-			mes "Living in this";
-			mes "town doesn't give me";
-			mes "much of a chance to enjoy";
-			mes "a man's drink. Hmmm, bring me...";
+			mes "[坎塔塔]";
+			mes "住在这个小镇让我没有机会享受男人的饮品。嗯，给我带来……";
 			next;
-			mes "[Cantata]";
-			mes "^3355FF1 Squid Ink^000000 and";
-			mes "^3355FF1 Sticky Muscus^000000!";
+			mes "[坎塔塔]";
+			mes "^3355FF1 章鱼墨^000000和^3355FF1 粘稠的粘液^000000！";
 			next;
-			mes "[Cantata]";
-			mes "Wahhahaha! What the hell is that look for?! Never you mind my gourmet sense of taste! Now get to work~!";
+			mes "[坎塔塔]";
+			mes "哇哈哈哈！你这是什么表情？！别管我那美食家的品味！";
+			mes "现在开始工作吧~！";
 			close;
 		}
 	}
 	else {
-		mes "[Cantata]";
-		mes "Merry Christmas!";
-		mes "Welcome to Lutie!";
+		mes "[坎塔塔]";
+		mes "圣诞快乐！欢迎来到鲁提！";
 		next;
-		mes "[Cantata]";
-		mes "It looks like the cold has brought a rosiness to your cheeks.";
-		mes "Haw haw haw!";
+		mes "[坎塔塔]";
+		mes "看起来寒冷让你的脸颊变得红润。哈哈哈！";
 		next;
-		mes "[Cantata]";
-		mes "Be careful, it wouldn't be good for you to catch the Lutie Flu.";
-		mes "...";
+		mes "[坎塔塔]";
+		mes "小心点，得了鲁提流感可不好。……";
 		next;
-		mes "[Cantata]";
-		mes "*Sigh* That reminds me...";
-		mes "My little boy had a terrible case of the Lutie Flu a while ago.";
+		mes "[坎塔塔]";
+		mes "*叹气* 这让我想起……我小男孩之前得了严重的鲁提流感。";
 		next;
-		mes "[Cantata]";
-		mes "It was during the night, and there was no place I could get any medicine. It seemed I could do nothing for my little boy.";
+		mes "[坎塔塔]";
+		mes "那是一个夜晚，我没有地方能买到药。";
+		mes "似乎我对我的小男孩无能为力。";
 		next;
-		mes "[Cantata]";
-		mes "I thought the least I could do for my son was get something cold to bring down his fever, but the snow of Lutie kept on melting after being placed on his forehead. He was burning up, and I was failing to relieve him.";
+		mes "[坎塔塔]";
+		mes "我觉得我能为我的儿子做的最起码的事情就是给他带点冷的";
+		mes "东西来退烧，但放在他额头上的露天雪总是融化。";
+		mes "他发烧得厉害，我却无法缓解他的痛苦。";
 		next;
-		mes "[Cantata]";
-		mes "It was then that";
-		mes "I knew I needed";
-		mes "some magic ice.";
+		mes "[坎塔塔]";
+		mes "就在那时，我知道我需要一些魔法冰。";
 		next;
-		mes "[Cantata]";
-		mes "Eventually, I found myself in the Christmas dungeon without any goal in mind. Inside I found, thank God, a certain creature made entirely of ice!";
+		mes "[坎塔塔]";
+		mes "最终，我发现自己在圣诞地下城，心中没有任何目标。";
+		mes "里面我发现了一个完全由冰构成的生物，感谢上天！";
 		next;
-		mes "[Cantata]";
-		mes "It was an ^3355FFIceporing^000000! The local people used to call it 'Icepantzering.' Anyway, I was able to save my boy's life with it. Thank goodness something like that was around in this town.";
+		mes "[坎塔塔]";
+		mes "那是一个^3355FF冰泡泡^000000！当地人称它为“冰胖子”。无论如何，";
+		mes "我用它救了我儿子的命。";
+		mes "真是太感谢这个城镇里有这样的东西了。";
 		next;
-		mes "[Cantata]";
-		mes "Oops, I think I've talked a bit much. Merry Christmas~!";
+		mes "[坎塔塔]";
+		mes "哎呀，我好像说得有点多了。圣诞快乐~！";
 		close;
 	}
 }
 
-xmas,134,112,4	script	Snowman	710,{
+xmas,134,112,4	script	雪人	710,{
 	if (checkweight(1201,1) == 0 ) {
 		cutin "rutie_snownow01.bmp",2;
 		mes "[德璞]";
@@ -764,7 +759,7 @@ xmas,134,112,4	script	Snowman	710,{
 		}
 }
 
-xmas,146,136,4	script	Hashokii	715,{
+xmas,146,136,4	script	哈秀基	715,{
 	mes "[塔心纪]";
 	mes "什么 ？ 毛茸茸的大叔？他又跟你说了我什么啊..跟你说我腌制泡菜的手艺多好又多好等等...";
 	mes "让我开心的话，然后想要我拿一些给他是吧？早知道他没安好心！呵..呵呵.不过啊";
@@ -838,100 +833,106 @@ xmas,146,136,4	script	Hashokii	715,{
 	}
 }
 
-xmas,206,168,4	script	Little Boy	706,{
+xmas,206,168,4	script	小男孩	706,{
 	if (xmas_npc == 9) {
-		mes "[Charu Charu]";
-		mes "Errrm?";
-		mes "Snowysnow?";
+		mes "[恰鲁恰鲁]";
+		mes "呃？雪雪？";
 		next;
-		mes "[Charu Charu]";
-		mes "Hmmm, well...";
-		mes "He's a nice snowman!";
-		mes "You want to know more about Snowysnow? Ummm, I'm not that smart! Ask Marcell!";
+		mes "[恰鲁恰鲁]";
+		mes "嗯……他是个不错的雪人！你想知道更多关于雪雪的事吗？嗯，";
+		mes "我不太聪明！问马塞尔吧！";
 		close;
 	} else {
-		mes "[Charu Charu]";
-		mes "Merry Merry Christmas!";
-		mes "Heheheheheh~!";
+		mes "[恰鲁恰鲁]";
+		mes "圣诞快乐！嘿嘿嘿嘿~！";
 		next;
-		mes "[Charu Charu]";
-		mes "Did you talk to that clown guy over there? Isn't he soooooo booooring? (-.-)";
+		mes "[恰鲁恰鲁]";
+		mes "你跟那边的小丑聊过了吗？他不是超级无聊吗？(-.-)";
 		next;
-		mes "[Charu Charu]";
-		mes "When Marcell and I watch his show, we feel like we're getting dumber and dumber~";
+		mes "[恰鲁恰鲁]";
+		mes "当马塞尔和我看他的表演时，我们觉得自己越来越笨了~";
 		next;
-		mes "[Marcell]";
-		mes "Charu Charu!! Watch your mouth! How dare you say that about poor Hashokii?! He's always trying hard to make us happy!";
+		mes "[马塞尔]";
+		mes "查鲁查鲁！！注意你的言辞！你怎么敢这么说可怜的哈秀基？！";
+		mes "他总是努力让我们开心！";
 		next;
-		mes "[Charu Charu]";
-		mes "Yeah, yeah.";
-		mes "Whatever~";
-		mes "I already know that!";
-		mes "But he's not funny at all!";
-		mes "I'd rather stay with ^3355FFSnowysnow^000000~";
+		mes "[恰鲁恰鲁]";
+		mes "是的，是的。随便啦~我已经知道了！但他一点也不好笑！";
+		mes "我宁愿和^3355FF雪雪^000000呆在一起~";
 		next;
-		mes "[Charu Charu]";
-		mes "Oh well, if you didn't visit Snowysnow yet, you should see him at least once. He's funny!";
+		mes "[恰鲁恰鲁]";
+		mes "哦，好吧，如果你还没去见雪雪，";
+		mes "至少应该去看看他。他很有趣！";
 		next;
-		mes "[Charu Charu]";
-		mes "Merry Christmas!";
-		mes "Enjoy your Holiday in Lutie~!";
+		mes "[恰鲁恰鲁]";
+		mes "圣诞快乐！享受你在露天的假期~！";
 		close;
 	}
 }
 
-xmas,208,168,4	script	Little Girl	703,{
+xmas,208,168,4	script	小女孩	703,{
 	if (xmas_npc == 9 || xmas_npc == 10) {
 		switch(xmas_npc) {
 		case 9:
-			mes "[Marcell]";
-			mes "You mean Snowysnow?";
-			mes "Of course I know him!";
+			mes "[马塞尔]";
+			mes "你是说雪雪吗？当然我认识他！";
 			next;
-			mes "[Marcell]";
-			mes "He's a nice and funny guy!";
-			mes "And as Charu Charu always insists, he's funnier than Hashokii~ (But please don't let Hashokii know!)";
+			mes "[马塞尔]";
+			mes "他是个好人，也很有趣！而且正如查鲁查鲁总是坚持的，";
+			mes "他比哈秀基有趣~（但请不要让哈秀基知道！）";
 			next;
-			mes "[Marcell]";
-			mes "Well, Charu Charu and I are orphans, and don't remember our parents at all. We've been brought up by the people here in Lutie.";
+			mes "[马塞尔]";
+			mes "嗯，查鲁查鲁和我都是孤儿，根本不记得我们的父母。";
+			mes "我们是由露天的人们抚养长大的。";
 			next;
-			mes "[Marcell]";
-			mes "Uncle Cantata and Auntie Thachentze treated us like their own children, and Poze and Duffle have been like a brother and sister to us!";
+			mes "[马塞尔]";
+			mes "坎塔塔叔叔和塔亨茨阿姨把我们当作自己的孩子，";
+			mes "而波兹和达夫尔就像我们的兄弟姐妹一样！";
 			next;
-			mes "[Marcell]";
-			mes "They're all nice and generous, and we always appreciate what they've done to take care of us.";
+			mes "[马塞尔]";
+			mes "他们都很好心慷慨，";
+			mes "我们总是感激他们为照顾我们所做的一切。";
 			next;
-			mes "[Marcell]";
-			mes "I also heard Snowysnow doesn't have a mommy or daddy too. And I also heard Snowysnow and us weren't born here, but somewhere else.";
+			mes "[马塞尔]";
+			mes "我也听说雪雪没有爸爸妈妈。";
+			mes "我还听说雪雪和我们并不是在这里出生的，而是在别的地方。";
 			next;
-			mes "[Marcell]";
-			mes "I've heard that Snowysnow and us actually come from the same place, although I'm not sure yet. But I know that Snowysnow and me have the same kind of burns on our body.";
+			mes "[马塞尔]";
+			mes "我听说雪雪和我们其实来自同一个地方，虽然我还不确定。";
+			mes "但我知道雪雪和我身上有一样的伤疤。";
 			next;
-			mes "[Marcell]";
-			mes "Charu Charu and I have these old burns on our backs, and Snowysnow has a dark smudge on his tummy. So I think we got burned all at the same time...";
+			mes "[马塞尔]";
+			mes "查鲁查鲁和我背上有这些旧伤疤，";
+			mes "而雪雪的肚子上有一个黑色的污点。";
+			mes "所以我觉得我们都是同时被烧伤的……";
 			next;
-			mes "[Marcell]";
-			mes "Oh, now I see . . . . .";
-			mes "You wanna learn all about Snowysnow because you want to become his friend! He'll be so happy to know that! Ooh! Maybe he'll give you a present! Good luck!";
+			mes "[马塞尔]";
+			mes "哦，我明白了……你想了解雪雪，因为你想成为他的朋友！";
+			mes "他知道后一定会很高兴的！哦！";
+			mes "也许他会给你一个礼物！祝你好运！";
 			set xmas_npc,10;
 			close;
 		case 10:
-			mes "[Marcell]";
-			mes "More than anybody else, you know the most about Snowysnow! Please talk to Mr.Snowysnow, he'll be happy to know you care about him. Merry Christmas!";
+			mes "[马塞尔]";
+			mes "比任何人都要了解雪雪的你！请去和雪雪先生聊聊，";
+			mes "他会很高兴知道你关心他。圣诞快乐！";
 			close;
 		}
 	} else {
-		mes "[Marcell]";
-		mes "Merry Christmas~!";
+		mes "[马塞尔]";
+		mes "圣诞快乐~！";
 		next;
-		mes "[Marcell]";
-		mes "It's freezing out here...! And Charu Charu makes me colder with his unbearable jokes. And the wind's blowing so hard!";
+		mes "[马塞尔]";
+		mes "外面冷得要命……！";
+		mes "而查鲁查鲁的笑话让我更冷。风刮得好厉害！";
 		next;
-		mes "[Marcell]";
-		mes "You know what? Snowysnow has a special power. He can make as many presents as Santa Claus! Isn't that great?";
+		mes "[马塞尔]";
+		mes "你知道吗？雪雪有一种特殊的能力。";
+		mes "他能像圣诞老人一样制造无数的礼物！这不是很棒吗？";
 		next;
-		mes "[Marcell]";
-		mes "Huh? What's that look on your face for? Snowysnow has a big gift bag inside of his body, and gives gifts whenever he feels like it. What's so hard to believe about that?";
+		mes "[马塞尔]";
+		mes "嗯？你这是什么表情？雪雪的身体里有一个大礼物袋，";
+		mes "想送礼物的时候就会送。有什么好不相信的呢？";
 		close;
 	}
 }

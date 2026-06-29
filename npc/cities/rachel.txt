@@ -21,78 +21,49 @@
 //============================================================
 
 //===== Set 1 ================================================
-ice_dun04,33,166,3	script	Frozen Boy	925,{
+ice_dun04,33,166,3	script	冰冻男孩	925,{
 	cutin "ra_sboy.bmp",2;
-	mes "["+strcharinfo(0)+"]";
-	mes "This boy must be the one who Ktullanux tried to protect.";
+	mes "[这个男孩一定是克图拉努克试图保护的对象。";
 	next;
-	mes "- The boy was frozen inside a giant ice pole, and he looks as if he is in sleep rather than dead. -";
+	mes "- 这个男孩被困在一根巨大的冰柱里，";
+	mes "看起来他似乎在睡觉，而不是死去。 -";
 	next;
-	mes "- You felt freezing as you come closer to the giant ice pole that held the boy within,";
-	mes "- but for some reason, you felt a mysterious power from the pole. -";
+	mes "- 当你靠近这根冰柱时，你感到一阵寒冷，";
+	mes "- 但出于某种原因，你从冰柱中感受到了一种神秘的力量。 -";
 	next;
-	mes "- The boy appeared to be snowy white, and beautiful from the head to the toe. -";
+	mes "- 这个男孩看起来雪白无瑕，从头到脚都很美丽。 -";
 	next;
-	mes "- You wondered why a young boy had to be confined within this isolated cave, -";
-	mes "- you instinctively knew that no mage in this world would be able to release him from the ice pole.";
+	mes "- 你想知道为什么一个年轻的男孩会被困在这个孤立的洞穴";
+	mes "中，- 你本能地知道这个世界上没有任何法师能够将他从";
+	mes "冰柱中释放出来。";
 	next;
-	mes "["+strcharinfo(0)+"]";
-	mes "What happened to this boy?";
+	mes "[这个男孩发生了什么？";
 	close2;
 	cutin "",255;
 	end;
 }
 
-ra_san04,137,48,3	script	Loomin-1st Class Secret	111,{
-	mes "^3131FFLoomin, the boy";
-	mes "trapped in the Ice Cave.^000000";
-	mes "Class: 1st";
-	mes " ";
-	mes " ";
-	mes " ";
-	mes "^333333The pope was born together";
-	mes "with a twin brother, a fair";
-	mes "skinned boy with pale skin";
-	mes "and silver blond hair. This";
-	mes "had never happened before";
-	mes "and presented a unique problem";
-	mes " ";
-	mes "High Priest Niren acted as";
-	mes "their maternity nurse and";
-	mes "came to Rachel, where the";
-	mes "twins were cared for by the";
-	mes "Priests. They all argued";
-	mes "over the boy's ultimate fate...";
-	mes " ";
-	mes "No one doubted that the boy";
-	mes "was spiritually powerful, but";
-	mes "was he a sacred complement to";
-	mes "his sister, or a great evil that";
-	mes "was in direct opposition to";
-	mes "her? It was a grueling debate";
-	mes " ";
-	mes "In the end, the High Priests";
-	mes "decided that the boy posed";
-	mes "a great risk to their society";
-	mes "People may not consider the";
-	mes "pope's birth as divine if they";
-	mes "knew she had a twin brother.";
-	mes " ";
-	mes "However, not wanting to fear";
-	mes "the wrath of the gods, the";
-	mes "High Priests did not kill the";
-	mes "boy. Instead, they sealed";
-	mes "him in the Ice Cave.";
-	mes " ";
-	mes "The High Priests made";
-	mes "a contract with Ktullanux,";
-	mes "a fearsome ice monster, to";
-	mes "guard the boy's prison, and";
-	mes "to insure that no one would.";
+ra_san04,137,48,3	script	一等秘密·卢敏	111,{
+	mes "^3131FF卢敏，被困在冰洞中的男孩。^000000 职业：";
+	mes "一等 ^333333教皇与他的双胞胎兄弟一起出生，";
+	mes "兄弟是一个皮肤白皙、金发银发的男孩。";
+	mes "这在历史上从未发生过，给高阶祭司尼伦带来了独特的问题。";
+	mes "他作为他们的产科护士来到拉赫尔，";
+	mes "双胞胎在那儿由祭司们照顾。";
+	mes "他们都争论着男孩的最终命运……没有人怀疑这个男孩的灵力";
+	mes "强大，但他是他姐姐的神圣补充，";
+	mes "还是与她直接对立的巨大邪恶？这是一场艰苦的辩论。最后，";
+	mes "高阶祭司决定这个男孩对他们的社会构成了巨大风险。";
+	mes "如果人们知道教皇有一个双胞胎兄弟，";
+	mes "可能不会认为她的出生是神圣的。然而，";
+	mes "高阶祭司不想惹怒神灵，因此没有杀死这个男孩。相反，";
+	mes "他们将他封印在冰洞中。";
+	mes "高阶祭司与可怕的冰怪克图拉努克签订了契约，";
+	mes "来守护男孩的监狱，确保没有人能够接近。";
 	close;
 }
 
-rachel,124,132,1	script	Citizen#1 	921,{
+rachel,124,132,1	script	市民#1 	921,{
 	mes "水晶龙所守护的人就是这少年吗...";
 	mes "-";
 	mes "像冰河一般在坚硬冻僵的冰中那少年的样";
@@ -108,7 +79,7 @@ rachel,124,132,1	script	Citizen#1 	921,{
 	close;
 }
 
-rachel,74,150,7	script	Girl#1	914,{
+rachel,74,150,7	script	女孩#1	914,{
 	mes "[村民]";
 	mes "愿菲依雅的恩典与你同在....";
 	mes "[村民]";
@@ -135,21 +106,17 @@ rachel,74,150,7	script	Girl#1	914,{
 	close;
 }
 
-rachel,144,243,5	script	Cheshrumnir Guard::ChesGuard	934,{
-	mes "[Cheshrumnir Guard]";
-	mes "You are at Cheshrumnir,";
-	mes "the hallowed grounds occupied";
-	mes "by our pope, Freya's mortal";
-	mes "incarnation. In respect for";
-	mes "her Excellency, I expect you";
-	mes "to enter with a pious heart.";
+rachel,144,243,5	script	切斯鲁姆尼尔卫兵::ChesGuard	934,{
+	mes "[切斯鲁姆尼尔卫兵]";
+	mes "你现在在切斯鲁姆尼尔，这是我们教皇弗蕾雅的神圣领地。";
+	mes "为了尊重她的尊严，我希望你怀着虔诚的心进入。";
 	close;
 }
 
-rachel,155,243,3	duplicate(ChesGuard)	Cheshrumnir Guard	934
+rachel,155,243,3	duplicate(ChesGuard)	切斯鲁姆尼尔卫兵	934
 
 
-rachel,209,198,3	script	Kinos#aru	921,{
+rachel,209,198,3	script	基诺斯#aru	921,{
 	mes "[小朋友]";
 	mes "开启此门进入房子里的话，可以选择一个";
 	mes "喜欢的房间还当作自己的房子，";
@@ -166,7 +133,7 @@ rachel,209,198,3	script	Kinos#aru	921,{
 	close;
 }
 
-rachel,260,175,3	script	Anku#aru	914,{
+rachel,260,175,3	script	安库#aru	914,{
 	mes "[昂库]";
 	mes "唉咿 真是的~";
 	mes "我正在跟喜牧喜牧玩捉迷藏，已经过了一";
@@ -182,7 +149,7 @@ rachel,260,175,3	script	Anku#aru	914,{
 	close;
 }
 
-rachel,272,141,3	script	Himuhimu#aru	921,{
+rachel,272,141,3	script	希穆希穆#aru	921,{
 	mes "[睡觉的小朋友]";
 	mes "呀呀..呼呼..........";
 	mes "...嘻嘻.....昂库笨蛋!";
@@ -192,121 +159,84 @@ rachel,272,141,3	script	Himuhimu#aru	921,{
 	close;
 }
 
-rachel,268,120,1	script	Rachel Guard#1aru::RaGuard	934,{
-	mes "[Rachel Guard]";
-	mes "Welcome to Rachel";
-	mes "the capital of Arunafeltz.";
-	mes "Please ask our guide";
-	mes "at the center of the city";
-	mes "for information and";
-	mes "guest services.";
+rachel,268,120,1	script	拉赫尔守卫#1aru::RaGuard	934,{
+	mes "[拉赫尔守卫]";
+	mes "欢迎来到阿鲁纳费尔茨的首都拉赫尔。";
+	mes "请在市中心向我们的导游询问信息和客人服务。";
 	close;
 }
 
-rachel,125,33,5	duplicate(RaGuard)	Rachel Guard#2aru	934
+rachel,125,33,5	duplicate(RaGuard)	拉赫尔守卫#2aru	934
 
-rachel,31,130,3	duplicate(RaGuard)	Rachel Guard#3aru	934
+rachel,31,130,3	duplicate(RaGuard)	拉赫尔守卫#3aru	934
 
-rachel,76,77,3	script	Rachel Priest	927,{
-	mes "[Rachel Priest]";
-	mes "Bwahahaha! Somehow,";
-	mes "drinks taste much better";
-	mes "during work hours!";
+rachel,76,77,3	script	拉赫尔祭司	927,{
+	mes "[拉赫尔祭司]";
+	mes "哈哈哈！在工作时间，饮料的味道似乎好得多！";
 	close;
 }
 
-ra_fild12,45,230,3	script	Airship Guide#Fild	934,{
-	mes "[Airship Guide]";
-	mes "The Schwarzwald Republic's";
-	mes "international Airship service";
-	mes "for Arunafeltz can only be";
-	mes "accessed in Rachel. Please";
-	mes "follow the mark on your";
-	mes "Mini-Map to find the Airport.";
+ra_fild12,45,230,3	script	飞船导游#Fild	934,{
+	mes "[飞船导游]";
+	mes "施瓦茨瓦尔德共和国的国际飞船服务只能在拉赫尔访问。";
+	mes "请按照迷你地图上的标记找到机场。";
 	viewpoint 1,293,208,1,0xFF0000;
 	close;
 }
 
 //rachel,201,174,3	script	Freya's Follower	927,{
-rachel,201,174,3	script	Freya's Follower	926,{
-	mes "[Freya's Follower]";
-	mes "All of Arunafeltz believes";
-	mes "in the goddess Freya, but";
-	mes "there are those of us that";
-	mes "are more seriously involved";
-	mes "in adoration and worship.";
+rachel,201,174,3	script	弗蕾雅的追随者	926,{
+	mes "[弗蕾雅的追随者]";
+	mes "阿鲁纳费尔茨的所有人都信仰女神弗蕾雅，";
+	mes "但我们中有些人更认真地参与崇拜和敬仰。";
 	next;
-	mes "[Freya's Follower]";
-	mes "First, there are ''Freya's";
-	mes "Followers,'' men and women";
-	mes "like me that dress in holy masks";
-	mes "and garments. I realize that our";
-	mes "dress may seem a bit peculiar";
-	mes "to you, but that is our way.";
+	mes "[弗蕾雅的追随者]";
+	mes "首先，有“弗蕾雅的追随者”，像我一样的男女，";
+	mes "穿着神圣的面具和衣服。";
+	mes "我知道我们的服装对你来说可能有点奇怪，";
+	mes "但这就是我们的方式。";
 	next;
-	mes "[Freya's Follower]";
-	mes "Then, there are the Priests";
-	mes "who dress in clean, white";
-	mes "flowing robes. They work in";
-	mes "the temple and serve the";
-	mes "community as religious leaders.";
+	mes "[弗蕾雅的追随者]";
+	mes "然后是穿着干净、白色流动长袍的祭司。他们在寺庙工作，";
+	mes "作为宗教领袖服务社区。";
 	next;
-	mes "[Freya's Follower]";
-	mes "Among these priests are";
-	mes "the elite High Priests that";
-	mes "directly assist our pope.";
-	mes "They wear more colorful";
-	mes "clothes as a sign of their";
-	mes "higher status in Rachel.";
+	mes "[弗蕾雅的追随者]";
+	mes "在这些祭司中，有直接协助教皇的精英大祭司。";
+	mes "他们穿着更丰富多彩的衣服，";
+	mes "以显示他们在拉赫尔的更高地位。";
 	next;
-	mes "[Freya's Follower]";
-	mes "All of us work tirelessly";
-	mes "to bring prosperity to";
-	mes "Arunafeltz, and to carry";
-	mes "out the teachings of our";
-	mes "beloved goddess Freya.";
+	mes "[弗蕾雅的追随者]";
+	mes "我们所有人都不懈努力，带来阿鲁纳费尔茨的繁荣，";
+	mes "传播我们心爱的女神弗蕾雅的教义。";
 	close;
 }
 
-rachel,206,30,3	script	Freya's Priest#play	920,{
-	mes "[Freya's Priest]";
-	mes "This...";
-	mes "bores me...";
+rachel,206,30,3	script	弗蕾雅的祭司#play	920,{
+	mes "[弗蕾雅的祭司]";
+	mes "这……让我感到无聊……";
 	next;
-	mes "[Freya's Priest]";
-	mes "You!";
-	mes "Entertain me!";
+	mes "[弗蕾雅的祭司]";
+	mes "你！给我娱乐！";
 	emotion ET_ANGER;
 	next;
-	if (select("What? You can't tell me what to do!:You got it.") == 1) {
-		mes "[Freya's Priest]";
-		mes "Oh. That much is";
-		mes "true, I suppose.";
+	if (select("你不能告诉我该做什么！:好的。") == 1) {
+		mes "[弗蕾雅的祭司]";
+		mes "哦。这倒是实话。";
 		close;
 	}
-	mes "[Freya's Priest]";
-	mes "Well, then,";
-	mes "what will you be";
-	mes "doing to entertain me?";
+	mes "[弗蕾雅的祭司]";
+	mes "那么，你打算怎么娱乐我？";
 	next;
-	if (select("Here's a funny story...:I will do what you want me to do.") == 1) {
-		mes "^3355FFYou told her the first";
-		mes "funny story that you";
-		mes "could think of.^000000";
+	if (select("来个有趣的故事……:我会做你想让我做的事。") == 1) {
+		mes "^3355FF你告诉她了你能想到的第一个有趣的故事。^000000";
 		specialeffect2 EF_TALK_FROSTJOKE;
 		next;
-		mes "[Freya's Priest]";
-		mes "That's supposed to";
-		mes "be funny? I suppose";
-		mes "that I don't understand";
-		mes "hoi polloi humor.";
+		mes "[弗蕾雅的祭司]";
+		mes "这算什么笑话？我想我不懂平民的幽默。";
 		close;
 	}
-	mes "[Freya's Priest]";
-	mes "Fine, fine~";
-	mes "Let me see what these";
-	mes "item of yours can do...";
-	mes "Oh? Oh! That's wonderful!";
+	mes "[弗蕾雅的祭司]";
+	mes "好吧，好吧~让我看看你这些物品能做什么……哦？哦！太棒了！";
 	close2;
 	set .@play,rand(1,10);
 	if (.@play < 3)
@@ -319,7 +249,7 @@ rachel,206,30,3	script	Freya's Priest#play	920,{
 	end;
 }
 
-rachel,197,137,3	script	Bard#aru	51,{
+rachel,197,137,3	script	吟游诗人#aru	51,{
 	mes "[流浪诗人]";
 	mes "噢噢噢~";
 	mes "我是漂泊他乡的诗人人人人人~~?";
@@ -347,340 +277,217 @@ rachel,197,137,3	script	Bard#aru	51,{
 	close;
 }
 
-ra_temple,148,91,3	script	Follower Akarna	916,{
-	mes "[Follower Akarna]";
-	mes "Cheshrumnir...";
-	mes "It is said that one";
-	mes "day, our goddess Freya";
-	mes "will descend to this place";
-	mes "in all of her glory. I hope";
-	mes "that I live to see that.";
+ra_temple,148,91,3	script	信徒阿卡娜	916,{
+	mes "[信徒阿卡娜]";
+	mes "切斯赫鲁姆尼尔……据说有一天，";
+	mes "我们的女神弗蕾雅将以她的荣耀降临此地。";
+	mes "我希望我能活着看到那一天。";
 	close;
 }
 
-ra_temple,115,148,7	script	Follower Yakum	916,{
-	mes "[Follower Yakum]";
-	mes "......";
-	mes ".........";
-	mes "............";
+ra_temple,115,148,7	script	信徒雅库姆	916,{
+	mes "[信徒雅库姆]";
+	mes "…… …… …… ……";
 	next;
-	mes "^3355FFShe is completely";
-	mes "immersed in deep,";
-	mes "meditative prayer.";
-	mes "It'd be rude to";
-	mes "disturb her now.^000000";
+	mes "^3355FF她完全沉浸在深沉的冥想祈祷中。现在打扰她会很不礼貌。^000000";
 	close;
 }
 
-ra_temin,287,88,7	script	Follower Lekua	926,{
-	mes "[Follower Lekua]";
-	mes "Look at these flowers.";
-	mes "Aren't they so beautiful?";
-	mes "I've spent a lot of time";
-	mes "cultivating this flower garden.";
+ra_temin,287,88,7	script	信徒雷库阿	926,{
+	mes "[信徒雷库阿]";
+	mes "看看这些花。它们多美啊！我花了很多时间来培育这个花园。";
 	next;
-	mes "[Follower Lekua]";
-	mes "I think it's Freya's";
-	mes "will for us to";
-	mes "bring as much beauty into";
-	mes "the world as we can. What";
-	mes "do you think about that?";
+	mes "[信徒雷库阿]";
+	mes "我认为这是弗蕾雅的意愿，";
+	mes "让我们尽可能地为世界带来美丽。你怎么看？";
 	close;
 }
 
-//ra_temin,228,303,5	script	Freya's Follower#in1	927,{
-ra_temin,228,303,5	script	Freya's Follower#in1	926,{
-	mes "[Freya's Follower]";
-	mes "Once again, I didn't get";
-	mes "any sleep yesterday... I'm";
-	mes "praying so hard for Freya's";
-	mes "second coming. I'm exhausted,";
-	mes "but I feel pretty good about";
-	mes "making that small sacrifice.";
+//ra_temin,228,303,5	script	弗蕾亚信徒#in1	927,{
+ra_temin,228,303,5	script	弗蕾雅的信徒#in1	926,{
+	mes "[弗蕾雅的信徒]";
+	mes "我昨天又没睡好……我在为弗蕾雅的再临而努力祈祷。";
+	mes "我很疲惫，但我觉得为这个小小的牺牲感到很不错。";
 	close;
 }
 
-//ra_temin,230,303,3	script	Freya's Follower#in2	927,{
-ra_temin,230,303,3	script	Freya's Follower#in2	926,{
-	mes "[Freya's Follower]";
-	mes "You have done well,";
-	mes "my brother. I am certain";
-	mes "that Freya would be proud";
-	mes "of all your effots.";
+//ra_temin,230,303,3	script	弗蕾亚信徒#in2	927,{
+ra_temin,230,303,3	script	弗蕾雅的信徒#in2	926,{
+	mes "[弗蕾雅的信徒]";
+	mes "你做得很好，我的兄弟。";
+	mes "我相信弗蕾雅会为你的努力感到骄傲。";
 	close;
 }
 
-ra_temin,138,64,5	script	Child Follower#in1	921,{
-	mes "[Child Follower]";
-	mes "No! My Mingming is dead!";
+ra_temin,138,64,5	script	小信徒#in1	921,{
+	mes "[小信徒]";
+	mes "不！我的明明死了！";
 	next;
-	select("Mingming?");
-	mes "[Child Follower]";
-	mes "Mingming is a sick bird";
-	mes "I found on the street, and";
-	mes "I really wanted it to just";
-	mes "rest and be healthy again";
-	mes "but it died! Waaaaah!";
+	select("明明？");
+	mes "[小信徒]";
+	mes "明明是一只我在街上发现的生病的小鸟，";
+	mes "我真的希望它能休息并恢复健康，但它死了！呜呜呜！";
 	emotion ET_CRY;
 	next;
-	mes "[Child Follower]";
-	mes "I... I'm going to";
-	mes "try to ask the pope!";
-	mes "M-maybe she can bring";
-	mes "Mingming back to life!";
-	mes "Do you know how I can";
-	mes "find our pope?";
+	mes "[小信徒]";
+	mes "我……我打算去问教皇！也许她能让明明复活！";
+	mes "你知道我该如何找到我们的教皇吗？";
 	close;
 }
 
 
 //===== Set 2 ================================================
-ra_fild12,283,208,3	script	Apprentice Priestess	914,{
+ra_fild12,283,208,3	script	见习女祭司	914,{
 	if ($rachel_donate < 10000) {
-		mes "[Papaii]";
-		mes "Welcome to Arunafeltz,";
-		mes "adventurer! Enjoy your stay~";
+		mes "[帕帕伊]";
+		mes "欢迎来到阿鲁纳费尔茨，冒险者！祝你在这里愉快~";
 		next;
-		if (select("Are you a guide?:Thanks, have a good day.") == 1) {
-			mes "[Papaii]";
-			mes "Oh, actually, if you";
-			mes "want to speak to a guide,";
-			mes "head west to Rachel, and";
-			mes "then go north from the plaza";
-			mes "in the center of the city.";
-			mes "You'll find one over there.";
+		if (select("你是导游吗？:谢谢，祝你有美好的一天。") == 1) {
+			mes "[帕帕伊]";
+			mes "哦，实际上，如果你想找导游，可以向西走到拉赫尔，";
+			mes "然后从市中心的广场向北走。你会在那边找到一个。";
 			next;
-			mes "[Papaii]";
-			mes "My name is Papaii,";
-			mes "and I've been sent here to";
-			mes "promote the upcoming festival";
-			mes "in honor of Freya. I encourage";
-			mes "you to donate for our festival";
-			mes "if you can spare the zeny.";
+			mes "[帕帕伊]";
+			mes "我叫帕帕伊，我被派来宣传即将举行的弗蕾雅节庆。";
+			mes "如果你能捐赠一些钱，我会很感激。";
 			next;
-			mes "[Papaii]";
-			mes "If you're interested in";
-			mes "learning more, then please";
-			mes "visit our temple, which will";
-			mes "be accepting donations and";
-			mes "hosting the festival, and";
-			mes "speak to Priestess Nemma.";
+			mes "[帕帕伊]";
+			mes "如果你想了解更多，请访问我们的寺庙，";
+			mes "我们将接受捐赠并举办节庆，和女祭司内玛交谈。";
 			next;
-			mes "[Papaii]";
-			mes "If you donate, you can";
-			mes "receive Lottery Tickets";
-			mes "that you can redeem for";
-			mes "randomly selected items from";
-			mes "the temple's storage. May";
-			mes "Freya bless you, traveler~";
+			mes "[帕帕伊]";
+			mes "如果你捐赠，你可以获得彩票，";
+			mes "兑换寺庙储藏室中的随机物品。愿弗蕾雅保佑你，旅行者~";
 			close;
 		}
-		mes "[Papaii]";
-		mes "May Freya bless you.";
-		mes "If you have time, please";
-		mes "visit our temple and make";
-		mes "a donation if you can~";
+		mes "[帕派]";
+		mes "愿弗蕾雅保佑你。如果你有时间，请来我们的神殿，";
+		mes "能捐赠的话就更好了~";
 		close;
 	}
-	mes "[Papaii]";
-	mes "Welcome to Arunafeltz!";
-	mes "The city over the rampart";
-	mes "is Rachel, the capital of";
-	mes "Arunafeltz. If you'd like to";
-	mes "rest from your travels, why";
-	mes "don't you visit Rachel?";
+	mes "[帕派]";
+	mes "欢迎来到阿鲁那费尔茨！城墙那边是拉赫尔，";
+	mes "阿鲁那费尔茨的首都。如果你想休息一下，何不去拉赫尔呢？";
 	next;
-	if (select("Are you a guide?:Tell me more about Rachel.") == 1) {
-		mes "[Papaii]";
-		mes "Actually, my name is";
-		mes "Papaii, and I'm stationed";
-		mes "here on behalf of the temple";
-		mes "spread awareness of this our";
-		mes "religion to visiting tourists.";
+	if (select("你是导游吗？:告诉我更多关于拉赫尔的事。") == 1) {
+		mes "[帕帕伊]";
+		mes "其实，我叫帕帕伊，";
+		mes "我在这里代表神殿向来访的游客宣传我们的宗教。";
 		next;
-		mes "[Papaii]";
-		mes "The entire nation of";
-		mes "Arunafeltz worships the";
-		mes "goddess Freya, and most";
-		mes "aspects of our lives are";
-		mes "largely influenced by our";
-		mes "religion. Did you know that?";
+		mes "[帕帕伊]";
+		mes "整个阿鲁那费尔茨国都崇拜女神弗蕾雅，";
+		mes "我们生活的方方面面都受到宗教的影响。你知道吗？";
 		next;
-		mes "[Papaii]";
-		mes "I invite you to visit";
-		mes "our temple if you'd like";
-		mes "to learn more about goddess";
-		mes "Freya. May Freya guide you";
-		mes "in all that you do, and may she";
-		mes "protect you in your journeys!";
+		mes "[帕帕伊]";
+		mes "如果你想了解更多关于女神弗蕾雅的事，";
+		mes "欢迎你来我们的神殿。愿弗蕾雅指引你所做的一切，";
+		mes "并在你的旅途中保护你！";
 		next;
-		mes "[Papaii]";
-		mes "Welcome to Arunafeltz!";
-		mes "The city over the rampart";
-		mes "is Rachel, the capital of";
-		mes "Arunafeltz. If you'd like to";
-		mes "rest from your travels, why";
-		mes "don't you visit Rachel?";
+		mes "[帕帕伊]";
+		mes "欢迎来到阿鲁那费尔茨！城墙那边是拉赫尔，";
+		mes "阿鲁那费尔茨的首都。如果你想休息一下，何不去拉赫尔呢？";
 		close;
 	}
-	mes "[Papaii]";
-	mes "Well, Rachel used to be";
-	mes "a barren desert until our";
-	mes "goddess led our ancestors to";
-	mes "this land. They cultivated the";
-	mes "desert by Freya's grace, and";
-	mes "made this area habitable.";
+	mes "[帕帕伊]";
+	mes "拉赫尔曾经是荒凉的沙漠，";
+	mes "直到我们的女神引领祖先来到这片土地。";
+	mes "他们在弗蕾雅的恩典下开垦了沙漠，使这片地区变得宜居。";
 	next;
-	mes "[Papaii]";
-	mes "Everything that you see here";
-	mes "has been artificially created";
-	mes "by humans. See? The blessings";
-	mes "of Freya truly enable us to";
-	mes "do miraculous things. You'll";
-	mes "see once you enter the capital.";
+	mes "[帕帕伊]";
+	mes "你看到的一切都是人类人工创造的。看吧？";
+	mes "弗蕾雅的祝福确实让我们能够做出奇迹。";
+	mes "你一进入首都就会看到。";
 	close;
 }
 
-rachel,127,117,4	script	Child Follower#2	914,{
-	mes "[Deno]";
-	mes "Although we pray to";
-	mes "the goddess Freya and";
-	mes "ask her for all sorts of";
-	mes "things, we can't expect";
-	mes "her to do everything for us.";
+rachel,127,117,4	script	儿童信徒#2	914,{
+	mes "[德诺]";
+	mes "虽然我们向女神弗蕾雅祈祷并请求各种事情，";
+	mes "但我们不能指望她为我们做一切。";
 	next;
-	mes "[Deno]";
-	mes "As humans, it is our";
-	mes "responsibility to do all";
-	mes "in our power to conceive";
-	mes "our own happiness. We";
-	mes "believe that if it is Freya's";
-	mes "will, then it shall be realized.";
+	mes "[德诺]";
+	mes "作为人类，我们有责任尽自己所能去追求自己的幸福。";
+	mes "我们相信，如果这是弗蕾雅的意愿，那它就会实现。";
 	next;
 	emotion ET_QUESTION;
-	mes "[Deno]";
-	mes "I know it might seem";
-	mes "a little confusing to";
-	mes "an outsider, the idea of";
-	mes "being reliant on our goddess";
-	mes "while relying our ourselves.";
+	mes "[德诺]";
+	mes "我知道这对外人来说可能有点困惑，";
+	mes "依赖我们的女神同时又依赖自己。";
 	close;
 }
 
-ra_temple,167,155,4	script	Child Follower#3	914,{
-	mes "[Lewei]";
-	mes "Shushh!";
-	mes "Be quiet.";
+ra_temple,167,155,4	script	儿童信徒#3	914,{
+	mes "[雷维]";
+	mes "嘘！安静点。";
 	next;
-	mes "[Lewei]";
-	mes "......";
-	mes ".........";
+	mes "[雷维]";
+	mes "...... .........";
 	next;
-	mes "[Lewei]";
-	mes "Go away! If someone!";
-	mes "sees you, I'm gonna";
-	mes "get caught, you jerk!";
+	mes "[雷维]";
+	mes "走开！如果有人看到你，我会被抓的，混蛋！";
 	next;
-	if (select("What are you doing?:Alright.") == 1) {
-		mes "[Lewei]";
-		mes "Hellooo~?";
-		mes "Can't you see?";
-		mes "It's called Hide-and-";
-		mes "Go-Seek. Gee whiz!";
-		mes "Hurry, get away!";
+	if (select("你在做什么？:好的。") == 1) {
+		mes "[雷维]";
+		mes "你好~？你看不见吗？这是捉迷藏。真是的！快点，快走！";
 		close;
 	}
-	mes "[Lewei]";
-	mes "Hurry, and get";
-	mes "outta here!";
+	mes "[雷维]";
+	mes "快点，赶紧离开这里！";
 	close;
 }
 
-ra_temple,179,161,7	script	Child Follower#4	921,{
-	mes "[Zhikka]";
-	mes "Shh! I'm playing";
-	mes "Hide-and-Seek. Would";
-	mes "you leave me alone, please?";
-	mes "I don't wanna get caught again!";
-	mes "Maybe it's because I always";
-	mes "use the same hiding place...";
+ra_temple,179,161,7	script	儿童信徒#4	921,{
+	mes "[智卡]";
+	mes "嘘！我在玩捉迷藏。请你离开好吗？我不想再被抓了！";
+	mes "也许是因为我总是用同一个藏身之处……";
 	close;
 }
 
-ra_temple,77,114,7	script	Child Follower#5	921,{
-	mes "[Emmet]";
-	mes "Oh my Freya! You scared me!";
-	mes "I thought you were one of the";
-	mes "kids playing Hide-and-Seek!";
-	mes "Ack! Get away, get away!";
-	mes "Can't let them find me!";
+ra_temple,77,114,7	script	儿童信徒#5	921,{
+	mes "[艾梅特]";
+	mes "哦，我的弗蕾雅！你吓到我了！";
+	mes "我还以为你是正在玩捉迷藏的孩子！啊！快走开，快走开！";
+	mes "不能让他们找到我！";
 	close;
 }
 
-ra_temple,172,113,5	script	Child Follower#6	921,{
-	mes "[Harse]";
-	mes "Where are yoooou~";
-	mes "Come out, come out";
-	mes "wherever you are~";
+ra_temple,172,113,5	script	小跟随者#6	921,{
+	mes "[哈斯]";
+	mes "你在哪里呀~ 快出来，快出来，无论你在哪里~";
 	next;
-	mes "[Harse]";
-	mes "What the Freya?";
-	mes "What's a grown-up";
-	mes "doing around here?";
-	mes "Can't you see I'm";
-	mes "playing Hide-and-Go-Seek?";
+	mes "[哈斯]";
+	mes "弗蕾雅的！一个大人怎么会在这里？";
+	mes "难道你看不出我在玩捉迷藏吗？";
 	close;
 }
 
-airplane,238,54,7	script	Adventurer	4_M_ORIENT01,{
+airplane,238,54,7	script	冒险者	4_M_ORIENT01,{
 	if ($rachel_donate < 10000) {
-		mes "[Adventurer]";
-		mes "You know that the temple";
-		mes "in Rachel is accepting";
-		mes "donations? They're asking";
-		mes "for a lot of zeny, but my buddies";
-		mes "and I donated anyway. Heck, we";
-		mes "wanted to see what we could win~";
+		mes "[冒险者]";
+		mes "你知道拉赫尔的神殿在接受捐款吗？他们要很多仙币，";
+		mes "但我和我的朋友们还是捐了。我们想看看能赢得什么~";
 		next;
-		mes "[Adventurer]";
-		mes "One of my buddies was";
-		mes "real freakin' lucky. He";
-		mes "got some kind of album,";
-		mes "opened it up and found";
-		mes "some kinda card inside.";
-		mes "Really pretty stuff.";
+		mes "[冒险者]";
+		mes "我一个朋友运气真好。他得到了一个相册，";
+		mes "打开后发现里面有张卡片。真漂亮的东西。";
 		next;
-		mes "[Adventurer]";
-		mes "Another buddy of mine?";
-		mes "Not so lucky. He got a";
-		mes "Condensed White Potion...";
-		mes "Yeah, I don't blame him for";
-		mes "feeling a little gypped, but he";
-		mes "donated for a good cause, right?";
+		mes "[冒险者]";
+		mes "我另一个朋友就没那么幸运了。";
+		mes "他得到了一个浓缩白药水……是的，我不怪他觉得有点被坑，";
+		mes "但他是为了好事捐款，对吧？";
 		next;
-		mes "[Adventurer]";
-		mes "Me? I got some yellow";
-		mes "bell shaped fruit. I didn't";
-		mes "really feel like eating it,";
-		mes "but after I took a bite,";
-		mes "it was like... whoa.";
-		mes "So refreshing!";
+		mes "[冒险者]";
+		mes "我呢？我得到了一个黄色铃铛形状的水果。我本来不想吃，";
+		mes "但咬了一口后，哇，真清爽！";
 		next;
-		mes "[Adventurer]";
-		mes "Anyway, all the donations";
-		mes "will be used to fund some";
-		mes "kinda festival. Sooo, I don't";
-		mes "think they'll be holding this";
-		mes "special lottery anymore once";
-		mes "they get enough money, you know?";
+		mes "[冒险者]";
+		mes "无论如何，所有的捐款将用于资助某种节日。所以，";
+		mes "我认为一旦他们筹集到足够的钱，";
+		mes "就不会再举行这个特别的抽奖了，你知道吗？";
 		close;
 	}
-	mes "[Adventurer]";
-	mes "You know, one of the";
-	mes "priestesses at the temple";
-	mes "in Rachel looked troubled";
-	mes "for some reason. I should've";
-	mes "asked what was bothering her,";
-	mes "and offered my help. Mm, nah.";
+	mes "[冒险者]";
+	mes "你知道，在瑞切尔的神殿里，有一位女祭司似乎很烦恼。";
+	mes "我应该问问她有什么困扰，并提供我的帮助。嗯，不，算了。";
 	close;
 }

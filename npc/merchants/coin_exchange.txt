@@ -39,7 +39,7 @@
 			setarray .@Items[2],12344,12345,12349;
 			set .@Book,11018; //Splendide_Selling_Item
 			set .@Coin,6081; //Splendide_Coin
-			set .@i, select("- 查看物品介绍:- 购买 Pinguicula's 果酱:- 购买 Luciola's 蜂蜜果酱:- 购买山茱萸之泪:- 取消");
+			set .@i, select("- 查看物品介绍:- 购买 捕虫堇果酱:- 购买 卢西奥拉蜂蜜果酱:- 购买山茱萸之泪:- 取消");
 		}
 		mes .@n$;
 		if (.@i == 1) {
@@ -49,7 +49,7 @@
 			end;
 		}
 		else if (.@i < 5) {
-			mes "I can sell you 3 "+getitemname(.@Items[.@i])+" for ^3131FF1 coin^000000.";
+			mes "我可以卖给你3个。";
 			next;
 			switch(select("- 购买:- 取消")) {
 			case 1:
@@ -75,15 +75,13 @@
 	}
 	else {
 		if (strnpcinfo(1) == "Merchant of Manuk") {
-			mes "Rtt od d";
-			mes "Qwo hd is d irr";
+			mes "Rtt od d Qwo hd is d irr";
 		}
 		else {
-			mes "BurWehAla";
-			mes "tasnarAndu Ie Ru";
+			mes "BurWehAla tasnarAndu Ie Ru";
 		}
 		close;
 	}
 }
-man_in01,286,16,1	duplicate(merchant_13_2)	Merchant of Manuk	454
-spl_in01,110,326,5	duplicate(merchant_13_2)	Merchant of Splendide	439
+man_in01,286,16,1	duplicate(merchant_13_2)	马努克的商人	454
+spl_in01,110,326,5	duplicate(merchant_13_2)	斯普伦迪德的商人	439

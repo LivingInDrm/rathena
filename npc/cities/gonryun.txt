@@ -88,11 +88,9 @@
 		mes "需要一点旅费.";
 		next;
 		mes "[瓦百豪]";
-		mes "出发前需支付 10,000 zeny旅费，";
-		mes "该费用还包含，";
-		mes "返回艾尔贝塔的费用，";
-		mes "已经准备好随时出发，";
-		mes "为您服务。.";
+		mes "出发前需支付10,000 Zeny旅费，";
+		mes "该费用还包含返回艾尔贝塔的费用，";
+		mes "已经准备好随时出发，为您服务。";
 		next;
 		mes "[瓦百豪]";
 		mes "想出发了吗?";
@@ -130,19 +128,16 @@
 	}
 }
 
-gon_fild01,255,79,7	script	Kunlun Envoy#gon2	776,{
-	mes "[Wa Bai Hu]";
-	mes "So, did you enjoy your trip?";
-	mes "I guess it's the time for you to";
-	mes "go home. The ship to Rune-Midgarts is ready to depart at any time.";
+gon_fild01,255,79,7	script	昆仑使者#gon2	776,{
+	mes "[瓦百豪]";
+	mes "那么，你的旅行愉快吗？我想是时候让你回家了。";
+	mes "前往鲁恩-米德加兹的船随时准备出发。";
 	next;
-	if (select("Go back to Alberta:Cancel") == 1) {
-		mes "[Wa Bai Hu]";
-		mes "Please come again.";
-		mes "I hope you will let your friends";
-		mes "know about Kunlun when you get";
-		mes "back. Now, let me guide you";
-		mes "back to Alberta.";
+	if (select("返回艾尔贝塔:取消") == 1) {
+		mes "[瓦百豪]";
+		mes "欢迎再次光临。";
+		mes "希望你回去后能告诉你的朋友们关于昆仑的事。现在，";
+		mes "让我带你回艾尔贝塔。";
 		close2;
 		if (checkre(0))
 			warp "alberta",245,87;
@@ -150,103 +145,77 @@ gon_fild01,255,79,7	script	Kunlun Envoy#gon2	776,{
 			warp "alberta",243,67;
 		end;
 	}
-	mes "[Wa Bai Hu]";
-	mes "Take your time, my guest.";
-	mes "There should be many places";
-	mes "you may have missed.";
+	mes "[瓦百豪]";
+	mes "慢慢来，我的客人。你可能错过了很多地方。";
 	close;
 }
 
-gon_fild01,187,239,7	script	Kunlun Envoy#gon3	776,{
-	mes "[Zhang Quing Long]";
-	mes "Please head north to enter Kunlun.";
-	mes "I hope you will have a great time";
-	mes "while staying in Kunlun.";
+gon_fild01,187,239,7	script	昆仑使者#gon3	776,{
+	mes "[张青龙]";
+	mes "请向北前往昆仑。希望你在昆仑的逗留愉快。";
 	close;
 }
 
-gonryun,153,64,7	script	Kunlun Envoy#gon4	776,{
-	mes "[Zhang Quing Long]";
-	mes "Please make yourself comfortable.";
-	mes "If you want to go back, I will";
-	mes "be more than happy to guide you";
-	mes "to the ship to Alberta.";
+gonryun,153,64,7	script	昆仑使者#gon4	776,{
+	mes "[张青龙]";
+	mes "请随意。如果你想回去，我很乐意带你去艾尔贝塔的船。";
 	next;
-	if (select("Go back to the harbor:Cancel") == 1) {
-		mes "[Zhang Quing Long]";
-		mes "I hope you enjoyed your trip.";
-		mes "Now, let me guide you back";
-		mes "to the harbor.";
+	if (select("返回码头:取消") == 1) {
+		mes "[张青龙]";
+		mes "希望你享受了这次旅行。现在，让我带你回码头。";
 		close2;
 		warp "gon_fild01",258,82;
 		end;
 	}
-	mes "[Zhang Quing Long]";
-	mes "Take your time, my guest.";
-	mes "There should be many places";
-	mes "you may have missed.";
+	mes "[张青龙]";
+	mes "慢慢来，我的客人。你可能错过了很多地方。";
 	close;
 }
 
 // Generic Kunlun NPCs
 //============================================================
-gonryun,200,82,3	script	Jian Chung Xun#gon	774,{
-	mes "[Jian Chung Xun]";
-	mes "I simply adore festivals.";
-	mes "That's why I love this town.";
-	mes "This town makes me feel like I am";
-	mes "in the middle of a festival all year round.";
+gonryun,200,82,3	script	简冲勋#gon	774,{
+	mes "[简冲勋]";
+	mes "我非常喜欢节日。这就是我爱这个小镇的原因。";
+	mes "这个小镇让我感觉一年四季都在庆祝。";
 	close;
 }
 
-gonryun,268,88,3	script	Liang Zhun Bu#gon	776,{
-	mes "[Liang Zhun Bu]";
-	mes "We are proud to be an independent";
-	mes "nation, and have been fighting";
-	mes "against the evil invaders who've";
-	mes "wanted to conquer this blessed land for many years...";
+gonryun,268,88,3	script	梁俊布#gon	776,{
+	mes "[梁俊布]";
+	mes "我们为成为一个独立的国家而自豪，";
+	mes "多年来一直在与想要征服这片神圣土地的邪恶";
+	mes "侵略者作斗争……";
 	next;
-	mes "[Liang Zhun Bu]";
-	mes "But we have victoriously fended";
-	mes "off every invasion! As long";
-	mes "as we believe in ourselves,";
-	mes "we shall never forget the";
-	mes "Triumphal Song that has helped us in our struggles.";
+	mes "[梁俊布]";
+	mes "但我们成功地抵御了每一次侵略！只要我们相信自己，";
+	mes "就永远不会忘记在斗争中帮助我们的《凯旋之歌》。";
 	close;
 }
 
-gonryun,118,111,5	script	Qian Yuen Shuang#gon	89,{
-	mes "[Qian Yuen Shuang]";
-	mes "The chief of this town is a man";
-	mes "who opens his heart to others.";
-	mes "However, I have heard that there";
-	mes "are some people who don't like his personality...";
+gonryun,118,111,5	script	千元霜#gon	89,{
+	mes "[千元霜]";
+	mes "这个镇的首领是一个对他人敞开心扉的人。然而，";
+	mes "我听说有些人不喜欢他的性格……";
 	next;
-	mes "[Qian Yuen Shuang]";
-	mes "Well, I like my town. The Chief's";
-	mes "efforts have made our town safer.";
-	mes "I just hope other people feel the";
-	mes "same way about what he has done.";
+	mes "[千元霜]";
+	mes "嗯，我喜欢我的镇。首领的努力让我们的镇更安全。";
+	mes "我只希望其他人也能对他所做的感同身受。";
 	close;
 }
 
-gonryun,181,161,3	script	Jing Wen Zhen#gon	773,{
-	mes "[Jing Wen Zhen]";
-	mes "The men in our town, Kunlun, are";
-	mes "all brave and courageous.";
-	mes "But, they are unable to get";
-	mes "married. It's quite a shame really...";
+gonryun,181,161,3	script	静文珍#gon	773,{
+	mes "[静文珍]";
+	mes "我们镇上的男人，昆仑，都是勇敢而无畏的。但，";
+	mes "他们无法结婚。这真的很可惜……";
 	next;
-	mes "[Jing Wen Zhen]";
-	mes "It's all because there are";
-	mes "more men than women.";
-	mes "I am not even sure whether";
-	mes "or not my son will be able to";
-	mes "find me a daughter in law.";
+	mes "[静文珍]";
+	mes "这都是因为男人比女人多。";
+	mes "我甚至不确定我的儿子是否能为我找到媳妇。";
 	close;
 }
 
-gonryun,113,135,6	script	Gatekeeper#gon	780,{
+gonryun,113,135,6	script	守门人#gon	780,{
 	mes "[瓦百豪]";
 	mes "是否有个愉快的旅途了呢?那么";
 	mes "现在应该是要回去的时候了吧!";
@@ -263,7 +232,7 @@ gonryun,113,135,6	script	Gatekeeper#gon	780,{
 	close;
 }
 
-gonryun,113,127,6	script	Gatekeeper#gon2	780,{
+gonryun,113,127,6	script	守门人#gon2	780,{
 	mes "[张澄龙]";
 	mes "请往上走过去就可以了";
 	mes "真希望你能够在昆仑";
@@ -280,56 +249,45 @@ gonryun,113,127,6	script	Gatekeeper#gon2	780,{
 	close;
 }
 
-gon_in,73,82,5	script	Ji Chung Zhe#gon	778,{
+gon_in,73,82,5	script	纪冲哲#gon	778,{
 	if (nakha >= 0 && nakha <= 2) {
-		mes "[Ji Chung Zhe]";
+		mes "[纪冲哲]";
 		mes "............";
 		next;
-		mes "[Ji Chung Zhe]";
-		mes "puuuuu....This sure is";
-		mes "something to worry about.";
+		mes "[纪冲哲]";
+		mes "唔……这真是让人担忧的事情。";
 		close;
 	}
 	if (nakha == 3) {
 		// set cha,1;// unused
-		mes "[Ji Chung Zhe]";
-		mes "I am Ji Chung Zhe, a renown brewer";
-		mes "of teas. Everyday, I put all my";
-		mes "efforts in making scrumptious, delicious tea.";
+		mes "[纪冲哲]";
+		mes "我是纪冲哲，一位著名的茶艺师。每天，";
+		mes "我都全力以赴地制作美味的茶。";
 		next;
-		mes "[Ji Chung Zhe]";
-		mes "*Sigh* But lately, the tea I've";
-		mes "been making hasn't been that";
-		mes "great... If I only had some special ingredients...";
+		mes "[纪冲哲]";
+		mes "*叹气* 但最近我做的茶并不好……如果我能有一些特别";
+		mes "的材料就好了……";
 		next;
-		mes "[Ji Chung Zhe]";
-		mes "I've been told that if you use";
-		mes "a snake, you can concoct a truly";
-		mes "extraordinary beverage~";
-		mes "But...where can I find one";
-		mes "and how can I catch one?";
-		mes "Hmm...";
+		mes "[纪冲哲]";
+		mes "我听说如果用蛇，";
+		mes "可以调制出一种真正非凡的饮品~ 可是……我该去哪里找，";
+		mes "怎么才能抓到一条呢？嗯……";
 		close;
 	}
 }
 
-gon_in,173,27,3	script	Yu Jiu Xia#gon	774,{
-	mes "[Yu Jiu Xia]";
-	mes "Geez, just as I thought.";
-	mes "They won't sell alcohol to me.";
-	mes "Maybe its cuz I'm too young...";
-	mes "Hmmm...I wonder how it tastes...";
+gon_in,173,27,3	script	余九霞#gon	774,{
+	mes "[余九霞]";
+	mes "唉，果然没错。他们不肯卖酒给我。";
+	mes "也许是因为我太年轻了……嗯……我想知道那味道如何……";
 	next;
-	mes "[Yu Jiu Xia]";
-	mes "However, I know they're making";
-	mes "some tasty tea that even kids";
-	mes "like me can enjoy.";
-	mes "It makes my mouth water just";
-	mes "thinking about this new tea.";
+	mes "[余九霞]";
+	mes "不过，我知道他们正在制作一些连我这样的孩子都能享受的";
+	mes "美味茶。光是想想这新茶就让我口水直流。";
 	close;
 }
 
-gonryun,166,196,3	script	Soldier#gon	780,{
+gonryun,166,196,3	script	士兵#gon	780,{
 	if (b_sword < 7) {
 		mes "[张澄龙]";
 		mes "希望在昆仑有个愉快的一天.";
@@ -390,7 +348,7 @@ gonryun,166,196,3	script	Soldier#gon	780,{
 	close;
 }
 
-gonryun,169,71,3	script	Guidev#gon	770,{
+gonryun,169,71,3	script	向导#gon	770,{
 	mes "[昆仑守卫]";
 	mes "欢迎.";
 	mes "这是昆仑领袖的住所.";

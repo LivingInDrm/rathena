@@ -20,7 +20,7 @@
 //= 1.7 Bug fixes and syntax. [Capuche]
 //============================================================
 
-alberta,97,51,0	script	Fabian	84,{
+alberta,97,51,0	script	法比安	84,{
 	mes "[法比安]";
 	mes "嘿... 环游世界的时候我可听到了好多好玩的事儿.";
 	next;
@@ -35,7 +35,7 @@ alberta,97,51,0	script	Fabian	84,{
 	close;
 }
 
-alberta,53,39,0	script	Steiner	100,{
+alberta,53,39,0	script	施泰纳	100,{
 	mes "[斯泰纳]";
 	mes "哦...!";
 	mes "欢迎来到艾尔贝塔,";
@@ -49,69 +49,71 @@ alberta,53,39,0	script	Steiner	100,{
 	close;
 }
 
-alberta_in,20,183,0	script	Chad	1_M_03,{
-	mes "[Chad]";
-	mes "People say the legendary weapon Gungnir never misses its target. I wonder if it's possibly true...";
+alberta_in,20,183,0	script	查德	1_M_03,{
+	mes "[查德]";
+	mes "人们说传说中的武器冈格尼尔从不失手。";
+	mes "我在想这可能是真的吗……";
 	next;
-	mes "[Chad]";
-	mes "People also say that babies are assembled by the storks before delivery, girls dig guys who act like jerks, and that Santa Claus exists! But only in Lutie.";
+	mes "[查德]";
+	mes "人们还说婴儿是由鹳送来的，女孩喜欢像混蛋一样的男孩，";
+	mes "还有圣诞老人存在！但只在露蒂。";
 	next;
-	mes "[Chad]";
-	mes "I wonder...";
-	mes "If any of that";
-	mes "is possibly";
-	mes "true...";
+	mes "[查德]";
+	mes "我在想……这些话有没有可能是真的……";
 	close;
 }
 
-alberta,131,139,2	script	Drunken Old Man	1_M_JOBGUIDER,{
-	mes "[Deagle]";
-	mes "^666666*Hiccup*^000000";
-	mes "Wh-what are you";
-	mes "staring at? Get lost!!";
+alberta,131,139,2	script	醉汉	1_M_JOBGUIDER,{
+	mes "[迪格尔]";
+	mes "^666666*呃*^000000 你在盯着我干什么？快走开！！";
 	next;
-	switch(select("Say nothing.","Leave him alone.")) {
+	switch(select("什么都不说。","Leave him alone.")) {
 	case 1:
-		mes "[Deagle]";
-		mes "Hahahaha ^666666*hiccup*^000000... You've got some nerve. I may look worthless now, but I used to be a sailor on the 'Going Mary.'";
+		mes "[迪格尔]";
+		mes "哈哈哈 ^666666*呃*^000000……你真有胆量。我现在看起来一无是处，";
+		mes "但我曾是“海上玛丽号”的水手。";
 		next;
-		switch(select("Never heard of it.","Really? No kidding!")) {
+		switch(select("从没听说过。","Really? No kidding!")) {
 		case 1:
-			mes "[Deagle]";
-			mes "Never heard of it?! Everybody knows th'notorious pirate ship 'Going Mary!' ^666666*Hiccup~*^000000";
+			mes "[迪格尔]";
+			mes "没听说过？！";
+			mes "人人都知道臭名昭著的海盗船“海上玛丽号”！^666666*呃~*^000000";
 			next;
-			mes "[Deagle]";
-			mes "Ah~ The ol'days. If only... If only we hadn't run into that STORM...^666666*hiccup*^000000";
+			mes "[迪格尔]";
+			mes "啊~ 过去的日子。如果……如果我们没有遇到那场风暴……^666666*呃*^000000";
 			next;
-			mes "[Deagle]";
-			mes "AH~ Captain. I miss our cap'n more than anything... No foe survived before cap'n's sword.";
+			mes "[迪格尔]";
+			mes "啊~ 船长。我比什么都更想念我们的船长……没有敌人在";
+			mes "船长的剑下存活。";
 			close;
 		case 2:
-			mes "[Deagle]";
-			mes "That's right! NOBODY meshes with the crew of the 'Going Mary!' And nobody can beat out cap'n in a sword fight!";
+			mes "[迪格尔]";
+			mes "没错！没有人能与“海上玛丽号”的船员抗衡！";
+			mes "也没有人能在剑斗中打败船长！";
 			next;
-			mes "[Deagle]";
-			mes "CAPTAIN~!!! ^666666*HICCUP~*^000000 He would swing his sword like this, then... THEN!!";
+			mes "[迪格尔]";
+			mes "船长~！！！^666666*呃~*^000000 他会这样挥剑，然后……然后！！";
 			next;
-			mes "[Deagle]";
-			mes "The bastard the captain was fighting, and anyone of his friends near him, were surrounded in flame!";
+			mes "[迪格尔]";
+			mes "船长正在战斗的那个家伙和他身边的朋友们都被火焰包围！";
 			next;
-			mes "[Deagle]";
-			mes "Man, that sword must have had some sort of mysterious power, or the captain was just that good...!";
+			mes "[迪格尔]";
+			mes "天哪，那把剑一定有某种神秘的力量，";
+			mes "或者船长就是那么厉害……！";
 			next;
-			mes "[Deagle]";
-			mes "Phew~~ ^666666*Sob* *Sob...*^000000 God, I miss everyone! Now I'm depressed! Please, go away now.";
+			mes "[迪格尔]";
+			mes "唉~~ ^666666*呜* *呜...*^000000 天啊，我想念大家！现在我很沮丧！";
+			mes "请你们现在离开。";
 			close;
 		}
 	case 2:
-		mes "[Deagle]";
-		mes "That's right!";
-		mes "Go AWAY~";
+		mes "[迪格尔]";
+		mes "没错！快走开~";
 		close;
 	}
 }
 
-alberta,58,80,2	script	Shakir	99,{
+alberta,58,80,2	script	沙基尔	99,{
 	mes "[乍得]";
 	if (rand(2)) {
 		mes "人们说传说中的刚尼尔长矛带有必中的攻击效果. 不知道是不是真的...";
@@ -138,7 +140,7 @@ alberta,58,80,2	script	Shakir	99,{
 	close;
 }
 
-alberta,62,156,2	script	Sonya	102,{
+alberta,62,156,2	script	索尼娅	102,{
 	mes "[蒂亚戈]";
 	switch(rand(3)){
 	case 0:
@@ -174,38 +176,37 @@ alberta,62,156,2	script	Sonya	102,{
 	}
 }
 
-alberta,93,174,2	script	Grandmother Alma	103,{
-	mes "[Grandmother Alma]";
-	mes "Some time ago,";
-	mes "a derelict ship";
-	mes "drifted into";
-	mes "Alberta harbour.";
+alberta,93,174,2	script	阿尔玛奶奶	103,{
+	mes "[阿尔玛奶奶]";
+	mes "不久前，一艘废弃的船漂到了阿尔伯塔港。";
 	next;
-	mes "[Grandmother Alma]";
-	mes "Hoping to save any survivors, some of the townspeople ventured into the ship. However, they all ran out terrified, saying that corpses were walking around inside the ship.";
+	mes "[阿尔玛奶奶]";
+	mes "为了拯救任何幸存者，一些镇上的人冒险进入船内。然而，";
+	mes "他们都惊恐地跑了出来，说船里有尸体在走动。";
 	next;
-	mes "[Grandmother Alma]";
-	mes "The ship was also packed with dangerous marine organisms, and they couldn't get inside, even if they wanted to.";
+	mes "[阿尔玛奶奶]";
+	mes "船上还挤满了危险的海洋生物，即使他们想进去也无法进入。";
 	next;
-	mes "[Grandmother Alma]";
-	mes "We couldn't do anything about that ominous looking ship, and just left it as it was. Nowadays, exploration teams try to enter that ship and wipe out its monsters.";
+	mes "[阿尔玛奶奶]";
+	mes "我们对那艘看起来不祥的船无能为力，只能任其存在。如今，";
+	mes "探险队试图进入那艘船，消灭里面的怪物。";
 	next;
-	mes "[Grandmother Alma]";
-	mes "So it might be a good experience for a young person like yourself to be a recruit. But, it's still not worth risking your life if you're not strong enough.";
+	mes "[阿尔玛奶奶]";
+	mes "所以对像你这样的年轻人来说，";
+	mes "成为一名新兵可能是个不错的经历。但如果你不够强大，";
+	mes "冒着生命危险就不值得了。";
 	close;
 }
 
-alberta,189,151,5	script	Fisk	4W_SAILOR,{
-	mes "[Fisk]";
-	mes "Ahoy mate,";
-	mes "where'd ya";
-	mes "wanna go?";
+alberta,189,151,5	script	菲斯克	4W_SAILOR,{
+	mes "[菲斯克]";
+	mes "嘿，伙计，你想去哪儿？";
 	next;
-	switch(select("Sunken Ship -> 250 zeny.","Izlude Marina -> 500 zeny.","Never mind.")) {
+	switch(select("沉船 -> 250 仙女币。","Izlude Marina -> 500 Zeny.","Never mind.")) {
 	case 1:
 		if (Zeny < 250) {
-			mes "[Fisk]";
-			mes "Hey now, don't try to cheat me! I said 250 zeny!";
+			mes "[菲斯克]";
+			mes "嘿，别想骗我！我说的是250仙女币！";
 			close;
 		}
 		Zeny = Zeny - 250;
@@ -213,8 +214,8 @@ alberta,189,151,5	script	Fisk	4W_SAILOR,{
 		end;
 	case 2:
 		if (Zeny < 500) {
-			mes "[Fisk]";
-			mes "Ain't no way yer getting there without the 500 zeny first!";
+			mes "[菲斯克]";
+			mes "没有500仙女币，你是无法到达那里的！";
 			close;
 		}
 		Zeny = Zeny - 500;
@@ -224,185 +225,167 @@ alberta,189,151,5	script	Fisk	4W_SAILOR,{
 			warp "izlude",176,182;
 		end;
 	case 3:
-		mes "[Fisk]";
-		mes "Alright...";
-		mes "Landlubber.";
+		mes "[菲斯克]";
+		mes "好吧……陆地上的人。";
 		close;
 	}
 }
 
-alb2trea,39,50,6	script	Fisk#a2t	4W_SAILOR,{
-	mes "[Fisk]";
-	mes "So you wanna head back to the mainland in Alberta, eh?";
+alb2trea,39,50,6	script	菲斯克#a2t	4W_SAILOR,{
+	mes "[菲斯克]";
+	mes "所以你想回到阿尔伯塔的大陆，对吧？";
 	next;
-	if (select("Yes please.","I changed my mind.") == 1)
+	if (select("是的，请。","I changed my mind.") == 1)
 		warp "alberta",192,169;
 	close;
 }
 
-alberta,195,151,2	script	Paul	4_M_04,{
-	mes "[Paul]";
-	mes "Good day~";
-	mes "Would you like";
-	mes "to join the";
-	mes "exploration team";
-	mes "of the Sunken Ship?";
+alberta,195,151,2	script	保罗	4_M_04,{
+	mes "[保罗]";
+	mes "你好~ 你想加入沉船探险队吗？";
 	next;
-	mes "[Paul]";
-	mes "Oh! Before you join, I must warn you. If you're not that strong, you may not want to go.";
+	mes "[保罗]";
+	mes "哦！在你加入之前，我必须警告你。";
+	mes "如果你不够强大，可能不想去。";
 	next;
-	mes "[Paul]";
-	mes "So, want";
-	mes "to sign up?";
-	mes "The admission";
-	mes "fee is only";
-	mes "200 Zeny.";
+	mes "[保罗]";
+	mes "那么，想要报名吗？入会费仅需200仙女币。";
 	next;
-	switch(select("Sign me up!","Uh, no thanks.")) {
+	switch(select("报名我！","Uh, no thanks.")) {
 	case 1:
 		if (Zeny < 200) {
-			mes "[Paul]";
-			mes "It seems you don't have the money, my friend. But please come back when you're able to pay.";
+			mes "[保罗]";
+			mes "看来你没有钱，我的朋友。不过请在你能支付时再来。";
 			close;
 		}
 		Zeny = Zeny - 200;
 		warp "alb2trea",62,69;
 		close;
 	case 2:
-		mes "[Paul]";
-		mes "Alright, well...";
-		mes "I'll be around";
-		mes "if you change";
-		mes "your mind.";
+		mes "[保罗]";
+		mes "好吧……如果你改变主意，我会在这里等你。";
 		close;
 	}
 }
 
-alberta,190,173,4	script	Phelix	4_M_03,{
-	mes "[Phelix]";
+alberta,190,173,4	script	菲利克斯	4_M_03,{
+	mes "[]";
 	if ((MaxWeight - Weight) < 10000) {
-		mes "Wait a moment!!";
-		mes "You have brought too many things!";
-		mes "You cannot accept any more items!";
-		mes "Please reduce the amount of items,";
-		mes "then come see me again.";
+		mes "等一下！！你带了太多东西！你不能再接受任何物品！";
+		mes "请减少物品数量，然后再来找我。";
 		close;
 	}
 	if (@event_zelopy == 0) {
-		mes "The hell are you doing here?";
-		mes "There is nothing you can get for free on this ship, if you want somethin', work for it!!";
+		mes "你在这里干什么？这艘船上没有免费的东西，";
+		mes "如果你想要什么，就得努力工作！！";
 		next;
-		mes "[Phelix]";
-		mes "Hmm, so why don't you bring me 10 Jellopies and I will give 1 potion. How's that sound?";
-		mes "Or if that's too hard for your pansy ass, 3 Jellopies for 1 Carrot.";
+		mes "[菲利克斯]";
+		mes "嗯，为什么不带我10个果冻，然后我给你1个药水。怎么样？";
+		mes "或者如果这对你来说太难，3个果冻换1个胡萝卜。";
 		next;
-		mes "[Phelix]";
-		mes "If you're interested in my offer, get me the stuff I mentioned.";
+		mes "[菲利克斯]";
+		mes "如果你对我的提议感兴趣，就把我提到的东西拿来。";
 		@event_zelopy = 1;
 		close;
 	}
-	mes "Hmm.. you want to exchange Jellopies for Red Potions or some Carrots eh? Well.. which one?";
+	mes "嗯……你想用果冻换红药水还是胡萝卜呢？那么……你想要哪个？";
 	next;
-	switch(select("Red Potions please.","Carrots please.")) {
+	switch(select("红药水请。","Carrots please.")) {
 	case 1:
-		mes "[Phelix]";
-		mes "Alright...";
-		mes "Let's see";
-		mes "what'cha got...";
+		mes "[菲利克斯]";
+		mes "好吧……让我看看你有什么……";
 		next;
-		mes "[Phelix]";
+		mes "[菲利克斯]";
 		if (countitem(909) < 10) {
-			mes "Hey! Weren't you listening? I said 10 Jellopies for 1 Red Potion.. are ya deaf?";
+			mes "嘿！你没听见吗？我说10个果冻换1个红药水……你耳朵聋了吗？";
 			close;
 		} else {
 			.@max = countitem(909)/10;
-			mes "Hmm, not bad...";
-			mes "How many potions";
-			mes "do you want to get?";
+			mes "嗯，不错……你想要多少药水？";
 			next;
-			switch(select("As many as I can, please.","I want this many.","Never mind, I like my jellopy.")) {
+			switch(select("尽可能多，谢谢。","I want this many.","Never mind, I like my jellopy.")) {
 			case 1:
 				delitem 909,.@max*10;// Jellopy
 				getitem 501,.@max;// Red_Potion
 				break;
 			case 2:
-				mes "[Phelix]";
-				mes "I'm not giving you more than 100 at a time so don't bother, OK? If you don't want any, just say '0'.";
-				mes "Right now, the most you can get is " + .@max + " but remember, 100 at most, you want to break my back?.";
+				mes "[菲利克斯]";
+				mes "我一次最多只给你100个，所以别想太多，明白吗？";
+				mes "如果你不想要，就说'0'。现在你最多可以得到的是";
 				input .@amount;
 				next;
-				mes "[Phelix]";
+				mes "[菲利克斯]";
 				if (.@amount <= 0) {
-					mes "Much obliged, come again anytime.";
+					mes "非常感谢，随时欢迎再来。";
 					close;
 				}
 				if (.@amount > 100) {
-					mes "Hey, what'd I say? 100 at a time at most, you're trying to kill me aren't you!";
+					mes "嘿，我说过的！一次最多100个，你是在逼我吗！";
 					close;
 				}
 				if (countitem(909) < .@amount*10) {
-					mes "Hmm, it looks like you don't have enough. Go get more Jellopies if you want anything else from me.";
+					mes "嗯，看起来你没有足够的果冻。如果想要其他东西，";
+					mes "就去多拿些果冻吧。";
 					close;
 				}
 				delitem 909,.@amount*10;// Jellopy
 				getitem 501,.@amount;// Red_Potion
 				break;
 			case 3:
-				mes "[Phelix]";
-				mes "No problem,";
-				mes "see you next time.";
+				mes "[菲利克斯]";
+				mes "没问题，下次见。";
 				close;
 			}
-			mes "[Phelix]";
-			mes "There you go! As I promised. Don't go suckin' them all down at once.";
+			mes "[菲利克斯]";
+			mes "给你！如我所承诺的。别一下子全喝了。";
 			close;
 		}
 	case 2:
-		mes "[Phelix]";
-		mes "Alright, let's see what ya got...";
+		mes "[菲利克斯]";
+		mes "好吧，让我看看你有什么……";
 		next;
-		mes "[Phelix]";
+		mes "[菲利克斯]";
 		if (countitem(909) < 3) {
-			mes "Hmm, look pansy ass, I said 3 Jellopies for 1 Carrot.. got it?";
+			mes "嘿，听着，我说3个果冻换1个胡萝卜……明白了吗？";
 			close;
 		}
 		.@max = countitem(909)/3;
-		mes "Not too bad pansy...";
-		mes "How many do you want?";
+		mes "还不错，想要多少个？";
 		next;
-		switch(select("As many as I can get, please","I want this many.","Never mind, I like my jellopy.")) {
+		switch(select("尽可能多，谢谢。","I want this many.","Never mind, I like my jellopy.")) {
 		case 1:
 			delitem 909,.@max*3;// Jellopy
 			getitem 515,.@max;// Carrot
 			break;
 		case 2:
-			mes "[Phelix]";
-			mes "Right I'm not giving you more than 100 at a time so don't bother, okay? If you don't want any, just say '0'.";
+			mes "[菲利克斯]";
+			mes "对，我一次最多只给你100个，所以别想太多，明白吗？";
+			mes "如果不想要，就说'0'。";
 			input .@amount;
 			next;
-			mes "[Phelix]";
+			mes "[菲利克斯]";
 			if (.@amount == 0) {
-				mes "Alright then, see you next time.";
+				mes "好吧，下次见。";
 				close;
 			}
 			if (.@amount > 100) {
-				mes "Hey pansy ass, I said 100 at most, no more than that! I'm not going to break my back for the likes of you!";
+				mes "嘿，听着，我说最多100个，别再多了！我可不想为你累死！";
 				close;
 			}
 			if (countitem(909) < .@amount*3) {
-				mes "Seems you don't have enough. Go get some more if you want anything else.";
+				mes "看来你没有足够的。想要其他东西就去多拿些吧。";
 				close;
 			}
 			delitem 909,.@amount*3;// Jellopy
 			getitem 515,.@amount;// Carrot
 			break;
 		case 3:
-			mes "[Phelix]";
-			mes "Catch'ya later.";
+			mes "[菲利克斯]";
+			mes "下次见。";
 			close;
 		}
-		mes "[Phelix]";
-		mes "There you go~! As I promised. Try not to stuff yer face.";
+		mes "[菲利克斯]";
+		mes "给你~！如我所承诺的。别吃得太快。";
 		close;
 	}
 }

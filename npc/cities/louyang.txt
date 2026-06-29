@@ -97,7 +97,7 @@
 	}
 }
 
-lou_fild01,190,100,7	script	Girl#1lou	815,{
+lou_fild01,190,100,7	script	女孩#1lou	815,{
 	mes "[姑娘]";
 	mes "像要返回艾尔贝塔吗?";
 	mes "[姑娘]";
@@ -137,77 +137,76 @@ lou_fild01,190,100,7	script	Girl#1lou	815,{
 
 // Generic Luoyang NPCs
 //============================================================
-louyang,297,167,2	script	Muscular Woman#lou	815,{
+louyang,297,167,2	script	肌肉女#lou	815,{
 	if (Sex == SEX_FEMALE) {
-		mes "[Zhi Ching Li]";
-		mes "All the members of the Maiden Palace, including myself and our master, are all female.";
+		mes "[智青丽]";
+		mes "女神宫的所有成员，包括我和我们的师傅，都是女性。";
 		next;
-		mes "[Zhi Ching Li]";
-		mes "Recently we've had a hard time recruiting new members, so I came here to check if there's any woman who wishes to join us.";
+		mes "[智青丽]";
+		mes "最近我们招募新成员遇到了困难，";
+		mes "所以我来这里看看是否有女性愿意加入我们。";
 		emotion ET_THINK;
 		close;
 	}
-	mes "[Zhi Ching Li]";
-	mes "...";
+	mes "[智青丽]";
+	mes "……";
 	next;
-	mes "[Zhi Ching Li]";
-	mes "...";
-	mes "......";
+	mes "[智青丽]";
+	mes "…… ……";
 	next;
-	mes "[Zhi Ching Li]";
-	mes "Please leave me";
-	mes "alone, I'm busy.";
+	mes "[智青丽]";
+	mes "请让我一个人待着，我很忙。";
 	close;
 }
 
-louyang,274,136,4	script	Powerful-looking guy#lou	819,{
-	mes "[Akiira]";
-	mes "I am practicing my 'Claw of Dragon.' I not only need to use the power of my fists, I must also condition myself spiritually.";
+louyang,274,136,4	script	看起来很强壮的家伙#lou	819,{
+	mes "[阿基拉]";
+	mes "我正在练习我的‘龙之爪’。我不仅需要运用拳头的力量，";
+	mes "还必须在精神上进行锻炼。";
 	next;
-	mes "[Akiira]";
-	mes "Every martial art requires";
-	mes "spiritual training since the";
-	mes "mind controls the body.";
-	mes "If you've trained yourself spiritually, you can easily";
-	mes "use any part of the body!";
+	mes "[阿基拉]";
+	mes "每种武术都需要精神训练，因为心智控制身体。";
+	mes "如果你在精神上进行了训练，";
+	mes "你就能轻松运用身体的任何部分！";
 	next;
-	mes "[Akiira]";
-	mes "If you are considering";
-	mes "studying the martial arts, you should first attain knowledge before jumping into the";
-	mes "physical training.";
+	mes "[阿基拉]";
+	mes "如果你考虑学习武术，首先应该获得知识，";
+	mes "然后再进行身体训练。";
 	next;
-	mes "[Akiira]";
-	mes "Learn about the martial arts";
-	mes "and meditate on life's truths. First, you must find peace of mind before you can hope to master the mind and body.";
+	mes "[阿基拉]";
+	mes "了解武术并冥想生活的真理。首先，你必须找到内心的平静，";
+	mes "才能希望掌握身心。";
 	close;
 }
 
-louyang,276,136,4	script	Fist master#lou	819,{
-	mes "[Zhiang Xiau Ji]";
-	mes "Finally...";
-	mes "I have mastered";
-	mes "the 'Claw of Dragon!'";
+louyang,276,136,4	script	拳法大师#lou	819,{
+	mes "[张小吉]";
+	mes "终于……我掌握了‘龙爪’！";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "Although there are eight basic steps, I had to learn the history of this art, and meditate, focusing on my spiritual improvement,";
-	mes "for three years.";
+	mes "[张小吉]";
+	mes "虽然有八个基本步骤，";
+	mes "但我花了三年时间学习这门艺术的历史，并冥想，";
+	mes "专注于精神提升。";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "After that, my master finally started to give me the physical training so I could use the eight steps of the Claw of Dragon. I've devoted myself to this art for thirty years.";
+	mes "[张小吉]";
+	mes "之后，我的师傅终于开始给我进行身体训练，";
+	mes "让我能运用龙爪的八个步骤。我为这门艺术奉献了三十年。";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "I'm very proud that I've";
-	mes "mastered this art ten years earlier than I expected. Now, I need to study this form and improve it by correcting its weak points and enhancing its strengths.";
+	mes "[张小吉]";
+	mes "我很自豪自己比预期早十年掌握了这门艺术。现在，";
+	mes "我需要研究这个形式，通过纠正弱点和增强优点来改进它。";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "I guess that would take me about ten years. But I'm not disheartened by that at all.";
+	mes "[张小吉]";
+	mes "我想这大约需要十年。但我对此并不灰心。";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "When you're learning a martial art, you can't rush yourself and learn everything in a short period of time. It's impossible! Plus, that isn't the essence of art...";
+	mes "[张小吉]";
+	mes "学习武术时，你不能急于求成，";
+	mes "试图在短时间内学会所有东西。这是不可能的！而且，";
+	mes "这也不是艺术的本质……";
 	close;
 }
 
-louyang,276,133,0	script	Trainee#1lou::LouTrainee	819,{
+louyang,276,133,0	script	学员#1lou::LouTrainee	819,{
 	mes "[训练者]";
 	mes "呀呀呀呀~!";
 	mes "啊啊啊啊啊~~!!";
@@ -215,7 +214,7 @@ louyang,276,133,0	script	Trainee#1lou::LouTrainee	819,{
 	close;
 }
 
-louyang,276,131,0	script	Trainee#2lou	819,{
+louyang,276,131,0	script	学员#2lou	819,{
 	mes "[李芷清]";
 	mes "俺们女王宫的人都是女的. 俺也是女的.";
 	mes "[李芷清]";
@@ -223,14 +222,14 @@ louyang,276,131,0	script	Trainee#2lou	819,{
 	close;
 }
 
-louyang,276,129,0	script	Trainee#3lou	819,{
+louyang,276,129,0	script	学员#3lou	819,{
 	mes "[安克亚]";
 	mes "我在练习 '鹰爪功.' 不但要锻炼拳部力量, 还要学着去调和心态.";
 	mes "[安克亚]";
 	close;
 }
 
-louyang,274,133,0	script	Trainee#4lou	819,{
+louyang,274,133,0	script	学员#4lou	819,{
 	mes "[江肖戟]";
 	mes "我终于...";
 	mes "练成了 '鹰爪功!'";
@@ -238,7 +237,7 @@ louyang,274,133,0	script	Trainee#4lou	819,{
 	close;
 }
 
-louyang,274,131,0	script	Trainee#5lou	819,{
+louyang,274,131,0	script	学员#5lou	819,{
 	mes "[训练者]";
 	mes "呔 呔 呔!";
 	mes "阿大大~~!!";
@@ -246,7 +245,7 @@ louyang,274,131,0	script	Trainee#5lou	819,{
 	close;
 }
 
-louyang,274,129,0	script	Trainee#6lou	819,{
+louyang,274,129,0	script	学员#6lou	819,{
 	mes "[训练者]";
 	mes "兮哈!";
 	mes "啊呀!!";
@@ -254,59 +253,58 @@ louyang,274,129,0	script	Trainee#6lou	819,{
 	close;
 }
 
-louyang,278,133,0	duplicate(LouTrainee)	Trainee#7lou	819
-louyang,278,131,0	duplicate(LouTrainee)	Trainee#8lou	819
-louyang,278,129,0	duplicate(LouTrainee)	Trainee#9lou	819
-louyang,272,133,0	duplicate(LouTrainee)	Trainee#10lou	819
-louyang,272,131,0	duplicate(LouTrainee)	Trainee#11lou	819
-louyang,272,129,0	duplicate(LouTrainee)	Trainee#12lou	819
+louyang,278,133,0	duplicate(LouTrainee)	学员#7lou	819
+louyang,278,131,0	duplicate(LouTrainee)	学员#8lou	819
+louyang,278,129,0	duplicate(LouTrainee)	学员#9lou	819
+louyang,272,133,0	duplicate(LouTrainee)	学员#10lou	819
+louyang,272,131,0	duplicate(LouTrainee)	学员#11lou	819
+louyang,272,129,0	duplicate(LouTrainee)	学员#12lou	819
 
 // Luoyang Viewing Tower
 //============================================================
-lou_in01,25,23,5	script	Friendly Looking Lady#lo	817,{
-	mes "[Hong Miao]";
-	mes "Welcome.";
+lou_in01,25,23,5	script	友好的女士#lo	817,{
+	mes "[洪苗]";
+	mes "欢迎。";
 	next;
-	mes "[Hong Miao]";
-	mes "This is an elevator which leads";
-	mes "to the Observation Tower. We are providing you a safe and fast transfer service for an affordable fee. Would you like to use this service?";
+	mes "[洪苗]";
+	mes "这是通往观察塔的电梯。我们为您提供安全快捷的转运服务，";
+	mes "费用合理。您想使用这个服务吗？";
 	next;
-	switch(select("Information.:Yes.:Maybe next time.")) {
+	switch(select("信息。:是的。:也许下次。")) {
 	case 1:
-		mes "[Hong Miao]";
-		mes "After many suggestions and proposals were sent to the Luoyang tourism office, the Observation Tower was built so tourists can enjoy the sights.";
+		mes "[洪喵]";
+		mes "经过多次建议和提案，洛阳旅游局建造了观察塔，";
+		mes "让游客可以欣赏到美丽的风景。";
 		next;
-		mes "[Hong Miao]";
-		mes "Due to the geographical";
-		mes "features of Luoyang, it's difficult to enjoy the breath taking view that our land has to offer.";
+		mes "[洪喵]";
+		mes "由于洛阳的地理特征，欣赏我们土地上壮丽的景色非常困难。";
 		next;
-		mes "[Hong Miao]";
-		mes "You can come up to the tower by taking the elevator right here. We are providing this quick and safe transfer service for 500 zeny per person.";
+		mes "[洪喵]";
+		mes "您可以通过这里的电梯上塔。";
+		mes "我们提供快速安全的转运服务，每人500仙。";
 		close;
 	case 2:
 		if (Zeny < 500) {
-			mes "[Hong Miao]";
-			mes "I'm sorry, but you do not have enough zeny. I hope you'll come back later to enjoy the Observation Tower. Have a good day.";
+			mes "[洪喵]";
+			mes "抱歉，您的仙币不足。希望您稍后再来享受观察塔的美景。";
+			mes "祝您有美好的一天。";
 			close;
 		}
-		mes "[Hong Miao]";
-		mes "Thank you for your patronage.";
-		mes "We are trying to provide you with the best of service. Please";
-		mes "come again.";
+		mes "[洪喵]";
+		mes "感谢您的光临。";
+		mes "我们努力为您提供最好的服务。欢迎再次光临。";
 		next;
 		set Zeny, Zeny-500;
 		warp "lou_in01",17,19;
 		end;
 	case 3:
-		mes "[Hong Miao]";
-		mes "Please come";
-		mes "back later.";
-		mes "Have a good day.";
+		mes "[洪喵]";
+		mes "请稍后再来。祝您有美好的一天。";
 		close;
 	}
 }
 
-louyang,84,254,0	script	Exit#lou	111,{
+louyang,84,254,0	script	退出#lou	111,{
 	mes "[训练者]";
 	mes "呔啊!";
 	mes "呔啊!";

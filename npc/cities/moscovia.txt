@@ -92,22 +92,18 @@
 	}
 }
 
-moscovia,166,53,4	script	Moscovia P.R. Officer#2	960,{
-	mes "[Moscovia P.R. Officer]";
-	mes "How was your trip?";
-	mes "Do you have good memories from Moscovia?";
-	mes "A ship is now leaving";
-	mes "for Rune-Midgarts.";
+moscovia,166,53,4	script	莫斯科维亚公关官#2	960,{
+	mes "[莫斯科维亚公关官]";
+	mes "你的旅行怎么样？在莫斯科维亚有美好的回忆吗？";
+	mes "一艘船现在正前往鲁恩-米德加兹。";
 	next;
-	if (select("Return to Alberta:Cancel") == 2) {
-		mes "[Moscovia P.R. Officer]";
-		mes "If you want to see more";
-		mes "please take your time.";
+	if (select("返回阿尔伯塔:取消") == 2) {
+		mes "[莫斯科维亚公关官]";
+		mes "如果你想看更多，请慢慢来。";
 		close;
 	}
-	mes "[Moscovia P.R. Officer]";
-	mes "Please come and visit soon.";
-	mes "Ok then, Let's get going.";
+	mes "[莫斯科维亚公关官]";
+	mes "请快来拜访。好的，那我们出发吧。";
 	close2;
 	if (checkre(0))
 		warp "alberta",244,86;
@@ -119,7 +115,7 @@ moscovia,166,53,4	script	Moscovia P.R. Officer#2	960,{
 
 // Moscovia Palace :: mos_swan
 //============================================================
-moscovia,253,166,4	script	Soldier#mosk1	966,{
+moscovia,253,166,4	script	士兵#mosk1	966,{
 	mes "[士兵]";
 	mes "宫庭里面有统治着 莫斯科比亚的 辙勒";
 	mes "亚历斯3世居住在这里，";
@@ -127,12 +123,12 @@ moscovia,253,166,4	script	Soldier#mosk1	966,{
 	close;
 }
 
--	script	Soldier#mosk::MoscSoldier	966,{
+-	script	士兵#mosk::MoscSoldier	966,{
 	mes "[士兵]";
 	mes "请在宫廷里保持安静";
 	close;
 }
-mosk_in,118,66,5	duplicate(MoscSoldier)	Soldier#mosk02	966
-mosk_in,133,110,3	duplicate(MoscSoldier)	Soldier#mosk03	966
-mosk_in,133,73,3	duplicate(MoscSoldier)	Soldier#mosk04	966
-mosk_in,113,124,5	duplicate(MoscSoldier)	Soldier#mosk05	966
+mosk_in,118,66,5	duplicate(MoscSoldier)	士兵#mosk02	966
+mosk_in,133,110,3	duplicate(MoscSoldier)	士兵#mosk03	966
+mosk_in,133,73,3	duplicate(MoscSoldier)	士兵#mosk04	966
+mosk_in,113,124,5	duplicate(MoscSoldier)	士兵#mosk05	966

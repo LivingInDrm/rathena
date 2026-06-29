@@ -15,7 +15,7 @@
 //= 1.1a Added 'disable_items' command. [Euphy]
 //============================================================ 
 
--	script	Leablem#dummy::SocketEnchant2	-1,{
+-	script	雷亚布连#dummy::SocketEnchant2	-1,{
 	if (checkweight(1201,1) == 0)
 	{
 		mes "- 抱歉啊 !! -";
@@ -52,17 +52,12 @@
 	mes "全都取决于你要在什么材料上打洞.";
 	next;
 	mes "[雷亚布连]";
-	mes "武器吗？OK..";
-	mes "四种等级的武器,有四种不同的成功率.";
-	mes "C级的最简单，而S级的最难.";
-	mes "要试试什么等级的武器呢?";
+	mes "武器吗？好的.. 四种等级的武器，有四种不同的成功率。";
+	mes "C级的最简单，而S级的最难。你想试试哪个等级的武器呢？";
 	next;
 	mes "[雷亚布连]";
-	mes "C级吗?";
-	mes "那么,请选择想要打洞的装备.";
-	mes "[雷亚布连]";
-	mes "你选择了一般的B级.";
-	mes "想要精炼哪一种武器?";
+	mes "C级吗？那么，请选择想要打洞的装备。";
+	mes "[雷亚布连]您选择了一般的B级。想要精炼哪一种武器？";
 	next;
 	switch(select("我想为武器打洞:我想为防具打洞:你好像说了什么有趣的事情:再听听说明:没事"))
 	{
@@ -119,9 +114,7 @@
 						case 11: callfunc "Func_Socket2", 1167, 1178,40,61,500,984,2;
 					}
 				case 4:
-					mes "选择了B级的装备哦.";
-					mes "那么想要哪一种装备呢?";
-					mes "[雷亚布连]";
+					mes "选择了B级的装备哦。那么想要哪一种装备呢？[雷亚布连]";
 					next;
 					switch(select("风灵之矛:破甲短剑:龙牙剑:削刃短剑:妖短剑 泣神怨:G圣锤 十字星:死神之剑"))
 					{
@@ -322,11 +315,10 @@
 						mes "^FF0000打洞的时候别带着两件名字相同的要打洞物品.";
 						mes "^FF0000这样的话,打洞师父也不知道你到底要打哪一个装备的洞,";
 						next;
-						mes "^FF0000然后就随便给你那一件打洞算事.也许有时候贵重的东西就这样OVER了.^000000";
-						mes "[雷亚布连]";
-						mes "希望可以帮到你的忙啊.谢谢.";
-						mes "[雷亚布连]";
-						mes "额,好的.";
+						mes "^FF0000然后就随便给你那一件打洞算事。";
+						mes "也许有时候贵重的东西就这样结束了。";
+						mes "^000000[雷亚布连]希望可以帮到你的忙啊。谢谢。";
+						mes "[雷亚布连]嗯，好的。";
 						close;
 					}
 				case 2:
@@ -380,9 +372,9 @@
 	}
 }
 
-payon,236,199,3	duplicate(SocketEnchant2)	Leablem#pay	86
-lighthalzen,96,137,3	duplicate(SocketEnchant2)	Leablem#lhz	86
-prt_in,22,60,6	duplicate(SocketEnchant2)	Leablem#prt	86
+payon,236,199,3	duplicate(SocketEnchant2)	雷亚布连#pay	86
+lighthalzen,96,137,3	duplicate(SocketEnchant2)	雷亚布连#lhz	86
+prt_in,22,60,6	duplicate(SocketEnchant2)	雷亚布连#prt	86
 
 function	script	Func_Socket2	{
 	.@item_id = getarg(0);
@@ -391,45 +383,37 @@ function	script	Func_Socket2	{
 	setarray .@req_amount[0], getarg(6), getarg(8,0);
 
 	disable_items;
-	mes "[Leablem]";
+	mes "[]";
 	if (.@item_req[1] != 0 && .@req_amount[1] != 0)
 	{
 		mes getitemname(.@item_id) +"... Okay, then you need to bring me";
-		mes "^FF0000"+ (.@zeny_req >= 1000 ? (.@zeny_req /1000 +",000") : .@zeny_req) +",000 zeny as service charge,";
-		mes "^FF0000"+ .@req_amount[0] +"ea "+ getitemname(.@item_req[0]) +" and "+ .@req_amount[1] +"ea "+ getitemname(.@item_req[1]) +".";
-		mes "^FF0000Of course, you need a "+ getitemname(.@item_id) +".^000000";
+		mes "^FF0000 ^FF0000 ^FF0000当然，你需要一个";
 	}
 	else
 	{
 		mes getitemname(.@item_id) +"? Okay, then you need to bring me";
-		mes "^FF0000"+ (.@zeny_req >= 1000 ? (.@zeny_req/1000 +",000") : .@zeny_req) +",000 zeny as service charge and "+ .@req_amount[0] +" "+ getitemname(.@item_req[0]) + (.@req_amount[0] > 1 && .@item_req[0] != 999 ? "s":"") +" as the requirement.";
-		mes "^FF0000Of course, don't forget to bring me a "+ getitemname(.@item_id) +".";
-		mes "^FF0000You should have all items.^000000";
+		mes "^FF0000 ^FF0000当然，别忘了带给我一个^FF0000你应该把所有物品都准备好。^000000";
 	}
 	next;
-	mes "[Leablem]";
-	mes "Did you already bring all of them?";
-	mes "For your information, if you fail to create a slot,";
-	mes "you will lose all the item requirement as well as the target "+ ((getiteminfo(.@item_id, ITEMINFO_LOCATIONS)&EQP_HAND_R) ? "weapon" : "armor") +".";
-	mes "Also remember, if the "+ ((getiteminfo(.@item_id, ITEMINFO_LOCATIONS)&EQP_HAND_R) ? "weapon" : "armor") +" has been upgraded, and has been inserted with a card,";
-	mes "you will lose them even if you succeed in creating a slot.";
+	mes "[利布伦]";
+	mes "你已经把所有物品都带来了吗？告诉你，";
+	mes "如果你创建插槽失败，你将失去所有物品需求和目标。";
+	mes "还要记住，即使你成功创建插槽，你也会失去它们。";
 	next;
-	switch(select("Ask for slot creation.:Try next time."))
+	switch(select("请求创建插槽。:下次再试。"))
 	{
 		case 1:
 			if ((Zeny >= .@zeny_req*1000) && countitem(.@item_req[0]) >= .@req_amount[0] && countitem(getarg(7,512)) >= .@req_amount[1] && countitem(.@item_id) > 0)// if there's no .@req_amount[0] and .@req_amount[1] provided, check itemcount against 0 (we still need a valid item ID though)
 			{
-				mes "[Leablem]";
-				mes "Alright then, let the work begin!";
-				mes "You'd better pray for a successful result.";
+				mes "[利布伦]";
+				mes "好的，那就开始工作吧！你最好祈祷结果成功。";
 				next;
 				set .@a, rand(1,100);
 				if ((.@a > getarg(2)) && (.@a < getarg(3)))
 				{
 					specialeffect EF_LORD;
-					mes "[Leablem]";
-					mes "Great, it seems to be successful.";
-					mes "It looks pretty well done. Congratulations!";
+					mes "[利布伦]";
+					mes "太好了，似乎成功了。看起来做得相当不错。恭喜你！";
 					delitem .@item_id,1;
 					delitem .@item_req[0],.@req_amount[0];
 					if (.@item_req[1] != 0 && .@req_amount[1] != 0)
@@ -437,40 +421,37 @@ function	script	Func_Socket2	{
 					Zeny = Zeny - .@zeny_req *1000;
 					getitem getarg(1),1;
 					next;
-					mes "[Leablem]";
-					mes "See you again, buddy!";
+					mes "[利布伦]";
+					mes "再见了，朋友！";
 					close;
 				}
 				else
 				{
 					specialeffect EF_SUI_EXPLOSION;
-					mes "[Leablem]";
-					mes "Wah! ...I am so sorry, it failed.";
-					mes "However, I am completely innocent.";
-					mes "This is your luck, and it is destined by god, okay?";
-					mes "Don't be so disappointed,";
-					mes "and try next time.";
+					mes "[利布伦]";
+					mes "哇！……我很抱歉，失败了。不过，我完全无辜。这是你的运气，";
+					mes "是上天注定的，好吗？别太失望，下一次再试吧。";
 					delitem .@item_id,1;
 					delitem .@item_req[0],.@req_amount[0];
 					if (.@item_req[1] != 0 && .@req_amount[1] != 0)
 						delitem .@item_req[1],.@req_amount[1];
 					Zeny = Zeny - .@zeny_req *1000;
 					next;
-					mes "[Leablem]";
-					mes "See you again, buddy!";
+					mes "[利布伦]";
+					mes "再见了，朋友！";
 					close;
 				}
 			}
 			else
 			{
-				mes "[Leablem]";
-				mes "Are you stupid or what? You didn't bring all of the required items!";
-				mes "Go bring them quick!";
+				mes "[利布伦]";
+				mes "你是傻瓜吗？你没有带齐所有必需的物品！";
+				mes "快去把它们带回来！";
 				close;
 			}
 		case 2:
-			mes "[Leablem]";
-			mes "See you next time.";
+			mes "[利布伦]";
+			mes "下次见。";
 			close;
 	}
 }

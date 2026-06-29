@@ -44,6 +44,8 @@ ALLOWED_MIXED_ASCII_WORDS = {
     "ASPD",
     "ATK",
     "A",
+    "B",
+    "BBQ",
     "C",
     "Ctrl",
     "DEX",
@@ -54,9 +56,14 @@ ALLOWED_MIXED_ASCII_WORDS = {
     "F9",
     "F12",
     "GUI",
+    "G",
+    "G-",
+    "GOD-POING",
     "HP",
     "INT",
     "JOB",
+    "J",
+    "JJ",
     "L",
     "LUK",
     "M",
@@ -67,6 +74,7 @@ ALLOWED_MIXED_ASCII_WORDS = {
     "NPC",
     "O",
     "Online",
+    "POING",
     "Q",
     "RO",
     "Ragnarok",
@@ -75,11 +83,18 @@ ALLOWED_MIXED_ASCII_WORDS = {
     "STR",
     "Shift",
     "Tab",
+    "TM",
+    "TMD",
+    "VIP",
     "VIT",
     "V",
     "X",
+    "XX",
     "Z",
     "Zeny",
+    "Nyxltron",
+    "p",
+    "z",
     "bawi",
     "bo",
     "cobo",
@@ -188,7 +203,7 @@ def should_translate(text: str) -> bool:
     stripped = visible_text(text)
     if not stripped:
         return False
-    if "strcharinfo(" in stripped or "getarg(" in stripped:
+    if "strcharinfo(" in stripped or "getarg(" in stripped or SCRIPT_TOKEN_RE.search(stripped):
         return False
     if has_chinese(stripped):
         return bool(untranslated_ascii_words(stripped))
@@ -214,6 +229,12 @@ def make_npc_name_page(file: str, line_index: int, full_name: str) -> Page | Non
     if "_" in visible_name and " " not in visible_name:
         return None
     if re.match(r"^\d+_", visible_name):
+        return None
+    if re.search(r"\d", visible_name) and " " not in visible_name:
+        return None
+    if visible_name.endswith("Warp") and " " not in visible_name:
+        return None
+    if visible_name.islower() and " " not in visible_name:
         return None
     return Page(
         id=stable_id(file, "npc_name", line_index, full_name),
@@ -695,8 +716,11 @@ def apply_translations(npc_root: Path, pages: list[Page], translations: dict[str
                 indent = re.match(r"^(\s*)", lines[page.start_line]).group(1)
                 if page.speaker:
                     new_lines.append(f'{indent}mes "{lua_escape("[" + speaker + "]")}";')
-                for chunk in reflow_text(text, line_width):
-                    new_lines.append(f'{indent}mes "{lua_escape(chunk)}";')
+                if text.strip():
+                    for chunk in reflow_text(text, line_width):
+                        new_lines.append(f'{indent}mes "{lua_escape(chunk)}";')
+                if not new_lines:
+                    continue
                 old_preview = lines[page.start_line : page.end_line + 1]
                 lines[page.start_line : page.end_line + 1] = new_lines
                 previews.append({"file": rel, "line": page.start_line + 1, "old": old_preview, "new": new_lines})

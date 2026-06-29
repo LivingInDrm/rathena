@@ -30,7 +30,7 @@
 //= 2.0a Added 'disable_items' command. [Euphy]
 //============================================================
 
--	script	Seiyablem#dummy::SocketEnchant	-1,{
+-	script	世亚布连#dummy::SocketEnchant	-1,{
 	if (checkweight(1201,1) == 0)
 	{
 		mes "- 等一下!! -";
@@ -71,9 +71,8 @@
 					}
 				case 2:
 					mes "[世亚布连]";
-					mes "B级难度？";
-					mes "这是普通难度的类别";
-					mes "你希望我为哪一种B级武器打孔呢？";
+					mes "B级难度？这是普通难度的类别，";
+					mes "您希望我为哪一种B级武器打孔呢？";
 					next;
 					switch(select("链锤:长柄短剑:角弓:步兵长矛:海东剑:鲁特琴:钢铁鞭子:虎爪拳套:亚伯雷弓"))
 					{
@@ -148,9 +147,7 @@
 						case 4: callfunc "Func_Socket",2216,2217,40,66,200,999,3;
 					}
 				case 2:
-					mes "你选择B等级防具.";
-					mes "那么,要选择什么样的防具呢?";
-					mes "[世亚布连]";
+					mes "您选择B等级防具。那么，要选择什么样的防具呢？[世亚布连]";
 					next;
 					switch(select("镜盾:钢铁锁子甲:圣职之衣:丝质外袍:战士长靴:长靴:披肩:铁盾:圆盾:钢盾:妖道帽"))
 					{
@@ -253,47 +250,47 @@ function	script	Func_Socket	{
 	setarray .@req_amount[0], getarg(6), getarg(8,0);
 
 	disable_items;
-	mes "[Seiyablem]";
-	mes "You want to add a Slot to a "+ getitemname(.@item_id) +"?";
-	mes "Alright, please bring me ^FF0000"+ .@req_amount[0] +" "+ getitemname(.@item_req[0]) + (.@req_amount[0] > 1 && .@item_req[0] != 999 ? "s":"") +"^000000, "+ (.@item_req[1] != 0 && .@req_amount[1] != 0 ? ("^FF0000"+ .@req_amount[1] +" "+ getitemname(.@item_req[1]) + (.@req_amount[1] > 1 && .@item_req[1] != 999 ? "s":"") + "^000000 ") : "") + "and my ^FF0000" + (.@zeny_req >= 1000 ? (.@zeny_req /1000 +",000") : .@zeny_req) +",000 zeny^000000 service fee.";
-	mes "Ah, and don't forget to bring that "+ getitemname(.@item_id) +"!";
+	mes "[世亚布连]";
+	mes "你想给一个插槽加到一个好的，好的，请给我带来^FF0000 啊，";
+	mes "别忘了带上那个。";
 	next;
-	mes "[Seiyablem]";
+	mes "[世亚布连]";
 	if (getiteminfo(.@item_id, ITEMINFO_LOCATIONS) & EQP_HAND_R) // weapon
 	{
-		mes "I can try to add a slot now if you have the required items and zeny.";
-		mes "However, you should know that there's a chance that I might fail.";
-		mes "Therefore, I need to give you a fair warning...";
+		mes "如果你有所需的物品和锭币，我可以尝试现在添加一个插槽。";
+		mes "然而，你应该知道，这可能会失败。因此，";
+		mes "我需要给你一个公平的警告……";
 		next;
-		mes "[Seiyablem]";
-		mes "If this attempt to add a Slot to your Weapon fails, then the ^FF0000Weapon^000000, ^FF0000and any Cards compounded to it will be destroyed^000000.";
+		mes "[世亚布连]";
+		mes "如果这次尝试给你的武器添加插槽失败，那么^FF0000武器^000000，";
+		mes "^FF0000以及任何附加的卡片都会被摧毁^000000。";
 	}
 	else // armor
 	{
-		mes "If you have all the required materials, my zeny service fee and the Armor, then we can go ahead with the Slot Addition attempt.";
-		mes "But before that, I must warn you of the risk.";
+		mes "如果你有所有所需的材料、我的锭币服务费和盔甲，";
+		mes "那么我们可以继续尝试添加插槽。但在此之前，";
+		mes "我必须警告你风险。";
 		next;
-		mes "[Seiyablem]";
-		mes "If this attempt to add a Slot to your Armor fails, then the ^FF0000Armor^000000, ^FF0000it's upgrades^000000 ^FF0000and any Cards compounded to it will be destroyed^000000.";
+		mes "[世亚布连]";
+		mes "如果这次尝试给你的盔甲添加插槽失败，那么^FF0000盔甲^000000、";
+		mes "^FF0000它的升级^000000，^FF0000以及任何附加的卡片都会被摧毁^000000。";
 	}
-	mes "Do you still want to try to add a Slot?";
+	mes "你还想尝试添加插槽吗？";
 	next;
-	switch(select("Attempt Slot Addition:Cancel"))
+	switch(select("尝试添加插槽:取消"))
 	{
 		case 1:
 			if ((Zeny >= .@zeny_req*1000) && countitem(.@item_req[0]) >= .@req_amount[0] && countitem(getarg(7,512)) >= .@req_amount[1] && countitem(.@item_id) > 0)// if there's no getarg(7) and getarg(8) provided, check itemcount against 0 (we still need a valid item ID though)
 			{
-				mes "[Seiyablem]";
-				mes "Alright then, let the work begin!";
-				mes "You'd better pray for a successful result.";
+				mes "[世亚布连]";
+				mes "好的，那么，让工作开始吧！你最好祈祷结果成功。";
 				next;
 				set .@a, rand(1,100);
 				if ((.@a > getarg(2)) && (.@a < getarg(3)))
 				{
 					specialeffect getarg(3) == 51 ? EF_LORD : EF_SANCTUARY; // only S Class items have Lord of Vermillion effect
-					mes "[Seiyablem]";
-					mes "Great, it seems to be successful.";
-					mes "It looks pretty well done. Congratulations!";
+					mes "[世亚布连]";
+					mes "太好了，似乎成功了。看起来做得相当不错。恭喜你！";
 					delitem .@item_id,1;
 					delitem .@item_req[0],.@req_amount[0];
 					if (.@item_req[1] != 0 && .@req_amount[1] != 0)
@@ -301,68 +298,66 @@ function	script	Func_Socket	{
 					Zeny = Zeny - .@zeny_req *1000;
 					getitem getarg(1),1;
 					next;
-					mes "[Seiyablem]";
-					mes "See you again, buddy!";
+					mes "[世亚布连]";
+					mes "再见，伙计！";
 					close;
 				}
 				else
 				{
 					specialeffect EF_SUI_EXPLOSION;
-					mes "[Seiyablem]";
-					mes "Wah! ...I am so sorry, it failed.";
-					mes "However, I am completely innocent.";
-					mes "This is your luck, and it is destined by god, okay?";
-					mes "Don't be so disappointed, and try next time.";
+					mes "[赛亚布连]";
+					mes "哇！...我很抱歉，失败了。不过，我完全无辜。这是你的运气，";
+					mes "是上天注定的，好吗？别太失望，下次再试试吧。";
 					delitem .@item_id,1;
 					delitem .@item_req[0],.@req_amount[0];
 					if (.@item_req[1] != 0 && .@req_amount[1] != 0)
 						delitem .@item_req[1],.@req_amount[1];
 					Zeny = Zeny - .@zeny_req *1000;
 					next;
-					mes "[Seiyablem]";
-					mes "I wish you good luck next time!";
+					mes "[赛亚布连]";
+					mes "祝你下次好运！";
 					close;
 				}
 			}
 			else
 			{
-				mes "[Seiyablem]";
-				mes "I'd like to go ahead with this Slot Addition attempt, but you're missing a few things.";
-				mes "You sure that you have the equipment, required materials and the zeny?";
+				mes "[赛亚布连]";
+				mes "我想继续进行这个打洞尝试，但你缺少一些东西。";
+				mes "你确定你有设备、所需材料和足够的金币吗？";
 				close;
 			}
 		case 2:
-			mes "[Seiyablem]";
-			mes "Need some time to think about it, huh?";
-			mes "Alright, I can understand.";
-			mes "Just remember that life's no fun if you're always playing it safe~";
+			mes "[赛亚布连]";
+			mes "需要一些时间考虑吗？好的，我可以理解。只要记住，";
+			mes "如果你总是小心翼翼，生活就没意思了~";
 			close;
 	}
 }
 
-payon,140,151,5	duplicate(SocketEnchant)	Seiyablem#pay	84
-lhz_in02,281,35,5	duplicate(SocketEnchant)	Seiyablem#lhz	84
-prt_in,33,70,5	duplicate(SocketEnchant)	Seiyablem#prt	84
-morocc,51,41,4	duplicate(SocketEnchant)	Seiyablem#moc	84
+payon,140,151,5	duplicate(SocketEnchant)	赛亚布连#pay	84
+lhz_in02,281,35,5	duplicate(SocketEnchant)	赛亚布连#lhz	84
+prt_in,33,70,5	duplicate(SocketEnchant)	赛亚布连#prt	84
+morocc,51,41,4	duplicate(SocketEnchant)	赛亚布连#moc	84
 
--	script	Young Man#dummy::SocketMan	-1,{
-	mes "[Young Man]";
-	mes "I'm considering becoming a Slotting Engineer.";
-	mes "It's a new field where you can add Slots to equipment, and it'd be cool if I can work in such a lucrative career.";
+-	script	年轻人#dummy::SocketMan	-1,{
+	mes "[年轻人]";
+	mes "我在考虑成为一名打洞工程师。这是一个新领域，";
+	mes "可以为装备添加打洞，";
+	mes "如果我能在这样一个有利可图的职业中工作，那就太酷了。";
 	next;
-	mes "[Young Man]";
-	mes "There's a huge element of luck involved in successfully adding Slots from what I can understand.";
-	mes "You fail sometimes, but if you're super lucky, you can add two Slots.";
-	mes "Crazy. Huh?";
+	mes "[年轻人]";
+	mes "从我所了解的情况来看，成功添加打洞涉及很大的运气成分。";
+	mes "有时候会失败，但如果你超级幸运，";
+	mes "可以添加两个打洞。真疯狂，对吧？";
 	next;
-	mes "[Young Man]";
-	mes "But don't get too excited.";
-	mes "Only certain equipment can handle the addition of two extra Slots.";
-	mes "There's so much more I have to learn before I can even be an apprentice...";
+	mes "[年轻人]";
+	mes "但别太兴奋。";
+	mes "只有某些装备可以处理添加两个额外打洞的情况。";
+	mes "在我能成为学徒之前，还有很多东西要学……";
 	close;
 }
 
-prt_in,31,57,1	duplicate(SocketMan)	Young Man#prt	97
-payon,143,143,7	duplicate(SocketMan)	Young Man#pay	97
-morocc,60,42,3	duplicate(SocketMan)	Young Man#moc	97
-lhz_in02,269,33,5	duplicate(SocketMan)	Young Man#lhz	97
+prt_in,31,57,1	duplicate(SocketMan)	年轻人#prt	97
+payon,143,143,7	duplicate(SocketMan)	年轻人#pay	97
+morocc,60,42,3	duplicate(SocketMan)	年轻人#moc	97
+lhz_in02,269,33,5	duplicate(SocketMan)	年轻人#lhz	97

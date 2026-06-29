@@ -124,18 +124,14 @@
 	}
 }
 
-amatsu,194,79,5	script	Sea Captain#ama2	709,{
-	mes "[Walter Moers]";
-	mes "You came... Did you enjoy";
-	mes "your trip to Amatsu...?";
-	mes "Alright, I will take you";
-	mes "back to Alberta.";
+amatsu,194,79,5	script	海上船长#ama2	709,{
+	mes "[沃尔特·莫尔斯]";
+	mes "你来了……你在天满享受旅程吗……？好吧，";
+	mes "我会带你回阿尔贝塔。";
 	next;
-	if (select("Back to Alberta:Cancel") == 1) {
-		mes "[Walter Moers]";
-		mes "Let's go then. You must have";
-		mes "so many things to talk about,";
-		mes "right? All aboard now.";
+	if (select("返回阿尔贝塔:取消") == 1) {
+		mes "[沃尔特·莫尔斯]";
+		mes "那我们走吧。你一定有很多话要说，对吧？快上船。";
 		close2;
 		if (checkre(0))
 			warp "alberta",245,87;
@@ -143,32 +139,25 @@ amatsu,194,79,5	script	Sea Captain#ama2	709,{
 			warp "alberta",243,91;
 		end;
 	}
-	mes "[Walter Moers]";
-	mes "Well, take your time.";
-	mes "The ship to Alberta is";
-	mes "always ready to depart...";
+	mes "[沃尔特·莫尔斯]";
+	mes "好吧，慢慢来。去阿尔贝塔的船随时准备出发……";
 	close;
 }
 
 // Generic Amatsu NPCs
 //============================================================
-amatsu,230,160,3	script	Well-side Maiden#ama	757,{
-	mes "[Yuuko]";
-	mes "I usually come to this well to";
-	mes "draw water, but never when it's";
-	mes "foggy or rainy. For some reason";
-	mes "whenever the weather is a";
-	mes "certain way, I feel like...";
+amatsu,230,160,3	script	岸边少女#ama	757,{
+	mes "[优子]";
+	mes "我通常来这个井里打水，但从不在雾天或下雨时来。";
+	mes "每当天气有些特殊时，我总觉得……";
 	next;
-	mes "[Yuuko]";
-	mes "...someone...or some thing is";
-	mes "struggling to crawl out from";
-	mes "the bottom of this well...";
-	mes "It really gives me the creeps.";
+	mes "[优子]";
+	mes "……有人……或者某种东西正在努力从井底爬出来……这真";
+	mes "的让我毛骨悚然。";
 	close;
 }
 
-amatsu,179,107,4	script	John#ama	86,{
+amatsu,179,107,4	script	约翰#ama	86,{
 	mes "[优舞可]";
 	mes "虽然每天都会来提水";
 	mes "不过有雾的天气或下雨天";
@@ -225,7 +214,7 @@ amatsu,179,107,4	script	John#ama	86,{
 	close;
 }
 
-amatsu,205,163,3	script	Mimi#ama	759,{
+amatsu,205,163,3	script	米米#ama	759,{
 	mes "[佑翰]";
 	mes "唷";
 	mes "你也好跟我一样";
@@ -243,47 +232,37 @@ amatsu,205,163,3	script	Mimi#ama	759,{
 	close;
 }
 
-amatsu,185,115,3	script	Drunken Man#ama	765,{
-	mes "[Kosake]";
-	mes "*Hiccup*...My wife is just like,";
-	mes "...like a man...*Hiccup*...";
-	mes "I'm going to really...*Hiccup*...not go home this time...Hiccup";
+amatsu,185,115,3	script	醉汉#ama	765,{
+	mes "[小酒鬼]";
+	mes "*打嗝*……我妻子就像……像个男人……*打嗝*……这次我真的……*";
+	mes "打嗝*……不打算回家了……打嗝";
 	next;
-	if (select("Stop drinking and go home:Let's drink together") == 1) {
-		mes "[Kosake]";
-		mes "What?! Do you want me to get";
-		mes "hit by my wife's big fist?";
-		mes "That's right! I said 'big fist!'";
+	if (select("停止饮酒并回家:一起喝酒") == 1) {
+		mes "[小酒鬼]";
+		mes "什么？！你想让我被我妻子的拳头打吗？没错！";
+		mes "我说的是‘拳头！’";
 		next;
-		mes "[Kosake]";
-		mes "Sad to say, I married a woman";
-		mes "with man hands...";
-		mes "Big, strong hands that can kill a tiger.";
+		mes "[小酒鬼]";
+		mes "可惜我嫁了个手像男人的女人……大而有力的手能杀死老虎。";
 		next;
-		mes "[Druken Man]";
-		mes "It was in Ko...Koko-something";
-		mes "town. She hit me because I";
-		mes "lost some money...*Hiccup*";
+		mes "[醉汉]";
+		mes "我在……什么……科……科科镇。她打我因为我输了钱……*打嗝*";
 		next;
-		mes "[Druken Man]";
-		mes "Life~~ is~~ nothing~~~";
-		mes "What is zeny~~~~ ";
-		mes "*Hiccup*...... *Hiccup*.......";
-		mes ".......................";
-		mes "........Z.z..z...zzz...";
+		mes "[醉汉]";
+		mes "生活是虚无的……什么是锭子……*打嗝*……*打嗝*……";
+		mes ".......................Z.z..z...zzz...";
 		close;
 	}
-	mes "[Kosake]";
-	mes "Heh heh... nice lad...";
-	mes "But you know *Hiccup*";
-	mes "I can't give you any of mine! Heheheh...";
+	mes "[小酒鬼]";
+	mes "嘿嘿……好小子……但你知道*打嗝*我不能给你我的任";
+	mes "何东西！嘿嘿嘿……";
 	next;
-	mes "[Kosake]";
-	mes "If you buy me a drink, I will think about it...Hehehe...*Hiccup*..";
+	mes "[小酒鬼]";
+	mes "如果你请我喝一杯，我会考虑的……嘿嘿……*打嗝*……";
 	close;
 }
 
-amatsu,217,179,1	script	Grandma#ama	760,{
+amatsu,217,179,1	script	奶奶#ama	760,{
 	mes "[咪咪]";
 	mes "呼呼..";
 	mes "看到港口附近的，冠军天津町小姐了吗?";
@@ -295,7 +274,7 @@ amatsu,217,179,1	script	Grandma#ama	760,{
 	close;
 }
 
-amatsu,287,266,3	script	Jyaburo#ama	766,{
+amatsu,287,266,3	script	贾布罗#ama	766,{
 	mes "[酒助]";
 	mes "嗝..我这老太婆";
 	mes "只有力气最大..嗝..";
@@ -329,102 +308,77 @@ amatsu,287,266,3	script	Jyaburo#ama	766,{
 	mes "如果你要请我喝酒的话我再考虑看看";
 	mes "呵呵..嗝..";
 	next;
-	mes "[Jyaburo]";
-	mes "人类的生命如此短暂";
-	mes "但我们能够在生活中笑着";
-	mes "忘记悲伤。";
-	mes "悲伤。";
-	mes "...永远快乐。";
+	mes "[贾布罗]";
+	mes "人类的生命如此短暂，但我们能够在生活中笑着，忘记悲伤。";
+	mes "悲伤……永远快乐。";
 	close;
 }
 
 // Legendary Tree
 //============================================================
-amatsu,269,221,1	script	Propose Girl#ama	758,{
+amatsu,269,221,1	script	求婚女孩#ama	758,{
 	set jap_tree,1;
-	mes "[Hutari Shioko]";
-	mes "It is a pleasure to meet you.";
-	mes "My name is Hutari Shioko.";
-	mes "My hobby is listening to music.";
-	mes "I'm an avid fan of classical music.";
+	mes "[双子志子]";
+	mes "很高兴见到你。我叫双子志子。我的爱好是听音乐。";
+	mes "我是古典音乐的忠实粉丝。";
 	next;
-	mes "[Hutari Shioko]";
-	mes "There is an old story about";
-	mes "the hill in our town.";
-	mes "Have you heard this story before?";
+	mes "[双子志子]";
+	mes "我们镇上有个古老的故事。你听说过这个故事吗？";
 	next;
-	mes "[Hutari Shioko]";
-	mes "It is said that if you propose";
-	mes "under that tree, you and your";
-	mes "lover will live a happy life for all eternity.";
+	mes "[双子志子]";
+	mes "据说如果你在那棵树下求婚，";
+	mes "你和你的爱人将会永远幸福地生活。";
 	next;
-	mes "[Hutari Shioko]";
-	mes "However, the proposal can not be";
-	mes "done at any given time. The legend states that it can only be done on Saturday evenings.";
+	mes "[双子志子]";
+	mes "不过，求婚不能随时进行。传说中只能在星期六的晚上进行。";
 	next;
-	mes "[Hutari Shioko]";
-	mes "After the proposal, the reply must";
-	mes "be answered before Sunday evening. This is the most crucial part of it.";
+	mes "[双子志子]";
+	mes "求婚后，回复必须在星期天晚上之前给出。";
+	mes "这是最关键的部分。";
 	next;
 	emotion ET_BIGTHROB;
-	mes "[Hutari Shioko]";
-	mes "If you like someone...";
-	mes "You should try proposing";
-	mes "under that tree. I'm sure ";
-	mes "happy things will happen, if you do.";
+	mes "[双子志子]";
+	mes "如果你喜欢某人……你应该试着在那棵树下求婚。";
+	mes "我相信如果你这样做，幸福的事情会发生。";
 	close;
 }
 
-amatsu,243,202,3	script	Drama Teacher#ama	760,{
+amatsu,243,202,3	script	戏剧老师#ama	760,{
 	set jap_tree,2;
-	mes "[Garakame sensei]";
-	mes "This is a beautiful place";
-	mes "with everlasting cherry blossoms.";
-	mes "Also, this town is the origin of";
-	mes "legendary play, 'White Dryad.' ";
+	mes "[伽拉卡梅老师]";
+	mes "这是一个美丽的地方，樱花永恒绽放。此外，";
+	mes "这个镇是传奇剧作《白色树精》的发源地。";
 	next;
 	if (Sex == SEX_MALE) {
-		mes "[Garakame sensei]";
-		mes "If you know a girl who is";
-		mes "talented in acting, please";
-		mes "bring her to me. I have been";
-		mes "searching for a girl who could";
-		mes "play the role as the 'White Dryad.'";
+		mes "[伽拉卡梅老师]";
+		mes "如果你认识一个有表演天赋的女孩，请把她带给我。";
+		mes "我一直在寻找能扮演《白色树精》的女孩。";
 		next;
-		mes "[Garakame sensei]";
-		mes "The 'White Dryad' is a nymph of";
-		mes "cherry tree... It has been hard to";
-		mes "find a girl who can perform";
-		mes "as the 'White Dryad...'";
+		mes "[伽拉卡梅老师]";
+		mes "《白色树精》是樱树的精灵……找到一个能表演《白色树精》的";
+		mes "女孩一直很困难。";
 		close;
 	}
 	emotion ET_SURPRISE;
-	mes "[Garakame sensei]";
-	mes "Are you interested in acting?";
-	mes "I need someone who sees";
-	mes "the passion in acting and";
-	mes "can understand my vision.";
+	mes "[伽拉卡梅老师]";
+	mes "你对表演感兴趣吗？";
+	mes "我需要一个能理解我愿景并看到表演热情的人。";
 	next;
-	mes "[Garakame sensei]";
-	mes "When you stand on the stage,";
-	mes "you need to become the";
-	mes "character. Your acting needs";
-	mes "to touch the hearts of the";
-	mes "audience and touch their souls.";
+	mes "[伽拉卡梅老师]";
+	mes "当你站在舞台上时，你需要成为角色。";
+	mes "你的表演需要打动观众的心灵，触动他们的灵魂。";
 	next;
-	mes "[Garakame sensei]";
-	mes "Everyone's life is like a ";
-	mes "drama, right? Enjoy your life";
-	mes "as what you are and find me";
-	mes "someday when you are ready.";
+	mes "[伽拉卡梅老师]";
+	mes "每个人的生活就像一场戏剧，对吧？享受你作为自己的生活，";
+	mes "等你准备好时再来找我。";
 	close;
 }
 
-amatsu,283,203,1	script	Bonubonu#ama1	1323,{
+amatsu,283,203,1	script	博努博努#ama1	1323,{
 	end;
 }
 
-amatsu,283,203,1	script	Bonubonu#ama2	111,{
+amatsu,283,203,1	script	博努博努#ama2	111,{
 	set jap_tree,3;
 	emotion ET_PROFUSELY_SWEAT;
 	mes "[嘉普罗]";
@@ -454,7 +408,7 @@ amatsu,283,203,1	script	Bonubonu#ama2	111,{
 	close;
 }
 
-amatsu,274,178,7	script	Veterinarian#ama	735,{
+amatsu,274,178,7	script	兽医#ama	735,{
 	set jap_tree,4;
 	mes "[樱井诚一]";
 	mes "啊... 我不是怪人，所以";
@@ -507,82 +461,49 @@ amatsu,274,178,7	script	Veterinarian#ama	735,{
 	close;
 }
 
-amatsu,262,197,1	script	Legendary Tree	111,{
+amatsu,262,197,1	script	传奇树	111,{
 	if (jap_tree == 1) {
-		mes "^3355FFAs she mentioned, this tree";
-		mes "seems to be a famous place";
-		mes "for proposing lovers.";
-		mes "There were several carved symbols";
-		mes "of hearts and initials of lovers";
-		mes "on the bark.^000000";
+		mes "^3355FF正如她所提到的，这棵树似乎是求婚恋人的著名地点。";
+		mes "树皮上刻有许多心形符号和恋人的名字缩写。^000000";
 		next;
-		mes "^3355FFBesides proposals, people";
-		mes "gather under this tree when";
-		mes "they discuss important";
-		mes "matters. I could listen to";
-		mes "all kinds of stories";
-		mes "in this magnificent place.^000000";
+		mes "^3355FF除了求婚，人们在讨论重要事务时也会聚集在这棵树下。";
+		mes "我在这个宏伟的地方听到了各种各样的故事。^000000";
 		close;
 	}
 	else if (jap_tree == 2) {
-		mes "^3355FFThe legendary play, 'White Dryad'.....";
-		mes "I never heard about that title but";
-		mes "it sounds familiar.";
-		mes "Nymph of cherry tree... What would";
-		mes "be her position in the play?^000000";
+		mes "^3355FF传奇剧作《白色树精》……我从未听说过这个标题，";
+		mes "但听起来很熟悉。樱树的精灵……她在剧中的角色是什么呢？^000000";
 		next;
 		if (Sex == SEX_MALE) {
-			mes "^3355FFI would like to find";
-			mes "a person who is talented";
-			mes "in acting and help her until";
-			mes "she performs the play. However,";
-			mes "it seems to be easier said than done.^000000";
+			mes "^3355FF我想找一个有表演天赋的人，并帮助她直到她演出这部剧。";
+			mes "然而，这似乎说起来容易做起来难。^000000";
 			close;
 		}
-		mes "^3355FFI might have talent in";
-		mes "acting which hasn't been discovered yet. I thought, 'If I dress up, I should perform as the 'White Dryad...'^000000";
+		mes "^3355FF我可能有未被发现的表演天赋。我想，‘如果我打扮一下，";
+		mes "应该可以扮演“白色树精”...^000000";
 		close;
 	}
 	else if (jap_tree == 3) {
-		mes "^3355FFUnlike other cherry trees,";
-		mes "this tree has a strong fragrance.";
-		mes "I just fell into a relaxed";
-		mes "mood. The fragrance eased";
-		mes "my burdens and I felt";
-		mes "very comfortable.^000000";
+		mes "^3355FF与其他樱桃树不同，这棵树散发着浓郁的香气。我感到放松，";
+		mes "香气减轻了我的负担，让我感到非常舒适。^000000";
 		next;
-		mes "^3355FFIt was just for a few moments";
-		mes "but I could forget the";
-		mes "burdens of life. I wish to";
-		mes "come back again and";
-		mes "sit under this tree...^000000";
+		mes "^3355FF虽然只有短短几分钟，但我可以忘记生活的重担。";
+		mes "我希望能再次回来，坐在这棵树下...^000000";
 		close;
 	}
 	else if (jap_tree == 4) {
-		mes "^3355FFThis strong fragrance";
-		mes "is making me dizzy. Not like";
-		mes "other cherry trees, this tree's";
-		mes "shimmering white petals";
-		mes "felt strange.^000000";
+		mes "^3355FF这股浓烈的香气让我感到头晕。与其他樱桃树不同，";
+		mes "这棵树闪烁的白色花瓣让我感到奇怪。^000000";
 		next;
-		mes "^3355FFIt feels as if my soul is";
-		mes "being drained if I stay here";
-		mes "longer. After a glimpse of";
-		mes "the cherry tree, I thought to";
-		mes "myself, 'I must get out of here quickly.'^000000";
+		mes "^3355FF如果我再待久一点，感觉我的灵魂都要被抽走了。";
+		mes "瞥见樱桃树后，我心想，‘我得快点离开这里。’^000000";
 		close;
 	}
-	mes "^3355FFThere was a cherry tree";
-	mes "on the hill. It doesn't look";
-	mes "like the other trees.";
-	mes "This tree seems to have";
-	mes "a long history...^000000";
+	mes "^3355FF山上有一棵樱桃树。它看起来与其他树不同。";
+	mes "这棵树似乎有着悠久的历史...^000000";
 	next;
-	mes "^3355FFAre there any people";
-	mes "who live here? I took";
-	mes "a look around and found";
-	mes "someone down the hill.";
-	mes "I better ask her about this tree.^000000";
+	mes "^3355FF这里有住的人吗？我四处看看，发现山下有个人。";
+	mes "我最好去问问她关于这棵树的事。^000000";
 	close;
 }
 

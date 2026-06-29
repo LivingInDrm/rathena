@@ -34,352 +34,375 @@
 
 // Al De Baran
 //============================================================
-aldebaran,113,70,4	script	Forger Munster#alde	48,{
-	mes "[Munster]";
-	mes "My family used to live in Geffen. So I guess it was natural that we studied forging and eventually became Blacksmiths. Then, we finally moved to this town,";
-	mes "Al De Baran.";
+aldebaran,113,70,4	script	锻造者穆斯特#alde	48,{
+	mes "[穆斯特]";
+	mes "我家以前住在吉芬。所以我们学习锻造，最终成为了铁匠。";
+	mes "然后，我们终于搬到了这个城镇，阿尔德巴兰。";
 	next;
-	if (select("About ^3355FFItem Upgrade^000000:Quit") == 1) {
-		mes "[Munster]";
-		mes "My father was a famous blacksmith in Geffen, and he taught me a lot about forging equipment.";
+	if (select("关于^3355FF物品升级^000000:退出") == 1) {
+		mes "[穆斯特]";
+		mes "我父亲是吉芬著名的铁匠，";
+		mes "他教了我很多关于锻造装备的知识。";
 		next;
-		mes "[Munster]";
-		mes "One of the fundamentals is that the success probability of upgrading an item depends on the level of the weapon.";
+		mes "[穆斯特]";
+		mes "升级物品的成功概率取决于武器的等级，这是基本原则之一。";
 		next;
-		mes "[Munster]";
-		mes "For level 1 weapons, you may upgrade up to + 7 without the risk of breaking the weapon. Level 2 weapons can be upgraded to +6. Level 3 weapons can be upgraded to +5 safely.";
+		mes "[穆斯特]";
+		mes "对于1级武器，您可以安全地升级到+7，而不会破坏武器。";
+		mes "2级武器可以升级到+6，3级武器可以安全升级到+5。";
 		next;
-		mes "[Munster]";
-		mes "For level 4 weapons, you can upgrade + 4 without too much risk. As for armors, you can upgrade them to +4. But if the upgrade for the equipment fails, it will be destroyed!";
+		mes "[穆斯特]";
+		mes "对于4级武器，您可以安全地升级到+4。至于盔甲，";
+		mes "您也可以升级到+4。但如果装备升级失败，它将被摧毁！";
 		close;
 	}
-	mes "[Munster]";
-	mes "Hmm...";
-	mes "If you get a chance, try to visit my father's workshop here in Al de Baran. If I may say so, he's a pretty talented Blacksmith.";
+	mes "[穆斯特]";
+	mes "嗯……如果有机会，试着来阿尔德巴兰的我父亲的工作坊看看。";
+	mes "如果我可以这么说，他是一位相当有才华的铁匠。";
 	close;
 }
 
-aldebaran,64,104,4	script	Smithing Guy#alde	55,{
-	mes "[Quatro]";
-	mes "Have you heard that a famous Blacksmith moved here from Geffen?";
+aldebaran,64,104,4	script	铁匠#alde	55,{
+	mes "[夸特罗]";
+	mes "你听说过一位著名的铁匠从吉芬搬到这里吗？";
 	next;
-	if (select("Famous Blacksmith?:End Conversation") == 1) {
-		mes "[Quatro]";
-		mes "From what I've heard, he's one of those Blacksmiths that can upgrade your weapons and armor. When you upgrade a weapon, its attack strength is increased.";
+	if (select("著名铁匠？:结束对话") == 1) {
+		mes "[夸特罗]";
+		mes "据我所知，他是那种可以升级你的武器和盔甲的铁匠。";
+		mes "升级武器时，其攻击力会增加。";
 		next;
-		mes "[Quatro]";
-		mes "For each upgrade level, attack strength increases by 2 for level 1 weapons. On level 2 weapons, 3 attack strength is added.";
+		mes "[夸特罗]";
+		mes "每升级一级，1级武器的攻击力增加2，2级武器增加3。";
 		next;
-		mes "[Quatro]";
-		mes "On level 3 weapons, 5 attack strength is added for each level, and for level 4 weapons, 7 attack strength is added for each level.";
+		mes "[夸特罗]";
+		mes "3级武器每级增加5攻击力，4级武器每级增加7攻击力。";
 		close;
 	}
-	mes "[Quatro]";
-	mes "This Blacksmith's family lives here, since his wife is sick and weak. Because of her condition, she needs to take medicinal herbs that grow near Al de Baran.";
+	mes "[夸特罗]";
+	mes "这位铁匠的家人住在这里，因为他的妻子生病虚弱。";
+	mes "由于她的状况，她需要服用在阿尔德巴兰附近生长的药草。";
 	next;
-	mes "[Quatro]";
-	mes "They also have a dutiful son who's always helping out with the family business. I'm sure that kid will grow up to become a good Blacksmith like his father.";
+	mes "[夸特罗]";
+	mes "他们还有一个尽责的儿子，总是帮助家里的生意。";
+	mes "我相信那个孩子会成长为像他父亲一样优秀的铁匠。";
 	close;
 }
 
-aldebaran,49,93,4	script	Young Man#alde	83,{
-	mes "[Miller]";
-	mes "Aren't level 4 weapons cool!";
-	mes "I can't believe such powerful";
-	mes "weapons exist!";
+aldebaran,49,93,4	script	年轻人#alde	83,{
+	mes "[米勒]";
+	mes "4级武器真酷！我简直不敢相信有这么强大的武器！";
 	next;
-	mes "[Miller]";
-	mes "Well, they're rarely seen in the open market, but boss monsters will drop them by a low chance if you happen to be able to kill them.";
+	mes "[米勒]";
+	mes "不过，它们在公开市场上很少见，但如果你能击败首领怪物，";
+	mes "它们有可能掉落。";
 	close;
 }
 
-aldebaran,81,61,4	script	Shell Gathering Lady#ald	101,{
-	mes "[Joanne]";
-	mes "I enjoy gathering shells from the sea. It's really fun and relaxing~";
+aldebaran,81,61,4	script	贝壳采集女士#ald	101,{
+	mes "[乔安娜]";
+	mes "我喜欢从海里收集贝壳。这真的很有趣，也很放松~";
 	next;
-	if (select("Shell Gathering?:End Conversation") == 1) {
-		mes "[Joanne]";
-		mes "When you see bubbles popping up from the sand or muddy puddles, try digging into the ground a bit. You might find some shells underneath the ground!";
+	if (select("贝壳采集？:结束对话") == 1) {
+		mes "[乔安娜]";
+		mes "当你看到沙子或泥水中冒出气泡时，试着挖掘一下地面。";
+		mes "你可能会在地下找到一些贝壳！";
 		next;
-		mes "[Joanne]";
-		mes "Have you heard";
-		mes "of Ambernite?";
-		mes "That shell monster";
-		mes "is pretty tough~";
+		mes "[乔安娜]";
+		mes "你听说过琥珀壳吗？那个贝壳怪物相当强大~";
 		next;
-		mes "[Joanne]";
-		mes "It's usually seen at the beach near the west province of Prontera. If you ever try attacking it without being prepared, you might be in trouble.";
+		mes "[乔安娜]";
+		mes "它通常出现在普隆德拉西部的海滩。";
+		mes "如果你在没有准备的情况下攻击它，可能会遇到麻烦。";
 		next;
-		mes "[Joanne]";
-		mes "Ambernite is";
-		mes "pretty strong!";
-		mes "So look out for it!";
+		mes "[乔安娜]";
+		mes "琥珀壳相当强大！所以要小心！";
 		close;
 	}
-	mes "[Joanne]";
-	mes "Ambernite is";
-	mes "pretty strong!";
-	mes "So look out for it!";
+	mes "[乔安]";
+	mes "琥珀石非常强大！小心点！";
 	close;
 }
 
-aldebaran,46,129,4	script	Canal Guy#alde	97,{
-	mes "[Panama]";
-	mes "Al De Baran is known world wide as the City of Canals. The waterways really add a sophisticated, romantic touch to our fair city.";
+aldebaran,46,129,4	script	运河人#alde	97,{
+	mes "[巴拿马]";
+	mes "阿尔德巴兰因运河而闻名于世。";
+	mes "水道为我们美丽的城市增添了优雅和浪漫的气息。";
 	next;
-	switch(select("About the Canals:End Conversation")) {
+	switch(select("关于运河:结束对话")) {
 	case 1:
-		mes "[Panama]";
-		mes "Well, a canal is an artificial waterway used for travel,";
-		mes "shipping, or irrigation.";
+		mes "[巴拿马]";
+		mes "运河是用于旅行、运输或灌溉的人造水道。";
 		next;
-		mes "[Panama]";
-		mes "However, the canals over here are just for show. If we needed to transport anything, we just use the Kafra Corporation Teleport service!";
+		mes "[巴拿马]";
+		mes "不过，这里的运河只是用来观赏的。如果需要运输任何东西，";
+		mes "我们只需使用卡夫拉公司的传送服务！";
 		close;
 		break;
 	case 2:
-		mes "[Panama]";
-		mes "I have that you will enjoy your stay in Al De Baran.";
+		mes "[巴拿马]";
+		mes "我希望你在阿尔德巴兰的逗留愉快。";
 		close;
 		break;
 	}
 }
 
-aldebaran,67,154,4	script	Forest Guy#alde	98,{
-	mes "[Isenberg]";
-	mes "Mt. Mjolnir and Payon Forest.";
-	mes "Both of those places are tough";
-	mes "to travel through.";
+aldebaran,67,154,4	script	森林人#alde	98,{
+	mes "[伊森伯格]";
+	mes "米约尔尼尔山和佩永森林。这两个地方都很难穿越。";
 	next;
-	switch(select("Mt.Mjolnir?:Payon Forest...?:End Conversation")) {
+	switch(select("米约尔尼尔山？:佩永森林...?:结束对话")) {
 	case 1:
-		mes "[Isenberg]";
-		mes "To arrive here from Prontera or Geffen, you've got to cross the Mjolnir Mountains.";
+		mes "[伊森伯格]";
+		mes "从普隆特拉或杰芬到这里，你必须穿越米约尔尼尔山。";
 		next;
-		mes "[Isenberg]";
-		mes "If you've made it here by foot without using the Kafra Teleportation service,";
-		mes "then good job!";
+		mes "[伊森伯格]";
+		mes "如果你是步行而来，没有使用卡夫拉传送服务，那你真不错！";
 		next;
-		mes "[Isenberg]";
-		mes "The Mjolnir Mountains are really steep, and it's full of aggressive and hostile monsters. So it's always a risk to travel through there alone.";
+		mes "[伊森伯格]";
+		mes "米约尔尼尔山非常陡峭，里面充满了攻击性和敌对的怪物。";
+		mes "所以独自穿越那里总是有风险。";
 		close;
 	case 2:
-		mes "[Isenberg]";
-		mes "If you wish to visit Alberta or the city of Payon, you must first travel through the Payon Forest.";
+		mes "[伊森伯格]";
+		mes "如果你想去阿尔贝尔塔或佩永城，首先必须穿越佩永森林。";
 		next;
-		mes "[Isenberg]";
-		mes "The Payon Forest is a winding, intricate maze where it's easy to get lost. Unless you concentrate and keep track of your path, you might be stuck wandering in that dangerous place.";
+		mes "[伊森伯格]";
+		mes "佩永森林是一个曲折复杂的迷宫，很容易迷路。";
+		mes "除非你集中注意力并跟踪你的路径，";
+		mes "否则可能会在那个危险的地方徘徊。";
 		next;
-		mes "[Isenberg]";
-		mes "Payon, the Archer Village, was built deep inside this steep and rugged forest so that it may be protected from outside invaders. So I guess that a good decision on their part.";
+		mes "[伊森伯格]";
+		mes "弓箭手村佩永建在这片陡峭而崎岖的森林深处，";
+		mes "以保护自己免受外来入侵者的侵扰。";
+		mes "我想这是他们的一个明智决定。";
 		close;
 	case 3:
-		mes "[Isenberg]";
-		mes "The huge mountains surrounding this town";
-		mes "blocks people from outside to come into this town.";
-		mes "That may be a part of the reason how we have been able to";
-		mes "keep this beautiful canal and mysterious alchemy";
-		mes "without any influence from outside.";
+		mes "[伊森伯格]";
+		mes "环绕这个城镇的巨大山脉阻挡了外来者的进入。";
+		mes "这可能是我们能够保持这美丽的运河和神秘的炼金术不受外";
+		mes "界影响的原因之一。";
 		close;
 	}
 }
 
-aldebaran,90,170,4	script	Slot Guy#alde	47,{
-	mes "[Epthiel]";
-	mes "Some weapons or armor have Slots where you can insert Cards obtained from monsters.";
+aldebaran,90,170,4	script	槽位人#alde	47,{
+	mes "[埃普提尔]";
+	mes "一些武器或盔甲有槽位，可以插入从怪物那里获得的卡片。";
 	next;
-	switch(select("About the number of Slots:Relation between Cards and Slots:End Conversation")) {
+	switch(select("关于槽位数量:卡片与槽位的关系:结束对话")) {
 	case 1:
-		mes "[Epthiel]";
-		mes "Items dropped by monsters possess more Slots than ordinary weapons or armor sold in NPC shops.";
+		mes "[埃普提尔]";
+		mes "怪物掉落的物品比NPC商店出售的普通武器或盔甲";
+		mes "拥有更多的槽位。";
 		next;
-		mes "[Epthiel]";
-		mes "I guess you can assume that an item with more Slots is more valuable than the same item with fewer Slots.";
+		mes "[埃普提尔]";
+		mes "你可以认为，";
+		mes "拥有更多槽位的物品比相同物品的槽位更少的更有价值。";
 		close;
 	case 2:
-		mes "[Epthiel]";
-		mes "Once a Card is inserted into a Slot, it is impossible to remove it. So please be careful when you insert Cards into weapons or armor.";
+		mes "[埃普提尔]";
+		mes "一旦卡片插入槽中，就无法移除。因此，";
+		mes "请在将卡片插入武器或盔甲时小心。";
 		next;
-		mes "[Epthiel]";
-		mes "Also, when you mouse over equipment in the Item Window or Vending Window, the name of the item will be followed by the number of its Slots in brackets.";
+		mes "[埃普提尔]";
+		mes "此外，当你将鼠标悬停在物品窗口或出售窗口的装备上时，";
+		mes "物品名称后会在括号中显示其槽位数量。";
 		next;
-		mes "[Epthiel]";
-		mes "For example, a Shield with 1 Slot, when moused over, would display the name 'Shield [1].'";
+		mes "[埃普提尔]";
+		mes "例如，一个有1个槽位的盾牌，";
+		mes "鼠标悬停时会显示名称为'盾牌 [1]'。";
 		next;
-		mes "[Epthiel]";
-		mes "You may also right-click an item, and check the Card Slot window below the item description window for the number of Slots.";
+		mes "[埃普提尔]";
+		mes "你也可以右键点击物品，";
+		mes "查看物品描述窗口下方的卡槽窗口以获取槽位数量。";
 		close;
 	case 3:
-		mes "[Epithiel]";
-		mes "Have you ever obtained a card from a monster?";
+		mes "[埃普提尔]";
+		mes "你曾从怪物身上获得过卡片吗？";
 		close;
 	}
 }
 
-aldebaran,117,181,4	script	Phracon Guy#alde	48,{
-	mes "[Joy]";
-	mes "Level 1 weapons, which are the lowest grade, need a metal named ^3355FFPhracon^000000 in order to be upgraded.";
+aldebaran,117,181,4	script	普拉康研究员#alde	48,{
+	mes "[乔伊]";
+	mes "等级1的武器是最低级别的，";
+	mes "需要一种名为^3355FF普拉康^000000的金属才能升级。";
 	next;
-	switch(select("About Phracon:Advice about Phracon:End Conversation")) {
+	switch(select("关于普拉康:关于普拉康的建议:结束对话")) {
 	case 1:
-		mes "[Joy]";
-		mes "Phracon is a pretty common metal and can be found all over the Midgard continent.";
+		mes "[乔伊]";
+		mes "普拉康是一种相当常见的金属，遍布整个米德加德大陆。";
 		next;
-		mes "[Joy]";
-		mes "Although it lacks the strength of other metals, it's easy to find and obtain. You can get Phracons by killing monsters or by buying them in Forging Shops in towns.";
+		mes "[乔伊]";
+		mes "虽然它的强度不如其他金属，但容易找到和获取。";
+		mes "你可以通过击杀怪物或在城镇的锻造店购买普拉康。";
 		next;
-		mes "[Joy]";
-		mes "When you no longer need Phracons because you are using higher level weapons, you can sell them for some zeny!";
+		mes "[乔伊]";
+		mes "当你不再需要普拉康，因为你使用更高级的武器时，";
+		mes "可以将它们出售换取一些Zeny！";
 		close;
 	case 2:
-		mes "[Joy]";
-		mes "Well, I hear lots of monsters carry Phracons and will drop them once killed. Why don't you go hunting for them?";
+		mes "[乔伊]";
+		mes "我听说很多怪物携带普拉康，击杀后会掉落。";
+		mes "为什么不去狩猎它们呢？";
 		next;
-		mes "[Joy]";
-		mes "It shouldn't be too difficult. Once I found a Phracon that dropped after killing a Bebe Savage! But if you're desperate, you can always buy them at the Forging Shop.";
+		mes "[乔伊]";
+		mes "这应该不太难。";
+		mes "我曾经在击杀小野猪后找到过一个掉落的普拉康！";
+		mes "不过如果你急需，也可以在锻造店购买。";
 		close;
 	case 3:
-		mes "[Joy]";
-		mes "Good luck with finding Phracons!";
+		mes "[乔伊]";
+		mes "祝你好运，找到普拉康！";
 		close;
 	}
 }
 
-aldebaran,121,231,4	script	Alchemy Guy#alde	49,{
-	mes "[Chemirre]";
-	mes "Alchemists, one of the 2nd Jobs, are able to create items out of several materials using knowledge from the ancient age of Al De Baran.";
+aldebaran,121,231,4	script	炼金术研究员#alde	49,{
+	mes "[凯米尔]";
+	mes "炼金术士是第二职业之一，";
+	mes "能够利用古代阿尔德巴兰的知识将多种材料制作成物品。";
 	next;
-	switch(select("About Alchemy in Payon:Definition of Alchemy:. . . . .:End Conversation")) {
+	switch(select("关于佩永的炼金术:炼金术的定义:. . . . .:结束对话")) {
 	case 1:
-		mes "[Chemirre]";
-		mes "Most people don't know that there was an oriental form of Alchemy that developed in Payon.";
+		mes "[凯米尔]";
+		mes "大多数人不知道，佩永曾经发展出一种东方炼金术。";
 		next;
-		mes "[Chemirre]";
-		mes "These Payon Alchemists were able to create Gold out of different materials. However, Payon Alchemy never advanced as much as the Alchemy in Al De Baran.";
+		mes "[凯米尔]";
+		mes "这些佩永的炼金术士能够利用不同材料创造黄金。然而，";
+		mes "佩永的炼金术从未像阿尔德巴兰的炼金术那样发展。";
 		next;
-		mes "[Chemirre]";
-		mes "Materials for Alchemy in Payon were scarce and interest in that field eventually waned. Now, you can only study Alchemy here in Al De Baran.";
+		mes "[凯米尔]";
+		mes "佩永的炼金术材料稀缺，对该领域的兴趣最终减退。现在，";
+		mes "你只能在阿尔德巴兰学习炼金术。";
 		next;
-		mes "[Chemirre]";
-		mes "Still, I can't help but wonder what secrets were lost after the Payon art of Alchemy disappeared from the face of the Earth...";
+		mes "[凯米尔]";
+		mes "不过，我不禁想知道，佩永的炼金术消失后，";
+		mes "失去了什么秘密……";
 		close;
 	case 2:
-		mes "[Chemirre]";
-		mes "Alchemists specialize in chemical research in order to create useful items out of various things.";
+		mes "[凯米尔]";
+		mes "炼金术士专注于化学研究，";
+		mes "以便从各种物品中创造出有用的物品。";
 		next;
-		mes "[Chemirre]";
-		mes "I also hear that they create all sorts of Potions, and can even summon certain monsters! It seems that their studies have all sorts of nifty applications.";
+		mes "[凯米尔]";
+		mes "我听说他们可以制作各种药水，甚至能召唤某些怪物！";
+		mes "看来他们的研究有很多有趣的应用。";
 		close;
 	case 3:
-		mes "[Chemirre]";
-		mes "You are bored, aren't you?";
-		mes "Alright then, I will tell you a story about monster cards and item slots.";
-		mes "As you already know, if you ever have obtained a monster card before,";
+		mes "[凯米尔]";
+		mes "你无聊吧？好吧，我给你讲一个关于怪物卡和物品槽的故事。";
+		mes "你已经知道，如果你获得过怪物卡，";
 		next;
-		mes "[Chemirre]";
-		mes "you can only insert a monster card to an item";
-		mes "that satisfies the card's location requirement.";
-		mes "For instance, let's say, you have obtained a Poring Card.";
+		mes "[凯米尔]";
+		mes "你只能将怪物卡插入满足卡片位置要求的物品。例如，";
+		mes "假设你获得了一张波利卡。";
 		next;
-		mes "[Chemirre]";
-		mes "When you right click on the card, you will see";
-		mes "its ability as LUK+2 and Perfect Dodge+1";
-		mes "and its location as 'Armor'. ";
+		mes "[凯米尔]";
+		mes "当你右键点击这张卡时，";
+		mes "你会看到它的能力是LUK+2和完美闪避+1，位置为“护甲”。";
 		next;
-		mes "[Chemirre]";
-		mes "If you try to insert this card to a dagger with many slots,";
-		mes "it is not going to work because the card only can be inserted to";
-		mes "armor items.";
+		mes "[凯米尔]";
+		mes "如果你尝试将这张卡插入一个有多个槽的匕首，";
+		mes "它是行不通的，因为这张卡只能插入护甲物品。";
 		next;
-		mes "[Chemirre]";
-		mes "Almost every armor items that are being sold";
-		mes "in town shops do not have slots on them.";
-		mes "That means, you can only obtain";
-		mes "slotted armors by hunting monsters.";
+		mes "[凯米尔]";
+		mes "几乎所有在城镇商店出售的护甲物品上都没有槽。这意味着，";
+		mes "你只能通过打怪获得有槽的护甲。";
 		next;
-		mes "[Chemirre]";
-		mes "Ah, let me tell you how you can insert a card to an item.";
-		mes "If you want to insert a card on your equipped armor,";
-		mes "you must unequip the armor first.";
-		mes "And then, double click a card that you want to use.";
-		mes "Then a list of armor, that you can insert the card, will be displayed.";
+		mes "[凯米尔]";
+		mes "啊，让我告诉你如何将卡片插入物品。";
+		mes "如果你想在装备的护甲上插入卡片，必须先卸下护甲。然后，";
+		mes "双击你想使用的卡片。接着，";
+		mes "会显示出可以插入卡片的护甲列表。";
 		next;
-		mes "[Chemirre]";
-		mes "It is not that complicated, is it?";
+		mes "[凯米尔]";
+		mes "这并不复杂，对吧？";
 		close;
 	case 4:
-		mes "[Chemirre]";
-		mes "You can talk about Rune-Midgarts' alchemy";
-		mes "without talking about the Al De Baran Alchemist Guild!";
-		mes "Long Live Alchemists!";
+		mes "[凯米尔]";
+		mes "谈论鲁恩-米德加兹的炼金术时，";
+		mes "怎么能不提阿尔德巴朗炼金师公会呢！炼金师万岁！";
 		close;
 	}
 }
 
-aldebaran,86,228,4	script	Little Kid#alde	62,{
-	mes "[Bebe]";
-	mes "A while ago I went out for a walk toward Mt. Mjolnir with my pet Savage Bebe. His name is NukNuk!";
-	mes "We got attacked, but luckily we weren't hurt.";
+aldebaran,86,228,4	script	小孩#alde	62,{
+	mes "[贝贝]";
+	mes "不久前，我带着我的宠物野蛮贝贝去妙勒尼山散步。";
+	mes "它的名字叫努克努克！我们遭到了攻击，但幸运的是没有受伤。";
 	next;
-	switch(select("Attacked?:About Mt.Mjolnir:End Conversation")) {
+	switch(select("被攻击了？:关于妙勒尼山:结束对话")) {
 	case 1:
-		mes "[Bebe]";
-		mes "I was walking up a narrow path, and out of the blue, a giant and ugly plant started to attack me and NukNuk!";
+		mes "[贝贝]";
+		mes "我正走在一条狭窄的小路上，突然，";
+		mes "一个巨大的丑陋植物开始攻击我和努克努克！";
 		next;
-		mes "[Bebe]";
-		mes "I was so surprised, so me and NukNuk had to run away. I threw rocks at it, but I don't think I hurt it. It must have been really strong!";
+		mes "[贝贝]";
+		mes "我非常惊讶，所以我和努克努克不得不逃跑。我朝它扔了石头，";
+		mes "但我觉得没有伤到它。它一定非常强大！";
 		next;
-		mes "[Bebe]";
-		mes "What really surprised me was the plant that attacked me was a huge flower with the face of a person! So, look out for those. They're dangerous!";
+		mes "[贝贝]";
+		mes "让我真正惊讶的是，";
+		mes "攻击我的植物是一朵有着人脸的巨大花朵！所以，";
+		mes "要小心这些。它们很危险！";
 		close;
 	case 2:
-		mes "[Bebe]";
-		mes "Even though people are fascinated by the scenic beauty of Mt. Mjolnir, it's full of dangerous monsters!";
+		mes "[贝贝]";
+		mes "尽管人们被妙勒尼山的美丽风景所吸引，";
+		mes "但那里充满了危险的怪物！";
 		next;
-		mes "[Bebe]";
-		mes "There are Flowers, Insects, Bees, Butterflies and Moths that are big enough to kill you if you're not careful!";
+		mes "[贝贝]";
+		mes "那里有花、昆虫、蜜蜂、蝴蝶和蛾子，";
+		mes "如果你不小心，它们足以致命！";
 		next;
-		mes "[Bebe]";
-		mes "Then again, most of these monsters won't hurt you if you don't attack first. But some of them will attack you once they see you!";
+		mes "[贝贝]";
+		mes "不过，大多数这些怪物如果你不先攻击它们是不会伤害你的。";
+		mes "但有些会在看到你后攻击你！";
 		close;
 	case 3:
-		mes "[Bebe]";
-		mes "By the way, where is my NukNuk...?";
-		mes "NukNuk! Come out!";
+		mes "[贝贝]";
+		mes "对了，我的努克努克在哪里...? 努克努克！快出来！";
 		close;
 	}
 }
 
-aldebaran,159,242,4	script	Insect Guy#alde	119,{
-	mes "[Stromme]";
-	mes "Even to a strong Swordman, the Insects or Mt. Mjolnir pose a considerable threat. You've got to know your enemy before engaging it in battle!";
+aldebaran,159,242,4	script	昆虫家#alde	119,{
+	mes "[斯特罗梅]";
+	mes "即使是强大的剑士，";
+	mes "昆虫或妙勒尼山也构成了相当大的威胁。在战斗之前，";
+	mes "你必须了解你的敌人！";
 	next;
-	if (select("About Insects:End Conversation") == 1) {
-		mes "[Stromme]";
-		mes "Honey Bees, Butterflies and Moths seem like simple creatures, but that doesn't mean you should underestimate them.";
+	if (select("关于昆虫:结束对话") == 1) {
+		mes "[斯特罗梅]";
+		mes "蜜蜂、蝴蝶和蛾子看似简单，";
+		mes "但这并不意味着你可以小觑它们。";
 		next;
-		mes "[Stromme]";
-		mes "These Insects have evolved over time, and can counter attacks from threats like you adventurers!";
+		mes "[斯特罗梅]";
+		mes "这些昆虫随着时间的推移而进化，";
+		mes "能够抵御像你们冒险者这样的威胁的攻击！";
 		next;
-		mes "[Stromme]";
-		mes "There are also carnivorous Insects, such as praying Spiders, praying Mantises, and the millipede like Argiopes.";
+		mes "[斯特罗梅]";
+		mes "还有一些食肉昆虫，比如捕蝇蛛、";
+		mes "螳螂和像阿尔吉欧佩斯的千足虫。";
 		next;
-		mes "[Stromme]";
-		mes "These monsters have mutated and are too strong for a person at certain levels. You should especially watch out for Argiopes.";
+		mes "[斯特罗梅]";
+		mes "这些怪物已经变异，某些等级的人根本无法对抗。";
+		mes "你尤其要小心阿尔吉欧佩斯。";
 		next;
-		mes "[Stromme]";
-		mes "Luckily, their eyesight is pretty bad, so it won't notice you if you walk a safe distance away from it.";
+		mes "[斯特罗梅]";
+		mes "幸运的是，它们的视力相当差，所以如果你保持安全距离，";
+		mes "它们不会注意到你。";
 		close;
 	}
-	mes "[Stromme]";
-	mes "No matter how harmless and pretty insects are,";
-	mes "take heed to not touch them.";
-	mes "They are extremely strong unlike their innocent looking.";
-	mes "Don't belittle the livings in the Mt. Mjolnir.";
+	mes "[斯特罗梅]";
+	mes "无论昆虫看起来多么无害和美丽，都要小心不要触碰它们。";
+	mes "它们的力量远超它们看起来的无辜。";
+	mes "不要小看妙勒尼山中的生物。";
 	close;
 }
 
-aldebaran,60,70,4	script	Sylvia#alde	69,{
+aldebaran,60,70,4	script	西尔维亚#alde	69,{
 	mes "[曼斯特]";
 	mes "我家原本住在吉芬";
 	next;
@@ -409,7 +432,7 @@ aldebaran,60,70,4	script	Sylvia#alde	69,{
 	close;
 }
 
-aldebaran,93,80,4	script	Issei#alde	48,{
+aldebaran,93,80,4	script	伊赛#alde	48,{
 	mes "[奎特罗]";
 	mes "听说最近艾尔帕兰";
 	next;
@@ -435,32 +458,34 @@ aldebaran,93,80,4	script	Issei#alde	48,{
 	close;
 }
 
-aldebaran,180,46,4	script	Joo Jahk#alde	88,{
-	mes "[Joo Jahk]";
-	mes "I'm a tourist";
-	mes "from Payon,";
-	mes "the City of Forests.";
+aldebaran,180,46,4	script	朱·扎克#alde	88,{
+	mes "[朱·扎克]";
+	mes "我是来自森林之城佩永的游客。";
 	next;
-	mes "[Joo Jahk]";
-	mes "The tempature here in Al De Baran is very cool, probably because of the waterways. Do you think the water in the canals is drinkable?";
+	mes "[朱·扎克]";
+	mes "阿尔德巴兰的气温非常凉爽，可能是因为有水道。";
+	mes "你觉得运河里的水可以喝吗？";
 	next;
-	mes "[Joo Jahk]";
-	mes "Well, it's too late for me, since I already drank some. Still, I'm a little worried...";
+	mes "[朱·扎克]";
+	mes "嗯，我已经喝了一些，现在为时已晚。不过，我还是有点担心……";
 	next;
-	if (select("Continue.:End conversation.") == 1) {
-		mes "[Joo Jahk]";
-		mes "On one of my travels around Midgard, I've heard from a really high level Mage that physical attacks, or magic with Neutral Property, won't damage Spiritual Property monsters.";
+	if (select("继续。:结束对话。") == 1) {
+		mes "[朱·扎克]";
+		mes "在我环游米德加德时，我听一位高等级法师说，";
+		mes "物理攻击或中性属性的魔法对灵性属性的怪物无效。";
 		next;
-		mes "[Joo Jahk]";
-		mes "Maybe that advice will come in handy, now that you know that. Always remember the importance of the Properties of your skills and weapons when battling monsters.";
+		mes "[朱·扎克]";
+		mes "也许这个建议会派上用场，既然你知道了。战斗时，";
+		mes "永远记住技能和武器属性的重要性。";
 		close;
 	}
-	mes "[Joo Jahk]";
-	mes "On the other hand, the water I drank did taste pretty good. Hopefully it didn't have anything too weird in it...";
+	mes "[朱·扎克]";
+	mes "另一方面，我喝的水味道还不错。";
+	mes "希望里面没有什么奇怪的东西……";
 	close;
 }
 
-aldebaran,212,122,4	script	Citizen#alde	97,{
+aldebaran,212,122,4	script	市民#alde	97,{
 	mes "[密雷亚]";
 	mes "你知道吗 ? 听说武器的等级";
 	mes "不只到3 而已 ..";
@@ -483,7 +508,8 @@ aldebaran,212,122,4	script	Citizen#alde	97,{
 		mes "啊，我想起来了！就在几天前，我看到了一只看起来非常有趣的怪物！它是一只长着天使翅膀的波利！";
 		next;
 		mes "[加文]";
-		mes "我发誓！它在Mjolnir山附近和一些普通的波利一起跳来跳去。我觉得它就像是它们的领袖。";
+		mes "我发誓！它在妙勒尼山附近和一些普通的波利一起跳来跳去";
+		mes "。我觉得它就像是它们的领袖。";
 		close;
 	}
 	mes "[加文]";
@@ -492,49 +518,57 @@ aldebaran,212,122,4	script	Citizen#alde	97,{
 	close;
 }
 
-aldebaran,146,124,4	script	Town Girl#alde	101,{
-	mes "[Nastasia]";
-	mes "Somewhere in the world there is an ^3355FFAssassin Guild^000000, where they teach people the subtle art of assassination.";
+aldebaran,146,124,4	script	镇上的女孩#alde	101,{
+	mes "[纳斯塔西亚]";
+	mes "在世界的某个地方，有一个^3355FF刺客公会^000000，";
+	mes "教人们微妙的刺杀艺术。";
 	next;
-	mes "[Nastasia]";
-	mes "But isn't killing illegal? And do they even collect educational tuition?";
+	mes "[纳斯塔西亚]";
+	mes "但杀人不是违法的吗？他们甚至收取学费吗？";
 	next;
-	if (select("Continue conversation.:End Conversation.") == 1) {
-		mes "[Nastasia]";
-		mes "Although Assassins benefit from being very quick and having lots of AGI, they should still have some DEX.";
+	if (select("继续对话。:结束对话。") == 1) {
+		mes "[娜斯塔西亚]";
+		mes "虽然刺客的敏捷和高AGI让他们非常迅速，";
+		mes "但他们仍然需要一些DEX。";
 		next;
-		mes "[Nastasia]";
-		mes "DEX is especially important if you want to hit monsters with wings. Those monsters are quick moving and fast in attacking.";
+		mes "[娜斯塔西亚]";
+		mes "如果你想击中有翅膀的怪物，DEX尤其重要。";
+		mes "这些怪物移动迅速，攻击也很快。";
 		next;
-		mes "[Nastasia]";
-		mes "In general, if you want to hit monsters that are as fast, or even faster, than you are, you're going to need some DEX.";
+		mes "[娜斯塔西亚]";
+		mes "一般来说，如果你想击中和你一样快甚至更快的怪物，";
+		mes "你需要一些DEX。";
 		close;
 	}
-	mes "[Nastasia]";
-	mes "It's usually said that in this world, nothing is free. Still, if you don't have to pay money to learn to be an Assassin...";
+	mes "[娜斯塔西亚]";
+	mes "通常人们说这个世界上没有免费的东西。不过，";
+	mes "如果你不需要花钱学习成为刺客……";
 	close;
 }
 
-aldebaran,143,136,4	script	Bell Keeper#A	89,{
-	mes "[Bell Keeper]";
-	mes "I have been charged by the Committee of 'Heaven on Earth' to guard this entrance of the Clock Tower.";
+aldebaran,143,136,4	script	钟楼守卫#A	89,{
+	mes "[钟楼守卫]";
+	mes "我被‘人间天堂’委员会指派守卫钟楼的这个入口。";
 	next;
-	if (select("About Clock Tower.:Quit.") == 1) {
-		mes "[Bell Keeper]";
-		mes "Every floor of this tower is connected to each other by a certain device we like to call 'Warp Gear.'";
+	if (select("关于钟楼。:退出。") == 1) {
+		mes "[钟楼守卫]";
+		mes "这座塔的每一层都通过我们称之为‘传送装置’的设备相连。";
 		next;
-		mes "[Bell Keeper]";
-		mes "Even though there are interconnecting warps everywhere in the Clock Tower, beware the 'Random Warp.'";
+		mes "[钟楼守卫]";
+		mes "尽管钟楼内到处都有相互连接的传送装置，";
+		mes "但要小心‘随机传送’。";
 		next;
-		mes "[Bell Keeper]";
-		mes "The 'Random Warp' will transport you to an unknown spot. Be advised if you don't want to suddenly be separated from your party...";
+		mes "[钟楼守卫]";
+		mes "‘随机传送’会将你传送到未知地点。";
+		mes "如果你不想突然与队伍分开，请注意。";
 		next;
-		mes "[Bell Keeper]";
-		mes "Remember, Random Warps are shown in green on the mini-map. So keep your eyes peeled for that, as well as for those dangerous Clocks.";
+		mes "[钟楼守卫]";
+		mes "记住，随机传送在小地图上用绿色标示。所以要留意这些，";
+		mes "以及那些危险的钟。";
 		close;
 	}
-	mes "[Bell Keeper]";
-	mes "Please take heed that this Clock Tower is filled with extremely dangerous monsters.";
+	mes "[钟楼守卫]";
+	mes "请注意，这座钟楼里充满了极其危险的怪物。";
 	close;
 }
 
@@ -583,97 +617,90 @@ aldeba_in,232,241,4	script	RS125#alde	48,{
 	close;
 }
 
-aldeba_in,223,121,4	script	Threatening-Looking Man	63,{
-	mes "[Threatening-Looking Man]";
-	mes "Hey, you don't come inside someone else's house without permission.";
-	mes "This is ridiculous!";
-	mes "How dare you to come inside of my house and talk to me as if that is a normal thing to do?";
+aldeba_in,223,121,4	script	威胁感十足的男人	63,{
+	mes "[威胁感十足的男人]";
+	mes "嘿，你不能在没有许可的情况下进入别人的房子。";
+	mes "这太荒谬了！你怎么敢在我家里和我说话，仿佛这很正常？";
 	next;
-	mes "[Threatening-Looking Man]";
-	mes "Hahahaha...chill out, I was just joking.";
+	mes "[威胁感十足的男人]";
+	mes "哈哈哈哈……放轻松，我只是开玩笑。";
 	next;
-	if (select("Continue:Quit") == 1) {
-		mes "[Threatening-Looking Man]";
-		mes "You may know this already, but";
-		mes "we have a system called, the mercenary system in this world.";
-		mes "Yes, I am a mercenary soldier.";
+	if (select("继续:退出") == 1) {
+		mes "[威胁感十足的男人]";
+		mes "你可能已经知道，";
+		mes "但我们这个世界有一个叫做雇佣兵系统的制度。是的，";
+		mes "我是一名雇佣兵。";
 		next;
-		mes "[Threatening-Looking Man]";
-		mes "It is simple. You just pay for someone to aid you in fight.";
-		mes "Better mercenary soldier you want, more money you have to pay, you know?";
+		mes "[威胁感十足的男人]";
+		mes "这很简单。你只需支付费用让人帮助你战斗。";
+		mes "你想要更好的雇佣兵，就得支付更多的钱，你知道的。";
 		next;
-		mes "[Threatening-Looking Man]";
-		mes "Let's stop talking about boring stuffs.";
-		mes "I will tell you how you can find a good mercenary soldier.";
+		mes "[威胁感十足的男人]";
+		mes "别再谈这些无聊的事情了。";
+		mes "我来告诉你如何找到一个好的雇佣兵。";
 		next;
-		mes "[Threatening-Looking Man]";
-		mes "Check its nose if it is clean and wet.";
-		mes "A good mercenary soldier must have the wet nose";
-		mes "because it shows that the soldier is at his best in health condition.";
-		mes "If the nose is dry, that means that he caught a cold.";
+		mes "[威胁感十足的男人]";
+		mes "检查他们的鼻子是否干净湿润。";
+		mes "一个好的雇佣兵必须有湿润的鼻子，";
+		mes "因为这表明他们的健康状况良好。如果鼻子干燥，";
+		mes "那就说明他们感冒了。";
 		next;
-		mes "[Threatening-Looking Man]";
-		mes "And don't forget to check the soldier's ankle.";
-		mes "The best mercenary soldier has thin ankles and a white neck!";
-		mes "If he has long hair, it's better! If the hair is permed and wavy, that's perfect!";
+		mes "[威胁看起来的男人]";
+		mes "别忘了检查士兵的脚踝。最好的雇佣兵士兵脚踝细长，";
+		mes "脖子白皙！如果他有长发，那就更好了！";
+		mes "如果头发是卷曲的，那就完美了！";
 		next;
-		mes "[Threatening-Looking Man]";
-		mes "Lastly, you have to check whether he is ready to serve you with quality service!";
-		mes "That means, he must do his best in aiding you in fight!";
+		mes "[威胁看起来的男人]";
+		mes "最后，你必须检查他是否准备好为你提供优质服务！";
+		mes "这意味着，他必须全力以赴地帮助你战斗！";
 		close;
 	}
-	mes "[Threatening-Looking Man]";
-	mes "Get out, now!";
-	mes "If you a cop, show me a warrant,";
-	mes "if you are a member of my family, prove it with your birth mark!";
+	mes "[威胁看起来的男人]";
+	mes "现在就出去！如果你是警察，给我出示搜查令；";
+	mes "如果你是我家的人，拿出生辰八字来证明！";
 	close;
 }
 
-aldeba_in,219,61,4	script	Friendly-Looking Man#ald	109,{
-	mes "[Friendly-Looking Man]";
-	mes "You don't have to listen to a guy right next to my room.";
-	mes "Two years ago, he was in a mercenary training center and fell off from a tree";
-	mes "while trying to gather a nut from it.";
+aldeba_in,219,61,4	script	友善的男人#ald	109,{
+	mes "[友善的男人]";
+	mes "你不必听旁边那个家伙的话。两年前，";
+	mes "他在一个雇佣兵训练中心，试图从树上摘坚果时摔了下来。";
 	next;
-	mes "[Friendly-Looking Man]";
-	mes "He keeps talking to himself loud and it gives me a headache...";
-	mes "Gosh!";
+	mes "[友善的男人]";
+	mes "他总是自言自语，声音很大，真让我头疼……天哪！";
 	close;
 }
 
-aldeba_in,152,47,4	script	Fussy Man#alde	97,{
-	mes "[Fussy Man]";
-	mes "Aaaaarrrggghhh...I AM IN TROUBLE!";
-	mes "My little chicken has left me!";
-	mes "Oh, my god! Oh, my god!";
+aldeba_in,152,47,4	script	挑剔的男人#alde	97,{
+	mes "[挑剔的男人]";
+	mes "啊啊啊啊……我有麻烦了！我的小鸡离开我了！哦，";
+	mes "我的天啊！哦，我的天啊！";
 	next;
-	if (select("What do you call the chicken?:. . . . .") == 1) {
-		mes "[Fussy Man]";
-		mes "I used to call it 'Amazing Picky'...";
-		mes "*Sob* What should I do! How could this happen!";
-		mes "Please, please help me to find my sweet little chicken!";
+	if (select("你给小鸡起什么名字？: . . . . .") == 1) {
+		mes "[挑剔的男人]";
+		mes "我以前叫它‘神奇挑剔’……*呜* 我该怎么办！怎么会这样！请，";
+		mes "帮我找回我的小鸡！";
 		next;
-		if (select("What? That is such a boring name!:. . . . .") == 1) {
-			mes "[Fussy Man]";
-			mes "Don't be so ridiculous!";
-			mes "'Amazing Picky' is the most wonderful and the most unique name";
-			mes "in this world, and my chicken deserves the name!";
+		if (select("什么？这个名字太无聊了！: . . . . .") == 1) {
+			mes "[挑剔的男人]";
+			mes "别这么荒谬！‘神奇挑剔’是这个世界上最美妙、";
+			mes "最独特的名字，我的小鸡值得这个名字！";
 			close;
 		}
-		mes "[Fussy Man]";
-		mes "You don't care, do you?";
-		mes "I am only child in my family, so I have been thinking of my little chicken as my brother!";
-		mes "I want my chicken back...*Sob*";
+		mes "[挑剔的男人]";
+		mes "你不在乎，对吧？我家里只有我一个孩子，";
+		mes "所以我一直把我的小鸡当作我的兄弟！";
+		mes "我想要我的小鸡回来……*呜*";
 		close;
 	}
-	mes "[Fussy Man]";
-	mes "You don't care, do you?";
-	mes "I am only child in my family, so I have been thinking of my little chicken as my brother!";
-	mes "I want my chicken back...*Sob*";
+	mes "[挑剔的男人]";
+	mes "你不在乎，对吧？我家里只有我一个孩子，";
+	mes "所以我一直把我的小鸡当作我的兄弟！";
+	mes "我想要我的小鸡回来……*呜*";
 	close;
 }
 
-aldeba_in,156,179,4	script	Master#alde	61,{
+aldeba_in,156,179,4	script	主人#alde	61,{
 	mes "[帕那马]";
 	mes "艾尔帕兰在尘世大陆上";
 	mes "算是个名满天下";
@@ -762,183 +789,183 @@ aldeba_in,156,179,4	script	Master#alde	61,{
 	close;
 }
 
-aldeba_in,84,166,4	script	Kafra Service#alde	117,{
+aldeba_in,84,166,4	script	卡夫拉服务#alde	117,{
 	cutin "kafra_01",2;
-	mes "[Kafra Pavianne]";
-	mes "Welcome! I'm Pavianne,";
-	mes "one of the senior Kafra Employees. The Kafra Corporation Service is always trying to satisfy 100 % of our customers' expectations.";
+	mes "[卡夫拉·帕维安]";
+	mes "欢迎！我是帕维安，卡夫拉公司的高级员工之一。";
+	mes "卡夫拉公司始终努力满足100%的客户期望。";
 	next;
-	mes "[Kafra Pavianne]";
-	mes "Due to a change in customer support policy, we no longer accept Kafra Passes. However, we are offering refunds for our customers who still possess these passes.";
+	mes "[卡夫拉·帕维安]";
+	mes "由于客户支持政策的变化，我们不再接受卡夫拉通行证。";
+	mes "不过，我们会为仍持有这些通行证的客户提供退款。";
 	next;
-	if (select("Sell Kafra Pass:Alright, bye~") == 1) {
+	if (select("出售卡夫拉通行证:好的，再见~") == 1) {
 		if (countitem(1084) == 0) {
-			mes "[Kafra Pavianne]";
-			mes "I'm sorry,";
-			mes "but you don't";
-			mes "have any Kafra Passes.";
+			mes "[卡夫拉·帕维安]";
+			mes "对不起，但你没有任何卡夫拉通行证。";
 			close2;
 			cutin "",255;
 			end;
 		}
 		else {
 			set .@kafrapassmoney,countitem(1084)*2000;
-			mes "[Kafra Pavianne]";
-			mes "Let's see...";
+			mes "[卡夫拉·帕维安]";
+			mes "让我看看……";
 			if (countitem(1084) == 1) {
-				mes "You have 1 Kafra Pass.";
-				mes "You can sell that pass to us for 2000 zeny. Would you like to sell this Kafra Pass back to the Kafra Corporation?";
+				mes "你有1个卡夫拉通行证。";
+				mes "你可以以2000仙石的价格将该通行证卖给我们。";
+				mes "你想把这个卡夫拉通行证卖回卡夫拉公司吗？";
 			}
 			else {
-				mes "You have "+ countitem(1084) +" Kafra Passes.";
-				mes "If you want to sell them to us, you will receive "+ .@kafrapassmoney +" zeny. Would you like to sell these back to the Kafra Corporation?";
+				mes "如果你想把它们卖给我们，你将会收到";
 			}
 			next;
-			if (select("Yes:No") == 1) {
+			if (select("是:否") == 1) {
 				if (countitem(1084) == 0) {
-					mes "[Kafra Pavianne]";
-					mes "I'm sorry, but you don't have any Kafra Passes.";
+					mes "[卡夫拉·帕维安]";
+					mes "抱歉，但你没有任何卡夫拉通行证。";
 					close2;
 					cutin "",255;
 					end;
 				}
 				delitem 1084,countitem(1084); //Kapra's_Pass
 				set Zeny,Zeny+.@kafrapassmoney;
-				mes "[Kafra Pavianne]";
-				mes "Thank you.";
+				mes "[卡夫拉·帕维安]";
+				mes "谢谢你。";
 			}
 			close2;
 			cutin "",255;
 			end;
 		}
 	}
-	mes "[Kafra Pavianne]";
-	mes "Thank you,";
-	mes "have a good day.";
+	mes "[卡夫拉·帕维安]";
+	mes "谢谢，祝你有美好的一天。";
 	close2;
 	cutin "",255;
 	end;
 }
 
-aldeba_in,83,245,4	script	Kafra Service#2alde	116,{
+aldeba_in,83,245,4	script	卡夫拉服务#2alde	116,{
 	cutin "kafra_02",2;
-	mes "[Kafra Blossom]";
-	mes "Welcome to the";
-	mes "Kafra Corporation.";
-	mes "The Kafra Employees are";
-	mes "always here to serve you.";
+	mes "[卡夫拉·花朵]";
+	mes "欢迎来到卡夫拉公司。卡夫拉员工随时为您服务。";
 	next;
-	mes "[Kafra Blossom]";
-	mes "We appreciate your continued use of the Kafra Service. Please feel free to ask me if you have any questions.";
+	mes "[卡夫拉·花朵]";
+	mes "感谢您继续使用卡夫拉服务。";
+	mes "如果您有任何问题，请随时问我。";
 	next;
-	switch(select("How does Kafra Storage work?:How do you teleport people?")) {
+	switch(select("卡夫拉储存是如何工作的？:你们是如何传送人的？")) {
 	case 1:
-		mes "[Kafra Blossom]";
-		mes "Well, adventurers like yourself can place items into Kafra Storage, so that you don't have to carry all of your stuff around.";
+		mes "[卡夫拉·花朵]";
+		mes "好吧，像你这样的冒险者可以将物品放入卡夫拉储存，";
+		mes "这样你就不必随身携带所有东西。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "Now, the Kafra Storage Window is separated into three tabs into which items are automatically sorted.";
+		mes "[卡夫拉·花朵]";
+		mes "现在，卡夫拉储存窗口分为三个标签，物品会自动分类。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "The ^3355FFItem^000000, ^3355FFEquip^000000, and ^3355FFEtc^000000 tabs work just like the tabs in your character Item Inventory.";
+		mes "[卡夫拉·花朵]";
+		mes "^3355FF物品^000000、^3355FF装备^000000和^3355FF其他^000000标签的功能与角色物品背包中的标签相同。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "Multiple items of the same type will only take up one Slot in the Item and Etc. tabs. For example, 324 Jellopies would take up only one Slot, and 22 Red Potions would take another Slot.";
+		mes "[卡夫拉·花朵]";
+		mes "相同类型的多个物品在物品和其他标签中只占用一个槽。";
+		mes "例如，324个果冻只占用一个槽，22个红药水占用另一个槽。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "However, in the Equip tab, each and every single item takes up its own Slot. I guess that's because each and every single equipment can be uniquely upgraded by forging or through Cards.";
+		mes "[卡夫拉·花朵]";
+		mes "然而，在装备标签中，每个物品都占用一个槽。";
+		mes "我想这是因为每个装备都可以通过锻造或卡片独特升级。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "There's a total of 300 Slots for all three item categories in the Kafra Storage, so it might be helpful to remember that.";
+		mes "[卡夫拉·花朵]";
+		mes "卡夫拉储存的所有三类物品总共有300个槽，";
+		mes "所以记住这一点可能会有帮助。";
 		next;
 		break;
 	case 2:
-		mes "[Kafra Blossom]";
-		mes "Oh, I get that question all the time. '^CC0066Oh Blossom, how do you do it?^000000' Well...";
+		mes "[卡夫拉·花朵]";
+		mes "哦，我经常被问到这个问题。'^CC0066哦，花朵，";
+		mes "你是怎么做到的？^000000' 嗯……";
 		next;
-		mes "[Kafra Blossom]";
-		mes "Well, I couldn't really go too much into detail, of course. That's confidential information. But I can tell you our teleportation works through a mix of magic and technology.";
+		mes "[卡夫拉·花朵]";
+		mes "当然，我不能详细说明。这是机密信息。但我可以告诉你，";
+		mes "我们的传送是通过魔法和技术的结合来实现的。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "Also, the Kafra girls alone can't teleport our customers. We just receive and process your teleportation request.";
+		mes "[卡夫拉·花朵]";
+		mes "此外，卡夫拉的女孩们无法单独传送我们的客户。";
+		mes "我们只是接收并处理你的传送请求。";
 		next;
-		mes "[Kafra Blossom]";
-		mes "Behind the scenes, skilled professionals and technicians are working 24 hours a day to ensure that you teleport quickly and safely to your destination.";
+		mes "[卡夫拉·花朵]";
+		mes "在幕后，熟练的专业人员和技术人员24小时工作，";
+		mes "确保你快速安全地传送到目的地。";
 		next;
 		break;
 	}
-	mes "[Kafra Blossom]";
-	mes "Anyway, I hope you enjoy your visit here in the Kafra Corporation Headquarters.";
+	mes "[卡夫拉·花朵]";
+	mes "无论如何，希望你在卡夫拉公司总部的访问愉快。";
 	if (rand(1,11) == 9) {
 		next;
-		mes "[Kafra Blossom]";
-		mes "...";
+		mes "[卡夫拉·花朵]";
+		mes "……";
 		next;
-		mes "[Kafra Blossom]";
-		mes "...";
-		mes "......";
+		mes "[卡夫拉·花朵]";
+		mes "…… ……";
 		next;
-		mes "[Kafra Blossom]";
-		mes "Oh Mansoo...";
+		mes "[卡夫拉·花朵]";
+		mes "哦，曼苏……";
 	}
 	close2;
 	cutin "",255;
 	end;
 }
 
-aldeba_in,24,245,4	script	Kafra Jasmine#alde	115,{
+aldeba_in,24,245,4	script	卡夫拉·茉莉#alde	115,{
 	cutin "kafra_03",2;
-	mes "[Kafra Jasmine]";
-	mes "Welcome!";
-	mes "The Kafra service is";
-	mes "always on your side.";
+	mes "[卡夫拉·茉莉]";
+	mes "欢迎！卡夫拉服务始终在您身边。";
 	next;
-	mes "[Kafra Jasmine]";
-	mes "Thank you for coming all the way to visit us at the Kafra Corporation Headquarters here in Al De Baran!";
+	mes "[卡夫拉·茉莉]";
+	mes "感谢您特意来到阿尔德巴朗的卡夫拉公司总部拜访我们！";
 	next;
-	mes "[Kafra Jasmine]";
-	mes "The Kafra Service is always behind our customers with a dependable reputation that has been established over five thousand, eight hundred years...";
+	mes "[卡夫拉·茉莉]";
+	mes "卡夫拉服务始终以可靠的声誉支持我们的客户，";
+	mes "这个声誉已经建立了五千八百年……";
 	next;
-	switch(select("What?! I can't believe that!:Ahh~ Shut Up!:Your service is great!")) {
+	switch(select("什么？！我简直不敢相信！:啊~闭嘴！:你们的服务真棒！")) {
 	case 1:
-		mes "["+ strcharinfo(0) +"]";
-		mes "What?!";
-		mes "I can't";
-		mes "believe that!";
+		mes "[ 什么？！我简直不敢相信！";
 		next;
-		mes "["+ strcharinfo(0) +"]";
-		mes "FIVE THOUSAND AND EIGHT HUNDRED YEARS?! THAT'S INSANE!";
+		mes "[ 五千八百年？！太疯狂了！";
 		next;
-		mes "[Kafra Jasmine]";
-		mes "Arrrrghh! Shut up and listen! It took me a week to memorize all this! My memory isn't as good as the other Kafra Employees...!";
+		mes "[卡夫拉·茉莉]";
+		mes "啊啊啊！闭嘴，听我说！我花了一周时间才记住这些！";
+		mes "我的记忆没有其他卡夫拉员工那么好……！";
 		next;
-		mes "[Kafra Jasmine]";
-		mes "Now, um...";
-		mes "As I was saying, the Kafra Corporation was founded eight thousand, five hundred years ago by, um, Emilio Alexander Kafra... Inventor of the word 'Kafra?'";
+		mes "[卡夫拉·茉莉]";
+		mes "现在，呃……我刚才说的是，卡夫拉公司是八千五百年前由，呃，";
+		mes "埃米利奥·亚历山大·卡夫拉创立的……‘卡夫拉’";
+		mes "这个词的发明者？";
 		next;
-		mes "[Kafra Jasmine]";
-		mes "He...";
-		mes "He was a great man. He... Argh! I can't remember!";
+		mes "[卡夫拉·茉莉]";
+		mes "他……他是个伟大的人。他……啊！我记不起来了！";
 		next;
-		mes "[Kafra Jasmine]";
-		mes "Oh no...!";
-		mes "This can't be the right story! Five million, eight hundred years?! It's impossible!";
+		mes "[卡夫拉·茉莉]";
+		mes "哦不……！这不可能是正确的故事！五百万八千年？！这不可能！";
 		break;
 	case 2:
-		mes "[Kafra Jasmine]";
-		mes "Listen...";
-		mes "Punk.";
+		mes "[卡夫拉·茉莉]";
+		mes "听着……小子。";
 		next;
-		mes "[Kafra Jasmine]";
-		mes "I was a member of the Kafra Garrison before joining the Kafra Service Team. My specialty was ^990000Magnum Break^000000, so if you know what's good for you, don't mess with me.";
+		mes "[卡夫拉·茉莉]";
+		mes "我在加入卡夫拉服务团队之前是卡夫拉警卫队的成员。";
+		mes "我的专长是^990000大马士革破坏^000000，知道对你好的话，就别惹我。";
 		next;
-		mes "[Kafra Jasmine]";
-		mes "I'm trying my best to live as quietly and as femininely as I can, so don't make me break your knuckles! You got it?!";
+		mes "[卡夫拉·茉莉]";
+		mes "我尽力过着安静而女性化的生活，";
+		mes "所以别让我打断你的手指！明白了吗？！";
 		break;
 	case 3:
-		mes "[Kafra Jasmine]";
-		mes "Hooray!";
-		mes "That's great news to hear. We're always working hard to make sure that our customers are satisfied with the services that we provide.";
+		mes "[卡夫拉·茉莉]";
+		mes "太好了！听到这个消息真是太棒了。";
+		mes "我们一直在努力确保我们的客户对我们提供";
+		mes "的服务感到满意。";
 		break;
 	}
 	close2;
@@ -946,75 +973,83 @@ aldeba_in,24,245,4	script	Kafra Jasmine#alde	115,{
 	end;
 }
 
-aldeba_in,142,238,4	script	Kafra Service#3alde	114,{
+aldeba_in,142,238,4	script	卡夫拉服务#3alde	114,{
 	cutin "kafra_04",2;
-	mes "[Kafra Roxie]";
-	mes "Welcome~!";
-	mes "The Kafra Corporation will always support Midgard's adventurers with our excellent services.";
+	mes "[卡夫拉·罗克西]";
+	mes "欢迎~！";
+	mes "卡夫拉公司将始终以优质服务支持米德加德的冒险者。";
 	next;
-	mes "[Kafra Roxie]";
-	mes "My name is Roxie!";
-	mes "I hope you enjoy";
-	mes "your visit here in";
-	mes "Kafra Corporation's";
-	mes "Headquarters.";
+	mes "[卡夫拉·罗克西]";
+	mes "我叫罗克西！希望您在卡夫拉公司总部的访问愉快。";
 	next;
-	mes "[Kafra Roxie]";
-	mes "I'm here to answer any of your questions regarding Kafra Corporations policies, as well as take note of any of your feedback.";
+	mes "[卡夫拉·罗克西]";
+	mes "我在这里回答您关于卡夫拉公司政策的任何问题，";
+	mes "并记录您的反馈。";
 	next;
-	switch(select("Kafra Policies:I love Kafra!")) {
+	switch(select("卡夫拉政策:我爱卡夫拉！")) {
 	case 1:
-		mes "[Kafra Roxie]";
-		mes "So, you'd like more details on our policies and eligibility for our services? What would you like me to explain?";
+		mes "[卡夫拉·罗克西]";
+		mes "那么，您想了解我们政策和服务资格的更多细节吗？";
+		mes "您希望我解释什么？";
 		next;
-		switch(select("Kafra Storage:Cart Rental:Actually, never mind.")) {
+		switch(select("卡夫拉存储:租车:其实，算了。")) {
 		case 1:
-			mes "[Kafra Roxie]";
-			mes "As you probably already know, our customers must have at least Basic Skill level 6 in order to use the Kafra Storage.";
+			mes "[卡夫拉·罗克西]";
+			mes "如您所知，我们的客户必须至少达到基础技能等级6才能";
+			mes "使用卡夫拉存储。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "As for the reason for this certain policy, we've had problems with young, fresh faced Novices that would put everything into their Storage.";
+			mes "[卡夫拉·罗克西]";
+			mes "至于这个政策的原因，我们曾遇到过一些年轻的新手，";
+			mes "他们会把所有东西都放进储物箱里。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "Now you remember your days as a Novice. Everything was new and exciting, but zeny was scarce. Well, a lot of Novices would even put their weapons and armor in Kafra Storage.";
+			mes "[卡夫拉·罗克西]";
+			mes "你还记得你作为新手的日子吗？";
+			mes "一切都是那么新鲜和令人兴奋，但钱却很紧张。";
+			mes "很多新手甚至会把他们的武器和盔甲放进卡夫拉储物箱里。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "However, by this time, they've already spent what little zeny they had to open their Storage. But they don't have enough to access their Storage again!";
+			mes "[卡夫拉·罗克西]";
+			mes "然而，到那时，他们已经花光了所有的钱来开启储物箱，";
+			mes "但却没有足够的钱再次访问储物箱！";
 			next;
-			mes "[Kafra Roxie]";
-			mes "So, these weaponless, armorless Novices must fight monsters with their bare hands until they gather the zeny to open their Kafra Storage again!";
+			mes "[卡夫拉·罗克西]";
+			mes "所以，这些没有武器和盔甲的新手必须赤手空拳与怪物战斗，";
+			mes "直到他们积攒足够的钱再次开启卡夫拉储物箱！";
 			next;
-			mes "[Kafra Roxie]";
-			mes "It's a silly mistake, to be sure, but we here at Kafra Corporation value human life, and decided on the Basic Skill Level 6 Requirement to prevent this kind of mishap.";
+			mes "[卡夫拉·罗克西]";
+			mes "这确实是个愚蠢的错误，但我们卡夫拉公司重视人命，";
+			mes "因此决定设定基本技能等级6的要求，以防止这种情况发生。";
 			break;
 		case 2:
-			mes "[Kafra Roxie]";
-			mes "As you may know, the Kafra Corporation has a special relationship with the Merchant Guild, as well as the Blacksmith and Alchemist guilds in Midgard.";
+			mes "[卡夫拉·罗克西]";
+			mes "如你所知，卡夫拉公司与商人公会、";
+			mes "铁匠公会和炼金术士公会有着特殊的关系。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "The Kafra Corporation only rents Carts to Merchants, Blacksmiths and Alchemists since these job associations have a special contract with us.";
+			mes "[卡夫拉·罗克西]";
+			mes "卡夫拉公司只向商人、铁匠和炼金术士出租马车，";
+			mes "因为这些职业协会与我们有特殊合同。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "Also, it'd be really impractical to rent carts out to people who couldn't create or sell goods.";
+			mes "[卡夫拉·罗克西]";
+			mes "而且，";
+			mes "向无法创造或销售商品的人出租马车是非常不切实际的。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "As for Super Novices, well, we're really not supposed to rent carts to them since the Super Novice Society in Al De Baran doesn't have a contract with us.";
+			mes "[卡夫拉·罗克西]";
+			mes "至于超级新手，我们实际上不应该向他们出租马车，";
+			mes "因为阿尔德巴兰的超级新手协会与我们没有合同。";
 			next;
-			mes "[Kafra Roxie]";
-			mes "If a Kafra Employee rented a Cart to a Super Novice, she'd probably get in big trouble with Leilah...";
+			mes "[卡夫拉·罗克西]";
+			mes "如果卡夫拉员工向超级新手出租了马车，";
+			mes "她可能会因为这件事而遭到莱拉的严厉惩罚……";
 			break;
 		case 3:
-			mes "[Kafra Roxie]";
-			mes "Oh, alright~!";
-			mes "If you have any questions,";
-			mes "please let me know!";
+			mes "[卡夫拉·罗克西]";
+			mes "哦，好吧~！如果你有任何问题，请告诉我！";
 			break;
 		}
 		break;
 	case 2:
-		mes "[Kafra Roxie]";
-		mes "Thank you!";
-		mes "It's great to know that we're appreciated by our customers! All of us are working hard to make sure that our service meets your standards of excellence~";
+		mes "[卡夫拉·罗克西]";
+		mes "谢谢你！知道我们受到客户的认可真是太好了！";
+		mes "我们所有人都在努力确保我们的服务符合你的卓越标准~";
 		break;
 	}
 	close2;
@@ -1022,27 +1057,25 @@ aldeba_in,142,238,4	script	Kafra Service#3alde	114,{
 	end;
 }
 
-aldeba_in,91,244,4	script	Kafra Service#4alde	112,{
+aldeba_in,91,244,4	script	卡夫拉服务#4alde	112,{
 	cutin "kafra_06",2;
-	mes "[Kafra Curly Sue]";
-	mes "Hello, hello!!";
-	mes "I'm Curly Sue,";
-	mes "the newest member";
-	mes "of the Kafra Staff!";
+	mes "[卡夫拉·卷发苏]";
+	mes "你好，你好！！我是卷发苏，卡夫拉员工中最新的成员！";
 	next;
-	mes "[Kafra Curly Sue]";
-	mes "I may still need to learn more about serving our customers, but I'm always doing my best!";
+	mes "[卡夫拉·卷发苏]";
+	mes "我可能还需要学习更多关于服务客户的知识，";
+	mes "但我一直在尽力而为！";
 	next;
-	if (select("Where's your mommy, kid?:End conversation.") == 1) {
-		mes "[Kafra Curly Sue]";
-		mes "Waaaaaaah~!";
-		mes "I'm not a kid!";
+	if (select("你妈妈在哪里，孩子？:结束对话。") == 1) {
+		mes "[卡夫拉·卷发苏]";
+		mes "哇啊啊啊~！我不是小孩！";
 		close2;
 		cutin "",255;
 		end;
 	}
-	mes "[Kafra Curly Sue]";
-	mes "Here at Kafra Corporation, we are all doing our very best to give you the excellent service that you expect from us.";
+	mes "[卡夫拉·卷发苏]";
+	mes "在卡夫拉公司，";
+	mes "我们都在尽最大努力为您提供您期望的优质服务。";
 	close2;
 	cutin "",255;
 	end;
@@ -1051,442 +1084,339 @@ aldeba_in,91,244,4	script	Kafra Service#4alde	112,{
 // Kafra Special Reserve Point NPCs
 //============================================================
 // Special Reserve ----------------------------------------------
-aldeba_in,79,161,7	script	Kafra Employee#reserve1	4_F_KAFRA3,{
+aldeba_in,79,161,7	script	卡夫拉员工#reserve1	4_F_KAFRA3,{
 	if (checkweight(1201,1) == 0) {
-		mes "^3355FFWait a minute! Right now,";
-		mes "you're carrying too many items";
-		mes "in your inventory. Please come";
-		mes "back after storing some of";
-		mes "your things in Kafra Storage.";
+		mes "^3355FF等一下！现在你背负的物品太多了。";
+		mes "请在卡夫拉储物箱存放一些物品后再回来。";
 		close;
 	}
-	mes "[Kafra Employee]";
-	mes "Welcome, "+ strcharinfo(0) +"~";
-	mes "Here, you can exchange";
-	mes "the Special Reserve Points";
-	mes "you've earned by using the";
-	mes "Kafra Services for some";
-	mes "neat and useful prizes~";
+	mes "[卡夫拉员工]";
+	mes "欢迎，您可以用通过卡夫拉服务获得的特殊储备积分兑换一";
+	mes "些不错且实用的奖品~";
 	next;
-	mes "[Kafra Employee]";
-	mes "Please remember that each window has a different amount of special reserve points you can Use";
-	mes "You can use ^7D0781from 100p to 3000p^000000 in here.";
+	mes "[卡夫拉员工]";
+	mes "请记住，每个窗口可以使用的特殊储备积分数量不同。";
+	mes "您可以在这里使用^7D0781从100p到3000p^000000。";
 	next;
-	mes "[Kafra Employee]";
+	mes "[卡夫拉员工]";
 	if ((MaxWeight - Weight) < 11000) {
-		mes "Um, but I don't think";
-		mes "you're able to carry";
-		mes "very much right now.";
-		mes "It looks like you have";
-		mes "too much stuff inside";
-		mes "your inventory.";
+		mes "嗯，我觉得您现在不能携带太多东西。";
+		mes "看起来您的背包里东西太多了。";
 		next;
-		mes "[Kafra Employee]";
-		mes "Please put some of";
-		mes "your things into Kafra";
-		mes "Storage. To use this";
-		mes "service, we ask that you";
-		mes "have about ^FF00001,100^000000 free units";
-		mes "of weight in your inventory.";
+		mes "[卡夫拉员工]";
+		mes "请将一些物品放入卡夫拉仓库。使用此服务时，";
+		mes "我们要求您的背包中有大约^FF00001,100^000000的空重单位。";
 		close;
 	}
 	.@total = RESRVPTS;
-	mes "Let's see...";
+	mes "让我看看...";
 	mes strcharinfo(0) +"...";
-	mes "Ah, you have a total of";
+	mes "啊，您总共有";
 	mes .@total +" Special Reserve Points.";
-	mes "Now what you would like";
-	mes "to exchange them for?";
+	mes "那么您想用这些积分兑换什么呢？";
 	next;
 	setarray .@select_price[0], 516, 100,7, 200,15, 300,25, 400,35, 500,50, 600,60, 700,75, 800,85, 900,100, 1000;// <item_id>,<points required>,<item quantity>
-	.@s = select( "100 = Potato 7 ea", "200 = Potato 15 ea", "300 = Potato 25 ea", "400 = Potato 35 ea", "500 = Potato 50 ea", "600 = Potato 60 ea", "700 = Potato 75 ea",
+	.@s = select( "100 = 土豆 7 个", "200 = Potato 15 ea", "300 = Potato 25 ea", "400 = Potato 35 ea", "500 = Potato 50 ea", "600 = Potato 60 ea", "700 = Potato 75 ea",
 		"800 = Potato 85 ea", "900 = Potato 100 ea", "1000 = 1st Lottery Chance!", "Next Articles", "Cancel" );
 	if (.@s == 11) {
 		setarray .@select_price[0], 501, 1100,7, 1300,15, 1500,25, 1700,35, 1900,50, 2100,60, 2300,75, 2500,85, 2800,100, 3000;
-		.@s = select( "1100 = Red Potion 7 ea:1300 = Red Potion 15 ea:1500 = Red Potion 25 ea:1700 = Red Potion 35 ea:1900 = Red Potion 50 ea:2100 = Red Potion 60 ea:" +
+		.@s = select( "1100 = 红药水 7 个:1300 = 红药水 15 个:1500 = 红药水 25 个:1700 = 红药水 35 个:1900 = 红药水 50 个:2100 = 红药水 60 个:" +
 			"2300 = Red Potion 75 ea:2500 = Red Potion 85 ea:2800 = Red Potion 100 ea:3000 = 2nd Lotery Chance!::Cancel" );
 		.@choose_sub_select = 1;
 	}
 	if (.@s != 12) {// cancel
-		mes "[Kafra Employee]";
+		mes "[卡夫拉员工]";
 		.@index_points = .@s * 2 - 1;
 		.@index_quantity = .@s * 2;
 		if (.@total < .@select_price[.@index_points]) {
 			.@points = .@select_price[.@index_points] - .@total;
-			mes "I'm sorry, but you don't";
-			mes "enough Special Reserve";
-			mes "Points to exchange for this";
-			mes "reward. You need at least";
-			mes "^0000FF"+ .@points +"^000000 more points.";
+			mes "对不起，";
+			mes "您没有足够的特殊储备积分来兑换这个奖励。您至少需要^0000FF。";
 			close;
 		}
 		.@total = .@total - .@select_price[.@index_points];
-		mes "After receiving this";
-		mes "reward, you'll have";
-		mes "^AC0000"+ .@total +"^000000 Special Reserve";
-		mes "Points left. Would you";
-		mes "like to redeem your";
-		mes "points for this reward?";
+		mes "在获得这个奖励后，您将剩下^AC0000积分。";
+		mes "您想用这些积分兑换这个奖励吗？";
 		next;
-		if (select( "Exchange.", "Cancel" ) == 1) {
+		if (select( "兑换。", "Cancel" ) == 1) {
 			RESRVPTS = .@total;
 			if (.@s < 10)
 				getitem .@select_price[0], .@select_price[.@index_quantity];
 			else {
-				mes "[Kafra Employee]";
+				mes "[卡夫拉员工]";
 				if (.@choose_sub_select == 0) {
-					mes "^0000FF1st Lottery Chance!!^000000";
-					mes "It's time to test out";
-					mes "your luck. Get ready!";
+					mes "^0000FF第一次抽奖机会！！^000000 是时候测试一下你的运气了。准备好！";
 				}
 				else {
-					mes "Uh oh...";
-					mes "It's that time again~";
-					mes "It's Kafra Lottery Time!";
-					mes "Let's see how good your";
-					mes "luck is today. Ready?";
+					mes "哦哦... 又到这个时候了~ 是卡夫拉抽奖时间！";
+					mes "让我们看看你今天的运气如何。准备好了吗？";
 				}
 				next;
-				mes "[Kafra Employee]";
-				mes "How many times";
-				mes "would you like to spin";
-				mes "the lottery machine?";
-				mes "You can spin it 1 to 5 times.";
+				mes "[卡夫拉员工]";
+				mes "您想抽奖多少次？您可以抽1到5次。";
 				next;
 				while( input(.@input,1,5) != 0 ) {
-					mes "[Kafra Employee]";
-					mes "Excuse me...?";
-					mes "Please choose";
-					mes "a number from 1 to 5.";
+					mes "[卡夫拉员工]";
+					mes "抱歉...? 请从1到5中选择一个数字。";
 					next;
 				}
 				.@choose_prize = rand(1,20);
 				while( .@input != .@random_while ) {
 					.@sound_word = rand(1,3);
 					if (.@sound_word == 1) {
-						mes "^3355FFDrrrrrrrrrrrrrrrrrr...";
-						mes "Tuum tuum tuum!^000000";
+						mes "^3355FFDrrrrrrrrrrrrrrrrrr... Tuum tuum tuum!^000000";
 					}
 					else if (.@sound_word == 2) {
-						mes "^3355FFChika chika chika";
-						mes "Shooooooooooom~^000000";
+						mes "^3355FFChika chika chika Shooooooooooom~^000000";
 					}
 					else if (.@sound_word == 3) {
-						mes "^3355FFTuk tuk tuk tuk";
-						mes "Flaaaaaavaaaaah~^000000";
+						mes "^3355FFTuk tuk tuk tuk Flaaaaaavaaaaah~^000000";
 					}
 					next;
 					.@random_while++;
 				}
-				mes "[Kafra Employee]";
+				mes "[卡夫拉员工]";
 				if (.@choose_sub_select == 0) {
-					mes "Ooh, something";
-					mes "came out! Let's see";
-					mes "what you've won~";
-					mes "Oh goodness, it's...!";
+					mes "哦，出来了什么！让我们看看您赢得了什么~ 哦天哪，是...！";
 					next;
-					mes "[Kafra Employee]";
+					mes "[卡夫拉员工]";
 					if (.@choose_prize <= 10) {
 						getitem 516,100;// Sweet_Potato
-						mes "Hm? F-fourth prize?";
-						mes "You got the 4th prize!!";
-						mes "Well, that's not too bad.";
-						mes "That's 100 Potatoes!";
-						mes "When they're sliced, then fried, they make a great snack when";
-						mes "drinking with your friends~";
+						mes "嗯？第四名奖品？你得到了第四名奖品！！这还不错呢。";
+						mes "100个土豆！切片后油炸，和朋友一起喝酒时是个很好的小吃~";
 					}
 					else if (.@choose_prize <= 15) {
 						getitem 602,4;// Wing_Of_Butterfly
-						mes "It's Third Prize!";
-						mes "4 Butterfly Wings~";
-						mes "When you're in trouble,";
-						mes "just wave one of these";
-						mes "to take you away...";
-						mes "To your safe place.";
+						mes "这是第三名奖品！4个蝴蝶翅膀~ 当你遇到麻烦时，";
+						mes "只需挥动其中一个，就能带你回到安全的地方。";
 					}
 					else if (.@choose_prize <= 19) {
 						getitem 2403,1;// Shoes
-						mes "Second Prize!";
-						mes "A brand new shiny pair";
-						mes "of Shoes! Its elegant design";
-						mes "and durability comes with our";
-						mes "highest recommendation. We";
-						mes "hope you enjoy your new shoes~";
+						mes "第二名奖品！一双崭新的闪亮鞋子！";
+						mes "它优雅的设计和耐用性是我们最高的推荐。";
+						mes "希望你喜欢你的新鞋子~";
 					}
 					else if (.@choose_prize == 20) {
 						getitem 2328,1;// Wooden_Mail
-						mes "Whoa...!";
-						mes "First Prize!";
-						mes "Your very own";
+						mes "哇...！一等奖！你自己的";
 						next;
-						mes "set of Wooden Mail!";
-						mes "Today must be your";
-						mes "lucky day, adventurer!";
+						mes "木制盔甲！今天真是你的幸运日，冒险者！";
 					}
 				}
 				else {
-					mes "It looks like";
-					mes "something came";
-					mes "out! What could it be?";
-					mes "Ooh, you just won...";
+					mes "看起来有什么东西出来了！那会是什么呢？哦，";
+					mes "你刚刚赢得了...";
 					next;
-					mes "[Kafra Employee]";
+					mes "[卡夫拉员工]";
 					if (.@choose_prize <= 10) {
 						getitem 501,100;// Red_Potion
-						mes "F-fourth prize...?!";
-						mes "Boooo! 100 Red Potions.";
-						mes "Wait.. That's actually pretty";
-						mes "good! Yaaaaaay~ Now you";
-						mes "can look like a high roller by";
-						mes "sharing them with your friends!";
+						mes "第四名奖品...？！呜哇！100个红药水。等等.. 这其实还不错！";
+						mes "耶~ 现在你可以通过和朋友分享它们来显得很有面子！";
 					}
 					else if (.@choose_prize <= 16) {
 						getitem 2201,1;// Sunglasses
-						mes "Third Prize!";
-						mes "Your very own pair";
-						mes "of suave Sunglasses!";
-						mes "It'll give you an edge in";
-						mes "the war of looking cool,";
-						mes "or when playing poker~";
+						mes "第三名奖品！你自己的时尚太阳镜！";
+						mes "它会让你在看起来酷的战争中占据优势，或者在玩扑克时~";
 					}
 					else if (.@choose_prize <= 19) {
 						getitem 2226,1;// Cap
-						mes "Second Prize!";
-						mes "A... Cap? Hmmm,";
-						mes "these have pretty good";
-						mes "Defense, but I'm not so";
-						mes "sure of how fashionable";
-						mes "this hat is. Oh well...";
+						mes "第二名奖品！一顶... 帽子？嗯，这个防御力还不错，";
+						mes "但我不太确定这顶帽子时尚不时尚。算了...";
 					}
 					else if (.@choose_prize == 20) {
 						getitem 505,3;// Blue_Potion
-						mes "Oh wow...!";
-						mes "First Prize!";
-						mes "3 Blue Potions~";
-						mes "With enough of these,";
-						mes "you can use your skills";
-						mes "with a bit more impunity~";
+						mes "哇哦...！一等奖！3个蓝药水~ 有了这些，";
+						mes "你可以更加肆无忌惮地使用你的技能~";
 					}
 				}
 			}
 			next;
 		}
 	}
-	mes "[Kafra Employee]";
-	mes "Alright then. Please";
-	mes "use our services to";
-	mes "collect more and more";
-	mes "Special Reserve Points";
-	mes "for even better rewards.";
-	mes "Thank you for your patronage.";
+	mes "[卡夫拉员工]";
+	mes "好的。那么请使用我们的服务来收集更多的特别储备点，";
+	mes "以获得更好的奖励。感谢您的光临。";
 	close;
 }
 
-aldeba_in,88,161,3	script	Kafra Employee#reserve2	4_F_KAFRA3,{
-	mes "[Kafra Employee]";
-	mes "Welcome~ "+ strcharinfo(0) +".";
-	mes "Currently, we, Kafra Center is having a special event for our customers.";
+aldeba_in,88,161,3	script	卡夫拉员工#reserve2	4_F_KAFRA3,{
+	mes "[卡夫拉员工]";
+	mes "欢迎~ 目前，";
+	mes "我们卡普拉中心正在为我们的客户举办特别活动。";
 	next;
-	mes "[Kafra Employee]";
-	mes "You can get free gifts by using special reserve points with ^FF0000Special Kafra ^529DFFGift Event!^000000";
-	mes "Kafra Corporation added new gifts in this event.";
+	mes "[卡夫拉员工]";
+	mes "您可以通过使用特殊储备点参与^FF0000特别卡普拉 ^529DFF礼品活动！";
+	mes "^000000 卡普拉公司在此活动中增加了新的礼品。";
 	next;
-	mes "[Kafra Employee]";
-	mes "Do you want to use your points?";
+	mes "[卡夫拉员工]";
+	mes "您想使用您的积分吗？";
 	next;
-	if (select( "Yes, I do","Maybe in next time" ) == 1) {
-		mes "[Kafra Employee]";
+	if (select( "是的，我想。","Maybe in next time" ) == 1) {
+		mes "[卡夫拉员工]";
 		if ((MaxWeight - Weight) < 11000) {
-			mes "....Oh dear... What are you carrying so many things...?";
-			mes "I don't think you can keep the received items~";
+			mes "....哦，亲爱的... 你为什么带着这么多东西...?";
+			mes "我觉得你无法保留收到的物品~";
 			next;
-			mes "[Kafra Employee]";
-			mes "I'm sorry~ but~";
-			mes "Please, visit Kafra warehouse and store your items until you have free space of ^0000FF1100^000000 and come back.";
-			mes "I apologize for inconvenience~";
+			mes "[卡夫拉员工]";
+			mes "抱歉~ 但是~ 请访问卡普拉仓库并存储您的物品，";
+			mes "直到您有^0000FF1100^000000的空位再回来。对给您带来的不便表示歉意~";
 			close;
 		}
-		mes "Your special reserve points are ^FF0000"+ RESRVPTS +"^000000~";
-		mes "Choose a category to test your luck.";
+		mes "您的特别储备点是^FF0000 选择一个类别来测试您的运气。";
 		next;
 		setarray .@points[1],5000,7000,10000;
-		.@s = select( "5000p = 1st Lottery Chance!", "7000p = 2nd Lottery Chance!", "10000p = 3rd Lottery Chance!", "Cancel" );
+		.@s = select( "5000p = 第一轮抽奖机会！", "7000p = 2nd Lottery Chance!", "10000p = 3rd Lottery Chance!", "Cancel" );
 		if (.@s != 4) {
-			mes "[Kafra Employee]";
+			mes "[卡夫拉员工]";
 			if (RESRVPTS < .@points[.@s]) {
-				mes "I'm sorry~ dear~";
-				mes "You can't choose the selected chance because you do not have enough special reserve points.";
-				mes "Please check your special reserve points and choose another one~";
+				mes "抱歉~ 亲爱的~ 由于您的特殊储备点不足，";
+				mes "无法选择所选的机会。";
+				mes "请检查您的特殊储备点并选择其他选项~";
 				close;
 			}
 			RESRVPTS = RESRVPTS - .@points[.@s];
 			mes "^0000FF"+ F_GetNumSuffix(.@s) +" Lottery Chance!!^000000";
 			next;
-			mes "[Kafra Employee]";
-			mes "It's time to try your luck.";
+			mes "[卡夫拉员工]";
+			mes "是时候试试你的运气了。";
 			next;
-			mes "[Kafra Employee]";
-			mes "Let's see how lucky you are. Now! Get ready!";
+			mes "[卡夫拉员工]";
+			mes "让我们看看你的运气如何。现在！准备好！";
 			next;
 			.@sound_word = rand(1,3);
 			if (.@sound_word == 1)
-				mes "'Drrrrrr~ Drrrrrr~'";
+				mes "'嗡嗡~ 嗡嗡~'";
 			else if (.@sound_word == 2)
-				mes "'Rrrrrrr...'";
+				mes "'咕噜...'";
 			else if (.@sound_word == 3)
-				mes "'Boing.. Boing.. Clink!'";
+				mes "'蹦.. 蹦.. 铿锵！'";
 			next;
-			mes "[Kafra Employee]";
-			mes "Something has come out~ Let's see what you got~";
-			mes "G~ U~ E~ S~ S~ W~ H~ A~ T~";
+			mes "[卡夫拉员工]";
+			mes "有什么东西出来了~ 让我们看看你得到了什么~ 猜猜看~";
 			next;
-			mes "[Kafra Employee]";
-			mes "^FF0000Oh, my goodness! It's!!^000000";
+			mes "[卡夫拉员工]";
+			mes "^FF0000哦，我的天！是！！^000000";
 			next;
-			mes "[Kafra Employee]";
+			mes "[卡夫拉员工]";
 			.@choose_prize = rand(1,20);
 			if (.@s == 1) {
 				if (.@choose_prize < 15) {
 					getitem 501,150;// Red_Potion
-					mes "What a pity!";
-					mes "You got the 4th prize!!";
-					mes "The prize is ^00FF00150 Red Potions~^000000";
+					mes "真可惜！你得到了第四名！！奖品是^00FF00150个红药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "Whoa~ 150 potions! It is enough to share with your friends~";
+					mes "[卡夫拉员工]";
+					mes "哇~ 150瓶药水！足够和朋友分享了~";
 				}
 				else if (.@choose_prize < 18) {
 					getitem 645,15;// Center_Potion
-					mes "The 3rd~~";
-					mes "The 3rd prize!";
-					mes "The prize is ^00FF0015 Concentration Potion~^000000";
+					mes "第三名~~ 第三名！奖品是^00FF0015个集中药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "We always use this when we need to concentrate on something.";
-					mes "However, overdose is not good for your body~";
+					mes "[卡夫拉员工]";
+					mes "我们总是在需要集中注意力时使用这个。不过，";
+					mes "过量对身体不好~";
 				}
 				else if (.@choose_prize < 20) {
 					getitem 505,3;// Blue_Potion
-					mes "The 2nd~~";
-					mes "The 3rd prize~~";
-					mes "The prize is ^00FF003 Blue Potions~^000000";
+					mes "第二名~~ 第三名~~ 奖品是^00FF003蓝药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "Try these when your spiritual power is low~";
+					mes "[卡夫拉员工]";
+					mes "当你的精神力低时可以试试这些~";
 				}
 				else if (.@choose_prize == 20) {
 					getitem 608,1;// Seed_Of_Yggdrasil
-					mes "Whoa~!! The first... The First!!!";
-					mes "Congratulations~~ You got the 1st prize~";
-					mes "The prize is ^00FF001 Yggdrasil Seed~^000000";
+					mes "哇~！！第一名... 第一名！！！";
+					mes "恭喜~~ 你得到了第一名~ 奖品是^00FF001生命之树种子~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "I guess you spent entire luck for this lottery chance~";
+					mes "[卡夫拉员工]";
+					mes "我想你把所有的运气都花在了这次抽奖上~";
 				}
 			}
 			else if (.@s == 2) {
 				if (.@choose_prize < 15) {
 					getitem 504,10;// White_Potion
-					mes "What a pity!";
-					mes "You got the 4th prize!!";
-					mes "The prize is ^00FF0010 White Potions~^000000";
+					mes "真可惜！你得到了第四名！！奖品是^00FF0010个白药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "The greatest among potions! Use it before you fall into faint~";
+					mes "[卡夫拉员工]";
+					mes "药水中的佼佼者！在你快要晕倒之前使用~";
 				}
 				else if (.@choose_prize < 18) {
 					getitem 656,15;// Awakening_Potion
-					mes "The 3rd~~";
-					mes "The 3rd prize!";
-					mes "The prize is ^00FF0015 Awakening Potions~^000000";
+					mes "第三名~~ 第三名！奖品是^00FF0015个觉醒药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "An awakening potion is better than a concentration potion!";
-					mes "Overdose is not good for your body~";
+					mes "[卡夫拉员工]";
+					mes "觉醒药水比集中药水更好！过量对身体不好~";
 				}
 				else if (.@choose_prize < 20) {
 					getitem 657,10;// Berserk_Potion
-					mes "The 2nd~~";
-					mes "The 3rd prize~~";
-					mes "The prize is ^00FF0010 Berserk Potions~^000000";
+					mes "第二名~~ 第三名~~ 奖品是^00FF0010个狂暴药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "Overdose may cause madness~";
+					mes "[卡夫拉员工]";
+					mes "过量可能会导致疯狂~";
 				}
 				else if (.@choose_prize == 20) {
 					getitem 608,1;// Seed_Of_Yggdrasil
 					getitem 607,1;// Yggdrasilberry
-					mes "Whoa~!! The first... The First!!!";
-					mes "Congratulations~~ You got the 1st prize~";
-					mes "The prize is ^00FF001 Yggdrasilberry~^000000";
-					mes "The prize is ^00FF001 Yggdrasil Seed~^000000";
+					mes "哇~！！第一名... 第一名！！！";
+					mes "恭喜~~ 你得到了第一名~ 奖品是^00FF001生命之树浆果~^000000 奖品是^00FF00";
+					mes "1生命之树种子~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "I guess you spent entire luck for this lottery chance~";
+					mes "[卡夫拉员工]";
+					mes "我想你把所有的运气都花在了这次抽奖上~";
 				}
 			}
 			else if (.@s == 3) {
 				if (.@choose_prize < 15) {
 					getitem 504,30;// White_Potion
-					mes "What a pity!";
-					mes "You got the 4th prize!!";
-					mes "The prize is ^00FF0030 White Potions~^000000";
+					mes "真可惜！你获得了第四名！！奖品是^00FF0030白药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "The greatest among potions! Use it before you fall into faint~";
+					mes "[卡夫拉员工]";
+					mes "药水中的佼佼者！在你昏倒之前赶快使用~";
 				}
 				else if (.@choose_prize < 18) {
 					getitem 505,10;// Blue_Potion
-					mes "The 3rd~~";
-					mes "The 3rd prize!";
-					mes "The prize is ^00FF0010 Blue Potions~^000000";
+					mes "第三名~~第三名奖品！奖品是^00FF0010蓝药水~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "Try these when your spiritual power is low~";
+					mes "[卡夫拉员工]";
+					mes "当你的精神力低下时试试这些~";
 				}
 				else if (.@choose_prize < 20) {
 					getitem 608,1;// Seed_Of_Yggdrasil
 					getitem 526,10;// Royal_Jelly
-					mes "The 2nd~~";
-					mes "The 3rd prize~~";
-					mes "The prize is ^00FF001 Yggdrasil Seed~^000000";
-					mes "The prize is ^00FF0010 Royal Jellies~^000000";
+					mes "第二名~~第三名奖品~~奖品是^00FF001耶梦加得种子~^000000奖";
+					mes "品是^00FF0010皇家果冻~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "What a gift set~";
-					mes "These are very healthy food so ~";
+					mes "[卡夫拉员工]";
+					mes "这是一份礼品组合~这些都是非常健康的食物~";
 				}
 				else if (.@choose_prize == 20) {
 					getitem 607,3;// Yggdrasilberry
 					getitem 608,2;// Seed_Of_Yggdrasil
-					mes "Whoa~!! The first... The First!!!";
-					mes "Congratulations~~ You got the 1st prize~";
-					mes "The prize is ^00FF003 Yggdrasilberries~^000000";
-					mes "The prize is ^00FF002 Yggdrasil Seeds~^000000";
+					mes "哇~！！第一名...第一名！！！";
+					mes "恭喜~~你获得了第一名~奖品是^00FF003耶梦加得莓果~^000000奖品是^00FF00";
+					mes "2耶梦加得种子~^000000";
 					next;
-					mes "[Kafra Employee]";
-					mes "I guess you spent entire luck for this lottery chance~";
+					mes "[卡夫拉员工]";
+					mes "我想你把所有运气都花在了这次抽奖上~";
 				}
 			}
-			mes "Congratulations~~";
+			mes "恭喜~~";
 			close;
 		}
 	}
-	mes "[Kafra Employee]";
-	mes "No Problem~";
-	mes "Collect more~ and more~ special reserve points~";
-	mes "Thank you for using Kafra Corporation's services~~";
+	mes "[卡夫拉员工]";
+	mes "没问题~收集更多~更多~特别储备点~感谢你使用卡夫";
+	mes "拉公司的服务~~";
 	close;
 }
 
 // Inside Clock Tower
 //============================================================
-c_tower3,10,249,4	script	Gatekeeper#ct	84,{
+c_tower3,10,249,4	script	守门人#ct	84,{
 	//Key_Of_Clock_Tower
 	callfunc "F_ClockTowerGate","4th",7026,"c_tower4",185,44;
 }
 
-alde_dun03,264,16,4	script	Gatekeeper#ct1	101,{
+alde_dun03,264,16,4	script	守门人#ct1	101,{
 	//Underground_Key
 	callfunc "F_ClockTowerGate","B4th",7027,"alde_dun04",79,267;
 }
@@ -1495,101 +1425,68 @@ function	script	F_ClockTowerGate	{
 	.@floor$ = getarg(0);
 	.@item_req = getarg(1);
 
-	mes "[Gatekeeper Boy]";
-	mes "Welcome to";
-	mes "Kinase - Blue Gallino";
-	mes "The one of Local Speciality in Aldebaran.";
-	mes "You can't go through from "+ .@floor$ +" Floor,";
-	mes "Please go back.";
+	mes "[守门人男孩]";
+	mes "欢迎来到基纳斯 - 蓝色加利诺，";
+	mes "这是阿尔德巴朗的地方特产。你无法通过，请返回。";
 	next;
-	switch(select("About Clock Tower:About the "+ .@floor$ +" Floor:Move to the "+ .@floor$ +" Floor:End Dialogue")) {
+	switch(select("关于时钟塔:关于 "+ .@floor$ +" Floor:Move to the "+ .@floor$ +" Floor:End Dialogue")) {
 	case 1:
-		mes "[Gatekeeper Boy]";
-		mes "Homeland of Alchemy, Aldebaran!";
-		mes "Long Time ago, there were";
-		mes "3 Legendary Alchemists...They are";
-		mes "Bruke Seimer";
-		mes "Philip Warisez";
-		mes "And ..";
+		mes "[守门人男孩]";
+		mes "炼金术的故乡，阿尔德巴朗！很久以前，";
+		mes "这里有三位传奇炼金术士……他们是布鲁克·赛默、";
+		mes "菲利普·瓦里泽和……";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "Romero Specialre!";
-		mes "This venerable architecture is";
-		mes "their masterpiece.";
-		mes "I assume you would feel something unusual";
-		mes "While on the way to this floor,";
-		mes "Every feature of This Clocktower ";
+		mes "[守门人男孩]";
+		mes "罗梅罗特别建筑！这座古老的建筑是他们的杰作。";
+		mes "我想你在前往这一层的路上会感受到一些不同寻常的东西，";
+		mes "这座时钟塔的每个特征。";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "Consists of Mysterious Ancient Magics.";
-		mes "If you just wander around here,";
-		mes " without any intention";
+		mes "[守门人男孩]";
+		mes "由神秘的古代魔法构成。";
+		mes "如果你只是随意游荡而没有任何意图，";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "By any means,";
-		mes "You will meet with a mishap";
-		mes "by Gatekeeper Creatures.";
-		mes "Please be careful ..";
+		mes "[守门人男孩]";
+		mes "无论如何，你都会遇到守门生物的意外。请小心……";
 		close;
 	case 2:
-		mes "[Gatekeeper Boy]";
-		mes "Ancient Alchemists";
-		mes "Sealed the Gate of 4th Floor using an Alchemistic Device ";
-		mes "To keep something";
-		mes "From Evil Creatures and Human Enemies.";
-		mes "To go through this door";
+		mes "[守门人男孩]";
+		mes "古代炼金术士用炼金术装置封印了四楼的门，";
+		mes "以防止邪恶生物和人类敌人进入。要通过这扇门，";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "It needs a Key.";
-		mes "That Key has rumored to be possessed by Gatekeeper Creatures";
-		mes "Prowling around here.";
+		mes "[守门人男孩]";
+		mes "需要一把钥匙。传闻这把钥匙由徘徊在这里的守门生物拥有。";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "The Key is the Intensiveness of Ancient Alchemy,";
-		mes "By hearsay When used once,";
-		mes "It will be released from being spelled";
-		mes "And be disappeared.";
+		mes "[守门人男孩]";
+		mes "这把钥匙是古代炼金术的精髓，听说使用一次后，";
+		mes "它会被解除封印并消失。";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "If that key";
-		mes "Comes into your possession,";
-		mes "Please show me.";
-		mes "The one who possesses the Key";
-		mes "Will have access to go through";
-		mes "This Gate with his own will!";
+		mes "[守门人男孩]";
+		mes "如果那把钥匙落入你手中，请给我看看。";
+		mes "拥有钥匙的人将可以凭自己的意愿通过这扇门！";
 		next;
-		mes "[Gatekeeper Boy]";
-		mes "I will give you a chance.";
-		mes ". . . . .";
+		mes "[守门人男孩]";
+		mes "我会给你一个机会……";
 		close;
 	case 3:
 		if (countitem(.@item_req) > 0) {
-			mes "[Gatekeeper Boy]";
-			mes "Hmm! I already felt that you are not an Ordinary person,";
-			mes "Now it seems to be successful in Speculation.";
-			mes "Please, you may enter.";
-			mes "May God bless you ..";
+			mes "[守门少年]";
+			mes "嗯！我已经感觉到你不是普通人，";
+			mes "现在看来我的猜测是正确的。请，你可以进入。愿上帝保佑你。";
 			close2;
 			delitem .@item_req,1;
 			warp getarg(2),getarg(3),getarg(4);
 			end;
 		}
 		else {
-			mes "[Gatekeeper Boy]";
-			mes ". . . . . .";
-			mes "Unfortunately you don't have a privilege";
-			mes "To enter this Gate ..";
-			mes "You won't be able to go through";
-			mes "As long as Ancient Alchemists";
-			mes " Don't grant you.";
+			mes "[守门少年]";
+			mes "……可惜你没有进入这个大门的特权……只要古代炼金术士不授";
+			mes "予你，你就无法通过。";
 			close;
 		}
 	case 4:
-		mes "[Gatekeeper Boy]";
-		mes "This Clock Tower";
-		mes "Is the place where the 3 Ancient Legendary Alchemists";
-		mes "Has left their Spirits and Skills.";
-		mes "Please Do not Scribble or Damage on the Interior.";
+		mes "[守门少年]";
+		mes "这座钟楼是三位古代传奇炼金术士留下他们的灵魂和技能的";
+		mes "地方。请不要在内部乱涂乱画或损坏。";
 		close;
 	}
 }

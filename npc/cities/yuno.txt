@@ -26,7 +26,7 @@
 
 // Juno
 //============================================================
-yuno,184,173,4	script	Freidrich#juno	729,{
+yuno,184,173,4	script	弗雷德里希#juno	729,{
 	if (rand(1,5) == 1) {
 		mes "[弗雷德莱奇]";
 		mes "^3355FF朱诺^000000 依靠着远古神秘的力量漂浮在空中.";
@@ -59,124 +59,127 @@ yuno,184,173,4	script	Freidrich#juno	729,{
 	}
 }
 
-yuno,337,227,4	script	Juno Granny#juno	103,{
-	mes "[Granny]";
+yuno,337,227,4	script	朱诺奶奶#juno	103,{
+	mes "[奶奶]";
 	if (rand(1,50) == 1) {
 		if (Zeny > 999) {
-			mes "So, do you enjoy candy?";
+			mes "那么，你喜欢糖果吗？";
 			next;
-			mes "^3355FFGranny hands you some candy^000000.";
+			mes "^3355FF奶奶给你一些糖果^000000。";
 			next;
-			mes "[Granny]";
-			mes "You've already chosen. It doesn't matter whether or not you get this candy. That doesn't matter at all. You have to understand why it's happened.";
+			mes "[奶奶]";
+			mes "你已经做出了选择。你是否得到这块糖果并不重要。";
+			mes "你必须理解为什么会这样。";
 			next;
-			mes "[Granny]";
-			mes "Here's ^3355FF1,000 zeny^000000.";
-			mes "Do you accept this?";
+			mes "[奶奶]";
+			mes "这是^3355FF1,000仙币^000000。你接受吗？";
 			next;
-			if (select("Accept:Do not accept") == 1) {
-				mes "[Granny]";
-				mes "*Giggle*";
-				mes "There you go~";
+			if (select("接受:不接受") == 1) {
+				mes "[奶奶]";
+				mes "*咯咯笑* 给你~";
 				set Zeny, Zeny-1000;
 				getitem 529,1; //Candy
 				next;
-				mes "[Granny]";
-				mes "*Giggle*";
-				mes "Well then...";
-				mes "See you ~";
+				mes "[奶奶]";
+				mes "*咯咯笑* 那么...再见~";
 				close;
 			}
-			mes "[Granny]";
-			mes "Yes, that's right. Now you must ask yourself why you didn't accept the candy I offered.";
+			mes "[奶奶]";
+			mes "是的，没错。现在你必须问自己，";
+			mes "为什么你没有接受我给你的糖果。";
 			close;
 		}
 		else {
-			mes "*Giggle giggle*";
-			mes "The time has come.";
-			mes "Well then...";
+			mes "*咯咯笑* 时机到了。那么...";
 			close;
 		}
 	}
 	else {
-		mes "I am an old Sage granny who foresees everything...";
+		mes "我是一位预见一切的老智者奶奶...";
 		next;
-		mes "[Granny]";
-		mes "Have you heard of a boss monster that has been around Juno for a long time? It's known only as the ^FF3355Lord of the Dead^000000.";
+		mes "[奶奶]";
+		mes "你听说过一个在朱诺附近徘徊的boss怪物吗？";
+		mes "它被称为^FF3355死者之王^000000。";
 		next;
-		mes "[Granny]";
-		mes "It is rumored to be from the realm of the dead. It brings many undead monsters with it, intending to lead living creatures to its cold and icy realm.";
+		mes "[奶奶]";
+		mes "据说它来自死者的领域。它带来了许多不死生物，";
+		mes "意图将生物引向它冰冷的领域。";
 		next;
-		mes "[Granny]";
-		mes "You have already chosen whether or not you will challenge the Lord of the Dead. All you need to do right now is understand why you made the decision.";
+		mes "[奶奶]";
+		mes "你已经选择了是否挑战死者之王。";
+		mes "你现在需要做的就是理解你做出这个决定的原因。";
 		close;
 	}
 }
 
-yuno,328,239,4	script	Juno Fighter#juno	732,{
-	mes "[Sergiof]";
-	mes "My name is Sergiof,";
-	mes "the fighter who";
-	mes "serves Granny.";
+yuno,328,239,4	script	朱诺战士#juno	732,{
+	mes "[塞尔吉奥夫]";
+	mes "我叫塞尔吉奥夫，是奶奶的战士。";
 	next;
-	mes "[Sergiof]";
-	mes "I will tell you about ^3355FFGrand Peco^000000 which is a high level Peco Peco. Grand Peco is faster than Peco Peco and is quite aggressive.";
+	mes "[塞尔吉奥夫]";
+	mes "我将告诉你关于^3355FF大皮可^000000的事，它是一种高级皮可皮可。";
+	mes "大皮可比皮可皮可更快，而且相当具有攻击性。";
 	next;
-	mes "[Sergiof]";
-	mes "It attacks using its strong bill and many Peco Pecos follow it. There's quite a difference in power between Peco Peco and the Grand Peco.";
+	mes "[塞尔吉奥夫]";
+	mes "它用强壮的喙攻击，许多皮可皮可跟随它。";
+	mes "皮可皮可和大皮可之间的力量差距很大。";
 	close;
 }
 
-yuno,343,68,4	script	Juno Despot#juno	730,{
-	mes "[Ninno]";
+yuno,343,68,4	script	朱诺暴君#juno	730,{
+	mes "[宁诺]";
 	if (rand(1,1000) == 1) {
-		mes "You are very lucky to have me tell you this story. This only happens by ^FF33551 out of a 1,000 chance^000000.";
+		mes "你真幸运能听到这个故事。这只有^FF33551千分之一的机会^000000。";
 		next;
-		mes "[Ninno]";
-		mes "This world you are experiencing is actually fabricated! It's time for you to see reality for what it is!";
+		mes "[宁诺]";
+		mes "你正在经历的这个世界其实是虚构的！";
+		mes "是时候让你看到现实的真相了！";
 		next;
-		mes "[Ninno]";
-		mes "Open your eyes! Stop being manipulated by virtual reality!";
+		mes "[宁诺]";
+		mes "睁开你的眼睛！不要再被虚拟现实操控了！";
 		close2;
 		warp "prontera",182,206;
 		end;
 	}
-	mes "Have you ever heard of an Egyptian king who was once believed to be a son of a god? His name is ^3355FFPharoah^000000.";
+	mes "你听说过一个曾被认为是神之子的埃及国王吗？";
+	mes "他的名字是^3355FF法老^000000。";
 	next;
-	mes "[Ninno]";
-	mes "He was rumored to be a high sorcerer that used his power to curse innocents. It is said that he is still around, placing his curses on people.";
+	mes "[尼诺]";
+	mes "他被传言是一个高阶法师，利用他的力量诅咒无辜者。";
+	mes "人们说他仍然在附近，继续对人施加诅咒。";
 	next;
-	mes "[Ninno]";
-	mes "As an adventurer, it's possible that you may see him in your travels. Be careful...";
+	mes "[尼诺]";
+	mes "作为一名冒险者，你可能会在旅途中遇到他。小心点……";
 	close;
 }
 
-yuno,165,111,4	script	Juno Sage#juno	123,,{
-	mes "[Le Morpheus]";
+yuno,165,111,4	script	朱诺贤者#juno	123,,{
+	mes "[]";
 	if (rand(1,50) == 25) {
 		if (Zeny > 4999) {
-			mes "Look in my hand. I am holding two different kinds of herbs.";
+			mes "看看我手中。我拿着两种不同的草药。";
 			next;
-			mes "[Le Morpheus]";
-			mes "One is a ^3355FFBlue Herb^000000 which will make you forget about reality and keep you in this virtual reality^000000.";
+			mes "[勒·墨菲斯]";
+			mes "一种是^3355FF蓝色草药^000000，能让你忘记现实，留在这个虚拟世界中^000000。";
 			next;
-			mes "[Le Morpheus]";
-			mes "The other is a ^FF3355Red Herb^000000 which will reveal to you what is true and real.";
+			mes "[勒·墨菲斯]";
+			mes "另一种是^FF3355红色草药^000000，能向你揭示真实和真相。";
 			next;
-			mes "[Le Morpheus]";
-			mes "Whichever one you choose, you must spend ^3355FF5,000 zeny^000000. Now, please select one.";
+			mes "[勒·墨菲斯]";
+			mes "无论你选择哪一种，你都必须花费^3355FF5,000仙币^000000。";
+			mes "现在，请选择一种。";
 			next;
-			if (select("Choose ^FF3355Red Herb^000000:Choose ^3355FFBlue Herb^000000.") == 1) {
-				mes "[Le Morpheus]";
-				mes "As you have chosen, you will forget everything, and remain in this virtual reality.";
+			if (select("选择^FF3355红色草药^000000:选择^3355FF蓝色草药^000000。") == 1) {
+				mes "[勒·墨菲斯]";
+				mes "既然你选择了，你将忘记一切，留在这个虚拟现实中。";
 				set Zeny, Zeny-5000;
 				getitem 507,1; //Red_Herb
 				close2;
 				warp "prontera",182,206;
 				end;
 			}
-			mes "[Le Morpheus]";
-			mes "You will see the truth.";
+			mes "[勒·墨菲斯]";
+			mes "你将看到真相。";
 			set Zeny, Zeny-5000;
 			getitem 510,1; //Blue_Herb
 			close2;
@@ -184,59 +187,68 @@ yuno,165,111,4	script	Juno Sage#juno	123,,{
 			end;
 		}
 		else {
-			mes "Hmm. I'm sorry to say you just missed a fortunate chance. However, I can tell you don't have enough wealth to bring this fortune to fruition.";
+			mes "嗯。很抱歉，你刚刚错过了一个幸运的机会。不过，";
+			mes "我可以告诉你，你没有足够的财富来实现这个机会。";
 			close;
 		}
 	}
 	else {
-		mes "^3355FFApocalypse^000000...";
-		mes "It is the name of an android that used to guard Juno long ago.";
+		mes "^3355FF末日^000000……这是一个曾经守护朱诺的安卓的名字。";
 		next;
-		mes "[Le Morpheus]";
-		mes "Because its artificial intelligence has corrupted over the years, it can no longer distinguish comrades from enemies. Sadly, that android is nothing but a mindless monster now.";
+		mes "[勒·墨菲斯]";
+		mes "因为它的人工智能多年来已经腐化，无法再区分同伴和敌人。";
+		mes "可悲的是，这个安卓现在只是一只无意识的怪物。";
 		close;
 	}
 }
 
-yuno,157,205,4	script	Juno Artisan#juno	54,{
-	mes "[Artisan]";
-	mes "*Mumble mumble...*";
+yuno,157,205,4	script	朱诺工匠#juno	54,{
+	mes "[工匠]";
+	mes "*嘟囔嘟囔……*";
 	next;
-	mes "[Artisan]";
-	mes "Oh, hello there. Let me introduce myself. I am an artisan who tries to succeed the rights and duties of item makers in Juno.";
+	mes "[工匠]";
+	mes "哦，你好。让我自我介绍一下。我是一名工匠，";
+	mes "努力继承朱诺的物品制造者的权利和职责。";
 	next;
-	switch(select("About Powerful Equipment:About Unique Items:About Authentic Food:End Conversation")) {
+	switch(select("关于强力装备:关于独特物品:关于正宗食物:结束对话")) {
 	case 1:
-		mes "[Artisan]";
-		mes "Let me suggest the ^3355FFHoly Guard^000000 and ^3355FFHoly Avenger^000000 which are special items for Crusaders.";
+		mes "[工匠]";
+		mes "让我推荐^3355FF神圣守护者^000000和^3355FF神圣复仇者^000000，";
+		mes "都是给十字军的特殊物品。";
 		next;
-		mes "[Artisan]";
-		mes "These pieces of equipment are very light and have sufficient abilities. They also happen to possess holy power.";
+		mes "[工匠]";
+		mes "这些装备非常轻便，能力也足够。它们还拥有神圣的力量。";
 		next;
-		mes "[Artisan]";
-		mes "Therefore, this equipment is more powerful over some kinds of monsters such as Ghosts or the Undead.";
+		mes "[工匠]";
+		mes "因此，";
+		mes "这些装备在对付某些怪物如鬼魂或不死生物时更为强大。";
 		next;
-		mes "[Artisan]";
-		mes "However it is rumored that only a few chosen Crusaders are able to obtain those items due of their rarity.";
+		mes "[工匠]";
+		mes "然而，传言只有少数被选中的十字军才能获得这些物品，";
+		mes "因为它们非常稀有。";
 		close;
 	case 2:
-		mes "[Artisan]";
-		mes "It looks like a simple scroll marked with concentric circles and a star. Although the ^FF3355Worn-Out Magic Scroll^000000 is very old, it's wanted by many Sages for research purposes.";
+		mes "[工匠]";
+		mes "它看起来像一张标有同心圆和星星的简单卷轴。";
+		mes "虽然^FF3355破旧的魔法卷轴^000000非常古老，";
+		mes "但许多贤者仍然希望能为研究而获得它。";
 		next;
-		mes "[Artisan]";
-		mes "It seems you can use that item when you chant a high-level magic spell.";
+		mes "[工匠]";
+		mes "看起来你可以在吟唱高级魔法时使用那个物品。";
 		close;
 	case 3:
-		mes "[Artisan]";
-		mes "^3355FFRice Cake^000000! Yes, it's a traditional food that's favored by a lot of people. There's a lot of nostalgic memories of old fashioned markets that are connected to the Rice Cake.";
+		mes "[工匠]";
+		mes "^3355FF年糕^000000！是的，这是一种受到很多人喜爱的传统食品。";
+		mes "与年糕相关的老式市场有很多怀旧的回忆。";
 		next;
-		mes "[Artisan]";
-		mes "Ahhh~";
-		mes "I wish I could eat a bit of Rice Cake right now.";
+		mes "[工匠]";
+		mes "啊~我真希望现在能吃到一点年糕。";
 		close;
 	case 4:
-		mes "[Artisan]";
-		mes "Although Juno is known as a city of Sages, I hope you understand that ordinary people live and prosper here as well. Please enjoy the unique atmosphere that Juno has to offer.";
+		mes "[工匠]";
+		mes "虽然朱诺被称为智者之城，";
+		mes "但我希望你能理解这里也有普通人生活和繁荣。";
+		mes "请享受朱诺独特的氛围。";
 		close;
 	}
 }
@@ -304,14 +316,10 @@ yuno,157,205,4	script	Juno Artisan#juno	54,{
 	mes "欢迎来到朱诺,创造之源.";
 	next;
 	mes "[朱诺的士兵]";
-	mes "听说过巨大杰勒比结晶吗?";
-	mes "那些东西真TMD大!";
-	mes "[朱诺的士兵]";
+	mes "听说过巨大杰勒比结晶吗?那些东西真他妈的大！";
 	next;
-	mes "真TMD难以相信这样又大又亮的杰勒比结晶居然会存在啊!";
-	mes "真让人难以置信";
-	mes "居然有如此大而";
-	mes "闪闪发光的果冻存在！";
+	mes "真他妈的难以相信这样又大又亮的杰勒比结晶居然会存在啊！";
+	mes "真让人难以置信，居然有如此大而闪闪发光的果冻存在！";
 	close;
 }
 
@@ -339,35 +347,29 @@ yuno,157,205,4	script	Juno Artisan#juno	54,{
 	close;
 }
 
-yuno,142,183,5	script	Airship Representative	100,{
-	mes "[Airship Representative]";
-	mes "Good day, I am here to inform you";
-	mes "about the Juno Airship which";
-	mes "we plan to operate in the near future.";
+yuno,142,183,5	script	空中船代表	100,{
+	mes "[空中船代表]";
+	mes "您好，我在这里通知您关于我们计划在不久的将来运";
+	mes "营的朱诺空中船。";
 	next;
-	mes "[Air ship Representative]";
-	mes "Unfortunately, it is still in";
-	mes "development, and we've yet";
-	mes "to complete testing. However,";
-	mes "we feel the need to let our";
-	mes "eager customers know of our";
-	mes "progress.";
+	mes "[空中船代表]";
+	mes "不幸的是，它仍在开发中，我们尚未完成测试。不过，";
+	mes "我们觉得有必要让热切的顾客了解我们的进展。";
 	next;
-	mes "[Airship Representative]";
-	mes "The Airship we're developing will provide you with convenient travel to any town. You can also enjoy the sights while aloft in the sky. Unique products from various areas will also be provided.";
+	mes "[空中船代表]";
+	mes "我们正在开发的空中船将为您提供便捷的旅行服务，";
+	mes "您可以在空中欣赏美景。还将提供来自各个地区的独特产品。";
 	next;
-	mes "[Airship Representative]";
-	mes "We promise our customers an";
-	mes "amazing travel experience";
-	mes "once the Airship is in";
-	mes "operation. In the meantime,";
-	mes "we are providing a special";
-	mes "teleport service.";
+	mes "[空中船代表]";
+	mes "我们承诺一旦空中船投入运营，";
+	mes "将为顾客提供惊人的旅行体验。与此同时，";
+	mes "我们提供特别的传送服务。";
 	next;
-	mes "[Airship Representative]";
-	mes "The teleport fee is 1,800 zeny, regardless of where you want to go. Please let me know your desired destination.";
+	mes "[空中船代表]";
+	mes "传送费用为1800仙，去往任何地方都一样。";
+	mes "请告诉我您想去的目的地。";
 	next;
-	switch(select("Prontera:Izlude:Geffen:Morocc:Payon:Alberta:Comodo:Cancel")) {
+	switch(select("普隆德拉:伊斯鲁德:吉芬:摩洛克:佩尤恩:阿尔伯塔:科莫多:取消")) {
 		case 1: callsub S_Warp,"prontera",116,72;
 		case 2: if (checkre(0)) callsub S_Warp,"izlude",128,98; else callsub S_Warp,"izlude",94,103;
 		case 3: callsub S_Warp,"geffen",120,39;
@@ -385,9 +387,8 @@ S_Warp:
 		end;
 	}
 	else {
-		mes "[Airship Representative]";
-		mes "I regret to say that you do not have enough zeny with you.";
-		mes "Please check the amount of zeny that you have.";
+		mes "[空中船代表]";
+		mes "很遗憾，您身上的仙币不足。请检查您拥有的仙币数量。";
 		close;
 	}
 }
