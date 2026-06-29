@@ -10,20 +10,20 @@
 
 // Stop Post Quest
 // ============================================================
-moc_ruins,113,181,4	duplicate(William)	William#moc	89
+moc_ruins,113,181,4	duplicate(William)	威廉#moc	89
 
 // Binoculars Quest
 // ============================================================
-moc_ruins,118,176,4	duplicate(Alchemist)	Alchemist#moc	64
+moc_ruins,118,176,4	duplicate(Alchemist)	炼金术士#moc	64
 
 // Resurrection of Satan Morocc
 // ============================================================
 
-morocc,176,103,3	duplicate(Continental Official)	Continental Official#mor	754
+morocc,176,103,3	duplicate(Continental Official)	大陆官员#mor	754
 
 // Succession of the Prince
 // ============================================================
-prontera,153,353,4	script	Messenger#prince1	105,{
+prontera,153,353,4	script	信使#prince1	105,{
 	if (nk_prince == 0) {
 		if (rebirth_moc_edq > 1) {
 			mes "[信使]";
@@ -146,7 +146,7 @@ prontera,153,353,4	script	Messenger#prince1	105,{
 	}
 }
 
-prt_castle,117,163,5	script	Inspector#prince	755,{
+prt_castle,117,163,5	script	检查员#prince	755,{
 	if (checkquest(10004) == 0 || checkquest(10004) == 1) {
 		mes "[检查员]";
 		mes "法官！";
@@ -1043,7 +1043,7 @@ prt_castle,117,163,5	script	Inspector#prince	755,{
 	}
 }
 
-prt_castle,272,375,4	script	Prince	881,{
+prt_castle,272,375,4	script	王子	881,{
 	if (nk_prince > 6) {
 		mes "-痴迷于制作";
 		mes "锁和钥匙。-";
@@ -1110,7 +1110,7 @@ prt_castle,272,375,4	script	Prince	881,{
 	}
 }
 
-prt_castle,274,372,4	script	Servant#hans	48,{
+prt_castle,274,372,4	script	仆人#hans	48,{
 	if (checkquest(10020) == 2) {
 		mes "[汉斯]";
 		mes "啊……嗯……我……";
@@ -1194,7 +1194,7 @@ prt_castle,274,372,4	script	Servant#hans	48,{
 	}
 }
 
-prt_castle,339,202,3	script	Prince#urgen	989,{
+prt_castle,339,202,3	script	王子#urgen	989,{
 	if (nk_prince > 6) {
 		mes "[乌鲁根]";
 		mes "...这并不好看。";
@@ -1297,7 +1297,7 @@ prt_castle,339,202,3	script	Prince#urgen	989,{
 	}
 }
 
-prt_castle,289,201,3	script	Prince#helmut	991,{
+prt_castle,289,201,3	script	王子#helmut	991,{
 	if (nk_prince > 6) {
 		mes "[赫尔穆特]";
 		mes "真是个白痴。我早该杀了他。现在我感到轻松多了。";
@@ -1478,7 +1478,7 @@ prt_castle,289,201,3	script	Prince#helmut	991,{
 	}
 }
 
-prt_castle,288,208,4	script	Calbern	962,{
+prt_castle,288,208,4	script	卡尔本	962,{
 	mes "[卡尔本]";
 	mes "您好吗，先生？";
 	mes "我是赫尔穆特王子的仆人...";
@@ -1494,7 +1494,7 @@ prt_castle,288,208,4	script	Calbern	962,{
 	close;
 }
 
-prt_castle,391,205,3	script	Prince#poe	993,{
+prt_castle,391,205,3	script	王子#poe	993,{
 	if (nk_prince > 6) {
 		mes "[波伊]";
 		mes "无论条件如何，他在生活的比赛中就是个失败者。";
@@ -1558,7 +1558,7 @@ prt_castle,391,205,3	script	Prince#poe	993,{
 				mes "我现在选择一张卡片！";
 				next;
 				mes "[波伊]";
-				mes "It is..." + .@card + "!!";
+				mes "这是...";
 				next;
 				if (.@card > 7) {
 					set .@wincount,.@wincount+1;
@@ -1593,7 +1593,7 @@ prt_castle,391,205,3	script	Prince#poe	993,{
 				mes "看看我的卡片！";
 				next;
 				mes "[波伊]";
-				mes "It is..." + .@card + "!!";
+				mes "这是...";
 				next;
 				if (.@card < 7) {
 					set .@wincount,.@wincount+1;
@@ -1718,7 +1718,7 @@ prt_castle,391,205,3	script	Prince#poe	993,{
 	}
 }
 
-prt_castle,364,375,4	script	Prince#peter	987,{
+prt_castle,364,375,4	script	王子#peter	987,{
 	if (nk_prince > 6) {
 		mes "[彼得]";
 		mes "鉴定师。";
@@ -1901,7 +1901,7 @@ prt_castle,364,375,4	script	Prince#peter	987,{
 	}
 }
 
-aldebaran,132,184,3	script	Girl#prince	96,{
+aldebaran,132,184,3	script	女孩#prince	96,{
 	if (checkquest(10013) == 0 || checkquest(10013) == 1) {
 		if (countitem(744) > 0) {
 			mes "[少女]";
@@ -1937,7 +1937,7 @@ aldebaran,132,184,3	script	Girl#prince	96,{
 	}
 }
 
-prt_castle,314,373,4	script	Prince#eisen	983,{
+prt_castle,314,373,4	script	王子#eisen	983,{
 	if (nkprince_eisen > 2) {
 		if (nkprince_eisen == 3) {
 			mes "[阿赫鲁姆]";
@@ -2391,7 +2391,7 @@ prt_castle,314,373,4	script	Prince#eisen	983,{
 	}
 }
 
-prt_castle,368,312,4	script	Prince#ern	985,{
+prt_castle,368,312,4	script	王子#ern	985,{
 	if (checkquest(10024) == 2) {
 		mes "[厄恩斯特]";
 		mes "...兄弟，如果你想的话...";
@@ -2658,10 +2658,9 @@ OnTouch:
 	}
 }
 
-prt_castle,156,325,4	script	Young Noble#valter	86,{
-	mes "[Young Noble Walter]";
-	mes "Step aside.";
-	mes "How dare you talk to him.";
+prt_castle,156,325,4	script	年轻贵族#valter	86,{
+	mes "[年轻贵族沃尔特]";
+	mes "让开，你怎么敢和他说话。";
 	close;
 
 OnInit:
@@ -2677,10 +2676,9 @@ OnDisable:
 	end;
 }
 
-prt_castle,157,323,3	script	Aged Noble#rihart	880,{
-	mes "[Aged Noble Richard]";
-	mes "Hmm-hmm.";
-	mes "What an indecorous person!";
+prt_castle,157,323,3	script	年长贵族#rihart	880,{
+	mes "[年长贵族理查德]";
+	mes "嗯哼，真是个不体面的家伙！";
 	close;
 
 OnInit:
@@ -2696,7 +2694,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,314,371,0	script	Prince#another_ern	985,{
+prt_castle,314,371,0	script	王子#another_ern	985,{
 	if (nkprince_eisen == 13) {
 		mes "[阿赫鲁姆]";
 		mes "我告诉过你我不想当国王，我也没有改变主意的打算！";
@@ -2845,7 +2843,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,314,372,0	script	Prince#another_ern1	985,{
+prt_castle,314,372,0	script	王子#another_ern1	985,{
 	if (nkprince_eisen == 14) {
 		mes "[厄恩斯特]";
 		mes "呜……兄弟？……你……告诉我你会杀了我……你只是想被我杀掉？？……呜……兄弟？……";
@@ -2950,7 +2948,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,272,372,1	script	Prince#eisen1	983,{
+prt_castle,272,372,1	script	王子#eisen1	983,{
 	mes "[阿赫鲁姆]";
 	mes "笨蛋。你永远不会成为国王。你这一生……难道你不知道吗？真是个垃圾上瘾者！！";
 	next;
@@ -3008,7 +3006,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,336,202,7	script	Prince#eisen2	983,{
+prt_castle,336,202,7	script	王子#eisen2	983,{
 	mes "[乌鲁根]";
 	mes "你说什么？阿赫鲁姆？";
 	mes "嘿！你刚才对我说了什么？阿赫鲁姆？！";
@@ -3066,7 +3064,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,286,201,7	script	Prince#eisen3	983,{
+prt_castle,286,201,7	script	王子#eisen3	983,{
 	mes "[阿赫鲁姆]";
 	mes "军事狂热者！混蛋！你认为力量能解决一切吗？在所有情况下，你认为人们能和平共处吗？！";
 	next;
@@ -3121,7 +3119,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,388,205,6	script	Prince#eisen4	983,{
+prt_castle,388,205,6	script	王子#eisen4	983,{
 	mes "[阿赫鲁姆]";
 	mes "你总是关心赌博。但是，为什么你不先关心你的周围呢，嗯？理查德的少爷？";
 	next;
@@ -3185,7 +3183,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,364,372,1	script	Prince#eisen5	983,{
+prt_castle,364,372,1	script	王子#eisen5	983,{
 	mes "[阿赫鲁姆]";
 	mes "彼得，如果你的工作没有意义，你会怎么做？";
 	next;
@@ -3249,7 +3247,7 @@ OnDisable:
 	end;
 }
 
-prt_castle,368,310,1	script	Prince#eisen6	983,{
+prt_castle,368,310,1	script	王子#eisen6	983,{
 	mes "[厄恩斯特]";
 	mes "兄弟，再告诉我一次。你刚才说了什么？";
 	next;
@@ -3498,7 +3496,7 @@ prt_castle,225,318,0	warp	#room12	1,1,prt_castle,276,263
 prt_castle,273,264,0	warp	#room22	1,1,prt_castle,221,318
 prt_castle,221,308,0	warp	#princeout	1,1,prt_castle,176,167
 
-prt_castle,176,170,5	script	Guard#princein	105,{
+prt_castle,176,170,5	script	守卫#princein	105,{
 	if (nk_prince > 4) {
 		mes "[奇怪地方的卫兵]";
 		mes "你可以通过隐藏的门去王子们聚集的房间。出于安全原因，这里完全被守卫和隐藏。";

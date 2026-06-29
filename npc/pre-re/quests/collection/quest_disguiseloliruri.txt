@@ -8,12 +8,12 @@
 //= rAthena Project
 //===== Description: =========================================
 //= Custom Version.
-//= Repeatable EXP Quest : Kill 50 Disguise or Loli Ruri.
+//= Repeatable EXP Quest : Kill 50 Disguise or ????.
 //===== Additional Comments: =================================
 //= 1.0 First version.
 //============================================================
 
-nif_fild01,332,327,4	script	Deadman	795,{
+nif_fild01,332,327,4	script	死者	795,{
 
 	if (checkquest(60173) != -1) {
 		if (checkquest(60173,HUNTING) != 2 ) {
@@ -107,7 +107,7 @@ nif_fild01,332,327,4	script	Deadman	795,{
 			mes "[死者]";
 			mes "那么，你想为我猎杀哪种怪物呢？";
 			next;
-			switch(select("伪装:Loli Ruri:取消")) {
+			switch(select("伪装:????:取消")) {
 			case 1:
 				if (BaseLevel > 90) {
 					mes "[死者]";
@@ -122,12 +122,12 @@ nif_fild01,332,327,4	script	Deadman	795,{
 			case 2:
 				if (BaseLevel > 98) {
 					mes "[死者]";
-					mes "感谢你对Loli Ruri的巨大帮助！";
+					mes "感谢你对????的巨大帮助！";
 					mes "目前情况稳定，我不再需要你帮我杀它们了。";
 					close;
 				}
 				mes "[死者]";
-				mes "杀死50个Loli Ruri，完成后告诉我。我会为你的努力给予奖励。";
+				mes "杀死50个????，完成后告诉我。我会为你的努力给予奖励。";
 				setquest 60176;
 				close;
 			case 3:
@@ -145,6 +145,6 @@ nif_fild01,332,327,4	script	Deadman	795,{
 	mes "哦，天哪，哦，天哪！";
 	next;
 	mes "[死者]";
-	mes "抱歉，我现在不能说话，我正在经历一场痛苦，这些该死的伪装者和Loli Ruri要杀了我。";
+	mes "抱歉，我现在不能说话，我正在经历一场痛苦，这些该死的伪装者和????要杀了我。";
 	close;
 }

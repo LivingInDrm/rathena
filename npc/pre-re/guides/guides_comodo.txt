@@ -1,127 +1,253 @@
-//===== rAthena Script =======================================
-//= Comodo Guides
-//===== By: ==================================================
-//= kobra_k88; L0ne_W0lf
-//===== Current Version: =====================================
-//= 1.5
-//===== Compatible With: =====================================
-//= rAthena Project
-//===== Description: =========================================
-//= [Official Conversion]
-//= Guides for the City of Comodo
-//===== Additional Comments: =================================
-//= Fully working
-//= 1.1 Now using duplicate command.
-//= 1.2 Optimized, updated common guide names [Lupus]
-//= 1.3 Updated the guide according to how it is on iRO, thanks
-//=     to Muad_Dib [MasterOfMuppets]
-//= 1.4 Removed 3 guides, and converted to use functions.
-//= 1.5 Rescripted to official 10.3 standards. [L0ne_W0lf]
-//============================================================
-
-comodo,322,178,4	script	Comodo Guide#cmd::CmdGuide	700,{
-	callfunc "F_CmdGuide","Native Kokomo";
-}
-
-comodo,176,350,4	script	Comodo Guide#2cmd	700,{
-	callfunc "F_CmdGuide","Native Nutcoco";
-}
-
-comodo,37,219,4	script	Guide#2cmd	700,{
-	callfunc "F_CmdGuide","Native Papaya";
-}
-
-function	script	F_CmdGuide	{
-	mes "["+getarg(0)+"]";
-	mes "欢迎来到科莫多，";
-	mes "这座梦幻之城，";
-	mes "夜生活永不停歇！";
-	mes "我对这一带非常熟悉，";
-	mes "如果您需要问路，";
-	mes "尽管告诉我吧。";
-	next;
-	switch(select("赌场:草裙舞台 ^3355FF(舞者转职)^000000:武器和防具店:道具店:特产商店:卡普拉公司西部分部:酋长的家:酒馆:露营地:结束对话")) {
-	case 1:
-		viewpoint 1,140,98,0,0xFF6633;
-		mes "请参照您小地图上的";
-		mes "^FF6633+^000000 标记来找到";
-		mes "赌场，这里是疲惫旅人的";
-		mes "休憩天堂，也是科莫多";
-		mes "夜生活的中心。";
-		close;
-	case 2:
-		viewpoint 1,188,168,1,0x0000FF;
-		mes "请参照您小地图上的";
-		mes "^0000FF+^000000 标记来找到";
-		mes "草裙舞台，女弓箭手";
-		mes "可以在这里";
-		mes "转职为舞者。";
-		close;
-	case 3:
-		viewpoint 1,266,70,2,0x00FFFF;
-		mes "请参照您小地图上的";
-		mes "^00FFFF+^000000 标记来找到";
-		mes "武器和防具店。一定要";
-		mes "去看看那里有没有";
-		mes "科莫多独有的";
-		mes "特殊物品哦！";
-		close;
-	case 4:
-		viewpoint 1,86,128,3,0x515151;
-		mes "请参照您小地图上的";
-		mes "^515151+^000000 标记来找到";
-		mes "道具店。如果您之前没去过，";
-		mes "我建议您去看看，";
-		mes "备齐以后可能";
-		mes "用到的道具。";
-		close;
-	case 5:
-		viewpoint 1,298,124,4,0x3355FF;
-		mes "请参照您小地图上的";
-		mes "^3355FF+^000000 标记来找到";
-		mes "特产商店，在那里您可以";
-		mes "买到科莫多地区独有的特色礼品~";
-		close;
-	case 6:
-		viewpoint 1,136,202,5,0xFF5555;
-		mes "请参照您小地图上的";
-		mes "^FF5555+^000000 标记来找到";
-		mes "卡普拉公司的西部分部。";
-		mes "他们提供一些非常重要的";
-		mes "服务，您以后可能会用到。";
-		close;
-	case 7:
-		viewpoint 1,114,294,5,0xFF5555;
-		mes "请参照您小地图上的";
-		mes "^FF5555+^000000 标记来找到";
-		mes "酋长的家。欢迎您前去";
-		mes "拜访，他通常很乐意";
-		mes "接待来访的客人。";
-		close;
-	case 8:
-		viewpoint 1,166,298,5,0xFF5555;
-		mes "请参照您小地图上的";
-		mes "^FF5555+^000000 标记来找到";
-		mes "酒馆。在那里您可以结识";
-		mes "其他游客，放松身心，";
-		mes "享受愉快的社交时光~";
-		close;
-	case 9:
-		viewpoint 1,210,308,5,0xFF5555;
-		mes "请参照您小地图上的";
-		mes "^FF5555+^000000 标记来找到";
-		mes "露营地。和您的家人朋友";
-		mes "聚在一起，享受科莫多";
-		mes "露营地的特色烧烤吧~";
-		close;
-	case 10:
-		mes "["+getarg(0)+"]";
-		mes "其实，科莫多看起来";
-		mes "总是像夜晚一样，";
-		mes "因为它建在一个巨大的";
-		mes "洞穴里。虽然这里没有阳光，";
-		mes "但这里的黑暗比起阴郁，";
-		mes "更多的是令人兴奋~";
-		close;
-	}
-}
+//===== rAthena Script =======================================
+
+//= Comodo Guides
+
+//===== By: ==================================================
+
+//= kobra_k88; L0ne_W0lf
+
+//===== Current Version: =====================================
+
+//= 1.5
+
+//===== Compatible With: =====================================
+
+//= rAthena Project
+
+//===== Description: =========================================
+
+//= [Official Conversion]
+
+//= Guides for the City of Comodo
+
+//===== Additional Comments: =================================
+
+//= Fully working
+
+//= 1.1 Now using duplicate command.
+
+//= 1.2 Optimized, updated common guide names [Lupus]
+
+//= 1.3 Updated the guide according to how it is on iRO, thanks
+
+//=     to Muad_Dib [MasterOfMuppets]
+
+//= 1.4 Removed 3 guides, and converted to use functions.
+
+//= 1.5 Rescripted to official 10.3 standards. [L0ne_W0lf]
+
+//============================================================
+
+
+
+comodo,322,178,4	script	科莫多向导#cmd::CmdGuide	700,{
+
+	callfunc "F_CmdGuide","Native Kokomo";
+
+}
+
+
+
+comodo,176,350,4	script	科莫多向导#2cmd	700,{
+
+	callfunc "F_CmdGuide","Native Nutcoco";
+
+}
+
+
+
+comodo,37,219,4	script	向导#2cmd	700,{
+
+	callfunc "F_CmdGuide","Native Papaya";
+
+}
+
+
+
+function	script	F_CmdGuide	{
+
+	mes "["+getarg(0)+"]";
+
+	mes "欢迎来到科莫多，";
+
+	mes "这座梦幻之城，";
+
+	mes "夜生活永不停歇！";
+
+	mes "我对这一带非常熟悉，";
+
+	mes "如果您需要问路，";
+
+	mes "尽管告诉我吧。";
+
+	next;
+
+	switch(select("赌场:草裙舞台 ^3355FF(舞者转职)^000000:武器和防具店:道具店:特产商店:卡普拉公司西部分部:酋长的家:酒馆:露营地:结束对话")) {
+
+	case 1:
+
+		viewpoint 1,140,98,0,0xFF6633;
+
+		mes "请参照您小地图上的";
+
+		mes "^FF6633+^000000 标记来找到";
+
+		mes "赌场，这里是疲惫旅人的";
+
+		mes "休憩天堂，也是科莫多";
+
+		mes "夜生活的中心。";
+
+		close;
+
+	case 2:
+
+		viewpoint 1,188,168,1,0x0000FF;
+
+		mes "请参照您小地图上的";
+
+		mes "^0000FF+^000000 标记来找到";
+
+		mes "草裙舞台，女弓箭手";
+
+		mes "可以在这里";
+
+		mes "转职为舞者。";
+
+		close;
+
+	case 3:
+
+		viewpoint 1,266,70,2,0x00FFFF;
+
+		mes "请参照您小地图上的";
+
+		mes "^00FFFF+^000000 标记来找到";
+
+		mes "武器和防具店。一定要";
+
+		mes "去看看那里有没有";
+
+		mes "科莫多独有的";
+
+		mes "特殊物品哦！";
+
+		close;
+
+	case 4:
+
+		viewpoint 1,86,128,3,0x515151;
+
+		mes "请参照您小地图上的";
+
+		mes "^515151+^000000 标记来找到";
+
+		mes "道具店。如果您之前没去过，";
+
+		mes "我建议您去看看，";
+
+		mes "备齐以后可能";
+
+		mes "用到的道具。";
+
+		close;
+
+	case 5:
+
+		viewpoint 1,298,124,4,0x3355FF;
+
+		mes "请参照您小地图上的";
+
+		mes "^3355FF+^000000 标记来找到";
+
+		mes "特产商店，在那里您可以";
+
+		mes "买到科莫多地区独有的特色礼品~";
+
+		close;
+
+	case 6:
+
+		viewpoint 1,136,202,5,0xFF5555;
+
+		mes "请参照您小地图上的";
+
+		mes "^FF5555+^000000 标记来找到";
+
+		mes "卡普拉公司的西部分部。";
+
+		mes "他们提供一些非常重要的";
+
+		mes "服务，您以后可能会用到。";
+
+		close;
+
+	case 7:
+
+		viewpoint 1,114,294,5,0xFF5555;
+
+		mes "请参照您小地图上的";
+
+		mes "^FF5555+^000000 标记来找到";
+
+		mes "酋长的家。欢迎您前去";
+
+		mes "拜访，他通常很乐意";
+
+		mes "接待来访的客人。";
+
+		close;
+
+	case 8:
+
+		viewpoint 1,166,298,5,0xFF5555;
+
+		mes "请参照您小地图上的";
+
+		mes "^FF5555+^000000 标记来找到";
+
+		mes "酒馆。在那里您可以结识";
+
+		mes "其他游客，放松身心，";
+
+		mes "享受愉快的社交时光~";
+
+		close;
+
+	case 9:
+
+		viewpoint 1,210,308,5,0xFF5555;
+
+		mes "请参照您小地图上的";
+
+		mes "^FF5555+^000000 标记来找到";
+
+		mes "露营地。和您的家人朋友";
+
+		mes "聚在一起，享受科莫多";
+
+		mes "露营地的特色烧烤吧~";
+
+		close;
+
+	case 10:
+
+		mes "["+getarg(0)+"]";
+
+		mes "其实，科莫多看起来";
+
+		mes "总是像夜晚一样，";
+
+		mes "因为它建在一个巨大的";
+
+		mes "洞穴里。虽然这里没有阳光，";
+
+		mes "但这里的黑暗比起阴郁，";
+
+		mes "更多的是令人兴奋~";
+
+		close;
+
+	}
+
+}

@@ -37,6 +37,65 @@ EN_WORD_RE = re.compile(r"[A-Za-z]{2,}")
 COLOR_RE = re.compile(r"\^[0-9A-Fa-f]{6}")
 SCRIPT_TOKEN_RE = re.compile(r"[@#$]\w+|\.@\w+|</?(?:NAVI|INFO)>")
 BREAK_PUNCTUATION = "\uFF0C\u3002\uFF01\uFF1F\uFF1B\uFF1A\u3001,.!?;:"
+ASCII_WORD_RE = re.compile(r"[A-Za-z][A-Za-z0-9_+'./-]*")
+ALLOWED_MIXED_ASCII_WORDS = {
+    "AGI",
+    "Alt",
+    "ASPD",
+    "ATK",
+    "A",
+    "C",
+    "Ctrl",
+    "DEX",
+    "DEF",
+    "E",
+    "EXP",
+    "F1",
+    "F9",
+    "F12",
+    "GUI",
+    "HP",
+    "INT",
+    "JOB",
+    "L",
+    "LUK",
+    "M",
+    "Lv",
+    "LV",
+    "MATK",
+    "MDEF",
+    "NPC",
+    "O",
+    "Online",
+    "Q",
+    "RO",
+    "Ragnarok",
+    "S",
+    "SP",
+    "STR",
+    "Shift",
+    "Tab",
+    "VIT",
+    "V",
+    "X",
+    "Z",
+    "Zeny",
+    "bawi",
+    "bo",
+    "cobo",
+    "ctrl",
+    "emotion",
+    "gawi",
+    "http",
+    "nc",
+    "ns",
+    "organize",
+    "ragnarokonline",
+    "shift",
+    "spacer",
+    "tab",
+    "where",
+}
 MES_RE = re.compile(r'^(\s*mes\s+)"((?:\\.|[^"\\])*)"(.*)$')
 CAPTION_RE = re.compile(r'^(\s*caption\s+)"((?:\\.|[^"\\])*)"(.*)$')
 SELECT_RE = re.compile(r'(\bselect\s*\(\s*")((?:\\.|[^"\\])*)(")')
@@ -105,9 +164,35 @@ def has_chinese(text: str) -> bool:
     return bool(CN_RE.search(text))
 
 
+def untranslated_ascii_words(text: str) -> list[str]:
+    stripped = visible_text(text)
+    words: list[str] = []
+    for word in ASCII_WORD_RE.findall(stripped):
+        normalized = word.strip("'\".。")
+        if not normalized:
+            continue
+        if normalized in ALLOWED_MIXED_ASCII_WORDS:
+            continue
+        if re.fullmatch(r"F+|F\d+", normalized):
+            continue
+        if "." in normalized and re.fullmatch(r"[A-Za-z0-9./-]+", normalized):
+            continue
+        shortcut_parts = [part for part in re.split(r"\+", normalized) if part]
+        if len(shortcut_parts) > 1 and all(part in ALLOWED_MIXED_ASCII_WORDS for part in shortcut_parts):
+            continue
+        words.append(word)
+    return words
+
+
 def should_translate(text: str) -> bool:
     stripped = visible_text(text)
-    if not stripped or has_chinese(stripped) or not EN_WORD_RE.search(stripped):
+    if not stripped:
+        return False
+    if "strcharinfo(" in stripped or "getarg(" in stripped:
+        return False
+    if has_chinese(stripped):
+        return bool(untranslated_ascii_words(stripped))
+    if not EN_WORD_RE.search(stripped):
         return False
     if LOW_VALUE_RE.fullmatch(stripped) and not BRACKET_NAME_RE.fullmatch(stripped):
         return False
@@ -125,6 +210,10 @@ def split_npc_name(name: str) -> tuple[str, str]:
 def make_npc_name_page(file: str, line_index: int, full_name: str) -> Page | None:
     visible_name, _ = split_npc_name(full_name)
     if not visible_name.strip() or has_chinese(visible_name) or not EN_WORD_RE.search(visible_name):
+        return None
+    if "_" in visible_name and " " not in visible_name:
+        return None
+    if re.match(r"^\d+_", visible_name):
         return None
     return Page(
         id=stable_id(file, "npc_name", line_index, full_name),
@@ -589,7 +678,11 @@ def apply_translations(npc_root: Path, pages: list[Page], translations: dict[str
                 if not new_full_name:
                     continue
                 line = lines[page.start_line]
-                new_line = line.replace(original_full_name, new_full_name, 1)
+                name_match = SCRIPT_DEF_RE.match(line) or DUPLICATE_DEF_RE.match(line)
+                if name_match and name_match.group("name") == original_full_name:
+                    new_line = f'{name_match.group("prefix")}{new_full_name}{name_match.group("rest")}'
+                else:
+                    new_line = line.replace(original_full_name, new_full_name, 1)
                 if new_line != line:
                     lines[page.start_line] = new_line
                     previews.append({"file": rel, "line": page.start_line + 1, "old": [line], "new": [new_line]})
@@ -627,17 +720,6 @@ def apply_translations(npc_root: Path, pages: list[Page], translations: dict[str
                 previews.append({"file": rel, "line": page.start_line + 1, "old": [line], "new": [lines[page.start_line]]})
                 changed = True
                 stats["pages"] += 1
-        if npc_name_replacements:
-            duplicate_source_re = re.compile(r"duplicate\(([^)]+)\)")
-            for index, line in enumerate(lines):
-                def replace_duplicate_source(match: re.Match) -> str:
-                    source = match.group(1)
-                    return f"duplicate({npc_name_replacements.get(source, source)})"
-
-                new_line = duplicate_source_re.sub(replace_duplicate_source, line)
-                if new_line != line:
-                    lines[index] = new_line
-                    changed = True
         if changed:
             stats["files"] += 1
             if not dry_run:

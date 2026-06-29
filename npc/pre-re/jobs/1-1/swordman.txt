@@ -37,7 +37,7 @@
 //= 2.3 Added Quest Log commands. [L0ne_W0lf]
 //============================================================ 
 
-izlude_in,74,172,4	script	Swordman#swd_1	119,{
+izlude_in,74,172,4	script	剑士#swd_1	119,{
 	if (Upper == 1) {
 		if (Class == Job_Novice_High && (ADVJOB == Job_Lord_Knight || ADVJOB == Job_Paladin)) {
 			mes "[剑士]";
@@ -203,7 +203,7 @@ izlude_in,74,172,4	script	Swordman#swd_1	119,{
 	}
 }
 
-izlude_in,62,170,6	script	Swordman#swd_2	85,{
+izlude_in,62,170,6	script	剑士#swd_2	85,{
 	mes "[剑士]";
 	if (BaseJob == Job_Swordman) {
 		mes "抱歉，我只能允许初学者进入考场。";
@@ -235,7 +235,7 @@ izlude_in,62,170,6	script	Swordman#swd_2	85,{
 	}
 }
 
-izlude_in,30,175,4	script	Swordman#swd_3	92,{
+izlude_in,30,175,4	script	剑士#swd_3	92,{
 	mes "[剑士]";
 	mes "我来告诉你关于考试的事！仔细听，我不会重复的。";
 	next;
@@ -262,7 +262,7 @@ izlude_in,30,175,4	script	Swordman#swd_3	92,{
 	close;
 }
 
-izlude_in,30,163,0	script	Test Hall Staff#swd_1	105,{
+izlude_in,30,163,0	script	测试大厅工作人员#swd_1	105,{
 	mes "[考场工作人员]";
 	if (BaseJob == Job_Swordman) {
 		mes "嗯？你是怎么进来的？你不应该在这里，请现在离开。";
@@ -298,19 +298,19 @@ izlude_in,30,163,0	script	Test Hall Staff#swd_1	105,{
 // Examination Courses NPCs
 //============================================================ 
 // 1-1
-job_sword1,230,245,2	script	Medic#swd_1	105,{
+job_sword1,230,245,2	script	医师#swd_1	105,{
 	callfunc "F_JobSwdMedic","1st";
 }
-job_sword1,230,242,2	script	Test Hall Staff#swd_2	105,{
+job_sword1,230,242,2	script	测试大厅工作人员#swd_2	105,{
 	callfunc "F_JobSwdStaff",1;
 }
-job_sword1,230,207,2	script	Medic#2swd_2	105,{
+job_sword1,230,207,2	script	医师#2swd_2	105,{
 	callfunc "F_JobSwdMedic","2nd";
 }
-job_sword1,230,204,2	script	Test Hall Staff#2swd_3	105,{
+job_sword1,230,204,2	script	测试大厅工作人员#2swd_3	105,{
 	callfunc "F_JobSwdStaff",1;
 }
-job_sword1,223,167,2	script	Mae#swd_1_success	92,{
+job_sword1,223,167,2	script	梅#swd_1_success	92,{
 	mapannounce "job_sword1","Applicant " + strcharinfo(0) + ". You successfully passed the test.",bc_map;
 	set job_sword_q,4;
 	mes "[梅]";
@@ -323,14 +323,14 @@ job_sword1,223,167,2	script	Mae#swd_1_success	92,{
 
 // Examination Course Functions
 //============================================================ 
-function	script	F_JobSwdMedic	{
+function	script	F_剑士医师	{
 	percentheal 100,0;
 	mes "[医护兵]";
 	mes "这里是"+getarg(0)+"检查点！加油！";
 	close;
 }
 
-function	script	F_JobSwdStaff	{
+function	script	F_剑士工作人员	{
 	mes "[考场工作人员]";
 	mes "你要放弃吗？";
 	next;
@@ -344,7 +344,7 @@ function	script	F_JobSwdStaff	{
 	close;
 }
 
-function	script	F_JobSwdTestStaff	{
+function	script	F_剑士测试工作人员	{
 OnTouch:
 	mes "[考场工作人员]";
 	mes "申请人 " + strcharinfo(0) + "。你要放弃吗？？";
@@ -358,7 +358,7 @@ OnTouch:
 	end;
 }
 
-function	script	F_JobSwdTestStaff2	{
+function	script	F_剑士测试工作人员2	{
 OnTouch:
 	mapannounce "job_sword1","Applicant " + strcharinfo(0) + ". Pass the "+getarg(0)+" course.",bc_map;
 	warp "job_sword1",getarg(1),getarg(2);
@@ -370,28 +370,28 @@ OnTouch:
 job_sword1,223,243,0	warp	checkp1-2#swd_1	1,1,job_sword1,11,206
 job_sword1,223,205,0	warp	checkp2-3#swd_1	1,1,job_sword1,11,168
 
-job_sword1,7,245,0	script	Test Hall Staff#swd_4	45,1,3,{
+job_sword1,7,245,0	script	测试大厅工作人员#swd_4	45,1,3,{
 	callfunc "F_JobSwdTestStaff",10,245;
 }
 
-job_sword1,8,207,0	script	Test Hall Staff#swd_5	45,1,6,{
+job_sword1,8,207,0	script	测试大厅工作人员#swd_5	45,1,6,{
 	callfunc "F_JobSwdTestStaff",11,207;
 }
 
-job_sword1,8,169,0	script	Test Hall Staff#swd_6	45,1,6,{
+job_sword1,8,169,0	script	测试大厅工作人员#swd_6	45,1,6,{
 	callfunc "F_JobSwdTestStaff",11,169;
 }
 
-job_sword1,192,244,0	script	Test Hall Staff#swd_7	45,1,3,{
+job_sword1,192,244,0	script	测试大厅工作人员#swd_7	45,1,3,{
 	callfunc "F_JobSwdTestStaff2","1st",215,244;
 }
 
-job_sword1,193,207,0	script	Test Hall Staff#swd_8	45,1,3,{
+job_sword1,193,207,0	script	测试大厅工作人员#swd_8	45,1,3,{
 	callfunc "F_JobSwdTestStaff2","2nd",215,205;
 	warp "job_sword1",215,205;
 }
 
-job_sword1,193,168,0	script	Test Hall Staff#swd_9	45,1,3,{
+job_sword1,193,168,0	script	测试大厅工作人员#swd_9	45,1,3,{
 	callfunc "F_JobSwdTestStaff2","3rd",215,167;
 }
 
