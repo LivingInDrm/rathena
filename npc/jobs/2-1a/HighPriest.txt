@@ -1,82 +1,62 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Advance Class jobchanger after kRO Normals.
 //===== By: ==================================================
 //= Nana
 //= finished, optimized and tested by Lupus
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.3
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Advance Class jobchanger after kRO Normals.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.1 Made all into functions, additional checks, etc. [Lupus]
 //= 1.2 Made numbers into constants. [Vicious]
 //= 1.3 Now saves/restores all the quest skills [Lupus]
-//============================================================ 
+//============================================================
 
-valkyrie,44,42,5	script	High Priest#Valkyrie	60,{
+valkyrie,44,42,5	script	大祭司#Valkyrie	60,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[High Priest]";
-			mes "Congratulations.";
-			mes "Honor to the warriors!";
+			mes "[大祭司]";
+			mes "恭喜你。荣耀属于战士们！";
 			close;
 		}
-		mes "[High Priest]";
-		mes "Through the power";
-		mes "of holiness, may we";
-		mes "find peace, strength";
-		mes "and protection. Deliver";
-		mes "us from the forces of evil...";
+		mes "[大祭司]";
+		mes "通过神圣的力量，愿我们找到和平、力量和保护。";
+		mes "拯救我们脱离邪恶的力量……";
 		close;
 	}
 	else if (ADVJOB == Job_High_Priest && Class == Job_Acolyte_High && JobLevel > 39) {
-		mes "[High Priest]";
-		mes "Our world is in";
-		mes "need of people of";
-		mes "talent and conviction.";
-		mes "Please continue your";
-		mes "good works as an even";
-		mes "greater hero of holiness...";
+		mes "[大祭司]";
+		mes "我们的世界需要有才华和信念的人。";
+		mes "请继续作为更伟大的神圣英雄做好你的工作……";
 		next;
-		mes "[High Priest]";
-		mes "Would you like";
-		mes "to become a High Priest?";
+		mes "[大祭司]";
+		mes "你想成为大祭司吗？";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[High Priest]";
-			mes "When you're ready,";
-			mes "feel free to come back.";
-			mes "Honor to the warriors!";
+		if (select("不。:是的。") == 1) {
+			mes "[大祭司]";
+			mes "当你准备好时，随时欢迎回来。荣耀属于战士们！";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[High Priest]";
-			mes "It is still possible for you to learn more skills. Please use";
-			mes "all of your remaining Skill Points before returning to me.";
+			mes "[大祭司]";
+			mes "你仍然可以学习更多技能。";
+			mes "请在回来之前使用你所有剩余的技能点。";
 			close;
 		}
 		jobchange Job_High_Priest;
 		set ADVJOB,0;
-		mes "[High Priest]";
-		mes "Congratulations.";
-		mes "As a High Priest,";
-		mes "I hope you will guide";
-		mes "others upon the path";
-		mes "to holiness...";
+		mes "[大祭司]";
+		mes "恭喜你。作为大祭司，我希望你能引导他人走向神圣的道路……";
 		close;
 	}
-	mes "[High Priest]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[大祭司]";
+	mes "欢迎来到瓦尔哈拉，荣耀之殿。";
 	next;
-	mes "[High Priest]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors!";
+	mes "[大祭司]";
+	mes "请在这里好好休息。荣耀属于战士们！";
 	close;
 }

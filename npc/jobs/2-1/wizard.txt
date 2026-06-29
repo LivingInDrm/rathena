@@ -1,16 +1,16 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Wizard Job Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= (Aegis) Translated by yoshiki, converted by kobra_k88
 //= Further bugfixed and tested by Lupus
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 3.3
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Job Change quest for Wizard class.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 2.4 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
 //= 2.5 Several bugfixes with the help of Barron-Monster. [L0ne_W0lf]
 //= 2.5a More bugfixes care of Barron-Monster. [L0ne_W0lf]
@@ -27,215 +27,207 @@
 //= 3.1 Removed the need for use of 'goto.' [L0ne_W0lf]
 //= 3.2 Modified the quest to renewal. [Vali] (Thanks to Muad_Dib for the necessary info).
 //= 3.3 Fixed waitingroom bug. [Euphy]
-//============================================================ 
+//============================================================
 
-gef_tower,111,37,4	script	Wizard Guildsman	70,{
+gef_tower,111,37,4	script	法师公会成员	70,{
 	if (Upper == 1) {
-		mes "[Catherine]";
-		mes "? Excuse me, I am wondering if we have met before...?";
-		mes "Hey~ you have changed a lot! So, what happened?";
+		mes "[凯瑟琳]";
+		mes "？抱歉，";
+		mes "我想知道我们以前见过吗……嘿~你变化好多！发生了什么？";
 		next;
-		mes "[Catherine]";
-		mes "I feel you have become so much powerful, eh?";
-		mes "Congratulations and good luck with your life!";
+		mes "[凯瑟琳]";
+		mes "我觉得你变得强大多了，恭喜你，祝你生活愉快！";
 		close;
 	}
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
-			mes "[Catherine]";
-			mes "Since you're already a Wizard, you don't have any more business with me...?";
-			mes "Now, excuse me.";
+			mes "[凯瑟琳]";
+			mes "既然你已经是法师了，那就没事可和我聊了吧……抱歉。";
 			next;
-			mes "[Catherine]";
+			mes "[凯瑟琳]";
 			if (Sex == SEX_MALE)
-				mes "Well, If you intended to ask me on a date... I appreciate it...hohoho.";
+				mes "嗯，如果你是想约我出去……我很感激……呵呵呵。";
 			else
-				mes "Well, if you fix me up with a cute guy... I'd appreciate it...hohoho!.";
+				mes "嗯，";
+				mes "如果你能给我介绍一个可爱的男孩……我会很感激……呵呵呵！";
 			close;
 		}
 		else if (BaseClass == Job_Novice) {
-			mes "[Wizard Guildsman]";
-			mes "Oh my goodness, it's a novice~ ain't you the cutest little thing.";
-			mes "By the way honey, this place is for Wizards.";
+			mes "[法师公会成员]";
+			mes "哦，我的天哪，你是个新手~真是太可爱了。顺便说一下，";
+			mes "亲爱的，这里是法师的地方。";
 			next;
-			mes "[Wizard Guildsman]";
-			mes "If you are interested in magic,";
-			mes "Go visit the ^0000FFMage^000000 guild.";
+			mes "[法师公会成员]";
+			mes "如果你对魔法感兴趣，去^0000FF法师^000000公会看看吧。";
 		}
 		else {
-			mes "[Wizard Guildsman]";
-			mes "Huh? what brings you to such a high place...?";
-			mes "If you don't have any specific business, please leave immediately.";
-			mes "This place is for Wizards, you know?";
+			mes "[法师公会成员]";
+			mes "嗯？你怎么会来这么高的地方...? 如果你没有特别的事情，";
+			mes "请立即离开。这里是法师的地方，你知道吗？";
 		}
 		next;
-		mes "[Wizard Guildsman]";
-		mes "Ok, then. Farewell.";
+		mes "[法师公会成员]";
+		mes "好吧，再见。";
 		close;
 	}
 	if (WIZ_Q == 0) {
-		mes "[Wizard Guildsman]";
-		mes "Huh? What are you doing way up here...?";
-		mes "So what brings you here?";
+		mes "[法师公会成员]";
+		mes "嗯？你在这里干什么...? 那你来这里有什么事吗？";
 		next;
-		if (select("I want to become a Wizard.:...nothing.") == 1) {
-			mes "[Wizard Guildsman]";
-			mes "I see... Well, of course you want to become a Wizard, otherwise you wouldn't have walked up all those stairs right?";
-			mes "Anyways, I would like to welcome you. I will assist you in becoming a Wizard.";
+		if (select("我想成为法师。:...没什么。") == 1) {
+			mes "[法师公会成员]";
+			mes "我明白了... 当然你想成为法师，";
+			mes "否则你不会走上这么多楼梯吧？无论如何，我欢迎你。";
+			mes "我会帮助你成为法师。";
 			next;
-			mes "[Wizard Guildsman]";
-			mes "My name is Catherine Medici. Just between me and you, I just became a Wizard too!";
-			mes "You can call me Cathy if you want. Hehehehehe~";
+			mes "[法师公会成员]";
+			mes "我叫凯瑟琳·美第奇。就你我之间，我也刚成为法师！";
+			mes "如果你愿意，可以叫我凯西。嘿嘿嘿~";
 			next;
-			mes "[Catherine]";
-			mes "Many people want to become Wizards, but only the patient and strong ones will eventually accomplish their goals.";
-			mes "In order to become a Wizard, one must undergo difficult quests.";
+			mes "[凯瑟琳]";
+			mes "许多人想成为法师，";
+			mes "但只有耐心和强大的人才能最终实现他们的目标。";
+			mes "要成为法师，必须经历艰难的任务。";
 			next;
-			mes "[Catherine]";
-			mes "Also only mages who have reached a job level of 40 or higher are qualified for these quests.";
-			mes "Lower level mages aren't experienced enough with magic to become Wizards...";
+			mes "[凯瑟琳]";
+			mes "而且只有达到40级或以上的法师才能参加这些任务。";
+			mes "低级法师在魔法方面经验不足，无法成为法师...";
 			next;
-			mes "[Catherine]";
-			mes "Well, I will give you more information when you apply for the job.";
-			mes "So! Do you want to apply now?";
+			mes "[凯瑟琳]";
+			mes "好吧，当你申请工作时，我会给你更多信息。那么！";
+			mes "你现在想申请吗？";
 			next;
-			if (select("Yes, I do.:On second thought, Let me think about it.") == 1) {
+			if (select("是的，我想。:再想想吧。") == 1) {
 				if (JobLevel < 40) {
-					mes "[Catherine]";
-					mes "Hey hey, weren't you listening to me?";
-					mes "I told you that you need to be at least job level 40 to sign up for the quest...";
+					mes "[凯瑟琳]";
+					mes "嘿嘿，你没在听我说吗？我告诉过你，";
+					mes "至少需要40级才能报名参加任务...";
 					next;
-					mes "[Catherine]";
-					mes "No need to hurry, go experience and ponder more about the world of magic.";
-					mes "When I deem you're qualified, I will accept your application.";
+					mes "[凯瑟琳]";
+					mes "不需要着急，去多体验和思考魔法的世界。";
+					mes "当我认为你合格时，我会接受你的申请。";
 					close;
 				}
 				if (SkillPoint) {
-					mes "[Catherine]";
-					mes "Umm... You're well qualified, but you have some unused skill points left.";
-					mes "You'd better learn more skills before applying again.";
+					mes "[凯瑟琳]";
+					mes "嗯... 你很合格，但还有一些未使用的技能点。";
+					mes "你最好在再次申请之前学习更多技能。";
 					close;
 				}
-				mes "[Catherine]";
-				mes "Very well then, I accept your application.";
+				mes "[凯瑟琳]";
+				mes "很好，我接受你的申请。";
 				mes "Your name is..." + strcharinfo(0) + ", isn't it? I am not sure if I pronounced it correctly?";
 				next;
-				mes "[Catherine]";
-				mes "The Wizard job change quest is divided into 3 parts.";
-				mes "1st part, gathering magic items.";
-				mes "2nd part, a written test.";
-				mes "The last part is a practical magic test.";
+				mes "[凯瑟琳]";
+				mes "法师转职任务分为三部分。第一部分，收集魔法物品。";
+				mes "第二部分，笔试。最后一部分是实践魔法测试。";
 				next;
-				mes "[Catherine]";
-				mes "Among one of these tests, we exempt those who are at job level 50.";
-				mes "It is enough to prove to us the effort it will take to become a Wizard if a mage has learned that much already.";
+				mes "[凯瑟琳]";
+				mes "在这些测试中，我们会免除达到50级的法师。";
+				mes "如果法师已经学到了那么多，";
+				mes "证明了他们成为法师所需的努力。";
 				next;
 				if (JobLevel == 50) {
-					mes "[Catherine]";
-					mes "Hmm, come to think of it, you're at job level 50!?";
-					mes "You must have worked very hard. Your going to become a very powerful Wizard, I can feel it in you.";
+					mes "[凯瑟琳]";
+					mes "嗯，想想看，你已经达到50级！？你一定付出了很多努力。";
+					mes "你将成为一个非常强大的法师，我能感觉到。";
 					next;
-					mes "[Catherine]";
-					mes "Ok. You already passed the 1st test then.";
-					mes "Don't get too laid back though, there are still 2 more tests left.";
+					mes "[凯瑟琳]";
+					mes "好的。那么你已经通过了第一测试。不要太放松，";
+					mes "还有两个测试在等着你。";
 					next;
-					mes "[Catherine]";
-					mes "Go talk to the man in the corner and he will give you the remaining exams.";
-					mes "Be careful. We have lost many Mages due to the difficulty of the exams.";
+					mes "[凯瑟琳]";
+					mes "去和角落里的那个人谈谈，他会给你剩下的考试。小心点。";
+					mes "我们已经因为考试的难度失去了很多法师。";
 					set WIZ_Q,3;
 					setquest 9015;
 					close;
 				}
-				mes "[Catherine]";
-				mes "Then, since I have your application and everything else I need, I'll give you some info about the first test.";
-				mes "You can memorize this or write it down, doesn't matter. But remember it for sure.";
+				mes "[凯瑟琳]";
+				mes "那么，既然我已经收到了你的申请和其他所需材料，";
+				mes "我就给你一些关于第一次测试的信息。";
+				mes "你可以记住这些或者写下来，随你，但一定要记住。";
 				next;
-				mes "[Catherine]";
-				mes "The first test is collecting magic items.";
-				mes "The important part is that you must gather these items on your own.";
+				mes "[凯瑟琳]";
+				mes "第一次测试是收集魔法物品。";
+				mes "重要的是你必须自己收集这些物品。";
 				next;
 				set wizard_m1,rand(1,2);
-				mes "[Catherine]";
-				mes "The items you must collect are...";
+				mes "[凯瑟琳]";
+				mes "你必须收集的物品是……";
 				if (rand(2)) {
 					set WIZ_Q,1;
 					setquest 9013;
-					mes "^3355FFRed Gemstone^000000 10 each,";
-					mes "^3355FFBlue Gemstone^000000 10 each,";
-					mes "^3355FFYellow Gemstone^000000 10 each,";
+					mes "^3355FF红宝石^000000 每种10个，^3355FF蓝宝石^000000 每种10个，^3355FF黄宝石^000000 每种10个，";
 				}
 				else {
 					set WIZ_Q,2;
 					setquest 9014;
-					mes "^3355FFCrystal Blue^000000 5 each,";
-					mes "^3355FFGreen Live^000000 5 each,";
-					mes "^3355FFRed Blood^000000 5 each,";
-					mes "^3355FFWind of Verdure^000000 5 each,";
+					mes "^3355FF水晶蓝^000000 每种5个，^3355FF绿生^000000 每种5个，";
+					mes "^3355FF红血^000000 每种5个，^3355FF绿风^000000 每种5个，";
 				}
-				mes "...is it too hard? No, any would be Wizard should be able to at least get these items.";
+				mes "……这太难了吗？不，";
+				mes "任何一个法师都应该能至少收集到这些物品。";
 				next;
-				mes "[Catherine]";
-				mes "Well, good luck.";
-				mes "I'll be happily waiting. ~Hehe.";
+				mes "[凯瑟琳]";
+				mes "好吧，祝你好运。我会高兴地等着。~嘿嘿。";
 				close;
 			}
-			mes "[Catherine]";
-			mes "Oh, ok then, take your time.";
-			mes "Since I'll always be here, accepting applications...*sigh*...anyways! ~Hehehehe.";
+			mes "[凯瑟琳]";
+			mes "哦，好吧，那你慢慢来。";
+			mes "反正我会一直在这里接受申请……*叹气*……总之！~嘿嘿嘿。";
 			close;
 		}
-		mes "[Wizard Guildsman]";
-		mes "Geez, what a lame person.";
-		mes "You have no business here, hope you don't mind, now off you go!";
+		mes "[法师公会成员]";
+		mes "真是个无聊的人。你在这里没事可做，希望你不介意，快走吧！";
 		close;
 	}
 	else if (WIZ_Q == 1) {
-		mes "[Catherine]";
-		mes "Let me see, did you get all the items?";
-		mes "Then let's check...";
+		mes "[凯瑟琳]";
+		mes "让我看看，你收齐所有物品了吗？那我们来检查一下……";
 		next;
 		if (countitem(716) > 9 && countitem(717) > 9 && countitem(715) > 9) {
-			mes "[Catherine]";
-			mes "Perfect! You got all the items. I like!~";
-			mes "These items will be put to great use in our guild. ~Hehehee.";
+			mes "[凯瑟琳]";
+			mes "完美！你收齐了所有物品。我喜欢！";
+			mes "~这些物品将在我们的公会中得到很好的利用。~嘿嘿嘿。";
 			next;
 			delitem 716,10; //Red_Gemstone
 			delitem 717,10; //Blue_Gemstone
 			delitem 715,10; //Yellow_Gemstone
 			set WIZ_Q,3;
 			changequest 9013,9015;
-			mes "[Catherine]";
-			mes "Good for you! You passed the first test.";
-			mes "But there are still two more left, so don't get too relaxed.";
+			mes "[凯瑟琳]";
+			mes "恭喜你！你通过了第一次测试。但还有两个测试，";
+			mes "所以不要太放松。";
 			next;
-			mes "[Catherine]";
-			mes "Go talk to the guy in the corner for the rest of the tests.";
-			mes "It might be a bit hard, so be careful, I wouldn't want you ending up like most of the Mages that come for these exams...poor souls indeed, may they rest in peace. ~Hehehe.";
+			mes "[凯瑟琳]";
+			mes "去和角落里的那个人谈谈，进行剩下的测试。可能会有点难，";
+			mes "所以小心点，";
+			mes "我可不想让你像大多数来参加这些考试的法师一样……可怜的";
+			mes "灵魂，愿他们安息。~嘿嘿嘿。";
 			close;
 		}
-		mes "[Catherine]";
-		mes "Hey, what's this? Umm...I don't think you have everything yet!";
+		mes "[凯瑟琳]";
+		mes "嘿，这是什么？嗯……我觉得你还没有收齐所有物品！";
 		next;
-		mes "[Catherine]";
-		mes "It might've been tough coming all the way up here, what with this altitude and all, but go back and collect the items.";
-		mes "Life's short enough as it is, so stop wasting your time and gather the items I told you before.";
+		mes "[凯瑟琳]";
+		mes "来到这里可能很艰难，毕竟这个高度，";
+		mes "但还是回去收集那些物品。人生苦短，别浪费时间，";
+		mes "快去收集我之前告诉你的物品。";
 		next;
-		mes "[Catherine]";
-		mes "^3355FFRed Gemstone^000000 10 each,";
-		mes "^3355FFBlue Gemstone^000000 10 each,";
-		mes "^3355FFYellow Gemstone^000000 10 each,";
-		mes "Don't forget this time, and bring all the items, ok?...";
+		mes "[凯瑟琳]";
+		mes "^3355FF红宝石^000000 每种10个，^3355FF蓝宝石^000000 每种10个，^3355FF黄宝石^000000 每种10个，";
+		mes "别忘了这次，带齐所有物品，好的？……";
 		close;
 	}
 	else if (WIZ_Q == 2) {
-		mes "[Catherine]";
-		mes "Did you get all the items?";
-		mes "Let's see... Do you have the right ones?...";
+		mes "[凯瑟琳]";
+		mes "你收齐所有物品了吗？让我看看……你有正确的物品吗？……";
 		next;
 		if (countitem(991) > 4 && countitem(993) > 4 && countitem(990) > 4 && countitem(992) > 4) {
-			mes "[Catherine]";
-			mes "Perfect! Good job...I'm satisfied! ~Hehe";
-			mes "Our guild greatly appreciates these items and will use them wisely.";
+			mes "[凯瑟琳]";
+			mes "完美！干得好……我很满意！~嘿嘿，";
+			mes "我们公会非常感谢这些物品，并会明智地使用它们。";
 			next;
 			delitem 991,5; //Crystal_Blue
 			delitem 993,5; //Yellow_Live
@@ -243,830 +235,883 @@ gef_tower,111,37,4	script	Wizard Guildsman	70,{
 			delitem 992,5; //Wind_Of_Verdure
 			set WIZ_Q,3;
 			changequest 9014,9015;
-			mes "[Catherine]";
-			mes "Good. You've passed the first test now.";
-			mes "But you still have two more tests to go, so don't get too laid back, because it only gets harder from here. ~Hehehe";
+			mes "[凯瑟琳]";
+			mes "很好。你现在通过了第一次测试。但你还有两个测试要进行，";
+			mes "所以不要太放松，因为接下来只会更难。~嘿嘿嘿。";
 			next;
-			mes "[Catherine]";
-			mes "Go talk to that guy in the corner to take the rest of the tests.";
-			mes "It might be a bit hard, so be careful, I wouldn't want you ending up like most of the Mages that come for these exams...poor souls indeed, may they rest in peace. ~Hehehe.";
+			mes "[凯瑟琳]";
+			mes "去和角落里的那个人谈谈，进行剩下的测试。可能会有点难，";
+			mes "所以小心点，";
+			mes "我可不想让你像大多数来参加这些考试的法师一样……可怜的";
+			mes "灵魂，愿他们安息。~嘿嘿嘿。";
 			close;
 		}
-		mes "[Catherine]";
-		mes "Eh, what's this? I don't think you have everything?";
+		mes "[凯瑟琳]";
+		mes "嗯，这是什么？我觉得你没有带齐所有东西？";
 		next;
-		mes "[Catherine]";
-		mes "I regret that you had to go through the trouble of coming all the way up here, but go get the right items again.";
-		mes "Stop wasting your time and get the items I initially requested. For goodness sakes...This is the easiest part of the exam.";
+		mes "[凯瑟琳]";
+		mes "我很遗憾你要费这么大劲跑到这里，但请再去拿对的物品。";
+		mes "别浪费时间，去拿我最初要求的物品。";
+		mes "天哪……这可是考试中最简单的部分。";
 		next;
-		mes "[Catherine]";
-		mes "^3355FFCrystsal Blue^000000 5 each,";
-		mes "^3355FFGreen Live^000000 5 each,";
-		mes "^3355FFRed Blood^000000 5 each,";
-		mes "^3355FFWind of Verdure^000000 5 each,";
-		mes "Don't forget them this time and gather the correct ones, ok? See you soon...";
+		mes "[凯瑟琳]";
+		mes "^3355FF水晶蓝^000000 各5个，^3355FF绿色生机^000000 各5个，^3355FF鲜血红^000000 各5个，";
+		mes "^3355FF生机之风^000000 各5个，这次别忘了，收集正确的物品，";
+		mes "明白了吗？再见……";
 		close;
 	}
 	else if (WIZ_Q == 3) {
-		mes "[Catherine]";
-		mes "What is it? You didn't go talk to the guy in the corner?";
-		mes "You can't become a Wizard by just brining the items I requested, no no, that just wont do...";
+		mes "[凯瑟琳]";
+		mes "怎么了？你没去找角落里的那个人吗？";
+		mes "光带我要求的物品是无法成为法师的，";
+		mes "不行不行，这样可不行……";
 		next;
-		mes "[Catherine]";
-		mes "You can only prove yourself Wizard material after you take the two remaining tests.";
-		mes "I'll be waiting, so go now.";
+		mes "[凯瑟琳]";
+		mes "你只能在完成剩下的两个测试后证明自己是法师的材料。";
+		mes "我会等着你，所以快去吧。";
 		close;
 	}
 	else if (WIZ_Q == 4) {
-		mes "[Catherine]";
-		mes "*sigh*...Poor thing, what a pity.";
-		mes "How can you think of trying to become a Wizard when you can't even answer those simple questions?";
+		mes "[凯瑟琳]";
+		mes "*叹气*……可怜的孩子，真可惜。";
+		mes "你连那些简单的问题都回答不了，怎么能想成为法师呢？";
 		next;
-		mes "[Catherine]";
-		mes "Let's see... Should I give you some hints as your senior?";
-		mes "But I'm a bit thirsty, so give me 1 Apple Juice, and we got a deal. ~Hehehe";
+		mes "[凯瑟琳]";
+		mes "让我看看……我该给你一些提示吗，作为你的前辈？";
+		mes "不过我有点渴，给我1杯苹果汁，我们就成交。~嘿嘿";
 		next;
-		switch(select("Give me some hints, please.:I want to try again on my own!")) {
+		switch(select("请给我一些提示。:我想自己再试一次！")) {
 		case 1:
 			if (countitem(531) > 0) {
 				delitem 531,1; //Apple_Juice
-				mes "[Catherine]";
-				mes "Yummers, Apple Juice is the best...";
-				mes "Gulp gulp gulp... Haaaaaah... ~Hehe";
+				mes "[凯瑟琳]";
+				mes "好喝，苹果汁是最棒的……咕噜咕噜咕噜……哈……~嘿嘿";
 				next;
-				mes "[Catherine]";
-				mes "Well then, I'll give you a hint for the second test.";
+				mes "[凯瑟琳]";
+				mes "那么，我会给你第二个测试的提示。";
 				next;
-				mes "[Catherine]";
-				mes "He asks three types of questions.";
-				mes "Questions about Magic, Monsters...";
-				mes "and Magicians...also known as Mages.";
+				mes "[凯瑟琳]";
+				mes "他会问三种类型的问题。关于魔法、";
+				mes "怪物……还有法师……也就是法师。";
 				next;
-				mes "[Catherine]";
-				mes "It's up to him to decide which questions to ask.";
-				mes "*sigh*...He'd look much better if he cut his hair and shaved...";
-				mes "He always looks so grungy because he doesn't take care of himself...*sigh*...pity, he could be a regular lady killer. ~tehehehe";
+				mes "[凯瑟琳]";
+				mes "由他决定问哪些问题。*叹气*……如果他剪了头发、刮了胡子，";
+				mes "肯定会好很多……他总是看起来很邋遢，";
+				mes "因为不爱护自己……*叹气*……真可惜，";
+				mes "他本可以是个魅力四射的家伙。~嘿嘿";
 				next;
-				mes "[Catherine]";
-				mes "Anyways, as for the questions about magic...";
-				mes "They're usually about the spells you've learned.";
+				mes "[凯瑟琳]";
+				mes "无论如何，关于魔法的问题……通常是关于你学过的法术。";
 				next;
-				mes "[Catherine]";
-				mes "If it's something you haven't learned or haven't experienced, or anything like that...";
-				mes "I heard there's a nice place you can refer to that's very well organized.";
+				mes "[凯瑟琳]";
+				mes "如果是你没学过或没经历过的事情……我听说有个地方可以参";
+				mes "考，组织得很好。";
 				next;
-				mes "[Catherine]";
-				mes "You just have to cast the spell, you know...the one that looks like a big bold *e* symbol.";
-				mes "The magic words are... iro.ragnarokonline.com ~Or so they say!";
-				mes "Strange spell, don't you think? I don't know how to make it work myself.";
+				mes "[凯瑟琳]";
+				mes "你只需要施放那个法术，";
+				mes "你知道的……看起来像个大写的 *e* 符号。";
+				mes "魔法词是…… iro.ragnarokonline.com ~听说是这样！";
+				mes "奇怪的法术，你觉得呢？我自己都不知道怎么用。";
 				next;
-				mes "[Catherine]";
-				mes "And about the monster questions.";
-				mes "Fighting them yourself and learning is the best way to go about that.";
+				mes "[凯瑟琳]";
+				mes "至于怪物的问题，亲自去打怪并学习是最好的方法。";
 				next;
-				mes "[Catherine]";
-				mes "But you know in Prontera, there is a big library.";
-				mes "You can get information about most of the monsters in that library.";
-				mes "Going there and studying a bit more would work too.";
+				mes "[凯瑟琳]";
+				mes "但你知道，在普隆德拉有一个大图书馆。";
+				mes "你可以在那儿获取大多数怪物的信息。";
+				mes "去那里多学习一下也不错。";
 				next;
-				mes "[Catherine]";
-				mes "Last, but not least, questions about Mages.";
-				mes "This is something that most others cannot teach you...";
-				mes "Because you are a Mage.";
+				mes "[凯瑟琳]";
+				mes "最后，关于法师的问题。";
+				mes "这是大多数人无法教你的……因为你是法师。";
 				next;
-				mes "[Catherine]";
-				mes "It's hard to know about others when you don't even know about yourself, right?";
-				mes "So if you get one of these questions, think about it carefully then answer.";
+				mes "[凯瑟琳]";
+				mes "了解他人之前，首先要了解自己，对吧？";
+				mes "所以如果你遇到这些问题，仔细思考后再回答。";
 			}
 			else {
-				mes "[Catherine]";
-				mes "Like I said, I'll think about it if you give me 1 Apple Juice.";
-				mes "If not... Well, you can think about it on your own. Hey I don't make the rules here i just follow em! Can't argue with this one though. ~tehehehe";
+				mes "[凯瑟琳]";
+				mes "就像我说的，如果你给我1杯苹果汁，我会考虑一下。";
+				mes "如果不...那你就自己想吧。嘿，我不是这里的规则制定者，";
+				mes "我只是遵循而已！不过这件事可不能争辩。~嘿嘿嘿";
 			}
 			break;
 		case 2:
-			mes "[Catherine]";
-			mes "Yeah, you get the most satisfaction when you solve things on your own.";
-			mes "Go finish the rest of the tests with that spirit!";
+			mes "[凯瑟琳]";
+			mes "是的，当你独自解决问题时，获得的满足感是最大的。";
+			mes "带着这种精神去完成剩下的测试吧！";
 		}
 		next;
-		mes "[Catherine]";
-		mes "Well then, see you soon! *crosses fingers* dont end up like the others before you! May God rest thier souls...huh? Oh nothing! ~Hehehehe";
-		mes "Hurry, he's waiting for you!";
+		mes "[凯瑟琳]";
+		mes "那么，再见了！*交叉手指*希望你不要像之前的那些人一样！";
+		mes "愿上帝保佑他们的灵魂...嗯？没什么！~嘿嘿嘿，";
+		mes "快点，他在等你！";
 		close;
 	}
 	else if (WIZ_Q == 5) {
-		mes "[Catherine]";
-		mes "Tehehehe~ I was listening all along.";
-		mes "Well done in answering all those questions. I want to give something, like a present...";
+		mes "[凯瑟琳]";
+		mes "嘿嘿嘿~我一直在听。你回答得很好。";
+		mes "我想给你点东西，像是礼物...";
 		next;
-		mes "[Catherine]";
-		mes "You still have one more test to go, right?";
-		mes "Just a bit more and you will be qualified to be a Wizard, so I'll give you the present then. ~Hehe";
+		mes "[凯瑟琳]";
+		mes "你还有一个测试要完成，对吧？再坚持一下，";
+		mes "你就能成为一名法师了，到时候我会给你礼物的。~嘿嘿";
 		next;
-		mes "[Catherine]";
-		mes "See ya, well...hopefully!";
-		mes "He's waiting for you!";
+		mes "[凯瑟琳]";
+		mes "再见，希望能再见到你！他在等你！";
 		close;
 	}
 	else if (WIZ_Q == 6) {
-		mes "[Catherine]";
-		mes "Eh, did you leave in the middle of the test?";
-		mes "You...*sigh*...I didn't think you would do such a dishonorable thing.";
+		mes "[凯瑟琳]";
+		mes "呃，你在测试中途离开了吗？你...*叹气*...";
+		mes "我没想到你会做出如此不光彩的事。";
 		next;
-		mes "[Catherine]";
+		mes "[]";
 		if (Sex == SEX_MALE) {
-			mes "Granted you're a mage, but how could a guy be so weak?!";
-			mes "Well, at least your alive still. Go back and try harder this time. ~tehehehe";
+			mes "虽然你是法师，但怎么会有男生这么弱呢？！好吧，";
+			mes "至少你还活着。回去再努力一次吧。~嘿嘿嘿";
 		}
 		else {
-			mes "Don't pretend to be weak just because you're a girl. Look at me! I did it, and so can you. You can't ask for sympathy.";
-			mes "You came all this way to become a Wizard! Now come on, you can do it!!";
+			mes "别因为你是女孩就假装软弱。看看我！我做到了，你也可以。";
+			mes "你不能要求同情。你走了这么远就是为了成为法师！";
+			mes "快点，你能做到的！！";
 			next;
-			mes "[Catherine]";
-			mes "I agree that it is difficult, but not to the point of giving up.";
-			mes "You of all people should find the strength and patience to complete this test!";
+			mes "[凯瑟琳]";
+			mes "我同意这很困难，但绝对不能放弃。";
+			mes "你应该找到力量和耐心来完成这个测试！";
 		}
 		next;
-		mes "[Catherine]";
-		mes "So, try harder this time...";
-		mes "He's waiting!";
+		mes "[凯瑟琳]";
+		mes "所以，这次再努力一点...他在等你！";
 		close;
 	}
 	else if (WIZ_Q == 7) {
 		if (JobLevel < 40) {
 			set WIZ_Q,0;
-			mes "[Catherine]";
-			mes "Hey, what don't you get it?";
-			mes "I said you must be at least job level 40 to change your job, got it?";
+			mes "[凯瑟琳]";
+			mes "嘿，你不明白吗？";
+			mes "我说你必须至少达到40级才能转职，明白了吗？";
 			next;
-			mes "[Catherine]";
-			mes "There is nothing to be in hurry, so why don't you take your time for studying?";
-			mes "When the time comes, I will welcome you with open arms.";
+			mes "[凯瑟琳]";
+			mes "没必要着急，为什么不花时间学习呢？等时机来临时，";
+			mes "我会张开双臂欢迎你。";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Catherine]";
-			mes "Are you done with all the tests? Oh drats, it seems like you still have some skill points left.";
-			mes "Learn some other skills with your remaining points, and then come talk to me again.";
+			mes "[凯瑟琳]";
+			mes "你完成所有测试了吗？哦，真糟糕，";
+			mes "看来你还有一些技能点没用。";
+			mes "用剩下的点数学习其他技能，然后再来找我。";
 			close;
 		}
-		mes "[Catherine]";
-		mes "Wooooooooooooow...you finished all the tests?!";
-		mes "Congratulations, congrats, congrats! Wooopiiieeeee! ~Hehehehehehe";
+		mes "[凯瑟琳]";
+		mes "哇哦...你完成了所有测试？！恭喜你，恭喜你，恭喜你！";
+		mes "哇哦！~嘿嘿嘿嘿";
 		next;
-		mes "[Catherine]";
-		mes "Well, no need to wait, I congratulate you. I hearby deem you Wizard.";
+		mes "[凯瑟琳]";
+		mes "好吧，不用再等了，我祝贺你。我正式宣布你成为法师。";
 		next;
 		completequest 9018;
 		callfunc "Job_Change",Job_Wizard;
 		callfunc "F_ClearJobVar";		// clears all job variables for the current player
-		mes "[Catherine]";
-		mes "Since you're a Wizard now, act like a Wizard, got it?";
-		mes "Us wizards have to be careful since we possess the ultimate power of magic.";
+		mes "[凯瑟琳]";
+		mes "既然你现在是法师，就要像法师一样行事，明白了吗？";
+		mes "我们法师必须小心，因为我们拥有终极魔法的力量。";
 		next;
-		mes "[Catherine]";
-		mes "Don't go about casting spells in town for no reason, or bother others with spells that are in their own battle.";
-		mes "A Wizard's magic is meant for their own battles with monsters.";
+		mes "[凯瑟琳]";
+		mes "不要随便在城镇施法，也不要打扰他人正在进行的战斗。";
+		mes "法师的魔法是用来对付怪物的。";
 		next;
-		mes "[Catherine]";
-		mes "Go join parties with others and keep training.";
-		mes "And...oh, wait, I prepared a present for you, one sec.";
+		mes "[凯瑟琳]";
+		mes "去和其他人组队训练吧。哦，等等，";
+		mes "我为你准备了一份礼物，稍等。";
 		next;
-		mes "[Catherine]";
-		mes "rummage rummage...";
-		mes "shuffle shuffle...";
+		mes "[凯瑟琳]";
+		mes "翻翻翻... 摆摆摆...";
 		next;
 		getitem 505,6; //Blue_Potion
-		mes "[Catherine]";
-		mes "Here you go. I hope you'll make good use of it when you need it. ~tehehe";
-		mes "I gave them to you as a present, so don't go out and sell it. Use it for yourself, ok?";
+		mes "[凯瑟琳]";
+		mes "给你，希望你能在需要的时候好好利用它。~嘻嘻，";
+		mes "我把它送给你作为礼物，所以不要去卖掉哦，自己用吧，好的？";
 		next;
-		mes "[Catherine]";
-		mes "Well, then...*sight*...live a wonderful life as a Wizard, become the strongest out there!";
+		mes "[凯瑟琳]";
+		mes "那么...*叹气*...作为法师过上美好的生活，成为最强的吧！";
 		close;
 	}
 }
 
-gef_tower,102,24,2	script	Gloomy Wizard	735,{
+gef_tower,102,24,2	script	阴郁的法师	735,{
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
-			mes "[Raulel]";
-			mes "*Cough* *cough* what do you want?";
-			mes "If you are a person that uses magic, then you need to make sure you are well informed about it.";
+			mes "[劳雷尔]";
+			mes "*咳嗽* *咳嗽* 你想要什么？如果你是个使用魔法的人，";
+			mes "就要确保自己对魔法有足够的了解。";
 			next;
-			mes "[Raulel]";
-			mes "Don't live dishonestly, or impolitely, or else one day you'll be caught in a spell you can't control, and BOOM, your dead!";
+			mes "[劳雷尔]";
+			mes "不要不诚实或无礼，否则有一天你会被无法控制的魔法困住，";
+			mes "轰的一声，你就死了！";
 			if (Sex == SEX_MALE) {
-				mes "If you don't want that to happen, then learn how to use spells properly!";
+				mes "如果你不想那样发生，就要学会正确使用魔法！";
 				next;
-				mes "[Raulel]";
-				mes "You may live life crippled if you get obsessed with the love of Greater Magic. ~haha";
+				mes "[劳雷尔]";
+				mes "如果你沉迷于强大魔法的爱，你可能会过得很惨。~哈哈";
 			}
 			else {
-				mes "So learn how to use magic properly, or you would just be better off giving up on using magic.";
+				mes "所以要学会正确使用魔法，否则你不如放弃使用魔法。";
 				next;
-				mes "[Raulel]";
-				mes "If you don't want that, go hit on a guy or something! ~Hahahaha";
-				mes "If you don't pay attention to yourself, you'll be engulfed by magic one day...";
+				mes "[劳雷尔]";
+				mes "如果你不想那样，就去勾搭个男孩吧！";
+				mes "~哈哈哈哈 如果你不注意自己，总有一天会被魔法吞噬...";
 			}
 			close;
 		}
 		else if (BaseJob == Job_Priest) {
-			mes "[Raulel]";
-			mes "Go away, one who works for the Church!";
-			mes "Magic repels Holy power, jeez...your messing up my aura.";
+			mes "[劳雷尔]";
+			mes "走开，教会的人！魔法会排斥神圣的力量，真是的...";
+			mes "你搞乱了我的气场。";
 			next;
-			mes "[Raulel]";
-			mes "And plus, *cough* *cough* my health isn't all that good right now either...";
-			mes "Don't come any closer, just leave!";
+			mes "[劳雷尔]";
+			mes "而且，*咳嗽* *咳嗽* 我现在身体也不好...";
+			mes "不要靠近我，快走！";
 			close;
 		}
 		else if (BaseClass == Job_Novice) {
-			mes "[Raulel]";
-			mes "Why did a little one like you come here?!";
-			mes "Get lost! ~Hahahahaha";
+			mes "[劳雷尔]";
+			mes "你这个小家伙为什么来这里？！快走！~哈哈哈哈";
 			close2;
 			warp "geffen",120,110;
 			end;
 		}
-		mes "[Raulel]";
-		mes "*sneeze* *cough* Oooowww...my entire body is in pain. I feel like I'm trapped in a tub of ice water!";
+		mes "[劳雷尔]";
+		mes "*打喷嚏* *咳嗽* 哎呀...我全身都在痛。";
+		mes "感觉像是被困在冰水里！";
 		next;
-		mes "[Raulel]";
-		mes "What do you want? Jeez...just get lost, won't you?";
+		mes "[劳雷尔]";
+		mes "你想要什么？真是的...快走吧，好吗？";
 		close;
 	}
 	if (WIZ_Q == 0) {
-		mes "[Raulel]";
-		mes "*cough* *cough* *sneeze* I don't know who you are and what you do, but I don't have any business with you.";
+		mes "[劳雷尔]";
+		mes "*咳嗽* *咳嗽* *打喷嚏* 我不知道你是谁，";
+		mes "也不知道你想干什么，但我和你没有任何关系。";
 		next;
-		mes "[Raulel]";
-		mes "Go away! Get lost!";
+		mes "[劳雷尔]";
+		mes "走开！快走！";
 		close;
 	}
 	else if (WIZ_Q == 1 || WIZ_Q  == 2) {
-		mes "[Raulel]";
-		mes "Hahahaha~ You're the one that wants to become a Wizard?!";
+		mes "[劳雷尔]";
+		mes "哈哈哈哈~ 你就是想成为法师的人？！";
 		next;
-		mes "[Raulel]";
-		mes "*sneeze* If you just lived as you were, all you'd have to do was hunt a little and live the easy life...";
+		mes "[劳雷尔]";
+		mes "*打喷嚏* 如果你就这样生活，最多也就是打打猎，";
+		mes "过上轻松的生活...";
 		next;
-		mes "[Raulel]";
-		mes "*Cough* *cough* Let's see how well you live as a Wizard. ~Hahahahhaha";
+		mes "[劳雷尔]";
+		mes "*咳嗽* *咳嗽* 让我们看看你作为法师的生活有";
+		mes "多好。~哈哈哈哈";
 		close;
 	}
 	else if ((WIZ_Q == 3) || (WIZ_Q == 4)) {
 		if (WIZ_Q == 3) {
-			mes "[Raulel]";
-			mes "*Cough* *cough*...You must've passed the first test.";
-			mes "Ok, I'm the Wizard in charge of your testing from now on. My name is 'Raulel Asparagus'.";
+			mes "[劳雷尔]";
+			mes "*咳* *咳*...你一定通过了第一个测试。好吧，从现在开始，";
+			mes "我是负责你测试的法师。我叫‘劳雷尔·芦笋’。";
 			next;
-			mes "[Raulel]";
-			mes "*sneeze* It's not too late yet, wouldn't you rather just go back to town and enjoy the peaceful life?";
+			mes "[劳雷尔]";
+			mes "*打喷嚏* 还不算太晚，";
+			mes "你难道不想回城镇享受平静的生活吗？";
 			next;
-			mes "[Raulel]";
-			mes "Hahahaha~ You don't know how dangerous it is...to deal with Greater Magic.";
+			mes "[劳雷尔]";
+			mes "哈哈哈哈~ 你不知道这有多危险...去接触更高的魔法。";
 			next;
-			if (select("I want to live as a normal Mage.:I would like to continue with the tests.") == 1) {
-				mes "[Raulel]";
-				mes "Hahaha~ *sneeze* Good choice...*cough* *cough*~";
-				mes "Best not to even dream about life as a Wizard. Graa...Greaa...*sneeze* Greater Magic wasn't meant for humans to use!";
+			if (select("我想作为一个普通法师生活。:我想继续进行测试。") == 1) {
+				mes "[劳雷尔]";
+				mes "哈哈哈~ *打喷嚏* 好选择...";
+				mes "*咳* *咳*~ 最好连做法师的梦都不要做。呃...";
+				mes "更高的魔法并不是人类可以使用的！";
 				next;
-				mes "[Raulel]";
-				mes "Leave the top of this tower quietly and don't ever look back.";
-				mes "Just live peacefully with the powers that you have right now.";
+				mes "[劳雷尔]";
+				mes "安静地离开这座塔的顶端，永远不要回头。";
+				mes "就用你现在拥有的力量平静地生活吧。";
 				close;
 			}
-			mes "[Raulel]";
-			mes "*sneeze* Hahahaha~ Now there's a foolish one here!";
-			mes "Well then, let's see how good you are. *cough* I want to see this with my own two eyes!";
+			mes "[劳雷尔]";
+			mes "*打喷嚏* 哈哈哈哈~ 这里有个傻瓜！那么，";
+			mes "让我们看看你有多厉害。*咳* 我想亲眼看看！";
 			next;
-			mes "[Raulel]";
-			mes "*sneeze* Then let's begin the test!";
-			mes "If you don't answer them all correctly, you fail. Hahahahahahahahaha~";
+			mes "[劳雷尔]";
+			mes "*打喷嚏* 那么让我们开始测试吧！如果你没有全部答对，";
+			mes "你就失败了。哈哈哈哈哈哈~";
 			next;
-			mes "[Raulel]";
-			mes "I'll give you 10 questions so give me the right answers.";
-			mes "If you get something wrong, I won't tell you what it is!";
+			mes "[劳雷尔]";
+			mes "我会给你10个问题，所以请给我正确的答案。如果你答错了，";
+			mes "我不会告诉你是什么！";
 			if(checkquest(9016) == -1) {
 				changequest 9015,9016;
 			}
 			next;
-			mes "[Raulel]";
-			mes "*Cough* *cough* Then here go the questions!";
+			mes "[劳雷尔]";
+			mes "*咳* *咳* 那么问题来了！";
 		}
 		else if (WIZ_Q == 4) {
-			mes "[Raulel]";
-			mes "Hahahaha~ Are you that desperate? *sneeze* What a pain in the arse...";
+			mes "[劳雷尔]";
+			mes "哈哈哈哈~ 你真的那么绝望吗？*打喷嚏* 真是麻烦...";
 			next;
-			mes "[Raulel]";
-			mes "Since you don't want to settle for a stable and peaceful life, I'll give you another chance...";
+			mes "[劳雷尔]";
+			mes "既然你不想安于稳定和平的生活，我就给你另一个机会...";
 			next;
-			mes "[Raulel]";
-			mes "If you miss one single question, then just give up. You wouldn't have any talent in being a Wizard! ~Hahahahaha";
+			mes "[劳雷尔]";
+			mes "如果你错过一个问题，那就放弃吧。";
+			mes "你根本没有成为法师的天赋！~哈哈哈哈";
 			next;
-			if (select("Because of you, I want to live as a normal Mage now.:I would like to continue with the tests.") == 1) {
-				mes "[Raulel]";
-				mes "Hahahaha~ Surprising, comming from you, that's a very wise choice...*cough* *cough*";
-				mes "If i were you, i would never, ever dream of becoming a Wizard again. Gre...Greaa...*sneeze* Greater Magic wasn't meant for humans to use.";
+			if (select("因为你，我现在想作为一个普通法师生活。:我想继续进行测试。") == 1) {
+				mes "[劳雷尔]";
+				mes "哈哈哈哈~ 令人惊讶，来自你，这真是个明智的选择...";
+				mes "*咳* *咳* 如果我是你，我绝对不会再梦想成为法师。呃...";
+				mes "更高的魔法并不是人类可以使用的。";
 				next;
-				mes "[Raulel]";
-				mes "Just leave the top of this tower quietly and never look back.";
-				mes "Live peacefully with the powers that you have right now.";
+				mes "[劳雷尔]";
+				mes "安静地离开这座塔的顶端，永远不要回头。";
+				mes "用你现在拥有的力量平静地生活吧。";
 				close;
 			}
-			mes "[Raulel]";
-			mes "Hahahahahahaha~ Now there's a foolish one right here!";
-			mes "Well then, let's see just how good you can be! *sneeze* I want to see this with my own two eyes.";
+			mes "[劳雷尔]";
+			mes "哈哈哈哈哈哈~ 这里有个傻瓜！那么，";
+			mes "让我们看看你能有多好！*打喷嚏* 我想亲眼看看。";
 			next;
-			mes "[Raulel]";
-			mes "Then let's begin the test!";
+			mes "[劳雷尔]";
+			mes "那么让我们开始测试吧！";
 		}
 		next;
 		switch(rand(1,3)) {
 		case 1:
-			mes "[Raulel]";
-			mes "1. Which of the following is not necessary to learn Fire Wall?";
+			mes "[劳雷尔]";
+			mes "1. 以下哪项不是学习火墙所必需的？";
 			next;
-			if (select("Fire Bolt Lv 4:Fire Ball Lv 5:Sight Lv 1:Napalm Beat Lv 4") == 4)
+			if (select("火焰箭 Lv 4:火球 Lv 5:视线 Lv 1:火焰轰击 Lv 4") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "2. Regaurdless of it's previous attribute, What does the monster's attribute change to when you cast Frost Diver on it?";
+			mes "[劳雷尔]";
+			mes "2. 无论其先前属性如何，当你对怪物施放冰霜潜水时，";
+			mes "怪物的属性会变成什么？";
 			next;
-			if (select("Water:Earth:Fire:Wind") == 1)
+			if (select("水:土:火:风") == 1)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "3. When you completely master Napalm Beat, what is the ratio of the increased MATK using that spell?";
+			mes "[劳雷尔]";
+			mes "3. 当你完全掌握火焰击时，";
+			mes "使用该技能时增加的魔法攻击力比例是多少？";
 			next;
-			if (select("1.6 times:1.7 times:2 times:20 times") == 2)
+			if (select("1.6倍:1.7倍:2倍:20倍") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "4. What item do you need when casting Stone Curse?";
+			mes "[劳雷尔]";
+			mes "4. 在施放石化术时需要什么物品？";
 			next;
-			if (select("Red Blood:Blue Gemstone:Yellow Gemstone:Red Gemstone") == 4)
+			if (select("红色血液:蓝色宝石:黄色宝石:红色宝石") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "5. Which of the following is not required to master Safety Wall?";
+			mes "[劳雷尔]";
+			mes "5. 以下哪个不是掌握安全墙所需的？";
 			next;
-			if (select("Napalm Beat Lv 4:Soul Strike Lv 5:Increase SP Recovery Lv 6:Safety Wall Lv 7") == 3)
+			if (select("火焰击 Lv 4:灵魂打击 Lv 5:增加 SP 恢复 Lv 6:安全墙 Lv 7") == 3)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "6. Without the INT bonus, what amount of SP is recovered every 10 seconds when you have learned Increase SP Recovery Lv 7?";
+			mes "[劳雷尔]";
+			mes "6. 在没有智力加成的情况下，";
+			mes "学习增加 SP 恢复 Lv 7 后每 10 秒恢复多少 SP？";
 			next;
 			if (select("14:21:28:35") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "7. Using Energy Coat, when you have 50% of your SP remaining, how much SP is used when hit, and what percentage is damage reduced by?";
+			mes "[劳雷尔]";
+			mes "7. 使用能量护盾时，当你的 SP 剩余 50% 时，";
+			mes "受到攻击时消耗多少 SP，伤害减少百分比是多少？";
 			next;
-			if (select("Damage 18% SP1.5%:Damage 18% SP2%:Damage 24% SP1.5%:Damage 24% SP2%") == 2)
+			if (select("伤害 18% SP 1.5%:伤害 18% SP 2%:伤害 24% SP 1.5%:伤害 24% SP 2%") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "8. How much SP is consumed and how many times can you avoid attacks when using Safety Wall Lv 6?";
+			mes "[劳雷尔]";
+			mes "8. 使用安全墙 Lv 6 时消耗多少 SP，能避免多少次攻击？";
 			next;
-			if (select("SP 40, 6 times:SP 35, 6 times:SP 40, 7 times:SP 35, 7 times") == 3)
+			if (select("SP 40，6 次:SP 35，6 次:SP 40，7 次:SP 35，7 次") == 3)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "9. How much SP is needed when using Lv 10 Thunderstorm?";
+			mes "[劳雷尔]";
+			mes "9. 使用 Lv 10 雷暴需要多少 SP？";
 			next;
 			if (select("84:74:64:54") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "10. Which skill is most useful training in the Byalan Dungeon?";
+			mes "[劳雷尔]";
+			mes "10. 在比亚兰地下城中，哪个技能最有用？";
 			next;
-			if (select("Lightning Bolt:Fire Bolt:Cold Bolt:Sight") == 1)
+			if (select("闪电箭:火焰箭:冰霜箭:视野") == 1)
 				set .@wizard_t,.@wizard_t+10;
 			break;
 		case 2:
-			mes "[Raulel]";
-			mes "1. Which monster can you obtain a slotted Guard from?";
+			mes "[劳雷尔]";
+			mes "1. 哪个怪物可以获得带孔的护甲？";
 			next;
-			if (select("Thief Bug:PecoPeco:Pupa:Kobold (Hammer)") == 3)
+			if (select("盗贼虫:皮可皮可:幼虫:哥布林（锤子）") == 3)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "2. Which of the following is the easiest monster for a low level Mage to hunt?";
+			mes "[劳雷尔]";
+			mes "2. 以下哪个是低级法师最容易猎杀的怪物？";
 			next;
-			if (select("Flora:Giearth:Golem:Myst") == 1)
+			if (select("花草:地球:魔像:神秘") == 1)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "3. Which monster will not be affected by Stone Curse?";
+			mes "[劳雷尔]";
+			mes "3. 哪个怪物不会受到石化术的影响？";
 			next;
-			if (select("Elder Willow:Evil Druid:Magnolia:Marc") == 2)
+			if (select("老柳树:邪恶德鲁伊:木兰:马克") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "4. When attacking a Lv 3 water attribute monster with a wind attribute weapon, what is the damage percentage?";
+			mes "[劳雷尔]";
+			mes "4. 当用风属性武器攻击 Lv 3 水属性怪物时，";
+			mes "伤害百分比是多少？";
 			next;
 			if (select("125%:150%:175%:200%") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "5. If a Baby Desert Wolf and a Familiar fought, which one would win?";
+			mes "[劳雷尔]";
+			mes "5. 如果幼崽沙漠狼和熟悉的生物战斗，哪个会赢？";
 			next;
-			if (select("Baby Desert Wolf:Familiar:Neither:I don't know") == 1)
+			if (select("幼崽沙漠狼:熟悉的生物:都不是:我不知道") == 1)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "6. Which of the following cannot be a Cute Pet?";
+			mes "[劳雷尔]";
+			mes "6. 以下哪个不能成为可爱的宠物？";
 			next;
-			if (select("Poporing:Roda Frog:Smokie:Poison Spore") == 2)
+			if (select("泡泡:罗达青蛙:烟雾:毒孢子") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "7. Choose the monster that is weak against a fire attribute attack.";
+			mes "[劳雷尔]";
+			mes "7. 选择一个对火属性攻击弱的怪物。";
 			next;
 			if (select("Dagger Goblin:Mace Goblin:Morningstar Goblin:Hammer Goblin") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "8. Which of the following has the highest defense?";
+			mes "[劳雷尔]";
+			mes "8. 以下哪个防御力最高？";
 			next;
-			if (select("Horn:Chonchon:Andre:Caramel") == 4)
+			if (select("Horn:苍蝇:Andre:Caramel") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "9. Choose the monster that's of a different species.";
+			mes "[劳雷尔]";
+			mes "9. 选择一个不同种类的怪物。";
 			next;
-			if (select("Poring:Mastering:Ghostring:Spore") == 3)
+			if (select("波林:掌握:幽灵:孢子") == 3)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "10. Which of the following is not an Undead monster?";
+			mes "[劳雷尔]";
+			mes "10. 以下哪个不是不死类怪物？";
 			next;
-			if (select("Drake:Megalodon:Deviace:Khalitzburg") == 3)
+			if (select("德雷克:巨齿鲨:变异者:卡利兹堡") == 3)
 				set .@wizard_t,.@wizard_t+10;
 			break;
 		case 3:
-			mes "[Raulel]";
-			mes "1. Which stat is the most important for a Mage?";
+			mes "[劳雷尔]";
+			mes "1. 对于法师来说，哪个属性最重要？";
 			next;
 			if (select("INT:AGI:DEX:VIT") == 1)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "2. Which attribute does not have a 'Bolt' type attack?";
+			mes "[劳雷尔]";
+			mes "2. 哪个属性没有“闪电”类型的攻击？";
 			next;
-			if (select("Water:Earth:Fire:Wind") == 2)
+			if (select("水:土:火:风") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "3. Choose the one that does not relate to a Mage.";
+			mes "[劳雷尔]";
+			mes "3. 选择一个与法师无关的选项。";
 			next;
-			if (select("Weak physical strength.:Attacks at a distance.:Good at selling stuff.:Magic Defense is high.") == 3)
+			if (select("弱物理攻击力:远程攻击:擅长出售物品:魔法防御高") == 3)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "4. Which town is the home of Mages?";
+			mes "[劳雷尔]";
+			mes "4. 哪个城镇是法师的家？";
 			next;
-			if (select("Prontera:Morocc:Alberta:Geffen") == 4)
+			if (select("普隆德拉:摩洛克:阿尔贝塔:杰芬") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "5. Which of the following cards has nothing to do with INT?";
+			mes "[劳雷尔]";
+			mes "5. 以下哪个卡片与智力无关？";
 			next;
-			if (select("Andre Egg Card:Soldier Andre Card:Baby Desert Wolf Card:Elder Willow Card") == 2)
+			if (select("安德烈蛋卡:士兵安德烈卡:幼年沙漠狼卡:老柳卡") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "6. What is the Mage good at compared to other job classes?";
+			mes "[劳雷尔]";
+			mes "6. 法师相比其他职业擅长什么？";
 			next;
-			if (select("Exceptional Vocal Ability:Exceptional Acting Ability:Exceptional Dance Skills:Exceptional Magic Skills") == 4)
+			if (select("卓越的歌唱能力:卓越的表演能力:卓越的舞蹈技能:卓越的魔法技能") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "7. What is the INT bonus at Job Lv 40 for a Mage?";
+			mes "[劳雷尔]";
+			mes "7. 法师在职业等级40时的智力加成是多少？";
 			next;
 			if (select("8:7:6:5") == 4)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "8. Which item can a Mage not equip?";
+			mes "[劳雷尔]";
+			mes "8. 法师不能装备哪个物品？";
 			next;
-			if (select("Knife:Boys Cap:Sandle:Eye of Dullahan") == 2)
+			if (select("刀:男孩帽:凉鞋:杜兰之眼") == 2)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "9. Which of the following is the catalyst when making the Mage test solution 3?";
+			mes "[劳雷尔]";
+			mes "9. 制作法师测试溶液3时的催化剂是什么？";
 			next;
-			if (select("Blue Gemstone:Red Gemstone:Yellow Gemstone:Red Blood") == 1)
+			if (select("蓝宝石:红宝石:黄宝石:红血") == 1)
 				set .@wizard_t,.@wizard_t+10;
-			mes "[Raulel]";
-			mes "10. Which card is irrelevant to magic?";
+			mes "[劳雷尔]";
+			mes "10. 哪张卡与魔法无关？";
 			next;
-			if (select("Marduk Card:Magnolia Card:Willow Card:Maya Card") == 2)
+			if (select("马尔杜克卡:木兰卡:柳树卡:玛雅卡") == 2)
 				set .@wizard_t,.@wizard_t+10;
 		}
-		mes "[Raulel]";
+		mes "[劳雷尔]";
 		if (WIZ_Q == 4) {
-			mes "Good job, you finished answered all the questions... Go buy yourself some potions or something if you have the Zeny. Haha...";
+			mes "干得好，你完成了所有问题... 如果你有足够的锭，";
+			mes "可以去买些药水。哈哈...";
 			next;
-			mes "[Raulel]";
+			mes "[劳雷尔]";
 			mes "Your score is... " + .@wizard_t + "points.....";
 			if (.@wizard_t == 100) {
 				set WIZ_Q,5;
 				changequest 9016,9017;
-				mes "Hahahahahahah~ Well done, you passed the second test.";
-				mes "It wasn't done in one try like mine was, but I'll let you slide...";
+				mes "哈哈哈哈哈~ 干得不错，你通过了第二个测试。";
+				mes "虽然不是像我那样一次就成功，但我会放你一马...";
 				next;
-				mes "[Raulel]";
-				mes "*sneeze* Don't relax just yet, there's still the matter of the third and final test.";
-				mes "I advise you to rest a bit while the final test is prepared. Your gonna need it. Hahahahaha~";
+				mes "[劳雷尔]";
+				mes "*打喷嚏* 还不能放松，";
+				mes "第三个也是最后一个测试还在等着你。";
+				mes "我建议你在准备最后测试的时候稍微休息一下，";
+				mes "你会需要的。哈哈哈哈~";
 				close;
 			}
 			else if (.@wizard_t == 90) {
 				set WIZ_Q,5;
 				changequest 9016,9017;
-				mes "Hahaha~ Since you only missed one problem, you passed the second test.";
-				mes "It wasn't done in one try like mine was, but I'll let you slide...";
+				mes "哈哈哈~ 你只错了一道题，算是通过了第二个测试。";
+				mes "虽然不是像我那样一次就成功，但我会放你一马...";
 				next;
-				mes "[Raulel]";
-				mes "*sneeze* Don't relax just yet, there's still the matter of the third and final test.";
-				mes "I advise you to rest a bit while the final test is prepared. Your gonna need it. Hahahahaha~";
+				mes "[劳雷尔]";
+				mes "*打喷嚏* 还不能放松，";
+				mes "第三个也是最后一个测试还在等着你。";
+				mes "我建议你在准备最后测试的时候稍微休息一下，";
+				mes "你会需要的。哈哈哈哈~";
 				close;
 			}
 			else if (.@wizard_t == 80) {
 				set WIZ_Q,5;
 				changequest 9016,9017;
-				mes "Sheez... You didn't do very well, but you passed the second test.";
-				mes "It wasn't done in one try like mine was, but I'll let you slide...";
+				mes "哎呀...你表现得不太好，但你通过了第二个测试。";
+				mes "虽然不是像我那样一次就成功，但我会放你一马...";
 				next;
-				mes "[Raulel]";
-				mes "*sneeze* Don't relax just yet, there's still the matter of the third and final test.";
-				mes "I advise you to rest a bit while the final test is prepared. Your gonna need it. Hahahahaha~";
+				mes "[劳雷尔]";
+				mes "*打喷嚏* 还不能放松，";
+				mes "第三个也是最后一个测试还在等着你。";
+				mes "我建议你在准备最后测试的时候稍微休息一下，";
+				mes "你会需要的。哈哈哈哈~";
 				close;
 			}
 			else {
-				mes "You failed. Go study some more!";
+				mes "你失败了。去多学习一些吧！";
 				next;
-				mes "[Raulel]";
-				mes "*cough* *cough* Did you really think you could become a Wizard with such a mediocre level like yours?";
-				mes "Get lost! If you were a Wizard right now, the monsters that I fight, would eat you up in no time!";
+				mes "[劳雷尔]";
+				mes "*咳嗽* *咳嗽* 你真的以为你能凭借这么平庸的水平成为法";
+				mes "师吗？滚开！如果你现在是法师，";
+				mes "我打的那些怪物会很快把你吃掉！";
 				close;
 			}
 		}
-		mes "Hmmm...Good job, you finished answering all the questions, go buy yourself some potions or something, thats IF you have the Zeny. Hahahahahahahah~";
+		mes "嗯...干得不错，你回答完所有问题了，";
+		mes "去买点药水或者别的东西吧，";
+		mes "前提是你有足够的Zeny。哈哈哈哈哈哈~";
 		next;
-		mes "[Raulel]";
+		mes "[劳雷尔]";
 		mes "Your score is... " + .@wizard_t + " points!";
 		if (.@wizard_t == 100) {
 			set WIZ_Q,5;
 			changequest 9016,9017;
-			mes "*cough* *Cough* Well done, you passed the second test.";
+			mes "*咳嗽* *咳嗽* 干得不错，你通过了第二个测试。";
 			next;
-			mes "[Raulel]";
-			mes "Hahahaha~ Don't relax just yet, there's still the third test.";
-			mes "*sneeze* I advise you to rest a bit while the final test is prepared...Hahahahah~";
+			mes "[劳雷尔]";
+			mes "哈哈哈~ 还不能放松，第三个测试还在等着你。";
+			mes "*打喷嚏* 我建议你在准备最后测试的时候稍微休息一";
+			mes "下...哈哈哈哈~";
 			close;
 		}
 		else if (.@wizard_t == 90) {
 			set WIZ_Q,5;
 			changequest 9016,9017;
-			mes "Hahahaha~ I'll let you slide by since you only missed one problem. You passed the second test.";
+			mes "哈哈哈哈~ 你只错了一道题，我会放你一马，";
+			mes "你通过了第二个测试。";
 			next;
-			mes "[Raulel]";
-			mes "Hahahaha~ Don't relax just yet, there's still the third test.";
-			mes "*sneeze* I advise you to rest a bit while the final test is prepared...Hahahahah~";
+			mes "[劳雷尔]";
+			mes "哈哈哈哈~ 还不能放松，第三个测试还在等着你。";
+			mes "*打喷嚏* 我建议你在准备最后测试的时候稍微休息一";
+			mes "下...哈哈哈哈~";
 			close;
 		}
 		else {
 			set WIZ_Q,4;
-			mes "You failed. I will let you come back again...after you've learned more relating to the type of questions I've asked you.";
+			mes "你失败了。我会让你再来一次...";
+			mes "在你学到更多与我问的问题相关的知识之后。";
 			next;
-			mes "[Raulel]";
-			mes "Tisk...not enough, not enough! Did you really think you could become a Wizard with the little bit of knowledge you have?";
-			mes "Get lost! If you were a Wizard right now, the monsters I deal with would eat you up in no time!";
+			mes "[劳雷尔]";
+			mes "啧...不够，不够！";
+			mes "你真的以为凭你这么一点知识就能成为法师吗？滚开！";
+			mes "如果你现在是法师，我面对的那些怪物会很快把你吃掉！";
 			close;
 		}
 	}
 	else if (WIZ_Q == 5) {
-		mes "[Raulel]";
-		mes "Ok, hope you got plenty of rest. Hahahahahah~";
-		mes "Then let's begin the last test.";
+		mes "[劳雷尔]";
+		mes "好吧，希望你休息得够好。";
+		mes "哈哈哈哈~那我们开始最后的测试吧。";
 		next;
-		mes "[Raulel]";
-		mes "Should I explain a little about this final test? It is difficult, I will not hide that from you...";
+		mes "[劳雷尔]";
+		mes "要我简单解释一下这个最后的测试吗？它很难，";
+		mes "我不会对你隐瞒。";
 		next;
-		if (select("No, it's ok, I'm ready.:I would like to listen.") == 1) {
-			mes "[Raulel]";
-			mes "What a rash person. Your the type that rushes into battle without thinking, what in the world are you doing here instead of with the Prontera Chivalry? Heck, go for it! *cough* Not my fault if you end up dying.";
-			mes "Just consider yourself a glass cannon...because the monsters are going to break you into pieces. Hahahahahahahahaha~";
+		if (select("不，没关系，我准备好了。:我想听听。") == 1) {
+			mes "[劳雷尔]";
+			mes "真是个鲁莽的人。你就是那种不思考就冲进战斗的人，";
+			mes "你在这里干什么，不去和普隆德拉骑士团一起？去吧！";
+			mes "*咳* 如果你死了可别怪我。";
+			mes "就当自己是个玻璃炮吧……因为那些怪物会把你打得粉碎。";
+			mes "哈哈哈哈哈哈哈~";
 			next;
 			set WIZ_Q,6;
 			savepoint "geffen",120,107,1,1;
-			mes "[Raulel]";
-			mes "Then, as you wish. I'll send you there right now.";
-			mes "Oh, if you see a white light at the end of a tunnel, that means your pathetic cause you failed! Hahahahahah~";
+			mes "[劳雷尔]";
+			mes "那么，随你的便。我现在就送你过去。哦，";
+			mes "如果你在隧道尽头看到白光，";
+			mes "那就意味着你可怜的目标失败了！哈哈哈哈~";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
-		mes "[Raulel]";
-		mes "What a devoted person. Very well, I'll explain.";
-		mes "No matter how hard this last test may seem, if you do as I say, you can finish it quickly and easily.";
+		mes "[劳雷尔]";
+		mes "真是个忠诚的人。很好，我来解释一下。";
+		mes "无论最后的测试看起来多么困难，只要你按照我说的去做，";
+		mes "就能快速轻松地完成。";
 		next;
-		mes "[Raulel]";
-		mes "The final test has a total of 3 parts.";
-		mes "The order is Water Room, Earth Room, Fire Room. In each room, there are monsters of that particular attribute.";
+		mes "[劳雷尔]";
+		mes "最后的测试一共有3个部分。顺序是水房、土房、火房。";
+		mes "在每个房间里都有该属性的怪物。";
 		next;
-		mes "[Raulel]";
-		mes "You'll find out what monsters will be there once you go in. If you use attacks with the *sneeze*";
-		mes "right attribute, it shouldn't be too hard. Hahaha~";
+		mes "[劳雷尔]";
+		mes "一旦你进去，就会知道那里会有什么怪物。";
+		mes "如果你使用*打喷嚏*正确属性的攻击，";
+		mes "应该不会太难。哈哈哈~";
 		next;
-		mes "[Raulel]";
-		mes "Once you defeat all the monsters within the given time in any one room...";
-		mes "you'll be moved to the next room.";
+		mes "[劳雷尔]";
+		mes "一旦你在任何一个房间内在规定时间内击败所有怪物……你就";
+		mes "会被转移到下一个房间。";
 		next;
-		mes "[Raulel]";
-		mes "After these three rooms are clear, the testing is over.";
-		mes "You will become a Wizard which is controlled by Greater Magic Powers! Know this...There is no returning to an easy life.";
+		mes "[劳雷尔]";
+		mes "这三个房间都清理完后，测试就结束了。";
+		mes "你将成为一个由更高魔法力量控制的法师！";
+		mes "要知道……再也无法回到轻松的生活了。";
 		next;
-		mes "[Raulel]";
-		mes "Hahaha~ You look frightened. You know, it's not too late to turn back and live an easy life.";
-		mes "If you want, I can send you back to town right now... What do you want to do?";
+		mes "[劳雷尔]";
+		mes "哈哈哈~ 你看起来很害怕。你知道，";
+		mes "现在回头过来过轻松的生活还不算晚。如果你想，";
+		mes "我可以现在就送你回城……你想怎么做？";
 		next;
-		if (select("Continue testing.:I want to go back because I have butterflies in my stomach.") == 1) {
+		if (select("继续测试。:我想回去，因为我感到紧张。") == 1) {
 			set WIZ_Q,6;
 			savepoint "geffen",120,107,1,1;
-			mes "[Raulel]";
-			mes "You are indeed, very determined. Ok! Hahahahahaha~";
-			mes "*Cough* *cough* As you wish, we shall begin the final test!";
+			mes "[劳雷尔]";
+			mes "你确实很坚定。好吧！哈哈哈哈哈~ *咳* *咳* 随你的便，";
+			mes "我们开始最后的测试吧！";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
 		set WIZ_Q,6;
-		mes "[Raulel]";
-		mes "Good thinking. This is a better choice for you. Hahahahah~";
-		mes "Go back and live a easy life, Greater Magic is a force that should not be wield by types like yourself.";
+		mes "[劳雷尔]";
+		mes "想得不错。这对你来说是个更好的选择。";
+		mes "哈哈哈哈~ 回去过轻松的生活吧，";
+		mes "更高的魔法不适合你这种人。";
 		close2;
 		warp "geffen",120,110;
 		end;
 	}
 	else if (WIZ_Q == 6) {
 		if (WIZ_Q2 == 6) {
-			mes "[Raulel]";
-			mes "Hahahahahaha~ I've never seen anyone so...sooo...*sneeze* tenacious as you.";
-			mes "So you want to try again eh? Even though I've ridiculed you for your failures before??";
+			mes "[劳雷尔]";
+			mes "哈哈哈哈哈~ 我从未见过如此……如此……*打喷嚏* 顽强的人。";
+			mes "你想再试一次吗？即使我之前嘲笑过你的失败？？";
 			next;
-			mes "[Raulel]";
-			mes "Ok then, here's a proposition. Since you're probably worn out as it is, and I can clearly see the lust for Greater Magic burning in your eyes...";
-			mes "Hahahahaha~ yeah! Go bring me a ^3355FFWorn Out Scroll^000000.";
+			mes "[劳雷尔]";
+			mes "好吧，我有个提议。既然你现在可能已经精疲力竭，";
+			mes "我可以清楚地看到你眼中对更高魔法的渴望……哈哈哈哈~ 是";
+			mes "的！去给我带一张^3355FF破旧卷轴^000000。";
 			next;
 			set WIZ_Q2,WIZ_Q2+1;
-			mes "[Raulel]";
-			mes "If not, you can take the test again...";
-			mes "Well, I'll send you to take the test for now. Hahahaha~";
+			mes "[劳雷尔]";
+			mes "如果没有，你可以再参加测试……好吧，";
+			mes "我现在就送你去测试。哈哈哈哈~";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
 		else if (WIZ_Q2 > 6) {
-			mes "[Raulel]";
-			mes "Oh! So you're back? Hahahahaha~";
-			mes "*Cough* Cough* Do you want to take the test again? Or did you bring the ^3355FFWorn Out Scroll^000000?";
+			mes "[劳雷尔]";
+			mes "哦！你回来了？哈哈哈哈~ *咳* 咳* 你想再参加测试吗？";
+			mes "还是你带来了^3355FF破旧卷轴^000000？";
 			next;
-			if (select("Continue the test.:Worn Out Scroll...") == 1) {
+			if (select("继续测试。:破旧卷轴……") == 1) {
 				savepoint "geffen",120,107,1,1;
-				mes "[Raulel]";
-				mes "Hahaha~ Ok, at least you have some spirit.";
-				mes "I'll send you in again, try dying once more will yah? Hahahahahahahahaha~";
+				mes "[劳雷尔]";
+				mes "哈哈哈~ 好吧，至少你还有点精神。我再送你进去，";
+				mes "试着再死一次吧？哈哈哈哈哈哈哈~";
 				close2;
 				warp "job_wiz",57,154;
 				end;
 			}
 			if (countitem(618) > 0) {
 				delitem 618,1; //Worn_Out_Scroll
-				mes "[Raulel]";
-				mes "Hahahahahahahaha~ *Cough* *cough* So you ended up bringing one of these eh? Good job...";
-				mes "I think I can continue my research with this...";
+				mes "[劳雷尔]";
+				mes "哈哈哈哈哈哈哈~ *咳* *咳* 所以你带来了其中之一吗？";
+				mes "干得不错……我想我可以继续我的研究了……";
 				next;
 				set WIZ_Q2,0;
 				set WIZ_Q,7;
-				mes "[Raulel]";
-				mes "Even though your not Grade A Wizard material, I can tell your serious about wanting the Greater Magic. I'll tell Catherine that you passed. Hahahahahahahahah~";
-				mes "You went through a lot of trouble here, and that is the true purpose for us selecting Wizards. Only those who will devote themselves to the art will ever become Wizards. Good luck to you. Become much Stronger. Hahahahahaha~";
+				mes "[劳雷尔]";
+				mes "虽然你不是A级法师的材料，";
+				mes "但我能看出你对更高魔法的渴望。我会告诉凯瑟琳你通过了。";
+				mes "哈哈哈哈哈哈哈~ 你在这里经历了很多，";
+				mes "这正是我们选择法师的真正目的。";
+				mes "只有那些愿意全心投入魔法的人才能成为法师。祝你好运，";
+				mes "变得更强大。哈哈哈哈哈~";
 				close;
 			}
 		}
-		mes "[Raulel]";
-		mes "*sneeze* What? You want to take the test again?";
-		mes "Geez...you already failed the battle test! Hahahahahahahaha~ So you like magic that much, eh?";
+		mes "[劳雷尔]";
+		mes "*打喷嚏* 什么？你想再参加一次测试？";
+		mes "天哪……你已经在战斗测试中失败了！";
+		mes "哈哈哈哈哈哈~ 所以你这么喜欢魔法，是吗？";
 		next;
-		mes "[Raulel]";
-		mes "Since your so weak that you can't finish this final test on your own...you need a separate test to help you out.";
-		mes "*Cough* If you can't pass the battle test, then do a good job with this one. Hahahahahahah~";
+		mes "[劳雷尔]";
+		mes "既然你这么弱，";
+		mes "无法独自完成最后的测试……你需要一个单独的测试来帮助你";
+		mes "。*咳* 如果你不能通过战斗测试，";
+		mes "那就好好完成这个吧。哈哈哈哈哈~";
 		next;
-		mes "[Raulel]";
-		mes "Well, you better answer these problems if you plan on becoming a Wizard. Hahahahahahaha~";
+		mes "[劳雷尔]";
+		mes "那么，如果你打算成为法师，";
+		mes "就最好回答这些问题。哈哈哈哈哈哈~";
 		next;
-		mes "[Raulel]";
-		mes "1. Choose the monster with a different attribute than the others.";
+		mes "[劳雷尔]";
+		mes "1. 选择与其他怪物属性不同的怪物。";
 		next;
-		if (select("Mantis:Cornutus:Giearth:Caramel") == 2)
+		if (select("螳螂:角虫:吉尔斯:焦糖") == 2)
 			set .@wizard_t,.@wizard_t+20;
-		mes "[Raulel]";
-		mes "2. Choose the monster that is not a looting one.";
+		mes "[劳雷尔]";
+		mes "2. 选择一个不是掠夺型的怪物。";
 		next;
-		if (select("Yoyo:Magnolia:Metaller:Zerom") == 4)
+		if (select("悠悠:木兰:金属人:零") == 4)
 			set .@wizard_t,.@wizard_t+20;
-		mes "[Raulel]";
-		mes "3. Which of these monsters does not recognize casting?";
+		mes "[劳雷尔]";
+		mes "3. 这些怪物中哪个不识别施法？";
 		next;
-		if (select("Marina:Vitata:Scorpion:Giearth") == 1)
+		if (select("玛丽娜:维塔塔:蝎子:吉尔斯") == 1)
 			set .@wizard_t,.@wizard_t+20;
-		mes "[Raulel]";
-		mes "4. Choose the spell that would be efficient against a Marine Sphere.";
+		mes "[劳雷尔]";
+		mes "4. 选择对海洋球有效的法术。";
 		next;
-		if (select("Cold Bolt:Fire Bolt:Lightning Bolt:Stone Curse") == 3)
+		if (select("寒冰箭:火焰箭:闪电箭:石化咒") == 3)
 			set .@wizard_t,.@wizard_t+20;
-		mes "[Raulel]";
-		mes "5. Choose the monster that can move.";
+		mes "[劳雷尔]";
+		mes "5. 选择可以移动的怪物。";
 		next;
-		if (select("Hydra:Madragora:Greatest General:Frilldora") == 4)
+		if (select("水蛇:玛德拉戈拉:大将军:弗里尔多拉") == 4)
 			set .@wizard_t,.@wizard_t+20;
-		mes "[Raulel]";
-		mes "*pfft* Do it right, so I don't have to ask again.";
+		mes "[劳雷尔]";
+		mes "*噗* 做对了，这样我就不用再问了。";
 		next;
-		mes "[Raulel]";
+		mes "[劳雷尔]";
 		mes "You got " + .@wizard_t + " points.";
 		if (.@wizard_t == 100) {
-			mes "Hahahahahaha~ *Cough* *cough* If you can answer all these questions correctly, how is it you can't do well in battles??";
+			mes "哈哈哈哈哈~ *咳* *咳* 如果你能正确回答所有这些问题，";
+			mes "怎么会在战斗中表现不佳呢？？";
 			next;
 		}
 		else if (.@wizard_t == 80) {
-			mes "Eh, soso...";
-			mes "I'll let you retake the test.";
+			mes "嗯，马马虎虎……我让你重考。";
 			next;
 		}
 		else {
-			mes "You failed! Go study some more!";
+			mes "你失败了！去多学习一下！";
 			next;
-			mes "[Raulel]";
-			mes "You lack something...*sneez*...like intelligence. That's why you keep on failing. Hahahahahahahaha~";
+			mes "[劳雷尔]";
+			mes "你缺少一些东西……*打喷嚏*……比如智力。";
+			mes "这就是你不断失败的原因。哈哈哈哈哈哈~";
 			close;
 		}
-		if (select("Begin the test please.:Can I get another explanation?") == 1) {
-			mes "[Raulel]";
-			mes "Nobody is going to help you become a Wizard. Hahahahahahahaha~";
-			mes "*Cough* *cough* No point in crying after dying...";
+		if (select("请开始测试。:我可以再听一遍解释吗？") == 1) {
+			mes "[劳雷尔]";
+			mes "没有人会帮助你成为法师。";
+			mes "哈哈哈哈哈哈~ *咳* *咳* 死后哭泣也没用……";
 			next;
 			percentheal 100,100;
-			mes "[Raulel]";
-			mes "Then, as you wish. I'll send you to fight.";
-			mes "Oh! If you see some tall pearly gates and hear a booming deep voice from behind it, that means that your a failure when it comes to Magic. Hahahahahahahahaha~";
+			mes "[劳雷尔]";
+			mes "那么，随你的便。我会让你去战斗。哦！";
+			mes "如果你看到一些高耸的珍珠大门，";
+			mes "并听到从后面传来的低沉声音，";
+			mes "那就意味着你在魔法方面是个失败者。哈哈哈哈哈哈哈~";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
-		mes "[Raulel]";
-		mes "*Cough* *cough* Then I shall explain.";
-		mes "The test may be hard, but just do as I tell you and it shouldn't be a problem.";
+		mes "[拉乌雷尔]";
+		mes "*咳* *咳* 那我来解释一下。测试可能很难，";
+		mes "但只要按照我说的做，就不会有问题。";
 		next;
-		mes "[Raulel]";
-		mes "There are 3 parts to this final test.";
-		mes "The order is...*sneez*...the Water Room, Earth Room, and then the Fire Room. Each room has monsters of that attribute in it.";
+		mes "[拉乌雷尔]";
+		mes "这个最终测试分为三个部分，顺序是……*打喷嚏*……水房、";
+		mes "土房，然后是火房。每个房间都有该属性的怪物。";
 		next;
-		mes "[Raulel]";
-		mes "You'll see what monsters they are when you enter.";
-		mes "If you use the appropriate spells against them, it shouldn't be that difficult. Hahahahahahaha~";
+		mes "[拉乌雷尔]";
+		mes "你进入后就会看到是什么怪物。";
+		mes "如果你对它们使用适当的法术，就不会太难。哈哈哈哈哈哈~";
 		next;
-		mes "[Raulel]";
-		mes "Within the given time, if you defeat all the monsters...";
-		mes "you will be sent to the next room.";
+		mes "[拉乌雷尔]";
+		mes "在规定时间内，";
+		mes "如果你击败所有怪物……你将被送往下一个房间。";
 		next;
-		mes "[Raulel]";
-		mes "After that, the test is over.";
-		mes "You will then become a Wizard controlled by Greater Magic powers! There is no coming back to the easy life you have known thus far.";
+		mes "[拉乌雷尔]";
+		mes "之后，测试就结束了。";
+		mes "你将成为一个被更高魔法力量控制的法师！";
+		mes "你再也无法回到你曾经的轻松生活。";
 		next;
-		mes "[Raulel]";
-		mes "Hahahahaha~ You look frightened. It's not too late you know.";
-		mes "*Cough* *cough* You can give up and go back to town! Just forget about the Greater Magic and live a normal life. What do yah say?";
+		mes "[拉乌雷尔]";
+		mes "哈哈哈哈~ 你看起来很害怕。你知道现在还不算晚。";
+		mes "*咳* *咳* 你可以放弃，回到城镇！忘掉更高魔法，";
+		mes "过上普通的生活吧。你觉得怎么样？";
 		next;
-		if (select("Continue with the test.:I'm too scared, I would like to quit.") == 1) {
+		if (select("继续测试。:我太害怕了，我想退出。") == 1) {
 			percentheal 100,100;
-			mes "[Raulel]";
-			mes "This time when you die, don't come back crying. Hahahahahahahahah~ *Cough *cough*";
-			mes "As you wish, let's begin the final test!";
+			mes "[拉乌雷尔]";
+			mes "这次死了可别回来哭。";
+			mes "哈哈哈哈哈哈哈~ *咳* *咳* 你想怎样，";
+			mes "就这样开始最终测试吧！";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
-		mes "[Raulel]";
-		mes "Comming from you, thats some darn good thinking. That's more a fit for you anyways. Hahahahahahahahaha~";
-		mes "Go back and live a quiet and peaceful life!";
+		mes "[拉乌雷尔]";
+		mes "从你口中说出这些，真是个好主意。更适合你。";
+		mes "哈哈哈哈哈哈~ 回去过上安静和平的生活吧！";
 		close2;
 		warp "geffen",120,110;
 		end;
 	}
 	else if (WIZ_Q == 7) {
-		mes "[Raulel]";
-		mes "You shouldn't have any more business with me as far as I'm concerned.";
-		mes "But, since your so darned persistent, I'll let you take the test again. Hahahahaha~";
+		mes "[拉乌雷尔]";
+		mes "在我看来，你和我没有更多的事情可谈。但既然你这么执着，";
+		mes "我就让你再参加一次测试。哈哈哈哈~";
 		next;
-		mes "[Raulel]";
-		mes "Go! Go and become the Wizard you really want to be.";
-		mes "And be careful! Greater Magic will always be after you...";
+		mes "[拉乌雷尔]";
+		mes "去吧！去成为你真正想成为的法师。小心点！";
+		mes "更高魔法将永远追随你……";
 		close;
 	}
 }
 
-job_wiz,50,165,4	script	Arena Assistant	700,{
-	mes "[Arena Assistant]";
-	mes "Welcome to the Wizard Job Change Arena.";
-	mes "If you would like to take the final test, then please enter the waiting room.";
+job_wiz,50,165,4	script	竞技场助手	700,{
+	mes "[竞技场助手]";
+	mes "欢迎来到法师职业转职竞技场。";
+	mes "如果你想参加最终测试，请进入候补室。";
 	next;
-	mes "[Arena Assistant]";
-	mes "If someone is already taking the test, please wait.";
-	mes "All testing status will be broadcasted, and will begin as soon as the previous tester has gone through.";
+	mes "[竞技场助手]";
+	mes "如果有人正在进行测试，请耐心等待。";
+	mes "所有测试状态将会广播，并在前一个测试者完成后开始。";
 	next;
-	mes "[Arena Assistant]";
-	mes "Each person may take approximately 5 to 10 minutes.";
-	mes "If you would like to leave the arena, please log off anytime.";
+	mes "[竞技场助手]";
+	mes "每个人的测试时间大约为5到10分钟。";
+	mes "如果你想离开竞技场，请随时下线。";
 	close;
 
 OnInit:
@@ -1088,7 +1133,7 @@ OnStart:
 
 // Water Room (Test 2 part 1)
 //==========================================================
-job_wiz,1,1,1	script	Room of Water	66,{
+job_wiz,1,1,1	script	水房	66,{
 OnInit:
 	disablenpc "Room of Water";
 	end;
@@ -1103,9 +1148,9 @@ OnEnable:
 		set .MyMobs,7;
 	monster "job_wiz",109,174,"Phen",1158,1,"Room of Water::OnMyMobDead";
 	monster "job_wiz",118,174,"Shellfish",1074,1,"Room of Water::OnMyMobDead";
-	monster "job_wiz",109,165,"Vadon",1066,1,"Room of Water::OnMyMobDead";
-	monster "job_wiz",118,165,"Cornutus",1067,1,"Room of Water::OnMyMobDead";
-	monster "job_wiz",101,157,"Marina",1141,1,"Room of Water::OnMyMobDead";
+	monster "job_wiz",109,165,"螃蟹",1066,1,"Room of Water::OnMyMobDead";
+	monster "job_wiz",118,165,"贝壳魔灵",1067,1,"Room of Water::OnMyMobDead";
+	monster "job_wiz",101,157,"海葵",1141,1,"Room of Water::OnMyMobDead";
 	monster "job_wiz",126,157,"Marin",1242,1,"Room of Water::OnMyMobDead";
 	monster "job_wiz",98,170,"Magnolia",1138,1,"Room of Water::OnMyMobDead";
 	initnpctimer;
@@ -1182,7 +1227,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,2,1	script	Room of Water#Door	66,{
+job_wiz,1,2,1	script	水房#Door	66,{
 OnInit:
 	disablenpc "Room of Water#Door";
 	end;
@@ -1248,7 +1293,7 @@ OnTimer63000:
 	end;
 }
 
-job_wiz,114,169,0	script	Room of Water#Failed	-1,16,16,{
+job_wiz,114,169,0	script	水房#Failed	-1,16,16,{
 OnInit:
 	disablenpc "Room of Water#Failed";
 	end;
@@ -1261,7 +1306,7 @@ OnTouch_:
 
 // Earth Room (Test 2 part 2)
 //==========================================================
-job_wiz,1,3,1	script	Room of Earth	66,{
+job_wiz,1,3,1	script	土房	66,{
 OnInit:
 	disablenpc "Room of Earth";
 	end;
@@ -1272,7 +1317,7 @@ OnEnable:
 		set .MyMobs,10;
 		monster "job_wiz",120,102,"Hode",1127,1,"Room of Earth::OnMyMobDead";
 		monster "job_wiz",111,93,"Savage",1166,1,"Room of Earth::OnMyMobDead";
-		monster "job_wiz",127,86,"Mantis",1139,1,"Room of Earth::OnMyMobDead";
+		monster "job_wiz",127,86,"螳螂",1139,1,"Room of Earth::OnMyMobDead";
 	}
 	else
 		set .MyMobs,7;
@@ -1282,7 +1327,7 @@ OnEnable:
 	monster "job_wiz",120,93,"Giearth",1121,1,"Room of Earth::OnMyMobDead";
 	monster "job_wiz",107,98,"Bigfoot",1060,1,"Room of Earth::OnMyMobDead";
 	monster "job_wiz",124,98,"Orc Warrior",1023,1,"Room of Earth::OnMyMobDead";
-	monster "job_wiz",104,86,"Vitata",1176,1,"Room of Earth::OnMyMobDead";
+	monster "job_wiz",104,86,"白蚁",1176,1,"Room of Earth::OnMyMobDead";
 	initnpctimer;
 	end;
 
@@ -1356,7 +1401,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,4,1	script	Room of Earth#Door	66,{
+job_wiz,1,4,1	script	土房#Door	66,{
 OnInit:
 	disablenpc "Room of Earth#Door";
 	end;
@@ -1428,7 +1473,7 @@ OnTimer63000:
 	end;
 }
 
-job_wiz,116,97,0	script	Room of Earth#Failed	-1,16,16,{
+job_wiz,116,97,0	script	土房#Failed	-1,16,16,{
 OnInit:
 	disablenpc "Room of Earth#Failed";
 	end;
@@ -1441,7 +1486,7 @@ OnTouch_:
 
 // Fire Room (Test 2 part 3)
 //==========================================================
-job_wiz,1,5,1	script	Room of Fire	66,{
+job_wiz,1,5,1	script	火房	66,{
 OnInit:
 	disablenpc "Room of Fire";
 	end;
@@ -1534,7 +1579,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,6,1	script	Room of Fire#Door	66,{
+job_wiz,1,6,1	script	火房#Door	66,{
 OnInit:
 	disablenpc "Room of Fire#Door";
 	end;
@@ -1611,7 +1656,7 @@ OnTimer123000:
 	donpcevent "Arena Assistant::OnStart";
 }
 
-job_wiz,46,99,0	script	Room of Fire#Failed	-1,16,16,{
+job_wiz,46,99,0	script	火房#Failed	-1,16,16,{
 OnInit:
 	disablenpc "Room of Fire#Failed";
 	end;
@@ -1621,7 +1666,7 @@ OnTouch_:
 	end;
 }
 
-job_wiz,1,7,1	script	Test Helper#wiz	66,{
+job_wiz,1,7,1	script	测试助手#wiz	66,{
 	end;
 
 OnInit:
@@ -1659,163 +1704,165 @@ OnTimer9000:
 	end;
 }
 
-gef_tower,107,36,4	script	White Dog#wiz	81,{
+gef_tower,107,36,4	script	白狗#wiz	81,{
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
 			cutin "job_wizard_maria01",2;
-			mes "[Maria]";
-			mes "Instead of sticking around here, wouldn't it be better to go out and test how strong you've become?";
+			mes "[玛丽亚]";
+			mes "与其呆在这里，不如出去测试一下你变得多强吧？";
 			next;
-			mes "[Maria]";
-			mes "Don't forget that Wizards grow and improve in power each and every day.";
+			mes "[玛丽亚]";
+			mes "别忘了，法师每天都在成长和提升自己的力量。";
 			close2;
 			cutin "job_wizard_maria01",255;
 			end;
 		}
 		else if (BaseClass == Job_Novice) {
 			cutin "job_wizard_maria01",2;
-			mes "[Dog]";
-			mes "What? Kiddo!";
-			mes "Is a Dog talking so amusing to you?";
+			mes "[狗]";
+			mes "什么？小子！狗会说话对你来说很有趣吗？";
 		}
 		else {
 			cutin "job_wizard_maria02",2;
-			mes "[Dog]";
-			mes "Sheesh...Why would a person that can't even cast a spell a single spell come up here?";
-			mes "*Pfft* If you're that bored, do the world a favor and climb to the top of this building via the outside, then proceed to do some acrobatics if you get there.";
+			mes "[狗]";
+			mes "哎...一个连法术都不会施展的人怎么会来这里？";
+			mes "*哼* 如果你那么无聊，帮帮世界，爬到这栋楼的顶上，";
+			mes "然后如果能到达，就做些杂技吧。";
 		}
 		next;
-		mes "[Dog]";
-		mes "*Bark* Get lost!";
-		mes "I don't have time for people like you!";
+		mes "[狗]";
+		mes "*汪* 滚开！我没时间搭理你这种人！";
 		close2;
 		cutin "job_wizard_maria02",255;
 		end;
 	}
 	if (WIZ_Q == 0) {
 		cutin "job_wizard_maria01",2;
-		mes "[Dog]";
-		mes "Ah...I know what you're about to say. You want to change jobs to a Wizard, right?";
+		mes "[狗]";
+		mes "啊...我知道你想说什么。你想转职成为法师，对吧？";
 		next;
-		mes "[Dog]";
-		mes "Go talk to Catherine. She'll help you.";
+		mes "[狗]";
+		mes "去找凯瑟琳，她会帮助你的。";
 		next;
-		mes "[Dog]";
-		mes "Also, if you would like to know anything about the job change process, I can explain.";
+		mes "[狗]";
+		mes "另外，如果你想了解转职的过程，我可以给你解释。";
 		next;
-		switch(select(".......:A Dog is talking to me...")) {
+		switch(select(".......:一只狗在和我说话...")) {
 		case 1:
-			mes "[Dog]";
-			mes "...*bark*...? What is it?? Why are you looking at me like that?!";
-			mes "Is it your first time seeing a Dog talk?";
+			mes "[狗]";
+			mes "...*汪*...? 你想干什么？？为什么这样看着我？！";
+			mes "这是你第一次见狗说话吗？";
 			next;
-			mes "[Dog]";
-			mes "*Bark* It's not common that you see a Dog talking I suppose. bark~";
-			mes "...Yes i suppose it is a rare site...*grrr*...Stop Gawking for goodness sakes!";
+			mes "[狗]";
+			mes "*汪* 见到会说话的狗可不常见。我想...是个罕见的景象...";
+			mes "*呜*...别再盯着我看了！";
 			next;
-			mes "[Dog]";
-			mes "My name is 'Maria Splodofska'. Just call me 'Maria'.";
-			mes "I'm helping candidates that wish to become Wizards.";
+			mes "[狗]";
+			mes "我叫‘玛丽亚·斯普洛多夫斯卡’。叫我‘玛丽亚’就行。";
+			mes "我在帮助想成为法师的候选人。";
 			next;
 			cutin "job_wizard_maria03",2;
-			mes "[Maria]";
-			mes "*Bark* Well, the reason I became a dog is...I was helping my boyfriend in experimenting to prepare for his Final for his Magic Degree. Well, *Grrrr* he accidentally turned me into a dog.";
-			mes "Theoretically, in a couple months the chemicals should wear off and I should be returned to normal. When exactly, I have no idea?";
+			mes "[玛利亚]";
+			mes "*汪* 我变成狗的原因是...";
+			mes "我在帮助我的男朋友准备他的魔法学位的期末考试。结果，";
+			mes "*呜* 他不小心把我变成了狗。从理论上讲，";
+			mes "几个月后药效应该会消失，我会恢复正常。";
+			mes "具体什么时候，我也不知道。";
 			next;
 			cutin "job_wizard_maria01",2;
-			mes "[Maria]";
-			mes "Well...it doesn't concern you anyways.";
-			mes "Now, where were we.";
+			mes "[玛利亚]";
+			mes "好吧...这与你无关。现在，我们说到哪里了。";
 			next;
 			break;
 		case 2:
 			cutin "job_wizard_maria02",2;
-			mes "[Dog]";
-			mes "*Bark* *bark* *bark* Don't state the obvious! Alright, I know I'm a dog!";
+			mes "[狗]";
+			mes "*汪* *汪* *汪* 别说废话！好吧，我知道我是一只狗！";
 			next;
 			cutin "job_wizard_maria01",2;
-			mes "[Dog]";
-			mes "My name is 'Maria Splodofska'. People call me 'Maria'.";
-			mes "I'm helping little ones like you that wish to become Wizards.";
+			mes "[玛丽亚]";
+			mes "我叫‘玛丽亚·斯普洛多夫斯卡’，人们叫我‘玛丽亚’。";
+			mes "我在帮助像你这样的孩子想成为法师。";
 			next;
 			cutin "job_wizard_maria03",2;
-			mes "[Dog called 'Maria']";
-			mes "The reason I became a dog is...My boyfriend that was experimenting to prepare for the Magic Degree, accidentally turned me into a dog.";
-			mes "Theoretically, in a couple months, the chemicals should wear off and I should be returned to normal. Exactly when, I have no idea?";
+			mes "[玛丽亚]";
+			mes "我变成狗的原因是……我男朋友在准备魔法学位的实验时，";
+			mes "不小心把我变成了狗。从理论上讲，";
+			mes "几个月后药效应该会消失，我会恢复正常。";
+			mes "具体什么时候，我也不知道。";
 			next;
 			cutin "job_wizard_maria02",2;
-			mes "[Dog called 'Maria']";
-			mes "I'm not a 'dog' called 'Maria'!! Oi!! Listen to me!!";
+			mes "[玛丽亚]";
+			mes "我不是‘叫玛丽亚的狗’！！喂！！听我说！！";
 			next;
-			mes "[Dog... 'Maria'...]";
+			mes "[玛丽亚]";
 			mes "..........";
 			next;
-			mes "[Maria]";
-			mes "...*BARK* *BARK* *BARK*... I'm upset, but whatever!! You seem busy so I'll just drop it.";
+			mes "[玛丽亚]";
+			mes "...*汪* *汪* *汪*... 我很生气，但没关系！！";
+			mes "你看起来很忙，我就不说了。";
 			next;
 			break;
 		}
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "Like I said before, to change jobs, talk to Catherine.";
-		mes "She's a new Wizard too.";
+		mes "[玛利亚]";
+		mes "如我之前所说，要换职业，请找凯瑟琳。她也是一名新法师。";
 		next;
-		mes "[Maria]";
-		mes "I can tell you more about the job change process, but I can't hold back a busy person now can I?";
-		mes "What do you think? Should I explain some about whats in store for Mages that wish to become Wizards?";
+		mes "[玛利亚]";
+		mes "我可以告诉你更多关于换职业的流程，";
+		mes "但我不能耽误忙碌的人。你觉得怎么样？";
+		mes "我应该解释一下想成为法师的魔法师们将面临什么吗？";
 		next;
-		switch(select("Yes, please! I would like that.:No, it's ok.:A talking dog...")) {
+		switch(select("好的，请告诉我！我想知道。:不，没关系。:一只会说话的狗…")) {
 		case 1:
 			cutin "job_wizard_maria01",2;
-			mes "[Maria]";
-			mes "OK, I will explain the process for you.";
+			mes "[玛利亚]";
+			mes "好的，我会为你解释这个过程。";
 			next;
-			mes "[Maria]";
-			mes "There are three tests in the job change process.";
-			mes "The first test is collecting magic items.";
+			mes "[玛利亚]";
+			mes "换职业的过程中有三个测试。第一个测试是收集魔法物品。";
 			next;
-			mes "[Maria]";
-			mes "That one begins when you submit an application to Catherine.";
-			mes "She'll either tell you to collect all types of gemstones, or gather stones with attributes.";
+			mes "[玛利亚]";
+			mes "这个测试在你向凯瑟琳提交申请时开始。";
+			mes "她会告诉你收集各种宝石，或者收集具有属性的石头。";
 			next;
-			mes "[Maria]";
-			mes "Second test is a magic quiz,";
-			mes "The gloomy Laurel in the corner is in charge of that part.";
+			mes "[玛利亚]";
+			mes "第二个测试是魔法测验，阴郁的劳雷尔负责这一部分。";
 			next;
-			mes "[Maria]";
-			mes "There are questions about magic, monsters, and Mages.";
-			mes "Out of the 10 questions, if you don't get them all correct, he doesn't let you pass. In other words, you fail...";
+			mes "[玛利亚]";
+			mes "测验中会有关于魔法、怪物和魔法师的问题。在10个问题中，";
+			mes "如果你没有全部答对，他就不会让你通过。";
+			mes "换句话说，你就失败了……";
 			next;
-			mes "[Maria]";
-			mes "Oddly enough, He is in charge of the 3rd test too.";
-			mes "The third test is eliminating monsters.";
+			mes "[玛利亚]";
+			mes "奇怪的是，他也负责第三个测试。第三个测试是消灭怪物。";
 			next;
-			mes "[Maria]";
-			mes "In each room, there are monsters of certain attributes.";
-			mes "You must attack them with the appropriate spells.";
+			mes "[玛利亚]";
+			mes "每个房间里都有特定属性的怪物。";
+			mes "你必须用适当的法术攻击它们。";
 			next;
-			mes "[Maria]";
-			mes "Well, that's all that I can say. Go apply now.";
+			mes "[玛利亚]";
+			mes "好吧，我能说的就这些。快去申请吧。";
 			next;
-			mes "[Maria]";
-			mes "It's better to just try it yourself than to listen to my descriptions.";
+			mes "[玛利亚]";
+			mes "亲自尝试总比听我描述要好。";
 			close2;
 			cutin "job_wizard_maria01",255;
 			warp "gef_dun00",116,102;
 			end;
 		case 2:
-			mes "[Maria]";
-			mes "Really? Ok, then go apply and do your best.";
+			mes "[玛利亚]";
+			mes "真的？好的，那就去申请，尽力而为。";
 			close2;
 			cutin "job_wizard_maria01",255;
 			end;
 		case 3:
 			cutin "job_wizard_maria02",2;
-			mes "[Maria]";
-			mes "I'm not a DOG!! HOOOOWWWWWWLLLLLLL~";
+			mes "[玛利亚]";
+			mes "我不是狗！！嗷嗷嗷嗷嗷~";
 			next;
-			mes "[Maria]";
-			mes "Dang it! I hope you FAIL!! Go get lost!!";
+			mes "[玛利亚]";
+			mes "真是的！我希望你失败！！快去迷路吧！！";
 			close2;
 			cutin "job_wizard_maria01",255;
 			warp "gef_dun00",116,102;
@@ -1824,149 +1871,144 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 	}
 	else if (WIZ_Q == 1) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "You seem lost...";
-		mes "You've applied, and now you're looking for the items right?";
+		mes "[玛利亚]";
+		mes "你似乎迷路了……你已经申请了，现在在找物品，对吧？";
 		next;
-		mes "[Maria]";
-		mes "But since this is only the first test, don't depend on others.";
-		mes "Complete it yourself. Thats the best way.";
+		mes "[玛利亚]";
+		mes "但既然这只是第一个测试，不要依赖他人。";
+		mes "自己完成它才是最好的方法。";
 		next;
-		mes "[Maria]";
-		mes "From what I've heard, you have to gather gemstones...";
-		mes "I can't help you directly, but I can give you some advice.";
+		mes "[玛利亚]";
+		mes "我听说你需要收集宝石……我不能直接帮助你，";
+		mes "但我可以给你一些建议。";
 		next;
-		mes "[Maria]";
-		mes "First, to get Red Gemstones, go to Culverts in Prontera.";
-		mes "You can obtain them from the Thief Bugs and Thief Bug eggs found plentiful there.";
+		mes "[玛利亚]";
+		mes "首先，要获得红宝石，去普隆德拉的下水道。";
+		mes "你可以从那里的盗贼虫和盗贼虫蛋中获得它们。";
 		next;
-		mes "[Maria]";
-		mes "Yellow Gemstones are easy to find in the desert.";
-		mes "Condors, Picky's, and sometimes monsters like Golem's drop them.";
+		mes "[玛利亚]";
+		mes "黄色宝石在沙漠中很容易找到。秃鹰、挑剔的怪物，";
+		mes "有时像石头人这样的怪物会掉落它们。";
 		next;
-		mes "[Maria]";
-		mes "And...*woof* to get Blue Gemstones. Try going to the Byalan Dungeons.";
-		mes "Cornutus, Vadon, and monsters like Mars can drop those Gems.";
+		mes "[玛利亚]";
+		mes "还有……*汪*要获得蓝宝石，试着去比亚兰地牢。角头怪、";
+		mes "瓦顿和像火星这样的怪物可以掉落这些宝石。";
 		next;
-		mes "[Maria]";
-		mes "Of course you can get blue Gemstones at the magic shop here in town...";
-		mes "But, finding them yourself would be much more rewarding and helpful later in the test.";
+		mes "[玛利亚]";
+		mes "当然，你也可以在镇上的魔法商店买到蓝宝石……但自己找到";
+		mes "它们会更有成就感，对后面的测试也更有帮助。";
 		next;
-		mes "[Maria]";
-		mes "Anyways, try your best.";
-		mes "This is the basics of being a Wizard.";
+		mes "[玛利亚]";
+		mes "无论如何，尽力而为。这是成为法师的基础。";
 		close2;
 		cutin "job_wizard_maria01",255;
 		end;
 	}
 	else if (WIZ_Q == 2) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "You seem lost...";
-		mes "You've applied, and now you're looking for the items right?";
+		mes "[玛利亚]";
+		mes "你看起来迷茫……你已经申请了，现在在找物品，对吧？";
 		next;
-		mes "[Maria]";
-		mes "But since this is only the first test, don't depend on others for help.";
-		mes "Complete it yourself, thats the best way.";
+		mes "[玛利亚]";
+		mes "但这是第一次测试，不要依赖他人帮助。自己完成，";
+		mes "这是最好的方式。";
 		next;
-		mes "[Maria]";
-		mes "From what I've heard, you have to gather elemental stones...";
-		mes "I can't help you directly, but I can give you some advice.";
+		mes "[玛利亚]";
+		mes "我听说你需要收集元素石……我不能直接帮助你，";
+		mes "但可以给你一些建议。";
 		next;
-		mes "[Maria]";
-		mes "Well, you can find the Crystal Blue in Byalan Dungeon.";
-		mes "Cornutus, Kukre, Marina, Vadon...these monsters drop them frequently.";
+		mes "[玛利亚]";
+		mes "你可以在比亚兰地下城找到水晶蓝。贝壳魔灵、库克雷、";
+		mes "海葵、螃蟹……这些怪物经常掉落。";
 		next;
-		mes "[Maria]";
-		mes "You can get Green Live from insect type monsters.";
-		mes "Try hunting monsters like Horn, Mantis, or Vitata.";
+		mes "[玛利亚]";
+		mes "你可以从昆虫类怪物那里获得绿色生命。试着猎杀像Horn、";
+		mes "螳螂或白蚁这样的怪物。";
 		next;
-		mes "[Maria]";
-		mes "Oh and *woof*, Red Blood. I heard you can get a lot of those from...";
-		mes "Elder Willows, Metallers or Scorpions found in the desert would work well too.";
+		mes "[玛利亚]";
+		mes "哦，还有*汪*，红血。我听说你可以从……老柳树、";
+		mes "金属怪或沙漠中的蝎子那里获得很多。";
 		next;
-		mes "[Maria]";
-		mes "For Wind of Verdue. Hornet, Stainer, Steel Chonchon.";
-		mes "If you try just a bit, you can get them really easily.";
+		mes "[玛利亚]";
+		mes "关于风之绿意，蜂兵、斯泰纳、钢铁苍蝇。";
+		mes "如果你稍微努力一下，就能很容易地得到它们。";
 		next;
-		mes "[Maria]";
-		mes "But anyways, always try your best.";
-		mes "It's the basics of being a Wizard.";
+		mes "[玛利亚]";
+		mes "但无论如何，始终尽力而为。这是成为法师的基础。";
 		close2;
 		cutin "job_wizard_maria01",255;
 		end;
 	}
 	else if (WIZ_Q == 3) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "Don't be too relieved just after the first test.";
-		mes "Try your best, as you still have two more tests to go.";
+		mes "[玛利亚]";
+		mes "不要在第一次测试后就太放松。尽力而为，";
+		mes "你还有两次测试要完成。";
 		close2;
 		cutin "job_wizard_maria01",255;
 		end;
 	}
 	else if (WIZ_Q == 4) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "ZzzzZzzzZzzz...";
+		mes "[玛利亚]";
+		mes "ZzzzZzzzZzzz……";
 		next;
 		cutin "job_wizard_maria02",2;
-		mes "[Maria]";
-		mes "*wimper*...Blizadris...you suck...Zzz...";
+		mes "[玛利亚]";
+		mes "*呜咽*……布里札德里斯……你真糟糕……Zzz……";
 		close2;
 		cutin "job_wizard_maria02",255;
 		end;
 	}
 	else if (WIZ_Q == 5) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "Oh, you're doing well aren't you?";
+		mes "[玛利亚]";
+		mes "哦，你做得不错，不是吗？";
 		next;
-		mes "[Maria]";
-		mes "Well, try your best to the very end.";
-		mes "Laurel is waiting.";
+		mes "[玛利亚]";
+		mes "好吧，尽力做到最后。劳雷尔在等你。";
 		close2;
 		cutin "job_wizard_maria01",255;
 		end;
 	}
 	else if (WIZ_Q == 6) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "*BARK*...you gave up?";
-		mes "*Sigh*...How can you become a Wizard with such a weak heart?";
+		mes "[玛利亚]";
+		mes "*汪*……你放弃了？";
+		mes "*叹气*……你怎么能以如此脆弱的心态成为法师？";
 		next;
-		mes "[Maria]";
-		mes "You know that each room has monsters of the same attribute...";
-		mes "If you're a person that deals with magic, you need to know about the different spells.";
+		mes "[玛利亚]";
+		mes "你知道每个房间都有相同属性的怪物……如果你是一个使用魔";
+		mes "法的人，你需要了解不同的法术。";
 		next;
-		mes "[Maria]";
-		mes "You also need to learn how to counter monsters that use skills.";
-		mes "Your best bet is to kill the monsters that are attacking you first.";
+		mes "[玛利亚]";
+		mes "你还需要学习如何对抗使用技能的怪物。";
+		mes "你最好的选择是先杀掉攻击你的怪物。";
 		next;
-		mes "[Maria]";
-		mes "*Grrr* Anyways, continue the test.";
-		mes "Don't have a weak mind, *woof* and go back! *Bark* *Bark* Right this moment! *BARK*";
+		mes "[玛利亚]";
+		mes "*咆哮*无论如何，继续测试。不要有脆弱的心态，*汪*，";
+		mes "马上回去！*汪* *汪* 现在就去！*汪*";
 		close2;
 		cutin "job_wizard_maria01",255;
 		end;
 	}
 	else if (WIZ_Q == 7) {
 		cutin "job_wizard_maria01",2;
-		mes "[Maria]";
-		mes "As I thought, I knew you'd be able to do it, I could smell it in yah! *Woof*";
-		mes "Now I can call you Wizard.";
+		mes "[玛利亚]";
+		mes "果然，我知道你能做到，我能闻到你的气息！";
+		mes "*汪*现在我可以称呼你为法师了。";
 		next;
-		mes "[Maria]";
-		mes "Congratulations. Always give your best at everything, no matter what.";
+		mes "[玛利亚]";
+		mes "恭喜你。无论如何，始终全力以赴。";
 		close2;
 		cutin "job_wizard_maria01",255;
 		end;
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.1 Now using the initnpctimer command, donpcevent,
 //= and new waitingroom event commands.  No more addtimer spamming.
 //= No longer have to talk to the npc to take the test.  Just enter the chat room.

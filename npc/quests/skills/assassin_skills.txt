@@ -1,20 +1,20 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Assassin Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Venom Knife, Sonic Acceleration
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.5 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-in_moc_16,14,27,5	script	Assassin#realman	884,{
+in_moc_16,14,27,5	script	刺客#realman	884,{
 	if (BaseJob == Job_Assassin && ASSN_SK2 == 1) {
 		if (getskilllv("AS_VENOMKNIFE") == 0) {
 			mes "[基尔廷]";
@@ -286,7 +286,7 @@ in_moc_16,14,27,5	script	Assassin#realman	884,{
 	}
 }
 
-in_moc_16,23,27,5	script	Assassin#realgirl	885,{
+in_moc_16,23,27,5	script	刺客#realgirl	885,{
 	if (BaseJob == Job_Assassin && ASSN_SK == 7) {
 		if (getskilllv("AS_SONICACCEL") == 0) {
 			mes "[艾斯米尔]";
@@ -736,61 +736,41 @@ in_moc_16,23,27,5	script	Assassin#realgirl	885,{
 	}
 }
 
-in_sphinx2,259,213,0	script	Old Coffin#qsk_as	-1,7,8,{
+in_sphinx2,259,213,0	script	古老的棺材#qsk_as	-1,7,8,{
 OnTouch_:
 	if (ASSN_SK == 2) {
-		mes "^3355FFIt's an ancient coffin";
-		mes "with a broken lid that";
-		mes "is slightly ajar. You";
-		mes "momentarily catch a glint";
-		mes "of something shining inside.^000000";
+		mes "^3355FF这是一个古老的棺材，盖子破损并微微开启。";
+		mes "你瞬间看到里面闪烁着什么东西。^000000";
 		specialeffect EF_CONE;
 		next;
 		while(1) {
-			switch(select("Put your hand inside:Inspect the coffin's opening:Lift the lid:Turn the coffin upside down:Ignore it")) {
+			switch(select("把手放进去:检查棺材的开口:抬起盖子:把棺材翻过来:忽视它")) {
 			case 1:
-				mes "^3355FFYou carefully put your";
-				mes "hand inside the coffin";
-				mes "and try to retrieve the";
-				mes "shining object that";
-				mes "you had glimpsed.";
-				mes "...............................^000000";
+				mes "^3355FF你小心翼翼地把手放进棺材里，";
+				mes "试图取出你刚才看到的闪亮物体";
+				mes "。...............................^000000";
 				next;
-				mes "^3355FFSomething inside";
-				mes "the coffin bit your";
-				mes "hand really hard!^000000";
+				mes "^3355FF棺材里的东西狠狠地咬了你的手！^000000";
 				sc_start SC_Poison,30000,0;
 				sc_start SC_Bleeding,10000,0;
 				emotion ET_HUK, playerattached();
 				close;
 			case 2:
-				mes "^3355FFYou try to peek";
-				mes "inside the coffin";
-				mes "through the gap";
-				mes "between the coffin's";
-				mes "edge and the lid.";
-				mes "...............................^000000";
+				mes "^3355FF你试着透过棺材边缘和盖子之间的缝隙窥视里面";
+				mes "。...............................^000000";
 				next;
-				mes "^3355FFYou're barely able to";
-				mes "perceive that something";
-				mes "is squirming inside the";
-				mes "coffin, but it's far too dark";
-				mes "to see anything else.^000000";
+				mes "^3355FF你勉强能感觉到棺材里有什么东西在扭动，";
+				mes "但太黑了看不清其他东西。^000000";
 				sc_start SC_Blind,30000,0;
 				next;
 				break;
 			case 3:
-				mes "^3355FFYou don't have the";
-				mes "strength to move";
-				mes "something as heavy";
-				mes "as this coffin's lid...^000000";
+				mes "^3355FF你没有力量移动这个棺材盖这么重的东西……^000000";
 				sc_start SC_Curse,30000,0;
 				next;
 				break;
 			case 4:
-				mes "^3355FFYou don't have the";
-				mes "strength to turn this";
-				mes "coffin upside down.^000000";
+				mes "^3355FF你没有力量把这个棺材翻过来。^000000";
 				next;
 				break;
 			case 5:
@@ -800,80 +780,54 @@ OnTouch_:
 	}
 }
 
-in_sphinx2,212,267,0	script	Old Coffin#qsk_as2	-1,5,6,{
+in_sphinx2,212,267,0	script	古老的棺材#qsk_as2	-1,5,6,{
 OnTouch_:
 	if (ASSN_SK == 2) {
-		mes "^3355FFIt's an ancient coffin";
-		mes "with a broken lid that";
-		mes "is slightly ajar. You";
-		mes "momentarily catch a glint";
-		mes "of something shining inside.^000000";
+		mes "^3355FF这是一个古老的棺材，盖子破损并微微开启。";
+		mes "你瞬间看到里面闪烁着什么东西。^000000";
 		specialeffect EF_CONE;
 		next;
 		while(1) {
-			switch(select("Put your hand inside:Inspect the coffin's opening:Lift the lid:Turn the coffin upside down:Ignore it")) {
+			switch(select("把手伸进去:检查棺材的开口:抬起盖子:把棺材翻过来:忽略它")) {
 			case 1:
-				mes "^3355FFYou carefully put your";
-				mes "hand inside the coffin";
-				mes "and try to retrieve the";
-				mes "shining object that";
-				mes "you had glimpsed.";
-				mes "...............................^000000";
+				mes "^3355FF你小心翼翼地把手伸进棺材，";
+				mes "试图取出你看到的闪亮物体";
+				mes "。...............................^000000";
 				next;
 				if (rand(1,3) != 3) {
-					mes "^3355FFYou carefully put your";
-					mes "hand inside the coffin";
-					mes "and try to retrieve the";
-					mes "shining object that";
-					mes "you had glimpsed.";
-					mes "...............................^000000";
+					mes "^3355FF你小心翼翼地把手伸进棺材，";
+					mes "试图取出你看到的闪亮物体";
+					mes "。...............................^000000";
 					next;
-					mes "^3355FFSomething inside";
-					mes "the coffin bit your";
-					mes "hand really hard!^000000";
+					mes "^3355FF棺材里的东西狠狠地咬了你的手！^000000";
 					sc_start SC_Poison,30000,0;
 					sc_start SC_Bleeding,10000,0;
 					emotion ET_HUK, playerattached();
 					close;
 				}
 				else {
-					mes "^3355FFYour fingers manage";
-					mes "to find a solid object";
-					mes "that you pull out of the";
-					mes "coffin. You have obtained";
-					mes "a Sapphire for Esmille.^000000";
+					mes "^3355FF你的手指找到一个坚固的物体，你把它从棺材里拉了出来。";
+					mes "你获得了一个用于艾斯米尔的蓝宝石。^000000";
 					set ASSN_SK,5;
 					getitem 726,1; //Blue_Jewel
 					close;
 				}
 			case 2:
-				mes "^3355FFYou try to peek";
-				mes "inside the coffin";
-				mes "through the gap";
-				mes "between the coffin's";
-				mes "edge and the lid.";
-				mes "...............................^000000";
+				mes "^3355FF你试图通过棺材边缘和盖子之间的缝隙窥视里面";
+				mes "。...............................^000000";
 				next;
-				mes "^3355FFYou're barely able to";
-				mes "perceive that something";
-				mes "is squirming inside the";
-				mes "coffin, but it's far too dark";
-				mes "to see anything else.^000000";
+				mes "^3355FF你勉强能感觉到棺材里有东西在扭动，";
+				mes "但太黑了看不清其他东西。^000000";
 				sc_start SC_Blind,30000,0;
 				next;
 				break;
 			case 3:
-				mes "^3355FFYou don't have the";
-				mes "strength to move";
-				mes "something as heavy";
-				mes "as this coffin's lid...^000000";
+				mes "^3355FF你没有力量移动这个棺材盖这么重的东西……^000000";
 				sc_start SC_Curse,30000,0;
 				next;
 				break;
 			case 4:
-				mes "^3355FFYou don't have the";
-				mes "strength to turn this";
-				mes "coffin upside down.^000000";
+				mes "^3355FF你没有力量把这个棺材翻过来。^000000";
 				next;
 				break;
 			case 5:
@@ -883,34 +837,24 @@ OnTouch_:
 	}
 }
 
-in_sphinx2,13,163,0	script	Stone Statue#qsk_as	-1,7,7,{
+in_sphinx2,13,163,0	script	石像#qsk_as	-1,7,7,{
 OnTouch_:
 	if (ASSN_SK == 3) {
 		specialeffect EF_CONE;
-		mes "^3355FFThis ancient stone statue";
-		mes "is covered with cracks and";
-		mes "looks close to falling apart.";
-		mes "The glimmer of a shining object";
-		mes "peers out from beneath one of";
-		mes "the feet. The ground appears";
-		mes "soft enough to dig through...^000000";
+		mes "^3355FF这个古老的石像布满裂缝，看起来快要散架了。";
+		mes "一个闪亮物体的光芒从它的脚下透出。";
+		mes "地面看起来足够柔软，可以挖掘……^000000";
 		specialeffect EF_CONE;
 		next;
-		if (select("Dig to retrieve the shining object:Ignore it") == 1) {
-			mes "^3355FFAs your fingers dig into";
-			mes "the soft ground, it emits^000000";
+		if (select("挖掘以取出闪亮物体:忽略它") == 1) {
+			mes "^3355FF当你的手指挖入柔软的土壤时，它释放出^000000";
 			if (rand(1,3) != 3){
-				mes "^3355FFa yellow gas that clouds";
-				mes "your senses and briefly";
-				mes "knocks you unconscious.^000000";
+				mes "^3355FF一种黄色气体，模糊了你的感官，并让你短暂失去意识。^000000";
 				sc_start SC_Sleep,30000,0;
 				close;
 			}
-			mes "^3355FFa yellow gas. However, you";
-			mes "hold your breath in and expel";
-			mes "all gas in your lungs in time";
-			mes "to escape its effects. You've";
-			mes "retrieved a Ruby for Esmille.^000000";
+			mes "^3355FF一种黄色气体。然而，你屏住呼吸，及时将肺中的气体排出，";
+			mes "逃过了它的影响。你获得了一个用于艾斯米尔的红宝石。^000000";
 			set ASSN_SK,5;
 			getitem 723,1; //Cardinal_Jewel
 		}
@@ -918,34 +862,24 @@ OnTouch_:
 	}
 }
 
-in_sphinx2,13,146,0	script	Stone Statue#qsk_as2	-1,7,7,{
+in_sphinx2,13,146,0	script	石像#qsk_as2	-1,7,7,{
 OnTouch_:
 	if (ASSN_SK == 3) {
 		specialeffect EF_CONE;
-		mes "^3355FFThis ancient stone statue";
-		mes "is covered with cracks and";
-		mes "looks close to falling apart.";
-		mes "The glimmer of a shining object";
-		mes "peers out from beneath one of";
-		mes "the feet. The ground appears";
-		mes "soft enough to dig through...^000000";
+		mes "^3355FF这个古老的石像布满裂缝，看起来快要散架了。";
+		mes "一个闪亮物体的光芒从它的脚下透出。";
+		mes "地面看起来足够柔软，可以挖掘……^000000";
 		specialeffect EF_CONE;
 		next;
-		if (select("Dig to retrieve the shining object:Ignore it") == 1) {
-			mes "^3355FFAs your fingers dig into";
-			mes "the soft ground, it emits^000000";
+		if (select("挖掘以取出闪亮物体:忽略它") == 1) {
+			mes "^3355FF当你的手指深入柔软的土地时，它发出^000000";
 			if (rand(1,3) != 3) {
-				mes "^3355FFa yellow gas that clouds";
-				mes "your senses and briefly";
-				mes "knocks you unconscious.^000000";
+				mes "^3355FF一种黄色气体，模糊了你的感官，短暂地让你失去意识。^000000";
 				sc_start SC_Sleep,30000,0;
 				close;
 			}
-			mes "^3355FFa yellow gas. However, you";
-			mes "hold your breath in and expel";
-			mes "all gas in your lungs in time";
-			mes "to escape its effects. Sadly,";
-			mes "all you found was broken glass.^000000";
+			mes "^3355FF一种黄色气体。然而，你屏住呼吸，及时将肺中的气体排出，";
+			mes "逃过了它的影响。可惜，你只发现了破碎的玻璃。^000000";
 			emotion ET_HUK, playerattached();
 		}
 		close;
@@ -986,15 +920,15 @@ OnTouch_:
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

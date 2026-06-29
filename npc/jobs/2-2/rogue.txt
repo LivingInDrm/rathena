@@ -18,12 +18,12 @@
 //= 2.4c Corrected a Typo error ";;" and a typo error with "rouge". (bugreport:909) [Samuray22]
 //= 2.5 Added dummy "OnMyMobDead" labels. (bugreport:1100) [L0ne_W0lf]
 //= 2.6 Fixed a few bugs in the Rogue Guildsman. [L0ne_W0lf]
-//= 2.7 Fixed a bug on Markie question 5, bugreport:1600 [Brainstorm]
+//= 2.7 Fixed a bug on 玛琪 question 5, bugreport:1600 [Brainstorm]
 //= 2.8 Moved "Thug" to Morocc Ruins. [L0ne_W0lf]
 //= 2.9 Added Quest Log commands. [Kisuka]
 //============================================================
 
-moc_ruins,86,103,1	script	Thug#rg	118,{
+moc_ruins,86,103,1	script	流氓#rg	118,{
 	mes "[流氓]";
 	mes "*叹气...*";
 	mes "生活是什么？";
@@ -54,135 +54,125 @@ moc_ruins,86,103,1	script	Thug#rg	118,{
 	close;
 }
 
-in_rogue,363,122,4	script	Rogue Guildsman#rg	747,{
+in_rogue,363,122,4	script	盗贼公会成员#rg	747,{
 	if (Upper == 1) {
-		mes "[Markie]";
-		mes "Eh? You...you...?!";
-		mes "Hey, haven't we met before?";
+		mes "[马克]";
+		mes "嗯？你...你...？！嘿，我们之前见过吗？";
 		next;
-		mes "[Markie]";
-		mes "..............";
-		mes "Awww, ^FF0000I am sorry^000000! I think I misunderstood you from someone I know.";
+		mes "[马克]";
+		mes ".............. 哎呀，^FF0000我很抱歉^000000！";
+		mes "我想我把你误认为我认识的人了。";
 		next;
-		mes "[Markie]";
-		mes ".......";
-		mes "........It is strange though. Umm.";
+		mes "[马克]";
+		mes "....... ........这很奇怪呢。嗯。";
 		next;
-		mes "[Markie]";
-		mes "I never misunderstand people...oh well, be safe anyway!";
+		mes "[马克]";
+		mes "我从来不误解别人...哦，好吧，祝你平安！";
 		close;
 	}
 	if (BaseJob == Job_Thief) {
 		if (SkillPoint) {
-			mes "[Rogue Guildsman]";
-			mes "Yo, what are you doin'?!";
-			mes "You can't change your job if you got unused skill points, so use 'em all up. You bettah check yo-self before you wreck yo-self.";
+			mes "[盗贼公会成员]";
+			mes "嘿，你在干什么？！如果你还有未使用的技能点，";
+			mes "就不能换职业，赶紧用完它们。";
+			mes "你最好在搞砸之前检查一下自己。";
 			close;
 		}
 		if (JobLevel > 39) {
 			if (ROGUE_Q == 0) {
-				mes "[Rogue Guildsman]";
-				mes "So what's a kid";
-				mes "like you doin' here?";
+				mes "[盗贼公会成员]";
+				mes "那么像你这样的孩子在这里干什么？";
 				if (Sex == SEX_MALE) {
-					mes "Oh, I get it now...";
-					mes "The widdle boy wants";
+					mes "哦，我明白了...小家伙想要";
 				}
 				else {
-					mes "Oh, I see...";
-					mes "Lil' cutie wants ";
+					mes "哦，我明白了...小可爱想要";
 				}
-				mes "to be a ^800000Rogue^000000.";
+				mes "成为一个^800000盗贼^000000。";
 				next;
-				mes "[Rogue Guildsman]";
-				mes "Eh, nice meetin' you, I guess. I'm Markie, and I do work for the Rogue Guild, a philanthro-- *ahem* a ^800000feelanthropist^000000 group, as you can see. So what's your name?";
+				mes "[盗贼公会成员]";
+				mes "嘿，很高兴见到你，我是马克，我在盗贼公会工作，";
+				mes "一个慈善-- *咳* ^800000慈善家^000000团体，如你所见。";
+				mes "那么你叫什么名字？";
 				next;
-				mes "[Markie]";
+				mes "[玛基]";
 				mes "..." + strcharinfo(0) + "?";
-				mes "Heh heh! Cool name.";
-				mes "If it was dorky, we'd";
-				mes "make you change it,";
-				mes "so you're in luck.";
+				mes "嘿嘿！好名字。如果是个傻名字，";
+				mes "我们会让你改的，所以你真幸运。";
 				next;
-				mes "[Markie]";
-				mes "So why you wanna join up with the Rogues? I guess you gave me your real name, so you'd be an honest Rogue. Not many of those around, heh heh~";
+				mes "[马克]";
+				mes "那么你为什么想加入盗贼公会？我想你给了我你的真名，";
+				mes "所以你会是个诚实的盗贼。这样的盗贼可不多见，嘿嘿~";
 				next;
-				mes "[Markie]";
-				mes "Rule number 1 for Rogues...";
-				mes "Never give out your real identity to most people, most of the time. It's just a little backup measure we like to use.";
+				mes "[马克]";
+				mes "盗贼的第一条规则...";
+				mes "大多数时候不要把你的真实身份告诉别人。";
+				mes "这只是我们喜欢用的小备份措施。";
 				next;
-				mes "[Markie]";
-				mes "Right. I'm officially accepting your application, so now you gotta take a test. Don't sweat it, this first one is real simple.";
+				mes "[马克]";
+				mes "好的。我正式接受你的申请，所以现在你得参加一个测试。";
+				mes "别紧张，这第一个测试很简单。";
 				next;
-				mes "[Markie]";
-				mes "Alright...";
-				mes "Let's get started!";
+				mes "[马克]";
+				mes "好了...让我们开始吧！";
 				next;
 			}
 			else if (ROGUE_Q == 1) {
-				mes "[Markie]";
-				mes "You again?";
-				mes "Okay, you probably screwed up last time 'cuz you were way too nervous. So just chill and pass";
-				mes "this test, okay?";
+				mes "[马克]";
+				mes "又是你？好吧，你上次可能是因为太紧张搞砸了。所以放轻松，";
+				mes "顺利通过这个测试，好吗？";
 				next;
 			}
 			else if (ROGUE_Q == 2) {
-				mes "[Markie]";
-				mes "Go talk to Smith. His test might be pretty hard. He's one of the guys who makes sure that people pay up their debts to us. So yeah, he might be a bit of a hard case.";
+				mes "[马克]";
+				mes "去找史密斯。他的测试可能会很难。";
+				mes "他是确保人们向我们还债的人之一。所以是的，";
+				mes "他可能会有点难对付。";
 				next;
-				mes "[Markie]";
-				mes "Yeah...";
-				mes "That guy can be pretty anal, but we need a guy like him in our guild. Anyway, be careful. Lots of luck to you, pal.";
+				mes "[马克]";
+				mes "是啊...那家伙可能会很严格，";
+				mes "但我们需要像他这样的人在公会里。无论如何，小心点。";
+				mes "祝你好运，朋友。";
 				close;
 			}
 			else if (ROGUE_Q > 2 && ROGUE_Q < 16) {
-				mes "[Markie]";
-				mes "Hey yo...";
-				mes "Do your best.";
+				mes "[马克]";
+				mes "嘿，努力点。";
 				next;
-				mes "[Markie]";
-				mes "Heh heh...";
-				mes "Fresh meat. This'll be";
-				mes "a cinch to--Wait! Er, I wasn't talkin' about you! I meant the other fresh meat~";
+				mes "[马克]";
+				mes "嘿嘿... 新鲜的肉。这对我来说简直是小菜一碟——等等！呃，";
+				mes "我不是在说你！我是说其他的新鲜肉~";
 				close;
 			}
 			else if (ROGUE_Q == 16 || ROGUE_Q == 17) {
 				changequest 2026,2027;
-				mes "[Markie]";
+				mes "[马克]";
 				if (ROGUE_Q == 16) {
-					mes "Oh hey, it's you!";
-					mes "You did a good job, guy.";
-					mes "Now, lemme change your";
-					mes "job to Rogue. You earned it!";
+					mes "哦，嘿，是你！你做得很好，伙计。现在，";
+					mes "让我把你的职业改为盗贼。你值得拥有！";
 					next;
-					mes "[Markie]";
-					mes "Congrats~!";
-					mes "You look";
-					mes "sooo dope!";
+					mes "[马克]";
+					mes "恭喜~！你看起来真酷！";
 				}
 				else {
-					mes "Oh! It's you!";
-					mes "You were actually able to put up with that guy? Good stuff! Must've had a rough time collect all those items, eh?";
+					mes "哦！是你！你居然能忍受那个家伙？不错！";
+					mes "收集那些物品一定很辛苦吧？";
 					next;
-					mes "[Markie]";
-					mes "Hey hey~";
-					mes "Congrats!";
-					mes "You've been";
-					mes "doin' a great job~";
+					mes "[马克]";
+					mes "嘿嘿~ 恭喜！你做得很棒~";
 				}
 				set .@jlevel,JobLevel;
 				callfunc "Job_Change",Job_Rogue;
 				callfunc "F_ClearJobVar";
 				completequest 2027;
 				next;
-				mes "[Markie]";
-				mes "Now...";
-				mes "It's time";
-				mes "for me to make";
-				mes "a speech~ *Ahem*";
+				mes "[马克]";
+				mes "现在... 是我发表演讲的时候了~ *咳咳*";
 				next;
-				mes "[Markie]";
-				mes "Enjoy your freedom as a Rogue. Just remember that you gotta be free and responsible at the same time. So treat other guys the way you wanna be treated, kay? Alright, seeya round.";
+				mes "[马克]";
+				mes "享受作为盗贼的自由吧。只要记住，";
+				mes "你必须同时自由和负责任。所以要像对待自己一样对待别人，";
+				mes "明白吗？好吧，回见。";
 				close2;
 				if (.@jlevel == 50) {
 					getitem 1220,1; //Gladius_
@@ -191,138 +181,134 @@ in_rogue,363,122,4	script	Rogue Guildsman#rg	747,{
 				}
 				end;
 			}
-			if (select("I'm ready.:Hold on, I need to get ready!") == 2) {
-				mes "[Markie]";
-				mes "Get ready...?";
-				mes "Fine, fine.";
-				mes "Take your sweet";
-				mes "time, why don't you?";
-				mes "But hurry up and";
-				mes "come back, got it?";
+			if (select("我准备好了。:等一下，我需要准备一下！") == 2) {
+				mes "[马克]";
+				mes "准备好...? 好吧，好吧。你慢慢来，为什么不呢？";
+				mes "但快点回来，明白了吗？";
 				close;
 			}
 			next;
-			mes "[Markie]";
-			mes "Listen carefully, and";
-			mes "pick the right answer.";
-			mes "Capish? Now, lemme";
-			mes "read these questions...";
+			mes "[马克]";
+			mes "仔细听，选对答案。明白了吗？现在，让我来读这些问题...";
 			next;
 			switch(rand(1,3)) {
 			case 1:
-				mes "[Markie]";
-				mes "1. Choose the skill necessary for learning ^880000Stalk^000000.";
+				mes "[马克]";
+				mes "1. 选择学习 ^880000潜行^000000 所需的技能。";
 				next;
-				if (select("^880000Hiding^000000:^880000Steal^000000:^880000Improve Dodge^000000:^880000Bash^000000") == 1)
+				if (select("^880000潜行^000000:^880000偷窃^000000:^880000提高闪避^000000:^880000猛击^000000") == 1)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "2. In comparison to the Merchant's Level 10 ^880000Discount^000000 skill, how much more of a discount, in terms of percent, can a Rogue get with Level 10 ^880000Haggle^000000 skill?";
+				mes "[马克]";
+				mes "2. 与商人的10级 ^880000折扣^000000 技能相比，";
+				mes "盗贼在10级 ^880000讨价还价^000000 技能下能获得多少更多的折扣";
+				mes "，按百分比计算？";
 				next;
 				if (select("3 %:2 %:1 %:0 %") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "3. What is the correct description for the skill, ^880000Mug^000000?";
+				mes "[马克]";
+				mes "3. ^880000抢劫^000000 技能的正确描述是什么？";
 				next;
-				if (select("Steal items from players:Steal items from monsters:Steal Zeny from monsters:Steal Zeny from players") == 3)
+				if (select("从玩家那里偷取物品:从怪物那里偷取物品:从怪物那里偷取Zeny:从玩家那里偷取Zeny") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "4. How many Rogues does it require to activate the skill, ^880000Slyness^000000?";
+				mes "[马克]";
+				mes "4. 激活技能 ^880000狡诈^000000 需要多少个盗贼？";
 				next;
-				if (select("1 Rogues + 2 Assassin:1 Thief + 2 Rogue:4 Thieves:2 Rogues") == 4)
+				if (select("1个盗贼 + 2个刺客:1个小偷 + 2个盗贼:4个小偷:2个盗贼") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "5. Choose the skill that you can learn at Level 5 ^880000Divest Helm^000000.";
+				mes "[马克]";
+				mes "5. 选择在5级可以学习的技能 ^880000剥夺头盔^000000。";
 				next;
-				if (select("^880000Envenom^000000:^880000Strip Tease^000000:^880000Venom Splasher^000000:^880000Divest Shield^000000") == 4)
+				if (select("^880000毒药^000000:^880000脱衣舞^000000:^880000毒液飞溅^000000:^880000剥夺盾牌^000000") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "6. Choose the skill which allows its user to move while hiding.";
+				mes "[马克]";
+				mes "6. 选择允许用户在隐藏时移动的技能。";
 				next;
-				if (select("^880000Hiding^000000:^880000Back Slide^000000:^880000Stalk^000000:^880000Sand Attack^000000") == 3)
+				if (select("^880000潜行^000000:^880000后退滑动^000000:^880000潜行^000000:^880000沙攻击^000000") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "7. Choose the card that increases the accuracy rate of its owner.";
+				mes "[马克]";
+				mes "7. 选择能提高拥有者命中率的卡片。";
 				next;
-				if (select("Andre Card.:Familiar Card.:Mummy Card.:Marina Card.") == 3)
+				if (select("安德烈卡片。:熟悉卡片。:木乃伊卡片。:玛丽娜卡片。") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "8. Choose the monster that receives more damage when it's attacked by a weapon with the Vadon card (20 % more damage on Fire property).";
+				mes "[玛琪]";
+				mes "8. 选择受到带有瓦东卡片的武器攻击时受到更多伤害的怪";
+				mes "物（火属性增加20%伤害）。";
 				next;
-				if (select("Vadon:Deviruchi:Elder Willow:Baphomet") == 3)
+				if (select("瓦东:德维鲁奇:老柳树:巴风特") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "9. How much SP does the skill ^880000Double Attack^000000 require when used with a Dagger?";
+				mes "[玛琪]";
+				mes "9. 使用匕首时，技能^880000双重攻击^000000需要多少SP？";
 				next;
-				if (select("15:Passive skill, no SP required.:Passive skill, 10 SP:54") == 2)
+				if (select("15:被动技能，无需SP:被动技能，10 SP:54") == 2)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "10. Choose the most efficient dagger to use in the Byalan Dungeon.";
+				mes "[玛琪]";
+				mes "10. 选择在比亚兰地下城中使用的最有效的匕首。";
 				next;
-				if (select("Wind Main-Gauche:Ice Main-Gauche:Earth Main-Gauche:Fire Main-Gauche") == 1)
+				if (select("风主手:冰主手:土主手:火主手") == 1)
 					set .@assassin_t,.@assassin_t+10;
 				break;
 			case 2:
-				mes "[Markie]";
-				mes "1. Which monster drops a slotted Gladius?";
+				mes "[玛琪]";
+				mes "1. 哪个怪物掉落带槽的格拉迪乌斯？";
 				next;
-				if (select("Thief Bug:Peco Peco:Desert Wolf:Kobold") == 4)
+				if (select("盗贼虫:佩可佩可:沙漠狼:科博尔德") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "2. Which monster drops a slotted Main-Gauche?";
+				mes "[玛琪]";
+				mes "2. 哪个怪物掉落带槽的主手？";
 				next;
-				if (select("Hornet:Desert Wolf:Marionette:Myst") == 1)
+				if (select("黄蜂:沙漠狼:木偶:神秘") == 1)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "3. Choose the class that is able to create unique potions.";
+				mes "[玛琪]";
+				mes "3. 选择能够制作独特药水的职业。";
 				next;
-				if (select("Merchant:Alchemist:Blacksmith:Priest") == 2)
+				if (select("商人:炼金术士:铁匠:牧师") == 2)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "4. Choose the weapon that Rogues aren't allowed to use.";
+				mes "[玛琪]";
+				mes "4. 选择盗贼不允许使用的武器。";
 				next;
-				if (select("Gakkung:Crossbow:Gladius:Katar") == 4)
+				if (select("嘎库恩:弩:格拉迪乌斯:卡塔尔") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "5. Choose the property that the monster Hode possesses.";
+				mes "[玛琪]";
+				mes "5. 选择怪物霍德所拥有的属性。";
 				next;
-				if (select("Water:Fire:Wind:Earth") == 4)
+				if (select("水:火:风:土") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "6. Choose the monster that is unable to be tamed for as a Cute Pet.";
+				mes "[玛琪]";
+				mes "6. 选择无法被驯服为可爱宠物的怪物。";
 				next;
-				if (select("Poporing:Creamy:Orc:Poison Spore") == 2)
+				if (select("泡泡:奶油:兽人:毒孢子") == 2)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "7. Choose the monster that receives more damage from a Dagger with the Fire property.";
+				mes "[玛琪]";
+				mes "7. 选择受到火属性匕首攻击时受到更多伤害的怪物。";
 				next;
-				if (select("Dagger Goblin:Mace Goblin:Morning Star Goblin:Hammer Goblin") == 4)
+				if (select("匕首哥布林:锤子哥布林:晨星哥布林:锤子哥布林") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "8. Choose the town that doesn't have any guild castles.";
+				mes "[玛琪]";
+				mes "8. 选择没有公会城堡的城镇。";
 				next;
-				if (select("Prontera:Al De Baran:Alberta:Payon") == 3)
+				if (select("普隆德拉:阿尔德巴兰:阿尔伯塔:佩永") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "9. Choose the plant that drops Blue Herbs.";
+				mes "[玛琪]";
+				mes "9. 选择掉落蓝药草的植物。";
 				next;
-				switch(select("Green Plant:Yellow Plant:Blue Plant:Shining Plant")) {
+				switch(select("绿色植物:黄色植物:蓝色植物:闪亮植物")) {
 				default:
 					break;
 				case 3:
@@ -332,53 +318,53 @@ in_rogue,363,122,4	script	Rogue Guildsman#rg	747,{
 					set .@assassin_t,.@assassin_t+10;
 					break;
 				}
-				mes "[Markie]";
-				mes "10. Choose the monster that does not have the Undead property.";
+				mes "[玛琪]";
+				mes "10. 选择没有不死属性的怪物。";
 				next;
-				if (select("Zombie:Megalodon:Familiar:Khalitzburg") == 3)
+				if (select("僵尸:巨齿鲨:熟悉:卡利兹堡") == 3)
 					set .@assassin_t,.@assassin_t+10;
 				break;
 			case 3:
-				mes "[Markie]";
-				mes "1. By what percentage is the flee rate increased when a Thief masters the ^880000Improve Dodge^000000?";
+				mes "[玛琪]";
+				mes "1. 当盗贼掌握了^880000提高闪避^000000时，闪避率提高了多少百分比？";
 				next;
 				if (select("30:40:160:20") == 1)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "2. Choose the monster that detects a characters using the Hiding or Cloaking skill.";
+				mes "[玛琪]";
+				mes "2. 选择能够侦测使用隐身或隐蔽技能的怪物。";
 				next;
-				if (select("Worm Tail:Argos:Mummy:Soldier Skeleton") == 2)
+				if (select("虫尾:阿尔戈斯:木乃伊:士兵骷髅") == 2)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "3. Choose the location where Thieves can change their jobs to Rogues.";
+				mes "[玛琪]";
+				mes "3. 选择盗贼可以转职为流氓的地点。";
 				next;
-				if (select("Comodo:Kokomo Beach:Paros Lighthouse:Morocc") == 3)
+				if (select("科莫多:可可莫海滩:帕罗斯灯塔:摩洛克") == 3)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "4. In which town can Novices change their jobs to Thieves?";
+				mes "[玛琪]";
+				mes "4. 在哪个城镇新手可以转职为盗贼？";
 				next;
-				if (select("Comodo:Lutie:Alberta:Morocc") == 4)
+				if (select("科莫多:露天市场:阿尔伯塔:摩洛克") == 4)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "5. Choose the card that does not affect the DEX stat.";
+				mes "[玛琪]";
+				mes "5. 选择不影响DEX属性的卡片。";
 				next;
-				if (select("Rocker Card:Mummy Card:Zerom Card:Drops Card") == 2)
+				if (select("摇滚卡:木乃伊卡:零姆卡:掉落卡") == 2)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "6. So what's cool about being a Rogue?";
+				mes "[玛琪]";
+				mes "成为流氓有什么酷的地方？";
 				next;
-				select("Being totally badass.:The clothes, the style.:Getting to call other people, 'foo'':Excellent attack strength");
+				select("完全酷炫:衣服和风格:可以叫别人'foo':优秀的攻击力");
 				set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "7. When is it possible to change jobs from Thief to Rogue?";
+				mes "[玛琪]";
+				mes "什么时候可以从盗贼转职为流氓？";
 				next;
-				switch(select("At job Level 30:At job Level 35:At Job Level 40:At Job Level 50")) {
+				switch(select("在职业等级30:在职业等级35:在职业等级40:在职业等级50")) {
 				default:
 					break;
 				case 3:
@@ -388,16 +374,17 @@ in_rogue,363,122,4	script	Rogue Guildsman#rg	747,{
 					set .@assassin_t,.@assassin_t+10;
 					break;
 				}
-				mes "[Markie]";
-				mes "8. You want to dye your hair blue. What town do you go to, and in which direction, with 12 o' clock being North.";
+				mes "[玛琪]";
+				mes "你想把头发染成蓝色。你要去哪个城镇，";
+				mes "朝哪个方向，12点钟是北方。";
 				next;
-				if (select("Morocc, 7 o'clock:Prontera, 7 o'clock:Morocc, 5 o'clock:Prontera, 1 o'clock") == 2)
+				if (select("摩洛克，7点:普隆德拉，7点:摩洛克，5点:普隆德拉，1点") == 2)
 					set .@assassin_t,.@assassin_t+10;
 
-				mes "[Markie]";
-				mes "9. Choose the mushroom that is required on the Thief job change quest.";
+				mes "[玛琪]";
+				mes "选择在盗贼转职任务中需要的蘑菇。";
 				next;
-				switch(select("Orange Gooey Mushroom:Red Hairy Mushroom:Orange Net Mushroom:Orange Sticky Mushroom")) {
+				switch(select("橙色黏糊蘑菇:红色毛茸茸蘑菇:橙色网状蘑菇:橙色粘性蘑菇")) {
 				default:
 					break;
 				case 1:
@@ -405,250 +392,219 @@ in_rogue,363,122,4	script	Rogue Guildsman#rg	747,{
 					set .@assassin_t,.@assassin_t+10;
 					break;
 				}
-				mes "[Markie]";
-				mes "10. Choose the card that least benefits the Rogue class.";
+				mes "[玛琪]";
+				mes "选择对流氓职业帮助最小的卡片。";
 				next;
-				if (select("Whisper Card:Elder Willow Card:Zerom Card:Matyr Card") == 2)
+				if (select("低语卡:老柳树卡:零姆卡:殉道者卡") == 2)
 					set .@assassin_t,.@assassin_t+10;
 			}
-			mes "[Markie]";
-			mes "*Whew~*";
-			mes "Finally.";
-			mes "We're done.";
+			mes "[玛琪]";
+			mes "*呼~* 终于完成了。";
 			next;
-			mes "[Markie]";
-			mes "Let's see.";
-			mes "You got...";
+			mes "[玛琪]";
+			mes "让我看看。你得到了...";
 			mes "" + .@assassin_t + " points.";
 			if (.@assassin_t > 80) {
 				set ROGUE_Q,2;
 				setquest 2017;
-				mes "Good. You passed.";
-				mes "We don't gotta";
-				mes "do that again.";
+				mes "很好。你通过了。我们不需要再做一次。";
 				next;
-				mes "[Markie]";
-				mes "But don't get too comfortable just yet, you got more o' these tests. Your next one will be from Smith.";
+				mes "[玛琪]";
+				mes "但不要太得意，你还有更多的测试。下一个是史密斯的测试。";
 				next;
-				mes "[Markie]";
-				mes "So...";
-				mes "Go find Smith and finish up this test, yeah? Be careful though, Smith's a pretty anal guy.";
+				mes "[玛琪]";
+				mes "所以...去找史密斯完成这个测试吧？不过要小心，";
+				mes "史密斯是个很严厉的人。";
 				close;
 			}
 			else {
 				set ROGUE_Q,1;
-				mes "Aw crud... You failed!";
+				mes "哎呀...你失败了！";
 				next;
-				mes "[Markie]";
-				mes "Man, you shoulda learned more when you had the chance. Thanks for wasting my time.";
+				mes "[玛琪]";
+				mes "伙计，你应该在有机会的时候多学点东西。";
+				mes "谢谢你浪费我的时间。";
 				next;
-				mes "[Markie]";
-				mes "*Sigh...* Lemme give you some tips, yeah? I'm supposed to tell you about some kind of ^990000iro.ragnarokonline.com^000000 to help you learn what you need to know.";
+				mes "[玛琪]";
+				mes "*叹气...* 让我给你一些建议，好吗？";
+				mes "我应该告诉你一些关于^990000iro.ragnarokonline.com^000000的事情，";
+				mes "帮助你学习你需要知道的。";
 				next;
-				mes "[Markie]";
-				mes "Of course, I don't know what the heck it means, but if you understand it, it'll probably help you out a lot.";
+				mes "[马克]";
+				mes "当然，我不知道这是什么意思，但如果你明白的话，";
+				mes "可能会对你有很大帮助。";
 				close;
 			}
 		}
 		else if (JobLevel < 40) {
-			mes "[Rogue Guildsman]";
-			mes "Whoa, slow down newbie. We only accept people who are at least Thief Job Level 40. I ain't risking myself by letting you in before you're ready. Got it?";
+			mes "[盗贼公会成员]";
+			mes "哇，慢点，新手。我们只接受至少盗贼职业等级40的人。";
+			mes "我可不想冒险让你在还没准备好的情况下加入，明白了吗？";
 			close;
 		}
 	}
 	else if (BaseJob == Job_Assassin) {
-		mes "[Rogue Guildsman]";
-		mes "Huh...?";
-		mes "What's an Assassin doin' here? Uh, you haven't been assigned to kill someone in the Rogue Guild, are you?";
+		mes "[盗贼公会成员]";
+		mes "哈...? 一个刺客在这里干什么？呃，";
+		mes "你不会是被分配去刺杀公会里的人吧？";
 		next;
-		mes "[Rogue Guildsman]";
-		mes "In any case, don't mess with us! You can't catch me... I'm a smooth criminal!";
+		mes "[盗贼公会成员]";
+		mes "无论如何，别惹我们！你抓不住我... 我是个狡猾的罪犯！";
 		next;
-		mes "[Rogue Guildsman]";
-		mes "Don't get it, huh? It's something I always used to say to Huey. If you're in the Assassin Guild, you oughta have met him...";
+		mes "[盗贼公会成员]";
+		mes "不明白吗？这是我以前常对休伊说的话。";
+		mes "如果你在刺客公会，应该见过他...";
 		close;
 	}
 	else if (BaseJob == Job_Rogue) {
-		mes "[Markie]";
-		mes "Hey hey~";
-		mes "Long time no see.";
-		mes "Eh, right now we don't";
-		mes "any requests from the";
-		mes "guild for you, so just";
-		mes "check back again later.";
+		mes "[马克]";
+		mes "嘿嘿~ 好久不见。现在公会没有你的请求，稍后再来吧。";
 		close;
 	}
 	else {
-		mes "[Rogue Guildsman]";
-		mes "Hey you...";
-		mes "Get your ugly";
-		mes "ass out of here";
-		mes "before I redecorate";
-		mes "that face of yours!";
+		mes "[盗贼公会成员]";
+		mes "嘿你... 快滚出去，不然我就要重新装修你的脸了！";
 		close;
 	}
 }
 
-in_rogue,376,23,1	script	Mr. Smith#rg	57,{
+in_rogue,376,23,1	script	史密斯先生#rg	57,{
 	if (ROGUE_Q == 2) {
-		mes "[Mr. Smith]";
-		mes "Welcome to";
-		mes "the Rogue guild.";
-		mes "From here on, I will";
-		mes "verify your qualification.";
+		mes "[史密斯先生]";
+		mes "欢迎来到盗贼公会。从现在开始，我将验证你的资格。";
 		next;
-		mes "[Mr. Smith]";
-		mes "Before we get started,";
-		mes "I want you to know";
-		mes "about something...";
+		mes "[史密斯先生]";
+		mes "在我们开始之前，我想让你知道一些事情...";
 		next;
-		mes "[Mr. Smith]";
-		mes "All new Rogues are required to pay an application fee, so I hope you take care of that first.";
+		mes "[史密斯先生]";
+		mes "所有新盗贼都需要支付申请费，所以希望你先处理好这个。";
 		next;
-		mes "[Mr. Smith]";
-		mes "What you have to understand is that the Rogue Guild does a lot of business, ^666666sometimes illegally^000000, that needs financial backup.";
+		mes "[史密斯先生]";
+		mes "你需要明白的是，盗贼公会做了很多生意，";
+		mes "^666666有时是非法的^000000，需要资金支持。";
 		next;
 		set .@item_need,rand(1,15);
 		if (.@item_need > 0 && .@item_need < 6) callsub S_Req,"10 Skel-bone","6 Blue Herb","10 Decayed Nail","10 Horrendous Mouth",3;
 		else if (.@item_need > 5 && .@item_need < 11) callsub S_Req,"10 Green Herb","10 Crab Shell","10 Snake Scale","10 Garlet",4;
 		else if (.@item_need > 10 && .@item_need < 15) callsub S_Req,"10 Yellow Herb","10 Shell","10 Grasshopper's Leg","10 Bear's Footskin",5;
 		else if (.@item_need == 15) {
-			mes "[Mr. Smith]";
-			mes "I will let you know...";
+			mes "[史密斯先生]";
+			mes "我会告诉你...";
 			set ROGUE_Q,6;
 			changequest 2017,2021;
 			next;
-			mes "[Mr. Smith]";
-			mes "I will let you know......";
+			mes "[史密斯先生]";
+			mes "我会告诉你......";
 			next;
-			mes "[Mr. Smith]";
-			mes "I will let you know........";
-			mes "By the way.....";
+			mes "[史密斯先生]";
+			mes "我会告诉你........ 顺便说一句.....";
 			next;
-			mes "[Mr. Smith]";
-			mes "Oh man...";
-			mes "This is...";
-			mes "Damn...";
-			mes "Annoying!";
+			mes "[史密斯先生]";
+			mes "哦，天哪... 这真是... 真烦人！";
 			next;
-			mes "[Mr. Smith]";
+			mes "[史密斯先生]";
 			mes "...";
 			next;
-			mes "[Mr. Smith]";
-			mes "...";
-			mes "......";
+			mes "[史密斯先生]";
+			mes "... ......";
 			next;
-			mes "[Mr. Smith]";
-			mes "...";
-			mes "......";
-			mes ".........";
+			mes "[史密斯先生]";
+			mes "... ...... .........";
 			next;
-			mes "[Mr. Smith]";
-			mes "Today, I'm in a pissed off mood, ya' know why?! I haven't collected any bills! God! Idiot Thieves coming at me all the time, wanting to become Rogues!";
+			mes "[史密斯先生]";
+			mes "今天我心情很糟，你知道为什么吗？！我还没收到账单！天哪！";
+			mes "愚蠢的盗贼们总是来找我，想成为盗贼！";
 			next;
-			mes "[Mr. Smith]";
-			mes "Jesus! Now I understand why our leader told us that working as customer support sucks.";
+			mes "[史密斯先生]";
+			mes "天哪！现在我明白为什么我们的领导告诉我们做客服真糟糕。";
 			next;
-			mes "[Mr. Smith]";
-			mes "That god damn guild master assigned me to this shitty job. I'm better than this F$@king job!";
+			mes "[史密斯先生]";
+			mes "那个该死的公会会长把我分配到这个糟糕的工作。";
+			mes "我比这个工作强多了！";
 			mapannounce "in_rogue","That god damn guild master assigned me to this shitty job! That Bastard!",bc_map;
-			mes "That bastard should go to F$@king hell, I'm gonna kick that mother F$@kers ass! F#%k F#%k F#%k !!!";
+			mes "那个混蛋应该去见鬼，我要揍那个混蛋！去你妈的！";
 			mapannounce "in_rogue","That bastard should go to F$@king hell, I'm gonna kick that mother F$@kers ass! F#%k F#%k F#%k !!!",bc_map;
 			next;
-			mes "[Mr. Smith]";
-			mes "That dipshit who just tried to change his job, the one before you...";
+			mes "[史密斯先生]";
+			mes "那个刚试图转职的傻瓜，就是你之前的那个...";
 			mapannounce "in_rogue","That dipshit who just tried to change his job, the one before you...",bc_map;
-			mes "You know what the f#@k he talked to me about?!?";
+			mes "你知道他跟我说了什么吗？！";
 			mapannounce "in_rogue","You know what the f#@k he talked to me about?!?",bc_map;
 			mes "F#$@%#$*#$%@#$!!";
 			mapannounce "in_rogue","F#$@%#$*#$%@#$!!",bc_map;
 			next;
-			mes "[Mr. Smith]";
-			mes "What the--?! What's with this chat filter?! Stop #*!@$ing me! you stupid F#$%*! Let me talk!!!";
+			mes "[史密斯先生]";
+			mes "什么--？！这个聊天过滤器怎么回事？！别再#*!@$我了！";
+			mes "你这个愚蠢的F#$%*! 让我说话！！！";
 			mapannounce "in_rogue","What the--?! What's with this chat filter?! Stop #*!@$ing me! you stupid F#$%*! Let me talk!!!",bc_map;
 			next;
-			mes "[Mr. Smith]";
+			mes "[史密斯先生]";
 			mes "What the f#@k you looking at...? " + strcharinfo(0) + "? That's your name!?";
 			mapannounce "in_rogue","What the f#@k you looking at...? " + strcharinfo(0) + "? That's your name!?",bc_map;
 			mes " ";
 			mes "[" + strcharinfo(0) + "]";
-			mes "Umm...";
-			mes "Sir...?";
-			mes "I didn't mean to make you upset. I just came here to so I could become a Rogue.";
+			mes "嗯……先生……？我不是故意让你生气的。";
+			mes "我只是来这里想成为一个盗贼。";
 			next;
-			mes "[Mr. Smith]";
-			mes "Holy shit on a stick, what the f#$k was I just f!#king talking about, you moron!";
+			mes "[史密斯]";
+			mes "真是太离谱了，我刚才在说什么，笨蛋！";
 			mapannounce "in_rogue","Holy shit on a stick, what the f#$k was I just f!#king talking about, you moron!",bc_map;
 			next;
-			mes "[Mr. Smith]";
-			mes "Just leave me alone! Just leave alone! Just leave me alone!";
+			mes "[史密斯]";
+			mes "别来烦我！别来烦我！别来烦我！";
 			mapannounce "in_rogue","Just leave me alone! Just leave alone! Just leave me alone!",bc_map;
 			next;
-			mes "[Mr. Smith]";
-			mes "Do whatever you want, okay? Just do whatever the F$!!K you want...!!";
+			mes "[史密斯]";
+			mes "随便你怎么做，好吗？随便你想做什么...！";
 			mapannounce "in_rogue","Do whatever you want, okay? Just do whatever the F$!!K you want...!!",bc_map;
 			next;
-			mes "[Mr. Smith]";
-			mes "Your application fee... ^FF000010,000 zeny^000000!!";
+			mes "[史密斯]";
+			mes "你的申请费... ^FF000010,000仙石^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Crysalis^000000!";
-			mes "^FF00005 Empty Bottle^000000!";
-			mes "^FF00005 Iron Ore^000000!";
-			mes "^FF00005 Stone Heart^000000!!";
+			mes "[史密斯]";
+			mes "^FF00005 水晶^000000！^FF00005 空瓶^000000！^FF00005 铁矿石^000000！^FF00005 石心^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Red Herb^000000!";
-			mes "^FF00005 Animal Skin^000000!!";
-			mes "^FF00005 Yellow Gemstone^000000!!";
+			mes "[史密斯]";
+			mes "^FF00005 红草^000000！^FF00005 动物皮^000000！！^FF00005 黄宝石^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Tooth of Bat^000000!";
-			mes "^FF00005 Scorpion Tail^000000!!";
-			mes "^FF00005 Yoyo Tail^000000!!";
+			mes "[史密斯]";
+			mes "^FF00005 蝙蝠牙^000000！^FF00005 蝎子尾巴^000000！！^FF00005 悠悠尾巴^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Monster's Feed^000000!";
-			mes "^FF00005 Fluff^000000!!";
-			mes "^FF00005 Clover^000000!!";
+			mes "[史密斯]";
+			mes "^FF00005 怪物饲料^000000！^FF00005 毛绒^000000！！^FF00005 三叶草^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Feather of Birds^000000!";
-			mes "^FF00005 Talon^000000!!";
-			mes "^FF00005 Spawn^000000!!";
+			mes "[史密斯]";
+			mes "^FF00005 鸟羽^000000！^FF00005 爪子^000000！！^FF00005 幼虫^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "Don't even think about coming back until you've got all those or I'll kill you where you stand.";
+			mes "[史密斯]";
+			mes "别想回来，直到你把所有东西都带回来，";
+			mes "否则我会当场杀了你。";
 			next;
-			mes "[Mr. Smith]";
-			mes "What the F$@k? Did you just say I'm annoying you? Shut up, you ungrateful prick!";
+			mes "[史密斯]";
+			mes "你在说什么？你说我让你烦？闭嘴，你这个忘恩负义的家伙！";
 			next;
-			mes "[Mr. Smith]";
-			mes "I just added ^FF000010 Raccoon Leaf^000000 to the list. You better get it!";
+			mes "[史密斯]";
+			mes "我刚刚把^FF000010 浣熊叶^000000加到清单上了。你最好去拿！";
 			next;
-			mes "[Mr. Smith]";
-			mes "F%$#*&#@$%#@$@#$%@$%&*k! Haven't you ever thought about how hard it would be to be an NPC!?!";
+			mes "[史密斯]";
+			mes "真是的！你有没有想过当NPC有多难！";
 			mapannounce "in_rogue","F%$#*&#@$%#@$@#$%@$%&*k! Haven't you ever thought about how hard it would be to be an NPC!?!",bc_map;
 			close;
 		}
 	}
 	else if (ROGUE_Q < 2) {
-		mes "[Mr. Smith]";
-		mes "Three thousand, two hundred seventy two. Three thousand, two hundred seventy three. Three thousand, two hundred seventy four...";
+		mes "[史密斯]";
+		mes "三千二百七十二。三千二百七十三。三千二百七十四...";
 		next;
-		mes "[Mr. Smith]";
-		mes "Uhh...";
-		mes "Headache...";
-		mes "This is too much";
-		mes "zeny to count.";
+		mes "[史密斯]";
+		mes "呃...头疼...这太多仙石了，数不过来。";
 		next;
-		mes "[Mr. Smith]";
-		mes "Uh...?";
-		mes "What are you doing here? If you're going to talk about the job change, you need to speak to the other guy first.";
+		mes "[史密斯]";
+		mes "呃...? 你在这里干什么？如果你想谈换职业，";
+		mes "你得先去找另一个人。";
 		next;
-		mes "[Mr. Smith]";
-		mes "...Shit!";
-		mes "I lost count!";
+		mes "[史密斯]";
+		mes "...该死！我数错了！";
 		close;
 	}
 	else if (ROGUE_Q > 2) {
@@ -661,8 +617,8 @@ in_rogue,376,23,1	script	Mr. Smith#rg	57,{
 			countitem(913) > 4 && countitem(904) > 4 && countitem(942) > 4 && countitem(528) > 4 &&
 			countitem(914) > 4 && countitem(705) > 4 && countitem(916) > 4 && countitem(917) > 4 &&
 			countitem(908) > 4 && countitem(945) > 4) {
-				mes "[Mr. Smith]";
-				mes "Ummm...let's see...";
+				mes "[史密斯]";
+				mes "嗯...让我看看...";
 				set Zeny, Zeny-10000;
 				delitem 915,5; //Chrysalis
 				delitem 713,5; //Empty_Bottle
@@ -683,79 +639,59 @@ in_rogue,376,23,1	script	Mr. Smith#rg	57,{
 				delitem 945,5; //Raccoon_Leaf
 				set ROGUE_Q,8;
 				next;
-				mes "[Mr. Smith]";
-				mes "Wow, you've brought each and every single thing I asked you to. Good work... I salute you.";
+				mes "[史密斯]";
+				mes "哇，你把我要求的每一件东西都带来了。";
+				mes "干得不错...我向你致敬。";
 				next;
-				mes "^CCCCCC- Middle Finger -^000000'";
-				mes "*Grins*";
+				mes "^CCCCCC- 中指 -^000000' *微笑*";
 				set ROGUE_Q,8;
 				changequest 2021,2025;
 				next;
-				mes "[Mr. Smith]";
-				mes "Since you showed such great effort, I'm going to write a recommendation letter for you. I usually don't do that, you know.";
+				mes "[史密斯]";
+				mes "既然你表现得这么努力，我会为你写一封推荐信。";
+				mes "我通常不这样做，你知道的。";
 				next;
-				mes "[Mr. Smith]";
-				mes "But I'm sure you'll be a great asset to the Rogue Guild. Hmm, I don't have a blank piece of paper right now, so take this instead...";
+				mes "[史密斯]";
+				mes "但我相信你会成为流氓公会的一个重要资产。嗯，";
+				mes "我现在没有空白纸，所以就拿这个吧...";
 				getitem 1097,1; //Worn_Out_Page
 				next;
-				mes "[Mr. Smith]";
-				mes "*Sigh...*";
-				mes "I know, I know. I'm supposed to control myself in the work place. Getting enraged is a bad habit...";
+				mes "[史密斯先生]";
+				mes "唉……我知道，我知道。我应该在工作场所控制自己。";
+				mes "发怒是个坏习惯……";
 				next;
-				mes "[Mr. Smith]";
-				mes "*Mumble mumble...*";
-				mes "How was I... *Mumble...*";
-				mes "How did... I remember...";
-				mes "*Sigh* It was all because of my bad temper!";
+				mes "[史密斯先生]";
+				mes "嘟囔嘟囔……我怎么会……嘟囔……我记得……唉，";
+				mes "都是因为我的坏脾气！";
 				next;
-				mes "[Mr. Smith]";
-				mes "Wah....!!!";
+				mes "[史密斯先生]";
+				mes "哇……！！！";
 				next;
-				mes "^3355FFIt might be a better";
-				mes "idea to come back later.^000000";
+				mes "^3355FF也许稍后再来会更好。^000000";
 				close;
 			}
-			mes "[Mr. Smith]";
-			mes "Listen this time!";
-			mes "Application fee:";
-			mes "^FF000010000 zeny^000000,";
-			mes "^FF00005 Crysalis^000000!";
-			mes "^FF00005 Empty Bottle^000000!";
-			mes "^FF00005 Iron Ore^000000!";
+			mes "[史密斯先生]";
+			mes "这次听着！申请费：^FF000010000仙石^000000，^FF00005水晶^000000！^FF00005空瓶^000000！^FF00005铁矿石^000000！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Stone Heart^000000!!";
-			mes "^FF00005 Red Herb^000000!";
-			mes "^FF00005 Animal Skin^000000!!";
-			mes "^FF00005 Yellow Gemstone^000000!!";
+			mes "[史密斯先生]";
+			mes "^FF00005石心^000000！！^FF00005红草药^000000！^FF00005动物皮^000000！！^FF00005黄宝石^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Tooth of Bat^000000!";
-			mes "^FF00005 Scorpion Tail^000000!!";
-			mes "^FF00005 Yoyo Tail^000000!!";
+			mes "[史密斯先生]";
+			mes "^FF00005蝙蝠牙^000000！^FF00005蝎子尾巴^000000！！^FF00005悠悠尾巴^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Monster's Feed^000000!";
-			mes "^FF00005 Fluff^000000!!";
-			mes "^FF00005 Clover^000000!!";
+			mes "[史密斯先生]";
+			mes "^FF00005怪物饲料^000000！^FF00005绒毛^000000！！^FF00005三叶草^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "^FF00005 Feather of Birds^000000!";
-			mes "^FF00005 Talon^000000!!";
-			mes "^FF00005 Spawn^000000!!";
-			mes "^FF000010 Raccoon Leaf^000000!!";
+			mes "[史密斯先生]";
+			mes "^FF00005鸟的羽毛^000000！^FF00005爪子^000000！！^FF00005幼崽^000000！！^FF000010浣熊叶^000000！！";
 			next;
-			mes "[Mr. Smith]";
-			mes "Don't even think";
-			mes "of coming back";
-			mes "without them!";
+			mes "[史密斯先生]";
+			mes "别想不带这些回来！";
 			close;
 		}
 		else if (ROGUE_Q == 7) {
-			mes "[Mr. Smith]";
-			mes "Let me see...";
-			mes "Who would should";
-			mes "I send you to...?";
+			mes "[史密斯先生]";
+			mes "让我想想……我该把你送去找谁呢……？";
 			switch(rand(1,3)) {
 			case 1:
 				set ROGUE_Q,9;
@@ -769,30 +705,33 @@ in_rogue,376,23,1	script	Mr. Smith#rg	57,{
 					changequest 2020,2022;
 				}
 				next;
-				mes "[Mr. Smith]";
-				mes "Right! I know";
-				mes "just the guy~!";
+				mes "[史密斯先生]";
+				mes "对了！我知道该找谁~！";
 				next;
-				mes "[Mr. Smith]";
-				mes "Go visit Aragham Junior who lives South of the Sandarman Fortress. That area is located one field east from here.";
+				mes "[史密斯先生]";
+				mes "去找住在沙达曼堡南边的阿拉甘小子。";
+				mes "那个地方在这里东边一块田地。";
 				next;
-				mes "[Mr. Smith]";
-				mes "He's a pretty nice guy, you know. He works hard and is really good at bill collecting.";
+				mes "[史密斯先生]";
+				mes "他是个不错的人，你知道吗。他工作努力，收账很在行。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Before he joined the Rogue Guild, people have been trying to kill him for something his father did in the past. So, he became a runaway.";
+				mes "[史密斯先生]";
+				mes "在他加入盗贼公会之前，人们一直想杀他，";
+				mes "因为他父亲过去做的事情。所以，他成了逃亡者。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Well anyway, that's why he's been with us. We've been helping him hide from his enemies.";
+				mes "[史密斯先生]";
+				mes "总之，这就是他为什么和我们在一起。";
+				mes "我们一直在帮助他躲避敌人。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Ah, you might want to remember the password if you want to meet him. He doesn't let anybody in his house without the password.";
+				mes "[史密斯先生]";
+				mes "啊，如果你想见他，记得密码。他不让任何人没有密码进他家。";
 				next;
-				mes "[Mr. Smith]";
-				mes "The password is ^0000FFAragham never hoarded upgrade items^000000.";
+				mes "[史密斯先生]";
+				mes "密码是^0000FF阿拉甘从不囤积升级物品^000000。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Well, I will wish you luck. His place isn't that far from here, so come back as soon as possible. Being swift... That is the spirit of the Rogue.";
+				mes "[史密斯先生]";
+				mes "祝你好运。他的地方离这里不远，所以尽快回来。";
+				mes "迅速……这就是盗贼的精神。";
 				close;
 			case 2:
 				set ROGUE_Q,10;
@@ -806,29 +745,32 @@ in_rogue,376,23,1	script	Mr. Smith#rg	57,{
 					changequest 2020,2023;
 				}
 				next;
-				mes "[Mr. Smith]";
-				mes "Hmm...";
-				mes "This guy might be";
-				mes "good for you, but...";
-				mes "He's a little dangerous.";
+				mes "[史密斯先生]";
+				mes "嗯……这个家伙可能适合你，但……他有点危险。";
 				next;
-				mes "[Mr. Smith]";
-				mes "I want you to meet Antonio Junior, son of Antonio the first. For some reason people have been trying to kill him because of something his father did in the past.";
+				mes "[史密斯先生]";
+				mes "我想让你见见安东尼奥小子，安东尼奥一世的儿子。";
+				mes "因为他父亲过去做的事情，人们一直想杀他。";
 				next;
-				mes "[Mr. Smith]";
-				mes "He was brought up in Payon, but he's staying in an empty house near the Kokomo beach at the moment.";
+				mes "[史密斯先生]";
+				mes "他是在佩雍长大的，";
+				mes "但目前住在科科莫海滩附近的一栋空房子里。";
 				next;
-				mes "[Mr. Smith]";
-				mes "I've heard lately that he's been complaining a lot about the noise outside of his house, and he fears an assassination attempt. Anyway...";
+				mes "[史密斯先生]";
+				mes "我最近听说他一直在抱怨他家外面的噪音，";
+				mes "并且担心会遭到暗杀。无论如何……";
 				next;
-				mes "[Mr. Smith]";
-				mes "He's kind of tense, so he throws a dagger at anyone who approaches his house. He has a violent personality.";
+				mes "[史密斯先生]";
+				mes "他有点紧张，";
+				mes "所以对任何接近他家的人都会扔刀子。他性格暴躁。";
 				next;
-				mes "[Mr. Smith]";
-				mes "However, he does have magnificent business skills. And he also loves gambling. Once you get to know him, he'll take care of your Rogue training really well.";
+				mes "[史密斯先生]";
+				mes "不过，他的商业头脑非常出色，而且他也喜欢赌博。";
+				mes "一旦你了解他，他会很好地照顾你的盗贼训练。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Ah, you might want to remember the password to meet him in person. The password is ^0000FFAntonio doesn't enjoy destroying upgrade items^000000.";
+				mes "[史密斯先生]";
+				mes "啊，你可能要记住见他的密码。";
+				mes "密码是^0000FF安东尼不喜欢毁坏升级物品^000000。";
 				close;
 			case 3:
 				set ROGUE_Q,11;
@@ -842,106 +784,88 @@ in_rogue,376,23,1	script	Mr. Smith#rg	57,{
 					changequest 2020,2024;
 				}
 				next;
-				mes "[Mr. Smith]";
-				mes "Hmm...";
-				mes "This guy might be";
-				mes "good for you, but...";
-				mes "He's a little dangerous.";
+				mes "[史密斯先生]";
+				mes "嗯……这个家伙可能对你有帮助，但……他有点危险。";
 				next;
-				mes "[Mr. Smith]";
-				mes "His name is";
-				mes "Hollgrehenn Junior,";
-				mes "a genius at manipulation.";
+				mes "[史密斯先生]";
+				mes "他的名字是霍尔格伦小子，一个操控天才。";
 				next;
-				mes "[Mr. Smith]";
-				mes "However, because of something his father did long ago, people have been trying to kill him. Because of this, he is very high strung and will throw daggers at people he doesn't trust.";
+				mes "[史密斯先生]";
+				mes "然而，由于他父亲很久以前做的事情，人们一直在试图杀他。";
+				mes "因此，他非常紧张，对不信任的人会扔刀子。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Our leader has been able to get him to join our guild, and his brilliant mind has been an asset to us. Once you get to know him, he'll take care of your Rogue training really well.";
+				mes "[史密斯先生]";
+				mes "我们的领袖成功让他加入了我们的公会，";
+				mes "他的聪明才智对我们非常有帮助。一旦你了解他，";
+				mes "他会很好地照顾你的盗贼训练。";
 				next;
-				mes "[Mr. Smith]";
-				mes "Ah, you might want to remember the password to meet him in person. The password is ^0000FFMy father never hoarded upgrade items^000000.";
+				mes "[史密斯先生]";
+				mes "啊，你可能要记住见他的密码。";
+				mes "密码是^0000FF我父亲从不囤积升级物品^000000。";
 				close;
 			}
 		}
 		else if (ROGUE_Q == 8) {
-			mes "[Mr. Smith]";
-			mes "Alright... Now that I've calmed down, I can inform you of your next destination. *Whew*";
+			mes "[史密斯先生]";
+			mes "好吧……现在我冷静下来了，可以告诉你下一个目的地。*呼*";
 			next;
-			mes "[Mr. Smith]";
-			mes "Go and find Hermanthorn Junior, who is living near the ^0000FFthe checkpoint of Paros Lighthouse^000000, which is at the border between Morocc and Comodo.";
+			mes "[史密斯先生]";
+			mes "去找赫尔曼索恩小子，他住在^0000FF帕罗斯灯塔的检查站^000000附近，";
+			mes "那里是摩洛克和科莫多的边界。";
 			next;
-			mes "[Mr. Smith]";
-			mes "Ah...almost forgot, keep in mind not to mention anything about upgrading items. This is very important.";
+			mes "[史密斯先生]";
+			mes "啊……差点忘了，记得不要提升级物品的事情。这非常重要。";
 			close;
 		}
 		else if (ROGUE_Q == 9) {
-			mes "[Mr. Smith]";
-			mes "What...?";
-			mes "Did you just";
-			mes "say that you";
-			mes "forgot where to go?";
+			mes "[史密斯先生]";
+			mes "什么……？你刚才说你忘了去哪儿了吗？";
 			next;
-			mes "[Mr. Smith]";
-			mes "Head one field East and enter the building that is South of the Sandarman Fortress to meet Aragham Junior.";
+			mes "[史密斯先生]";
+			mes "往东走一片田野，进入沙达曼堡垒南边的建筑，";
+			mes "去见阿拉甘小子。";
 			next;
-			mes "[Mr. Smith]";
-			mes "The password is ^0000FFAragham never hoarded upgrade items^000000.";
+			mes "[史密斯先生]";
+			mes "密码是^0000FF阿拉甘从不囤积升级物品^000000。";
 			close;
 		}
 		else if (ROGUE_Q == 10) {
-			mes "[Mr. Smith]";
-			mes "What...?";
-			mes "Did you just";
-			mes "say that you";
-			mes "forgot where to go?";
+			mes "[史密斯先生]";
+			mes "什么……？你刚才说你忘了去哪儿了吗？";
 			next;
-			mes "[Mr. Smith]";
-			mes "Go to the building";
-			mes "at Kokomo Beach,";
-			mes "which is on the way";
-			mes "to Comodo, to meet";
-			mes "Antonio Junior.";
+			mes "[史密斯先生]";
+			mes "去科科莫海滩的建筑，沿途去科莫多，去见安东尼小子。";
 			next;
-			mes "[Mr. Smith]";
-			mes "The password is ^0000FF'Antonio doesn't enjoy destroying upgrade items'^000000.";
+			mes "[史密斯先生]";
+			mes "密码是^0000FF'安东尼不喜欢毁坏升级物品'^000000。";
 			close;
 		}
 		else if (ROGUE_Q == 11) {
-			mes "[Mr. Smith]";
-			mes "What...?";
-			mes "Did you just";
-			mes "say that you";
-			mes "forgot where to go?";
+			mes "[史密斯先生]";
+			mes "什么……？你刚才说你忘了去哪儿了吗？";
 			next;
-			mes "[Mr. Smith]";
-			mes "Go to the field South of Sandarman Fortress, which is on the way to Morocc from here, to meet Hollgrehenn Junior.";
+			mes "[史密斯先生]";
+			mes "去沙达曼堡垒南边的田野，从这里去摩洛克，";
+			mes "去见霍尔格伦小子。";
 			next;
-			mes "[Mr. Smith]";
-			mes "The password is ^0000FFMy father never hoarded upgrade items^000000.";
+			mes "[史密斯先生]";
+			mes "密码是^0000FF我父亲从不囤积升级物品^000000。";
 			close;
 		}
 		else if (ROGUE_Q > 11) {
-			mes "[Mr. Smith]";
-			mes "Hmmm...?";
-			mes "Don't you have";
-			mes "to go somewhere";
-			mes "else to complete";
-			mes "your Rogue training?";
+			mes "[史密斯]";
+			mes "嗯...? 你不是应该去别的地方完成你的盗贼训练吗？";
 			close;
 		}
 	}
 
 
 S_Req:
-	mes "[Mr. Smith]";
-	mes "First, the";
-	mes "application fee:";
-	mes "^FF000010,000 zeny^000000.";
+	mes "[史密斯]";
+	mes "首先，申请费是：^FF000010,000 zeny^000000。";
 	next;
-	mes "[Mr. Smith]";
-	mes "We also need";
-	mes "you to bring";
+	mes "[史密斯先生]";
+	mes "我们还需要你带来";
 	mes "^FF0000"+getarg(0)+"^000000,";
 	mes "^FF0000"+getarg(1)+"^000000,";
 	mes "^FF0000"+getarg(2)+"^000000 and";
@@ -958,18 +882,11 @@ S_Req:
 		changequest 2017,2020;
 	}
 	next;
-	mes "[Mr. Smith]";
-	mes "Hmm...?";
-	mes "What was that?";
-	mes "Did you just say that";
-	mes "you're willing to donate";
-	mes "more for the guild?";
+	mes "[史密斯]";
+	mes "嗯...? 你刚才说你愿意为公会捐赠更多吗？";
 	next;
-	mes "[Mr. Smith]";
-	mes "That sounds sweet,";
-	mes "I appreciate that.";
-	mes "But come back when";
-	mes "you're ready.";
+	mes "[史密斯]";
+	mes "听起来不错，我很感激。但等你准备好了再回来。";
 	close;
 
 
@@ -978,7 +895,7 @@ S_CheckItems:
 	setarray .@amount[0], getarg(1), getarg(3), getarg(5), getarg(7);
 
 	if (Zeny > 9999 && countitem(.@item_req[0]) >= .@amount[0] && countitem(.@item_req[1]) >= .@amount[1] && countitem(.@item_req[2]) >= .@amount[2] && countitem(.@item_req[3]) >= .@amount[3]) {
-		mes "[Mr. Smith]";
+		mes "[史密斯先生]";
 		mes "Okay, we've got the application fee, ^FF000010,000 zeny^000000, "+ .@amount[0] +" "+ getitemname(.@item_req[0]) +", "+ .@amount[1] +" "+ getitemname(.@item_req[1]) +", "+ .@amount[2] +" "+ getitemname(.@item_req[2]) +" and "+ .@amount[3] +" "+ getitemname(.@item_req[3]) +"...";
 		set Zeny, Zeny-10000;
 		delitem .@item_req[0],.@amount[0];
@@ -987,31 +904,28 @@ S_CheckItems:
 		delitem .@item_req[3],.@amount[3];
 		set ROGUE_Q,7;
 		next;
-		mes "[Mr. Smith]";
-		mes "Great, great...";
-		mes "I think you";
-		mes "brought everything.";
+		mes "[史密斯]";
+		mes "很好，我想你带来了所有东西。";
 		set ROGUE_Q,7;
 		next;
-		mes "[Mr. Smith]";
-		mes "Alright, wait just a moment while";
-		mes "I prepare these things. Let's see... Your next test is...";
+		mes "[史密斯]";
+		mes "好的，等我准备一下这些东西。让我们看看...";
+		mes "你的下一个测试是...";
 		close;
 	}
-	mes "[Mr. Smith]";
-	mes "What the f$@k!? You didn't bring all the required items?! Are you telling me that you need to check the requirements again!?";
+	mes "[史密斯]";
+	mes "你在搞什么鬼！？你没有带齐所有必需的物品？！";
+	mes "你是在告诉我你需要再检查一次要求吗！？";
 	next;
-	mes "[Mr. Smith]";
-	mes "Now listen...!";
-	mes "Bring ^FF000010,000 zeny^000000,";
-	mes "and the following items...";
+	mes "[史密斯]";
+	mes "现在听着...！带上 ^FF000010,000 zeny^000000 和以下物品...";
 	next;
-	mes "[Mr. Smith]";
+	mes "[史密斯先生]";
 	mes "^FF0000 "+ .@amount[0] +" "+ getitemname(.@item_req[0]) +"^000000,";
 	mes "^FF0000 "+ .@amount[1] +" "+ getitemname(.@item_req[1]) +"^000000,";
 	mes "^FF0000 "+ .@amount[2] +" "+ getitemname(.@item_req[2]) +"^000000,";
 	mes "^FF0000 "+ .@amount[3] +" "+ getitemname(.@item_req[3]) +"^000000,";
-	mes "You got it this time?";
+	mes "这次你明白了吗？";
 	close;
 }
 
@@ -1225,52 +1139,47 @@ OnTouch_:
 	}
 }
 
-in_rogue,272,135,1	script	Hermanthorn Jr#rg	85,{
+in_rogue,272,135,1	script	赫尔曼索恩Jr#rg	85,{
 	if (ROGUE_Q == 8) {
-		mes "[HermanthornJr.]";
-		mes "I see...";
-		mes "You must be from";
-		mes "the Rogue guild.";
-		mes "You must be one of the";
-		mes "ones Mr. Smith wasn't";
-		mes "too happy with...";
+		mes "[赫尔曼索恩Jr.]";
+		mes "我明白了...你一定是来自盗贼公会的。";
+		mes "你是史密斯先生不太满意的那一个吧...";
 		next;
-		mes "[HermanthornJr.]";
-		mes "He threw a fit and you brought him all the items he asked for, didn't you? Well, I can see that you're still pretty naive. Hahaha~";
+		mes "[赫尔曼索恩Jr.]";
+		mes "他发了脾气，而你把他要求的所有物品都带来了，是吧？";
+		mes "我能看出你还是挺天真的。哈哈~";
 		next;
-		mes "[HermanthornJr.]";
-		mes "I suppose he suckered you into gathering those items, and then passed you on to me. Sad, really.";
+		mes "[赫尔曼索恩Jr.]";
+		mes "我想他让你收集那些物品，然后把你交给我。真可悲。";
 		next;
-		mes "[HermanthornJr.]";
-		mes "Well, since you were tortured by him, I'll try to be especially generous to you. My test for you will be simple, so simple.";
+		mes "[赫尔曼索恩Jr.]";
+		mes "好吧，既然你被他折磨过，我会特别对你宽容。";
+		mes "我的测试对你来说会很简单，简单得很。";
 		next;
-		mes "[HermanthornJr.]";
-		mes "All you have to do is go through an underground tunnel, and walk all the way back to the Rogue Guild.";
+		mes "[赫尔曼索恩Jr.]";
+		mes "你只需要穿过一个地下隧道，走回盗贼公会就可以了。";
 		next;
-		mes "[HermanthornJr.]";
-		mes "There is one thing I should tell you, though. You might want to be careful inside, alright?";
+		mes "[赫尔曼索恩Jr.]";
+		mes "不过我应该告诉你一件事。你可能要小心点，明白吗？";
 		next;
-		mes "[HermanthornJr.]";
-		mes "A bunch of pricks have been throwing Dead Branches and casting Hocus Pocus all over the place...";
+		mes "[赫尔曼索恩Jr.]";
+		mes "一群家伙到处扔死树枝和施放魔法...";
 		next;
-		mes "[HermanthornJr.]";
-		mes "Well...";
-		mes "Just make it back to the Rogue Guild alive. That's all you have to do!";
+		mes "[赫尔曼索恩Jr.]";
+		mes "好吧...只要安全回到盗贼公会就行。这就是你要做的全部！";
 		set ROGUE_Q,12;
 		changequest 2025,2026;
 		close;
 	}
 	else if (ROGUE_Q == 12) {
-		mes "[HermanthornJr.]";
-		mes "Oh right. This is really important. You need a password to enter the tunnel. To unlock the door, the four number combination is ^0000FF3019^000000.";
+		mes "[赫尔曼索恩Jr.]";
+		mes "哦，对了。这非常重要。你需要一个密码才能进入隧道。";
+		mes "打开门的四位数字组合是^0000FF3019^000000。";
 		close;
 	}
 	else {
-		mes "[HermanthornJr.]";
-		mes "Huh...?";
-		mes "What the hell";
-		mes "are you doing here.";
-		mes "Scram, why don't you?";
+		mes "[赫尔曼索恩Jr.]";
+		mes "嗯...?你在这里干什么？快滚吧，行不行？";
 		close;
 	}
 }
@@ -1298,10 +1207,7 @@ OnTouch_:
 		}
 		else {
 			mes "[赫尔曼索恩Jr.]";
-			mes "嗯……";
-			mes "我不是告诉过你";
-			mes "我更改了";
-			mes "密码吗？*眨眼*";
+			mes "嗯……我不是告诉过你我更改了密码吗？*眨眼*";
 			close;
 		}
 	}
@@ -1396,259 +1302,202 @@ OnTouch_:
 	end;
 }
 
-in_rogue,244,39,1	script	Aragham Junior#rg	99,{
+in_rogue,244,39,1	script	阿拉甘小子#rg	99,{
 	if (ROGUE_Q == 9) {
-		mes "[Aragham Jr.]";
-		mes "Oh, you must be";
-		mes "from the Rogue Guild...";
+		mes "[阿拉甘小子]";
+		mes "哦，你一定是来自盗贼公会的……";
 		next;
-		mes "[Aragham Jr.]";
-		mes "My name is";
-		mes "Aragham Junior,";
-		mes "Rogue of the Desert.";
-		mes "Are you ready to learn";
-		mes "how to be a Rogue?";
+		mes "[阿拉甘小子]";
+		mes "我叫阿拉甘小子，沙漠中的盗贼。";
+		mes "你准备好学习如何成为盗贼了吗？";
 		next;
-		mes "[Aragham Jr.]";
-		mes "See, as a Rogue, our motto is, '^0000FFAvoid the strong! Be malicious to the weak!^000000' That rule especially goes true for monsters.";
+		mes "[阿拉甘小子]";
+		mes "作为盗贼，我们的座右铭是，'^0000FF避免强者！对弱者恶意！";
+		mes "^000000' 这条规则尤其适用于怪物。";
 		next;
-		mes "[Aragham Jr.]";
-		mes "Avoid the strong!";
-		mes "Be malicious to the weak!";
-		mes "It's a simple rule...";
+		mes "[阿拉甘小子]";
+		mes "避免强者！对弱者恶意！这是一条简单的规则……";
 		next;
-		mes "[Aragham Jr.]";
-		mes "Now, remember it as you go through ^0000FFthe Underground Tunnel^000000. Try to walk all the way to the Rogue Guild.";
+		mes "[阿拉甘小子]";
+		mes "现在，记住这条规则，当你穿过^0000FF地下隧道^000000时。";
+		mes "尽量走到盗贼公会。";
 		next;
-		mes "[Aragham Jr.]";
-		mes "There will be a few monsters, but don't worry. I know you're strong. Alright, are you ready to go or what?";
+		mes "[阿拉甘小子]";
+		mes "那里会有一些怪物，但别担心。我知道你很强。好了，";
+		mes "你准备好出发了吗？";
 		next;
-		if (select("Yes, let's go.:Nah~") == 1) {
-			mes "[Aragham Jr.]";
-			mes "Alright...";
-			mes "Good luck, then.";
+		if (select("是的，出发吧。:不~") == 1) {
+			mes "[阿拉甘小子]";
+			mes "好的……祝你好运。";
 			close2;
 			warp "in_rogue",15,105;
 			set ROGUE_Q,13;
 			changequest 2022,2026;
 			end;
 		}
-		mes "[Aragham Jr.]";
-		mes "Fine, fine.";
-		mes "Take your time";
-		mes "and come back";
-		mes "when you're ready.";
+		mes "[阿拉甘小子]";
+		mes "好吧，慢慢来，准备好再回来。";
 		close;
 	}
 	else if (ROGUE_Q == 13) {
-		mes "[Aragham Jr.]";
-		mes "Oh, you're back.";
-		mes "I think you'll do well this time. Another motto Rogues have is '^0000FFFailure teaches success^000000.' Well, then again...";
+		mes "[阿拉甘小子]";
+		mes "哦，你回来了。我觉得这次你会做得很好。";
+		mes "盗贼们还有另一条座右铭是'^0000FF失败教会成功^000000'。";
+		mes "不过，话说回来……";
 		next;
-		if (select("Re-Test:Cancel") == 1) {
-			mes "[Aragham Jr.]";
-			mes "Good luck.";
+		if (select("重新测试:取消") == 1) {
+			mes "[阿拉甘小子]";
+			mes "祝你好运。";
 			close2;
 			warp "in_rogue",15,105;
 			end;
 		}
-		mes "[Aragham Jr.]";
-		mes "Fine, fine.";
-		mes "Take your time";
-		mes "and come back";
-		mes "when you're ready.";
+		mes "[阿拉甘小子]";
+		mes "好吧，慢慢来，准备好再回来。";
 		close;
 	}
 	else if (BaseJob != Job_Rogue) {
-		mes "[Aragham Jr.]";
-		mes "Huh...?";
-		mes "Who are you?!";
-		mes "You're not from";
-		mes "the Rogue Guild!!";
+		mes "[阿拉甘小子]";
+		mes "嗯……你是谁？！你不是来自盗贼公会的！！";
 		next;
-		mes "[Aragham Jr.]";
-		mes "You've come here to kill me, haven't you? N-no! I'm can't die yet! Get lost! Otherwise, I'll kill you first!";
+		mes "[阿拉甘小子]";
+		mes "你是来杀我的，对吧？不——我还不能死！滚开！";
+		mes "否则，我会先杀了你！";
 		close;
 	}
 	else {
-		mes "[Aragham Jr.]";
-		mes "Hey...";
-		mes "what brings";
-		mes "you back here?";
-		mes "Why don't you";
-		mes "take a rest";
-		mes "before you leave?";
+		mes "[阿拉甘小子]";
+		mes "嘿……你为什么又回来了？不如在离开之前休息一下？";
 		close;
 	}
 }
 
-in_rogue,160,34,1	script	Hollgrehenn junior#rg	85,{
+in_rogue,160,34,1	script	霍尔格伦小子#rg	85,{
 	if (ROGUE_Q == 11) {
-		mes "[Hollgrehenn Jr.]";
-		mes "Huh...";
-		mes "From the";
-		mes "Rogue guild, huh?";
+		mes "[霍尔格伦小子]";
+		mes "嗯……来自盗贼公会，啊？";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "I'm Hollgrehenn Junior. I tend to a lot of our underground business. So are you ready to take on my test?";
+		mes "[霍尔格伦小子]";
+		mes "我是霍尔格伦小子。我负责很多地下业务。";
+		mes "你准备好接受我的测试了吗？";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "We Rogues share this motto: ^0000FFAvoid the strong! Be malicious to the weak!^000000 This rule applies to any threat, especially monsters.";
+		mes "[霍尔格伦小子]";
+		mes "我们盗贼有这样的座右铭：^0000FF避免强者！对弱者恶意！";
+		mes "^000000 这条规则适用于任何威胁，尤其是怪物。";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "It's easy to remember.";
-		mes "Just don't forget to put it into practice. You got it?";
+		mes "[霍尔格伦小子]";
+		mes "这很容易记住。只要别忘了付诸实践。明白了吗？";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "For my test, you'll go through the ^0000FFUnderground Tunnel^000000. Follow it all the way back to the Rogue Guild.";
+		mes "[霍尔格伦小子]";
+		mes "在我的测试中，你将穿过^0000FF地下隧道^000000。一路走回盗贼公会。";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "There are some monsters there, but that'll be part of your training. Now, are you ready to go or not?";
+		mes "[霍尔格伦小子]";
+		mes "那里有一些怪物，但这将是你训练的一部分。现在，";
+		mes "你准备好出发了吗？";
 		next;
-		if (select("Yes, I am.:Nah~") == 1) {
-			mes "[Hollgrehenn Jr.]";
-			mes "Good luck.";
+		if (select("是的，我准备好了。:不~") == 1) {
+			mes "[霍尔格伦小子]";
+			mes "祝你好运。";
 			close2;
 			warp "in_rogue",15,105;
 			set ROGUE_Q,15;
 			changequest 2024,2026;
 			end;
 		}
-		mes "[Hollgrehenn Jr.]";
-		mes "Take your time.";
-		mes "Come back here";
-		mes "when you're ready.";
+		mes "[霍尔格伦小子]";
+		mes "慢慢来，准备好再回来这里。";
 		close;
 	}
 	else if (ROGUE_Q == 15) {
-		mes "[Hollgrehenn Jr.]";
-		mes "Huh.";
-		mes "You failed.";
-		mes "Gonna try again?";
+		mes "[霍尔格伦小子]";
+		mes "哈，你失败了。还想再试一次吗？";
 		next;
-		if (select("Re-Test:Cancel.") == 1) {
-			mes "[Hollgrehenn Jr.]";
-			mes "Good luck.";
+		if (select("重测:取消。") == 1) {
+			mes "[霍尔格伦小子]";
+			mes "祝你好运。";
 			close2;
 			warp "in_rogue",15,105;
 			end;
 		}
-		mes "[Hollgrehenn Jr.]";
-		mes "Take your time.";
-		mes "Come back here";
-		mes "when you're ready.";
+		mes "[霍尔格伦小子]";
+		mes "慢慢来，准备好再回来这里。";
 		close;
 	}
 	else if (BaseJob != Job_Rogue) {
-		mes "[Hollgrehenn Jr.]";
-		mes "Huh...?";
-		mes "You're not from";
-		mes "the Rogue Guild...";
+		mes "[霍尔格伦小子]";
+		mes "哈...? 你不是来自盗贼公会的...";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "You better get out";
-		mes "of here right now";
-		mes "if you know what's";
-		mes "good for you...";
+		mes "[霍尔格伦小子]";
+		mes "如果你知道对你有好处，就最好现在离开这里...";
 		next;
-		mes "[Hollgrehenn Jr.]";
-		mes "Now...";
-		mes "Beat it before";
-		mes "I change my mind";
-		mes "about killing you.";
+		mes "[霍尔格伦小子]";
+		mes "现在... 快走，在我改变主意之前。";
 		close;
 	}
 	else {
-		mes "[Hollgrehenn Jr.]";
-		mes "Hey...";
-		mes "Come to visit?";
-		mes "We Rogues gotta";
-		mes "stick together, huh?";
+		mes "[霍尔格伦小子]";
+		mes "嘿... 来拜访吗？我们盗贼得团结在一起，对吧？";
 		close;
 	}
 }
 
-in_rogue,177,109,1	script	Antonio junior#rg	88,{
+in_rogue,177,109,1	script	安东尼奥小子#rg	88,{
 	if (ROGUE_Q == 10) {
-		mes "[Antonio Jr.]";
-		mes "You're from";
-		mes "the Rogue guild?";
-		mes "If you wanna learn";
-		mes "about becoming a Rogue,";
-		mes "then shut up and stay put.";
+		mes "[安东尼奥小子]";
+		mes "你是来自盗贼公会的吗？";
+		mes "如果想了解如何成为盗贼，就闭嘴待着。";
 		next;
-		mes "[Antonio Jr.]";
-		mes "^0000FFAvoid the strong! Be malicious to the weak!^000000 That's our motto for battling monsters.";
+		mes "[安东尼奥小子]";
+		mes "^0000FF避免强者！对弱者恶毒！^000000 这就是我们对抗怪物的座右铭。";
 		next;
-		mes "[Antonio Jr.]";
-		mes "Show no mercy when you fight weaker monsters, and try to keep away from stronger monsters.";
+		mes "[安东尼奥小子]";
+		mes "对付弱小的怪物时不要留情，尽量远离强大的怪物。";
 		next;
-		mes "[Antonio Jr.]";
-		mes "Now, I want you to walk all the way to the Rogue Guild through this ^0000FFUnderground Tunnel^000000.";
+		mes "[安东尼奥小子]";
+		mes "现在，我希望你走到盗贼公会，通过这条^0000FF地下隧道^000000。";
 		next;
-		mes "[Antonio Jr.]";
-		mes "There are monsters there, but if you avoid the strong and be malicious to the weak, you'll be fine.";
+		mes "[安东尼奥小子]";
+		mes "那里有怪物，但如果你避免强者并对弱者恶毒，你会没事的。";
 		next;
-		if (select("Let's go!:W-wait~") == 1) {
-			mes "[Antonio Jr.]";
-			mes "I hope you do";
-			mes "not fail this test";
-			mes "You can only become";
-			mes "a Rogue if you pass...";
+		if (select("我们走吧！:等、等一下~") == 1) {
+			mes "[安东尼奥小子]";
+			mes "希望你不要在这个测试中失败，只有通过才能成为盗贼...";
 			close2;
 			warp "in_rogue",15,105;
 			set ROGUE_Q,14;
 			changequest 2023,2026;
 			end;
 		}
-		mes "[Antonio Jr.]";
-		mes "I don't have time";
-		mes "to fool around with";
-		mes "you. Hurry up, get";
-		mes "ready, then take";
-		mes "the test.";
+		mes "[安东尼奥小子]";
+		mes "我没时间和你开玩笑。快点，准备好，然后参加测试。";
 		close;
 	}
 	else if (ROGUE_Q == 14) {
-		mes "[Antonio Jr.]";
-		mes "You failed...?";
-		mes "I guess that's life.";
-		mes "Are you gonna try";
-		mes "again or what?";
+		mes "[安东尼奥小子]";
+		mes "你失败了...? 我想这就是生活。你打算再试一次吗？";
 		next;
-		if (select("Re-test:Cancel") == 1) {
-			mes "[Antonio Jr.]";
-			mes "Remember, I'm doing";
-			mes "you a favor here...";
-			mes "Now, don't come back";
-			mes "until you're a Rogue.";
+		if (select("重测:取消") == 1) {
+			mes "[安东尼奥小子]";
+			mes "记住，我是在帮你... 现在，等你成为盗贼再回来。";
 			close2;
 			warp "in_rogue",15,105;
 			end;
 		}
-		mes "[Antonio Jr.]";
-		mes "I don't have time";
-		mes "to fool around with";
-		mes "you. Hurry up, get";
-		mes "ready, then take";
-		mes "the test.";
+		mes "[安东尼奥小子]";
+		mes "我没时间和你开玩笑。快点，准备好，然后参加测试。";
 		close;
 	}
 	else if (BaseJob != Job_Rogue) {
-		mes "Huh...?";
-		mes "Who are you?!";
-		mes "You're not from";
-		mes "the Rogue Guild!!";
+		mes "哈...? 你是谁？！你不是来自盗贼公会！！";
 		next;
-		mes "[Antonio Jr.]";
-		mes "You've come here to kill me?! I won't let you!! Come on, give me your best shot! You can't fight if I rip out your eyes!";
+		mes "[安东尼奥小子]";
+		mes "你是来杀我的？！我不会让你得逞的！！来吧，尽力一击！";
+		mes "如果我挖掉你的眼睛，你就不能打了！";
 		close;
 	}
 	else {
-		mes "[Antonio Jr.]";
-		mes "Hey, how's it goin'?";
-		mes "Take it easy, and just";
-		mes "relax before you leave.";
+		mes "[安东尼奥小子]";
+		mes "嘿，最近怎么样？放轻松，离开前好好放松一下。";
 		close;
 	}
 }

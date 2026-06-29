@@ -1,19 +1,19 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Crusader Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.4
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Shrink
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //============================================================
 
-geffen,110,117,3	script	Ford#11	752,{
+geffen,110,117,3	script	福特#11	752,{
 	if (BaseJob == Job_Crusader) {
 		if (CRUS_SK == 8 && getskilllv("CR_SHRINK") == 0) {
 			mes "[福特]";
@@ -277,7 +277,7 @@ geffen,110,117,3	script	Ford#11	752,{
 	}
 }
 
-gef_fild13,297,242,3	script	Soldier#277	751,{
+gef_fild13,297,242,3	script	士兵#277	751,{
 	if (BaseJob == Job_Crusader) {
 		if (Upper == 1 && getskilllv("CR_SHRINK")) {
 			if (CRUS_SK == 8) {
@@ -578,7 +578,7 @@ gef_fild13,297,242,3	script	Soldier#277	751,{
 	}
 }
 
-prt_church,87,127,3	script	Pastor#1011	755,{
+prt_church,87,127,3	script	牧师#1011	755,{
 	if (BaseJob == Job_Crusader) {
 		if (Upper == 1 && getskilllv("CR_SHRINK")) {
 			if (CRUS_SK == 8) {
@@ -621,12 +621,8 @@ prt_church,87,127,3	script	Pastor#1011	755,{
 			mes "哥布林毒药解药。";
 			next;
 			mes "[亚瑟父亲]";
-			mes "圣人保佑我们，";
-			mes "哥布林确实是";
-			mes "残忍而无情的！";
-			mes "不幸的是，我刚刚";
-			mes "用完了哥布林毒药解 antidote";
-			mes "必须从头开始制作。";
+			mes "圣人保佑我们，哥布林确实是残忍而无情的！不幸的是，";
+			mes "我刚刚用完了哥布林毒药解药，必须从头开始制作。";
 			next;
 			mes "["+ strcharinfo(0) +"]";
 			mes "告诉我你想要什么";
@@ -686,7 +682,7 @@ prt_church,87,127,3	script	Pastor#1011	755,{
 				delitem 909,5; //Jellopy
 				delitem 514,1; //Grape
 				delitem 1003,1; //Coal
-				delitem 7053,3; //Cyfar
+				delitem 7053,3; //西法
 				delitem 713,3; //Empty_Bottle
 				set CRUS_SK,6;
 				close;
@@ -717,11 +713,8 @@ prt_church,87,127,3	script	Pastor#1011	755,{
 		}
 		else if (CRUS_SK == 6) {
 			mes "[亚瑟父亲]";
-			mes "你的时机必须是";
-			mes "神圣的灵感：我";
-			mes "刚刚完成了哥布林";
-			mes "毒药解 antidote。现在请";
-			mes "仔细听我说...";
+			mes "你的时机必须是神圣的灵感：我刚刚完成了哥布林毒药解药。";
+			mes "现在请仔细听我说...";
 			next;
 			mes "[亚瑟父亲]";
 			mes "我不能保证这是否";
@@ -811,15 +804,15 @@ prt_church,87,127,3	script	Pastor#1011	755,{
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

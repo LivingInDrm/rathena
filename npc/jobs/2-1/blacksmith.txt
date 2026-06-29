@@ -1,5 +1,5 @@
 //===== rAthena Script =======================================
-//= Blacksmith Job Quest
+//= 铁匠 Job Quest
 //===== By: ==================================================
 //= EREMES THE CANIVALIZER(Aegis)
 //= Translated by: yoshiki.
@@ -12,7 +12,7 @@
 //= rAthena Project
 //===== Description: =========================================
 //= [Official Conversion]
-//= Job Change quest for Blacksmith class.
+//= Job Change quest for 铁匠 class.
 //===== Additional Comments: =================================
 //= Changed some npc names to the iRO names. Changed some variable
 //= names and labels. Edited some text.[kobra_k88]
@@ -35,7 +35,7 @@
 //= 2.4c More fixes courtosy of Micktu. [L0ne_W0lf]
 //= 2.4d Fixed an incorrect answer in the quiz. (Trojal) [L0ne_W0lf]
 //= 2.4e Touched up a few issues as pointed out by Ultramage. [L0ne_W0lf]
-//= 2.5 Krongast is in Lighthalzen. (DarkValmir) [L0ne_W0lf]
+//= 2.5 克朗加斯 is in Lighthalzen. (DarkValmir) [L0ne_W0lf]
 //= 2.6 Fixed 4 bugs [Lupus]
 //= 2.6a Typo fix [Yommy]
 //= 2.7 Added Quest Log commands. [Kisuka]
@@ -43,7 +43,7 @@
 //= 2.9 Updated with some extra conditions. [Euphy]
 //==============================================================
 
-ein_in01,18,28,4	script	Guildsman#BLS	731,{
+ein_in01,18,28,4	script	公会成员#BLS	731,{
 	if (Upper == 1) {
 		mes "[阿尔提雷根]";
 		mes "嘿嘿。我没时间闲聊，我很忙。这些商人都在努力成为铁匠。";
@@ -131,7 +131,7 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 		mes "嗯，我的锻造生意似乎不再增长了。";
 		close;
 	}
-	else if (BaseJob == Job_Blacksmith) {
+	else if (BaseJob == Job_铁匠) {
 		mes "[阿尔提雷根]";
 		mes "哦！好久不见。";
 		mes "你是来向克里斯托弗购买材料的吗？这些天我被困在这张桌子后面。我的身体渴望敲打老铁砧。";
@@ -264,36 +264,34 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 				mes "请卸下您的骑乘宠物，然后再试一次！";
 				close;
 			}
-			mes "太好了，我可以从您眼中的光芒看出您成功了。我现在可以将锻造的礼物，黑smith的艺术赐予您。";
+			mes "太好了，我可以从您眼中的光芒看出您成功了。";
+			mes "我现在可以将锻造的礼物，铁匠的艺术赐予您。";
 			if (checkquest(2015) != -1) {
 				changequest 2015,2016;
 			}
 			next;
 			set .@joblvl,JobLevel;
-			callfunc "Job_Change",Job_Blacksmith;
+			callfunc "Job_Change",Job_铁匠;
 			callfunc "F_ClearJobVar";		// clears all job variables for the current player
 			mes "[阿尔提雷根]";
 			mes "请始终记住，我们是创造者，是金属的艺术家。要小心不要陷入自私的陷阱中。";
 			mes "和贪婪。";
 			next;
-			delitem 1005,1; //Hammer_Of_Blacksmith
+			delitem 1005,1; //Hammer_Of_铁匠
 			completequest 2016;
 			mes "[阿尔提雷根]";
-			mes "这是一个小小的";
-			mes "礼物，以标志着";
-			mes "您作为黑smith的";
-			mes "生活的开始。";
-			mes "恭喜！！！";
+			mes "这是一个小小的礼物，";
+			mes "以标志着您作为铁匠的生活的开始。恭喜！！！";
 			if (.@joblvl > 48)
 				getitem 999,30; //Steel
-			else 
+			else
 				getitem 999,5; //Steel
 			close;
 		}
 	}
 }
 
-ein_in01,201,27,3	script	Guildsman#alberta	63,{
+ein_in01,201,27,3	script	公会成员#alberta	63,{
 	mes "[格什普恩施特]";
 	mes "你好！";
 	mes "我是^8E6B23格什普恩施特^000000，";
@@ -324,8 +322,8 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 		else if ((BSMITH_Q == 1) || (BSMITH_Q == 2)) {
 			if (BSMITH_Q == 1) {
 				mes "[格什普恩施特]";
-				mes "我可以假设你是黑smith公会派来的帮手吗？我能雇到的可靠帮手不多，所以我总是";
-				mes "缺少帮手。";
+				mes "我可以假设你是铁匠公会派来的帮手吗？";
+				mes "我能雇到的可靠帮手不多，所以我总是缺少帮手。";
 				next;
 				mes "[格什普恩施特]";
 				mes "嗯，无论如何，";
@@ -668,7 +666,8 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 				mes "全部完成...";
 				switch(BSMITH_Q) {
 				case 9:
-					mes "好了，现在把这个带给^8E6B23Baisulist^000000，在米德加尔特王国的吉芬。只需送达并带回收据给我。";
+					mes "好了，现在把这个带给^8E6B23拜苏利斯^000000，在米德加尔特王国的吉芬。";
+					mes "只需送达并带回收据给我。";
 					getitem 1610,1; //Arc_Wand
 					if (checkquest(2003) != -1) {
 						changequest 2003,2008;
@@ -718,7 +717,8 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 					mes "去^8E6B23维基贝因^000000在梦罗克的卢恩-米德加兹王国，";
 					break;
 				case 11:
-					mes "好的，现在把这个带到 ^8E6B23Krongast^000000 在利希塔恩。只需送达并把收据带回来。";
+					mes "好的，现在把这个带到^8E6B23克朗加斯^000000在利希塔恩。";
+					mes "只需送达并把收据带回来。";
 					getitem 1119,1; //Tsurugi
 					if (checkquest(2005) != -1) {
 						changequest 2005,2010;
@@ -731,20 +731,15 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 					mes "刀剑！仔细看看";
 					mes "刀刃...";
 					next;
-					mes "^3355FF刀刃上写着：";
-					mes "‘锋利的";
-					mes "Geschupenschte";
-					mes "Tsurugi 特制。’";
-					mes "确实感觉";
-					mes "完全不同";
-					mes "与普通的 Tsurugi...^000000";
+					mes "^3355FF刀刃上写着：‘锋利的格什普恩施特Tsurugi特制。";
+					mes "’确实感觉完全不同于普通的Tsurugi...^000000";
 					next;
 					mes "[格什普恩施特]";
-					mes "无论如何，拿这个";
-					mes "到 ^8E6B23Krongast^000000 在利希塔恩";
+					mes "无论如何，拿这个到^8E6B23克朗加斯^000000在利希塔恩。";
 					break;
 				case 12:
-					mes "好的，现在把这个带给^8E6B23Talpiz^000000，在米德加尔特王国的斐扬。只需交付这个并带回收据给我。";
+					mes "好的，现在把这个带给^8E6B23塔尔皮兹^000000，在米德加尔特王国的斐扬。";
+					mes "只需交付这个并带回收据给我。";
 					getitem 1713,1; //Arbalest
 					if (checkquest(2006) != -1) {
 						changequest 2006,2011;
@@ -758,37 +753,28 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 					mes "这个弓...";
 					next;
 					mes "^3355FF这个弓上写着：";
-					mes "Geschupenschte";
+					mes "格什普恩施特";
 					mes "奢华版弩炮。";
 					mes "确实看起来更奢华";
 					mes "比普通的弩炮更奢华。^000000";
 					next;
 					mes "[格什普恩施特]";
-					mes "无论如何，拿这个";
-					mes "给^8E6B23Talpiz^000000，在米德加尔特王国的斐扬，";
+					mes "无论如何，拿这个给^8E6B23塔尔皮兹^000000，在米德加尔特王国的斐扬。";
 					break;
 				case 13:
-					mes "好的，现在把这个带给^8E6B23Bismarc^000000，在胡乐。只需交付这个并带回收据。";
+					mes "好的，现在把这个带给^8E6B23比斯马克^000000，在胡乐。";
+					mes "只需交付这个并带回收据。";
 					getitem 1122,1; //Ring_Pommel_Saber
 					if (checkquest(2007) != -1) {
 						changequest 2007,2012;
 					}
 					next;
 					mes "[格什普恩施特]";
-					mes "嗯……？";
-					mes "你那是什么表情？";
-					mes "这可不是普通的";
-					mes "环 pommel 剑！";
-					mes "仔细看看";
-					mes "手柄...";
+					mes "嗯……？你那是什么表情？这可不是普通的环 柄头 剑！";
+					mes "仔细看看手柄...";
 					next;
-					mes "^3355FF把手上写着:";
-					mes "‘绿色草药’";
-					mes "环 pommel 剑";
-					mes "的盖舒本施特";
-					mes "马克2。确实有些";
-					mes "完全不同的";
-					mes "感觉。^000000";
+					mes "^3355FF把手上写着:‘绿色草药’环 柄头 剑的盖舒本施特马克2。";
+					mes "确实有些完全不同的感觉。^000000";
 					next;
 					mes "[格什普恩施特]";
 					mes "这把剑中蕴含的绿色草药的力量非常有用！你可以通过快速刺击这个武器来拯救一个正在缓慢中毒而死的人！";
@@ -837,21 +823,22 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 			next;
 			mes "[格什普恩施特]";
 			if (BSMITH_Q == 9) {
-				mes "在吉芬，";
-				mes "从城镇中心的11点方向，你会找到 ^8E6B23Baisulist^000000。别忘了收据。";
+				mes "在吉芬，从城镇中心的11点方向，";
+				mes "你会找到^8E6B23拜苏利斯^000000。别忘了收据。";
 			}
 			else if (BSMITH_Q == 10) {
-				mes "找到剑锤";
-				mes "在梦罗克的商人 ^8E6B23Wickebine^000000 那里。别忘了收据。";
+				mes "找到剑锤在梦罗克的商人^8E6B23维克比恩^000000那里。别忘了收据。";
 			}
 			else if (BSMITH_Q == 11) {
-				mes "在利希塔恩，朝市中心的6点方向，你会在武器商店附近找到 ^8E6B23Krongast^000000。别忘了收据。";
+				mes "在利希塔恩，朝市中心的6点方向，";
+				mes "你会在武器商店附近找到^8E6B23克朗加斯^000000。别忘了收据。";
 			}
 			else if (BSMITH_Q == 12) {
-				mes "在斐扬，朝市中心的5点方向，你会找到 ^8E6B23Talpiz^000000。别忘了收据。";
+				mes "在斐扬，朝市中心的5点方向，你会找到^8E6B23塔尔皮兹^000000。别忘了收据。";
 			}
 			else {
-				mes "在胡乐，朝市中心的1点方向，你会在飞空船附近找到 ^8E6B23Bismarc^000000。别忘了收据。";
+				mes "在胡乐，朝市中心的1点方向，";
+				mes "你会在飞空船附近找到^8E6B23比斯马克^000000。别忘了收据。";
 			}
 			close;
 		}
@@ -948,7 +935,7 @@ ein_in01,201,27,3	script	Guildsman#alberta	63,{
 	}
 }
 
-geffen,46,164,1	script	Baisulist#BLS	69,{
+geffen,46,164,1	script	拜苏利斯#BLS	69,{
 	if (BSMITH_Q == 9 && countitem(1610) > 0) {
 		mes "[拜苏利斯]";
 		mes "哦，您好！";
@@ -976,7 +963,8 @@ geffen,46,164,1	script	Baisulist#BLS	69,{
 		delitem 1610,1; //Arc_Wand
 		next;
 		mes "[拜苏利斯]";
-		mes "非常感谢你特意来到这里。那个Geschupenschte，见到他时请替我打他一巴掌，因为他这次订单太迟了...";
+		mes "非常感谢你特意来到这里。那个格什普恩施特，";
+		mes "见到他时请替我打他一巴掌，因为他这次订单太迟了...";
 		next;
 		mes "[拜苏利斯]";
 		mes "请等";
@@ -1012,9 +1000,8 @@ geffen,46,164,1	script	Baisulist#BLS	69,{
 		mes "我的交付...";
 		next;
 		mes "[拜苏利斯]";
-		mes "我在想...";
-		mes "黑smith公会可能";
-		mes "人手不足？我想不出其他原因导致他们迟到...";
+		mes "我在想...铁匠公会可能人手不足？";
+		mes "我想不出其他原因导致他们迟到...";
 		next;
 		mes "[拜苏利斯]";
 		mes "我什么时候能得到";
@@ -1023,7 +1010,7 @@ geffen,46,164,1	script	Baisulist#BLS	69,{
 	}
 }
 
-morocc,27,112,4	script	Wickebine#BLS	725,{
+morocc,27,112,4	script	维克比尼#BLS	725,{
 	if (BSMITH_Q == 10 && countitem(1219) > 0) {
 		cutin "Job_Black_hucke01",2;
 		mes "[维基贝恩]";
@@ -1124,7 +1111,7 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 	}
 }
 
-lighthalzen,209,80,4	script	Krongast#BLS	734,{
+lighthalzen,209,80,4	script	克朗加斯特#BLS	734,{
 	if (BSMITH_Q == 11 && countitem(1119) > 0) {
 		mes "[克朗加斯特]";
 		mes "哦哦哦哦~";
@@ -1202,7 +1189,7 @@ lighthalzen,209,80,4	script	Krongast#BLS	734,{
 	}
 }
 
-payon,214,79,4	script	Talpiz#BLS	59,{
+payon,214,79,4	script	塔尔皮兹#BLS	59,{
 	if (BSMITH_Q == 12 && countitem(1713) > 0) {
 		mes "[塔尔皮兹]";
 		mes "哦~";
@@ -1276,7 +1263,7 @@ payon,214,79,4	script	Talpiz#BLS	59,{
 	}
 }
 
-hugel,168,183,1	script	Bismarc#BLS	118,{
+hugel,168,183,1	script	比斯马克#BLS	118,{
 	if (BSMITH_Q == 13 && countitem(1122) > 0) {
 		mes "[比斯马克]";
 		mes "天哪...";
@@ -1303,9 +1290,7 @@ hugel,168,183,1	script	Bismarc#BLS	118,{
 			close;
 		}
 		mes "[比斯马克]";
-		mes "^666666*Ghklk*^000000";
-		mes "给我...！";
-		mes "拜托了！";
+		mes "^666666*Ghklk*^000000给我...！拜托了！";
 		next;
 		set BSMITH_Q,14;
 		delitem 1122,1; //Ring_Pommel_Saber
@@ -1316,8 +1301,7 @@ hugel,168,183,1	script	Bismarc#BLS	118,{
 		mes "绿色草药的力量。^000000";
 		next;
 		mes "[比斯马克]";
-		mes "^666666*Ghyklk*^000000";
-		mes "*喘息喘息*";
+		mes "^666666*Ghyklk*^000000*喘息喘息*";
 		next;
 		mes "[比斯马克]";
 		mes "请...";
@@ -1355,10 +1339,7 @@ hugel,168,183,1	script	Bismarc#BLS	118,{
 	}
 	else {
 		mes "[比斯马克]";
-		mes "^666666*Ghyklk*^000000";
-		mes "^666666*呜呜*^000000";
-		mes "我的";
-		mes "订购到了...？";
+		mes "^666666*Ghyklk*^000000^666666*呜呜*^000000我的订购到了...？";
 		next;
 		mes "[比斯马克]";
 		mes "体内的毒";
@@ -1373,120 +1354,89 @@ hugel,168,183,1	script	Bismarc#BLS	118,{
 	}
 }
 
-ein_in01,24,41,5	script	Blacksmith Guildsman#moc	726,{
+ein_in01,24,41,5	script	铁匠公会成员#moc	726,{
 	if (BSMITH_Q == 16) {
 		emotion ET_SCRATCH;
-		mes "[Mitehmaeeuh]";
-		mes "Oh...so you're the one who wants to be a blacksmith?";
-		mes "Nice, heh heh.";
-		mes "As you've realized from your past tests, you won't be promoted from Merchant to Blacksmtih immediately.";
+		mes "[米特哈梅]";
+		mes "哦...所以你就是想成为铁匠的人？不错，呵呵。";
+		mes "正如你从过去的测试中意识到的，";
+		mes "你不会立即从商人晋升为铁匠。";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "How much do you truly understand about smithing? Are you ready for me to ask you some questions?";
+		mes "[米特哈梅]";
+		mes "你对锻造了解多少？你准备好让我问你一些问题吗？";
 		next;
-		if (select("Yes:No, not yet~") == 1) {
-			mes "[Mitehmaeeuh]";
-			mes "Alright...";
-			mes "My test is simple.";
-			mes "I'll ask five questions.";
-			mes "If you miss too many,";
-			mes "you fail. And I won't";
-			mes "tell you what you missed.";
+		if (select("是:还没准备好~") == 1) {
+			mes "[米特哈梅]";
+			mes "好的...我的测试很简单。我会问五个问题。如果你答错太多，";
+			mes "就会失败。我不会告诉你你错了什么。";
 			next;
 			set .@blackss_te,0;
-			mes "[Mitehmaeeuh]";
-			mes "Please listen";
-			mes "and answer carefully...";
+			mes "[米特哈梅]";
+			mes "请仔细听并回答...";
 			next;
 			switch(rand(1,3)) {
 			case 1:
-				mes "[Mitehmaeeuh]";
-				mes "1. What ability";
-				mes "is required to learn";
-				mes "the ^8E6B23Discount^000000 skill?";
+				mes "[米特哈梅]";
+				mes "1. 学习^8E6B23折扣^000000技能需要什么能力？";
 				next;
-				if (select("Level 3 Push Cart:Item Appraisal:Level 10 Mammonite:Level 3 Enlarge Weight") == 4)
+				if (select("3级推车:物品鉴定:10级玛门:3级扩大重量") == 4)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "2. When you attack";
-				mes "with ^8E6B23Hammerfall^000000,";
-				mes "what status effect can";
-				mes "you inflict on enemies?";
+				mes "[米特哈梅]";
+				mes "2. 当你使用^8E6B23凶砍^000000攻击时，";
+				mes "可以对敌人施加什么状态效果？";
 				next;
-				if (select("Stun:Blindness:Chaos:Silence") == 1)
+				if (select("眩晕:失明:混乱:沉默") == 1)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "3. How much Zeny is spent";
-				mes "when attacking with the";
-				mes "mastered Mammonite skill?";
-				mes "(Level 10 Mammonite)";
+				mes "[米特哈梅]";
+				mes "3. 使用掌握的金钱攻击技能攻击时消耗多少Zeny？";
+				mes "（10级金钱攻击）";
 				next;
 				if (select("900 Zeny:1000 Zeny:2000 Zeny:100,000 Zeny") == 2)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "4. What is the";
-				mes "discount rate when";
-				mes "the ^8E6B23Discount^000000";
-				mes "skill is mastered?";
+				mes "[米特哈梅]";
+				mes "4. 当^8E6B23折扣^000000技能掌握后，折扣率是多少？";
 				next;
 				if (select("21 % :22 % :23 % :24 % ") == 4)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "5. What is the maximum";
-				mes "percentage that you can";
-				mes "overcharge items sold to";
-				mes "NPCs after mastering the";
-				mes "^8E6B23Overcharge^000000 skill?";
+				mes "[米特哈梅]";
+				mes "5. 掌握^8E6B23超额收费^000000技能后，";
+				mes "出售给NPC的物品最多可以加价多少百分比？";
 				next;
 				if (select("21 % :22 % :23 % :24 % ") == 3)
 					set .@blackss_te,.@blackss_te+20;
 				break;
 			case 2:
-				mes "[Mitehmaeeuh]";
-				mes "1. Which of the";
-				mes "following monsters";
-				mes "drops Steel?";
+				mes "[米特哈梅]";
+				mes "1. 以下哪个怪物掉落钢铁？";
 				next;
-				if (select("Zerom:Chon Chon:Skel Worker:Requiem") == 3)
+				if (select("泽罗姆:虫虫:骷髅工人:安魂曲") == 3)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "2. Which of the following";
-				mes "stones can be made from";
-				mes "Red Bloods?";
+				mes "[米特哈梅]";
+				mes "2. 以下哪些石头可以由红血制成？";
 				next;
-				if (select("Flame Heart:Rough Wind:Great Nature:Mystic Frozen") == 1)
+				if (select("火焰之心:粗糙之风:伟大自然:神秘冰冻") == 1)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "3. Which of the following";
-				mes "stones do you have the most";
-				mes "of in your Kafra Storage?";
+				mes "[米特哈梅]";
+				mes "3. 在你的卡普拉储存中，以下哪种石头数量最多？";
 				next;
-				select("Wind of Verdure:Red Blood:Green Live:Crystal Blue");
+				select("生机之风:红血:绿色生命:水晶蓝");
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "4. In general,";
-				mes "which of the following";
-				mes "properties receives the";
-				mes "most damage from a Wind";
-				mes "attribute weapon?";
+				mes "[米特哈梅]";
+				mes "4. 通常情况下，以下哪种属性受到风属性武器的伤害最大？";
 				next;
-				if (select("Fire Property:Water Property:Earth Property:Wind Property") == 2)
+				if (select("火属性:水属性:土属性:风属性") == 2)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "5. How many Iron Ore";
-				mes "is required to make";
-				mes "1 Steel?";
+				mes "[米特哈梅]";
+				mes "5. 制作1个钢铁需要多少铁矿石？";
 				next;
-				if (select("5 Iron Ore :4 Iron Ore:3 Iron Ore:6 Iron Ore") == 1)
+				if (select("5铁矿石:4铁矿石:3铁矿石:6铁矿石") == 1)
 					set .@blackss_te,.@blackss_te+20;
 				break;
 			case 3:
-				mes "[Mitehmaeeuh]";
-				mes "1. What do you usually";
-				mes "do when you meet someone";
-				mes "randomly on the street?";
+				mes "[米特哈梅]";
+				mes "1. 当你在街上随机遇到某人时，你通常会做什么？";
 				next;
-				switch(select("Ask them what they need.:Have a brief conversation.:Ignore them.:Give items and run away.")) {
+				switch(select("问他们需要什么。:进行简短对话。:忽视他们。:给他们物品然后跑开。")) {
 				case 1:
 				case 2:
 					set .@blackss_te,.@blackss_te+20;
@@ -1494,151 +1444,139 @@ ein_in01,24,41,5	script	Blacksmith Guildsman#moc	726,{
 				default:
 					break;
 				}
-				mes "[Mitehmaeeuh]";
-				mes "2. In what village";
-				mes "can you learn the";
-				mes "^8E6B23Crazy Uproar^000000 and";
-				mes "^8E6B23Change Cart^000000 skills?";
+				mes "[米特哈梅]";
+				mes "2. 在哪个村庄可以学习^8E6B23疯狂喧闹^000000和^8E6B23变更马车^000000技能？";
 				next;
-				if (select("Al De Baran:Alberta:Morocc:Izlude") == 2)
+				if (select("阿尔德巴兰:阿尔伯塔:摩洛克:伊斯鲁德") == 2)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "3. From the center of Einbroch,";
-				mes "in which direction is the Blacksmith Guild?";
+				mes "[米特哈梅]";
+				mes "3. 从艾因布洛赫中心，铁匠公会位于哪个方向？";
 				next;
-				if (select("11 o'clock:5 o'clock:7 o'clock:12 o'clock") == 2)
+				if (select("11点:5点:7点:12点") == 2)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "4. In which town";
-				mes "can you find the";
-				mes "most Blacksmiths?";
+				mes "[米特哈梅]";
+				mes "4. 在哪个城镇可以找到最多的铁匠？";
 				next;
-				if (select("Prontera:Morocc:Alberta:Einbroch") == 4)
+				if (select("普隆德拉:摩洛克:阿尔伯塔:艾因布洛赫") == 4)
 					set .@blackss_te,.@blackss_te+20;
-				mes "[Mitehmaeeuh]";
-				mes "5. Which of the";
-				mes "following statuses";
-				mes "affect your skill";
-				mes "as a Blacksmith?";
+				mes "[米特哈梅]";
+				mes "5. 以下哪些状态会影响你作为铁匠的技能？";
 				next;
-				if (select("STR :DEX:AGI :VIT ") == 2)
+				if (select("力量:敏捷:灵巧:体力") == 2)
 					set .@blackss_te,.@blackss_te+20;
 				break;
 			}
-			mes "[Mitehmaeeuh]";
-			mes "Ah...";
-			mes "You've completed";
-			mes "the quiz. Let's see...";
+			mes "[米特哈梅]";
+			mes "啊……你完成了测验。让我看看……";
 			next;
-			mes "[Mitehmaeeuh]";
-			mes "You earned";
+			mes "[米特哈梅]";
+			mes "你获得了";
 			mes ""+ .@blackss_te +" points...";
 			if (.@blackss_te > 70) {
-				mes "Very nice!";
-				mes "Congratulations!";
-				mes "You just passed!";
+				mes "非常好！恭喜你！你通过了！";
 				next;
-				mes "[Mitehmaeeuh]";
-				mes "However, don't let your early success make you overconfident. A Blacksmith's life isn't a picnic. As proof that you have passed the test, I give you this Hammer of Blacksmith.";
+				mes "[米特哈梅]";
+				mes "不过，不要因为早期的成功而自满。";
+				mes "锻造师的生活可不是轻松的。作为你通过测试的证明，";
+				mes "我给你这个锻造师之锤。";
 				set BSMITH_Q,17;
-				getitem 1005,1; //Hammer_Of_Blacksmith
+				getitem 1005,1; //Hammer_Of_铁匠
 				changequest 2014,2015;
 				next;
-				mes "[Mitehmaeeuh]";
-				mes "Take this Hammer";
-				mes "of Blacksmith and go back to the Altiregen. Okay then? I wish you the best of luck!";
+				mes "[米特哈梅]";
+				mes "拿着这个锻造师之锤，回到阿尔提雷根去吧。好吗？祝你好运！";
 				close;
 			}
-			mes "You failed! You better study up before coming back here.";
+			mes "你失败了！你最好先好好学习再回来。";
 			next;
-			mes "[Mitehmaeeuh]";
-			mes "With your knowledge, or lack thereof, you'll just end up hurting yourself holding a hammer!";
+			mes "[米特哈梅]";
+			mes "凭你的知识，或者说缺乏知识，拿着锤子只会伤到自己！";
 			close;
 		}
-		mes "[Mitehmaeeuh]";
-		mes "Okay then.";
-		mes "Please prepare";
-		mes "yourself and return";
-		mes "when you are ready...";
+		mes "[米特哈梅]";
+		mes "好的，请做好准备，准备好后再回来……";
 		close;
 	}
 	else if (BSMITH_Q == 17) {
 		emotion ET_SCRATCH;
-		mes "[Mitehmaeeuh]";
-		mes "Yeap, you just passed the Blacksmith job test~";
+		mes "[米特哈梅]";
+		mes "没错，你刚刚通过了锻造师的职业测试~";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "Why don't you go back to Mr.Altiregen?";
+		mes "[米特哈梅]";
+		mes "你为什么不回去找阿尔提雷根先生呢？";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "Don't forget to bring the Hammer of Blacksmith with you!";
+		mes "[米特哈梅]";
+		mes "别忘了带上锻造师之锤！";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "Oh, also make sure that you have no skill point left before you change your job~";
+		mes "[米特哈梅]";
+		mes "哦，确保在转职之前没有技能点剩余哦~";
 		close;
 	}
 	else {
 		emotion ET_SCRATCH;
-		mes "[Mitehmaeeuh]";
-		mes "I had to deal with the heat when I was in Morocc,";
-		mes "and now I have to deal with the smog in this Einbroch!";
+		mes "[米特哈梅]";
+		mes "我在摩洛克时要忍受高温，现在在艾因布洛赫又要忍受雾霾！";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "But, I must admit that this is the perfect place for Blacksmiths because we have an abundance of crafting material supplies as well as highly developed equipment.";
+		mes "[米特哈梅]";
+		mes "不过，我必须承认这里是锻造师的完美之地，";
+		mes "因为我们有丰富的材料供应和高度发达的设备。";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "We, Blacksmiths are trying our best to forge the best of the best weapons.";
+		mes "[米特哈梅]";
+		mes "我们锻造师正在尽力锻造出最好的武器。";
 		next;
-		mes "[Mitehmaeeuh]";
-		mes "We pledge our honor on that!";
+		mes "[米特哈梅]";
+		mes "我们为此而自豪！";
 		close;
 	}
 }
 
-geffen_in,109,170,3	script	Blacksmith Guildsman#gef	726,{
-	mes "[Blacksmith Guildsman]";
-	mes "Good day, are you here to visit Blacksmith Guild?";
+geffen_in,109,170,3	script	锻造师公会成员#gef	726,{
+	mes "[锻造师公会成员]";
+	mes "你好，您是来参观锻造师公会的吗？";
 	next;
-	mes "[Blacksmith Guildsman]";
-	mes "I thank you for coming this far to visit our guild. However, I regret to inform you that Blacksmith Guild has been";
-	mes "moved to ^3131FF'Einbroch' in the Schwarzwald Republic^000000.";
+	mes "[锻造师公会成员]";
+	mes "感谢您来到我们公会。不过，我很遗憾地通知您，";
+	mes "锻造师公会已迁至^3131FF'艾因布洛赫'在施瓦茨瓦尔德共和国^000000。";
 	next;
-	mes "[Blacksmith Guildsman]";
-	mes "You can travel to Schwarzwald Republic by using the airship.";
-	mes "I can provide you a teleport service to Izlude, where you can use the airship.";
-	mes "Would you like to move to Izlude immediately?";
+	mes "[锻造师公会成员]";
+	mes "您可以通过使用飞艇前往施瓦茨瓦尔德共和国。";
+	mes "我可以为您提供传送服务到伊兹鲁德，您可以在那使用飞艇。";
+	mes "您想立即前往伊兹鲁德吗？";
 	next;
-	switch(select("How to go to Einbroch:Yes!:No, thanks.")) {
+	switch(select("如何前往艾因布洛赫:是的！:不，谢谢。")) {
 	case 1:
-		mes "[Blacksmith Guildsman]";
-		mes "Oops, haven't you used the airship yet?";
+		mes "[锻造师公会成员]";
+		mes "哦，您还没有使用过飞艇吗？";
 		next;
-		mes "[Blacksmith Guildsman]";
-		mes "Unlike Rune-Midgarts Kingdom, Schwarzwald Republic has 'the airship' instead of teleport services to move between towns.";
+		mes "[锻造师公会成员]";
+		mes "与鲁恩-米德加兹王国不同，施瓦茨瓦尔德共和国有‘飞艇’，";
+		mes "而不是传送服务来在城镇之间移动。";
 		next;
-		mes "[Blacksmith Guildsman]";
-		mes "In ^3131FF'Izlude'^000000, you can use ^3131FF'the international airship'^000000 which travels between ^3131FFIzlude and Juno in Schwarzwald Republic^000000.";
+		mes "[铁匠公会成员]";
+		mes "在^3131FF'伊斯鲁德'^000000，您可以乘坐^3131FF'国际飞船'^000000，";
+		mes "往返于^3131FF伊斯鲁德和施瓦兹瓦尔德共和国的朱诺^000000。";
 		next;
-		mes "[Blacksmith Guildsman]";
-		mes "Take the airship, and go to Juno. Then from Juno, you need to take ^3131FFthe domestic airship^000000 to go to Einbroch.";
-		mes "Remember, you are ^3131FFnot going outside of the airport^000000 upon transit from the international to the domestic airship.";
+		mes "[铁匠公会成员]";
+		mes "乘坐飞船前往朱诺。然后从朱诺出发，";
+		mes "您需要乘坐^3131FF国内飞船^000000前往艾因布洛赫。请记住，";
+		mes "在国际飞船与国内飞船之间的转机时，您^3131FF不能离开机场^000000。";
 		next;
-		mes "[Blacksmith Guildsman]";
-		mes "It might sound complicated, but you will know once you are in the airport.";
-		mes "When you arrive in Blacksmith Guild, please send my regard to my coworkers!";
+		mes "[铁匠公会成员]";
+		mes "这听起来可能很复杂，但您到达机场后就会明白。";
+		mes "当您到达铁匠公会时，请向我的同事们问好！";
 		close;
 	case 2:
 		if (Zeny < 600) {
-			mes "[Blacksmith Guildsman]";
-			mes "Excuse me, but you do not have enough money.";
+			mes "[铁匠公会成员]";
+			mes "抱歉，您的钱不够。";
 			close;
 		}
 		set Zeny, Zeny-600;
 		warp "izlude",94,103;
 		end;
 	case 3:
-		mes "[Blacksmith Guildsman]";
-		mes "Please take care!";
+		mes "[铁匠公会成员]";
+		mes "请保重！";
 		close;
 	}
 }

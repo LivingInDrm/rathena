@@ -1,217 +1,143 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Monk Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen, Samuray22
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Spiritual Bestowment, Excruciating Palm
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.5 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //============================================================
 
-prt_monk,270,198,3	script	Apprentice Monk#qsk_mo	753,{
+prt_monk,270,198,3	script	学徒僧侣#qsk_mo	753,{
 	if (BaseJob == Job_Monk) {
 		if (MONK_SK == 7) {
-			mes "[Monk]";
-			mes "To take the time to";
-			mes "comtemplate on your most";
-			mes "important goal, your highest";
-			mes "priority, is never a waste.";
-			mes "Never confuse your means";
-			mes "to the end you wish to achieve.";
+			mes "[僧侣]";
+			mes "花时间思考你最重要的目标，最高优先事项，绝不是浪费。";
+			mes "切勿混淆达到你想要的结果的手段。";
 			close;
 		}
 		if (MONK_SK == 6 && getskilllv("MO_KITRANSLATION") == 0) {
-			mes "[Monk]";
-			mes "You've forgotten the";
-			mes "basics behind performing";
-			mes "Spiritual Bestowment?";
-			mes "How can this be...?";
+			mes "[僧侣]";
+			mes "你忘记了进行灵性赋予的基本知识吗？这怎么可能……？";
 			next;
-			mes "[Monk]";
-			mes "Ah, now I understand.";
-			mes "You've transcended the";
-			mes "limitations that used to";
-			mes "hold you back, and have";
-			mes "become a Champion. I'm";
-			mes "sorry for underestimating you.";
+			mes "[僧侣]";
+			mes "啊，我明白了。你已经超越了曾经束缚你的限制，";
+			mes "成为了一名冠军。抱歉我低估了你。";
 			next;
-			mes "[Monk]";
-			mes "Very well. It will be an honor";
-			mes "for me to help you relearn the";
-			mes "Spiritual Bestowment skill. As";
-			mes "a side effect, you will probably relearn Excruciating Palm as well.";
+			mes "[僧侣]";
+			mes "很好。能帮助你重新学习灵性赋予技能对我来说是荣幸。";
+			mes "作为副作用，你可能也会重新学习剧痛掌。";
 			next;
-			mes "[Monk]";
-			mes "Now be still and relax";
-			mes "as I perform my special";
-			mes "accupressure treatment that";
-			mes "will commit these skills to";
-			mes "your nervous system and ";
-			mes "motor memory...";
+			mes "[僧侣]";
+			mes "现在请静止并放松，我将进行我的特殊指压治疗，";
+			mes "将这些技能铭刻在你的神经系统和运动记忆中……";
 			next;
-			mes "^3355FF*Tap-tap-tap-tap-tap-tap-tap-tap- tap-tap-tap-tap-tap-tap-tap-tap-";
-			mes "tap-tap-tap-tap-tap-tap-tap-tap- tap-tap-tap-tap-tap-tap-tap-tap-";
-			mes "tap-tap-tap-tap-tap-tap-tap-tap- tap-tap-tap-tap-tap-tap-tap-tap-";
-			mes "tap-tap-tap-tap-tap-tap* *POKE*^000000";
+			mes "^3355FF*轻轻敲打*^000000";
 			set MONK_SK,7;
 			skill "MO_KITRANSLATION",1,SKILL_PERM;
 			skill "MO_BALKYOUNG",1,SKILL_PERM;
 			next;
-			mes "[Monk]";
-			mes "It is done. Please";
-			mes "continue to use these";
-			mes "special skills to promote";
-			mes "peace and harmony in this";
-			mes "world. Farewell, my friend.";
+			mes "[僧侣]";
+			mes "完成了。请继续使用这些特殊技能来促进这个世界的和平与";
+			mes "和谐。再见，我的朋友。";
 			close;
 		}
 		if (MONK_SK > 2) {
-			mes "[Monk]";
-			mes "To take the time to";
-			mes "comtemplate on your most";
-			mes "important goal, your highest";
-			mes "priority, is never a waste.";
-			mes "Never confuse your means";
-			mes "to the end you wish to achieve.";
+			mes "[僧侣]";
+			mes "花时间思考你最重要的目标，最高优先事项，绝不是浪费。";
+			mes "切勿混淆达到你想要的结果的手段。";
 			next;
-			mes "[Monk]";
-			mes "Ah, I have a favor to ask.";
-			mes "Please do not tell others that";
-			mes "I have taught you Spiritual";
-			mes "Bestowment. I don't wish to";
-			mes "spend my time teaching too";
-			mes "many people this skill...";
+			mes "[僧侣]";
+			mes "啊，我有个请求。请不要告诉其他人我教过你灵性赋予。";
+			mes "我不想花太多时间教太多人这个技能……";
 			close;
 		}
 		if (MONK_SK == 2) {
 			if (Weight == 0) {
-				mes "[Monk]";
-				mes "Ah. Well done. I see";
-				mes "that you managed to learn";
-				mes "the most important thing,";
-				mes "selflessness, on your own.";
-				mes "Now I trust that you won't";
-				mes "abuse what I have to teach you.";
+				mes "[僧侣]";
+				mes "啊，做得好。我看到你自己学会了最重要的事情——无私。";
+				mes "现在我相信你不会滥用我教给你的东西。";
 				next;
-				mes "[Monk]";
-				mes "My test may seem too strict,";
-				mes "but it is impossible to learn";
-				mes "Spiritual Bestowment without the right discipline. As with all";
-				mes "things, readiness and preparation precede all forms of realization.";
+				mes "[僧侣]";
+				mes "我的考验可能看起来很严格，但没有正确的纪律，";
+				mes "就无法学习精神赋予。所有事物都一样，";
+				mes "准备和准备工作是所有实现形式的前提。";
 				next;
-				mes "[Monk]";
-				mes "Now just relax for a moment.";
-				mes "I will use accupressure to";
-				mes "train your nervous system to";
-				mes "physically memorize the energy";
-				mes "flow and movements required";
-				mes "for Spiritual Bestowment.";
+				mes "[僧侣]";
+				mes "现在放松一下。我将使用指压法来训练你的神经系统，";
+				mes "使其能够身体记忆精神赋予所需的能量流动和动作。";
 				next;
-				mes "^3355FF*Tap... tap*";
-				mes "*Tap... Tap*";
-				mes "*Tap tap tap*^000000";
+				mes "^3355FF*轻敲... 轻敲* *轻敲... 轻敲* *轻敲轻敲轻敲*^000000";
 				next;
-				mes "^3355FF*Tap tap tap*";
-				mes "*Tap tap tap*";
-				mes "*Tap... Tap tap*^000000";
+				mes "^3355FF*轻敲轻敲轻敲* *轻敲轻敲轻敲* *轻敲... 轻敲轻敲*^000000";
 				next;
-				mes "^3355FF*Tap-tap-tap-tap-tap-tap-tap-tap- tap-tap-tap-tap-tap-tap-tap-tap-";
-				mes "tap-tap-tap-tap-tap-tap-tap-tap- tap-tap-tap-tap-tap-tap-tap-tap-";
-				mes "tap-tap-tap-tap-tap-tap-tap-tap- tap-tap-tap-tap-tap-tap-tap-tap-";
-				mes "tap-tap-tap-tap-tap-tap* *POKE*^000000";
+				mes "^3355FF*咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔";
+				mes "咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔咔* *戳戳*^000000";
 				next;
-				mes "[Monk]";
-				mes "It is done. You are now";
-				mes "capable of using Spiritual";
-				mes "Bestowment. Ah, yes. I've never";
-				mes "really named this skill, but that is what it is usually called by";
-				mes "other Monks who have seen it.";
+				mes "[僧侣]";
+				mes "完成了。你现在可以使用灵魂赐予了。啊，是的。";
+				mes "我从未真正给这个技能起过名字，";
+				mes "但其他见过它的僧侣通常称之为这个。";
 				next;
-				mes "[Monk]";
-				mes "Remember that this skill has a";
-				mes "long Cast Time and Skill Delay,";
-				mes "so use it very carefully. This";
-				mes "skill will let you give a Spirit Sphere to one of your Party";
-				mes "Members by consuming 40 SP.";
+				mes "[僧侣]";
+				mes "请记住，这个技能有较长的施法时间和技能延迟，";
+				mes "所以请谨慎使用。这个技能可以让你消耗40点SP，";
+				mes "将一个灵魂球给予你的队友。";
 				next;
-				mes "[Monk]";
-				mes "You will better understand";
-				mes "the use of this skill if you";
-				mes "practice. Keep in mind that";
-				mes "fighting may be necessary at";
-				mes "times, but it is a means to an";
-				mes "end, and not an end in itself.";
+				mes "[僧侣]";
+				mes "如果你练习，你会更好地理解这个技能的使用。请记住，";
+				mes "战斗有时是必要的，但它是达到目的的手段，";
+				mes "而不是目的本身。";
 				set MONK_SK,3;
 				skill "MO_KITRANSLATION",1,SKILL_PERM;
 				next;
-				mes "[Monk]";
-				mes "Our skills should not be";
-				mes "used to shed blood. If you";
-				mes "can transcend conflict, you";
-				mes "will know that fighting has";
-				mes "no worth, no value. Peace";
-				mes "be with you, my friend.";
+				mes "[僧侣]";
+				mes "我们的技能不应被用来流血。如果你能超越冲突，";
+				mes "你会知道战斗没有价值，没有意义。";
+				mes "愿和平与你同在，我的朋友。";
 				close;
 			}
 			else {
-				mes "[Monk]";
-				mes "Have you learned the";
-				mes "meaning of selflessness?";
-				mes "When you abandon greed";
-				mes "and the desires of the world,";
-				mes "you will be ready for my teaching.";
+				mes "[僧侣]";
+				mes "你学会无私的意义了吗？当你放弃贪婪和世俗的欲望时，";
+				mes "你就准备好接受我的教导了。";
 				close;
 			}
 		}
 		if (MONK_SK == 1) {
-			mes "[Monk]";
-			mes "Fighting is meaningless.";
-			mes "Transcend conflict and";
-			mes "difference through the";
-			mes "realization that all are";
-			mes "one. Discipline your mind";
-			mes "and the truth will be revealed.";
+			mes "[僧侣]";
+			mes "战斗是毫无意义的。通过意识到万物皆一，超越冲突和差异。";
+			mes "修炼你的心智，真理将会显现。";
 			next;
-			mes "[Monk]";
-			mes "Hm? To what purpose have";
-			mes "you come to visit me? Ah, so";
-			mes "you wish to learn the skill that I have developed. My colleague";
-			mes "was right: more and more people have been wanting to learn this.";
+			mes "[僧侣]";
+			mes "嗯？你来找我有什么目的？啊，原来你想学习我所发展的技能。";
+			mes "我的同事说得对：越来越多的人想要学习这个。";
 			next;
-			mes "[Monk]";
-			mes "Do not misunderstand me.";
-			mes "It is true that power and";
-			mes "justice, wisdom and action";
-			mes "must be balanced. However,";
-			mes "I have been visited by too many power hungry, bloodthirsty people.";
+			mes "[僧侣]";
+			mes "不要误解我的意思。确实，力量与正义、";
+			mes "智慧与行动必须保持平衡。然而，我接待过太多渴望权力、";
+			mes "嗜血成性的来访者。";
 			next;
-			mes "[Monk]";
-			mes "In all fairness, I shall";
-			mes "give you a chance. Prove";
-			mes "to me that you would use";
-			mes "the skills I teach you for";
-			mes "peace and justice. Prove that";
-			mes "you are free from selfishness.";
+			mes "[僧侣]";
+			mes "公平地说，我会给你一个机会。";
+			mes "证明给我看你会将我教给你的技能用于和平与正义。";
+			mes "证明你没有自私之心。";
 			set MONK_SK,2;
 			close;
 		}
 	}
-	mes "[Monk]";
-	mes "Fighting is meaningless.";
-	mes "Transcend conflict and";
-	mes "difference through the";
-	mes "realization that all are";
-	mes "one. Discipline your mind";
-	mes "and the truth will be revealed.";
+	mes "[僧侣]";
+	mes "战斗是毫无意义的。通过意识到众生皆一，超越冲突与差异。";
+	mes "修炼你的心智，真相将会显现。";
 	close;
 }
 
-monk_test,316,69,5	script	Monk#qsk_mo	823,{
+monk_test,316,69,5	script	僧侣#qsk_mo	823,{
 	if (BaseJob == Job_Monk) {
 		if (MONK_SK == 6) {
 			mes "[武僧]";
@@ -433,15 +359,15 @@ monk_test,316,69,5	script	Monk#qsk_mo	823,{
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

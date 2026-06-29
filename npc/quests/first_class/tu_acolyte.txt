@@ -26,7 +26,7 @@
 
 // Priest Praupin
 //============================================================
-prt_church,179,15,1	script	Priest Praupin	4_M_MINISTER,{
+prt_church,179,15,1	script	祭司普劳平	4_M_MINISTER,{
 	mes "[普劳平牧师]";
 	mes "";
 	if(BaseJob != Job_Acolyte){
@@ -151,7 +151,7 @@ prt_church,179,15,1	script	Priest Praupin	4_M_MINISTER,{
 
 // Asthe
 //============================================================
-prt_monk,230,106,3	script	Asthe#tu	1_F_PRIEST,{
+prt_monk,230,106,3	script	阿斯特#tu	1_F_PRIEST,{
 	mes "[阿斯特]";
 	mes "";
 	switch(tu_acolyte01){
@@ -413,9 +413,8 @@ prt_monk,230,106,3	script	Asthe#tu	1_F_PRIEST,{
 		mes "高^3131FF力量^000000、^3131FF智力^000000、^3131FF敏捷^000000，并解除^3131FF诅咒^000000。";
 		next;
 		mes "[阿斯特]";
-		mes "和治疗一样，祝福也可以用在不死类怪物";
-		mes "身上。（^3131FFSHIFT + 祝福^000000）祝福实际上会对不";
-		mes "死者施加诅咒。";
+		mes "和治疗一样，祝福也可以用在不死类怪物身上。";
+		mes "(^3131FFSHIFT + 祝福^000000)祝福实际上会对不死者施加诅咒。";
 		next;
 		mes "[阿斯特]";
 		mes "在你学会等级5的^3131FF神圣保护^000000后，就可以学习";
@@ -454,14 +453,13 @@ prt_monk,230,106,3	script	Asthe#tu	1_F_PRIEST,{
 		mes "对吗？";
 		next;
 		mes "[阿斯特]";
-		mes "当你打开技能窗口时，你会看到你还可以";
-		mes "根据神圣保护的等级学习^3131FFDemon Bane^000000和^3131FF";
-		mes "天使之护^000000。";
+		mes "当你打开技能窗口时，";
+		mes "你会看到你还可以根据神圣保护的等级学习^3131FFDemon";
+		mes "Bane^000000和^3131FF天使之护^000000。";
 		next;
 		mes "[阿斯特]";
-		mes "现在，^3131FFDemon Bane^000000增加你对不死和恶魔怪";
-		mes "物的攻击力，所以对于我们这些通过驱逐";
-		mes "邪恶来侍奉上帝的人来说非常有用。";
+		mes "现在，^3131FFDemon Bane^000000增加你对不死和恶魔怪物的攻击力，";
+		mes "对于我们这些通过驱逐邪恶来侍奉上帝的人来说非常有用。";
 		next;
 		mes "[???]";
 		mes "一旦你学会了三级驱魔术，你就可以学习^3131FF";
@@ -547,11 +545,10 @@ prt_monk,230,106,3	script	Asthe#tu	1_F_PRIEST,{
 		mes "将允许你通过消耗^FF00001蓝色宝石^000000传送到备忘";
 		mes "点或保存的目的地。";
 		next;
-		mes "[???]";
-		mes "一旦你掌握了传送门，你可以^3131FF记住三个备";
-		mes "忘点^000000。你不能在大多数场地或地下城保存";
-		mes "备忘点，但可以在城镇和某些场地使用^FF0000";
-		mes "/memo^000000命令。";
+		mes "[]";
+		mes "一旦你掌握了传送门，你可以^3131FF记住三个备忘点^000000。";
+		mes "你不能在大多数场地或地下城保存备忘点，";
+		mes "但可以在城镇和某些场地使用^FF0000/memo^000000命令。";
 		next;
 		mes "[???]";
 		mes "这让你困惑了吗？只需记住，传送和传送门";
@@ -695,8 +692,8 @@ prt_monk,230,106,3	script	Asthe#tu	1_F_PRIEST,{
 		mes "圣水！";
 		next;
 		mes "[???]";
-		mes "这就是你制作^3131FF圣水^000000的方法。记住，使用Aqua";
-		mes "Benedicta技能时，^3131FF你的脚必须接触水^000000。";
+		mes "这就是你制作^3131FF圣水^000000的方法。记住，";
+		mes "使用Aqua Benedicta技能时，^3131FF你的脚必须接触水^000000。";
 		next;
 		mes "[???]";
 		mes "呵呵~ 我教你的就这些了。虽然过程有些";
@@ -735,7 +732,7 @@ prt_monk,230,106,3	script	Asthe#tu	1_F_PRIEST,{
 
 // Priest Gardron
 //============================================================
-monk_in,18,38,6	script	Priest Gardron#tu	4_M_MINISTER,{
+monk_in,18,38,6	script	牧师加德龙#tu	4_M_MINISTER,{
 	mes "[?????]";
 	mes "";
 	if(tu_acolyte01 == 7){
@@ -861,7 +858,7 @@ monk_in,18,38,6	script	Priest Gardron#tu	4_M_MINISTER,{
 
 // Dog
 //============================================================
-prt_monk,235,245,5	script	Dog#tu	4_DOG01,{
+prt_monk,235,245,5	script	狗#tu	4_DOG01,{
 	mes "[?]";
 	mes "^CDB79EB汪汪！呜呜！^000000";
 	next;
@@ -877,18 +874,15 @@ prt_monk,235,245,5	script	Dog#tu	4_DOG01,{
 					next;
 					mes "^3355FF这只狗磨着牙，凶狠地盯着你。^000000";
 				} else {
-					mes "[?]";
 					mes "^CDB79ER汪汪！^000000";
 					emotion ET_THROB;
 				}
 				break;
 			case 2:
-				mes "[?]";
 				mes "^CDB79ER汪汪~^000000";
 				emotion ET_THROB;
 				break;
 			case 3:
-				mes "[?]";
 				mes "^CDB79ER汪汪！^000000";
 				break;
 			}
@@ -901,7 +895,7 @@ prt_monk,235,245,5	script	Dog#tu	4_DOG01,{
 
 // Boy
 //============================================================
-prt_monk,243,238,5	script	Boy#boy_voi	HIDDEN_WARP_NPC,5,5,{
+prt_monk,243,238,5	script	男孩#boy_voi	HIDDEN_WARP_NPC,5,5,{
 OnTouch_:
 	if(tu_acolyte01 != 10) end;
 	mes "[??]";
@@ -911,7 +905,7 @@ OnTouch_:
 
 // Ill Girl
 //============================================================
-prt_monk,226,257,6	script	Ill Girl#tu	4_F_04,{
+prt_monk,226,257,6	script	病女孩#tu	4_F_04,{
 	mes "[????]";
 	mes "";
 	if(tu_acolyte01 > 12){
@@ -1058,7 +1052,7 @@ prt_monk,226,257,6	script	Ill Girl#tu	4_F_04,{
 
 // Veiner
 //============================================================
-prt_monk,197,228,3	script	Veiner	4_M_ORIENT02,{
+prt_monk,197,228,3	script	维纳	4_M_ORIENT02,{
 	mes "[??]";
 	mes "";
 	if(countitem(1081) && tu_acolyte01 == 18){// Merchant_Box_1
@@ -1068,8 +1062,7 @@ prt_monk,197,228,3	script	Veiner	4_M_ORIENT02,{
 		mes "什么？你有快递给我？那会是什么呢？";
 		next;
 		mes "[??]";
-		mes "这是……！是我亲爱的手工巧克力！哦，Bibi！";
-		mes "你真棒！";
+		mes "这是……！是我亲爱的手工巧克力！哦，Bibi！你真棒！";
 		specialeffect EF_VALLENTINE;
 		specialeffect EF_HEARTCASTING;
 		next;
@@ -1093,10 +1086,10 @@ prt_monk,197,228,3	script	Veiner	4_M_ORIENT02,{
 
 // Hedrick
 //============================================================
-prt_monk,28,260,5	script	Hedrick	1_M_04,{
+prt_monk,28,260,5	script	赫德里克	1_M_04,{
 	mes "[????]";
-	mes "^333333*呼*^000000 今天我真是努力工作！而且效率也很";
-	mes "高！一如既往，干得好，Hedrick。你是第一！";
+	mes "^333333*呼*^000000 今天我真是努力工作！而且效率也很高！一如既往，";
+	mes "干得好，赫德里克。你是第一！";
 	if(countitem(7148)==0 || tu_acolyte01 != 19) close;// Mother_Letter
 	next;
 	mes "[????]";
@@ -1118,7 +1111,7 @@ prt_monk,28,260,5	script	Hedrick	1_M_04,{
 
 // Weapon Merchant
 //============================================================
-prt_monk,136,261,0	script	Weapon Merchant#tu	HIDDEN_WARP_NPC,9,9,{
+prt_monk,136,261,0	script	武器商人#tu	HIDDEN_WARP_NPC,9,9,{
 OnTouch_:
 	if(tu_acolyte01 != 20 || countitem(1081) == 0) end;// Merchant_Box_1
 	mes "[????]";
@@ -1135,7 +1128,7 @@ OnTouch_:
 
 // Karven
 //============================================================
-monk_in,103,176,7	script	Karven	1_M_PASTOR,{
+monk_in,103,176,7	script	卡尔文	1_M_PASTOR,{
 	mes "[???]";
 	mes "愿你安息";
 	if(tu_acolyte01 == 21 && countitem(7183)){
@@ -1162,18 +1155,16 @@ monk_in,103,176,7	script	Karven	1_M_PASTOR,{
 
 // Gloria
 //============================================================
-prt_monk,219,164,3	script	Gloria#tu	4_F_SISTER,{
+prt_monk,219,164,3	script	格洛丽亚#tu	4_F_SISTER,{
 	mes "[????]";
 	mes "";
 	if(BaseJob != Job_Acolyte){
-		mes "嗨，嗨~ 我是Gloria。你想知道我名字的有";
-		mes "趣之处吗？";
+		mes "嗨，嗨~ 我是格洛丽亚。你想知道我名字的有趣之处吗？";
 		next;
 		mes "[????]";
-		mes "我父亲是Geffen的铁匠，听说他在我出生";
-		mes "那天完成了一件不可思议的武器。他认为";
-		mes "这是好运的象征，所以把武器命名为我的";
-		mes "名字！";
+		mes "我父亲是Geffen的铁匠，";
+		mes "听说他在我出生那天完成了一件不可思议的武器。";
+		mes "他认为这是好运的象征，所以把武器命名为我的名字！";
 		next;
 		mes "[????]";
 		mes "知道有一把武器以我的名字命名有点奇怪";
@@ -1213,15 +1204,15 @@ prt_monk,219,164,3	script	Gloria#tu	4_F_SISTER,{
 			end;
 		}
 	}
-	mes "哇……你是从Asthe那里学到这些的吗？太棒";
-	mes "了……你一定比我强多了，我甚至不能再吹";
-	mes "嘘自己能传送到普隆德拉了。^333333*呜呜*^000000";
+	mes "哇……你是从Asthe那里学到这些的吗？";
+	mes "太棒了……你一定比我强多了，";
+	mes "我甚至不能再吹嘘自己能传送到普隆德拉了。^333333*呜呜*^000000";
 	close;
 }
 
 // Cleope Verce
 //============================================================
-prt_monk,153,210,3	script	Cleope Verce	4_F_SISTER,{
+prt_monk,153,210,3	script	克里奥佩·维尔斯	4_F_SISTER,{
 	mes "[????????]";
 	mes "";
 	if(BaseJob == Job_Acolyte){
@@ -1379,7 +1370,7 @@ OnTouch_:
 
 // Eavesdrop
 //============================================================
-prt_monk,223,123,3	script	Eavesdrop#tu	HIDDEN_NPC,{
+prt_monk,223,123,3	script	窃听#tu	HIDDEN_NPC,{
 	if(BaseJob != Job_Acolyte){
 		mes "^3355FF这里什么都没有。^000000";
 		close;
@@ -1432,9 +1423,8 @@ prt_monk,223,123,3	script	Eavesdrop#tu	HIDDEN_NPC,{
 		mes "^CD6600盖博尔？你是在告诉我王室有一个诅咒吗？^000000";
 		next;
 		mes "[窗外的声音]";
-		mes "^A68064是的……这可能就是为什么他的高ness，特";
-		mes "里斯坦三世国王和他的朝臣最近表现得很";
-		mes "奇怪……^000000";
+		mes "^A68064是的……这可能就是为什么他的高ness，";
+		mes "特里斯坦三世国王和他的朝臣最近表现得很奇怪……^000000";
 		next;
 		mes "[窗外的声音]";
 		mes "^A68064你看……据说尤尔蒙加德在鲁恩-米德加兹";
@@ -1515,7 +1505,7 @@ prt_monk,223,123,3	script	Eavesdrop#tu	HIDDEN_NPC,{
 	close;
 }
 
-sec_in02,17,156,3	script	1st Job Quest Reset	4_F_JOB_BLACKSMITH,{
+sec_in02,17,156,3	script	第一次职业任务重置	4_F_JOB_BLACKSMITH,{
 	callfunc "F_GM_NPC";
 	mes "[1级职业任务]";
 	mes "你想重置哪个？";

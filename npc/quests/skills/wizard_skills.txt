@@ -1,20 +1,20 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Wizard Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Sight Blaster
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.5 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-gef_tower,115,36,4	script	Meow#q_wiz	876,{
+gef_tower,115,36,4	script	喵#q_wiz	876,{
 	if (BaseJob == Job_Wizard) {
 		if (WIZ_SK == 100) {
 			if (getskilllv("WZ_SIGHTBLASTER") == 0) {
@@ -55,11 +55,8 @@ gef_tower,115,36,4	script	Meow#q_wiz	876,{
 			}
 			else {
 				mes "[喵]";
-				mes "呼... 呼...";
-				mes "凯瑟琳... 我会让你";
-				mes "为此感到遗憾的。";
-				mes "把我变成小猫...";
-				mes "我...要... 睡着了... Zzz...";
+				mes "呼... 呼... 凯瑟琳... 我会让你为此感到遗憾的。";
+				mes "把我变成小猫... 我...要... 睡着了... Zzz...";
 				close;
 			}
 		}
@@ -308,11 +305,8 @@ gef_tower,115,36,4	script	Meow#q_wiz	876,{
 		}
 		else {
 			mes "[喵]";
-			mes "呼... 呼...";
-			mes "凯瑟琳... 我会让你";
-			mes "为此感到遗憾的。";
-			mes "把我变成小猫...";
-			mes "我...要... 睡着了... Zzz...";
+			mes "呼... 呼... 凯瑟琳... 我会让你为此感到遗憾的。";
+			mes "把我变成小猫... 我...要... 睡着了... Zzz...";
 			close;
 		}
 	}
@@ -343,106 +337,72 @@ gef_tower,115,36,4	script	Meow#q_wiz	876,{
 			close;
 		}
 		mes "[喵]";
-		mes "哈！是啊...";
-		mes "打个盹听起来像是";
-		mes "我听过的最好的主意";
-		mes "整天。嗯。^333333*哈欠~*^000000";
-		mes "好了，睡觉时间到了...";
-		mes "呼呼呼ZZZzzz... ZzZzzzz...";
+		mes "哈！是啊... 打个盹听起来像是我听过的最好的主意。整天。";
+		mes "嗯。^333333*哈欠~*^000000好了，睡觉时间到了...";
+		mes "呼呼呼ZZZzzz...ZzZzzzz...";
 		close;
 	}
 }
 
-prt_in,82,98,3	script	Simon Mayace#q_wiz	46,{
+prt_in,82,98,3	script	西蒙·梅亚斯#q_wiz	46,{
 	if (WIZ_SK == 1) {
-		mes "[Simon]";
-		mes "Ah, you must be a skilled";
-		mes "practitioner of magic. Mmm,";
-		mes "you must one of those Wizards.";
-		mes "High Wizards? I can't really";
-		mes "tell the difference. Ah, may";
-		mes "I be of service to you?";
+		mes "[西蒙]";
+		mes "啊，你一定是一位熟练的魔法师。嗯，你一定是那些法师之一。";
+		mes "高阶法师？我真的分不清。啊，我能为你服务吗？";
 		next;
-		if (select("I'm fine, thank you.:I want to learn about push backs.") == 1) {
-			mes "[Simon]";
-			mes "I'm surprised that you chose";
-			mes "to practice magic: judging";
-			mes "from your build, I'd say that";
-			mes "you'd be well suited to wielding a sword. Haha, but that's just";
-			mes "a humble Knight's opinion.";
+		if (select("我很好，谢谢。:我想了解关于推击的知识。") == 1) {
+			mes "[西蒙]";
+			mes "我很惊讶你选择练习魔法：从你的体型来看，";
+			mes "我觉得你更适合挥舞剑。哈哈，";
+			mes "但这只是一个谦虚骑士的看法。";
 			close;
 		}
-		mes "[Simon]";
-		mes "Wait, are you asking me";
-		mes "to teach you a Push-Back";
-		mes "attack technique? You can";
-		mes "defend yourself using spells";
-		mes "like Fire Wall or Fire Bolt";
-		mes "much more effectively, right?";
+		mes "[西蒙]";
+		mes "等一下，你是让我教你推击攻击技巧吗？";
+		mes "你可以用像火墙或火焰箭这样的法术更有效地自卫，对吧？";
 		next;
-		select("But at close range...");
-		mes "[Simon]";
-		mes "Oh, I see. Yeah, Wizards";
-		mes "aren't very effective in close";
-		mes "range battles. Okay, I can see";
-		mes "why you'd want to learn some";
-		mes "Push-Back technique. Alright,";
-		mes "I can teach you a few basics.";
+		select("但在近距离...");
+		mes "[西蒙]";
+		mes "哦，我明白了。是的，法师在近战中并不太有效。好吧，";
+		mes "我能理解你想学习一些推击技巧的原因。好的，";
+		mes "我可以教你一些基础。";
 		next;
-		mes "[Simon]";
-		mes "Now, every adventurer knows";
-		mes "the fundamentals of attacking.";
-		mes "You strike, and then ready your";
-		mes "next action, which is either";
-		mes "another strike, a dodge or a";
-		mes "guard. Simple stuff, right?";
+		mes "[西蒙]";
+		mes "现在，每个冒险者都知道攻击的基本原则。你攻击，";
+		mes "然后准备下一步行动，可能是再一次攻击、";
+		mes "闪避或防御。简单吧？";
 		next;
-		mes "[Simon]";
-		mes "To push an enemy back, you've";
-		mes "got to attack using a strike";
-		mes "with continuous force. It's all";
-		mes "in the follow through. Now, if";
-		mes "you strike the head, the push";
-		mes "distance will be too short.";
+		mes "[西蒙]";
+		mes "要将敌人推开，你必须用持续的力量进行攻击。";
+		mes "关键在于跟进。如果你攻击头部，推开的距离会太短。";
 		next;
-		mes "[Simon]";
-		mes "If you deliver a pushing";
-		mes "strike to the legs, your";
-		mes "enemy will fall towards you.";
-		mes "The best target for pushing";
-		mes "attacks is the torso since it";
-		mes "allows more control of the push.";
+		mes "[西蒙]";
+		mes "如果你对腿部进行推击，敌人会向你倒下。";
+		mes "推击攻击的最佳目标是躯干，因为这样可以更好地控制推力。";
 		next;
-		mes "[Simon]";
-		mes "Well, I've explained";
-		mes "pushing as best as I can.";
-		mes "Concentrate and practice the";
-		mes "theory on your own, and you";
-		mes "should be able to do it. Good luck on your travels, adventurer~";
+		mes "[西蒙]";
+		mes "好吧，我已经尽力解释推击的要点了。集中精力，";
+		mes "自己练习理论，你应该能做到。祝你旅途顺利，冒险者~";
 		set WIZ_SK,2;
 		close;
 	}
 	else {
-		mes "[Simon]";
-		mes "Make no mistake:";
-		mes "swordplay is an art.";
-		mes "The techniques may seem";
-		mes "brutish at first glance, but";
-		mes "there's a keen strategy that";
-		mes "Knights innately understand.";
+		mes "[西蒙]";
+		mes "不要误解：剑术是一门艺术。这些技巧乍一看可能显得粗暴，";
+		mes "但骑士们天生就能理解其中的深刻策略。";
 		close;
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

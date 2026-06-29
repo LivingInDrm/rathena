@@ -1,100 +1,79 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Advance Class jobchanger after kRO Normals.
 //===== By: ==================================================
 //= Nana
 //= finished, optimized and tested by Lupus
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.3
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Advance Class jobchanger after kRO Normals.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.1 Made all into functions, additional checks, etc. [Lupus]
 //= 1.2 Made numbers into constants. [Vicious]
 //= 1.3 Now saves/restores all the quest skills [Lupus]
-//============================================================ 
+//============================================================
 
-valkyrie,44,58,5	script	Assassin Cross#Valkyrie	725,{
+valkyrie,44,58,5	script	刺客十字#Valkyrie	725,{
 	if (ADVJOB == 0 || Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
-			mes "[Assassin Cross]";
-			mes "Congratulations...";
+			mes "[刺客十字]";
+			mes "恭喜你……";
 			next;
-			mes "[Assassin Cross]";
-			mes "...";
+			mes "[刺客十字]";
+			mes "……";
 			next;
-			mes "[Assassin Cross]";
-			mes "...";
-			mes "......";
+			mes "[刺客十字]";
+			mes "…… ……";
 			next;
-			mes "[Assassin Cross]";
-			mes "...";
-			mes "......";
-			mes "Honor to";
-			mes "the warriors.";
+			mes "[刺客十字]";
+			mes "……荣耀属于战士们。";
 			close;
 		}
-		mes "[Assassin Cross]";
-		mes "We are the warriors";
-		mes "of the desert. Nobody";
-		mes "looks down upon us.";
-		mes "Nobody...";
+		mes "[刺客十字]";
+		mes "我们是沙漠的战士。没有人会看不起我们。没有人……";
 		close;
 	}
 	else if (ADVJOB == Job_Assassin_Cross && Class == Job_Thief_High && JobLevel > 39) {
-		mes "[Assassin Cross]";
-		mes "The time has come.";
-		mes "The world needs you...";
-		mes "More than ever.";
+		mes "[刺客十字]";
+		mes "时机已到。这个世界需要你……比以往任何时候都更需要。";
 		next;
-		mes "[Assassin Cross]";
-		mes "I ask that you continue to live in the shadows, but as an even greater Assassin with a new appearance.";
+		mes "[刺客十字]";
+		mes "我希望你继续在阴影中生活，";
+		mes "但以全新的形象成为更伟大的刺客。";
 		next;
-		mes "[Assassin Cross]";
-		mes "Will you become";
-		mes "an Assassin Cross?";
+		mes "[刺客十字]";
+		mes "你愿意成为刺客十字吗？";
 		next;
-		if (select("No.:Yes.") == 1) {
-			mes "[Assassin Cross]";
-			mes "When you are";
-			mes "ready, come back.";
+		if (select("不。:是的。") == 1) {
+			mes "[刺客十字]";
+			mes "当你准备好时，回来找我。";
 			next;
-			mes "[Assassin Cross]";
-			mes "Honor to";
-			mes "the warriors.";
+			mes "[刺客十字]";
+			mes "荣耀属于战士们。";
 			close;
 		}
 		if (SkillPoint) {
-			mes "[Assassin Cross]";
-			mes "You still haven't";
-			mes "learned everything";
-			mes "that you can.";
+			mes "[刺客十字]";
+			mes "你仍然没有学到你能学到的一切。";
 			next;
-			mes "[Assassin Cross]";
-			mes "Use all your";
-			mes "Skill Points";
-			mes "and then come back.";
+			mes "[刺客十字]";
+			mes "使用你所有的技能点，然后再回来。";
 			close;
 		}
 		jobchange Job_Assassin_Cross;
 		set ADVJOB,0;
-		mes "[Assassin Cross]";
-		mes "Congratulations.";
-		mes "As an Assassin Cross,";
-		mes "I hope that you fight for a brighter future within the darkness.";
+		mes "[刺客十字]";
+		mes "恭喜你。作为刺客十字，";
+		mes "我希望你在黑暗中为更光明的未来而战。";
 		close;
 	}
-	mes "[Assassin Cross]";
-	mes "Welcome";
-	mes "to Valhalla,";
-	mes "the Hall of Honor.";
+	mes "[刺客十字]";
+	mes "欢迎来到瓦尔哈拉，荣耀之殿。";
 	next;
-	mes "[Assassin Cross]";
-	mes "Please make";
-	mes "yourself comfortable";
-	mes "while you are here.";
-	mes "Honor to the warriors.";
+	mes "[刺客十字]";
+	mes "请在这里好好休息。荣耀属于战士们。";
 	close;
 }

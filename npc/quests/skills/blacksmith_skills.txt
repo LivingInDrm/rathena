@@ -1,20 +1,20 @@
-//===== rAthena Script ======================================= 
-//= Blacksmith Skills Quests
-//===== By: ================================================== 
+//===== rAthena Script =======================================
+//= 铁匠 Skills Quests
+//===== By: ==================================================
 //= Lupus, Reddozen, Samuray22
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.6
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Dubious Salesmanship, Greed
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.6 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //============================================================
 
-geffen,178,72,3	script	Akkie#qsk_bs	726,{
-	if (BaseJob != Job_Blacksmith) {
+geffen,178,72,3	script	铁匠公会被派来教授可疑的销售技巧给铁匠和大师铁匠。[阿基]#qsk_bs	726,{
+	if (BaseJob != Job_铁匠) {
 		mes "[阿基]";
 		mes "我看到你已经";
 		mes "自从上次见面以来";
@@ -67,11 +67,8 @@ geffen,178,72,3	script	Akkie#qsk_bs	726,{
 		mes "我是阿基，来自";
 		if (Upper == 1) {
 			mes "Hello, "+ strcharinfo(0) +",";
-			mes "黑smith公会";
-			mes "被派遣来教授";
-			mes "可疑的销售技巧给";
-			mes "铁匠和大师铁匠。";
-			mes "[阿基]";
+			mes "哦，你和吉芬的古德曼谈过了吗？";
+			mes "他是铁匠公会的代表，教授贪婪技能。";
 			next;
 			mes "这个额外的职业";
 			mes "技能使你能够减少";
@@ -391,11 +388,8 @@ geffen,178,72,3	script	Akkie#qsk_bs	726,{
 	}
 	if (BLACK_SK == 6) {
 		mes "[阿基]";
-		mes "哦，你和";
-		mes "吉芬的古德曼谈过了吗？";
-		mes "他是";
-		mes "黑smith公会的代表，";
-		mes "教授贪婪技能。";
+		mes "哦，你和吉芬的古德曼谈过了吗？";
+		mes "他是铁匠公会的代表，教授贪婪技能。";
 		next;
 		mes "[阿基]";
 		mes "如果你认真对待";
@@ -468,8 +462,8 @@ geffen,178,72,3	script	Akkie#qsk_bs	726,{
 	close;
 }
 
-geffen,172,52,1	script	Goodman#qsk_bs	826,{
-	if (BaseJob != Job_Blacksmith) {
+geffen,172,52,1	script	古德曼#qsk_bs	826,{
+	if (BaseJob != Job_铁匠) {
 		mes "[好人]";
 		mes "充能之灵。";
 		mes "超越了。这让我感到高兴";
@@ -650,15 +644,15 @@ geffen,172,52,1	script	Goodman#qsk_bs	826,{
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //=     Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //=     some of the items required and made them into real
-//=     quests. [Reddozen] 
+//=     quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

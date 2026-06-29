@@ -1,16 +1,16 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Alchemist Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen, Samuray22
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 2.2
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for item: Elemental_Create_Book
 //= Quest for skill: Bioethics
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.9 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 2.0 Rescripted (and re-added) Bio Ethics quest. [L0ne_W0lf]
 //= 2.1 Fixed a Resurrection -> Homunculus Resurrection. [L0ne_W0lf]
@@ -18,7 +18,7 @@
 //= 2.2 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-yuno_in04,33,108,4	script	Pisruik#qsk_al	883,{
+yuno_in04,33,108,4	script	皮斯鲁克#qsk_al	883,{
 	if (BaseJob == Job_Alchemist) {
 		if (JobLevel < 40) {
 			mes "[皮斯鲁克]";
@@ -631,11 +631,8 @@ yuno_in04,33,108,4	script	Pisruik#qsk_al	883,{
 				close;
 			}
 			mes "[皮斯鲁克]";
-			mes "嗯？是什么让你";
-			mes "改变主意的？好吧，";
-			mes "我不能不接受这个请求";
-			mes "任何帮助，所以我想这就是";
-			mes "a \"Yes.\" Yeah, you can help.";
+			mes "嗯？是什么让你改变主意的？好吧，我不能拒绝这个请求，";
+			mes "所以我想这就是个\"是\"。是的，你可以帮忙。";
 			next;
 			mes "[皮斯鲁克]";
 			mes "好的，去给我拿";
@@ -965,11 +962,8 @@ yuno_in04,33,108,4	script	Pisruik#qsk_al	883,{
 					close;
 				}
 				else {
-					mes "^3355FF不幸的是，";
-					mes "你的背包里没有任何东西";
-					mes "看起来适合";
-					mes "替代Pisruik的";
-					mes "破损眼镜。^000000";
+					mes "^3355FF不幸的是，你的背包里没有任何东西，";
+					mes "看起来适合替代皮斯鲁克的破损眼镜。^000000";
 					close;
 				}
 			}
@@ -1103,7 +1097,7 @@ yuno_in04,33,108,4	script	Pisruik#qsk_al	883,{
 	}
 }
 
-yuno_in04,22,107,5	script	Irache#qsk_al	740,{
+yuno_in04,22,107,5	script	伊拉切#qsk_al	740,{
 	mes "[伊拉切]";
 	mes "嘿嘿嘿...!";
 	mes "完成了！有了这个";
@@ -1121,7 +1115,7 @@ yuno_in04,22,107,5	script	Irache#qsk_al	740,{
 	close;
 }
 
-yuno_in04,27,107,4	script	Degas#qsk_al	748,{
+yuno_in04,27,107,4	script	德加斯#qsk_al	748,{
 	mes "[德加斯]";
 	mes "工作真是太麻烦了";
 	mes "如此接近这些其他";
@@ -1139,17 +1133,14 @@ yuno_in04,27,107,4	script	Degas#qsk_al	748,{
 	close;
 }
 
-yuno_in04,33,106,4	script	Pile of Books#qsk_al	111,{
-	mes "^3355FFIt's simply a pile";
-	mes "of scattered documents.";
-	mes "Although it seems unorganized,";
-	mes "it doesn't look like the people";
-	mes "here have any trouble finding^FFFFFF ^3355FF what they need when they need it.";
+yuno_in04,33,106,4	script	一堆书#qsk_al	111,{
+	mes "^3355FF这只是一堆散乱的文件。虽然看起来杂乱无章，";
+	mes "但这里的人似乎并不难找到^FFFFFF ^3355FF他们需要的东西。";
 	close;
 }
 
 // Start Bioethics quest
-lhz_in01,224,140,3	script	Kellasus#qsk_al	57,{
+lhz_in01,224,140,3	script	凯拉苏斯#qsk_al	57,{
 	if (BaseJob == Job_Alchemist && bioeth == 13) {
 		mes "[凯拉苏斯]";
 		mes "继续保持";
@@ -1311,11 +1302,8 @@ lhz_in01,224,140,3	script	Kellasus#qsk_al	57,{
 		mes "你为什么要提醒我";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "这样的事情？";
-		mes "你说得对，创造";
-		mes "人造人确实带来了道德";
-		mes "问题。但我想 appeal to your sense";
-		mes "人道主义，如果可以的话。";
+		mes "这样的事情？你说得对，创造人造人确实带来了道德问题。";
+		mes "但我想 appeal to your sense 人道主义，如果可以的话。";
 		next;
 		mes "[凯拉苏斯]";
 		mes "我不明白。";
@@ -1742,7 +1730,7 @@ lhz_in01,224,140,3	script	Kellasus#qsk_al	57,{
 	close;
 }
 
-lhz_in01,225,122,5	script	Skrajjad#qsk_al	754,{
+lhz_in01,225,122,5	script	斯克拉贾德#qsk_al	754,{
 	if (BaseJob == Job_Alchemist && bioeth > 4) {
 		mes "[斯克拉贾德]";
 		mes "我已经教会你关于人造人的一切。";
@@ -1823,12 +1811,8 @@ lhz_in01,225,122,5	script	Skrajjad#qsk_al	754,{
 		mes "行为是不人道的。";
 		next;
 		mes "[斯克拉贾德]";
-		mes "“尊重所有生命形式。”";
-		mes "这就是信条";
-		mes "对于自律者专家而言。";
-		mes "现在去找 ^FF0000Keshibien^000000";
-		mes "让他教你";
-		mes "召唤人造人技能。";
+		mes "“尊重所有生命形式。”这就是自律者专家的信条。";
+		mes "现在去找 ^FF0000Keshibien^000000，让他教你召唤人造人技能。";
 		next;
 		set bioeth,5;
 		mes "[斯克拉贾德]";
@@ -1856,7 +1840,7 @@ lhz_in01,225,122,5	script	Skrajjad#qsk_al	754,{
 	close;
 }
 
-lhz_in01,204,138,5	script	Keshibien#qsk_al	750,{
+lhz_in01,204,138,5	script	凯希比恩#qsk_al	750,{
 	if (BaseJob == Job_Alchemist && bioeth > 5) {
 		mes "[凯希比恩]";
 		mes "我希望你";
@@ -1968,7 +1952,7 @@ lhz_in01,204,138,5	script	Keshibien#qsk_al	750,{
 	close;
 }
 
-lhz_in02,278,273,3	script	Broncher#qsk_al	709,{
+lhz_in02,278,273,3	script	布朗彻#qsk_al	709,{
 	if (BaseJob == Job_Alchemist && bioeth > 6) {
 		mes "[布朗彻]";
 		mes "又是你？我不是已经";
@@ -2060,7 +2044,7 @@ lhz_in02,278,273,3	script	Broncher#qsk_al	709,{
 	close;
 }
 
-lhz_in03,106,34,3	script	Koring#qsk_al	706,{
+lhz_in03,106,34,3	script	科林#qsk_al	706,{
 	if (BaseJob == Job_Alchemist && bioeth == 8 || bioeth == 9) {
 		mes "[可可]";
 		mes "我爸爸是最棒的";
@@ -2106,7 +2090,7 @@ lhz_in03,106,34,3	script	Koring#qsk_al	706,{
 	close;
 }
 
-lhz_in03,109,31,5	script	Beninne#qsk_al	90,{
+lhz_in03,109,31,5	script	贝宁#qsk_al	90,{
 	if (BaseJob == Job_Alchemist && bioeth == 8 || bioeth == 9) {
 		mes "[贝尼娜]";
 		mes "你见过我的丈夫，";
@@ -2150,7 +2134,7 @@ lhz_in03,109,31,5	script	Beninne#qsk_al	90,{
 	close;
 }
 
-lighthalzen,226,210,3	script	Nannan#qsk_al	86,{
+lighthalzen,226,210,3	script	南南#qsk_al	86,{
 	mes "[南南]";
 	mes "你知道，我一直认为所有的炼金术士都是书呆子，";
 	mes "学者类型，他们的脸总是埋在书本里学习。但";
@@ -2172,7 +2156,7 @@ lighthalzen,226,210,3	script	Nannan#qsk_al	86,{
 	close;
 }
 
-lhz_in01,218,141,7	script	Alchemist#qsk_al	98,{
+lhz_in01,218,141,7	script	炼金术士#qsk_al	98,{
 	mes "[炼金术士]";
 	mes "在所有人类中，";
 	mes "我相信凯拉苏斯是";
@@ -2199,15 +2183,15 @@ lhz_in01,218,141,7	script	Alchemist#qsk_al	98,{
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

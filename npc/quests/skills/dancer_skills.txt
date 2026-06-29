@@ -1,21 +1,21 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Dancer Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Charming Wink
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.4a Changed NPC location [Yommy]
 //= 1.5 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-comodo,204,172,5	script	Canell#qsk_dan01	724,{
+comodo,204,172,5	script	卡内尔#qsk_dan01	724,{
 	if (BaseJob == Job_Dancer && JobLevel > 39) {
 		if (DANCER_SK == 0) {
 			mes "[卡内尔]";
@@ -400,7 +400,7 @@ comodo,204,172,5	script	Canell#qsk_dan01	724,{
 	}
 }
 
-prontera,183,333,1	script	Aelle#qsk_dan02	79,{
+prontera,183,333,1	script	艾尔#qsk_dan02	79,{
 	if (BaseJob == Job_Dancer) {
 		if (DANCER_SK == 3) {
 			mes "[艾尔]";
@@ -528,18 +528,12 @@ prontera,183,333,1	script	Aelle#qsk_dan02	79,{
 				mes "你做对了……如果你……";
 				next;
 				mes "[艾尔]";
-				mes "哦，已经很久了";
-				mes "自从我喝了这么多";
-				mes "！呃，感到";
-				mes "有点--反正，j-只需关闭";
-				mes "而你-- ^333333*打嗝*^000000 眨眼";
-				mes "是如此如此如此简单~";
+				mes "来吧！跟我做，我来做！眨眼，j-只需像这样，好吗？";
+				mes "你看到了吗？^333333*眨眼*^000000";
 				next;
 				mes "[醉酒的艾尔]";
-				mes "来吧！跟我做";
-				mes "我来做！眨眼，j-只需";
-				mes "像这样，好吗？你看到了吗？";
-				mes "^333333*眨眼*^000000";
+				mes "来吧！跟我做，我来做！眨眼，就像这样，好吗？";
+				mes "你看到了吗？^333333*眨眼*^000000";
 				emotion ET_BEST;
 				next;
 				mes "["+ strcharinfo(0) +"]";
@@ -600,10 +594,8 @@ prontera,183,333,1	script	Aelle#qsk_dan02	79,{
 			mes "我真的需要--";
 			next;
 			mes "[完全醉倒的艾尔]";
-			mes "ZzzZzz... 嗯？";
-			mes "是的，我知道，我是...";
-			mes "我是个天才，是的...";
-			mes "...ZzzzZzzzZzZzzzZZZzz...";
+			mes "闭嘴！我困死了！去开开。跟我说话卡内尔，";
+			mes "我的妹妹……ZzzzzZzZZZzzzZZ....";
 			next;
 			mes "["+ strcharinfo(0) +"]";
 			mes "醒醒！";
@@ -612,11 +604,8 @@ prontera,183,333,1	script	Aelle#qsk_dan02	79,{
 			mes "学习这个技巧！";
 			next;
 			mes "[烦躁的艾尔]";
-			mes "闭嘴！";
-			mes "我困死了！";
-			mes "去开开。跟我说话";
-			mes "卡内尔，我的妹妹...";
-			mes "...ZzzzzZzZZZzzzZZ....";
+			mes "闭嘴！我困死了！去开开。";
+			mes "跟我妹妹卡内尔说话……ZzzzzZzZZZzzzZZ....";
 			set DANCER_SK,7;
 			close2;
 			warp "prontera",156,272;
@@ -631,11 +620,8 @@ prontera,183,333,1	script	Aelle#qsk_dan02	79,{
 			mes "眨眼和--";
 			next;
 			mes "[艾尔]";
-			mes "^333333*打嗝*^000000 Zzz--什么？";
-			mes "我需要教你";
-			mes "走开。跟我说话的";
-			mes "姐姐，现在太累了。";
-			mes "去吧，别烦我，女孩！";
+			mes "^333333*打嗝*^000000Zzz--什么？我需要教你？走开。去跟我姐姐说话，";
+			mes "我现在太累了。去吧，别烦我，女孩！";
 			close2;
 			warp "prontera",156,272;
 			end;
@@ -723,15 +709,15 @@ prontera,183,333,1	script	Aelle#qsk_dan02	79,{
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

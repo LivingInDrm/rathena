@@ -47,7 +47,7 @@
 //= 3.8 Another 'unofficial fix'. Player can't change job if time out after the necklace is deleted. [Atemo]
 //============================================================
 
-in_moc_16,19,33,1	script	Guildsman#asn	55,{
+in_moc_16,19,33,1	script	公会成员#asn	55,{
 	if (Upper == 1) {
 		mes "[凶狠的家伙]";
 		mes "嗯？你....？";
@@ -289,7 +289,7 @@ in_moc_16,19,33,1	script	Guildsman#asn	55,{
 	}
 }
 
-in_moc_16,25,90,1	script	Guildsman#ASN2	730,2,2,{
+in_moc_16,25,90,1	script	公会成员#ASN2	730,2,2,{
 	mes "[刺客 '凯']";
 	mes "嗯？！";
 	emotion ET_SURPRISE;
@@ -430,7 +430,8 @@ OnTouch_:
 				switch(rand(1,3)) {
 				case 1:
 					mes "[刺客 '凯']";
-					mes "首先，Grimtooth是...专门为匕首设计的技能。因此，它不需要与刀类武器相关的任何技能。";
+					mes "首先，无影之牙 是专门为匕首设计的技能。因此，";
+					mes "它不需要与刀类武器相关的任何技能。";
 					next;
 					mes "[刺客 '凯']";
 					mes "双重攻击...你试过吗？它允许你一次攻击敌人两次。";
@@ -456,7 +457,9 @@ OnTouch_:
 					mes "从沙漠狼那里获得一个插槽匕首是可能的。好吧，记住这一点。你总有一天会需要这些信息。";
 					next;
 					mes "[刺客 '凯']";
-					mes "你可以从住在地下阴暗潮湿地方的朋友那里获得一个插槽的Jur。好吧，我不知道那家伙为什么会有那把武器...也许他需要它来挖洞？";
+					mes "你可以从住在阴暗潮湿地方的朋友那里获得一个插槽的Jur。";
+					mes "好吧，我不知道那家伙为什么会有那把武器……也许";
+					mes "他需要它来挖洞？";
 					next;
 					mes "[刺客 '凯']";
 					mes "还有...";
@@ -480,7 +483,8 @@ OnTouch_:
 					mes "‘增加闪避’让你每个技能等级有+3%的闪避率。";
 					next;
 					mes "[刺客 '凯']";
-					mes "正如我一再告诉你的：匕首类武器（Jamadhar/Jur/Katar等）是双手的！";
+					mes "正如我一再告诉你的：";
+					mes "匕首类武器（Jamadhar/Jur/Katar等）是双手的！";
 					next;
 					mes "[刺客 '凯']";
 					mes "沙漠之城...我想念我的家乡，梦罗克。我已经很久没去那里了。我感觉我几天前才成为盗贼。时间过得真快...";
@@ -539,7 +543,7 @@ OnTouch_:
 			next;
 			if (JobLevel > 48) {
 				mes "[刺客 '凯']";
-				mes "Wait, Job level " + JobLevel + "?! I can see you've been training pretty hard! My bosses will like this~";
+				mes "Wait, Job level " + JobLevel + "?! I can see you've been training pretty hard! My 首领es will like this~";
 				next;
 				mes "[刺客 '凯']";
 				mes "你完成表格了吗？好的，交给我吧。等我一下，我会把你传送到测试大厅.";
@@ -621,7 +625,7 @@ OnTouch_:
 			next;
 			if (JobLevel > 48) {
 				mes "[刺客 '凯']";
-				mes "Ho? Job Level " + JobLevel + "?! You must have been training really hard. The bosses will like that for sure...";
+				mes "Ho? Job Level " + JobLevel + "?! You must have been training really hard. The 首领es will like that for sure...";
 				next;
 				mes "[刺客 '凯']";
 				mes "你填完表格了吗？好吧，把它给我，我可以把你送到测试大厅。祝你好运~";
@@ -730,7 +734,8 @@ OnTouch_:
 					mes "然而，如果你不想使用两把匕首，你就不需要这个技能。当你达到右手精通等级2时，你会看到左手精通是如何工作的。";
 					next;
 					mes "[匿名者]";
-					mes "^3355FFSonic Blow^000000 允许你一次性攻击敌人8次。这个技能只适用于卡塔尔武器，因为它需要的速度。";
+					mes "^3355FF音速投掷^000000 允许你一次性攻击敌人8次。";
+					mes "这个技能只适用于卡塔尔武器，因为它需要的速度。";
 					next;
 					mes "[匿名者]";
 					mes "当然，伤害会受到力量和武器伤害的影响。当你达到等级4的卡塔尔精通时，你会理解这个技能是如何运作的。";
@@ -1096,7 +1101,7 @@ OnTouch_:
 	}
 }
 
-in_moc_16,21,165,2	script	Standby Room#ASNTEST	725,{
+in_moc_16,21,165,2	script	待命室#ASNTEST	725,{
 	end;
 
 OnInit:
@@ -1124,73 +1129,75 @@ OnStart:
 	end;
 }
 
-in_moc_16,21,165,2	script	Test Guide#ASN	725,4,4,{
+in_moc_16,21,165,2	script	测试指南#ASN	725,4,4,{
 	end;
 
 OnTouch_:
 	if (ASSIN_Q2 < 5) {
-		mes "[Barcardi]";
-		mes "You can't take the next trial without passing the written test first. You better speak to the Anonymous One...";
+		mes "[巴卡尔迪]";
+		mes "你不能在通过书面测试之前进行下一个试炼。";
+		mes "你最好去找匿名者……";
 		close2;
 		warp "in_moc_16",19,76;
 		end;
 	}
 	if (ASSIN_Q == 1 && ASSIN_Q2 == 5) {
-		mes "[Barcardi]";
+		mes "[巴卡尔迪]";
 		mes "" + strcharinfo(0) + "...";
-		mes "You passed the test..?";
+		mes "你通过测试了吗……？";
 		next;
-		mes "[Barcardi]";
-		mes "To be honest, I want to grant you the job change without any other condition. Too many pathetic people don't even have the basic knowledge to be Assassins...";
+		mes "[巴卡尔迪]";
+		mes "说实话，我想在没有其他条件的情况下授予你转职。";
+		mes "太多可怜的人连成为刺客的基本知识都没有……";
 		next;
-		mes "[Barcardi]";
-		mes "We must keep our dignity as Assassins and be truly great! Regrettably, there are too many idiots that don't have any pride.";
+		mes "[巴卡尔迪]";
+		mes "我们必须保持作为刺客的尊严，真正伟大！可惜的是，";
+		mes "太多傻瓜没有任何自尊。";
 		next;
-		mes "[Barcardi]";
-		mes "All Assassins must respect the enemies they slay, the blood that they spill, and above all, maintain their sense of dignity!";
+		mes "[巴卡尔迪]";
+		mes "所有刺客都必须尊重他们所杀的敌人，所流的血，";
+		mes "最重要的是，保持他们的尊严！";
 		next;
-		mes "[Barcardi]";
-		mes "Alright. This next trial will test your ability to quickly find your target.";
+		mes "[巴卡尔迪]";
+		mes "好的。下一个试炼将测试你快速找到目标的能力。";
 		next;
-		mes "[Barcardi]";
-		mes "If you're going to be an Assassin, we need to determine whether or not you can distinguish friend from foe in an instant.";
+		mes "[巴卡尔迪]";
+		mes "如果你要成为刺客，";
+		mes "我们需要判断你是否能瞬间分辨朋友和敌人。";
 		next;
-		mes "[Barcardi]";
-		mes "The main goal of this test is to find and kill as many monsters named ^008800Job change target^000000 as possible.";
+		mes "[巴卡尔迪]";
+		mes "这个测试的主要目标是找到并杀死尽可能多的名为^008800Job";
+		mes "change target^000000的怪物。";
 		next;
-		mes "[Barcardi]";
-		mes "You must kill at least";
-		mes "6 ^008800Job change target^000000 monsters. They're intermingled among similar looking monsters, so you need to be careful...";
+		mes "[巴卡尔迪]";
+		mes "你必须至少杀死6个 ^008800转职目标^000000 怪物。";
+		mes "它们与外形相似的怪物混在一起，所以你需要小心……";
 		next;
-		mes "[Barcardi]";
-		mes "If you fail, you'll have to restart this test. Go to the room above";
-		mes "me to be transported to the Test Hall.";
+		mes "[巴卡尔迪]";
+		mes "如果你失败了，就必须重新开始这个测试。";
+		mes "去我上面的房间传送到测试大厅。";
 		next;
-		mes "[Barcardi]";
-		mes "Only one person is allowed to take the test at a time, so if anyone is taking the test, you'll have to wait until that person finishes.";
+		mes "[巴卡尔迪]";
+		mes "每次只能有一个人参加测试，所以如果有人正在测试，";
+		mes "你必须等到那个人完成。";
 		close;
 	}
 	else {
-		mes "[Barcardi]";
-		mes "Hey, don't be too hard";
-		mes "on yourself. Cheer up!";
+		mes "[巴卡尔迪]";
+		mes "嘿，不要对自己太苛刻。振作起来！";
 		next;
-		mes "[Barcardi]";
-		mes "Hmm, if you're exhausted, I'm willing to bring you back. Of course, if you leave, you'll have to take the job test over again. So what do you want to do?";
+		mes "[巴卡尔迪]";
+		mes "嗯，如果你累了，我愿意带你回去。当然，如果你离开，";
+		mes "就必须重新参加职业测试。你想怎么做？";
 		next;
-		if (select("Continue!:Quit the job change test for now.") == 1) {
-			mes "[Barcardi]";
-			mes "Good choice!";
-			mes "Remember, you";
-			mes "must find and kill";
-			mes "6 ^008800Job change target^000000 monsters!";
-			mes "Good luck!";
+		if (select("继续！:暂时退出职业变更测试。") == 1) {
+			mes "[巴卡尔迪]";
+			mes "好选择！记住，";
+			mes "你必须找到并击杀6只^008800职业变更目标^000000怪物！祝你好运！";
 			close;
 		}
-		mes "[Barcardi]";
-		mes "Alright...";
-		mes "I guess you";
-		mes "could use a break...";
+		mes "[巴卡尔迪]";
+		mes "好吧……我想你可以休息一下……";
 		close2;
 		ASSIN_Q = 0;
 		ASSIN_Q2 = 0;
@@ -1200,18 +1207,18 @@ OnTouch_:
 	}
 }
 
-in_moc_16,1,1,0	script	Beholder#ASNTEST	-1,{
+in_moc_16,1,1,0	script	观察者#ASNTEST	-1,{
 	end;
 
 OnEnable:
 	.MyMobs = 6;
 	// Target mobs
-	monster "in_moc_16",62,161,"Job change target",1002,1,"Beholder#ASNTEST::OnMyMobDead";
-	monster "in_moc_16",85,169,"Job change target",1063,1,"Beholder#ASNTEST::OnMyMobDead";
-	monster "in_moc_16",88,152,"Job change target",1002,1,"Beholder#ASNTEST::OnMyMobDead";
-	monster "in_moc_16",90,143,"Job change target",1113,1,"Beholder#ASNTEST::OnMyMobDead";
-	monster "in_moc_16",74,167,"Job change target",1031,1,"Beholder#ASNTEST::OnMyMobDead";
-	monster "in_moc_16",77,173,"Job change target",1002,1,"Beholder#ASNTEST::OnMyMobDead";
+	monster "in_moc_16",62,161,"转职目标",1002,1,"Beholder#ASNTEST::OnMyMobDead";
+	monster "in_moc_16",85,169,"转职目标",1063,1,"Beholder#ASNTEST::OnMyMobDead";
+	monster "in_moc_16",88,152,"转职目标",1002,1,"Beholder#ASNTEST::OnMyMobDead";
+	monster "in_moc_16",90,143,"转职目标",1113,1,"Beholder#ASNTEST::OnMyMobDead";
+	monster "in_moc_16",74,167,"转职目标",1031,1,"Beholder#ASNTEST::OnMyMobDead";
+	monster "in_moc_16",77,173,"转职目标",1002,1,"Beholder#ASNTEST::OnMyMobDead";
 	// Decoy mobs
 	monster "in_moc_16",62,161,"Job change creature",1063,1,"Beholder#ASNTEST::OnMyMobDead2";
 	monster "in_moc_16",85,169,"Job change creature",1031,1,"Beholder#ASNTEST::OnMyMobDead2";
@@ -1221,7 +1228,7 @@ OnEnable:
 	monster "in_moc_16",68,173,"Job change dummy",1113,1,"Beholder#ASNTEST::OnMyMobDead2";
 	monster "in_moc_16",65,158,"Battle test target",1002,1,"Beholder#ASNTEST::OnMyMobDead2";
 	monster "in_moc_16",60,158,"Warrior test target",1113,1,"Beholder#ASNTEST::OnMyMobDead2";
-	monster "in_moc_16",64,169,"Job change targets",1002,1,"Beholder#ASNTEST::OnMyMobDead2";
+	monster "in_moc_16",64,169,"转职目标s",1002,1,"Beholder#ASNTEST::OnMyMobDead2";
 	monster "in_moc_16",71,173,"Jobs change target",1063,1,"Beholder#ASNTEST::OnMyMobDead2";
 	monster "in_moc_16",77,172,"Please don't hit me",1002,1,"Beholder#ASNTEST::OnMyMobDead2";
 	monster "in_moc_16",76,172,"Job change sample",1063,1,"Beholder#ASNTEST::OnMyMobDead2";
@@ -1292,7 +1299,7 @@ OnTimer1000:
 	end;
 
 OnTimer2000:
-	mapannounce "in_moc_16","As you've been told before, find and only kill monsters named 'Job change target!'",bc_map;
+	mapannounce "in_moc_16","As you've been told before, find and only kill monsters named '转职目标!'",bc_map;
 	end;
 
 OnTimer3000:
@@ -1308,7 +1315,7 @@ OnTimer5000:
 	end;
 
 OnTimer65000:
-	mapannounce "in_moc_16","2 minutes left. As I've told you, get the 'Job change target' monsters!",bc_map;
+	mapannounce "in_moc_16","2 minutes left. As I've told you, get the '转职目标' monsters!",bc_map;
 	end;
 
 OnTimer125000:
@@ -1446,7 +1453,7 @@ in_moc_16,86,147,0	duplicate(SinTrap)	18_2	-1,0,0
 in_moc_16,87,146,0	duplicate(SinTrap)	18_3	-1,0,0
 in_moc_16,87,147,0	duplicate(SinTrap)	18_4	-1,0,0
 
-in_moc_16,87,137,0	script	Keeper of the Door#ASN	45,2,1,{
+in_moc_16,87,137,0	script	门的守护者#ASN	45,2,1,{
 OnInit:
 	disablenpc "Keeper of the Door#ASN";
 	end;
@@ -1494,7 +1501,7 @@ OnMyMobDead:
 	end;
 }
 
-in_moc_16,89,98,1	script	Thomas#ASNTEST	118,5,1,{
+in_moc_16,89,98,1	script	托马斯#ASNTEST	118,5,1,{
 	end;
 
 OnTouch_:
@@ -1583,7 +1590,7 @@ OnDisable:
 	end;
 }
 
-in_moc_16,87,48,2	script	Barcardi#ASN	725,2,2,{
+in_moc_16,87,48,2	script	巴卡尔迪#ASN	725,2,2,{
 	end;
 OnTouch_:
 	donpcevent "timestopper#1::OnDisable";
@@ -1598,7 +1605,7 @@ OnTouch_:
 	end;
 }
 
-in_moc_16,182,169,0	script	Maze Assistant	45,1,1,{
+in_moc_16,182,169,0	script	迷宫助手	45,1,1,{
 OnTouch_:
 	if (ASSIN_Q == 5 || ASSIN_Q == 6) {
 		warp "in_moc_16",181,183;
@@ -1615,7 +1622,7 @@ OnTouch_:
 	}
 }
 
-in_moc_16,167,110,0	script	Guildmaster#ASN1	-1,3,1,{
+in_moc_16,167,110,0	script	公会长#ASN1	-1,3,1,{
 OnTouch_:
 	savepoint "in_moc_16",167,110,1,1;
 	mes "[公会长]";
@@ -1636,7 +1643,7 @@ OnCast:
 	end;
 }
 
-in_moc_16,149,80,4	script	Guildmaster#ASN2	106,1,1,{
+in_moc_16,149,80,4	script	公会长#ASN2	106,1,1,{
 	end;
 OnTouch_:
 	if (checkre(0))
@@ -1949,7 +1956,7 @@ OnTouch_:
 		mes "他们会";
 		mes "很快就到。";
 		next;
-		enablenpc "[Huey]";
+		enablenpc "[休伊]";
 		enablenpc "[Khai]";
 		enablenpc "[The Anonymous One]";
 		enablenpc "[Barcardi]";
@@ -1969,31 +1976,24 @@ OnTouch_:
 		mes "是不错的。";
 		next;
 		mes "[公会长]";
-		mes "嗯……";
-		mes "匿名者";
-		mes "支持你。怎么样";
-		mes "关于你，Huey？";
+		mes "嗯……匿名者支持你。你觉得怎么样，休伊？";
 		next;
 		if (ASSIN_Q3 == 1) { // player Job Level was above 48
-			mes "[Huey]";
-			mes "一个稀有的存在。";
-			mes "你可以看出来";
-			mes "通过职业等级。";
+			mes "[休伊]";
+			mes "一个稀有的存在。你可以通过职业等级看出来。";
 			next;
-			mes "[Huey]";
-			mes "我同意";
-			mes "匿名者的看法。";
+			mes "[休伊]";
+			mes "我同意匿名者的看法。";
 		}
 		else { // player Job Level was below 48
-			mes "[Huey]";
+			mes "[休伊]";
 			mes "Although "+ strcharinfo(0) +" looks too mellow and gentle, kind of like a pussycat, "+ strcharinfo(0) +" has the stuff.";
 			next;
-			mes "[Huey]";
+			mes "[休伊]";
 			mes "如果你没意见，我想回去工作。";
 			next;
 			mes "[公会长]";
-			mes "是的...";
-			mes "就这些了，Huey。";
+			mes "是的……就这些了，休伊。";
 		}
 		next;
 		mes "[公会长]";
@@ -2001,7 +2001,7 @@ OnTouch_:
 		mes "‘观察者’，你";
 		mes "有什么看法？";
 		next;
-		disablenpc "[Huey]";
+		disablenpc "[休伊]";
 		mes "[观察者]";
 		mes "嗯，我不喜欢这次考试的分数。但是，总的来说，整个测试都通过了。我对这个人还可以。";
 		next;
@@ -2065,13 +2065,13 @@ OnTouch_:
 			mes "好吧，我说得太多了。请选择一件武器作为礼物。";
 			next;
 			mes "[公会长]";
-			mes "你可以选择一把Jur、Katar、Main Gauche或Gladius。作为一名大师，我爱它们所有。";
+			mes "你可以选择一把Jur、Katar、Main Gauche或Gladius。";
+			mes "作为一名大师，我爱它们所有。";
 			next;
 			switch(select("短剑:匕首:主手刀:格拉迪乌斯")) {
 			case 1:
 				mes "[公会长]";
-				mes "一把Jur...";
-				mes "好选择。给你。我希望它能对你有所帮助。";
+				mes "一把Jur……好选择。给你。我希望它能对你有所帮助。";
 				getitem 1251,1; //Jur_
 				break;
 			case 2:
@@ -2138,7 +2138,7 @@ OnTouch_:
 		next;
 		mes "[公会长]";
 		mes "好吧，你们都可以回到你们的位置。我也会送你们去入口。我们走吧...";
-		disablenpc "[Huey]";
+		disablenpc "[休伊]";
 		disablenpc "[Khai]";
 		disablenpc "[The Anonymous One]";
 		disablenpc "[Barcardi]";
@@ -2182,70 +2182,65 @@ OnTouch_:
 	}
 }
 
-in_moc_16,186,81,1	script	Master Assist	55,1,1,{
-	mes "[Assistent Gayle Maroubitz]";
-	mes "Sorry, but I'm not in charge of job changes. Go to the Guildmaster, as he has told you.";
+in_moc_16,186,81,1	script	大师助手	55,1,1,{
+	mes "[助手盖尔·马鲁比茨]";
+	mes "抱歉，我不负责职业变更。去找公会长，他已经告诉过你了。";
 	close;
 }
 
-in_moc_16,170,90,0	script	info 1	-1,{
+in_moc_16,170,90,0	script	信息 1	-1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "Huh.";
-	mes "Now, that place is blocked. You might want to check the other side.";
+	mes "[公会长]";
+	mes "嗯。现在，那地方被封锁了。你可能想去另一边看看。";
 	close;
 }
 
-in_moc_16,153,85,0	script	info 2	-1,1,1,{
+in_moc_16,153,85,0	script	信息 2	-1,1,1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "You're getting warmer. You're almost there. Just, turn around a little bit.";
+	mes "[公会会长]";
+	mes "你越来越接近了。快到了，只需稍微转身。";
 	close;
 }
 
-in_moc_16,160,85,0	script	info 3	-1,1,1,{
+in_moc_16,160,85,0	script	信息 3	-1,1,1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "Hmm.";
-	mes "Now, that place";
-	mes "is blocked.";
+	mes "[公会会长]";
+	mes "嗯，那地方被挡住了。";
 	close;
 }
 
-in_moc_16,175,89,0	script	info 4	-1,1,1,{
+in_moc_16,175,89,0	script	信息 4	-1,1,1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "Umm...";
-	mes "You're heading for my assistant. Do you still need to talk to him?";
+	mes "[公会会长]";
+	mes "嗯……你正朝我的助手走去。你还需要和他谈谈吗？";
 	close;
 }
 
-in_moc_16,164,88,0	script	info 5	-1,{
+in_moc_16,164,88,0	script	信息 5	-1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "Well done...";
-	mes "I can feel your steps near me.";
+	mes "[公会会长]";
+	mes "做得好……我能感觉到你离我很近。";
 	close;
 }
 
-in_moc_16,149,95,0	script	info 6	-1,1,1,{
+in_moc_16,149,95,0	script	信息 6	-1,1,1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "Hm? Not bad. You're almost here.";
+	mes "[公会会长]";
+	mes "嗯？不错，你快到了。";
 	close;
 }
 
-in_moc_16,180,101,0	script	info 7	-1,1,1,{
+in_moc_16,180,101,0	script	信息 7	-1,1,1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "I don't think you're going the right way.";
+	mes "[公会会长]";
+	mes "我觉得你走错方向了。";
 	close;
 }
 
-in_moc_16,186,107,0	script	info 8	-1,1,1,{
+in_moc_16,186,107,0	script	信息 8	-1,1,1,{
 OnTouch_:
-	mes "[Guildmaster]";
-	mes "No sense of direction, eh?";
+	mes "[公会会长]";
+	mes "没有方向感吗？";
 	close;
 }
 
@@ -2256,10 +2251,10 @@ OnInit:
 	disablenpc();
 	end;
 }
-in_moc_16,156,87,1	duplicate(#moc_assin_dup)	[Huey]	55
-in_moc_16,156,85,1	duplicate(#moc_assin_dup)	[Khai]	730
-in_moc_16,156,83,1	duplicate(#moc_assin_dup)	[The Anonymous One]	106
-in_moc_16,156,81,2	duplicate(#moc_assin_dup)	[Barcardi]	725
-in_moc_16,156,79,1	duplicate(#moc_assin_dup)	[Beholder]	118
-in_moc_16,156,77,1	duplicate(#moc_assin_dup)	[Thomas]	118
-in_moc_16,156,75,1	duplicate(#moc_assin_dup)	[Gayle Maroubitz]	55
+in_moc_16,156,87,1	duplicate(#moc_assin_dup)	[休伊]	55
+in_moc_16,156,85,1	duplicate(#moc_assin_dup)	[凯]	730
+in_moc_16,156,83,1	duplicate(#moc_assin_dup)	[匿名者]	106
+in_moc_16,156,81,2	duplicate(#moc_assin_dup)	[巴卡尔迪]	725
+in_moc_16,156,79,1	duplicate(#moc_assin_dup)	[注视者]	118
+in_moc_16,156,77,1	duplicate(#moc_assin_dup)	[托马斯]	118
+in_moc_16,156,75,1	duplicate(#moc_assin_dup)	[盖尔·马罗比茨]	55

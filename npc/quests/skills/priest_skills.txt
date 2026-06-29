@@ -1,289 +1,184 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Priest Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Redempito
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.4 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.5 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-prt_church,111,112,1	script	Sister Linus	79,{
+prt_church,111,112,1	script	莉娜修修女	79,{
 	if (BaseJob == Job_Priest) {
 		if (PRIEST_SK == 100) {
 			if (getskilllv("PR_REDEMPTIO") == 0) {
-				mes "[Sister Linus]";
-				mes "Hm? We've met before,";
-				mes "haven't we? Then again,";
-				mes "all Priests begin to look";
-				mes "the same after a while. Ah,";
-				mes "were you one of the ones";
-				mes "to whom I taught Redemptio?";
+				mes "[莉娜修女]";
+				mes "嗯？我们以前见过吧？不过，";
+				mes "所有的牧师过一段时间后都开始看起来一样。啊，";
+				mes "你是我教过红emption的人之一吗？";
 				next;
-				mes "[Sister Linus]";
-				mes "Ah, you've forgotten, have";
-				mes "you? Well, it's no problem for";
-				mes "me to teach you again. This skill enables you to revive your fallen";
-				mes "Party Members by sacrificing";
-				mes "your own life for them.";
+				mes "[莉娜修修女]";
+				mes "啊，你忘了吗？没关系，我可以再教你。";
+				mes "这项技能可以通过牺牲自己的生命来复活倒下的队友。";
 				next;
-				mes "[Sister Linus]";
-				mes "^3131FFOh holy and venerable one,";
-				mes "we pray to you. Please show";
-				mes "us your mercy and guide us";
-				mes "with your light. Give us the";
-				mes "strength to walk the path of";
-				mes "love and sacrifice. Redemptio!^000000";
+				mes "[莉娜修修女]";
+				mes "^3131FF哦，神圣而尊贵的您，我们向您祈祷。请施予我们怜悯，";
+				mes "用您的光引导我们。";
+				mes "赐予我们走爱与牺牲之路的力量。红emption！^000000";
 				skill "PR_REDEMPTIO",1,SKILL_PERM;
 				next;
-				mes "[Sister Linus]";
-				mes "There...";
-				mes "You should be able";
-				mes "to perform Redemptio";
-				mes "now. I hope you use it";
-				mes "well on your adventures~";
+				mes "[莉娜修修女]";
+				mes "好了……你现在应该能施展红emption了。";
+				mes "希望你在冒险中好好利用它~";
 				close;
 			}
 			else {
-				mes "[Sister Linus]";
-				mes "I'll always be praying";
-				mes "for your safety. Be careful,";
-				mes "and I hope that you can bring";
-				mes "love and compassion to all";
-				mes "whom you meet in your travels.";
+				mes "[莉娜修修女]";
+				mes "我会一直为你的安全祈祷。小心点，";
+				mes "希望你能把爱与同情带给你旅行中遇到的每一个人。";
 				close;
 			}
 		}
 		else if (PRIEST_SK == 0) {
 			set redemp,1014;
 			if (getskilllv("PR_REDEMPTIO")) {
-				mes "[Sister Linus]";
-				mes "I'll always be praying";
-				mes "for your safety. Be careful,";
-				mes "and I hope that you can bring";
-				mes "love and compassion to all";
-				mes "whom you meet in your travels.";
+				mes "[莉娜修修女]";
+				mes "我会一直为你的安全祈祷。小心点，";
+				mes "希望你能把爱与同情带给你旅行中遇到的每一个人。";
 				set PRIEST_SK,100;
 				close;
 			}
-			mes "[Sister Linus]";
-			mes "Please have mercy and";
-			mes "spread your light through";
-			mes "the world. Guide her with";
-			mes "your benevolent wisdom...";
-			mes "Bless her, and may she";
-			mes "be protected by your grace.";
+			mes "[莉娜修修女]";
+			mes "请施予怜悯，让您的光辉遍布世界。";
+			mes "用您的仁慈智慧引导她……祝福她，愿她受到您的恩典保护。";
 			next;
-			select("Whom are you praying for, sister?");
-			mes "[Sister Linus]";
-			mes "Oh! You startled me!";
-			mes "Whom am I praying for?";
-			mes "Well, I once knew a young,";
-			mes "playful and merry nun who was";
-			mes "also a bit brazen. But I have";
-			mes "many joyful memories of her.";
+			select("你在为谁祈祷，修女？");
+			mes "[莉娜修修女]";
+			mes "哦！你吓到我了！我在为谁祈祷？我曾经认识一个年轻、活泼、";
+			mes "快乐的修女，她也有点大胆。但我对她有很多快乐的回忆。";
 			next;
-			mes "[Sister Linus]";
-			mes "One day, a group of adventurers";
-			mes "came to Prontera Church in hopes of hiring a Priest to accompany";
-			mes "them to ^3131DDGlast Heim^000000. It must have been fate that she was the only";
-			mes "Priest that was available.";
+			mes "[莉娜修修女]";
+			mes "有一天，一群冒险者来到普隆德拉教堂，";
+			mes "希望雇佣一位牧师陪他们去^3131DD格拉斯特海姆^000000。";
+			mes "她是唯一可用的牧师，这一定是命运。";
 			next;
-			mes "[Sister Linus]";
-			mes "I remember that she was";
-			mes "so determined to join those";
-			mes "adventurers, and we had no";
-			mes "choice but to let her go.";
-			mes "Still, many of us believed";
-			mes "that it was too dangerous...";
+			mes "[莉娜修修女]";
+			mes "我记得她非常想加入那些冒险者，我们别无选择，";
+			mes "只能让她离开。尽管如此，";
+			mes "我们中的许多人都认为这太危险了……";
 			next;
-			mes "[Sister Linus]";
-			mes "I hear that, at first, their";
-			mes "ragtag team was able to";
-			mes "successfully exterminate";
-			mes "a great number of monsters.";
-			mes "But supporting them as a Priest";
-			mes "must have been tough for her...";
+			mes "[莉娜修修女]";
+			mes "我听说，起初，他们这个杂牌团队成功消灭了大量怪物。";
+			mes "但作为牧师支持他们对她来说一定很艰难……";
 			next;
-			mes "[Sister Linus]";
-			mes "Then, tragedy struck.";
-			mes "Surrounded by Wanderers,";
-			mes "the adventurers quickly fell";
-			mes "in defeat, one by one. Soon,";
-			mes "the young nun was the only one of the group still standing.";
+			mes "[莉娜修修女]";
+			mes "然后，悲剧发生了。被流浪者包围，";
+			mes "冒险者们迅速一个接一个地失败。很快，";
+			mes "年轻的修女成了唯一还站着的人。";
 			next;
-			mes "[Sister Linus]";
-			mes "Alone against impossible";
-			mes "odds, that poor girl had no";
-			mes "choice but to try a desperate";
-			mes "gamble. She began to chant";
-			mes "the ancient holy spell...";
+			mes "[莉娜修修女]";
+			mes "孤身面对不可能的局面，那可怜的女孩别无选择，";
+			mes "只能尝试一次绝望的赌博。她开始吟唱古老的神圣咒语……";
 			next;
-			select("Ancient spell...?");
-			mes "[Sister Linus]";
-			mes "Yes! ^FF0000Redemptio^000000!";
-			mes "A skill that only the";
-			mes "most talented Priests";
-			mes "can perform! And here she";
-			mes "was, a young nun with very";
-			mes "little experience, trying it!";
+			select("古老的咒语……？");
+			mes "[莉娜修修女]";
+			mes "是的！^FF0000红emption^000000！只有最有天赋的牧师才能施展的技能！";
+			mes "而她只是一个经验极少的年轻修女，居然尝试了！";
 			next;
-			mes "[Sister Linus]";
-			mes "Redemptio is the last";
-			mes "resort skill that can be";
-			mes "used to nobly save the";
-			mes "lives of others at the cost";
-			mes "of ^3131FFsacrificing your own life^000000.";
+			mes "[莉娜修修女]";
+			mes "救赎是最后的手段技能，可以以^3131FF牺牲自己的生命^000000为代价，";
+			mes "崇高地拯救他人的生命。";
 			next;
-			mes "[Sister Linus]";
-			mes "Yes, I remember the days";
-			mes "she wasn't very interested";
-			mes "in studying the Priest and";
-			mes "Acolyte skills. Surprisingly,";
-			mes "she had learned enough to";
-			mes "attempt to cast Redemptio...";
+			mes "[莉娜修修女]";
+			mes "是的，我记得她以前对学习牧师和侍者技能并不太感兴趣。";
+			mes "令人惊讶的是，她学会了足够的知识来尝试施展救赎……";
 			next;
-			mes "[Sister Linus]";
-			mes "Miraculously, she succeeded";
-			mes "in reviving her party members.";
-			mes "They quickly used a Yggdrasil";
-			mes "Leaf to restore her life, and they defeated the Wanderers and";
-			mes "returned home safely.";
+			mes "[莉娜修修女]";
+			mes "奇迹般地，她成功复活了她的队友。";
+			mes "他们迅速使用了一个世界树叶来恢复她的生命，";
+			mes "击败了流浪者，安全回家。";
 			next;
-			mes "[Sister Linus]";
-			mes "Because of this success, she";
-			mes "was promoted to High Priest";
-			mes "despite the many mistakes she";
-			mes "made in the past. Now she travels the world, helping adventurers";
-			mes "in any way that she can.";
+			mes "[莉娜修修女]";
+			mes "因为这次成功，她被提升为大祭司，尽管过去犯了许多错误。";
+			mes "现在她游历世界，尽可能帮助冒险者。";
 			next;
-			mes "[Sister Linus]";
-			mes "But, well, she'll";
-			mes "always be that spunky";
-			mes "and joyful girl to me.";
+			mes "[莉娜修修女]";
+			mes "不过，对我来说，她永远是那个活泼快乐的女孩。";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "Wait, you still haven't";
-			mes "answered my question.";
-			mes "Are you praying for this";
-			mes "nun? And if so, is she";
-			mes "in some kind of danger?";
+			mes "等一下，你还没有回答我的问题。你是在为这个修女祈祷吗？";
+			mes "如果是的话，她有危险吗？";
 			next;
-			mes "[Sister Linus]";
-			mes "Well, a few months ago,";
-			mes "she went on a mission to";
-			mes "^3131FFLighthalzen^000000, a city in the";
-			mes "Schwarzwald Republic. I was";
-			mes "just worried since I haven't";
-			mes "heard from her in a while.";
+			mes "[莉娜修修女]";
+			mes "嗯，几个月前，她去^3131FF光之城^000000执行任务。我有些担心，";
+			mes "因为我已经很久没有收到她的消息。";
 			next;
-			mes "[Sister Linus]";
-			mes "I come here to pray for";
-			mes "her everyday, and hope that";
-			mes "she'll come back safely and";
-			mes "share stories of her adventures";
-			mes "with me. Ooh, we'll talk all night long! It'll be so much fun!";
+			mes "[莉娜修修女]";
+			mes "我每天来这里为她祈祷，希望她能安全回来，";
+			mes "和我分享她的冒险故事。哦，我们会聊一整夜！一定会很有趣！";
 			next;
-			mes "[Sister Linus]";
-			mes "Goodness, I've been";
-			mes "running my mouth! I'm";
-			mes "sorry to keep you, did you";
-			mes "have somewhere to go? Well,";
-			mes "I'll be praying for your safety~";
+			mes "[莉娜修修女]";
+			mes "天哪，我说得太多了！抱歉耽误你了，你有地方要去吗？好吧，";
+			mes "我会为你的安全祈祷~";
 			next;
 			mes "["+ strcharinfo(0) +"]";
-			mes "Before I go, would you";
-			mes "please tell me the name";
-			mes "of that High Priest you were";
-			mes "talking about? If I see her,";
-			mes "I'll ask her to contact you.";
+			mes "在我离开之前，你能告诉我你提到的那位大祭司的名字吗？";
+			mes "如果我见到她，我会请她联系你。";
 			next;
-			mes "[Sister Linus]";
-			mes "Oh, thank you! Her name";
-			mes "is High Priest Sorin. Um,";
-			mes "^3131FFMargaretha Sorin^000000. If you";
-			mes "happen to find her, please";
-			mes "let her know that I am";
-			mes "praying for her safety.";
+			mes "[莉娜修修女]";
+			mes "哦，谢谢你！她的名字是大祭司索琳。嗯，^3131FF玛格丽塔·索琳^000000。";
+			mes "如果你碰巧找到她，请告诉她我在为她的安全祈祷。";
 			set PRIEST_SK,1;
 			close;
 		}
 		else if (PRIEST_SK == 1) {
-			mes "[Sister Linus]";
-			mes "Oh, hello~";
-			mes "How are you";
-			mes "doing today?";
+			mes "[莉娜修修女]";
+			mes "哦，您好~ 今天过得怎么样？";
 			next;
-			if (select("Please teach me ^3131FFRedemptio^000000.:Cancel") == 1) {
-				mes "[Sister Linus]";
-				mes "Ooh, Redemptio would be";
-				mes "a good skill for you to learn~";
-				mes "It's difficult to cast, but when you succeed, you can revive all";
-				mes "of your defeated Party Members.";
+			if (select("请教我^3131FF救赎^000000。:取消") == 1) {
+				mes "[莉娜修修女]";
+				mes "哦，救赎会是一个很好的技能供你学习~ 它很难施展，";
+				mes "但成功后可以复活你所有被击败的队友。";
 				next;
-				mes "[Sister Linus]";
-				mes "Of course, the drawback";
-				mes "is that you must ^3131FFsacrifice";
-				mes "your own life^000000 in order to";
-				mes "use the skill. Now, to learn";
-				mes "Redemptio, you must first";
-				mes "learn ^3131FFLevel 1 Resurrection^000000.";
+				mes "[莉娜修修女]";
+				mes "当然，缺点是你必须^3131FF牺牲自己的生命^000000才能使用这个技能。";
+				mes "现在，要学习救赎，你必须先学习^3131FF一级复活^000000。";
 				next;
-				mes "[Sister Linus]";
-				mes "Ah, you must";
-				mes "also bring me";
-				mes "^3131FF30 Holy Waters and";
-				mes "20 Blue Gemstones^000000";
-				mes "so you can attempt";
-				mes "to learn the skill.";
+				mes "[莉娜修修女]";
+				mes "啊，你还必须带给我^3131FF30瓶圣水和20颗蓝色宝石^000000，";
+				mes "这样你才能尝试学习这个技能。";
 				set PRIEST_SK,2;
 				next;
-				mes "[Sister Linus]";
-				mes "Um, but if you fail to";
-				mes "learn Redemptio, you'll";
-				mes "lose 1 Holy Water and";
-				mes "1 Blue Gemstone and";
-				mes "you'll have to try it again...";
+				mes "[莉娜修修女]";
+				mes "嗯，但如果你未能学习救赎，";
+				mes "你将失去1瓶圣水和1颗蓝色宝石，还得再试一次……";
 				close;
 			}
-			mes "[Sister Linus]";
-			mes "Praying gives me a";
-			mes "sense of peace and";
-			mes "comfort. Perhaps that";
-			mes "is one of the reasons";
-			mes "why I chose this job...";
+			mes "[莉娜修修女]";
+			mes "祈祷让我感到平静和安慰。";
+			mes "也许这就是我选择这份工作的原因之一……";
 			close;
 		}
 		else if (PRIEST_SK == 2) {
 			if (getskilllv("ALL_RESURRECTION") > 0) {
 				if (countitem(523) > 29 && countitem(717) > 19) {
-					mes "[Sister Linus]";
-					mes "Ooh, it seems like you've";
-					mes "brought everything that you";
-					mes "need to learn Redemptio.";
-					mes "Are you ready to try it? If you";
-					mes "fail, you'll lose 1 Holy Water";
-					mes "and 1 Blue Gemstone, okay?";
+					mes "[莉娜修女]";
+					mes "哦，看起来你已经准备好学习救赎术了。你准备好尝试了吗？";
+					mes "如果失败，你将失去1瓶圣水和1颗蓝宝石，好吗？";
 					next;
-					mes "[Sister Linus]";
-					mes "Now, please";
-					mes "concentrate and";
-					mes "repeat this special";
-					mes "prayer after me.";
+					mes "[莉娜修女]";
+					mes "现在，请集中注意力，跟我重复这段特殊的祷告。";
 					next;
-					mes "[Sister Linus]";
-					mes "^3131FFOh holy and venerable one,";
-					mes "we pray to you. Please show";
-					mes "us your mercy and guide us";
-					mes "with your light. Give us the";
-					mes "strength to walk the path of";
-					mes "love and sacrifice. Redemptio!^000000";
+					mes "[莉娜修女]";
+					mes "^3131FF哦，神圣而尊贵的存在，我们向您祈祷。请赐予我们您的怜悯，";
+					mes "用您的光明指引我们。";
+					mes "给予我们走爱与牺牲之路的力量。救赎术！^000000";
 					next;
 					set .@redem_s,JobLevel+getskilllv("ALL_RESURRECTION");
 					set .@red_suc,rand(1,100);
@@ -300,13 +195,9 @@ prt_church,111,112,1	script	Sister Linus	79,{
 
 					if (.@success) {
 						specialeffect2 EF_HEALSP;
-						mes "[Sister Linus]";
-						mes "Congratulations!";
-						mes "You successfully";
-						mes "learned Redemptio!";
-						mes "Please remember to only";
-						mes "use this skill in the most";
-						mes "critical situations.";
+						mes "[莉娜修女]";
+						mes "恭喜你！你成功学习了救赎术！";
+						mes "请记得只在最关键的时刻使用这个技能。";
 						delitem 717,20; //Blue_Gemstone
 						delitem 523,30; //Holy_Water
 						set PRIEST_SK,100;
@@ -315,13 +206,9 @@ prt_church,111,112,1	script	Sister Linus	79,{
 					}
 					else {
 						specialeffect2 EF_POISONHIT;
-						mes "[Sister Linus]";
-						mes "Oh no! I'm sorry,";
-						mes "but you failed to";
-						mes "learn Redemptio. Well,";
-						mes "I'll be waiting right here,";
-						mes "so we can try again when";
-						mes "you're ready, okay?";
+						mes "[莉娜修女]";
+						mes "哦，不！对不起，你未能学习救赎术。好吧，我会在这里等着，";
+						mes "当你准备好时我们可以再试一次，好吗？";
 						delitem 717,1; //Blue_Gemstone
 						delitem 523,1; //Holy_Water
 						close;
@@ -329,49 +216,37 @@ prt_church,111,112,1	script	Sister Linus	79,{
 
 				}
 				else {
-					mes "[Sister Linus]";
-					mes "If you want to try to learn";
-					mes "Redemptio, please bring";
-					mes "^3131FF20 Blue Gemstones^000000 and";
-					mes "^3131FF30 Holy Waters^000000. Ah, and";
-					mes "you need to learn ^3131FFLevel 1";
-					mes "Resurrection^000000 beforehand.";
+					mes "[莉娜修女]";
+					mes "如果你想尝试学习救赎术，请带上^3131FF20颗蓝宝石^000000和^3131FF30瓶圣水^000000。";
+					mes "啊，你需要先学习^3131FF一级复活^000000。";
 					close;
 				}
 			}
 			else {
-				mes "[Sister Linus]";
-				mes "If you want to try to learn";
-				mes "Redemptio, please bring";
-				mes "^3131FF20 Blue Gemstones^000000 and";
-				mes "^3131FF30 Holy Waters^000000. Ah, and";
-				mes "you need to learn ^3131FFLevel 1";
-				mes "Resurrection^000000 beforehand.";
+				mes "[莉娜修女]";
+				mes "如果你想尝试学习救赎术，请带上^3131FF20颗蓝宝石^000000和^3131FF30瓶圣水^000000。";
+				mes "啊，你需要先学习^3131FF一级复活^000000。";
 				close;
 			}
 		}
 	}
 	else {
-		mes "[Sister Linus]";
-		mes "Please have mercy and";
-		mes "spread your light through";
-		mes "the world. Guide her with";
-		mes "your benevolent wisdom...";
-		mes "Bless her, and may she";
-		mes "be protected by your grace.";
+		mes "[莉娜修女]";
+		mes "请施予怜悯，将您的光明传播到世界。";
+		mes "用您仁慈的智慧引导她……祝福她，愿她受到您的恩典保护。";
 		close;
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

@@ -19,7 +19,7 @@
 //= 1.5 Fixed bad NPC header data to comply with rev. 11603. [L0ne_W0lf]
 //= 1.6 Fixed infinate loop. (bugreport:2393) [L0ne_W0lf]
 //= 1.7 Added 10.3 dialog and moved Arpesto to hunter skill quest. [Kisuka]
-//= 1.8 Updated slightly, removed additional emotions from Reidin. [L0ne_W0lf]
+//= 1.8 Updated slightly, removed additional emotions from 雷丁. [L0ne_W0lf]
 //= 1.9 Misc. updates. [L0ne_W0lf]
 //= 1.9a Added 'npcskill' command. [Euphy]
 //= 2.0 Updated to match the official script. [Euphy]
@@ -30,7 +30,7 @@
 
 // Bard Jet
 //============================================================
-payon_in02,67,65,3	script	Bard Jet#tu	1_M_BARD,{
+payon_in02,67,65,3	script	吟游诗人杰特#tu	1_M_BARD,{
 	mes "[杰特]";
 	mes "每位神明都不会衰老，因为有美丽的女神";
 	mes "伊登，她是青春之苹果的守护者，永生的女";
@@ -124,7 +124,7 @@ payon_in02,67,65,3	script	Bard Jet#tu	1_M_BARD,{
 
 // Sign
 //============================================================
-pay_arche,127,154,4	script	Sign#arc	2_BOARD1,{
+pay_arche,127,154,4	script	标志#arc	2_BOARD1,{
 	mes "弓箭手换职业办公室 ---> <--- 伊卡洛";
 	mes "斯";
 	close;
@@ -132,7 +132,7 @@ pay_arche,127,154,4	script	Sign#arc	2_BOARD1,{
 
 // Master Kavaruk
 //============================================================
-payon_in02,54,13,3	script	Master Kavaruk	1_M_JOBTESTER,{
+payon_in02,54,13,3	script	卡瓦鲁克大师	1_M_JOBTESTER,{
 	mes "[卡瓦鲁克大师]";
 	mes "你好，年轻人。我是伊卡洛斯弓箭手公会的";
 	mes "卡瓦鲁克大师。欢迎你。";
@@ -358,9 +358,9 @@ payon_in02,54,13,3	script	Master Kavaruk	1_M_JOBTESTER,{
 	close;
 }
 
-// Reidin Corse
+// 雷丁 Corse
 //============================================================
-pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
+pay_arche,103,165,5	script	雷丁·科尔斯#tu	4_M_REIDIN_KURS,{
 	mes "[雷丁·科尔斯]";
 	mes "";
 	if (checkweight(1201,1) == 0) {
@@ -914,8 +914,8 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 				mes "尾。你的测试是带回^3131FF10个蘑菇孢子^000000和^3131FF10个";
 				mes "尖鳞^000000。";
 			} else {
-				mes "现在，去Mjolnir山打猎花。你的测试是带";
-				mes "回^3131FF5个食人花^000000和^3131FF20个茎^000000。";
+				mes "现在，去Mjolnir山打猎花。";
+				mes "你的测试是带回^3131FF5个食人花^000000和^3131FF20个茎^000000。";
 			}
 			next;
 			mes "[雷丁·科尔斯]";
@@ -946,13 +946,11 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 				mes "10个蘑菇孢子^000000和^3131FF10个尖鳞^000000。";
 				close;
 			} else if (!checkre(0) && (countitem(1032) < 5 || countitem(905) < 20)) {
-				mes "记住，你需要去Mjolnir山，给我带回^3131FF5个食";
-				mes "人花^000000和^3131FF20个茎^000000。";
+				mes "记住，你需要去Mjolnir山，给我带回^3131FF5个食人花^000000和^3131FF20个茎^000000。";
 				next;
 				mes "[雷丁·科尔斯]";
-				mes "从普隆德拉出发，你可以通过向^3131FF北^000000，^3131FF北^000000，然";
-				mes "后^3131FF东^000000到达Mjolnir山。不过如果你愿意，我";
-				mes "可以直接送你去。";
+				mes "从普隆德拉出发，你可以向^3131FF北^000000，^3131FF北^000000，然后^3131FF东^000000到达Mjolnir山。";
+				mes "不过如果你愿意，我可以直接送你去。";
 				next;
 				switch(select("去吧！:等一下！")) {
 				case 1:
@@ -1036,9 +1034,8 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 			close;
 		}
 	}
-	mes "让我自我介绍一下。我是所有弓箭手中的";
-	mes "弓箭手，^3131FFReidin Corse^000000，伊卡洛斯公会的会";
-	mes "长！";
+	mes "让我自我介绍一下。我是所有弓箭手中的弓箭手，";
+	mes "^3131FF雷丁 Corse^000000，伊卡洛斯公会的会长！";
 	next;
 	emotion ET_BEST;
 	mes "[??????]";
@@ -1058,13 +1055,13 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 	next;
 	emotion ET_MONEY;
 	mes "[??????]";
-	mes "现在加入只需一次性费用^3131FF1,000,000，zeny^000000";
-	mes "！快来加入伊卡洛斯公会，机会难得！";
+	mes "现在加入只需一次性费用^3131FF1,000,000，zeny^000000！";
+	mes "快来加入伊卡洛斯公会，机会难得！";
 	next;
 	emotion ET_HNG, getnpcid(0, "Arpesto");
 	mes "[????]";
-	mes "Reidin……别闹了。嘿，小子。真正的伊卡洛";
-	mes "斯公会会长在那栋建筑里。";
+	mes "雷丁……别闹了。嘿，小子。";
+	mes "真正的伊卡洛斯公会会长在那栋建筑里。";
 	next;
 	emotion ET_HUK;
 	mes "[??????]";
@@ -1094,12 +1091,11 @@ pay_arche,84,139,3	script	Seisner	4_F_JOB_HUNTER,{
 	mes "家！";
 	if(tu_archer01 == 1 || tu_archer01 > 2){
 		next;
-		mes "^3355FF你向Seisner展示了Master Kavaruk为你";
-		mes "写的信。^000000";
+		mes "^3355FF你向Seisner展示了Master Kavaruk为你写的信。^000000";
 		next;
 		mes "[???]";
-		mes "所以Master Kavaruk想让我教你关于弓箭";
-		mes "手和射箭的知识？好吧，你想知道什么？";
+		mes "所以Master Kavaruk想让我教你关于弓箭手和射箭的知识？";
+		mes "好吧，你想知道什么？";
 		while(1){
 			next;
 			switch(select("关于弓箭手。:弓箭手的属性:结束对话。")){
@@ -1198,8 +1194,8 @@ pay_arche,84,139,3	script	Seisner	4_F_JOB_HUNTER,{
 						mes "你可以更频繁地使用特殊技能。";
 						next;
 						mes "[???]";
-						mes "对于猎人，弓箭手的第二职业，较高的智力";
-						mes "将增加^3131FFFalcon^000000造成的伤害。";
+						mes "对于猎人，弓箭手的第二职业，";
+						mes "较高的智力将增加^3131FFFalcon^000000造成的伤害。";
 						next;
 						if(tu_archer01 == 1) tu_archer01 = 2;
 						continue;
@@ -1261,9 +1257,9 @@ pay_arche,84,139,3	script	Seisner	4_F_JOB_HUNTER,{
 		mes "但我认为每个人都应该理解射箭。";
 		next;
 		mes "[???]";
-		mes "如果你对我教你的知识感到足够自信，应";
-		mes "该回去找Master Kavaruk。但如果你还有";
-		mes "问题，随时可以来问我。";
+		mes "如果你对我教你的知识感到足够自信，";
+		mes "应该回去找Master Kavaruk。但如果你还有问题，";
+		mes "随时可以来问我。";
 		close2;
 		specialeffect2 EF_WIND;
 		tu_archer01 = 3;
@@ -1291,15 +1287,12 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 	mes "[侍僧]";
 	if(tu_archer01 == 14){
 		if(gettime(DT_HOUR) >= 18 && gettime(DT_HOUR) < 22){
-			mes "H-您好!";
-			mes "嗯, 嗯...";
-			mes "你是R-雷丁·科西嘉的";
-			mes "朋友的T呢? ";
+			mes "H-您好!嗯,嗯...你是R-雷丁·科西嘉的朋友的T呢?";
 			next;
 			mes "[侍僧]";
-			mes "M-我的名字是马夫拉. ";
-			mes "自从他救了我的命, Reidin有 - 始终是一个很好的F-朋友给我. 他是这样一个伟大的射手";
-			mes "和一个非常好的人!";
+			mes "M-我的名字是马夫拉。自从他救了我的命，";
+			mes "雷丁始终是一个很好的F-朋友给我。";
+			mes "他是这样一个伟大的射手和一个非常好的人!";
 			next;
 			mes "[侍僧]";
 			mes "嗯, 和...";
@@ -1309,9 +1302,8 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 			emotion ET_PROFUSELY_SWEAT;
 			next;
 			mes "[侍僧]";
-			mes "呵呵, 因为我训练成为一个侍僧, 我应该帮了别人, 他已经教. 所以...";
-			mes "让我们H-互帮火车!";
-			mes "嗯, 是这样行不行? ";
+			mes "呵呵，因为我训练成为一个侍僧，我应该帮了别人，他已经教。";
+			mes "所以...让我们H-互帮火车!嗯,是这样行不行?";
 			next;
 			switch(select("当然.:不用.:科西嘉是我的!")) {
 			case 1:
@@ -1332,35 +1324,24 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 				close;
 			case 3:
 				mes "[侍僧]";
-				mes "诶? !";
-				mes "R-真的? ";
-				mes "我猜他不";
-				mes "需要告诉我, 如果";
-				mes "他已经有女朋友了......";
+				mes "诶? 真的? 我想他不需要告诉我，如果他已经有女朋友了……";
 				next;
 				mes "[侍僧]";
 				if(Sex == SEX_MALE){
-					mes "W-等待!";
-					mes "? - 你一个人!";
-					mes "DDD  - 不要取笑我";
-					mes "这样的!我是认真的!";
+					mes "等一下! 你一个人! 不要取笑我! 我是认真的!";
 				} else {
-					mes "而且他是如此勇敢";
-					mes ", 风趣, 聪明. ";
-					mes "? - 你幸运地拥有他. ";
-					mes "*嗅探* I. .. I. ..";
+					mes "而且他如此勇敢、风趣、聪明。你真幸运能拥有他。";
+					mes "*嗅嗅* 我……我……";
 					next;
 					mes "[侍僧]";
-					mes "*抽鼻子*";
-					mes "我将D-尽我所能来帮助你!";
-					mes "祝你俩幸福!(Waaaaaah?!)";
+					mes "*抽鼻子* 我会尽力帮助你!祝你们幸福!(Waaaaaah?!)";
 				}
 				tu_archer01 = 15;
 				close;
 			}
 		}
 		else {
-			mes "ZZZZZ ... WH-WHA ...? 你是谁?";
+			mes "ZZZZZ……你是谁?";
 			specialeffect EF_SLEEPATTACK;
 			next;
 			mes "[侍僧]";
@@ -1387,22 +1368,17 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 	}
 	else if(tu_archer01 == 15){
 		if((gettime(DT_HOUR) >= 18) && (gettime(DT_HOUR) < 22)){
-			mes "ZZZZZ ... WH-WHA ...? 你是谁?";
+			mes "ZZZZZ……你是谁?";
 			specialeffect EF_SLEEPATTACK;
 			next;
 			mes "[侍僧]";
-			mes "雷丁·科西嘉? 我无法相信，我觉得自己睡";
-			mes "着了FO - ZZZZZZZ ...";
+			mes "雷丁·科西嘉？我简直不敢相信，";
+			mes "我觉得自己睡着了……ZZZZZZZ……";
 			next;
 			mes "[侍僧]";
-			mes "ZZZZ  - 哦!";
-			mes "J-前夕借此";
-			mes "我再次入睡?!*哈欠*";
+			mes "ZZZZ……哦！前夕借此我再次入睡？！*哈欠*";
 		} else {
-			mes "好吧?!";
-			mes "让我来试试";
-			mes "施放法术";
-			mes "为您服务!YAA?P!";
+			mes "好吧？！让我来试试施放法术为您服务！YAA？P！";
 		}
 		switch(rand(4)) {
 			case 0: npcskill "AL_HEAL",3,90,62; break;
@@ -1421,15 +1397,14 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 		}
 		close;
 	}
-	mes "... W-为什么旅行使我已经困...?";
-	mes "ZZZZZZZZ ...";
+	mes "……为什么旅行让我这么困……ZZZZZZZZ……";
 	specialeffect EF_SLEEPATTACK;
 	close;
 }
 
 // Alchemist Guildmember
 //============================================================
-pay_arche,130,113,3	script	Alchemist Guildmember#tu	2_M_ALCHE,{
+pay_arche,130,113,3	script	炼金术士公会成员#tu	2_M_ALCHE,{
 	mes "[炼金术士公会成员]";
 	mes "";
 	if(tu_archer02 > 0){
@@ -1491,7 +1466,7 @@ pay_arche,130,113,3	script	Alchemist Guildmember#tu	2_M_ALCHE,{
 
 // Arthail
 //============================================================
-prontera,126,335,5	script	Arthail	1_M_BARD,{
+prontera,126,335,5	script	阿尔泰尔	1_M_BARD,{
 	mes "[阿尔泰尔]";
 	mes "";
 	if(tu_archer02 < 3){
@@ -1646,7 +1621,7 @@ prontera,126,335,5	script	Arthail	1_M_BARD,{
 
 // New Guild Master
 //============================================================
-prontera,167,281,3	script	New Guild Master#tu	4_M_MONK,{
+prontera,167,281,3	script	新公会会长#tu	4_M_MONK,{
 	mes "[新公会会长]";
 	mes "听着，所有追求名声和荣耀的人！";
 	next;
@@ -1665,7 +1640,7 @@ prontera,167,281,3	script	New Guild Master#tu	4_M_MONK,{
 
 // Mage
 //============================================================
-prontera,144,301,5	script	Mage#tu	2_F_MAGICMASTER,{
+prontera,144,301,5	script	法师#tu	2_F_MAGICMASTER,{
 	mes "[法师]";
 	mes "你看到那个新公会会长了吗？真是个爱说";
 	mes "教的人！";
@@ -1687,7 +1662,7 @@ prontera,144,301,5	script	Mage#tu	2_F_MAGICMASTER,{
 
 // Minister
 //============================================================
--	script	Minister#tu_	-1,{
+-	script	大臣#tu_	-1,{
 	mes "[部长]";
 	mes "王室";
 	mes "非常忙碌";
@@ -1763,7 +1738,7 @@ OnTouch_:
 
 // Bishop Maugins
 //============================================================
-monk_in,19,43,1	script	Bishop Maugins	1_M_PASTOR,{
+monk_in,19,43,1	script	主教莫金斯	1_M_PASTOR,{
 	mes "[毛金主教]";
 	mes "";
 	if(tu_archer02 == 7){

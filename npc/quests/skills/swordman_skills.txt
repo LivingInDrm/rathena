@@ -149,27 +149,22 @@ OnTouch:
 	end;
 }
 
-prt_in,75,88,5	script	Leon Von Frich	85,3,3,{
+prt_in,75,88,5	script	莱昂·冯·弗里希	85,3,3,{
 	if ((BaseClass == Job_Swordman) && (JobLevel >= 25 || (BaseJob == Job_Knight || BaseJob == Job_Crusader))) {
 		if (getskilllv("SM_FATALBLOW") == 1) {
-			mes "[Leon]";
-			mes "Eh?";
-			mes "I was wondering who that was!";
-			mes "Why it's you from before!";
-			mes "Nice to see you again! How are you?";
-			mes "Be careful! Hahaha!";
+			mes "[莱昂]";
+			mes "哦？我在想那是谁呢！原来是你啊！很高兴再次见到你！";
+			mes "你好吗？小心点！哈哈哈！";
 			close;
 		}
 		else if ((countitem(1752) > 9) && (countitem(1751) > 9) && (countitem(532) > 0) && (countitem(962) > 29) && (countitem(526) > 4)) {
-			mes "[Leon]";
-			mes "Ooh! You are more than ready";
-			mes "to learn Fatal Blow!";
-			mes "So how about it? Would you like to learn?";
+			mes "[莱昂]";
+			mes "哦！你已经准备好学习致命一击了！怎么样？想学吗？";
 			next;
-			switch (select("Yes!:No, I don't want to.:But, what is Fatal Blow?")) {
+			switch (select("是的！:不，我不想。:但是，什么是致命一击？")) {
 			case 1:
-				mes "[Leon]";
-				mes "OK, lets begin!";
+				mes "[莱昂]";
+				mes "好的，我们开始吧！";
 				next;
 				delitem 1752,10; //Fire_Arrow
 				delitem 1751,10; //Silver_Arrow
@@ -177,132 +172,105 @@ prt_in,75,88,5	script	Leon Von Frich	85,3,3,{
 				delitem 962,30; //Tentacle
 				delitem 526,5; //Royal_Jelly
 				skill "SM_FATALBLOW",1,SKILL_PERM;
-				mes "[Leon]";
-				mes "Success!";
-				mes "Go use your new skill to its full potential.";
-				mes "Hahahahahahahaha!";
+				mes "[莱昂]";
+				mes "成功了！去好好利用你的新技能吧。哈哈哈哈哈哈！";
 				close;
 			case 2:
-				mes "[Leon]";
-				mes "I don't like you!!!";
+				mes "[莱昂]";
+				mes "我不喜欢你！！！";
 				close;
 			case 3:
-				mes "[Leon]";
-				mes "I developed this skill recently.";
-				mes "When you use bash, depending ";
-				mes "on your level, you can stun ";
-				mes "your opponent. .";
-				mes "You have learned bash, haven't you?";
+				mes "[莱昂]";
+				mes "我最近开发了这个技能。当你使用冲击时，根据你的等级，";
+				mes "可以眩晕对手。你学会了冲击，对吧？";
 				next;
-				mes "[Leon]";
-				mes "What do you think. Stun is";
-				mes "a very useful technique. Don't you find this skill attractive?";
-				mes "When you think you do, just come right back to me!";
+				mes "[莱昂]";
+				mes "你觉得呢？眩晕是个非常有用的技巧。";
+				mes "你不觉得这个技能很吸引人吗？";
+				mes "当你觉得可以时，随时回来找我！";
 				close;
 			}
 		}
-		mes "[Leon]";
-		mes "Ooh! A young and strong swordsman!";
+		mes "[莱昂]";
+		mes "哦！一位年轻强壮的剑士！";
 		next;
-		mes "[Leon]";
-		mes "Wow, seeing your arm, you must enjoy using bash?";
+		mes "[莱昂]";
+		mes "哇，看到你的手臂，你一定喜欢使用冲击吧？";
 		next;
-		select("Eh, I... just...");
-		mes "[Leon]";
+		select("呃，我...只是...");
+		mes "[]";
 		if (Sex == SEX_FEMALE) {
-			mes "No need to be surprised.";
-			mes "If you use a sword, of course you ought to have a good arm!";
+			mes "没必要惊讶。如果你用剑，当然要有一条好手臂！";
 		}
 		else {
-			mes "Nothing to be embarrassed about.";
-			mes "Even if you are a female you need a strong arm to use a sword!";
+			mes "没什么好尴尬的。即使你是女性，使用剑也需要强壮的手臂！";
 		}
-		mes "In times of only useless and lazy youngsters,";
-		mes "I'm glad I met someone strong like you.";
+		mes "在这群无用懒惰的年轻人中，";
+		mes "我很高兴遇到像你这样强壮的人。";
 		next;
-		mes "[Leon]";
-		mes "Yes, I would like to give a present to an awesome swordsman like you.";
+		mes "[莱昂]";
+		mes "是的，我想送给你这样一位出色剑士一个礼物。";
 		next;
-		switch (select("What present?:It's ok.")) {
+		switch (select("什么礼物？:没关系。")) {
 		case 1:
-			mes "[Leon]";
-			mes "Haha nothing special, but a skill to attack the vital point!";
+			mes "[莱昂]";
+			mes "哈哈没什么特别的，只是一个攻击要害的技能！";
 			next;
 		case 2:
-			mes "[Leon]";
-			mes "...Haha nothing special, just a skill that aims at the vital spot!";
+			mes "[莱昂]";
+			mes "...哈哈没什么特别的，只是一个瞄准要害的技能！";
 			next;
 		}
-		mes "[Leon]";
-		mes "It's a skill I developed recently.";
-		mes "When you use bash, depending on";
-		mes "your level, your opponent can";
-		mes "become stunned.";
-		mes "You have learned bash, haven't you?";
+		mes "[莱昂]";
+		mes "这是我最近开发的技能。当你使用冲击时，根据你的等级，";
+		mes "对手可能会被眩晕。你学会了冲击，对吧？";
 		next;
-		mes "[Leon]";
-		mes "When I was a swordsman like you,";
-		mes "I used to enjoy using Bash. Every time, I thought";
-		mes "- maybe the attack would be more powerful";
-		mes "if I use stun at the same time.";
+		mes "[莱昂]";
+		mes "当我还是像你一样的剑士时，我喜欢使用冲击。";
+		mes "每次我都在想——如果同时使用眩晕，攻击会不会更强？";
 		next;
-		mes "[Leon]";
-		mes "I drew back from the battlefield to do research";
-		mes "and finally, I developed this wonderful new skill!";
-		mes "Would you like to learn this skill?";
+		mes "[莱昂]";
+		mes "我从战场上退下来进行研究，最终开发了这个奇妙的新技能！";
+		mes "你想学习这个技能吗？";
 		next;
-		switch (select("Yes.:No.:Do you have any advice on how to eat sushi?")) {
+		switch (select("是的。:不。:你有什么关于吃寿司的建议吗？")) {
 		case 1:
-			mes "[Leon]";
-			mes "Ok. I'll tell you the requirements.";
-			mes "First you need to have level 5 Bash.";
-			mes "You will also need to prepare 10 Fire Arrows, 10 Silver Arrows, 1 bottle of Banana Juice, 30 Tentacles, and 5 bottles of Royal Jelly.";
-			mes "They are.. somewhat like ingredients.";
+			mes "[莱昂]";
+			mes "好的。我告诉你要求。首先你需要有5级冲击。";
+			mes "你还需要准备10个火箭，10个银箭，1瓶香蕉汁，";
+			mes "30个触手和5瓶皇家蜂蜜。它们有点像材料。";
 			next;
-			mes "[Leon]";
-			mes "come to me again once you have all the materials.";
-			mes "We shall talk then.";
+			mes "[莱昂]";
+			mes "等你收集齐所有材料后再来找我，我们再谈。";
 			close;
 		case 2:
-			mes "[Leon]";
-			mes "Hahahahahahahahahaha!";
-			mes "... ";
-			mes " ... ";
-			mes " ...";
-			mes "I'm at a loss of words!?";
+			mes "[莱昂]";
+			mes "哈哈哈哈哈哈哈哈哈！……我无言以对！？";
 			close;
 		case 3:
-			mes "[Sushi King Leon]";
-			mes "The best way to eat sushi is";
-			mes "with your hands.";
-			mes "That is the basic.";
-			mes "And dip the fish, not the rice,";
-			mes "in the soy sauce.";
+			mes "[寿司王莱昂]";
+			mes "吃寿司最好的方式是用手。这是基本。";
+			mes "要把鱼而不是米饭蘸酱油。";
 			next;
-			mes "[Sushi King Leon]";
-			mes "That way you get a richer flavor.";
-			mes "Also, always eat the kind that is in season.";
-			mes "Eating in the order of white fish then";
-			mes "blue fish will make it taste better!";
-			mes "Mmm! I like sushi~~!";
+			mes "[寿司王莱昂]";
+			mes "这样你能品尝到更丰富的味道。此外，永远要吃当季的寿司。";
+			mes "先吃白鱼再吃蓝鱼会更美味！嗯！我喜欢寿司~~！";
 			close;
 		}
 	}
-	mes "[Leon]";
-	mes "Oh, no! I have nothing to offer you!";
-	mes "I can't say nice and fun things to anyone";
-	mes "other than swordsmen!";
-	mes "See you in a better world!";
+	mes "[莱昂]";
+	mes "哦，不！我没有什么可以给你的！";
+	mes "我无法对除了剑士以外的人说好听有趣的话！";
+	mes "希望在更好的世界再见！";
 	close;
 
 OnTouch_:
-	mes "[Leon]";
-	mes "Hahahahahahaha!";
-	mes "Hahahahahahaha!";
+	mes "[莱昂]";
+	mes "哈哈哈哈哈哈！哈哈哈哈哈哈！";
 	close;
 }
 
-prt_in,94,57,3	script	Juan	85,4,4,{
+prt_in,94,57,3	script	胡安	85,4,4,{
 	if (BaseClass == Job_Swordman) {
 		if (getskilllv("SM_AUTOBERSERK") == 1) {
 			mes "[胡安]";
@@ -472,9 +440,9 @@ prt_in,94,57,3	script	Juan	85,4,4,{
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= Fully working
 //= 1.0a Now using functions found in "Global_Functions.txt"
 //=     for class checks.

@@ -1,17 +1,17 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Valkyrie Realm
 //===== By: ==================================================
 //= Nana, fixes by Poki
 //= finished, optimized and tested by Lupus
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 3.1
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quest to become a Tranceded Class. (Advanced/Rebirthed)
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.1 Made all into functions,additional checks,quest skills,now Valhallana can return you back. She also makes reborn process only when you got no Zeny/items (as in kRO) [Lupus]
 //= 1.2 now alternative classes can use their 1-1 job NPC to become Advanced 1st Class [Lupus]
 //= 1.4 added Baby Class support [Lupus]
@@ -38,9 +38,9 @@
 //= 2.9b Fixed Verdandi typo, fixed resetting vars [Lupus]
 //= 3.0 Added quest log commands. [L0ne_W0lf]
 //= 3.1 Added Izlude Renewal coordinates.
-//============================================================ 
+//============================================================
 
-valkyrie,48,86,4	script	Valkyrie#	811,{
+valkyrie,48,86,4	script	女武神#	811,{
 	if (ADVJOB != 0 || Upper == 1) {
 		mes "[女武神]";
 		mes "欢迎";
@@ -212,147 +212,135 @@ valkyrie,48,86,4	script	Valkyrie#	811,{
 	}
 }
 
-yuno_in02,88,164,5	script	Metheus Sylphe#Library	742,{
+yuno_in02,88,164,5	script	梅修斯·西尔菲#Library	742,{
 	if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		if (valkyrie_Q == 0) {
-			mes "[Metheus Sylphe]";
-			mes "Welcome to the Library of the Schweicherbil Magic Academy.";
-			mes "I assume you have come here";
-			mes "to read the 'Book of Ymir.'";
+			mes "[梅修斯·西尔菲]";
+			mes "欢迎来到施维赫比尔魔法学院的图书馆。";
+			mes "我想你是来这里阅读《尤米尔之书》的。";
 			next;
-			mes "[Metheus Sylphe]";
-			mes "Unfortunately, the original copy of the book has been damaged over time. We currently only allow the public to view a copy of the book.";
+			mes "[梅修斯·西尔菲]";
+			mes "不幸的是，书的原版已经随着时间的推移而损坏。";
+			mes "我们目前只允许公众查看书的副本。";
 			next;
-			mes "[Metheus Sylphe]";
-			mes "Also, in order to preserve the original 'Book of Ymir,' we have decided to accept donations from people who wish to read the copy we have provided.";
+			mes "[梅修斯·西尔菲]";
+			mes "此外，为了保护原版《尤米尔之书》，";
+			mes "我们决定接受希望阅读我们提供的副本的人的捐赠。";
 			next;
-			mes "[Metheus Sylphe]";
-			mes "The suggested";
-			mes "donation amount is";
-			mes "1,285,000 zeny.";
+			mes "[梅修斯·西尔菲]";
+			mes "建议的捐赠金额是1,285,000仙人掌。";
 			next;
-			if (select("Donate.:Cancel.") == 1) {
+			if (select("捐赠。:取消。") == 1) {
 				if (Zeny >= 1285000) {
 					set Zeny, Zeny-1285000;
 					set valkyrie_Q,1;
-					mes "[Metheus Sylphe]";
-					mes "Thank you, your donation will be used for a good cause. You may";
-					mes "now go in and read the book.";
+					mes "[梅修斯·西尔菲]";
+					mes "谢谢你，你的捐赠将用于善事。你现在可以进去阅读书籍。";
 					close;
 				}
-				mes "[Metheus Sylphe]";
-				mes "Unfortunately, you don't seem to possess enough zeny at the moment. Please check your funds and come back again.";
+				mes "[梅修斯·西尔菲]";
+				mes "不幸的是，你目前似乎没有足够的仙人掌。";
+				mes "请检查你的资金，再回来。";
 				close;
 			}
-			mes "[Metheus Sylphe]";
-			mes "Take your time, and";
-			mes "enjoy your travels.";
+			mes "[梅修斯·西尔菲]";
+			mes "慢慢来，享受你的旅行。";
 			close;
 		}
-		mes "[Metheus Sylphe]";
-		mes "Once again, thank you for your generous donation. Feel free to read a carbon copy of the 'Book of Ymir' at your leisure.";
+		mes "[梅修斯·西尔菲]";
+		mes "再次感谢你的慷慨捐赠。";
+		mes "随时可以阅读《尤米尔之书》的复印本。";
 		close;
 	}
-	mes "[Metheus Sylphe]";
-	mes "Welcome to the Library of the Schweicherbil Magic Academy.";
-	mes "Here, we have a countless number of books. Please take your time and look around.";
+	mes "[梅修斯·西尔菲]";
+	mes "欢迎来到施维赫比尔魔法学院的图书馆。";
+	mes "这里有无数本书。请慢慢查看。";
 	close;
 }
 
-yuno_in02,93,207,1	script	Book of Ymir	111,{
+yuno_in02,93,207,1	script	尤米尔之书	111,{
 	if (ADVJOB != 0 || Upper == 1) {
-		mes "[The Book of Ymir]";
-		mes "...The entrance to the Hall of Honor is open to anyone who has moved forward into their next life. It is there to help heroes decide what they want to do, and can lead them to anywhere in this world.";
+		mes "[尤米尔之书]";
+		mes "……荣耀殿堂的入口向所有进入下一个生命的人开放。";
+		mes "这里帮助英雄们决定他们想要做什么，";
+		mes "并能引导他们到这个世界的任何地方。";
 		next;
-		mes "[The Book of Ymir]";
-		mes "In the Hall of Honor, everything is prepared for heroes. It is rumored that any wish that cannot be fulfilled in our reality can be realized in the Hall of Honor.";
+		mes "[尤米尔之书]";
+		mes "在荣耀殿堂，一切都为英雄们准备好了。传言说，";
+		mes "在我们的现实中无法实现的愿望，可以在荣耀殿堂中实现。";
 		next;
-		if (select("Stop reading.:Continue reading.") == 1) {
-			mes "[The Book of Ymir]";
+		if (select("停止阅读。:继续阅读。") == 1) {
+			mes "[尤米尔之书]";
 			mes ".....";
 			close;
 		}
-		mes "[The Book of Ymir]";
-		mes "There is a forgotten path which leads to the Hall of Honor, the closest place to the heavens. The ordinary will never discover this place...";
+		mes "[尤米尔之书]";
+		mes "有一条通往荣耀殿堂的被遗忘之路，";
+		mes "那里是离天堂最近的地方。普通人永远无法发现这个地方……";
 		close2;
 		warp "valkyrie",48,8;
 		end;
 	}
 	else if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		if (valkyrie_Q != 0) {
-			mes "[The Book of Ymir]";
-			mes "...Therefore, ancient heroes were";
-			mes "always in anguish, knowing that";
-			mes "eventually, they were mortal and";
-			mes "would pass from this realm...";
+			mes "[尤米尔之书]";
+			mes "……因此，古代的英雄们总是感到痛苦，";
+			mes "因为他们知道自己终究是凡人，会离开这个领域……";
 			next;
-			mes "[The Book of Ymir]";
-			mes "There were no documents,";
-			mes "songs, or remaining folklore that had any information on life after death. However, I recently uncovered an old scroll";
-			mes "about Valkyrie...";
+			mes "[尤米尔之书]";
+			mes "没有任何文件、歌曲或流传下来的民间传说提及死后的生活。";
+			mes "然而，我最近发现了一卷关于女武神的古老卷轴……";
 			next;
-			mes "[The Book of Ymir]";
-			mes "Valkyrie...";
-			mes "The legendary";
-			mes "guardian angel.";
-			mes "Angel of Ragnarok.";
+			mes "[尤米尔之书]";
+			mes "女武神……传奇的守护天使，诸神黄昏的天使。";
 			next;
-			mes "[The Book of Ymir]";
-			mes "Adventurers of great strength";
-			mes "and bravery will be lead by";
-			mes "Valkyrie to Valhalla, the Hall";
-			mes "of Honor. There, they will be";
-			mes "given a new life.";
+			mes "[尤米尔之书]";
+			mes "强大而勇敢的冒险者将被女武神引导至瓦尔哈拉，荣耀殿堂。";
+			mes "在那里，他们将获得新生。";
 			next;
-			mes "[The Book of Ymir]";
-			mes "Reborn, they will live again as";
-			mes "even greater heroes that will";
-			mes "brighten the world. Bodies that";
-			mes "were exhausted will be filled";
-			mes "with energy...";
+			mes "[尤米尔之书]";
+			mes "重生后，他们将以更伟大的英雄身份再次生活，";
+			mes "照亮这个世界。疲惫的身体将重新充满活力……";
 			next;
-			mes "[The Book of Ymir]";
-			mes "And their souls will be given abilities with the heart of Ymir. However, the heart of Ymir was totally destroyed and scattered all over the world after the battle for Rune-Midgarts.";
+			mes "[尤米尔之书]";
+			mes "他们的灵魂将获得尤米尔之心的能力。然而，";
+			mes "尤米尔之心在鲁恩-米德加兹特的战斗中被彻底摧毁，";
+			mes "散落在世界各地。";
 			next;
-			mes "[The Book of Ymir]";
-			mes "I have found a small amount of";
-			mes "Ymir heart pieces over a long";
-			mes "long period of time. But I can't";
-			mes "confirm if the story of Valkyrie";
-			mes "and Valhalla is true just";
-			mes "through scientific tests.";
+			mes "[尤米尔之书]";
+			mes "我在漫长的时间里找到了一小部分尤米尔之心的碎片。";
+			mes "但我无法仅通过科学测试确认女武神和瓦尔哈拉";
+			mes "的故事是否真实。";
 			next;
-			mes "[The Book of Ymir]";
-			mes "So, I am leaving this record in hope that someone in the future";
-			mes "can confirm that Valkyrie and Valhalla actually exist...";
+			mes "[尤米尔之书]";
+			mes "因此，我留下这份记录，";
+			mes "希望未来有人能确认女武神和瓦尔哈拉确实存在……";
 			next;
 			set valkyrie_Q,2;
 			if(checkquest(1000) == -1) {
 				setquest 1000;
 			}
-			mes "[The Book of Ymir]";
-			mes "Let the heroes live new lives";
-			mes "so they can protect the world";
-			mes "from danger. And then...";
+			mes "[尤米尔之书]";
+			mes "让英雄们过上新生活，以保护世界免受危险。然后……";
 			close;
 		}
-		mes "[The Book of Ymir]";
-		mes "...";
+		mes "[尤米尔之书]";
+		mes "……";
 		close;
 	}
-	mes "[The Book of Ymir]";
-	mes "...";
+	mes "[尤米尔之书]";
+	mes "……";
 	close;
 }
 
-yuno_in05,49,43,1	script	Heart of Ymir	111,{
+yuno_in05,49,43,1	script	尤米尔之心	111,{
 	if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		if (valkyrie_Q == 2) warp "valkyrie",48,8;
 	}
 	end;
 }
 
-valkyrie,44,33,5	script	Teleporter	124,{
+valkyrie,44,33,5	script	传送者	124,{
 	if (Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
@@ -397,6 +385,6 @@ S_WarpChar:
 }
 
 // Warps
-//============================================================ 
+//============================================================
 valkyrie,48,73,0	warp	valk01#1	1,1,valkyrie,48,64
 valkyrie,48,66,0	warp	valk01#2	1,1,valkyrie,48,75

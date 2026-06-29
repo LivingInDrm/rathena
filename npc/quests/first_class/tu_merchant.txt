@@ -518,9 +518,8 @@ alberta_in,70,51,5	script	Guarnien	4W_M_02,{
 				getitem 1351,1; //Battle_Axe
 				next;
 				mes "[???]";
-				mes "好吧，下次我会谈谈Mammonite技能。现在，";
-				mes "让我稍微休息一下，放松一下这艰难的讲";
-				mes "座。^666666*呼!*^000000";
+				mes "好吧，下次我会谈谈金钱攻击技能。现在，";
+				mes "让我稍微休息一下，放松一下这艰难的讲座。^666666*呼!*^000000";
 				close;
 			}
 		} else {
@@ -529,9 +528,8 @@ alberta_in,70,51,5	script	Guarnien	4W_M_02,{
 			mes "去学习这些技能，好吗？";
 			close;
 		}
-		mes "好吧，下次我会谈谈Mammonite技能。现在，";
-		mes "让我稍微休息一下，放松一下这艰难的讲";
-		mes "座。^666666*呼!*^000000";
+		mes "好吧，下次我会谈谈金钱攻击技能。现在，";
+		mes "让我稍微休息一下，放松一下这艰难的讲座。^666666*呼!*^000000";
 		tu_merchant = 2;
 		erasequest 8229;
 		setquest 8230;
@@ -597,14 +595,12 @@ alberta_in,70,51,5	script	Guarnien	4W_M_02,{
 				getitem 1351,1; //Battle_Axe
 				next;
 				mes "[???]";
-				mes "好吧，下次我会谈谈Mammonite技能。现在，";
-				mes "让我稍微休息一下，放松一下这艰难的讲";
-				mes "座。^666666*呼!*^000000";
+				mes "好吧，下次我会谈谈金钱攻击技能。现在，";
+				mes "让我稍微休息一下，放松一下这艰难的讲座。^666666*呼!*^000000";
 				close;
 			}
-			mes "好吧，下次我会谈谈Mammonite技能。现在，";
-			mes "让我稍微休息一下，放松一下这艰难的学";
-			mes "习。";
+			mes "好吧，下次我会谈谈金钱攻击技能。现在，";
+			mes "让我稍微休息一下，放松一下这艰难的学习。";
 			next;
 			mes "[???]";
 			mes "哦... 我稍后会告诉你更多关于折扣技能";
@@ -675,8 +671,8 @@ L_Potions:
 		if(MaxWeight - Weight < 71){
 			next;
 			mes "[???]";
-			mes "哇，等等！你根本无法携带这些！为什么不";
-			mes "把一些东西放进Kafra储存再回来呢？";
+			mes "哇，等等！你根本无法携带这些！";
+			mes "为什么不把一些东西放进卡普拉储存再回来呢？";
 		} else {
 			Zeny = Zeny - .@cost;
 			tu_merchant = getarg(1);
@@ -731,7 +727,7 @@ L_Potions:
 		if(MaxWeight - Weight < 71){
 			next;
 			mes "[???]";
-			mes "...哼？你最好把一些东西放进Kafra储存，";
+			mes "...哼？你最好把一些东西放进卡普拉储存，";
 			mes "你不能再携带太多了！";
 		} else {
 			Zeny = Zeny - .@cost;
@@ -749,7 +745,7 @@ L_Potions:
 
 // Aigie
 //============================================================
-prt_in,169,11,3	script	Aigie	4_F_03,{
+prt_in,169,11,3	script	艾吉	4_F_03,{
 	mes "[??]";
 	mes "";
 	if (tu_merchant == 6)
@@ -807,7 +803,7 @@ L_Potions:
 
 // Jayon
 //============================================================
-prontera,247,129,3	script	Jayon	4_M_03,{
+prontera,247,129,3	script	杰永	4_M_03,{
 	mes "[杰扬]";
 	mes "";
 	if (tu_merchant == 6)
@@ -866,7 +862,7 @@ L_Potions:
 
 // Maos
 //============================================================
-prt_in,251,129,3	script	Maos	4_M_SEAMAN,{
+prt_in,251,129,3	script	毛斯	4_M_SEAMAN,{
 	mes "[毛斯]";
 	mes "";
 	if (tu_merchant == 6)

@@ -1,19 +1,19 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Knight Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen, Samuray22
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Charge Attack
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.5 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //============================================================
 
-prt_in,85,99,3	script	Knight#kabuto	734,{
+prt_in,85,99,3	script	骑士#kabuto	734,{
 	if (BaseJob == Job_Knight) {
 		if (KNGT_SK == 10) {
 			mes "[艾索菲特]";
@@ -56,11 +56,9 @@ prt_in,85,99,3	script	Knight#kabuto	734,{
 			mes "在造成伤害之前。";
 			next;
 			mes "[艾索菲特]";
-			mes "在这段延迟期间，你将会";
-			mes "被 immobilized。因此，";
-			mes "增加伤害的代价";
-			mes "对你自己来说风险更大。";
-			mes "现在，最好在自己身上练习这个技能。";
+			mes "在这段延迟期间，你将会被 immobilized。因此，";
+			mes "增加伤害的代价对你自己来说风险更大。现在，";
+			mes "最好在自己身上练习这个技能。";
 			set KNGT_SK,10;
 			skill "KN_CHARGEATK",1,SKILL_PERM;
 			next;
@@ -106,11 +104,9 @@ prt_in,85,99,3	script	Knight#kabuto	734,{
 			mes "在造成伤害之前。";
 			next;
 			mes "[艾索菲特]";
-			mes "在这段延迟期间，你将会";
-			mes "被 immobilized。因此，";
-			mes "增加伤害的代价";
-			mes "对你自己来说风险更大。";
-			mes "现在，最好在自己身上练习这个技能。";
+			mes "在这段延迟期间，你将会被 immobilized。因此，";
+			mes "增加伤害的代价对你自己来说风险更大。现在，";
+			mes "最好在自己身上练习这个技能。";
 			set KNGT_SK,9;
 			skill "KN_CHARGEATK",1,SKILL_PERM;
 			next;
@@ -313,10 +309,8 @@ OnTouch:
 	if (KNGT_SK > 2)
 		end;
 	if (KNGT_SK <= 2) {
-		mes "[?]";
-		mes "Kiiiiiiai~！";
-		mes "呀啊啊啊啊！";
-		mes "呼！哈！嘿呀！";
+		mes "[]";
+		mes "Kiiiiiiai~！呀啊啊啊啊！呼！哈！嘿呀！";
 		next;
 		mes "[?]";
 		mes "西-哎呀！";
@@ -340,40 +334,27 @@ OnTouch:
 	close;
 }
 
-prontera,72,352,7	script	Grand Master	733,{
-	mes "[Grand Master]";
+prontera,72,352,7	script	大宗师	733,{
+	mes "[大宗师]";
 	if (KNGT_SK == 2 || KNGT_SK == 3) {
-		mes "Alright men, you don't";
-		mes "need to put ^333333that^000000 much effort";
-		mes "into your training. You have";
-		mes "to do this everyday, so make";
-		mes "sure that you don't exhaust";
-		mes "yourselves unnecessarily.";
+		mes "好了，伙计们，你们不需要在训练中投入^333333那么多^000000精力。";
+		mes "你们必须每天都这样做，所以要确保不要不必要地耗尽自己。";
 		next;
-		mes "[Grand Master]";
-		mes "The most important thing";
-		mes "is that you don't injure";
-		mes "yourselves. Take it easy";
-		mes "and make sure that you";
-		mes "don't pull a muscle.";
-		mes "Um, that's an order!";
+		mes "[大宗师]";
+		mes "最重要的是你们不要受伤。放轻松，";
+		mes "确保不要拉伤肌肉。嗯，这是命令！";
 		if (KNGT_SK == 2) set KNGT_SK,3;
 		close;
 	}
-	mes "Put your backs into it,";
-	mes "men! I know training can";
-	mes "be tough, but it'll make";
-	mes "you harder, better, faster and";
-	mes "stronger! Prontera's safety is your responsibility, Knights!";
+	mes "加油，伙计们！我知道训练很艰苦，但这会让你们变得更强、";
+	mes "更好、更快！保护普隆德拉的安全是你们的责任，骑士们！";
 	next;
-	mes "[Grand Master]";
-	mes "...";
-	mes "Oh, I'm just kidding around.";
-	mes "Let's go take a break, guys.";
+	mes "[大宗师]";
+	mes "……哦，我只是开玩笑。大家去休息一下吧。";
 	close;
 }
 
-prontera,78,354,3	script	Knight#zabii	734,{
+prontera,78,354,3	script	骑士#zabii	734,{
 	if (KNGT_SK == 3 || KNGT_SK == 4) {
 		mes "[扎比]";
 		mes "我想我们更像是";
@@ -411,7 +392,7 @@ prontera,78,354,3	script	Knight#zabii	734,{
 	close;
 }
 
-prontera,73,357,5	script	Knight#drake	734,{
+prontera,73,357,5	script	骑士#drake	734,{
 	if (KNGT_SK == 4 || KNGT_SK == 5) {
 		mes "[昆仑]";
 		mes "我下次的薪水能得到什么？";
@@ -445,7 +426,7 @@ prontera,73,357,5	script	Knight#drake	734,{
 	close;
 }
 
-prontera,78,357,3	script	Knight#sasword	734,{
+prontera,78,357,3	script	骑士#sasword	734,{
 	mes "[吉亚]";
 	if (KNGT_SK == 5 || KNGT_SK == 6) {
 		mes "伙计，这个骑士团的";
@@ -472,7 +453,7 @@ prontera,78,357,3	script	Knight#sasword	734,{
 	close;
 }
 
-prontera,66,358,5	script	Knight#gattack	733,{
+prontera,66,358,5	script	骑士#gattack	733,{
 	mes "[加塔克]";
 	if (KNGT_SK == 7) {
 		mes "等一下，埃索费特在哪里？";
@@ -512,15 +493,15 @@ prontera,66,358,5	script	Knight#gattack	733,{
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //= Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //= some of the items required and made them into real
-//= quests. [Reddozen] 
+//= quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]

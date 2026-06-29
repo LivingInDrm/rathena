@@ -1,22 +1,22 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Thief Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= kobra_k88
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.8
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
-//= Quests for skills: Sand Attack, Back Slide, Find Stone, 
+//===== Description: =========================================
+//= Quests for skills: Sand Attack, Back Slide, Find Stone,
 //= Stone Fling.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.5 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.6 Fixed a Exploit for Assassins and Rogues. (bugreport:2332) [Samuray22]
 //= 1.7 Updated to latest available official file. [Masao]
 //= 1.8 Fixed JobLevel requirement for Assassins and Rogues. [Joseph]
-//============================================================ 
+//============================================================
 
-moc_prydb1,154,128,4	script	Alcouskou	118,{
+moc_prydb1,154,128,4	script	阿尔库斯库	118,{
 	if (BaseClass == Job_Thief) {
 		mes "[阿尔库斯库]";
 		mes "在生活中你会遇到";
@@ -47,12 +47,8 @@ moc_prydb1,154,128,4	script	Alcouskou	118,{
 					mes "你应该有一个特殊的沙袋。";
 					next;
 					mes "[阿尔库斯库]";
-					mes "什么？你难道不指望我";
-					mes "也为你做这个吗？";
-					mes "你一定很懒！！！";
-					mes "很好，去找一个名叫";
-					mes "RuRumuni的人。他会给你做一个";
-					mes "结实的皮袋。";
+					mes "什么？你难道不指望我也为你做这个吗？你一定很懒！！！很好，";
+					mes "去找一个名叫鲁鲁穆尼的人。他会给你做一个结实的皮袋。";
 					next;
 					mes "[阿尔库斯库]";
 					mes "我会为你的准备。";
@@ -431,42 +427,28 @@ moc_prydb1,154,128,4	script	Alcouskou	118,{
 	close;
 }
 
-payon,91,77,3	script	Bag Seller	99,{
-	mes "[RuRumuni]";
-	mes "I am a humble merchant here";
-	mes "in Payon. I buy the leather";
-	mes "hides of animals brought in by";
-	mes "the hunters and make leather";
-	mes "pouches to sell. I grew up";
-	mes "around leather working and am quite good at it.";
+payon,91,77,3	script	包袋商人	99,{
+	mes "[鲁鲁穆尼]";
+	mes "我是一名谦逊的商人，常驻佩雍。";
+	mes "我购买猎人带来的动物皮革，制作皮袋出售。";
+	mes "我从小就接触皮革工艺，做得相当不错。";
 	next;
 	switch (skill_thief_1) {
 	case 0:
-		mes "[RuRumuni]";
-		mes "There is a thief guild in the";
-		mes "area of Morocc. I know one there";
-		mes "that sends me thieves in need";
-		mes "of items I make such as a";
-		mes "^3355FF' Leather Bag of Infinity '^000000.";
-		mes "They visit my store often.";
+		mes "[鲁鲁穆尼]";
+		mes "在摩洛克地区有一个盗贼公会。我认识那里的一位，";
+		mes "他会把需要我制作的物品的盗贼送来，比如^3355FF'无限皮袋'^000000。";
+		mes "他们经常来我的店。";
 		close;
 	case 1:
 		if ((countitem(952) > 0) && (countitem(1055) > 0) && (countitem(1025) > 0)) {
-			mes "[RuRumuni]";
-			mes "Ahhh... You have come for a leather bag.";
-			mes "Very good, very good.";
-			mes "I will make you the leather bag";
-			mes "right away if you wait just a bit.";
-			mes "TuTak TuTak Shyuku Shyuku Shyuku";
-			mes "- - - - -";
+			mes "[鲁鲁穆尼]";
+			mes "啊，你是来找皮袋的。很好，非常好。如果你稍等一下，";
+			mes "我会立刻为你制作皮袋。咔嗒咔嗒，咕噜咕噜咕噜——";
 			next;
-			mes "[RuRumuni]";
-			mes "Okay, here it is all done.";
-			mes "Take this leather bag";
-			mes "to the Thief guild's Alcouskou";
-			mes "If you take him this, he will";
-			mes "teach you the skill that you ";
-			mes "wish to learn.";
+			mes "[鲁鲁穆尼]";
+			mes "好了，这个做好了。把这个皮袋带给盗贼公会的阿尔库斯库，";
+			mes "如果你把这个给他，他会教你想学的技能。";
 			delitem 952,1; //Cactus_Needle
 			delitem 1055,1; //Earthworm_Peeling
 			delitem 1025,1; //Spiderweb
@@ -474,39 +456,29 @@ payon,91,77,3	script	Bag Seller	99,{
 			getitem 7042,1; //Leather_Bag_Of_Infinity
 			close;
 		}
-		mes "[RuRumuni]";
-		mes "Find Alcouskou of the thief guild";
-		mes "to place and order for a leather bag of infinity.";
-		mes "You should know that the leather bag of infinity";
-		mes "takes much time and skill to make.";
-		mes "In order to make such an item, you";
-		mes "must provide me with the materials.";
+		mes "[鲁鲁穆尼]";
+		mes "去找盗贼公会的阿尔库斯库下订单一个无限皮袋。你要知道，";
+		mes "制作无限皮袋需要很多时间和技巧。为了制作这样的物品，";
+		mes "你必须提供我所需的材料。";
 		next;
-		mes "The items needed as materials are";
-		mes "these items. ..";
-		mes "^3355FF' Earthworm Peeling '^000000";
-		mes "^3355FF' Cobweb '^000000";
-		mes "^3355FF' Cactus Needle '^000000";
-		mes "I need one of each.";
+		mes "所需的材料有这些……^3355FF'蚯蚓皮'^000000 ^3355FF'蛛网'^000000 ^3355FF'仙人掌刺'^000000 我";
+		mes "需要每种各一个。";
 		close;
 	case 2:
-		mes "[RuRumuni]";
-		mes "Here is your leather bag of infinity.";
-		mes "Take this to the Thief guilds";
-		mes "Alcouskou and let him know ";
-		mes "that you are now ready to learn";
-		mes "the skill.";
+		mes "[鲁鲁穆尼]";
+		mes "这是你的无限皮袋。把这个带给盗贼公会的阿尔库斯库，";
+		mes "让他知道你现在准备好学习技能了。";
 		close;
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 Fully working
 //= 1.1 Changed Sand Attack requirements from 5 Grit to 5 Fine Grit and a
 //=     Leather Bag of Infinity.  These are the official RO requirements
-//=     Added npc RuRumuni, maker of Leather Bag of Infinity. [kobra_k88]
+//=     Added npc 鲁鲁穆尼, maker of Leather Bag of Infinity. [kobra_k88]
 //= 1.1a Now using functions found in "Global_Functions.txt" for
 //=     class checks.[kobra_k88]
 //= 1.2 Added Baby Class Support [Lupus]
@@ -514,4 +486,4 @@ payon,91,77,3	script	Bag Seller	99,{
 //= 1.4 Fixed exploit [Lupus]
 //= 1.4a Fixed some typos [IVBela]
 //= 1.4b changed perm. variables to temp ones [Lupus]
-//============================================================ 
+//============================================================

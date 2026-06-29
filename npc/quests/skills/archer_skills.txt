@@ -4,18 +4,18 @@
 //= rAthena Dev Team
 //===== Current Version: =====================================
 //= 1.7
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Quest for skills: Arrow Crafting, Arrow Repel
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.5 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.6 Updated to latest available official file.
 //=     also fixed Item issue [bugreport:5607]. [Masao]
 //= 1.7 Fixed JobLevel requirements. [Euphy]
 //============================================================
 
-moc_ruins,118,99,5	script	Roberto	88,{
+moc_ruins,118,99,5	script	罗伯托	88,{
 	if (BaseClass == Job_Archer) {
 		if (getskilllv("AC_MAKINGARROW") == 1) {
 			mes "[罗伯托]";
@@ -66,12 +66,9 @@ moc_ruins,118,99,5	script	Roberto	88,{
 				close;
 			}
 			mes "[罗伯托]";
-			mes "在梦罗克的弓箭手！？";
-			mes "很高兴见到你！在这样的地方遇到同伴";
-			mes "弓箭手！* sniffsniff *！";
-			mes "我一个人来到梦罗克..";
-			mes "但我还是个新手，压力... 哇啊~";
-			mes "我非常孤独~";
+			mes "在梦罗克的弓箭手！？很高兴见到你！";
+			mes "在这样的地方遇到同伴弓箭手！我一个人来到梦罗克，";
+			mes "但我还是个新手，压力很大……我非常孤独。";
 			next;
 			switch (select("这一定很难。没关系，要有信心。:继续忍耐。")) {
 			case 1:
@@ -141,7 +138,7 @@ moc_ruins,118,99,5	script	Roberto	88,{
 	close;
 }
 
-payon,103,63,3	script	Jason	88,3,3,{
+payon,103,63,3	script	杰森	88,3,3,{
 	if (BaseClass == Job_Archer) {
 		if (getskilllv("AC_CHARGEARROW") == 1) {
 			mes "[杰森]";
@@ -266,9 +263,9 @@ OnTouch_:
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 Roberto message text is based off RO npc.  Jason message
 //=     text is custom from old version.
 //=     All items are from official quests though.[kobra_k88]

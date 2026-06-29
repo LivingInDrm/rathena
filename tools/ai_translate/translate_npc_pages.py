@@ -35,7 +35,7 @@ from translate_fast import RateLimiter, call_openai_json, load_api_config  # noq
 CN_RE = re.compile(r"[\u4e00-\u9fff]")
 EN_WORD_RE = re.compile(r"[A-Za-z]{2,}")
 COLOR_RE = re.compile(r"\^[0-9A-Fa-f]{6}")
-SCRIPT_TOKEN_RE = re.compile(r"[@#$]\w+|\.@\w+|</?(?:NAVI|INFO)>")
+SCRIPT_TOKEN_RE = re.compile(r"(?<![A-Za-z0-9!#@$%*.])(?:\.@\w+|[@#$]\w+)|</?(?:NAVI|INFO)>")
 BREAK_PUNCTUATION = "\uFF0C\u3002\uFF01\uFF1F\uFF1B\uFF1A\u3001,.!?;:"
 ASCII_WORD_RE = re.compile(r"[A-Za-z][A-Za-z0-9_+'./-]*")
 ALLOWED_MIXED_ASCII_WORDS = {
@@ -340,6 +340,9 @@ def extract_file(npc_root: Path, path: Path, include_npc_names: bool = False) ->
         caption_match = CAPTION_RE.match(line)
         if mes_match or caption_match:
             match = mes_match or caption_match
+            if match.group(3).lstrip().startswith("+"):
+                flush_dialogue()
+                continue
             kind = "mes" if mes_match else "caption"
             buffer.append(SourceLine(line_index, kind, lua_unescape(match.group(2))))
             continue

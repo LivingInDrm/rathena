@@ -1,21 +1,21 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Novice Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= kobra_k88
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.8
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Quest for skills: First Aid, Trick Dead
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.5 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
 //= 1.6 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
 //= 1.7 Updated to latest available official file. [Masao]
 //= 1.8 Added Baby support. [Zopokx]
-//============================================================ 
+//============================================================
 
-prt_in,234,133,4	script	Nami	66,{
+prt_in,234,133,4	script	娜美	66,{
 	if ((Class == Job_Novice || Class == Job_Baby) && (JobLevel > 3 || BaseLevel > 11) && (skill_nov < 3)) {
 		mes "[娜美]";
 		mes "你好！";
@@ -189,293 +189,205 @@ prt_in,234,133,4	script	Nami	66,{
 	close;
 }
 
-prt_in,73,87,4	script	Chivalry Member	65,{
+prt_in,73,87,4	script	骑士团成员	65,{
 	if ((Class == Job_Novice || Class == Job_Baby) && (JobLevel > 6) && ((skill_nov >= 3) && (skill_nov <= 5))) {
-		mes "[Bulma]";
-		mes "Yeah. . . I look great. . .";
-		mes "I am a knight in the knight's";
-		mes "guild of Prontera! Kuhahhahhahah !!";
-		mes "It hasn't been long since I became a";
-		mes " knight, but I still look great huh?";
-		mes "What do you think? ? ?";
+		mes "[布尔玛]";
+		mes "是啊……我看起来很棒……我是普隆德拉骑士公会的骑士！";
+		mes "哈哈哈！！我成为骑士还不久，";
+		mes "但我看起来依然很棒吧？你觉得呢？？";
 		next;
 		switch (skill_nov) {
 		case 3:
-			mes "[Bulma]";
-			mes "Hello my young friend -";
-			mes "You remind me of myself as young";
-			mes "sword man. . . ";
-			mes "Kekekkek, Oh I miss those days . .";
-			mes "Look at me acting like an old man.";
-			mes "Heh heh Sorry...";
+			mes "[布尔玛]";
+			mes "你好，我的小朋友——你让我想起年轻时的自己……哈哈，";
+			mes "我真怀念那些日子……看看我，像个老头一样。嘿嘿，抱歉……";
 			next;
-			mes "[Bulma]";
-			mes "I'm still young!!! Aren't I???";
-			mes "If you just work hard and be patient,";
-			mes "you will soon receive the job you desire as well.";
-			mes "It takes patience, but this is";
-			mes "good life kekkeke";
-			mes "Hmm, I would like to help you out . .";
+			mes "[布尔玛]";
+			mes "我还年轻呢！！！难道不是吗？？只要你努力工作并保持耐心，";
+			mes "你也会很快得到你想要的工作。这需要耐心，";
+			mes "但这就是美好的生活，哈哈，我想帮帮你……";
 			next;
-			mes "[Bulma]";
-			mes ". . . . . I'm not sure why you are looking";
-			mes "at me like that. I assure you that this";
-			mes "might seem a little weird at first, but";
-			mes "what I tell you will most likely be a great aid to you..";
+			mes "[布尔玛]";
+			mes "……我不太明白你为什么这样看着我。我向你保证，";
+			mes "这一开始可能看起来有点奇怪，";
+			mes "但我告诉你的东西很可能会对你有很大帮助……";
 			next;
-			mes "[Bulma]";
-			mes "Ha ha... It looks like you are getting";
-			mes "a bit interested in what I have to say.";
-			mes "I can teach you a very useful skill!";
-			mes "This skill is acting like you are dead! '";
-			mes "No No, it is more than acting, you ";
-			mes "actually look dead!!! ..";
+			mes "[布尔玛]";
+			mes "哈哈……看起来你对我说的话有点兴趣。";
+			mes "我可以教你一个非常有用的技能！这个技能就是假装你死了！";
+			mes "不不，这不仅仅是演戏，你实际上看起来像死了一样！！！";
 			next;
-			mes "[Bulma]";
-			mes "The name of the skill is ^3355FF' Play Dead '^000000";
-			mes "It is a skill I used as a novice.";
-			mes "But don't think little of it because";
-			mes "it is a novice skill. In fact, it takes";
-			mes "extreme concentration and skill";
-			mes "to even make this skill pass as believable.";
+			mes "[布尔玛]";
+			mes "这个技能的名字是^3355FF'假装死亡'^000000，";
+			mes "这是我作为新手时使用的技能。";
+			mes "但不要因为这是新手技能就小看它。实际上，";
+			mes "要让这个技能看起来可信需要极大的专注和技巧。";
 			next;
-			mes "[Bulma]";
-			mes "For example,";
-			mes "What if you are attacked by a strong";
-			mes "monster and can't survive.";
-			mes "You must play dead!";
-			mes "But if the monster was to tickle you,";
-			mes "could you control yourself?";
+			mes "[布尔玛]";
+			mes "例如，如果你被强大的怪物攻击而无法生存，";
+			mes "你必须假装死亡！但是如果怪物来挠你，你能控制自己吗？";
 			next;
-			mes "[Bulma]";
-			mes "The skill will help you deal with";
-			mes "many situations such as this.";
-			mes "It is truly a skill for the strong minded.";
-			mes "The goal of the skill is to look";
-			mes "perfectly dead. . .";
+			mes "[布尔玛]";
+			mes "这个技能将帮助你应对许多这样的情况。";
+			mes "它真的是一个适合意志坚定者的技能。";
+			mes "这个技能的目标是看起来完全死去……";
 			next;
-			mes "[Bulma]";
-			mes "I think that's enough explanation.";
-			mes "I can tell by the look in your eyes";
-			mes "that you are ready for your training.";
-			mes "Lets not delay!";
-			mes "Ok, take this pill first. . .";
-			mes "Let's see how this goes. . .";
+			mes "[布尔玛]";
+			mes "我想解释的差不多了。";
+			mes "我可以从你眼中的神情看出你已经准备好接受训练了。";
+			mes "别拖延！好吧，先吃下这个药丸……让我们看看会发生什么……";
 			next;
-			mes "[Bulma]";
-			mes "Within in 10 minutes, you must";
-			mes "go to the 2nd floor of the Prontera Castle's";
-			mes "East wing. ^3355FF' Newbie Tag '^000000 is";
-			mes "the item you are seeking. ! . .";
+			mes "[布尔玛]";
+			mes "在10分钟内，你必须去普隆德拉城东翼的二楼。";
+			mes "你要寻找的物品是^3355FF'新手标签'^000000！……";
 			next;
-			mes "^3355FF- *Gulp* (You have swallowed the pill) -^000000";
+			mes "^3355FF- *咕噜*（你已经吞下了药丸）-^000000";
 			next;
-			mes "[Bulma]";
-			mes "The pill that you have just taken";
-			mes "will make it difficult for you to breathe. . .";
-			mes "Kekekk . .AH HA - Just joking !";
-			mes "It is actually a pill to gives you";
-			mes "a mental calm so you can be patient.";
-			mes "I think that nothing is better";
+			mes "[布尔玛]";
+			mes "你刚刚吃下的药丸会让你呼吸困难……哈哈，开玩笑的！";
+			mes "其实这是让你保持冷静的药丸，这样你就可以耐心等待。";
+			mes "我认为没有什么比这更好的了。";
 			next;
-			mes "[Bulma]";
-			mes "training than running.";
-			mes "Okay? GO! ! ! ! ~~~~~";
-			mes "If you are late, you have to do it again! !";
-			mes "Now GO ! GO ! GO !";
-			mes "Run ~~~~~!!!!";
+			mes "[布尔玛]";
+			mes "训练就是奔跑。明白了吗？走！走！走！~~~~~如果你迟到了，";
+			mes "就得重新来过！现在走！走！走！快跑~~~~~！！！";
 			set skill_nov, 4;
 			close;
 		case 4:
-			mes "[Bulma]";
-			mes "HEY! what are you doing here ? !";
-			mes "You must be very irresponsible to be";
-			mes "here when your time is running out.";
-			mes "Run Run Run! - - - - -";
+			mes "[布尔玛]";
+			mes "嘿！你在这里干什么？！你一定很不负责任，";
+			mes "时间不多了还在这里。快跑！快跑！快跑！——";
 			next;
-			mes "[Bulma]";
-			mes "On the 2nd floor of the east wing!";
-			mes "It's in the Prontera castle!";
-			mes "Okayyyyy~~~!! *waves goodbye*";
+			mes "[布尔玛]";
+			mes "在东翼的二楼！就在普隆德拉城里！好吧~~~！！*挥手告别*";
 			close;
 		case 5:
 			if (countitem(7039) > 0) {
-				mes "[Bulma]";
-				mes "Hey... I see that you have -";
-				mes "finished your quest! ! ! . .";
-				mes "If you can endure all this,";
-				mes "it shouldn't be a problem to use";
-				mes "this skill. You are a natural!";
+				mes "[布尔玛]";
+				mes "嘿……我看到你完成了任务！！！如果你能忍受这一切，";
+				mes "使用这个技能就不成问题。你真是个天才！";
 				next;
-				mes "[Bulma]";
-				mes "Now, if you ever feel threatened,";
-				mes "use this skill as you see fit.";
-				mes " ' Play Dead ' ";
-				mes "Okay okay, See you around ! ! !";
+				mes "[布尔玛]";
+				mes "现在，如果你感到受到威胁，";
+				mes "随时使用这个技能——'假装死亡'。好吧，回见！";
 				set skill_nov,6;
 				delitem 7039,1; //Novice_Nametag
 				skill "NV_TRICKDEAD",1,SKILL_PERM;
 				close;
 			}
-			mes "[Bulma]";
-			mes "What? -";
-			mes "Why haven't you finished your quest?";
-			mes " *Tsk* *Tsk* You must have lost the pass . . .";
-			mes "Such irresponsibility is not acceptable.";
-			mes "I can't accept you into training until";
-			mes "I know you are capable. Go and try again.";
+			mes "[布尔玛]";
+			mes "什么？——你怎么还没完成任务？";
+			mes "*啧* *啧* 你一定是丢了通行证……这样的不负责任是不可接";
+			mes "受的。在我知道你有能力之前，";
+			mes "我不能让你接受训练。去再试一次。";
 			next;
-			mes "[Bulma]";
-			mes "Don't take me lightly. . .";
-			mes "If I tell you to come in 10 minutes,";
-			mes "I expect that of you.";
-			mes "In order for you to have another chance,";
-			mes "you must start from the beginning. . .";
-			mes "Do it right this time ! ! ! !";
+			mes "[布尔玛]";
+			mes "不要小看我……如果我告诉你十分钟后进来，我是指这个。";
+			mes "为了让你有另一次机会，你必须从头开始……这次要做对！";
 			set skill_nov,4;
 			close;
 		}
 	}
-	mes "[Bulma]";
-	mes "Yeah... I remember back to long ago !";
-	mes "Especially those embarrassing Novice years.";
-	mes "Wow... It is funny to think about those years now.";
-	mes "Those years were difficult. . .";
-	mes "Thankfully you can use the First Aid";
-	mes "skill when you reach novice job level 7.";
+	mes "[布尔玛]";
+	mes "是啊……我记得很久以前的事！尤其是那些尴尬的初学者岁月。";
+	mes "哇……现在想起来真有趣，";
+	mes "那段时间很艰难……幸好你在达到初学者7级时可";
+	mes "以使用急救技能。";
 	next;
-	mes "[Bulma]";
-	mes "That saved me many times in the past. . .";
-	mes "I am sure it will help you much as well.";
-	mes "Hopefully, it will be something you use well . .";
+	mes "[布尔玛]";
+	mes "这在过去救了我很多次……我相信它也会对你有很大帮助。";
+	mes "希望你能好好利用它。";
 	next;
-	mes "[Bulma]";
-	mes "If you have any friends who are novices,";
-	mes "tell them about me.";
-	mes "If I can, I will help them out";
-	mes "as best as I can . . . .";
+	mes "[布尔玛]";
+	mes "如果你有任何初学者朋友，告诉他们我的事。如果可以的话，";
+	mes "我会尽力帮助他们……";
 	close;
 }
 
-prt_castle,175,146,4	script	Nursing Instructor	50,{
-	mes "[Dread Lord]";
-	mes ". . . . . . . . . .";
-	mes ". . . . . . . . . .";
-	mes "Stop pestering me! ! !";
-	mes "I am very busy ! ! !";
-	mes "Would you just bug off ? ! ? !";
+prt_castle,175,146,4	script	护理讲师	50,{
+	mes "[恐惧领主]";
+	mes "……别烦我！！！我很忙！！！你能不能走开？！";
 	close2;
 	if ((skill_nov >= 0) && (skill_nov <= 5)) {
 		switch (skill_nov) {
 		case 0:
-			mes "[Dread Lord]";
-			mes "The people who work here at";
-			mes "Prontera clinic are battling life";
-			mes "and death everyday.";
-			mes "It takes a lot of patience and ";
-			mes "puts a lot of tension on us.";
-			mes "Sorry if we seem a bit uptight. . .";
+			mes "[恐惧领主]";
+			mes "在普隆德拉诊所工作的人每天都在与生死搏斗。";
+			mes "这需要很多耐心，也给我们带来了很大的压力。";
+			mes "抱歉如果我们看起来有点紧张……";
 			next;
-			mes "[Dread Lord]";
-			mes "I am the Nursing director.";
-			mes "There are many things I must do.";
-			mes "If your business is complete, please leave.";
+			mes "[恐惧领主]";
+			mes "我是护理主任。我有很多事情要做。";
+			mes "如果你的事情办完了，请离开。";
 			close;
 		case 1:
-			mes "[Dread Lord]";
-			mes "Ohhh . .";
-			mes "You have come here for bandages ?";
-			mes "Do you even know how we get these";
-			mes "precious bandages ?";
-			mes "They come from a powerful monster";
-			mes "that is found in the pyramids of Morocc.";
+			mes "[恐惧领主]";
+			mes "哦……你是来找绷带的？";
+			mes "你知道我们是怎么得到这些珍贵的绷带的吗？";
+			mes "它们来自摩洛克金字塔里的一种强大怪物。";
 			next;
-			mes "[Dread Lord]";
-			mes "The monster is some sort of mummy.";
-			mes "We take the rotten bandages from it's";
-			mes "diseased body and sanitize them. . .";
-			mes "Do you believe me ? . .";
-			mes "Heh heh... There is even poison";
-			mes "in the bandages.";
+			mes "[恐惧领主]";
+			mes "那怪物是一种木乃伊。";
+			mes "我们从它的病态身体上取下腐烂的绷带并进行消毒……你相信";
+			mes "我吗？呵呵……绷带里甚至还有毒。";
 			next;
-			mes "[Dread Lord]";
-			mes "Fortunately, the poison kills other poisons";
-			mes "and does not hurt the patient . .";
-			mes "You must destroy poison with poison. . .";
-			mes "I think I heard something similar that. . .";
-			mes ". . . . . Anyway, I would usually give you a";
-			mes "hard time for taking these bandages lightly,";
+			mes "[恐惧领主]";
+			mes "幸运的是，这种毒能杀死其他毒素而不会伤害病人……你必须";
+			mes "用毒来消灭毒……我想我听过类似的说法……不过，";
+			mes "我通常会因为你轻视这些绷带而给你麻烦，";
 			next;
-			mes "[Dread Lord]";
-			mes "but I am much too tired today to";
-			mes "give you any trouble. . .";
-			mes "If you ever get skilled in medicine and first aid,";
-			mes "please consider joining our clinic.";
-			mes "Now don't take these bandages and then";
-			mes "go and get killed, be careful. -";
+			mes "[恐惧领主]";
+			mes "但今天我实在太累了，";
+			mes "不想给你麻烦……如果你将来在医学和急救方面有了技能，";
+			mes "请考虑加入我们的诊所。";
+			mes "现在别拿着这些绷带去送死，小心点。-";
 			next;
-			mes "^3355FF- Got 1 Sterilized Bandages -^000000";
+			mes "^3355FF- 获得 1 个消毒绷带 -^000000";
 			set skill_nov,2;
 			close;
 		case 2:
-			mes "[Dread Lord]";
-			mes "Look, if your business is done";
-			mes "get out of my site! ! !";
-			mes "I have no time for this nonsense ..";
-			mes ". . . . .";
-			mes "- Click Click *Walks away* . . . . . -";
+			mes "[恐惧领主]";
+			mes "听着，如果你的事情办完了就离开我的视线！！！";
+			mes "我没时间处理这些废话……- 咔咔 *走开*……-";
 			close;
 		case 4:
 			if (countitem(7039) == 0) {
-				mes "[Dread Lord]";
-				mes "Look at this guy!";
-				mes "Wake up and watch where you are going.";
-				mes "What are you thinking running around our clinic!";
-				mes "Running ?!?!";
-				mes "*Sigh* . . ";
-				mes "What do you want? ! ? !";
+				mes "[恐惧领主]";
+				mes "看看这个家伙！醒醒，注意你在干什么。";
+				mes "你在我们诊所里跑来跑去想什么呢！跑？！？！";
+				mes "*叹气*……你想要什么？！";
 				next;
-				mes "[Dread Lord]";
-				mes "I see. . . .";
-				mes ". . . . . what ?";
-				mes "You want to have a bandage to learn first aid?";
-				mes " *Arhg* Here take it !";
-				mes "-woosh - *storms away*";
+				mes "[恐惧领主]";
+				mes "我明白了……你想要一个绷带来学习急救？*啊哈*给你！";
+				mes "-呼——*怒气冲冲地走开*";
 				next;
-				mes "^3355FF- Got 1 Newbie Tag -^000000";
+				mes "^3355FF- 获得 1 个新手标签 -^000000";
 				set skill_nov,5;
 				getitem 7039,1; //Novice_Nametag
 				close;
 			}
-			mes "[Dread Lord]";
-			mes "What ! !";
-			mes "I'm only going to give you one!";
-			mes "You don't need any more for the test !";
-			mes "Do you want to stay a novice forever???";
-			mes "I would be happy to arrange that !";
+			mes "[恐惧领主]";
+			mes "什么！！！我只会给你一个！你不需要更多来测试！";
+			mes "你想永远当初学者吗？？我很乐意安排这个！";
 			close;
 		case 5:
-			mes "[Dread Lord]";
-			mes "What more do you want !";
-			mes "Get out of here !";
-			mes "OUT !";
+			mes "[恐惧领主]";
+			mes "你还想要什么！快滚出去！出去！";
 			close;
 		}
 	}
-	mes "[Dread Lord]";
-	mes "Argh, Get out of here !!";
-	mes "I don't like shouting but ..";
-	mes "GET OUT OF HERE! ! ! ! ! !";
+	mes "[恐惧领主]";
+	mes "啊，快滚出去！！我不喜欢大喊，但……快滚出去！！！！！！";
 	close;
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= Fully working
 //= 1.2 Added Baby Class Support [Lupus]
 //= 1.3 Fixed a Zeny exploit, made more variables clear
 //= on finishing quests. [Lupus]
 //= 1.4 Fixed exploits [Lupus]
 //= 1.4a Fixed some typos [IVBela]
-//============================================================ 
+//============================================================

@@ -1,21 +1,21 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Hunter Skills Quests
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen, Kisuka
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.4
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Quests for skills: Phantasmic Arrow
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //=     Somehow eA engine doesn't let you keep learn't skill V_V'
 //= 1.2 Added to correct locations, correct NPC's, fixed
 //=     some of the items required and made them into real
-//=     quests. [Reddozen] 
+//=     quests. [Reddozen]
 //= 1.3 Fixed bugs and minor typos. Optimized [Lupus]
 //= 1.3a fixed an item ID typo, thx 2Spiritual Kid
 //= 1.3b Splitted into different files [DracoRPG]
@@ -24,7 +24,7 @@
 //= 1.4 Moved Arpesto from tu_archer and added his script. [Kisuka]
 //============================================================
 
-pay_arche,109,169,3	script	Arpesto	712,{
+pay_arche,109,169,3	script	阿佩斯托	712,{
 	if (BaseJob == Job_Hunter) {
 		if (qskill_hunter == 100) {
 			if (getskilllv("HT_PHANTASMIC")) {
@@ -39,7 +39,7 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				mes "老头！你只是害怕！";
 				mes "而我，";
 				mes "另一方面...";
-				emotion ET_KIK, getnpcid(0, "Reidin Corse#tu");
+				emotion ET_KIK, getnpcid(0, "雷丁 Corse#tu");
 				next;
 				mes "[阿佩斯托]";
 				mes "你这个小家伙";
@@ -49,10 +49,8 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				close;
 			} else {
 				mes "[阿佩斯托]";
-				mes "我认出你来了，";
-				mes "从某个地方，";
-				mes "我想，Reidin，你";
-				mes "还记得这个家伙吗？";
+				mes "我认出你来了，从某个地方，我想，雷丁，";
+				mes "你还记得这个家伙吗？";
 				next;
 				mes "[雷丁·科尔斯]";
 				mes "哦，得了，我们见过";
@@ -63,12 +61,8 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				mes "相信我！";
 				next;
 				mes "[阿佩斯托]";
-				mes "好吧，好吧。";
-				mes "如果Reidin认为你是";
-				mes "有价值的，那你可能";
-				mes "是的。在这种情况下，我想";
-				mes "提供教你我的秘密";
-				mes "技能，''幻影箭''。";
+				mes "好吧，好吧。如果雷丁认为你是有价值的，那你可能是的。";
+				mes "在这种情况下，我想提供教你我的秘密技能，''幻影箭''。";
 				next;
 				mes "[雷丁·科尔斯]";
 				mes "等等，这家伙";
@@ -104,7 +98,7 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				mes "你不是一开始叫它";
 				mes "阿尔佩斯托的第三形态";
 				mes "或者类似的名字吗？";
-				emotion ET_SWEAT, getnpcid(0, "Reidin Corse#tu");
+				emotion ET_SWEAT, getnpcid(0, "雷丁 Corse#tu");
 				next;
 				mes "[阿佩斯托]";
 				mes "呃，是的，阿尔佩斯托的";
@@ -149,15 +143,11 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				mes "''^3131FF幻影箭^000000'' 听起来";
 				mes "比你想出来的";
 				mes "其他名字酷多了！";
-				emotion ET_AHA, getnpcid(0, "Reidin Corse#tu");
+				emotion ET_AHA, getnpcid(0, "雷丁 Corse#tu");
 				next;
 				mes "[阿佩斯托]";
-				mes "你有时候还挺有用的，";
-				mes "Reidin。现在，";
-				mes "回到正题上来。";
-				mes "我将教你我的绝技，";
-				mes "幻影箭。现在……";
-				mes "准备好你的心灵和身体！";
+				mes "你有时候还挺有用的，雷丁。现在，回到正题。";
+				mes "我将教你我的绝技，幻影箭。准备好你的心灵和身体！";
 				next;
 				mes "[阿佩斯托]";
 				mes "幻-！";
@@ -190,7 +180,7 @@ pay_arche,109,169,3	script	Arpesto	712,{
 				next;
 				mes "[阿佩斯托]";
 				mes "我为什么是我？!";
-				emotion ET_HUK, getnpcid(0, "Reidin Corse#tu");
+				emotion ET_HUK, getnpcid(0, "雷丁 Corse#tu");
 				next;
 				mes "^3355FF*砰*^000000";
 				next;
@@ -293,16 +283,12 @@ pay_arche,109,169,3	script	Arpesto	712,{
 					mes "意外编造那个";
 					mes "技能的时候你很无聊";
 					mes "而且只是随便玩玩";
-					emotion ET_KIK, getnpcid(0, "Reidin Corse#tu");
+					emotion ET_KIK, getnpcid(0, "雷丁 Corse#tu");
 					next;
 					emotion ET_HUK;
-					mes "其中一把弓！";
-					mes "[阿佩斯托]";
-					mes "^333333*咳咳*^000000 请，Reidin，";
-					mes "不要娱乐毫无根据的";
-					mes "谣言。只有在";
-					mes "与Eddga无数次战斗之后";
-					mes "我才成功发明并";
+					mes "其中一把弓！[阿佩斯托]^333333*咳咳*^000000请，雷丁，";
+					mes "不要娱乐毫无根据的谣言。";
+					mes "只有在与Eddga无数次战斗之后我才成功发明并";
 					next;
 					mes "完美的紧急箭。";
 					mes "[雷丁·科尔斯]";
@@ -340,7 +326,7 @@ pay_arche,109,169,3	script	Arpesto	712,{
 					mes "...";
 					mes "......";
 					mes ".........";
-					emotion ET_THINK, getnpcid(0, "Reidin Corse#tu");
+					emotion ET_THINK, getnpcid(0, "雷丁 Corse#tu");
 					set qskill_hunter,1;
 					close;
 				case 2:
@@ -359,7 +345,7 @@ pay_arche,109,169,3	script	Arpesto	712,{
 		mes "就来找我。";
 		mes "[阿佩斯托]";
 		next;
-		emotion ET_HNG, getnpcid(0, "Reidin Corse#tu");
+		emotion ET_HNG, getnpcid(0, "雷丁 Corse#tu");
 		mes "天空看起来依然晴朗，但最近吹过这片土地的风似乎带着不幸的气息。";
 		mes "[雷丁·科尔斯]";
 		mes "所以……";

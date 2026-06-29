@@ -1,15 +1,15 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Swordman Class Tutorial and Job Specific Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Fix up by Jukka
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.6
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Swordman training quest.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 Fully working
 //= 1.1 optimized [Lupus]
 //= 1.2 Fixed a typo on NPC name. [SinSloth]
@@ -17,11 +17,11 @@
 //= 1.4 Misc. updates. [L0ne_W0lf]
 //= 1.5 Added Renewal Izlude coordinates.
 //= 1.6 Added Pre-Renewal support. [Euphy]
-//============================================================ 
+//============================================================
 
 // Shurank
 //============================================================
-izlude_in,82,163,3	script	Shurank	733,{
+izlude_in,82,163,3	script	舒兰克	733,{
 	mes "[舒兰克]";
 	if(Class == Job_Novice || Class == Job_Baby){
 		mes "还在想";
@@ -602,8 +602,8 @@ izlude_in,82,163,3	script	Shurank	733,{
 			close;
 		}
 	case 6:
-		mes "我希望你去找一位名叫^5D478BDequ'ee^000000的骑士，他在^5D478BGeffen^000000。仔细听，这是我想让你传达的信息";
-		mes "我希望你把这个信息交给他。";
+		mes "我希望你去找一位名叫^5D478BDequ'ee^000000的骑士，他在^5D478BGeffen^000000。仔细听，";
+		mes "这是我想让你传达的信息，我希望你把这个信息交给他。";
 		next;
 		mes "[舒兰克]";
 		mes "^0000FF发生了什么";
@@ -629,8 +629,8 @@ izlude_in,82,163,3	script	Shurank	733,{
 		mes "其实我有一个重要的任务想让你执行。这并不难：你只需传递一条消息。";
 		next;
 		mes "[舒兰克]";
-		mes "我希望你去找一位名叫^5D478BDequ'ee^000000的骑士，他在^5D478BGeffen^000000。仔细听，这是我想让你传达的信息";
-		mes "我希望你把这个信息交给他。";
+		mes "我希望你去找一位名叫^5D478BDequ'ee^000000的骑士，他在^5D478BGeffen^000000。仔细听，";
+		mes "这是我想让你传达的信息，我希望你把这个信息交给他。";
 		next;
 		mes "[舒兰克]";
 		mes "^0000FF发生了什么";
@@ -999,7 +999,7 @@ izlude_in,82,163,3	script	Shurank	733,{
 
 // Daqu'ee
 //============================================================
-geffen,154,143,3	script	Dequ'ee	734,{
+geffen,154,143,3	script	德奎	734,{
 	if(BaseJob == Job_Novice){
 		mes "[德奎]";
 		mes "你好啊。";
@@ -1880,20 +1880,20 @@ geffen,154,143,3	script	Dequ'ee	734,{
 		input .@inputstr$;
 		if(.@inputstr$ == .@hans$){
 			mes "[德奎]";
-			mes "victkleyundncem？这确实听起来很奇怪。";
-			mes "现在，告诉我班克利的密码。";
+			mes "victkleyundncem？这确实听起来很奇怪。现在，";
+			mes "告诉我班克利的密码。";
 			next;
 			input .@inputstr$;
 			if(.@inputstr$ == .@bang$){
 				mes "[德奎]";
-				mes "hekdlfiDrindkelsd……那到底是什么……？这";
-				mes "确实很神秘。穆特罗的呢？";
+				mes "hekdlfiDrindkelsd……那到底是什么……？";
+				mes "这确实很神秘。穆特罗的呢？";
 				next;
 				input .@inputstr$;
 				if(.@inputstr$ == .@mutr$){
 					mes "[德奎]";
-					mes "ConBanfoevidehi。这将会很难搞清楚。好";
-					mes "吧，现在告诉我盖尔的密码。";
+					mes "ConBanfoevidehi。这将会很难搞清楚。好吧，";
+					mes "现在告诉我盖尔的密码。";
 					next;
 					input .@inputstr$;
 					if(.@inputstr$ == .@geil$){
@@ -1921,12 +1921,12 @@ geffen,154,143,3	script	Dequ'ee	734,{
 						close;
 					}
 				} else {
-	
+
 					mes "[德奎]";
 					mes "...你确定你听到了吗？";
 					mes "你为什么不再去检查一下？";
 					close;
-	
+
 				}
 			} else {
 				mes "[德奎]";
@@ -1935,14 +1935,14 @@ geffen,154,143,3	script	Dequ'ee	734,{
 				close;
 			}
 		} else {
-	
+
 			mes "[德奎]";
 			mes "你确定这是对的吗？";
 			mes "不，不，我觉得不是。";
 			mes "你能检查一下那个代码并再次审问嫌疑人吗？";
 			mes "如果你需要的话？";
 			close;
-	
+
 		}
 	}
 	if(tu_swordman == 14){
@@ -1969,8 +1969,9 @@ geffen,154,143,3	script	Dequ'ee	734,{
 		mes "至于受害者，嗯，那是机密信息。你明白的，对吧？";
 		next;
 		mes "[德奎]";
-		mes "现在，我希望你去梦罗克审问四个嫌疑人。他们的名字是 ^5D478BMuetro^000000, ^5D478BGeil^000000, ^5D478BHans^000000";
-		mes "和 ^5D478BBankley^000000。应该不会太困难。";
+		mes "现在，我希望你去梦罗克审问四个嫌疑人。";
+		mes "他们的名字是^5D478BMuetro^000000, ^5D478BGeil^000000, ^5D478BHans^000000和^5D478BBankley^000000。";
+		mes "应该不会太困难。";
 		next;
 		mes "[德奎]";
 		mes "在你和他们都说完话后，回来向我报告。特别重要的是，你要记住或写下你可能得到的任何重要线索";
@@ -2247,7 +2248,7 @@ geffen,154,143,3	script	Dequ'ee	734,{
 			break;
 		}
 	}
-	
+
 	mes "嗯……？";
 	mes "你有什么";
 	mes "和我打交道的事吗？";
@@ -2256,7 +2257,7 @@ geffen,154,143,3	script	Dequ'ee	734,{
 
 // Geil
 //============================================================
-morocc_in,51,101,3	script	Geil	89,{
+morocc_in,51,101,3	script	盖尔	89,{
 	mes "[盖尔]";
 	if(tu_swordman == 15){
 		mes "你是被当局派来的吗？别再给我添麻烦了！我不是谋杀者！我甚至不知道谁被杀了。我不是你们要找的人！";
@@ -2307,7 +2308,7 @@ morocc_in,51,101,3	script	Geil	89,{
 
 // Meutro
 //============================================================
-morocc,82,292,5	script	Muetro	84,{
+morocc,82,292,5	script	穆特罗	84,{
 	mes "[穆埃特罗]";
 	if(tu_swordman == 15){
 		mes "你只是";
@@ -2348,7 +2349,7 @@ morocc,82,292,5	script	Muetro	84,{
 
 // Hans
 //============================================================
-morocc,240,72,3	script	Hans	86,{
+morocc,240,72,3	script	汉斯	86,{
 	mes "[汉斯]";
 	if(tu_swordman == 15){
 		mes "帮帮我！";
@@ -2406,7 +2407,7 @@ morocc,240,72,3	script	Hans	86,{
 
 // Bankley
 //============================================================
-morocc_in,12,156,3	script	Bankley	97,{
+morocc_in,12,156,3	script	班克利	97,{
 	if(tu_swordman > 19){
 		mes "^3355FF班克利脸上露出了可怜的";
 		mes "表情。^000000";

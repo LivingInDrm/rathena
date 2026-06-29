@@ -1,16 +1,16 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Bard Skill Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Lupus, Reddozen; L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.6
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Official quest for the Bard skill "Pang Voice"
 //= Prerequisite: Geffen Bard Quest
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 for fully working skills only [Lupus]
 //= 1.1 Added more new skill quests for more classes [Lupus]
 //=     Somehow eA engine doesn't let you keep learn't skill
@@ -27,287 +27,187 @@
 //= 1.6 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-prontera,174,328,3	script	Young Man#bard_q1	89,3,3,{
+prontera,174,328,3	script	年轻人#bard_q1	89,3,3,{
 	if (BaseJob == Job_Bard) {
 		emotion ET_HUK;
-		mes "[Timid Young Man]";
-		mes "Eh? Wwwaaaah--!";
-		mes "Y-you're--it's-it's--";
+		mes "[胆小的年轻人]";
+		mes "呃？哇啊——！你是——这——是——";
 		if (Upper != 1)
-			mes "It's a freakin' Bard!";
+			mes "这是一位怪异的吟游诗人！";
 		else
-			mes "It's a freakin' Minstrel!";
-		mes "D-don't come any closer!";
-		mes "I... I don't like you guys!";
+			mes "这是一位怪异的吟游者！别靠近！我……我不喜欢你们！";
 		next;
-		if (select("Wha--? Why the heck not?:Hey, take it easy, man.") == 1) {
-			mes "[Timid Young Man]";
-			mes "N-no! Don't look at me!";
-			mes "I know what you're trying";
-			mes "to do! Please, I haven't";
-			mes "done anything to you!";
-			mes "J-just s-stay away!";
+		if (select("什么——？为什么不呢？:嘿，放轻松点，伙计。") == 1) {
+			mes "[胆小的年轻人]";
+			mes "不——！别看着我！我知道你想做什么！请，";
+			mes "我没有对你做过任何事！只要离我远点！";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Um...";
-			mes "I'm not really trying";
-			mes "to do anything. Why";
-			mes "don't you relax, and--";
+			mes "嗯……我并不是想做什么。你为什么不放松一下，——";
 			next;
-			mes "[Timid Young Man]";
-			mes "Relax?! Nobody believes me";
-			mes "when I tell them how dangerous";
-			mes "you guys are. You think you're";
-			mes "so smug with your funny jokes";
-			mes "and lovely songs, but I know";
-			mes "what kind of powers you have!";
+			mes "[胆小的年轻人]";
+			mes "放松？！没人相信我说你们有多危险。你们以为自己很得意，";
+			mes "开着有趣的玩笑，唱着美妙的歌曲，";
+			mes "但我知道你们拥有怎样的力量！";
 			close;
 		}
 		else {
-			mes "[Timid Young Man]";
-			mes "N-no! Don't look at me!";
-			mes "I know what you're trying";
-			mes "to do! Please, I haven't";
-			mes "done anything to you!";
-			mes "J-just s-stay away!";
+			mes "[胆小的年轻人]";
+			mes "不——！别看着我！我知道你想做什么！请，";
+			mes "我没有对你做过任何事！只要离我远点！";
 			next;
-			if (select("Offer him a drink.:Reassure him that you're safe.") == 1) {
+			if (select("请他喝一杯。:向他保证你是安全的。") == 1) {
 				mes "[" + strcharinfo(0) + "]";
-				mes "Look, I don't know what";
-				mes "you've got against me, but";
-				mes "you really need to relax.";
-				mes "Here, have a drink on me.";
+				mes "听着，我不知道你对我有什么意见，但你真的需要放松一下。";
+				mes "来，喝一杯我的吧。";
 				next;
 				if (countitem(12112) > 0) {
-					mes "[Timid Young Man]";
-					mes "Oh~! Isn't that";
-					mes "a Tropical Sograt?";
-					mes "That's my favorite";
-					mes "drink in all the world!";
+					mes "[胆小的年轻人]";
+					mes "哦~！那是热带索格拉特吗？这是我最喜欢的饮料！";
 					if (qskill_bard == 9) {
-						mes "Thanks so--waitaminute.";
+						mes "谢谢你——等等。";
 						next;
-						mes "[Timid Young Man]";
-						mes "This is some sort";
-						mes "of weird trick, isn't it?";
-						mes "And to think I almost";
-						mes "f-f-fell for it! P-please";
-						mes "j-just leave me alone!";
+						mes "[胆小的年轻人]";
+						mes "这是一种奇怪的把戏，不是吗？想想我差点就上当了！";
+						mes "请你就离我远点！";
 						close;
 					}
 					else if (qskill_bard > 0) {
 						next;
-						mes "[Timid Young Man]";
-						mes "Wait, I've seen you before.";
-						mes "And you brought me a drink";
-						mes "just like this one. You...";
-						mes "You d-didn't learn th-that";
-						mes "w-w-weird skill, d-did you?";
-						mes "Wait, no. You couldn't have...";
+						mes "[胆小的年轻人]";
+						mes "等等，我见过你。你给我带来了和这个一样的饮料。";
+						mes "你……你没有学会那种奇怪的技能吧？等等，不，你不可能……";
 						next;
 						mes "[" + strcharinfo(0) + "]";
-						mes "Oh, please~";
-						mes "You know, I think";
-						mes "that maybe you";
-						mes "worry too much.";
+						mes "哦，拜托~ 你知道吗，我觉得你可能太担心了。";
 						close;
 					}
 					else {
 						next;
-						mes "[Timid Young Man]";
-						mes "^333333*Gulp Gulp*^000000";
-						mes "Ahhhh~ Oh, you don't";
-						mes "understand how long I've";
-						mes "been wanting this drink!";
-						mes "It tastes so good, and";
-						mes "now I feel sooo relaxed...";
+						mes "[胆小的年轻人]";
+						mes "^333333*咕噜咕噜*^000000 啊~ 哦，你不知道我有多想喝这杯饮料！";
+						mes "味道太好了，现在我感觉放松多了……";
 						next;
-						switch(select("See? I'm not dangerous at all~:So what makes someone like me so scary?")) {
+						switch(select("看吧？我根本不危险~:那么，像我这样的人为什么会让人害怕呢？")) {
 						case 1:
-							mes "[Timid Young Man]";
-							mes "Hmmm... Maybe.";
-							mes "Maybe all of you Bards";
-							mes "and Minstrels aren't that";
-							mes "bad. But I can never forget";
-							mes "what that Bard did to me...";
+							mes "[胆小的年轻人]";
+							mes "嗯……也许。也许你们所有的吟游诗人和吟唱者并没有那么糟。";
+							mes "但我永远无法忘记那个吟游诗人对我做的事……";
 							next;
-							mes "[Timid Young Man]";
-							mes "It all started when I was";
-							mes "traveling through Umbala and";
-							mes "met a strange Bard who was";
-							mes "studying under the tutelage";
-							mes "of Puchuchartan, the Utan";
-							mes "Shaman of the village.";
+							mes "[胆小的年轻人]";
+							mes "一切都始于我在乌姆巴拉旅行时，";
+							mes "遇到了一位奇怪的吟游诗人，";
+							mes "他在村子的乌坦萨满普楚查尔坦的指导下学习。";
 							next;
-							mes "[Timid Young Man]";
-							mes "That Bard and I got along fairly well until he took me to Umbala's";
-							mes "Bungee Jump. He insisted that I jump at least once for the ''full";
-							mes "Umbala experience.'' I refused, seeing as they don't use bungees.";
+							mes "[胆小的年轻人]";
+							mes "我和那个吟游诗人相处得还不错，";
+							mes "直到他带我去乌姆巴拉的蹦极跳。他坚持让我至少跳一次，";
+							mes "以获得“完整的乌姆巴拉体验”。我拒绝了，";
+							mes "因为他们根本不使用蹦极绳。";
 							next;
-							mes "[Timid Young Man]";
-							mes "The Bard seemed offended";
-							mes "and claimed it was perfectly";
-							mes "safe, and that only a few people";
-							mes "have died by jumping. Then, he";
-							mes "just... He gave me this intense look.";
+							mes "[胆小的年轻人]";
+							mes "吟游诗人似乎很生气，声称这完全安全，";
+							mes "只有少数人跳下去时死去。然后，";
+							mes "他就……给了我一个强烈的眼神。";
 							next;
-							mes "[Timid Young Man]";
-							mes "His eyes seemed so full";
-							mes "of rage! I remember him";
-							mes "mumbling something, and";
-							mes "all of a sudden, I lost control";
-							mes "of my body! My arms and legs";
-							mes "were just moving on their own!";
+							mes "[胆小的年轻人]";
+							mes "他的眼中充满了愤怒！我记得他嘟囔着什么，突然间，";
+							mes "我失去了对身体的控制！我的手臂和腿就像是自己在动！";
 							next;
-							mes "[Timid Young Man]";
-							mes "Before long, I found myself";
-							mes "struggling to keep myself from";
-							mes "leaping off that Bungee Jump.";
-							mes "But the more I resisted, the";
-							mes "more violently I'd flail toward";
-							mes "the edge. It was horrible!";
+							mes "[胆小的年轻人]";
+							mes "没过多久，我发现自己在拼命阻止自己跳下那个蹦极跳。";
+							mes "但我越是抵抗，就越是猛烈地朝边缘扑去。真是可怕！";
 							next;
-							mes "[Timid Young Man]";
-							mes "That was the most terrifying";
-							mes "experience of my life! It was";
-							mes "bad enough that I risked my";
-							mes "life, but that feeling of not";
-							mes "having any control over your";
-							mes "body is so overwhelming!";
+							mes "[胆小的年轻人]";
+							mes "那是我一生中最可怕的经历！我冒着生命危险已经够糟糕了，";
+							mes "但那种对身体失去控制的感觉真是令人窒息！";
 							next;
 							mes "[" + strcharinfo(0) + "]";
-							mes "Wait, you're saying";
-							mes "a Bard did this to you?";
-							mes "I've never heard of a song";
-							mes "or skill with that sort of effect before. That's really strange...";
+							mes "等一下，你是说一个吟游诗人对你做了这个？";
+							mes "我从未听说过有这种效果的歌曲或技能。这真奇怪……";
 							next;
-							mes "[Timid Young Man]";
-							mes "Well, I've never heard";
-							mes "of that sort of power up";
-							mes "until I had to experience";
-							mes "it for myself. Oh, I can still";
-							mes "see that evil smile of his";
-							mes "in my nightmares...";
+							mes "[胆小的年轻人]";
+							mes "嗯，我在亲身经历之前从未听说过这种力量。哦，";
+							mes "我仍然能在噩梦中看到他那邪恶的微笑……";
 							next;
-							mes "[Timid Young Man]";
-							mes "Anyway, thanks for that";
-							mes "drink, it really helped me";
-							mes "settle my nerves. But I must";
-							mes "warn you not to look for that";
-							mes "strange Bard. I'm sure he's really some sort of demon or something...";
+							mes "[胆小的年轻人]";
+							mes "不过，谢谢你给我那杯饮料，真的帮我缓解了紧张。";
+							mes "但我必须警告你，不要去寻找那个奇怪的吟游诗人。";
+							mes "我敢肯定他真的是某种恶魔……";
 							next;
 							if (JobLevel > 39) {
-								mes "[Timid Young Man]";
-								mes "But... If you really";
-								mes "want to attain that sort";
-								mes "of power, I can't really";
-								mes "stop you. Thankfully, nobody";
-								mes "has any idea of where he is~";
+								mes "[胆小的年轻人]";
+								mes "但是……如果你真的想获得那种力量，我也无法阻止你。";
+								mes "谢天谢地，没人知道他在哪里~";
 								delitem 12112,1; //Tropical_Sograt
 								set qskill_bard,1;
 							}
 							else {
-								mes "[Timid Young Man]";
-								mes "Even if you could find that";
-								mes "Bard to get him to teach you";
-								mes "how he did that to me, I'm sure";
-								mes "he mentioned something about";
-								mes "being at least ^660000Job Level 40^000000 to";
-								mes "be able to handle that power...";
+								mes "[胆小的年轻人]";
+								mes "即使你能找到那个吟游诗人让他教你怎么对我做的事，";
+								mes "我敢肯定他提到过至少要达到^660000职业等级 40^000000才能";
+								mes "掌控那种力量……";
 								delitem 12112,1; //Tropical_Sograt
 							}
 							close;
 						case 2:
-							mes "[Timid Young Man]";
-							mes "^333333*Sigh*^000000 Well, maybe all Bards";
-							mes "and Minstrels aren't terrifying. But any Bard will remind me";
-							mes "of the one that I met during my";
-							mes "travels. Just thinking about";
-							mes "that time gives me goosebumps.";
+							mes "[胆小的年轻人]";
+							mes "^333333*叹气*^000000 嗯，也许并不是所有的吟游诗人和民谣歌手都可怕。";
+							mes "但任何吟游诗人都会让我想起我在旅行中遇到的那个。";
+							mes "光是想起那段时间就让我起鸡皮疙瘩。";
 							next;
-							mes "[Timid Young Man]";
-							mes "It all started when I was";
-							mes "traveling through Umbala and";
-							mes "met a strange Bard who was";
-							mes "studying under the tutelage";
-							mes "of Puchuchartan, the Utan";
-							mes "Shaman of the village.";
+							mes "[胆小的年轻人]";
+							mes "一切都始于我在乌姆巴拉旅行时，遇到一个奇怪的吟游诗人，";
+							mes "他在村子的乌坦萨满普楚查尔坦的指导下学习。";
 							next;
-							mes "[Timid Young Man]";
-							mes "That Bard and I got along fairly well until he took me to Umbala's";
-							mes "Bungee Jump. He insisted that I jump at least once for the ''full";
-							mes "Umbala experience.'' I refused, seeing as they don't use bungees.";
+							mes "[胆小的年轻人]";
+							mes "我和那个吟游诗人相处得还不错，";
+							mes "直到他带我去乌姆巴拉的蹦极跳。他坚持让我至少跳一次，";
+							mes "以获得“完整的乌姆巴拉体验”。我拒绝了，";
+							mes "因为他们根本不使用蹦极绳。";
 							next;
-							mes "[Timid Young Man]";
-							mes "The Bard seemed offended";
-							mes "and claimed it was perfectly";
-							mes "that a few people have died";
-							mes "by jumping. Then, he just...";
-							mes "He gave me this intense look.";
+							mes "[胆小的年轻人]";
+							mes "吟游诗人似乎很生气，声称这完全安全，";
+							mes "只有少数人跳下去时死去。然后，";
+							mes "他就……给了我一个强烈的眼神。";
 							next;
-							mes "[Timid Young Man]";
-							mes "His eyes seemed so full";
-							mes "of rage! I remember him";
-							mes "mumbling something, and";
-							mes "all of a sudden, I lost control";
-							mes "of my body! My arms and legs";
-							mes "were just moving on their own!";
+							mes "[胆小的年轻人]";
+							mes "他的眼中充满了愤怒！我记得他嘟囔着什么，突然间，";
+							mes "我失去了对身体的控制！我的手臂和腿就像是自己在动！";
 							next;
-							mes "[Timid Young Man]";
-							mes "Before long, I found myself";
-							mes "struggling to keep myself from";
-							mes "leaping off that Bungee Jump.";
-							mes "But the more I resisted, the";
-							mes "more violently I'd flail toward";
-							mes "the edge. It was horrible!";
+							mes "[胆小的年轻人]";
+							mes "没过多久，我发现自己在拼命阻止自己跳下那个蹦极跳。";
+							mes "但我越是抵抗，就越是猛烈地朝边缘扑去。真是可怕！";
 							next;
-							mes "[Timid Young Man]";
-							mes "That was the most terrifying";
-							mes "experience of my life! It was";
-							mes "bad enough that I risked my";
-							mes "life, but that feeling of not";
-							mes "having any control over your";
-							mes "body is so overwhelming!";
+							mes "[害羞的年轻人]";
+							mes "这是我一生中最可怕的经历！我冒着生命危险已经够糟糕了，";
+							mes "但那种对自己身体完全失去控制的感觉真是令人窒息！";
 							next;
 							mes "[" + strcharinfo(0) + "]";
-							mes "Wait, you're saying";
-							mes "a Bard did this to you?";
-							mes "I've never heard of a song";
-							mes "or skill with that sort of effect before. That's really strange...";
+							mes "等一下，你是说一个吟游诗人对你做了这个？";
+							mes "我从未听说过有这种效果的歌曲或技能。这真奇怪……";
 							next;
-							mes "[Timid Young Man]";
-							mes "Well, I've never heard";
-							mes "of that sort of power up";
-							mes "until I had to experience";
-							mes "it for myself. Oh, I can still";
-							mes "see that evil smile of his";
-							mes "in my nightmares...";
+							mes "[害羞的年轻人]";
+							mes "嗯，我之前从未听说过这种力量，直到我亲身经历。哦，";
+							mes "我在梦中仍然能看到他那邪恶的微笑……";
 							next;
-							mes "[Timid Young Man]";
-							mes "Anyway, thanks for that";
-							mes "drink, it really helped me";
-							mes "settle my nerves. But I must";
-							mes "warn you not to look for that";
-							mes "strange Bard. I'm sure he's really some sort of demon or something...";
+							mes "[害羞的年轻人]";
+							mes "无论如何，感谢你给我那杯饮料，真的帮我平静了神经。";
+							mes "但我必须警告你，不要去寻找那个奇怪的吟游诗人。";
+							mes "我敢肯定他真的是某种恶魔……";
 							next;
 							if (JobLevel > 39) {
-								mes "[Timid Young Man]";
-								mes "But... If you really";
-								mes "want to attain that sort";
-								mes "of power, I can't really";
-								mes "stop you. Thankfully, nobody";
-								mes "has any idea of where he is~";
+								mes "[害羞的年轻人]";
+								mes "但是……如果你真的想获得那种力量，我也无法阻止你。";
+								mes "谢天谢地，没人知道他在哪里~";
 								delitem 12112,1; //Tropical_Sograt
 								set qskill_bard,1;
 							}
 							else {
-								mes "[Timid Young Man]";
-								mes "Even if you could find that";
-								mes "Bard to get him to teach you";
-								mes "how he did that to me, I'm sure";
-								mes "he mentioned something about";
-								mes "being at least ^660000Job Level 40^000000 to";
-								mes "be able to handle that power...";
+								mes "[害羞的年轻人]";
+								mes "即使你能找到那个吟游诗人让他教你怎么对我做的事，";
+								mes "我敢肯定他提到过至少要达到^660000职业等级 40^000000才能";
+								mes "驾驭那种力量……";
 								delitem 12112,1; //Tropical_Sograt
 							}
 							close;
@@ -315,60 +215,40 @@ prontera,174,328,3	script	Young Man#bard_q1	89,3,3,{
 					}
 				}
 				else {
-					mes "[Timid Young Man]";
-					mes "Eh...?! Um, th-that's";
-					mes "nice of y-you to offer,";
-					mes "but I'm p-pretty picky";
-					mes "about what I d-drink.";
-					mes "P-plus, I don't k-know";
-					mes "if I can t-trust you.";
+					mes "[害羞的年轻人]";
+					mes "呃…？！嗯，你这样说真好，但我对饮料很挑剔。而且，";
+					mes "我不知道我能不能信任你。";
 					next;
-					mes "[Timid Young Man]";
-					mes "I don't think there's";
-					mes "much that could get m-me";
-					mes "to ch-change my m-mind!";
-					mes "Well... Maybe if you brought";
-					mes "my favorite drink, Tropical";
-					mes "Sograt, I would reconsider...";
+					mes "[害羞的年轻人]";
+					mes "我觉得没有什么能让我改变主意！";
+					mes "嗯……也许如果你带来我最喜欢的饮料，热带索格拉特，";
+					mes "我会考虑一下……";
 					close;
 				}
 			}
 			mes "[" + strcharinfo(0) + "]";
-			mes "Don't worry,";
-			mes "I won't hurt you.";
+			mes "别担心，我不会伤害你的。";
 			next;
-			mes "[Timid Young Man]";
-			mes "Th-that's what th-they";
-			mes "all say, right before they";
-			mes "get into your mind and then";
-			mes "twist it as hard as they can!";
+			mes "[害羞的年轻人]";
+			mes "那是他们都说的，对吧，";
+			mes "在他们进入你的脑海并尽可能扭曲它之前！";
 			if (qskill_bard == 9) {
-				mes "J-just don't t-touch me!";
-				mes "...Ack! And stay away!";
+				mes "只要别碰我！……啊！而且离我远点！";
 			}
 			else {
-				mes "E-even if you d-don't have";
-				mes "that p-power, l-leave me alone!";
+				mes "即使你没有那种力量，也请离我远点！";
 			}
 			close;
 		}
 	}
 	else {
-		mes "[Timid Young Man]";
-		mes "Oh... Oh goodness.";
-		mes "Was that a Bard just";
-		mes "over there? Oh, I'm so";
-		mes "afraid of those guys!";
-		mes "And those Minstrels";
-		mes "are even worse!";
+		mes "[害羞的年轻人]";
+		mes "哦……天哪。刚才那是一个吟游诗人吗？哦，我真害怕那些家伙！";
+		mes "那些小调歌手更糟糕！";
 		next;
-		mes "[Timid Young Man]";
-		mes "Don't get me wrong, I love";
-		mes "songs and entertainment,";
-		mes "but you've got to understand!";
-		mes "Some of them have powers";
-		mes "that you wouldn't believe!";
-		mes "I... I've seen them myself!";
+		mes "[害羞的年轻人]";
+		mes "别误会，我喜欢歌曲和娱乐，但你得理解！";
+		mes "他们中的一些人拥有你无法想象的力量！我……我亲眼见过！";
 		close;
 	}
 
@@ -379,261 +259,170 @@ OnTouch:
 	end;
 }
 
-morocc_in,169,72,7	script	Spiteful-Looking Bard#bs	741,3,3,{
+morocc_in,169,72,7	script	恶毒的吟游诗人#bs	741,3,3,{
 	if (BaseJob == Job_Bard) {
 		if (Class == Job_Clown && qskill_bard == 9) {
 			if (getskilllv("BA_PANGVOICE") != 0) {
-				mes "[Riott]";
-				mes "Geh heh heh~";
-				mes "Been making good use of";
-				mes "what I taught you? Just be";
-				mes "careful and don't use that skill recklessly. Otherwise, people";
-				mes "will hate you as they hate me.";
+				mes "[里奥特]";
+				mes "嘿嘿嘿~你有好好利用我教你的东西吗？小心点，";
+				mes "别随便使用那个技能。否则，人们会像恨我一样恨你。";
 				next;
-				mes "[Riott]";
-				mes "Your enemies, and the";
-				mes "occasional drunkard, on";
-				mes "the other hand, are different";
-				mes "matters entirely! Bwah hah hah!";
+				mes "[里奥特]";
+				mes "至于你的敌人和偶尔的醉汉，";
+				mes "那就完全是不同的事了！哈哈哈！";
 				close;
 			}
 			else {
-				mes "[Riott]";
-				mes "Impossible! You forgot";
-				mes "everything I've taught you?";
-				mes "How can that be? Oh well, it's";
-				mes "no trouble for me to teach that";
-				mes "to you again if you'd like.";
+				mes "[里奥特]";
+				mes "不可能！你忘记我教你的所有东西了吗？怎么会这样？哦，";
+				mes "好吧，如果你愿意，我再教你一次也没问题。";
 				next;
-				if (select("No, thanks.:Thanks, I'd appreciate that.") == 1) {
-					mes "[Riott]";
-					mes "What...?";
-					mes "You really don't";
-					mes "want to learn it?";
-					mes "I assure you there's";
-					mes "no strings attached.";
-					mes "If you change your mind...";
+				if (select("不，谢谢。:谢谢，我很感激。") == 1) {
+					mes "[里奥特]";
+					mes "什么……？你真的不想学吗？我向你保证没有任何附加条件。";
+					mes "如果你改变主意……";
 					close;
 				}
-				mes "[Riott]";
-				mes "First, you must stare";
-				mes "fiercely into the eyes of";
-				mes "your target, and focus on";
-				mes "thoughts of dominance. This";
-				mes "is the basis for mesmerization. Now listen to this incantation...";
+				mes "[里奥特]";
+				mes "首先，你必须凶狠地盯着目标的眼睛，专注于支配的想法。";
+				mes "这是催眠的基础。现在听这个咒语……";
 				next;
-				mes "[Riott]";
-				mes "Uuuummm Baaalaaaa";
-				mes "Uuuummmm Baaalaaa~";
-				mes "Kkkkuuurrirrreeee";
-				mes "Kkkkuuurrirrreeee";
-				mes "Oooumm guandlejdl";
-				mes "Woooo Ei ei ei ei......";
+				mes "[里奥特]";
+				mes "呜呜呜 巴拉啦~呜呜呜 巴拉啦~咕咕咕咕咕咕 咕咕咕咕 咕";
+				mes "咕 呜呜呜呜 维维维维维……";
 				specialeffect EF_TALK_FROSTJOKE;
 				next;
-				mes "[Riott]";
-				mes "Pang's Voice is used to";
-				mes "confuse people and disrupt";
-				mes "control of their bodies. It's not a fatal skill, but it is effective";
-				mes "in mentally upsetting your enemy. Make very wise use of this skill.";
+				mes "[里奥特]";
+				mes "Pang的声音用于迷惑人们并干扰他们身体的控制。";
+				mes "这不是致命技能，但在心理上能有效地扰乱敌人。";
+				mes "请明智地使用这个技能。";
 				skill "BA_PANGVOICE",1,SKILL_PERM;
 				close;
 			}
 		}
 		else if (qskill_bard > 8) {
-			mes "[Riott]";
-			mes "Geh heh heh~";
-			mes "Been making good use of";
-			mes "what I taught you? Just be";
-			mes "careful and don't use that skill recklessly. Otherwise, people";
-			mes "will hate you as they hate me.";
+			mes "[里奥特]";
+			mes "嘿嘿嘿~你有没有好好利用我教你的东西？小心点，";
+			mes "不要随意使用那个技能。否则，人们会像恨我一样恨你。";
 			next;
-			mes "[Riott]";
-			mes "Your enemies, and the";
-			mes "occasional drunkard, on";
-			mes "the other hand, are different";
-			mes "matters entirely! Bwah hah hah!";
+			mes "[里奥特]";
+			mes "你的敌人和偶尔的醉汉，情况就完全不同了！哈哈哈！";
 			close;
 		}
 		else if (qskill_bard == 8) {
 			if (countitem(7277) > 0) {
-				mes "[Riott]";
-				mes "Ah, you've brought me";
-				mes "a Munak Doll made by";
-				mes "Yao Jun, just like you said";
-				mes "you would. Ah yes, this is her";
-				mes "craftsmanship, impeccable";
-				mes "as always. You've done well~";
+				mes "[里奥特]";
+				mes "啊，你给我带来了一个由姚俊制作的僵尸妹玩偶，";
+				mes "正如你所说的。啊，是的，这是她的工艺，";
+				mes "一如既往地完美。你做得很好~";
 				next;
-				mes "[Riott]";
-				mes "To fulfill my part of this";
-				mes "bargain, I shall now teach";
-				mes "you my special skill. Now,";
-				mes "I developed this by listening";
-				mes "to incantations by the Utan";
-				mes "Shaman in Umbala.";
+				mes "[里奥特]";
+				mes "为了履行我的承诺，我现在要教你我的特殊技能。";
+				mes "我是通过听Umbala的Utan萨满的咒语开发这个技能的。";
 				next;
-				mes "[Riott]";
-				mes "First, you must stare";
-				mes "fiercely into the eyes of";
-				mes "your target, and focus on";
-				mes "thoughts of dominance. This";
-				mes "is the basis for mesmerization. Now listen to this incantation...";
+				mes "[里奥特]";
+				mes "首先，你必须凶狠地盯着目标的眼睛，专注于支配的想法。";
+				mes "这是催眠的基础。现在听这个咒语……";
 				next;
-				mes "[Riott]";
-				mes "''Toad's leg, Verit's heart,";
-				mes "spinning stars, spilling zeny,";
-				mes "hands and feet tied. Is this";
-				mes "voices yours, is this voice";
-				mes "mine. Head spinning, head";
-				mes "spinning, head spinning...!''";
+				mes "[里奥特]";
+				mes "''蟾蜍的腿，维里特的心，旋转的星星，倾泻的仙女，";
+				mes "手脚被绑。这声音是你的，还是我的。头晕，头晕，头晕……！''";
 				specialeffect2 EF_TALK_FROSTJOKE;
-				delitem 7277,1; //Munak_Doll
+				delitem 7277,1; //僵尸妹_Doll
 				skill "BA_PANGVOICE",1,SKILL_PERM;
 				set qskill_bard,9;
 				next;
-				mes "[Riott]";
-				mes "Remember, it doesn't matter";
-				mes "what you say, but how you say";
-				mes "it. Hypnotically induce your";
-				mes "target with a forbiddenly";
-				mes "seductive rhythm and your";
-				mes "grasp will be inescapable!";
+				mes "[里奥特]";
+				mes "记住，重要的不是你说什么，而是你怎么说。";
+				mes "用禁忌而诱人的节奏催眠你的目标，你的掌控将无可逃避！";
 				next;
-				mes "[Riott]";
-				mes "Ah, and use sleight of";
-				mes "hand to distract your target";
-				mes "from your true motive! I find";
-				mes "that casting Unbarring Octave";
-				mes "with this skill works best. This skill's name is ''Pang Voice!''";
+				mes "[里奥特]";
+				mes "啊，利用巧妙的手法分散目标对你真实动机的注意！";
+				mes "我发现用这个技能施展Unbarring Octave效果最好。";
+				mes "这个技能的名字是''Pang Voice！''";
 				next;
-				mes "[Riott]";
-				mes "''Pang Voice'' will mentally";
-				mes "shock your target and disrupt";
-				mes "control of his own body for";
-				mes "a while. You can't exert control";
-				mes "over victims with this skill, but they usually assume otherwise...";
+				mes "[里奥特]";
+				mes "''Pang Voice''会在心理上震撼你的目标，";
+				mes "并在一段时间内干扰他对自己身体的控制。";
+				mes "你无法对受害者施加控制，但他们通常会认为相反……";
 				next;
-				mes "[Riott]";
-				mes "You need to be judicious in";
-				mes "your use of this skill! Don't";
-				mes "use it recklessly, or people";
-				mes "will come to hate you as they";
-				mes "hate me. But ''Pang Voice'' can be welcome is certain situations.";
+				mes "[里奥特]";
+				mes "你需要谨慎使用这个技能！不要随意使用，";
+				mes "否则人们会像恨我一样恨你。但在某些情况下，";
+				mes "''Pang Voice''是受欢迎的。";
 				next;
-				mes "[Riott]";
-				mes "Subject your enemies to";
-				mes "Pang Voice as much as you";
-				mes "like, and no one will blame";
-				mes "you for it. And you can get away with casting Pang Voice on bullies";
-				mes "and drunkards occasionally...";
+				mes "[里奥特]";
+				mes "随意对你的敌人施加Pang Voice，没人会责怪你。";
+				mes "而且你偶尔可以对欺负者和醉汉施展Pang Voice……";
 				close;
 			}
-			mes "[Riott]";
-			mes "Hmpf. Weren't able";
-			mes "to find me a Munak Doll";
-			mes "yet? Well, don't worry, I'm";
-			mes "a patient man. Just try to get";
-			mes "one for me as soon as you can.";
+			mes "[里奥特]";
+			mes "哼。还没能给我找到僵尸妹玩偶吗？别担心，我是个耐心的人。";
+			mes "尽快给我找一个吧。";
 			close;
 		}
 		else if (qskill_bard == 7) {
 			if (countitem(574) > 4) {
-				mes "[Riott]";
-				mes "Ah, you've brought me";
-				mes "some fresh eggs laid by";
-				mes "Yhelle, just like I asked.";
-				mes "I'm sure it was dangerous";
-				mes "going to Niflheim, but the flavor of these eggs is worth it.";
+				mes "[里奥特]";
+				mes "啊，你给我带来了Yhelle下的鲜鸡蛋，正如我所要求的。";
+				mes "我知道去尼夫海姆很危险，但这些鸡蛋的味道是值得的。";
 				next;
 				next;
-				mes "[Riott]";
-				mes "To fulfill my part of this";
-				mes "bargain, I shall now teach";
-				mes "you my special skill. Now,";
-				mes "I developed this by listening";
-				mes "to incantations by the Utan";
-				mes "Shaman in Umbala.";
+				mes "[里奥特]";
+				mes "为了履行我的承诺，我现在要教你我的特殊技能。";
+				mes "我是通过听Umbala的Utan萨满的咒语开发这个技能的。";
 				next;
-				mes "[Riott]";
-				mes "First, you must stare";
-				mes "fiercely into the eyes of";
-				mes "your target, and focus on";
-				mes "thoughts of dominance. This";
-				mes "is the basis for mesmerization. Now listen to this incantation...";
+				mes "[里奥特]";
+				mes "首先，你必须用强烈的目光盯着目标，专注于支配的思想。";
+				mes "这是催眠的基础。现在听这个咒语……";
 				next;
-				mes "[Riott]";
-				mes "''Toad's leg, Verit's heart,";
-				mes "spinning stars, spilling zeny,";
-				mes "hands and feet tied. Is this";
-				mes "voices yours, is this voice";
-				mes "mine. Head spinning, head";
-				mes "spinning, head spinning...!''";
+				mes "[里奥特]";
+				mes "''蟾蜍的腿，维里特的心，旋转的星星，洒落的仙女币，";
+				mes "手脚被绑。这声音是你的，还是我的。头晕，头晕，头晕……！''";
 				specialeffect2 EF_TALK_FROSTJOKE;
 				delitem 574,5; //Egg
 				skill "BA_PANGVOICE",1,SKILL_PERM;
 				set qskill_bard,9;
 				next;
-				mes "[Riott]";
-				mes "Remember, it doesn't matter";
-				mes "what you say, but how you say";
-				mes "it. Hypnotically induce your";
-				mes "target with a forbiddenly";
-				mes "seductive rhythm and your";
-				mes "grasp will be inescapable!";
+				mes "[里奥特]";
+				mes "记住，重要的不是你说什么，而是你怎么说。";
+				mes "用禁忌而诱人的节奏催眠你的目标，你的掌控将无可逃避！";
 				next;
-				mes "[Riott]";
-				mes "Ah, and use sleight of";
-				mes "hand to distract your target";
-				mes "from your true motive! I find";
-				mes "that casting Unbarring Octave";
-				mes "with this skill works best. This skill's name is ''Pang Voice!''";
+				mes "[里奥特]";
+				mes "啊，利用手法分散目标对你真实动机的注意力！";
+				mes "我发现用这个技能施展不受限制的八度音阶效果最好。";
+				mes "这个技能的名字是''震撼之声！''";
 				next;
-				mes "[Riott]";
-				mes "''Pang Voice'' will mentally";
-				mes "shock your target and disrupt";
-				mes "control of his own body for";
-				mes "a while. You can't exert control";
-				mes "over victims with this skill, but they usually assume otherwise...";
+				mes "[里奥特]";
+				mes "''震撼之声''会在心理上震撼你的目标，";
+				mes "暂时干扰他们对身体的控制。";
+				mes "你无法通过这个技能控制受害者，";
+				mes "但他们通常会认为自己可以……";
 				next;
-				mes "[Riott]";
-				mes "You need to be judicious in";
-				mes "your use of this skill! Don't";
-				mes "use it recklessly, or people";
-				mes "will come to hate you as they";
-				mes "hate me. But ''Pang Voice'' can be welcome is certain situations.";
+				mes "[里奥特]";
+				mes "你需要谨慎使用这个技能！不要轻率使用，";
+				mes "否则人们会像恨我一样恨你。但在某些情况下，";
+				mes "''震撼之声''是受欢迎的。";
 				next;
-				mes "[Riott]";
-				mes "Subject your enemies to";
-				mes "Pang Voice as much as you";
-				mes "like, and no one will blame";
-				mes "you for it. And you can get away with casting Pang Voice on bullies";
-				mes "and drunkards occasionally...";
+				mes "[里奥特]";
+				mes "随意对你的敌人施加震撼之声，没人会责怪你。";
+				mes "而且你偶尔可以对霸 bully 和醉汉施展震撼之";
+				mes "声而逃脱惩罚……";
 				close;
 			}
 			else {
-				mes "[Riott]";
-				mes "Hmm... You didn't";
-				mes "bring enough Eggs...";
-				mes "This will not do. It'll";
-				mes "be a while until Yhelle";
-				mes "will be able to lay more";
-				mes "eggs. Yes, this isn't enough...";
+				mes "[里奥特]";
+				mes "嗯……你带的蛋不够……这可不行。";
+				mes "Yhelle要再下蛋还要一段时间。是的，这不够……";
 				next;
-				mes "[Riott]";
-				mes "Well, to make up for the";
-				mes "missing eggs, go and get ";
-				mes "me ^4D4DFF1 Munak Doll^000000. I know that";
-				mes "Yao Jun's Munak Dolls are";
-				mes "masterpieces, and I am an";
-				mes "an avid collector of her work.";
+				mes "[里奥特]";
+				mes "好吧，为了弥补缺少的蛋，去给我拿一个^4D4DFF1穆纳克娃娃^000000。";
+				mes "我知道姚君的穆纳克娃娃是杰作，";
+				mes "而我也是她作品的狂热收藏者。";
 				next;
-				mes "[Riott]";
+				mes "[]";
 				if (countitem(574) > 0) {
-					mes "In the meanwhile,";
-					mes "I'll enjoy the few";
-					mes "eggs that you do have!";
-					mes "Bweh heh heh heh heh!";
+					mes "在此期间，我会享受你手中仅有的几个蛋！嘿嘿嘿嘿嘿！";
 					delitem 574,countitem(574); //Egg
 				}
 				set qskill_bard,8;
@@ -641,259 +430,159 @@ morocc_in,169,72,7	script	Spiteful-Looking Bard#bs	741,3,3,{
 			}
 		}
 		else if (qskill_bard > 1 && qskill_bard < 7) {
-			mes "[Riott]";
-			mes "So have you been";
-			mes "having trouble gathering";
-			mes "eggs from Yhelle? I know";
-			mes "she can be one fast running";
-			mes "chicken. But to survive where";
-			mes "she roosts, she has to be.";
+			mes "[里奥特]";
+			mes "所以你在收集Yhelle的蛋时遇到麻烦了吗？";
+			mes "我知道她是一只跑得很快的鸡。但为了生存，她必须如此。";
 			close;
 		}
 		else {
-			mes "[Riott]";
-			mes "Hmmrmpf!";
-			mes "Eh heh heh heh!";
+			mes "[里奥特]";
+			mes "嗯哼！嘿嘿嘿嘿！";
 			emotion ET_KIK;
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Um...";
-			mes "What's so funny?";
+			mes "嗯……有什么好笑的？";
 			next;
 			if (gef_bard_q == 30 || gef_bard_q == 31) {
-				mes "[Riott]";
-				mes "Hm? Ah! That's one of the";
+				mes "[里奥特]";
+				mes "嗯？啊！那是其中之一";
 				if (gef_bard_q == 30) {
-					mes "Black Seals that can only";
-					mes "be given by Kino Kitty. You";
-					mes "must be a person of great";
-					mes "emotional depth if he favors";
-					mes "you enough to give you that.";
+					mes "只能由基诺猫咪赠送的黑色印章。如果他如此青睐你，";
+					mes "你一定是个情感深邃的人。";
 				}
 				else {
-					mes "Silver Seals that can only";
-					mes "be given by Errende. You";
-					mes "must be truly kind at heart";
-					mes "if he has offered to be your";
-					mes "friend. How about that?";
+					mes "只能由埃伦德赠送的银色印章。如果他愿意成为你的朋友，";
+					mes "你一定是个心地善良的人。怎么样？";
 				}
 				next;
-				mes "[Riott]";
-				mes "Geh heh heh~";
-				mes "Hey, take a look";
-				mes "at those two drunks";
-				mes "all the way over there.";
+				mes "[里奥特]";
+				mes "嘿嘿嘿~ 看看那边的两个醉汉。";
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "Yeah, I can see them.";
-				mes "But what's so special";
-				mes "about those two guys?";
+				mes "是的，我能看到他们。但是那两个家伙有什么特别之处吗？";
 				next;
-				mes "[Riott]";
-				mes "Just...";
-				mes "Keep watching.";
+				mes "[里奥特]";
+				mes "只需……继续观察。";
 				next;
-				mes "^3355FFRiott stared intensely";
-				mes "at one of the drunken men";
-				mes "and began to harshly murmur";
-				mes "some indistinct words in a";
-				mes "low, hoarse voice. One of the";
-				mes "men starts slightly convulsing.^000000";
+				mes "^3355FF里奥特盯着一个醉汉，低声嘟囔着一些模糊的词语。";
+				mes "那个男人开始微微抽搐。^000000";
 				next;
-				mes "[Little Bit Drunken Guy]";
-				mes "H-hey...! ^333333*Hiccup!*^000000";
-				mes "What are you doing?!";
-				mes "K-keep your hands to";
-				mes "yourself! Do I look";
-				mes "like a woman to you?";
+				mes "[醉汉小子]";
+				mes "嘿...！^333333*打嗝!*^000000你在干什么？！别碰我！你觉得我像女人吗？";
 				next;
-				mes "[More Drunken Guy]";
-				mes "What are you talking";
-				mes "about? Wh-what?! Why";
-				mes "are my arms all wrapped";
-				mes "around you? S-sorry, I was";
-				mes "trying to just go that w--";
-				mes "I wasn't trying to hug you!";
+				mes "[另一个醉汉]";
+				mes "你在说什么？什、什么？！我怎么会抱着你？抱歉，";
+				mes "我只是想往那边走——我不是想抱你！";
 				next;
-				mes "[Little Bit Drunken Guy]";
-				mes "Bumping into me,";
-				mes "I understand. But a full";
-				mes "blown hug? Come on, now!";
-				mes "That was totally on purpose!";
-				mes "Wh-what? My h-hand! It's...";
-				mes "It's moving my itself?!";
+				mes "[醉汉小子]";
+				mes "碰到我我可以理解，但你居然抱我？这完全是故意的！什、";
+				mes "什么？我的手！它...自己在动？！";
 				next;
-				mes "[More Drunken Guy]";
-				mes "Ack! Wh-what are";
-				mes "you doing! S-stop";
-				mes "touching my butt!";
+				mes "[另一个醉汉]";
+				mes "啊！你在干什么！别碰我的屁股！";
 				next;
-				mes "^3355FFThe two men continued";
-				mes "to gesticulate and move";
-				mes "wildly without direction.";
+				mes "^3355FF这两个男人继续无目的地挥舞着手臂。";
 				next;
 				mes "[" + strcharinfo(0) + "]";
-				mes "Those two...";
-				mes "Those two probably";
-				mes "had way too much to drink.";
+				mes "那两个……那两个可能喝得太多了。";
 				next;
-				mes "[Riott]";
-				mes "Nah, they just lost";
-				mes "control of their bodies";
-				mes "for a bit. It's the result";
-				mes "of my skill which sort of";
-				mes "scrambles their minds.";
+				mes "[里奥特]";
+				mes "不，他们只是暂时失去了对身体的控制。这是我技能的结果，";
+				mes "会让他们的思维混乱。";
 				next;
 				if (qskill_bard == 1) {
 					mes "[" + strcharinfo(0) + "]";
-					mes "Mind scrambling?";
-					mes "Wait, are you the same";
-					mes "Bard who made someone";
-					mes "jump off Umbala's Bungee";
-					mes "Jump against his will?";
+					mes "脑袋混乱？等一下，";
+					mes "你是那个让人强迫跳下乌姆巴拉蹦极的吟游诗人吗？";
 					next;
-					mes "[Riott]";
-					mes "Huh? How did you";
-					mes "learn about that?";
-					mes "I'm not proud of that,";
-					mes "(even though it was";
-					mes "hilarious at the time)";
-					mes "but yeah, that was me.";
+					mes "[里奥特]";
+					mes "哈？你怎么知道的？我对此并不自豪（尽管当时确实很搞笑），";
+					mes "但没错，那是我。";
 					next;
-					if (select("Please teach me that skill!:Oh, alright. Just checking.") == 1) {
-						mes "[Riott]";
-						mes "Hm? You want to learn";
-						mes "how to scramble minds";
-						mes "like I did just now? Well,";
-						mes "I invented this skill, though";
-						mes "I did have a lot of help from";
-						mes "the Utan Shaman. Let's see...";
+					if (select("请教我那个技能！:哦，好吧。只是随便问问。") == 1) {
+						mes "[里奥特]";
+						mes "嗯？你想学我刚才那样混乱思维的技能？我发明了这个技能，";
+						mes "虽然我得到了乌坦萨满的很多帮助。让我看看...";
 						next;
-						mes "[Riott]";
-						mes "Alright. If you want me";
-						mes "to teach you, then bring me";
-						mes "5 Eggs from a chicken named";
-						mes "Yhelle. Yhelle lays the highest";
-						mes "quality eggs: they're delicious";
-						mes "and great for a Bard's voice~";
+						mes "[里奥特]";
+						mes "好吧。如果你想让我教你，就给我带来5个名叫Yhelle的鸡蛋。";
+						mes "Yhelle下的蛋质量最高：美味又对吟游诗人的声音有帮助~";
 						next;
-						mes "[Riott]";
-						mes "However, this chicken roosts";
-						mes "in a strange, dangerous place.";
-						mes "You'll need to explore this huge, mysterious tree in Umbala in order";
-						mes "to get there. Last time I went,";
-						mes "I pretty much almost died.";
+						mes "[里奥特]";
+						mes "不过，这只鸡在一个奇怪而危险的地方栖息。";
+						mes "你需要探索乌姆巴拉那棵巨大而神秘的树才能到达那里。";
+						mes "上次我去的时候，差点就死了。";
 						next;
-						mes "[Riott]";
-						mes "Alright...";
-						mes "So don't forget";
-						mes "to come back here";
-						mes "and bring me back";
-						mes "^4D4DFF5 Yhelle's Eggs^000000, alright?";
+						mes "[里奥特]";
+						mes "好了...所以别忘了回来带给我^4D4DFFYhelle的鸡蛋^000000，好吗？";
 						set qskill_bard,2;
 						close;
 					}
-					mes "[Riott]";
-					mes "Boy, you're a curious one.";
-					mes "But if you know about that";
-					mes "and you bumped into me, you";
-					mes "must certainly travel around";
-					mes "a lot. I can respect a good,";
-					mes "seasoned adventurer like you.";
+					mes "[里奥特]";
+					mes "哎呀，你真是个好奇的人。不过如果你知道这些，还碰到我，";
+					mes "那你肯定是个四处旅行的人。";
+					mes "我很欣赏像你这样的老练冒险者。";
 					close;
 				}
 				mes "[" + strcharinfo(0) + "]";
-				mes "Wha...?";
-				mes "I can't believe you.";
-				mes "Mind scrambling? That";
-				mes "doesn't make any sense!";
-				mes "They're just really drunk...";
+				mes "什么……？我不敢相信你。脑袋混乱？这没有任何意义！";
+				mes "他们只是喝醉了……";
 				next;
-				mes "[Riott]";
-				mes "How dare you question my";
-				mes "power? Oh well, I suppose";
-				mes "I really can't be too angry.";
-				mes "Most people who do believe";
-				mes "me usually claim that I'm";
-				mes "an axis of evil about now...";
+				mes "[里奥特]";
+				mes "你敢质疑我的能力？哦，好吧，我想我真的不能太生气。";
+				mes "大多数相信我的人通常会说我现在是邪恶的化身...";
 				close;
 			}
-			mes "[Riott]";
-			mes "Eh, nothing much. Say,";
-			mes "you don't have any Bard";
-			mes "Seals? That's a sure sign";
-			mes "that you haven't been really";
-			mes "connecting with the Bard";
-			mes "community. That's a shame...";
+			mes "[里奥特]";
+			mes "呃，没什么特别的。对了，你没有吟游诗人印章吗？";
+			mes "这可是你没有真正融入吟游诗人社区的明显迹象。真可惜...";
 			next;
-			mes "[Riott]";
-			mes "*Sigh* Alright, I know";
-			mes "how you can meet more Bards.";
-			mes "Why don't you try making friends with Errende? Look for a Bard";
-			mes "dressed in green in Geffen and";
-			mes "you should be able to find him.";
+			mes "[里奥特]";
+			mes "唉，好吧，我知道你可以怎么认识更多的吟游诗人。";
+			mes "你为什么不试着和Errende交朋友呢？";
+			mes "在吉芬找一个穿绿色衣服的吟游诗人，你应该能找到他。";
 			close;
 		}
 	}
 	else {
-		mes "[Riott]";
-		mes "Hmmrmpf!";
-		mes "Eh heh heh heh!";
+		mes "[里奥特]";
+		mes "嗯哼！嘿嘿嘿！";
 		emotion ET_KIK;
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Um...";
-		mes "What's so funny?";
+		mes "嗯……有什么好笑的？";
 		next;
 		if (gef_bard_q == 30 || gef_bard_q == 31) {
-			mes "[Riott]";
-			mes "Hm? Ah! That's one of the";
+			mes "[里奥特]";
+			mes "嗯？啊！那是其中一个";
 			if (gef_bard_q == 30) {
-				mes "Black Seals that can only";
-				mes "be given by Kino Kitty. You";
-				mes "must be a person of great";
-				mes "emotional depth if he favors";
-				mes "you enough to give you that.";
+				mes "只能由Kino Kitty给予的黑色印章。如果他如此看重你，";
+				mes "说明你是个情感深邃的人。";
 			}
 			else {
-				mes "Silver Seals that can only";
-				mes "be given by Errende. You";
-				mes "must be truly kind at heart";
-				mes "if he has offered to be your";
-				mes "friend. How about that?";
+				mes "只能由Errende给予的银色印章。如果他愿意成为你的朋友，";
+				mes "说明你真的是个善良的人。怎么样？";
 			}
 			next;
-			mes "[Riott]";
-			mes "Geh heh heh~";
-			mes "Hey, take a look";
-			mes "at those two drunks";
-			mes "all the way over there.";
+			mes "[里奥特]";
+			mes "嘿嘿嘿~看看那边的两个醉汉。";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "Yeah, I can see";
-			mes "together. But what";
-			mes "about them?";
+			mes "是的，我能一起看到。但是他们呢？";
 			next;
-			mes "[Riott]";
-			mes "Just...";
-			mes "Keep watching.";
+			mes "[里奥特]";
+			mes "继续看。";
 			close;
 		}
-		mes "[Riott]";
-		mes "Eh, nothing much. Say,";
-		mes "I notice you don't have";
-		mes "any Bard seals. That tells";
-		mes "me that you don't really";
-		mes "meet that many Bards. You";
-		mes "should really change that.";
+		mes "[里奥特]";
+		mes "哦，没什么特别的。说实话，";
+		mes "我注意到你没有任何吟游诗人的印章。";
+		mes "这告诉我你并没有见过很多吟游诗人。你真的应该改变一下。";
 		next;
-		mes "[Riott]";
-		mes "Bards and Minstrels can";
-		mes "make some pretty handy";
-		mes "friends if you give them";
-		mes "a chance. Here, why don't";
-		mes "you find Errende in Geffen?";
-		mes "He's a pretty popular guy...";
+		mes "[里奥特]";
+		mes "如果你给他们一个机会，";
+		mes "吟游诗人和小调歌手可以成为非常好的朋友。来吧，";
+		mes "去吉芬找Errende吧？他是个很受欢迎的人……";
 		close;
 	}
 
@@ -903,7 +592,7 @@ OnTouch:
 }
 
 // Yhelle the Chicken
-//============================================================ 
+//============================================================
 niflheim,239,70,1	script	Yhelle#bard_chick1	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
@@ -937,7 +626,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",1,2; close;
 }
 
-niflheim,185,205,3	script	Yhelle#bard_chick2	800,3,3,{
+niflheim,185,205,3	script	耶赫尔#bard_chick2	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -963,7 +652,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",2,3; close;
 }
 
-niflheim,85,203,5	script	Yhelle#bard_chick3	800,3,3,{
+niflheim,85,203,5	script	耶赫尔#bard_chick3	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -989,7 +678,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",3,4; close;
 }
 
-niflheim,149,81,7	script	Yhelle#bard_chick4	800,3,3,{
+niflheim,149,81,7	script	耶赫尔#bard_chick4	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -1015,7 +704,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",4,5; close;
 }
 
-niflheim,209,144,3	script	Yhelle#bard_chick5	800,3,3,{
+niflheim,209,144,3	script	耶赫尔#bard_chick5	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -1042,8 +731,8 @@ OnTouch:
 }
 
 // Drunken Men
-//============================================================ 
-morocc_in,178,73,3	script	Customer#bard_skill01	54,{
+//============================================================
+morocc_in,178,73,3	script	顾客#bard_skill01	54,{
 	mes "[小醉汉]";
 	mes "你觉得怎么样";
 	mes "是全世界最好喝的饮料吗？我觉得";
@@ -1103,7 +792,7 @@ morocc_in,178,73,3	script	Customer#bard_skill01	54,{
 	close;
 }
 
-morocc_in,175,70,7	script	Customer#bard_skill02	50,{
+morocc_in,175,70,7	script	顾客#bard_skill02	50,{
 	mes "[小醉汉]";
 	mes "你觉得怎么样";
 	mes "是全世界最好喝的饮料吗？我觉得";
@@ -1164,8 +853,8 @@ morocc_in,175,70,7	script	Customer#bard_skill02	50,{
 }
 
 // Bartender
-//============================================================ 
-morocc_in,166,76,7	script	Bartender#bard_qskill	46,{
+//============================================================
+morocc_in,166,76,7	script	酒保#bard_qskill	46,{
 	if (checkweight(1201,1) == 0) {
 		mes "^3355FF站住！";
 		mes "你携带的物品太多，背包空间不足以接收任何奖励。请腾出更多背包空间后再来接受这个挑战。";
@@ -1247,29 +936,25 @@ morocc_in,166,76,7	script	Bartender#bard_qskill	46,{
 }
 
 // Function
-//============================================================ 
+//============================================================
 function	script	F_BardSkillYhelle	{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 2000) {
-		mes "^3355FFHold it right there!";
-		mes "You're carrying too many items and don't have enough inventory space to receive any rewards. Please make more inventory space available and come back to take this challenge.";
+		mes "^3355FF等一下！你携带的物品太多，背包空间不足，";
+		mes "无法接收任何奖励。";
+		mes "请腾出更多背包空间后再来接受这个挑战。";
 		close;
 	}
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
-	mes "[Hen Yhelle]";
-	mes "Cluck-Cluuuck?";
-	mes "Cluck cluck cluck!";
+	mes "[亨·耶赫尔]";
+	mes "咯咯？咯咯咯咯！";
 	next;
 	if (rand(1,3) == 2) {
 		disablenpc "Yhelle#bard_chick"+getarg(0);
 		donpcevent "Yhelle#bard_chick"+getarg(1)+"::OnEnable";
-		mes "^3355FFUpon sensing your";
-		mes "presense, the hen";
-		mes "quickly ran away.^000000";
+		mes "^3355FF在感知到你的存在后，母鸡迅速跑开了。^000000";
 		if (qskill_bard > 1 && qskill_bard < 7) {
-			mes "^3355FFYou found ^3333331 Egg^3355FF in the";
-			mes "place where Yhelle the";
-			mes "Hen was roosting.^000000";
+			mes "^3355FF你在耶赫尔母鸡栖息的地方发现了^3333331个蛋^3355FF。^000000";
 			set qskill_bard,qskill_bard+1;
 			getitem 574,1; //Egg
 		}
@@ -1277,9 +962,7 @@ function	script	F_BardSkillYhelle	{
 	else {
 		disablenpc "Yhelle#bard_chick"+getarg(0);
 		donpcevent "Yhelle#bard_chick"+getarg(1)+"::OnEnable";
-		mes "^3355FFUpon sensing your";
-		mes "presense, the hen";
-		mes "quickly ran away.^000000";
+		mes "^3355FF在感知到你的存在后，母鸡迅速跑开了。^000000";
 	}
 	return;
 }
