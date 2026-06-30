@@ -47,7 +47,7 @@
 			.@Grade = select(.@menu$);
 			.@BaseLevel = 5 + (.@Grade * 10);
 			.@BaseLevel = (.@val > 90)? 90 : .@BaseLevel;
-			.@ZenyCost = 7 * .@Grade;
+			.@ZenyCost = 700 * .@Grade;
 			setarray .@FaithCost[7], 50,100,300;
 			.@FaithCost = .@FaithCost[.@Grade];
 			mes "[Mercenary Manager]";
@@ -55,7 +55,7 @@
 			mes "Grade " + .@name$[.@type] + " Mercenary?";
 			mes "You need to have attained";
 			mes "Base Level " + .@BaseLevel + " or higher, and";
-			mes "must pay the " + .@ZenyCost + ",000 zeny fee.";
+			mes "must pay the " + .@ZenyCost + " zeny fee.";
 			next;
 			if(select("Yes:No") == 2) {
 				mes "[Mercenary Manager]";
@@ -83,12 +83,12 @@
 				mes "Please come back to me";
 				mes "once you reach Base Level " + .@BaseLevel + ".";
 			}
-			else if (Zeny < .@ZenyCost * 1000) {
+			else if (Zeny < .@ZenyCost) {
 				mes "[Mercenary Manager]";
 				mes "I'm sorry, but you";
 				mes "don't have enough zeny";
 				mes "to hire this Mercenary.";
-				mes "The hiring fee is " + .@ZenyCost + ",000 zeny.";
+				mes "The hiring fee is " + .@ZenyCost + " zeny.";
 			}
 			else {
 				mes "[Mercenary Manager]";
@@ -97,8 +97,8 @@
 				mes "to protecting their clients.";
 				mes "Summoned Mercenaries will";
 				mes "offer their support to you for";
-				mes "30 minutes. Take care now.";
-				Zeny = Zeny - (.@ZenyCost * 1000);
+				mes "300 minutes. Take care now.";
+				Zeny = Zeny - .@ZenyCost;
 				getitem .@item[.@type] - 10 + .@Grade, 1;
 			}
 			close;
@@ -136,7 +136,7 @@
 			mes "You can't give this scroll";
 			mes "to anyone else, and the";
 			mes "Mercenary will only remain";
-			mes "with you for 30 minutes after";
+			mes "with you for 300 minutes after";
 			mes "you summon him. Don't forget";
 			mes "about the time limit, okay?";
 			close;
