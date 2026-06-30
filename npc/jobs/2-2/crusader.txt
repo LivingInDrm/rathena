@@ -37,7 +37,7 @@
 
 // Senior Crusader: 1st Collect Items Test
 //============================================================
--	script	高级十字军_	-1,{
+-	script	高级十字军_::Senior Crusader_	-1,{
 	mes "[迈克尔·哈利格]";
 	if (Upper == 1) { //the baby classes were totally blocked... due to missing == 1
 		mes "去训练自己，为即将到来的圣战做好准备。";
@@ -327,7 +327,7 @@
 
 // Suffering Man: 2nd Endurance Test
 //============================================================
--	script	痛苦中的人	-1,{
+-	script	痛苦中的人::Man in Anguish_	-1,{
 	mes "[穆尔纳克·米乔尔]";
 	if(BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Crusader) {
@@ -462,7 +462,7 @@
 
 // Gabriel Valentine: 3rd Knowledge Test
 //============================================================
-prt_church,95,127,3	script	十字军	745,{
+prt_church,95,127,3	script	十字军::Crusader	745,{
 	mes "[加布里埃尔·瓦伦丁]";
 	if(BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Crusader) {
@@ -811,7 +811,7 @@ prt_church,95,127,3	script	十字军	745,{
 
 // Crusader: 4th Purification Test
 //============================================================
--	script	守护骑士_	-1,{
+-	script	守护骑士_::Patron Knight_	-1,{
 	mes "[布里安特·皮约德]";
 	mes "欢迎。";
 	if(BaseJob != Job_Swordman) {
@@ -950,7 +950,7 @@ prt_church,95,127,3	script	十字军	745,{
 //----------------------------------------------------------------------------
 // Endurance Test
 //----------------------------------------------------------------------------
-job_cru,1,1,1	script	召唤师#cr1	-1,{
+job_cru,1,1,1	script	召唤师#cr1::Summoner#cr1	-1,{
 OnTimer300000:
 	donpcevent "Summoner#cr1::OnReset";
 	end;
@@ -1011,7 +1011,7 @@ OnDead:
 	end;
 }
 
-job_cru,1,2,1	script	召唤师#cr2	-1,{
+job_cru,1,2,1	script	召唤师#cr2::Summoner#cr2	-1,{
 OnTimer345000:
 	donpcevent "Summoner#cr2::OnReset";
 	end;
@@ -1062,7 +1062,7 @@ OnDead:
 	end;
 }
 
-job_cru,1,3,1	script	召唤师#cr3	-1,{
+job_cru,1,3,1	script	召唤师#cr3::Summoner#cr3	-1,{
 OnTimer345000:
 	donpcevent "Summoner#cr3::OnReset";
 	end;
@@ -1115,7 +1115,7 @@ OnDead:
 	end;
 }
 
-job_cru,1,4,1	script	召唤师#cr4	-1,{
+job_cru,1,4,1	script	召唤师#cr4::Summoner#cr4	-1,{
 OnTimer345000:
 	donpcevent "Summoner#cr4::OnReset";
 	end;
@@ -1177,7 +1177,7 @@ OnDead:
 //----------------------------------------------------------------------------
 // Purification Test
 //----------------------------------------------------------------------------
-job_cru,24,187,4	script	守护骑士#2	751,{
+job_cru,24,187,4	script	守护骑士#2::Patron Knight#2	751,{
 	mes "[布里安特·皮约德]";
 	mes "欢迎。你将在这里参加最后的测试。";
 	mes "如果你准备好了，请进入候考室。";
@@ -1192,7 +1192,7 @@ job_cru,24,187,4	script	守护骑士#2	751,{
 	close;
 }
 
-job_cru,24,187,2	script	候考室#cr1	700,{
+job_cru,24,187,2	script	候考室#cr1::Waiting Room#cr1	700,{
 	end;
 
 OnInit:
@@ -1213,7 +1213,7 @@ OnStart:
 	end;
 }
 
-job_cru,168,17,0	script	僵尸引导	-1,2,2,{
+job_cru,168,17,0	script	僵尸引导::Zombie Guide	-1,2,2,{
 OnTouch_:
 	mes "[布里安特·皮约德]";
 	mes "前去击败出现的所有怪物。如果还有剩余的，你将无法通过。";
@@ -1223,7 +1223,7 @@ OnTouch_:
 	close;
 }
 
-job_cru,2,1,1	script	怪物召唤#cr0	-1,{
+job_cru,2,1,1	script	怪物召唤#cr0::Monster Summon#cr0	-1,{
 OnInit:
 	disablenpc "Monster Summon#cr0";
 	end;
@@ -1275,7 +1275,7 @@ OnReset:
 	end;
 }
 
-job_cru,168,45,0	script	怪物召唤#cr1	-1,15,1,{
+job_cru,168,45,0	script	怪物召唤#cr1::Monster Summon#cr1	-1,15,1,{
 OnInit:
 	disablenpc "Monster Summon#cr1";
 	end;
@@ -1294,7 +1294,7 @@ OnEnd:
 	end;
 }
 
-job_cru,168,80,0	script	怪物召唤#cr2	-1,15,1,{
+job_cru,168,80,0	script	怪物召唤#cr2::Monster Summon#cr2	-1,15,1,{
 OnInit:
 	disablenpc "Monster Summon#cr2";
 	end;
@@ -1313,7 +1313,7 @@ OnEnd:
 	end;
 }
 
-job_cru,165,115,0	script	怪物召唤#cr3	-1,15,1,{
+job_cru,165,115,0	script	怪物召唤#cr3::Monster Summon#cr3	-1,15,1,{
 OnInit:
 	disablenpc "Monster Summon#cr3";
 	end;
@@ -1332,7 +1332,7 @@ OnEnd:
 	end;
 }
 
-job_cru,168,150,0	script	怪物召唤#cr4	-1,15,1,{
+job_cru,168,150,0	script	怪物召唤#cr4::Monster Summon#cr4	-1,15,1,{
 OnInit:
 	disablenpc "Monster Summon#cr4";
 	end;
@@ -1360,13 +1360,13 @@ OnEnd:
 
 }
 
-job_cru,168,150,0	script	怪物召唤#cr4-a	-1,{
+job_cru,168,150,0	script	怪物召唤#cr4-a::Monster Summon#cr4-a	-1,{
 OnDead:
 	donpcevent "Monster Summon#cr5::OnStart";
 	end;
 }
 
-job_cru,2,2,1	script	怪物召唤#cr6	-1,{
+job_cru,2,2,1	script	怪物召唤#cr6::Monster Summon#cr6	-1,{
 OnTimer241000:
 	areawarp "job_cru",160,14,175,178,"job_cru",24,169;
 	donpcevent "Monster Summon#cr0::OnReset";

@@ -116,7 +116,7 @@ prontera,164,171,3	script	MvP Ladder Warper	56,{
 	}
 	cleanmap .eventmap$;
 	warpparty .eventmap$, 0,0, .party_id, strnpcinfo(4);
-	donpcevent strnpcinfo(0)+"::OnMvpDead";
+	donpcevent strnpcinfo(3)+"::OnMvpDead";
 	sleep .timeout * 60000;
 	if ( .round == .totalround +1 ) {
 		getpartymember .party_id, 1;

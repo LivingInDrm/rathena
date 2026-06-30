@@ -74,30 +74,30 @@ OnTouch:
 	}
 }
 
-mosk_dun02,53,215,3	script	士兵1#mos	4_M_RUSKNIGHT,{
+mosk_dun02,53,215,3	script	士兵1#mos::Soldier1#mos	4_M_RUSKNIGHT,{
 	mes "[士兵]";
 	mes "我们是沙皇的士兵。我们被召唤应对紧急情况，";
 	mes "请不要再打扰我们。";
 	close;
 	
 OnInit:
-	hideonnpc strnpcinfo(0);
+	hideonnpc strnpcinfo(3);
 	end;
 OnEnable:
-	hideoffnpc strnpcinfo(0);
+	hideoffnpc strnpcinfo(3);
 	end;
 }
-mosk_dun02,50,217,3	duplicate(Soldier1#mos)	士兵2#mos	4_M_RUSKNIGHT
-mosk_dun02,56,217,5	duplicate(Soldier1#mos)	士兵3#mos	4_M_RUSKNIGHT
+mosk_dun02,50,217,3	duplicate(Soldier1#mos)	士兵2#mos::Soldier2#mos	4_M_RUSKNIGHT
+mosk_dun02,56,217,5	duplicate(Soldier1#mos)	士兵3#mos::Soldier3#mos	4_M_RUSKNIGHT
 
-mosk_dun01,170,164,3	script	里程碑#1	HIDDEN_NPC,{
+mosk_dun01,170,164,3	script	里程碑#1::Milestone#1	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "^3131FF- 侍奉太阳的人将会死去，去北方。 -^000000";
 	close;
 }
 
-mosk_dun01,207,276,3	script	里程碑#1-2	HIDDEN_NPC,{
+mosk_dun01,207,276,3	script	里程碑#1-2::Milestone#1-2	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "^3131FF- 前进的人可能会受伤，但心中勇敢；后退的人将会安全。";
@@ -113,7 +113,7 @@ mosk_dun01,207,276,3	script	里程碑#1-2	HIDDEN_NPC,{
 	close;
 }
 
-mosk_dun01,264,191,3	script	里程碑#1-3	HIDDEN_NPC,{
+mosk_dun01,264,191,3	script	里程碑#1-3::Milestone#1-3	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "^3131FF- 前进的人可能会受伤，但心中勇敢；后退的人将会安全。";
@@ -129,7 +129,7 @@ mosk_dun01,264,191,3	script	里程碑#1-3	HIDDEN_NPC,{
 	close;
 }
 
-mosk_dun02,168,28,3	script	里程碑#2-1	HIDDEN_NPC,{
+mosk_dun02,168,28,3	script	里程碑#2-1::Milestone#2-1	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "^3131FF- 前进的人可能会受伤，但他们勇敢无畏；后退的人会安全，";
@@ -145,7 +145,7 @@ mosk_dun02,168,28,3	script	里程碑#2-1	HIDDEN_NPC,{
 	close;
 }
 
-mosk_dun02,268,117,3	script	里程碑#2-3	HIDDEN_NPC,{
+mosk_dun02,268,117,3	script	里程碑#2-3::Milestone#2-3	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "^3131FF- 向前迈出的人将获得荣誉，但可能会死；";
@@ -162,7 +162,7 @@ mosk_dun02,268,117,3	script	里程碑#2-3	HIDDEN_NPC,{
 	close;
 }
 
-mosk_dun03,27,131,3	script	里程碑#3-2	HIDDEN_NPC,{
+mosk_dun03,27,131,3	script	里程碑#3-2::Milestone#3-2	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "^3131FF- 留下的人可能会死，但将获得荣誉；返回的人可能会受伤，";
@@ -179,7 +179,7 @@ mosk_dun03,27,131,3	script	里程碑#3-2	HIDDEN_NPC,{
 	close;
 }
 
-mosk_dun03,119,46,3	script	里程碑#3-1	HIDDEN_NPC,{
+mosk_dun03,119,46,3	script	里程碑#3-1::Milestone#3-1	HIDDEN_NPC,{
 	mes "大石头上有文字。";
 	next;
 	mes "^3131FF- 留下的人可能会死，但将获得荣誉；返回的人可能会受伤，";
@@ -196,14 +196,14 @@ mosk_dun03,119,46,3	script	里程碑#3-1	HIDDEN_NPC,{
 	close;
 }
 
-mosk_dun01,194,43,3	script	里程碑#1-1	HIDDEN_NPC,{
+mosk_dun01,194,43,3	script	里程碑#1-1::Milestone#1-1	HIDDEN_NPC,{
 	mes "- 大石头上有文字。 -";
 	next;
 	mes "- 如果你想保护自己的生命，就返回 -";
 	close;
 }
 
-mosk_fild02,198,53,3	script	船#mos_dun	HIDDEN_NPC,{
+mosk_fild02,198,53,3	script	船#mos_dun::Ship#mos_dun	HIDDEN_NPC,{
 	mes "- 你发现一艘停泊的船。 -";
 	next;
 	if(select("乘船回村庄。:探索更多。") == 1) {

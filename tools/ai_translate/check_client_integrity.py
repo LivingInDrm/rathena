@@ -55,12 +55,20 @@ MODEL_RESOURCE_RELS = (
 PETINFO_RESOURCE_RELS = (
     r"data\luafiles514\lua files\datainfo\petinfo.lub",
 )
+PCJOBNAMEGENDER_RELS = (
+    r"data\luafiles514\lua files\admin\pcjobnamegender.lub",
+    r"data\luafiles514\lua files\datainfo\pcjobnamegender.lub",
+)
 JOBNAME_MODEL_RE = re.compile(
     r'^(\s*\[jobtbl\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]+\.gr2)(",?\s*)$',
     re.MULTILINE,
 )
 JOBNAME_RESOURCE_RE = re.compile(
     r'^(\s*\[jobtbl\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]*)(",?\s*)$',
+    re.MULTILINE,
+)
+PCJOBNAMEGENDER_RE = re.compile(
+    r'^(\s*\[pcJobTbl2?\.(?P<key>[^\]]+)\]\s*=\s*")(?P<value>[^"]*)(",?\s*)$',
     re.MULTILINE,
 )
 PETINFO_RESOURCE_RE = re.compile(r'"(?P<value>[^"]*\.(?:act|bmp|spr|wav|str|gr2))"', re.IGNORECASE)
@@ -74,6 +82,13 @@ TIPBOX_RELS = (
     r"SystemEN\tipbox.lub",
 )
 TIPBOX_IMAGE_RE = re.compile(rb'Image\s*=\s*"(?P<value>(?:\\.|[^"\\])*)"')
+CLIENTINFO_RELS = (
+    r"clientinfo.xml",
+    r"sclientinfo.xml",
+    r"data\clientinfo.xml",
+    r"data\sclientinfo.xml",
+)
+LOADING_IMAGE_RE = re.compile(r"<image>\s*(?P<value>[^<]+?)\s*</image>", re.IGNORECASE)
 
 
 def read_text_file(path: Path) -> str | None:
@@ -388,6 +403,50 @@ def check_jobname_resource_diffs(client_dir: Path, backups: dict[str, Path]) -> 
     return issues
 
 
+def pcjobnamegender_map(text: str) -> dict[str, dict]:
+    resources = {}
+    for match in PCJOBNAMEGENDER_RE.finditer(text):
+        resources[match.group("key")] = {
+            "line": text.count("\n", 0, match.start()) + 1,
+            "value": match.group("value"),
+        }
+    return resources
+
+
+def check_pcjobnamegender_diffs(client_dir: Path, backups: dict[str, Path]) -> list[dict]:
+    issues = []
+    for rel in PCJOBNAMEGENDER_RELS:
+        current_path = client_dir / rel
+        backup_path = backups.get(rel)
+        if not current_path.exists() or backup_path is None:
+            continue
+        current_text = read_text_file(current_path)
+        backup_text = read_text_file(backup_path)
+        if current_text is None or backup_text is None:
+            continue
+        current_resources = pcjobnamegender_map(current_text)
+        backup_resources = pcjobnamegender_map(backup_text)
+        diffs = []
+        if len(current_resources) != len(backup_resources):
+            diffs.append(
+                {
+                    "kind": "value_count",
+                    "current": len(current_resources),
+                    "backup": len(backup_resources),
+                }
+            )
+        for key, current in current_resources.items():
+            backup = backup_resources.get(key)
+            if backup is None or current["value"] == backup["value"]:
+                continue
+            diffs.append({"line": current["line"], "key": key, "current": current["value"], "backup": backup["value"]})
+            if len(diffs) >= 50:
+                break
+        if diffs:
+            issues.append({"file": str(current_path), "backup": str(backup_path), "diffs": diffs})
+    return issues
+
+
 def petinfo_resource_values(text: str) -> list[dict]:
     return [
         {
@@ -533,6 +592,50 @@ def check_tipbox_image_diffs(client_dir: Path, backups: dict[str, Path]) -> list
     return issues
 
 
+def loading_images(path: Path) -> list[dict]:
+    text = read_text_file(path)
+    if text is None:
+        return []
+    return [
+        {
+            "line": text.count("\n", 0, match.start()) + 1,
+            "value": match.group("value"),
+        }
+        for match in LOADING_IMAGE_RE.finditer(text)
+    ]
+
+
+def check_loading_image_overrides(client_dir: Path) -> list[dict]:
+    issues = []
+    root_images: dict[str, set[str]] = {}
+    for name in ("clientinfo.xml", "sclientinfo.xml"):
+        path = client_dir / name
+        if path.exists():
+            root_images[name] = {row["value"] for row in loading_images(path)}
+
+    for rel in CLIENTINFO_RELS:
+        current_path = client_dir / rel
+        if not current_path.exists():
+            continue
+        images = loading_images(current_path)
+        if not images:
+            continue
+        filename = Path(rel).name
+        baseline = root_images.get(filename)
+        if baseline is None or current_path == client_dir / filename:
+            continue
+        extras = [row for row in images if row["value"] not in baseline]
+        if extras:
+            issues.append(
+                {
+                    "file": str(current_path),
+                    "baseline": str(client_dir / filename),
+                    "extras": extras,
+                }
+            )
+    return issues
+
+
 def check_missing_commas(paths: list[Path]) -> list[dict]:
     issues = []
     for path in paths:
@@ -564,9 +667,11 @@ def build_report(client_dir: Path, backup_dir: Path) -> dict:
         "itemdb_key_diffs": check_itemdb_key_diffs(client_dir, backups),
         "model_resource_diffs": check_model_resource_diffs(client_dir, backups),
         "jobname_resource_diffs": check_jobname_resource_diffs(client_dir, backups),
+        "pcjobnamegender_diffs": check_pcjobnamegender_diffs(client_dir, backups),
         "petinfo_resource_diffs": check_petinfo_resource_diffs(client_dir, backups),
         "map_background_diffs": check_map_background_diffs(client_dir, backups),
         "tipbox_image_diffs": check_tipbox_image_diffs(client_dir, backups),
+        "loading_image_overrides": check_loading_image_overrides(client_dir),
         "missing_commas": check_missing_commas(paths),
     }
 
@@ -591,9 +696,11 @@ def main() -> int:
         "itemdb_key_diffs": len(report["itemdb_key_diffs"]),
         "model_resource_diffs": len(report["model_resource_diffs"]),
         "jobname_resource_diffs": len(report["jobname_resource_diffs"]),
+        "pcjobnamegender_diffs": len(report["pcjobnamegender_diffs"]),
         "petinfo_resource_diffs": len(report["petinfo_resource_diffs"]),
         "map_background_diffs": len(report["map_background_diffs"]),
         "tipbox_image_diffs": len(report["tipbox_image_diffs"]),
+        "loading_image_overrides": len(report["loading_image_overrides"]),
         "missing_commas": len(report["missing_commas"]),
         "output": str(output),
     }
@@ -605,9 +712,11 @@ def main() -> int:
         "itemdb_key_diffs",
         "model_resource_diffs",
         "jobname_resource_diffs",
+        "pcjobnamegender_diffs",
         "petinfo_resource_diffs",
         "map_background_diffs",
         "tipbox_image_diffs",
+        "loading_image_overrides",
         "missing_commas",
     )
     return 1 if any(summary[key] for key in issue_keys) else 0

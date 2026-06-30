@@ -43,7 +43,7 @@
 //= 2.9 Updated with some extra conditions. [Euphy]
 //==============================================================
 
-ein_in01,18,28,4	script	公会成员#BLS	731,{
+ein_in01,18,28,4	script	公会成员#BLS::Guildsman#BLS	731,{
 	if (Upper == 1) {
 		mes "[阿尔提雷根]";
 		mes "嘿嘿。我没时间闲聊，我很忙。这些商人都在努力成为铁匠。";
@@ -131,7 +131,7 @@ ein_in01,18,28,4	script	公会成员#BLS	731,{
 		mes "嗯，我的锻造生意似乎不再增长了。";
 		close;
 	}
-	else if (BaseJob == Job_铁匠) {
+	else if (BaseJob == Job_Blacksmith) {
 		mes "[阿尔提雷根]";
 		mes "哦！好久不见。";
 		mes "你是来向克里斯托弗购买材料的吗？这些天我被困在这张桌子后面。我的身体渴望敲打老铁砧。";
@@ -271,7 +271,7 @@ ein_in01,18,28,4	script	公会成员#BLS	731,{
 			}
 			next;
 			set .@joblvl,JobLevel;
-			callfunc "Job_Change",Job_铁匠;
+			callfunc "Job_Change",Job_Blacksmith;
 			callfunc "F_ClearJobVar";		// clears all job variables for the current player
 			mes "[阿尔提雷根]";
 			mes "请始终记住，我们是创造者，是金属的艺术家。要小心不要陷入自私的陷阱中。";
@@ -291,7 +291,7 @@ ein_in01,18,28,4	script	公会成员#BLS	731,{
 	}
 }
 
-ein_in01,201,27,3	script	公会成员#alberta	63,{
+ein_in01,201,27,3	script	公会成员#alberta::Guildsman#alberta	63,{
 	mes "[格什普恩施特]";
 	mes "你好！";
 	mes "我是^8E6B23格什普恩施特^000000，";
@@ -935,7 +935,7 @@ ein_in01,201,27,3	script	公会成员#alberta	63,{
 	}
 }
 
-geffen,46,164,1	script	拜苏利斯#BLS	69,{
+geffen,46,164,1	script	拜苏利斯#BLS::Baisulist#BLS	69,{
 	if (BSMITH_Q == 9 && countitem(1610) > 0) {
 		mes "[拜苏利斯]";
 		mes "哦，您好！";
@@ -1010,7 +1010,7 @@ geffen,46,164,1	script	拜苏利斯#BLS	69,{
 	}
 }
 
-morocc,27,112,4	script	维克比尼#BLS	725,{
+morocc,27,112,4	script	维克比尼#BLS::Wickebine#BLS	725,{
 	if (BSMITH_Q == 10 && countitem(1219) > 0) {
 		cutin "Job_Black_hucke01",2;
 		mes "[维基贝恩]";
@@ -1111,7 +1111,7 @@ morocc,27,112,4	script	维克比尼#BLS	725,{
 	}
 }
 
-lighthalzen,209,80,4	script	克朗加斯特#BLS	734,{
+lighthalzen,209,80,4	script	克朗加斯特#BLS::Krongast#BLS	734,{
 	if (BSMITH_Q == 11 && countitem(1119) > 0) {
 		mes "[克朗加斯特]";
 		mes "哦哦哦哦~";
@@ -1189,7 +1189,7 @@ lighthalzen,209,80,4	script	克朗加斯特#BLS	734,{
 	}
 }
 
-payon,214,79,4	script	塔尔皮兹#BLS	59,{
+payon,214,79,4	script	塔尔皮兹#BLS::Talpiz#BLS	59,{
 	if (BSMITH_Q == 12 && countitem(1713) > 0) {
 		mes "[塔尔皮兹]";
 		mes "哦~";
@@ -1263,7 +1263,7 @@ payon,214,79,4	script	塔尔皮兹#BLS	59,{
 	}
 }
 
-hugel,168,183,1	script	比斯马克#BLS	118,{
+hugel,168,183,1	script	比斯马克#BLS::Bismarc#BLS	118,{
 	if (BSMITH_Q == 13 && countitem(1122) > 0) {
 		mes "[比斯马克]";
 		mes "天哪...";
@@ -1354,7 +1354,7 @@ hugel,168,183,1	script	比斯马克#BLS	118,{
 	}
 }
 
-ein_in01,24,41,5	script	铁匠公会成员#moc	726,{
+ein_in01,24,41,5	script	铁匠公会成员#moc::Blacksmith Guildsman#moc	726,{
 	if (BSMITH_Q == 16) {
 		emotion ET_SCRATCH;
 		mes "[米特哈梅]";
@@ -1530,7 +1530,7 @@ ein_in01,24,41,5	script	铁匠公会成员#moc	726,{
 	}
 }
 
-geffen_in,109,170,3	script	锻造师公会成员#gef	726,{
+geffen_in,109,170,3	script	锻造师公会成员#gef::Blacksmith Guildsman#gef	726,{
 	mes "[锻造师公会成员]";
 	mes "你好，您是来参观锻造师公会的吗？";
 	next;

@@ -47,7 +47,7 @@
 //= 3.8 Another 'unofficial fix'. Player can't change job if time out after the necklace is deleted. [Atemo]
 //============================================================
 
-in_moc_16,19,33,1	script	公会成员#asn	55,{
+in_moc_16,19,33,1	script	公会成员#asn::Guildsman#asn	55,{
 	if (Upper == 1) {
 		mes "[凶狠的家伙]";
 		mes "嗯？你....？";
@@ -289,7 +289,7 @@ in_moc_16,19,33,1	script	公会成员#asn	55,{
 	}
 }
 
-in_moc_16,25,90,1	script	公会成员#ASN2	730,2,2,{
+in_moc_16,25,90,1	script	公会成员#ASN2::Guildsman#ASN2	730,2,2,{
 	mes "[刺客 '凯']";
 	mes "嗯？！";
 	emotion ET_SURPRISE;
@@ -1101,7 +1101,7 @@ OnTouch_:
 	}
 }
 
-in_moc_16,21,165,2	script	待命室#ASNTEST	725,{
+in_moc_16,21,165,2	script	待命室#ASNTEST::Standby Room#ASNTEST	725,{
 	end;
 
 OnInit:
@@ -1129,7 +1129,7 @@ OnStart:
 	end;
 }
 
-in_moc_16,21,165,2	script	测试指南#ASN	725,4,4,{
+in_moc_16,21,165,2	script	测试指南#ASN::Test Guide#ASN	725,4,4,{
 	end;
 
 OnTouch_:
@@ -1207,7 +1207,7 @@ OnTouch_:
 	}
 }
 
-in_moc_16,1,1,0	script	观察者#ASNTEST	-1,{
+in_moc_16,1,1,0	script	观察者#ASNTEST::Beholder#ASNTEST	-1,{
 	end;
 
 OnEnable:
@@ -1453,7 +1453,7 @@ in_moc_16,86,147,0	duplicate(SinTrap)	18_2	-1,0,0
 in_moc_16,87,146,0	duplicate(SinTrap)	18_3	-1,0,0
 in_moc_16,87,147,0	duplicate(SinTrap)	18_4	-1,0,0
 
-in_moc_16,87,137,0	script	门的守护者#ASN	45,2,1,{
+in_moc_16,87,137,0	script	门的守护者#ASN::Keeper of the Door#ASN	45,2,1,{
 OnInit:
 	disablenpc "Keeper of the Door#ASN";
 	end;
@@ -1501,7 +1501,7 @@ OnMyMobDead:
 	end;
 }
 
-in_moc_16,89,98,1	script	托马斯#ASNTEST	118,5,1,{
+in_moc_16,89,98,1	script	托马斯#ASNTEST::Thomas#ASNTEST	118,5,1,{
 	end;
 
 OnTouch_:
@@ -1590,7 +1590,7 @@ OnDisable:
 	end;
 }
 
-in_moc_16,87,48,2	script	巴卡尔迪#ASN	725,2,2,{
+in_moc_16,87,48,2	script	巴卡尔迪#ASN::Barcardi#ASN	725,2,2,{
 	end;
 OnTouch_:
 	donpcevent "timestopper#1::OnDisable";
@@ -1605,7 +1605,7 @@ OnTouch_:
 	end;
 }
 
-in_moc_16,182,169,0	script	迷宫助手	45,1,1,{
+in_moc_16,182,169,0	script	迷宫助手::Maze Assistant	45,1,1,{
 OnTouch_:
 	if (ASSIN_Q == 5 || ASSIN_Q == 6) {
 		warp "in_moc_16",181,183;
@@ -1622,7 +1622,7 @@ OnTouch_:
 	}
 }
 
-in_moc_16,167,110,0	script	公会长#ASN1	-1,3,1,{
+in_moc_16,167,110,0	script	公会长#ASN1::Guildmaster#ASN1	-1,3,1,{
 OnTouch_:
 	savepoint "in_moc_16",167,110,1,1;
 	mes "[公会长]";
@@ -1643,7 +1643,7 @@ OnCast:
 	end;
 }
 
-in_moc_16,149,80,4	script	公会长#ASN2	106,1,1,{
+in_moc_16,149,80,4	script	公会长#ASN2::Guildmaster#ASN2	106,1,1,{
 	end;
 OnTouch_:
 	if (checkre(0))
@@ -2182,62 +2182,62 @@ OnTouch_:
 	}
 }
 
-in_moc_16,186,81,1	script	大师助手	55,1,1,{
+in_moc_16,186,81,1	script	大师助手::Master Assist	55,1,1,{
 	mes "[助手盖尔·马鲁比茨]";
 	mes "抱歉，我不负责职业变更。去找公会长，他已经告诉过你了。";
 	close;
 }
 
-in_moc_16,170,90,0	script	信息 1	-1,{
+in_moc_16,170,90,0	script	信息 1::info 1	-1,{
 OnTouch_:
 	mes "[公会长]";
 	mes "嗯。现在，那地方被封锁了。你可能想去另一边看看。";
 	close;
 }
 
-in_moc_16,153,85,0	script	信息 2	-1,1,1,{
+in_moc_16,153,85,0	script	信息 2::info 2	-1,1,1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "你越来越接近了。快到了，只需稍微转身。";
 	close;
 }
 
-in_moc_16,160,85,0	script	信息 3	-1,1,1,{
+in_moc_16,160,85,0	script	信息 3::info 3	-1,1,1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "嗯，那地方被挡住了。";
 	close;
 }
 
-in_moc_16,175,89,0	script	信息 4	-1,1,1,{
+in_moc_16,175,89,0	script	信息 4::info 4	-1,1,1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "嗯……你正朝我的助手走去。你还需要和他谈谈吗？";
 	close;
 }
 
-in_moc_16,164,88,0	script	信息 5	-1,{
+in_moc_16,164,88,0	script	信息 5::info 5	-1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "做得好……我能感觉到你离我很近。";
 	close;
 }
 
-in_moc_16,149,95,0	script	信息 6	-1,1,1,{
+in_moc_16,149,95,0	script	信息 6::info 6	-1,1,1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "嗯？不错，你快到了。";
 	close;
 }
 
-in_moc_16,180,101,0	script	信息 7	-1,1,1,{
+in_moc_16,180,101,0	script	信息 7::info 7	-1,1,1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "我觉得你走错方向了。";
 	close;
 }
 
-in_moc_16,186,107,0	script	信息 8	-1,1,1,{
+in_moc_16,186,107,0	script	信息 8::info 8	-1,1,1,{
 OnTouch_:
 	mes "[公会会长]";
 	mes "没有方向感吗？";
@@ -2251,10 +2251,10 @@ OnInit:
 	disablenpc();
 	end;
 }
-in_moc_16,156,87,1	duplicate(#moc_assin_dup)	[休伊]	55
-in_moc_16,156,85,1	duplicate(#moc_assin_dup)	[凯]	730
-in_moc_16,156,83,1	duplicate(#moc_assin_dup)	[匿名者]	106
-in_moc_16,156,81,2	duplicate(#moc_assin_dup)	[巴卡尔迪]	725
-in_moc_16,156,79,1	duplicate(#moc_assin_dup)	[注视者]	118
-in_moc_16,156,77,1	duplicate(#moc_assin_dup)	[托马斯]	118
-in_moc_16,156,75,1	duplicate(#moc_assin_dup)	[盖尔·马罗比茨]	55
+in_moc_16,156,87,1	duplicate(#moc_assin_dup)	[休伊]::[Huey]	55
+in_moc_16,156,85,1	duplicate(#moc_assin_dup)	[凯]::[Khai]	730
+in_moc_16,156,83,1	duplicate(#moc_assin_dup)	[匿名者]::[The Anonymous One]	106
+in_moc_16,156,81,2	duplicate(#moc_assin_dup)	[巴卡尔迪]::[Barcardi]	725
+in_moc_16,156,79,1	duplicate(#moc_assin_dup)	[注视者]::[Beholder]	118
+in_moc_16,156,77,1	duplicate(#moc_assin_dup)	[托马斯]::[Thomas]	118
+in_moc_16,156,75,1	duplicate(#moc_assin_dup)	[盖尔·马罗比茨]::[Gayle Maroubitz]	55

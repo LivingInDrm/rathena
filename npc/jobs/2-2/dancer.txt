@@ -23,7 +23,7 @@
 //= 3.7a Fixed a label execution. [Euphy]
 //============================================================
 
-comodo,180,153,4	script	索诺托拉#1	90,{
+comodo,180,153,4	script	索诺托拉#1::Sonotora#1	90,{
 	mes "[雅典娜·索诺托拉]";
 	mes "他们说";
 	mes "著名的舞蹈学校";
@@ -43,7 +43,7 @@ comodo,180,153,4	script	索诺托拉#1	90,{
 	close;
 }
 
-comodo,193,151,4	script	博尔·罗宾#1	86,{
+comodo,193,151,4	script	博尔·罗宾#1::Bor Robin#1	86,{
 	mes "[博尔·罗宾]";
 	mes "啊……聚光灯下的明星！我将亲眼目睹他们成为舞者……！";
 	next;
@@ -65,7 +65,7 @@ comodo,193,151,4	script	博尔·罗宾#1	86,{
 	close;
 }
 
-job_duncer,43,93,4	script	艾尔#da	724,{
+job_duncer,43,93,4	script	艾尔#da::Aile#da	724,{
 	if (Upper == 1) {
 		mes "[艾尔]";
 		mes "一二三四，";
@@ -385,7 +385,7 @@ job_duncer,43,93,4	script	艾尔#da	724,{
 	}
 }
 
-job_duncer,95,93,4	script	比茹#da	101,{
+job_duncer,95,93,4	script	比茹#da::Bijou#da	101,{
 	if (SkillPoint) {
 		mes "[比珠]";
 		mes "如果你还有技能";
@@ -870,7 +870,7 @@ job_duncer,95,93,4	script	比茹#da	101,{
 
 // Waiting Room
 //============================================================
-job_duncer,32,154,1	script	候诊室#dance	66,{
+job_duncer,32,154,1	script	候诊室#dance::Waiting Room#dance	66,{
 	end;
 
 OnInit:
@@ -895,7 +895,7 @@ OnEnable:
 	end;
 }
 
-job_duncer,32,154,1	script	候诊室#click	66,{
+job_duncer,32,154,1	script	候诊室#click::Waiting Room#click	66,{
 	mes "[普约金]";
 	mes "请在候诊室等候。点击聊天框进入。";
 	next;
@@ -906,7 +906,7 @@ job_duncer,32,154,1	script	候诊室#click	66,{
 
 // Dance Timer
 //============================================================
-job_duncer,69,105,0	script	比久#dance_timer	-1,{
+job_duncer,69,105,0	script	比久#dance_timer::Bijou#dance_timer	-1,{
 OnEnable:
 	initnpctimer;
 	end;
@@ -1293,7 +1293,7 @@ OnDisable:
 
 // Backup Dancers
 //============================================================
-job_duncer,63,110,4	script	后台舞者#1	724,{
+job_duncer,63,110,4	script	后台舞者#1::Backdancer#1	724,{
 	end;
 
 OnSmile:
@@ -1311,7 +1311,7 @@ OnOmg:
 	end;
 }
 
-job_duncer,66,113,4	script	后台舞者#2	724,{
+job_duncer,66,113,4	script	后台舞者#2::Backdancer#2	724,{
 	end;
 
 OnSmile:
@@ -1323,7 +1323,7 @@ OnOmg:
 	end;
 }
 
-job_duncer,72,113,4	script	后台舞者#3	724,{
+job_duncer,72,113,4	script	后台舞者#3::Backdancer#3	724,{
 	end;
 
 OnSmile:
@@ -1335,7 +1335,7 @@ OnOmg:
 	end;
 }
 
-job_duncer,75,110,4	script	后台舞者#4	724,{
+job_duncer,75,110,4	script	后台舞者#4::Backdancer#4	724,{
 	end;
 
 OnSmile:

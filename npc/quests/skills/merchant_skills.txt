@@ -15,7 +15,7 @@
 //= 1.8 Moved Alberta NPC to pre-re/re paths. [Euphy]
 //============================================================
 
-alberta,83,96,5	script	尼科	98,7,7,{
+alberta,83,96,5	script	尼科::Necko	98,7,7,{
 	if (BaseClass == Job_Merchant) {
 		if (getskilllv("MC_LOUD") == 1) {
 			mes "[尼克]";
@@ -62,7 +62,7 @@ alberta,83,96,5	script	尼科	98,7,7,{
 			mes "喀喀喀喀喀喀喀喀！";
 			close;
 		}
-		else if ((countitem(722) > 6) && (countitem(532) > 0) && (countitem(921) > 49) && (JobLevel >= 15 || (BaseJob == Job_铁匠 || BaseJob == Job_Alchemist))) {
+		else if ((countitem(722) > 6) && (countitem(532) > 0) && (countitem(921) > 49) && (JobLevel >= 15 || (BaseJob == Job_Blacksmith || BaseJob == Job_Alchemist))) {
 			mes "[尼克]";
 			mes "哦！你！";
 			mes "你有资格学习如何大喊！";
@@ -179,7 +179,7 @@ OnTouch_:
 	close;
 }
 
-alberta,119,221,6	script	查尔隆	107,{
+alberta,119,221,6	script	查尔隆::Charlron	107,{
 	if (BaseClass == Job_Merchant) {
 		if (getskilllv("MC_CHANGECART") == 1) {
 			mes "[查尔隆]";
@@ -201,7 +201,7 @@ alberta,119,221,6	script	查尔隆	107,{
 			mes "祝你健康~";
 			close;
 		}
-		else if (JobLevel >= 30|| (BaseJob == Job_铁匠 || BaseJob == Job_Alchemist)) {
+		else if (JobLevel >= 30|| (BaseJob == Job_Blacksmith || BaseJob == Job_Alchemist)) {
 			mes "[查尔隆]";
 			mes "很高兴见到你，同行的商人";
 			mes "如果我没记错的话，";
@@ -348,7 +348,7 @@ alberta,119,221,6	script	查尔隆	107,{
 			mes "这里！快点！";
 			close;
 		}
-		else if (JobLevel >= 35 || (BaseJob == Job_铁匠 || BaseJob == Job_Alchemist)) {
+		else if (JobLevel >= 35 || (BaseJob == Job_Blacksmith || BaseJob == Job_Alchemist)) {
 			mes "[格尔沙恩]";
 			mes "哦。你的身体很结实";
 			mes "作为一个商人。你一定很";

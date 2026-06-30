@@ -48,7 +48,7 @@ OnTimer150000:
 	end;
 }
 
-in_rogue,357,174,2	script	杀手#Rogueguild	705,1,1,{
+in_rogue,357,174,2	script	杀手#Rogueguild::Killer#Rogueguild	705,1,1,{
 OnInit:
 	disablenpc "Killer#Rogueguild";
 	end;
@@ -131,7 +131,7 @@ OnTouch_:
 	end;
 }
 
-in_rogue,355,179,0	script	海贾拉·格雷格#rogueguild	46,{
+in_rogue,355,179,0	script	海贾拉·格雷格#rogueguild::Haijara Greg#rogueguild	46,{
 	if (BaseJob == Job_Rogue) {
 		if (ROG_SK == 12 && Upper == 1) {
 			mes "[海贾拉·格雷格]";
@@ -396,7 +396,7 @@ in_rogue,355,179,0	script	海贾拉·格雷格#rogueguild	46,{
 	}
 }
 
-in_rogue,152,29,0	script	路易斯·格雷格#rogueguild	84,{
+in_rogue,152,29,0	script	路易斯·格雷格#rogueguild::Louis Greg#rogueguild	84,{
 	if (BaseJob == Job_Rogue || Class == Job_Thief_High) {
 		if (ROG_SK < 1) {
 			mes "[路易斯·格雷格]";
@@ -495,7 +495,7 @@ in_rogue,152,29,0	script	路易斯·格雷格#rogueguild	84,{
 	close;
 }
 
-in_rogue,268,125,2	script	索尔·格雷格#rogueguild	86,{
+in_rogue,268,125,2	script	索尔·格雷格#rogueguild::Thor Greg#rogueguild	86,{
 	if (BaseJob == Job_Rogue || Class == Job_Thief_High) {
 		if (ROG_SK < 1) {
 			mes "[索尔·格雷格]";
@@ -619,7 +619,7 @@ in_rogue,268,125,2	script	索尔·格雷格#rogueguild	86,{
 	close;
 }
 
-in_rogue,181,114,3	script	杰·格雷格#rogueguild	85,{
+in_rogue,181,114,3	script	杰·格雷格#rogueguild::Jay Greg#rogueguild	85,{
 	if (BaseJob == Job_Rogue || Class == Job_Thief_High) {
 		if (ROG_SK < 1) {
 			mes "[杰·格雷格]";
@@ -983,7 +983,7 @@ OnInit:
 	end;
 }
 
-in_rogue,88,119,3	script	等候室#rogue10	828,{
+in_rogue,88,119,3	script	等候室#rogue10::Waiting Room#rogue10	828,{
 OnEnable:
 	enablenpc "Waiting Room#rogue10";
 	enablewaitingroomevent "Waiting Room#rogue10";

@@ -14,7 +14,7 @@
 //= 1.5 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-in_moc_16,14,27,5	script	刺客#realman	884,{
+in_moc_16,14,27,5	script	刺客#realman::Assassin#realman	884,{
 	if (BaseJob == Job_Assassin && ASSN_SK2 == 1) {
 		if (getskilllv("AS_VENOMKNIFE") == 0) {
 			mes "[基尔廷]";
@@ -286,7 +286,7 @@ in_moc_16,14,27,5	script	刺客#realman	884,{
 	}
 }
 
-in_moc_16,23,27,5	script	刺客#realgirl	885,{
+in_moc_16,23,27,5	script	刺客#realgirl::Assassin#realgirl	885,{
 	if (BaseJob == Job_Assassin && ASSN_SK == 7) {
 		if (getskilllv("AS_SONICACCEL") == 0) {
 			mes "[艾斯米尔]";
@@ -736,7 +736,7 @@ in_moc_16,23,27,5	script	刺客#realgirl	885,{
 	}
 }
 
-in_sphinx2,259,213,0	script	古老的棺材#qsk_as	-1,7,8,{
+in_sphinx2,259,213,0	script	古老的棺材#qsk_as::Old Coffin#qsk_as	-1,7,8,{
 OnTouch_:
 	if (ASSN_SK == 2) {
 		mes "^3355FF这是一个古老的棺材，盖子破损并微微开启。";
@@ -780,7 +780,7 @@ OnTouch_:
 	}
 }
 
-in_sphinx2,212,267,0	script	古老的棺材#qsk_as2	-1,5,6,{
+in_sphinx2,212,267,0	script	古老的棺材#qsk_as2::Old Coffin#qsk_as2	-1,5,6,{
 OnTouch_:
 	if (ASSN_SK == 2) {
 		mes "^3355FF这是一个古老的棺材，盖子破损并微微开启。";
@@ -837,7 +837,7 @@ OnTouch_:
 	}
 }
 
-in_sphinx2,13,163,0	script	石像#qsk_as	-1,7,7,{
+in_sphinx2,13,163,0	script	石像#qsk_as::Stone Statue#qsk_as	-1,7,7,{
 OnTouch_:
 	if (ASSN_SK == 3) {
 		specialeffect EF_CONE;
@@ -862,7 +862,7 @@ OnTouch_:
 	}
 }
 
-in_sphinx2,13,146,0	script	石像#qsk_as2	-1,7,7,{
+in_sphinx2,13,146,0	script	石像#qsk_as2::Stone Statue#qsk_as2	-1,7,7,{
 OnTouch_:
 	if (ASSN_SK == 3) {
 		specialeffect EF_CONE;

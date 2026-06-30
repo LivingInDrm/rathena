@@ -1579,7 +1579,7 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 			mes "摔破的东西倒在你的头上, 右边那个地方情有独钟的是, $＃* @! 这是一个万里挑一的拍摄. ";
 			percentheal -30,0;
 			close2;
-			donpcevent strnpcinfo(0)+"::OnDisable";
+			donpcevent strnpcinfo(3)+"::OnDisable";
 			warp "dew_fild01",371,211;
 			end;
 		}
@@ -1602,7 +1602,7 @@ dew_fild01,259,48,4	script	Poby#dew_drink	538,{
 		break;
 	}
 	close2;
-	donpcevent strnpcinfo(0)+"::OnDisable";
+	donpcevent strnpcinfo(3)+"::OnDisable";
 	end;
 OnEnable:
 	enablenpc();
@@ -1617,10 +1617,10 @@ OnTimer180000:
 OnTimer120000:
 OnTimer240000:
 	if(rand(2))
-		donpcevent strnpcinfo(0)+"::OnEnable";
+		donpcevent strnpcinfo(3)+"::OnEnable";
 	end;
 OnTimer300000:
-	donpcevent strnpcinfo(0)+"::OnEnable";
+	donpcevent strnpcinfo(3)+"::OnEnable";
 	end;
 }
 dew_fild01,247,62,0	duplicate(DewataPalm)	Palm Tree#drink01	844

@@ -30,7 +30,7 @@
 
 // Payon
 //============================================================
-payon,246,154,0	script	女士#payon	90,{
+payon,246,154,0	script	女士#payon::Lady#payon	90,{
 	mes "[女士]";
 	mes "好久以前,";
 	mes "斐扬的发展才起步的时候,";
@@ -58,7 +58,7 @@ payon,246,154,0	script	女士#payon	90,{
 	close;
 }
 
-payon,134,211,4	script	年轻人#payon	59,{
+payon,134,211,4	script	年轻人#payon::Young Man#payon	59,{
 	mes "[年轻人]";
 	mes "从你的穿着来看，";
 	mes "我可以看出你是这里的陌生人。欢迎来到佩雍。";
@@ -84,7 +84,7 @@ payon,134,211,4	script	年轻人#payon	59,{
 	close;
 }
 
-payon,173,82,0	script	年轻人#2payon	88,{
+payon,173,82,0	script	年轻人#2payon::Young Man#2payon	88,{
 	mes "[年轻人]";
 	mes "我记得我已故的祖父曾告诉我的故事。";
 	next;
@@ -109,7 +109,7 @@ payon,173,82,0	script	年轻人#2payon	88,{
 	close;
 }
 
-payon,158,246,3	script	守卫#payon	708,3,3,{
+payon,158,246,3	script	守卫#payon::Guardsman#payon	708,3,3,{
 	end;
 
 OnTouch_:
@@ -124,7 +124,7 @@ OnTouch_:
 	close;
 }
 
-payon,249,156,1	script	女人#payon	66,{
+payon,249,156,1	script	女人#payon::Woman#payon	66,{
 	mes "[年轻男子]";
 	mes "我记得我已逝的爷爷告诉过我一件事情.";
 	mes "[年轻男子]";
@@ -176,7 +176,7 @@ payon,249,156,1	script	女人#payon	66,{
 	close;
 }
 
-payon,246,158,5	script	女人#2payon	66,0,0,{
+payon,246,158,5	script	女人#2payon::Woman#2payon	66,0,0,{
 	mes "[卫兵]";
 	mes "这是斐扬中央宫. 本中央宫向游客开放, 但是根据我们的法律, 一旦到了里头就要按照老一套的规矩来行事.";
 	mes "[卫兵]";
@@ -223,7 +223,7 @@ payon,246,158,5	script	女人#2payon	66,0,0,{
 	close;
 }
 
-payon,210,110,1	script	醉汉#payon	120,{
+payon,210,110,1	script	醉汉#payon::Drunkard#payon	120,{
 	if (Class != Job_Archer) {
 		mes "[女人]";
 		mes "欢迎来到斐扬.";
@@ -295,7 +295,7 @@ payon,210,110,1	script	醉汉#payon	120,{
 	close;
 }
 
-payon,132,235,3	script	怪物学者#02	98,{
+payon,132,235,3	script	怪物学者#02::Monster Scholar#02	98,{
 	mes "[怪物学者维克克]";
 	mes "很高兴见到你。我叫维克克。";
 	mes "我是鲁恩-米德加兹王国怪物研究组织的学者。";
@@ -371,7 +371,7 @@ payon,132,235,3	script	怪物学者#02	98,{
 
 // Inside Payon
 //============================================================
-payon_in01,180,7,2	script	女服务员#payon	90,{
+payon_in01,180,7,2	script	女服务员#payon::Waitress#payon	90,{
 	mes "[吉姆的麻麻]";
 	mes "哦天哪~";
 	next;
@@ -463,7 +463,7 @@ payon_in01,180,7,2	script	女服务员#payon	90,{
 	close;
 }
 
-payon_in03,96,116,3	script	首席警卫#payon	708,3,3,{
+payon_in03,96,116,3	script	首席警卫#payon::Chief Guardsman#payon	708,3,3,{
 	end;
 
 OnTouch_:
@@ -480,7 +480,7 @@ OnTouch_:
 	close;
 }
 
-payon_in01,66,64,5	script	弓箭手扎克#payon	88,{
+payon_in01,66,64,5	script	弓箭手扎克#payon::Archer Zakk#payon	88,{
 	mes "[弓箭手扎克]";
 	mes "我有点担心我的一个朋友。";
 	next;
@@ -530,7 +530,7 @@ payon_in01,66,64,5	script	弓箭手扎克#payon	88,{
 	close;
 }
 
-payon_in01,47,59,2	script	弓箭手沃尔特#payon	88,{
+payon_in01,47,59,2	script	弓箭手沃尔特#payon::Archer Wolt#payon	88,{
 	mes "[弓箭手沃尔特]";
 	mes "弓箭手应该尽量多练习。否则，他们永远无法成为专家。";
 	next;
@@ -796,7 +796,7 @@ payon_in01,47,59,2	script	弓箭手沃尔特#payon	88,{
 	close;
 }
 
-payon_in03,99,190,4	script	首领#payon	107,2,2,{
+payon_in03,99,190,4	script	首领#payon::Chief#payon	107,2,2,{
 	end;
 
 OnTouch_:
@@ -934,7 +934,7 @@ OnTouch_:
 	end;
 }
 
-payon_in03,102,185,5	script	守卫#payon	708,{
+payon_in03,102,185,5	script	守卫#payon::Guard#payon	708,{
 	if (BaseLevel < 30) {
 		mes "[魔物学者 卫库克]";
 		mes "你好.";
@@ -956,7 +956,7 @@ payon_in03,102,185,5	script	守卫#payon	708,{
 
 // Payon Archer Village
 //============================================================
-pay_arche,77,131,2	script	弓箭手乔#payon	88,{
+pay_arche,77,131,2	script	弓箭手乔#payon::Archer Joe#payon	88,{
 	mes "[弓箭手乔]";
 	mes "佩尤恩！真是个美妙的地方！绝佳的弓和技艺高超的弓箭手！";
 	next;

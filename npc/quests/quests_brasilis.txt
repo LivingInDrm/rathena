@@ -111,21 +111,21 @@ OnGo:
 			else if (compare(strnpcinfo(2),"2")) setarray .@i[0],1,3;
 			else setarray .@i[0],1,2;
 			donpcevent "Puppy#"+charat(strnpcinfo(2),0)+.@i[rand(2)]+"::OnEnable";
-			hideonnpc strnpcinfo(0);
+			hideonnpc strnpcinfo(3);
 		}
 	}
 	close;
 
 OnInit:
-	if (!compare(strnpcinfo(2),"1")) hideonnpc strnpcinfo(0);
+	if (!compare(strnpcinfo(2),"1")) hideonnpc strnpcinfo(3);
 	end;
 
 OnEnable:
-	hideoffnpc strnpcinfo(0);
+	hideoffnpc strnpcinfo(3);
 	end;
 
 OnDisable:
-	hideonnpc strnpcinfo(0);
+	hideonnpc strnpcinfo(3);
 	end;
 }
 

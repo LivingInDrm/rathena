@@ -17,7 +17,7 @@
 
 // Black Marketeer (Buy Licenses - Non-Merchant Classes) :: qskill_buy_store
 //============================================================ 
-que_job01,68,84,1	script	黑市商人#Buying	881,{
+que_job01,68,84,1	script	黑市商人#Buying::Black Marketeer#Buying	881,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 2400) {
 		mes "[贾斯先生]";
 		mes "你太贪心了，甚至比我还要贪心！";
@@ -93,7 +93,7 @@ que_job01,68,84,1	script	黑市商人#Buying	881,{
 
 // Purchasing Team (Learn Skill - Merchant Classes)
 //============================================================ 
-alberta_in,58,52,4	script	采购团队#Buying	59,{
+alberta_in,58,52,4	script	采购团队#Buying::Purchasing Team#Buying	59,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 2400) {
 		mes "- 你无法交谈或执行任务，因为你携带的物品太多。 -";
 		close;

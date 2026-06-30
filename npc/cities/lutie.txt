@@ -16,7 +16,7 @@
 
 // Teleport to Lutie
 //============================================================
--	script	克劳斯先生	718,{
+-	script	克劳斯先生::Mr. Claus	718,{
 	mes "[克劳斯先生]";
 	mes "哈哈哈~ 圣诞快乐！！祝大家快乐和圣诞的欢愉！";
 	next;
@@ -61,7 +61,7 @@
 
 // Inside Lutie
 //============================================================
-xmas_in,100,96,4	script	圣诞老人	718,{
+xmas_in,100,96,4	script	圣诞老人::Santa Claus	718,{
 	mes "[圣诞老人]";
 	mes "哈哈哈~ 圣诞快乐！！";
 	next;
@@ -80,7 +80,7 @@ xmas_in,100,96,4	script	圣诞老人	718,{
 	close;
 }
 
-xmas_in,167,173,4	script	达夫尔	711,{
+xmas_in,167,173,4	script	达夫尔::Duffle	711,{
 	if (xmas_npc == 1) {
 		mes "[修沓云]";
 		mes "呵　呵　呵";
@@ -140,7 +140,7 @@ xmas_in,167,173,4	script	达夫尔	711,{
 	}
 }
 
-xmas_in,27,103,4	script	宽容的阿姨	701,{
+xmas_in,27,103,4	script	宽容的阿姨::Lenient Aunt	701,{
 	switch (xmas_npc) {
 	case 5:
 		mes "[塔肯茨]";
@@ -261,7 +261,7 @@ xmas_in,27,103,4	script	宽容的阿姨	701,{
 
 // Lutie
 //============================================================
-xmas,117,304,4	script	波泽	713,{
+xmas,117,304,4	script	波泽::Poze	713,{
 	if (xmas_npc == 3 || xmas_npc == 4) {
 		mes "[圣诞老公公]";
 		mes "哈哈哈~";
@@ -304,7 +304,7 @@ xmas,117,304,4	script	波泽	713,{
 	}
 }
 
-xmas,176,236,4	script	毛叔叔	712,{
+xmas,176,236,4	script	毛叔叔::Uncle Hairy	712,{
 	if (xmas_npc == 4) {
 		if (countitem(1024) > 0 && countitem(938) > 0) {
 			mes "[坎塔塔]";
@@ -443,7 +443,7 @@ xmas,176,236,4	script	毛叔叔	712,{
 	}
 }
 
-xmas,134,112,4	script	雪人	710,{
+xmas,134,112,4	script	雪人::Snowman	710,{
 	if (checkweight(1201,1) == 0 ) {
 		cutin "rutie_snownow01.bmp",2;
 		mes "[德璞]";
@@ -759,7 +759,7 @@ xmas,134,112,4	script	雪人	710,{
 		}
 }
 
-xmas,146,136,4	script	哈秀基	715,{
+xmas,146,136,4	script	哈秀基::Hashokii	715,{
 	mes "[塔心纪]";
 	mes "什么 ？ 毛茸茸的大叔？他又跟你说了我什么啊..跟你说我腌制泡菜的手艺多好又多好等等...";
 	mes "让我开心的话，然后想要我拿一些给他是吧？早知道他没安好心！呵..呵呵.不过啊";
@@ -833,7 +833,7 @@ xmas,146,136,4	script	哈秀基	715,{
 	}
 }
 
-xmas,206,168,4	script	小男孩	706,{
+xmas,206,168,4	script	小男孩::Little Boy	706,{
 	if (xmas_npc == 9) {
 		mes "[恰鲁恰鲁]";
 		mes "呃？雪雪？";
@@ -870,7 +870,7 @@ xmas,206,168,4	script	小男孩	706,{
 	}
 }
 
-xmas,208,168,4	script	小女孩	703,{
+xmas,208,168,4	script	小女孩::Little Girl	703,{
 	if (xmas_npc == 9 || xmas_npc == 10) {
 		switch(xmas_npc) {
 		case 9:

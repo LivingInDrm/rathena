@@ -29,7 +29,7 @@
 //= 2.8 Removed the need for use of 'goto.' [L0ne_W0lf]
 //============================================================
 
-yuno_in02,38,61,5	script	学院院长#sa	743,{
+yuno_in02,38,61,5	script	学院院长#sa::Dean of the Academy#sa	743,{
 	cutin "job_sage_kayron",2;
 	mes "[凯伦·格里克]";
 	if (Upper == 1) {
@@ -197,7 +197,7 @@ yuno_in02,38,61,5	script	学院院长#sa	743,{
 	end;
 }
 
-yuno_in03,154,35,4	script	学院工作人员#a	742,{
+yuno_in03,154,35,4	script	学院工作人员#a::Staff of the Academy#a	742,{
 	mes "[梅修斯·西尔菲]";
 	if (Upper == 1) {
 		mes "欢迎来到施维赫比尔魔法学院。等一下……我从哪里认识你吗？";
@@ -611,7 +611,7 @@ yuno_in03,154,35,4	script	学院工作人员#a	742,{
 	}
 }
 
-yuno_in03,105,177,5	script	书面测试教授#s	754,{
+yuno_in03,105,177,5	script	书面测试教授#s::Written Test Professor#s	754,{
 	mes "[克莱托斯·维尔多]";
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Sage) {
@@ -1021,7 +1021,7 @@ L_AskQuestions:
 }
 
 //Practical Examination Professer
-yuno_in03,169,180,3	script	实践考试 P	755,{
+yuno_in03,169,180,3	script	实践考试 P::Practical Examination P	755,{
 	mes "[赫尔墨斯·特里斯]";
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Sage) {
@@ -1216,7 +1216,7 @@ yuno_in03,169,180,3	script	实践考试 P	755,{
 	}
 }
 
-yuno_in03,62,176,2	script	历史教授#sa	109,{
+yuno_in03,62,176,2	script	历史教授#sa::History Professor#sa	109,{
 	mes "[萨菲恩·莱利斯]";
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Sage) {
@@ -1640,7 +1640,7 @@ yuno_in03,62,176,2	script	历史教授#sa	109,{
 	}
 }
 
-yuno_in03,32,102,1	script	生物学教授#sa	755,{
+yuno_in03,32,102,1	script	生物学教授#sa::Biology Professor#sa	755,{
 	mes "[卢修斯·塞尔苏斯]";
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Sage) {
@@ -2040,7 +2040,7 @@ yuno_in03,32,102,1	script	生物学教授#sa	755,{
 	}
 }
 
-yuno_in03,244,31,3	script	物理教授#sa	120,{
+yuno_in03,244,31,3	script	物理教授#sa::Physics Professor#sa	120,{
 	mes "[艾比西·乔治]";
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Sage) {
@@ -2451,7 +2451,7 @@ yuno_in03,244,31,3	script	物理教授#sa	120,{
 	}
 }
 
-job_sage,50,165,4	script	测试助手#talk	700,{
+job_sage,50,165,4	script	测试助手#talk::Test Helper#talk	700,{
 	mes "[测试助手]";
 	mes "欢迎来到贤者实用考试大厅。";
 	mes "如果你想现在参加考试，请进入候考室。";
@@ -2467,7 +2467,7 @@ job_sage,50,165,4	script	测试助手#talk	700,{
 	close;
 }
 
-job_sage,50,165,4	script	候诊室#sg	700,{
+job_sage,50,165,4	script	候诊室#sg::Waiting Room#sg	700,{
 	end;
 
 OnInit:
@@ -2488,7 +2488,7 @@ OnEnable:
 	end;
 }
 
--	script	竞技场#1	66,{
+-	script	竞技场#1::Arena#1	66,{
 OnInit:
 	disablenpc "Arena#1";
 	end;
@@ -2584,7 +2584,7 @@ OnTimer186000:
 	end;
 }
 
--	script	竞技场#2	-1,{
+-	script	竞技场#2::Arena#2	-1,{
 OnInit:
 	disablenpc "Arena#2";
 	end;
@@ -2687,7 +2687,7 @@ OnTimer186000:
 	end;
 }
 
--	script	竞技场#Doorkeeper	-1,{
+-	script	竞技场#Doorkeeper::Arena#Doorkeeper	-1,{
 OnInit:
 	disablenpc "Arena#Doorkeeper";
 	end;
@@ -2753,7 +2753,7 @@ OnTimer63000:
 	end;
 }
 
--	script	竞技场#3	-1,{
+-	script	竞技场#3::Arena#3	-1,{
 OnInit:
 	disablenpc "Arena#3";
 	end;
@@ -2770,7 +2770,7 @@ OnDisable:
 	end;
 }
 
--	script	测试助手#sg	-1,{
+-	script	测试助手#sg::Test Helper#sg	-1,{
 OnInit:
 	disablenpc "Test Helper#sg";
 	end;

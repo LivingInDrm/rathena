@@ -25,7 +25,7 @@
 //= 2.0 Bug fixes (bugreport:7928) [DeadlySilence]
 //============================================================
 
-geffen,59,143,0	script	梅拉	91,{
+geffen,59,143,0	script	梅拉::Meera	91,{
 	mes "[米拉]";
 	mes "欢迎来到吉芬,";
 	mes "魔法之城!";
@@ -48,7 +48,7 @@ geffen,59,143,0	script	梅拉	91,{
 	close;
 }
 
-geffen,156,190,0	script	奥尔沃克	82,{
+geffen,156,190,0	script	奥尔沃克::Orwalk	82,{
 	mes "[欧沃克]";
 	mes "有兴趣...";
 	mes "很有兴趣！";
@@ -66,21 +66,23 @@ geffen,156,190,0	script	奥尔沃克	82,{
 	close;
 }
 
-geffen_in,164,109,0	script	巫师斯坦扎	64,{
+geffen_in,164,109,0	script	巫师斯坦扎::Wizard Stanza	64,{
 	mes "[斯坦扎]";
 	mes "我感受到一股强大的灵魂。难道是你吗……？";
 	next;
 	mes "[斯坦扎]";
-	if (BaseJob == Job_Mage)
+	if (BaseJob == Job_Mage) {
 		mes "看来你在神秘艺术方面受过训练。";
 		mes "魔法……它的力量受因果法则的支配。";
+ }
 	else if (BaseJob == Job_Acolyte) {
 		mes "啊……我看到你以某种方式掌握了神圣的力量。";
 		mes "我想神圣力量可以被视为一种神秘能量。";
 	}
-	else if (Class == Job_Novice)
+	else if (Class == Job_Novice) {
 		mes "虽然你现在可能无法使用魔法或其他强大的技能，";
 		mes "但这些知识在未来可能会对你有所帮助，年轻的初学者……";
+ }
 	else
 		mes "尽管你没有正式的魔法训练，";
 		mes "但你使用的技能无论你是否意识到，都在借用异界的能量……";
@@ -100,7 +102,7 @@ geffen_in,164,109,0	script	巫师斯坦扎	64,{
 	close;
 }
 
-geffen,147,26,0	script	拉尔菲	97,{
+geffen,147,26,0	script	拉尔菲::Ralphie	97,{
 	mes "[拉尔菲]";
 	mes "在这个世界的某处，有一把罕见的魔杖能将精神之力转换为物质之力, 这把杖来自 ^990000毁灭之力^000000...";
 	next;
@@ -130,7 +132,7 @@ geffen,147,26,0	script	拉尔菲	97,{
 	close;
 }
 
-geffen,111,48,0	script	斯泰西	101,{
+geffen,111,48,0	script	斯泰西::Stacey	101,{
 	if (getequipid(EQI_HEAD_TOP) == 2299) {
 		mes "[斯坦西]";
 		mes "哦...!";
@@ -190,7 +192,7 @@ geffen,111,48,0	script	斯泰西	101,{
 	}
 }
 
-geffen_in,34,170,0	script	西奥多	47,{
+geffen_in,34,170,0	script	西奥多::Theodore	47,{
 	mes "[西奥多]";
 	mes "你好!";
 	mes "难道不是一种";
@@ -222,7 +224,7 @@ geffen_in,34,170,0	script	西奥多	47,{
 	close;
 }
 
-geffen,146,148,4	script	可疑的家伙	99,6,6,{
+geffen,146,148,4	script	可疑的家伙::Suspicious Guy	99,6,6,{
 	end;
 
 OnTouch_:
@@ -363,9 +365,10 @@ OnTouch_:
 		break;
 	case 3:
 		mes "[可疑的家伙]";
-		if (Sex == SEX_MALE)
+		if (Sex == SEX_MALE) {
 			mes "披风？那是过时的消息！";
 			mes "你知道现在什么是最新的防护装备吗？";
+  }
 		else
 			mes "那么，为什么这么美丽的女人要穿过时的东西呢？";
 			mes "你知道什么能让你看起来更好吗？";
@@ -431,7 +434,7 @@ OnTouch_:
 	close;
 }
 
-geffen_in,22,125,1	script	商人	52,{
+geffen_in,22,125,1	script	商人::Crumpler	52,{
 	mes "[?]";
 	mes "^333333*嘘!*";
 	mes "嘿，你!";
@@ -528,7 +531,7 @@ geffen_in,22,125,1	script	商人	52,{
 	}
 }
 
-geffen_in,59,61,1	script	斯凯勒	61,{
+geffen_in,59,61,1	script	斯凯勒::Skyler	61,{
 	mes "[克鲁帕]";
 	mes "哦~~~!";
 	mes "你的裙子真好看呀~";
@@ -553,7 +556,7 @@ geffen_in,59,61,1	script	斯凯勒	61,{
 	close;
 }
 
-geffen_in,27,134,5	script	服务员#elen	91,{
+geffen_in,27,134,5	script	服务员#elen::Waitress#elen	91,{
 	mes "[斯盖乐]";
 	mes "你好 你好。";
 	mes "你不在看吗？";
@@ -692,7 +695,7 @@ geffen_in,27,134,5	script	服务员#elen	91,{
 	close;
 }
 
-geffen_in,70,67,3	script	服务员#elise	90,{
+geffen_in,70,67,3	script	服务员#elise::Waitress#elise	90,{
 	mes "[艾仑奥瑞]";
 	mes "这个地方....";
 	mes "的确有";
@@ -809,7 +812,7 @@ geffen_in,70,67,3	script	服务员#elise	90,{
 	close;
 }
 
-geffen_in,79,76,2	script	商人达文	120,{
+geffen_in,79,76,2	script	商人达文::Merchant Daven	120,{
 	mes "[商人达文]";
 	mes "我记得吉芬那时候还很无聊。";
 	next;
@@ -875,7 +878,7 @@ geffen_in,79,76,2	script	商人达文	120,{
 	close;
 }
 
-geffen_in,114,73,5	script	哈登海姆	709,{
+geffen_in,114,73,5	script	哈登海姆::Hadenheim	709,{
 	mes "[伊丽纱]";
 	mes "你好~";
 	next;
@@ -921,7 +924,7 @@ geffen_in,114,73,5	script	哈登海姆	709,{
 	close;
 }
 
-geffen_in,39,127,2	script	灵媒顾问	704,{
+geffen_in,39,127,2	script	灵媒顾问::Psychic Advisor	704,{
 	mes "[灵媒顾问]";
 	mes "啊...别告诉我！你是来算命的，对吧？我知道，我知道...";
 	mes "我能看到未来！那么你想要什么样的命运？";
@@ -1376,7 +1379,7 @@ geffen_in,39,127,2	script	灵媒顾问	704,{
 	}
 }
 
-geffen_in,109,72,2	script	怪物学者	90,{
+geffen_in,109,72,2	script	怪物学者::Monster Scholar	90,{
 	mes "[埃斯特雷斯]";
 	mes "你好，我是吉芬的怪物学专家。你有什么特别想了解的吗？";
 	next;
@@ -1392,9 +1395,10 @@ geffen_in,109,72,2	script	怪物学者	90,{
 		mes "可以过桥去西边与科博尔德战斗。";
 		next;
 		mes "[埃斯特雷斯]";
-		if (BaseLevel > 40)
+		if (BaseLevel > 40) {
 			mes "你看起来足够强大，可以接受这样的挑战。";
 			mes "但如果你看到更鲁莽的人过西桥，最好给他们一个警告。";
+  }
 		else
 			mes "嗯，如果你打算去那里，最好不要单独去。";
 			mes "我真的建议你做好准备，如果要与那些怪物战斗。";
@@ -1461,7 +1465,7 @@ geffen_in,109,72,2	script	怪物学者	90,{
 
 // Lvl 4 weapon quest related NPC ------------------------------------------------------
 
-geffen,203,146,5	script	市民	97,{
+geffen,203,146,5	script	市民::Citizen	97,{
 	mes "[商人大卫]";
 	mes "我记得在回到";
 	mes "吉芬后有段时间真的很无聊啊！ ";

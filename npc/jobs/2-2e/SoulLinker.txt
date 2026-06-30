@@ -23,7 +23,7 @@
 //= 1.6 Updated to match the latest official script. [Euphy]
 //============================================================
 
-morocc_in,174,30,6	script	小孩#link1	716,{
+morocc_in,174,30,6	script	小孩#link1::Kid#link1	716,{
 	if (Class == Job_Soul_Linker) {
 		mes "[玛雅]";
 		mes "祝你好运，";
@@ -491,9 +491,9 @@ OnTouch_:
 	end;
 }
 
-job_soul,35,30,6	duplicate(SLTester)	玛雅#link6	716
+job_soul,35,30,6	duplicate(SLTester)	玛雅#link6::Maia#link6	716
 
-job_soul,30,35,6	script	僧侣灵魂#link4	827,{
+job_soul,30,35,6	script	僧侣灵魂#link4::Monk Spirit#link4	827,{
 	if (SOUL_Q == 2) {
 		mes "[僧侣灵魂]";
 		mes "我是谁...? 我想...最好还是先和玛雅谈谈...";
@@ -524,7 +524,7 @@ job_soul,30,35,6	script	僧侣灵魂#link4	827,{
 	close;
 }
 
-job_soul,30,25,7	script	智者灵魂#link5	754,{
+job_soul,30,25,7	script	智者灵魂#link5::Sage Spirit#link5	754,{
 	if (SOUL_Q == 2) {
 		mes "[智者灵魂]";
 		mes "和玛雅谈谈。如果玛雅不先解释你的现状，";
@@ -559,7 +559,7 @@ job_soul,30,25,7	script	智者灵魂#link5	754,{
 	close;
 }
 
-job_soul,25,30,5	script	炼金术士之灵#link7	744,{
+job_soul,25,30,5	script	炼金术士之灵#link7::Alchemist Spirit#link7	744,{
 	if (SOUL_Q == 2) {
 		mes "[炼金术士之灵]";
 		mes "哦！我真的想和你说话，";
@@ -593,7 +593,7 @@ job_soul,25,30,5	script	炼金术士之灵#link7	744,{
 	close;
 }
 
-job_soul,1,5,0	script	计时器#link3	111,{
+job_soul,1,5,0	script	计时器#link3::Timer#link3	111,{
 	end;
 
 OnEnable:
@@ -625,7 +625,7 @@ OnTimer183000:
 	stopnpctimer;
 }
 
-sec_in02,35,153,0	script	灵魂链接者瓦尔	871,{
+sec_in02,35,153,0	script	灵魂链接者瓦尔::Soul Linker Var	871,{
 	callfunc "F_GM_NPC";
 	mes "[灵魂链接者瓦尔]";
 	mes "如果灵魂链接者候选人在任务结束时遇到问题，";

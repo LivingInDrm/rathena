@@ -27,7 +27,7 @@
 //= 1.6 Replaced effect numerics with constants. [L0ne_W0lf]
 //============================================================
 
-prontera,174,328,3	script	年轻人#bard_q1	89,3,3,{
+prontera,174,328,3	script	年轻人#bard_q1::Young Man#bard_q1	89,3,3,{
 	if (BaseJob == Job_Bard) {
 		emotion ET_HUK;
 		mes "[胆小的年轻人]";
@@ -259,7 +259,7 @@ OnTouch:
 	end;
 }
 
-morocc_in,169,72,7	script	恶毒的吟游诗人#bs	741,3,3,{
+morocc_in,169,72,7	script	恶毒的吟游诗人#bs::Spiteful-Looking Bard#bs	741,3,3,{
 	if (BaseJob == Job_Bard) {
 		if (Class == Job_Clown && qskill_bard == 9) {
 			if (getskilllv("BA_PANGVOICE") != 0) {
@@ -626,7 +626,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",1,2; close;
 }
 
-niflheim,185,205,3	script	耶赫尔#bard_chick2	800,3,3,{
+niflheim,185,205,3	script	耶赫尔#bard_chick2::Yhelle#bard_chick2	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -652,7 +652,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",2,3; close;
 }
 
-niflheim,85,203,5	script	耶赫尔#bard_chick3	800,3,3,{
+niflheim,85,203,5	script	耶赫尔#bard_chick3::Yhelle#bard_chick3	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -678,7 +678,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",3,4; close;
 }
 
-niflheim,149,81,7	script	耶赫尔#bard_chick4	800,3,3,{
+niflheim,149,81,7	script	耶赫尔#bard_chick4::Yhelle#bard_chick4	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -704,7 +704,7 @@ OnTouch:
 	callfunc "F_BardSkillYhelle",4,5; close;
 }
 
-niflheim,209,144,3	script	耶赫尔#bard_chick5	800,3,3,{
+niflheim,209,144,3	script	耶赫尔#bard_chick5::Yhelle#bard_chick5	800,3,3,{
 	emotion ET_HUK, playerattached();
 	emotion ET_HUK;
 	mes "[亨·耶尔]";
@@ -732,7 +732,7 @@ OnTouch:
 
 // Drunken Men
 //============================================================
-morocc_in,178,73,3	script	顾客#bard_skill01	54,{
+morocc_in,178,73,3	script	顾客#bard_skill01::Customer#bard_skill01	54,{
 	mes "[小醉汉]";
 	mes "你觉得怎么样";
 	mes "是全世界最好喝的饮料吗？我觉得";
@@ -792,7 +792,7 @@ morocc_in,178,73,3	script	顾客#bard_skill01	54,{
 	close;
 }
 
-morocc_in,175,70,7	script	顾客#bard_skill02	50,{
+morocc_in,175,70,7	script	顾客#bard_skill02::Customer#bard_skill02	50,{
 	mes "[小醉汉]";
 	mes "你觉得怎么样";
 	mes "是全世界最好喝的饮料吗？我觉得";
@@ -854,7 +854,7 @@ morocc_in,175,70,7	script	顾客#bard_skill02	50,{
 
 // Bartender
 //============================================================
-morocc_in,166,76,7	script	酒保#bard_qskill	46,{
+morocc_in,166,76,7	script	酒保#bard_qskill::Bartender#bard_qskill	46,{
 	if (checkweight(1201,1) == 0) {
 		mes "^3355FF站住！";
 		mes "你携带的物品太多，背包空间不足以接收任何奖励。请腾出更多背包空间后再来接受这个挑战。";

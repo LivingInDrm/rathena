@@ -57,7 +57,7 @@
 //= 2.9a Tweaked NPC sprite & cutin used. [Liam]
 //============================================================ 
 
-einbroch,246,70,0	script	投票计时器#ein	-1,{
+einbroch,246,70,0	script	投票计时器#ein::Vote Timer#ein	-1,{
 OnInit:
 	if ($dts) {
 		set $dts,0;
@@ -229,7 +229,7 @@ OnTimer60000:
 	end;
 }
 
-einbroch,245,71,0	script	投票计时器2#ein	-1,{
+einbroch,245,71,0	script	投票计时器2#ein::Vote Timer2#ein	-1,{
 OnEnable:
 	initnpctimer;
 	end;
@@ -251,7 +251,7 @@ OnTimer60000:
 	end;
 }
 
-einbroch,246,71,0	script	投票计时器3#ein	-1,{
+einbroch,246,71,0	script	投票计时器3#ein::Vote Timer3#ein	-1,{
 OnEnable:
 	initnpctimer;
 	end;
@@ -274,7 +274,7 @@ OnTimer60000:
 	end;
 }
 
-einbroch,247,71,0	script	投票计时器4#ein	-1,{
+einbroch,247,71,0	script	投票计时器4#ein::Vote Timer4#ein	-1,{
 OnEnable:
 	initnpctimer;
 	end;
@@ -596,28 +596,28 @@ function	script	F_VoteKafra	{
 	end;
 }
 
-yuno,162,191,4	script	卡夫拉投票工作人员#yuno	861,{
+yuno,162,191,4	script	卡夫拉投票工作人员#yuno::Kafra Voting Staff#yuno	861,{
 	callfunc "F_Vote卡普拉",9;
 }
-prontera,164,125,4	script	卡夫拉投票工作人员#prt	116,{
+prontera,164,125,4	script	卡夫拉投票工作人员#prt::Kafra Voting Staff#prt	116,{
 	callfunc "F_Vote卡普拉",2;
 }
-moc_ruins,104,133,4	script	卡夫拉投票工作人员#moc	116,{
+moc_ruins,104,133,4	script	卡夫拉投票工作人员#moc::Kafra Voting Staff#moc	116,{
 	callfunc "F_Vote卡普拉",2;
 }
-geffen,122,37,4	script	卡夫拉投票工作人员#gef	116,{
+geffen,122,37,4	script	卡夫拉投票工作人员#gef::Kafra Voting Staff#gef	116,{
 	callfunc "F_Vote卡普拉",2;
 }
-payon,158,182,4	script	卡夫拉投票工作人员#pay	116,{
+payon,158,182,4	script	卡夫拉投票工作人员#pay::Kafra Voting Staff#pay	116,{
 	callfunc "F_Vote卡普拉",2;
 }
-alberta,119,70,4	script	卡夫拉投票工作人员#alb	116,{
+alberta,119,70,4	script	卡夫拉投票工作人员#alb::Kafra Voting Staff#alb	116,{
 	callfunc "F_Vote卡普拉",2;
 }
-aldebaran,145,102,4	script	卡夫拉投票工作人员#alde	116,{
+aldebaran,145,102,4	script	卡夫拉投票工作人员#alde::Kafra Voting Staff#alde	116,{
 	callfunc "F_Vote卡普拉",2;
 }
-lighthalzen,163,60,4	script	卡夫拉投票工作人员#lght	861,{
+lighthalzen,163,60,4	script	卡夫拉投票工作人员#lght::Kafra Voting Staff#lght	861,{
 	callfunc "F_Vote卡普拉",9;
 }
 
@@ -910,16 +910,16 @@ lighthalzen,163,60,4	script	卡夫拉投票工作人员#lght	861,{
 	end;
 }
 
-yuno,153,191,6	duplicate(VotingStaffCCE)	酷活动工作人员#yuno	874
-prontera,147,125,6	duplicate(VotingStaffCCE)	酷活动工作人员#prt	874
-moc_ruins,97,133,6	duplicate(VotingStaffCCE)	酷活动工作人员#moc	874
-geffen,117,37,6	duplicate(VotingStaffCCE)	酷活动工作人员#gef	874
-payon,153,182,6	duplicate(VotingStaffCCE)	酷活动工作人员#pay	874
-alberta,114,70,6	duplicate(VotingStaffCCE)	酷活动工作人员#alb	874
-aldebaran,138,102,6	duplicate(VotingStaffCCE)	酷活动工作人员#alde	874
-lighthalzen,154,60,6	duplicate(VotingStaffCCE)	酷活动工作人员#lhz	874
+yuno,153,191,6	duplicate(VotingStaffCCE)	酷活动工作人员#yuno::Cool Event Staff#yuno	874
+prontera,147,125,6	duplicate(VotingStaffCCE)	酷活动工作人员#prt::Cool Event Staff#prt	874
+moc_ruins,97,133,6	duplicate(VotingStaffCCE)	酷活动工作人员#moc::Cool Event Staff#moc	874
+geffen,117,37,6	duplicate(VotingStaffCCE)	酷活动工作人员#gef::Cool Event Staff#gef	874
+payon,153,182,6	duplicate(VotingStaffCCE)	酷活动工作人员#pay::Cool Event Staff#pay	874
+alberta,114,70,6	duplicate(VotingStaffCCE)	酷活动工作人员#alb::Cool Event Staff#alb	874
+aldebaran,138,102,6	duplicate(VotingStaffCCE)	酷活动工作人员#alde::Cool Event Staff#alde	874
+lighthalzen,154,60,6	duplicate(VotingStaffCCE)	酷活动工作人员#lhz::Cool Event Staff#lhz	874
 
-yuno,103,225,0	script	审查协会#5	-1,{
+yuno,103,225,0	script	审查协会#5::Scrutiny Association#5	-1,{
 OnInit:
 	initnpctimer;
 	end;
@@ -937,7 +937,7 @@ OnTimer7200000:
 	end;
 }
 
-einbroch,248,71,0	script	审查协会#6	-1,{
+einbroch,248,71,0	script	审查协会#6::Scrutiny Association#6	-1,{
 OnEnable:
 	initnpctimer;
 	end;
@@ -960,7 +960,7 @@ OnTimer15000:
 	end;
 }
 
-einbroch,249,71,0	script	审查协会#7	-1,{
+einbroch,249,71,0	script	审查协会#7::Scrutiny Association#7	-1,{
 OnEnable:
 	initnpctimer;
 	end;
@@ -986,7 +986,7 @@ OnTimer15000:
 /*
 // GM only NPC used for modifying values related to the DTS system.
 // Disabled in official script.
-sec_in02,17,160,4	script	投票全局变量女孩#yuno	864,{
+sec_in02,17,160,4	script	投票全局变量女孩#yuno::Vote Globalvar Girl#yuno	864,{
 	callfunc "F_GM_NPC";
 	mes "[克里斯蒂的女仆]";
 	mes "克里斯蒂小姐！";

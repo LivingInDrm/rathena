@@ -28,14 +28,14 @@
 //= 1.5 Added dummy "OnMyMobDead" event to Cursed Spirit. [L0ne_W0lf]
 //============================================================
 
-niflheim,52,147,3	script	基兹#nif	796,{
+niflheim,52,147,3	script	基兹#nif::Keedz#nif	796,{
 	mes "[柯资]";
 	mes "活着的人不准进来";
 	mes "这里 -! 不允许";
 	close;
 }
 
-niflheim,195,211,6	script	巨人#nif	796,3,3,{
+niflheim,195,211,6	script	巨人#nif::Gigantia#nif	796,3,3,{
 	if (isequipped(5038) || isequipped(2257) || isequipped(2256)) {
 		mes "[" + strcharinfo(0) + "]";
 		mes "怎么了？";
@@ -70,7 +70,7 @@ OnTouch_:
 	end;
 }
 
-nif_in,16,27,1	script	不死鸡#nif	800,{
+nif_in,16,27,1	script	不死鸡#nif::Undead Chicken#nif	800,{
 	percentheal -5,0;
 	mes "[不死鸡]";
 	mes "我曾是一只过着平静生活的普通鸡，";
@@ -85,7 +85,7 @@ nif_in,16,27,1	script	不死鸡#nif	800,{
 	close;
 }
 
-nif_in,16,30,4	script	不死使者#nif	799,{
+nif_in,16,30,4	script	不死使者#nif::Undead Familiar#nif	799,{
 	percentheal -5,0;
 	mes "[瓦托曼]";
 	mes "哦哦，真方便，一个活人~！";
@@ -98,7 +98,7 @@ nif_in,16,30,4	script	不死使者#nif	799,{
 	close;
 }
 
-nif_in,156,93,5	script	孩子#niflheim	793,{
+nif_in,156,93,5	script	孩子#niflheim::Child#niflheim	793,{
 	mes "[瞎眼鸡]";
 	mes "活着的时候被人们吃掉了，";
 	mes "现在换我来吃你了，咕咕咕，";
@@ -154,7 +154,7 @@ nif_in,156,93,5	script	孩子#niflheim	793,{
 	}
 }
 
-niflheim,350,258,1	script	被诅咒的灵魂#nif	802,{
+niflheim,350,258,1	script	被诅咒的灵魂#nif::Cursed Spirit#nif	802,{
 	killmonster "niflheim","Cursed Spirit#nif::OnMyMobDead";
 	mes "[阿什·布鲁斯]";
 	mes "我感觉你被强大的咒语诅咒了……嗯……很明显你想做什么……";

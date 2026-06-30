@@ -1604,11 +1604,11 @@ OnMyMobDead:
 		case 2: set .@str$,"唉，那不过是短暂的一场梦……"; break;
 	}
 	mapannounce "job3_rang02","蛋形炸弹 : "+.@str$,bc_map,"0x87ceeb"; //FW_NORMAL 12 0 0
-	donpcevent strnpcinfo(0)+"::OnDisable";
+	donpcevent strnpcinfo(3)+"::OnDisable";
 	end;
 OnTimer10000:
 	mapannounce "job3_rang02","蛋形炸弹 : 啊啊啊啊啊啊！！！我都说了吧！！",bc_map,"0xFF9900"; //FW_NORMAL 12 0 0
-	donpcevent strnpcinfo(0)+"::OnDisable";
+	donpcevent strnpcinfo(3)+"::OnDisable";
 	end;
 }
 job3_rang02,246,42,0	duplicate(Egg Bomb#0)	Egg Bomb#14	139

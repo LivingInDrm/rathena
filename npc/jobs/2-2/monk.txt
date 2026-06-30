@@ -18,7 +18,7 @@
 //= 2.5 Removed the need for use of 'goto.' [L0ne_W0lf]
 //============================================================
 
-prt_monk,59,247,1	script	ÊØ»¤É®ÂÂ#mk	120,6,2,{
+prt_monk,59,247,1	script	ÊØ»¤É®ÂÂ#mk::Guarding Monk#mk	120,6,2,{
 	if (Upper == 1) {
 		mes "[ÍÐ»ô²¼]";
 		mes "àÅ£¿ÄãÀ´ÕâÀïÓÐÊ²Ã´ÊÂ£¿Èç¹ûÏë½øÈëÕâ¸öÉñÊ¥ÇøÓò£¬";
@@ -283,7 +283,7 @@ OnTouch_:
 	end;
 }
 
-monk_in,99,58,1	script	ÄÂº£ÀÏÊ¦#mk	60,{
+monk_in,99,58,1	script	ÄÂº£ÀÏÊ¦#mk::Sensei Moohae#mk	60,{
 	mes "[ÄÂº£ÀÏÊ¦]";
 	mes "ÄãºÃ£¬ÄãËÆºõ×ßÔÚ´¿½àµÄµÀÂ·ÉÏ¡£½øÀ´°É£¬";
 	mes "½ñÌìÎÒÄÜÎªÄã×öÐ©Ê²Ã´£¿";
@@ -813,7 +813,7 @@ monk_in,99,58,1	script	ÄÂº£ÀÏÊ¦#mk	60,{
 	}
 }
 
-prt_monk,251,255,1	script	Í¸¹þ#mk	79,{
+prt_monk,251,255,1	script	Í¸¹þ#mk::Touha#mk	79,{
 	if (MONK_Q >= 10 && MONK_Q < 14) {
 		if (MONK_Q == 10) {
 			mes "[Í¸¹þ]";
@@ -1591,7 +1591,7 @@ prt_monk,251,255,1	script	Í¸¹þ#mk	79,{
 	}
 }
 
-prt_monk,57,179,1	script	²¼¹þ#mk	110,{
+prt_monk,57,179,1	script	²¼¹þ#mk::Boohae#mk	110,{
 	if (MONK_Q == 14 && BaseJob == Job_Acolyte) {
 		mes "[²¼¹þ]";
 		mes "...";
@@ -1757,7 +1757,7 @@ prt_monk,57,179,1	script	²¼¹þ#mk	110,{
 	}
 }
 
-prt_monk,199,169,3	script	ÃÅÎÀ#mk	746,{
+prt_monk,199,169,3	script	ÃÅÎÀ#mk::Door Keeper#mk	746,{
 	mes "[ÊØÎÀÇÇÀïÆÕ]";
 	mes "....Õâ¸öµØ·½ÊÇÎªÄÇÐ©ÕýÔÚ²âÊÔ³ÉÎªÉ®ÂÂµÄÈË×¼±¸µÄ¡£";
 	next;
@@ -1790,7 +1790,7 @@ prt_monk,199,169,3	script	ÃÅÎÀ#mk	746,{
 	}
 }
 
-monk_test,329,61,3	script	°ÍÊæ#mk	753,{
+monk_test,329,61,3	script	°ÍÊæ#mk::Bashu#mk	753,{
 	if (MONK_Q > 14 && MONK_Q < 25) {
 		if (MONK_Q == 15) {
 			mes "[°ÍÊæ]";
@@ -1841,7 +1841,7 @@ monk_test,329,61,3	script	°ÍÊæ#mk	753,{
 	}
 }
 
-monk_test,386,388,4	script	¼ûÏ°É®ÂÂ#mk	110,{
+monk_test,386,388,4	script	¼ûÏ°É®ÂÂ#mk::Apprentice Monk#mk	110,{
 	mes "[¼ûÏ°É®ÂÂ]";
 	mes "»¶Ó­£¡Õâ¸öµØ·½ÊÇ²âÊÔÉ®ÂÂºòÑ¡ÈËÄÍÁ¦µÄµØ·½£¡";
 	next;
@@ -1872,7 +1872,7 @@ monk_test,386,388,4	script	¼ûÏ°É®ÂÂ#mk	110,{
 	close;
 }
 
-monk_test,387,350,0	script	¼à¶½Ô±#race_monk	45,2,2,{
+monk_test,387,350,0	script	¼à¶½Ô±#race_monk::Supervisor#race_monk	45,2,2,{
 OnTouch_:
 	if (MONK_Q >= 15 && MONK_Q <= 23) {
 		set MONK_Q,MONK_Q+1;
@@ -1904,33 +1904,33 @@ OnTouch_:
 	end;
 }
 
-monk_test,83,384,0	duplicate(MonkTrap)	ÏÝÚå#t_monk1_2	-1
-monk_test,82,385,0	duplicate(MonkTrap)	ÏÝÚå#t_monk1_3	-1
-monk_test,83,385,0	duplicate(MonkTrap)	ÏÝÚå#t_monk1_4	-1
-monk_test,38,388,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_1	-1,0,1
-monk_test,39,388,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_2	-1,0,1
-monk_test,38,386,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_3	-1
-monk_test,39,386,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_4	-1
-monk_test,11,158,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_1	-1,1,0
-monk_test,11,159,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_2	-1,1,0
-monk_test,13,159,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_3	-1
-monk_test,13,158,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_4	-1
-monk_test,11,30,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_1	-1,3,0
-monk_test,11,31,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_2	-1,3,0
-monk_test,15,30,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_3	-1
-monk_test,15,31,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_4	-1
-monk_test,70,12,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_1	-1,0,1
-monk_test,71,12,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_2	-1,0,1
-monk_test,70,10,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_3	-1
-monk_test,71,10,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_4	-1
-monk_test,186,11,0	duplicate(MonkTrap)	ÏÝÚå#t_monk6_1	-1,2,3
-monk_test,189,11,0	duplicate(MonkTrap)	ÏÝÚå#t_monk6_2	-1,0,3
-monk_test,387,43,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_1	-1,1,0
-monk_test,387,42,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_2	-1,1,0
-monk_test,389,43,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_3	-1
-monk_test,389,42,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_4	-1
+monk_test,83,384,0	duplicate(MonkTrap)	ÏÝÚå#t_monk1_2::Trap#t_monk1_2	-1
+monk_test,82,385,0	duplicate(MonkTrap)	ÏÝÚå#t_monk1_3::Trap#t_monk1_3	-1
+monk_test,83,385,0	duplicate(MonkTrap)	ÏÝÚå#t_monk1_4::Trap#t_monk1_4	-1
+monk_test,38,388,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_1::Trap#t_monk2_1	-1,0,1
+monk_test,39,388,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_2::Trap#t_monk2_2	-1,0,1
+monk_test,38,386,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_3::Trap#t_monk2_3	-1
+monk_test,39,386,0	duplicate(MonkTrap)	ÏÝÚå#t_monk2_4::Trap#t_monk2_4	-1
+monk_test,11,158,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_1::Trap#t_monk3_1	-1,1,0
+monk_test,11,159,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_2::Trap#t_monk3_2	-1,1,0
+monk_test,13,159,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_3::Trap#t_monk3_3	-1
+monk_test,13,158,0	duplicate(MonkTrap)	ÏÝÚå#t_monk3_4::Trap#t_monk3_4	-1
+monk_test,11,30,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_1::Trap#t_monk4_1	-1,3,0
+monk_test,11,31,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_2::Trap#t_monk4_2	-1,3,0
+monk_test,15,30,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_3::Trap#t_monk4_3	-1
+monk_test,15,31,0	duplicate(MonkTrap)	ÏÝÚå#t_monk4_4::Trap#t_monk4_4	-1
+monk_test,70,12,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_1::Trap#t_monk5_1	-1,0,1
+monk_test,71,12,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_2::Trap#t_monk5_2	-1,0,1
+monk_test,70,10,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_3::Trap#t_monk5_3	-1
+monk_test,71,10,0	duplicate(MonkTrap)	ÏÝÚå#t_monk5_4::Trap#t_monk5_4	-1
+monk_test,186,11,0	duplicate(MonkTrap)	ÏÝÚå#t_monk6_1::Trap#t_monk6_1	-1,2,3
+monk_test,189,11,0	duplicate(MonkTrap)	ÏÝÚå#t_monk6_2::Trap#t_monk6_2	-1,0,3
+monk_test,387,43,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_1::Trap#t_monk7_1	-1,1,0
+monk_test,387,42,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_2::Trap#t_monk7_2	-1,1,0
+monk_test,389,43,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_3::Trap#t_monk7_3	-1
+monk_test,389,42,0	duplicate(MonkTrap)	ÏÝÚå#t_monk7_4::Trap#t_monk7_4	-1
 
-job_monk,225,180,1	script	ÐþÎä#mk	89,{
+job_monk,225,180,1	script	ÐþÎä#mk::Hyunmoo#mk	89,{
 	if ((countitem(1069) > 0 || countitem(1070) > 0) && countitem(1069) < 30 && countitem(1070) < 30) {
 		mes "[ÐþÎä]";
 		mes "ÄãÃ»ÓÐ´ø¹»Ä¢¹½...È¥¶àÄÃÒ»Ð©¡£";
@@ -2022,7 +2022,7 @@ job_monk,225,180,1	script	ÐþÎä#mk	89,{
 	}
 }
 
-prt_monk,225,180,1	script	ÐþÎä#mk2	89,{
+prt_monk,225,180,1	script	ÐþÎä#mk2::Hyunmoo#mk2	89,{
 	if (MONK_Q < 25) {
 		mes "[ÐþÎä]";
 		mes "µ±ÎÒ¿´µ½Êß²ËÉú³¤Ê±£¬ÎÒ¸Ðµ½×Ô¼ºÒ²ÔÚ³É³¤¡£";
@@ -2063,7 +2063,7 @@ prt_monk,225,180,1	script	ÐþÎä#mk2	89,{
 	}
 }
 
-monk_test,319,139,1	script	ÌÀÄ·#mk	52,{
+monk_test,319,139,1	script	ÌÀÄ·#mk::Tomoon#mk	52,{
 	if (MONK_Q == 25) {
 		mes "[ÌÀÄ·]";
 		mes "»¶Ó­ÄêÇáÈË¡£";
@@ -2134,7 +2134,7 @@ monk_test,319,139,1	script	ÌÀÄ·#mk	52,{
 	}
 }
 
-monk_test,82,85,1	script	¼à¿¼¹Ù#mk	95,{
+monk_test,82,85,1	script	¼à¿¼¹Ù#mk::Proctor#mk	95,{
 	mes "[¼à¿¼¹Ù]";
 	mes "ÄÇÃ´£¬Äã×¼±¸ºÃ½ÓÊÜ¾«ÉñÑµÁ·ÁËÂð£¿";
 	next;
@@ -2241,7 +2241,7 @@ OnTouch_:
 	end;
 }
 
-monk_test,88,91,1	script	¼à¿¼¹Ù#mk2	52,{
+monk_test,88,91,1	script	¼à¿¼¹Ù#mk2::Proctor#mk2	52,{
 	mes "[¼à¿¼¹Ù]";
 	mes "ÄÇÃ´£¬Äã×¼±¸ºÃ½ÓÊÜÕâ¸ö¾«ÉñÑµÁ·ÁËÂð£¿";
 	next;
@@ -2348,7 +2348,7 @@ OnTouch_:
 	end;
 }
 
-monk_test,95,85,1	script	¼à¿¼¹Ù#btl#3	79,{
+monk_test,95,85,1	script	¼à¿¼¹Ù#btl#3::Proctor#btl#3	79,{
 	mes "[¼à¿¼¹Ù]";
 	mes "ÄÇÃ´£¬Äã×¼±¸ºÃ½ÓÊÜÕâ¸ö¾«ÉñÑµÁ·ÁËÂð£¿";
 	next;

@@ -42,7 +42,7 @@
 //= 3.3 Fixed missing changequest. [Joseph]
 //============================================================
 
-prt_in,88,101,4	script	骑士队长#knt	56,{
+prt_in,88,101,4	script	骑士队长#knt::Chivalry Captain#knt	56,{
 	mes "[赫尔曼队长]";
 	if (Upper == 1) {
 		mes "嗯？你是……你身上有什么特别的感觉？";
@@ -400,7 +400,7 @@ L_Mission:
 	}
 }
 
-prt_in,75,107,4	script	安德鲁爵士#knt	65,{
+prt_in,75,107,4	script	安德鲁爵士#knt::Sir Andrew#knt	65,{
 	mes "[安德鲁爵士]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -564,7 +564,7 @@ prt_in,75,107,4	script	安德鲁爵士#knt	65,{
 	}
 }
 
-prt_in,71,91,0	script	西拉库斯爵士#knt	65,{
+prt_in,71,91,0	script	西拉库斯爵士#knt::Sir Siracuse#knt	65,{
 	mes "[西尔·西拉库斯]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -880,7 +880,7 @@ prt_in,71,91,0	script	西拉库斯爵士#knt	65,{
 	}
 }
 
-prt_in,79,94,4	script	西尔·温德索#knt	733,{
+prt_in,79,94,4	script	西尔·温德索#knt::Sir Windsor#knt	733,{
 	mes "[西尔·温德索]";
 	mes "……";
 	next;
@@ -969,7 +969,7 @@ prt_in,79,94,4	script	西尔·温德索#knt	733,{
 
 // Test 2 part 1
 //==========================================================
-job_knt,89,106,4	script	骑士温莎#knt	733,{
+job_knt,89,106,4	script	骑士温莎#knt::Knight Windsor#knt	733,{
 	mes "[温莎爵士]";
 	mes "……";
 	next;
@@ -1034,7 +1034,7 @@ job_knt,89,106,4	script	骑士温莎#knt	733,{
 	}
 }
 
-job_knt,89,106,4	script	温莎·本尼迪克特#knt	733,{
+job_knt,89,106,4	script	温莎·本尼迪克特#knt::Windsor Benedict#knt	733,{
 	end;
 
 OnInit:
@@ -1257,7 +1257,7 @@ OnTimer182000:
 
 // Test 3 (Manners)
 //==========================================================
-prt_in,69,107,6	script	艾米女士#knt	728,{
+prt_in,69,107,6	script	艾米女士#knt::Lady Amy#knt	728,{
 	mes "[艾米女士]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -1501,7 +1501,7 @@ prt_in,69,107,6	script	艾米女士#knt	728,{
 
 // Test 4 (patience)
 //==========================================================
-prt_in,70,99,6	script	艾德蒙爵士#knt	734,{
+prt_in,70,99,6	script	艾德蒙爵士#knt::Sir Edmond#knt	734,{
 	mes "[艾德蒙爵士]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {
@@ -1622,7 +1622,7 @@ prt_in,70,99,6	script	艾德蒙爵士#knt	734,{
 	}
 }
 
-job_knt,1,1,1	script	计时器#knt	107,{
+job_knt,1,1,1	script	计时器#knt::Timer#knt	107,{
 OnTimer300000:
 	enablenpc "Warp#knt";
 	end;
@@ -1684,7 +1684,7 @@ OnTouch_:
 
 // Test 5, and creates Claymores for knights
 //==========================================================
-prt_in,87,92,4	script	格雷爵士#knt	119,{
+prt_in,87,92,4	script	格雷爵士#knt::Sir Gray#knt	119,{
 	mes "[格雷爵士]";
 	if (BaseJob != Job_Swordman) {
 		if (BaseJob == Job_Knight) {

@@ -5441,7 +5441,7 @@ new_1-3,99,169,3	script	Friendly Poring#ac	4_PORING,{
 
 // - ????
 // -----------------------------------------------------------------------------
-new_1-3,108,165,3	script	????#cupet	4_GHOSTRING,{
+new_1-3,108,165,3	script	????#cupet::Ghostring#cupet	4_GHOSTRING,{
 	mes "[鬼影]";
 	mes "我是最大的鬼影！";
 	close;
@@ -7610,10 +7610,11 @@ iz_ac02,142,85,6	script	Lusa#ac	4_F_GUNSLINGER,{
 			next;
 			mes "[露莎]";
 			mes "";
-			if (Sex == SEX_MALE)
+			if (Sex == SEX_MALE) {
 				mes "你知道吗，你让我想起了我弟弟，那家伙连";
 				mes "谷仓的侧面都打不中……至少在我教他之前";
 				mes "。";
+   }
 			else
 				mes "你知道吗，你让我想起了我妹妹，那小家伙";
 				mes "连谷仓的侧面都打不中……至少在我教她之";
@@ -14237,7 +14238,7 @@ izlude_d,155,132,3	duplicate(Locas#iz)	Locas#iz_d	4_M_02
 // - Enchanter 蒙兹
 // - Teaches the player about enchanting.
 // -----------------------------------------------------------------------------
-izlude,96,125,7	script	Enchanter 蒙兹#iz	4_CAT_SAILOR2,{
+izlude,96,125,7	script	Enchanter 蒙兹#iz::Enchanter Mounds#iz	4_CAT_SAILOR2,{
 	if (!checkweight(1301,1)) {
 		mes "- 由于你的背包里物品过多，任务无法继";
 		mes "续 -";
@@ -14661,10 +14662,10 @@ OnInit:
 	end;
 }
 
-izlude_a,96,125,7	duplicate(Enchanter 蒙兹#iz)	Enchanter 蒙兹#iz_a	4_CAT_SAILOR2
-izlude_b,96,125,7	duplicate(Enchanter 蒙兹#iz)	Enchanter 蒙兹#iz_b	4_CAT_SAILOR2
-izlude_c,96,125,7	duplicate(Enchanter 蒙兹#iz)	Enchanter 蒙兹#iz_c	4_CAT_SAILOR2
-izlude_d,96,125,7	duplicate(Enchanter 蒙兹#iz)	Enchanter 蒙兹#iz_d	4_CAT_SAILOR2
+izlude_a,96,125,7	duplicate(Enchanter Mounds#iz)	Enchanter 蒙兹#iz_a::Enchanter Mounds#iz_a	4_CAT_SAILOR2
+izlude_b,96,125,7	duplicate(Enchanter Mounds#iz)	Enchanter 蒙兹#iz_b::Enchanter Mounds#iz_b	4_CAT_SAILOR2
+izlude_c,96,125,7	duplicate(Enchanter Mounds#iz)	Enchanter 蒙兹#iz_c::Enchanter Mounds#iz_c	4_CAT_SAILOR2
+izlude_d,96,125,7	duplicate(Enchanter Mounds#iz)	Enchanter 蒙兹#iz_d::Enchanter Mounds#iz_d	4_CAT_SAILOR2
 
 // - Enchanter Almond J
 // - Teaches the player about enchanting.

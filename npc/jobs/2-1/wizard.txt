@@ -29,7 +29,7 @@
 //= 3.3 Fixed waitingroom bug. [Euphy]
 //============================================================
 
-gef_tower,111,37,4	script	法师公会成员	70,{
+gef_tower,111,37,4	script	法师公会成员::Wizard Guildsman	70,{
 	if (Upper == 1) {
 		mes "[凯瑟琳]";
 		mes "？抱歉，";
@@ -440,7 +440,7 @@ gef_tower,111,37,4	script	法师公会成员	70,{
 	}
 }
 
-gef_tower,102,24,2	script	阴郁的法师	735,{
+gef_tower,102,24,2	script	阴郁的法师::Gloomy Wizard	735,{
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
 			mes "[劳雷尔]";
@@ -1100,7 +1100,7 @@ gef_tower,102,24,2	script	阴郁的法师	735,{
 	}
 }
 
-job_wiz,50,165,4	script	竞技场助手	700,{
+job_wiz,50,165,4	script	竞技场助手::Arena Assistant	700,{
 	mes "[竞技场助手]";
 	mes "欢迎来到法师职业转职竞技场。";
 	mes "如果你想参加最终测试，请进入候补室。";
@@ -1133,7 +1133,7 @@ OnStart:
 
 // Water Room (Test 2 part 1)
 //==========================================================
-job_wiz,1,1,1	script	水房	66,{
+job_wiz,1,1,1	script	水房::Room of Water	66,{
 OnInit:
 	disablenpc "Room of Water";
 	end;
@@ -1227,7 +1227,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,2,1	script	水房#Door	66,{
+job_wiz,1,2,1	script	水房#Door::Room of Water#Door	66,{
 OnInit:
 	disablenpc "Room of Water#Door";
 	end;
@@ -1293,7 +1293,7 @@ OnTimer63000:
 	end;
 }
 
-job_wiz,114,169,0	script	水房#Failed	-1,16,16,{
+job_wiz,114,169,0	script	水房#Failed::Room of Water#Failed	-1,16,16,{
 OnInit:
 	disablenpc "Room of Water#Failed";
 	end;
@@ -1306,7 +1306,7 @@ OnTouch_:
 
 // Earth Room (Test 2 part 2)
 //==========================================================
-job_wiz,1,3,1	script	土房	66,{
+job_wiz,1,3,1	script	土房::Room of Earth	66,{
 OnInit:
 	disablenpc "Room of Earth";
 	end;
@@ -1401,7 +1401,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,4,1	script	土房#Door	66,{
+job_wiz,1,4,1	script	土房#Door::Room of Earth#Door	66,{
 OnInit:
 	disablenpc "Room of Earth#Door";
 	end;
@@ -1473,7 +1473,7 @@ OnTimer63000:
 	end;
 }
 
-job_wiz,116,97,0	script	土房#Failed	-1,16,16,{
+job_wiz,116,97,0	script	土房#Failed::Room of Earth#Failed	-1,16,16,{
 OnInit:
 	disablenpc "Room of Earth#Failed";
 	end;
@@ -1486,7 +1486,7 @@ OnTouch_:
 
 // Fire Room (Test 2 part 3)
 //==========================================================
-job_wiz,1,5,1	script	火房	66,{
+job_wiz,1,5,1	script	火房::Room of Fire	66,{
 OnInit:
 	disablenpc "Room of Fire";
 	end;
@@ -1579,7 +1579,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,6,1	script	火房#Door	66,{
+job_wiz,1,6,1	script	火房#Door::Room of Fire#Door	66,{
 OnInit:
 	disablenpc "Room of Fire#Door";
 	end;
@@ -1656,7 +1656,7 @@ OnTimer123000:
 	donpcevent "Arena Assistant::OnStart";
 }
 
-job_wiz,46,99,0	script	火房#Failed	-1,16,16,{
+job_wiz,46,99,0	script	火房#Failed::Room of Fire#Failed	-1,16,16,{
 OnInit:
 	disablenpc "Room of Fire#Failed";
 	end;
@@ -1666,7 +1666,7 @@ OnTouch_:
 	end;
 }
 
-job_wiz,1,7,1	script	测试助手#wiz	66,{
+job_wiz,1,7,1	script	测试助手#wiz::Test Helper#wiz	66,{
 	end;
 
 OnInit:
@@ -1704,7 +1704,7 @@ OnTimer9000:
 	end;
 }
 
-gef_tower,107,36,4	script	白狗#wiz	81,{
+gef_tower,107,36,4	script	白狗#wiz::White Dog#wiz	81,{
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
 			cutin "job_wizard_maria01",2;

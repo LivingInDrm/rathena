@@ -23,11 +23,11 @@
 	mes "欢迎到普隆德拉.";
 	close;
 }
-prontera,223,99,1	duplicate(prtguard)	守卫#2pront	105
-prontera,229,104,5	duplicate(prtguard)	守卫#3pront	105
-prontera,47,339,5	duplicate(prtguard)	守卫#4pront	105
+prontera,223,99,1	duplicate(prtguard)	守卫#2pront::Guard#2pront	105
+prontera,229,104,5	duplicate(prtguard)	守卫#3pront::Guard#3pront	105
+prontera,47,339,5	duplicate(prtguard)	守卫#4pront::Guard#4pront	105
 
-prontera,101,288,3	script	舒格#pront	98,{
+prontera,101,288,3	script	舒格#pront::Shuger#pront	98,{
 	mes "[夏格]";
 	mes "城外的原野有一种粉红色的魔物叫做 '^FF8888波利^000000'.";
 	next;
@@ -42,7 +42,7 @@ prontera,101,288,3	script	舒格#pront	98,{
 	close;
 }
 
-prontera,54,240,6	script	托诺#pront	97,{
+prontera,54,240,6	script	托诺#pront::Tono#pront	97,{
 	mes "[图诺]";
 	mes "你知道吗?";
 	next;
@@ -60,7 +60,7 @@ prontera,54,240,6	script	托诺#pront	97,{
 	close;
 }
 
-prontera,106,116,6	script	梅里迪斯#pront	91,{
+prontera,106,116,6	script	梅里迪斯#pront::Merideth#pront	91,{
 	mes "[梅丽德丝]";
 	mes "因为休假时天气很好，所以和家人出来郊游。在寻找一些悠闲的地方时，在森林里发现了非常有趣的事——";
 	next;
@@ -72,7 +72,7 @@ prontera,106,116,6	script	梅里迪斯#pront	91,{
 	close;
 }
 
-prontera,160,133,2	script	尤皮#pront	102,{
+prontera,160,133,2	script	尤皮#pront::YuPi#pront	102,{
 	mes "[佑比]";
 	mes "有很多样子看起来差不多，但是颜色略微有所不同的魔物。碰到这类型的魔物一定要小心，不要被他们的外表蒙蔽！";
 	next;
@@ -84,7 +84,7 @@ prontera,160,133,2	script	尤皮#pront	102,{
 	close;
 }
 
-prontera,149,202,2	script	尤娜#pront	700,{
+prontera,149,202,2	script	尤娜#pront::YuNa#pront	700,{
 	mes "[佑罗]";
 	mes "奥丁是我们所侍奉的神。他被称之为战争之神，也叫做子息之神。";
 	mes "[佑罗]";
@@ -108,7 +108,7 @@ prontera,149,202,2	script	尤娜#pront	700,{
 	close;
 }
 
-prontera,216,70,2	script	斯特赖夫#pront	48,{
+prontera,216,70,2	script	斯特赖夫#pront::Strife#pront	48,{
 	if (Class == Job_Novice) {
 		if (event_prt_nov_dreamtalk == 0) {
 			mes "[斯特拉依普]";
@@ -205,7 +205,7 @@ prontera,216,70,2	script	斯特赖夫#pront	48,{
 	}
 }
 
-prontera,78,150,3	script	达伊伦#pront	90,{
+prontera,78,150,3	script	达伊伦#pront::Dairenne#pront	90,{
 	mes "[乡村女孩 丹尼尔]";
 	mes "啊...";
 	mes "这里的街道可真是拥挤，. *咳、咳、咳* 噢！沙土、灰尘，这么脏，我觉得现在的首都并不是什么都好. 有什么需要我帮忙的?";
@@ -230,7 +230,7 @@ prontera,78,150,3	script	达伊伦#pront	90,{
 //============================================================
 /*
 //This NPC has been disabled officially.
-prt_in,178,92,0	script	图书馆管理员#pront	57,{
+prt_in,178,92,0	script	图书馆管理员#pront::Curator of Library#pront	57,{
 	mes "[管理员古伊斯]";
 	mes "在普隆德拉图书馆的西部分馆，";
 	mes "我们记录了散布在鲁恩-米德加兹王国各地地下城中的怪物。";
@@ -248,7 +248,7 @@ prt_in,178,92,0	script	图书馆管理员#pront	57,{
 }
 */
 
-prt_in,175,50,0	script	图书馆女孩#pront	71,{
+prt_in,175,50,0	script	图书馆女孩#pront::Library Girl#pront	71,{
 	mes "[图书馆女孩艾伦]";
 	mes "在普隆德拉图书馆的东部分馆，";
 	mes "我们提供按属性分类的怪物百科全书。";
@@ -258,7 +258,7 @@ prt_in,175,50,0	script	图书馆女孩#pront	71,{
 	close;
 }
 
-prt_in,47,141,0	script	老人#pront	56,{
+prt_in,47,141,0	script	老人#pront::An Old Man#pront	56,{
 	mes "[老人]";
 	mes "普隆德拉下水道已经被遗弃很久了。";
 	mes "现在那个地方被^000077盗贼虫^000000侵扰了！";
@@ -269,7 +269,7 @@ prt_in,47,141,0	script	老人#pront	56,{
 	close;
 }
 
-prt_in,26,31,0	script	一个老人#2pront	54,{
+prt_in,26,31,0	script	一个老人#2pront::An Old Man#2pront	54,{
 	mes "[老人]";
 	mes "我不知道你是否会相信，";
 	mes "但我在^000077下水道^000000看到了一件奇怪的事情……";
@@ -291,7 +291,7 @@ prt_in,26,31,0	script	一个老人#2pront	54,{
 	close;
 }
 
-prt_in,180,20,2	script	酒保#pront	61,{
+prt_in,180,20,2	script	酒保#pront::Bartender#pront	61,{
 	mes "[管理员 奇司]";
 	mes "我们图书馆的资料是依照在卢恩 米德加尔特王国各个密穴里的魔物来分类的, ";
 	mes "让你可以一目了然，轻松的获得你所想要的资料.";
@@ -336,7 +336,7 @@ prt_in,180,20,2	script	酒保#pront	61,{
 
 }
 
-prt_in,173,24,2	script	谢维尔德#pront	85,{
+prt_in,173,24,2	script	谢维尔德#pront::Shevild#pront	85,{
 	mes "[工读生 艾伦]";
 	mes "欢迎光临，这座图书馆里的资料是依照魔物属性作为分类的依据，你可以在这里阅读相关的书籍。另外，这里也有部分商人与制铁匠技能说明的相关书籍.";
 	mes "啊！旁边那间图书馆里也有很多值得一看的好书籍，你可以去参观一下．";
@@ -408,7 +408,7 @@ prt_in,173,24,2	script	谢维尔德#pront	85,{
 	close;
 }
 
-prt_in,177,20,2	script	天苏#pront	97,{
+prt_in,177,20,2	script	天苏#pront::TenSue#pront	97,{
 	switch(rand(3)) {
 	case 1:
 		mes "[大叔]";
@@ -465,7 +465,7 @@ prt_in,177,20,2	script	天苏#pront	97,{
 	}
 }
 
-prt_in,177,18,2	script	马文#pront	80,{
+prt_in,177,18,2	script	马文#pront::Marvin#pront	80,{
 	mes "[大叔]";
 	mes "虽然你不知道该不该相信我的话, 但是我在 ^000077下水道^000000中看过非常惊人的事情...";
 	next;
@@ -489,7 +489,7 @@ prt_in,177,18,2	script	马文#pront	80,{
 	close;
 }
 
-prt_in,284,168,3	script	吉尼丁·瑞菲尔#pront	55,{
+prt_in,284,168,3	script	吉尼丁·瑞菲尔#pront::Ginedin Rephere#pront	55,{
 	mes "[裁缝吉尼丁·瑞菲尔]";
 	mes "11……12……嗯，好的。我想我能在今晚的聚会之前完成。";
 	next;
@@ -542,7 +542,7 @@ prt_in,284,168,3	script	吉尼丁·瑞菲尔#pront	55,{
 
 // Prontera Church
 //============================================================
-prt_church,103,76,0	script	石榴石#pront	67,{
+prt_church,103,76,0	script	石榴石#pront::Garnet#pront	67,{
 	mes "[柏坦得]";
 	mes "哎...普龙德拉的人越来越多了,";
 	mes "生意真是越来越难做了. 如果生意好一点就好了...";
@@ -632,7 +632,7 @@ prt_church,103,76,0	script	石榴石#pront	67,{
 	end;
 }
 
-prt_church,103,71,0	script	亨森#pront	120,{
+prt_church,103,71,0	script	亨森#pront::Henson#pront	120,{
 	mes "[修毕特]";
 	mes "快来喔快来喔~快来这里喝一杯，还有生动有趣的故事可以听喔!";
 	next;
@@ -723,7 +723,7 @@ prt_church,103,71,0	script	亨森#pront	120,{
 
 // Hidden Temple
 //============================================================
-prt_maze02,100,69,0	script	士兵#pront	105,{
+prt_maze02,100,69,0	script	士兵#pront::Soldier#pront	105,{
 	mes "[谭修]";
 	mes "什么...?";
 	mes "你已经厌倦在地牢击杀魔物了? 拜托...";
@@ -735,7 +735,7 @@ prt_maze02,100,69,0	script	士兵#pront	105,{
 	close;
 }
 
-prt_maze02,110,69,0	script	士兵#2pront	105,{
+prt_maze02,110,69,0	script	士兵#2pront::Soldier#2pront	105,{
 	mes "[马宾]";
 	mes "不管你是结交异性, 或与怪物战斗, 我得说, 这都跟 ^333399技能^000000有息息相关.";
 	next;

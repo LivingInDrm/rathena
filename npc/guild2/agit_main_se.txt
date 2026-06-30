@@ -26,7 +26,7 @@ OnAgitInit2:
 OnRecvCastle2:
 	if (strnpcinfo(2) == "template") end;
 	if (!getcastledata(strnpcinfo(2),CD_GUILD_ID)) {
-		donpcevent strnpcinfo(0)+"::OnStart";
+		donpcevent strnpcinfo(3)+"::OnStart";
 		// Monster spawns are identical for all castles.
 		monster strnpcinfo(2),0,0,"Evil Druid",1117,10;
 		monster strnpcinfo(2),0,0,"Khalitzburg",1132,4;
@@ -51,7 +51,7 @@ OnAgitStart2:
 	if (agitcheck2()) {
 		maprespawnguildid strnpcinfo(2),getcastledata(strnpcinfo(2),CD_GUILD_ID),2;
 		gvgon strnpcinfo(2);
-		donpcevent strnpcinfo(0)+"::OnStart";
+		donpcevent strnpcinfo(3)+"::OnStart";
 	}
 	else for(set .@i,0; .@i<4; set .@i,.@i+1)
 		donpcevent "RL"+.@i+"#"+strnpcinfo(2)+"::OnDisable";
@@ -63,7 +63,7 @@ OnAgitEnd2:
 	if (getcastledata(strnpcinfo(2),CD_GUILD_ID)) {
 		set .@str$,substr(strnpcinfo(2),0,1)+substr(strnpcinfo(2),8,9);
 		killmonster strnpcinfo(2),"Steward#"+.@str$+"::OnStartArena";
-		donpcevent strnpcinfo(0)+"::OnReset";
+		donpcevent strnpcinfo(3)+"::OnReset";
 		donpcevent "Steward#"+.@str$+"::OnStop";
 	}
 	end;
@@ -76,7 +76,7 @@ OnGuildBreak:
 	setcastledata strnpcinfo(2),CD_GUILD_ID,0;
 	sleep 7000;
 	announce "Guild Base ["+getcastlename(strnpcinfo(2))+"] has been abandoned.",0;
-	donpcevent strnpcinfo(0)+"::OnRecvCastle2";
+	donpcevent strnpcinfo(3)+"::OnRecvCastle2";
 	end;
 
 OnStart:
@@ -127,7 +127,7 @@ OnReset:
 OnChange:
 	set .@str$, substr(strnpcinfo(2),0,1)+substr(strnpcinfo(2),8,9);
 	setarray getd("$agit_"+.@str$+"[0]"),2,2,1,1,2,0;
-	donpcevent strnpcinfo(0)+"::OnEmpSpawn";
+	donpcevent strnpcinfo(3)+"::OnEmpSpawn";
 	donpcevent "Control Device03#"+.@str$+"::OnEnable";
 	donpcevent "1st Guardian Stone#"+.@str$+"::OnEnable";
 	donpcevent "2nd Guardian Stone#"+.@str$+"::OnEnable";
@@ -137,7 +137,7 @@ OnClock0001:
 	// Spawn Treasure Chests based on castle economy.
 	if (strnpcinfo(2) == "template") end;
 	if (!getcastledata(strnpcinfo(2),CD_GUILD_ID)) end;
-	killmonster strnpcinfo(2),strnpcinfo(0)+"::OnTreasureDied";
+	killmonster strnpcinfo(2),strnpcinfo(3)+"::OnTreasureDied";
 	if (getcastledata(strnpcinfo(2),CD_INVESTED_ECONOMY)) {
 		set .@Economy,getcastledata(strnpcinfo(2),CD_CURRENT_ECONOMY);
 		setcastledata strnpcinfo(2),CD_CURRENT_ECONOMY,.@Economy+getcastledata(strnpcinfo(2),CD_INVESTED_ECONOMY)+(rand(2) && getgdskilllv(getcastledata(strnpcinfo(2),CD_GUILD_ID),10014));
@@ -1458,7 +1458,7 @@ OnGuardianDied:
 
 OnReset:
 	stopnpctimer;
-	killmonster strnpcinfo(2),strnpcinfo(0)+"::OnGuardianDied";
+	killmonster strnpcinfo(2),strnpcinfo(3)+"::OnGuardianDied";
 	deletearray getd(".x_"+strnpcinfo(2)+"[0]"),22;
 	deletearray getd(".y_"+strnpcinfo(2)+"[0]"),22;
 	end;
@@ -1484,7 +1484,7 @@ OnEnable:
 	end;
 
 OnDisable:
-	killmonster strnpcinfo(2),strnpcinfo(0)+"::OnGuardianStoneDied";
+	killmonster strnpcinfo(2),strnpcinfo(3)+"::OnGuardianStoneDied";
 	setd "$agit_"+substr(strnpcinfo(2),0,1)+substr(strnpcinfo(2),8,9)+"["+(atoi(charat(strnpcinfo(1),2))-1)+"]",1;
 	stopnpctimer;
 	end;
@@ -1703,7 +1703,7 @@ OnDisable:
 	.@wall_name$ = substr(strnpcinfo(2),0,1) + substr(strnpcinfo(2),8,9) + "_" + strnpcinfo(1);
 	if (checkwall(.@wall_name$) == true)
 		delwall .@wall_name$;
-	killmonster strnpcinfo(2),strnpcinfo(0)+"::OnBarrierDestroyed";
+	killmonster strnpcinfo(2),strnpcinfo(3)+"::OnBarrierDestroyed";
 	end;
 }
 

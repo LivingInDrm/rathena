@@ -26,7 +26,7 @@
 
 // Priest Praupin
 //============================================================
-prt_church,179,15,1	script	祭司普劳平	4_M_MINISTER,{
+prt_church,179,15,1	script	祭司普劳平::Priest Praupin	4_M_MINISTER,{
 	mes "[普劳平牧师]";
 	mes "";
 	if(BaseJob != Job_Acolyte){
@@ -151,7 +151,7 @@ prt_church,179,15,1	script	祭司普劳平	4_M_MINISTER,{
 
 // Asthe
 //============================================================
-prt_monk,230,106,3	script	阿斯特#tu	1_F_PRIEST,{
+prt_monk,230,106,3	script	阿斯特#tu::Asthe#tu	1_F_PRIEST,{
 	mes "[阿斯特]";
 	mes "";
 	switch(tu_acolyte01){
@@ -732,7 +732,7 @@ prt_monk,230,106,3	script	阿斯特#tu	1_F_PRIEST,{
 
 // Priest Gardron
 //============================================================
-monk_in,18,38,6	script	牧师加德龙#tu	4_M_MINISTER,{
+monk_in,18,38,6	script	牧师加德龙#tu::Priest Gardron#tu	4_M_MINISTER,{
 	mes "[?????]";
 	mes "";
 	if(tu_acolyte01 == 7){
@@ -858,7 +858,7 @@ monk_in,18,38,6	script	牧师加德龙#tu	4_M_MINISTER,{
 
 // Dog
 //============================================================
-prt_monk,235,245,5	script	狗#tu	4_DOG01,{
+prt_monk,235,245,5	script	狗#tu::Dog#tu	4_DOG01,{
 	mes "[?]";
 	mes "^CDB79EB汪汪！呜呜！^000000";
 	next;
@@ -895,7 +895,7 @@ prt_monk,235,245,5	script	狗#tu	4_DOG01,{
 
 // Boy
 //============================================================
-prt_monk,243,238,5	script	男孩#boy_voi	HIDDEN_WARP_NPC,5,5,{
+prt_monk,243,238,5	script	男孩#boy_voi::Boy#boy_voi	HIDDEN_WARP_NPC,5,5,{
 OnTouch_:
 	if(tu_acolyte01 != 10) end;
 	mes "[??]";
@@ -905,7 +905,7 @@ OnTouch_:
 
 // Ill Girl
 //============================================================
-prt_monk,226,257,6	script	病女孩#tu	4_F_04,{
+prt_monk,226,257,6	script	病女孩#tu::Ill Girl#tu	4_F_04,{
 	mes "[????]";
 	mes "";
 	if(tu_acolyte01 > 12){
@@ -1052,7 +1052,7 @@ prt_monk,226,257,6	script	病女孩#tu	4_F_04,{
 
 // Veiner
 //============================================================
-prt_monk,197,228,3	script	维纳	4_M_ORIENT02,{
+prt_monk,197,228,3	script	维纳::Veiner	4_M_ORIENT02,{
 	mes "[??]";
 	mes "";
 	if(countitem(1081) && tu_acolyte01 == 18){// Merchant_Box_1
@@ -1086,7 +1086,7 @@ prt_monk,197,228,3	script	维纳	4_M_ORIENT02,{
 
 // Hedrick
 //============================================================
-prt_monk,28,260,5	script	赫德里克	1_M_04,{
+prt_monk,28,260,5	script	赫德里克::Hedrick	1_M_04,{
 	mes "[????]";
 	mes "^333333*呼*^000000 今天我真是努力工作！而且效率也很高！一如既往，";
 	mes "干得好，赫德里克。你是第一！";
@@ -1111,7 +1111,7 @@ prt_monk,28,260,5	script	赫德里克	1_M_04,{
 
 // Weapon Merchant
 //============================================================
-prt_monk,136,261,0	script	武器商人#tu	HIDDEN_WARP_NPC,9,9,{
+prt_monk,136,261,0	script	武器商人#tu::Weapon Merchant#tu	HIDDEN_WARP_NPC,9,9,{
 OnTouch_:
 	if(tu_acolyte01 != 20 || countitem(1081) == 0) end;// Merchant_Box_1
 	mes "[????]";
@@ -1128,7 +1128,7 @@ OnTouch_:
 
 // Karven
 //============================================================
-monk_in,103,176,7	script	卡尔文	1_M_PASTOR,{
+monk_in,103,176,7	script	卡尔文::Karven	1_M_PASTOR,{
 	mes "[???]";
 	mes "愿你安息";
 	if(tu_acolyte01 == 21 && countitem(7183)){
@@ -1155,7 +1155,7 @@ monk_in,103,176,7	script	卡尔文	1_M_PASTOR,{
 
 // Gloria
 //============================================================
-prt_monk,219,164,3	script	格洛丽亚#tu	4_F_SISTER,{
+prt_monk,219,164,3	script	格洛丽亚#tu::Gloria#tu	4_F_SISTER,{
 	mes "[????]";
 	mes "";
 	if(BaseJob != Job_Acolyte){
@@ -1212,7 +1212,7 @@ prt_monk,219,164,3	script	格洛丽亚#tu	4_F_SISTER,{
 
 // Cleope Verce
 //============================================================
-prt_monk,153,210,3	script	克里奥佩·维尔斯	4_F_SISTER,{
+prt_monk,153,210,3	script	克里奥佩·维尔斯::Cleope Verce	4_F_SISTER,{
 	mes "[????????]";
 	mes "";
 	if(BaseJob == Job_Acolyte){
@@ -1370,7 +1370,7 @@ OnTouch_:
 
 // Eavesdrop
 //============================================================
-prt_monk,223,123,3	script	窃听#tu	HIDDEN_NPC,{
+prt_monk,223,123,3	script	窃听#tu::Eavesdrop#tu	HIDDEN_NPC,{
 	if(BaseJob != Job_Acolyte){
 		mes "^3355FF这里什么都没有。^000000";
 		close;
@@ -1505,7 +1505,7 @@ prt_monk,223,123,3	script	窃听#tu	HIDDEN_NPC,{
 	close;
 }
 
-sec_in02,17,156,3	script	第一次职业任务重置	4_F_JOB_BLACKSMITH,{
+sec_in02,17,156,3	script	第一次职业任务重置::1st Job Quest Reset	4_F_JOB_BLACKSMITH,{
 	callfunc "F_GM_NPC";
 	mes "[1级职业任务]";
 	mes "你想重置哪个？";

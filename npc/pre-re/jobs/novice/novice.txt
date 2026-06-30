@@ -26,30 +26,30 @@
 //============================================================
 
 // Bulletin Board
-new_1-1,66,114,4	script	公告板#nv	111,{
+new_1-1,66,114,4	script	公告板#nv::Bulletin Board#nv	111,{
 	mes "^FF0000=================================^000000 ^FF0000 ^000000 ^E40CAA[欢迎]^CC0000来到^FF9000新手^7FFF00训";
 	mes "练^00FF00场地 ^E40CAA[欢迎]^FF0000^000000 ^FF0000=================================^000000";
 	close;
 }
 
-new_2-1,66,114,4	duplicate(公告板#nv)	公告板#nv2	111
-new_3-1,66,114,4	duplicate(公告板#nv)	公告板#nv3	111
-new_4-1,66,114,4	duplicate(公告板#nv)	公告板#nv4	111
-new_5-1,66,114,4	duplicate(公告板#nv)	公告板#nv5	111
+new_2-1,66,114,4	duplicate(Bulletin Board#nv)	公告板#nv2::Bulletin Board#nv2	111
+new_3-1,66,114,4	duplicate(Bulletin Board#nv)	公告板#nv3::Bulletin Board#nv3	111
+new_4-1,66,114,4	duplicate(Bulletin Board#nv)	公告板#nv4::Bulletin Board#nv4	111
+new_5-1,66,114,4	duplicate(Bulletin Board#nv)	公告板#nv5::Bulletin Board#nv5	111
 
-new_1-1,144,116,2	script	守卫#nv1	105,{
+new_1-1,144,116,2	script	守卫#nv1::Guard#nv1	105,{
 	mes "[训练场卫兵]";
 	mes "欢迎来到训练场。";
 	mes "你现在在外院。请进入城堡开始你的训练。";
 	close;
 }
 
-new_2-1,144,116,2	duplicate(守卫#nv1)	守卫#nv2-1	105
-new_3-1,144,116,2	duplicate(守卫#nv1)	守卫#nv3-1	105
-new_4-1,144,116,2	duplicate(守卫#nv1)	守卫#nv4-1	105
-new_5-1,144,116,2	duplicate(守卫#nv1)	守卫#nv5-1	105
+new_2-1,144,116,2	duplicate(Guard#nv1)	守卫#nv2-1::Guard#nv2-1	105
+new_3-1,144,116,2	duplicate(Guard#nv1)	守卫#nv3-1::Guard#nv3-1	105
+new_4-1,144,116,2	duplicate(Guard#nv1)	守卫#nv4-1::Guard#nv4-1	105
+new_5-1,144,116,2	duplicate(Guard#nv1)	守卫#nv5-1::Guard#nv5-1	105
 
-new_1-1,144,107,2	script	守卫#nv2	105,{
+new_1-1,144,107,2	script	守卫#nv2::Guard#nv2	105,{
 	mes "[训练场卫兵]";
 	if(rand(2)) {
 		mes "进来吧！";
@@ -70,14 +70,14 @@ new_1-1,144,107,2	script	守卫#nv2	105,{
 	close;
 }
 
-new_2-1,144,107,2	duplicate(守卫#nv2)	守卫#nv2-2	105
-new_3-1,144,107,2	duplicate(守卫#nv2)	守卫#nv3-2	105
-new_4-1,144,107,2	duplicate(守卫#nv2)	守卫#nv4-2	105
-new_5-1,144,107,2	duplicate(守卫#nv2)	守卫#nv5-2	105
+new_2-1,144,107,2	duplicate(Guard#nv2)	守卫#nv2-2::Guard#nv2-2	105
+new_3-1,144,107,2	duplicate(Guard#nv2)	守卫#nv3-2::Guard#nv3-2	105
+new_4-1,144,107,2	duplicate(Guard#nv2)	守卫#nv4-2::Guard#nv4-2	105
+new_5-1,144,107,2	duplicate(Guard#nv2)	守卫#nv5-2::Guard#nv5-2	105
 
 
 // Receptionist
-new_1-2,100,29,4	script	接待员#nv1	86,{
+new_1-2,100,29,4	script	接待员#nv1::Receptionist#nv1	86,{
 	mes "[训练场接待员]";
 	mes "你好，你看起来是新来的。";
 	mes "你叫什么名字？";
@@ -193,12 +193,12 @@ new_1-2,100,29,4	script	接待员#nv1	86,{
 		}
 	}
 }
-new_2-2,100,29,4	duplicate(接待员#nv1)	接待员#nv2	86
-new_3-2,100,29,4	duplicate(接待员#nv1)	接待员#nv3	86
-new_4-2,100,29,4	duplicate(接待员#nv1)	接待员#nv4	86
-new_5-2,100,29,4	duplicate(接待员#nv1)	接待员#nv5	86
+new_2-2,100,29,4	duplicate(Receptionist#nv1)	接待员#nv2::Receptionist#nv2	86
+new_3-2,100,29,4	duplicate(Receptionist#nv1)	接待员#nv3::Receptionist#nv3	86
+new_4-2,100,29,4	duplicate(Receptionist#nv1)	接待员#nv4::Receptionist#nv4	86
+new_5-2,100,29,4	duplicate(Receptionist#nv1)	接待员#nv5::Receptionist#nv5	86
 
-new_1-1,53,114,4	script	诗音#nv1	727,{
+new_1-1,53,114,4	script	诗音#nv1::Shion#nv1	727,{
 	if (nov_get_item04 > 9 || nov_get_item05 > 9) {
 		mes "[诗音]";
 		mes "嗯……？";
@@ -369,14 +369,14 @@ new_1-1,53,114,4	script	诗音#nv1	727,{
 	}
 }
 
-new_2-1,53,114,4	duplicate(诗音#nv1)	诗音#nv2	727
-new_3-1,53,114,4	duplicate(诗音#nv1)	诗音#nv3	727
-new_4-1,53,114,4	duplicate(诗音#nv1)	诗音#nv4	727
-new_5-1,53,114,4	duplicate(诗音#nv1)	诗音#nv5	727
+new_2-1,53,114,4	duplicate(Shion#nv1)	诗音#nv2::Shion#nv2	727
+new_3-1,53,114,4	duplicate(Shion#nv1)	诗音#nv3::Shion#nv3	727
+new_4-1,53,114,4	duplicate(Shion#nv1)	诗音#nv4::Shion#nv4	727
+new_5-1,53,114,4	duplicate(Shion#nv1)	诗音#nv5::Shion#nv5	727
 
 
 // Interfaces Tutor
-new_1-2,99,105,3	script	界面导师#nv1	751,{
+new_1-2,99,105,3	script	界面导师#nv1::Interfaces Tutor#nv1	751,{
 	if (nov_get_item02 > 9 && nov_get_item03 > 9 && nov_get_item04 > 9) {
 		mes "[克里斯]";
 		mes "你已经完成了所有基本课程。你和助教们谈过了吗？";
@@ -653,7 +653,7 @@ new_1-2,99,105,3	script	界面导师#nv1	751,{
 	}
 }
 
-new_1-2,83,111,3	script	技能导师#nv	753,{
+new_1-2,83,111,3	script	技能导师#nv::Skill Tutor#nv	753,{
 	if (nov_get_item02 > 9 && nov_get_item03 > 9 && nov_get_item04 > 9) {
 		mes "[塞西尔]";
 		mes "嗯...?你还需要更多帮助吗？";
@@ -902,7 +902,7 @@ new_1-2,83,111,3	script	技能导师#nv	753,{
 	}
 }
 
-new_1-2,115,111,3	script	道具导师#nv	726,{
+new_1-2,115,111,3	script	道具导师#nv::Item Tutor#nv	726,{
 	if (nov_get_item02 > 9 && nov_get_item03 > 9 && nov_get_item04 > 9) {
 		mes "[爱丽丝]";
 		mes "嗯...?你需要帮忙找人吗？";
@@ -1246,7 +1246,7 @@ new_1-2,115,111,3	script	道具导师#nv	726,{
 	}
 }
 
-new_1-2,118,108,3	script	卡普拉职员#nv1	117,{
+new_1-2,118,108,3	script	卡普拉职员#nv1::Kafra Employee#nv1	117,{
 	mes "[卡夫拉员工]";
 	mes "欢迎来到卡夫拉公司。卡夫拉的服务始终在你身边。";
 	if (NEW_MES_FLAG0) {
@@ -1532,7 +1532,7 @@ new_1-2,118,108,3	script	卡普拉职员#nv1	117,{
 }
 
 //Interface Assistant
-new_1-2,161,182,5	script	教官#nv	92,{
+new_1-2,161,182,5	script	教官#nv::Instructor#nv	92,{
 	mes "[埃德温]";
 	mes "欢迎来到我的课堂。";
 	mes "选择你想要了解更多的主题。";
@@ -1699,7 +1699,7 @@ new_1-2,161,182,5	script	教官#nv	92,{
 	}
 }
 
-new_1-2,182,182,3	script	身体学导师	754,{
+new_1-2,182,182,3	script	身体学导师::Somatology Instructor	754,{
 	mes "[贾尔·里奥特]";
 	mes "欢迎，新冒险者。我，";
 	mes "贾尔·里奥特将帮助你了解角色状态的基本规则。";
@@ -1886,7 +1886,7 @@ new_1-2,182,182,3	script	身体学导师	754,{
 	}
 }
 
-new_1-2,184,172,1	script	技能理解导师	47,{
+new_1-2,184,172,1	script	技能理解导师::Understandings of Skills	47,{
 	mes "[里奥·汉德森]";
 	mes "欢迎~哦，看看这个可爱的小新手~！";
 	next;
@@ -2112,7 +2112,7 @@ new_1-2,184,172,1	script	技能理解导师	47,{
 	}
 }
 
-new_1-2,121,101,2	script	引导士兵#nv1	105,{
+new_1-2,121,101,2	script	引导士兵#nv1::Guide Soldier#nv1	105,{
 	mes "[引导士兵]";
 	mes "我们引导士兵在每个城镇的入口提供位置信息。";
 	mes "你可以通过我们的特殊制服轻松找到我们。";
@@ -2127,7 +2127,7 @@ new_1-2,121,101,2	script	引导士兵#nv1	105,{
 	close;
 }
 
-new_1-2,17,182,5	script	助手#nv	84,{
+new_1-2,17,182,5	script	助手#nv::Helper#nv	84,{
 	if (nov_2nd_cos < 11) {
 		mes "[艾尔敏]";
 		mes "恭喜！";
@@ -2413,7 +2413,7 @@ new_1-2,17,182,5	script	助手#nv	84,{
 	}
 }
 
-new_1-2,38,182,3	script	入口守卫#nv	92,{
+new_1-2,38,182,3	script	入口守卫#nv::Entrance Guard#nv	92,{
 	if (nov_2nd_cos == 0) {
 		mes "[穆丽尔]";
 		mes "抱歉，我不能让没有接受战斗指导的人进入实地战斗训练场。";
@@ -2643,10 +2643,10 @@ new_1-3,95,30,4	script	训练师#nv1::NovHoffman	84,{
 	}
 }
 
-new_2-3,95,30,4	duplicate(NovHoffman)	训练师#nv2	84
-new_3-3,95,30,4	duplicate(NovHoffman)	训练师#nv3	84
-new_4-3,95,30,4	duplicate(NovHoffman)	训练师#nv4	84
-new_5-3,95,30,4	duplicate(NovHoffman)	训练师#nv5	84
+new_2-3,95,30,4	duplicate(NovHoffman)	训练师#nv2::Trainer#nv2	84
+new_3-3,95,30,4	duplicate(NovHoffman)	训练师#nv3::Trainer#nv3	84
+new_4-3,95,30,4	duplicate(NovHoffman)	训练师#nv4::Trainer#nv4	84
+new_5-3,95,30,4	duplicate(NovHoffman)	训练师#nv5::Trainer#nv5	84
 
 new_1-3,96,174,3	script	测试考官#nv1::NovKeyman	85,{
 	mes "[基曼]";
@@ -2669,15 +2669,15 @@ new_1-3,96,174,3	script	测试考官#nv1::NovKeyman	85,{
 	}
 }
 
-new_2-3,96,174,3	duplicate(NovKeyman)	测试考官#nv2	85
-new_3-3,96,174,3	duplicate(NovKeyman)	测试考官#nv3	85
-new_4-3,96,174,3	duplicate(NovKeyman)	测试考官#nv4	85
-new_5-3,96,174,3	duplicate(NovKeyman)	测试考官#nv5	85
+new_2-3,96,174,3	duplicate(NovKeyman)	测试考官#nv2::Test Examiner#nv2	85
+new_3-3,96,174,3	duplicate(NovKeyman)	测试考官#nv3::Test Examiner#nv3	85
+new_4-3,96,174,3	duplicate(NovKeyman)	测试考官#nv4::Test Examiner#nv4	85
+new_5-3,96,174,3	duplicate(NovKeyman)	测试考官#nv5::Test Examiner#nv5	85
 
 //Potato Merchant
 new_1-2,28,185,4	shop	Potato Merchant	90,516:15
 
-new_1-4,100,29,1	script	汉森#nv	46,{
+new_1-4,100,29,1	script	汉森#nv::Hanson#nv	46,{
 	if (checkweight(909,400) == 0) {
 		mes "[汉森]";
 		mes "你身上携带的所有物品一定很沉重。你从哪里得到这么多东西？请通过丢弃不需要的东西来减轻你的负担。";
@@ -3903,7 +3903,7 @@ S_UserJobchoice:
 }
 
 //Novice Instructor
-new_1-4,91,22,4	script	布鲁斯#nv	57,{
+new_1-4,91,22,4	script	布鲁斯#nv::Bruce#nv	57,{
 	if (Class == Job_Novice) {
 		if (nov_3_swordman == 20) {
 			mes "[布鲁斯]";

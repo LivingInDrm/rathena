@@ -32,7 +32,7 @@
 //= 2.6 Removed the need for use of 'goto.' [L0ne_W0lf]
 //==========================================================
 
-prt_church,16,41,4	script	大主教#prst	60,{
+prt_church,16,41,4	script	大主教#prst::High Bishop#prst	60,{
 	// Uncomment the following 'if' statement to allow High Priests to assist Acolytes with the job change quest.
 	// Officially High Priests are blocked from helping by an indiscriminate check if you are a transcended character.
 	//if (Class == Job_High_Priest) set .@AllowHPAssist,1;
@@ -552,7 +552,7 @@ prt_church,16,41,4	script	大主教#prst	60,{
 	}
 }
 
-prt_church,27,24,1	script	修女塞西莉亚	79,{
+prt_church,27,24,1	script	修女塞西莉亚::Sister Cecilia	79,{
 	mes "[塞西莉亚修女]";
 	if (BaseJob != Job_Acolyte) {
 		if (BaseJob == Job_Priest) {
@@ -914,7 +914,7 @@ prt_church,27,24,1	script	修女塞西莉亚	79,{
 
 // 2nd Test
 //==========================================================
-job_prist,24,187,4	script	彼得·S·阿尔贝托	110,{
+job_prist,24,187,4	script	彼得·S·阿尔贝托::Peter S. Alberto	110,{
 	mes "[彼得神父]";
 	if (BaseJob == Job_Priest) {
 		mes "欢迎！";
@@ -1096,7 +1096,7 @@ OnDisable:
 	end;
 }
 
-job_prist,23,187,1	script	彼得·阿尔贝托#2	110,{
+job_prist,23,187,1	script	彼得·阿尔贝托#2::Peter S. Alberto#2	110,{
 	mes "[彼得神父]";
 	if (BaseJob == Job_Priest) {
 		mes "欢迎！";
@@ -1226,7 +1226,7 @@ OnMyMobDead:
 	end;
 }
 
-job_prist,24,44,0	script	僵尸信息	-1,1,1,{
+job_prist,24,44,0	script	僵尸信息::Zombie Info	-1,1,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[彼得神父]";
@@ -1371,7 +1371,7 @@ OnTouch_:
 
 // 3rd Test
 //==========================================================
-job_prist,168,45,4	script	德维鲁奇#prst	1109,8,1,{
+job_prist,168,45,4	script	德维鲁奇#prst::Deviruchi#prst	1109,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[德维鲁奇]";
@@ -1474,7 +1474,7 @@ OnTouch_:
 	end;
 }
 
-job_prist,168,80,4	script	双胞胎#prst	1046,8,1,{
+job_prist,168,80,4	script	双胞胎#prst::Doppelganger#prst	1046,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[双重影分身]";
@@ -1543,7 +1543,7 @@ OnTouch_:
 	}
 }
 
-job_prist,168,115,4	script	黑暗领主#prst	1272,8,1,{
+job_prist,168,115,4	script	黑暗领主#prst::Dark Lord#prst	1272,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[黑暗领主]";
@@ -1600,7 +1600,7 @@ OnTouch_:
 	}
 }
 
-job_prist,168,150,4	script	巴风特#prst	736,8,1,{
+job_prist,168,150,4	script	巴风特#prst::Baphomet#prst	736,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[巴风特]";

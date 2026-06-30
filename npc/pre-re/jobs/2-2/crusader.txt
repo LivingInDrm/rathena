@@ -9,15 +9,15 @@
 
 // Senior Crusader: 1st Collect Items Test
 //============================================================
-prt_castle,45,169,5	duplicate(Senior Crusader_)	高级十字军	4_M_CRU_OLD
+prt_castle,45,169,5	duplicate(Senior Crusader_)	高级十字军::Senior Crusader	4_M_CRU_OLD
 
 // Suffering Man: 2nd Endurance Test
 //============================================================
-prt_castle,164,32,1	duplicate(Man in Anguish_)	痛苦的男人	4_M_JOB_KNIGHT1
+prt_castle,164,32,1	duplicate(Man in Anguish_)	痛苦的男人::Man in Anguish	4_M_JOB_KNIGHT1
 
 // Crusader: 4th Purification Test
 //============================================================
-prt_castle,35,151,5	duplicate(Patron Knight_)	守护骑士	4_M_CRU
+prt_castle,35,151,5	duplicate(Patron Knight_)	守护骑士::Patron Knight	4_M_CRU
 
 // Actual tests
 //============================================================
@@ -25,7 +25,7 @@ prt_castle,35,151,5	duplicate(Patron Knight_)	守护骑士	4_M_CRU
 //----------------------------------------------------------------------------
 // Endurance Test
 //----------------------------------------------------------------------------
-job_cru,98,105,4	script	 召唤师#cr5	WARPNPC,3,3,{
+job_cru,98,105,4	script	 召唤师#cr5:: Summoner#cr5	WARPNPC,3,3,{
 	end;
 OnTouch_:
 	set CRUS_Q,6;
@@ -37,7 +37,7 @@ OnTouch_:
 //----------------------------------------------------------------------------
 // Purification Test
 //----------------------------------------------------------------------------
-job_cru,168,180,4	script	怪物召唤#cr5	WARPNPC,3,3,{
+job_cru,168,180,4	script	怪物召唤#cr5::Monster Summon#cr5	WARPNPC,3,3,{
 	end;
 OnInit:
 	disablenpc "Monster Summon#cr5";

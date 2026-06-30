@@ -40,7 +40,7 @@
 //= 3.1 Added Izlude Renewal coordinates.
 //============================================================
 
-valkyrie,48,86,4	script	女武神#	811,{
+valkyrie,48,86,4	script	女武神#::Valkyrie#	811,{
 	if (ADVJOB != 0 || Upper == 1) {
 		mes "[女武神]";
 		mes "欢迎";
@@ -212,7 +212,7 @@ valkyrie,48,86,4	script	女武神#	811,{
 	}
 }
 
-yuno_in02,88,164,5	script	梅修斯·西尔菲#Library	742,{
+yuno_in02,88,164,5	script	梅修斯·西尔菲#Library::Metheus Sylphe#Library	742,{
 	if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		if (valkyrie_Q == 0) {
 			mes "[梅修斯·西尔菲]";
@@ -258,7 +258,7 @@ yuno_in02,88,164,5	script	梅修斯·西尔菲#Library	742,{
 	close;
 }
 
-yuno_in02,93,207,1	script	尤米尔之书	111,{
+yuno_in02,93,207,1	script	尤米尔之书::Book of Ymir	111,{
 	if (ADVJOB != 0 || Upper == 1) {
 		mes "[尤米尔之书]";
 		mes "……荣耀殿堂的入口向所有进入下一个生命的人开放。";
@@ -333,14 +333,14 @@ yuno_in02,93,207,1	script	尤米尔之书	111,{
 	close;
 }
 
-yuno_in05,49,43,1	script	尤米尔之心	111,{
+yuno_in05,49,43,1	script	尤米尔之心::Heart of Ymir	111,{
 	if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		if (valkyrie_Q == 2) warp "valkyrie",48,8;
 	}
 	end;
 }
 
-valkyrie,44,33,5	script	传送者	124,{
+valkyrie,44,33,5	script	传送者::Teleporter	124,{
 	if (Upper != 1) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {

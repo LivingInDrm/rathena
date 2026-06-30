@@ -125,7 +125,7 @@ OnAgitBreak:
 	MapRespawnGuildID strnpcinfo(2),.@GID,6;
 
 	// Refresh castle data, disable Kafra and reset Invest information.
-	donpcevent strnpcinfo(0)+"::OnRecvCastle";
+	donpcevent strnpcinfo(3)+"::OnRecvCastle";
 	disablenpc "Kafra Staff#"+strnpcinfo(2);
 	for( set .@i, CD_INVESTED_ECONOMY; .@i <= CD_ENABLED_KAFRA; set .@i, .@i+1 ) {
 		SetCastleData strnpcinfo(2), .@i, 0;
@@ -164,7 +164,7 @@ OnGuildBreak:
 	// Wait before refreshing guild information.
 	sleep 7000;
 	Announce "Guild Base [" + GetCastleName(strnpcinfo(2)) + "] has been abandoned.",0;
-	donpcevent strnpcinfo(0)+"::OnRecvCastle";
+	donpcevent strnpcinfo(3)+"::OnRecvCastle";
 	end;
 
 OnAgitInit:
@@ -1107,7 +1107,7 @@ OnSpawnGuardians:
 
 	// Kill all existing guardians before spawning new ones.
 	// This should prevent duplicating Guardians when char Server disconnects.
-	killmonster strnpcinfo(2),strnpcinfo(0)+"::OnGuardianDied";
+	killmonster strnpcinfo(2),strnpcinfo(3)+"::OnGuardianDied";
 
 	for( set .@i, 0; .@i <= 7 ; set .@i, .@i+1 ) {
 		set .@UseGID,.@i + 10;

@@ -237,7 +237,7 @@ OnTouchNPC:
 	mapannounce "p_track01","Please remember that we can distribute Prize Medals for only 5 minutes after each race.",bc_map,"0x33FF66";
 	sleep 1000;
 	donpcevent "Medal Distributor#single::OnEnable";
-	donpcevent strnpcinfo(0)+"::OnDisable";
+	donpcevent strnpcinfo(3)+"::OnDisable";
 	killmonster "p_track01",strnpcinfo(0)+"::OnMyMobDead";
 	end;
 	
@@ -1704,7 +1704,7 @@ OnTouchNPC:
 		specialeffect EF_MVP;
 		mapannounce "p_track02","Monster "+.@i+" has reached the Finish Line!",bc_map,"0x66FFCC";
 		$@mon_race_2_1 = .@i;
-		donpcevent strnpcinfo(0)+"::OnDisable";
+		donpcevent strnpcinfo(3)+"::OnDisable";
 	} else {
 		emotion ET_THROB;
 		specialeffect EF_MVP;

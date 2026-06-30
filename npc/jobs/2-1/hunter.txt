@@ -70,11 +70,11 @@ in_hunter,99,99,4	script	猎人信息#hnt::HntNotice	727,{
 	close;
 }
 
-pay_fild10,148,252,3	duplicate(HntNotice)	转职地点#hu	857
+pay_fild10,148,252,3	duplicate(HntNotice)	转职地点#hu::Job Change Location#hu	857
 
 // Actual Job quest start
 //============================================================
-hu_in01,386,373,4	script	猎人公会成员#hnt	727,{
+hu_in01,386,373,4	script	猎人公会成员#hnt::Hunter Guildsman#hnt	727,{
 	if (Upper == 1) {
 		mes "[猎人谢琳]";
 		mes "哦，你最近怎么样？好久不见了，是吧？";
@@ -419,9 +419,10 @@ hu_in01,386,373,4	script	猎人公会成员#hnt	727,{
 			mes "把物品交给恶魔猎人，就是在这个区域最左边的那个家伙~";
 			next;
 			mes "[猎人谢琳]";
-			if (Sex == SEX_MALE)
+			if (Sex == SEX_MALE) {
 				mes "如果你决定成为猎人，答应我来拜访我。";
 				mes "我想看到你成为猎人。你一定会看起来很棒！！";
+   }
 			else
 				mes "如果你决定成为猎人，记得来找我哦？你很漂亮，不过...";
 				mes "作为猎人会更漂亮的。嘿嘿~";
@@ -458,7 +459,7 @@ hu_in01,386,373,4	script	猎人公会成员#hnt	727,{
 	close;
 }
 
-hu_in01,382,382,4	script	公会接待员#hnt	732,{
+hu_in01,382,382,4	script	公会接待员#hnt::Guild Receptionist#hnt	732,{
 	if (HNTR_Q == 2) {
 		mes "[公会接待员]";
 		mes "Greetings. They call me... ^660000The Demon Hunter^000000. I am the one in charge of processing applications. Your name is ... " + strcharinfo(0) + ", correct?";
@@ -530,10 +531,11 @@ hu_in01,382,382,4	script	公会接待员#hnt	732,{
 		HNTR_Q = .@items[6];
 		next;
 		mes "[恶魔猎人]";
-		if (HNTR_Q >= 5)
+		if (HNTR_Q >= 5) {
 			mes "顺便说一下，";
 			mes "我们猎人公会的一名成员正在弓箭手公会执行公务。";
 			mes "我相信你需要去拜访这个人，因为他负责测试。";
+  }
 		else {
 			mes "哦对了，我们的公会会长已经去佩尤中央宫殿出差了。";
 			mes "你必须去找他，因为他负责测试。";
@@ -600,9 +602,10 @@ hu_in01,382,382,4	script	公会接待员#hnt	732,{
 			delitem .@items[2],.@items[3];
 			delitem .@items[4],.@items[5];
 			mes "[恶魔猎人]";
-			if (HNTR_Q == 10)
+			if (HNTR_Q == 10) {
 				mes "你带来了所有必要的材料……你可以向我们的公会会长询问测";
 				mes "试区域的方向，他目前在佩尤中央宫殿。";
+   }
 			else
 				mes "你带来了所有必要的材料……要获取测试区域的方向，";
 				mes "请去找我们的公会会长，他在弓箭手公会。";
@@ -637,7 +640,7 @@ hu_in01,382,382,4	script	公会接待员#hnt	732,{
 	}
 }
 
-payon_in03,131,7,3	script	猎人#htnGM	59,{
+payon_in03,131,7,3	script	猎人#htnGM::Hunter#htnGM	59,{
 	if (HNTR_Q == 10) {
 		mes "[猎人公会长]";
 		mes "哼。你一定是来参加猎人职业测试的。让我告诉你测试的过程。你想知道什么？";
@@ -794,7 +797,7 @@ payon_in03,131,7,3	script	猎人#htnGM	59,{
 	}
 }
 
-payon_in02,21,31,1	script	猎人#htnGM2	59,{
+payon_in02,21,31,1	script	猎人#htnGM2::Hunter#htnGM2	59,{
 	cutin "job_huntermaster",2;
 	if (HNTR_Q == 11) {
 		mes "[猎人公会长]";
@@ -977,7 +980,7 @@ payon_in02,21,31,1	script	猎人#htnGM2	59,{
 	}
 }
 
-job_hunte,178,32,1	script	向导#hnt	107,5,2,{
+job_hunte,178,32,1	script	向导#hnt::Guide#hnt	107,5,2,{
 OnTouch_:
 	if (HNTR_Q == 12) {
 		mes "[指南]";
@@ -1032,7 +1035,7 @@ OnTouch_:
 	end;
 }
 
-job_hunte,178,38,1	script	候诊室#hnt	66,{
+job_hunte,178,38,1	script	候诊室#hnt::Waiting Room#hnt	66,{
 	end;
 
 OnInit:
@@ -1051,7 +1054,7 @@ OnStart:
 	end;
 }
 
-job_hunte,1,1,1	script	经理#hnt	66,{
+job_hunte,1,1,1	script	经理#hnt::Manager#hnt	66,{
 OnInit:
 	disablenpc "Manager#hnt";
 	end;
@@ -1212,7 +1215,7 @@ OnTimer197000:
 	end;
 }
 
-job_hunte,93,101,1	script	切换#hnt	723,1,1,{
+job_hunte,93,101,1	script	切换#hnt::Switch#hnt	723,1,1,{
 OnTouch_:
 	mes "^3355FF有3个按钮";
 	mes "在逃脱开关上。^000000";

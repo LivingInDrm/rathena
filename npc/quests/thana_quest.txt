@@ -2084,11 +2084,11 @@ OnTimer3000:
 thana_boss,217,167,3	script	Memory Seal#tt1	1711,3,3,{
 	end;
 OnEnable:
-	hideoffnpc strnpcinfo(0);
+	hideoffnpc strnpcinfo(3);
 	set .hide,0;
 	end;
 OnDisable:
-	hideonnpc strnpcinfo(0);
+	hideonnpc strnpcinfo(3);
 	set .hide,0;
 	end;
 OnTouch_:
@@ -2135,7 +2135,7 @@ OnTouch_:
 		mes "into the crest, causing";
 		mes "its glow to intensify.^000000";
 		close2;
-		hideonnpc strnpcinfo(0);
+		hideonnpc strnpcinfo(3);
 		set .hide, .hide | (1<<.@seal);
 		delitem .@i[0],1;
 		specialeffect .@i[4];

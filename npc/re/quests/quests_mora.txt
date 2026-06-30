@@ -441,7 +441,7 @@ OnDisable:
 	stopnpctimer;
 	end;
 OnTimer5000:
-	donpcevent strnpcinfo(0)+"::OnDisable";
+	donpcevent strnpcinfo(3)+"::OnDisable";
 	stopnpctimer;
 	end;
 }
@@ -500,7 +500,7 @@ OnTimer1000:
 	end;
 OnTimer600000:
 	donpcevent "Bush#ep14_1_bs"+charat(strnpcinfo(0),4)+"::OnEnable";
-	donpcevent strnpcinfo(0)+"::OnDisable";
+	donpcevent strnpcinfo(3)+"::OnDisable";
 	end;
 }
 spl_fild02,180,1,0	duplicate(#mora_bush_timer)	Bush1Timer	440
@@ -4087,19 +4087,19 @@ OnFullon:
 		mes "真令人惊讶. 你在这干嘛?";
 		next;
 		if(select("你又在这干嘛?:那些耳朵...?") == 2) {
-			donpcevent strnpcinfo(0)+"::OnDisable";
+			donpcevent strnpcinfo(3)+"::OnDisable";
 			end;
 		}
 		if (countitem(6386) >= 10) {
 			mes "[柴郡]";
 			close2;
-			donpcevent strnpcinfo(0)+"::OnDisable";
+			donpcevent strnpcinfo(3)+"::OnDisable";
 			end;
 		}
 		if (countitem(1092) == 0) {
 			mes "出来散步?";
 			close2;
-			donpcevent strnpcinfo(0)+"::OnDisable";
+			donpcevent strnpcinfo(3)+"::OnDisable";
 			end;
 		}
 		mes "我和阿哈特一同出来, 但是他回去处理一个紧急事件了.";
@@ -4111,7 +4111,7 @@ OnFullon:
 				mes ".. ..............";
 				mes "[柴郡]";
 				close2;
-				donpcevent strnpcinfo(0)+"::OnDisable";
+				donpcevent strnpcinfo(3)+"::OnDisable";
 				end;
 			}
 			mes "这棵树... 是白色的, 透明, 有光泽.";
@@ -4122,7 +4122,7 @@ OnFullon:
 			percentheal 5,5;
 		}
 		close2;
-		donpcevent strnpcinfo(0)+"::OnDisable";
+		donpcevent strnpcinfo(3)+"::OnDisable";
 		end;
 	} else if (checkquest(5021) > -1 || checkquest(5022) > -1) {
 		if (checkquest(5021) > -1) {
@@ -4137,13 +4137,13 @@ OnFullon:
 		mes "你知道的, 沙帕人在活着时会慢慢变成石头.";
 		next;
 		if(select("....:多么...多么漂亮的树啊.") == 2) {
-			donpcevent strnpcinfo(0)+"::OnDisable";
+			donpcevent strnpcinfo(3)+"::OnDisable";
 			end;
 		}
 		if (countitem(.@item) >= 10) {
 			mes "所以当他们死了, 他们会变成石树.";
 			close2;
-			donpcevent strnpcinfo(0)+"::OnDisable";
+			donpcevent strnpcinfo(3)+"::OnDisable";
 			end;
 		}
 		progressbar "ffff00",3;
@@ -4160,7 +4160,7 @@ OnFullon:
 		} else
 			mes "[柴郡]";
 		close2;
-		donpcevent strnpcinfo(0)+"::OnDisable";
+		donpcevent strnpcinfo(3)+"::OnDisable";
 		end;
 	} else {
 		mes "... .. ...";
@@ -4180,7 +4180,7 @@ OnDisable:
 	end;
 OnReset:
 	if (rand(2))
-		donpcevent strnpcinfo(0)+"::OnEnable";
+		donpcevent strnpcinfo(3)+"::OnEnable";
 	else
 		initnpctimer;
 	end;
@@ -4190,10 +4190,10 @@ OnTimer30000:
 OnTimer40000:
 OnTimer50000:
 	if (rand(2)) 
-		donpcevent strnpcinfo(0)+"::OnEnable";
+		donpcevent strnpcinfo(3)+"::OnEnable";
 	end;
 OnTimer60000:
-	donpcevent strnpcinfo(0)+"::OnEnable";
+	donpcevent strnpcinfo(3)+"::OnEnable";
 	end;
 OnTouch:
 	if (checkquest(5034) == 2 || ep14_1_muk == 0 || rand(5)) {

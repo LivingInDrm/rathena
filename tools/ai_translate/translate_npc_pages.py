@@ -222,6 +222,20 @@ def split_npc_name(name: str) -> tuple[str, str]:
     return name[:index], name[index:]
 
 
+def npc_unique_name(name: str) -> str:
+    return name.split("::", 1)[1] if "::" in name else name
+
+
+def localized_npc_name(original_full_name: str, translated_visible_name: str) -> str:
+    visible_name, suffix = split_npc_name(original_full_name)
+    translated_visible_name = translated_visible_name.strip() or visible_name
+    localized = translated_visible_name + suffix
+    original_unique_name = npc_unique_name(original_full_name)
+    if localized != original_unique_name and "::" not in localized:
+        localized += f"::{original_unique_name}"
+    return localized
+
+
 def make_npc_name_page(file: str, line_index: int, full_name: str) -> Page | None:
     visible_name, _ = split_npc_name(full_name)
     if not visible_name.strip() or has_chinese(visible_name) or not EN_WORD_RE.search(visible_name):
@@ -246,6 +260,67 @@ def make_npc_name_page(file: str, line_index: int, full_name: str) -> Page | Non
         text=visible_name,
         lines=[SourceLine(line_index, "npc_name", full_name)],
     )
+
+
+def indent_width(line: str) -> int:
+    return len(line) - len(line.lstrip(" \t"))
+
+
+def is_braceless_if(line: str) -> bool:
+    stripped = line.strip()
+    if stripped.endswith("{") or stripped.startswith("//"):
+        return False
+    return bool(re.match(r"^(?:if|else\s+if)\s*\(.+\)$", stripped))
+
+
+def wrap_multiline_if_branches(lines: list[str]) -> list[str]:
+    result: list[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if not is_braceless_if(line):
+            result.append(line)
+            index += 1
+            continue
+        base_indent = indent_width(line)
+        body: list[str] = []
+        cursor = index + 1
+        while cursor < len(lines):
+            candidate = lines[cursor]
+            if candidate.strip() == "":
+                body.append(candidate)
+                cursor += 1
+                continue
+            if indent_width(candidate) <= base_indent:
+                break
+            body.append(candidate)
+            cursor += 1
+        next_token = cursor
+        while next_token < len(lines) and lines[next_token].strip() == "":
+            next_token += 1
+        significant_body = [body_line for body_line in body if body_line.strip() and not body_line.strip().startswith("//")]
+        if next_token < len(lines) and lines[next_token].lstrip().startswith("else") and len(significant_body) > 1:
+            result.append(line + " {")
+            result.extend(body)
+            result.append(line[:base_indent] + "}")
+            index = cursor
+            continue
+        result.append(line)
+        index += 1
+    return result
+
+
+def postprocess_script_lines(lines: list[str]) -> list[str]:
+    processed = wrap_multiline_if_branches(lines)
+    if any("::" in line for line in processed):
+        processed = [
+            line.replace("hideonnpc strnpcinfo(0)", "hideonnpc strnpcinfo(3)")
+            .replace("hideoffnpc strnpcinfo(0)", "hideoffnpc strnpcinfo(3)")
+            .replace("donpcevent strnpcinfo(0)+", "donpcevent strnpcinfo(3)+")
+            .replace("killmonster strnpcinfo(2),strnpcinfo(0)+", "killmonster strnpcinfo(2),strnpcinfo(3)+")
+            for line in processed
+        ]
+    return processed
 
 
 def iter_files(npc_root: Path, files: list[str] | None, dirs: list[str] | None) -> list[Path]:
@@ -690,8 +765,7 @@ def apply_translations(npc_root: Path, pages: list[Page], translations: dict[str
             if not translated_name:
                 continue
             original_full_name = page.lines[0].original
-            _, suffix = split_npc_name(original_full_name)
-            npc_name_replacements[original_full_name] = translated_name + suffix
+            npc_name_replacements[original_full_name] = localized_npc_name(original_full_name, translated_name)
         for page in sorted(file_pages, key=lambda item: item.start_line, reverse=True):
             row = translations[page.id]
             if page.kind == "npc_name":
@@ -748,6 +822,7 @@ def apply_translations(npc_root: Path, pages: list[Page], translations: dict[str
                 changed = True
                 stats["pages"] += 1
         if changed:
+            lines = postprocess_script_lines(lines)
             stats["files"] += 1
             if not dry_run:
                 target = (output_root / rel) if output_root else source_path

@@ -30,7 +30,7 @@
 
 // Bard Jet
 //============================================================
-payon_in02,67,65,3	script	吟游诗人杰特#tu	1_M_BARD,{
+payon_in02,67,65,3	script	吟游诗人杰特#tu::Bard Jet#tu	1_M_BARD,{
 	mes "[杰特]";
 	mes "每位神明都不会衰老，因为有美丽的女神";
 	mes "伊登，她是青春之苹果的守护者，永生的女";
@@ -124,7 +124,7 @@ payon_in02,67,65,3	script	吟游诗人杰特#tu	1_M_BARD,{
 
 // Sign
 //============================================================
-pay_arche,127,154,4	script	标志#arc	2_BOARD1,{
+pay_arche,127,154,4	script	标志#arc::Sign#arc	2_BOARD1,{
 	mes "弓箭手换职业办公室 ---> <--- 伊卡洛";
 	mes "斯";
 	close;
@@ -132,7 +132,7 @@ pay_arche,127,154,4	script	标志#arc	2_BOARD1,{
 
 // Master Kavaruk
 //============================================================
-payon_in02,54,13,3	script	卡瓦鲁克大师	1_M_JOBTESTER,{
+payon_in02,54,13,3	script	卡瓦鲁克大师::Master Kavaruk	1_M_JOBTESTER,{
 	mes "[卡瓦鲁克大师]";
 	mes "你好，年轻人。我是伊卡洛斯弓箭手公会的";
 	mes "卡瓦鲁克大师。欢迎你。";
@@ -360,7 +360,7 @@ payon_in02,54,13,3	script	卡瓦鲁克大师	1_M_JOBTESTER,{
 
 // 雷丁 Corse
 //============================================================
-pay_arche,103,165,5	script	雷丁·科尔斯#tu	4_M_REIDIN_KURS,{
+pay_arche,103,165,5	script	雷丁·科尔斯#tu::Reidin Corse#tu	4_M_REIDIN_KURS,{
 	mes "[雷丁·科尔斯]";
 	mes "";
 	if (checkweight(1201,1) == 0) {
@@ -425,10 +425,11 @@ pay_arche,103,165,5	script	雷丁·科尔斯#tu	4_M_REIDIN_KURS,{
 			next;
 			mes "[雷丁·科尔斯]";
 			mes "";
-			if(JobLevel > 39)
+			if(JobLevel > 39) {
 				mes "嘿！你准备好换工作了吗？别在这里浪费时";
 				mes "间，赶紧去找个新工作吧！或者你可以问卡";
 				mes "瓦鲁克大师要点事做。";
+   }
 			else if(JobLevel < 5){
 				mes "好的！我们有一位新弓箭手！你真幸运找到";
 				mes "了我，我是你能找到的最好的老师！但让我";
@@ -495,9 +496,10 @@ pay_arche,103,165,5	script	雷丁·科尔斯#tu	4_M_REIDIN_KURS,{
 					tu_archer01 = 6;
 					mes "现在，你的第一个任务是学习^3131FF三级猫头鹰";
 					mes "之眼^000000！";
-					if (checkre(0))
+					if (checkre(0)) {
 						mes "从摩洛克出发，向南旅行，你可以与秃鹰战";
 						mes "斗进行训练。";
+     }
 					else
 						mes "从普隆德拉出发，向南，再向南，然后向西，";
 						mes "你可以与秃鹰战斗进行训练。";
@@ -642,10 +644,11 @@ pay_arche,103,165,5	script	雷丁·科尔斯#tu	4_M_REIDIN_KURS,{
 			next;
 			.@eagle = getskilllv("AC_VULTURE");
 			if(.@eagle < 3){
-				if (checkre(0))
+				if (checkre(0)) {
 					mes "好的，曼达哥拉通常生活在吉芬附近。我可";
 					mes "以送你去吉芬，所以只需向北走就能找到";
 					mes "它们。";
+    }
 				else
 					mes "好的，曼达哥拉通常生活在米约尔尼尔山";
 					mes "附近。我可以送你去普隆德拉，所以只需从";
@@ -699,9 +702,10 @@ pay_arche,103,165,5	script	雷丁·科尔斯#tu	4_M_REIDIN_KURS,{
 		} else if(tu_archer01 == 8){
 			.@eagle = getskilllv("AC_VULTURE");
 			if(.@eagle < 3){
-				if (checkre(0))
+				if (checkre(0)) {
 					mes "曼达哥拉生活在吉芬以北的地区。学习到";
 					mes "三级秃鹫之眼，熟悉你的攻击范围。";
+    }
 				else
 					mes "曼达哥拉生活在普隆德拉的东北地区。学";
 					mes "习到三级秃鹫之眼，熟悉你的攻击范围。";
@@ -1404,7 +1408,7 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 
 // Alchemist Guildmember
 //============================================================
-pay_arche,130,113,3	script	炼金术士公会成员#tu	2_M_ALCHE,{
+pay_arche,130,113,3	script	炼金术士公会成员#tu::Alchemist Guildmember#tu	2_M_ALCHE,{
 	mes "[炼金术士公会成员]";
 	mes "";
 	if(tu_archer02 > 0){
@@ -1466,7 +1470,7 @@ pay_arche,130,113,3	script	炼金术士公会成员#tu	2_M_ALCHE,{
 
 // Arthail
 //============================================================
-prontera,126,335,5	script	阿尔泰尔	1_M_BARD,{
+prontera,126,335,5	script	阿尔泰尔::Arthail	1_M_BARD,{
 	mes "[阿尔泰尔]";
 	mes "";
 	if(tu_archer02 < 3){
@@ -1621,7 +1625,7 @@ prontera,126,335,5	script	阿尔泰尔	1_M_BARD,{
 
 // New Guild Master
 //============================================================
-prontera,167,281,3	script	新公会会长#tu	4_M_MONK,{
+prontera,167,281,3	script	新公会会长#tu::New Guild Master#tu	4_M_MONK,{
 	mes "[新公会会长]";
 	mes "听着，所有追求名声和荣耀的人！";
 	next;
@@ -1640,7 +1644,7 @@ prontera,167,281,3	script	新公会会长#tu	4_M_MONK,{
 
 // Mage
 //============================================================
-prontera,144,301,5	script	法师#tu	2_F_MAGICMASTER,{
+prontera,144,301,5	script	法师#tu::Mage#tu	2_F_MAGICMASTER,{
 	mes "[法师]";
 	mes "你看到那个新公会会长了吗？真是个爱说";
 	mes "教的人！";
@@ -1662,7 +1666,7 @@ prontera,144,301,5	script	法师#tu	2_F_MAGICMASTER,{
 
 // Minister
 //============================================================
--	script	大臣#tu_	-1,{
+-	script	大臣#tu_::Minister#tu_	-1,{
 	mes "[部长]";
 	mes "王室";
 	mes "非常忙碌";
@@ -1738,7 +1742,7 @@ OnTouch_:
 
 // Bishop Maugins
 //============================================================
-monk_in,19,43,1	script	主教莫金斯	1_M_PASTOR,{
+monk_in,19,43,1	script	主教莫金斯::Bishop Maugins	1_M_PASTOR,{
 	mes "[毛金主教]";
 	mes "";
 	if(tu_archer02 == 7){

@@ -234,9 +234,10 @@ function	Job_Options	{
 				break;
 			case Job_Novice_High:
 				// Job change after rebirth
-				if( .LastJob && lastJob )
+				if( .LastJob && lastJob ) {
 					Job_Options(.@job_opt,
 						roclass((eaclass(lastJob)&EAJ_BASEMASK)|EAJL_UPPER));
+    }
 				else
 					Job_Options(.@job_opt, 
 						Job_Swordman_High, Job_Mage_High, Job_Archer_High,
